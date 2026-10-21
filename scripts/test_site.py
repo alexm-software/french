@@ -91,7 +91,8 @@ def assert_s04_explicit(hierarchy, sectors, buildings, rooms):
     for zoom_id in ("R_resto_room_z1", "R_wine_01_z1"):
         art = load(ROOT / "content" / "art" / zoom_id / "hotspots.json")
         link = next(item for item in art["links"] if item.get("kind") == "zoom_back")
-        assert link["box"][1] >= art["height"] - 120, (zoom_id, link["box"])
+        # The step back meets the bottom of the painting, even when the box starts higher.
+        assert link["box"][3] >= art["height"] - 120, (zoom_id, link["box"])
         built = load(DATA / "rooms" / f"{zoom_id}.json")
         assert built["kind"] == "zoom"
         assert built["parent"]["id"] == S04_BACK[zoom_id]
@@ -486,16 +487,17 @@ def main():
     cave = next(word for word in wine["words"] if word["lemma"] == "cave")
     assert cave["cognate_type"] == "false_cognate"
     assert cave["false_cognate_note"]
-    assert len(wine["words"]) == 16
+    assert len(wine["words"]) == 14
     assert all(word["lemma"] not in {"whisky", "rhum", "cognac", "cigare"} for word in wine["words"])
     assert all(word["painted"] for word in wine["words"])
     zoom_wine = load(DATA / "rooms" / "R_wine_01_z1.json")
     assert zoom_wine["parent"]["id"] == "R_wine_01"
     assert zoom_wine["parent"]["name_fr"] == "La cave"
-    assert len(zoom_wine["words"]) == 8
-    for lemma in ("whisky", "rhum", "cognac", "cigare"):
+    assert len(zoom_wine["words"]) == 10
+    for lemma in ("whisky", "rhum", "cognac", "cigare", "champagne", "cru"):
         drawn = next(word for word in zoom_wine["words"] if word["lemma"] == lemma)
         assert drawn["painted"] is True, lemma
+    assert all(word["lemma"] not in {"champagne", "cru"} for word in wine["words"])
     assert any(hot.get("word_id") == "fr_whisky_noun" and not hot.get("helper") for hot in zoom_wine["scene"]["hotspots"])
     assert "plaque" not in load(ROOT / "content" / "art" / "B08_cafe" / "hotspots.json")["text_areas"]
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
@@ -649,7 +651,7 @@ def finish(quiz):
     assert not set(shown) & set(hidden)
     assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
     assert len(source_conv) == 722
-    assert len(hidden) == 15
+    assert len(hidden) == 10
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
     assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'

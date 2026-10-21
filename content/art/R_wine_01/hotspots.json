@@ -2,46 +2,27 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 650,
+ "divider_x": 706,
  "kind": "room",
- "note": "Fit-audit repaint 2026-10-21 (hook standard v2): each figure acts out its word's new hook. Stone pillar in the middle: feminine words left (with the stairs up), masculine right (with the studded street door and the bar alcove that opens the zoom). One box per item.",
+ "note": "Grounded repaint v3 2026-10-21: one vaulted cellar with a single flagstone floor; every figure stands or sits on the floor, a tub rim or a barrel at true scale (no shelves, nothing floating, adults only around the wine). Feminine words left of the vine pillar, masculine right. One box per item. Exits: stone stairs UP to the dining hall (top left), arched door and ramp up to the street (right, where the delivery van came in). The back tasting bar is the zoom spot. Champagne and cru moved to the tasting-bar zoom to keep the room uncrowded.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    531,
-    35,
-    744,
-    110
+    500,
+    78,
+    800,
+    172
    ],
    "text_box": [
-    550,
-    45,
-    725,
-    100
+    515,
+    90,
+    785,
+    160
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_bouteille_noun",
-   "lemma": "bouteille",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la bouteille",
-   "box": [
-    12,
-    495,
-    290,
-    690
-   ],
-   "label_xy": [
-    151,
-    680
-   ],
-   "scene": "A BOOT (boo-TEHY) sticks out of the neck of a huge green BOTTLE."
-  },
   {
    "id": "fr_cave_noun",
    "lemma": "cave",
@@ -50,73 +31,35 @@
    "side": "left",
    "label": "la cave",
    "box": [
-    40,
-    331,
-    170,
-    435
+    78,
+    222,
+    218,
+    306
    ],
    "label_xy": [
-    105,
-    425
+    148,
+    296
    ],
-   "scene": "A CALF (KAHV) curls up at the foot of the stone steps in the dim wine CELLAR."
+   "scene": "A CALF (KAHV) naps on the straw at the foot of the stone steps down into the wine CELLAR."
   },
   {
-   "id": "fr_vigne_noun",
-   "lemma": "vigne",
+   "id": "fr_bouteille_noun",
+   "lemma": "bouteille",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la vigne",
+   "label": "la bouteille",
    "box": [
-    206,
-    62,
-    353,
+    226,
+    165,
+    344,
     328
    ],
    "label_xy": [
-    280,
+    285,
     318
    ],
-   "scene": "A TEENY gnome (VEENY) climbs a curling grape VINE heavy with purple bunches."
-  },
-  {
-   "id": "fr_vodka_noun",
-   "lemma": "vodka",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la vodka",
-   "box": [
-    178,
-    331,
-    305,
-    491
-   ],
-   "label_xy": [
-    242,
-    481
-   ],
-   "scene": "Same as English 'vodka' (stress at the end, vod-KAH): a frosty bottle of VODKA stands in a bucket of ice."
-  },
-  {
-   "id": "fr_ivresse_noun",
-   "lemma": "ivresse",
-   "article": "l'",
-   "gender": "f",
-   "side": "left",
-   "label": "l'ivresse",
-   "box": [
-    309,
-    334,
-    469,
-    485
-   ],
-   "label_xy": [
-    389,
-    475
-   ],
-   "scene": "EVE RESTS (ee-VREHS) on a barrel, eyes swirling, giddy with a HEADY THRILL after the grape-stomping."
+   "scene": "A BOOT (boo-TEHY) is stuck upside down in the neck of a huge green BOTTLE standing on the cellar floor."
   },
   {
    "id": "fr_brasserie_noun",
@@ -126,16 +69,16 @@
    "side": "left",
    "label": "la brasserie",
    "box": [
-    357,
-    100,
-    493,
-    329
+    346,
+    120,
+    452,
+    352
    ],
    "label_xy": [
-    425,
-    319
+    399,
+    342
    ],
-   "scene": "Same as English 'brasserie' (said brah-suh-REE): a waiter in a long white apron carries tankards through a busy BRASSERIE."
+   "scene": "Same as English 'brasserie' (said brah-suh-REE): a waiter in a long white apron hurries his tray of shiny BRASS tankards up to the BRASSERIE."
   },
   {
    "id": "fr_appellation_noun",
@@ -145,35 +88,35 @@
    "side": "left",
    "label": "l'appellation",
    "box": [
-    497,
-    170,
-    618,
-    330
+    454,
+    222,
+    560,
+    420
    ],
    "label_xy": [
-    558,
-    320
+    507,
+    410
    ],
-   "scene": "Same as English 'appellation' (said ah-pay-lah-SYOHN): an old winemaker presses the red NAME-OF-ORIGIN wax seal onto his bottle."
+   "scene": "Same as English 'appellation' (said ah-pay-lah-SYOHN): an old winemaker leans on his barrel and stamps a big red royal wax seal on his bottle: by decree, a wine of NAMED ORIGIN!"
   },
   {
-   "id": "fr_capsule_noun",
-   "lemma": "capsule",
-   "article": "la",
+   "id": "fr_ivresse_noun",
+   "lemma": "ivresse",
+   "article": "l'",
    "gender": "f",
    "side": "left",
-   "label": "la capsule",
+   "label": "l'ivresse",
    "box": [
-    473,
-    333,
-    600,
-    470
+    78,
+    332,
+    282,
+    572
    ],
    "label_xy": [
-    536,
-    460
+    180,
+    562
    ],
-   "scene": "Same as English 'capsule' (said kahp-SEWL): a squirrel collects shiny BOTTLE CAPS in an acorn cup."
+   "scene": "EVE RESTS (ee-VREHS) on the rim of the grape tub, purple-footed and swirly-eyed: the HEADY DIZZINESS of too much grape-stomping."
   },
   {
    "id": "fr_degustation_noun",
@@ -183,54 +126,73 @@
    "side": "left",
    "label": "la dégustation",
    "box": [
-    325,
-    489,
-    625,
-    700
+    306,
+    356,
+    452,
+    488
    ],
    "label_xy": [
-    475,
-    690
+    379,
+    478
    ],
-   "scene": "At a TASTING table, a goat makes a DISGUSTED face (day-GEWS-) at one glass, then grins at the next."
+   "scene": "At the little TASTING table a goat sniffs glass after glass, unsure whether to be DISGUSTED (day-GEWS-) or delighted."
   },
   {
-   "id": "fr_verre_noun",
-   "lemma": "verre",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le verre",
+   "id": "fr_capsule_noun",
+   "lemma": "capsule",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la capsule",
    "box": [
-    781,
-    62,
-    950,
-    222
+    284,
+    490,
+    410,
+    620
    ],
    "label_xy": [
-    866,
-    212
+    347,
+    610
    ],
-   "scene": "A puzzled bear scratches its head: 'WHERE?' (VEHR) — but the GLASS is right there in its own paw."
+   "scene": "Same as English 'capsule' (said kahp-SEWL): a squirrel wears a shiny bottle CAP as a helmet while hugging his acorn: CAP-sule!"
   },
   {
-   "id": "fr_vin_noun",
-   "lemma": "vin",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le vin",
+   "id": "fr_vodka_noun",
+   "lemma": "vodka",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la vodka",
    "box": [
-    688,
-    227,
-    912,
-    412
+    470,
+    422,
+    574,
+    602
    ],
    "label_xy": [
-    800,
-    402
+    522,
+    592
    ],
-   "scene": "A little delivery VAN (VAN) unloads crates of WINE bottles."
+   "scene": "Same as English 'vodka' but stressed at the end, vod-KAH: a crow perched on the ice bucket croaks 'KAH!' at the frosty VODKA bottle chilling inside."
+  },
+  {
+   "id": "fr_vigne_noun",
+   "lemma": "vigne",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la vigne",
+   "box": [
+    576,
+    176,
+    700,
+    545
+   ],
+   "label_xy": [
+    638,
+    535
+   ],
+   "scene": "A TEENY gnome (VEENY) stands at the foot of a stone pillar wrapped in a curling grape VINE heavy with purple bunches."
   },
   {
    "id": "fr_alcool_noun",
@@ -240,35 +202,16 @@
    "side": "right",
    "label": "l'alcool",
    "box": [
-    915,
-    226,
-    1060,
-    411
+    716,
+    310,
+    790,
+    450
    ],
    "label_xy": [
-    988,
-    401
+    753,
+    440
    ],
-   "scene": "Old AL heaves a sack of COAL (ahl-KOL) past the cellar rack of ALCOHOL bottles."
-  },
-  {
-   "id": "fr_champagne_noun",
-   "lemma": "champagne",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le champagne",
-   "box": [
-    960,
-    415,
-    1225,
-    511
-   ],
-   "label_xy": [
-    1092,
-    501
-   ],
-   "scene": "Same as English 'champagne' (said shahn-PAHNY): a cork pops from a CHAMPAGNE bottle and the fizz sprays a startled hedgehog."
+   "scene": "Like English 'alcohol', said ahl-KOL: a glass of wine in tiny sunglasses looks so al-COOL on its barrel."
   },
   {
    "id": "fr_bouchon_noun",
@@ -278,16 +221,54 @@
    "side": "right",
    "label": "le bouchon",
    "box": [
-    706,
-    419,
-    900,
-    524
+    793,
+    330,
+    906,
+    515
    ],
    "label_xy": [
-    803,
-    514
+    850,
+    505
    ],
-   "scene": "A ghost shouts 'BOO!' (boo-SHOHN) and the CORK shoots out of a bottle."
+   "scene": "A ghost shouts 'BOO!' (boo-SHOHN) as he heaves a giant CORK over his head."
+  },
+  {
+   "id": "fr_verre_noun",
+   "lemma": "verre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le verre",
+   "box": [
+    872,
+    148,
+    985,
+    328
+   ],
+   "label_xy": [
+    928,
+    318
+   ],
+   "scene": "A woman balances a GLASS of red wine on her head and shrugs 'WHERE?' (VEHR): it is right on top of her!"
+  },
+  {
+   "id": "fr_vin_noun",
+   "lemma": "vin",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le vin",
+   "box": [
+    990,
+    282,
+    1200,
+    398
+   ],
+   "label_xy": [
+    1095,
+    388
+   ],
+   "scene": "A delivery VAN (VAN) backs into the cellar with its doors open, packed with crates of WINE."
   },
   {
    "id": "fr_tonneau_noun",
@@ -297,69 +278,50 @@
    "side": "right",
    "label": "le tonneau",
    "box": [
-    694,
-    528,
-    968,
-    700
+    908,
+    400,
+    1058,
+    622
    ],
    "label_xy": [
-    831,
-    690
+    983,
+    612
    ],
-   "scene": "A boy yelps 'TOE! NO!' (toh-NOH) as a big wooden BARREL rolls towards his foot."
-  },
-  {
-   "id": "fr_cru_noun",
-   "lemma": "cru",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cru",
-   "box": [
-    975,
-    515,
-    1262,
-    720
-   ],
-   "label_xy": [
-    1118,
-    710
-   ],
-   "scene": "A CREW (KREW) of three grape-pickers proudly holds up one dusty bottle of their famous VINTAGE."
+   "scene": "A cellar hand yells 'TOE! NO!' (toh-NOH) as a runaway BARREL rolls right over his foot."
   }
  ],
  "zoom_from": {
   "room_id": "R_wine_01_z1",
   "box": [
-   975,
-   81,
-   1075,
-   212
+   722,
+   176,
+   868,
+   300
   ],
-  "label": "bottle alcove (right wall)"
+  "label": "tasting bar (back wall)"
  },
  "links": [
   {
    "target": "R_resto_room",
    "box": [
-    0,
-    18,
-    200,
-    327
+    80,
+    50,
+    222,
+    215
    ],
-   "label": "Stairs up to the dining hall",
+   "label": "Stone stairs up to the dining hall",
    "name": "Restaurant Le Bon Goût — salle",
    "kind": "stairs_up"
   },
   {
    "target": "B09_restaurant",
    "box": [
-    1169,
-    88,
-    1262,
-    400
+    990,
+    95,
+    1130,
+    275
    ],
-   "label": "Studded door: out to the street",
+   "label": "Arched door and ramp up to the street",
    "name": "Restaurant Le Bon Goût (outside)",
    "kind": "exit"
   }

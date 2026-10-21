@@ -4,21 +4,21 @@
  "height": 720,
  "divider_x": 640,
  "kind": "room",
- "note": "Fit-audit repaint 2026-10-21 (hook standard v2): each figure acts out its word's new hook. Wooden column in the middle: feminine words left (with the glazed street door), masculine right (with the stairs up). One box per item.",
+ "note": "v3 GROUNDED repaint 2026-10-21: one café ground floor on a single terracotta floor; every figure sits on a chair, stands on the floor or sits on the zinc counter at real size. Wooden column in the middle: feminine words left (street door, terrace window, front tables), masculine right (zinc counter, giraffe window, back tables, stairs up). Items kept >=6% from every edge. One box per item. Round 4 (2026-10-21 15:30): the front-left table is a grown-up table (a grey-haired lady in a green cardigan with the ice-cream glass; the beer with its bee and the ashtray with one unlit cigarette sit there, nobody drinking or smoking); the extra boy at the poodle's table was removed. Neutral daylight colour grade (tools/neutralize.py; warm original kept as base_warm_v3.jpg).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    519,
-    6,
-    775,
-    112
+    505,
+    85,
+    780,
+    172
    ],
    "text_box": [
-    540,
-    20,
-    755,
-    100
+    525,
+    95,
+    760,
+    162
    ]
   }
  },
@@ -31,16 +31,16 @@
    "side": "left",
    "label": "la glace",
    "box": [
-    70,
-    356,
-    211,
-    720
+    100,
+    335,
+    268,
+    600
    ],
    "label_xy": [
-    140,
-    710
+    184,
+    590
    ],
-   "scene": "A girl licks a pink ICE CREAM piled high in a tall GLASS (GLAHS)."
+   "scene": "A grey-haired lady in a green cardigan happily licks an ICE CREAM piled high in a tall GLASS (GLAHS)."
   },
   {
    "id": "fr_biere_noun",
@@ -50,16 +50,16 @@
    "side": "left",
    "label": "la bière",
    "box": [
-    215,
-    236,
-    283,
-    556
+    272,
+    446,
+    324,
+    568
    ],
    "label_xy": [
-    249,
-    546
+    298,
+    558
    ],
-   "scene": "A BEE in the AIR (BYEHR) hovers over a frothy glass of BEER."
+   "scene": "A BEE in the AIR (BYEHR) hovers over a frothy glass of BEER on the green-cardigan lady's grown-up table; nobody drinks it."
   },
   {
    "id": "fr_cigarette_noun",
@@ -69,16 +69,16 @@
    "side": "left",
    "label": "la cigarette",
    "box": [
-    287,
-    505,
-    347,
-    575
+    327,
+    520,
+    380,
+    568
    ],
    "label_xy": [
-    317,
-    565
+    354,
+    558
    ],
-   "scene": "Same as English 'cigarette' (said see-gah-REHT): a CIGARETTE rests in an ashtray on the terrace table, nobody smoking it."
+   "scene": "Same as English 'cigarette' (said see-gah-REHT): one unlit CIGARETTE lies in the ashtray on the green-cardigan lady's grown-up table; nobody smokes it."
   },
   {
    "id": "fr_terrasse_noun",
@@ -88,16 +88,16 @@
    "side": "left",
    "label": "la terrasse",
    "box": [
-    286,
-    138,
-    484,
-    372
+    265,
+    100,
+    415,
+    296
    ],
    "label_xy": [
-    385,
-    362
+    340,
+    286
    ],
-   "scene": "Same as English 'terrace' (said teh-RAHS): two friends chat at a sunny café TERRACE table under a parasol."
+   "scene": "Same as English 'terrace' (said teh-RAHS): through the open window, two friends chat at a sunny café TERRACE table under a parasol."
   },
   {
    "id": "fr_soif_noun",
@@ -107,14 +107,14 @@
    "side": "left",
    "label": "la soif",
    "box": [
-    351,
-    380,
-    484,
-    700
+    270,
+    300,
+    420,
+    442
    ],
    "label_xy": [
-    418,
-    690
+    345,
+    432
    ],
    "scene": "A SUAVE fox in a bow tie (SWAHF) is dying of THIRST, tongue out, reaching for a water jug."
   },
@@ -126,14 +126,14 @@
    "side": "left",
    "label": "la boisson",
    "box": [
-    488,
-    375,
-    625,
-    700
+    438,
+    304,
+    588,
+    600
    ],
    "label_xy": [
-    556,
-    690
+    513,
+    590
    ],
    "scene": "A BOY sings a SONG (bwah-SOHN) into a bottle of fizzy DRINK as if it were a microphone."
   },
@@ -145,14 +145,14 @@
    "side": "left",
    "label": "la tasse",
    "box": [
-    488,
-    118,
-    625,
-    372
+    428,
+    192,
+    548,
+    300
    ],
    "label_xy": [
-    556,
-    362
+    488,
+    290
    ],
    "scene": "A juggler TOSSES (TAHS) a CUP and saucer high in the air."
   },
@@ -165,34 +165,15 @@
    "label": "le café",
    "box": [
     660,
-    181,
-    785,
-    282
+    228,
+    708,
+    335
    ],
    "label_xy": [
-    722,
-    272
+    684,
+    325
    ],
-   "scene": "Same as English 'café' (said kah-FAY): a sleepy owl sips a tiny cup of black COFFEE."
-  },
-  {
-   "id": "fr_bar_noun",
-   "lemma": "bar",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le bar",
-   "box": [
-    656,
-    331,
-    755,
-    690
-   ],
-   "label_xy": [
-    706,
-    680
-   ],
-   "scene": "Same as English 'bar' (said BAHR): a sheep polishes the shiny zinc BAR counter with a cloth."
+   "scene": "Same as English 'café' (said kah-FAY): a sleepy owl perched on the zinc bar sips a tiny cup of black COFFEE to stay awake."
   },
   {
    "id": "fr_the_noun",
@@ -202,16 +183,35 @@
    "side": "right",
    "label": "le thé",
    "box": [
-    759,
-    390,
-    879,
-    580
+    712,
+    255,
+    810,
+    388
    ],
    "label_xy": [
-    819,
-    570
+    761,
+    378
    ],
-   "scene": "A ginger cat swishes its long TAIL (TAY) while it stirs a steaming cup of TEA."
+   "scene": "A ginger cat sitting on the bar swishes its long TAIL (TAY) down the counter side, its cup of TEA by its paw."
+  },
+  {
+   "id": "fr_bar_noun",
+   "lemma": "bar",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bar",
+   "box": [
+    650,
+    392,
+    850,
+    490
+   ],
+   "label_xy": [
+    750,
+    480
+   ],
+   "scene": "Same as English 'bar' (said BAHR): the zinc BAR counter is polished so bright it gleams like one giant silver BAR."
   },
   {
    "id": "fr_plateau_noun",
@@ -221,14 +221,14 @@
    "side": "right",
    "label": "le plateau",
    "box": [
-    883,
-    345,
-    980,
-    720
+    816,
+    205,
+    922,
+    388
    ],
    "label_xy": [
-    932,
-    710
+    869,
+    378
    ],
    "scene": "A waitress gasps 'OH!' as her TRAY of flat ('PLAT') plates wobbles (plah-TOH)."
   },
@@ -240,35 +240,16 @@
    "side": "right",
    "label": "le jus",
    "box": [
-    862,
-    62,
-    989,
-    340
+    928,
+    135,
+    1060,
+    306
    ],
    "label_xy": [
-    926,
-    330
+    994,
+    296
    ],
-   "scene": "A ZOO giraffe (ZHEW) sips orange JUICE through a very long straw."
-  },
-  {
-   "id": "fr_bistrot_noun",
-   "lemma": "bistrot",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le bistrot",
-   "box": [
-    993,
-    250,
-    1079,
-    440
-   ],
-   "label_xy": [
-    1036,
-    430
-   ],
-   "scene": "Same as English 'bistro', silent t (bees-TROH): a poodle sips coffee at the window of a little BISTRO with checked curtains."
+   "scene": "A ZOO giraffe (ZHEW) pokes its head in through the window to sip orange JUICE through a very long straw."
   },
   {
    "id": "fr_aperitif_noun",
@@ -278,16 +259,35 @@
    "side": "right",
    "label": "l'apéritif",
    "box": [
-    1083,
-    244,
-    1232,
-    469
+    925,
+    322,
+    1001,
+    420
    ],
    "label_xy": [
-    1158,
-    459
+    963,
+    410
    ],
-   "scene": "Same as English 'aperitif' (said ah-pay-ree-TEEF): an elegant goose raises a small pre-dinner APERITIF glass beside a bowl of olives."
+   "scene": "Same as English 'aperitif' (said ah-pay-ree-TEEF): a white goose sits at a little table with its small pre-dinner APERITIF glass and a bowl of olives."
+  },
+  {
+   "id": "fr_bistrot_noun",
+   "lemma": "bistrot",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bistrot",
+   "box": [
+    1114,
+    284,
+    1182,
+    402
+   ],
+   "label_xy": [
+    1148,
+    392
+   ],
+   "scene": "Same as English 'bistro', silent t (bees-TROH): a curly poodle sits at its favourite little BISTRO table by the stairs, sipping coffee."
   },
   {
    "id": "fr_tilleul_noun",
@@ -297,26 +297,60 @@
    "side": "right",
    "label": "le tilleul",
    "box": [
-    985,
-    473,
-    1280,
-    720
+    870,
+    350,
+    1150,
+    588
    ],
    "label_xy": [
-    1132,
-    710
+    1010,
+    578
    ],
-   "scene": "Beside a YULE log, granny pours a cup of LIME-BLOSSOM TEA (tee-YUHL) from a sprig of linden flowers."
+   "polygon": [
+    [
+     1005,
+     350
+    ],
+    [
+     1108,
+     350
+    ],
+    [
+     1108,
+     408
+    ],
+    [
+     1150,
+     408
+    ],
+    [
+     1150,
+     588
+    ],
+    [
+     870,
+     588
+    ],
+    [
+     870,
+     426
+    ],
+    [
+     1005,
+     426
+    ]
+   ],
+   "scene": "Beside a chocolate YULE log, granny pours LIME-BLOSSOM TEA (tee-YUHL), a sprig of yellow linden flowers on her table."
   }
  ],
  "links": [
   {
    "target": "R_cafe_02",
    "box": [
-    1112,
-    0,
-    1280,
-    240
+    1130,
+    45,
+    1203,
+    280
    ],
    "label": "Stairs up to the first floor",
    "name": "Café de la Place — étage",
@@ -325,10 +359,10 @@
   {
    "target": "B08_cafe",
    "box": [
-    0,
-    30,
-    66,
-    610
+    77,
+    105,
+    215,
+    330
    ],
    "label": "Front door: out to the street",
    "name": "Café de la Place (outside)",
