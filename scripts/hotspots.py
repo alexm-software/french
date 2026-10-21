@@ -118,6 +118,9 @@ def normalize_scene(raw):
         for key in ("name", "name_fr", "name_en", "label_fr", "label_en", "kind"):
             if item.get(key):
                 link[key] = str(item[key])
+        polygon = _polygon(item.get("polygon"))
+        if polygon:
+            link["polygon"] = polygon
         links.append(link)
 
     exits = {}
@@ -131,6 +134,9 @@ def normalize_scene(raw):
         for field in ("label", "name", "name_fr", "name_en", "label_fr", "label_en", "kind"):
             if item.get(field):
                 exit_item[field] = str(item[field])
+        polygon = _polygon(item.get("polygon"))
+        if polygon:
+            exit_item["polygon"] = polygon
         exits[key] = exit_item
 
     zoom_from = None

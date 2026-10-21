@@ -128,6 +128,58 @@ def assert_fullscreen_overlays():
     assert ".tool[data-fs]" in css
 
 
+def _point_inside(point, polygon):
+    x, y = point
+    hits = False
+    count = len(polygon)
+    for index in range(count):
+        x0, y0 = polygon[index]
+        x1, y1 = polygon[(index + 1) % count]
+        if (y0 > y) != (y1 > y):
+            cross = x0 + (y - y0) / (y1 - y0) * (x1 - x0)
+            if x < cross:
+                hits = not hits
+    return hits
+
+
+def assert_wide_passages():
+    """Street continuations and doorways are big hit areas, not just their labels."""
+    from hotspots import normalize_scene
+
+    for segment in ("ST_cooking_seg001", "ST_cooking_seg002", "ST_cooking_seg003", "ST_cooking_seg004"):
+        raw = load(ROOT / "content" / "art" / segment / "hotspots.json")
+        scene = normalize_scene(raw)
+        items = scene["hotspots"]
+        for key in ("forward", "back"):
+            exit_item = scene["exits"][key]
+            polygon = exit_item.get("polygon")
+            assert polygon and len(polygon) >= 4, (segment, key)
+            xs = [point[0] for point in polygon]
+            ys = [point[1] for point in polygon]
+            assert max(xs) - min(xs) >= int(scene["width"] * 0.14), (segment, key, max(xs) - min(xs))
+            assert max(ys) - min(ys) >= 60, (segment, key)
+            box = exit_item["box"]
+            center = ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
+            assert _point_inside(center, polygon), (segment, key)
+            for item in items:
+                item_box = item["box"]
+                item_center = ((item_box[0] + item_box[2]) / 2, (item_box[1] + item_box[3]) / 2)
+                assert not _point_inside(item_center, polygon), (segment, key, item["word_id"])
+    sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
+    street = next(link for link in sector["links"] if link["kind"] == "street")
+    assert street["polygon"]
+    street_width = max(point[0] for point in street["polygon"]) - min(point[0] for point in street["polygon"])
+    assert street_width >= int(sector["width"] * 0.15)
+    room = normalize_scene(load(ROOT / "content" / "art" / "R_resto_room" / "hotspots.json"))
+    door = next(link for link in room["links"] if link["kind"] == "door")
+    arch = next(link for link in room["links"] if "rch" in link["label"])
+    assert door["polygon"][1][0] - door["polygon"][0][0] > door["box"][2] - door["box"][0]
+    assert arch["polygon"][1][0] - arch["polygon"][0][0] > arch["box"][2] - arch["box"][0]
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert 'polygon class="hit"' in client
+    assert "hitShape(link)" in client and "hitShape(exit)" in client
+
+
 def assert_back_strip_stays_visible(client):
     """The strip back is a header control, not an item in the menu that hides under 820px."""
     shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
@@ -482,6 +534,7 @@ def finish(quiz):
     assert i18n["fr"]["tools"]["fullscreen"] == "Plein écran"
     assert i18n["fr"]["tools"]["leave"] == "Quitter le plein écran"
     assert_fullscreen_overlays()
+    assert_wide_passages()
     walk_site_graph()
     dining = load(DATA / "rooms" / "R_resto_room_z1.json")
     assert dining["parent"]["id"] == "R_resto_room"

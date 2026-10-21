@@ -731,6 +731,15 @@ function arrowGraphic(kind, box) {
   </g>`;
 }
 
+function hitShape(item) {
+  if (item.polygon && item.polygon.length >= 3) {
+    const points = item.polygon.map((point) => point.join(",")).join(" ");
+    return `<polygon class="hit" points="${points}"></polygon>`;
+  }
+  const [x0, y0, x1, y1] = item.box;
+  return `<rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>`;
+}
+
 function sceneMarkup(scene, words, zooms) {
   const byId = Object.fromEntries((words || []).map((word) => [word.id, word]));
   const areas = scene.text_areas || {};
@@ -744,22 +753,20 @@ function sceneMarkup(scene, words, zooms) {
   const parts = [];
   (scene.links || []).forEach((link) => {
     if (!link?.box || !link.target) return;
-    const [x0, y0, x1, y1] = link.box;
     const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
     const way = wayMarkup(link);
     const label = way ? enterLabel(link, "open") : hoverLabel(link, "open");
-    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${nameTag(label, link.box)}</g>`);
+    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${nameTag(label, link.box)}</g>`);
   });
   Object.entries(scene.exits || {}).forEach(([key, exit]) => {
     const kind = exitKind(key);
     if (!kind || !exit?.box || !exit.target) return;
     state.nav[kind] = hashFor(exit.target);
-    const [x0, y0, x1, y1] = exit.box;
     const graphic = signedExits.has(kind) ? "" : arrowGraphic(kind, exit.box);
     const zoomBox = isZoomTarget(exit.target) ? ` data-zoom-box="${exit.box.join(",")}"` : "";
     const way = wayMarkup(exit, key);
     const label = way ? enterLabel(exit, `nav.${kind}`) : hoverLabel(exit, `nav.${kind}`);
-    parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
+    parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(exit)}${graphic}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
     if (hot.helper) return;
