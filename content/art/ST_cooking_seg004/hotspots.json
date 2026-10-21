@@ -7,235 +7,184 @@
  "sector_id": "S04_cafes",
  "kind": "verb_place",
  "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 4 · cook, fry",
- "divider_x": 875,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, direction signs (forward / back arrows = the clickable exits, side markers -er / -ir / -re). Signs never sit on an item box.",
+ "name": "Ruelle des Gourmets — étape 4 · Taste & season",
+ "divider_x": 828,
+ "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
  "tier_counts": {
-  "street": 6,
+  "street": 4,
   "balcony": 2,
-  "upper": 0,
-  "roof": 4
+  "upper": 2,
+  "roof": 1
  },
  "text_areas": {
-  "fr_remuer_verb_sign": {
+  "fr_gouter_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_remuer_verb",
-   "text": "remuer",
+   "for": "fr_gouter_verb",
+   "text": "goûter",
    "box": [
-    65,
-    544,
-    144,
-    570
+    72,
+    632,
+    146,
+    658
    ],
    "text_box": [
-    69,
-    548,
-    140,
-    566
+    76,
+    636,
+    142,
+    654
    ]
   },
-  "fr_rechauffer_verb_sign": {
+  "fr_deguster_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_rechauffer_verb",
-   "text": "réchauffer",
+   "for": "fr_deguster_verb",
+   "text": "déguster",
    "box": [
-    679,
-    652,
-    783,
-    678
+    265,
+    632,
+    357,
+    658
    ],
    "text_box": [
-    683,
-    656,
-    779,
-    674
+    269,
+    636,
+    353,
+    654
    ]
   },
-  "fr_cuisiner_verb_sign": {
+  "fr_savourer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_cuisiner_verb",
-   "text": "cuisiner",
+   "for": "fr_savourer_verb",
+   "text": "savourer",
    "box": [
-    492,
-    652,
-    576,
-    678
+    454,
+    632,
+    546,
+    658
    ],
    "text_box": [
-    496,
-    656,
-    572,
-    674
+    458,
+    636,
+    542,
+    654
    ]
   },
-  "fr_saurer_verb_sign": {
+  "fr_saler_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_saurer_verb",
-   "text": "saurer",
+   "for": "fr_saler_verb",
+   "text": "saler",
    "box": [
-    348,
-    676,
-    420,
-    702
+    668,
+    670,
+    726,
+    696
    ],
    "text_box": [
-    352,
-    680,
-    416,
-    698
+    672,
+    674,
+    722,
+    692
    ]
   },
-  "fr_cuire_verb_sign": {
+  "fr_sucrer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_cuire_verb",
-   "text": "cuire",
+   "for": "fr_sucrer_verb",
+   "text": "sucrer",
    "box": [
-    912,
-    660,
-    972,
-    686
+    199,
+    351,
+    269,
+    377
    ],
    "text_box": [
-    916,
-    664,
-    968,
-    682
+    203,
+    355,
+    265,
+    373
    ]
   },
-  "fr_bouillir_verb_sign": {
+  "fr_epicer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_bouillir_verb",
-   "text": "bouillir",
+   "for": "fr_epicer_verb",
+   "text": "épicer",
    "box": [
-    1099,
-    684,
-    1175,
-    710
+    565,
+    389,
+    635,
+    415
    ],
    "text_box": [
-    1103,
-    688,
-    1171,
-    706
+    569,
+    393,
+    631,
+    411
    ]
   },
-  "fr_griller_verb_sign": {
+  "fr_ailler_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_griller_verb",
-   "text": "griller",
+   "for": "fr_ailler_verb",
+   "text": "ailler",
    "box": [
-    122,
-    181,
-    190,
-    207
+    385,
+    212,
+    445,
+    238
    ],
    "text_box": [
-    126,
-    185,
-    186,
-    203
+    389,
+    216,
+    441,
+    234
    ]
   },
-  "fr_frire_verb_sign": {
+  "fr_farcir_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_frire_verb",
-   "text": "frire",
+   "for": "fr_farcir_verb",
+   "text": "se farcir",
    "box": [
-    991,
-    402,
-    1045,
-    428
+    1003,
+    358,
+    1089,
+    384
    ],
    "text_box": [
-    995,
-    406,
-    1041,
-    424
+    1007,
+    362,
+    1085,
+    380
    ]
   },
-  "fr_flamber_verb_sign": {
+  "fr_truffer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_flamber_verb",
-   "text": "flamber",
+   "for": "fr_truffer_verb",
+   "text": "truffer",
    "box": [
-    580,
-    251,
-    662,
-    277
+    154,
+    176,
+    226,
+    202
    ],
    "text_box": [
-    584,
-    255,
-    658,
-    273
-   ]
-  },
-  "fr_congeler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_congeler_verb",
-   "text": "congeler",
-   "box": [
-    27,
-    168,
-    117,
-    194
-   ],
-   "text_box": [
-    31,
-    172,
-    113,
-    190
-   ]
-  },
-  "fr_surgeler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_surgeler_verb",
-   "text": "surgeler",
-   "box": [
-    402,
-    85,
-    490,
-    111
-   ],
-   "text_box": [
-    406,
-    89,
-    486,
-    107
-   ]
-  },
-  "fr_rotir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rotir_verb",
-   "text": "rôtir",
-   "box": [
-    1055,
-    210,
-    1109,
-    236
-   ],
-   "text_box": [
-    1059,
-    214,
-    1105,
-    232
+    158,
+    180,
+    222,
+    198
    ]
   },
   "dir_forward": {
    "role": "direction",
    "for_exit": "forward",
-   "text": "Rue des Saveurs →",
+   "text": "étape 5 →",
    "box": [
-    738,
-    366,
-    920,
-    394
+    1175,
+    8,
+    1274,
+    38
    ],
    "text_box": [
-    741,
-    369,
-    917,
-    391
+    1178,
+    11,
+    1271,
+    35
    ]
   },
   "dir_back": {
@@ -243,435 +192,404 @@
    "for_exit": "back",
    "text": "← étape 3",
    "box": [
-    0,
-    234,
+    6,
+    682,
     105,
-    262
+    712
    ],
    "text_box": [
-    3,
-    237,
+    9,
+    685,
     102,
-    259
+    709
    ]
   },
   "dir_side_er": {
    "role": "direction",
    "text": "-er",
    "box": [
-    444,
-    288,
-    491,
-    314
+    700,
+    70,
+    741,
+    100
    ],
    "text_box": [
-    447,
-    291,
-    488,
-    311
+    703,
+    73,
+    738,
+    97
    ]
   },
   "dir_side_irre": {
    "role": "direction",
    "text": "-ir / -re",
    "box": [
-    1140,
-    216,
-    1222,
-    242
+    1150,
+    52,
+    1226,
+    82
    ],
    "text_box": [
-    1143,
-    219,
-    1219,
-    239
+    1153,
+    55,
+    1223,
+    79
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Taste & season",
+   "box": [
+    560,
+    6,
+    816,
+    52
+   ],
+   "text_box": [
+    564,
+    10,
+    812,
+    48
    ]
   }
  },
  "items": [
   {
-   "id": "fr_remuer_verb",
-   "lemma": "remuer",
-   "gloss": "to stir; to move",
+   "id": "fr_gouter_verb",
+   "lemma": "goûter",
+   "gloss": "to taste, to try (food); (as a noun) the afternoon snack",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 1,
    "box": [
-    148,
-    414,
-    297,
-    700
+    31,
+    481,
+    188,
+    662
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "witch stirring a cauldron, cat mewing"
+   "scene": "a little girl tastes a spoonful of sticky goo beside her cup of tea"
   },
   {
-   "id": "fr_rechauffer_verb",
-   "lemma": "réchauffer",
-   "gloss": "to reheat, to warm up",
+   "id": "fr_deguster_verb",
+   "lemma": "déguster",
+   "gloss": "to savour, to taste slowly",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 2,
    "box": [
-    602,
-    434,
-    860,
-    648
+    219,
+    456,
+    404,
+    662
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "chauffeur reheating soup on his car engine"
+   "scene": "a lady savours a slice of tart, eyes closed, in a gusty wind"
   },
   {
-   "id": "fr_cuisiner_verb",
-   "lemma": "cuisiner",
-   "gloss": "to cook (make a meal)",
+   "id": "fr_savourer_verb",
+   "lemma": "savourer",
+   "gloss": "to savour, to enjoy slowly",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 3,
    "box": [
-    477,
-    453,
-    591,
-    648
+    406,
+    512,
+    594,
+    662
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "boy cooking at a little stove"
+   "scene": "a tortoise savours a big strawberry"
   },
   {
-   "id": "fr_saurer_verb",
-   "lemma": "saurer",
-   "gloss": "to smoke (fish or meat)",
+   "id": "fr_saler_verb",
+   "lemma": "saler",
+   "gloss": "to salt",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 4,
    "box": [
-    300,
-    393,
-    469,
-    672
+    600,
+    438,
+    794,
+    700
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "fisherman smoking a rack of silver herrings over a smoky fire"
+   "scene": "Sally the sailor salts a pot of potatoes with a giant shaker"
   },
   {
-   "id": "fr_cuire_verb",
-   "lemma": "cuire",
-   "gloss": "to cook (with heat)",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 9,
-   "box": [
-    862,
-    484,
-    1023,
-    656
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "choir of little chefs singing while they cook a pot"
-  },
-  {
-   "id": "fr_bouillir_verb",
-   "lemma": "bouillir",
-   "gloss": "to boil",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 10,
-   "box": [
-    1025,
-    440,
-    1250,
-    680
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "pot boiling over in a giant pan"
-  },
-  {
-   "id": "fr_griller_verb",
-   "lemma": "griller",
-   "gloss": "to grill; to toast",
+   "id": "fr_sucrer_verb",
+   "lemma": "sucrer",
+   "gloss": "to sweeten, to add sugar",
    "verb_group": 1,
    "side": "left",
    "tier": "balcony",
    "level": "balcony",
    "order": 5,
    "box": [
-    140,
-    211,
-    352,
-    391
+    112,
+    269,
+    356,
+    381
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "cowboy on the balcony grilling sausages"
+   "scene": "Sue drops sugar cubes into a red crayfish's tea"
   },
   {
-   "id": "fr_frire_verb",
-   "lemma": "frire",
-   "gloss": "to fry",
-   "verb_group": 3,
-   "side": "right",
+   "id": "fr_epicer_verb",
+   "lemma": "épicer",
+   "gloss": "to spice, to season",
+   "verb_group": 1,
+   "side": "left",
    "tier": "balcony",
    "level": "balcony",
-   "order": 11,
-   "box": [
-    934,
-    250,
-    1102,
-    398
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "robot frying chips in a sizzling pan"
-  },
-  {
-   "id": "fr_flamber_verb",
-   "lemma": "flamber",
-   "gloss": "to flambé, to set alight",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
    "order": 6,
    "box": [
-    562,
-    117,
-    680,
-    247
+    469,
+    244,
+    731,
+    419
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "boy flambéing a pan at the roof dormer"
+   "scene": "a green pea beside a cook spicing a curry pot"
   },
   {
-   "id": "fr_congeler_verb",
-   "lemma": "congeler",
-   "gloss": "to freeze",
+   "id": "fr_ailler_verb",
+   "lemma": "ailler",
+   "gloss": "to flavour with garlic",
    "verb_group": 1,
    "side": "left",
-   "tier": "roof",
-   "level": "roof",
+   "tier": "upper",
+   "level": "upper",
    "order": 7,
    "box": [
-    55,
-    39,
-    209,
-    164
+    325,
+    125,
+    506,
+    242
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "penguin beside a pot of soup frozen solid into an ice block"
+   "scene": "a pirate cheers with a garlic bulb, rubbing garlic on his toast"
   },
   {
-   "id": "fr_surgeler_verb",
-   "lemma": "surgeler",
-   "gloss": "to deep-freeze",
+   "id": "fr_farcir_verb",
+   "lemma": "farcir",
+   "gloss": "to stuff (with a filling)",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 9,
+   "box": [
+    981,
+    231,
+    1112,
+    388
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se farcir",
+   "scene": "a stargazer with a telescope stuffs tomatoes with rice, checking herself in a hand mirror (mirror = reflexive)",
+   "mirror": "painted inside the item box"
+  },
+  {
+   "id": "fr_truffer_verb",
+   "lemma": "truffer",
+   "gloss": "to add truffles to; to pack, to fill (with)",
    "verb_group": 1,
    "side": "left",
    "tier": "roof",
    "level": "roof",
    "order": 8,
    "box": [
-    211,
-    8,
-    398,
-    188
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "snowman on a deep-freezer chest, frost spilling over"
-  },
-  {
-   "id": "fr_rotir_verb",
-   "lemma": "rôtir",
-   "gloss": "to roast",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "roof",
-   "level": "roof",
-   "order": 12,
-   "box": [
-    1016,
-    75,
-    1148,
+    106,
+    6,
+    275,
     206
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "chicken turning on a rotisserie in an open roof hatch"
+   "scene": "a fairy on the roof sprinkles black truffles on an omelette"
   }
  ],
  "exits": {
   "forward": {
-   "target": "S04_sector",
+   "target": "ST_cooking_seg005",
    "box": [
-    738,
-    366,
-    920,
-    394
+    1175,
+    8,
+    1274,
+    38
    ],
-   "label": "next: Rue des Saveurs (square)",
-   "name": "Rue des Saveurs (square)",
+   "label": "next: Ruelle des Gourmets — étape 5",
+   "name": "Ruelle des Gourmets — étape 5",
    "kind": "street",
    "polygon": [
     [
-     470,
-     332
+     922,
+     0
     ],
     [
-     470,
-     365
+     922,
+     52
     ],
     [
-     470,
-     393
+     1226,
+     52
     ],
     [
-     470,
-     433
+     1226,
+     82
     ],
     [
-     826,
-     433
+     922,
+     82
     ],
     [
-     826,
-     394
+     922,
+     231
     ],
     [
-     826,
-     393
+     1112,
+     231
     ],
     [
-     919,
-     393
+     1112,
+     388
     ],
     [
-     919,
-     366
+     922,
+     388
     ],
     [
-     826,
-     366
+     922,
+     720
     ],
     [
-     826,
-     332
+     1280,
+     720
+    ],
+    [
+     1280,
+     0
     ]
    ]
   },
   "back": {
    "target": "ST_cooking_seg003",
    "box": [
-    0,
-    234,
+    6,
+    682,
     105,
-    262
+    712
    ],
    "label": "back: Ruelle des Gourmets — étape 3",
    "name": "Ruelle des Gourmets — étape 3",
    "kind": "street",
    "polygon": [
     [
-     0,
-     200
+     358,
+     0
+    ],
+    [
+     358,
+     6
+    ],
+    [
+     106,
+     6
+    ],
+    [
+     106,
+     206
+    ],
+    [
+     325,
+     206
+    ],
+    [
+     325,
+     242
+    ],
+    [
+     358,
+     242
+    ],
+    [
+     358,
+     269
+    ],
+    [
+     112,
+     269
+    ],
+    [
+     112,
+     381
+    ],
+    [
+     358,
+     381
+    ],
+    [
+     358,
+     456
+    ],
+    [
+     219,
+     456
+    ],
+    [
+     219,
+     481
+    ],
+    [
+     31,
+     481
+    ],
+    [
+     31,
+     662
+    ],
+    [
+     358,
+     662
+    ],
+    [
+     358,
+     720
     ],
     [
      0,
-     210
+     720
     ],
     [
      0,
-     390
-    ],
-    [
-     0,
-     413
-    ],
-    [
-     0,
-     699
-    ],
-    [
-     0,
-     719
-    ],
-    [
-     191,
-     719
-    ],
-    [
-     191,
-     700
-    ],
-    [
-     147,
-     700
-    ],
-    [
-     147,
-     414
-    ],
-    [
-     147,
-     413
-    ],
-    [
-     191,
-     413
-    ],
-    [
-     191,
-     391
-    ],
-    [
-     139,
-     391
-    ],
-    [
-     139,
-     211
-    ],
-    [
-     139,
-     210
-    ],
-    [
-     191,
-     210
-    ],
-    [
-     191,
-     200
+     0
     ]
    ]
   }

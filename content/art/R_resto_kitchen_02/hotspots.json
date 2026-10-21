@@ -2,27 +2,46 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 640,
+ "divider_x": 684,
  "kind": "room",
- "note": "Round 2 repaint (white tiles instead of peach walls; staircase + back door added). One box per item.",
+ "note": "Fit-audit repaint 2026-10-21 (hook standard v2): each figure acts out its word's new hook (sound cue + meaning). The white pillar splits the room: feminine words left, masculine words and adjectives right. One box per item.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    446,
-    31,
-    820,
-    148
+    531,
+    38,
+    740,
+    110
    ],
    "text_box": [
-    472,
-    48,
-    795,
-    132
+    550,
+    50,
+    725,
+    98
    ]
   }
  },
  "items": [
+  {
+   "id": "fr_puree_noun",
+   "lemma": "purée",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la purée",
+   "box": [
+    62,
+    130,
+    249,
+    332
+   ],
+   "label_xy": [
+    156,
+    322
+   ],
+   "scene": "A grey stingray (RAY) turns up its nose, 'PEW!' (pew-RAY), beside a bowl of MASHED POTATO."
+  },
   {
    "id": "fr_moutarde_noun",
    "lemma": "moutarde",
@@ -31,11 +50,16 @@
    "side": "left",
    "label": "la moutarde",
    "box": [
-    44,
-    86,
-    133,
-    184
-   ]
+    253,
+    125,
+    435,
+    325
+   ],
+   "label_xy": [
+    344,
+    315
+   ],
+   "scene": "A cow says 'MOO' over a TART (moo-TAHRD) smeared thickly with yellow MUSTARD."
   },
   {
    "id": "fr_vanille_noun",
@@ -45,53 +69,16 @@
    "side": "left",
    "label": "la vanille",
    "box": [
-    153,
-    50,
-    281,
-    200
-   ]
-  },
-  {
-   "id": "fr_puree_noun",
-   "lemma": "purée",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la purée",
-   "box": [
-    19,
-    289,
-    153,
-    375
-   ]
-  },
-  {
-   "id": "fr_salsa_noun",
-   "lemma": "salsa",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la salsa",
-   "box": [
-    31,
-    377,
-    175,
-    461
-   ]
-  },
-  {
-   "id": "fr_bouillabaisse_noun",
-   "lemma": "bouillabaisse",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la bouillabaisse",
-   "box": [
-    8,
-    469,
-    266,
-    640
-   ]
+    439,
+    118,
+    648,
+    322
+   ],
+   "label_xy": [
+    544,
+    312
+   ],
+   "scene": "Like English 'vanilla' but said vah-NEEY (no final 'a'): a girl sniffs a dark VANILLA pod beside a scoop of ice cream."
   },
   {
    "id": "fr_cuisson_noun",
@@ -101,40 +88,73 @@
    "side": "left",
    "label": "la cuisson",
    "box": [
-    312,
-    178,
-    610,
+    0,
+    345,
+    209,
+    650
+   ],
+   "label_xy": [
+    104,
+    640
+   ],
+   "scene": "A quizmaster rabbit rings a buzzer, 'QUIZ ON!' (kwee-SOHN), while timing the COOKING of a roast with an egg timer."
+  },
+  {
+   "id": "fr_salsa_noun",
+   "lemma": "salsa",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la salsa",
+   "box": [
+    213,
+    430,
+    354,
+    632
+   ],
+   "label_xy": [
+    284,
+    622
+   ],
+   "scene": "Same as English 'salsa' (stress at the end, sahl-SAH): two tomatoes dance a twirl beside a bowl of chunky SALSA."
+  },
+  {
+   "id": "fr_bouillabaisse_noun",
+   "lemma": "bouillabaisse",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la bouillabaisse",
+   "box": [
+    358,
+    350,
+    504,
+    675
+   ],
+   "label_xy": [
+    431,
+    665
+   ],
+   "scene": "Same as English 'bouillabaisse' (said boo-yah-BEHS): a fisherwoman stirs a big pot of FISH STEW with a crab peeping over the rim."
+  },
+  {
+   "id": "fr_gastronomie_noun",
+   "lemma": "gastronomie",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la gastronomie",
+   "box": [
+    508,
+    330,
+    662,
     625
    ],
-   "scene": "chef checks the doneness of a steak with a thermometer"
-  },
-  {
-   "id": "fr_barbecue_noun",
-   "lemma": "barbecue",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le barbecue",
-   "box": [
-    680,
-    320,
-    862,
-    430
-   ]
-  },
-  {
-   "id": "fr_ingredient_noun",
-   "lemma": "ingrédient",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'ingrédient",
-   "box": [
-    735,
-    435,
-    1044,
-    586
-   ]
+   "label_xy": [
+    585,
+    615
+   ],
+   "scene": "Same as English 'gastronomy' (said gahs-troh-noh-MEE): an old chef with a medal carries a tall tower of FINE FRENCH DISHES."
   },
   {
    "id": "fr_preparatif_noun",
@@ -144,51 +164,83 @@
    "side": "right",
    "label": "le préparatif",
    "box": [
-    648,
-    594,
-    992,
-    690
-   ]
-  },
-  {
-   "id": "fr_chauffage_noun",
-   "lemma": "chauffage",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le chauffage",
-   "box": [
-    890,
-    133,
-    1235,
-    432
+    744,
+    62,
+    1068,
+    249
    ],
-   "scene": "chauffeur warming his hands at the radiator"
+   "label_xy": [
+    906,
+    239
+   ],
+   "scene": "Like English 'preparations' but said pray-pah-rah-TEEF: a busy grandpa ticks off a long list of PARTY PREPARATIONS, candles and plates."
   },
   {
-   "id": "fr_deboire_noun",
-   "lemma": "déboire",
+   "id": "fr_barbecue_noun",
+   "lemma": "barbecue",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le déboire",
+   "label": "le barbecue",
    "box": [
-    1044,
-    445,
-    1280,
+    725,
+    253,
+    1038,
+    425
+   ],
+   "label_xy": [
+    882,
+    415
+   ],
+   "scene": "Same as English 'barbecue' (said bahr-buh-KYOO): a grandma in a striped apron flips sausages on a smoking BARBECUE."
+  },
+  {
+   "id": "fr_ingredient_noun",
+   "lemma": "ingrédient",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'ingrédient",
+   "box": [
+    722,
+    428,
+    1085,
+    577
+   ],
+   "label_xy": [
+    904,
+    567
+   ],
+   "scene": "Same as English 'ingredient' (said an-gray-DYAHN): a fox lines up eggs, flour and butter, the INGREDIENTS for a cake."
+  },
+  {
+   "id": "fr_gastronomique_adj",
+   "lemma": "gastronomique",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "gastronomique",
+   "box": [
+    869,
+    581,
+    1012,
+    705
+   ],
+   "label_xy": [
+    940,
     695
    ],
-   "scene": "boar biting a sour crab apple"
+   "scene": "Same as English 'gastronomic', ending MEEK: a MEEK little mouse proudly presents a tiny GOURMET plate under a silver dome."
   }
  ],
  "links": [
   {
    "target": "R_resto_kitchen_01",
    "box": [
-    297,
-    23,
-    438,
-    175
+    1100,
+    441,
+    1280,
+    720
    ],
    "label": "Stairs down to the main kitchen",
    "name": "Restaurant Le Bon Goût — cuisine",
@@ -197,32 +249,14 @@
   {
    "target": "B09_restaurant",
    "box": [
-    844,
-    72,
-    888,
-    320
+    1162,
+    88,
+    1250,
+    437
    ],
    "label": "Back door: outside stair to the street",
    "name": "Restaurant Le Bon Goût (outside)",
-   "kind": "exit",
-   "polygon": [
-    [
-     820,
-     56
-    ],
-    [
-     888,
-     56
-    ],
-    [
-     888,
-     320
-    ],
-    [
-     820,
-     320
-    ]
-   ]
+   "kind": "exit"
   }
  ]
 }

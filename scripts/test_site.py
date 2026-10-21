@@ -43,6 +43,9 @@ S04_BACK = {
     "ST_cooking_seg002": "ST_cooking",
     "ST_cooking_seg003": "ST_cooking",
     "ST_cooking_seg004": "ST_cooking",
+    "ST_cooking_seg005": "ST_cooking",
+    "ST_cooking_seg006": "ST_cooking",
+    "ST_cooking_seg007": "ST_cooking",
 }
 
 
@@ -146,7 +149,8 @@ def assert_wide_passages():
     """Street continuations and doorways are big hit areas, not just their labels."""
     from hotspots import normalize_scene
 
-    for segment in ("ST_cooking_seg001", "ST_cooking_seg002", "ST_cooking_seg003", "ST_cooking_seg004"):
+    segments = tuple(f"ST_cooking_seg{index:03d}" for index in range(1, 8))
+    for segment in segments:
         raw = load(ROOT / "content" / "art" / segment / "hotspots.json")
         scene = normalize_scene(raw)
         items = scene["hotspots"]
@@ -156,7 +160,7 @@ def assert_wide_passages():
             assert polygon and len(polygon) >= 4, (segment, key)
             xs = [point[0] for point in polygon]
             ys = [point[1] for point in polygon]
-            assert max(xs) - min(xs) >= int(scene["width"] * 0.14), (segment, key, max(xs) - min(xs))
+            assert max(xs) - min(xs) >= int(scene["width"] * 0.15), (segment, key, max(xs) - min(xs))
             assert max(ys) - min(ys) >= 60, (segment, key)
             box = exit_item["box"]
             center = ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
@@ -172,12 +176,23 @@ def assert_wide_passages():
     assert street_width >= int(sector["width"] * 0.15)
     room = normalize_scene(load(ROOT / "content" / "art" / "R_resto_room" / "hotspots.json"))
     door = next(link for link in room["links"] if link["kind"] == "door")
-    arch = next(link for link in room["links"] if "rch" in link["label"])
-    assert door["polygon"][1][0] - door["polygon"][0][0] > door["box"][2] - door["box"][0]
-    assert arch["polygon"][1][0] - arch["polygon"][0][0] > arch["box"][2] - arch["box"][0]
+    arch = next(link for link in room["links"] if "rch" in link["label"].lower())
+    for opening in (door, arch):
+        box = opening["box"]
+        hit = opening.get("polygon") or [
+            [box[0], box[1]], [box[2], box[1]], [box[2], box[3]], [box[0], box[3]],
+        ]
+        width = max(point[0] for point in hit) - min(point[0] for point in hit)
+        height = max(point[1] for point in hit) - min(point[1] for point in hit)
+        assert min(width, height) >= 60 and width * height >= 8000, (opening["label"], width, height)
     client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
     assert 'polygon class="hit"' in client
     assert "hitShape(link)" in client and "hitShape(exit)" in client
+    assert "wordLabel(" in client
+    assert "Math.max(22, y0 - 6)" not in client
+    cafe = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_01" / "hotspots.json"))
+    labelled = next(hot for hot in cafe["hotspots"] if hot.get("label_xy"))
+    assert labelled["label_xy"][1] > labelled["box"][1]
 
 
 def assert_back_strip_stays_visible(client):
@@ -300,7 +315,8 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(nodes) == 1 + 16 + 84 + 845, len(nodes)
+    assert len(rooms) == 848, len(rooms)
+    assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
 
@@ -327,7 +343,7 @@ def main():
     sector = load(DATA / "sectors" / "S04_cafes.json")
     assert sector["open"] is True
     ids = [building["id"] for building in sector["buildings"]]
-    assert ids == ["B09_restaurant", "B08_cafe", "ST_cooking"], ids
+    assert ids == ["B08_cafe", "B09_restaurant", "ST_cooking"], ids
     assert sector["scene"]["image"].endswith("art/S04_sector/base.jpg")
     assert sector["scene"]["sign_text"] == "Rue des Saveurs"
     assert sector["description_fr"].startswith("La terrasse")
@@ -336,15 +352,16 @@ def main():
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
     assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
-    assert len(sector["alleys"]) == 4
+    assert len(sector["alleys"]) == 7
+    assert [alley["id"] for alley in sector["alleys"]] == [f"ST_cooking_seg{i:03d}" for i in range(1, 8)]
     assert sector["alleys"][0]["verbs"][0] == "manger"
     assert "nourrir" in sector["alleys"][0]["verbs"]
     assert "bannir" not in {verb for alley in sector["alleys"] for verb in alley["verbs"]}
 
     street = next(building for building in sector["buildings"] if building["id"] == "ST_cooking")
     segments = [room["id"] for room in street["floors"][0]["rooms"]]
-    assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 5)], segments
-    assert [room["chip"] for room in street["floors"][0]["rooms"]] == ["1", "2", "3", "4"]
+    assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 8)], segments
+    assert [room["chip"] for room in street["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
     assert "ST_cooking" not in sector["walk"]
     assert not any(room_id.startswith("ST_cooking") for room_id in sector["walk"])
 
@@ -368,13 +385,14 @@ def main():
     assert upstairs["sign"] == "L'étage"
     assert upstairs["scene"]["placeholder"] is False
     assert not upstairs["scene"].get("plaque_text")
-    assert len(upstairs["words"]) == 12
-    troc = next(word for word in upstairs["words"] if word["id"] == "fr_troc_noun")
-    assert troc["mnemonic_explain"] and troc["gender"] == "m" and troc["head"] == "le troc"
-    troc_hits = [hot for hot in upstairs["scene"]["hotspots"] if hot.get("word_id") == "fr_troc_noun" and not hot.get("helper")]
-    assert len(troc_hits) == 1
-    assert troc["example_fr"] and troc["example_en"]
-    assert "flelex_freq" not in troc and "cefr_flelex" not in troc
+    assert len(upstairs["words"]) == 9
+    barman = next(word for word in upstairs["words"] if word["id"] == "fr_barman_noun")
+    assert barman["mnemonic_explain"] and barman["gender"] == "m" and barman["head"] == "le barman"
+    barman_hits = [hot for hot in upstairs["scene"]["hotspots"] if hot.get("word_id") == "fr_barman_noun" and not hot.get("helper")]
+    assert len(barman_hits) == 1
+    assert barman_hits[0]["label_xy"][1] >= barman_hits[0]["box"][1]
+    assert barman["example_fr"] and barman["example_en"]
+    assert "flelex_freq" not in barman and "cefr_flelex" not in barman
 
     dining = load(DATA / "rooms" / "R_resto_room.json")
     zoom = next(hot for hot in dining["scene"]["hotspots"] if hot.get("zoom_id") == "R_resto_room_z1")
@@ -392,7 +410,7 @@ def main():
 
     seg = load(DATA / "rooms" / "ST_cooking_seg001.json")
     lemmas = {word["lemma"] for word in seg["words"]}
-    assert "manger" in lemmas and "nourrir" in lemmas and "servir" in lemmas
+    assert "manger" in lemmas and "nourrir" in lemmas and "servir" not in lemmas
     assert seg["scene"]["layout"] == "tiered"
     assert seg["scene"]["exits"]["back"]["target"] == "S04_sector"
     assert seg["scene"]["exits"]["forward"]["target"] == "ST_cooking_seg002"
@@ -402,9 +420,7 @@ def main():
     assert areas["dir_forward"]["role"] == "direction" and areas["dir_forward"]["text"] == "étape 2 →"
     assert areas["dir_side_er"]["text"] == "-er"
     assert areas["dir_side_irre"]["text"] == "-ir / -re"
-    assert areas["fr_servir_verb_sign"]["role"] == "verb_sign"
-    assert areas["fr_servir_verb_sign"]["text"] == "servir (à / de)"
-    assert "fr_servir_verb_plaque" not in areas
+    assert "fr_servir_verb_sign" not in areas
     raw_items = load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json")["items"]
     for item in raw_items:
         hits = [hot for hot in seg["scene"]["hotspots"] if hot.get("word_id") == item["id"] and not hot.get("helper")]
@@ -416,7 +432,10 @@ def main():
     assert seg["conversation"]["lines"] and seg["conversation"]["lines"][0]["fr"]
     assert seg["prev"] is None and seg["next"] is None
     assert not any(str(item["id"]).startswith("ST_") for item in seg["related"])
-    servir = next(word for word in seg["words"] if word["lemma"] == "servir")
+    snack = load(DATA / "rooms" / "ST_cooking_seg002.json")
+    servir = next(word for word in snack["words"] if word["lemma"] == "servir")
+    assert snack["scene"]["text_areas"]["fr_servir_verb_sign"]["text"] == "servir (à / de)"
+    assert "fr_servir_verb_plaque" not in snack["scene"]["text_areas"]
     assert servir["prepositions"] == ["à", "de"]
     assert servir["conjugations"]["present"][0] == "je sers"
     assert servir["conjugations"]["participe_passe"] == "servi"
@@ -425,28 +444,29 @@ def main():
     assert servir["conjugations"]["imperatif"] == ["sers", "servons", "servez"]
     assert servir["example_fr"] and servir["example_en"]
 
-    last = load(DATA / "rooms" / "ST_cooking_seg004.json")
+    last = load(DATA / "rooms" / "ST_cooking_seg007.json")
     assert last["sign"] == "Ruelle des Gourmets"
-    assert last["name_fr"] == "Étape 4 · Cuire et frire"
+    assert last["name_fr"] == "Étape 7 · Cuire et rôtir"
     assert last["scene"]["layout"] == "tiered"
     assert last["scene"]["exits"]["forward"]["target"] == "S04_sector"
-    assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg003"
-    assert [room["chip"] for room in last["floors"][0]["rooms"]] == ["1", "2", "3", "4"]
+    assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg006"
+    assert [room["chip"] for room in last["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
     assert not any(hot.get("mirror") or hot.get("helper") for hot in last["scene"]["hotspots"])
     assert not (DATA / "rooms" / "ST_cooking_seg011.json").exists()
-    assert not (DATA / "rooms" / "ST_cooking_seg005.json").exists()
+    assert (DATA / "rooms" / "ST_cooking_seg005.json").exists()
     assert not (ROOT / "content" / "art" / "ST_cooking_seg011").exists()
 
     wine = load(DATA / "rooms" / "R_wine_01.json")
     cave = next(word for word in wine["words"] if word["lemma"] == "cave")
     assert cave["cognate_type"] == "false_cognate"
     assert cave["false_cognate_note"]
-    assert len(wine["words"]) == 15
+    assert len(wine["words"]) == 16
     assert all(word["lemma"] not in {"whisky", "rhum", "cognac", "cigare"} for word in wine["words"])
     assert all(word["painted"] for word in wine["words"])
     zoom_wine = load(DATA / "rooms" / "R_wine_01_z1.json")
     assert zoom_wine["parent"]["id"] == "R_wine_01"
-    assert len(zoom_wine["words"]) == 10
+    assert zoom_wine["parent"]["name_fr"] == "La cave"
+    assert len(zoom_wine["words"]) == 8
     for lemma in ("whisky", "rhum", "cognac", "cigare"):
         drawn = next(word for word in zoom_wine["words"] if word["lemma"] == lemma)
         assert drawn["painted"] is True, lemma
@@ -455,7 +475,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 12, room_files
+    assert len(room_files) == 15, room_files
     assert not (DATA / "rooms" / "R_greet.json").exists()
     quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
     seen = []
@@ -554,8 +574,9 @@ def finish(quiz):
     assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()
 
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))
-    assert len(delivered["hotspots"]) == 12
-    assert delivered["hotspots"][0]["word_id"] == "fr_tuilerie_noun"
+    assert len(delivered["hotspots"]) == 9
+    assert delivered["hotspots"][0]["word_id"] == "fr_carafe_noun"
+    assert delivered["hotspots"][0]["label_xy"]
 
     shown = []
     for path in (DATA / "rooms").glob("*.json"):
@@ -566,8 +587,14 @@ def finish(quiz):
         shown.append(conv["id"])
     source_conv = load(ROOT / "data" / "source" / "conversations.json")["conversations"]
     hidden = [item["id"] for item in source_conv if item.get("status") != "written"]
-    assert shown and not hidden
-    assert len(source_conv) == 721
+    assert shown and hidden
+    assert not set(shown) & set(hidden)
+    assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
+    assert len(source_conv) == 722
+    assert len(hidden) == 10
+    vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
+    assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a COKE bottle ("KOK") and crows at dawn.'
     print("ok", len(quiz["items"]), "quiz items;", len(scene["hotspots"]), "church hotspots")
 
 

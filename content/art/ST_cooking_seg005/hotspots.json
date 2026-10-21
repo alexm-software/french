@@ -1,0 +1,605 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg005",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "name": "Ruelle des Gourmets — étape 5 · Cut & knead",
+ "divider_x": 870,
+ "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
+ "tier_counts": {
+  "street": 4,
+  "balcony": 2,
+  "upper": 2,
+  "roof": 1
+ },
+ "text_areas": {
+  "fr_couper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_couper_verb",
+   "text": "couper",
+   "box": [
+    87,
+    595,
+    163,
+    621
+   ],
+   "text_box": [
+    91,
+    599,
+    159,
+    617
+   ]
+  },
+  "fr_tailler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tailler_verb",
+   "text": "tailler",
+   "box": [
+    297,
+    601,
+    365,
+    627
+   ],
+   "text_box": [
+    301,
+    605,
+    361,
+    623
+   ]
+  },
+  "fr_trancher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_trancher_verb",
+   "text": "trancher",
+   "box": [
+    501,
+    608,
+    591,
+    634
+   ],
+   "text_box": [
+    505,
+    612,
+    587,
+    630
+   ]
+  },
+  "fr_decouper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decouper_verb",
+   "text": "découper",
+   "box": [
+    680,
+    614,
+    776,
+    640
+   ],
+   "text_box": [
+    684,
+    618,
+    772,
+    636
+   ]
+  },
+  "fr_entamer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_entamer_verb",
+   "text": "entamer",
+   "box": [
+    223,
+    395,
+    311,
+    421
+   ],
+   "text_box": [
+    227,
+    399,
+    307,
+    417
+   ]
+  },
+  "fr_eplucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_eplucher_verb",
+   "text": "éplucher",
+   "box": [
+    636,
+    420,
+    726,
+    446
+   ],
+   "text_box": [
+    640,
+    424,
+    722,
+    442
+   ]
+  },
+  "fr_aiguiser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_aiguiser_verb",
+   "text": "aiguiser",
+   "box": [
+    554,
+    270,
+    640,
+    296
+   ],
+   "text_box": [
+    558,
+    274,
+    636,
+    292
+   ]
+  },
+  "fr_petrir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_petrir_verb",
+   "text": "pétrir",
+   "box": [
+    1045,
+    301,
+    1111,
+    327
+   ],
+   "text_box": [
+    1049,
+    305,
+    1107,
+    323
+   ]
+  },
+  "fr_ciseler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ciseler_verb",
+   "text": "ciseler",
+   "box": [
+    298,
+    170,
+    370,
+    196
+   ],
+   "text_box": [
+    302,
+    174,
+    366,
+    192
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 6 →",
+   "box": [
+    1175,
+    8,
+    1274,
+    38
+   ],
+   "text_box": [
+    1178,
+    11,
+    1271,
+    35
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 4",
+   "box": [
+    6,
+    6,
+    105,
+    36
+   ],
+   "text_box": [
+    9,
+    9,
+    102,
+    33
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    6,
+    48,
+    47,
+    78
+   ],
+   "text_box": [
+    9,
+    51,
+    44,
+    75
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1198,
+    48,
+    1274,
+    78
+   ],
+   "text_box": [
+    1201,
+    51,
+    1271,
+    75
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Cut & knead",
+   "box": [
+    762,
+    4,
+    978,
+    50
+   ],
+   "text_box": [
+    766,
+    8,
+    974,
+    46
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_couper_verb",
+   "lemma": "couper",
+   "gloss": "to cut",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    12,
+    456,
+    238,
+    625
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a pigeon offers a coin while the baker cuts its baguette in two"
+  },
+  {
+   "id": "fr_tailler_verb",
+   "lemma": "tailler",
+   "gloss": "to cut, to trim, to prune",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    262,
+    469,
+    400,
+    631
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a gardener in a red bow tie trims a hedge into a bow-tie shape"
+  },
+  {
+   "id": "fr_trancher_verb",
+   "lemma": "trancher",
+   "gloss": "to slice; to settle (a question)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    481,
+    475,
+    612,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a miner mole in a trench slices a round cheese into wedges"
+  },
+  {
+   "id": "fr_decouper_verb",
+   "lemma": "découper",
+   "gloss": "to cut up, to carve; to cut out",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    650,
+    469,
+    806,
+    644
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a girl cuts out paper stars with big scissors"
+  },
+  {
+   "id": "fr_entamer_verb",
+   "lemma": "entamer",
+   "gloss": "to start on, to cut into (a loaf, a cake)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 5,
+   "box": [
+    112,
+    269,
+    422,
+    425
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "an ant tamer in a circus jacket cuts into a fresh loaf while his ants watch"
+  },
+  {
+   "id": "fr_eplucher_verb",
+   "lemma": "éplucher",
+   "gloss": "to peel; to go through with a fine-tooth comb",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    619,
+    302,
+    744,
+    450
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a plush teddy peels a long ribbon of potato skin"
+  },
+  {
+   "id": "fr_aiguiser_verb",
+   "lemma": "aiguiser",
+   "gloss": "to sharpen",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 7,
+   "box": [
+    425,
+    150,
+    769,
+    300
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a man sharpens a knife on a whetstone, sparks flying, a geyser spouting behind him"
+  },
+  {
+   "id": "fr_petrir_verb",
+   "lemma": "pétrir",
+   "gloss": "to knead",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 9,
+   "box": [
+    962,
+    119,
+    1194,
+    331
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a baker kneads dough on a pear-tree stump"
+  },
+  {
+   "id": "fr_ciseler_verb",
+   "lemma": "ciseler",
+   "gloss": "to chisel; to chop finely (herbs)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 8,
+   "box": [
+    250,
+    62,
+    419,
+    200
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a gnome chops herbs finely with tiny scissors on the roof"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_cooking_seg006",
+   "box": [
+    1175,
+    8,
+    1274,
+    38
+   ],
+   "label": "next: Ruelle des Gourmets — étape 6",
+   "name": "Ruelle des Gourmets — étape 6",
+   "kind": "street",
+   "polygon": [
+    [
+     922,
+     0
+    ],
+    [
+     922,
+     4
+    ],
+    [
+     978,
+     4
+    ],
+    [
+     978,
+     48
+    ],
+    [
+     1274,
+     48
+    ],
+    [
+     1274,
+     78
+    ],
+    [
+     922,
+     78
+    ],
+    [
+     922,
+     119
+    ],
+    [
+     1194,
+     119
+    ],
+    [
+     1194,
+     331
+    ],
+    [
+     922,
+     331
+    ],
+    [
+     922,
+     720
+    ],
+    [
+     1280,
+     720
+    ],
+    [
+     1280,
+     0
+    ]
+   ]
+  },
+  "back": {
+   "target": "ST_cooking_seg004",
+   "box": [
+    6,
+    6,
+    105,
+    36
+   ],
+   "label": "back: Ruelle des Gourmets — étape 4",
+   "name": "Ruelle des Gourmets — étape 4",
+   "kind": "street",
+   "polygon": [
+    [
+     358,
+     0
+    ],
+    [
+     358,
+     48
+    ],
+    [
+     6,
+     48
+    ],
+    [
+     6,
+     78
+    ],
+    [
+     250,
+     78
+    ],
+    [
+     250,
+     200
+    ],
+    [
+     358,
+     200
+    ],
+    [
+     358,
+     269
+    ],
+    [
+     112,
+     269
+    ],
+    [
+     112,
+     425
+    ],
+    [
+     358,
+     425
+    ],
+    [
+     358,
+     456
+    ],
+    [
+     12,
+     456
+    ],
+    [
+     12,
+     625
+    ],
+    [
+     262,
+     625
+    ],
+    [
+     262,
+     631
+    ],
+    [
+     358,
+     631
+    ],
+    [
+     358,
+     720
+    ],
+    [
+     0,
+     720
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  }
+ },
+ "links": []
+}

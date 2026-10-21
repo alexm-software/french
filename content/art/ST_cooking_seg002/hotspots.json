@@ -7,303 +7,167 @@
  "sector_id": "S04_cafes",
  "kind": "verb_place",
  "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 2 · taste, fill, drink",
- "divider_x": 905,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, direction signs (forward / back arrows = the clickable exits, side markers -er / -ir / -re). Signs never sit on an item box.",
+ "name": "Ruelle des Gourmets — étape 2 · Snack & sit down",
+ "divider_x": 650,
+ "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
  "tier_counts": {
-  "street": 7,
-  "balcony": 4,
+  "street": 4,
+  "balcony": 2,
   "upper": 2,
-  "roof": 4
+  "roof": 1
  },
  "text_areas": {
-  "fr_gouter_verb_sign": {
+  "fr_croquer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_gouter_verb",
-   "text": "goûter",
+   "for": "fr_croquer_verb",
+   "text": "croquer",
    "box": [
-    63,
-    470,
-    137,
-    496
+    150,
+    651,
+    232,
+    677
    ],
    "text_box": [
-    67,
-    474,
-    133,
-    492
+    154,
+    655,
+    228,
+    673
    ]
   },
-  "fr_verser_verb_sign": {
+  "fr_engouffrer_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_verser_verb",
-   "text": "verser",
+   "for": "fr_engouffrer_verb",
+   "text": "engouffrer",
    "box": [
-    276,
-    400,
-    346,
-    426
+    419,
+    595,
+    525,
+    621
    ],
    "text_box": [
+    423,
+    599,
+    521,
+    617
+   ]
+  },
+  "fr_servir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_servir_verb",
+   "text": "servir (à / de)",
+   "box": [
+    724,
+    620,
+    856,
+    646
+   ],
+   "text_box": [
+    728,
+    624,
+    852,
+    642
+   ]
+  },
+  "fr_engloutir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_engloutir_verb",
+   "text": "engloutir",
+   "box": [
+    1009,
+    664,
+    1103,
+    690
+   ],
+   "text_box": [
+    1013,
+    668,
+    1099,
+    686
+   ]
+  },
+  "fr_grignoter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_grignoter_verb",
+   "text": "grignoter",
+   "box": [
+    61,
+    332,
+    157,
+    358
+   ],
+   "text_box": [
+    65,
+    336,
+    153,
+    354
+   ]
+  },
+  "fr_attabler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_attabler_verb",
+   "text": "s'attabler",
+   "box": [
+    507,
+    345,
+    605,
+    371
+   ],
+   "text_box": [
+    511,
+    349,
+    601,
+    367
+   ]
+  },
+  "fr_pique_niquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pique_niquer_verb",
+   "text": "pique-niquer",
+   "box": [
     280,
-    404,
-    342,
-    422
-   ]
-  },
-  "fr_consommer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_consommer_verb",
-   "text": "consommer",
-   "box": [
-    522,
-    690,
-    637,
-    716
+    326,
+    406,
+    352
    ],
    "text_box": [
-    526,
-    694,
-    633,
-    712
+    284,
+    330,
+    402,
+    348
    ]
   },
-  "fr_deguster_verb_sign": {
+  "fr_desservir_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_deguster_verb",
-   "text": "déguster",
+   "for": "fr_desservir_verb",
+   "text": "desservir",
    "box": [
-    642,
-    684,
-    735,
-    710
+    798,
+    282,
+    894,
+    308
    ],
    "text_box": [
-    646,
-    688,
-    731,
-    706
+    802,
+    286,
+    890,
+    304
    ]
   },
-  "fr_trinquer_verb_sign": {
+  "fr_rassasier_verb_sign": {
    "role": "verb_sign",
-   "for": "fr_trinquer_verb",
-   "text": "trinquer",
+   "for": "fr_rassasier_verb",
+   "text": "rassasier",
    "box": [
-    746,
-    684,
-    832,
-    710
+    287,
+    126,
+    381,
+    152
    ],
    "text_box": [
-    750,
-    688,
-    828,
-    706
-   ]
-  },
-  "fr_boire_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_boire_verb",
-   "text": "boire",
-   "box": [
-    972,
-    652,
-    1032,
-    678
-   ],
-   "text_box": [
-    976,
-    656,
-    1028,
-    674
-   ]
-  },
-  "fr_remplir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_remplir_verb",
-   "text": "remplir (de)",
-   "box": [
-    1080,
-    645,
-    1198,
-    671
-   ],
-   "text_box": [
-    1084,
-    649,
-    1194,
-    667
-   ]
-  },
-  "fr_savourer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_savourer_verb",
-   "text": "savourer",
-   "box": [
-    100,
-    426,
-    192,
-    452
-   ],
-   "text_box": [
-    104,
-    430,
-    188,
-    448
-   ]
-  },
-  "fr_saler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_saler_verb",
-   "text": "saler",
-   "box": [
-    408,
-    317,
-    466,
-    343
-   ],
-   "text_box": [
-    412,
-    321,
-    462,
-    339
-   ]
-  },
-  "fr_diluer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_diluer_verb",
-   "text": "diluer",
-   "box": [
-    748,
-    410,
-    814,
-    436
-   ],
-   "text_box": [
-    752,
-    414,
-    810,
-    432
-   ]
-  },
-  "fr_emplir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_emplir_verb",
-   "text": "s'emplir",
-   "box": [
-    980,
-    434,
-    1064,
-    460
-   ],
-   "text_box": [
-    984,
-    438,
-    1060,
-    456
-   ]
-  },
-  "fr_epicer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_epicer_verb",
-   "text": "épicer",
-   "box": [
-    161,
-    72,
-    231,
-    98
-   ],
-   "text_box": [
-    165,
-    76,
-    227,
-    94
-   ]
-  },
-  "fr_ailler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_ailler_verb",
-   "text": "ailler",
-   "box": [
-    404,
-    265,
-    465,
-    291
-   ],
-   "text_box": [
-    408,
-    269,
-    461,
-    287
-   ]
-  },
-  "fr_sucrer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_sucrer_verb",
-   "text": "sucrer",
-   "box": [
-    746,
-    215,
-    816,
-    241
-   ],
-   "text_box": [
-    750,
-    219,
-    812,
-    237
-   ]
-  },
-  "fr_truffer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_truffer_verb",
-   "text": "truffer",
-   "box": [
-    298,
-    160,
-    370,
-    186
-   ],
-   "text_box": [
-    302,
-    164,
-    366,
-    182
-   ]
-  },
-  "fr_desalterer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_desalterer_verb",
-   "text": "désaltérer",
-   "box": [
-    644,
-    6,
-    749,
-    32
-   ],
-   "text_box": [
-    648,
-    10,
-    745,
-    28
-   ]
-  },
-  "fr_farcir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_farcir_verb",
-   "text": "se farcir",
-   "box": [
-    1008,
-    231,
-    1094,
-    257
-   ],
-   "text_box": [
-    1012,
-    235,
-    1090,
-    253
+    291,
+    130,
+    377,
+    148
    ]
   },
   "dir_forward": {
@@ -311,16 +175,16 @@
    "for_exit": "forward",
    "text": "étape 3 →",
    "box": [
-    1164,
-    444,
-    1269,
-    472
+    1175,
+    8,
+    1274,
+    38
    ],
    "text_box": [
-    1167,
-    447,
-    1266,
-    469
+    1178,
+    11,
+    1271,
+    35
    ]
   },
   "dir_back": {
@@ -328,539 +192,399 @@
    "for_exit": "back",
    "text": "← étape 1",
    "box": [
-    18,
-    222,
-    123,
-    250
+    6,
+    6,
+    105,
+    36
    ],
    "text_box": [
-    21,
-    225,
-    120,
-    247
+    9,
+    9,
+    102,
+    33
    ]
   },
   "dir_side_er": {
    "role": "direction",
    "text": "-er",
    "box": [
-    378,
-    234,
-    425,
-    260
+    580,
+    8,
+    621,
+    38
    ],
    "text_box": [
-    381,
-    237,
-    422,
-    257
+    583,
+    11,
+    618,
+    35
    ]
   },
   "dir_side_irre": {
    "role": "direction",
    "text": "-ir / -re",
    "box": [
-    1170,
-    318,
-    1252,
-    344
+    690,
+    8,
+    766,
+    38
    ],
    "text_box": [
-    1173,
-    321,
-    1249,
-    341
+    693,
+    11,
+    763,
+    35
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Snack & sit down",
+   "box": [
+    985,
+    46,
+    1274,
+    92
+   ],
+   "text_box": [
+    989,
+    50,
+    1270,
+    88
    ]
   }
  },
  "items": [
   {
-   "id": "fr_gouter_verb",
-   "lemma": "goûter",
-   "gloss": "to taste, to try (food); (as a noun) the afternoon snack",
+   "id": "fr_croquer_verb",
+   "lemma": "croquer",
+   "gloss": "to crunch, to bite into",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 1,
    "box": [
-    8,
-    500,
-    193,
-    703
+    94,
+    419,
+    288,
+    681
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "children tasting a chocolate afternoon snack"
+   "scene": "a croquet player in white crunches into a red apple, mallet and ball beside him"
   },
   {
-   "id": "fr_verser_verb",
-   "lemma": "verser",
-   "gloss": "to pour",
+   "id": "fr_engouffrer_verb",
+   "lemma": "engouffrer",
+   "gloss": "to gobble up; to swallow up",
    "verb_group": 1,
    "side": "left",
    "tier": "street",
    "level": "street",
    "order": 2,
    "box": [
-    195,
-    430,
-    367,
-    703
+    400,
+    480,
+    545,
+    625
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "Versailles courtier pouring from a golden jug"
+   "scene": "a goofy dog gobbles a whole plate of sausages"
   },
   {
-   "id": "fr_consommer_verb",
-   "lemma": "consommer",
-   "gloss": "to consume; to have (food or drink); to use up",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    375,
-    497,
-    514,
-    695
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "bear consuming jars of honey"
-  },
-  {
-   "id": "fr_deguster_verb",
-   "lemma": "déguster",
-   "gloss": "to savour, to taste slowly",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 4,
-   "box": [
-    516,
-    497,
-    648,
-    672
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "old man savouring a spoonful of soup"
-  },
-  {
-   "id": "fr_trinquer_verb",
-   "lemma": "trinquer",
-   "gloss": "to clink glasses, to drink a toast",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 5,
-   "box": [
-    680,
-    477,
-    898,
-    680
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "two friends clinking glasses"
-  },
-  {
-   "id": "fr_boire_verb",
-   "lemma": "boire",
-   "gloss": "to drink",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 14,
-   "box": [
-    953,
-    469,
-    1052,
-    648
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boa drinking a giant milkshake through a straw"
-  },
-  {
-   "id": "fr_remplir_verb",
-   "lemma": "remplir",
-   "gloss": "to fill (up)",
+   "id": "fr_servir_verb",
+   "lemma": "servir",
+   "gloss": "to serve",
    "verb_group": 2,
    "side": "right",
    "tier": "street",
    "level": "street",
-   "order": 15,
+   "order": 7,
    "box": [
-    1055,
-    477,
-    1164,
-    641
+    719,
+    400,
+    862,
+    650
    ],
    "prepositions": [
+    "à",
     "de"
    ],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "child filling her bucket again at the pump"
+   "scene": "a butler bows and serves a cake on a silver tray"
   },
   {
-   "id": "fr_savourer_verb",
-   "lemma": "savourer",
-   "gloss": "to savour, to enjoy slowly",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 6,
-   "box": [
-    102,
-    258,
-    250,
-    422
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "lady savouring a sweet on her balcony"
-  },
-  {
-   "id": "fr_saler_verb",
-   "lemma": "saler",
-   "gloss": "to salt",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 7,
-   "box": [
-    453,
-    347,
-    601,
-    484
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "sailor salting a big pot"
-  },
-  {
-   "id": "fr_diluer_verb",
-   "lemma": "diluer",
-   "gloss": "to dilute, to water down",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 8,
-   "box": [
-    703,
-    273,
-    859,
-    406
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "girl diluting red juice with water"
-  },
-  {
-   "id": "fr_emplir_verb",
-   "lemma": "emplir",
-   "gloss": "to fill",
+   "id": "fr_engloutir_verb",
+   "lemma": "engloutir",
+   "gloss": "to gulp down, to swallow up",
    "verb_group": 2,
    "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 8,
+   "box": [
+    881,
+    406,
+    1231,
+    694
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a gluttonous whale in a tub swallows a basket of fish"
+  },
+  {
+   "id": "fr_grignoter_verb",
+   "lemma": "grignoter",
+   "gloss": "to nibble, to snack",
+   "verb_group": 1,
+   "side": "left",
    "tier": "balcony",
    "level": "balcony",
-   "order": 16,
+   "order": 3,
    "box": [
-    934,
-    266,
-    1110,
-    430
+    19,
+    256,
+    200,
+    362
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a mouse nibbles cheese aboard a little green yacht in a window-box pond"
+  },
+  {
+   "id": "fr_attabler_verb",
+   "lemma": "attabler",
+   "gloss": "to take a seat at the table",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    481,
+    244,
+    631,
+    375
    ],
    "prepositions": [],
    "reflexive": true,
-   "pronominal_form": "s'emplir",
-   "scene": "man filling an ample jug to the brim, mirror on the wall (s'emplir)",
+   "pronominal_form": "s'attabler",
+   "scene": "a goat sits at a little table with its napkin, checking it in a wall mirror (mirror = reflexive)",
    "mirror": "painted inside the item box"
   },
   {
-   "id": "fr_epicer_verb",
-   "lemma": "épicer",
-   "gloss": "to spice, to season",
+   "id": "fr_pique_niquer_verb",
+   "lemma": "pique-niquer",
+   "gloss": "to picnic, to have a picnic",
    "verb_group": 1,
    "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    256,
+    175,
+    431,
+    356
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a hedgehog family picnics on a red checked blanket in the raised centre window"
+  },
+  {
+   "id": "fr_desservir_verb",
+   "lemma": "desservir",
+   "gloss": "to clear (the table); to serve (a place, of a bus or train)",
+   "verb_group": 3,
+   "side": "right",
    "tier": "upper",
    "level": "upper",
    "order": 9,
    "box": [
-    133,
-    102,
-    260,
-    242
+    781,
+    156,
+    912,
+    312
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "man spicing a pot from the teapot-house window"
+   "scene": "a waitress with a gold medal clears the table, stacking plates sky-high"
   },
   {
-   "id": "fr_ailler_verb",
-   "lemma": "ailler",
-   "gloss": "to flavour with garlic",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 10,
-   "box": [
-    469,
-    226,
-    575,
-    330
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "man with garlic bulbs in the bottle-house window"
-  },
-  {
-   "id": "fr_sucrer_verb",
-   "lemma": "sucrer",
-   "gloss": "to sweeten, to add sugar",
+   "id": "fr_rassasier_verb",
+   "lemma": "rassasier",
+   "gloss": "to fill up, to satisfy (hunger)",
    "verb_group": 1,
    "side": "left",
    "tier": "roof",
    "level": "roof",
-   "order": 11,
+   "order": 6,
    "box": [
-    688,
-    39,
-    875,
-    211
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "girl dropping sugar lumps into her tea on the roof"
-  },
-  {
-   "id": "fr_truffer_verb",
-   "lemma": "truffer",
-   "gloss": "to add truffles to; to pack, to fill (with)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 12,
-   "box": [
-    262,
-    23,
-    406,
+    119,
+    19,
+    550,
     156
    ],
    "prepositions": [],
    "reflexive": false,
    "pronominal_form": null,
-   "scene": "pig snuffling a basket of truffles on the teapot roof"
-  },
-  {
-   "id": "fr_desalterer_verb",
-   "lemma": "désaltérer",
-   "gloss": "to quench (someone's) thirst",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 13,
-   "box": [
-    430,
-    12,
-    640,
-    206
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "sailor on the bottle-house top heating sea water in a big copper kettle and gulping a mug of it to quench his thirst"
-  },
-  {
-   "id": "fr_farcir_verb",
-   "lemma": "farcir",
-   "gloss": "to stuff (with a filling)",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "roof",
-   "level": "roof",
-   "order": 17,
-   "box": [
-    938,
-    31,
-    1164,
-    227
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "se farcir",
-   "scene": "laughing clown (farce) stuffing a turkey, mirror beside him (se farcir)",
-   "mirror": "painted inside the item box"
+   "scene": "three cheerleading ducks with pompoms round a full-up bear on the basket handle"
   }
  ],
  "exits": {
   "forward": {
    "target": "ST_cooking_seg003",
    "box": [
-    1164,
-    444,
-    1269,
-    472
+    1175,
+    8,
+    1274,
+    38
    ],
    "label": "next: Ruelle des Gourmets — étape 3",
    "name": "Ruelle des Gourmets — étape 3",
    "kind": "street",
    "polygon": [
     [
-     1111,
-     410
+     922,
+     0
     ],
     [
-     1111,
-     429
+     922,
+     46
     ],
     [
-     1111,
-     430
+     1274,
+     46
     ],
     [
-     1089,
-     430
+     1274,
+     92
     ],
     [
-     1089,
-     476
+     922,
+     92
     ],
     [
-     1165,
-     476
+     922,
+     406
     ],
     [
-     1165,
-     640
+     1231,
+     406
     ],
     [
-     1165,
-     641
+     1231,
+     694
     ],
     [
-     1089,
-     641
+     922,
+     694
     ],
     [
-     1089,
-     719
-    ],
-    [
-     1280,
-     719
+     922,
+     720
     ],
     [
      1280,
-     641
+     720
     ],
     [
      1280,
-     477
-    ],
-    [
-     1280,
-     430
-    ],
-    [
-     1280,
-     410
+     0
     ]
    ]
   },
   "back": {
    "target": "ST_cooking_seg001",
    "box": [
-    18,
-    222,
-    123,
-    250
+    6,
+    6,
+    105,
+    36
    ],
    "label": "back: Ruelle des Gourmets — étape 1",
    "name": "Ruelle des Gourmets — étape 1",
    "kind": "street",
    "polygon": [
     [
-     0,
-     188
+     358,
+     0
+    ],
+    [
+     358,
+     19
+    ],
+    [
+     119,
+     19
+    ],
+    [
+     119,
+     156
+    ],
+    [
+     358,
+     156
+    ],
+    [
+     358,
+     175
+    ],
+    [
+     256,
+     175
+    ],
+    [
+     256,
+     256
+    ],
+    [
+     19,
+     256
+    ],
+    [
+     19,
+     362
+    ],
+    [
+     358,
+     362
+    ],
+    [
+     358,
+     419
+    ],
+    [
+     94,
+     419
+    ],
+    [
+     94,
+     681
+    ],
+    [
+     358,
+     681
+    ],
+    [
+     358,
+     720
     ],
     [
      0,
-     241
+     720
     ],
     [
      0,
-     257
-    ],
-    [
-     0,
-     421
-    ],
-    [
-     0,
-     499
-    ],
-    [
-     191,
-     499
-    ],
-    [
-     191,
-     422
-    ],
-    [
-     101,
-     422
-    ],
-    [
-     101,
-     258
-    ],
-    [
-     101,
-     257
-    ],
-    [
-     191,
-     257
-    ],
-    [
-     191,
-     242
-    ],
-    [
-     132,
-     242
-    ],
-    [
-     132,
-     188
+     0
     ]
    ]
   }

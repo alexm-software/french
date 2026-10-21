@@ -2,86 +2,28 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": null,
+ "divider_x": 380,
  "kind": "zoom",
  "parent_room_id": "R_wine_01",
- "note": "Round 3 recompose: all words masculine, so the counter items fill the RIGHT two-thirds (x >= ~270); the left holds the sign and a small lamp niche. Corkscrew cork now bush-shaped (topiary). Data now matches: whisky/rhum/cognac/cigare pinned to this zoom in room_overrides.",
+ "note": "Fit-audit repaint 2026-10-21 (hook standard v2). Bottle-alcove close-up: all eight words are masculine and sit right of the divider; sign, bench and rope are setting on the left. One box per item; zoom_back bottom-left.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    97,
-    39,
-    508,
-    180
+    44,
+    50,
+    338,
+    265
    ],
    "text_box": [
-    125,
-    58,
-    480,
-    160
+    80,
+    90,
+    300,
+    230
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_alcoolisme_noun",
-   "lemma": "alcoolisme",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'alcoolisme",
-   "box": [
-    430,
-    216,
-    534,
-    320
-   ]
-  },
-  {
-   "id": "fr_embouteillage_noun",
-   "lemma": "embouteillage",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'embouteillage",
-   "box": [
-    578,
-    70,
-    805,
-    284
-   ],
-   "scene": "man in socks telling tales in a traffic jam"
-  },
-  {
-   "id": "fr_vignoble_noun",
-   "lemma": "vignoble",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le vignoble",
-   "box": [
-    841,
-    75,
-    1066,
-    292
-   ],
-   "scene": "noble lord in his vines"
-  },
-  {
-   "id": "fr_cidre_noun",
-   "lemma": "cidre",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cidre",
-   "box": [
-    269,
-    356,
-    445,
-    539
-   ]
-  },
   {
    "id": "fr_whisky_noun",
    "lemma": "whisky",
@@ -90,55 +32,16 @@
    "side": "right",
    "label": "le whisky",
    "box": [
-    456,
-    336,
-    581,
-    520
-   ]
-  },
-  {
-   "id": "fr_rhum_noun",
-   "lemma": "rhum",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le rhum",
-   "box": [
-    594,
-    331,
-    738,
-    516
+    469,
+    56,
+    603,
+    300
    ],
-   "scene": "rum bottle and small rum keg"
-  },
-  {
-   "id": "fr_cognac_noun",
-   "lemma": "cognac",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cognac",
-   "box": [
-    742,
-    344,
-    820,
-    503
-   ]
-  },
-  {
-   "id": "fr_tire_bouchon_noun",
-   "lemma": "tire-bouchon",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le tire-bouchon",
-   "box": [
-    852,
-    297,
-    950,
-    516
+   "label_xy": [
+    536,
+    290
    ],
-   "scene": "corkscrew with a bush-shaped cork"
+   "scene": "Same as English 'whisky' (said wees-KEE): an amber WHISKY bottle with a tartan ribbon."
   },
   {
    "id": "fr_cigare_noun",
@@ -148,11 +51,111 @@
    "side": "right",
    "label": "le cigare",
    "box": [
+    607,
+    94,
+    838,
+    319
+   ],
+   "label_xy": [
+    722,
+    309
+   ],
+   "scene": "Same as English 'cigar' (said see-GAHR): a fat CIGAR lies in an open cedar box, unlit."
+  },
+  {
+   "id": "fr_rhum_noun",
+   "lemma": "rhum",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le rhum",
+   "box": [
+    869,
+    44,
+    1043,
+    312
+   ],
+   "label_xy": [
     956,
-    383,
-    1106,
-    503
-   ]
+    302
+   ],
+   "scene": "Like English 'rum' but said ROM: a pirate parrot guards a small barrel of RUM."
+  },
+  {
+   "id": "fr_cognac_noun",
+   "lemma": "cognac",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cognac",
+   "box": [
+    1047,
+    138,
+    1230,
+    312
+   ],
+   "label_xy": [
+    1138,
+    302
+   ],
+   "scene": "Same as English 'cognac' (said koh-NYAHK): a round balloon glass of amber COGNAC by a candle."
+  },
+  {
+   "id": "fr_cidre_noun",
+   "lemma": "cidre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cidre",
+   "box": [
+    381,
+    356,
+    611,
+    612
+   ],
+   "label_xy": [
+    496,
+    602
+   ],
+   "scene": "Like English 'cider' but said SEEDR: red apples tumble from a basket beside a fizzy bottle of CIDER."
+  },
+  {
+   "id": "fr_vignoble_noun",
+   "lemma": "vignoble",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le vignoble",
+   "box": [
+    615,
+    369,
+    765,
+    619
+   ],
+   "label_xy": [
+    690,
+    609
+   ],
+   "scene": "A NOBLE little knight with a big V on his shield (vee-NYOBL) stands guard beside a painting of his hillside VINEYARD."
+  },
+  {
+   "id": "fr_tire_bouchon_noun",
+   "lemma": "tire-bouchon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le tire-bouchon",
+   "box": [
+    769,
+    400,
+    1003,
+    625
+   ],
+   "label_xy": [
+    886,
+    615
+   ],
+   "scene": "Literally 'pull-cork' (teer-boo-SHOHN): a little mouse leans back and TUGS a CORKSCREW until the cork pops free."
   },
   {
    "id": "fr_gourmet_noun",
@@ -162,12 +165,16 @@
    "side": "right",
    "label": "le gourmet",
    "box": [
-    1070,
-    184,
-    1258,
-    380
+    1007,
+    362,
+    1262,
+    637
    ],
-   "scene": "gourmet sniffing red wine"
+   "label_xy": [
+    1134,
+    627
+   ],
+   "scene": "Same as English 'gourmet' (said goor-MEH): a plump GOURMET, napkin tucked in, sniffs a wedge of blue cheese with closed eyes."
   }
  ],
  "links": [

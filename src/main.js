@@ -683,6 +683,20 @@ function fittedPlate(className, text, box, opts = {}) {
   </g>`;
 }
 
+function wordLabel(word, box, labelXy) {
+  const [x0, y0, x1, y1] = box;
+  let x;
+  let y;
+  if (labelXy && labelXy.length >= 2) {
+    x = Number(labelXy[0]);
+    y = Number(labelXy[1]);
+  } else {
+    x = (x0 + x1) / 2;
+    y = Math.min(Math.max(y1 - 8, y0 + 14), y1 - 4);
+  }
+  return `<text class="lbl ${genderClass(word)}" x="${x}" y="${y}" text-anchor="middle" font-size="18">${esc(word.head)}</text>`;
+}
+
 function nameTag(text, box) {
   if (!text) return "";
   const size = 22;
@@ -798,7 +812,7 @@ function sceneMarkup(scene, words, zooms) {
       const [a, b, c, d] = hot.door_plaque;
       extra += textBlock("plaque", word.prepositions.join(" · "), [a, b, c, d]);
     }
-    const label = signed.has(word.id) ? "" : `<text class="lbl ${genderClass(word)}" x="${cx}" y="${Math.max(22, y0 - 6)}" text-anchor="middle" font-size="18">${esc(word.head)}</text>`;
+    const label = signed.has(word.id) ? "" : wordLabel(word, box, hot.label_xy);
     parts.push(`<g class="hot word" data-word="${esc(word.id)}" data-item-box="${box.join(",")}" tabindex="0" role="button" aria-label="${esc(`${word.head}, ${word.gloss}`)}">${shape}${label}${extra}</g>`);
   });
   Object.entries(areas).forEach(([key, area]) => {

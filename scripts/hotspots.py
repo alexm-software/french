@@ -63,6 +63,9 @@ def _hot(item):
     mirror = _box(item.get("mirror_box"))
     if mirror:
         hot["mirror_box"] = mirror
+    label_xy = item.get("label_xy")
+    if isinstance(label_xy, (list, tuple)) and len(label_xy) >= 2:
+        hot["label_xy"] = [int(round(float(label_xy[0]))), int(round(float(label_xy[1])))]
     return hot
 
 

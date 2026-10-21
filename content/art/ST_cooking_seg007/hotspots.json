@@ -1,0 +1,637 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg007",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "name": "Ruelle des Gourmets — étape 7 · Heat & cook",
+ "divider_x": 700,
+ "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
+ "tier_counts": {
+  "street": 4,
+  "balcony": 2,
+  "upper": 2,
+  "roof": 1
+ },
+ "text_areas": {
+  "fr_rechauffer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rechauffer_verb",
+   "text": "réchauffer",
+   "box": [
+    88,
+    582,
+    192,
+    608
+   ],
+   "text_box": [
+    92,
+    586,
+    188,
+    604
+   ]
+  },
+  "fr_cuisiner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cuisiner_verb",
+   "text": "cuisiner",
+   "box": [
+    311,
+    532,
+    395,
+    558
+   ],
+   "text_box": [
+    315,
+    536,
+    391,
+    554
+   ]
+  },
+  "fr_saurer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_saurer_verb",
+   "text": "saurer",
+   "box": [
+    511,
+    620,
+    583,
+    646
+   ],
+   "text_box": [
+    515,
+    624,
+    579,
+    642
+   ]
+  },
+  "fr_cuire_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cuire_verb",
+   "text": "cuire",
+   "box": [
+    958,
+    601,
+    1018,
+    627
+   ],
+   "text_box": [
+    962,
+    605,
+    1014,
+    623
+   ]
+  },
+  "fr_griller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_griller_verb",
+   "text": "griller",
+   "box": [
+    128,
+    308,
+    196,
+    334
+   ],
+   "text_box": [
+    132,
+    312,
+    192,
+    330
+   ]
+  },
+  "fr_bouillir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bouillir_verb",
+   "text": "bouillir",
+   "box": [
+    943,
+    401,
+    1019,
+    427
+   ],
+   "text_box": [
+    947,
+    405,
+    1015,
+    423
+   ]
+  },
+  "fr_flamber_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_flamber_verb",
+   "text": "flamber",
+   "box": [
+    449,
+    239,
+    531,
+    265
+   ],
+   "text_box": [
+    453,
+    243,
+    527,
+    261
+   ]
+  },
+  "fr_frire_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_frire_verb",
+   "text": "frire",
+   "box": [
+    973,
+    264,
+    1027,
+    290
+   ],
+   "text_box": [
+    977,
+    268,
+    1023,
+    286
+   ]
+  },
+  "fr_rotir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rotir_verb",
+   "text": "rôtir",
+   "box": [
+    957,
+    51,
+    1011,
+    77
+   ],
+   "text_box": [
+    961,
+    55,
+    1007,
+    73
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Saveurs →",
+   "box": [
+    1098,
+    8,
+    1274,
+    38
+   ],
+   "text_box": [
+    1101,
+    11,
+    1271,
+    35
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 6",
+   "box": [
+    6,
+    6,
+    105,
+    36
+   ],
+   "text_box": [
+    9,
+    9,
+    102,
+    33
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    6,
+    48,
+    47,
+    78
+   ],
+   "text_box": [
+    9,
+    51,
+    44,
+    75
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1198,
+    100,
+    1274,
+    130
+   ],
+   "text_box": [
+    1201,
+    103,
+    1271,
+    127
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Heat & cook",
+   "box": [
+    652,
+    40,
+    866,
+    86
+   ],
+   "text_box": [
+    656,
+    44,
+    862,
+    82
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_rechauffer_verb",
+   "lemma": "réchauffer",
+   "gloss": "to reheat, to warm up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    19,
+    425,
+    262,
+    612
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "Ray on his sofa warms up soup in a little pan on a stove beside him"
+  },
+  {
+   "id": "fr_cuisiner_verb",
+   "lemma": "cuisiner",
+   "gloss": "to cook (make a meal)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    281,
+    381,
+    425,
+    562
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a queasy green horse in an apron cooks at the stove"
+  },
+  {
+   "id": "fr_saurer_verb",
+   "lemma": "saurer",
+   "gloss": "to smoke (fish or meat)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    469,
+    400,
+    625,
+    650
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a sorry-looking fisherman smokes herrings over a smoky wood fire"
+  },
+  {
+   "id": "fr_cuire_verb",
+   "lemma": "cuire",
+   "gloss": "to cook (with heat)",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    838,
+    494,
+    1138,
+    631
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a choir of singing carrots cooks in a bubbling pot"
+  },
+  {
+   "id": "fr_griller_verb",
+   "lemma": "griller",
+   "gloss": "to grill; to toast",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    31,
+    138,
+    294,
+    338
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a greedy bear cheers as it grills sausages over coals"
+  },
+  {
+   "id": "fr_bouillir_verb",
+   "lemma": "bouillir",
+   "gloss": "to boil",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 7,
+   "box": [
+    844,
+    331,
+    1119,
+    431
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a red buoy with floppy ears bobs in boiling water"
+  },
+  {
+   "id": "fr_flamber_verb",
+   "lemma": "flamber",
+   "gloss": "to flambé, to set alight",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    381,
+    88,
+    600,
+    269
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a waiter flambés a flan that bursts into blue flames in the bay window"
+  },
+  {
+   "id": "fr_frire_verb",
+   "lemma": "frire",
+   "gloss": "to fry",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 8,
+   "box": [
+    881,
+    131,
+    1119,
+    294
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a jolly friar fries golden fish in a sizzling pan"
+  },
+  {
+   "id": "fr_rotir_verb",
+   "lemma": "rôtir",
+   "gloss": "to roast",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "roof",
+   "level": "roof",
+   "order": 9,
+   "box": [
+    894,
+    12,
+    1075,
+    81
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": "a chicken roasts on a turning spit on the roof"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "S04_sector",
+   "box": [
+    1098,
+    8,
+    1274,
+    38
+   ],
+   "label": "next: Rue des Saveurs (square)",
+   "name": "Rue des Saveurs (square)",
+   "kind": "street",
+   "polygon": [
+    [
+     922,
+     0
+    ],
+    [
+     922,
+     12
+    ],
+    [
+     1075,
+     12
+    ],
+    [
+     1075,
+     81
+    ],
+    [
+     922,
+     81
+    ],
+    [
+     922,
+     100
+    ],
+    [
+     1274,
+     100
+    ],
+    [
+     1274,
+     130
+    ],
+    [
+     922,
+     130
+    ],
+    [
+     922,
+     131
+    ],
+    [
+     1119,
+     131
+    ],
+    [
+     1119,
+     294
+    ],
+    [
+     922,
+     294
+    ],
+    [
+     922,
+     331
+    ],
+    [
+     1119,
+     331
+    ],
+    [
+     1119,
+     431
+    ],
+    [
+     922,
+     431
+    ],
+    [
+     922,
+     494
+    ],
+    [
+     1138,
+     494
+    ],
+    [
+     1138,
+     631
+    ],
+    [
+     922,
+     631
+    ],
+    [
+     922,
+     720
+    ],
+    [
+     1280,
+     720
+    ],
+    [
+     1280,
+     0
+    ]
+   ]
+  },
+  "back": {
+   "target": "ST_cooking_seg006",
+   "box": [
+    6,
+    6,
+    105,
+    36
+   ],
+   "label": "back: Ruelle des Gourmets — étape 6",
+   "name": "Ruelle des Gourmets — étape 6",
+   "kind": "street",
+   "polygon": [
+    [
+     358,
+     0
+    ],
+    [
+     358,
+     48
+    ],
+    [
+     6,
+     48
+    ],
+    [
+     6,
+     78
+    ],
+    [
+     358,
+     78
+    ],
+    [
+     358,
+     138
+    ],
+    [
+     31,
+     138
+    ],
+    [
+     31,
+     338
+    ],
+    [
+     358,
+     338
+    ],
+    [
+     358,
+     381
+    ],
+    [
+     281,
+     381
+    ],
+    [
+     281,
+     425
+    ],
+    [
+     19,
+     425
+    ],
+    [
+     19,
+     612
+    ],
+    [
+     358,
+     612
+    ],
+    [
+     358,
+     720
+    ],
+    [
+     0,
+     720
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  }
+ },
+ "links": []
+}
