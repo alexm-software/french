@@ -1,0 +1,70 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "The covered market, the green iron-and-glass hall with a basket-weave glass roof in the centre of the Place du Marché. Everything is on the ground floor, one stall after another: fruit -> exotic fruit -> vegetables (zoom: the crate) -> meat and fish -> seafood and deli -> bakery -> pastry shop -> grocery (zoom: the shelf crate) -> pantry.",
+ "text_areas": {
+  "name": {
+   "role": "building_name",
+   "text": "Marché couvert",
+   "box": [
+    420,
+    272,
+    620,
+    308
+   ],
+   "text_box": [
+    426,
+    278,
+    614,
+    302
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "↙ Place du Marché",
+   "box": [
+    80,
+    600,
+    380,
+    640
+   ],
+   "text_box": [
+    86,
+    606,
+    374,
+    634
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_fruits_01",
+   "box": [
+    431,
+    319,
+    600,
+    562
+   ],
+   "label": "Through the open double door into the fruit stalls",
+   "name": "Les fruits",
+   "kind": "door"
+  },
+  {
+   "target": "S03_sector",
+   "box": [
+    0,
+    650,
+    500,
+    720
+   ],
+   "label": "Back across the cobbles to the Place du Marché",
+   "name": "Place du Marché",
+   "kind": "path"
+  }
+ ],
+ "building_name": "Marché couvert"
+}

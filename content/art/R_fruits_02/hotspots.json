@@ -1,0 +1,225 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "The exotic-fruit stalls among potted palms, a seller behind each stall. Feminine nouns to the left of the green iron pillar (x=640), masculine to the right. The arch on the left goes back to the fruit stalls; the opening on the right, past the coconut palm, leads to the vegetable stalls.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Fruits exotiques",
+   "box": [
+    300,
+    630,
+    600,
+    666
+   ],
+   "text_box": [
+    306,
+    636,
+    594,
+    660
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_benne_noun",
+   "lemma": "benne",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la benne",
+   "box": [
+    162,
+    419,
+    266,
+    550
+   ],
+   "label_xy": [
+    214,
+    540
+   ],
+   "scene": "small yellow tipper skip full of fruit"
+  },
+  {
+   "id": "fr_variante_noun",
+   "lemma": "variante",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la variante",
+   "box": [
+    475,
+    315,
+    518,
+    431
+   ],
+   "label_xy": [
+    496,
+    421
+   ],
+   "scene": "two almost identical pineapples, one with a blue bow"
+  },
+  {
+   "id": "fr_monstruosite_noun",
+   "lemma": "monstruosité",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la monstruosité",
+   "box": [
+    522,
+    365,
+    585,
+    431
+   ],
+   "label_xy": [
+    554,
+    421
+   ],
+   "scene": "giant pumpkin with a grumpy face"
+  },
+  {
+   "id": "fr_cantatrice_noun",
+   "lemma": "cantatrice",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la cantatrice",
+   "box": [
+    272,
+    294,
+    447,
+    610
+   ],
+   "label_xy": [
+    360,
+    600
+   ],
+   "scene": "opera singer lady singing with arms wide"
+  },
+  {
+   "id": "fr_pamplemousse_noun",
+   "lemma": "pamplemousse",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le pamplemousse",
+   "box": [
+    866,
+    269,
+    981,
+    575
+   ],
+   "label_xy": [
+    924,
+    565
+   ],
+   "scene": "moose holding a grapefruit"
+  },
+  {
+   "id": "fr_macadam_noun",
+   "lemma": "macadam",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le macadam",
+   "box": [
+    700,
+    469,
+    860,
+    612
+   ],
+   "label_xy": [
+    780,
+    602
+   ],
+   "scene": "patch of tarmac with a tiny steamroller"
+  },
+  {
+   "id": "fr_bananier_noun",
+   "lemma": "bananier",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bananier",
+   "box": [
+    987,
+    287,
+    1056,
+    481
+   ],
+   "label_xy": [
+    1022,
+    471
+   ],
+   "scene": "potted banana tree"
+  },
+  {
+   "id": "fr_apogee_noun",
+   "lemma": "apogée",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'apogée",
+   "box": [
+    700,
+    290,
+    800,
+    431
+   ],
+   "label_xy": [
+    750,
+    421
+   ],
+   "scene": "tall pyramid of fruit with a star on top"
+  },
+  {
+   "id": "fr_cocotier_noun",
+   "lemma": "cocotier",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cocotier",
+   "box": [
+    962,
+    87,
+    1200,
+    250
+   ],
+   "label_xy": [
+    1081,
+    240
+   ],
+   "scene": "coconut palm crown full of coconuts"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_fruits_01",
+   "box": [
+    150,
+    137,
+    266,
+    412
+   ],
+   "label": "Back through the arch to the fruit stalls",
+   "name": "Les fruits",
+   "kind": "arch"
+  },
+  {
+   "target": "R_vegetables",
+   "box": [
+    1062,
+    300,
+    1280,
+    487
+   ],
+   "label": "Through the arch under the palm to the vegetable stall",
+   "name": "Les légumes",
+   "kind": "arch"
+  }
+ ]
+}

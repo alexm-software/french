@@ -1,0 +1,171 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "The pastry shop. Feminine nouns to the left of the green iron pillar (x=640), masculine to the right. The arch with the bread oven on the left goes back to the bakery; the arch with milk and cheese shelves on the right leads to the grocery.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La pâtisserie",
+   "box": [
+    180,
+    60,
+    400,
+    96
+   ],
+   "text_box": [
+    186,
+    66,
+    394,
+    90
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_croute_noun",
+   "box": [
+    181,
+    425,
+    312,
+    506
+   ],
+   "scene": "golden crusty loaf"
+  },
+  {
+   "id": "fr_galette_noun",
+   "box": [
+    169,
+    512,
+    325,
+    631
+   ],
+   "scene": "round flat galette with a paper crown"
+  },
+  {
+   "id": "fr_truffe_noun",
+   "box": [
+    330,
+    470,
+    438,
+    550
+   ],
+   "scene": "box of chocolate truffles"
+  },
+  {
+   "id": "fr_pastille_noun",
+   "box": [
+    344,
+    562,
+    437,
+    644
+   ],
+   "scene": "tin of round throat lozenges"
+  },
+  {
+   "id": "fr_madeleine_noun",
+   "box": [
+    456,
+    450,
+    581,
+    531
+   ],
+   "scene": "plate of shell-shaped madeleines"
+  },
+  {
+   "id": "fr_quiche_noun",
+   "box": [
+    443,
+    537,
+    587,
+    631
+   ],
+   "scene": "quiche"
+  },
+  {
+   "id": "fr_biscuit_noun",
+   "box": [
+    706,
+    469,
+    856,
+    550
+   ],
+   "scene": "plate of biscuits"
+  },
+  {
+   "id": "fr_chalet_noun",
+   "box": [
+    785,
+    369,
+    927,
+    450
+   ],
+   "scene": "gingerbread chalet"
+  },
+  {
+   "id": "fr_repli_noun",
+   "box": [
+    762,
+    556,
+    897,
+    644
+   ],
+   "scene": "turtle pulling back into its shell"
+  },
+  {
+   "id": "fr_patissier_noun",
+   "box": [
+    981,
+    206,
+    1156,
+    450
+   ],
+   "scene": "pastry chef in a tall white hat piping cream"
+  },
+  {
+   "id": "fr_gratin_noun",
+   "box": [
+    881,
+    456,
+    1069,
+    544
+   ],
+   "scene": "bubbling cheese gratin dish"
+  },
+  {
+   "id": "fr_lut_noun",
+   "box": [
+    912,
+    550,
+    1119,
+    676
+   ],
+   "scene": "pot whose lid is being sealed with a strip of dough"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_bakery_01",
+   "box": [
+    162,
+    112,
+    462,
+    418
+   ],
+   "label": "Back through the arch with the bread oven to the bakery",
+   "name": "La boulangerie",
+   "kind": "arch"
+  },
+  {
+   "target": "R_grocery_01",
+   "box": [
+    781,
+    112,
+    975,
+    362
+   ],
+   "label": "Through the arch with milk and cheese shelves to the grocery",
+   "name": "L'épicerie",
+   "kind": "arch"
+  }
+ ]
+}

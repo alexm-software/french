@@ -1,0 +1,203 @@
+{
+ "divider_x": 496,
+ "kind": "room",
+ "note": "The grocery stalls, a woman grocer on the left and a man grocer on the right. Feminine nouns to the left of the green iron pillar (x=496), masculine to the right. The arch on the left goes back to the pastry shop; the arch on the right leads to the pantry. The empty crate on the stool opens a zoom (R_grocery_01_z1); it is not an exit.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "L'épicerie",
+   "box": [
+    560,
+    620,
+    800,
+    656
+   ],
+   "text_box": [
+    566,
+    626,
+    794,
+    650
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_nourriture_noun",
+   "box": [
+    152,
+    327,
+    291,
+    456
+   ],
+   "scene": "picnic basket overflowing with food"
+  },
+  {
+   "id": "fr_huile_noun",
+   "box": [
+    296,
+    322,
+    327,
+    431
+   ],
+   "scene": "bottle of olive oil"
+  },
+  {
+   "id": "fr_creme_noun",
+   "box": [
+    333,
+    375,
+    402,
+    444
+   ],
+   "scene": "bowl of whipped cream"
+  },
+  {
+   "id": "fr_confiture_noun",
+   "box": [
+    408,
+    356,
+    456,
+    431
+   ],
+   "scene": "jar of strawberry jam"
+  },
+  {
+   "id": "fr_lait_noun",
+   "box": [
+    747,
+    310,
+    787,
+    388
+   ],
+   "scene": "bottle of milk"
+  },
+  {
+   "id": "fr_chocolat_noun",
+   "box": [
+    710,
+    394,
+    777,
+    437
+   ],
+   "scene": "bar of chocolate"
+  },
+  {
+   "id": "fr_sucre_noun",
+   "box": [
+    783,
+    400,
+    836,
+    440
+   ],
+   "scene": "bowl of sugar cubes"
+  },
+  {
+   "id": "fr_fromage_noun",
+   "box": [
+    842,
+    369,
+    931,
+    430
+   ],
+   "scene": "wheel of cheese"
+  },
+  {
+   "id": "fr_beurre_noun",
+   "box": [
+    937,
+    400,
+    990,
+    447
+   ],
+   "scene": "block of butter"
+  },
+  {
+   "id": "fr_riz_noun",
+   "box": [
+    995,
+    344,
+    1087,
+    404
+   ],
+   "scene": "sack of rice"
+  },
+  {
+   "id": "fr_supermarche_noun",
+   "box": [
+    802,
+    452,
+    969,
+    644
+   ],
+   "scene": "small shopping trolley in front of the grocery counter"
+  },
+  {
+   "id": "fr_oeuf_noun",
+   "box": [
+    996,
+    410,
+    1022,
+    462
+   ],
+   "scene": "egg in an egg cup"
+  },
+  {
+   "id": "fr_caviar_noun",
+   "box": [
+    1032,
+    435,
+    1075,
+    469
+   ],
+   "scene": "tiny tin of black caviar"
+  },
+  {
+   "id": "fr_bibelot_noun",
+   "box": [
+    1093,
+    356,
+    1147,
+    465
+   ],
+   "scene": "little china shepherdess knick-knack"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_grocery_01_z1",
+   "box": [
+    535,
+    350,
+    687,
+    450
+   ],
+   "label": "La caisse"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_bakery_02",
+   "box": [
+    62,
+    87,
+    145,
+    400
+   ],
+   "label": "Back through the arch with cakes to the pastry shop",
+   "name": "La pâtisserie",
+   "kind": "arch"
+  },
+  {
+   "target": "R_grocery_02",
+   "box": [
+    1100,
+    87,
+    1206,
+    350
+   ],
+   "label": "Through the arch with pizza and spaghetti to the pantry",
+   "name": "Le garde-manger",
+   "kind": "arch"
+  }
+ ]
+}
