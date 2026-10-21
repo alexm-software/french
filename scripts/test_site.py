@@ -351,6 +351,10 @@ def finish(quiz):
     assert dining["parent"]["name_fr"] == "La salle"
     assert [item["icon"] for item in guide["en"]["sections"]] == [item["icon"] for item in guide["fr"]["sections"]]
     assert len(guide["en"]["sections"]) == 9
+    rooms_en = next(item["body"] for item in guide["en"]["sections"] if item["icon"] == "house")
+    rooms_fr = next(item["body"] for item in guide["fr"]["sections"] if item["icon"] == "house")
+    assert "magnifying glass" in rooms_en
+    assert "loupe" in rooms_fr
     assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()
 
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))

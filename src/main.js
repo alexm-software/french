@@ -421,6 +421,75 @@ function fitHits() {
     pad.setAttribute("width", String(w));
     pad.setAttribute("height", String(h));
   });
+  placeZoomBadges();
+}
+
+function isZoomTarget(target) {
+  return /_z\d+$/i.test(String(target || ""));
+}
+
+function placeZoomBadges() {
+  const frame = document.querySelector("#walk .frame");
+  if (!frame) return;
+  frame.querySelectorAll(":scope > .zoom-badge").forEach((node) => node.remove());
+  const svg = frame.querySelector("svg");
+  const ctm = svg?.getScreenCTM();
+  const inverse = ctm?.inverse();
+  if (!svg || !ctm || !inverse) return;
+  const frameRect = frame.getBoundingClientRect();
+  const badgePx = window.matchMedia("(max-width: 700px)").matches ? 22 : 30;
+  const toScreen = (x, y) => {
+    const point = svg.createSVGPoint();
+    point.x = x;
+    point.y = y;
+    const mapped = point.matrixTransform(ctm);
+    return { x: mapped.x - frameRect.left, y: mapped.y - frameRect.top };
+  };
+  const toSvgX = (px) => {
+    const origin = svg.createSVGPoint();
+    const shifted = svg.createSVGPoint();
+    origin.x = frameRect.left;
+    origin.y = frameRect.top;
+    shifted.x = frameRect.left + px;
+    shifted.y = frameRect.top;
+    return Math.abs(shifted.matrixTransform(inverse).x - origin.matrixTransform(inverse).x) || badgePx;
+  };
+  const size = toSvgX(badgePx);
+  const items = [...svg.querySelectorAll("[data-item-box]")].map((el) => {
+    const [x0, y0, x1, y1] = el.dataset.itemBox.split(",").map(Number);
+    return { x0, y0, x1, y1 };
+  });
+  const hitsItem = (x, y) => items.some((item) => x < item.x1 && x + size > item.x0 && y < item.y1 && y + size > item.y0);
+  const view = svg.viewBox.baseVal;
+  svg.querySelectorAll("[data-zoom-box]").forEach((el) => {
+    const target = el.dataset.zoom || el.dataset.target || "";
+    if (!el.dataset.zoom && !isZoomTarget(target)) return;
+    const [x0, y0, x1] = el.dataset.zoomBox.split(",").map(Number);
+    let x = x1 - size;
+    let y = y0;
+    for (let step = 0; step < 8 && hitsItem(x, y); step += 1) {
+      x -= size * 0.65;
+      if (x < x0 - size) {
+        x = x1 - size;
+        y += size * 0.65;
+      }
+    }
+    const limit = 6;
+    x = Math.max(limit, Math.min(x, (view.width || 1280) - size - limit));
+    y = Math.max(limit, Math.min(y, (view.height || 720) - size - limit));
+    const screen = toScreen(x, y);
+    const node = document.createElement("button");
+    node.type = "button";
+    node.className = "zoom-badge";
+    node.title = t("lookCloser");
+    node.setAttribute("aria-label", t("lookCloser"));
+    if (el.dataset.zoom) node.dataset.zoom = el.dataset.zoom;
+    else node.dataset.target = target;
+    node.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.25"/><path d="M14.4 14.4 19.2 19.2"/></svg>`;
+    node.style.left = `${Math.max(4, Math.min(screen.x, frame.clientWidth - badgePx - 4))}px`;
+    node.style.top = `${Math.max(4, Math.min(screen.y, frame.clientHeight - badgePx - 4))}px`;
+    frame.appendChild(node);
+  });
 }
 
 function hashFor(target) {
@@ -559,7 +628,8 @@ function sceneMarkup(scene, words, zooms) {
     if (!link?.box || !link.target) return;
     const [x0, y0, x1, y1] = link.box;
     const label = hoverLabel(link, "open");
-    parts.push(`<g class="hot link" data-target="${esc(link.target)}" tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${nameTag(label, link.box)}</g>`);
+    const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
+    parts.push(`<g class="hot link${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${nameTag(label, link.box)}</g>`);
   });
   Object.entries(scene.exits || {}).forEach(([key, exit]) => {
     const kind = exitKind(key);
@@ -568,7 +638,8 @@ function sceneMarkup(scene, words, zooms) {
     const [x0, y0, x1, y1] = exit.box;
     const label = hoverLabel(exit, `nav.${kind}`);
     const graphic = signedExits.has(kind) ? "" : arrowGraphic(kind, exit.box);
-    parts.push(`<g class="hot exit ${kind}" data-target="${esc(exit.target)}" tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
+    const zoomBox = isZoomTarget(exit.target) ? ` data-zoom-box="${exit.box.join(",")}"` : "";
+    parts.push(`<g class="hot exit ${kind}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
     if (hot.helper) return;
@@ -589,7 +660,8 @@ function sceneMarkup(scene, words, zooms) {
       const label = state.lang === "fr"
         ? (hot.label_fr || named?.sign_fr || named?.sign || hot.label || t("lookCloser"))
         : (hot.label_en || hot.label || named?.sign || t("lookCloser"));
-      parts.push(`<g class="hot zoom" data-zoom="${esc(hot.zoom_id)}" tabindex="0" role="button" aria-label="${esc(label)}">${shape}${nameTag(label, hot.box)}</g>`);
+      const zoomBox = hot.box ? ` data-zoom-box="${hot.box.join(",")}"` : "";
+      parts.push(`<g class="hot zoom" data-zoom="${esc(hot.zoom_id)}"${zoomBox} tabindex="0" role="button" aria-label="${esc(label)}">${shape}${nameTag(label, hot.box)}</g>`);
       return;
     }
     if (!word) return;
@@ -600,7 +672,7 @@ function sceneMarkup(scene, words, zooms) {
       extra += textBlock("plaque", word.prepositions.join(" · "), [a, b, c, d]);
     }
     const label = signed.has(word.id) ? "" : `<text class="lbl ${genderClass(word)}" x="${cx}" y="${Math.max(22, y0 - 6)}" text-anchor="middle" font-size="18">${esc(word.head)}</text>`;
-    parts.push(`<g class="hot word" data-word="${esc(word.id)}" tabindex="0" role="button" aria-label="${esc(`${word.head}, ${word.gloss}`)}">${shape}${label}${extra}</g>`);
+    parts.push(`<g class="hot word" data-word="${esc(word.id)}" data-item-box="${box.join(",")}" tabindex="0" role="button" aria-label="${esc(`${word.head}, ${word.gloss}`)}">${shape}${label}${extra}</g>`);
   });
   Object.entries(areas).forEach(([key, area]) => {
     const text = area.text || (key === "sign" ? scene.sign_text : "") || (key === "plaque" ? scene.plaque_text : "");
