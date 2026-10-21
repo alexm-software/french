@@ -247,8 +247,8 @@ def finish(quiz):
         shown.append(conv["id"])
     source_conv = load(ROOT / "data" / "source" / "conversations.json")["conversations"]
     hidden = [item["id"] for item in source_conv if item.get("status") != "written"]
-    assert hidden and shown
-    assert not set(hidden) & set(shown)
+    assert shown and not hidden
+    assert len(source_conv) == 721
     print("ok", len(quiz["items"]), "quiz items;", len(scene["hotspots"]), "church hotspots")
 
 
