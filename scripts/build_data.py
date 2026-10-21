@@ -89,6 +89,72 @@ def split_name(name):
     return name, ""
 
 
+MISSING_FR = []
+
+
+def bilingual_name(name):
+    """Split 'French — English' or 'French (english)' when the source has both."""
+    text = (name or "").strip()
+    if " — " in text:
+        french, english = text.split(" — ", 1)
+        return french.strip(), english.strip()
+    match = re.match(r"^(.*?)\s+\((.+)\)\s*$", text)
+    if match and match.group(1).strip() and match.group(2).strip():
+        return match.group(1).strip(), match.group(2).strip()
+    return "", ""
+
+
+def note_missing(kind, record_id, key):
+    MISSING_FR.append(f"{kind} {record_id} {key}")
+
+
+def locale_fields(record, kind, record_id, signs=None, log=True):
+    """Copy name_fr / description_fr when present. Fall back later in the client."""
+    name = (record.get("name") or "").strip()
+    name_fr = (record.get("name_fr") or "").strip()
+    name_en = (record.get("name_en") or "").strip()
+    derived_fr, derived_en = bilingual_name(name)
+    if not name_fr and derived_fr and derived_en:
+        name_fr = derived_fr
+    if not name_en and derived_en:
+        name_en = derived_en
+    if not name_fr and signs and signs.get(record_id):
+        name_fr = signs[record_id]
+    fields = {}
+    if name_fr:
+        fields["name_fr"] = name_fr
+    elif name and log:
+        note_missing(kind, record_id, "name_fr")
+    if name_en:
+        fields["name_en"] = name_en
+    description = (record.get("description") or record.get("setting") or "").strip()
+    description_fr = (record.get("description_fr") or record.get("setting_fr") or "").strip()
+    if description:
+        fields["description"] = description
+    if description_fr:
+        fields["description_fr"] = description_fr
+    elif description and log:
+        note_missing(kind, record_id, "description_fr")
+    return fields
+
+
+def report_missing_fr():
+    if not MISSING_FR:
+        print("French metadata: no missing name_fr or description_fr")
+        return
+    counts = {}
+    for line in MISSING_FR:
+        key = line.rsplit(" ", 1)[-1]
+        counts[key] = counts.get(key, 0) + 1
+    summary = ", ".join(f"{key} × {count}" for key, count in sorted(counts.items()))
+    print(f"missing French metadata (English fallback): {summary}")
+    for line in MISSING_FR[:40]:
+        print(f"  {line}")
+    extra = len(MISSING_FR) - 40
+    if extra > 0:
+        print(f"  … {extra} more")
+
+
 def floor_of(room):
     if room.get("kind") == "zoom":
         return None
@@ -240,6 +306,8 @@ def card(word, by_lemma, rooms_by_id, open_sectors, conjugations, live_ids=None)
         "related": link_lemmas(word.get("related"), by_lemma, rooms_by_id, open_sectors, live_ids),
         "opposites": link_lemmas(word.get("opposites"), by_lemma, rooms_by_id, open_sectors, live_ids),
         "usage_warning": word.get("usage_warning"),
+        "example_fr": (word.get("example_fr") or "").strip() or None,
+        "example_en": (word.get("example_en") or "").strip() or None,
         "literal": word.get("literal"),
         "register": word.get("register"),
         "letter_name": word.get("letter_name"),
@@ -273,36 +341,27 @@ def quiz_item(word):
 
 
 def dialogue_for(conv, words_by_id):
-    words = [words_by_id[i] for i in conv.get("target_words") or [] if i in words_by_id][:8]
-    lines = [{
-        "speaker": "Inès",
-        "fr": "On est bien ici. On revoit les mots de cet endroit ?",
-        "en": "This is a good spot. Shall we go over the words that live here?",
-    }]
-    speakers = ("Marc", "Inès")
-    for index, word in enumerate(words):
-        ask, answer = speakers[index % 2], speakers[(index + 1) % 2]
-        head = headword(word)
-        english = gloss_short(word.get("gloss"))
-        if word["pos"] == "verb":
-            lines.append({"speaker": ask, "fr": f"Tu connais le verbe « {head} » ?", "en": f"Do you know the verb “{head}”?"})
-            lines.append({"speaker": answer, "fr": f"Oui. « {head} » veut dire « {english} ».", "en": f"Yes. “{head}” means “{english}”."})
-        elif word["pos"] == "noun":
-            lines.append({"speaker": ask, "fr": f"Tu vois {head} ?", "en": f"Do you see {head}?"})
-            lines.append({"speaker": answer, "fr": f"Oui, {head}. En anglais : « {english} ».", "en": f"Yes, {head}. In English: “{english}”."})
-        else:
-            lines.append({"speaker": ask, "fr": f"Et « {word['lemma']} » ?", "en": f"And “{word['lemma']}”?"})
-            lines.append({"speaker": answer, "fr": f"Ça veut dire « {english} ».", "en": f"That means “{english}”."})
-    lines.append({
-        "speaker": "Inès",
-        "fr": "On les laisse à leur place. La prochaine fois, l'endroit nous les rendra.",
-        "en": "We'll leave them in their places. Next time, the place will give them back.",
-    })
+    """Hand-written dialogues only. Premise notes are not turned into a quiz script."""
+    del words_by_id
+    if conv.get("status") != "written":
+        return None
+    lines = []
+    for line in conv.get("lines") or []:
+        if not isinstance(line, dict):
+            continue
+        speaker = str(line.get("speaker") or "").strip()
+        fr = str(line.get("fr") or "").strip()
+        en = str(line.get("en") or "").strip()
+        if speaker and fr:
+            lines.append({"speaker": speaker, "fr": fr, "en": en})
+    if not lines:
+        return None
     return {
-        "id": conv["id"],
-        "title": conv.get("title"),
-        "premise": conv.get("premise"),
-        "generated": conv.get("status") == "premise_only",
+        "id": conv.get("id"),
+        "title": conv.get("title") or "",
+        "title_fr": (conv.get("title_fr") or "").strip(),
+        "premise": conv.get("premise") or "",
+        "premise_fr": (conv.get("premise_fr") or "").strip(),
         "lines": lines,
     }
 
@@ -348,17 +407,16 @@ def bind_scene(room, words, building, signs, plaques=None):
     )
     if not scene:
         return None
-    # Alleys leave the square and come back to it. They do not open into each other.
-    if room.get("kind") == "street_segment":
-        exits = scene.get("exits") or {}
-        box = (exits.get("prev") or exits.get("next") or {}).get("box") or [0, 620, 240, 720]
-        scene["links"] = [{
-            "target": sector_art_id(room["sector_id"]),
-            "box": box,
-            "label": "Back to the square",
-            "exit": True,
-        }]
-        scene["exits"] = {}
+    # Exits stay as painted: forward, back, and left or right when the picture has them.
+    # A zoom with no way out gets a back step to its parent.
+    if room.get("kind") == "zoom" and room.get("parent_room_id"):
+        exits = scene.setdefault("exits", {})
+        if not any(exits.get(key) for key in ("prev", "back")):
+            exits["back"] = {
+                "box": [24, 24, 120, 96],
+                "target": room["parent_room_id"],
+                "label": "Step back",
+            }
     zoom = scene.get("zoom_from")
     if zoom:
         scene["hotspots"].insert(0, {
@@ -384,16 +442,20 @@ def bind_scene(room, words, building, signs, plaques=None):
                 hot["word_id"] = by_slug.get(fold(ref))
         if not hot.get("word_id") and hot.get("slug"):
             hot["word_id"] = by_slug.get(fold(hot["slug"])) or by_slug.get(hot["slug"])
+    for hot in scene["hotspots"]:
+        # One clickable box per item. A mnemonic box widens that box; it is not a second target.
+        extra = hot.get("mnemonic_box")
+        if extra and hot.get("box"):
+            box = hot["box"]
+            hot["box"] = [
+                min(box[0], extra[0]),
+                min(box[1], extra[1]),
+                max(box[2], extra[2]),
+                max(box[3], extra[3]),
+            ]
+        hot.pop("mnemonic_box", None)
     extras = []
     for hot in list(scene["hotspots"]):
-        if hot.get("mnemonic_box") and hot.get("word_id"):
-            extras.append({
-                "word_id": hot["word_id"],
-                "helper": True,
-                "box": hot["mnemonic_box"],
-                "side": hot.get("side"),
-                "slug": (hot.get("slug") or "") + "-helper",
-            })
         if hot.get("mirror_box") and hot.get("word_id"):
             extras.append({
                 "word_id": hot["word_id"],
@@ -410,13 +472,15 @@ def bind_scene(room, words, building, signs, plaques=None):
 def neighbor_stub(sector_id, sectors_by_id, open_sectors):
     sector = sectors_by_id[sector_id]
     french, english = split_name(sector["name"])
-    return {
+    payload = {
         "id": sector_id,
         "name": sector["name"],
         "fr_name": french,
         "en_name": english,
         "open": sector_id in open_sectors,
     }
+    payload.update(locale_fields(sector, "sector", sector_id, log=False))
+    return payload
 
 
 def chip_text(room):
@@ -447,7 +511,7 @@ def ordered_building_rooms(building, rooms):
 def room_stub(room, signs, buildings, open_sectors, live_ids=None):
     floor = floor_of(room)
     building = buildings.get(room["building_id"])
-    return {
+    payload = {
         "id": room["id"],
         "name": room["name"],
         "kind": room["kind"],
@@ -463,6 +527,8 @@ def room_stub(room, signs, buildings, open_sectors, live_ids=None):
         "parent_room_id": room.get("parent_room_id"),
         "furniture": room.get("furniture"),
     }
+    payload.update(locale_fields(room, "room", room["id"], signs, log=False))
+    return payload
 
 
 def pack_positions(count):
@@ -548,6 +614,28 @@ def table_rows(items, imperative=False):
     return rows
 
 
+def _bare_participle(form):
+    if form and str(form).startswith("étant "):
+        return str(form)[len("étant "):]
+    return form
+
+
+def _participle(items, gender=None, number=None):
+    pool = list(items or [])
+    if gender:
+        matched = [item for item in pool if item.get("g") == gender]
+        if matched:
+            pool = matched
+    if number:
+        matched = [item for item in pool if item.get("n") == number]
+        if matched:
+            pool = matched
+    if not pool:
+        return None
+    forms = pool[0].get("c") or []
+    return _bare_participle(forms[0] if forms else None)
+
+
 def extract_tables(payload):
     moods = payload.get("moods") or {}
     tables = {}
@@ -556,6 +644,16 @@ def extract_tables(payload):
         rows = table_rows(items, imperative=(key == "imperatif"))
         if rows:
             tables[key] = rows
+    part = moods.get("participe") or {}
+    passe = _participle(part.get("participe-passé"), "m", "s")
+    passe_f = _participle(part.get("participe-passé"), "f", "s")
+    present = _participle(part.get("participe-présent"))
+    if passe:
+        tables["participe_passe"] = passe
+    if passe_f and passe_f != passe:
+        tables["participe_passe_f"] = passe_f
+    if present:
+        tables["participe_present"] = present
     return tables or None
 
 
@@ -600,6 +698,37 @@ def conjugate_missing(infinitives, cache):
     return cache
 
 
+def refresh_participles(cache):
+    """Older cache rows stored the seven tenses only. Fill participles when verbecc is here."""
+    stale = [
+        key for key, value in cache.items()
+        if isinstance(value, dict) and value.get("present") and "participe_passe" not in value
+    ]
+    if not stale:
+        return cache
+    logging.disable(logging.CRITICAL)
+    try:
+        from verbecc import CompleteConjugator
+    except ImportError:
+        print(f"participles missing for {len(stale)} verbs; verbecc is not installed, so the cache was left as it is")
+        return cache
+    conjugator = CompleteConjugator("fr")
+    updated = 0
+    for infinitive in stale:
+        try:
+            payload = json.loads(conjugator.conjugate(infinitive).to_json())
+            tables = extract_tables(payload)
+            if tables:
+                cache[infinitive] = tables
+                updated += 1
+        except Exception:
+            continue
+    if updated:
+        save_cache(cache)
+        print(f"stored participles for {updated} verbs")
+    return cache
+
+
 # --- emit ------------------------------------------------------------------
 
 def building_payload(building, rooms_by_id, signs, open_sectors, live_ids=None):
@@ -630,7 +759,7 @@ def building_payload(building, rooms_by_id, signs, open_sectors, live_ids=None):
                 "rooms": [room_stub(room, signs, {building["id"]: building}, open_sectors, live_ids) for room in grouped[level]],
             })
     positions = pack_positions(len(floors))
-    return {
+    payload = {
         "id": building["id"],
         "name": building["name"],
         "type": building["type"],
@@ -641,6 +770,8 @@ def building_payload(building, rooms_by_id, signs, open_sectors, live_ids=None):
         "floors": floors,
         "x": positions[0][0] if False else None,
     }
+    payload.update(locale_fields(building, "building", building["id"], signs, log=False))
+    return payload
 
 
 def main():
@@ -681,6 +812,13 @@ def main():
     for conv in conversations:
         conv_by_room[conv["room_id"]].append(conv)
 
+    for sector in sectors:
+        locale_fields(sector, "sector", sector["id"], signs)
+    for building in buildings:
+        locale_fields(building, "building", building["id"], signs)
+    for room in rooms:
+        locale_fields(room, "room", room["id"], signs)
+
     route = world["suggested_route"]
     route_index = {step["sector_id"]: step for step in route}
 
@@ -691,7 +829,7 @@ def main():
             word = words_by_id.get(word_id)
             if word and word["pos"] == "verb":
                 infinitives.append(verb_infinitive(word))
-    cache = conjugate_missing(sorted(set(infinitives)), load_cache())
+    cache = refresh_participles(conjugate_missing(sorted(set(infinitives)), load_cache()))
 
     if PUBLIC.exists():
         shutil.rmtree(PUBLIC / "data", ignore_errors=True)
@@ -726,12 +864,14 @@ def main():
                 building = buildings_by_id[building_id]
                 payload = building_payload(building, rooms_by_id, signs, open_sectors, live_ids)
                 building_payloads.append(payload)
-                index_buildings.append({
+                index_building = {
                     "id": building["id"],
                     "name": building["name"],
                     "type": building["type"],
                     "sector_id": sector["id"],
-                })
+                }
+                index_building.update(locale_fields(building, "building", building["id"], signs, log=False))
+                index_buildings.append(index_building)
                 exterior = load_place_scene(building["id"], signs.get(building["id"]) or building["name"])
                 if exterior:
                     payload["scene"] = exterior
@@ -775,6 +915,7 @@ def main():
             "scene": None,
             "alleys": [],
         }
+        sector_payload.update(locale_fields(sector, "sector", sector["id"], signs, log=False))
         if open_now:
             sector_scene = load_place_scene(sector_art_id(sector["id"]), signs.get(sector_art_id(sector["id"])) or french)
             if sector_scene:
@@ -801,7 +942,7 @@ def main():
             sector_payload["alleys"] = alleys
         sector_payloads[sector["id"]] = sector_payload
         write_json(PUBLIC / "data" / "sectors" / f"{sector['id']}.json", sector_payload)
-        index_sectors.append({
+        index_sector = {
             "id": sector["id"],
             "name": sector["name"],
             "fr_name": french,
@@ -813,7 +954,9 @@ def main():
             "x": x,
             "y": y,
             "order": order,
-        })
+        }
+        index_sector.update(locale_fields(sector, "sector", sector["id"], signs, log=False))
+        index_sectors.append(index_sector)
 
     prayers_by_id = {prayer["id"]: prayer for prayer in prayers}
     rooms_emitted = 0
@@ -893,14 +1036,16 @@ def main():
                 if room.get("kind") == "street_segment" and other.get("kind") == "street_segment":
                     continue
                 other_sector = sectors_by_id[other["sector_id"]]
-                related.append({
+                related_item = {
                     "id": other["id"],
                     "name": other["name"],
                     "sign": sign_text(other, buildings_by_id.get(other["building_id"]), signs),
                     "sector_id": other["sector_id"],
                     "sector_name": split_name(other_sector["name"])[0],
                     "open": is_live(other, open_sectors, live_ids),
-                })
+                }
+                related_item.update(locale_fields(other, "room", other["id"], signs, log=False))
+                related.append(related_item)
             prev_room = next_room = None
             if room["id"] in walk_pos and room.get("kind") != "zoom":
                 index = walk_pos[room["id"]]
@@ -908,7 +1053,16 @@ def main():
                     prev_room = _nav_room(walk[index - 1], rooms_by_id, buildings_by_id, signs)
                 if index + 1 < len(walk):
                     next_room = _nav_room(walk[index + 1], rooms_by_id, buildings_by_id, signs)
-            convs = [dialogue_for(conv, words_by_id) for conv in conv_by_room.get(room["id"], [])]
+            convs = [
+                item for item in (
+                    dialogue_for(conv, words_by_id) for conv in conv_by_room.get(room["id"], [])
+                ) if item
+            ]
+            for conv in convs:
+                if conv.get("premise") and not conv.get("premise_fr"):
+                    note_missing("conversation", conv.get("id") or room["id"], "premise_fr")
+                if conv.get("title") and not conv.get("title_fr"):
+                    note_missing("conversation", conv.get("id") or room["id"], "title_fr")
             room_prayers = []
             for prayer_id in room.get("prayers") or []:
                 prayer = prayers_by_id.get(prayer_id)
@@ -949,6 +1103,7 @@ def main():
                 "scene": scene,
                 "words": cards,
             }
+            payload.update(locale_fields(room, "room", room["id"], signs, log=False))
             write_json(PUBLIC / "data" / "rooms" / f"{room['id']}.json", payload)
             write_json(PUBLIC / "data" / "quiz" / "room" / f"{room['id']}.json", {
                 "scope": "room",
@@ -1005,6 +1160,9 @@ def main():
         "prayers": [{"id": prayer["id"], "title_fr": prayer["title_fr"], "title_en": prayer["title_en"]} for prayer in prayers],
         "counts": {"words": len(words), "rooms": len(rooms), "sectors": len(sectors)},
     })
+    shutil.copy2(ROOT / "data" / "i18n.json", PUBLIC / "data" / "i18n.json")
+    shutil.copy2(ROOT / "data" / "guide.json", PUBLIC / "data" / "guide.json")
+    report_missing_fr()
     digest = hashlib.sha1(json.dumps(sorted(open_sectors)).encode()).hexdigest()[:8]
     print(f"emitted {rooms_emitted} open rooms; index {digest}")
 
@@ -1012,7 +1170,7 @@ def main():
 def _nav_room(room_id, rooms_by_id, buildings_by_id, signs):
     room = rooms_by_id[room_id]
     building = buildings_by_id.get(room["building_id"])
-    return {
+    payload = {
         "id": room["id"],
         "name": room["name"],
         "sign": sign_text(room, building, signs),
@@ -1020,6 +1178,8 @@ def _nav_room(room_id, rooms_by_id, buildings_by_id, signs):
         "kind": room["kind"],
         "open": True,
     }
+    payload.update(locale_fields(room, "room", room["id"], signs, log=False))
+    return payload
 
 
 if __name__ == "__main__":

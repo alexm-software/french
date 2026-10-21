@@ -39,6 +39,9 @@ def main():
     assert ids == ["B09_restaurant", "B08_cafe", "ST_cooking"], ids
     assert sector["scene"]["image"].endswith("art/S04_sector/base.jpg")
     assert sector["scene"]["sign_text"] == "Rue des Saveurs"
+    assert sector["description_fr"].startswith("La terrasse")
+    cooking = next(link for link in sector["scene"]["links"] if link["target"] == "ST_cooking_seg001")
+    assert cooking["label_fr"] == "Ruelle des Gourmets"
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
     assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
@@ -76,7 +79,9 @@ def main():
     assert len(upstairs["words"]) == 12
     troc = next(word for word in upstairs["words"] if word["id"] == "fr_troc_noun")
     assert troc["mnemonic_explain"] and troc["gender"] == "m" and troc["head"] == "le troc"
-    assert any(hot.get("helper") and hot.get("word_id") == "fr_troc_noun" for hot in upstairs["scene"]["hotspots"])
+    troc_hits = [hot for hot in upstairs["scene"]["hotspots"] if hot.get("word_id") == "fr_troc_noun" and not hot.get("helper")]
+    assert len(troc_hits) == 1
+    assert "example_fr" not in troc or not troc.get("example_fr")
 
     dining = load(DATA / "rooms" / "R_resto_room.json")
     zoom = next(hot for hot in dining["scene"]["hotspots"] if hot.get("zoom_id") == "R_resto_room_z1")
@@ -95,22 +100,29 @@ def main():
     seg = load(DATA / "rooms" / "ST_cooking_seg001.json")
     lemmas = {word["lemma"] for word in seg["words"]}
     assert lemmas == {"nourrir", "écraser", "dévorer", "déjeuner", "servir", "manger"}
-    assert seg["scene"]["links"] == [{
-        "target": "S04_sector",
-        "box": seg["scene"]["links"][0]["box"],
-        "label": "Back to the square",
-        "exit": True,
-    }] or (len(seg["scene"]["links"]) == 1 and seg["scene"]["links"][0]["target"] == "S04_sector" and seg["scene"]["links"][0]["exit"] is True)
-    assert seg["scene"]["exits"] == {}
+    assert seg["scene"]["exits"]["prev"]["target"] == "S04_sector"
+    assert seg["scene"]["exits"]["next"]["target"] == "ST_cooking_seg002"
+    assert not any(link.get("exit") for link in seg["scene"].get("links") or [])
+    raw_items = load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json")["items"]
+    for item in raw_items:
+        hits = [hot for hot in seg["scene"]["hotspots"] if hot.get("word_id") == item["id"] and not hot.get("helper")]
+        assert len(hits) == 1, item["id"]
+        box = hits[0]["box"]
+        for part in (item["box"], item.get("mnemonic_box")):
+            if not part:
+                continue
+            assert box[0] <= part[0] and box[1] <= part[1] and box[2] >= part[2] and box[3] >= part[3]
+    assert seg.get("conversation") is None
     assert seg["prev"] is None and seg["next"] is None
     assert not any(str(item["id"]).startswith("ST_") for item in seg["related"])
     servir = next(word for word in seg["words"] if word["lemma"] == "servir")
     assert servir["prepositions"] == ["à", "de"]
     assert servir["conjugations"]["present"][0] == "je sers"
+    assert servir["conjugations"]["participe_passe"] == "servi"
+    assert servir["conjugations"]["participe_present"] == "servant"
+    assert load(DATA / "rooms" / "R_cafe_01.json")["name_fr"] == "La terrasse"
     assert servir["conjugations"]["imperatif"] == ["sers", "servons", "servez"]
     assert seg["scene"]["text_areas"]["fr_servir_verb_plaque"]["text"] == "à / de"
-    assert seg["conversation"]["lines"]
-    assert any(word["lemma"] in line["fr"] for line in seg["conversation"]["lines"] for word in seg["words"])
 
     later = load(DATA / "rooms" / "ST_cooking_seg011.json")
     assert later["sign"] == "Ruelle des Gourmets"
@@ -165,6 +177,32 @@ def finish(quiz):
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
     assert [link["target"] for link in sector["links"]] == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"]
     assert sector["exits"] == {}
+
+    pointed = normalize_scene({
+        "width": 100,
+        "height": 40,
+        "text_areas": {"north": {"box": [0, 0, 40, 20], "text": "Nord", "role": "direction"}},
+        "items": [],
+    })
+    assert pointed["text_areas"]["north"]["role"] == "direction"
+    assert pointed["text_areas"]["north"]["text"] == "Nord"
+
+    i18n = load(ROOT / "data" / "i18n.json")
+    guide = load(ROOT / "data" / "guide.json")
+
+    def flat(obj, prefix=""):
+        found = set()
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                found |= flat(value, f"{prefix}.{key}" if prefix else key)
+        else:
+            found.add(prefix)
+        return found
+
+    assert flat(i18n["en"]) == flat(i18n["fr"])
+    assert [item["icon"] for item in guide["en"]["sections"]] == [item["icon"] for item in guide["fr"]["sections"]]
+    assert len(guide["en"]["sections"]) == 9
+    assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()
 
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))
     assert len(delivered["hotspots"]) == 12

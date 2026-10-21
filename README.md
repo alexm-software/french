@@ -4,7 +4,7 @@ A French vocabulary memory palace, from A1 to C2. You walk a map of sixteen quar
 
 Rue des Saveurs (S04, cafés and restaurants) is the open quarter: the square, Café de la Place, Restaurant Le Bon Goût, and eleven short cooking alleys off that square. The other quarters are on the map and marked coming soon. The long walk still begins in the beginner quarter; that door is drawn, and it is not open yet.
 
-Each alley is its own lane. The arch on the square opens a signpost, and the only way out of an alley is back to the square. A later street, with fewer two-sided alleys, can replace `ST_cooking` by dropping in new paintings and room data. Do not hard-code the verb list.
+You walk by the painted doors, paths and stairs. Forward and back (and left or right, when the picture has them) stay on the painting as `exits`. A later street can replace `ST_cooking` by dropping in new paintings and room data. Do not hard-code the verb list. Each painted item has one clickable box: if a `mnemonic_box` is still present, it widens that box and is not a second target.
 
 `content/assignment.json` decides which words are drawn in a painting. A word that `rooms.json` still lists, but the painting does not draw, stays in that room’s word list and is marked as not in the painting. Street paintings store prev/next under `exits`. Building fronts and the sector view store doors under `links`. The build accepts both.
 
@@ -45,9 +45,10 @@ A hotspot may include:
 - `word_id` — a vocabulary id from `vocab.jsonl`
 - `box` — `[x0, y0, x1, y1]`, and `polygon` when the clickable shape is not a rectangle
 - `text_areas.sign` and `text_areas.plaque` — each with `box` and `text_box`
-- `mnemonic_box` — the helper character, separate from the object
-- `links` — doors on a building front or the sector square (`target`, `box`, `label`)
-- `exits.prev` and `exits.next` — the street painting’s two ends. An alley keeps only the return to the sector square
+- `mnemonic_box` — optional. The build unions it into `box` so the page has one hotspot. New paintings can omit it
+- `links` — doors on a building front or the sector square (`target`, `box`, `label`, optional `label_fr`)
+- `exits` — `prev` / `next`, and `left` / `right` or `forward` / `back` when the painting has them
+- `text_areas` may set `role` to `building_name` or `direction`
 - `door_plaque` or `door_plaque_box` — where a verb’s preposition is set in type
 - `mirror_box` — a reflexive verb
 - `zoom_from` — a closer view, such as the bar counter (`room_id`, `box`, `label`)
@@ -83,4 +84,6 @@ A cache miss calls the conjugator and writes the new tables back. The group prin
 
 ## Credits
 
-Word lists, glosses and prayers have their own licences. They are on the Credits page, and the source note is in `data/source/CREDITS.md`. Cinzel and IM Fell English are SIL Open Font License; the licence texts sit beside the font files in `src/fonts/`.
+Word lists, glosses and prayers have their own licences. They are on the Credits page, and the source note is in `data/source/CREDITS.md`. Baloo 2 and Patrick Hand are SIL Open Font License; the licence texts sit beside the font files in `src/fonts/`.
+
+Interface copy is in `data/i18n.json` (`en` and `fr`). The Village guide is `data/guide.json`. Place records may add `name_fr` and `description_fr`; the build prints any that are still missing and the page falls back to English. The language switch defaults to English.
