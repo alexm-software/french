@@ -351,16 +351,10 @@ def walk_site_graph():
 def main():
     index = load(DATA / "index.json")
     assert index["open_sectors"] == ["S01_beginner", "S04_cafes"], index["open_sectors"]
-    assert index["open_rooms"] == [
-        "R_abs_time_01", "R_abs_time_02",
-        "R_adv_time_01", "R_adv_time_01_z1", "R_adv_time_02", "R_adv_time_02_z1", "R_adv_time_03",
-        "R_colors_01", "R_colors_02", "R_colors_02_z1",
-        "R_exclaim_01", "R_exclaim_02", "R_exclaim_03", "R_farewell",
-        "R_greet", "R_polite", "R_polite_z1",
-        "R_shapes_02", "R_shapes_03", "R_shapes_03_z1", "R_shapes_03_z2",
-        "R_time_clock_01", "R_time_clock_01_z1", "R_time_clock_02",
-        "R_time_days_01", "R_time_days_01_z1", "R_time_days_02", "R_time_days_02_z1",
-    ], index["open_rooms"]
+    site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
+    assert index["open_rooms"] == site_rooms, index["open_rooms"]
+    assert len(site_rooms) == 47
+    assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
     assert len(index["sectors"]) == 16
@@ -507,7 +501,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 43, room_files
+    assert len(room_files) == 62, room_files
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -515,14 +509,16 @@ def main():
     assert square["open"] is True
     assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
-    assert soon == {"B02_ecole"}, soon
+    assert soon == set(), soon
     open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
-    assert open_doors == {"B01_fontaine", "B03_horloge", "B04_atelier_couleurs", "S04_sector"}, open_doors
+    assert open_doors == {"B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs", "S04_sector"}, open_doors
     stairs = {
         ("B04_atelier_couleurs", "R_shapes_03"): ("stairs", "stairs_down"),
         ("R_colors_02", "R_shapes_02"): ("stairs", "stairs_down"),
         ("R_adv_time_01", "R_time_clock_02"): ("stairs_up", "stairs_down"),
         ("R_abs_time_01", "R_adv_time_03"): ("stairs_up", "stairs_down"),
+        ("R_pronouns_01", "R_numbers2"): ("stairs_up", "stairs_down"),
+        ("R_conjunctions", "R_pronouns_03"): ("stairs_up", "stairs_down"),
     }
     for (src, dest), (up_kind, down_kind) in stairs.items():
         raw = load(ROOT / "content" / "art" / src / "hotspots.json")
@@ -534,7 +530,9 @@ def main():
     colors = load(DATA / "rooms" / "R_colors_01.json")
     assert colors["building_id"] == "B04_atelier_couleurs"
     assert any(link["target"] == "R_colors_02" for link in colors["scene"]["links"])
-    assert not (DATA / "rooms" / "R_alphabet_01.json").exists()
+    classroom = load(DATA / "rooms" / "R_alphabet_01.json")
+    assert classroom["building_id"] == "B02_ecole"
+    assert any(link["target"] == "R_alphabet_02" for link in classroom["scene"]["links"])
     quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
     seen = []
     for path in (DATA / "rooms").glob("*.json"):

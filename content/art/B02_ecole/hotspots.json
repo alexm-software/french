@@ -1,0 +1,70 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "The little white schoolhouse seen from its yard: the same building as on the village square (giant open book for a roof with blank pages, blank plaque, double green door, stone steps, potted bay tree). Ground floor: entrance alphabet classroom, second alphabet room (zoom: chalkboard), counting room (zoom: desk), articles room (zoom: teacher's desk), questions room (zoom: pupil's desk), first pronouns hall; first floor (stairs up from the pronouns hall): higher numbers (zoom: table), pronouns (2), prepositions (1), prepositions (2), conjunctions (zoom: desk); attic (stairs up from the conjunctions room): pronouns (3) and prepositions (3). Inside walk: R_alphabet_01 -> R_numbers1 -> R_articles -> R_questions -> R_pronouns_01 -> (stairs up) R_numbers2 -> R_pronouns_02 -> R_prepositions_01 -> R_prepositions_02 -> R_conjunctions -> (stairs up) R_pronouns_03 -> R_prepositions_03; R_alphabet_02 opens off the entrance classroom.",
+ "text_areas": {
+  "name": {
+   "role": "building_name",
+   "text": "Petite École",
+   "box": [
+    578,
+    228,
+    831,
+    310
+   ],
+   "text_box": [
+    588,
+    238,
+    821,
+    300
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "↙ Place du Village",
+   "box": [
+    340,
+    668,
+    600,
+    708
+   ],
+   "text_box": [
+    345,
+    673,
+    595,
+    703
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_alphabet_01",
+   "box": [
+    632,
+    334,
+    762,
+    600
+   ],
+   "label": "In through the green double door to the entrance classroom",
+   "name": "L'alphabet (1)",
+   "kind": "door"
+  },
+  {
+   "target": "S01_sector",
+   "box": [
+    20,
+    630,
+    330,
+    720
+   ],
+   "label": "Back along the cobbled path to the square",
+   "name": "Place du Village",
+   "kind": "path"
+  }
+ ],
+ "building_name": "Petite École"
+}

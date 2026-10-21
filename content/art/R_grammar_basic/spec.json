@@ -1,0 +1,60 @@
+{
+ "divider_x": 70,
+ "kind": "zoom",
+ "parent_room_id": "R_articles",
+ "note": "Zoom on the teacher's desk in the articles room. Both words are masculine (le nom, l'article), so the divider sits at the far left (one-gender zoom convention). The blank card on the wall is the sign.",
+ "text_areas": {
+  "sign": {
+   "role": "zoom_name",
+   "text": "Le bureau du maître",
+   "box": [
+    169,
+    62,
+    398,
+    219
+   ],
+   "text_box": [
+    179,
+    72,
+    388,
+    209
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_nom_noun",
+   "box": [
+    281,
+    244,
+    425,
+    544
+   ],
+   "scene": "garden gnome figurine wearing a blank name tag"
+  },
+  {
+   "id": "fr_article_noun",
+   "box": [
+    625,
+    397,
+    1190,
+    610
+   ],
+   "scene": "folded newspaper with a blank price tag tied on"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_articles",
+   "box": [
+    110,
+    616,
+    1170,
+    705
+   ],
+   "label": "Step back into the articles room",
+   "name": "Les articles",
+   "kind": "zoom_back"
+  }
+ ]
+}
