@@ -1,0 +1,109 @@
+{
+ "divider_x": 1000,
+ "name": "Allée du Quotidien — étape 5 · nouer, clouer, cirer",
+ "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is a hedge with no verbs). Street: goat tugging loose from its tether (mirror by the door), bride lowering her veil at her mirror, cat scratching on the cheese grater; balcony: sailor knotting a new rope; upper window: carpenter nailing a shutter with a squawking cockatoo; roof terrace: boy waxing a tall boot. Forward = far lane; back = near cobbles.",
+ "items": [
+  {
+   "id": "fr_detacher_verb",
+   "box": [
+    15,
+    355,
+    365,
+    665
+   ],
+   "tier": "street",
+   "mirror": "oval mirror on the wall by the door"
+  },
+  {
+   "id": "fr_voiler_verb",
+   "box": [
+    392,
+    398,
+    560,
+    632
+   ],
+   "tier": "street",
+   "mirror": "tall mirror by her door"
+  },
+  {
+   "id": "fr_gratter_verb",
+   "box": [
+    708,
+    438,
+    830,
+    612
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_nouer_verb",
+   "box": [
+    445,
+    100,
+    615,
+    305
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_clouer_verb",
+   "box": [
+    165,
+    28,
+    345,
+    200
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_cirer_verb",
+   "box": [
+    720,
+    100,
+    925,
+    262
+   ],
+   "tier": "roof"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg006",
+   "box": [
+    1000,
+    480,
+    1110,
+    580
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 6",
+   "sign": "étape 6 →"
+  },
+  "back": {
+   "target": "ST_routine_seg004",
+   "box": [
+    450,
+    665,
+    1000,
+    712
+   ],
+   "label": "Back up the lane to étape 4",
+   "name": "Allée du Quotidien, étape 4",
+   "sign": "← étape 4"
+  }
+ },
+ "signs": {
+  "er": [
+   620,
+   30,
+   710,
+   64
+  ],
+  "irre": [
+   1060,
+   40,
+   1190,
+   74
+  ]
+ }
+}

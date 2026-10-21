@@ -1,0 +1,223 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 760,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 6: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 6",
+   "box": [
+    620,
+    40,
+    960,
+    84
+   ],
+   "text_box": [
+    626,
+    46,
+    954,
+    78
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 7 →",
+   "box": [
+    696,
+    340,
+    856,
+    374
+   ],
+   "text_box": [
+    702,
+    346,
+    850,
+    368
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 5",
+   "box": [
+    880,
+    612,
+    1060,
+    638
+   ],
+   "text_box": [
+    886,
+    618,
+    1054,
+    632
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_liquider_verb",
+   "lemma": "liquider",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "liquider",
+   "box": [
+    119,
+    331,
+    344,
+    612
+   ],
+   "label_xy": [
+    232,
+    602
+   ],
+   "scene": "shopkeeper under a leaking awning selling off the last umbrellas, a squirrel grabbing the very last",
+   "gloss": "to liquidate, pay off, settle; to sell off",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_subventionner_verb",
+   "lemma": "subventionner",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "subventionner",
+   "box": [
+    346,
+    338,
+    681,
+    544
+   ],
+   "label_xy": [
+    514,
+    534
+   ],
+   "scene": "mayor by a submarine-shaped van handing a giant cheque to a puppet-theatre owner",
+   "gloss": "to subsidize",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_cumuler_verb",
+   "lemma": "cumuler",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "cumuler",
+   "box": [
+    482,
+    140,
+    694,
+    306
+   ],
+   "label_xy": [
+    588,
+    296
+   ],
+   "scene": "kitten mewing on top of a tall heap of yarn balls",
+   "gloss": "to accumulate; to multitask",
+   "verb_group": 1,
+   "tier": "balcony",
+   "level": "balcony",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_monnayer_verb",
+   "lemma": "monnayer",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "monnayer",
+   "box": [
+    337,
+    65,
+    478,
+    319
+   ],
+   "label_xy": [
+    408,
+    309
+   ],
+   "scene": "worker at a coin press cheering as gold coins pour out",
+   "gloss": "to mint coins; to manufacture money",
+   "verb_group": 1,
+   "tier": "upper",
+   "level": "upper",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_taxer_verb",
+   "lemma": "taxer",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "taxer",
+   "box": [
+    869,
+    310,
+    1203,
+    610
+   ],
+   "label_xy": [
+    1036,
+    600
+   ],
+   "scene": "taxi driver holding out his hand to a parrot on the taxi roof",
+   "gloss": "to tax; to accuse",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  }
+ ],
+ "links": [],
+ "segment_id": "ST_commerce_seg007",
+ "street_id": "ST_commerce",
+ "sector_id": "S03_market",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue du Commerce — étape 6",
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg008",
+   "box": [
+    690,
+    380,
+    860,
+    520
+   ],
+   "label": "Walk on to Rue du Commerce — étape 7",
+   "name": "Rue du Commerce — étape 7",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_commerce_seg005",
+   "box": [
+    350,
+    640,
+    1100,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 5",
+   "name": "Rue du Commerce — étape 5",
+   "kind": "street"
+  }
+ }
+}

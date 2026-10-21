@@ -1,0 +1,366 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg013",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 13 · repousser, se hisser, abattre",
+ "divider_x": 820,
+ "note": "Tiered verb place. -er LEFT (man pushing back a charging goat with his broom, man hoisting himself up a rope onto the wall while a goose hisses, little mirror on the wall; man chaining his bicycle to the balcony rail; cook trapping a jay under a pie dish at the upper window; farmer mowing the grass roof with a scythe), -ir/-re RIGHT (man knocking down a tower of tin cans with a cricket bat). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_repousser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_repousser_verb",
+   "text": "repousser",
+   "box": [
+    211,
+    640,
+    307,
+    666
+   ],
+   "text_box": [
+    215,
+    644,
+    303,
+    662
+   ]
+  },
+  "fr_hisser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_hisser_verb",
+   "text": "se hisser",
+   "box": [
+    539,
+    599,
+    635,
+    625
+   ],
+   "text_box": [
+    543,
+    603,
+    631,
+    621
+   ]
+  },
+  "fr_enchainer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enchainer_verb",
+   "text": "enchaîner",
+   "box": [
+    436,
+    324,
+    532,
+    350
+   ],
+   "text_box": [
+    440,
+    328,
+    528,
+    346
+   ]
+  },
+  "fr_pieger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pieger_verb",
+   "text": "piéger",
+   "box": [
+    222,
+    299,
+    290,
+    325
+   ],
+   "text_box": [
+    226,
+    303,
+    286,
+    321
+   ]
+  },
+  "fr_faucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_faucher_verb",
+   "text": "faucher",
+   "box": [
+    189,
+    93,
+    267,
+    119
+   ],
+   "text_box": [
+    193,
+    97,
+    263,
+    115
+   ]
+  },
+  "fr_abattre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_abattre_verb",
+   "text": "abattre",
+   "box": [
+    995,
+    630,
+    1073,
+    656
+   ],
+   "text_box": [
+    999,
+    634,
+    1069,
+    652
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 14 →",
+   "box": [
+    760,
+    430,
+    905,
+    540
+   ],
+   "text_box": [
+    766,
+    436,
+    899,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 12",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    700,
+    25,
+    800,
+    59
+   ],
+   "text_box": [
+    703,
+    28,
+    797,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    840,
+    25,
+    960,
+    59
+   ],
+   "text_box": [
+    843,
+    28,
+    957,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_repousser_verb",
+   "lemma": "repousser",
+   "gloss": "to push back",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    56,
+    400,
+    462,
+    672
+   ],
+   "label_xy": [
+    259,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_hisser_verb",
+   "lemma": "hisser",
+   "gloss": "to hoist",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    475,
+    412,
+    700,
+    631
+   ],
+   "label_xy": [
+    587,
+    619
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se hisser",
+   "scene": "",
+   "mirror": "small oval mirror on the wall beside the rope"
+  },
+  {
+   "id": "fr_enchainer_verb",
+   "lemma": "enchaîner",
+   "gloss": "to chain, to shackle; to subjugate, to enslave",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    394,
+    194,
+    575,
+    356
+   ],
+   "label_xy": [
+    484,
+    344
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_pieger_verb",
+   "lemma": "piéger",
+   "gloss": "to trap",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    200,
+    194,
+    312,
+    331
+   ],
+   "label_xy": [
+    256,
+    319
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_faucher_verb",
+   "lemma": "faucher",
+   "gloss": "to mow, to reap; to run over",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 5,
+   "box": [
+    112,
+    8,
+    344,
+    125
+   ],
+   "label_xy": [
+    228,
+    113
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_abattre_verb",
+   "lemma": "abattre",
+   "gloss": "to knock down; to slaughter",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    912,
+    369,
+    1156,
+    662
+   ],
+   "label_xy": [
+    1034,
+    650
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg014",
+   "box": [
+    760,
+    430,
+    905,
+    540
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 14",
+   "sign": "étape 14 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg012",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 12",
+   "name": "Rue des Gestes, étape 12",
+   "sign": "← étape 12",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

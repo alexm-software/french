@@ -1,0 +1,202 @@
+{
+ "divider_x": 663,
+ "kind": "room",
+ "note": "Grounded repaint v3 2026-10-21: one coherent ground-floor kitchen, single tiled floor, every figure on the floor, on a stool or at a real stove/table at true scale (no rows, no shelves, nothing floating). Feminine words left of the porthole swing doors, masculine words and adjectives right. One box per item. Exits: back door (outside), swing doors (dining hall), stairs up (upper kitchen); the windows are not exits.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "box": [
+    498,
+    82,
+    708,
+    148
+   ],
+   "text_box": [
+    511,
+    90,
+    695,
+    141
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_menthe_noun",
+   "box": [
+    112,
+    167,
+    241,
+    290
+   ],
+   "scene": "My AUNT (m'AHNT) in a straw sun hat tends her terracotta pot of fresh MINT on the windowsill by the sink."
+  },
+  {
+   "id": "fr_recette_noun",
+   "box": [
+    268,
+    172,
+    357,
+    380
+   ],
+   "scene": "A young cook presses the big red RESET button (ruh-SEHT) on the brick oven, a blank RECIPE card in her other hand, to start all over again."
+  },
+  {
+   "id": "fr_soupe_noun",
+   "box": [
+    360,
+    106,
+    454,
+    310
+   ],
+   "scene": "Like English 'soup', said SOOP (rhymes with 'loop'): steam from a big copper pot of SOUP curls up into a giant LOOP-the-loop."
+  },
+  {
+   "id": "fr_saveur_noun",
+   "box": [
+    456,
+    167,
+    509,
+    406
+   ],
+   "scene": "A cook at the stove smiles as she SAVOURS (sah-VUHR) the FLAVOUR on her wooden spoon."
+  },
+  {
+   "id": "fr_amertume_noun",
+   "box": [
+    514,
+    270,
+    660,
+    412
+   ],
+   "scene": "A pony MARE sits on the floor hugging her TUM (ah-mehr-TEWM), face all puckered, after biting the lemon at her hooves: such BITTERNESS!"
+  },
+  {
+   "id": "fr_preparation_noun",
+   "box": [
+    106,
+    294,
+    248,
+    524
+   ],
+   "scene": "Like English 'preparation', but it starts with PRAY (pray-pah-rah-SYOHN): an apprentice boy PRAYS over his six little bowls of chopped vegetables, the PREPARATION done."
+  },
+  {
+   "id": "fr_frite_noun",
+   "box": [
+    252,
+    415,
+    519,
+    523
+   ],
+   "scene": "A FLEET (FREET) of little paper boats with paper sails is moored on the worktable, each loaded with golden FRIES."
+  },
+  {
+   "id": "fr_sauce_noun",
+   "box": [
+    362,
+    526,
+    568,
+    594
+   ],
+   "scene": "Like English 'sauce', said SOHS (rhymes with 'dose'): a roast fish on its platter gets a huge DOSE of glossy brown SAUCE, with a little pot of extra beside it."
+  },
+  {
+   "id": "fr_gout_noun",
+   "box": [
+    693,
+    259,
+    785,
+    466
+   ],
+   "scene": "A little girl on a stool licks a spoonful of sticky purple GOO and smacks her lips: what a TASTE!"
+  },
+  {
+   "id": "fr_delicieux_adj",
+   "box": [
+    787,
+    246,
+    912,
+    356
+   ],
+   "scene": "A boy waves 'SEE YA!' beside his DAILY calendar (day-lee-SYEUH) as he bites into a DELICIOUS cream tart."
+  },
+  {
+   "id": "fr_grille_adj",
+   "box": [
+    916,
+    233,
+    1034,
+    382
+   ],
+   "scene": "A GREEN parrot on the grill rail cheers 'YAY!' (gree-YAY) over sausages GRILLED with black stripes."
+  },
+  {
+   "id": "fr_culinaire_adj",
+   "box": [
+    815,
+    441,
+    962,
+    601
+   ],
+   "scene": "A COOL cat in sunglasses sits NEAR the stove (kew-lee-NEHR) holding up a golden whisk, a CULINARY prize."
+  },
+  {
+   "id": "fr_cuisinier_noun",
+   "box": [
+    1036,
+    286,
+    1166,
+    618
+   ],
+   "scene": "A COOK so QUEASY he has turned green all over sits stirring his pot, his bandaged KNEE (kwee-zee-NYAY) resting on a footstool."
+  },
+  {
+   "id": "fr_haricot_noun",
+   "box": [
+    1037,
+    158,
+    1148,
+    274
+   ],
+   "scene": "A shaggy HAIRY COW (ah-ree-KOH) leans in at the window and munches a long green BEAN from a colander."
+  }
+ ],
+ "links": [
+  {
+   "target": "B09_restaurant",
+   "box": [
+    511,
+    163,
+    600,
+    266
+   ],
+   "label": "Back door: out to the street",
+   "name": "Restaurant Le Bon Goût (outside)",
+   "kind": "exit"
+  },
+  {
+   "target": "R_resto_room",
+   "box": [
+    649,
+    165,
+    761,
+    255
+   ],
+   "label": "Porthole swing doors to the dining hall",
+   "name": "Restaurant Le Bon Goût — salle",
+   "kind": "door"
+  },
+  {
+   "target": "R_resto_kitchen_02",
+   "box": [
+    778,
+    66,
+    1026,
+    229
+   ],
+   "label": "Stairs up to the upper kitchen",
+   "name": "Restaurant Le Bon Goût — cuisine (étage)",
+   "kind": "stairs_up"
+  }
+ ]
+}

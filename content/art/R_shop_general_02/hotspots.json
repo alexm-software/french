@@ -1,0 +1,294 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "General shop (2): sales, offers, receipts and prices. The wooden post in the middle divides it: feminine nouns on its left, masculine on its right. The corner by the right door is a zoom (R_shop_general_02_z1). The left doorway goes back to the jeweller's boutique; the right doorway leads on to the general shop (3).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les commerces (2)",
+   "box": [
+    40,
+    18,
+    250,
+    52
+   ],
+   "text_box": [
+    46,
+    24,
+    244,
+    46
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_offre_noun",
+   "lemma": "offre",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'offre",
+   "box": [
+    250,
+    175,
+    365,
+    269
+   ],
+   "label_xy": [
+    308,
+    259
+   ],
+   "scene": "squirrel offering three buttons for an acorn"
+  },
+  {
+   "id": "fr_fermeture_noun",
+   "lemma": "fermeture",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la fermeture",
+   "box": [
+    369,
+    125,
+    494,
+    320
+   ],
+   "label_xy": [
+    432,
+    310
+   ],
+   "scene": "farmer struggling to do up his jacket zip"
+  },
+  {
+   "id": "fr_garantie_noun",
+   "lemma": "garantie",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la garantie",
+   "box": [
+    500,
+    125,
+    615,
+    281
+   ],
+   "label_xy": [
+    558,
+    271
+   ],
+   "scene": "shopkeeper holding up a teapot"
+  },
+  {
+   "id": "fr_vente_noun",
+   "lemma": "vente",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la vente",
+   "box": [
+    319,
+    44,
+    937,
+    112
+   ],
+   "label_xy": [
+    628,
+    102
+   ],
+   "scene": "long blank sale banner strung across the shop"
+  },
+  {
+   "id": "fr_clientele_noun",
+   "lemma": "clientèle",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la clientèle",
+   "box": [
+    81,
+    356,
+    352,
+    412
+   ],
+   "label_xy": [
+    216,
+    402
+   ],
+   "scene": "three tortoises queuing patiently"
+  },
+  {
+   "id": "fr_provision_noun",
+   "lemma": "provision",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la provision",
+   "box": [
+    356,
+    325,
+    419,
+    400
+   ],
+   "label_xy": [
+    388,
+    390
+   ],
+   "scene": "hamster with cheeks stuffed full"
+  },
+  {
+   "id": "fr_negociation_noun",
+   "lemma": "négociation",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la négociation",
+   "box": [
+    287,
+    416,
+    612,
+    662
+   ],
+   "label_xy": [
+    450,
+    652
+   ],
+   "scene": "pony bargaining over a carrot"
+  },
+  {
+   "id": "fr_reduction_noun",
+   "lemma": "réduction",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la réduction",
+   "box": [
+    81,
+    469,
+    250,
+    650
+   ],
+   "label_xy": [
+    166,
+    640
+   ],
+   "scene": "white duck waddling off with a discounted loaf"
+  },
+  {
+   "id": "fr_ticket_noun",
+   "lemma": "ticket",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le ticket",
+   "box": [
+    706,
+    131,
+    800,
+    300
+   ],
+   "label_xy": [
+    753,
+    290
+   ],
+   "scene": "shop girl handing over a very long receipt"
+  },
+  {
+   "id": "fr_registre_noun",
+   "lemma": "registre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le registre",
+   "box": [
+    831,
+    144,
+    987,
+    281
+   ],
+   "label_xy": [
+    909,
+    271
+   ],
+   "scene": "shopkeeper writing in a big register"
+  },
+  {
+   "id": "fr_marchand_noun",
+   "lemma": "marchand",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le marchand",
+   "box": [
+    662,
+    331,
+    955,
+    676
+   ],
+   "label_xy": [
+    808,
+    666
+   ],
+   "scene": "rug merchant unrolling a carpet, cat asleep on it"
+  },
+  {
+   "id": "fr_tarif_noun",
+   "lemma": "tarif",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le tarif",
+   "box": [
+    1006,
+    56,
+    1144,
+    250
+   ],
+   "label_xy": [
+    1075,
+    240
+   ],
+   "scene": "wall of coral used as a price board"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_shop_general_02_z1",
+   "box": [
+    960,
+    345,
+    1180,
+    640
+   ],
+   "label": "the corner by the counter"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_boutique_01",
+   "box": [
+    44,
+    56,
+    181,
+    330
+   ],
+   "label": "Back through the left doorway to the jeweller's boutique",
+   "name": "La boutique (1)",
+   "kind": "door"
+  },
+  {
+   "target": "R_shop_general_03",
+   "box": [
+    1160,
+    81,
+    1262,
+    340
+   ],
+   "label": "Through the right doorway to the general shop (3)",
+   "name": "Les commerces (3)",
+   "kind": "door"
+  }
+ ]
+}

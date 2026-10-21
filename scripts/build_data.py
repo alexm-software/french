@@ -244,12 +244,41 @@ def explain_mnemonic(word):
     return " ".join(parts)
 
 
+# Sectors that name at least one id in open_rooms. Other open sectors stay fully walkable.
+RESTRICTED_SECTORS = set()
+
+
 def is_live(room, open_sectors, live_ids):
     if not room or room.get("sector_id") not in open_sectors:
         return False
-    if live_ids and room["id"] not in live_ids:
+    if room.get("sector_id") in RESTRICTED_SECTORS and room["id"] not in (live_ids or ()):
         return False
     return True
+
+
+def mark_soon_links(scene, rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids):
+    """Doors into a closed building stay visible and are not clickable."""
+    if not scene:
+        return scene
+    art_to_sector = {}
+    for sector_id in sectors_by_id:
+        art_to_sector[f"{sector_id.split('_')[0]}_sector"] = sector_id
+    for link in scene.get("links") or []:
+        target = link.get("target")
+        if not target:
+            continue
+        soon = False
+        if target in rooms_by_id:
+            soon = not is_live(rooms_by_id[target], open_sectors, live_ids)
+        elif target in buildings_by_id:
+            building = buildings_by_id[target]
+            owned = [rooms_by_id[rid] for rid in building.get("rooms") or [] if rid in rooms_by_id]
+            soon = not any(is_live(room, open_sectors, live_ids) for room in owned)
+        elif target in art_to_sector:
+            soon = art_to_sector[target] not in open_sectors
+        if soon:
+            link["soon"] = True
+    return scene
 
 
 def link_lemmas(lemmas, by_lemma, rooms_by_id, open_sectors, live_ids=None):
@@ -417,8 +446,10 @@ def bind_scene(room, words, building, signs, plaques=None):
                 "target": room["parent_room_id"],
                 "label": "Step back",
             }
-    zoom = scene.get("zoom_from")
-    if zoom:
+    regions = list(scene.get("zoom_regions") or [])
+    if not regions and scene.get("zoom_from"):
+        regions = [scene["zoom_from"]]
+    for zoom in regions:
         scene["hotspots"].insert(0, {
             "zoom_id": zoom["room_id"],
             "label": signs.get(zoom["room_id"]) or zoom.get("label") or "Look closer",
@@ -782,7 +813,7 @@ def main():
     assignment_path = ROOT / "content" / "assignment.json"
     assignment = load_json(assignment_path) if assignment_path.exists() else {}
     open_sectors = set(site.get("open_sectors") or [])
-    # When set, only these rooms are walkable. Everything else in the quarter stays coming soon.
+    # Rooms listed here limit their own sector. A sector with no listed room stays fully open.
     live_ids = set(site.get("open_rooms") or [])
     words = []
     with (SOURCE / "vocab.jsonl").open(encoding="utf-8") as handle:
@@ -801,6 +832,8 @@ def main():
         by_lemma[word["lemma"].casefold()].append(word)
     rooms = load_json(SOURCE / "rooms.json")["rooms"]
     rooms_by_id = {room["id"]: room for room in rooms}
+    global RESTRICTED_SECTORS
+    RESTRICTED_SECTORS = {room["sector_id"] for room in rooms if room["id"] in live_ids}
     buildings = load_json(SOURCE / "buildings.json")["buildings"]
     buildings_by_id = {building["id"]: building for building in buildings}
     sectors = load_json(SOURCE / "sectors.json")["sectors"]
@@ -874,7 +907,9 @@ def main():
                 index_buildings.append(index_building)
                 exterior = load_place_scene(building["id"], signs.get(building["id"]) or building["name"])
                 if exterior:
-                    payload["scene"] = exterior
+                    payload["scene"] = mark_soon_links(
+                        exterior, rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids,
+                    )
                     copy_art(building["id"])
                 for floor in payload["floors"]:
                     for stub in floor["rooms"]:
@@ -919,7 +954,9 @@ def main():
         if open_now:
             sector_scene = load_place_scene(sector_art_id(sector["id"]), signs.get(sector_art_id(sector["id"])) or french)
             if sector_scene:
-                sector_payload["scene"] = sector_scene
+                sector_payload["scene"] = mark_soon_links(
+                    sector_scene, rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids,
+                )
                 copy_art(sector_art_id(sector["id"]))
             alleys = []
             for building in building_payloads:
@@ -978,7 +1015,10 @@ def main():
                     word_ids.append(word_id)
             room_words = [words_by_id[word_id] for word_id in word_ids if word_id in words_by_id]
             cards = [card(word, by_lemma, rooms_by_id, open_sectors, cache, live_ids) for word in room_words]
-            scene = bind_scene(room, room_words, building, signs, plaques)
+            scene = mark_soon_links(
+                bind_scene(room, room_words, building, signs, plaques),
+                rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids,
+            )
             painted_ids = {
                 hot.get("word_id")
                 for hot in (scene or {}).get("hotspots") or []
@@ -1141,6 +1181,8 @@ def main():
                 "sector_id": featured_room["sector_id"],
                 "kind": "room",
             }
+    elif "S01_beginner" in open_sectors:
+        featured = {"id": "S01_beginner", "sign": "Place du Village", "kind": "sector"}
     elif "S04_cafes" in open_sectors:
         featured = {"id": "S04_cafes", "sign": signs.get("S04_sector") or "Rue des Saveurs", "kind": "sector"}
     write_json(PUBLIC / "data" / "index.json", {

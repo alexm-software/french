@@ -1,0 +1,107 @@
+{
+ "divider_x": 860,
+ "name": "Rue des Gestes — étape 1 · serrer, pencher, tendre",
+ "note": "Tiered verb place. -er LEFT (neighbours shaking hands with a hard squeeze, man on a stepladder leaning out for a falling pen, woman shaking a rug with a cuckoo flying out on the balcony, man trembling at a dangling spider at the upper window, jittery old lady shaking a hand bell on the roof terrace), -ir/-re RIGHT (girl holding out a carrot to a donkey). Forward = far lane; back = near cobbles to the square.",
+ "items": [
+  {
+   "id": "fr_serrer_verb",
+   "box": [
+    75,
+    394,
+    406,
+    672
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_pencher_verb",
+   "box": [
+    410,
+    302,
+    619,
+    662
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_secouer_verb",
+   "box": [
+    188,
+    156,
+    456,
+    300
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_trembler_verb",
+   "box": [
+    262,
+    38,
+    438,
+    154
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_agiter_verb",
+   "box": [
+    537,
+    8,
+    675,
+    169
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_tendre_verb",
+   "box": [
+    944,
+    444,
+    1231,
+    656
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg002",
+   "box": [
+    790,
+    450,
+    935,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 2",
+   "sign": "étape 2 →"
+  },
+  "back": {
+   "target": "S02_sector",
+   "box": [
+    470,
+    674,
+    960,
+    712
+   ],
+   "label": "Back under the pulley arch to the square",
+   "name": "Place de la Rue des Maisons",
+   "sign": "← place"
+  }
+ },
+ "signs": {
+  "er": [
+   700,
+   25,
+   800,
+   59
+  ],
+  "irre": [
+   830,
+   25,
+   950,
+   59
+  ]
+ }
+}

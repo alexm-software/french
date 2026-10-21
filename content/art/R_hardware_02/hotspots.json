@@ -1,0 +1,294 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 590,
+ "kind": "room",
+ "note": "Hardware shop (2): metals, chains, ropes and scrap. Feminine nouns to the left of x=590, masculine to the right. The back shelves are a zoom (R_hardware_02_z1). The left doorway goes back to the fashion boutique; the right doorway leads on to the jeweller's boutique.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La quincaillerie (2)",
+   "box": [
+    760,
+    15,
+    1000,
+    55
+   ],
+   "text_box": [
+    766,
+    21,
+    994,
+    49
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_chaine_noun",
+   "lemma": "chaîne",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la chaîne",
+   "box": [
+    112,
+    50,
+    231,
+    481
+   ],
+   "label_xy": [
+    172,
+    471
+   ],
+   "scene": "shopkeeper hauling a heavy iron chain"
+  },
+  {
+   "id": "fr_corde_noun",
+   "lemma": "corde",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la corde",
+   "box": [
+    237,
+    256,
+    316,
+    456
+   ],
+   "label_xy": [
+    276,
+    446
+   ],
+   "scene": "guitarist with a rope tied to the rafters"
+  },
+  {
+   "id": "fr_grille_noun",
+   "lemma": "grille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la grille",
+   "box": [
+    320,
+    94,
+    456,
+    320
+   ],
+   "label_xy": [
+    388,
+    310
+   ],
+   "scene": "tall wrought-iron gate"
+  },
+  {
+   "id": "fr_liaison_noun",
+   "lemma": "liaison",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la liaison",
+   "box": [
+    475,
+    45,
+    581,
+    269
+   ],
+   "label_xy": [
+    528,
+    259
+   ],
+   "scene": "monkey swinging between links of a chain"
+  },
+  {
+   "id": "fr_ferraille_noun",
+   "lemma": "ferraille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la ferraille",
+   "box": [
+    362,
+    324,
+    576,
+    515
+   ],
+   "label_xy": [
+    469,
+    505
+   ],
+   "scene": "fairy building a tin castle on a heap of scrap iron"
+  },
+  {
+   "id": "fr_rayure_noun",
+   "lemma": "rayure",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la rayure",
+   "box": [
+    287,
+    519,
+    481,
+    656
+   ],
+   "label_xy": [
+    384,
+    646
+   ],
+   "scene": "toolbox with a big scratch across its lid"
+  },
+  {
+   "id": "fr_fil_noun",
+   "lemma": "fil",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le fil",
+   "box": [
+    650,
+    50,
+    715,
+    205
+   ],
+   "label_xy": [
+    682,
+    195
+   ],
+   "scene": "spider tiptoeing down a thread"
+  },
+  {
+   "id": "fr_fer_noun",
+   "lemma": "fer",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le fer",
+   "box": [
+    600,
+    225,
+    716,
+    421
+   ],
+   "label_xy": [
+    658,
+    411
+   ],
+   "scene": "blacksmith hammering glowing iron on an anvil"
+  },
+  {
+   "id": "fr_metal_noun",
+   "lemma": "métal",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le métal",
+   "box": [
+    719,
+    256,
+    819,
+    358
+   ],
+   "label_xy": [
+    769,
+    348
+   ],
+   "scene": "metal robot shrugging"
+  },
+  {
+   "id": "fr_marbre_noun",
+   "lemma": "marbre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le marbre",
+   "box": [
+    581,
+    425,
+    740,
+    644
+   ],
+   "label_xy": [
+    660,
+    634
+   ],
+   "scene": "shivering boy on a cold marble step, marbles scattered"
+  },
+  {
+   "id": "fr_acier_noun",
+   "lemma": "acier",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'acier",
+   "box": [
+    744,
+    362,
+    925,
+    587
+   ],
+   "label_xy": [
+    834,
+    577
+   ],
+   "scene": "boy skiing down a plank ramp on steel skis"
+  },
+  {
+   "id": "fr_couchage_noun",
+   "lemma": "couchage",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le couchage",
+   "box": [
+    950,
+    506,
+    1203,
+    676
+   ],
+   "label_xy": [
+    1076,
+    666
+   ],
+   "scene": "sleeping bag rolled out on a couch-bed"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_hardware_02_z1",
+   "box": [
+    900,
+    110,
+    1130,
+    355
+   ],
+   "label": "the back shelves"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_boutique_02",
+   "box": [
+    20,
+    69,
+    108,
+    470
+   ],
+   "label": "Back through the left doorway to the fashion boutique",
+   "name": "La boutique (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_boutique_01",
+   "box": [
+    1160,
+    69,
+    1262,
+    500
+   ],
+   "label": "Through the right doorway to the jeweller's boutique",
+   "name": "La boutique (1)",
+   "kind": "door"
+  }
+ ]
+}

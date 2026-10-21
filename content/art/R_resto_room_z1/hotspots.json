@@ -2,28 +2,47 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": null,
+ "divider_x": 427,
  "kind": "zoom",
  "parent_room_id": "R_resto_room",
- "note": "Round 3 recompose: all words masculine, so the counter with every item runs across the RIGHT two-thirds (x >= ~400); the left third holds the sign and a small window setting. Cabaret moved to the far right end (was near the centre).",
+ "note": "Fit-audit repaint 2026-10-21 (hook standard v2). Bar-counter close-up: all six words are masculine and stand on the right of the divider (sign, plant and stool form the setting on the left). One box per item; zoom_back bottom-left. S04 v3 (2026-10-21): reviewed (objects all stand on the counter, the owner stands behind it at true scale); border outpainted so the snow globe and every item sit at least 6% in from each edge.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    102,
-    39,
-    508,
-    180
+    133,
+    48,
+    434,
+    327
    ],
    "text_box": [
-    130,
-    58,
-    480,
-    160
+    157,
+    117,
+    411,
+    252
    ]
   }
  },
  "items": [
+  {
+   "id": "fr_cabaret_noun",
+   "lemma": "cabaret",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cabaret",
+   "box": [
+    439,
+    201,
+    574,
+    464
+   ],
+   "label_xy": [
+    506,
+    454
+   ],
+   "scene": "Same as English 'cabaret' (said kah-bah-REH): a frog in a top hat sings on a tiny CABARET stage at the end of the bar."
+  },
   {
    "id": "fr_couscous_noun",
    "lemma": "couscous",
@@ -32,11 +51,35 @@
    "side": "right",
    "label": "le couscous",
    "box": [
-    403,
-    419,
-    557,
-    520
-   ]
+    576,
+    328,
+    760,
+    480
+   ],
+   "label_xy": [
+    668,
+    470
+   ],
+   "scene": "Same as English 'couscous' (said koos-KOOS): a steaming dome of COUSCOUS crowned with vegetables in a painted dish."
+  },
+  {
+   "id": "fr_restaurateur_noun",
+   "lemma": "restaurateur",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le restaurateur",
+   "box": [
+    830,
+    100,
+    1124,
+    354
+   ],
+   "label_xy": [
+    977,
+    344
+   ],
+   "scene": "Same as English 'restaurateur' (said rehs-toh-rah-TUHR): the proud RESTAURANT OWNER, a silver-haired lady, counts the day's takings beside her brass till."
   },
   {
    "id": "fr_banquet_noun",
@@ -46,27 +89,16 @@
    "side": "right",
    "label": "le banquet",
    "box": [
-    559,
-    414,
-    789,
-    512
+    764,
+    358,
+    951,
+    437
    ],
-   "scene": "roast turkey banquet platter"
-  },
-  {
-   "id": "fr_arrangement_noun",
-   "lemma": "arrangement",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'arrangement",
-   "box": [
-    625,
-    156,
-    850,
-    405
+   "label_xy": [
+    858,
+    427
    ],
-   "scene": "flower arrangement of sunflowers and roses"
+   "scene": "Same as English 'banquet' (said bahn-KEH, no 't'): a long BANQUET platter piled with a roast, grapes and bread."
   },
   {
    "id": "fr_hors_d_oeuvre_noun",
@@ -76,41 +108,16 @@
    "side": "right",
    "label": "l'hors-d'œuvre",
    "box": [
-    789,
-    409,
-    1003,
-    497
-   ]
-  },
-  {
-   "id": "fr_classement_noun",
-   "lemma": "classement",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le classement",
-   "box": [
-    852,
-    247,
-    1020,
-    398
+    830,
+    440,
+    1041,
+    522
    ],
-   "scene": "class race winners on a podium"
-  },
-  {
-   "id": "fr_cabaret_noun",
-   "lemma": "cabaret",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cabaret",
-   "box": [
-    1023,
-    180,
-    1242,
-    461
+   "label_xy": [
+    936,
+    512
    ],
-   "scene": "miniature cabaret theatre with dancers"
+   "scene": "Same as English 'hors d'oeuvre' (said or-DUHVR): a little tray of STARTERS, cheese and tomatoes on cocktail sticks."
   },
   {
    "id": "fr_bistro_noun",
@@ -120,22 +127,26 @@
    "side": "right",
    "label": "le bistro",
    "box": [
-    956,
-    500,
-    1280,
-    720
+    1078,
+    357,
+    1188,
+    496
    ],
-   "scene": "little bistro table with coffee"
+   "label_xy": [
+    1133,
+    486
+   ],
+   "scene": "Same as English 'bistro' (said bees-TROH): a tiny model BISTRO with a red awning sits in a snow globe on the bar."
   }
  ],
  "links": [
   {
    "target": "R_resto_room",
    "box": [
-    0,
-    600,
-    160,
-    720
+    106,
+    522,
+    242,
+    624
    ],
    "label": "Back to the dining hall",
    "name": "Restaurant Le Bon Goût — salle",

@@ -1,0 +1,171 @@
+{
+ "divider_x": 600,
+ "kind": "room",
+ "note": "First shop of the covered arcade (general shop 1): prices, customers, shops and purchases. Feminine nouns to the left of x=600, masculine to the right (commercial, an adjective, sits on the left). The glazed door on the far left leads out to the forecourt and the square; the doorway on the far right leads on to the bookshop.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les commerces (1)",
+   "box": [
+    270,
+    18,
+    520,
+    62
+   ],
+   "text_box": [
+    276,
+    24,
+    514,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_queue_noun",
+   "box": [
+    106,
+    300,
+    232,
+    612
+   ],
+   "scene": "cat with a very long tail curling across the floor"
+  },
+  {
+   "id": "fr_valeur_noun",
+   "box": [
+    262,
+    206,
+    406,
+    400
+   ],
+   "scene": "jeweller holding up a glowing pearl"
+  },
+  {
+   "id": "fr_boutique_noun",
+   "box": [
+    244,
+    431,
+    412,
+    637
+   ],
+   "scene": "mouse trying on a tiny boot"
+  },
+  {
+   "id": "fr_commercial_adj",
+   "box": [
+    412,
+    188,
+    548,
+    346
+   ],
+   "scene": "woman filming another who holds up a shiny can"
+  },
+  {
+   "id": "fr_inscription_noun",
+   "box": [
+    419,
+    350,
+    548,
+    618
+   ],
+   "scene": "girl in a swimming cap and goggles signing up at a desk"
+  },
+  {
+   "id": "fr_client_noun",
+   "box": [
+    552,
+    244,
+    690,
+    520
+   ],
+   "scene": "customer polishing the counter while she waits"
+  },
+  {
+   "id": "fr_prix_noun",
+   "box": [
+    694,
+    195,
+    770,
+    400
+   ],
+   "scene": "girl holding up a giant golden price tag"
+  },
+  {
+   "id": "fr_magasin_noun",
+   "box": [
+    644,
+    70,
+    819,
+    190
+   ],
+   "scene": "shelves stacked with magazines"
+  },
+  {
+   "id": "fr_produit_noun",
+   "box": [
+    774,
+    200,
+    925,
+    394
+   ],
+   "scene": "salesman unveiling a singing toaster"
+  },
+  {
+   "id": "fr_commerce_noun",
+   "box": [
+    931,
+    212,
+    1034,
+    380
+   ],
+   "scene": "shopkeeper beckoning with both arms"
+  },
+  {
+   "id": "fr_echange_noun",
+   "box": [
+    744,
+    406,
+    1019,
+    676
+   ],
+   "scene": "two boys swapping a bag of marbles for stickers"
+  },
+  {
+   "id": "fr_achat_noun",
+   "box": [
+    1038,
+    181,
+    1203,
+    619
+   ],
+   "scene": "shah carrying a golden cat in a shopping bag"
+  }
+ ],
+ "links": [
+  {
+   "target": "B07_rue_commercante",
+   "box": [
+    31,
+    94,
+    100,
+    296
+   ],
+   "label": "Out through the glazed door to the arcade entrance",
+   "name": "Rue Commerçante (outside)",
+   "kind": "door"
+  },
+  {
+   "target": "R_bookshop_01",
+   "box": [
+    1040,
+    25,
+    1215,
+    176
+   ],
+   "label": "Through the right doorway to the bookshop",
+   "name": "La librairie (1)",
+   "kind": "door"
+  }
+ ]
+}

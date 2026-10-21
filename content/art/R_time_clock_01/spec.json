@@ -1,0 +1,163 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Ground-floor entrance hall of the clock tower (stone flagstones). Feminine nouns on the left (l'heure, la nuit, la journée, la minute); masculine on the right (le jour, le temps, l'instant, le soir, le moment, le matin). Green front door on the far left back out to the tower forecourt; the archway on the far right leads to the seasons room. Zoom: the sideboard on the back wall (behind the doorman).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les heures (1)",
+   "box": [
+    498,
+    62,
+    714,
+    198
+   ],
+   "text_box": [
+    508,
+    72,
+    704,
+    188
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_heure_noun",
+   "box": [
+    94,
+    262,
+    238,
+    619
+   ],
+   "scene": "confused man scratching his head at a giant pocket watch"
+  },
+  {
+   "id": "fr_nuit_noun",
+   "box": [
+    250,
+    285,
+    460,
+    480
+   ],
+   "scene": "sleepy gnu in a nightcap with a crescent-moon lantern"
+  },
+  {
+   "id": "fr_journee_noun",
+   "box": [
+    469,
+    245,
+    590,
+    485
+   ],
+   "scene": "traveller woman with suitcase and walking stick"
+  },
+  {
+   "id": "fr_minute_noun",
+   "box": [
+    400,
+    487,
+    522,
+    662
+   ],
+   "scene": "squirrel on a stool clutching a nut"
+  },
+  {
+   "id": "fr_jour_noun",
+   "box": [
+    662,
+    231,
+    770,
+    420
+   ],
+   "scene": "doorman holding up a smiling sun disc"
+  },
+  {
+   "id": "fr_temps_noun",
+   "box": [
+    631,
+    422,
+    869,
+    612
+   ],
+   "scene": "sunbather in a deckchair beside a big hourglass"
+  },
+  {
+   "id": "fr_instant_noun",
+   "box": [
+    831,
+    244,
+    919,
+    418
+   ],
+   "scene": "man with an instant camera, flash bursting"
+  },
+  {
+   "id": "fr_soir_noun",
+   "box": [
+    922,
+    100,
+    1060,
+    447
+   ],
+   "scene": "white swan beside a lit street lamp"
+  },
+  {
+   "id": "fr_moment_noun",
+   "box": [
+    1062,
+    269,
+    1202,
+    512
+   ],
+   "scene": "man pushing a lawn mower over a patch of turf"
+  },
+  {
+   "id": "fr_matin_noun",
+   "box": [
+    881,
+    520,
+    1194,
+    669
+   ],
+   "scene": "man doing yoga on a mat beside a rooster"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_time_clock_01_z1",
+   "box": [
+    771,
+    295,
+    830,
+    412
+   ],
+   "label": "the sideboard on the back wall"
+  }
+ ],
+ "links": [
+  {
+   "target": "B03_horloge",
+   "box": [
+    50,
+    40,
+    250,
+    255
+   ],
+   "label": "Out through the green front door to the tower forecourt",
+   "name": "Tour de l'Horloge (forecourt)",
+   "kind": "door"
+  },
+  {
+   "target": "R_time_days_01",
+   "box": [
+    1072,
+    40,
+    1250,
+    265
+   ],
+   "label": "Through the archway to the seasons room",
+   "name": "Tour — saisons et mois",
+   "kind": "arch"
+  }
+ ]
+}

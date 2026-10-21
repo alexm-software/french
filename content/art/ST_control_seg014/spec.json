@@ -1,0 +1,17 @@
+{"divider_x": 900,
+ "name": "Rue des Gestes — étape 14 · enfoncer, enterrer, s'étendre",
+ "note": "Tiered verb place. -er LEFT (man driving a fence post in with a mallet, squirrel burying an acorn in the flower bed, man cracking a walnut on the balcony, man launching a paper aeroplane from the upper window, man hauling a cart of bricks on the roof terrace), -ir/-re RIGHT (long tabby cat stretching out on the bench under a round mirror). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_enfoncer_verb", "box": [169, 344, 394, 672], "tier": "street"},
+  {"id": "fr_enterrer_verb", "box": [444, 550, 556, 650], "tier": "street"},
+  {"id": "fr_craquer_verb", "box": [344, 100, 475, 262], "tier": "balcony"},
+  {"id": "fr_projeter_verb", "box": [162, 44, 342, 150], "tier": "upper"},
+  {"id": "fr_charrier_verb", "box": [550, 119, 731, 244], "tier": "roof"},
+  {"id": "fr_etendre_verb", "box": [1094, 331, 1269, 612], "tier": "street", "mirror": "round mirror on the wall above the bench"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg015", "box": [860, 420, 1020, 520], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 15", "sign": "étape 15 →"},
+  "back": {"target": "ST_control_seg013", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 13", "name": "Rue des Gestes, étape 13", "sign": "← étape 13"}
+ },
+ "signs": {"er": [700, 25, 800, 59], "irre": [830, 25, 950, 59]}
+}

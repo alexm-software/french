@@ -1,0 +1,191 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "The deli counter and the fish counter (child-friendly, no blood), a woman butcher and a piggy chef behind them. Feminine nouns to the left of the green iron pillar (x=640), masculine to the right. Back past the cabbage crates on the left to the vegetable stalls; on past the shark and prawn counter on the right to the seafood and deli corner.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Poissons et viandes",
+   "box": [
+    700,
+    620,
+    960,
+    656
+   ],
+   "text_box": [
+    706,
+    626,
+    954,
+    650
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_viande_noun",
+   "box": [
+    237,
+    352,
+    337,
+    413
+   ],
+   "scene": "wrapped joint of meat on a board"
+  },
+  {
+   "id": "fr_chair_noun",
+   "box": [
+    140,
+    419,
+    312,
+    631
+   ],
+   "scene": "armchair carved out of a giant ham beside the deli counter"
+  },
+  {
+   "id": "fr_saucisse_noun",
+   "box": [
+    340,
+    500,
+    519,
+    631
+   ],
+   "scene": "dachshund wearing sausages by the deli counter"
+  },
+  {
+   "id": "fr_carcasse_noun",
+   "box": [
+    343,
+    402,
+    444,
+    450
+   ],
+   "scene": "clean fish skeleton on a plate"
+  },
+  {
+   "id": "fr_moule_noun_f",
+   "box": [
+    462,
+    352,
+    552,
+    405
+   ],
+   "scene": "bowl of mussels"
+  },
+  {
+   "id": "fr_sardine_noun",
+   "box": [
+    450,
+    428,
+    502,
+    465
+   ],
+   "scene": "open tin of sardines"
+  },
+  {
+   "id": "fr_charcuterie_noun",
+   "box": [
+    510,
+    410,
+    615,
+    468
+   ],
+   "scene": "platter of sliced cold meats"
+  },
+  {
+   "id": "fr_poisson_noun",
+   "box": [
+    675,
+    405,
+    806,
+    497
+   ],
+   "scene": "big silver fish on ice"
+  },
+  {
+   "id": "fr_porc_noun",
+   "box": [
+    735,
+    244,
+    869,
+    385
+   ],
+   "scene": "piggy chef behind the fish counter holding a pork chop"
+  },
+  {
+   "id": "fr_pate_noun_2",
+   "box": [
+    898,
+    422,
+    981,
+    481
+   ],
+   "scene": "terrine of pâté"
+  },
+  {
+   "id": "fr_jambon_noun",
+   "box": [
+    1021,
+    362,
+    1100,
+    481
+   ],
+   "scene": "whole ham on the bone"
+  },
+  {
+   "id": "fr_galop_noun",
+   "box": [
+    941,
+    331,
+    1015,
+    412
+   ],
+   "scene": "wooden toy horse galloping"
+  },
+  {
+   "id": "fr_saumon_noun",
+   "box": [
+    812,
+    402,
+    893,
+    460
+   ],
+   "scene": "pink salmon leaping"
+  },
+  {
+   "id": "fr_saucisson_noun",
+   "box": [
+    902,
+    256,
+    935,
+    381
+   ],
+   "scene": "long dry sausage hanging"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_vegetables",
+   "box": [
+    85,
+    256,
+    206,
+    412
+   ],
+   "label": "Back past the cabbage crates to the vegetable stall",
+   "name": "Les légumes",
+   "kind": "path"
+  },
+  {
+   "target": "R_butcher_02",
+   "box": [
+    1050,
+    250,
+    1203,
+    356
+   ],
+   "label": "On past the shark and prawn counter to the seafood corner",
+   "name": "Fruits de mer",
+   "kind": "path"
+  }
+ ]
+}

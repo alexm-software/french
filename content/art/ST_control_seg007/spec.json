@@ -1,0 +1,17 @@
+{"divider_x": 760,
+ "name": "Rue des Gestes — étape 7 · lancer, frissonner, couvrir",
+ "note": "Tiered verb place. -er LEFT (man throwing a lance at a straw target, woman rushing to snatch her washing from under a little rain cloud, brawny man rattling the balcony railing, shivering man in a blanket at the icicled upper window), -ir/-re RIGHT (woman covering the dove's cage with a cloth; man throwing a striped sheet over his balcony sofa). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_lancer_verb", "box": [81, 369, 400, 656], "tier": "street"},
+  {"id": "fr_precipiter_verb", "box": [437, 319, 637, 569], "tier": "street"},
+  {"id": "fr_ebranler_verb", "box": [244, 100, 431, 300], "tier": "balcony"},
+  {"id": "fr_frissonner_verb", "box": [50, 8, 219, 188], "tier": "upper"},
+  {"id": "fr_couvrir_verb", "box": [906, 388, 1119, 662], "tier": "street"},
+  {"id": "fr_recouvrir_verb", "box": [969, 106, 1238, 338], "tier": "balcony"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg008", "box": [680, 440, 840, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 8", "sign": "étape 8 →"},
+  "back": {"target": "ST_control_seg006", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 6", "name": "Rue des Gestes, étape 6", "sign": "← étape 6"}
+ },
+ "signs": {"er": [560, 25, 660, 59], "irre": [790, 25, 910, 59]}
+}

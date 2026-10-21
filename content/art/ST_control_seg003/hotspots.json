@@ -1,0 +1,366 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg003",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 3 · pousser, glisser, pendre",
+ "divider_x": 800,
+ "note": "Tiered verb place. -er LEFT (man pushing three cats in a wheelbarrow, penguin sliding down a wooden slide, woman at her loom by the lantern on the balcony, grocer weighing one pea on brass scales at the upper window), -ir/-re RIGHT (man hanging a pendulum clock by his door; singer interrupted by a squawking parrot on the balcony). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_pousser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pousser_verb",
+   "text": "pousser (à)",
+   "box": [
+    198,
+    640,
+    314,
+    666
+   ],
+   "text_box": [
+    202,
+    644,
+    310,
+    662
+   ]
+  },
+  "fr_glisser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_glisser_verb",
+   "text": "glisser",
+   "box": [
+    464,
+    593,
+    542,
+    619
+   ],
+   "text_box": [
+    468,
+    597,
+    538,
+    615
+   ]
+  },
+  "fr_allumer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_allumer_verb",
+   "text": "allumer",
+   "box": [
+    88,
+    287,
+    166,
+    313
+   ],
+   "text_box": [
+    92,
+    291,
+    162,
+    309
+   ]
+  },
+  "fr_peser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_peser_verb",
+   "text": "peser",
+   "box": [
+    355,
+    212,
+    413,
+    238
+   ],
+   "text_box": [
+    359,
+    216,
+    409,
+    234
+   ]
+  },
+  "fr_pendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pendre_verb",
+   "text": "pendre",
+   "box": [
+    1044,
+    630,
+    1112,
+    656
+   ],
+   "text_box": [
+    1048,
+    634,
+    1108,
+    652
+   ]
+  },
+  "fr_interrompre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_interrompre_verb",
+   "text": "interrompre",
+   "box": [
+    1020,
+    262,
+    1136,
+    288
+   ],
+   "text_box": [
+    1024,
+    266,
+    1132,
+    284
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 4 →",
+   "box": [
+    630,
+    440,
+    800,
+    560
+   ],
+   "text_box": [
+    636,
+    446,
+    794,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 2",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    560,
+    25,
+    660,
+    59
+   ],
+   "text_box": [
+    563,
+    28,
+    657,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    820,
+    25,
+    940,
+    59
+   ],
+   "text_box": [
+    823,
+    28,
+    937,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_pousser_verb",
+   "lemma": "pousser",
+   "gloss": "to push; to grow",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    125,
+    388,
+    388,
+    672
+   ],
+   "label_xy": [
+    256,
+    660
+   ],
+   "prepositions": [
+    "à"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_glisser_verb",
+   "lemma": "glisser",
+   "gloss": "to slide",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    394,
+    444,
+    612,
+    625
+   ],
+   "label_xy": [
+    503,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_allumer_verb",
+   "lemma": "allumer",
+   "gloss": "to light; to switch on",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    10,
+    106,
+    244,
+    319
+   ],
+   "label_xy": [
+    127,
+    307
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_peser_verb",
+   "lemma": "peser",
+   "gloss": "to weigh",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    306,
+    112,
+    462,
+    244
+   ],
+   "label_xy": [
+    384,
+    232
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_pendre_verb",
+   "lemma": "pendre",
+   "gloss": "to hang",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    1000,
+    344,
+    1156,
+    662
+   ],
+   "label_xy": [
+    1078,
+    650
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_interrompre_verb",
+   "lemma": "interrompre",
+   "gloss": "to interrupt",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    975,
+    112,
+    1181,
+    294
+   ],
+   "label_xy": [
+    1078,
+    282
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg004",
+   "box": [
+    630,
+    440,
+    800,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 4",
+   "sign": "étape 4 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg002",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 2",
+   "name": "Rue des Gestes, étape 2",
+   "sign": "← étape 2",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 2,
+  "upper": 1
+ }
+}

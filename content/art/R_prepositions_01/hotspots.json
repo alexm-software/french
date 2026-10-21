@@ -1,0 +1,282 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "room",
+ "note": "First-floor room of the first prepositions (de, pour, avec, sans, entre, contre, derrière...). Prepositions have no gender, so no left/right rule (divider null). The white door on the far left goes back to the second pronouns room; the white door on the far right leads to the second prepositions room.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les prépositions (1)",
+   "box": [
+    569,
+    47,
+    747,
+    186
+   ],
+   "text_box": [
+    577,
+    55,
+    739,
+    178
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_de_prep",
+   "lemma": "de",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "de",
+   "box": [
+    140,
+    256,
+    213,
+    481
+   ],
+   "label_xy": [
+    176,
+    471
+   ],
+   "scene": "girl holding a plate with a slice of cake"
+  },
+  {
+   "id": "fr_pour_prep",
+   "lemma": "pour",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "pour",
+   "box": [
+    215,
+    310,
+    350,
+    512
+   ],
+   "label_xy": [
+    282,
+    502
+   ],
+   "scene": "woman pouring water from a jug into a bowl for a dog"
+  },
+  {
+   "id": "fr_avec_prep",
+   "lemma": "avec",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "avec",
+   "box": [
+    354,
+    187,
+    442,
+    428
+   ],
+   "label_xy": [
+    398,
+    418
+   ],
+   "scene": "man pushing an old upright vacuum cleaner"
+  },
+  {
+   "id": "fr_entre_prep",
+   "lemma": "entre",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "entre",
+   "box": [
+    446,
+    110,
+    548,
+    365
+   ],
+   "label_xy": [
+    497,
+    355
+   ],
+   "scene": "boy stepping through the gap between two curtains"
+  },
+  {
+   "id": "fr_sans_prep",
+   "lemma": "sans",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "sans",
+   "box": [
+    552,
+    190,
+    669,
+    400
+   ],
+   "label_xy": [
+    610,
+    390
+   ],
+   "scene": "barefoot man holding out empty hands, shoes missing"
+  },
+  {
+   "id": "fr_avant_prep",
+   "lemma": "avant",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "avant",
+   "box": [
+    765,
+    156,
+    835,
+    316
+   ],
+   "label_xy": [
+    800,
+    306
+   ],
+   "scene": "soldier standing on guard with a wooden staff"
+  },
+  {
+   "id": "fr_depuis_prep",
+   "lemma": "depuis",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "depuis",
+   "box": [
+    697,
+    319,
+    836,
+    562
+   ],
+   "label_xy": [
+    766,
+    552
+   ],
+   "scene": "girl beside a little stone well looking at a pocket watch"
+  },
+  {
+   "id": "fr_pendant_prep",
+   "lemma": "pendant",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "pendant",
+   "box": [
+    944,
+    170,
+    1060,
+    232
+   ],
+   "label_xy": [
+    1002,
+    222
+   ],
+   "scene": "woman swinging a pendant on a chain"
+  },
+  {
+   "id": "fr_contre_prep",
+   "lemma": "contre",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "contre",
+   "box": [
+    838,
+    236,
+    1037,
+    334
+   ],
+   "label_xy": [
+    938,
+    324
+   ],
+   "scene": "two men arm-wrestling at a small table"
+  },
+  {
+   "id": "fr_derriere_prep",
+   "lemma": "derrière",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "derrière",
+   "box": [
+    1085,
+    300,
+    1169,
+    431
+   ],
+   "label_xy": [
+    1127,
+    421
+   ],
+   "scene": "boy hiding behind a tall metal milk churn"
+  },
+  {
+   "id": "fr_jusque_prep",
+   "lemma": "jusque",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "jusque",
+   "box": [
+    887,
+    337,
+    1047,
+    503
+   ],
+   "label_xy": [
+    967,
+    493
+   ],
+   "scene": "man pouring orange juice into the glass in his hand up to the brim"
+  },
+  {
+   "id": "fr_sauf_prep",
+   "lemma": "sauf",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "sauf",
+   "box": [
+    1050,
+    469,
+    1200,
+    674
+   ],
+   "label_xy": [
+    1125,
+    664
+   ],
+   "scene": "man lounging alone in an armchair"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_pronouns_02",
+   "box": [
+    70,
+    131,
+    136,
+    406
+   ],
+   "label": "Back through the white door to the second pronouns room",
+   "name": "Les pronoms (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_prepositions_02",
+   "box": [
+    1125,
+    144,
+    1197,
+    296
+   ],
+   "label": "Through the white door to the second prepositions room",
+   "name": "Les prépositions (2)",
+   "kind": "door"
+  }
+ ]
+}

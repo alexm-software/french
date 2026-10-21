@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg016",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 16 · alléger, dégainer, culminer",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low garden wall with hedges, no verbs). Tiers: street (porter lightening his handcart, knight drawing his sword beside a neighing pony, schoolgirl rubbing out a chalk cat), balcony (lady powdering her poodle), upper (mouse chauffeur driving a hamster along the sill), roof (goat on top of the chimney). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_alleger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_alleger_verb",
+   "text": "alléger",
+   "box": [
+    201,
+    640,
+    279,
+    666
+   ],
+   "text_box": [
+    205,
+    644,
+    275,
+    662
+   ]
+  },
+  "fr_degainer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_degainer_verb",
+   "text": "dégainer",
+   "box": [
+    500,
+    630,
+    588,
+    656
+   ],
+   "text_box": [
+    504,
+    634,
+    584,
+    652
+   ]
+  },
+  "fr_gommer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_gommer_verb",
+   "text": "gommer",
+   "box": [
+    692,
+    580,
+    760,
+    606
+   ],
+   "text_box": [
+    696,
+    584,
+    756,
+    602
+   ]
+  },
+  "fr_poudrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_poudrer_verb",
+   "text": "poudrer",
+   "box": [
+    279,
+    237,
+    357,
+    263
+   ],
+   "text_box": [
+    283,
+    241,
+    353,
+    259
+   ]
+  },
+  "fr_voiturer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_voiturer_verb",
+   "text": "voiturer",
+   "box": [
+    559,
+    256,
+    647,
+    282
+   ],
+   "text_box": [
+    563,
+    260,
+    643,
+    278
+   ]
+  },
+  "fr_culminer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_culminer_verb",
+   "text": "culminer",
+   "box": [
+    718,
+    158,
+    806,
+    184
+   ],
+   "text_box": [
+    722,
+    162,
+    802,
+    180
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 17 →",
+   "box": [
+    840,
+    440,
+    1000,
+    560
+   ],
+   "text_box": [
+    846,
+    446,
+    994,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 15",
+   "box": [
+    470,
+    668,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    674,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    880,
+    25,
+    980,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    977,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1000,
+    25,
+    1120,
+    59
+   ],
+   "text_box": [
+    1003,
+    28,
+    1117,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_alleger_verb",
+   "lemma": "alléger",
+   "gloss": "to lighten; to alleviate, relieve",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    56,
+    344,
+    425,
+    672
+   ],
+   "label_xy": [
+    240,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_degainer_verb",
+   "lemma": "dégainer",
+   "gloss": "to unsheath; to draw",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    428,
+    350,
+    660,
+    662
+   ],
+   "label_xy": [
+    544,
+    650
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_gommer_verb",
+   "lemma": "gommer",
+   "gloss": "to gum; to erase, rub out",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    662,
+    406,
+    790,
+    612
+   ],
+   "label_xy": [
+    726,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_poudrer_verb",
+   "lemma": "poudrer",
+   "gloss": "to powder",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    206,
+    31,
+    431,
+    269
+   ],
+   "label_xy": [
+    318,
+    257
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_voiturer_verb",
+   "lemma": "voiturer",
+   "gloss": "to drive, chauffeur",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    537,
+    169,
+    669,
+    288
+   ],
+   "label_xy": [
+    603,
+    276
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_culminer_verb",
+   "lemma": "culminer",
+   "gloss": "to culminate; reach the highest point",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    712,
+    10,
+    812,
+    190
+   ],
+   "label_xy": [
+    762,
+    178
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg017",
+   "box": [
+    840,
+    440,
+    1000,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 17",
+   "sign": "étape 17 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg015",
+   "box": [
+    470,
+    668,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 15",
+   "name": "Allée du Quotidien, étape 15",
+   "sign": "← étape 15",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

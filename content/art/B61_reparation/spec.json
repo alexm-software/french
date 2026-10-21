@@ -1,0 +1,67 @@
+{
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "The repair workshop: a half-timbered brick house with a big wrench-and-gear sign over its open front door and clocks in both shop windows. Ground floor: the workshop (R_adj_state_02) -> the repair café (R_adj_state_03); up the café staircase to the first floor: the attic room (R_adj_state_04, zoom: the market crate) -> the robot workshop (R_adj_state_05).",
+ "text_areas": {
+  "name": {
+   "role": "building_name",
+   "text": "L'Atelier de Réparation",
+   "box": [
+    520,
+    306,
+    840,
+    342
+   ],
+   "text_box": [
+    526,
+    312,
+    834,
+    336
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "↙ Place du Marché",
+   "box": [
+    80,
+    600,
+    380,
+    640
+   ],
+   "text_box": [
+    86,
+    606,
+    374,
+    634
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_adj_state_02",
+   "box": [
+    583,
+    372,
+    773,
+    630
+   ],
+   "label": "Through the open front door into the workshop",
+   "name": "L'atelier",
+   "kind": "door"
+  },
+  {
+   "target": "S03_sector",
+   "box": [
+    0,
+    650,
+    500,
+    720
+   ],
+   "label": "Back across the cobbles to the Place du Marché",
+   "name": "Place du Marché",
+   "kind": "path"
+  }
+ ],
+ "building_name": "L'Atelier de Réparation"
+}

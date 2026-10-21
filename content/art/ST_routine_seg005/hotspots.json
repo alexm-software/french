@@ -1,0 +1,367 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg005",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 5 · nouer, clouer, cirer",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is a hedge with no verbs). Street: goat tugging loose from its tether (mirror by the door), bride lowering her veil at her mirror, cat scratching on the cheese grater; balcony: sailor knotting a new rope; upper window: carpenter nailing a shutter with a squawking cockatoo; roof terrace: boy waxing a tall boot. Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_detacher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_detacher_verb",
+   "text": "se détacher",
+   "box": [
+    132,
+    633,
+    248,
+    659
+   ],
+   "text_box": [
+    136,
+    637,
+    244,
+    655
+   ]
+  },
+  "fr_voiler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_voiler_verb",
+   "text": "se voiler",
+   "box": [
+    428,
+    600,
+    524,
+    626
+   ],
+   "text_box": [
+    432,
+    604,
+    520,
+    622
+   ]
+  },
+  "fr_gratter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_gratter_verb",
+   "text": "gratter",
+   "box": [
+    730,
+    580,
+    808,
+    606
+   ],
+   "text_box": [
+    734,
+    584,
+    804,
+    602
+   ]
+  },
+  "fr_nouer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_nouer_verb",
+   "text": "nouer",
+   "box": [
+    501,
+    273,
+    559,
+    299
+   ],
+   "text_box": [
+    505,
+    277,
+    555,
+    295
+   ]
+  },
+  "fr_clouer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_clouer_verb",
+   "text": "clouer",
+   "box": [
+    221,
+    168,
+    289,
+    194
+   ],
+   "text_box": [
+    225,
+    172,
+    285,
+    190
+   ]
+  },
+  "fr_cirer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cirer_verb",
+   "text": "cirer",
+   "box": [
+    793,
+    230,
+    851,
+    256
+   ],
+   "text_box": [
+    797,
+    234,
+    847,
+    252
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 6 →",
+   "box": [
+    1000,
+    480,
+    1110,
+    580
+   ],
+   "text_box": [
+    1006,
+    486,
+    1104,
+    574
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 4",
+   "box": [
+    450,
+    665,
+    1000,
+    712
+   ],
+   "text_box": [
+    456,
+    671,
+    994,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    620,
+    30,
+    710,
+    64
+   ],
+   "text_box": [
+    623,
+    33,
+    707,
+    61
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1060,
+    40,
+    1190,
+    74
+   ],
+   "text_box": [
+    1063,
+    43,
+    1187,
+    71
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_detacher_verb",
+   "lemma": "détacher",
+   "gloss": "to detach",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    15,
+    355,
+    365,
+    665
+   ],
+   "label_xy": [
+    190,
+    653
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se détacher",
+   "scene": "",
+   "mirror": "oval mirror on the wall by the door"
+  },
+  {
+   "id": "fr_voiler_verb",
+   "lemma": "voiler",
+   "gloss": "to veil; to cover up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    392,
+    398,
+    560,
+    632
+   ],
+   "label_xy": [
+    476,
+    620
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se voiler",
+   "scene": "",
+   "mirror": "tall mirror by her door"
+  },
+  {
+   "id": "fr_gratter_verb",
+   "lemma": "gratter",
+   "gloss": "to scratch",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    708,
+    438,
+    830,
+    612
+   ],
+   "label_xy": [
+    769,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_nouer_verb",
+   "lemma": "nouer",
+   "gloss": "to knot; tie, bind, fasten",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    445,
+    100,
+    615,
+    305
+   ],
+   "label_xy": [
+    530,
+    293
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_clouer_verb",
+   "lemma": "clouer",
+   "gloss": "to nail; to stick",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    165,
+    28,
+    345,
+    200
+   ],
+   "label_xy": [
+    255,
+    188
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_cirer_verb",
+   "lemma": "cirer",
+   "gloss": "to wax, polish",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    720,
+    100,
+    925,
+    262
+   ],
+   "label_xy": [
+    822,
+    250
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg006",
+   "box": [
+    1000,
+    480,
+    1110,
+    580
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 6",
+   "sign": "étape 6 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg004",
+   "box": [
+    450,
+    665,
+    1000,
+    712
+   ],
+   "label": "Back up the lane to étape 4",
+   "name": "Allée du Quotidien, étape 4",
+   "sign": "← étape 4",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

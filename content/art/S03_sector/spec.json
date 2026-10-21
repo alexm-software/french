@@ -1,0 +1,278 @@
+{
+ "divider_x": null,
+ "kind": "sector_overview",
+ "note": "Place du Marché, the market square (sector S03). Around it: Maison de Couture (hat-roofed townhouse, B62) far left, Halle aux Poids (giant balance on the roof, B60), Marché couvert (iron-and-glass hall with a basket roof, B06) centre, the stone arch into the Rue Commerçante (B07), the arcaded Rue du Commerce verb street (ST_commerce), the Atelier de Réparation (cog and spanner, B61) and the Brocante gate (B59) on the right. The near cobbles lead back to the Place du Village (S01); the iron gate on the far left is the lane to the Home quarter (S02).",
+ "text_areas": {
+  "sector_name": {
+   "role": "sector_name",
+   "text": "Place du Marché",
+   "box": [
+    470,
+    22,
+    830,
+    72
+   ],
+   "text_box": [
+    476,
+    28,
+    824,
+    66
+   ]
+  },
+  "b62_name": {
+   "role": "building_name",
+   "text": "Maison de Couture",
+   "box": [
+    104,
+    370,
+    230,
+    408
+   ],
+   "text_box": [
+    110,
+    376,
+    224,
+    402
+   ]
+  },
+  "b60_name": {
+   "role": "building_name",
+   "text": "Halle aux Poids",
+   "box": [
+    316,
+    328,
+    420,
+    364
+   ],
+   "text_box": [
+    322,
+    334,
+    414,
+    358
+   ]
+  },
+  "b06_name": {
+   "role": "building_name",
+   "text": "Marché couvert",
+   "box": [
+    450,
+    288,
+    596,
+    324
+   ],
+   "text_box": [
+    456,
+    294,
+    590,
+    318
+   ]
+  },
+  "b07_name": {
+   "role": "building_name",
+   "text": "Rue Commerçante",
+   "box": [
+    624,
+    334,
+    716,
+    370
+   ],
+   "text_box": [
+    630,
+    340,
+    710,
+    364
+   ]
+  },
+  "st_name": {
+   "role": "building_name",
+   "text": "Rue du Commerce",
+   "box": [
+    720,
+    372,
+    834,
+    406
+   ],
+   "text_box": [
+    726,
+    378,
+    828,
+    400
+   ]
+  },
+  "b61_name": {
+   "role": "building_name",
+   "text": "Atelier de Réparation",
+   "box": [
+    862,
+    352,
+    972,
+    390
+   ],
+   "text_box": [
+    868,
+    358,
+    966,
+    384
+   ]
+  },
+  "b59_name": {
+   "role": "building_name",
+   "text": "Brocante",
+   "box": [
+    1050,
+    318,
+    1190,
+    354
+   ],
+   "text_box": [
+    1056,
+    324,
+    1184,
+    348
+   ]
+  },
+  "dir_s01": {
+   "role": "direction",
+   "text": "← Place du Village",
+   "box": [
+    420,
+    566,
+    760,
+    602
+   ],
+   "text_box": [
+    426,
+    572,
+    754,
+    596
+   ]
+  },
+  "dir_s02": {
+   "role": "direction",
+   "text": "← Quartier de la Maison",
+   "box": [
+    6,
+    650,
+    190,
+    686
+   ],
+   "text_box": [
+    12,
+    656,
+    184,
+    680
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "B62_couture",
+   "box": [
+    131,
+    412,
+    206,
+    494
+   ],
+   "label": "Into the fashion house",
+   "name": "Maison de Couture",
+   "kind": "door"
+  },
+  {
+   "target": "B60_balance",
+   "box": [
+    335,
+    369,
+    402,
+    494
+   ],
+   "label": "Into the weighing hall",
+   "name": "Halle aux Poids",
+   "kind": "door"
+  },
+  {
+   "target": "B06_marche",
+   "box": [
+    444,
+    330,
+    600,
+    490
+   ],
+   "label": "Into the covered market",
+   "name": "Marché couvert",
+   "kind": "door"
+  },
+  {
+   "target": "B07_rue_commercante",
+   "box": [
+    637,
+    375,
+    700,
+    488
+   ],
+   "label": "Through the arch into the shopping street",
+   "name": "Rue Commerçante",
+   "kind": "arch"
+  },
+  {
+   "target": "ST_commerce_seg001",
+   "box": [
+    715,
+    410,
+    830,
+    495
+   ],
+   "label": "Walk down the arcades of Rue du Commerce",
+   "name": "Rue du Commerce",
+   "kind": "path"
+  },
+  {
+   "target": "B61_reparation",
+   "box": [
+    881,
+    394,
+    950,
+    500
+   ],
+   "label": "Into the repair café",
+   "name": "Atelier de Réparation",
+   "kind": "door"
+  },
+  {
+   "target": "B59_brocante",
+   "box": [
+    1040,
+    360,
+    1200,
+    560
+   ],
+   "label": "Through the gate into the flea market",
+   "name": "Brocante",
+   "kind": "gate"
+  },
+  {
+   "target": "S01_sector",
+   "box": [
+    200,
+    610,
+    1000,
+    720
+   ],
+   "label": "Back across the cobbles to the Place du Village",
+   "name": "Place du Village",
+   "kind": "path"
+  },
+  {
+   "target": "S02_sector",
+   "box": [
+    0,
+    412,
+    88,
+    640
+   ],
+   "label": "Through the iron gate to the Home quarter",
+   "name": "Quartier de la Maison",
+   "kind": "gate"
+  }
+ ]
+}

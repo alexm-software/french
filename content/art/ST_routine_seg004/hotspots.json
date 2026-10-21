@@ -1,0 +1,367 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg004",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 4 · se raser, se brosser, meubler",
+ "divider_x": 960,
+ "note": "Tiered verb place. -er LEFT (boy wiping the chalk face, man shaving at his mirror, swallow brushing a hat on the balcony, big brother brushing his hair at the upper window, cow hoisting an armchair into the attic), -ir RIGHT (cook garnishing a cake on the balcony). Reflexive verbs have their mirror inside the box. Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_effacer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_effacer_verb",
+   "text": "effacer",
+   "box": [
+    111,
+    656,
+    189,
+    682
+   ],
+   "text_box": [
+    115,
+    660,
+    185,
+    678
+   ]
+  },
+  "fr_raser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_raser_verb",
+   "text": "se raser",
+   "box": [
+    323,
+    618,
+    411,
+    644
+   ],
+   "text_box": [
+    327,
+    622,
+    407,
+    640
+   ]
+  },
+  "fr_froler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_froler_verb",
+   "text": "frôler",
+   "box": [
+    518,
+    263,
+    586,
+    289
+   ],
+   "text_box": [
+    522,
+    267,
+    582,
+    285
+   ]
+  },
+  "fr_brosser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_brosser_verb",
+   "text": "se brosser",
+   "box": [
+    273,
+    150,
+    379,
+    176
+   ],
+   "text_box": [
+    277,
+    154,
+    375,
+    172
+   ]
+  },
+  "fr_meubler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_meubler_verb",
+   "text": "meubler",
+   "box": [
+    707,
+    318,
+    785,
+    344
+   ],
+   "text_box": [
+    711,
+    322,
+    781,
+    340
+   ]
+  },
+  "fr_garnir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_garnir_verb",
+   "text": "garnir",
+   "box": [
+    1109,
+    303,
+    1177,
+    329
+   ],
+   "text_box": [
+    1113,
+    307,
+    1173,
+    325
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 5 →",
+   "box": [
+    800,
+    470,
+    960,
+    560
+   ],
+   "text_box": [
+    806,
+    476,
+    954,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 3",
+   "box": [
+    450,
+    665,
+    960,
+    712
+   ],
+   "text_box": [
+    456,
+    671,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    440,
+    40,
+    540,
+    74
+   ],
+   "text_box": [
+    443,
+    43,
+    537,
+    71
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    960,
+    40,
+    1090,
+    74
+   ],
+   "text_box": [
+    963,
+    43,
+    1087,
+    71
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_effacer_verb",
+   "lemma": "effacer",
+   "gloss": "to erase",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    55,
+    360,
+    245,
+    688
+   ],
+   "label_xy": [
+    150,
+    676
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_raser_verb",
+   "lemma": "raser",
+   "gloss": "to shave",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    295,
+    390,
+    440,
+    650
+   ],
+   "label_xy": [
+    367,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se raser",
+   "scene": "",
+   "mirror": "oval mirror by the door"
+  },
+  {
+   "id": "fr_froler_verb",
+   "lemma": "frôler",
+   "gloss": "to brush against",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    505,
+    182,
+    600,
+    295
+   ],
+   "label_xy": [
+    552,
+    283
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_brosser_verb",
+   "lemma": "brosser",
+   "gloss": "to brush; to whip, to beat",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    268,
+    70,
+    385,
+    182
+   ],
+   "label_xy": [
+    326,
+    170
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se brosser",
+   "scene": "",
+   "mirror": "hand mirror"
+  },
+  {
+   "id": "fr_meubler_verb",
+   "lemma": "meubler",
+   "gloss": "to furnish; to break the silence",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 5,
+   "box": [
+    602,
+    28,
+    890,
+    350
+   ],
+   "label_xy": [
+    746,
+    338
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_garnir_verb",
+   "lemma": "garnir",
+   "gloss": "to furnish; to decorate",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    1080,
+    215,
+    1206,
+    335
+   ],
+   "label_xy": [
+    1143,
+    323
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg005",
+   "box": [
+    800,
+    470,
+    960,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 5",
+   "sign": "étape 5 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg003",
+   "box": [
+    450,
+    665,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 3",
+   "name": "Allée du Quotidien, étape 3",
+   "sign": "← étape 3",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 2,
+  "balcony": 2,
+  "upper": 1,
+  "roof": 1
+ }
+}

@@ -2,70 +2,45 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 640,
+ "divider_x": 663,
  "kind": "room",
- "note": "Round 2 repaint (neutral white kitchen; back door, swing door and staircase added). Adjectives (délicieux, grillé, culinaire) sit centre. One box per item.",
+ "note": "Grounded repaint v3 2026-10-21: one coherent ground-floor kitchen, single tiled floor, every figure on the floor, on a stool or at a real stove/table at true scale (no rows, no shelves, nothing floating). Feminine words left of the porthole swing doors, masculine words and adjectives right. One box per item. Exits: back door (outside), swing doors (dining hall), stairs up (upper kitchen); the windows are not exits.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    469,
-    47,
-    805,
+    498,
+    82,
+    708,
     148
    ],
    "text_box": [
-    495,
-    62,
-    780,
-    132
+    511,
+    90,
+    695,
+    141
    ]
   }
  },
  "items": [
   {
-   "id": "fr_amertume_noun",
-   "lemma": "amertume",
-   "article": "l'",
-   "gender": "f",
-   "side": "left",
-   "label": "l'amertume",
-   "box": [
-    39,
-    117,
-    230,
-    502
-   ],
-   "scene": "mare with a sore tum sipping bitter lemon juice"
-  },
-  {
-   "id": "fr_saveur_noun",
-   "lemma": "saveur",
+   "id": "fr_menthe_noun",
+   "lemma": "menthe",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la saveur",
+   "label": "la menthe",
    "box": [
-    234,
-    184,
-    453,
-    345
+    112,
+    167,
+    241,
+    290
    ],
-   "scene": "cook savouring the flavour from her spoon"
-  },
-  {
-   "id": "fr_soupe_noun",
-   "lemma": "soupe",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la soupe",
-   "box": [
-    312,
-    348,
-    453,
-    432
-   ]
+   "label_xy": [
+    176,
+    280
+   ],
+   "scene": "My AUNT (m'AHNT) in a straw sun hat tends her terracotta pot of fresh MINT on the windowsill by the sink."
   },
   {
    "id": "fr_recette_noun",
@@ -75,40 +50,73 @@
    "side": "left",
    "label": "la recette",
    "box": [
-    515,
-    250,
-    668,
-    390
+    268,
+    172,
+    357,
+    380
    ],
-   "scene": "cake set in the oven by the recipe"
+   "label_xy": [
+    312,
+    370
+   ],
+   "scene": "A young cook presses the big red RESET button (ruh-SEHT) on the brick oven, a blank RECIPE card in her other hand, to start all over again."
   },
   {
-   "id": "fr_frite_noun",
-   "lemma": "frite",
+   "id": "fr_soupe_noun",
+   "lemma": "soupe",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la frite",
+   "label": "la soupe",
    "box": [
-    210,
-    505,
-    336,
-    575
-   ]
+    360,
+    106,
+    454,
+    310
+   ],
+   "label_xy": [
+    407,
+    300
+   ],
+   "scene": "Like English 'soup', said SOOP (rhymes with 'loop'): steam from a big copper pot of SOUP curls up into a giant LOOP-the-loop."
   },
   {
-   "id": "fr_sauce_noun",
-   "lemma": "sauce",
+   "id": "fr_saveur_noun",
+   "lemma": "saveur",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la sauce",
+   "label": "la saveur",
    "box": [
-    16,
-    555,
-    145,
-    656
-   ]
+    456,
+    167,
+    509,
+    406
+   ],
+   "label_xy": [
+    482,
+    396
+   ],
+   "scene": "A cook at the stove smiles as she SAVOURS (sah-VUHR) the FLAVOUR on her wooden spoon."
+  },
+  {
+   "id": "fr_amertume_noun",
+   "lemma": "amertume",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'amertume",
+   "box": [
+    514,
+    270,
+    660,
+    412
+   ],
+   "label_xy": [
+    587,
+    402
+   ],
+   "scene": "A pony MARE sits on the floor hugging her TUM (ah-mehr-TEWM), face all puckered, after biting the lemon at her hooves: such BITTERNESS!"
   },
   {
    "id": "fr_preparation_noun",
@@ -118,67 +126,54 @@
    "side": "left",
    "label": "la préparation",
    "box": [
-    148,
-    578,
-    305,
-    680
-   ]
+    106,
+    294,
+    248,
+    524
+   ],
+   "label_xy": [
+    177,
+    514
+   ],
+   "scene": "Like English 'preparation', but it starts with PRAY (pray-pah-rah-SYOHN): an apprentice boy PRAYS over his six little bowls of chopped vegetables, the PREPARATION done."
   },
   {
-   "id": "fr_menthe_noun",
-   "lemma": "menthe",
+   "id": "fr_frite_noun",
+   "lemma": "frite",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la menthe",
+   "label": "la frite",
    "box": [
-    336,
-    484,
-    469,
-    703
-   ]
-  },
-  {
-   "id": "fr_delicieux_adj",
-   "lemma": "délicieux",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "délicieux",
-   "box": [
-    547,
-    437,
-    695,
-    516
-   ]
-  },
-  {
-   "id": "fr_grille_adj",
-   "lemma": "grillé",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "grillé",
-   "box": [
-    703,
-    445,
-    875,
+    252,
+    415,
+    519,
     523
-   ]
+   ],
+   "label_xy": [
+    386,
+    513
+   ],
+   "scene": "A FLEET (FREET) of little paper boats with paper sails is moored on the worktable, each loaded with golden FRIES."
   },
   {
-   "id": "fr_culinaire_adj",
-   "lemma": "culinaire",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "culinaire",
+   "id": "fr_sauce_noun",
+   "lemma": "sauce",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la sauce",
    "box": [
-    516,
-    570,
-    797,
-    711
-   ]
+    362,
+    526,
+    568,
+    594
+   ],
+   "label_xy": [
+    465,
+    584
+   ],
+   "scene": "Like English 'sauce', said SOHS (rhymes with 'dose'): a roast fish on its platter gets a huge DOSE of glossy brown SAUCE, with a little pot of extra beside it."
   },
   {
    "id": "fr_gout_noun",
@@ -188,12 +183,73 @@
    "side": "right",
    "label": "le goût",
    "box": [
-    672,
-    156,
-    888,
-    436
+    693,
+    259,
+    785,
+    466
    ],
-   "scene": "chef tastes green goo"
+   "label_xy": [
+    739,
+    456
+   ],
+   "scene": "A little girl on a stool licks a spoonful of sticky purple GOO and smacks her lips: what a TASTE!"
+  },
+  {
+   "id": "fr_delicieux_adj",
+   "lemma": "délicieux",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "délicieux",
+   "box": [
+    787,
+    246,
+    912,
+    356
+   ],
+   "label_xy": [
+    850,
+    346
+   ],
+   "scene": "A boy waves 'SEE YA!' beside his DAILY calendar (day-lee-SYEUH) as he bites into a DELICIOUS cream tart."
+  },
+  {
+   "id": "fr_grille_adj",
+   "lemma": "grillé",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "grillé",
+   "box": [
+    916,
+    233,
+    1034,
+    382
+   ],
+   "label_xy": [
+    975,
+    372
+   ],
+   "scene": "A GREEN parrot on the grill rail cheers 'YAY!' (gree-YAY) over sausages GRILLED with black stripes."
+  },
+  {
+   "id": "fr_culinaire_adj",
+   "lemma": "culinaire",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "culinaire",
+   "box": [
+    815,
+    441,
+    962,
+    601
+   ],
+   "label_xy": [
+    888,
+    591
+   ],
+   "scene": "A COOL cat in sunglasses sits NEAR the stove (kew-lee-NEHR) holding up a golden whisk, a CULINARY prize."
   },
   {
    "id": "fr_cuisinier_noun",
@@ -203,41 +259,16 @@
    "side": "right",
    "label": "le cuisinier",
    "box": [
-    890,
-    140,
-    1084,
-    453
-   ]
-  },
-  {
-   "id": "fr_rechauffement_noun",
-   "lemma": "réchauffement",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le réchauffement",
-   "box": [
-    1086,
-    180,
-    1266,
-    372
+    1036,
+    286,
+    1166,
+    618
    ],
-   "scene": "polar bear fanning itself as the ice melts"
-  },
-  {
-   "id": "fr_guichet_noun",
-   "lemma": "guichet",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le guichet",
-   "box": [
-    1088,
-    375,
-    1278,
-    585
+   "label_xy": [
+    1101,
+    608
    ],
-   "scene": "goose selling tickets through the hatch"
+   "scene": "A COOK so QUEASY he has turned green all over sits stirring his pot, his bandaged KNEE (kwee-zee-NYAY) resting on a footstool."
   },
   {
    "id": "fr_haricot_noun",
@@ -247,81 +278,50 @@
    "side": "right",
    "label": "le haricot",
    "box": [
-    800,
-    590,
-    1125,
-    719
-   ]
+    1037,
+    158,
+    1148,
+    274
+   ],
+   "label_xy": [
+    1092,
+    264
+   ],
+   "scene": "A shaggy HAIRY COW (ah-ree-KOH) leans in at the window and munches a long green BEAN from a colander."
   }
  ],
  "links": [
   {
    "target": "B09_restaurant",
    "box": [
-    250,
-    62,
-    335,
-    180
+    511,
+    163,
+    600,
+    266
    ],
    "label": "Back door: out to the street",
    "name": "Restaurant Le Bon Goût (outside)",
-   "kind": "exit",
-   "polygon": [
-    [
-     234,
-     0
-    ],
-    [
-     463,
-     0
-    ],
-    [
-     463,
-     180
-    ],
-    [
-     234,
-     180
-    ]
-   ]
+   "kind": "exit"
   },
   {
    "target": "R_resto_room",
    "box": [
-    455,
-    180,
-    505,
-    410
+    649,
+    165,
+    761,
+    255
    ],
-   "label": "Swing door to the dining hall",
+   "label": "Porthole swing doors to the dining hall",
    "name": "Restaurant Le Bon Goût — salle",
-   "kind": "door",
-   "polygon": [
-    [
-     455,
-     140
-    ],
-    [
-     513,
-     140
-    ],
-    [
-     513,
-     410
-    ],
-    [
-     455,
-     410
-    ]
-   ]
+   "kind": "door"
   },
   {
    "target": "R_resto_kitchen_02",
    "box": [
-    883,
-    25,
-    1000,
-    135
+    778,
+    66,
+    1026,
+    229
    ],
    "label": "Stairs up to the upper kitchen",
    "name": "Restaurant Le Bon Goût — cuisine (étage)",

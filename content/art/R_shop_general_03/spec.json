@@ -1,0 +1,183 @@
+{
+ "divider_x": 565,
+ "kind": "room",
+ "note": "General shop (3): counters, baskets, sellers and shop windows. Feminine nouns to the left of x=565, masculine to the right. The floor corner with the model town is a zoom (R_shop_general_03_z1). The left doorway goes back to the general shop (2); the right doorway leads on to the hardware shop (1).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les commerces (3)",
+   "box": [
+    860,
+    20,
+    1100,
+    60
+   ],
+   "text_box": [
+    866,
+    26,
+    1094,
+    54
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_marchandise_noun",
+   "box": [
+    100,
+    181,
+    269,
+    465
+   ],
+   "scene": "mouse on top of a tower of merchandise boxes"
+  },
+  {
+   "id": "fr_enseigne_noun_f",
+   "box": [
+    244,
+    44,
+    375,
+    175
+   ],
+   "scene": "blank shop sign swinging from an iron bracket"
+  },
+  {
+   "id": "fr_vitrine_noun",
+   "box": [
+    275,
+    180,
+    420,
+    381
+   ],
+   "scene": "shop window full of cakes"
+  },
+  {
+   "id": "fr_corbeille_noun",
+   "box": [
+    200,
+    469,
+    400,
+    644
+   ],
+   "scene": "crow stealing an apple from a wicker basket"
+  },
+  {
+   "id": "fr_epicerie_noun",
+   "box": [
+    425,
+    188,
+    560,
+    506
+   ],
+   "scene": "grocer dropping peas on the counter"
+  },
+  {
+   "id": "fr_comptoir_noun",
+   "box": [
+    575,
+    244,
+    696,
+    362
+   ],
+   "scene": "two toddlers squabbling over cookies on the counter"
+  },
+  {
+   "id": "fr_panier_noun",
+   "box": [
+    625,
+    425,
+    762,
+    531
+   ],
+   "scene": "puppy carrying a basket of eggs"
+  },
+  {
+   "id": "fr_vendeur_noun",
+   "box": [
+    700,
+    50,
+    796,
+    325
+   ],
+   "scene": "balloon seller with poodle-shaped balloons"
+  },
+  {
+   "id": "fr_caissier_noun",
+   "box": [
+    800,
+    150,
+    990,
+    312
+   ],
+   "scene": "badger cashier ringing up carrots for a rabbit"
+  },
+  {
+   "id": "fr_commercant_noun",
+   "box": [
+    862,
+    325,
+    987,
+    500
+   ],
+   "scene": "cheerful badger shopkeeper sweeping the floor"
+  },
+  {
+   "id": "fr_passant_noun",
+   "box": [
+    1019,
+    131,
+    1100,
+    387
+   ],
+   "scene": "tall passer-by pausing in the doorway"
+  },
+  {
+   "id": "fr_collectionneur_noun",
+   "box": [
+    1110,
+    215,
+    1203,
+    330
+   ],
+   "scene": "hedgehog collector peering through a magnifying glass"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_shop_general_03_z1",
+   "box": [
+    790,
+    520,
+    1180,
+    676
+   ],
+   "label": "the model town on the floor"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_shop_general_02",
+   "box": [
+    19,
+    56,
+    96,
+    520
+   ],
+   "label": "Back through the left doorway to the general shop (2)",
+   "name": "Les commerces (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_hardware_01",
+   "box": [
+    1104,
+    60,
+    1190,
+    210
+   ],
+   "label": "Through the right doorway to the hardware shop (1)",
+   "name": "La quincaillerie (1)",
+   "kind": "door"
+  }
+ ]
+}

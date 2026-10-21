@@ -1,0 +1,153 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Pets' yard at the side of the house, through the side gate. Feminine left (patted paw, leash, droppings on the path), masculine right (ball dog, sleeping cat, cheerleader rat, kitten in wool, shy puppy in a basket, bouncing doggie, hamster climbing the arm stairs). Exits: side gate to the street, glass door into the family room.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les animaux",
+   "box": [
+    531,
+    23,
+    734,
+    102
+   ],
+   "text_box": [
+    546,
+    31,
+    719,
+    94
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_patte_noun",
+   "box": [
+    8,
+    320,
+    318,
+    584
+   ]
+  },
+  {
+   "id": "fr_laisse_noun",
+   "box": [
+    211,
+    102,
+    508,
+    318
+   ]
+  },
+  {
+   "id": "fr_crotte_noun",
+   "box": [
+    148,
+    586,
+    391,
+    625
+   ],
+   "label_xy": [
+    270,
+    618
+   ]
+  },
+  {
+   "id": "fr_chien_noun",
+   "box": [
+    789,
+    211,
+    951,
+    357
+   ]
+  },
+  {
+   "id": "fr_chat_noun",
+   "box": [
+    953,
+    164,
+    1258,
+    357
+   ]
+  },
+  {
+   "id": "fr_rat_noun",
+   "box": [
+    469,
+    391,
+    633,
+    521
+   ]
+  },
+  {
+   "id": "fr_chaton_noun",
+   "box": [
+    635,
+    359,
+    828,
+    435
+   ]
+  },
+  {
+   "id": "fr_chiot_noun",
+   "box": [
+    539,
+    523,
+    734,
+    688
+   ],
+   "label_xy": [
+    636,
+    676
+   ]
+  },
+  {
+   "id": "fr_toutou_noun",
+   "box": [
+    766,
+    437,
+    977,
+    648
+   ]
+  },
+  {
+   "id": "fr_hamster_noun",
+   "box": [
+    979,
+    359,
+    1270,
+    712
+   ],
+   "label_xy": [
+    1124,
+    700
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B05_maison",
+   "box": [
+    39,
+    86,
+    172,
+    318
+   ],
+   "label": "Side gate back to the street",
+   "name": "La rue",
+   "kind": "door"
+  },
+  {
+   "target": "R_family_01",
+   "box": [
+    867,
+    8,
+    1016,
+    160
+   ],
+   "label": "Glass door into the family room",
+   "name": "La famille",
+   "kind": "door"
+  }
+ ]
+}

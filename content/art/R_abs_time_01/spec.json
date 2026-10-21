@@ -1,0 +1,191 @@
+{
+ "divider_x": 780,
+ "kind": "room",
+ "note": "First-floor 'times of life' room. Feminine nouns on the left and centre (la fin, l'époque, l'enfance, la génération, l'existence, la naissance, la retraite, la période); masculine on the right (le début, le départ, le passé, l'avenir, le destin, le sort). Eight feminine words, so the divider is offset to x=780. The wooden door on the far left goes back to the second adverbs room; the staircase on the right goes UP to the attic adverbs room.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le temps qui passe (1)",
+   "box": [
+    488,
+    106,
+    750,
+    200
+   ],
+   "text_box": [
+    496,
+    114,
+    742,
+    192
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_fin_noun",
+   "box": [
+    78,
+    375,
+    170,
+    612
+   ],
+   "scene": "girl snapping shut a folding fan"
+  },
+  {
+   "id": "fr_epoque_noun",
+   "box": [
+    172,
+    281,
+    283,
+    550
+   ],
+   "scene": "1920s flapper poking a gramophone horn"
+  },
+  {
+   "id": "fr_enfance_noun",
+   "box": [
+    285,
+    422,
+    440,
+    590
+   ],
+   "scene": "baby in a pram shaking a rattle"
+  },
+  {
+   "id": "fr_generation_noun",
+   "box": [
+    327,
+    260,
+    466,
+    420
+   ],
+   "scene": "grandmother, mother and little daughter holding hands"
+  },
+  {
+   "id": "fr_existence_noun",
+   "box": [
+    469,
+    337,
+    569,
+    619
+   ],
+   "scene": "woman holding an egg with a chick hatching"
+  },
+  {
+   "id": "fr_naissance_noun",
+   "box": [
+    494,
+    204,
+    662,
+    335
+   ],
+   "scene": "stork carrying a baby bundle in its beak"
+  },
+  {
+   "id": "fr_retraite_noun",
+   "box": [
+    597,
+    360,
+    720,
+    562
+   ],
+   "scene": "grandmother in a rocking chair eating a cream cake"
+  },
+  {
+   "id": "fr_periode_noun",
+   "box": [
+    722,
+    265,
+    792,
+    481
+   ],
+   "scene": "woman stretching out a long accordion"
+  },
+  {
+   "id": "fr_debut_noun",
+   "box": [
+    794,
+    325,
+    880,
+    572
+   ],
+   "scene": "boy on a little stage block shouting boo"
+  },
+  {
+   "id": "fr_depart_noun",
+   "box": [
+    882,
+    240,
+    950,
+    469
+   ],
+   "scene": "man in a tracksuit holding a chequered starting flag"
+  },
+  {
+   "id": "fr_passe_noun",
+   "box": [
+    952,
+    300,
+    1058,
+    569
+   ],
+   "scene": "old man holding out an open sepia photo album"
+  },
+  {
+   "id": "fr_avenir_noun",
+   "box": [
+    1069,
+    290,
+    1181,
+    415
+   ],
+   "scene": "man with a crystal ball cupping his ear"
+  },
+  {
+   "id": "fr_destin_noun",
+   "box": [
+    1060,
+    418,
+    1202,
+    631
+   ],
+   "scene": "man spinning a wheel of fortune at a little table"
+  },
+  {
+   "id": "fr_sort_noun",
+   "box": [
+    969,
+    140,
+    1180,
+    288
+   ],
+   "scene": "sorcerer in a starry robe casting a spell"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_adv_time_02",
+   "box": [
+    60,
+    150,
+    172,
+    372
+   ],
+   "label": "Back through the wooden door to the second adverbs room",
+   "name": "Tour — quand ? (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_adv_time_03",
+   "box": [
+    1182,
+    60,
+    1270,
+    330
+   ],
+   "label": "Up the staircase to the attic adverbs room",
+   "name": "Tour — quand ? (3)",
+   "kind": "stairs_up"
+  }
+ ]
+}

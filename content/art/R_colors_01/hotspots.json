@@ -1,0 +1,263 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Ground-floor colour studio (g6). Only noun: la couleur (f), front left. All the others are colour adjectives (no gender). Green doors on the left back out to the workshop yard; the arch on the right leads to the second colour studio.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les couleurs (1)",
+   "box": [
+    506,
+    59,
+    785,
+    194
+   ],
+   "text_box": [
+    518,
+    70,
+    773,
+    183
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_couleur_noun",
+   "lemma": "couleur",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la couleur",
+   "box": [
+    94,
+    300,
+    215,
+    569
+   ],
+   "label_xy": [
+    154,
+    559
+   ],
+   "scene": "girl in cool sunglasses holds up a big colour wheel"
+  },
+  {
+   "id": "fr_noir_adj",
+   "lemma": "noir",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "noir",
+   "box": [
+    228,
+    175,
+    410,
+    368
+   ],
+   "label_xy": [
+    319,
+    358
+   ],
+   "scene": "detective in black with a black umbrella beside a black-and-white striped easel"
+  },
+  {
+   "id": "fr_blanc_adj",
+   "lemma": "blanc",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "blanc",
+   "box": [
+    229,
+    372,
+    427,
+    619
+   ],
+   "label_xy": [
+    328,
+    609
+   ],
+   "scene": "young painter sneezes white paint onto a blank canvas"
+  },
+  {
+   "id": "fr_gris_adj",
+   "lemma": "gris",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "gris",
+   "box": [
+    431,
+    200,
+    615,
+    404
+   ],
+   "label_xy": [
+    523,
+    394
+   ],
+   "scene": "grey elephant gobbles peanuts from a sack"
+  },
+  {
+   "id": "fr_rouge_adj",
+   "lemma": "rouge",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "rouge",
+   "box": [
+    644,
+    198,
+    840,
+    348
+   ],
+   "label_xy": [
+    742,
+    338
+   ],
+   "scene": "red fire engine beside a red postbox"
+  },
+  {
+   "id": "fr_vert_adj",
+   "lemma": "vert",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "vert",
+   "box": [
+    620,
+    352,
+    785,
+    506
+   ],
+   "label_xy": [
+    702,
+    496
+   ],
+   "scene": "very green frog in green wellies on the fountain"
+  },
+  {
+   "id": "fr_jaune_adj",
+   "lemma": "jaune",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "jaune",
+   "box": [
+    472,
+    419,
+    616,
+    648
+   ],
+   "label_xy": [
+    544,
+    638
+   ],
+   "scene": "boy in yellow overalls paints a yellow zone on the floor"
+  },
+  {
+   "id": "fr_rose_adj",
+   "lemma": "rose",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "rose",
+   "box": [
+    906,
+    175,
+    1052,
+    431
+   ],
+   "label_xy": [
+    979,
+    421
+   ],
+   "scene": "pink flamingo beside a pot of pink roses"
+  },
+  {
+   "id": "fr_bleu_adj",
+   "lemma": "bleu",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "bleu",
+   "box": [
+    788,
+    381,
+    903,
+    616
+   ],
+   "label_xy": [
+    846,
+    606
+   ],
+   "scene": "boy blows up a big blue balloon"
+  },
+  {
+   "id": "fr_brun_adj",
+   "lemma": "brun",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "brun",
+   "box": [
+    907,
+    437,
+    1050,
+    628
+   ],
+   "label_xy": [
+    978,
+    618
+   ],
+   "scene": "brown bear munches a chocolate bun"
+  },
+  {
+   "id": "fr_pale_adj",
+   "lemma": "pâle",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "pâle",
+   "box": [
+    1056,
+    300,
+    1203,
+    565
+   ],
+   "label_xy": [
+    1130,
+    555
+   ],
+   "scene": "two friends compare a deep blue card with a pale blue one"
+  }
+ ],
+ "links": [
+  {
+   "target": "B04_atelier_couleurs",
+   "box": [
+    62,
+    65,
+    222,
+    296
+   ],
+   "label": "Out through the green doors to the workshop yard",
+   "name": "Atelier des Couleurs & Formes (entrance)",
+   "kind": "door"
+  },
+  {
+   "target": "R_colors_02",
+   "box": [
+    1095,
+    48,
+    1280,
+    296
+   ],
+   "label": "Through the arch to the second colour studio",
+   "name": "Atelier — les couleurs (2)",
+   "kind": "arch"
+  }
+ ]
+}

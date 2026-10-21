@@ -1,0 +1,163 @@
+{
+ "divider_x": null,
+ "kind": "room",
+ "note": "First-floor attic room (reached up the café staircase): adjectives of state 3 (ready, free, sick, fresh, clumsy...). Adjectives have no gender (divider null). The staircase on the left goes DOWN to the café; the doorway at the back right leads on into the robot workshop. The wooden market crate in the middle opens a zoom (R_adj_state_04_z1); it is not an exit.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le grenier",
+   "box": [
+    90,
+    52,
+    240,
+    88
+   ],
+   "text_box": [
+    96,
+    58,
+    234,
+    82
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_pret_adj",
+   "box": [
+    112,
+    445,
+    248,
+    625
+   ],
+   "scene": "kitten crouching ready to pounce on a ball of red wool"
+  },
+  {
+   "id": "fr_libre_adj",
+   "box": [
+    256,
+    75,
+    500,
+    362
+   ],
+   "scene": "mechanic opening a cage and a parrot flying out"
+  },
+  {
+   "id": "fr_malade_adj",
+   "box": [
+    250,
+    369,
+    505,
+    488
+   ],
+   "scene": "sick boy in bed with a hot-water bottle"
+  },
+  {
+   "id": "fr_frais_adj",
+   "box": [
+    400,
+    494,
+    687,
+    656
+   ],
+   "scene": "fish lying on a crate of ice"
+  },
+  {
+   "id": "fr_boueux_adj",
+   "box": [
+    506,
+    212,
+    606,
+    325
+   ],
+   "scene": "red buoy caked with mud on top of the crate"
+  },
+  {
+   "id": "fr_reserve_adj",
+   "box": [
+    612,
+    281,
+    778,
+    405
+   ],
+   "scene": "tea table laid with a blank place card"
+  },
+  {
+   "id": "fr_gauche_adj",
+   "box": [
+    784,
+    81,
+    925,
+    232
+   ],
+   "scene": "clumsy waiter tripping with a tray of cakes"
+  },
+  {
+   "id": "fr_sauvage_adj",
+   "box": [
+    831,
+    237,
+    962,
+    375
+   ],
+   "scene": "wild shaggy cat hissing at a toaster"
+  },
+  {
+   "id": "fr_complet_adj",
+   "box": [
+    700,
+    412,
+    962,
+    600
+   ],
+   "scene": "toy bus packed with geese, one more goose waiting"
+  },
+  {
+   "id": "fr_continu_adj",
+   "box": [
+    968,
+    200,
+    1188,
+    676
+   ],
+   "scene": "granny knitting a scarf that never ends"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_adj_state_04_z1",
+   "box": [
+    512,
+    331,
+    600,
+    488
+   ],
+   "label": "La caisse"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_adj_state_03",
+   "box": [
+    0,
+    138,
+    205,
+    440
+   ],
+   "label": "Down the staircase to the café",
+   "name": "Le café",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_adj_state_05",
+   "box": [
+    944,
+    50,
+    1119,
+    195
+   ],
+   "label": "Through the doorway into the robot workshop",
+   "name": "Les robots",
+   "kind": "door"
+  }
+ ]
+}

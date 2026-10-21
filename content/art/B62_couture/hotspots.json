@@ -1,0 +1,70 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "The Maison de Couture, the townhouse with a top-hat roof on the far left of the Place du Marché. Everything is on the ground floor: front door -> the salon (R_abs_beauty_02) -> the showroom atelier (R_abs_beauty_01) -> the picture gallery (R_abs_beauty_03).",
+ "text_areas": {
+  "name": {
+   "role": "building_name",
+   "text": "Maison de Couture",
+   "box": [
+    470,
+    392,
+    700,
+    428
+   ],
+   "text_box": [
+    476,
+    398,
+    694,
+    422
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "↙ Place du Marché",
+   "box": [
+    60,
+    600,
+    360,
+    640
+   ],
+   "text_box": [
+    66,
+    606,
+    354,
+    634
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_abs_beauty_02",
+   "box": [
+    512,
+    431,
+    662,
+    637
+   ],
+   "label": "Through the open front door into the salon",
+   "name": "Le salon",
+   "kind": "door"
+  },
+  {
+   "target": "S03_sector",
+   "box": [
+    0,
+    650,
+    600,
+    720
+   ],
+   "label": "Back across the cobbles to the Place du Marché",
+   "name": "Place du Marché",
+   "kind": "path"
+  }
+ ],
+ "building_name": "Maison de Couture"
+}

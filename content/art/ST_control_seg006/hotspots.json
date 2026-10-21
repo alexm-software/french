@@ -1,0 +1,368 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg006",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 6 · porter, poser, placer",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hotel porter carrying a tower of suitcases, woman posing as she puts down a vase, traveller returning home with his globe), balcony (man throwing an old boot down into the bin), upper (woman taking off her huge feathered hat), roof (man seating a tabby cat on a chair). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_porter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_porter_verb",
+   "text": "porter",
+   "box": [
+    331,
+    640,
+    399,
+    666
+   ],
+   "text_box": [
+    335,
+    644,
+    395,
+    662
+   ]
+  },
+  "fr_poser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_poser_verb",
+   "text": "poser",
+   "box": [
+    549,
+    618,
+    607,
+    644
+   ],
+   "text_box": [
+    553,
+    622,
+    603,
+    640
+   ]
+  },
+  "fr_retourner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_retourner_verb",
+   "text": "retourner (à / en)",
+   "box": [
+    789,
+    587,
+    903,
+    613
+   ],
+   "text_box": [
+    793,
+    591,
+    899,
+    609
+   ]
+  },
+  "fr_jeter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_jeter_verb",
+   "text": "jeter",
+   "box": [
+    527,
+    299,
+    585,
+    325
+   ],
+   "text_box": [
+    531,
+    303,
+    581,
+    321
+   ]
+  },
+  "fr_enlever_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enlever_verb",
+   "text": "enlever",
+   "box": [
+    679,
+    212,
+    757,
+    238
+   ],
+   "text_box": [
+    683,
+    216,
+    753,
+    234
+   ]
+  },
+  "fr_placer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_placer_verb",
+   "text": "placer",
+   "box": [
+    166,
+    156,
+    234,
+    182
+   ],
+   "text_box": [
+    170,
+    160,
+    230,
+    178
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 7 →",
+   "box": [
+    960,
+    440,
+    1100,
+    540
+   ],
+   "text_box": [
+    966,
+    446,
+    1094,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 5",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    880,
+    25,
+    980,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    977,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1000,
+    25,
+    1120,
+    59
+   ],
+   "text_box": [
+    1003,
+    28,
+    1117,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_porter_verb",
+   "lemma": "porter",
+   "gloss": "to carry; to wear",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    287,
+    238,
+    444,
+    672
+   ],
+   "label_xy": [
+    365,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_poser_verb",
+   "lemma": "poser",
+   "gloss": "to put down; to ask (a question)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    456,
+    394,
+    700,
+    650
+   ],
+   "label_xy": [
+    578,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_retourner_verb",
+   "lemma": "retourner",
+   "gloss": "to return; to turn over",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    787,
+    400,
+    906,
+    619
+   ],
+   "label_xy": [
+    846,
+    607
+   ],
+   "prepositions": [
+    "à",
+    "en"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_jeter_verb",
+   "lemma": "jeter",
+   "gloss": "to throw (away)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    469,
+    62,
+    644,
+    331
+   ],
+   "label_xy": [
+    556,
+    319
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_enlever_verb",
+   "lemma": "enlever",
+   "gloss": "to remove, take off",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    662,
+    88,
+    775,
+    244
+   ],
+   "label_xy": [
+    718,
+    232
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_placer_verb",
+   "lemma": "placer",
+   "gloss": "to place; to seat",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    100,
+    12,
+    300,
+    188
+   ],
+   "label_xy": [
+    200,
+    176
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg007",
+   "box": [
+    960,
+    440,
+    1100,
+    540
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 7",
+   "sign": "étape 7 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg005",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 5",
+   "name": "Rue des Gestes, étape 5",
+   "sign": "← étape 5",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

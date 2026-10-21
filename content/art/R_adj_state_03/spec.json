@@ -1,0 +1,181 @@
+{
+ "divider_x": null,
+ "kind": "room",
+ "note": "The ground-floor repair café: adjectives of state 2 (deserted, fixed, urgent, broken, supple...). Adjectives have no gender (divider null). The doorway on the left goes back into the workshop; the wooden staircase on the right goes UP to the first floor.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le café",
+   "box": [
+    480,
+    52,
+    700,
+    86
+   ],
+   "text_box": [
+    486,
+    58,
+    694,
+    80
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_fixe_adj",
+   "box": [
+    125,
+    56,
+    244,
+    175
+   ],
+   "scene": "wall clock with a nail through its face"
+  },
+  {
+   "id": "fr_desert_adj",
+   "box": [
+    106,
+    250,
+    318,
+    480
+   ],
+   "scene": "cat alone at a table eating a slice of cake"
+  },
+  {
+   "id": "fr_urgent_adj",
+   "box": [
+    387,
+    140,
+    569,
+    356
+   ],
+   "scene": "postman running with a parcel flashing a red light"
+  },
+  {
+   "id": "fr_casse_adj",
+   "box": [
+    325,
+    390,
+    512,
+    481
+   ],
+   "scene": "cassette tape with its ribbon spilling out"
+  },
+  {
+   "id": "fr_mobile_adj",
+   "box": [
+    306,
+    486,
+    556,
+    650
+   ],
+   "scene": "toy van with a hamster climbing in"
+  },
+  {
+   "id": "fr_illegal_adj",
+   "box": [
+    587,
+    137,
+    800,
+    290
+   ],
+   "scene": "policeman blowing his whistle at a mouse on a scooter"
+  },
+  {
+   "id": "fr_temporaire_adj",
+   "box": [
+    806,
+    80,
+    885,
+    178
+   ],
+   "scene": "cardboard patch taped over a broken window pane"
+  },
+  {
+   "id": "fr_souple_adj",
+   "box": [
+    525,
+    362,
+    687,
+    450
+   ],
+   "scene": "cat curled up inside a soup bowl"
+  },
+  {
+   "id": "fr_disponible_adj",
+   "box": [
+    731,
+    296,
+    887,
+    462
+   ],
+   "scene": "panda climbing into a little yellow taxi"
+  },
+  {
+   "id": "fr_fini_adj",
+   "box": [
+    890,
+    150,
+    1080,
+    387
+   ],
+   "scene": "repairman proudly holding a mended bicycle"
+  },
+  {
+   "id": "fr_pris_adj",
+   "box": [
+    1087,
+    244,
+    1185,
+    345
+   ],
+   "scene": "teddy bear sitting on a chair to save it"
+  },
+  {
+   "id": "fr_provisoire_adj",
+   "box": [
+    975,
+    392,
+    1194,
+    644
+   ],
+   "scene": "chair with a short leg propped up on a stack of books"
+  },
+  {
+   "id": "fr_interesse_adj",
+   "box": [
+    740,
+    500,
+    890,
+    640
+   ],
+   "scene": "cat watching a repairer's screwdriver closely"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_adj_state_02",
+   "box": [
+    275,
+    44,
+    382,
+    245
+   ],
+   "label": "Back through the doorway into the workshop",
+   "name": "L'atelier",
+   "kind": "door"
+  },
+  {
+   "target": "R_adj_state_04",
+   "box": [
+    1100,
+    44,
+    1280,
+    238
+   ],
+   "label": "Up the wooden staircase to the first floor",
+   "name": "L'étage",
+   "kind": "stairs_up"
+  }
+ ]
+}

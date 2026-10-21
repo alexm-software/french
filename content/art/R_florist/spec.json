@@ -1,0 +1,183 @@
+{
+ "divider_x": 670,
+ "kind": "room",
+ "note": "The florist's: flowers, plants, ferns and bouquets. The wooden post in the middle divides it: feminine nouns on its left, masculine (and the adjectives) on its right. The pots on the front floor are a zoom (R_florist_z1). The left doorway goes back to the hardware shop (1); the right doorway, behind the lady, leads on to the bookshop (2).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le fleuriste",
+   "box": [
+    380,
+    20,
+    620,
+    58
+   ],
+   "text_box": [
+    386,
+    26,
+    614,
+    52
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_fleur_noun",
+   "box": [
+    131,
+    112,
+    269,
+    296
+   ],
+   "scene": "flurry of flower petals swirling round a bumblebee"
+  },
+  {
+   "id": "fr_fee_noun",
+   "box": [
+    206,
+    300,
+    269,
+    381
+   ],
+   "scene": "tiny fairy sprinkling stardust on a toy village"
+  },
+  {
+   "id": "fr_plante_noun",
+   "box": [
+    274,
+    45,
+    352,
+    412
+   ],
+   "scene": "tall climbing plant reaching the ceiling"
+  },
+  {
+   "id": "fr_fougere_noun",
+   "box": [
+    356,
+    300,
+    475,
+    412
+   ],
+   "scene": "curly fern sprouting from an old food jar"
+  },
+  {
+   "id": "fr_cocarde_noun",
+   "box": [
+    525,
+    337,
+    681,
+    487
+   ],
+   "scene": "hen pinning a rosette onto a card"
+  },
+  {
+   "id": "fr_floraison_noun",
+   "box": [
+    77,
+    462,
+    294,
+    676
+   ],
+   "scene": "flowerbed bursting into bloom"
+  },
+  {
+   "id": "fr_bouquet_noun",
+   "box": [
+    700,
+    187,
+    800,
+    327
+   ],
+   "scene": "friendly ghost peeking out from behind a bouquet"
+  },
+  {
+   "id": "fr_rosier_noun",
+   "box": [
+    762,
+    75,
+    975,
+    183
+   ],
+   "scene": "rosebush climbing a trellis"
+  },
+  {
+   "id": "fr_lis_noun",
+   "box": [
+    804,
+    331,
+    906,
+    506
+   ],
+   "scene": "tall white lily in a pot"
+  },
+  {
+   "id": "fr_vase_noun_m",
+   "box": [
+    910,
+    240,
+    1000,
+    487
+   ],
+   "scene": "cat peeking from behind a jug vase of tulips"
+  },
+  {
+   "id": "fr_floral_adj",
+   "box": [
+    1025,
+    187,
+    1150,
+    594
+   ],
+   "scene": "lady in a floral dress with a bee on her skirt"
+  },
+  {
+   "id": "fr_vegetal_adj",
+   "box": [
+    1156,
+    60,
+    1203,
+    560
+   ],
+   "scene": "living wall of ivy and flowers"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_florist_z1",
+   "box": [
+    300,
+    512,
+    1020,
+    676
+   ],
+   "label": "the pots on the floor"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hardware_01",
+   "box": [
+    37,
+    50,
+    127,
+    460
+   ],
+   "label": "Back through the left doorway to the hardware shop (1)",
+   "name": "La quincaillerie (1)",
+   "kind": "door"
+  },
+  {
+   "target": "R_bookshop_02",
+   "box": [
+    1080,
+    95,
+    1152,
+    183
+   ],
+   "label": "Through the right doorway, behind the lady, to the bookshop (2)",
+   "name": "La librairie (2)",
+   "kind": "door"
+  }
+ ]
+}

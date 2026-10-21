@@ -1,0 +1,133 @@
+{
+ "divider_x": 740,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 3: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 3",
+   "box": [
+    560,
+    40,
+    900,
+    84
+   ],
+   "text_box": [
+    566,
+    46,
+    894,
+    78
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 4 →",
+   "box": [
+    730,
+    322,
+    880,
+    356
+   ],
+   "text_box": [
+    736,
+    328,
+    874,
+    350
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 2",
+   "box": [
+    660,
+    628,
+    880,
+    660
+   ],
+   "text_box": [
+    666,
+    634,
+    874,
+    654
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_revendiquer_verb",
+   "box": [
+    77,
+    330,
+    382,
+    640
+   ],
+   "scene": "man by his red van holding up a big key to claim his parking spot"
+  },
+  {
+   "id": "fr_accumuler_verb",
+   "box": [
+    385,
+    362,
+    650,
+    632
+   ],
+   "scene": "grey mule loaded with a huge bundle of snooker cues"
+  },
+  {
+   "id": "fr_ecouler_verb",
+   "box": [
+    290,
+    106,
+    438,
+    262
+   ],
+   "scene": "girl handing melons out of a blue cooler box, an oval mirror beside her"
+  },
+  {
+   "id": "fr_ecrier_verb",
+   "box": [
+    125,
+    75,
+    270,
+    188
+   ],
+   "scene": "girl at a window crying out with joy, an oval mirror beside her"
+  },
+  {
+   "id": "fr_debattre_verb",
+   "box": [
+    881,
+    394,
+    1181,
+    662
+   ],
+   "scene": "two cats in suits debating at podiums, each waving a cricket bat"
+  }
+ ],
+ "links": [
+  {
+   "target": "ST_commerce_seg003",
+   "box": [
+    740,
+    360,
+    875,
+    470
+   ],
+   "label": "Walk on to Rue du Commerce — étape 4",
+   "name": "Rue du Commerce — étape 4",
+   "kind": "street_forward"
+  },
+  {
+   "target": "ST_commerce_seg002",
+   "box": [
+    400,
+    665,
+    1100,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 2",
+   "name": "Rue du Commerce — étape 2",
+   "kind": "street_back"
+  }
+ ]
+}

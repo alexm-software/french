@@ -1,0 +1,366 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg012",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 12 · crever, rejeter, rattacher",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (clown whose balloon bursts, white cat pushing away its food bowl, fortune teller at her crystal ball), balcony (hedgehog curling up beside a little mirror), upper (lobster pinching a pansy in the window box), roof (rat tying a rope to the chimney). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_crever_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_crever_verb",
+   "text": "crever",
+   "box": [
+    186,
+    640,
+    254,
+    666
+   ],
+   "text_box": [
+    190,
+    644,
+    250,
+    662
+   ]
+  },
+  "fr_rejeter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rejeter_verb",
+   "text": "rejeter",
+   "box": [
+    439,
+    624,
+    517,
+    650
+   ],
+   "text_box": [
+    443,
+    628,
+    513,
+    646
+   ]
+  },
+  "fr_destiner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_destiner_verb",
+   "text": "destiner",
+   "box": [
+    678,
+    612,
+    766,
+    638
+   ],
+   "text_box": [
+    682,
+    616,
+    762,
+    634
+   ]
+  },
+  "fr_replier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_replier_verb",
+   "text": "se replier",
+   "box": [
+    128,
+    199,
+    234,
+    225
+   ],
+   "text_box": [
+    132,
+    203,
+    230,
+    221
+   ]
+  },
+  "fr_pincer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pincer_verb",
+   "text": "pincer",
+   "box": [
+    466,
+    268,
+    534,
+    294
+   ],
+   "text_box": [
+    470,
+    272,
+    530,
+    290
+   ]
+  },
+  "fr_rattacher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rattacher_verb",
+   "text": "rattacher",
+   "box": [
+    570,
+    85,
+    666,
+    111
+   ],
+   "text_box": [
+    574,
+    89,
+    662,
+    107
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 13 →",
+   "box": [
+    960,
+    450,
+    1090,
+    560
+   ],
+   "text_box": [
+    966,
+    456,
+    1084,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 11",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    880,
+    25,
+    980,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    977,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1000,
+    25,
+    1120,
+    59
+   ],
+   "text_box": [
+    1003,
+    28,
+    1117,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_crever_verb",
+   "lemma": "crever",
+   "gloss": "to burst; to die (informal)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    69,
+    262,
+    372,
+    672
+   ],
+   "label_xy": [
+    220,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rejeter_verb",
+   "lemma": "rejeter",
+   "gloss": "to reject",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    375,
+    488,
+    581,
+    656
+   ],
+   "label_xy": [
+    478,
+    644
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_destiner_verb",
+   "lemma": "destiner",
+   "gloss": "to destine",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    644,
+    450,
+    800,
+    644
+   ],
+   "label_xy": [
+    722,
+    632
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_replier_verb",
+   "lemma": "replier",
+   "gloss": "to fold",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    119,
+    75,
+    244,
+    231
+   ],
+   "label_xy": [
+    181,
+    219
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se replier",
+   "scene": "",
+   "mirror": "small round mirror propped on the balcony"
+  },
+  {
+   "id": "fr_pincer_verb",
+   "lemma": "pincer",
+   "gloss": "to pinch; to pluck",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    400,
+    119,
+    600,
+    300
+   ],
+   "label_xy": [
+    500,
+    288
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rattacher_verb",
+   "lemma": "rattacher",
+   "gloss": "to attach; to post",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    525,
+    19,
+    712,
+    117
+   ],
+   "label_xy": [
+    618,
+    105
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg013",
+   "box": [
+    960,
+    450,
+    1090,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 13",
+   "sign": "étape 13 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg011",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 11",
+   "name": "Rue des Gestes, étape 11",
+   "sign": "← étape 11",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

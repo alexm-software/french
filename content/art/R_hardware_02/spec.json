@@ -1,0 +1,183 @@
+{
+ "divider_x": 590,
+ "kind": "room",
+ "note": "Hardware shop (2): metals, chains, ropes and scrap. Feminine nouns to the left of x=590, masculine to the right. The back shelves are a zoom (R_hardware_02_z1). The left doorway goes back to the fashion boutique; the right doorway leads on to the jeweller's boutique.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La quincaillerie (2)",
+   "box": [
+    760,
+    15,
+    1000,
+    55
+   ],
+   "text_box": [
+    766,
+    21,
+    994,
+    49
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_chaine_noun",
+   "box": [
+    112,
+    50,
+    231,
+    481
+   ],
+   "scene": "shopkeeper hauling a heavy iron chain"
+  },
+  {
+   "id": "fr_corde_noun",
+   "box": [
+    237,
+    256,
+    316,
+    456
+   ],
+   "scene": "guitarist with a rope tied to the rafters"
+  },
+  {
+   "id": "fr_grille_noun",
+   "box": [
+    320,
+    94,
+    456,
+    320
+   ],
+   "scene": "tall wrought-iron gate"
+  },
+  {
+   "id": "fr_liaison_noun",
+   "box": [
+    475,
+    45,
+    581,
+    269
+   ],
+   "scene": "monkey swinging between links of a chain"
+  },
+  {
+   "id": "fr_ferraille_noun",
+   "box": [
+    362,
+    324,
+    576,
+    515
+   ],
+   "scene": "fairy building a tin castle on a heap of scrap iron"
+  },
+  {
+   "id": "fr_rayure_noun",
+   "box": [
+    287,
+    519,
+    481,
+    656
+   ],
+   "scene": "toolbox with a big scratch across its lid"
+  },
+  {
+   "id": "fr_fil_noun",
+   "box": [
+    650,
+    50,
+    715,
+    205
+   ],
+   "scene": "spider tiptoeing down a thread"
+  },
+  {
+   "id": "fr_fer_noun",
+   "box": [
+    600,
+    225,
+    716,
+    421
+   ],
+   "scene": "blacksmith hammering glowing iron on an anvil"
+  },
+  {
+   "id": "fr_metal_noun",
+   "box": [
+    719,
+    256,
+    819,
+    358
+   ],
+   "scene": "metal robot shrugging"
+  },
+  {
+   "id": "fr_marbre_noun",
+   "box": [
+    581,
+    425,
+    740,
+    644
+   ],
+   "scene": "shivering boy on a cold marble step, marbles scattered"
+  },
+  {
+   "id": "fr_acier_noun",
+   "box": [
+    744,
+    362,
+    925,
+    587
+   ],
+   "scene": "boy skiing down a plank ramp on steel skis"
+  },
+  {
+   "id": "fr_couchage_noun",
+   "box": [
+    950,
+    506,
+    1203,
+    676
+   ],
+   "scene": "sleeping bag rolled out on a couch-bed"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_hardware_02_z1",
+   "box": [
+    900,
+    110,
+    1130,
+    355
+   ],
+   "label": "the back shelves"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_boutique_02",
+   "box": [
+    20,
+    69,
+    108,
+    470
+   ],
+   "label": "Back through the left doorway to the fashion boutique",
+   "name": "La boutique (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_boutique_01",
+   "box": [
+    1160,
+    69,
+    1262,
+    500
+   ],
+   "label": "Through the right doorway to the jeweller's boutique",
+   "name": "La boutique (1)",
+   "kind": "door"
+  }
+ ]
+}

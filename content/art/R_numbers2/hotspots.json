@@ -1,0 +1,256 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "First-floor room of the bigger numbers and ordinals. The two masculine nouns (le million, le quart) are on the right (lion, pie man); the numbers and ordinal adjectives have no gender. The open stairwell with its banister at the front left goes back down to the pronouns hall; the white door at the back right leads to the second pronouns room. Zoom: the long grey table at the back.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les nombres (2)",
+   "box": [
+    594,
+    81,
+    838,
+    225
+   ],
+   "text_box": [
+    604,
+    91,
+    828,
+    215
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_deuxieme_adj",
+   "lemma": "deuxième",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "deuxième",
+   "box": [
+    311,
+    160,
+    378,
+    388
+   ],
+   "label_xy": [
+    344,
+    378
+   ],
+   "scene": "runner with a medal on the second podium step"
+  },
+  {
+   "id": "fr_premier_adj",
+   "lemma": "premier",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "premier",
+   "box": [
+    381,
+    47,
+    475,
+    432
+   ],
+   "label_xy": [
+    428,
+    422
+   ],
+   "scene": "runner on the top podium step lifting a gold cup"
+  },
+  {
+   "id": "fr_troisieme_adj",
+   "lemma": "troisième",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "troisième",
+   "box": [
+    481,
+    156,
+    550,
+    432
+   ],
+   "label_xy": [
+    516,
+    422
+   ],
+   "scene": "runner with a bronze medal on the third podium step"
+  },
+  {
+   "id": "fr_dernier_adj",
+   "lemma": "dernier",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "dernier",
+   "box": [
+    554,
+    312,
+    738,
+    519
+   ],
+   "label_xy": [
+    646,
+    509
+   ],
+   "scene": "weary runner sitting at the back darning his sock"
+  },
+  {
+   "id": "fr_mille_num",
+   "lemma": "mille",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "mille",
+   "box": [
+    106,
+    340,
+    308,
+    612
+   ],
+   "label_xy": [
+    207,
+    602
+   ],
+   "scene": "man eating from a huge bowl of green peas"
+  },
+  {
+   "id": "fr_trente_num",
+   "lemma": "trente",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "trente",
+   "box": [
+    359,
+    437,
+    548,
+    644
+   ],
+   "label_xy": [
+    454,
+    634
+   ],
+   "scene": "boy playing with a long toy train"
+  },
+  {
+   "id": "fr_cent_num",
+   "lemma": "cent",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "cent",
+   "box": [
+    748,
+    353,
+    975,
+    510
+   ],
+   "label_xy": [
+    862,
+    500
+   ],
+   "scene": "girl building a sand castle in a sandbox"
+  },
+  {
+   "id": "fr_quart_noun",
+   "lemma": "quart",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le quart",
+   "box": [
+    885,
+    225,
+    1012,
+    350
+   ],
+   "label_xy": [
+    948,
+    340
+   ],
+   "scene": "seated man holding a pie with one quarter cut out"
+  },
+  {
+   "id": "fr_million_noun",
+   "lemma": "million",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le million",
+   "box": [
+    1025,
+    281,
+    1200,
+    585
+   ],
+   "label_xy": [
+    1112,
+    575
+   ],
+   "scene": "lion sitting on a mound of gold coins"
+  },
+  {
+   "id": "fr_cinquante_num",
+   "lemma": "cinquante",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "cinquante",
+   "box": [
+    710,
+    550,
+    925,
+    660
+   ],
+   "label_xy": [
+    818,
+    650
+   ],
+   "scene": "basin with a sinking toy boat carrying a giant ant"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_numbers2_z1",
+   "box": [
+    741,
+    318,
+    862,
+    350
+   ],
+   "label": "the long grey table at the back"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_pronouns_01",
+   "box": [
+    0,
+    380,
+    104,
+    552
+   ],
+   "label": "Down the open stairwell to the pronouns hall",
+   "name": "Les pronoms (1)",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_pronouns_02",
+   "box": [
+    1015,
+    148,
+    1078,
+    278
+   ],
+   "label": "Through the white door to the second pronouns room",
+   "name": "Les pronoms (2)",
+   "kind": "door"
+  }
+ ]
+}

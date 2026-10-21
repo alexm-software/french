@@ -2,57 +2,27 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 640,
+ "divider_x": 360,
  "kind": "room",
- "note": "Round 2 repaint (neutral colour). One box per item. links = in-building navigation.",
+ "note": "Fit-audit repaint 2026-10-21 (hook standard v2). Only one feminine word (carafe): she stands left of the wooden pillar with the stairs down and the balcony door; the eight masculine words fill the right. One box per item. S04 v3 (2026-10-21): reviewed for pasted-on figures (none: every figure stands on the floor, sits on a stool or works at the counter); border outpainted and the room pulled back/shifted so the non-smoker kitten and every other item sit at least 6% in from each edge.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    440,
-    32,
-    848,
-    158
+    422,
+    64,
+    756,
+    183
    ],
    "text_box": [
-    470,
-    50,
-    818,
-    140
-   ]
-  },
-  "plaque": {
-   "role": "room_plaque",
-   "box": [
-    478,
-    208,
-    552,
-    318
-   ],
-   "text_box": [
-    488,
-    220,
-    542,
-    306
+    448,
+    80,
+    729,
+    169
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_tuilerie_noun",
-   "lemma": "tuilerie",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la tuilerie",
-   "box": [
-    0,
-    300,
-    345,
-    540
-   ],
-   "scene": "tile works: stacks of roof tiles beside a small kiln"
-  },
   {
    "id": "fr_carafe_noun",
    "lemma": "carafe",
@@ -61,11 +31,16 @@
    "side": "left",
    "label": "la carafe",
    "box": [
-    148,
-    545,
-    232,
-    682
-   ]
+    205,
+    272,
+    331,
+    487
+   ],
+   "label_xy": [
+    268,
+    477
+   ],
+   "scene": "Same as English 'carafe' (said kah-RAHF): a little girl carefully pours water from a tall glass CARAFE."
   },
   {
    "id": "fr_barman_noun",
@@ -75,100 +50,35 @@
    "side": "right",
    "label": "le barman",
    "box": [
-    712,
-    215,
-    810,
-    392
-   ]
-  },
-  {
-   "id": "fr_ermitage_noun",
-   "lemma": "ermitage",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'ermitage",
-   "box": [
-    815,
-    160,
-    985,
-    300
+    383,
+    202,
+    497,
+    524
    ],
-   "scene": "painting of a hermitage"
-  },
-  {
-   "id": "fr_loueur_noun",
-   "lemma": "loueur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le loueur",
-   "box": [
-    852,
-    15,
-    1150,
-    138
-   ],
-   "scene": "hire canoe + 'for hire' pennant"
-  },
-  {
-   "id": "fr_non_fumeur_noun",
-   "lemma": "non-fumeur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le non-fumeur",
-   "box": [
-    1020,
-    140,
-    1150,
-    275
-   ]
-  },
-  {
-   "id": "fr_apero_noun",
-   "lemma": "apéro",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'apéro",
-   "box": [
-    945,
-    302,
-    1280,
-    398
-   ],
-   "scene": "friends clinking juice under the up-arrow lamp"
-  },
-  {
-   "id": "fr_buveur_noun",
-   "lemma": "buveur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le buveur",
-   "box": [
-    815,
-    400,
-    1000,
-    680
-   ],
-   "scene": "beaver drinker"
-  },
-  {
-   "id": "fr_troc_noun",
-   "lemma": "troc",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le troc",
-   "box": [
-    590,
+   "label_xy": [
     440,
-    812,
-    720
+    514
    ],
-   "scene": "goat swapped for a crate of cabbages"
+   "scene": "Same as English 'barman' (said bahr-MAHN): a young BARMAN with a curly moustache rattles a silver shaker."
+  },
+  {
+   "id": "fr_gueridon_noun",
+   "lemma": "guéridon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le guéridon",
+   "box": [
+    501,
+    230,
+    608,
+    557
+   ],
+   "label_xy": [
+    554,
+    547
+   ],
+   "scene": "GERRY the university DON (gay-ree-DOHN), in a black gown, balances a teacup on a SMALL ROUND TABLE."
   },
   {
    "id": "fr_soda_noun",
@@ -178,25 +88,54 @@
    "side": "right",
    "label": "le soda",
    "box": [
-    1078,
-    440,
-    1142,
-    555
-   ]
+    612,
+    264,
+    666,
+    533
+   ],
+   "label_xy": [
+    639,
+    523
+   ],
+   "scene": "Same as English 'soda' (stress at the end, soh-DAH): a fizzy SODA bubbles up and over its glass."
   },
   {
-   "id": "fr_caviar_noun",
-   "lemma": "caviar",
+   "id": "fr_buveur_noun",
+   "lemma": "buveur",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le caviar",
+   "label": "le buveur",
    "box": [
-    1070,
-    558,
-    1148,
-    628
-   ]
+    670,
+    334,
+    767,
+    543
+   ],
+   "label_xy": [
+    718,
+    533
+   ],
+   "scene": "A BEAVER (bew-VUHR) is a big DRINKER, gulping from two glasses at once."
+  },
+  {
+   "id": "fr_apero_noun",
+   "lemma": "apéro",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'apéro",
+   "box": [
+    771,
+    300,
+    922,
+    543
+   ],
+   "label_xy": [
+    846,
+    533
+   ],
+   "scene": "A ROW of APES (ah-pay-ROH) clink little glasses at their evening APÉRO with a bowl of crisps."
   },
   {
    "id": "fr_breuvage_noun",
@@ -206,21 +145,64 @@
    "side": "right",
    "label": "le breuvage",
    "box": [
-    1150,
-    445,
-    1272,
-    625
-   ]
+    926,
+    241,
+    1025,
+    580
+   ],
+   "label_xy": [
+    976,
+    570
+   ],
+   "scene": "A bearded wizard BREWS a bubbling purple POTION in a VASE (bruh-VAHZH)."
+  },
+  {
+   "id": "fr_fast_food_noun",
+   "lemma": "fast-food",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le fast-food",
+   "box": [
+    1029,
+    417,
+    1092,
+    604
+   ],
+   "label_xy": [
+    1060,
+    594
+   ],
+   "scene": "Same as English 'fast food' (said fahs-TFOOD): a burger and fries on a red tray at a FAST-FOOD counter."
+  },
+  {
+   "id": "fr_non_fumeur_noun",
+   "lemma": "non-fumeur",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le non-fumeur",
+   "box": [
+    1096,
+    230,
+    1187,
+    618
+   ],
+   "label_xy": [
+    1142,
+    608
+   ],
+   "scene": "A kitten fans away a puff of FUMES (nohn-few-MUHR) with a paper fan: she is a strict NON-SMOKER."
   }
  ],
  "links": [
   {
    "target": "R_cafe_01",
    "box": [
-    370,
-    352,
-    575,
-    585
+    77,
+    431,
+    201,
+    675
    ],
    "label": "Stairs down to the café ground floor",
    "name": "Café de la Place — rez-de-chaussée",
@@ -229,32 +211,14 @@
   {
    "target": "B08_cafe",
    "box": [
-    402,
-    165,
-    470,
-    345
+    77,
+    84,
+    183,
+    426
    ],
    "label": "Balcony door: outside stair to the street",
    "name": "Café de la Place (outside)",
-   "kind": "exit",
-   "polygon": [
-    [
-     346,
-     109
-    ],
-    [
-     478,
-     109
-    ],
-    [
-     478,
-     345
-    ],
-    [
-     346,
-     345
-    ]
-   ]
+   "kind": "exit"
   }
  ]
 }

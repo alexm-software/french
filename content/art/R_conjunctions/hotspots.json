@@ -1,0 +1,256 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "room",
+ "note": "First-floor conjunctions room (et, mais, ou, quand, car, pourtant...). Conjunctions have no gender, so no left/right rule (divider null). The white door on the far left goes back to the second prepositions room; the narrow wooden staircase on the right climbs to the attic. Zoom: the pale pupil's desk in the middle.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les conjonctions",
+   "box": [
+    335,
+    59,
+    557,
+    234
+   ],
+   "text_box": [
+    345,
+    69,
+    547,
+    224
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_et_conj",
+   "lemma": "et",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "et",
+   "box": [
+    110,
+    327,
+    219,
+    597
+   ],
+   "label_xy": [
+    164,
+    587
+   ],
+   "scene": "boy holding a red apple in each hand"
+  },
+  {
+   "id": "fr_mais_conj",
+   "lemma": "mais",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "mais",
+   "box": [
+    235,
+    269,
+    350,
+    560
+   ],
+   "label_xy": [
+    292,
+    550
+   ],
+   "scene": "girl holding a ribbon maypole"
+  },
+  {
+   "id": "fr_que_conj",
+   "lemma": "que",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "que",
+   "box": [
+    372,
+    244,
+    445,
+    460
+   ],
+   "label_xy": [
+    408,
+    450
+   ],
+   "scene": "man coughing into his fist"
+  },
+  {
+   "id": "fr_comme_conj",
+   "lemma": "comme",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comme",
+   "box": [
+    450,
+    269,
+    556,
+    500
+   ],
+   "label_xy": [
+    503,
+    490
+   ],
+   "scene": "woman combing her hair next to a cat licking its fur"
+  },
+  {
+   "id": "fr_ou_conj",
+   "lemma": "ou",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "ou",
+   "box": [
+    647,
+    310,
+    752,
+    474
+   ],
+   "label_xy": [
+    700,
+    464
+   ],
+   "scene": "girl hesitating between two cakes on a little table"
+  },
+  {
+   "id": "fr_quand_conj",
+   "lemma": "quand",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "quand",
+   "box": [
+    756,
+    237,
+    856,
+    474
+   ],
+   "label_xy": [
+    806,
+    464
+   ],
+   "scene": "man checking his pocket watch"
+  },
+  {
+   "id": "fr_ni_conj",
+   "lemma": "ni",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "ni",
+   "box": [
+    887,
+    294,
+    1015,
+    496
+   ],
+   "label_xy": [
+    951,
+    486
+   ],
+   "scene": "man pointing at his knee and shaking his head"
+  },
+  {
+   "id": "fr_car_conj",
+   "lemma": "car",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "car",
+   "box": [
+    750,
+    477,
+    884,
+    640
+   ],
+   "label_xy": [
+    817,
+    630
+   ],
+   "scene": "boy pushing a little toy car"
+  },
+  {
+   "id": "fr_sinon_conj",
+   "lemma": "sinon",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "sinon",
+   "box": [
+    952,
+    500,
+    1037,
+    602
+   ],
+   "label_xy": [
+    994,
+    592
+   ],
+   "scene": "naughty little dog"
+  },
+  {
+   "id": "fr_pourtant_adv",
+   "lemma": "pourtant",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "pourtant",
+   "box": [
+    1043,
+    402,
+    1200,
+    602
+   ],
+   "label_xy": [
+    1122,
+    592
+   ],
+   "scene": "poor man in patched clothes smiling cheerfully"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_conjunctions_z1",
+   "box": [
+    560,
+    425,
+    643,
+    602
+   ],
+   "label": "the pale pupil's desk in the middle"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_prepositions_02",
+   "box": [
+    80,
+    181,
+    227,
+    323
+   ],
+   "label": "Back through the white door to the second prepositions room",
+   "name": "Les prépositions (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_pronouns_03",
+   "box": [
+    1100,
+    290,
+    1206,
+    398
+   ],
+   "label": "Up the narrow wooden staircase to the attic",
+   "name": "Les pronoms (3)",
+   "kind": "stairs_up"
+  }
+ ]
+}

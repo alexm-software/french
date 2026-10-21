@@ -1,0 +1,161 @@
+{
+ "divider_x": 540,
+ "kind": "room",
+ "note": "The trading hall at the end of the arcade (general shop 4): buyers, bids, stalls and bonuses under the glass roof. Feminine nouns to the left of x=540, masculine to the right. The far right corner (truck, penguin, rabbit, cloth merchant) is a zoom (R_shop_general_04_z1). The doorway on the left goes back to the boutique (3); this is the end of the arcade.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La halle marchande",
+   "box": [
+    470,
+    610,
+    730,
+    650
+   ],
+   "text_box": [
+    476,
+    616,
+    724,
+    644
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_halle_noun",
+   "box": [
+    94,
+    381,
+    294,
+    587
+   ],
+   "scene": "two children playing hide-and-seek among the crates"
+  },
+  {
+   "id": "fr_enchere_noun",
+   "box": [
+    162,
+    187,
+    269,
+    377
+   ],
+   "scene": "woman waving a bidding paddle"
+  },
+  {
+   "id": "fr_echoppe_noun",
+   "box": [
+    331,
+    244,
+    437,
+    431
+   ],
+   "scene": "tiny wooden stall barely big enough for one"
+  },
+  {
+   "id": "fr_brocante_noun",
+   "box": [
+    441,
+    244,
+    550,
+    437
+   ],
+   "scene": "woman selling old teapots at a table"
+  },
+  {
+   "id": "fr_acquisition_noun",
+   "box": [
+    319,
+    494,
+    444,
+    612
+   ],
+   "scene": "hamster proudly showing off a new running wheel"
+  },
+  {
+   "id": "fr_acheteur_noun",
+   "box": [
+    554,
+    294,
+    631,
+    456
+   ],
+   "scene": "boy buyer with arms full of shopping bags"
+  },
+  {
+   "id": "fr_distributeur_noun",
+   "box": [
+    569,
+    181,
+    681,
+    290
+   ],
+   "scene": "parrot perched on a vending machine"
+  },
+  {
+   "id": "fr_abonnement_noun",
+   "box": [
+    685,
+    200,
+    760,
+    330
+   ],
+   "scene": "lady in a bonnet collecting her magazines"
+  },
+  {
+   "id": "fr_souk_noun",
+   "box": [
+    764,
+    150,
+    890,
+    300
+   ],
+   "scene": "camel browsing carpets and lanterns"
+  },
+  {
+   "id": "fr_prelevement_noun",
+   "box": [
+    762,
+    369,
+    890,
+    450
+   ],
+   "scene": "magpie taking a nut from a squirrel's pile"
+  },
+  {
+   "id": "fr_bonus_noun",
+   "box": [
+    894,
+    231,
+    1012,
+    419
+   ],
+   "scene": "baker woman adding an extra loaf"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_shop_general_04_z1",
+   "box": [
+    744,
+    455,
+    1203,
+    676
+   ],
+   "label": "the stalls at the front right"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_boutique_03",
+   "box": [
+    60,
+    106,
+    158,
+    370
+   ],
+   "label": "Back through the doorway on the left to the boutique (3)",
+   "name": "La boutique (3)",
+   "kind": "door"
+  }
+ ]
+}

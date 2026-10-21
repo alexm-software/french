@@ -1,0 +1,17 @@
+{"divider_x": 700,
+ "name": "Rue des Gestes — étape 9 · balancer, se courber, rougir",
+ "note": "Tiered verb place. -er LEFT (girl swinging on the rope swing, man setting off a confetti cannon, old man bending to sniff his flowers on the balcony beside a wall mirror), -ir/-re RIGHT (shy young man blushing as a lady hands him a rose; door half-opening by itself with a cat peeking out, small mirror on the wall by it; baker rounding dough at the upper window). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_balancer_verb", "box": [125, 330, 270, 585], "tier": "street"},
+  {"id": "fr_declencher_verb", "box": [294, 331, 525, 644], "tier": "street"},
+  {"id": "fr_courber_verb", "box": [262, 119, 487, 300], "tier": "balcony", "mirror": "framed mirror on the wall beside the balcony"},
+  {"id": "fr_rougir_verb", "box": [869, 350, 1075, 672], "tier": "street"},
+  {"id": "fr_entrouvrir_verb", "box": [1078, 300, 1170, 600], "tier": "street", "mirror": "small framed mirror on the wall just left of the door"},
+  {"id": "fr_arrondir_verb", "box": [1100, 38, 1200, 169], "tier": "upper"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg010", "box": [600, 430, 780, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 10", "sign": "étape 10 →"},
+  "back": {"target": "ST_control_seg008", "box": [470, 676, 860, 712], "label": "Back up the lane to étape 8", "name": "Rue des Gestes, étape 8", "sign": "← étape 8"}
+ },
+ "signs": {"er": [560, 25, 660, 59], "irre": [700, 25, 820, 59]}
+}

@@ -1,766 +1,489 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_cooking_seg003",
- "street_id": "ST_cooking",
- "sector_id": "S04_cafes",
- "kind": "verb_place",
- "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 3 · cut, cut up",
- "divider_x": 940,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, direction signs (forward / back arrows = the clickable exits, side markers -er / -ir / -re). Signs never sit on an item box.",
- "tier_counts": {
-  "street": 6,
-  "balcony": 4,
-  "upper": 2,
-  "roof": 2
- },
- "text_areas": {
-  "fr_couper_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_couper_verb",
-   "text": "couper",
-   "box": [
-    186,
-    690,
-    262,
-    716
-   ],
-   "text_box": [
-    190,
-    694,
-    258,
-    712
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_cooking_seg003",
+  "street_id": "ST_cooking",
+  "sector_id": "S04_cafes",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Ruelle des Gourmets — étape 3 · Drink & pour",
+  "divider_x": 648,
+  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
+  "tier_counts": {
+    "street": 4,
+    "balcony": 2,
+    "upper": 1,
+    "roof": 1
   },
-  "fr_meler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_meler_verb",
-   "text": "mêler",
-   "box": [
-    270,
-    684,
-    336,
-    710
-   ],
-   "text_box": [
-    274,
-    688,
-    332,
-    706
-   ]
+  "text_areas": {
+    "fr_verser_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_verser_verb",
+      "text": "verser",
+      "box": [
+        237,
+        632,
+        307,
+        658
+      ],
+      "text_box": [
+        241,
+        636,
+        303,
+        654
+      ]
+    },
+    "fr_boire_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_boire_verb",
+      "text": "boire",
+      "box": [
+        687,
+        618,
+        747,
+        644
+      ],
+      "text_box": [
+        691,
+        622,
+        743,
+        640
+      ]
+    },
+    "fr_remplir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_remplir_verb",
+      "text": "remplir (de)",
+      "box": [
+        848,
+        618,
+        966,
+        644
+      ],
+      "text_box": [
+        852,
+        622,
+        962,
+        640
+      ]
+    },
+    "fr_emplir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_emplir_verb",
+      "text": "s'emplir",
+      "box": [
+        1046,
+        645,
+        1130,
+        671
+      ],
+      "text_box": [
+        1050,
+        649,
+        1126,
+        667
+      ]
+    },
+    "fr_consommer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_consommer_verb",
+      "text": "consommer",
+      "box": [
+        176,
+        279,
+        290,
+        305
+      ],
+      "text_box": [
+        180,
+        283,
+        286,
+        301
+      ]
+    },
+    "fr_trinquer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_trinquer_verb",
+      "text": "trinquer",
+      "box": [
+        509,
+        411,
+        595,
+        437
+      ],
+      "text_box": [
+        513,
+        415,
+        591,
+        433
+      ]
+    },
+    "fr_diluer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_diluer_verb",
+      "text": "diluer",
+      "box": [
+        546,
+        327,
+        612,
+        353
+      ],
+      "text_box": [
+        550,
+        331,
+        608,
+        349
+      ]
+    },
+    "fr_desalterer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_desalterer_verb",
+      "text": "désaltérer",
+      "box": [
+        417,
+        139,
+        521,
+        165
+      ],
+      "text_box": [
+        421,
+        143,
+        517,
+        161
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "étape 4 →",
+      "box": [
+        657,
+        369,
+        755,
+        397
+      ],
+      "text_box": [
+        660,
+        372,
+        752,
+        394
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← étape 2",
+      "box": [
+        466,
+        684,
+        564,
+        712
+      ],
+      "text_box": [
+        469,
+        687,
+        561,
+        709
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        286,
+        42,
+        327,
+        72
+      ],
+      "text_box": [
+        289,
+        45,
+        324,
+        69
+      ],
+      "style": "direction_plate",
+      "points": "left"
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        707,
+        51,
+        783,
+        81
+      ],
+      "text_box": [
+        710,
+        54,
+        780,
+        78
+      ],
+      "style": "direction_plate",
+      "points": "right"
+    },
+    "street_name": {
+      "role": "street_name",
+      "text": "Drink & pour",
+      "box": [
+        1077,
+        273,
+        1196,
+        346
+      ],
+      "text_box": [
+        1083,
+        279,
+        1190,
+        340
+      ],
+      "surface": "blank hanging sign board"
+    }
   },
-  "fr_ecraser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_ecraser_verb",
-   "text": "écraser",
-   "box": [
-    428,
-    431,
-    508,
-    457
-   ],
-   "text_box": [
-    432,
-    435,
-    504,
-    453
-   ]
+  "items": [
+    {
+      "id": "fr_verser_verb",
+      "lemma": "verser",
+      "gloss": "to pour",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        144,
+        346,
+        401,
+        662
+      ],
+      "label_xy": [
+        272,
+        652
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A poet reads out a VERSE and SAYS it (vehr-SAY) while POURING tea from high up into a cup."
+    },
+    {
+      "id": "fr_boire_verb",
+      "lemma": "boire",
+      "gloss": "to drink",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 6,
+      "box": [
+        630,
+        476,
+        805,
+        648
+      ],
+      "label_xy": [
+        717,
+        638
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A thirsty BOAR (BWAHR) DRINKS a whole stone trough of water."
+    },
+    {
+      "id": "fr_remplir_verb",
+      "lemma": "remplir",
+      "gloss": "to fill (up)",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 7,
+      "box": [
+        809,
+        419,
+        1006,
+        648
+      ],
+      "label_xy": [
+        907,
+        638
+      ],
+      "prepositions": [
+        "de"
+      ],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A RAM (rahn-PLEER) FILLS a huge bucket at the pump until it spills over."
+    },
+    {
+      "id": "fr_emplir_verb",
+      "lemma": "emplir",
+      "gloss": "to fill",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 8,
+      "box": [
+        1009,
+        432,
+        1168,
+        675
+      ],
+      "label_xy": [
+        1088,
+        665
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'emplir",
+      "scene": "A balloon named SAM (sahn-PLEER) FILLS ITSELF with air, admiring its swelling shape in a MIRROR (s'emplir).",
+      "mirror": "painted inside the item box"
+    },
+    {
+      "id": "fr_consommer_verb",
+      "lemma": "consommer",
+      "gloss": "to consume; to have (food or drink); to use up",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 2,
+      "box": [
+        174,
+        134,
+        293,
+        309
+      ],
+      "label_xy": [
+        233,
+        299
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Like English 'consume', said kohn-soh-MAY: a caterpillar in a party CONE hat CONSUMES leaf after leaf on the balcony."
+    },
+    {
+      "id": "fr_trinquer_verb",
+      "lemma": "trinquer",
+      "gloss": "to clink glasses, to drink a toast",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        492,
+        361,
+        613,
+        441
+      ],
+      "label_xy": [
+        552,
+        431
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Said TRAN-KAY, like 'DRINK? OK!': two friends on a little red balcony call it out and CLINK GLASSES."
+    },
+    {
+      "id": "fr_diluer_verb",
+      "lemma": "diluer",
+      "gloss": "to dilute, to water down",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 4,
+      "box": [
+        513,
+        227,
+        646,
+        357
+      ],
+      "label_xy": [
+        579,
+        347
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Like English 'dilute', said dee-LWAY (no 't'): grandma tips her watering can into a jug of thick red juice to DILUTE it."
+    },
+    {
+      "id": "fr_desalterer_verb",
+      "lemma": "désaltérer",
+      "gloss": "to quench (someone's) thirst",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 5,
+      "box": [
+        425,
+        51,
+        513,
+        169
+      ],
+      "label_xy": [
+        469,
+        159
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "By the DAZZLING gold knob on a sun-baked teapot roof, thirsty TERRY (day-ZAHL-tay-RAY) QUENCHES HIS THIRST, gulping a tall glass of cool water."
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_cooking_seg004",
+      "box": [
+        615,
+        361,
+        798,
+        472
+      ],
+      "polygon": [
+        [
+          615,
+          361
+        ],
+        [
+          798,
+          361
+        ],
+        [
+          798,
+          472
+        ],
+        [
+          615,
+          472
+        ]
+      ],
+      "label": "next: Ruelle des Gourmets — étape 4",
+      "name": "Ruelle des Gourmets — étape 4",
+      "kind": "street",
+      "area": "far street / vanishing point"
+    },
+    "back": {
+      "target": "ST_cooking_seg002",
+      "box": [
+        405,
+        571,
+        626,
+        720
+      ],
+      "label": "back: Ruelle des Gourmets — étape 2",
+      "name": "Ruelle des Gourmets — étape 2",
+      "kind": "street",
+      "area": "near foreground cobbles"
+    }
   },
-  "fr_tailler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_tailler_verb",
-   "text": "tailler",
-   "box": [
-    567,
-    660,
-    635,
-    686
-   ],
-   "text_box": [
-    571,
-    664,
-    631,
-    682
-   ]
-  },
-  "fr_melanger_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_melanger_verb",
-   "text": "mélanger",
-   "box": [
-    748,
-    684,
-    846,
-    710
-   ],
-   "text_box": [
-    752,
-    688,
-    842,
-    706
-   ]
-  },
-  "fr_dissoudre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_dissoudre_verb",
-   "text": "dissoudre",
-   "box": [
-    1048,
-    676,
-    1148,
-    702
-   ],
-   "text_box": [
-    1052,
-    680,
-    1144,
-    698
-   ]
-  },
-  "fr_trancher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_trancher_verb",
-   "text": "trancher",
-   "box": [
-    209,
-    413,
-    299,
-    439
-   ],
-   "text_box": [
-    213,
-    417,
-    295,
-    435
-   ]
-  },
-  "fr_decouper_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_decouper_verb",
-   "text": "découper",
-   "box": [
-    513,
-    418,
-    609,
-    444
-   ],
-   "text_box": [
-    517,
-    422,
-    605,
-    440
-   ]
-  },
-  "fr_entamer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_entamer_verb",
-   "text": "entamer",
-   "box": [
-    702,
-    418,
-    790,
-    444
-   ],
-   "text_box": [
-    706,
-    422,
-    786,
-    440
-   ]
-  },
-  "fr_petrir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_petrir_verb",
-   "text": "pétrir",
-   "box": [
-    1052,
-    267,
-    1118,
-    293
-   ],
-   "text_box": [
-    1056,
-    271,
-    1114,
-    289
-   ]
-  },
-  "fr_eplucher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_eplucher_verb",
-   "text": "éplucher",
-   "box": [
-    127,
-    72,
-    217,
-    98
-   ],
-   "text_box": [
-    131,
-    76,
-    213,
-    94
-   ]
-  },
-  "fr_broyer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_broyer_verb",
-   "text": "broyer",
-   "box": [
-    753,
-    128,
-    825,
-    154
-   ],
-   "text_box": [
-    757,
-    132,
-    821,
-    150
-   ]
-  },
-  "fr_aiguiser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_aiguiser_verb",
-   "text": "aiguiser",
-   "box": [
-    258,
-    168,
-    344,
-    194
-   ],
-   "text_box": [
-    262,
-    172,
-    340,
-    190
-   ]
-  },
-  "fr_ciseler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_ciseler_verb",
-   "text": "ciseler",
-   "box": [
-    617,
-    160,
-    689,
-    186
-   ],
-   "text_box": [
-    621,
-    164,
-    685,
-    182
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 4 →",
-   "box": [
-    1170,
-    288,
-    1275,
-    316
-   ],
-   "text_box": [
-    1173,
-    291,
-    1272,
-    313
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 2",
-   "box": [
-    6,
-    222,
-    111,
-    250
-   ],
-   "text_box": [
-    9,
-    225,
-    108,
-    247
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    444,
-    186,
-    491,
-    212
-   ],
-   "text_box": [
-    447,
-    189,
-    488,
-    209
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    1158,
-    186,
-    1240,
-    212
-   ],
-   "text_box": [
-    1161,
-    189,
-    1237,
-    209
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_couper_verb",
-   "lemma": "couper",
-   "gloss": "to cut",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    8,
-    411,
-    180,
-    703
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "barber cutting a pigeon's head feathers in the barber chair"
-  },
-  {
-   "id": "fr_meler_verb",
-   "lemma": "mêler",
-   "gloss": "to mix, to blend",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    182,
-    470,
-    305,
-    680
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boy whisking a bowl in a melee of flying spoons"
-  },
-  {
-   "id": "fr_ecraser_verb",
-   "lemma": "écraser",
-   "gloss": "to crush, to squash",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    406,
-    461,
-    530,
-    703
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "steamroller driver crushing a pile of tin cans flat"
-  },
-  {
-   "id": "fr_tailler_verb",
-   "lemma": "tailler",
-   "gloss": "to cut, to trim, to prune",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 4,
-   "box": [
-    532,
-    450,
-    670,
-    656
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "gardener trimming the poodle-shaped hedge with shears"
-  },
-  {
-   "id": "fr_melanger_verb",
-   "lemma": "mélanger",
-   "gloss": "to mix",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 5,
-   "box": [
-    672,
-    477,
-    922,
-    680
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boy and octopus mixing colourful fruit into a melange in a giant bowl"
-  },
-  {
-   "id": "fr_dissoudre_verb",
-   "lemma": "dissoudre",
-   "gloss": "to dissolve",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 13,
-   "box": [
-    969,
-    461,
-    1227,
-    672
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "scientist watching a sugar cube dissolve in a glass of water"
-  },
-  {
-   "id": "fr_trancher_verb",
-   "lemma": "trancher",
-   "gloss": "to slice; to settle (a question)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 6,
-   "box": [
-    70,
-    257,
-    258,
-    409
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "man slicing a loaf into neat slices"
-  },
-  {
-   "id": "fr_decouper_verb",
-   "lemma": "découper",
-   "gloss": "to cut up, to carve; to cut out",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 7,
-   "box": [
-    403,
-    289,
-    539,
-    414
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "girl cutting out a paper car with scissors"
-  },
-  {
-   "id": "fr_entamer_verb",
-   "lemma": "entamer",
-   "gloss": "to start on, to cut into (a loaf, a cake)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 8,
-   "box": [
-    680,
-    281,
-    812,
-    414
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boy in a tam cutting into the cake"
-  },
-  {
-   "id": "fr_petrir_verb",
-   "lemma": "pétrir",
-   "gloss": "to knead",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 14,
-   "box": [
-    1023,
-    297,
-    1148,
-    430
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "baker kneading dough"
-  },
-  {
-   "id": "fr_eplucher_verb",
-   "lemma": "éplucher",
-   "gloss": "to peel; to go through with a fine-tooth comb",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 9,
-   "box": [
-    125,
-    102,
-    219,
-    255
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "granny peeling long curls of potato skin"
-  },
-  {
-   "id": "fr_broyer_verb",
-   "lemma": "broyer",
-   "gloss": "to grind, to crush",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 10,
-   "box": [
-    706,
-    158,
-    812,
-    258
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "man grinding coffee beans in a big grinder"
-  },
-  {
-   "id": "fr_aiguiser_verb",
-   "lemma": "aiguiser",
-   "gloss": "to sharpen",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 11,
-   "box": [
-    227,
-    23,
-    375,
-    164
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boy sharpening knives on a grinding wheel, sparks flying"
-  },
-  {
-   "id": "fr_ciseler_verb",
-   "lemma": "ciseler",
-   "gloss": "to chisel; to chop finely (herbs)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 12,
-   "box": [
-    644,
-    39,
-    722,
-    156
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "boy chiselling a stone egg with hammer and chisel"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_cooking_seg004",
-   "box": [
-    1170,
-    288,
-    1275,
-    316
-   ],
-   "label": "next: Ruelle des Gourmets — étape 4",
-   "name": "Ruelle des Gourmets — étape 4",
-   "kind": "street",
-   "polygon": [
-    [
-     1089,
-     254
-    ],
-    [
-     1089,
-     296
-    ],
-    [
-     1149,
-     296
-    ],
-    [
-     1149,
-     429
-    ],
-    [
-     1149,
-     430
-    ],
-    [
-     1089,
-     430
-    ],
-    [
-     1089,
-     460
-    ],
-    [
-     1228,
-     460
-    ],
-    [
-     1228,
-     671
-    ],
-    [
-     1228,
-     672
-    ],
-    [
-     1089,
-     672
-    ],
-    [
-     1089,
-     719
-    ],
-    [
-     1280,
-     719
-    ],
-    [
-     1280,
-     672
-    ],
-    [
-     1280,
-     461
-    ],
-    [
-     1280,
-     430
-    ],
-    [
-     1280,
-     297
-    ],
-    [
-     1280,
-     254
-    ]
-   ]
-  },
-  "back": {
-   "target": "ST_cooking_seg002",
-   "box": [
-    6,
-    222,
-    111,
-    250
-   ],
-   "label": "back: Ruelle des Gourmets — étape 2",
-   "name": "Ruelle des Gourmets — étape 2",
-   "kind": "street",
-   "polygon": [
-    [
-     0,
-     188
-    ],
-    [
-     0,
-     254
-    ],
-    [
-     0,
-     256
-    ],
-    [
-     0,
-     408
-    ],
-    [
-     0,
-     410
-    ],
-    [
-     191,
-     410
-    ],
-    [
-     191,
-     409
-    ],
-    [
-     69,
-     409
-    ],
-    [
-     69,
-     257
-    ],
-    [
-     69,
-     256
-    ],
-    [
-     191,
-     256
-    ],
-    [
-     191,
-     255
-    ],
-    [
-     124,
-     255
-    ],
-    [
-     124,
-     188
-    ]
-   ]
-  }
- },
- "links": []
+  "links": []
 }

@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg017",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 17 · relancer, injecter, décaler",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man throwing the ball back to his spaniel, vet giving the cow an injection, man goggling at a giant golden car key), balcony (man steadying the ladder to help a woman hang a picture), upper (woman scurrying about with an old vacuum cleaner), roof (man shifting a pot of calla lilies). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_relancer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_relancer_verb",
+   "text": "relancer",
+   "box": [
+    224,
+    618,
+    312,
+    644
+   ],
+   "text_box": [
+    228,
+    622,
+    308,
+    640
+   ]
+  },
+  "fr_injecter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_injecter_verb",
+   "text": "injecter",
+   "box": [
+    567,
+    580,
+    655,
+    606
+   ],
+   "text_box": [
+    571,
+    584,
+    651,
+    602
+   ]
+  },
+  "fr_ecarquiller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecarquiller_verb",
+   "text": "écarquiller",
+   "box": [
+    773,
+    630,
+    889,
+    656
+   ],
+   "text_box": [
+    777,
+    634,
+    885,
+    652
+   ]
+  },
+  "fr_seconder_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_seconder_verb",
+   "text": "seconder",
+   "box": [
+    584,
+    404,
+    672,
+    430
+   ],
+   "text_box": [
+    588,
+    408,
+    668,
+    426
+   ]
+  },
+  "fr_vaquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_vaquer_verb",
+   "text": "vaquer",
+   "box": [
+    209,
+    224,
+    277,
+    250
+   ],
+   "text_box": [
+    213,
+    228,
+    273,
+    246
+   ]
+  },
+  "fr_decaler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decaler_verb",
+   "text": "décaler",
+   "box": [
+    739,
+    110,
+    817,
+    136
+   ],
+   "text_box": [
+    743,
+    114,
+    813,
+    132
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 18 →",
+   "box": [
+    920,
+    450,
+    1050,
+    560
+   ],
+   "text_box": [
+    926,
+    456,
+    1044,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 16",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    880,
+    25,
+    980,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    977,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1000,
+    25,
+    1120,
+    59
+   ],
+   "text_box": [
+    1003,
+    28,
+    1117,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_relancer_verb",
+   "lemma": "relancer",
+   "gloss": "to throw back; to relaunch",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    81,
+    356,
+    456,
+    650
+   ],
+   "label_xy": [
+    268,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_injecter_verb",
+   "lemma": "injecter",
+   "gloss": "to inject",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    462,
+    438,
+    760,
+    612
+   ],
+   "label_xy": [
+    611,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ecarquiller_verb",
+   "lemma": "écarquiller",
+   "gloss": "to open wide, to goggle",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    762,
+    481,
+    900,
+    662
+   ],
+   "label_xy": [
+    831,
+    650
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_seconder_verb",
+   "lemma": "seconder",
+   "gloss": "to assist; to help, ease",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    550,
+    144,
+    706,
+    436
+   ],
+   "label_xy": [
+    628,
+    424
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_vaquer_verb",
+   "lemma": "vaquer",
+   "gloss": "to busy oneself with; to scurry about looking for food",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    162,
+    56,
+    325,
+    256
+   ],
+   "label_xy": [
+    243,
+    244
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_decaler_verb",
+   "lemma": "décaler",
+   "gloss": "to shift, move (forward or back); to stagger",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    688,
+    25,
+    869,
+    142
+   ],
+   "label_xy": [
+    778,
+    130
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg018",
+   "box": [
+    920,
+    450,
+    1050,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 18",
+   "sign": "étape 18 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg016",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 16",
+   "name": "Rue des Gestes, étape 16",
+   "sign": "← étape 16",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

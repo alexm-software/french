@@ -1,0 +1,218 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "room",
+ "note": "Ground-floor questions room: the question words. They have no gender, so no left/right rule (divider null). Grouped scene on a rug with a reading chair, a counting table and a hat stand. The white door on the left wall goes back to the articles room; the white door at the back right leads to the pronouns hall. Zoom: the little pale pupil's desk in the front right corner.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les questions",
+   "box": [
+    505,
+    88,
+    815,
+    155
+   ],
+   "text_box": [
+    513,
+    96,
+    807,
+    147
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_qui_pron",
+   "lemma": "qui",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "qui",
+   "box": [
+    159,
+    118,
+    327,
+    525
+   ],
+   "label_xy": [
+    243,
+    515
+   ],
+   "scene": "puzzled man holding up a giant iron key"
+  },
+  {
+   "id": "fr_ou_adv",
+   "lemma": "où",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "où",
+   "box": [
+    330,
+    250,
+    392,
+    500
+   ],
+   "label_xy": [
+    361,
+    490
+   ],
+   "scene": "owl on a stand peering through binoculars"
+  },
+  {
+   "id": "fr_pourquoi_adv",
+   "lemma": "pourquoi",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "pourquoi",
+   "box": [
+    400,
+    160,
+    569,
+    432
+   ],
+   "label_xy": [
+    484,
+    422
+   ],
+   "scene": "beggar in patched clothes shrugging with empty pockets"
+  },
+  {
+   "id": "fr_quoi_pron",
+   "lemma": "quoi",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "quoi",
+   "box": [
+    429,
+    436,
+    565,
+    585
+   ],
+   "label_xy": [
+    497,
+    575
+   ],
+   "scene": "white duck quacking with its beak wide open"
+  },
+  {
+   "id": "fr_comment_adv",
+   "lemma": "comment",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comment",
+   "box": [
+    573,
+    275,
+    710,
+    585
+   ],
+   "label_xy": [
+    642,
+    575
+   ],
+   "scene": "seated man scratching his head over an instruction booklet, a heap of parts on the rug"
+  },
+  {
+   "id": "fr_quel_pron",
+   "lemma": "quel",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "quel",
+   "box": [
+    713,
+    200,
+    838,
+    479
+   ],
+   "label_xy": [
+    776,
+    469
+   ],
+   "scene": "old-fashioned diver comparing two strands of kelp"
+  },
+  {
+   "id": "fr_combien_adv",
+   "lemma": "combien",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "combien",
+   "box": [
+    841,
+    266,
+    955,
+    466
+   ],
+   "label_xy": [
+    898,
+    456
+   ],
+   "scene": "woman counting beans with a comb at a little table"
+  },
+  {
+   "id": "fr_lequel_pron",
+   "lemma": "lequel",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "lequel",
+   "box": [
+    958,
+    175,
+    1157,
+    467
+   ],
+   "label_xy": [
+    1058,
+    457
+   ],
+   "scene": "man pointing at one of three hats on the hat stand beside him"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_grammar_verbs",
+   "box": [
+    885,
+    470,
+    1106,
+    676
+   ],
+   "label": "the little pupil's desk in the corner"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_articles",
+   "box": [
+    66,
+    81,
+    156,
+    494
+   ],
+   "label": "Back through the white door to the articles room",
+   "name": "Les articles",
+   "kind": "door"
+  },
+  {
+   "target": "R_pronouns_01",
+   "box": [
+    1160,
+    121,
+    1212,
+    490
+   ],
+   "label": "Through the white door to the pronouns hall",
+   "name": "Les pronoms (1)",
+   "kind": "door"
+  }
+ ]
+}

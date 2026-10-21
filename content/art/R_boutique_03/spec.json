@@ -1,0 +1,203 @@
+{
+ "divider_x": 620,
+ "kind": "room",
+ "note": "Boutique (3): scents, jewels, purses and the latest vogue. Feminine nouns to the left of x=620, masculine to the right. The glass display cabinet at the back is a zoom (R_boutique_03_z1). The arched doorway on the left goes back to the bookshop (2); the tall doorway on the far right leads into the trading hall at the end of the arcade.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La boutique (3)",
+   "box": [
+    560,
+    15,
+    800,
+    55
+   ],
+   "text_box": [
+    566,
+    21,
+    794,
+    49
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_faction_noun",
+   "box": [
+    100,
+    137,
+    188,
+    450
+   ],
+   "scene": "guard in a bearskin standing watch by the door"
+  },
+  {
+   "id": "fr_vogue_noun",
+   "box": [
+    192,
+    300,
+    333,
+    512
+   ],
+   "scene": "penguins in sunglasses strutting on a catwalk"
+  },
+  {
+   "id": "fr_senteur_noun",
+   "box": [
+    337,
+    181,
+    469,
+    412
+   ],
+   "scene": "Santa sniffing a jar of pine scent"
+  },
+  {
+   "id": "fr_rondelle_noun",
+   "box": [
+    481,
+    288,
+    556,
+    415
+   ],
+   "scene": "tall stack of round metal washers"
+  },
+  {
+   "id": "fr_icone_noun",
+   "box": [
+    520,
+    87,
+    640,
+    284
+   ],
+   "scene": "giraffe fashion icon in a cone party hat posing for a camera"
+  },
+  {
+   "id": "fr_palette_noun",
+   "box": [
+    337,
+    419,
+    569,
+    676
+   ],
+   "scene": "painter whose kitten adds pawprints to the canvas"
+  },
+  {
+   "id": "fr_joyau_noun",
+   "box": [
+    644,
+    112,
+    715,
+    419
+   ],
+   "scene": "man leaping for joy under a sparkling jewel"
+  },
+  {
+   "id": "fr_dandy_noun",
+   "box": [
+    719,
+    219,
+    827,
+    476
+   ],
+   "scene": "dandy twirling his moustache in a mirror"
+  },
+  {
+   "id": "fr_porte_monnaie_noun",
+   "box": [
+    619,
+    481,
+    762,
+    581
+   ],
+   "scene": "velvet purse spilling gold coins"
+  },
+  {
+   "id": "fr_veilleur_noun",
+   "box": [
+    831,
+    212,
+    915,
+    428
+   ],
+   "scene": "night watchman holding a lantern"
+  },
+  {
+   "id": "fr_ambre_noun",
+   "box": [
+    919,
+    150,
+    1060,
+    280
+   ],
+   "scene": "jeweller holding a piece of amber to the light"
+  },
+  {
+   "id": "fr_parfumeur_noun",
+   "box": [
+    981,
+    287,
+    1081,
+    428
+   ],
+   "scene": "cat perfumer mixing rose oil"
+  },
+  {
+   "id": "fr_bijoutier_noun",
+   "box": [
+    1085,
+    306,
+    1200,
+    600
+   ],
+   "scene": "bee jeweller beside a tiered glass jewel stand"
+  },
+  {
+   "id": "fr_jade_noun",
+   "box": [
+    850,
+    432,
+    1062,
+    676
+   ],
+   "scene": "panda slipping on a green jade bangle"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_boutique_03_z1",
+   "box": [
+    740,
+    100,
+    1080,
+    146
+   ],
+   "label": "the glass display cabinet"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_bookshop_02",
+   "box": [
+    192,
+    50,
+    330,
+    236
+   ],
+   "label": "Back through the arched doorway to the bookshop (2)",
+   "name": "La librairie (2)",
+   "kind": "arch"
+  },
+  {
+   "target": "R_shop_general_04",
+   "box": [
+    1160,
+    88,
+    1280,
+    300
+   ],
+   "label": "Through the tall doorway on the right into the trading hall",
+   "name": "La halle marchande",
+   "kind": "door"
+  }
+ ]
+}

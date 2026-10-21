@@ -1,0 +1,251 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 700,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 2: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 2",
+   "box": [
+    520,
+    30,
+    860,
+    74
+   ],
+   "text_box": [
+    526,
+    36,
+    854,
+    68
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 3 →",
+   "box": [
+    630,
+    318,
+    776,
+    352
+   ],
+   "text_box": [
+    636,
+    324,
+    770,
+    346
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 1",
+   "box": [
+    630,
+    640,
+    776,
+    674
+   ],
+   "text_box": [
+    636,
+    646,
+    770,
+    668
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_commander_verb",
+   "lemma": "commander",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "commander",
+   "box": [
+    102,
+    362,
+    381,
+    662
+   ],
+   "label_xy": [
+    242,
+    652
+   ],
+   "scene": "little girl in a toy general's hat orders three scoops at the ice-cream kiosk",
+   "gloss": "to order",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_livrer_verb",
+   "lemma": "livrer",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "livrer",
+   "box": [
+    402,
+    360,
+    623,
+    672
+   ],
+   "label_xy": [
+    512,
+    662
+   ],
+   "scene": "delivery man in a coachman's livery coat hands a parcel to a lady",
+   "gloss": "to deliver; to hand over, deliver",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_racheter_verb",
+   "lemma": "racheter",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "racheter",
+   "box": [
+    362,
+    140,
+    556,
+    250
+   ],
+   "label_xy": [
+    459,
+    240
+   ],
+   "scene": "brown rat counting coins to buy back a gold pocket watch from the pawnbroker",
+   "gloss": "to buy back; to buy out, buy off",
+   "verb_group": 1,
+   "tier": "balcony",
+   "level": "balcony",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_rembourser_verb",
+   "lemma": "rembourser",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "rembourser",
+   "box": [
+    156,
+    94,
+    306,
+    244
+   ],
+   "label_xy": [
+    231,
+    234
+   ],
+   "scene": "wild boar in new boots holding out his shoebox for a refund",
+   "gloss": "to pay back, refund, reimburse",
+   "verb_group": 1,
+   "tier": "upper",
+   "level": "upper",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_vendre_verb",
+   "lemma": "vendre",
+   "article": "",
+   "gender": null,
+   "side": "right",
+   "label": "vendre (à)",
+   "box": [
+    781,
+    385,
+    1203,
+    676
+   ],
+   "label_xy": [
+    992,
+    666
+   ],
+   "scene": "man selling apples and pears from the back of a blue van",
+   "gloss": "to sell",
+   "verb_group": 3,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [
+    "à"
+   ],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_investir_verb",
+   "lemma": "investir",
+   "article": "",
+   "gender": null,
+   "side": "right",
+   "label": "investir",
+   "box": [
+    962,
+    106,
+    1112,
+    238
+   ],
+   "label_xy": [
+    1037,
+    228
+   ],
+   "scene": "beaver in a gold waistcoat dropping coins into a pink piggy bank",
+   "gloss": "to invest; to lay siege to",
+   "verb_group": 2,
+   "tier": "balcony",
+   "level": "balcony",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  }
+ ],
+ "links": [],
+ "segment_id": "ST_commerce_seg002",
+ "street_id": "ST_commerce",
+ "sector_id": "S03_market",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue du Commerce — étape 2",
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg004",
+   "box": [
+    628,
+    360,
+    778,
+    520
+   ],
+   "label": "Walk on to Rue du Commerce — étape 3",
+   "name": "Rue du Commerce — étape 3",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_commerce_seg001",
+   "box": [
+    130,
+    678,
+    780,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 1",
+   "name": "Rue du Commerce — étape 1",
+   "kind": "street"
+  }
+ }
+}

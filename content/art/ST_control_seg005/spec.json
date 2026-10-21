@@ -1,0 +1,17 @@
+{"divider_x": 900,
+ "name": "Rue des Gestes — étape 5 · fermer, casser, mettre",
+ "note": "Tiered verb place. -er LEFT (farmer closing the gate on three geese, cook whose casserole dish breaks on the cobbles, kangaroo rolling a beach ball on the balcony, man catching a butterfly at the upper window, stork setting a parcel down on the roof terrace), -ir/-re RIGHT (tailor putting on his top hat, tape measure round his neck). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_fermer_verb", "box": [56, 369, 262, 662], "tier": "street"},
+  {"id": "fr_casser_verb", "box": [400, 431, 669, 672], "tier": "street"},
+  {"id": "fr_rouler_verb", "box": [494, 212, 675, 362], "tier": "balcony"},
+  {"id": "fr_attraper_verb", "box": [137, 31, 394, 188], "tier": "upper"},
+  {"id": "fr_deposer_verb", "box": [506, 25, 656, 131], "tier": "roof"},
+  {"id": "fr_mettre_verb", "box": [1119, 400, 1200, 638], "tier": "street"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg006", "box": [880, 440, 1040, 560], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 6", "sign": "étape 6 →"},
+  "back": {"target": "ST_control_seg004", "box": [690, 676, 1100, 712], "label": "Back up the lane to étape 4", "name": "Rue des Gestes, étape 4", "sign": "← étape 4"}
+ },
+ "signs": {"er": [740, 25, 840, 59], "irre": [870, 25, 990, 59]}
+}

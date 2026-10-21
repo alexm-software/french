@@ -1,0 +1,366 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg015",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 15 · bricoler, ruser, s'adjoindre",
+ "divider_x": 860,
+ "note": "Tiered verb place. -er LEFT (man laying bricks for a little wall, fox in a fake moustache sneaking past the hen house, juggler with six balls on the balcony, decorator shelling peanuts at the upper window, man pulling on a pirate costume on the roof terrace), -ir/-re RIGHT (duckling hurrying to join the line of ducks, round mirror on the wall). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_bricoler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bricoler_verb",
+   "text": "bricoler",
+   "box": [
+    168,
+    640,
+    256,
+    666
+   ],
+   "text_box": [
+    172,
+    644,
+    252,
+    662
+   ]
+  },
+  "fr_ruser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ruser_verb",
+   "text": "ruser",
+   "box": [
+    456,
+    593,
+    514,
+    619
+   ],
+   "text_box": [
+    460,
+    597,
+    510,
+    615
+   ]
+  },
+  "fr_conjuguer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_conjuguer_verb",
+   "text": "conjuguer",
+   "box": [
+    471,
+    330,
+    567,
+    356
+   ],
+   "text_box": [
+    475,
+    334,
+    563,
+    352
+   ]
+  },
+  "fr_decortiquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decortiquer_verb",
+   "text": "décortiquer",
+   "box": [
+    135,
+    343,
+    251,
+    369
+   ],
+   "text_box": [
+    139,
+    347,
+    247,
+    365
+   ]
+  },
+  "fr_costumer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_costumer_verb",
+   "text": "costumer",
+   "box": [
+    156,
+    118,
+    244,
+    144
+   ],
+   "text_box": [
+    160,
+    122,
+    240,
+    140
+   ]
+  },
+  "fr_adjoindre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_adjoindre_verb",
+   "text": "s'adjoindre",
+   "box": [
+    1029,
+    618,
+    1145,
+    644
+   ],
+   "text_box": [
+    1033,
+    622,
+    1141,
+    640
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 16 →",
+   "box": [
+    700,
+    400,
+    880,
+    520
+   ],
+   "text_box": [
+    706,
+    406,
+    874,
+    514
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 14",
+   "box": [
+    470,
+    668,
+    900,
+    712
+   ],
+   "text_box": [
+    476,
+    674,
+    894,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    620,
+    25,
+    720,
+    59
+   ],
+   "text_box": [
+    623,
+    28,
+    717,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    880,
+    25,
+    1000,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    997,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_bricoler_verb",
+   "lemma": "bricoler",
+   "gloss": "to do DIY; to tinker",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    56,
+    450,
+    368,
+    672
+   ],
+   "label_xy": [
+    212,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ruser_verb",
+   "lemma": "ruser",
+   "gloss": "to use one's cunning",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    370,
+    425,
+    600,
+    625
+   ],
+   "label_xy": [
+    485,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_conjuguer_verb",
+   "lemma": "conjuguer",
+   "gloss": "to conjugate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    450,
+    169,
+    588,
+    362
+   ],
+   "label_xy": [
+    519,
+    350
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_decortiquer_verb",
+   "lemma": "décortiquer",
+   "gloss": "to decorticate; to dissect",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    106,
+    212,
+    281,
+    375
+   ],
+   "label_xy": [
+    193,
+    363
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_costumer_verb",
+   "lemma": "costumer",
+   "gloss": "to wear a particular costume",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 5,
+   "box": [
+    106,
+    10,
+    294,
+    150
+   ],
+   "label_xy": [
+    200,
+    138
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_adjoindre_verb",
+   "lemma": "adjoindre",
+   "gloss": "to adjoin; to join up",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    912,
+    368,
+    1262,
+    650
+   ],
+   "label_xy": [
+    1087,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'adjoindre",
+   "scene": "",
+   "mirror": "round mirror on the cottage wall beside the ducks"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg016",
+   "box": [
+    700,
+    400,
+    880,
+    520
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 16",
+   "sign": "étape 16 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg014",
+   "box": [
+    470,
+    668,
+    900,
+    712
+   ],
+   "label": "Back up the lane to étape 14",
+   "name": "Allée du Quotidien, étape 14",
+   "sign": "← étape 14",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

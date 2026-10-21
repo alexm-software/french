@@ -1,0 +1,109 @@
+{
+ "divider_x": 960,
+ "name": "Allée du Quotidien — étape 4 · se raser, se brosser, meubler",
+ "note": "Tiered verb place. -er LEFT (boy wiping the chalk face, man shaving at his mirror, swallow brushing a hat on the balcony, big brother brushing his hair at the upper window, cow hoisting an armchair into the attic), -ir RIGHT (cook garnishing a cake on the balcony). Reflexive verbs have their mirror inside the box. Forward = far lane; back = near cobbles.",
+ "items": [
+  {
+   "id": "fr_effacer_verb",
+   "box": [
+    55,
+    360,
+    245,
+    688
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_raser_verb",
+   "box": [
+    295,
+    390,
+    440,
+    650
+   ],
+   "tier": "street",
+   "mirror": "oval mirror by the door"
+  },
+  {
+   "id": "fr_froler_verb",
+   "box": [
+    505,
+    182,
+    600,
+    295
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_brosser_verb",
+   "box": [
+    268,
+    70,
+    385,
+    182
+   ],
+   "tier": "upper",
+   "mirror": "hand mirror"
+  },
+  {
+   "id": "fr_meubler_verb",
+   "box": [
+    602,
+    28,
+    890,
+    350
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_garnir_verb",
+   "box": [
+    1080,
+    215,
+    1206,
+    335
+   ],
+   "tier": "balcony"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg005",
+   "box": [
+    800,
+    470,
+    960,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 5",
+   "sign": "étape 5 →"
+  },
+  "back": {
+   "target": "ST_routine_seg003",
+   "box": [
+    450,
+    665,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 3",
+   "name": "Allée du Quotidien, étape 3",
+   "sign": "← étape 3"
+  }
+ },
+ "signs": {
+  "er": [
+   440,
+   40,
+   540,
+   74
+  ],
+  "irre": [
+   960,
+   40,
+   1090,
+   74
+  ]
+ }
+}

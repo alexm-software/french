@@ -1,0 +1,173 @@
+{
+ "divider_x": 650,
+ "kind": "room",
+ "note": "The salon of the Maison de Couture: manners, beauty, looks and charm. The marble column in the middle divides it: feminine nouns on its left, masculine (and chic) on its right. The blank wall panel opens a zoom onto the dressing corner (R_abs_beauty_02_z1). The glazed door on the far left leads out to the square; the doorway on the far right leads on to the showroom atelier.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le salon",
+   "box": [
+    250,
+    15,
+    500,
+    55
+   ],
+   "text_box": [
+    256,
+    21,
+    494,
+    49
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_maniere_noun",
+   "box": [
+    144,
+    262,
+    278,
+    556
+   ],
+   "scene": "gentleman bowing and offering a rose"
+  },
+  {
+   "id": "fr_beaute_noun",
+   "box": [
+    281,
+    269,
+    372,
+    562
+   ],
+   "scene": "model tying a silk bow round a teapot"
+  },
+  {
+   "id": "fr_magie_noun",
+   "box": [
+    378,
+    125,
+    496,
+    365
+   ],
+   "scene": "stylist waving a comb as a hairdo magically grows"
+  },
+  {
+   "id": "fr_apparence_noun",
+   "box": [
+    376,
+    369,
+    512,
+    644
+   ],
+   "scene": "mother straightening her son's bow tie"
+  },
+  {
+   "id": "fr_apparition_noun",
+   "box": [
+    516,
+    137,
+    656,
+    406
+   ],
+   "scene": "empty silk dress gliding through the air"
+  },
+  {
+   "id": "fr_elegance_noun",
+   "box": [
+    531,
+    419,
+    625,
+    581
+   ],
+   "scene": "heron standing on one leg on a little runway"
+  },
+  {
+   "id": "fr_merci_noun_m",
+   "box": [
+    681,
+    350,
+    733,
+    431
+   ],
+   "scene": "glittering thank-you card with a heart"
+  },
+  {
+   "id": "fr_charme_noun",
+   "box": [
+    737,
+    281,
+    890,
+    537
+   ],
+   "scene": "snake charmer playing a flute as the sofa sways"
+  },
+  {
+   "id": "fr_compliment_noun",
+   "box": [
+    894,
+    275,
+    1008,
+    506
+   ],
+   "scene": "shy hedgehog in a new hat blushing at a compliment"
+  },
+  {
+   "id": "fr_look_noun",
+   "box": [
+    919,
+    519,
+    1008,
+    656
+   ],
+   "scene": "pug in sunglasses and a silk scarf"
+  },
+  {
+   "id": "fr_chic_adj",
+   "box": [
+    1012,
+    206,
+    1162,
+    581
+   ],
+   "scene": "sheikh strolling in a beautifully tailored robe"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_abs_beauty_02_z1",
+   "box": [
+    750,
+    75,
+    950,
+    275
+   ],
+   "label": "the dressing corner"
+  }
+ ],
+ "links": [
+  {
+   "target": "B62_couture",
+   "box": [
+    94,
+    40,
+    240,
+    256
+   ],
+   "label": "Out through the glazed front door to the square",
+   "name": "Maison de Couture (outside)",
+   "kind": "door"
+  },
+  {
+   "target": "R_abs_beauty_01",
+   "box": [
+    1166,
+    100,
+    1235,
+    420
+   ],
+   "label": "Through the right doorway to the showroom atelier",
+   "name": "L'atelier",
+   "kind": "door"
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "The vegetable stalls, a seller behind each. Feminine nouns to the left of the green iron pillar (x=640), masculine to the right. The palm-filled arch on the left goes back to the exotic fruit; the arch on the right, past the fish scales, leads to the meat and fish stalls. The empty crate on the trestle in front of the pillar opens a zoom (R_vegetables_z1); it is not an exit.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les légumes",
+   "box": [
+    80,
+    620,
+    380,
+    656
+   ],
+   "text_box": [
+    86,
+    626,
+    374,
+    650
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_salade_noun",
+   "box": [
+    372,
+    327,
+    452,
+    390
+   ],
+   "scene": "head of lettuce"
+  },
+  {
+   "id": "fr_tomate_noun",
+   "box": [
+    457,
+    365,
+    491,
+    396
+   ],
+   "scene": "red tomato"
+  },
+  {
+   "id": "fr_meche_noun",
+   "box": [
+    306,
+    368,
+    366,
+    594
+   ],
+   "scene": "girl shopper with one long curly lock over her eye"
+  },
+  {
+   "id": "fr_patate_noun",
+   "box": [
+    510,
+    369,
+    559,
+    397
+   ],
+   "scene": "potato"
+  },
+  {
+   "id": "fr_carotte_noun",
+   "box": [
+    285,
+    290,
+    368,
+    362
+   ],
+   "scene": "parrot holding a carrot"
+  },
+  {
+   "id": "fr_souplesse_noun",
+   "box": [
+    387,
+    402,
+    556,
+    525
+   ],
+   "scene": "girl gymnast doing the splits on the stall platform"
+  },
+  {
+   "id": "fr_chou_noun",
+   "box": [
+    675,
+    322,
+    756,
+    422
+   ],
+   "scene": "cabbage sitting inside an old shoe"
+  },
+  {
+   "id": "fr_oignon_noun",
+   "box": [
+    762,
+    352,
+    815,
+    412
+   ],
+   "scene": "onion with a teardrop"
+  },
+  {
+   "id": "fr_pois_noun",
+   "box": [
+    821,
+    365,
+    875,
+    419
+   ],
+   "scene": "pod of green peas"
+  },
+  {
+   "id": "fr_ail_noun",
+   "box": [
+    722,
+    431,
+    775,
+    487
+   ],
+   "scene": "garlic bulb with one big eye"
+  },
+  {
+   "id": "fr_concombre_noun",
+   "box": [
+    781,
+    440,
+    850,
+    485
+   ],
+   "scene": "cucumber"
+  },
+  {
+   "id": "fr_tic_noun",
+   "box": [
+    906,
+    294,
+    960,
+    577
+   ],
+   "scene": "man shopper with a nervous twitch"
+  },
+  {
+   "id": "fr_kiosque_noun",
+   "box": [
+    966,
+    287,
+    1069,
+    544
+   ],
+   "scene": "little green newspaper kiosk"
+  },
+  {
+   "id": "fr_navet_noun",
+   "box": [
+    856,
+    425,
+    900,
+    485
+   ],
+   "scene": "white-purple turnip"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_vegetables_z1",
+   "box": [
+    572,
+    431,
+    706,
+    505
+   ],
+   "label": "La caisse"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_fruits_02",
+   "box": [
+    25,
+    87,
+    162,
+    412
+   ],
+   "label": "Back through the palm-filled arch to the exotic fruit",
+   "name": "Fruits exotiques",
+   "kind": "arch"
+  },
+  {
+   "target": "R_butcher_01",
+   "box": [
+    1112,
+    87,
+    1250,
+    412
+   ],
+   "label": "Through the arch on the right to the meat and fish stalls",
+   "name": "Poissons et viandes",
+   "kind": "arch"
+  }
+ ]
+}

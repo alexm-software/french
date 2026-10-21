@@ -1,0 +1,110 @@
+{
+ "divider_x": 1000,
+ "name": "Allée du Quotidien — étape 3 · laver, ranger, nettoyer",
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a garden wall with no verbs). Tiers: street (lion, washing man, ranger), balcony (robot), upper (girl with the net), roof terrace (duck in the tub). Reflexive verbs have their mirror inside the box. The puppy at the basin belongs to the lion's scene (éloigner). Forward = far lane; back = near cobbles.",
+ "items": [
+  {
+   "id": "fr_eloigner_verb",
+   "box": [
+    80,
+    470,
+    408,
+    686
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_laver_verb",
+   "box": [
+    412,
+    412,
+    595,
+    582
+   ],
+   "tier": "street",
+   "mirror": "oval mirror above the basin"
+  },
+  {
+   "id": "fr_ranger_verb",
+   "box": [
+    600,
+    470,
+    745,
+    640
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_debarrasser_verb",
+   "box": [
+    430,
+    215,
+    645,
+    405
+   ],
+   "tier": "balcony",
+   "mirror": "round mirror on the balcony wall"
+  },
+  {
+   "id": "fr_nettoyer_verb",
+   "box": [
+    165,
+    25,
+    370,
+    210
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_baigner_verb",
+   "box": [
+    615,
+    95,
+    752,
+    212
+   ],
+   "tier": "roof",
+   "mirror": "small mirror propped by the tub"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg004",
+   "box": [
+    950,
+    470,
+    1110,
+    570
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 4",
+   "sign": "étape 4 →"
+  },
+  "back": {
+   "target": "ST_routine_seg002",
+   "box": [
+    600,
+    660,
+    1000,
+    712
+   ],
+   "label": "Back up the lane to étape 2",
+   "name": "Allée du Quotidien, étape 2",
+   "sign": "← étape 2"
+  }
+ },
+ "signs": {
+  "er": [
+   800,
+   40,
+   900,
+   74
+  ],
+  "irre": [
+   1080,
+   40,
+   1200,
+   74
+  ]
+ }
+}
