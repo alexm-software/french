@@ -1,148 +1,313 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg008",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    18,
+    210,
+    100,
+    262
+   ],
+   "text_box": [
+    26,
+    218,
+    92,
+    254
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_percer_verb",
-      "slug": "fr_percer_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_emplir_verb",
-      "slug": "fr_emplir_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ],
-      "mirror_box": [
-        259,
-        198,
-        295,
-        246
-      ]
-    },
-    {
-      "word_id": "fr_maigrir_verb",
-      "slug": "fr_maigrir_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_melanger_verb",
-      "slug": "fr_melanger_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_croquer_verb",
-      "slug": "fr_croquer_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_engloutir_verb",
-      "slug": "fr_engloutir_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_regaler_verb_sign": {
+   "box": [
+    112,
+    248,
+    268,
+    298
+   ],
+   "text_box": [
+    128,
+    256,
+    252,
+    290
+   ],
+   "text": "régaler"
+  },
+  "fr_regaler_verb_plaque": {
+   "box": [
+    248,
+    390,
+    275,
+    412
+   ],
+   "text_box": [
+    251,
+    393,
+    272,
+    409
+   ],
+   "text": ""
+  },
+  "fr_cuisiner_verb_sign": {
+   "box": [
+    352,
+    252,
+    500,
+    305
+   ],
+   "text_box": [
+    367,
+    260,
+    485,
+    297
+   ],
+   "text": "cuisiner"
+  },
+  "fr_cuisiner_verb_plaque": {
+   "box": [
+    325,
+    412,
+    360,
+    438
+   ],
+   "text_box": [
+    329,
+    415,
+    356,
+    435
+   ],
+   "text": ""
+  },
+  "fr_cuire_verb_sign": {
+   "box": [
+    588,
+    258,
+    730,
+    302
+   ],
+   "text_box": [
+    602,
+    265,
+    716,
+    295
+   ],
+   "text": "cuire"
+  },
+  "fr_cuire_verb_plaque": {
+   "box": [
+    560,
+    315,
+    595,
+    335
+   ],
+   "text_box": [
+    564,
+    317,
+    591,
+    333
+   ],
+   "text": ""
+  },
+  "fr_surgeler_verb_sign": {
+   "box": [
+    818,
+    255,
+    960,
+    310
+   ],
+   "text_box": [
+    832,
+    263,
+    946,
+    302
+   ],
+   "text": "surgeler"
+  },
+  "fr_surgeler_verb_plaque": {
+   "box": [
+    950,
+    315,
+    975,
+    340
+   ],
+   "text_box": [
+    953,
+    318,
+    972,
+    337
+   ],
+   "text": ""
+  },
+  "fr_congeler_verb_sign": {
+   "box": [
+    1065,
+    258,
+    1200,
+    310
+   ],
+   "text_box": [
+    1079,
+    266,
+    1186,
+    302
+   ],
+   "text": "congeler"
+  },
+  "fr_congeler_verb_plaque": {
+   "box": [
+    1003,
+    318,
+    1030,
+    342
+   ],
+   "text_box": [
+    1006,
+    321,
+    1027,
+    339
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_regaler_verb",
+   "lemma": "régaler",
+   "box": [
+    100,
+    470,
+    240,
+    585
+   ],
+   "mnemonic_box": [
+    40,
+    362,
+    240,
+    595
+   ],
+   "mnemonic_label": "ray-ga-LAY",
+   "door_plaque_box": [
+    248,
+    390,
+    275,
+    412
+   ]
+  },
+  {
+   "id": "fr_cuisiner_verb",
+   "lemma": "cuisiner",
+   "box": [
+    330,
+    455,
+    490,
+    600
+   ],
+   "mnemonic_box": [
+    365,
+    342,
+    478,
+    500
+   ],
+   "mnemonic_label": "kwee-zee-NAY",
+   "door_plaque_box": [
+    325,
+    412,
+    360,
+    438
+   ]
+  },
+  {
+   "id": "fr_cuire_verb",
+   "lemma": "cuire",
+   "box": [
+    600,
+    460,
+    705,
+    600
+   ],
+   "mnemonic_box": [
+    545,
+    348,
+    750,
+    610
+   ],
+   "mnemonic_label": "choir",
+   "door_plaque_box": [
+    560,
+    315,
+    595,
+    335
+   ]
+  },
+  {
+   "id": "fr_surgeler_verb",
+   "lemma": "surgeler",
+   "box": [
+    795,
+    330,
+    945,
+    615
+   ],
+   "mnemonic_box": [
+    890,
+    385,
+    985,
+    615
+   ],
+   "mnemonic_label": "sur-gel (super-jelly)",
+   "door_plaque_box": [
+    950,
+    315,
+    975,
+    340
+   ]
+  },
+  {
+   "id": "fr_congeler_verb",
+   "lemma": "congeler",
+   "box": [
+    1060,
+    440,
+    1185,
+    610
+   ],
+   "mnemonic_box": [
+    1110,
+    385,
+    1235,
+    610
+   ],
+   "mnemonic_label": "congeal",
+   "door_plaque_box": [
+    1003,
+    318,
+    1030,
+    342
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    640,
+    100,
+    720
+   ],
+   "target": "ST_cooking_seg007"
+  },
+  "next": {
+   "box": [
+    1180,
+    640,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg009"
+  }
+ }
 }

@@ -1,142 +1,366 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg001",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    32,
+    92,
+    132,
+    162
+   ],
+   "text_box": [
+    42,
+    102,
+    122,
+    152
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_dejeuner_verb",
-      "slug": "fr_dejeuner_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_manger_verb",
-      "slug": "fr_manger_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_ecraser_verb",
-      "slug": "fr_ecraser_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_boire_verb",
-      "slug": "fr_boire_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_couper_verb",
-      "slug": "fr_couper_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_servir_verb",
-      "slug": "fr_servir_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_nourrir_verb_sign": {
+   "box": [
+    80,
+    307,
+    198,
+    350
+   ],
+   "text_box": [
+    92,
+    313,
+    186,
+    344
+   ],
+   "text": "nourrir"
+  },
+  "fr_nourrir_verb_plaque": {
+   "box": [
+    200,
+    385,
+    242,
+    428
+   ],
+   "text_box": [
+    205,
+    390,
+    237,
+    423
+   ],
+   "text": ""
+  },
+  "fr_ecraser_verb_sign": {
+   "box": [
+    300,
+    310,
+    402,
+    352
+   ],
+   "text_box": [
+    310,
+    316,
+    392,
+    346
+   ],
+   "text": "écraser"
+  },
+  "fr_ecraser_verb_plaque": {
+   "box": [
+    392,
+    395,
+    428,
+    428
+   ],
+   "text_box": [
+    396,
+    399,
+    424,
+    424
+   ],
+   "text": ""
+  },
+  "fr_devorer_verb_sign": {
+   "box": [
+    515,
+    310,
+    620,
+    352
+   ],
+   "text_box": [
+    525,
+    316,
+    610,
+    346
+   ],
+   "text": "dévorer"
+  },
+  "fr_devorer_verb_plaque": {
+   "box": [
+    628,
+    390,
+    662,
+    428
+   ],
+   "text_box": [
+    632,
+    395,
+    658,
+    423
+   ],
+   "text": ""
+  },
+  "fr_dejeuner_verb_sign": {
+   "box": [
+    700,
+    312,
+    808,
+    354
+   ],
+   "text_box": [
+    711,
+    318,
+    797,
+    348
+   ],
+   "text": "déjeuner"
+  },
+  "fr_dejeuner_verb_plaque": {
+   "box": [
+    828,
+    388,
+    868,
+    425
+   ],
+   "text_box": [
+    833,
+    392,
+    863,
+    421
+   ],
+   "text": ""
+  },
+  "fr_servir_verb_sign": {
+   "box": [
+    920,
+    312,
+    1028,
+    354
+   ],
+   "text_box": [
+    931,
+    318,
+    1017,
+    348
+   ],
+   "text": "servir"
+  },
+  "fr_servir_verb_plaque": {
+   "box": [
+    1032,
+    392,
+    1068,
+    430
+   ],
+   "text_box": [
+    1036,
+    397,
+    1064,
+    425
+   ],
+   "text": "à / de"
+  },
+  "fr_manger_verb_sign": {
+   "box": [
+    1120,
+    315,
+    1228,
+    355
+   ],
+   "text_box": [
+    1131,
+    321,
+    1217,
+    349
+   ],
+   "text": "manger"
+  },
+  "fr_manger_verb_plaque": {
+   "box": [
+    1078,
+    378,
+    1112,
+    418
+   ],
+   "text_box": [
+    1082,
+    383,
+    1108,
+    413
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_nourrir_verb",
+   "lemma": "nourrir",
+   "box": [
+    45,
+    475,
+    250,
+    620
+   ],
+   "mnemonic_box": [
+    0,
+    378,
+    145,
+    640
+   ],
+   "mnemonic_label": "nourish",
+   "door_plaque_box": [
+    200,
+    385,
+    242,
+    428
+   ]
+  },
+  {
+   "id": "fr_ecraser_verb",
+   "lemma": "écraser",
+   "box": [
+    252,
+    550,
+    478,
+    660
+   ],
+   "mnemonic_box": [
+    285,
+    460,
+    450,
+    580
+   ],
+   "mnemonic_label": "ay-kra-ZAY",
+   "door_plaque_box": [
+    392,
+    395,
+    428,
+    428
+   ]
+  },
+  {
+   "id": "fr_devorer_verb",
+   "lemma": "dévorer",
+   "box": [
+    480,
+    405,
+    624,
+    635
+   ],
+   "mnemonic_box": [
+    430,
+    155,
+    660,
+    300
+   ],
+   "mnemonic_label": "devour",
+   "door_plaque_box": [
+    628,
+    390,
+    662,
+    428
+   ]
+  },
+  {
+   "id": "fr_dejeuner_verb",
+   "lemma": "déjeuner",
+   "box": [
+    780,
+    495,
+    860,
+    555
+   ],
+   "mnemonic_box": [
+    680,
+    455,
+    870,
+    620
+   ],
+   "mnemonic_label": "day journey",
+   "door_plaque_box": [
+    828,
+    388,
+    868,
+    425
+   ]
+  },
+  {
+   "id": "fr_servir_verb",
+   "lemma": "servir",
+   "box": [
+    895,
+    380,
+    1030,
+    560
+   ],
+   "mnemonic_box": [
+    885,
+    460,
+    1100,
+    670
+   ],
+   "mnemonic_label": "serve",
+   "door_plaque_box": [
+    1032,
+    392,
+    1068,
+    430
+   ]
+  },
+  {
+   "id": "fr_manger_verb",
+   "lemma": "manger",
+   "box": [
+    1100,
+    535,
+    1250,
+    650
+   ],
+   "mnemonic_box": [
+    1135,
+    400,
+    1280,
+    630
+   ],
+   "mnemonic_label": "manger",
+   "door_plaque_box": [
+    1078,
+    378,
+    1112,
+    418
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    650,
+    120,
+    720
+   ],
+   "target": "S04_sector"
+  },
+  "next": {
+   "box": [
+    1160,
+    655,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg002"
+  }
+ }
 }

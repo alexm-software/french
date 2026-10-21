@@ -9,6 +9,7 @@ const state = {
   showEn: true,
   quiz: null,
   speechNote: "",
+  signpost: false,
 };
 
 const cache = new Map();
@@ -154,7 +155,9 @@ function shell(body, current) {
         </nav>
       </header>
       <main id="main">${body}</main>
-      <footer class="site">${index?.featured
+      <footer class="site">${index?.featured?.kind === "sector"
+        ? "Rue des Saveurs is painted: the café, the restaurant, and eleven alleys off the square. The other quarters are coming soon."
+        : index?.featured
         ? "The upstairs of Café de la Place is a finished painting. The other rooms are coming soon."
         : "Placeholder paintings hang until the finished art arrives. Words, genders and places already follow the village plan."}</footer>
     </div>`;
@@ -215,10 +218,12 @@ function mapView() {
   return shell(`
     <p class="kicker">The whole village</p>
     <h1>Sixteen quarters, one walk</h1>
-    <p class="lede">${esc(index.featured
+    <p class="lede">${esc(index.featured?.kind === "sector"
+      ? "Rue des Saveurs is open. Step into the square: the café and the restaurant have doors, and the lane lists eleven short alleys. Every other quarter is still coming soon."
+      : index.featured
       ? "The upstairs room of Café de la Place is hung and ready to walk. Every other room on the map is drawn, and still coming soon."
       : `${index.tagline} Rue des Saveurs is open: the café, the restaurant and the little cooking street. The other quarters are drawn on the map and still being painted.`)}</p>
-    ${index.featured ? `<p><a class="btn primary" href="#/room/${esc(index.featured.id)}">Enter ${esc(index.featured.sign)}</a></p>` : ""}
+    ${index.featured ? `<p><a class="btn primary" href="${index.featured.kind === "sector" ? `#/sector/${esc(index.featured.id)}` : `#/room/${esc(index.featured.id)}`}">Enter ${esc(index.featured.sign)}</a></p>` : ""}
     <div class="routes">
       ${routes.map(([id, label]) => `<button type="button" data-route="${esc(id)}" aria-pressed="${state.routeId === id ? "true" : "false"}">${esc(label)}</button>`).join("")}
     </div>
@@ -238,17 +243,24 @@ function sectorView(sector) {
   const places = sector.buildings.map((building) => {
     const rooms = building.floors.reduce((sum, floor) => sum + floor.rooms.length, 0);
     const detail = building.type === "verb_street"
-      ? `${building.verb_count || "Several"} verbs along ${rooms} stretches. ${building.architectural_theme || ""}`
+      ? `${building.verb_count || "Several"} verbs in ${rooms} alleys off the square. ${building.architectural_theme || ""}`
       : `${rooms} room${rooms === 1 ? "" : "s"}.`;
     const anyOpen = building.floors.some((floor) => floor.rooms.some((room) => room.open));
+    const kicker = building.type === "verb_street" ? "Alleys" : "Place";
     if (!sector.open || !anyOpen) {
-      return `<article class="card-link locked"><p class="kicker">${esc(building.type === "verb_street" ? "Verb street" : "Place")}</p><h2>${esc(building.name)}</h2><p>${esc(detail)}</p><p class="meta">Coming soon</p></article>`;
+      return `<article class="card-link locked"><p class="kicker">${esc(kicker)}</p><h2>${esc(building.name)}</h2><p>${esc(detail)}</p><p class="meta">Coming soon</p></article>`;
     }
-    return `<a class="card-link" href="#/building/${building.id}"><p class="kicker">${esc(building.type === "verb_street" ? "Verb street" : "Place")}</p><h2>${esc(building.name)}</h2><p>${esc(detail)}</p></a>`;
+    if (building.type === "verb_street") {
+      return `<button class="card-link" type="button" data-signpost="1"><p class="kicker">${esc(kicker)}</p><h2>${esc(building.name)}</h2><p>${esc(detail)} Choose one. It comes back to the square.</p></button>`;
+    }
+    return `<a class="card-link" href="#/building/${building.id}"><p class="kicker">${esc(kicker)}</p><h2>${esc(building.name)}</h2><p>${esc(detail)}</p></a>`;
   }).join("");
   const neighbors = sector.neighbors.map((neighbor) => `<a class="chip" href="#/sector/${neighbor.id}">${esc(neighbor.fr_name)}${neighbor.open ? "" : " · soon"}</a>`).join("");
+  const stage = stageFor(sector.scene, [], [], sector.fr_name);
   const body = sector.open ? `
-    <p class="lede">${esc(sector.description)}</p>
+    <p class="lede">${esc(sector.description)} The café and the restaurant are the two fronts. The lane opens a signpost of short alleys. Each alley returns here.</p>
+    ${stage}
+    ${signpostHtml(sector)}
     ${scoreLine(`sector:${sector.id}`)}
     <div class="row">
       <a class="btn primary" href="#/quiz/sector/${sector.id}">Quiz this quarter</a>
@@ -291,13 +303,15 @@ function buildingView(sector, building) {
         : `<span class="chip soon" title="Coming soon">${esc(chipLabel(room))} · soon</span>`).join("")}
     </div>`).join("");
   const intro = building.type === "verb_street"
-    ? `<p class="lede">${esc(building.architectural_theme || "")} Each verb is its own little front. A mirror on the front means the verb is reflexive. The word over the door is the preposition it takes.</p>`
-    : `<p class="lede">Rooms on the ground floor hold the more ordinary words. Upstairs is for the rarer ones. Feminine nouns sit on the left, masculine nouns on the right. The colour is only on the label.</p>`;
+    ? `<p class="lede">${esc(building.architectural_theme || "")} These are separate alleys off the square, not one walk. A mirror on a front means the verb is reflexive. The word on the door is the preposition it takes.</p>`
+    : `<p class="lede">The doors on the painting open the rooms. Rooms on the ground floor hold the more ordinary words. Upstairs is for the rarer ones. Feminine nouns sit on the left, masculine nouns on the right. The colour is only on the label.</p>`;
+  const stage = stageFor(building.scene, [], [], building.name);
   return shell(`
     ${crumbs([{ href: "#/", label: "Map" }, { href: `#/sector/${sector.id}`, label: sector.fr_name }, { label: building.name }])}
     <p class="kicker">${esc(sector.fr_name)}</p>
     <h1>${esc(building.name)}</h1>
     ${intro}
+    ${stage}
     <div class="floors">${floors}</div>
   `, `/building/${building.id}`);
 }
@@ -344,19 +358,97 @@ function chipTitle(item) {
   return item.sign || item.name || "";
 }
 
+function hashFor(target) {
+  const value = String(target || "");
+  if (value.endsWith("_sector")) {
+    const prefix = value.slice(0, -"_sector".length);
+    const sector = (state.index?.sectors || []).find((item) => item.id.startsWith(`${prefix}_`));
+    return `#/sector/${sector ? sector.id : value}`;
+  }
+  if (value.startsWith("B")) return `#/building/${value}`;
+  return `#/room/${value}`;
+}
+
+function sceneLinks(scene) {
+  // Exteriors and the sector view store doors in `links`. Street paintings store
+  // prev/next in `exits`. An alley never continues into the next alley: only a
+  // return to the square is kept.
+  const links = (scene.links || []).filter((link) => !(link.exit && String(link.target || "").startsWith("ST_")));
+  const exits = scene.exits || {};
+  [exits.prev, exits.next].forEach((exit) => {
+    if (!exit?.target || !exit.box) return;
+    const target = String(exit.target);
+    if (target.startsWith("ST_")) return;
+    if (links.some((link) => link.exit && link.target === target)) return;
+    links.push({
+      target,
+      box: exit.box,
+      label: "Back to the square",
+      exit: true,
+    });
+  });
+  return links;
+}
+
+function wrapLines(text, boxWidth, boxHeight) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const widthOf = (value, size) => Array.from(value).length * size * 0.58;
+  let size = Math.min(40, Math.max(8, boxHeight * 0.78));
+  while (size >= 8) {
+    const lines = [];
+    let current = "";
+    let fits = true;
+    for (const word of words) {
+      const trial = current ? `${current} ${word}` : word;
+      if (widthOf(trial, size) <= boxWidth) {
+        current = trial;
+      } else if (!current || widthOf(word, size) > boxWidth) {
+        fits = false;
+        break;
+      } else {
+        lines.push(current);
+        current = word;
+      }
+    }
+    if (current) lines.push(current);
+    if (fits && lines.length * size * 1.12 <= boxHeight + 1) return { size, lines };
+    size -= 1;
+  }
+  return { size: 8, lines: [String(text)] };
+}
+
+function textBlock(className, text, box) {
+  const wrapped = wrapLines(text, box[2] - box[0], box[3] - box[1]);
+  const cx = (box[0] + box[2]) / 2;
+  const lineHeight = wrapped.size * 1.12;
+  const top = (box[1] + box[3]) / 2 - (wrapped.lines.length * lineHeight) / 2 + wrapped.size * 0.75;
+  return wrapped.lines.map((line, index) =>
+    `<text class="${className}" x="${cx.toFixed(1)}" y="${(top + index * lineHeight).toFixed(1)}" text-anchor="middle" font-size="${wrapped.size.toFixed(1)}">${esc(line)}</text>`
+  ).join("");
+}
+
 function sceneMarkup(scene, words, zooms) {
-  const byId = Object.fromEntries(words.map((word) => [word.id, word]));
+  const byId = Object.fromEntries((words || []).map((word) => [word.id, word]));
+  const areas = scene.text_areas || {};
+  const signed = new Set(Object.keys(areas).filter((key) => key.endsWith("_sign")).map((key) => key.slice(0, -"_sign".length)));
   const parts = [];
-  scene.hotspots.forEach((hot) => {
+  sceneLinks(scene).forEach((link) => {
+    const [x0, y0, x1, y1] = link.box;
+    const alley = String(link.target || "").startsWith("ST_cooking");
+    const attr = alley ? `data-signpost="1"` : `data-target="${esc(link.target)}"`;
+    const label = alley ? "The cooking alleys" : (link.label || "Open");
+    const caption = link.exit
+      ? `<text class="exit-label" x="${(x0 + x1) / 2}" y="${Math.min(y1 - 12, y0 + 36)}" text-anchor="middle">Back to the square</text>`
+      : "";
+    parts.push(`<g class="hot link${link.exit ? " exit" : ""}" ${attr} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${caption}</g>`);
+  });
+  (scene.hotspots || []).forEach((hot) => {
     const word = byId[hot.word_id];
     const [x0, y0, x1, y1] = hot.box;
     const cx = (x0 + x1) / 2;
-    const cy = (y0 + y1) / 2;
-    const pad = `<rect class="hit pad" data-pad data-cx="${cx}" data-cy="${cy}" data-w="${x1 - x0}" data-h="${y1 - y0}" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>`;
+    const pad = `<rect class="hit pad" data-pad data-cx="${cx}" data-cy="${(y0 + y1) / 2}" data-w="${x1 - x0}" data-h="${y1 - y0}" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>`;
     let shape = pad;
-    if (hot.polygon) {
-      shape += `<polygon class="hit" points="${hot.polygon.map((point) => point.join(",")).join(" ")}"></polygon>`;
-    }
+    if (hot.polygon) shape += `<polygon class="hit" points="${hot.polygon.map((point) => point.join(",")).join(" ")}"></polygon>`;
     if (hot.zoom_id) {
       const named = (zooms || []).find((zoom) => zoom.id === hot.zoom_id);
       const label = named?.sign || hot.label || "Look closer";
@@ -365,39 +457,55 @@ function sceneMarkup(scene, words, zooms) {
     }
     if (!word) return;
     if (hot.helper) {
-      parts.push(`<g class="hot helper" data-word="${esc(word.id)}" tabindex="0" role="button" aria-label="Memory helper for ${esc(word.head)}">${shape}</g>`);
+      const name = hot.mirror ? `Mirror for ${word.head}` : `Memory helper for ${word.head}`;
+      parts.push(`<g class="hot helper" data-word="${esc(word.id)}" tabindex="0" role="button" aria-label="${esc(name)}">${shape}</g>`);
       return;
     }
     const klass = genderClass(word);
+    const hasPlaque = Boolean(areas[`${word.id}_plaque`]);
     let extra = "";
-    if (hot.door_plaque && word.prepositions?.length) {
+    if (hot.door_plaque && word.prepositions?.length && !hasPlaque) {
       const [a, b, c, d] = hot.door_plaque;
       extra += `<text class="prep" x="${(a + c) / 2}" y="${(b + d) / 2 + 4}" text-anchor="middle">${esc(word.prepositions.join(" · "))}</text>`;
     }
-    const labelY = Math.max(22, y0 - 6);
-    const size = labelSize(word.head, x1 - x0);
-    parts.push(`<g class="hot" data-word="${esc(word.id)}" tabindex="0" role="button" aria-label="${esc(`${word.head}, ${word.gloss}`)}">${shape}<text class="lbl ${klass}" x="${cx}" y="${labelY}" text-anchor="middle" font-size="${size.toFixed(1)}">${esc(word.head)}</text>${extra}</g>`);
+    const label = signed.has(word.id) ? "" : `<text class="lbl ${klass}" x="${cx}" y="${Math.max(22, y0 - 6)}" text-anchor="middle" font-size="${labelSize(word.head, x1 - x0).toFixed(1)}">${esc(word.head)}</text>`;
+    parts.push(`<g class="hot" data-word="${esc(word.id)}" tabindex="0" role="button" aria-label="${esc(`${word.head}, ${word.gloss}`)}">${shape}${label}${extra}</g>`);
   });
-  const sign = scene.text_areas?.sign;
-  if (sign && scene.sign_text) {
-    const box = sign.text_box || sign.box;
-    const cx = (box[0] + box[2]) / 2;
-    const cy = (box[1] + box[3]) / 2;
-    parts.push(`<text class="sign" x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle" font-size="${fittedSize(scene.sign_text, box[2] - box[0], box[3] - box[1]).toFixed(1)}">${esc(scene.sign_text)}</text>`);
-  }
-  const plaque = scene.text_areas?.plaque;
-  if (plaque && scene.plaque_text) {
-    const box = plaque.text_box || plaque.box;
-    parts.push(`<text class="plaque" x="${(box[0] + box[2]) / 2}" y="${(box[1] + box[3]) / 2}" text-anchor="middle" dominant-baseline="middle" font-size="${fittedSize(scene.plaque_text, box[2] - box[0], box[3] - box[1], 28).toFixed(1)}">${esc(scene.plaque_text)}</text>`);
-  }
+  Object.entries(areas).forEach(([key, area]) => {
+    const text = area.text || (key === "sign" ? scene.sign_text : "") || (key === "plaque" ? scene.plaque_text : "");
+    if (!text) return;
+    const box = area.text_box || area.box;
+    const klass = key.endsWith("_plaque") || key === "plaque" ? "plaque" : "sign";
+    parts.push(textBlock(klass, text, box));
+  });
   return `<svg viewBox="0 0 ${scene.width} ${scene.height}">${parts.join("")}</svg>`;
+}
+
+function stageFor(scene, words, zooms, alt) {
+  if (!scene?.image) return "";
+  return `<div class="stage"><img src="${esc(url(scene.image))}" alt="${esc(alt)}">${sceneMarkup(scene, words, zooms)}</div>`;
+}
+
+function signpostHtml(sector) {
+  if (!state.signpost) return "";
+  const alleys = sector.alleys || [];
+  return `<div class="signpost-layer">
+    <article class="signpost" role="dialog" aria-labelledby="signpost-title">
+      <button class="ghost" type="button" data-close-signpost>Close</button>
+      <p class="kicker">Off the square</p>
+      <h2 id="signpost-title">Ruelle des Gourmets</h2>
+      <p>Each alley is its own short lane. It comes back here. It does not run on into the next one.</p>
+      <ol class="alleys">${alleys.map((alley) => `<li><a href="#/room/${esc(alley.id)}"><strong>${esc(alley.chip)}</strong> ${esc((alley.verbs || []).join(", "))}</a></li>`).join("")}</ol>
+    </article>
+  </div>`;
 }
 
 function roomView(room, wordId, talk) {
   const words = room.words;
   const active = words.find((word) => word.id === wordId);
+  const alley = room.kind === "street_segment";
   const floors = (room.floors || []).filter((floor) => floor.rooms.length);
-  const showFloors = room.kind !== "zoom" && floors.some((floor) => floor.rooms.length > 1 || floors.length > 1);
+  const showFloors = !alley && room.kind !== "zoom" && floors.some((floor) => floor.rooms.length > 1 || floors.length > 1);
   const floorHtml = showFloors ? `<div class="floors">${floors.map((floor) => `
     <div class="floor"><span>${esc(floor.label)}</span>
       ${floor.rooms.map((item) => {
@@ -408,21 +516,26 @@ function roomView(room, wordId, talk) {
     </div>`).join("")}</div>` : "";
   const stage = room.scene?.image ? `
     <div class="stage">
-      <img src="${esc(url(room.scene.image))}" alt="Placeholder view of ${esc(room.sign)}. The finished painting will replace it.">
+      <img src="${esc(url(room.scene.image))}" alt="${esc(room.scene.placeholder ? `Placeholder view of ${room.sign}. The finished painting will replace it.` : room.sign)}">
       ${sceneMarkup(room.scene, words, room.zooms)}
     </div>
     ${room.scene.placeholder ? `<p class="note">Placeholder scene. The finished painting will hang in this same frame. Signs and labels are set in type, not baked into the picture, so they can be corrected without repainting.</p>` : ""}
   ` : `<p class="note">This room has no painting yet. The words are listed below.</p>`;
   const list = `<ul class="wordlist">${words.map((word) => `
-    <li><button type="button" data-word="${esc(word.id)}"><span class="${genderClass(word)}">${esc(word.head)}</span><small>${esc(word.gloss)}</small></button></li>
+    <li><button type="button" data-word="${esc(word.id)}" class="${word.painted === false ? "unpainted" : ""}"><span class="${genderClass(word)}">${esc(word.head)}</span><small>${esc(word.painted === false ? "Listed, not in this painting" : word.gloss)}</small></button></li>
   `).join("")}</ul>`;
   const zooms = (room.zooms || []).map((zoom) => `<a class="btn" href="#/room/${zoom.id}">Look closer: ${esc(zoom.furniture || zoom.sign)}</a>`).join("");
-  const back = room.parent ? `<a class="btn" href="#/room/${room.parent.id}">Step back to ${esc(room.parent.sign)}</a>` : "";
-  const walk = `<div class="row">
+  const back = room.parent
+    ? `<a class="btn" href="#/room/${room.parent.id}">Step back to ${esc(room.parent.sign)}</a>`
+    : alley
+      ? `<a class="btn" href="#/sector/${room.sector_id}">Back to the square</a>`
+      : "";
+  const walk = alley ? "" : `<div class="row">
     ${room.prev ? `<a class="chip" href="#/room/${room.prev.id}">Previous: ${esc(chipTitle(room.prev))}</a>` : ""}
     ${room.next ? `<a class="chip" href="#/room/${room.next.id}">Next: ${esc(chipTitle(room.next))}</a>` : ""}
   </div>`;
-  const related = (room.related || []).map((item) => item.open
+  const relatedItems = (room.related || []).filter((item) => !(alley && String(item.id).startsWith("ST_")));
+  const related = relatedItems.map((item) => item.open
     ? `<a class="chip" href="#/room/${item.id}">${esc(item.sign || item.name)}</a>`
     : `<span class="chip" title="Coming soon">${esc(item.name)} · soon</span>`).join("");
   const talkHtml = room.conversation ? conversationHtml(room) : "";
@@ -718,7 +831,9 @@ function aboutView() {
       <h2>How to use it</h2>
       <p>Open a room, tap a word, listen, and read the memory. Then hide the card and see whether the place gives the word back. The quiz can ask French to English, English to French, gender, or a listening question. Scores stay in this browser only.</p>
       <p>The prayers have their own quiet pages, with the French read aloud. Churches and other houses of worship, when their quarters open, are places of respect, not cartoons.</p>
-      <p>${state.index?.featured
+      <p>${state.index?.featured?.kind === "sector"
+        ? "Rue des Saveurs is a finished quarter: the square, both buildings, the rooms, and eleven short cooking alleys. Signs and labels are type, set into the picture, so they stay editable. A later street, with fewer two-sided alleys, can replace these eleven when its paintings arrive. The other quarters are coming soon."
+        : state.index?.featured
         ? "The upstairs room of Café de la Place is a finished painting. Signs and labels are type, set into the picture, so they stay editable. The other rooms are coming soon."
         : "The pictures you see now are placeholders, except where a finished painting has already been hung. The words are already in their real places. When a finished painting arrives, it hangs in the same frame and the labels stay editable."}</p>
     </div>
@@ -804,6 +919,7 @@ async function render() {
   playToken += 1;
   window.speechSynthesis?.cancel();
   const parts = parseRoute();
+  if (parts[0] !== "sector") state.signpost = false;
   let html = "";
   try {
     if (!state.index) state.index = await getJSON("data/index.json");
@@ -879,6 +995,21 @@ function onClick(event) {
   if (event.target.closest("[data-fs]")) {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
     else document.exitFullscreen?.();
+    return;
+  }
+  if (event.target.closest("[data-close-signpost]") || event.target.classList?.contains("signpost-layer")) {
+    state.signpost = false;
+    render();
+    return;
+  }
+  if (event.target.closest("[data-signpost]")) {
+    state.signpost = true;
+    render();
+    return;
+  }
+  const jump = event.target.closest("[data-target]");
+  if (jump) {
+    location.hash = hashFor(jump.dataset.target);
     return;
   }
   const route = event.target.closest("[data-route]");
@@ -986,6 +1117,11 @@ function onClick(event) {
 
 function onKey(event) {
   if (event.key === "Escape") {
+    if (state.signpost) {
+      state.signpost = false;
+      render();
+      return;
+    }
     const parts = parseRoute();
     if (parts[0] === "room" && parts[2] === "word") location.hash = `#/room/${parts[1]}`;
   }
