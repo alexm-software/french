@@ -22,6 +22,29 @@ def load(path):
 
 MAP = "village_map"
 
+# Every open café-quarter view and the strip button's hierarchy parent.
+# Painted exits are not a substitute: cooking segments paint a step back to
+# the square, and both restaurant zooms paint a back link on the bottom edge
+# that a cropped frame can hide.
+S04_BACK = {
+    "S04_cafes": MAP,
+    "B08_cafe": "S04_cafes",
+    "B09_restaurant": "S04_cafes",
+    "ST_cooking": "S04_cafes",
+    "R_cafe_01": "B08_cafe",
+    "R_cafe_02": "B08_cafe",
+    "R_resto_kitchen_01": "B09_restaurant",
+    "R_resto_kitchen_02": "B09_restaurant",
+    "R_resto_room": "B09_restaurant",
+    "R_wine_01": "B09_restaurant",
+    "R_resto_room_z1": "R_resto_room",
+    "R_wine_01_z1": "R_wine_01",
+    "ST_cooking_seg001": "ST_cooking",
+    "ST_cooking_seg002": "ST_cooking",
+    "ST_cooking_seg003": "ST_cooking",
+    "ST_cooking_seg004": "ST_cooking",
+}
+
 
 def _reachable(start, graph):
     seen = set()
@@ -33,6 +56,69 @@ def _reachable(start, graph):
         seen.add(node)
         stack.extend(graph.get(node, ()))
     return seen
+
+
+def assert_s04_explicit(hierarchy, sectors, buildings, rooms):
+    """Name every café-quarter view and require its strip parent.
+
+    Following only those parents must reach the village map. A painted
+    exit, including a zoom link sitting on the cropped edge, does not count.
+    """
+    present = {sector["id"] for sector in sectors if sector["id"] == "S04_cafes"}
+    present |= {building["id"] for building in buildings if building.get("sector_id") == "S04_cafes"}
+    present |= {room["id"] for room in rooms if room.get("sector_id") == "S04_cafes"}
+    missing = sorted(present - set(S04_BACK))
+    extra = sorted(set(S04_BACK) - present)
+    assert not missing, f"S04 views missing from the dead-end list: {missing}"
+    assert not extra, f"dead-end list names views that are not in S04: {extra}"
+    for view, parent in S04_BACK.items():
+        actual = hierarchy.get(view)
+        assert actual == parent, f"{view}: strip back is {actual}, expected {parent}"
+        node = view
+        seen = []
+        while node != MAP:
+            assert node not in seen, f"{view} loops at {node}"
+            seen.append(node)
+            node = hierarchy.get(node)
+            assert node, f"{view} stops at {seen[-1]} before the village map"
+    painted = load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json")
+    assert painted["exits"]["back"]["target"] == "S04_sector"
+    assert S04_BACK["ST_cooking_seg001"] == "ST_cooking"
+    for zoom_id in ("R_resto_room_z1", "R_wine_01_z1"):
+        art = load(ROOT / "content" / "art" / zoom_id / "hotspots.json")
+        link = next(item for item in art["links"] if item.get("kind") == "zoom_back")
+        assert link["box"][1] >= art["height"] - 120, (zoom_id, link["box"])
+        built = load(DATA / "rooms" / f"{zoom_id}.json")
+        assert built["kind"] == "zoom"
+        assert built["parent"]["id"] == S04_BACK[zoom_id]
+    for view, parent in S04_BACK.items():
+        path = DATA / "rooms" / f"{view}.json"
+        if not path.exists():
+            continue
+        built = load(path)
+        if built.get("kind") == "zoom":
+            assert built["parent"]["id"] == parent, view
+        else:
+            assert built.get("building_id") == parent, view
+
+
+def assert_back_strip_stays_visible(client):
+    """The strip back is a header control, not an item in the menu that hides under 820px."""
+    shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
+    assert shell.index("${opts.backNav") < shell.index('<nav class="nav">')
+    scene = client.split("function sceneNav", 1)[1].split("function crumbs", 1)[0]
+    assert "backNav" not in scene
+    assert "backNav: backNav(state.place)" in client
+    keys = client.split("function onKey", 1)[1].split("window.addEventListener(\"keydown\"", 1)[0]
+    assert 'event.key === "Escape"' in keys
+    assert "room?.kind === \"zoom\"" in keys
+    assert "backTarget(state.place)" in keys
+    css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
+    assert ".nav a.back" not in css
+    assert "a.back" in css
+    narrow = css.split("@media (max-width: 820px)", 1)[1].split("@media", 1)[0]
+    assert "display: none" in narrow and ".nav" in narrow
+    assert "a.back" in narrow
 
 
 def walk_site_graph():
@@ -54,6 +140,7 @@ def walk_site_graph():
     nodes = {MAP} | sector_ids | building_ids | room_ids
     graph = {node: set() for node in nodes}
     reverse = defaultdict(set)
+    hierarchy = {}
 
     def edge(src, dst, why):
         if src not in nodes or dst not in nodes:
@@ -61,10 +148,15 @@ def walk_site_graph():
         graph[src].add(dst)
         reverse[dst].add(src)
 
+    def back_edge(src, dst, why):
+        assert hierarchy.get(src, dst) == dst, f"{src} has two strip parents: {hierarchy.get(src)} and {dst}"
+        hierarchy[src] = dst
+        edge(src, dst, why)
+
     listed = defaultdict(set)
     for sector in sectors:
         edge(MAP, sector["id"], "map pin")
-        edge(sector["id"], MAP, "back to the village map")
+        back_edge(sector["id"], MAP, "back to the village map")
         for key in ("buildings", "streets"):
             for building_id in sector.get(key) or []:
                 listed[building_id].add(sector["id"])
@@ -73,7 +165,7 @@ def walk_site_graph():
     for building in buildings:
         owners = listed.get(building["id"]) or set()
         assert owners == {building["sector_id"]}, (building["id"], owners, building.get("sector_id"))
-        edge(building["id"], building["sector_id"], "back to the sector")
+        back_edge(building["id"], building["sector_id"], "back to the sector")
         for room_id in building.get("rooms") or []:
             edge(building["id"], room_id, "building contains room")
 
@@ -83,10 +175,10 @@ def walk_site_graph():
             parent = room.get("parent_room_id")
             assert parent in room_ids, room["id"]
             assert room["id"] in zoom_ids.get(parent, ()), room["id"]
-            edge(room["id"], parent, "back to the parent room")
+            back_edge(room["id"], parent, "back to the parent room")
         else:
             assert room.get("building_id") in building_ids, room["id"]
-            edge(room["id"], room["building_id"], "back to the building")
+            back_edge(room["id"], room["building_id"], "back to the building")
         for zoom_id in zoom_ids[room["id"]]:
             edge(room["id"], zoom_id, "room contains zoom")
 
@@ -127,9 +219,13 @@ def walk_site_graph():
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
     assert len(nodes) == 1 + 16 + 84 + 845, len(nodes)
+    stray = sorted(nodes - {MAP} - set(hierarchy))
+    assert not stray, f"strip back missing: {stray[:12]}"
 
     client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
     assert "data-back" in client and "nav.backMap" in client and "nav.backTo" in client
+    assert_s04_explicit(hierarchy, sectors, buildings, rooms)
+    assert_back_strip_stays_visible(client)
 
 
 def main():

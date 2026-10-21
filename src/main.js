@@ -227,6 +227,7 @@ function shell(body, current, opts = {}) {
       <header class="top ${state.menu ? "open" : ""}">
         <a class="brand" href="#/">${doodle("compass")}<span><strong>${esc(t("brand"))}</strong><small>${esc(t("tagline"))}</small></span></a>
         <button class="menu-btn" type="button" data-menu aria-expanded="${state.menu ? "true" : "false"}">${esc(t("menu"))}</button>
+        ${opts.backNav || ""}
         <nav class="nav">
           ${nav.map(([href, label]) => `<a href="#${href}" ${current === href ? 'aria-current="page"' : ""}>${esc(label)}</a>`).join("")}
           ${opts.extraNav || ""}
@@ -288,7 +289,6 @@ function sceneNav(place) {
       : "";
   const talk = room?.conversation ? `#/room/${room.id}/talk` : "";
   return `
-    ${backNav(place)}
     ${room ? `<button type="button" data-words>${esc(t("tools.words"))}</button>` : ""}
     ${quiz ? `<a href="${quiz}">${esc(t("tools.quiz"))}</a>` : ""}
     ${talk ? `<a href="${talk}">${esc(t("tools.talk"))}</a>` : ""}
@@ -748,9 +748,9 @@ function wordsDialog(room) {
   </div>`;
 }
 
-function pageShell(body, current, extraNav = "") {
+function pageShell(body, current, back = "") {
   state.place = null;
-  return shell(body, current, { extraNav });
+  return shell(body, current, { backNav: back });
 }
 
 function conversationHtml(room) {
@@ -1227,7 +1227,11 @@ async function render() {
       : state.place.kind === "building"
         ? `/building/${state.place.id}`
         : `/sector/${state.place.id}`;
-    app.innerHTML = shell("", current, { scene: true, extraNav: sceneNav(state.place) });
+    app.innerHTML = shell("", current, {
+      scene: true,
+      backNav: backNav(state.place),
+      extraNav: sceneNav(state.place),
+    });
     walk.innerHTML = walkHtml(activeDialog());
   } else {
     document.body.classList.remove("walking");
@@ -1425,13 +1429,26 @@ function onKey(event) {
     setHits(!state.hits);
     return;
   }
-  if (event.key === "Escape" && document.querySelector(".dialog-layer")) {
-    if (state.guideOpen) {
-      state.guideOpen = false;
-      mountGuide();
+  if (event.key === "Escape") {
+    const tag = event.target?.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+    if (document.querySelector(".dialog-layer")) {
+      if (state.guideOpen) {
+        state.guideOpen = false;
+        mountGuide();
+        return;
+      }
+      closeDialog();
       return;
     }
-    closeDialog();
+    const room = state.place?.kind === "room" ? state.place.room : null;
+    if (room?.kind === "zoom") {
+      const target = backTarget(state.place);
+      if (target?.href) {
+        event.preventDefault();
+        location.hash = target.href;
+      }
+    }
     return;
   }
   if (!document.querySelector(".dialog-layer") && state.nav) {
