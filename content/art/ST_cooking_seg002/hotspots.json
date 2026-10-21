@@ -1,593 +1,531 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_cooking_seg002",
- "street_id": "ST_cooking",
- "sector_id": "S04_cafes",
- "kind": "verb_place",
- "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 2 · Snack & sit down",
- "divider_x": 650,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
- "tier_counts": {
-  "street": 4,
-  "balcony": 2,
-  "upper": 2,
-  "roof": 1
- },
- "text_areas": {
-  "fr_croquer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_croquer_verb",
-   "text": "croquer",
-   "box": [
-    150,
-    651,
-    232,
-    677
-   ],
-   "text_box": [
-    154,
-    655,
-    228,
-    673
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_cooking_seg002",
+  "street_id": "ST_cooking",
+  "sector_id": "S04_cafes",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Ruelle des Gourmets — étape 2 · Snack & sit down",
+  "divider_x": 689,
+  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
+  "tier_counts": {
+    "street": 4,
+    "balcony": 2,
+    "upper": 2,
+    "roof": 1
   },
-  "fr_engouffrer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_engouffrer_verb",
-   "text": "engouffrer",
-   "box": [
-    419,
-    595,
-    525,
-    621
-   ],
-   "text_box": [
-    423,
-    599,
-    521,
-    617
-   ]
+  "text_areas": {
+    "fr_croquer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_croquer_verb",
+      "text": "croquer",
+      "box": [
+        325,
+        614,
+        407,
+        640
+      ],
+      "text_box": [
+        329,
+        618,
+        403,
+        636
+      ]
+    },
+    "fr_engouffrer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_engouffrer_verb",
+      "text": "engouffrer",
+      "box": [
+        459,
+        567,
+        565,
+        593
+      ],
+      "text_box": [
+        463,
+        571,
+        561,
+        589
+      ]
+    },
+    "fr_servir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_servir_verb",
+      "text": "servir (à / de)",
+      "box": [
+        824,
+        590,
+        956,
+        616
+      ],
+      "text_box": [
+        828,
+        594,
+        952,
+        612
+      ]
+    },
+    "fr_engloutir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_engloutir_verb",
+      "text": "engloutir",
+      "box": [
+        1036,
+        629,
+        1130,
+        655
+      ],
+      "text_box": [
+        1040,
+        633,
+        1126,
+        651
+      ]
+    },
+    "fr_grignoter_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_grignoter_verb",
+      "text": "grignoter",
+      "box": [
+        265,
+        342,
+        361,
+        368
+      ],
+      "text_box": [
+        269,
+        346,
+        357,
+        364
+      ]
+    },
+    "fr_attabler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_attabler_verb",
+      "text": "s'attabler",
+      "box": [
+        473,
+        373,
+        571,
+        399
+      ],
+      "text_box": [
+        477,
+        377,
+        567,
+        395
+      ]
+    },
+    "fr_pique_niquer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_pique_niquer_verb",
+      "text": "pique-niquer",
+      "box": [
+        450,
+        266,
+        576,
+        292
+      ],
+      "text_box": [
+        454,
+        270,
+        572,
+        288
+      ]
+    },
+    "fr_desservir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_desservir_verb",
+      "text": "desservir",
+      "box": [
+        988,
+        275,
+        1084,
+        301
+      ],
+      "text_box": [
+        992,
+        279,
+        1080,
+        297
+      ]
+    },
+    "fr_rassasier_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_rassasier_verb",
+      "text": "rassasier",
+      "box": [
+        196,
+        162,
+        290,
+        188
+      ],
+      "text_box": [
+        200,
+        166,
+        286,
+        184
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "étape 3 →",
+      "box": [
+        640,
+        269,
+        738,
+        297
+      ],
+      "text_box": [
+        643,
+        272,
+        735,
+        294
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← étape 1",
+      "box": [
+        571,
+        684,
+        669,
+        712
+      ],
+      "text_box": [
+        574,
+        687,
+        666,
+        709
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        590,
+        58,
+        631,
+        88
+      ],
+      "text_box": [
+        593,
+        61,
+        628,
+        85
+      ],
+      "style": "direction_plate",
+      "points": "left"
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        722,
+        58,
+        798,
+        88
+      ],
+      "text_box": [
+        725,
+        61,
+        795,
+        85
+      ],
+      "style": "direction_plate",
+      "points": "right"
+    },
+    "street_name": {
+      "role": "street_name",
+      "text": "Snack & sit down",
+      "box": [
+        830,
+        192,
+        907,
+        247
+      ],
+      "text_box": [
+        836,
+        198,
+        901,
+        241
+      ],
+      "surface": "blank hanging sign board"
+    }
   },
-  "fr_servir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_servir_verb",
-   "text": "servir (à / de)",
-   "box": [
-    724,
-    620,
-    856,
-    646
-   ],
-   "text_box": [
-    728,
-    624,
-    852,
-    642
-   ]
+  "items": [
+    {
+      "id": "fr_croquer_verb",
+      "lemma": "croquer",
+      "gloss": "to crunch, to bite into",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        289,
+        384,
+        443,
+        644
+      ],
+      "label_xy": [
+        366,
+        634
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A CROQUET player (kroh-KAY) CRUNCHES into a crisp apple, his mallet and ball forgotten."
+    },
+    {
+      "id": "fr_engouffrer_verb",
+      "lemma": "engouffrer",
+      "gloss": "to gobble up; to swallow up",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        446,
+        505,
+        578,
+        597
+      ],
+      "label_xy": [
+        512,
+        587
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A GOOFY floppy-eared dog (ahn-GOO-fray) GOBBLES UP a whole plate of food in one go, nose buried in the dish."
+    },
+    {
+      "id": "fr_servir_verb",
+      "lemma": "servir",
+      "gloss": "to serve",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 7,
+      "box": [
+        795,
+        373,
+        986,
+        620
+      ],
+      "label_xy": [
+        890,
+        610
+      ],
+      "prepositions": [
+        "à",
+        "de"
+      ],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A butler bows 'SIR!' and VEERS round the corner (sehr-VEER) to SERVE a cake on a silver tray."
+    },
+    {
+      "id": "fr_engloutir_verb",
+      "lemma": "engloutir",
+      "gloss": "to gulp down, to swallow up",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 8,
+      "box": [
+        990,
+        453,
+        1176,
+        659
+      ],
+      "label_xy": [
+        1083,
+        649
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A GLUTTONOUS whale (ahn-GLOO-teer) SWALLOWS UP a whole basket of fish in one gulp."
+    },
+    {
+      "id": "fr_grignoter_verb",
+      "lemma": "grignoter",
+      "gloss": "to nibble, to snack",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        259,
+        247,
+        367,
+        372
+      ],
+      "label_xy": [
+        313,
+        362
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A mouse NIBBLES a wedge of cheese aboard a little GREEN YACHT (gree-nyoh-TAY)."
+    },
+    {
+      "id": "fr_attabler_verb",
+      "lemma": "attabler",
+      "gloss": "to take a seat at the table",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 4,
+      "box": [
+        465,
+        310,
+        580,
+        403
+      ],
+      "label_xy": [
+        522,
+        393
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'attabler",
+      "scene": "A goat SAT AT a TABLE (sah-tah-BLAY), checking its napkin in a MIRROR as it TAKES ITS SEAT (s'attabler).",
+      "mirror": "painted inside the item box"
+    },
+    {
+      "id": "fr_pique_niquer_verb",
+      "lemma": "pique-niquer",
+      "gloss": "to picnic, to have a picnic",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 5,
+      "box": [
+        443,
+        185,
+        583,
+        296
+      ],
+      "label_xy": [
+        513,
+        286
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Like English 'picnic', said peek-nee-KAY: a hedgehog family PICNICS on a checked cloth, one PEEKS round holding up a golden KEY."
+    },
+    {
+      "id": "fr_desservir_verb",
+      "lemma": "desservir",
+      "gloss": "to clear (the table); to serve (a place, of a bus or train)",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "upper",
+      "level": "upper",
+      "order": 9,
+      "box": [
+        969,
+        175,
+        1104,
+        305
+      ],
+      "label_xy": [
+        1036,
+        295
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A waitress who DESERVES a medal (day-SEHR-veer) CLEARS THE TABLE, stacking plates sky-high."
+    },
+    {
+      "id": "fr_rassasier_verb",
+      "lemma": "rassasier",
+      "gloss": "to fill up, to satisfy (hunger)",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 6,
+      "box": [
+        120,
+        44,
+        367,
+        192
+      ],
+      "label_xy": [
+        243,
+        182
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Two cheerleading ducks shake pom-poms and chant 'RA-SA-ZAY!' (rah-sah-ZYAY) beside a bear sitting on the roof, FULL UP and beaming."
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_cooking_seg003",
+      "box": [
+        589,
+        261,
+        789,
+        578
+      ],
+      "polygon": [
+        [
+          589,
+          261
+        ],
+        [
+          789,
+          261
+        ],
+        [
+          789,
+          578
+        ],
+        [
+          589,
+          578
+        ]
+      ],
+      "label": "next: Ruelle des Gourmets — étape 3",
+      "name": "Ruelle des Gourmets — étape 3",
+      "kind": "street",
+      "area": "far street / vanishing point"
+    },
+    "back": {
+      "target": "ST_cooking_seg001",
+      "box": [
+        450,
+        602,
+        791,
+        720
+      ],
+      "label": "back: Ruelle des Gourmets — étape 1",
+      "name": "Ruelle des Gourmets — étape 1",
+      "kind": "street",
+      "area": "near foreground cobbles"
+    }
   },
-  "fr_engloutir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_engloutir_verb",
-   "text": "engloutir",
-   "box": [
-    1009,
-    664,
-    1103,
-    690
-   ],
-   "text_box": [
-    1013,
-    668,
-    1099,
-    686
-   ]
-  },
-  "fr_grignoter_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_grignoter_verb",
-   "text": "grignoter",
-   "box": [
-    61,
-    332,
-    157,
-    358
-   ],
-   "text_box": [
-    65,
-    336,
-    153,
-    354
-   ]
-  },
-  "fr_attabler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_attabler_verb",
-   "text": "s'attabler",
-   "box": [
-    507,
-    345,
-    605,
-    371
-   ],
-   "text_box": [
-    511,
-    349,
-    601,
-    367
-   ]
-  },
-  "fr_pique_niquer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_pique_niquer_verb",
-   "text": "pique-niquer",
-   "box": [
-    280,
-    326,
-    406,
-    352
-   ],
-   "text_box": [
-    284,
-    330,
-    402,
-    348
-   ]
-  },
-  "fr_desservir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_desservir_verb",
-   "text": "desservir",
-   "box": [
-    798,
-    282,
-    894,
-    308
-   ],
-   "text_box": [
-    802,
-    286,
-    890,
-    304
-   ]
-  },
-  "fr_rassasier_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rassasier_verb",
-   "text": "rassasier",
-   "box": [
-    287,
-    126,
-    381,
-    152
-   ],
-   "text_box": [
-    291,
-    130,
-    377,
-    148
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 3 →",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "text_box": [
-    1178,
-    11,
-    1271,
-    35
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 1",
-   "box": [
-    6,
-    6,
-    105,
-    36
-   ],
-   "text_box": [
-    9,
-    9,
-    102,
-    33
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    580,
-    8,
-    621,
-    38
-   ],
-   "text_box": [
-    583,
-    11,
-    618,
-    35
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    690,
-    8,
-    766,
-    38
-   ],
-   "text_box": [
-    693,
-    11,
-    763,
-    35
-   ]
-  },
-  "street_name": {
-   "role": "street_name",
-   "text": "Snack & sit down",
-   "box": [
-    985,
-    46,
-    1274,
-    92
-   ],
-   "text_box": [
-    989,
-    50,
-    1270,
-    88
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_croquer_verb",
-   "lemma": "croquer",
-   "gloss": "to crunch, to bite into",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    94,
-    419,
-    288,
-    681
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a croquet player in white crunches into a red apple, mallet and ball beside him"
-  },
-  {
-   "id": "fr_engouffrer_verb",
-   "lemma": "engouffrer",
-   "gloss": "to gobble up; to swallow up",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    400,
-    480,
-    545,
-    625
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a goofy dog gobbles a whole plate of sausages"
-  },
-  {
-   "id": "fr_servir_verb",
-   "lemma": "servir",
-   "gloss": "to serve",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 7,
-   "box": [
-    719,
-    400,
-    862,
-    650
-   ],
-   "prepositions": [
-    "à",
-    "de"
-   ],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a butler bows and serves a cake on a silver tray"
-  },
-  {
-   "id": "fr_engloutir_verb",
-   "lemma": "engloutir",
-   "gloss": "to gulp down, to swallow up",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 8,
-   "box": [
-    881,
-    406,
-    1231,
-    694
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a gluttonous whale in a tub swallows a basket of fish"
-  },
-  {
-   "id": "fr_grignoter_verb",
-   "lemma": "grignoter",
-   "gloss": "to nibble, to snack",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    19,
-    256,
-    200,
-    362
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a mouse nibbles cheese aboard a little green yacht in a window-box pond"
-  },
-  {
-   "id": "fr_attabler_verb",
-   "lemma": "attabler",
-   "gloss": "to take a seat at the table",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 4,
-   "box": [
-    481,
-    244,
-    631,
-    375
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'attabler",
-   "scene": "a goat sits at a little table with its napkin, checking it in a wall mirror (mirror = reflexive)",
-   "mirror": "painted inside the item box"
-  },
-  {
-   "id": "fr_pique_niquer_verb",
-   "lemma": "pique-niquer",
-   "gloss": "to picnic, to have a picnic",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 5,
-   "box": [
-    256,
-    175,
-    431,
-    356
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a hedgehog family picnics on a red checked blanket in the raised centre window"
-  },
-  {
-   "id": "fr_desservir_verb",
-   "lemma": "desservir",
-   "gloss": "to clear (the table); to serve (a place, of a bus or train)",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "upper",
-   "level": "upper",
-   "order": 9,
-   "box": [
-    781,
-    156,
-    912,
-    312
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a waitress with a gold medal clears the table, stacking plates sky-high"
-  },
-  {
-   "id": "fr_rassasier_verb",
-   "lemma": "rassasier",
-   "gloss": "to fill up, to satisfy (hunger)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 6,
-   "box": [
-    119,
-    19,
-    550,
-    156
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "three cheerleading ducks with pompoms round a full-up bear on the basket handle"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_cooking_seg003",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "label": "next: Ruelle des Gourmets — étape 3",
-   "name": "Ruelle des Gourmets — étape 3",
-   "kind": "street",
-   "polygon": [
-    [
-     922,
-     0
-    ],
-    [
-     922,
-     46
-    ],
-    [
-     1274,
-     46
-    ],
-    [
-     1274,
-     92
-    ],
-    [
-     922,
-     92
-    ],
-    [
-     922,
-     406
-    ],
-    [
-     1231,
-     406
-    ],
-    [
-     1231,
-     694
-    ],
-    [
-     922,
-     694
-    ],
-    [
-     922,
-     720
-    ],
-    [
-     1280,
-     720
-    ],
-    [
-     1280,
-     0
-    ]
-   ]
-  },
-  "back": {
-   "target": "ST_cooking_seg001",
-   "box": [
-    6,
-    6,
-    105,
-    36
-   ],
-   "label": "back: Ruelle des Gourmets — étape 1",
-   "name": "Ruelle des Gourmets — étape 1",
-   "kind": "street",
-   "polygon": [
-    [
-     358,
-     0
-    ],
-    [
-     358,
-     19
-    ],
-    [
-     119,
-     19
-    ],
-    [
-     119,
-     156
-    ],
-    [
-     358,
-     156
-    ],
-    [
-     358,
-     175
-    ],
-    [
-     256,
-     175
-    ],
-    [
-     256,
-     256
-    ],
-    [
-     19,
-     256
-    ],
-    [
-     19,
-     362
-    ],
-    [
-     358,
-     362
-    ],
-    [
-     358,
-     419
-    ],
-    [
-     94,
-     419
-    ],
-    [
-     94,
-     681
-    ],
-    [
-     358,
-     681
-    ],
-    [
-     358,
-     720
-    ],
-    [
-     0,
-     720
-    ],
-    [
-     0,
-     0
-    ]
-   ]
-  }
- },
- "links": []
+  "links": []
 }

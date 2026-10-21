@@ -1,598 +1,528 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_cooking_seg001",
- "street_id": "ST_cooking",
- "sector_id": "S04_cafes",
- "kind": "verb_place",
- "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 1 · Eat & feed",
- "divider_x": 835,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
- "tier_counts": {
-  "street": 4,
-  "balcony": 2,
-  "upper": 2,
-  "roof": 1
- },
- "text_areas": {
-  "fr_manger_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_manger_verb",
-   "text": "manger",
-   "box": [
-    146,
-    639,
-    228,
-    665
-   ],
-   "text_box": [
-    150,
-    643,
-    224,
-    661
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_cooking_seg001",
+  "street_id": "ST_cooking",
+  "sector_id": "S04_cafes",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Ruelle des Gourmets — étape 1 · Eat & feed",
+  "divider_x": 886,
+  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
+  "tier_counts": {
+    "street": 4,
+    "balcony": 2,
+    "upper": 2,
+    "roof": 1
   },
-  "fr_diner_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_diner_verb",
-   "text": "dîner",
-   "box": [
-    369,
-    632,
-    431,
-    658
-   ],
-   "text_box": [
-    373,
-    636,
-    427,
-    654
-   ]
+  "text_areas": {
+    "fr_manger_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_manger_verb",
+      "text": "manger",
+      "box": [
+        279,
+        645,
+        361,
+        671
+      ],
+      "text_box": [
+        283,
+        649,
+        357,
+        667
+      ]
+    },
+    "fr_diner_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_diner_verb",
+      "text": "dîner",
+      "box": [
+        545,
+        595,
+        607,
+        621
+      ],
+      "text_box": [
+        549,
+        599,
+        603,
+        617
+      ]
+    },
+    "fr_dejeuner_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_dejeuner_verb",
+      "text": "déjeuner",
+      "box": [
+        666,
+        534,
+        758,
+        560
+      ],
+      "text_box": [
+        670,
+        538,
+        754,
+        556
+      ]
+    },
+    "fr_nourrir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_nourrir_verb",
+      "text": "nourrir",
+      "box": [
+        1044,
+        586,
+        1120,
+        612
+      ],
+      "text_box": [
+        1048,
+        590,
+        1116,
+        608
+      ]
+    },
+    "fr_devorer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_devorer_verb",
+      "text": "dévorer",
+      "box": [
+        236,
+        463,
+        318,
+        489
+      ],
+      "text_box": [
+        240,
+        467,
+        314,
+        485
+      ]
+    },
+    "fr_bouffer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_bouffer_verb",
+      "text": "bouffer",
+      "box": [
+        549,
+        360,
+        627,
+        386
+      ],
+      "text_box": [
+        553,
+        364,
+        623,
+        382
+      ]
+    },
+    "fr_regaler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_regaler_verb",
+      "text": "se régaler",
+      "box": [
+        251,
+        345,
+        353,
+        371
+      ],
+      "text_box": [
+        255,
+        349,
+        349,
+        367
+      ]
+    },
+    "fr_souper_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_souper_verb",
+      "text": "souper",
+      "box": [
+        573,
+        192,
+        649,
+        218
+      ],
+      "text_box": [
+        577,
+        196,
+        645,
+        214
+      ]
+    },
+    "fr_alimenter_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_alimenter_verb",
+      "text": "alimenter",
+      "box": [
+        243,
+        210,
+        341,
+        236
+      ],
+      "text_box": [
+        247,
+        214,
+        337,
+        232
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "étape 2 →",
+      "box": [
+        837,
+        328,
+        935,
+        356
+      ],
+      "text_box": [
+        840,
+        331,
+        932,
+        353
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Rue des Saveurs",
+      "box": [
+        731,
+        684,
+        907,
+        712
+      ],
+      "text_box": [
+        734,
+        687,
+        904,
+        709
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        442,
+        27,
+        483,
+        57
+      ],
+      "text_box": [
+        445,
+        30,
+        480,
+        54
+      ],
+      "style": "direction_plate",
+      "points": "left"
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        906,
+        27,
+        982,
+        57
+      ],
+      "text_box": [
+        909,
+        30,
+        979,
+        54
+      ],
+      "style": "direction_plate",
+      "points": "right"
+    },
+    "street_name": {
+      "role": "street_name",
+      "text": "Eat & feed",
+      "box": [
+        1013,
+        49,
+        1206,
+        91
+      ],
+      "text_box": [
+        1019,
+        55,
+        1200,
+        85
+      ],
+      "surface": "upper facade"
+    }
   },
-  "fr_dejeuner_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_dejeuner_verb",
-   "text": "déjeuner",
-   "box": [
-    588,
-    626,
-    680,
-    652
-   ],
-   "text_box": [
-    592,
-    630,
-    676,
-    648
-   ]
+  "items": [
+    {
+      "id": "fr_manger_verb",
+      "lemma": "manger",
+      "gloss": "to eat",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        180,
+        500,
+        461,
+        675
+      ],
+      "label_xy": [
+        320,
+        665
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A MAN shares his sandwich with a blue JAY (mahn-ZHAY); they both EAT happily."
+    },
+    {
+      "id": "fr_diner_verb",
+      "lemma": "dîner",
+      "gloss": "to dine, to have dinner",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        511,
+        450,
+        641,
+        625
+      ],
+      "label_xy": [
+        576,
+        615
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Granny DINAH (dee-NAY) lights two candles and sits down to DINE at her evening table."
+    },
+    {
+      "id": "fr_dejeuner_verb",
+      "lemma": "déjeuner",
+      "gloss": "to have lunch",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 3,
+      "box": [
+        645,
+        452,
+        779,
+        564
+      ],
+      "label_xy": [
+        712,
+        554
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "On a sunny DAY in JUNE a boy shouts 'YAY!' (day-zhuh-NAY) and opens his LUNCH box at noon."
+    },
+    {
+      "id": "fr_nourrir_verb",
+      "lemma": "nourrir",
+      "gloss": "to feed",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 9,
+      "box": [
+        993,
+        432,
+        1171,
+        616
+      ],
+      "label_xy": [
+        1082,
+        606
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A NURSE (noo-REER) FEEDS a baby lamb from a bottle."
+    },
+    {
+      "id": "fr_devorer_verb",
+      "lemma": "dévorer",
+      "gloss": "to devour, to wolf down",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 4,
+      "box": [
+        185,
+        380,
+        369,
+        493
+      ],
+      "label_xy": [
+        277,
+        483
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Like English 'devour', said day-voh-RAY: a ravenous wolf DEVOURS a whole plate of sausages, lit up by a bright sun RAY."
+    },
+    {
+      "id": "fr_bouffer_verb",
+      "lemma": "bouffer",
+      "gloss": "to eat, to scoff (informal)",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 5,
+      "box": [
+        475,
+        288,
+        702,
+        390
+      ],
+      "label_xy": [
+        588,
+        380
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "At a BUFFET (boo-FAY) a hungry pig SCOFFS everything on the long table."
+    },
+    {
+      "id": "fr_regaler_verb",
+      "lemma": "régaler",
+      "gloss": "to treat (someone to a meal); 'se régaler': to enjoy a feast",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 6,
+      "box": [
+        240,
+        248,
+        364,
+        375
+      ],
+      "label_xy": [
+        302,
+        365
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "se régaler",
+      "scene": "A REGAL queen (ray-gah-LAY) admires herself in a MIRROR as she TREATS HERSELF to a FEAST of cream cakes (se régaler).",
+      "mirror": "painted inside the item box"
+    },
+    {
+      "id": "fr_souper_verb",
+      "lemma": "souper",
+      "gloss": "to have supper",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 7,
+      "box": [
+        556,
+        125,
+        667,
+        222
+      ],
+      "label_xy": [
+        611,
+        212
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A sleepy owl sips SOUP and PAYS (soo-PAY) with a coin at its late SUPPER table."
+    },
+    {
+      "id": "fr_alimenter_verb",
+      "lemma": "alimenter",
+      "gloss": "to feed; to supply (power, water)",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 8,
+      "box": [
+        199,
+        77,
+        385,
+        240
+      ],
+      "label_xy": [
+        292,
+        230
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A girl FEEDS a thirsty robot cup after cup of A LEMON TEA (ah-lee-mahn-TAY) through its funnel."
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_cooking_seg002",
+      "box": [
+        785,
+        320,
+        987,
+        564
+      ],
+      "polygon": [
+        [
+          785,
+          320
+        ],
+        [
+          987,
+          320
+        ],
+        [
+          987,
+          564
+        ],
+        [
+          785,
+          564
+        ]
+      ],
+      "label": "next: Ruelle des Gourmets — étape 2",
+      "name": "Ruelle des Gourmets — étape 2",
+      "kind": "street",
+      "area": "far street / vanishing point"
+    },
+    "back": {
+      "target": "S04_sector",
+      "box": [
+        649,
+        572,
+        990,
+        720
+      ],
+      "label": "back: Rue des Saveurs (square)",
+      "name": "Rue des Saveurs (square)",
+      "kind": "street",
+      "area": "near foreground cobbles"
+    }
   },
-  "fr_nourrir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_nourrir_verb",
-   "text": "nourrir",
-   "box": [
-    990,
-    645,
-    1066,
-    671
-   ],
-   "text_box": [
-    994,
-    649,
-    1062,
-    667
-   ]
-  },
-  "fr_devorer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_devorer_verb",
-   "text": "dévorer",
-   "box": [
-    156,
-    414,
-    238,
-    440
-   ],
-   "text_box": [
-    160,
-    418,
-    234,
-    436
-   ]
-  },
-  "fr_bouffer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_bouffer_verb",
-   "text": "bouffer",
-   "box": [
-    564,
-    414,
-    642,
-    440
-   ],
-   "text_box": [
-    568,
-    418,
-    638,
-    436
-   ]
-  },
-  "fr_regaler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_regaler_verb",
-   "text": "se régaler",
-   "box": [
-    143,
-    264,
-    245,
-    290
-   ],
-   "text_box": [
-    147,
-    268,
-    241,
-    286
-   ]
-  },
-  "fr_souper_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_souper_verb",
-   "text": "souper",
-   "box": [
-    599,
-    258,
-    675,
-    284
-   ],
-   "text_box": [
-    603,
-    262,
-    671,
-    280
-   ]
-  },
-  "fr_alimenter_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_alimenter_verb",
-   "text": "alimenter",
-   "box": [
-    363,
-    145,
-    461,
-    171
-   ],
-   "text_box": [
-    367,
-    149,
-    457,
-    167
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 2 →",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "text_box": [
-    1178,
-    11,
-    1271,
-    35
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← Rue des Saveurs",
-   "box": [
-    6,
-    6,
-    182,
-    36
-   ],
-   "text_box": [
-    9,
-    9,
-    179,
-    33
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    700,
-    8,
-    741,
-    38
-   ],
-   "text_box": [
-    703,
-    11,
-    738,
-    35
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    1050,
-    8,
-    1126,
-    38
-   ],
-   "text_box": [
-    1053,
-    11,
-    1123,
-    35
-   ]
-  },
-  "street_name": {
-   "role": "street_name",
-   "text": "Eat & feed",
-   "box": [
-    6,
-    44,
-    195,
-    90
-   ],
-   "text_box": [
-    10,
-    48,
-    191,
-    86
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_manger_verb",
-   "lemma": "manger",
-   "gloss": "to eat",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    81,
-    481,
-    294,
-    669
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a man shares his sandwich with a blue jay at a checked table"
-  },
-  {
-   "id": "fr_diner_verb",
-   "lemma": "dîner",
-   "gloss": "to dine, to have dinner",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    319,
-    481,
-    481,
-    662
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "granny Dinah lights two candles at her evening dinner table"
-  },
-  {
-   "id": "fr_dejeuner_verb",
-   "lemma": "déjeuner",
-   "gloss": "to have lunch",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    550,
-    481,
-    719,
-    656
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a boy cheers and opens his lunch box under a sunny June calendar"
-  },
-  {
-   "id": "fr_nourrir_verb",
-   "lemma": "nourrir",
-   "gloss": "to feed",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 9,
-   "box": [
-    944,
-    481,
-    1112,
-    675
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a nurse feeds a baby lamb from a bottle"
-  },
-  {
-   "id": "fr_devorer_verb",
-   "lemma": "dévorer",
-   "gloss": "to devour, to wolf down",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 4,
-   "box": [
-    44,
-    300,
-    350,
-    444
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a ravenous wolf devours a huge plate of sausages"
-  },
-  {
-   "id": "fr_bouffer_verb",
-   "lemma": "bouffer",
-   "gloss": "to eat, to scoff (informal)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 5,
-   "box": [
-    425,
-    312,
-    781,
-    444
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a pig scoffs everything on a long buffet"
-  },
-  {
-   "id": "fr_regaler_verb",
-   "lemma": "régaler",
-   "gloss": "to treat (someone to a meal); 'se régaler': to enjoy a feast",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 6,
-   "box": [
-    69,
-    144,
-    320,
-    294
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "se régaler",
-   "scene": "a regal queen admires herself in a hand mirror while treating herself to cream cakes (mirror = reflexive)",
-   "mirror": "painted inside the item box"
-  },
-  {
-   "id": "fr_souper_verb",
-   "lemma": "souper",
-   "gloss": "to have supper",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 7,
-   "box": [
-    531,
-    150,
-    744,
-    288
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a sleepy owl at its late supper: a bowl of soup and a coin to pay"
-  },
-  {
-   "id": "fr_alimenter_verb",
-   "lemma": "alimenter",
-   "gloss": "to feed; to supply (power, water)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 8,
-   "box": [
-    325,
-    50,
-    500,
-    175
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a girl pours lemon tea into a robot's funnel; half a lemon on the sill"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_cooking_seg002",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "label": "next: Ruelle des Gourmets — étape 2",
-   "name": "Ruelle des Gourmets — étape 2",
-   "kind": "street",
-   "polygon": [
-    [
-     922,
-     0
-    ],
-    [
-     922,
-     8
-    ],
-    [
-     1126,
-     8
-    ],
-    [
-     1126,
-     38
-    ],
-    [
-     922,
-     38
-    ],
-    [
-     922,
-     481
-    ],
-    [
-     1112,
-     481
-    ],
-    [
-     1112,
-     675
-    ],
-    [
-     922,
-     675
-    ],
-    [
-     922,
-     720
-    ],
-    [
-     1280,
-     720
-    ],
-    [
-     1280,
-     0
-    ]
-   ]
-  },
-  "back": {
-   "target": "S04_sector",
-   "box": [
-    6,
-    6,
-    182,
-    36
-   ],
-   "label": "back: Rue des Saveurs (square)",
-   "name": "Rue des Saveurs (square)",
-   "kind": "street",
-   "polygon": [
-    [
-     358,
-     0
-    ],
-    [
-     358,
-     44
-    ],
-    [
-     6,
-     44
-    ],
-    [
-     6,
-     90
-    ],
-    [
-     325,
-     90
-    ],
-    [
-     325,
-     144
-    ],
-    [
-     69,
-     144
-    ],
-    [
-     69,
-     294
-    ],
-    [
-     358,
-     294
-    ],
-    [
-     358,
-     300
-    ],
-    [
-     44,
-     300
-    ],
-    [
-     44,
-     444
-    ],
-    [
-     358,
-     444
-    ],
-    [
-     358,
-     481
-    ],
-    [
-     81,
-     481
-    ],
-    [
-     81,
-     669
-    ],
-    [
-     358,
-     669
-    ],
-    [
-     358,
-     720
-    ],
-    [
-     0,
-     720
-    ],
-    [
-     0,
-     0
-    ]
-   ]
-  }
- },
- "links": []
+  "links": []
 }

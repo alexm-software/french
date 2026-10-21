@@ -1,560 +1,486 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_cooking_seg006",
- "street_id": "ST_cooking",
- "sector_id": "S04_cafes",
- "kind": "verb_place",
- "layout": "tiered",
- "name": "Ruelle des Gourmets — étape 6 · Mix & chill",
- "divider_x": 855,
- "note": "Tiered verb place. Frontal row of whimsical houses: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT. tier: street (doorways, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (roofs/chimneys, rarest). ONE box per verb covering the action and its helper (and the mirror for reflexive verbs). Text areas: verb_sign per verb, verb_sign = the word label, centred inside the bottom of its own box. Signage (forward/back arrows = the clickable exits, side markers -er / -ir / -re, and the street_name sign) is small, overhead in the sky strip or at the frame edge, one style, never within 10 px of an item box.",
- "tier_counts": {
-  "street": 4,
-  "balcony": 3,
-  "upper": 0,
-  "roof": 1
- },
- "text_areas": {
-  "fr_meler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_meler_verb",
-   "text": "mêler",
-   "box": [
-    120,
-    639,
-    186,
-    665
-   ],
-   "text_box": [
-    124,
-    643,
-    182,
-    661
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_cooking_seg006",
+  "street_id": "ST_cooking",
+  "sector_id": "S04_cafes",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Ruelle des Gourmets — étape 6 · Mix & chill",
+  "divider_x": 844,
+  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
+  "tier_counts": {
+    "street": 4,
+    "balcony": 3,
+    "upper": 0,
+    "roof": 1
   },
-  "fr_ecraser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_ecraser_verb",
-   "text": "écraser",
-   "box": [
-    300,
-    645,
-    380,
-    671
-   ],
-   "text_box": [
-    304,
-    649,
-    376,
-    667
-   ]
+  "text_areas": {
+    "fr_meler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_meler_verb",
+      "text": "mêler",
+      "box": [
+        182,
+        632,
+        248,
+        658
+      ],
+      "text_box": [
+        186,
+        636,
+        244,
+        654
+      ]
+    },
+    "fr_ecraser_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_ecraser_verb",
+      "text": "écraser",
+      "box": [
+        490,
+        520,
+        570,
+        546
+      ],
+      "text_box": [
+        494,
+        524,
+        566,
+        542
+      ]
+    },
+    "fr_remuer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_remuer_verb",
+      "text": "remuer",
+      "box": [
+        352,
+        570,
+        430,
+        596
+      ],
+      "text_box": [
+        356,
+        574,
+        426,
+        592
+      ]
+    },
+    "fr_melanger_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_melanger_verb",
+      "text": "mélanger",
+      "box": [
+        617,
+        470,
+        715,
+        496
+      ],
+      "text_box": [
+        621,
+        474,
+        711,
+        492
+      ]
+    },
+    "fr_broyer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_broyer_verb",
+      "text": "broyer",
+      "box": [
+        173,
+        356,
+        245,
+        382
+      ],
+      "text_box": [
+        177,
+        360,
+        241,
+        378
+      ]
+    },
+    "fr_congeler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_congeler_verb",
+      "text": "congeler",
+      "box": [
+        434,
+        256,
+        524,
+        282
+      ],
+      "text_box": [
+        438,
+        260,
+        520,
+        278
+      ]
+    },
+    "fr_dissoudre_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_dissoudre_verb",
+      "text": "dissoudre",
+      "box": [
+        1014,
+        316,
+        1114,
+        342
+      ],
+      "text_box": [
+        1018,
+        320,
+        1110,
+        338
+      ]
+    },
+    "fr_surgeler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_surgeler_verb",
+      "text": "surgeler",
+      "box": [
+        164,
+        174,
+        252,
+        200
+      ],
+      "text_box": [
+        168,
+        178,
+        248,
+        196
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "étape 7 →",
+      "box": [
+        789,
+        308,
+        887,
+        336
+      ],
+      "text_box": [
+        792,
+        311,
+        884,
+        333
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← étape 5",
+      "box": [
+        716,
+        684,
+        814,
+        712
+      ],
+      "text_box": [
+        719,
+        687,
+        811,
+        709
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        380,
+        20,
+        421,
+        50
+      ],
+      "text_box": [
+        383,
+        23,
+        418,
+        47
+      ],
+      "style": "direction_plate",
+      "points": "left"
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        864,
+        30,
+        940,
+        60
+      ],
+      "text_box": [
+        867,
+        33,
+        937,
+        57
+      ],
+      "style": "direction_plate",
+      "points": "right"
+    },
+    "street_name": {
+      "role": "street_name",
+      "text": "Mix & chill",
+      "box": [
+        1128,
+        362,
+        1202,
+        412
+      ],
+      "text_box": [
+        1134,
+        368,
+        1196,
+        406
+      ],
+      "surface": "blank hanging sign board"
+    }
   },
-  "fr_remuer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_remuer_verb",
-   "text": "remuer",
-   "box": [
-    477,
-    632,
-    555,
-    658
-   ],
-   "text_box": [
-    481,
-    636,
-    551,
-    654
-   ]
+  "items": [
+    {
+      "id": "fr_meler_verb",
+      "lemma": "mêler",
+      "gloss": "to mix, to blend",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        126,
+        458,
+        304,
+        662
+      ],
+      "label_xy": [
+        215,
+        652
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "In a MELEE (may-LAY) two boys plunge brushes into one bucket and the red and yellow paints get MIXED together."
+    },
+    {
+      "id": "fr_ecraser_verb",
+      "lemma": "écraser",
+      "gloss": "to crush, to squash",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        474,
+        306,
+        586,
+        550
+      ],
+      "label_xy": [
+        530,
+        540
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A CRAZY elephant (ay-KRAH-zay) CRUSHES tomatoes by stomping in a tub."
+    },
+    {
+      "id": "fr_remuer_verb",
+      "lemma": "remuer",
+      "gloss": "to stir; to move",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 3,
+      "box": [
+        312,
+        362,
+        470,
+        600
+      ],
+      "label_xy": [
+        391,
+        590
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A cow MOOS (ruh-MWAY) while she STIRS a giant pot with a wooden spoon."
+    },
+    {
+      "id": "fr_melanger_verb",
+      "lemma": "mélanger",
+      "gloss": "to mix",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 4,
+      "box": [
+        590,
+        358,
+        742,
+        500
+      ],
+      "label_xy": [
+        666,
+        490
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A blue JAY MIXES MELON chunks (may-lahn-ZHAY) in a big bowl with its beak."
+    },
+    {
+      "id": "fr_broyer_verb",
+      "lemma": "broyer",
+      "gloss": "to grind, to crush",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 5,
+      "box": [
+        110,
+        212,
+        308,
+        386
+      ],
+      "label_xy": [
+        209,
+        376
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "Two brothers cheer 'BRO, YAY!' (brwah-YAY) as they GRIND coffee beans in a big wooden mill."
+    },
+    {
+      "id": "fr_congeler_verb",
+      "lemma": "congeler",
+      "gloss": "to freeze",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 6,
+      "box": [
+        416,
+        166,
+        542,
+        286
+      ],
+      "label_xy": [
+        479,
+        276
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A strawberry GEL in an ice-cream CONE (kohn-zhuh-LAY) FREEZES solid in a frosty freezer."
+    },
+    {
+      "id": "fr_dissoudre_verb",
+      "lemma": "dissoudre",
+      "gloss": "to dissolve",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 8,
+      "box": [
+        946,
+        158,
+        1182,
+        346
+      ],
+      "label_xy": [
+        1064,
+        336
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A yellow duck stirs a tub of SUDS (dee-SOODR) with a spoon until the soap DISSOLVES into foam."
+    },
+    {
+      "id": "fr_surgeler_verb",
+      "lemma": "surgeler",
+      "gloss": "to deep-freeze",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 7,
+      "box": [
+        110,
+        56,
+        306,
+        204
+      ],
+      "label_xy": [
+        208,
+        194
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": "A SURGEON (sewr-zhuh-LAY) in green scrubs DEEP-FREEZES a wobbly JELLY in a giant icy chest freezer on the roof."
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_cooking_seg007",
+      "box": [
+        746,
+        300,
+        930,
+        560
+      ],
+      "polygon": [
+        [
+          746,
+          300
+        ],
+        [
+          930,
+          300
+        ],
+        [
+          930,
+          560
+        ],
+        [
+          746,
+          560
+        ]
+      ],
+      "label": "next: Ruelle des Gourmets — étape 7",
+      "name": "Ruelle des Gourmets — étape 7",
+      "kind": "street",
+      "area": "far street / vanishing point"
+    },
+    "back": {
+      "target": "ST_cooking_seg005",
+      "box": [
+        320,
+        604,
+        1210,
+        720
+      ],
+      "label": "back: Ruelle des Gourmets — étape 5",
+      "name": "Ruelle des Gourmets — étape 5",
+      "kind": "street",
+      "area": "near foreground cobbles"
+    }
   },
-  "fr_melanger_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_melanger_verb",
-   "text": "mélanger",
-   "box": [
-    648,
-    632,
-    746,
-    658
-   ],
-   "text_box": [
-    652,
-    636,
-    742,
-    654
-   ]
-  },
-  "fr_broyer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_broyer_verb",
-   "text": "broyer",
-   "box": [
-    239,
-    358,
-    311,
-    384
-   ],
-   "text_box": [
-    243,
-    362,
-    307,
-    380
-   ]
-  },
-  "fr_congeler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_congeler_verb",
-   "text": "congeler",
-   "box": [
-    530,
-    345,
-    620,
-    371
-   ],
-   "text_box": [
-    534,
-    349,
-    616,
-    367
-   ]
-  },
-  "fr_dissoudre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_dissoudre_verb",
-   "text": "dissoudre",
-   "box": [
-    1016,
-    382,
-    1116,
-    408
-   ],
-   "text_box": [
-    1020,
-    386,
-    1112,
-    404
-   ]
-  },
-  "fr_surgeler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_surgeler_verb",
-   "text": "surgeler",
-   "box": [
-    546,
-    212,
-    634,
-    238
-   ],
-   "text_box": [
-    550,
-    216,
-    630,
-    234
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 7 →",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "text_box": [
-    1178,
-    11,
-    1271,
-    35
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 5",
-   "box": [
-    6,
-    6,
-    105,
-    36
-   ],
-   "text_box": [
-    9,
-    9,
-    102,
-    33
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    6,
-    60,
-    47,
-    90
-   ],
-   "text_box": [
-    9,
-    63,
-    44,
-    87
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    1198,
-    52,
-    1274,
-    82
-   ],
-   "text_box": [
-    1201,
-    55,
-    1271,
-    79
-   ]
-  },
-  "street_name": {
-   "role": "street_name",
-   "text": "Mix & chill",
-   "box": [
-    546,
-    6,
-    734,
-    52
-   ],
-   "text_box": [
-    550,
-    10,
-    730,
-    48
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_meler_verb",
-   "lemma": "mêler",
-   "gloss": "to mix, to blend",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    69,
-    469,
-    238,
-    669
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a melee of three children mixing red and blue paint in one bucket"
-  },
-  {
-   "id": "fr_ecraser_verb",
-   "lemma": "écraser",
-   "gloss": "to crush, to squash",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    256,
-    456,
-    425,
-    675
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a crazy elephant crushes tomatoes by stomping in a tub"
-  },
-  {
-   "id": "fr_remuer_verb",
-   "lemma": "remuer",
-   "gloss": "to stir; to move",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    444,
-    456,
-    588,
-    662
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a mooing cow stirs a giant pot with a wooden spoon"
-  },
-  {
-   "id": "fr_melanger_verb",
-   "lemma": "mélanger",
-   "gloss": "to mix",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 4,
-   "box": [
-    600,
-    475,
-    794,
-    662
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a blue jay mixes melon chunks in a big bowl"
-  },
-  {
-   "id": "fr_broyer_verb",
-   "lemma": "broyer",
-   "gloss": "to grind, to crush",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 5,
-   "box": [
-    175,
-    188,
-    375,
-    388
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "two brothers cheer as they grind coffee beans in a wooden mill"
-  },
-  {
-   "id": "fr_congeler_verb",
-   "lemma": "congeler",
-   "gloss": "to freeze",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 6,
-   "box": [
-    488,
-    244,
-    662,
-    375
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a strawberry-gel ice-cream cone freezes solid in a frosty freezer window (no animal)"
-  },
-  {
-   "id": "fr_dissoudre_verb",
-   "lemma": "dissoudre",
-   "gloss": "to dissolve",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 8,
-   "box": [
-    938,
-    275,
-    1194,
-    412
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a duck stirs a tub of suds until the soap dissolves into foam"
-  },
-  {
-   "id": "fr_surgeler_verb",
-   "lemma": "surgeler",
-   "gloss": "to deep-freeze",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 7,
-   "box": [
-    500,
-    81,
-    680,
-    242
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": "a surgeon lowers a wobbly jelly into a giant icy chest freezer on the roof"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_cooking_seg007",
-   "box": [
-    1175,
-    8,
-    1274,
-    38
-   ],
-   "label": "next: Ruelle des Gourmets — étape 7",
-   "name": "Ruelle des Gourmets — étape 7",
-   "kind": "street",
-   "polygon": [
-    [
-     922,
-     0
-    ],
-    [
-     922,
-     52
-    ],
-    [
-     1274,
-     52
-    ],
-    [
-     1274,
-     82
-    ],
-    [
-     922,
-     82
-    ],
-    [
-     922,
-     275
-    ],
-    [
-     1194,
-     275
-    ],
-    [
-     1194,
-     412
-    ],
-    [
-     922,
-     412
-    ],
-    [
-     922,
-     720
-    ],
-    [
-     1280,
-     720
-    ],
-    [
-     1280,
-     0
-    ]
-   ]
-  },
-  "back": {
-   "target": "ST_cooking_seg005",
-   "box": [
-    6,
-    6,
-    105,
-    36
-   ],
-   "label": "back: Ruelle des Gourmets — étape 5",
-   "name": "Ruelle des Gourmets — étape 5",
-   "kind": "street",
-   "polygon": [
-    [
-     358,
-     0
-    ],
-    [
-     358,
-     60
-    ],
-    [
-     6,
-     60
-    ],
-    [
-     6,
-     90
-    ],
-    [
-     358,
-     90
-    ],
-    [
-     358,
-     188
-    ],
-    [
-     175,
-     188
-    ],
-    [
-     175,
-     388
-    ],
-    [
-     358,
-     388
-    ],
-    [
-     358,
-     456
-    ],
-    [
-     256,
-     456
-    ],
-    [
-     256,
-     469
-    ],
-    [
-     69,
-     469
-    ],
-    [
-     69,
-     669
-    ],
-    [
-     256,
-     669
-    ],
-    [
-     256,
-     675
-    ],
-    [
-     358,
-     675
-    ],
-    [
-     358,
-     720
-    ],
-    [
-     0,
-     720
-    ],
-    [
-     0,
-     0
-    ]
-   ]
-  }
- },
- "links": []
+  "links": []
 }

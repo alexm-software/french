@@ -146,6 +146,46 @@ def _point_inside(point, polygon):
     return hits
 
 
+HOOK_STRENGTH = {"s": "strong", "o": "ok", "w": "weak", "p": "poor"}
+
+
+def assert_street_perspective_hooks():
+    """The 16 street-perspective hook rows are the ones the cards ship."""
+    rows = []
+    for line in (ROOT / "data" / "hooks" / "qa" / "qa_011_street_persp.tsv").read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        key, sound, scene, strength, gloss = (line.split("|") + [""])[:5]
+        rows.append((key, sound, scene, strength, gloss))
+    assert len(rows) == 16, len(rows)
+    by_lemma = {}
+    for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            word = json.loads(line)
+            by_lemma[word["lemma"]] = word
+    for key, sound, scene, strength, gloss in rows:
+        word = by_lemma[key]
+        hook = word["mnemonic_hook"]
+        assert hook["sound_alike"] == sound, key
+        assert hook["scene"] == scene, key
+        assert hook["strength"] == HOOK_STRENGTH[strength], (key, hook["strength"])
+        if gloss:
+            assert word["gloss"] == gloss, key
+        room = load(DATA / "rooms" / f"{word['room_id']}.json")
+        card = next(item for item in room["words"] if item["lemma"] == key)
+        assert card["hook"]["scene"] == scene, key
+        assert card["hook"]["sound_alike"] == sound, key
+
+
+def _exit_hit(exit_item):
+    """The clickable street: a polygon when the far lane is drawn, else the box."""
+    polygon = exit_item.get("polygon")
+    if polygon and len(polygon) >= 4:
+        return polygon
+    box = exit_item["box"]
+    return [[box[0], box[1]], [box[2], box[1]], [box[2], box[3]], [box[0], box[3]]]
+
+
 def assert_wide_passages():
     """Street continuations and doorways are big hit areas, not just their labels."""
     from hotspots import normalize_scene
@@ -153,16 +193,21 @@ def assert_wide_passages():
     segments = tuple(f"ST_cooking_seg{index:03d}" for index in range(1, 8))
     for segment in segments:
         raw = load(ROOT / "content" / "art" / segment / "hotspots.json")
+        assert raw.get("view") == "street_perspective", segment
+        assert raw["items"] and all(item.get("label_xy") for item in raw["items"]), segment
         scene = normalize_scene(raw)
         items = scene["hotspots"]
         for key in ("forward", "back"):
             exit_item = scene["exits"][key]
-            polygon = exit_item.get("polygon")
-            assert polygon and len(polygon) >= 4, (segment, key)
+            # Head-on lanes can be a little under 15% of the width at the vanishing
+            # point (étape 3's far street is 183px on a 1280-wide painting). The
+            # near cobbles are a box along the bottom edge, not a polygon.
+            polygon = _exit_hit(exit_item)
             xs = [point[0] for point in polygon]
             ys = [point[1] for point in polygon]
-            assert max(xs) - min(xs) >= int(scene["width"] * 0.15), (segment, key, max(xs) - min(xs))
-            assert max(ys) - min(ys) >= 60, (segment, key)
+            width = max(xs) - min(xs)
+            height = max(ys) - min(ys)
+            assert width >= 180 and height >= 60, (segment, key, width, height)
             box = exit_item["box"]
             center = ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
             assert _point_inside(center, polygon), (segment, key)
@@ -455,6 +500,7 @@ def main():
     assert last["scene"]["layout"] == "tiered"
     assert last["scene"]["exits"]["forward"]["target"] == "S04_sector"
     assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg006"
+    assert_street_perspective_hooks()
     assert [room["chip"] for room in last["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
     assert not any(hot.get("mirror") or hot.get("helper") for hot in last["scene"]["hotspots"])
     assert not (DATA / "rooms" / "ST_cooking_seg011.json").exists()
