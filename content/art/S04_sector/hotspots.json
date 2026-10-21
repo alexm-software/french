@@ -4,20 +4,54 @@
  "height": 720,
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Overview of sector S04_cafes (Rue des Saveurs). No vocabulary words; clickable links to the two buildings and the verb street Ruelle des Gourmets (enters at segment 1). Blank arch sign over the lane entrance is the sector name area. Same 'links' key build_hs.py writes and draws.",
+ "note": "Overview of sector S04_cafes (Rue des Saveurs), Round 2 repaint. Café left, restaurant right, the verb lane opens through the stone arch (route start = étape 1, the route returns here from étape 4).",
  "text_areas": {
-  "sign": {
+  "cafe_name": {
+   "role": "building_name",
+   "text": "Café de la Place",
    "box": [
-    533,
-    459,
-    730,
-    525
+    172,
+    286,
+    430,
+    347
    ],
    "text_box": [
-    548,
-    470,
-    715,
-    518
+    186,
+    293,
+    416,
+    340
+   ]
+  },
+  "resto_name": {
+   "role": "building_name",
+   "text": "Restaurant Le Bon Goût",
+   "box": [
+    812,
+    317,
+    1044,
+    395
+   ],
+   "text_box": [
+    826,
+    327,
+    1030,
+    385
+   ]
+  },
+  "lane_name": {
+   "role": "street_name",
+   "text": "Ruelle des Gourmets",
+   "box": [
+    570,
+    347,
+    731,
+    398
+   ],
+   "text_box": [
+    580,
+    353,
+    721,
+    392
    ]
   }
  },
@@ -27,32 +61,37 @@
    "target": "B08_cafe",
    "box": [
     0,
-    62,
-    419,
-    600
+    352,
+    539,
+    610
    ],
-   "label": "Café de la Place"
+   "label": "Café de la Place",
+   "name": "Café de la Place",
+   "kind": "building"
   },
   {
    "target": "B09_restaurant",
    "box": [
-    856,
-    75,
+    800,
+    400,
     1280,
-    650
+    620
    ],
-   "label": "Restaurant Le Bon Goût"
+   "label": "Restaurant Le Bon Goût",
+   "name": "Restaurant Le Bon Goût",
+   "kind": "building"
   },
   {
    "target": "ST_cooking_seg001",
    "box": [
-    420,
-    170,
-    855,
-    456
+    585,
+    405,
+    725,
+    610
    ],
-   "label": "Ruelle des Gourmets (cooking verbs)",
-   "label_fr": "Ruelle des Gourmets"
+   "label": "Ruelle des Gourmets: cooking verbs, étape 1",
+   "name": "Ruelle des Gourmets — étape 1",
+   "kind": "street"
   }
  ]
 }

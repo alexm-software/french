@@ -486,7 +486,7 @@ def neighbor_stub(sector_id, sectors_by_id, open_sectors):
 def chip_text(room):
     """Short switcher label. Street numbers come from the room record, not a fixed verb list."""
     if room.get("kind") == "street_segment":
-        match = re.search(r"segment\s+(\d+)", room.get("name") or "", re.IGNORECASE)
+        match = re.search(r"(?:segment|étape|etape)\s+(\d+)", room.get("name") or "", re.IGNORECASE)
         if match:
             return match.group(1)
         index = seg_index(room["id"])

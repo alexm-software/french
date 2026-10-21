@@ -4,6 +4,7 @@
    "id": "S01_beginner",
    "name": "Place du Village — Beginner Quarter",
    "description": "Starting square: greetings, alphabet, sounds, numbers, articles, pronouns, first grammar rules.",
+   "description_fr": "La place de départ : salutations, alphabet, sons, nombres, articles, pronoms et premières règles.",
    "entry_level": "A1",
    "buildings": [
     "B02_ecole",
@@ -15,24 +16,25 @@
    "adjacent_sectors": [
     "S02_home",
     "S03_market",
+    "S04_cafes",
     "S06_townhall",
     "S11_church"
    ],
-   "word_count": 493,
+   "word_count": 464,
    "cefr_counts": {
-    "A1": 245,
-    "A2": 60,
-    "B1": 59,
-    "B2": 60,
-    "C1": 37,
-    "C2": 32
-   },
-   "description_fr": "La place de départ : salutations, alphabet, sons, nombres, articles, pronoms et premières règles."
+    "A1": 244,
+    "A2": 57,
+    "B1": 55,
+    "B2": 55,
+    "C1": 27,
+    "C2": 26
+   }
   },
   {
    "id": "S02_home",
    "name": "Rue des Maisons — Home",
    "description": "A family house with every room, garden, garage and attic.",
+   "description_fr": "Une maison de famille, avec chaque pièce, le jardin, le garage et le grenier.",
    "entry_level": "A1",
    "buildings": [
     "B05_maison"
@@ -47,21 +49,21 @@
     "S09_nature",
     "S15_feelings"
    ],
-   "word_count": 686,
+   "word_count": 691,
    "cefr_counts": {
     "A1": 82,
     "A2": 87,
-    "B1": 167,
+    "B1": 172,
     "B2": 182,
     "C1": 106,
     "C2": 62
-   },
-   "description_fr": "Une maison de famille, avec chaque pièce, le jardin, le garage et le grenier."
+   }
   },
   {
    "id": "S03_market",
    "name": "Place du Marché — Shops & Market",
    "description": "Open-air market and the shopping street.",
+   "description_fr": "Le marché en plein air et la rue commerçante.",
    "entry_level": "A1",
    "buildings": [
     "B60_balance",
@@ -80,21 +82,21 @@
     "S04_cafes",
     "S05_bank"
    ],
-   "word_count": 649,
+   "word_count": 651,
    "cefr_counts": {
     "A1": 53,
     "A2": 67,
     "B1": 122,
     "B2": 153,
     "C1": 147,
-    "C2": 107
-   },
-   "description_fr": "Le marché en plein air et la rue commerçante."
+    "C2": 109
+   }
   },
   {
    "id": "S04_cafes",
    "name": "Rue des Saveurs — Restaurants & Cafés",
    "description": "Café terrace, bistro, restaurant kitchen and wine cellar.",
+   "description_fr": "La terrasse du café, le bistrot, la cuisine du restaurant et la cave.",
    "entry_level": "A2",
    "buildings": [
     "B09_restaurant",
@@ -104,25 +106,26 @@
     "ST_cooking"
    ],
    "adjacent_sectors": [
+    "S01_beginner",
     "S03_market",
     "S08_travel",
     "S14_culture"
    ],
-   "word_count": 182,
+   "word_count": 164,
    "cefr_counts": {
-    "A1": 14,
+    "A1": 15,
     "A2": 21,
-    "B1": 32,
-    "B2": 59,
-    "C1": 35,
-    "C2": 21
-   },
-   "description_fr": "La terrasse du café, le bistrot, la cuisine du restaurant et la cave."
+    "B1": 26,
+    "B2": 50,
+    "C1": 32,
+    "C2": 20
+   }
   },
   {
    "id": "S05_bank",
    "name": "Quai de la Banque — Bank, Work & Economy",
    "description": "Bank, offices and the business district.",
+   "description_fr": "La banque, les bureaux et le quartier des affaires.",
    "entry_level": "B1",
    "buildings": [
     "B11_bureaux",
@@ -138,21 +141,21 @@
     "S06_townhall",
     "S10_university"
    ],
-   "word_count": 463,
+   "word_count": 469,
    "cefr_counts": {
     "A1": 55,
     "A2": 63,
-    "B1": 94,
-    "B2": 99,
+    "B1": 96,
+    "B2": 102,
     "C1": 74,
-    "C2": 78
-   },
-   "description_fr": "La banque, les bureaux et le quartier des affaires."
+    "C2": 79
+   }
   },
   {
    "id": "S06_townhall",
    "name": "Place de la Mairie — Town Hall & Government",
    "description": "Town hall, courthouse, police station, post office and memorial.",
+   "description_fr": "La mairie, le tribunal, le commissariat, la poste et le monument aux morts.",
    "entry_level": "B1",
    "buildings": [
     "B63_pompiers",
@@ -172,21 +175,21 @@
     "S07_health",
     "S13_museum"
    ],
-   "word_count": 988,
+   "word_count": 993,
    "cefr_counts": {
-    "A1": 81,
+    "A1": 80,
     "A2": 111,
     "B1": 190,
-    "B2": 276,
-    "C1": 194,
+    "B2": 278,
+    "C1": 198,
     "C2": 136
-   },
-   "description_fr": "La mairie, le tribunal, le commissariat, la poste et le monument aux morts."
+   }
   },
   {
    "id": "S07_health",
    "name": "Quartier de la Santé — Health",
    "description": "Doctor's surgery, pharmacy, hospital, dentist.",
+   "description_fr": "Le cabinet du médecin, la pharmacie, l’hôpital et le dentiste.",
    "entry_level": "A2",
    "buildings": [
     "B17_cabinet",
@@ -206,16 +209,16 @@
     "A1": 27,
     "A2": 29,
     "B1": 62,
-    "B2": 65,
+    "B2": 66,
     "C1": 45,
-    "C2": 38
-   },
-   "description_fr": "Le cabinet du médecin, la pharmacie, l’hôpital et le dentiste."
+    "C2": 37
+   }
   },
   {
    "id": "S08_travel",
    "name": "Carrefour des Voyages — Travel",
    "description": "Railway station, airport, harbour, hotel and the roads.",
+   "description_fr": "La gare, l’aéroport, le port, l’hôtel et les routes.",
    "entry_level": "A2",
    "buildings": [
     "B25_monde",
@@ -233,21 +236,21 @@
     "S07_health",
     "S09_nature"
    ],
-   "word_count": 430,
+   "word_count": 431,
    "cefr_counts": {
     "A1": 76,
     "A2": 69,
-    "B1": 78,
-    "B2": 96,
+    "B1": 77,
+    "B2": 98,
     "C1": 62,
     "C2": 49
-   },
-   "description_fr": "La gare, l’aéroport, le port, l’hôtel et les routes."
+   }
   },
   {
    "id": "S09_nature",
    "name": "Vallée Verte — Nature",
    "description": "Mountain ski resort, forest, river, beach, campsite and farm around the village.",
+   "description_fr": "La station de ski, la forêt, la rivière, la plage, le camping et la ferme autour du village.",
    "entry_level": "A2",
    "buildings": [
     "B28_riviere",
@@ -269,21 +272,21 @@
     "S11_church",
     "S16_park"
    ],
-   "word_count": 596,
+   "word_count": 601,
    "cefr_counts": {
     "A1": 40,
-    "A2": 65,
+    "A2": 66,
     "B1": 124,
-    "B2": 186,
-    "C1": 122,
-    "C2": 59
-   },
-   "description_fr": "La station de ski, la forêt, la rivière, la plage, le camping et la ferme autour du village."
+    "B2": 187,
+    "C1": 123,
+    "C2": 61
+   }
   },
   {
    "id": "S10_university",
    "name": "Campus — University & Schools",
    "description": "Lycée and university faculties.",
+   "description_fr": "Le lycée et les facultés de l’université.",
    "entry_level": "B2",
    "buildings": [
     "B33_lycee",
@@ -300,21 +303,21 @@
     "S05_bank",
     "S13_museum"
    ],
-   "word_count": 625,
+   "word_count": 626,
    "cefr_counts": {
     "A1": 69,
     "A2": 86,
     "B1": 104,
     "B2": 145,
-    "C1": 113,
+    "C1": 114,
     "C2": 108
-   },
-   "description_fr": "Le lycée et les facultés de l’université."
+   }
   },
   {
    "id": "S11_church",
    "name": "Abbaye & Paroisse Notre-Dame — Catholic Quarter",
    "description": "Parish church, abbey, presbytery and cathedral: Catholic faith, liturgy and prayer.",
+   "description_fr": "L’église paroissiale, l’abbaye, le presbytère et la cathédrale : foi catholique, liturgie et prière.",
    "entry_level": "A2",
    "buildings": [
     "B41_presbytere",
@@ -339,13 +342,13 @@
     "B2": 43,
     "C1": 49,
     "C2": 88
-   },
-   "description_fr": "L’église paroissiale, l’abbaye, le presbytère et la cathédrale : foi catholique, liturgie et prière."
+   }
   },
   {
    "id": "S12_faiths",
    "name": "Rue de la Concorde — Other Places of Worship",
    "description": "Respectful visits to a synagogue, a mosque, a Protestant temple and an Orthodox church.",
+   "description_fr": "Des visites respectueuses à une synagogue, une mosquée, un temple protestant et une église orthodoxe.",
    "entry_level": "B2",
    "buildings": [
     "B43_concorde"
@@ -362,13 +365,13 @@
     "B2": 5,
     "C1": 8,
     "C2": 3
-   },
-   "description_fr": "Des visites respectueuses à une synagogue, une mosquée, un temple protestant et une église orthodoxe."
+   }
   },
   {
    "id": "S13_museum",
    "name": "Musée du Village — Museum",
    "description": "Art galleries, history wing and the text gallery for mature words.",
+   "description_fr": "Les galeries d’art, l’aile d’histoire et la galerie de textes pour les mots difficiles à dessiner.",
    "entry_level": "B2",
    "buildings": [
     "B44_musee"
@@ -384,21 +387,21 @@
     "S12_faiths",
     "S14_culture"
    ],
-   "word_count": 554,
+   "word_count": 551,
    "cefr_counts": {
     "A1": 51,
-    "A2": 61,
-    "B1": 85,
-    "B2": 151,
-    "C1": 121,
+    "A2": 60,
+    "B1": 84,
+    "B2": 149,
+    "C1": 122,
     "C2": 85
-   },
-   "description_fr": "Les galeries d’art, l’aile d’histoire et la galerie de textes pour les mots difficiles à dessiner."
+   }
   },
   {
    "id": "S14_culture",
    "name": "Boulevard des Loisirs — Culture, Media & Sport",
    "description": "Theatre, cinema, music school, stadium, games room and the newsstand.",
+   "description_fr": "Le théâtre, le cinéma, l’école de musique, le stade, la salle de jeux et le kiosque à journaux.",
    "entry_level": "B1",
    "buildings": [
     "B49_kiosque",
@@ -417,21 +420,21 @@
     "S15_feelings",
     "S16_park"
    ],
-   "word_count": 660,
+   "word_count": 662,
    "cefr_counts": {
     "A1": 80,
     "A2": 96,
     "B1": 123,
-    "B2": 157,
+    "B2": 159,
     "C1": 112,
     "C2": 92
-   },
-   "description_fr": "Le théâtre, le cinéma, l’école de musique, le stade, la salle de jeux et le kiosque à journaux."
+   }
   },
   {
    "id": "S15_feelings",
    "name": "Jardin des Cœurs — Emotions & People",
    "description": "A walled garden of pavilions for feelings, character and relationships.",
+   "description_fr": "Un jardin clos de pavillons pour les sentiments, le caractère et les relations.",
    "entry_level": "A2",
    "buildings": [
     "B51_portraits",
@@ -446,21 +449,21 @@
     "S14_culture",
     "S16_park"
    ],
-   "word_count": 631,
+   "word_count": 639,
    "cefr_counts": {
     "A1": 62,
     "A2": 70,
-    "B1": 114,
-    "B2": 169,
-    "C1": 131,
-    "C2": 85
-   },
-   "description_fr": "Un jardin clos de pavillons pour les sentiments, le caractère et les relations."
+    "B1": 116,
+    "B2": 171,
+    "C1": 134,
+    "C2": 86
+   }
   },
   {
    "id": "S16_park",
    "name": "Parc des Curiosités — Fairground & Park",
    "description": "A fairground park by the pond: hall of mirrors, strongman tent, show-judging tent, circus big top, hedge maze, the Opposites Bridge and the Idiom Garden.",
+   "description_fr": "Un parc forain au bord de l’étang : palais des glaces, tente du fort, tente du jury, chapiteau, labyrinthe, le pont des contraires et le jardin des expressions.",
    "entry_level": "A2",
    "buildings": [
     "B57_pont",
@@ -477,16 +480,15 @@
     "S14_culture",
     "S15_feelings"
    ],
-   "word_count": 523,
+   "word_count": 538,
    "cefr_counts": {
-    "A1": 73,
-    "A2": 66,
-    "B1": 77,
-    "B2": 115,
-    "C1": 123,
-    "C2": 69
-   },
-   "description_fr": "Un parc forain au bord de l’étang : palais des glaces, tente du fort, tente du jury, chapiteau, labyrinthe, le pont des contraires et le jardin des expressions."
+    "A1": 74,
+    "A2": 69,
+    "B1": 80,
+    "B2": 118,
+    "C1": 126,
+    "C2": 71
+   }
   }
  ]
 }

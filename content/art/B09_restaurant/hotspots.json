@@ -4,34 +4,37 @@
  "height": 720,
  "divider_x": null,
  "kind": "building_exterior",
- "note": "Exterior of B09_restaurant (Restaurant Le Bon Goût). No vocabulary words live here; links lead into the restaurant rooms (same 'links' key build_hs.py writes and draws).",
+ "note": "Exterior of B09_restaurant (Restaurant Le Bon Goût), Round 2 repaint: cream hanging board, blue sky. No vocabulary here; links lead into the restaurant rooms.",
  "text_areas": {
-  "sign": {
+  "name": {
+   "role": "building_name",
+   "text": "Restaurant Le Bon Goût",
    "box": [
-    485,
+    481,
     184,
     794,
-    275
+    281
    ],
    "text_box": [
-    508,
-    196,
-    770,
-    262
+    500,
+    198,
+    776,
+    268
    ]
   },
   "plaque": {
+   "role": "door_plaque",
    "box": [
-    385,
+    383,
     425,
-    415,
-    455
+    414,
+    456
    ],
    "text_box": [
-    388,
+    386,
     428,
-    412,
-    452
+    411,
+    453
    ]
   }
  },
@@ -40,12 +43,14 @@
   {
    "target": "R_resto_room",
    "box": [
-    546,
+    539,
     362,
-    728,
-    646
+    727,
+    648
    ],
-   "label": "Main door: dining hall"
+   "label": "Main door: dining hall",
+   "name": "Restaurant Le Bon Goût — salle",
+   "kind": "door"
   },
   {
    "target": "R_resto_kitchen_01",
@@ -55,27 +60,34 @@
     375,
     650
    ],
-   "label": "Kitchen side door"
+   "label": "Kitchen side door",
+   "name": "Restaurant Le Bon Goût — cuisine",
+   "kind": "door"
   },
   {
    "target": "R_resto_kitchen_02",
    "box": [
-    146,
+    148,
     187,
     320,
     328
    ],
-   "label": "Upstairs kitchen window"
+   "label": "Upstairs kitchen window",
+   "name": "Restaurant Le Bon Goût — cuisine (étage)",
+   "kind": "window"
   },
   {
    "target": "R_wine_01",
    "box": [
-    893,
-    362,
-    1181,
-    644
+    890,
+    398,
+    1180,
+    648
    ],
-   "label": "Wine cellar door"
+   "label": "Wine cellar arch",
+   "name": "Restaurant Le Bon Goût — cave à vin",
+   "kind": "door"
   }
- ]
+ ],
+ "building_name": "Restaurant Le Bon Goût"
 }

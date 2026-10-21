@@ -3,18 +3,21 @@
  "width": 1280,
  "height": 720,
  "divider_x": 640,
+ "kind": "room",
+ "note": "Round 2 repaint (neutral colour; front door, kitchen swing doors and cellar arch added; commandement = general with command baton instead of stone tablets). One box per item.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
     458,
-    44,
-    805,
+    39,
+    800,
     148
    ],
    "text_box": [
-    490,
-    62,
-    772,
+    482,
+    55,
+    776,
     132
    ]
   }
@@ -30,7 +33,7 @@
    "box": [
     8,
     78,
-    102,
+    97,
     188
    ]
   },
@@ -42,8 +45,8 @@
    "side": "left",
    "label": "la loge",
    "box": [
-    190,
-    23,
+    180,
+    19,
     398,
     312
    ]
@@ -57,11 +60,11 @@
    "label": "la rangée",
    "box": [
     403,
-    225,
+    226,
     586,
-    275
+    274
    ],
-   "mnemonic_label": "row of cows"
+   "scene": "a row of little cows"
   },
   {
    "id": "fr_consigne_noun",
@@ -71,18 +74,12 @@
    "side": "left",
    "label": "la consigne",
    "box": [
-    70,
-    242,
-    188,
-    366
+    0,
+    211,
+    178,
+    405
    ],
-   "mnemonic_box": [
-    8,
-    258,
-    68,
-    539
-   ],
-   "mnemonic_label": "guard reading the sign"
+   "scene": "guard pointing at instructions on an easel"
   },
   {
    "id": "fr_disposition_noun",
@@ -93,11 +90,11 @@
    "label": "la disposition",
    "box": [
     190,
-    325,
-    345,
-    366
+    330,
+    336,
+    418
    ],
-   "note": "chairs set out in rows behind the waitress"
+   "scene": "rows of chairs ready at your disposal"
   },
   {
    "id": "fr_commande_noun",
@@ -107,18 +104,12 @@
    "side": "left",
    "label": "la commande",
    "box": [
-    284,
-    535,
-    368,
-    572
-   ],
-   "mnemonic_box": [
-    117,
-    368,
+    86,
+    420,
     438,
-    711
+    720
    ],
-   "mnemonic_label": "general barks his order, waitress salutes"
+   "scene": "waitress takes the order at the table"
   },
   {
    "id": "fr_facture_noun",
@@ -128,18 +119,12 @@
    "side": "left",
    "label": "la facture",
    "box": [
-    523,
-    368,
-    585,
-    428
-   ],
-   "mnemonic_box": [
     445,
-    295,
-    522,
-    505
+    305,
+    590,
+    547
    ],
-   "mnemonic_label": "jaw 'fractured', bandaged chin"
+   "scene": "man with bandaged jaw reading the bill"
   },
   {
    "id": "fr_restaurant_noun",
@@ -149,24 +134,10 @@
    "side": "right",
    "label": "le restaurant",
    "box": [
-    738,
-    161,
-    888,
-    297
-   ]
-  },
-  {
-   "id": "fr_resto_noun",
-   "lemma": "resto",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le resto",
-   "box": [
-    727,
-    320,
+    802,
+    172,
     883,
-    477
+    289
    ]
   },
   {
@@ -177,10 +148,25 @@
    "side": "right",
    "label": "le commandement",
    "box": [
-    956,
-    203,
-    1018,
-    281
+    700,
+    242,
+    800,
+    523
+   ],
+   "scene": "general giving a command with his baton"
+  },
+  {
+   "id": "fr_resto_noun",
+   "lemma": "resto",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le resto",
+   "box": [
+    802,
+    330,
+    890,
+    477
    ]
   },
   {
@@ -191,10 +177,10 @@
    "side": "right",
    "label": "le serveur",
    "box": [
-    1020,
+    1008,
     242,
-    1094,
-    484
+    1102,
+    485
    ]
   },
   {
@@ -207,7 +193,7 @@
    "box": [
     683,
     523,
-    808,
+    805,
     594
    ]
   },
@@ -221,8 +207,8 @@
    "box": [
     820,
     497,
-    934,
-    602
+    938,
+    575
    ]
   },
   {
@@ -233,9 +219,9 @@
    "side": "right",
    "label": "le menu",
    "box": [
-    938,
+    940,
     492,
-    1092,
+    1100,
     594
    ]
   },
@@ -247,28 +233,60 @@
    "side": "right",
    "label": "le pourboire",
    "box": [
-    1122,
-    560,
-    1190,
-    598
+    1104,
+    383,
+    1274,
+    690
    ],
-   "mnemonic_box": [
-    1096,
-    390,
-    1273,
-    703
-   ],
-   "mnemonic_label": "poor boar waiter"
+   "scene": "poor boar waiter holding his tip"
   }
  ],
  "zoom_from": {
   "room_id": "R_resto_room_z1",
   "box": [
-   1112,
+   1158,
    62,
    1280,
-   388
+   380
   ],
   "label": "bar counter (right wall)"
- }
+ },
+ "links": [
+  {
+   "target": "B09_restaurant",
+   "box": [
+    660,
+    170,
+    698,
+    395
+   ],
+   "label": "Front door: out to the street",
+   "name": "Restaurant Le Bon Goût (outside)",
+   "kind": "exit"
+  },
+  {
+   "target": "R_resto_kitchen_01",
+   "box": [
+    922,
+    195,
+    1005,
+    398
+   ],
+   "label": "Swing doors to the kitchen",
+   "name": "Restaurant Le Bon Goût — cuisine",
+   "kind": "door"
+  },
+  {
+   "target": "R_wine_01",
+   "box": [
+    1105,
+    148,
+    1156,
+    336
+   ],
+   "label": "Arch: steps down to the wine cellar",
+   "name": "Restaurant Le Bon Goût — cave à vin",
+   "kind": "stairs_down"
+  }
+ ]
 }

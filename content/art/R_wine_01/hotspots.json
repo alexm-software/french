@@ -3,33 +3,22 @@
  "width": 1280,
  "height": 720,
  "divider_x": 595,
+ "kind": "room",
+ "note": "Round 2 from-scratch repaint: one floor, horse + farrier stand on the floor under the skylight (old wrong link: horse on a ledge clicked through to the window). Whisky/rhum/cognac/cigare live in the zoom (assignment.json). One box per item.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    483,
+    445,
     28,
-    858,
-    155
+    825,
+    153
    ],
    "text_box": [
-    502,
+    470,
     44,
-    838,
-    140
-   ]
-  },
-  "plaque": {
-   "box": [
-    609,
-    183,
-    719,
-    279
-   ],
-   "text_box": [
-    625,
-    198,
-    703,
-    264
+    800,
+    138
    ]
   }
  },
@@ -43,10 +32,11 @@
    "label": "la vigne",
    "box": [
     0,
-    0,
-    185,
-    112
-   ]
+    70,
+    118,
+    240
+   ],
+   "scene": "grape vine hanging over the glazed bay"
   },
   {
    "id": "fr_verriere_noun",
@@ -56,18 +46,12 @@
    "side": "left",
    "label": "la verrière",
    "box": [
-    190,
+    120,
     0,
-    372,
-    88
+    310,
+    410
    ],
-   "mnemonic_box": [
-    255,
-    90,
-    462,
-    212
-   ],
-   "mnemonic_label": "farrier under the skylight"
+   "scene": "farrier shoeing a horse under the glass skylight"
   },
   {
    "id": "fr_veranda_noun",
@@ -78,10 +62,11 @@
    "label": "la véranda",
    "box": [
     0,
+    242,
     118,
-    254,
-    384
-   ]
+    410
+   ],
+   "scene": "glazed veranda bay"
   },
   {
    "id": "fr_cave_noun",
@@ -91,10 +76,10 @@
    "side": "left",
    "label": "la cave",
    "box": [
-    288,
-    228,
-    420,
-    422
+    312,
+    148,
+    403,
+    398
    ]
   },
   {
@@ -105,11 +90,12 @@
    "side": "left",
    "label": "la brasserie",
    "box": [
-    425,
-    215,
-    592,
-    440
-   ]
+    405,
+    155,
+    530,
+    428
+   ],
+   "scene": "copper brewing stills"
   },
   {
    "id": "fr_ivresse_noun",
@@ -119,12 +105,12 @@
    "side": "left",
    "label": "l'ivresse",
    "box": [
-    44,
-    388,
-    262,
-    676
+    31,
+    414,
+    234,
+    664
    ],
-   "mnemonic_label": "giddy spinning skater"
+   "scene": "giddy spinning skater"
   },
   {
    "id": "fr_bouteille_noun",
@@ -134,18 +120,12 @@
    "side": "left",
    "label": "la bouteille",
    "box": [
-    308,
-    424,
-    413,
-    666
+    359,
+    434,
+    453,
+    648
    ],
-   "mnemonic_box": [
-    312,
-    470,
-    410,
-    636
-   ],
-   "mnemonic_label": "BOO ghost"
+   "scene": "BOO ghost in a bottle"
   },
   {
    "id": "fr_vodka_noun",
@@ -155,10 +135,10 @@
    "side": "left",
    "label": "la vodka",
    "box": [
-    428,
-    449,
-    482,
-    626
+    453,
+    430,
+    516,
+    641
    ]
   },
   {
@@ -169,10 +149,10 @@
    "side": "left",
    "label": "la capsule",
    "box": [
-    416,
-    630,
-    524,
-    670
+    516,
+    598,
+    602,
+    653
    ]
   },
   {
@@ -183,18 +163,12 @@
    "side": "right",
    "label": "le bouchon",
    "box": [
-    668,
-    472,
-    721,
-    522
+    612,
+    360,
+    828,
+    672
    ],
-   "mnemonic_box": [
-    560,
-    524,
-    782,
-    702
-   ],
-   "mnemonic_label": "cork pops into boot"
+   "scene": "cork pops into a boot"
   },
   {
    "id": "fr_sous_sol_noun",
@@ -204,18 +178,12 @@
    "side": "right",
    "label": "le sous-sol",
    "box": [
-    600,
-    340,
-    718,
-    466
+    734,
+    172,
+    850,
+    358
    ],
-   "mnemonic_box": [
-    722,
-    250,
-    810,
-    518
-   ],
-   "mnemonic_label": "sous-chef storing jam"
+   "scene": "sous-chef storing jam jars in the niche"
   },
   {
    "id": "fr_vin_noun",
@@ -225,18 +193,12 @@
    "side": "right",
    "label": "le vin",
    "box": [
-    835,
-    350,
-    903,
-    420
+    852,
+    242,
+    984,
+    414
    ],
-   "mnemonic_box": [
-    818,
-    312,
-    1013,
-    430
-   ],
-   "mnemonic_label": "wine van"
+   "scene": "wine van loading crates in the arch"
   },
   {
    "id": "fr_verre_noun",
@@ -246,18 +208,12 @@
    "side": "right",
    "label": "le verre",
    "box": [
-    924,
-    432,
-    1037,
-    699
-   ],
-   "mnemonic_box": [
-    836,
-    496,
-    922,
+    844,
+    453,
+    1016,
     640
    ],
-   "mnemonic_label": "VERY tall glass & mouse"
+   "scene": "VERY tall glass with a mouse"
   },
   {
    "id": "fr_alcool_noun",
@@ -267,10 +223,10 @@
    "side": "right",
    "label": "l'alcool",
    "box": [
-    1046,
-    452,
-    1130,
-    662
+    1016,
+    477,
+    1116,
+    664
    ]
   },
   {
@@ -281,21 +237,47 @@
    "side": "right",
    "label": "le champagne",
    "box": [
-    1132,
-    418,
-    1278,
-    702
+    1117,
+    422,
+    1273,
+    703
    ]
   }
  ],
  "zoom_from": {
   "room_id": "R_wine_01_z1",
   "box": [
-   1035,
-   300,
+   1219,
+   86,
    1280,
-   414
+   375
   ],
-  "label": "bar counter (right wall)"
- }
+  "label": "Look closer at the bar shelves"
+ },
+ "links": [
+  {
+   "target": "R_resto_room",
+   "box": [
+    545,
+    155,
+    720,
+    355
+   ],
+   "label": "Stairs up to the dining hall",
+   "name": "Restaurant Le Bon Goût — salle",
+   "kind": "stairs_up"
+  },
+  {
+   "target": "B09_restaurant",
+   "box": [
+    1019,
+    172,
+    1102,
+    461
+   ],
+   "label": "Studded door: out to the street",
+   "name": "Restaurant Le Bon Goût (outside)",
+   "kind": "exit"
+  }
+ ]
 }

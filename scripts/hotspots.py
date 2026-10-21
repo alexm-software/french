@@ -47,6 +47,7 @@ def _hot(item):
         "zoom_id": item.get("zoom_id") or None,
         "mnemonic_for": item.get("mnemonic_for") or None,
         "side": item.get("side") or None,
+        "tier": item.get("tier") or None,
         "label": item.get("label") or None,
         "helper": bool(item.get("helper")),
         "box": box,
@@ -77,6 +78,10 @@ def _area(area):
         payload["text"] = str(area["text"])
     if area.get("role"):
         payload["role"] = str(area["role"])
+    if area.get("for_exit"):
+        payload["for_exit"] = str(area["for_exit"])
+    if area.get("for"):
+        payload["for"] = str(area["for"])
     return payload
 
 
@@ -145,6 +150,7 @@ def normalize_scene(raw):
         "height": height,
         "divider_x": raw.get("divider_x"),
         "kind": raw.get("kind"),
+        "layout": raw.get("layout"),
         "placeholder": bool(raw.get("placeholder")),
         "text_areas": text_areas,
         "hotspots": hotspots,

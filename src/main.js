@@ -425,9 +425,9 @@ function verbSide(word, scene) {
   return "";
 }
 
-function wrapLines(text, boxWidth, boxHeight, maxSize = 36) {
+function wrapLines(text, boxWidth, boxHeight, maxSize = 36, widthFactor = 0.56) {
   const words = String(text).split(/\s+/).filter(Boolean);
-  const widthOf = (value, size) => Array.from(value).length * size * 0.56;
+  const widthOf = (value, size) => Array.from(value).length * size * widthFactor;
   let size = Math.min(maxSize, Math.max(8, boxHeight * 0.72));
   while (size >= 8) {
     const lines = [];
@@ -461,26 +461,28 @@ function textBlock(className, text, box, opts = {}) {
   ).join("");
 }
 
-function plateText(className, text, box, anchor) {
-  const size = 30;
-  const pad = 12;
-  const width = Array.from(text).length * size * 0.62 + pad * 2;
-  const height = size + pad * 1.4;
+function fittedPlate(className, text, box, opts = {}) {
   const [x0, y0, x1, y1] = box;
-  const cy = (y0 + y1) / 2;
-  let x = (x0 + x1) / 2;
-  let plateX = x - width / 2;
-  if (anchor === "start") {
-    x = x0;
-    plateX = x0 - 4;
-  } else if (anchor === "end") {
-    x = x1;
-    plateX = x1 - width + 4;
-  }
-  const plateY = cy - height / 2;
+  const width = Math.max(12, x1 - x0);
+  const height = Math.max(12, y1 - y0);
+  const inset = Math.min(2, width * 0.04, height * 0.08);
+  const wrapped = wrapLines(
+    text,
+    Math.max(8, width - inset * 2),
+    Math.max(8, height - inset * 2),
+    opts.maxSize || Math.max(11, (height - inset * 2) * 0.82),
+    opts.widthFactor || 0.62,
+  );
+  const cx = (x0 + x1) / 2;
+  const lineHeight = wrapped.size * 1.05;
+  const top = (y0 + y1) / 2 - (wrapped.lines.length * lineHeight) / 2 + wrapped.size * 0.78;
+  const lines = wrapped.lines.map((line, index) =>
+    `<text x="${cx.toFixed(1)}" y="${(top + index * lineHeight).toFixed(1)}" text-anchor="middle" font-size="${wrapped.size.toFixed(1)}">${esc(line)}</text>`
+  ).join("");
+  const rx = Math.min(5, height / 4);
   return `<g class="${className}">
-    <rect class="plate" x="${plateX.toFixed(1)}" y="${plateY.toFixed(1)}" width="${width.toFixed(1)}" height="${height.toFixed(1)}" rx="14"></rect>
-    <text x="${x.toFixed(1)}" y="${(cy + size * 0.32).toFixed(1)}" text-anchor="${anchor}" font-size="${size}">${esc(text)}</text>
+    <rect class="plate" x="${(x0 + 0.5).toFixed(1)}" y="${(y0 + 0.5).toFixed(1)}" width="${(width - 1).toFixed(1)}" height="${(height - 1).toFixed(1)}" rx="${rx.toFixed(1)}"></rect>
+    ${lines}
   </g>`;
 }
 
@@ -512,6 +514,11 @@ function sceneMarkup(scene, words, zooms) {
   const byId = Object.fromEntries((words || []).map((word) => [word.id, word]));
   const areas = scene.text_areas || {};
   const signed = new Set(Object.keys(areas).filter((key) => key.endsWith("_sign")).map((key) => key.slice(0, -5)));
+  const signedExits = new Set(
+    Object.values(areas)
+      .filter((area) => area.role === "direction" && area.for_exit)
+      .map((area) => exitKind(area.for_exit) || area.for_exit)
+  );
   state.nav = { forward: null, back: null, left: null, right: null };
   const parts = [];
   (scene.links || []).forEach((link) => {
@@ -526,7 +533,8 @@ function sceneMarkup(scene, words, zooms) {
     state.nav[kind] = hashFor(exit.target);
     const [x0, y0, x1, y1] = exit.box;
     const label = hoverLabel(exit, `nav.${kind}`);
-    parts.push(`<g class="hot exit ${kind}" data-target="${esc(exit.target)}" tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${arrowGraphic(kind, exit.box)}</g>`);
+    const graphic = signedExits.has(kind) ? "" : arrowGraphic(kind, exit.box);
+    parts.push(`<g class="hot exit ${kind}" data-target="${esc(exit.target)}" tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
     if (hot.helper) return;
@@ -567,17 +575,23 @@ function sceneMarkup(scene, words, zooms) {
     const wordId = key.endsWith("_sign") ? key.slice(0, -5) : "";
     const word = byId[wordId];
     if (area.role === "direction") {
-      parts.push(textBlock("direction", text, box, { maxSize: 15 }));
+      const trimmed = text.trim();
+      const sideClass = /^-er\b/.test(trimmed) ? " side-left" : /^-ir\b|-re\b/.test(trimmed) ? " side-right" : "";
+      parts.push(fittedPlate(`sign-plate direction-sign${sideClass}`, text, box, { maxSize: 18 }));
       return;
     }
-    if (area.role === "building_name" || key === "building_name") {
-      parts.push(plateText("building-name", text, box, "middle"));
+    if (area.role === "building_name" || area.role === "street_name" || key === "building_name") {
+      const klass = area.role === "street_name" ? "sign-plate street-name" : "sign-plate building-name";
+      parts.push(fittedPlate(klass, text, box, { maxSize: 32 }));
       return;
     }
-    if (word && word.pos === "verb") {
+    if (area.role === "room_name" || key === "sign") {
+      parts.push(fittedPlate("sign-plate room-name", text, box, { maxSize: 40 }));
+      return;
+    }
+    if (area.role === "verb_sign" || (word && word.pos === "verb")) {
       const side = verbSide(word, scene);
-      const anchor = side === "left" ? "start" : side === "right" ? "end" : "middle";
-      parts.push(plateText(`verb-sign ${side}`, text, box, anchor));
+      parts.push(fittedPlate(`verb-sign ${side}`, text, box, { maxSize: 16 }));
       return;
     }
     const klass = key.endsWith("_plaque") || key === "plaque" ? "plaque" : "sign";

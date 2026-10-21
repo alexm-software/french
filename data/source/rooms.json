@@ -76,7 +76,7 @@
     "R_opposites_05",
     "R_opposites_04",
     "R_adj_size_01",
-    "R_adv_manner_01"
+    "R_appearance_03"
    ],
    "conversation_ids": [
     "C_R_opposites_02"
@@ -589,13 +589,13 @@
    "sector_id": "S01_beginner",
    "building_id": "B01_fontaine",
    "links_back_to_sector": "S01_beginner",
-   "cefr_band": "B2",
-   "mean_level": 3.5,
+   "cefr_band": "B1",
+   "mean_level": 3.44,
    "related_rooms": [
     "R_polite",
     "R_exclaim_03",
     "ST_emotion_seg013",
-    "R_conjunctions"
+    "R_opposites_05"
    ],
    "conversation_ids": [
     "C_R_exclaim_02"
@@ -606,15 +606,16 @@
     "fr_hum_intj",
     "fr_chut_intj",
     "fr_bah_intj",
+    "fr_bis_adj",
     "fr_hop_intj",
     "fr_ouf_intj",
     "fr_bof_intj",
     "fr_tchao_intj"
    ],
-   "item_count": 8,
-   "total_items_incl_zooms": 8,
+   "item_count": 9,
+   "total_items_incl_zooms": 9,
    "side_counts": {
-    "n/a": 8
+    "n/a": 9
    }
   },
   {
@@ -658,7 +659,7 @@
   },
   {
    "id": "R_alphabet_01",
-   "name": "Alphabet & pronunciation hall [ground floor 1] · letter E (said \"e\"), letter, letter S (said \"esse\")",
+   "name": "Alphabet & pronunciation hall [ground floor 1] · letter I (said \"i\"), letter A (said \"a\"), letter U (said \"u\")",
    "type": "grammar",
    "setting": "Alphabet & pronunciation hall inside Petite École (first schoolhouse).",
    "kind": "full",
@@ -668,9 +669,9 @@
    "cefr_band": "A1",
    "mean_level": 1.0,
    "related_rooms": [
-    "R_articles",
-    "R_linguistics_03",
-    "R_linguistics_02"
+    "R_alphabet_02",
+    "ST_communication_seg004",
+    "R_linguistics_03"
    ],
    "grammar_rules": [
     "26 letters; names differ from English (e = 'euh', i = 'ee', g = 'zhay', j = 'zhee', r = 'air', u = 'ew').",
@@ -686,31 +687,29 @@
    ],
    "base_room": "R_alphabet",
    "words": [
-    "fr_lettre_noun",
-    "fr_f_letter",
-    "fr_e_letter",
-    "fr_n_letter",
-    "fr_m_letter",
-    "fr_s_letter",
-    "fr_r_letter",
-    "fr_p_letter",
-    "fr_v_letter",
-    "fr_l_letter",
-    "fr_t_letter",
-    "fr_c_letter",
-    "fr_d_letter",
-    "fr_o_letter"
+    "fr_j_letter",
+    "fr_z_letter",
+    "fr_q_letter",
+    "fr_h_letter",
+    "fr_g_letter",
+    "fr_k_letter",
+    "fr_i_letter",
+    "fr_y_letter",
+    "fr_x_letter",
+    "fr_u_letter",
+    "fr_b_letter",
+    "fr_a_letter",
+    "fr_w_letter"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 14,
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
    "side_counts": {
-    "left": 1,
     "n/a": 13
    }
   },
   {
    "id": "R_alphabet_02",
-   "name": "Alphabet & pronunciation hall [ground floor 2] · letter I (said \"i\"), letter A (said \"a\"), letter U (said \"u\")",
+   "name": "Alphabet & pronunciation hall [ground floor 2] · letter E (said \"e\"), letter, letter S (said \"esse\")",
    "type": "grammar",
    "setting": "Alphabet & pronunciation hall inside Petite École (first schoolhouse).",
    "kind": "full",
@@ -718,38 +717,38 @@
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
    "cefr_band": "A1",
-   "mean_level": 1.07,
+   "mean_level": 1.0,
    "related_rooms": [
-    "R_numbers1",
-    "R_prepositions_01",
-    "ST_communication_seg004",
-    "R_linguistics_03"
+    "R_alphabet_01",
+    "R_articles",
+    "R_linguistics_03",
+    "R_linguistics_02"
    ],
    "conversation_ids": [
     "C_R_alphabet_02"
    ],
    "base_room": "R_alphabet",
    "words": [
-    "fr_a_letter",
-    "fr_w_letter",
-    "fr_b_letter",
-    "fr_u_letter",
-    "fr_x_letter",
-    "fr_y_letter",
-    "fr_i_letter",
-    "fr_g_letter",
-    "fr_k_letter",
-    "fr_h_letter",
-    "fr_accent_noun",
-    "fr_q_letter",
-    "fr_z_letter",
-    "fr_j_letter"
+    "fr_lettre_noun",
+    "fr_o_letter",
+    "fr_d_letter",
+    "fr_c_letter",
+    "fr_t_letter",
+    "fr_l_letter",
+    "fr_v_letter",
+    "fr_p_letter",
+    "fr_r_letter",
+    "fr_s_letter",
+    "fr_m_letter",
+    "fr_n_letter",
+    "fr_e_letter",
+    "fr_f_letter"
    ],
    "item_count": 14,
    "total_items_incl_zooms": 14,
    "side_counts": {
-    "n/a": 13,
-    "right": 1
+    "left": 1,
+    "n/a": 13
    }
   },
   {
@@ -768,7 +767,7 @@
    "mean_level": 1.0,
    "related_rooms": [
     "R_grammar_verbs",
-    "R_alphabet_02",
+    "R_prepositions_01",
     "R_abs_quantity_03",
     "R_abs_quantity_01"
    ],
@@ -810,7 +809,7 @@
     "R_numbers2_z1"
    ],
    "cefr_band": "A2",
-   "mean_level": 1.62,
+   "mean_level": 1.68,
    "related_rooms": [
     "R_grammar_basic",
     "R_conjunctions",
@@ -837,7 +836,7 @@
     "fr_cinquante_num"
    ],
    "item_count": 10,
-   "total_items_incl_zooms": 21,
+   "total_items_incl_zooms": 22,
    "side_counts": {
     "n/a": 8,
     "right": 2
@@ -855,7 +854,7 @@
    "cefr_band": "A1",
    "mean_level": 1.0,
    "related_rooms": [
-    "R_alphabet_01",
+    "R_alphabet_02",
     "R_grammar_verbs",
     "R_linguistics_03",
     "R_people_04"
@@ -944,7 +943,7 @@
     "R_prepositions_02",
     "R_grammar_basic",
     "R_people_03",
-    "R_people_04"
+    "R_character_01"
    ],
    "conversation_ids": [
     "C_R_pronouns_02"
@@ -1058,10 +1057,10 @@
    "cefr_band": "A1",
    "mean_level": 1.08,
    "related_rooms": [
-    "R_alphabet_02",
+    "R_numbers1",
     "R_pronouns_01",
-    "R_adv_place_01",
-    "R_adv_place_02"
+    "R_adv_time_01",
+    "R_adv_place_01"
    ],
    "conversation_ids": [
     "C_R_prepositions_01"
@@ -1177,13 +1176,16 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [
+    "R_conjunctions_z1"
+   ],
    "cefr_band": "A2",
-   "mean_level": 1.87,
+   "mean_level": 1.81,
    "related_rooms": [
     "R_numbers2",
     "R_grammar_general",
-    "R_adv_time_01",
-    "R_adv_logic_01"
+    "R_adv_logic_01",
+    "R_adv_logic_02"
    ],
    "conversation_ids": [
     "C_R_conjunctions"
@@ -1198,19 +1200,13 @@
     "fr_quand_conj",
     "fr_ni_conj",
     "fr_car_conj",
-    "fr_sinon_conj",
-    "fr_soit_conj",
-    "fr_demeurant_noun",
-    "fr_lorsque_conj",
-    "fr_puisque_conj",
-    "fr_afin_conj",
-    "fr_quoique_conj"
+    "fr_pourtant_adv",
+    "fr_sinon_conj"
    ],
-   "item_count": 15,
-   "total_items_incl_zooms": 15,
+   "item_count": 10,
+   "total_items_incl_zooms": 16,
    "side_counts": {
-    "n/a": 14,
-    "right": 1
+    "n/a": 10
    }
   },
   {
@@ -1305,7 +1301,7 @@
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
    "cefr_band": "A2",
-   "mean_level": 2.33,
+   "mean_level": 2.25,
    "related_rooms": [
     "R_conjunctions",
     "R_pronouns_03",
@@ -1328,18 +1324,19 @@
    "words": [
     "fr_mot_noun",
     "fr_phrase_noun",
+    "fr_accent_noun",
     "fr_orthographe_noun"
    ],
-   "item_count": 3,
-   "total_items_incl_zooms": 3,
+   "item_count": 4,
+   "total_items_incl_zooms": 4,
    "side_counts": {
-    "right": 1,
+    "right": 2,
     "left": 2
    }
   },
   {
    "id": "R_time_days_01",
-   "name": "Days, months & seasons [all floors 1] · january, october, season",
+   "name": "Days, months & seasons [all floors 1] · january, october, july",
    "type": "theme",
    "setting": "Days, months & seasons inside Tour de l'Horloge (clock & calendar tower).",
    "kind": "full",
@@ -1350,7 +1347,7 @@
     "R_time_days_01_z1"
    ],
    "cefr_band": "A2",
-   "mean_level": 2.24,
+   "mean_level": 2.14,
    "related_rooms": [
     "R_abs_time_01",
     "R_time_days_02",
@@ -1368,10 +1365,10 @@
     "fr_ete_noun",
     "fr_hiver_noun",
     "fr_printemps_noun",
+    "fr_mai_noun",
     "fr_juillet_noun",
     "fr_octobre_noun",
     "fr_saison_noun",
-    "fr_aout_noun",
     "fr_echeance_noun",
     "fr_mensuel_adj",
     "fr_saisonnier_adj"
@@ -1397,10 +1394,10 @@
     "R_time_days_02_z1"
    ],
    "cefr_band": "A2",
-   "mean_level": 2.41,
+   "mean_level": 2.48,
    "related_rooms": [
     "R_time_days_01",
-    "R_adv_time_04",
+    "R_adv_time_02",
     "R_ch_calendar",
     "R_adj_time_01"
    ],
@@ -1413,18 +1410,18 @@
     "fr_dimanche_noun",
     "fr_rendez_vous_noun",
     "fr_samedi_noun",
-    "fr_mai_noun",
     "fr_juin_noun",
     "fr_lundi_noun",
     "fr_septembre_noun",
     "fr_date_noun",
     "fr_week_end_noun",
+    "fr_vendredi_noun",
     "fr_canicule_noun",
     "fr_hebdomadaire_adj",
     "fr_dominical_adj"
    ],
    "item_count": 13,
-   "total_items_incl_zooms": 22,
+   "total_items_incl_zooms": 21,
    "side_counts": {
     "left": 3,
     "right": 8,
@@ -1446,9 +1443,9 @@
    "cefr_band": "A1",
    "mean_level": 1.17,
    "related_rooms": [
-    "R_adv_time_02",
+    "R_adv_time_01",
     "R_bedroom_02",
-    "R_farewell"
+    "R_adv_manner_07"
    ],
    "conversation_ids": [
     "C_R_time_clock_01"
@@ -1482,16 +1479,13 @@
    "sector_id": "S01_beginner",
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
-   "zoom_ids": [
-    "R_time_clock_02_z1"
-   ],
    "cefr_band": "B2",
-   "mean_level": 4.06,
+   "mean_level": 4.08,
    "related_rooms": [
+    "R_adv_time_02",
     "R_abs_time_02",
-    "R_abs_time_03",
     "R_adj_time_05",
-    "R_adj_time_01"
+    "R_bedroom_02"
    ],
    "conversation_ids": [
     "C_R_time_clock_02"
@@ -1500,39 +1494,44 @@
    "words": [
     "fr_matinee_noun",
     "fr_reprise_noun",
-    "fr_centimetre_noun",
     "fr_delai_noun",
     "fr_horloge_noun",
-    "fr_tiers_noun",
     "fr_crepuscule_noun",
     "fr_alerte_noun",
     "fr_pendule_noun_f",
-    "fr_matinal_adj"
+    "fr_matinal_adj",
+    "fr_millenaire_noun",
+    "fr_interim_noun",
+    "fr_session_noun",
+    "fr_retardataire_noun"
    ],
-   "item_count": 10,
-   "total_items_incl_zooms": 16,
+   "item_count": 12,
+   "total_items_incl_zooms": 12,
    "side_counts": {
-    "left": 5,
-    "right": 4,
+    "left": 6,
+    "right": 5,
     "n/a": 1
    }
   },
   {
    "id": "R_adv_time_01",
-   "name": "Clock-tower stairway — when & how often [ground floor 1] · sometimes, then",
+   "name": "Clock-tower stairway — when & how often [ground floor] · soon, currently, previously",
    "type": "adverbs",
    "setting": "Each step of the tower stair is a moment: 'always' is a bell ringing every hour, 'never' a stopped clock, 'soon' a hand about to strike.",
    "kind": "full",
    "sector_id": "S01_beginner",
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [
+    "R_adv_time_01_z1"
+   ],
    "cefr_band": "A1",
-   "mean_level": 1.38,
+   "mean_level": 1.24,
    "related_rooms": [
-    "R_adv_time_02",
+    "R_time_clock_01",
     "R_abs_time_01",
-    "R_adv_logic_01",
-    "R_conjunctions"
+    "R_prepositions_01",
+    "R_adv_manner_01"
    ],
    "conversation_ids": [
     "C_R_adv_time_01"
@@ -1541,85 +1540,43 @@
    "words": [
     "fr_alors_adv",
     "fr_encore_adv",
-    "fr_longtemps_adv",
-    "fr_pourtant_adv",
-    "fr_parfois_adv",
-    "fr_souvent_adv",
-    "fr_puis_adv",
-    "fr_justement_adv",
-    "fr_parfaitement_adv",
-    "fr_lors_adv",
-    "fr_quelquefois_adv",
-    "fr_particulierement_adv",
-    "fr_notamment_adv"
-   ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
-   "side_counts": {
-    "n/a": 13
-   }
-  },
-  {
-   "id": "R_adv_time_02",
-   "name": "Clock-tower stairway — when & how often [ground floor 2] · soon, currently, today",
-   "type": "adverbs",
-   "setting": "Each step of the tower stair is a moment: 'always' is a bell ringing every hour, 'never' a stopped clock, 'soon' a hand about to strike.",
-   "kind": "full",
-   "sector_id": "S01_beginner",
-   "building_id": "B03_horloge",
-   "links_back_to_sector": "S01_beginner",
-   "cefr_band": "A1",
-   "mean_level": 1.23,
-   "related_rooms": [
-    "R_time_clock_01",
-    "R_adv_time_01",
-    "R_prepositions_01",
-    "R_adv_manner_01"
-   ],
-   "conversation_ids": [
-    "C_R_adv_time_02"
-   ],
-   "base_room": "R_adv_time",
-   "words": [
     "fr_jamais_adv",
     "fr_toujours_adv",
     "fr_maintenant_adv",
     "fr_deja_adv",
     "fr_tard_adv",
+    "fr_longtemps_adv",
     "fr_demain_adv",
-    "fr_aujourd_hui_adv",
-    "fr_bientot_adv",
-    "fr_hier_adv",
-    "fr_tot_adv",
-    "fr_autrefois_adv",
-    "fr_malheureusement_adv",
-    "fr_actuellement_adv"
+    "fr_aujourd_hui_adv"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
+   "item_count": 10,
+   "total_items_incl_zooms": 21,
    "side_counts": {
-    "n/a": 13
+    "n/a": 10
    }
   },
   {
-   "id": "R_adv_time_03",
-   "name": "Clock-tower stairway — when & how often [first floor 1] · recently, lately, two days ago",
+   "id": "R_adv_time_02",
+   "name": "Clock-tower stairway — when & how often [first floor] · regularly, recently, lately",
    "type": "adverbs",
    "setting": "Each step of the tower stair is a moment: 'always' is a bell ringing every hour, 'never' a stopped clock, 'soon' a hand about to strike.",
    "kind": "full",
    "sector_id": "S01_beginner",
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [
+    "R_adv_time_02_z1"
+   ],
    "cefr_band": "B1",
-   "mean_level": 3.45,
+   "mean_level": 3.35,
    "related_rooms": [
-    "R_adv_time_04",
-    "R_abs_time_02",
-    "R_prepositions_01",
-    "R_adv_manner_06"
+    "R_time_days_02",
+    "R_time_clock_02",
+    "R_adv_manner_01",
+    "R_adv_manner_03"
    ],
    "conversation_ids": [
-    "C_R_adv_time_03"
+    "C_R_adv_time_02"
    ],
    "base_room": "R_adv_time",
    "words": [
@@ -1628,63 +1585,21 @@
     "fr_jadis_adv",
     "fr_longuement_adv",
     "fr_auparavant_adv",
-    "fr_recemment_adv",
-    "fr_apres_demain_adv",
-    "fr_eternellement_adv",
-    "fr_avant_hier_adv",
-    "fr_dernierement_adv",
-    "fr_automatiquement_adv"
-   ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
-   "side_counts": {
-    "n/a": 11
-   }
-  },
-  {
-   "id": "R_adv_time_04",
-   "name": "Clock-tower stairway — when & how often [first floor 2] · regularly, usually, rarely",
-   "type": "adverbs",
-   "setting": "Each step of the tower stair is a moment: 'always' is a bell ringing every hour, 'never' a stopped clock, 'soon' a hand about to strike.",
-   "kind": "full",
-   "sector_id": "S01_beginner",
-   "building_id": "B03_horloge",
-   "links_back_to_sector": "S01_beginner",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "R_time_days_02",
-    "R_adv_time_03",
-    "R_adv_manner_03",
-    "R_adv_manner_07"
-   ],
-   "conversation_ids": [
-    "C_R_adv_time_04"
-   ],
-   "base_room": "R_adv_time",
-   "words": [
-    "fr_forcement_adv",
-    "fr_uniquement_adv",
     "fr_rarement_adv",
+    "fr_recemment_adv",
     "fr_regulierement_adv",
     "fr_normalement_adv",
-    "fr_generalement_adv",
-    "fr_specialement_adv",
-    "fr_constamment_adv",
-    "fr_personnellement_adv",
-    "fr_habituellement_adv",
-    "fr_principalement_adv",
-    "fr_traditionnellement_adv"
+    "fr_generalement_adv"
    ],
-   "item_count": 12,
-   "total_items_incl_zooms": 12,
+   "item_count": 10,
+   "total_items_incl_zooms": 17,
    "side_counts": {
-    "n/a": 12
+    "n/a": 10
    }
   },
   {
-   "id": "R_adv_time_05",
-   "name": "Clock-tower stairway — when & how often [upstairs] · invariably, periodically, often",
+   "id": "R_adv_time_03",
+   "name": "Clock-tower stairway — when & how often [upstairs] · periodically, often, invariably",
    "type": "adverbs",
    "setting": "Each step of the tower stair is a moment: 'always' is a bell ringing every hour, 'never' a stopped clock, 'soon' a hand about to strike.",
    "kind": "full",
@@ -1692,36 +1607,31 @@
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
    "cefr_band": "C1",
-   "mean_level": 5.36,
+   "mean_level": 5.33,
    "related_rooms": [
-    "R_abs_time_03",
-    "R_adv_manner_07",
-    "R_adv_manner_02"
+    "R_abs_time_02",
+    "R_adv_manner_06",
+    "R_adv_manner_03"
    ],
    "conversation_ids": [
-    "C_R_adv_time_05"
+    "C_R_adv_time_03"
    ],
    "base_room": "R_adv_time",
    "words": [
     "fr_indefiniment_adv",
-    "fr_ouvertement_adv",
     "fr_frequemment_adv",
     "fr_provisoirement_adv",
-    "fr_inutilement_adv",
     "fr_continuellement_adv",
     "fr_quotidiennement_adv",
     "fr_invariablement_adv",
-    "fr_typiquement_adv",
-    "fr_consciencieusement_adv",
     "fr_prochainement_adv",
     "fr_periodiquement_adv",
-    "fr_communement_adv",
-    "fr_loyalement_adv"
+    "fr_communement_adv"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 14,
+   "item_count": 9,
+   "total_items_incl_zooms": 9,
    "side_counts": {
-    "n/a": 14
+    "n/a": 9
    }
   },
   {
@@ -1739,7 +1649,7 @@
     "R_adv_time_01",
     "R_time_days_01",
     "R_adj_time_05",
-    "R_adj_time_02"
+    "R_people_04"
    ],
    "conversation_ids": [
     "C_R_abs_time_01"
@@ -1770,7 +1680,7 @@
   },
   {
    "id": "R_abs_time_02",
-   "name": "Tower timeline mural — eras, beginnings & ends [first floor] · era, pensioner, initiation",
+   "name": "Tower timeline mural — eras, beginnings & ends [first floor & upstairs] · immortality, introduction, era",
    "type": "theme",
    "setting": "A long mural spiralling up the tower: births, childhood, generations, eras, beginnings and ends painted along a timeline.",
    "kind": "full",
@@ -1778,10 +1688,10 @@
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
    "cefr_band": "B2",
-   "mean_level": 3.78,
+   "mean_level": 4.38,
    "related_rooms": [
-    "R_adv_time_03",
     "R_time_clock_02",
+    "R_adv_time_03",
     "R_adj_time_02",
     "R_adj_time_05"
    ],
@@ -1798,81 +1708,37 @@
     "fr_retraite_noun_2",
     "fr_initiation_noun",
     "fr_decennie_noun",
-    "fr_fecondite_noun"
-   ],
-   "item_count": 9,
-   "total_items_incl_zooms": 9,
-   "side_counts": {
-    "left": 7,
-    "right": 2
-   }
-  },
-  {
-   "id": "R_abs_time_03",
-   "name": "Tower timeline mural — eras, beginnings & ends [upstairs] · maternity, pregnancy, newborn",
-   "type": "theme",
-   "setting": "A long mural spiralling up the tower: births, childhood, generations, eras, beginnings and ends painted along a timeline.",
-   "kind": "full",
-   "sector_id": "S01_beginner",
-   "building_id": "B03_horloge",
-   "links_back_to_sector": "S01_beginner",
-   "cefr_band": "C1",
-   "mean_level": 5.27,
-   "related_rooms": [
-    "R_time_clock_02",
-    "R_adv_time_05",
-    "R_adj_time_02",
-    "R_adj_time_04"
-   ],
-   "conversation_ids": [
-    "C_R_abs_time_03"
-   ],
-   "base_room": "R_abs_time",
-   "words": [
-    "fr_grossesse_noun",
-    "fr_maternite_noun",
     "fr_immortalite_noun",
-    "fr_avortement_noun",
-    "fr_nouveau_ne_noun",
     "fr_introduction_noun",
-    "fr_prolongement_noun",
-    "fr_precarite_noun",
     "fr_preface_noun",
-    "fr_renouvellement_noun",
-    "fr_natalite_noun"
+    "fr_prolongement_noun",
+    "fr_renouvellement_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
    "side_counts": {
-    "left": 7,
+    "left": 9,
     "right": 4
    }
   },
   {
    "id": "R_colors_01",
-   "name": "Colors [ground floor] · blue, reddish, white color",
+   "name": "Colors [ground floor] · blue, color/colour, white color",
    "type": "theme",
    "setting": "Colors inside Atelier des Couleurs & Formes (colors and shapes).",
    "kind": "full",
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
-   "zoom_ids": [
-    "R_colors_01_z1"
-   ],
-   "cefr_band": "B1",
-   "mean_level": 3.0,
+   "cefr_band": "A1",
+   "mean_level": 1.27,
    "related_rooms": [
-    "R_shapes_02",
-    "R_colors_02",
+    "R_shapes_03",
     "ST_play_seg005",
     "R_appearance_03"
    ],
    "conversation_ids": [
     "C_R_colors_01"
-   ],
-   "merged_from": [
-    "Colors [upstairs] · reddish, tricolored, burgundy"
    ],
    "base_room": "R_colors",
    "words": [
@@ -1885,18 +1751,19 @@
     "fr_gris_adj",
     "fr_jaune_adj",
     "fr_rose_adj",
-    "fr_pale_adj"
+    "fr_pale_adj",
+    "fr_brun_adj"
    ],
-   "item_count": 10,
-   "total_items_incl_zooms": 19,
+   "item_count": 11,
+   "total_items_incl_zooms": 11,
    "side_counts": {
-    "n/a": 9,
+    "n/a": 10,
     "left": 1
    }
   },
   {
    "id": "R_colors_02",
-   "name": "Colors [first floor] · purple, beige, blue-green",
+   "name": "Colors [first floor & upstairs] · reddish, purple, tricolored",
    "type": "theme",
    "setting": "Colors inside Atelier des Couleurs & Formes (colors and shapes).",
    "kind": "full",
@@ -1907,10 +1774,9 @@
     "R_colors_02_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 3.61,
+   "mean_level": 4.05,
    "related_rooms": [
-    "R_colors_01",
-    "R_shapes_03",
+    "R_shapes_02",
     "ST_perception_seg013",
     "R_adj_senses_09"
    ],
@@ -1920,26 +1786,76 @@
    "base_room": "R_colors",
    "words": [
     "fr_tache_noun_2",
-    "fr_regulier_adj",
     "fr_violet_adj",
     "fr_marron_adj",
     "fr_mixte_adj",
     "fr_diversite_noun",
-    "fr_bis_adj",
     "fr_multiple_adj",
     "fr_nuance_noun",
-    "fr_neutre_adj"
+    "fr_neutre_adj",
+    "fr_contraste_noun",
+    "fr_teinte_noun",
+    "fr_verdure_noun",
+    "fr_blancheur_noun",
+    "fr_emeraude_noun",
+    "fr_lilas_noun",
+    "fr_pourpre_noun"
    ],
-   "item_count": 10,
-   "total_items_incl_zooms": 18,
+   "item_count": 15,
+   "total_items_incl_zooms": 21,
    "side_counts": {
-    "left": 3,
-    "n/a": 7
+    "left": 7,
+    "n/a": 5,
+    "right": 3
    }
   },
   {
    "id": "R_shapes_02",
-   "name": "Shapes & sizes [first floor] · shape, square",
+   "name": "Shapes & sizes [first floor & upstairs 1] · diameter, size, square",
+   "type": "theme",
+   "setting": "Shapes & sizes inside Atelier des Couleurs & Formes (colors and shapes).",
+   "kind": "full",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "cefr_band": "B2",
+   "mean_level": 3.85,
+   "related_rooms": [
+    "R_shapes_03",
+    "R_colors_02",
+    "R_adj_size_01",
+    "R_measures_03"
+   ],
+   "conversation_ids": [
+    "C_R_shapes_02"
+   ],
+   "base_room": "R_shapes",
+   "words": [
+    "fr_regulier_adj",
+    "fr_grandeur_noun",
+    "fr_centimetre_noun",
+    "fr_geant_noun",
+    "fr_tonne_noun",
+    "fr_foudre_noun_m",
+    "fr_carreau_noun",
+    "fr_carre_adj",
+    "fr_epaisseur_noun",
+    "fr_resolution_noun",
+    "fr_diametre_noun",
+    "fr_pourtour_noun",
+    "fr_hexagone_noun"
+   ],
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
+   "side_counts": {
+    "n/a": 2,
+    "left": 4,
+    "right": 7
+   }
+  },
+  {
+   "id": "R_shapes_03",
+   "name": "Shapes & sizes [first floor & upstairs 2] · shape, line",
    "type": "theme",
    "setting": "Shapes & sizes inside Atelier des Couleurs & Formes (colors and shapes).",
    "kind": "full",
@@ -1947,18 +1863,19 @@
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "zoom_ids": [
-    "R_shapes_02_z1",
-    "R_shapes_02_z2"
+    "R_shapes_03_z1",
+    "R_shapes_03_z2"
    ],
    "cefr_band": "B1",
-   "mean_level": 2.92,
+   "mean_level": 3.27,
    "related_rooms": [
     "R_colors_01",
-    "R_adj_size_02",
-    "R_measures_03"
+    "R_shapes_02",
+    "ST_control_seg014",
+    "R_abs_space_01"
    ],
    "conversation_ids": [
-    "C_R_shapes_02"
+    "C_R_shapes_03"
    ],
    "merged_from": [
     "Shapes & sizes [ground floor] · shape, line, surface"
@@ -1974,53 +1891,13 @@
     "fr_surface_noun",
     "fr_symbole_noun",
     "fr_trait_noun",
-    "fr_cercle_noun",
-    "fr_carre_adj"
+    "fr_cercle_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 26,
+   "item_count": 10,
+   "total_items_incl_zooms": 22,
    "side_counts": {
     "right": 6,
-    "left": 4,
-    "n/a": 1
-   }
-  },
-  {
-   "id": "R_shapes_03",
-   "name": "Shapes & sizes [upstairs] · circular, diagonal, hexagon",
-   "type": "theme",
-   "setting": "Shapes & sizes inside Atelier des Couleurs & Formes (colors and shapes).",
-   "kind": "full",
-   "sector_id": "S01_beginner",
-   "building_id": "B04_atelier_couleurs",
-   "links_back_to_sector": "S01_beginner",
-   "cefr_band": "C2",
-   "mean_level": 5.62,
-   "related_rooms": [
-    "R_colors_02",
-    "R_adj_size_02",
-    "R_measures_03"
-   ],
-   "conversation_ids": [
-    "C_R_shapes_03"
-   ],
-   "base_room": "R_shapes",
-   "words": [
-    "fr_contour_noun",
-    "fr_circulaire_adj",
-    "fr_parasol_noun",
-    "fr_diagonale_noun",
-    "fr_pointille_noun",
-    "fr_deformation_noun",
-    "fr_pourtour_noun",
-    "fr_hexagone_noun"
-   ],
-   "item_count": 8,
-   "total_items_incl_zooms": 8,
-   "side_counts": {
-    "right": 5,
-    "n/a": 1,
-    "left": 2
+    "left": 4
    }
   },
   {
@@ -2232,10 +2109,10 @@
     "R_living_02_z1"
    ],
    "cefr_band": "B1",
-   "mean_level": 3.2,
+   "mean_level": 3.27,
    "related_rooms": [
-    "R_attic",
-    "R_bedroom_01",
+    "R_kitchen_01",
+    "R_wardrobe_03",
     "R_art_03",
     "R_office_01"
    ],
@@ -2268,7 +2145,7 @@
     "fr_embrasse_noun"
    ],
    "item_count": 18,
-   "total_items_incl_zooms": 25,
+   "total_items_incl_zooms": 26,
    "side_counts": {
     "left": 9,
     "right": 9
@@ -2290,9 +2167,9 @@
    "mean_level": 3.27,
    "related_rooms": [
     "R_bedroom_01",
-    "R_wardrobe_03",
-    "R_resto_kitchen_01",
-    "ST_cooking_seg010"
+    "R_living_02",
+    "ST_cooking_seg004",
+    "R_resto_kitchen_01"
    ],
    "conversation_ids": [
     "C_R_kitchen_01",
@@ -2337,7 +2214,7 @@
    "related_rooms": [
     "R_entrance_04",
     "R_wardrobe_04",
-    "ST_cooking_seg007",
+    "ST_cooking_seg004",
     "R_resto_kitchen_01"
    ],
    "conversation_ids": [
@@ -2422,7 +2299,7 @@
    "cefr_band": "B1",
    "mean_level": 3.24,
    "related_rooms": [
-    "R_living_02",
+    "R_attic",
     "R_kitchen_01",
     "R_hardware_01",
     "R_boutique_01"
@@ -2520,7 +2397,7 @@
    "cefr_band": "B2",
    "mean_level": 3.69,
    "related_rooms": [
-    "R_garage_01",
+    "R_family_03",
     "R_bathroom_02",
     "ST_routine_seg003",
     "ST_routine_seg012"
@@ -2793,7 +2670,7 @@
    "cefr_band": "B1",
    "mean_level": 3.31,
    "related_rooms": [
-    "R_kitchen_01",
+    "R_living_02",
     "R_wardrobe_02",
     "R_boutique_01",
     "R_hardware_01"
@@ -2841,7 +2718,7 @@
     "R_wardrobe_04_z1"
    ],
    "cefr_band": "C1",
-   "mean_level": 5.3,
+   "mean_level": 5.33,
    "related_rooms": [
     "R_kitchen_02",
     "R_laundry_02",
@@ -2870,7 +2747,7 @@
     "fr_amenagement_noun"
    ],
    "item_count": 14,
-   "total_items_incl_zooms": 20,
+   "total_items_incl_zooms": 21,
    "side_counts": {
     "left": 5,
     "right": 9
@@ -2890,7 +2767,7 @@
    "related_rooms": [
     "R_entrance_01",
     "R_people_03",
-    "R_occupations_02"
+    "R_people_04"
    ],
    "conversation_ids": [
     "C_R_family_01"
@@ -2979,8 +2856,8 @@
    "cefr_band": "B2",
    "mean_level": 3.67,
    "related_rooms": [
-    "R_playroom_01",
     "R_garage_01",
+    "R_bathroom_01",
     "R_people_03",
     "R_people_02"
    ],
@@ -3025,7 +2902,7 @@
     "R_playroom_02",
     "R_entrance_04",
     "R_people_03",
-    "R_character_03"
+    "R_people_04"
    ],
    "conversation_ids": [
     "C_R_family_04"
@@ -3065,7 +2942,7 @@
    "mean_level": 3.58,
    "related_rooms": [
     "R_bedroom_02",
-    "R_family_03",
+    "R_garage_01",
     "R_sports_01",
     "R_sports_04"
    ],
@@ -3151,7 +3028,7 @@
    "mean_level": 3.12,
    "related_rooms": [
     "R_dining",
-    "R_living_02",
+    "R_bedroom_01",
     "ST_play_seg005",
     "R_body_02"
    ],
@@ -3199,10 +3076,10 @@
     "R_garage_01_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 3.68,
+   "mean_level": 3.65,
    "related_rooms": [
+    "R_playroom_01",
     "R_family_03",
-    "R_bathroom_01",
     "R_text_crime_01",
     "ST_routine_seg013"
    ],
@@ -3226,19 +3103,19 @@
     "fr_echelle_noun",
     "fr_clou_noun",
     "fr_marteau_noun",
+    "fr_ressort_noun",
     "fr_manivelle_noun",
     "fr_ciseau_noun",
-    "fr_griffe_noun",
     "fr_verrou_noun",
     "fr_assemblage_noun",
     "fr_remplacement_noun",
     "fr_bricolage_noun"
    ],
    "item_count": 18,
-   "total_items_incl_zooms": 25,
+   "total_items_incl_zooms": 26,
    "side_counts": {
-    "left": 6,
-    "right": 12
+    "left": 5,
+    "right": 13
    }
   },
   {
@@ -3668,7 +3545,7 @@
     "R_butcher_01",
     "R_fruits_01",
     "R_resto_kitchen_02",
-    "R_resto_kitchen_01"
+    "ST_cooking_seg002"
    ],
    "conversation_ids": [
     "C_R_grocery_01"
@@ -4345,7 +4222,7 @@
     "R_adj_time_01",
     "R_adj_time_03",
     "R_opposites_07",
-    "R_abs_time_01"
+    "R_abs_time_02"
    ],
    "conversation_ids": [
     "C_R_adj_time_02"
@@ -4597,7 +4474,7 @@
    "related_rooms": [
     "R_abs_quantity_01",
     "R_adv_logic_01",
-    "R_adv_time_01"
+    "R_conjunctions"
    ],
    "conversation_ids": [
     "C_R_adv_degree_01"
@@ -4636,7 +4513,7 @@
     "R_abs_quantity_03",
     "R_abs_quantity_04",
     "R_adv_manner_03",
-    "R_adv_manner_05"
+    "R_adv_manner_01"
    ],
    "conversation_ids": [
     "C_R_adv_degree_02"
@@ -4682,7 +4559,7 @@
    "related_rooms": [
     "R_abs_quantity_04",
     "R_adv_manner_05",
-    "R_adv_manner_03"
+    "R_adv_manner_04"
    ],
    "conversation_ids": [
     "C_R_adv_degree_03"
@@ -5012,7 +4889,7 @@
   },
   {
    "id": "R_adj_state_05",
-   "name": "Repair café — states & conditions [upstairs 2] · faulty, nonexistent, incompatible",
+   "name": "Repair café — states & conditions [upstairs 2] · nonexistent, faulty, incompatible",
    "type": "adjectives",
    "setting": "Broken, fixed, full, empty, wet, dry, clean and dirty objects queue on the workbench waiting for repair.",
    "kind": "full",
@@ -5020,7 +4897,7 @@
    "building_id": "B61_reparation",
    "links_back_to_sector": "S03_market",
    "cefr_band": "C2",
-   "mean_level": 5.5,
+   "mean_level": 5.54,
    "related_rooms": [
     "R_adj_state_02",
     "ST_making_seg004",
@@ -5042,12 +4919,13 @@
     "fr_defectueux_adj",
     "fr_incompatible_adj",
     "fr_intermittent_adj",
-    "fr_defaillant_adj"
+    "fr_defaillant_adj",
+    "fr_inactif_adj"
    ],
-   "item_count": 12,
-   "total_items_incl_zooms": 12,
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 12
+    "n/a": 13
    }
   },
   {
@@ -5195,6 +5073,7 @@
   {
    "id": "R_cafe_01",
    "name": "Café terrace (drinks) [ground & first floor] · drinking, beer, coffee",
+   "name_fr": "La terrasse",
    "type": "theme",
    "setting": "Café terrace (drinks) inside Café de la Place.",
    "kind": "full",
@@ -5206,7 +5085,7 @@
    "related_rooms": [
     "R_cafe_02",
     "R_wine_01",
-    "R_grocery_01"
+    "ST_cooking_seg002"
    ],
    "conversation_ids": [
     "C_R_cafe_01"
@@ -5242,6 +5121,7 @@
   {
    "id": "R_cafe_02",
    "name": "Café terrace (drinks) [upstairs] · drinker, beverage, barman",
+   "name_fr": "L'étage",
    "type": "theme",
    "setting": "Café terrace (drinks) inside Café de la Place.",
    "kind": "full",
@@ -5284,6 +5164,7 @@
   {
    "id": "R_resto_room",
    "name": "Dining hall (menu & service)",
+   "name_fr": "La salle",
    "type": "theme",
    "setting": "Dining hall (menu & service) inside Restaurant Le Bon Goût.",
    "kind": "full",
@@ -5333,6 +5214,7 @@
   {
    "id": "R_resto_kitchen_01",
    "name": "Chef's kitchen (cooking & taste) [ground & first floor] · recipe, delicious, taste",
+   "name_fr": "La cuisine",
    "type": "theme",
    "setting": "Chef's kitchen (cooking & taste) inside Restaurant Le Bon Goût.",
    "kind": "full",
@@ -5344,7 +5226,7 @@
    "related_rooms": [
     "R_resto_room",
     "R_grocery_02",
-    "ST_cooking_seg006"
+    "ST_cooking_seg004"
    ],
    "conversation_ids": [
     "C_R_resto_kitchen_01"
@@ -5380,6 +5262,7 @@
   {
    "id": "R_resto_kitchen_02",
    "name": "Chef's kitchen (cooking & taste) [upstairs] · cooking, ingredient, puree",
+   "name_fr": "L'étage",
    "type": "theme",
    "setting": "Chef's kitchen (cooking & taste) inside Restaurant Le Bon Goût.",
    "kind": "full",
@@ -5391,7 +5274,7 @@
    "related_rooms": [
     "R_wine_01",
     "R_grocery_02",
-    "ST_cooking_seg007"
+    "R_grocery_01"
    ],
    "conversation_ids": [
     "C_R_resto_kitchen_02"
@@ -5421,6 +5304,7 @@
   {
    "id": "R_wine_01",
    "name": "Wine cellar [ground & first floor] · wine, alcohol, bottle",
+   "name_fr": "La cave",
    "type": "theme",
    "setting": "Wine cellar inside Restaurant Le Bon Goût.",
    "kind": "full",
@@ -5526,7 +5410,7 @@
     "R_bank_counter_02_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 3.61,
+   "mean_level": 3.63,
    "related_rooms": [
     "R_bank_economy_01",
     "R_bank_economy_04",
@@ -5552,7 +5436,7 @@
     "fr_bancaire_adj"
    ],
    "item_count": 12,
-   "total_items_incl_zooms": 18,
+   "total_items_incl_zooms": 19,
    "side_counts": {
     "right": 6,
     "left": 5,
@@ -6057,8 +5941,8 @@
    "related_rooms": [
     "R_office_02",
     "R_office_03",
-    "R_family_01",
-    "R_politics_02"
+    "R_people_04",
+    "R_family_01"
    ],
    "conversation_ids": [
     "C_R_occupations_04"
@@ -6653,7 +6537,7 @@
    "mean_level": 5.33,
    "related_rooms": [
     "R_adv_logic_05",
-    "R_society_03",
+    "R_society_04",
     "R_history_02",
     "R_office_02"
    ],
@@ -6745,13 +6629,13 @@
    "sector_id": "S06_townhall",
    "building_id": "B13_mairie",
    "links_back_to_sector": "S06_townhall",
-   "cefr_band": "C1",
-   "mean_level": 5.45,
+   "cefr_band": "C2",
+   "mean_level": 5.5,
    "related_rooms": [
-    "R_politics_05",
     "R_adj_relation_10",
-    "R_history_01",
-    "R_abs_power_05"
+    "R_adv_logic_04",
+    "R_abs_power_05",
+    "R_history_01"
    ],
    "conversation_ids": [
     "C_R_society_03"
@@ -6768,32 +6652,33 @@
     "fr_manifestant_noun",
     "fr_utopie_noun",
     "fr_emancipation_noun",
-    "fr_citoyennete_noun"
+    "fr_citoyennete_noun",
+    "fr_sociabilite_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 12,
+   "total_items_incl_zooms": 12,
    "side_counts": {
-    "left": 6,
+    "left": 7,
     "right": 4,
     "n/a": 1
    }
   },
   {
    "id": "R_society_04",
-   "name": "Civic hall (society & rights) [upstairs 2] · oppression, censorship, restriction",
+   "name": "Civic hall (society & rights) [upstairs 2] · oppression, restriction, censorship",
    "type": "theme",
    "setting": "Civic hall (society & rights) inside Hôtel de Ville.",
    "kind": "full",
    "sector_id": "S06_townhall",
    "building_id": "B13_mairie",
    "links_back_to_sector": "S06_townhall",
-   "cefr_band": "C2",
-   "mean_level": 5.5,
+   "cefr_band": "C1",
+   "mean_level": 5.42,
    "related_rooms": [
+    "R_politics_05",
     "R_adj_relation_10",
-    "R_adv_logic_04",
-    "R_abs_power_03",
-    "R_abs_power_04"
+    "R_abs_power_04",
+    "R_abs_power_03"
    ],
    "conversation_ids": [
     "C_R_society_04"
@@ -6806,12 +6691,12 @@
     "fr_censure_noun",
     "fr_anonymat_noun",
     "fr_discrimination_noun",
+    "fr_precarite_noun",
     "fr_subvention_noun",
     "fr_assentiment_noun",
     "fr_equite_noun",
-    "fr_liberalisme_noun",
-    "fr_sociabilite_noun",
-    "fr_parite_noun"
+    "fr_parite_noun",
+    "fr_liberalisme_noun"
    ],
    "item_count": 12,
    "total_items_incl_zooms": 12,
@@ -6836,8 +6721,8 @@
    "mean_level": 1.35,
    "related_rooms": [
     "R_adj_relation_01",
-    "R_adv_time_01",
-    "R_adv_degree_02"
+    "R_adv_manner_03",
+    "R_adv_manner_01"
    ],
    "conversation_ids": [
     "C_R_adv_logic_01"
@@ -6923,7 +6808,7 @@
    "related_rooms": [
     "R_admin_01",
     "R_politics_02",
-    "R_adv_time_01",
+    "R_adv_manner_03",
     "R_adv_degree_02"
    ],
    "conversation_ids": [
@@ -6960,10 +6845,10 @@
    "cefr_band": "C2",
    "mean_level": 5.55,
    "related_rooms": [
-    "R_society_04",
+    "R_society_03",
     "R_adj_relation_07",
-    "R_adv_manner_07",
-    "R_adj_logic_04"
+    "R_adv_manner_02",
+    "R_adv_manner_06"
    ],
    "conversation_ids": [
     "C_R_adv_logic_04"
@@ -7002,8 +6887,8 @@
    "related_rooms": [
     "R_politics_04",
     "R_politics_05",
-    "R_adj_logic_03",
-    "R_adv_manner_03"
+    "R_adv_manner_03",
+    "R_adj_logic_03"
    ],
    "conversation_ids": [
     "C_R_adv_logic_05"
@@ -7419,8 +7304,8 @@
    "cefr_band": "C2",
    "mean_level": 5.5,
    "related_rooms": [
-    "R_society_03",
     "R_society_04",
+    "R_society_03",
     "R_abs_power_03",
     "R_abs_power_01"
    ],
@@ -8876,7 +8761,7 @@
    "related_rooms": [
     "R_dentist_01",
     "ST_body_seg011",
-    "R_character_07"
+    "R_text_medical"
    ],
    "conversation_ids": [
     "C_R_hospital_01"
@@ -9450,7 +9335,7 @@
     "R_road_01",
     "R_road_03",
     "R_abs_space_01",
-    "ST_movement_seg001"
+    "R_shapes_03"
    ],
    "conversation_ids": [
     "C_R_road_02"
@@ -9639,8 +9524,8 @@
    "mean_level": 5.38,
    "related_rooms": [
     "R_harbour_01",
-    "R_beach_01",
-    "R_beach_02"
+    "R_beach_02",
+    "R_beach_01"
    ],
    "conversation_ids": [
     "C_R_harbour_02"
@@ -10007,7 +9892,7 @@
    "related_rooms": [
     "R_mountain_02",
     "ST_movement_seg008",
-    "R_camping_02"
+    "R_garage_01"
    ],
    "conversation_ids": [
     "C_R_mountain_03"
@@ -10093,7 +9978,7 @@
     "R_birds_01",
     "R_wildlife_02",
     "R_fruits_01",
-    "R_entrance_03"
+    "R_garage_01"
    ],
    "conversation_ids": [
     "C_R_forest_02"
@@ -10516,7 +10401,7 @@
    "building_id": "B29_plage",
    "links_back_to_sector": "S09_nature",
    "cefr_band": "C1",
-   "mean_level": 5.23,
+   "mean_level": 5.21,
    "related_rooms": [
     "R_beach_01",
     "ST_play_seg003",
@@ -10535,17 +10420,18 @@
     "fr_contree_noun",
     "fr_golfe_noun",
     "fr_oasis_noun",
+    "fr_parasol_noun",
     "fr_surf_noun",
-    "fr_exode_noun",
     "fr_superficie_noun",
+    "fr_exode_noun",
     "fr_cotier_adj",
     "fr_oceanique_adj"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
+   "item_count": 14,
+   "total_items_incl_zooms": 14,
    "side_counts": {
     "left": 5,
-    "right": 5,
+    "right": 6,
     "center": 1,
     "n/a": 2
    }
@@ -10563,7 +10449,7 @@
    "mean_level": 3.25,
    "related_rooms": [
     "R_camping_02",
-    "ST_cooking_seg007",
+    "ST_cooking_seg004",
     "ST_nature_seg001"
    ],
    "conversation_ids": [
@@ -10938,7 +10824,7 @@
   },
   {
    "id": "R_weather_03",
-   "name": "Weather station [far end] · meteorological, weather, hurricane",
+   "name": "Weather station [far end] · meteorological, hurricane, weather",
    "type": "theme",
    "setting": "Weather station inside Observatoire & météo (sky).",
    "kind": "full",
@@ -10946,7 +10832,7 @@
    "building_id": "B32_ciel",
    "links_back_to_sector": "S09_nature",
    "cefr_band": "C1",
-   "mean_level": 5.22,
+   "mean_level": 5.3,
    "related_rooms": [
     "R_sky_01",
     "ST_nature_seg005",
@@ -10965,13 +10851,14 @@
     "fr_ouragan_noun",
     "fr_mistral_noun",
     "fr_cyclone_noun",
+    "fr_verglas_noun",
     "fr_meteorologique_adj"
    ],
-   "item_count": 9,
-   "total_items_incl_zooms": 9,
+   "item_count": 10,
+   "total_items_incl_zooms": 10,
    "side_counts": {
     "left": 2,
-    "right": 5,
+    "right": 6,
     "n/a": 2
    }
   },
@@ -11770,7 +11657,7 @@
     "R_social_science_01",
     "R_literature_02",
     "R_adj_relation_01",
-    "R_appearance_02"
+    "R_grammar_general"
    ],
    "conversation_ids": [
     "C_R_linguistics_02"
@@ -11817,8 +11704,8 @@
    "mean_level": 5.6,
    "related_rooms": [
     "R_social_science_02",
-    "R_adj_senses_09",
-    "R_grammar_general"
+    "R_grammar_general",
+    "R_adj_senses_09"
    ],
    "conversation_ids": [
     "C_R_linguistics_03"
@@ -12299,7 +12186,7 @@
     "R_chemistry_01",
     "R_biology",
     "R_mountain_02",
-    "R_beach_01"
+    "R_beach_02"
    ],
    "conversation_ids": [
     "C_R_geology"
@@ -12825,6 +12712,7 @@
    ],
    "prayers": [
     "P_notre_pere",
+    "P_credo_nicee",
     "P_agnus",
     "P_sanctus"
    ],
@@ -13849,7 +13737,7 @@
    "building_id": "B44_musee",
    "links_back_to_sector": "S13_museum",
    "cefr_band": "B2",
-   "mean_level": 4.0,
+   "mean_level": 4.05,
    "related_rooms": [
     "R_text_death",
     "R_text_crime_03",
@@ -13875,16 +13763,17 @@
     "fr_epidemie_noun",
     "fr_infection_noun",
     "fr_sanguin_adj",
+    "fr_avortement_noun",
     "fr_tuberculose_noun",
     "fr_pathologie_noun",
     "fr_cholera_noun",
     "fr_tabagisme_noun",
     "fr_pathologique_adj"
    ],
-   "item_count": 18,
-   "total_items_incl_zooms": 18,
+   "item_count": 19,
+   "total_items_incl_zooms": 19,
    "side_counts": {
-    "right": 7,
+    "right": 8,
     "left": 8,
     "n/a": 3
    }
@@ -13995,7 +13884,7 @@
     "R_art_02",
     "R_adj_senses_04",
     "R_adj_intensity_01",
-    "R_adv_manner_05"
+    "R_opposites_06"
    ],
    "conversation_ids": [
     "C_R_adj_senses_03"
@@ -16656,7 +16545,7 @@
     "R_people_01",
     "R_appearance_01",
     "R_opposites_01",
-    "R_family_01"
+    "R_society_03"
    ],
    "conversation_ids": [
     "C_R_people_02"
@@ -16697,7 +16586,7 @@
     "R_people_03_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 3.61,
+   "mean_level": 3.63,
    "related_rooms": [
     "R_character_04",
     "R_character_05",
@@ -16721,7 +16610,7 @@
     "fr_male_noun"
    ],
    "item_count": 10,
-   "total_items_incl_zooms": 18,
+   "total_items_incl_zooms": 19,
    "side_counts": {
     "center": 3,
     "right": 6,
@@ -16737,13 +16626,16 @@
    "sector_id": "S15_feelings",
    "building_id": "B51_portraits",
    "links_back_to_sector": "S15_feelings",
+   "zoom_ids": [
+    "R_people_04_z1"
+   ],
    "cefr_band": "C1",
-   "mean_level": 5.33,
+   "mean_level": 5.32,
    "related_rooms": [
     "R_character_09",
     "R_appearance_06",
     "R_occupations_02",
-    "R_office_01"
+    "R_family_01"
    ],
    "conversation_ids": [
     "C_R_people_04"
@@ -16751,27 +16643,21 @@
    "base_room": "R_people",
    "words": [
     "fr_lady_noun",
+    "fr_grossesse_noun",
     "fr_gentilhomme_noun",
     "fr_effectif_noun",
     "fr_cohue_noun",
+    "fr_maternite_noun",
     "fr_maturite_noun",
+    "fr_nouveau_ne_noun",
     "fr_anomalie_noun",
-    "fr_etrangete_noun",
-    "fr_citadin_noun",
-    "fr_feminisme_noun",
-    "fr_senior_noun",
-    "fr_milady_noun",
-    "fr_charcutier_noun",
-    "fr_preneur_noun",
-    "fr_individualisme_noun",
-    "fr_ado_noun"
+    "fr_etrangete_noun"
    ],
-   "item_count": 15,
-   "total_items_incl_zooms": 15,
+   "item_count": 10,
+   "total_items_incl_zooms": 19,
    "side_counts": {
-    "left": 6,
-    "right": 7,
-    "center": 2
+    "left": 7,
+    "right": 3
    }
   },
   {
@@ -17049,8 +16935,8 @@
    "mean_level": 5.56,
    "related_rooms": [
     "R_character_06",
-    "R_doctor_01",
-    "R_text_medical"
+    "R_text_medical",
+    "R_doctor_01"
    ],
    "conversation_ids": [
     "C_R_character_07"
@@ -17461,8 +17347,8 @@
    "mean_level": 3.09,
    "related_rooms": [
     "R_adj_size_02",
-    "R_opposites_02",
-    "R_adj_quality_03"
+    "R_shapes_02",
+    "R_opposites_02"
    ],
    "conversation_ids": [
     "C_R_adj_size_01"
@@ -17500,7 +17386,7 @@
    "related_rooms": [
     "R_adj_size_01",
     "R_shapes_02",
-    "R_shapes_03"
+    "R_adj_intensity_04"
    ],
    "conversation_ids": [
     "C_R_adj_size_02"
@@ -17540,8 +17426,8 @@
    "related_rooms": [
     "R_adj_intensity_03",
     "R_adj_intensity_02",
-    "R_adv_manner_05",
-    "R_emo_fear_02"
+    "R_emo_fear_02",
+    "R_adv_manner_05"
    ],
    "conversation_ids": [
     "C_R_adj_intensity_01"
@@ -18211,11 +18097,11 @@
     "R_adv_manner_01_z1"
    ],
    "cefr_band": "A1",
-   "mean_level": 1.39,
+   "mean_level": 1.45,
    "related_rooms": [
-    "R_adv_manner_02",
-    "R_opposites_02",
-    "R_opposites_05"
+    "R_adv_manner_03",
+    "R_adv_degree_02",
+    "R_opposites_02"
    ],
    "conversation_ids": [
     "C_R_adv_manner_01"
@@ -18231,7 +18117,49 @@
     "fr_soudain_adv",
     "fr_aussitot_adv",
     "fr_lentement_adv",
-    "fr_immediatement_adv"
+    "fr_justement_adv"
+   ],
+   "item_count": 10,
+   "total_items_incl_zooms": 22,
+   "side_counts": {
+    "n/a": 10
+   }
+  },
+  {
+   "id": "R_adv_manner_02",
+   "name": "Circus ring — how things are done [first floor 1] · vigorously, calmly, violently",
+   "type": "adverbs",
+   "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
+   "kind": "full",
+   "sector_id": "S16_park",
+   "building_id": "B55_cirque",
+   "links_back_to_sector": "S16_park",
+   "zoom_ids": [
+    "R_adv_manner_02_z1"
+   ],
+   "cefr_band": "B2",
+   "mean_level": 3.67,
+   "related_rooms": [
+    "R_adv_manner_03",
+    "R_adv_manner_05",
+    "R_adv_logic_04",
+    "R_adj_intensity_03"
+   ],
+   "conversation_ids": [
+    "C_R_adv_manner_02"
+   ],
+   "base_room": "R_adv_manner",
+   "words": [
+    "fr_bref_adv",
+    "fr_volontiers_adv",
+    "fr_soigneusement_adv",
+    "fr_vivement_adv",
+    "fr_violemment_adv",
+    "fr_librement_adv",
+    "fr_gentiment_adv",
+    "fr_discretement_adv",
+    "fr_nettement_adv",
+    "fr_attentivement_adv"
    ],
    "item_count": 10,
    "total_items_incl_zooms": 18,
@@ -18240,96 +18168,50 @@
    }
   },
   {
-   "id": "R_adv_manner_02",
-   "name": "Circus ring — how things are done [first floor 1] · vigorously, calmly, tenderly",
+   "id": "R_adv_manner_03",
+   "name": "Circus ring — how things are done [first floor 2] · mainly, terribly, brutally",
    "type": "adverbs",
    "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
    "kind": "full",
    "sector_id": "S16_park",
    "building_id": "B55_cirque",
    "links_back_to_sector": "S16_park",
+   "zoom_ids": [
+    "R_adv_manner_03_z1"
+   ],
    "cefr_band": "B2",
-   "mean_level": 3.67,
+   "mean_level": 3.61,
    "related_rooms": [
     "R_adv_manner_01",
-    "R_adv_manner_03",
-    "R_adj_intensity_03",
-    "R_adv_logic_04"
-   ],
-   "conversation_ids": [
-    "C_R_adv_manner_02"
-   ],
-   "base_room": "R_adv_manner",
-   "words": [
-    "fr_legerement_adv",
-    "fr_bref_adv",
-    "fr_volontiers_adv",
-    "fr_vivement_adv",
-    "fr_librement_adv",
-    "fr_gentiment_adv",
-    "fr_discretement_adv",
-    "fr_nettement_adv",
-    "fr_attentivement_adv",
-    "fr_calmement_adv",
-    "fr_silencieusement_adv",
-    "fr_tendrement_adv",
-    "fr_patiemment_adv",
-    "fr_joyeusement_adv",
-    "fr_progressivement_adv"
-   ],
-   "item_count": 15,
-   "total_items_incl_zooms": 15,
-   "side_counts": {
-    "n/a": 15
-   }
-  },
-  {
-   "id": "R_adv_manner_03",
-   "name": "Circus ring — how things are done [first floor 2] · violently, brutally, terribly",
-   "type": "adverbs",
-   "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
-   "kind": "full",
-   "sector_id": "S16_park",
-   "building_id": "B55_cirque",
-   "links_back_to_sector": "S16_park",
-   "cefr_band": "B2",
-   "mean_level": 3.67,
-   "related_rooms": [
     "R_adv_manner_02",
-    "R_adv_manner_05",
-    "R_adv_degree_02",
-    "R_adv_degree_03"
+    "R_adv_logic_05",
+    "R_adv_degree_02"
    ],
    "conversation_ids": [
     "C_R_adv_manner_03"
    ],
    "base_room": "R_adv_manner",
    "words": [
-    "fr_soigneusement_adv",
+    "fr_legerement_adv",
+    "fr_forcement_adv",
+    "fr_uniquement_adv",
     "fr_largement_adv",
     "fr_terriblement_adv",
-    "fr_violemment_adv",
+    "fr_specialement_adv",
     "fr_difficilement_adv",
+    "fr_personnellement_adv",
     "fr_gravement_adv",
-    "fr_brutalement_adv",
-    "fr_bizarrement_adv",
-    "fr_faiblement_adv",
-    "fr_physiquement_adv",
-    "fr_durement_adv",
-    "fr_desesperement_adv",
-    "fr_fixement_adv",
-    "fr_expres_adv",
-    "fr_premierement_adv"
+    "fr_brutalement_adv"
    ],
-   "item_count": 15,
-   "total_items_incl_zooms": 15,
+   "item_count": 10,
+   "total_items_incl_zooms": 18,
    "side_counts": {
-    "n/a": 15
+    "n/a": 10
    }
   },
   {
    "id": "R_adv_manner_04",
-   "name": "Circus ring — how things are done [upstairs 1] · passionately, faithfully, adroitly",
+   "name": "Circus ring — how things are done [upstairs 1] · faithfully, loyally, passionately",
    "type": "adverbs",
    "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
    "kind": "full",
@@ -18337,11 +18219,11 @@
    "building_id": "B55_cirque",
    "links_back_to_sector": "S16_park",
    "cefr_band": "C2",
-   "mean_level": 5.54,
+   "mean_level": 5.6,
    "related_rooms": [
-    "R_adv_manner_07",
+    "R_adv_manner_06",
     "R_adv_degree_03",
-    "R_adj_intensity_03"
+    "R_adj_senses_07"
    ],
    "conversation_ids": [
     "C_R_adv_manner_04"
@@ -18357,15 +18239,17 @@
     "fr_solidement_adv",
     "fr_habilement_adv",
     "fr_irremediablement_adv",
+    "fr_couramment_adv",
     "fr_chaleureusement_adv",
     "fr_impatiemment_adv",
     "fr_adroitement_adv",
+    "fr_loyalement_adv",
     "fr_durablement_adv"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
-    "n/a": 13
+    "n/a": 15
    }
   },
   {
@@ -18378,10 +18262,10 @@
    "building_id": "B55_cirque",
    "links_back_to_sector": "S16_park",
    "cefr_band": "C1",
-   "mean_level": 5.21,
+   "mean_level": 5.2,
    "related_rooms": [
-    "R_adv_manner_03",
-    "R_adv_manner_06",
+    "R_adv_manner_02",
+    "R_adv_manner_07",
     "R_adv_degree_03",
     "R_adj_intensity_01"
    ],
@@ -18401,19 +18285,64 @@
     "fr_severement_adv",
     "fr_solennellement_adv",
     "fr_horriblement_adv",
+    "fr_inutilement_adv",
     "fr_rigoureusement_adv",
     "fr_radicalement_adv",
-    "fr_couramment_adv"
+    "fr_gracieusement_adv"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 14,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
-    "n/a": 14
+    "n/a": 15
    }
   },
   {
    "id": "R_adv_manner_06",
-   "name": "Circus ring — how things are done [upstairs 3] · momentarily, suddenly",
+   "name": "Circus ring — how things are done [upstairs 3] · consciously, intentionally, systematically",
+   "type": "adverbs",
+   "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
+   "kind": "full",
+   "sector_id": "S16_park",
+   "building_id": "B55_cirque",
+   "links_back_to_sector": "S16_park",
+   "cefr_band": "C2",
+   "mean_level": 5.53,
+   "related_rooms": [
+    "R_adv_manner_07",
+    "R_adv_manner_04",
+    "R_adv_logic_04",
+    "R_adv_logic_05"
+   ],
+   "conversation_ids": [
+    "C_R_adv_manner_06"
+   ],
+   "base_room": "R_adv_manner",
+   "words": [
+    "fr_aisement_adv",
+    "fr_volontairement_adv",
+    "fr_ouvertement_adv",
+    "fr_gratuitement_adv",
+    "fr_pele_mele_adv",
+    "fr_systematiquement_adv",
+    "fr_typiquement_adv",
+    "fr_consciencieusement_adv",
+    "fr_indirectement_adv",
+    "fr_scientifiquement_adv",
+    "fr_consciemment_adv",
+    "fr_financierement_adv",
+    "fr_individuellement_adv",
+    "fr_artificiellement_adv",
+    "fr_intentionnellement_adv"
+   ],
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
+   "side_counts": {
+    "n/a": 15
+   }
+  },
+  {
+   "id": "R_adv_manner_07",
+   "name": "Circus ring — how things are done [upstairs 4] · momentarily, suddenly",
    "type": "adverbs",
    "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
    "kind": "full",
@@ -18421,15 +18350,15 @@
    "building_id": "B55_cirque",
    "links_back_to_sector": "S16_park",
    "cefr_band": "C1",
-   "mean_level": 5.36,
+   "mean_level": 5.27,
    "related_rooms": [
     "R_adv_manner_05",
-    "R_adv_manner_07",
+    "R_adv_manner_06",
     "R_character_02",
-    "R_adv_time_05"
+    "R_adv_logic_05"
    ],
    "conversation_ids": [
-    "C_R_adv_manner_06"
+    "C_R_adv_manner_07"
    ],
    "base_room": "R_adv_manner",
    "words": [
@@ -18441,60 +18370,18 @@
     "fr_fraichement_adv",
     "fr_spontanement_adv",
     "fr_simultanement_adv",
+    "fr_eperdument_adv",
     "fr_momentanement_adv",
+    "fr_parallelement_adv",
     "fr_intensement_adv",
     "fr_temporairement_adv",
     "fr_prematurement_adv",
-    "fr_gracieusement_adv",
     "fr_imperativement_adv"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 14,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
-    "n/a": 14
-   }
-  },
-  {
-   "id": "R_adv_manner_07",
-   "name": "Circus ring — how things are done [upstairs 4] · consciously, intentionally, easily",
-   "type": "adverbs",
-   "setting": "Each act shows a manner: the tightrope walker goes slowly and carefully, the clown falls suddenly, the juggler throws easily.",
-   "kind": "full",
-   "sector_id": "S16_park",
-   "building_id": "B55_cirque",
-   "links_back_to_sector": "S16_park",
-   "cefr_band": "C2",
-   "mean_level": 5.5,
-   "related_rooms": [
-    "R_adv_manner_06",
-    "R_adv_manner_04",
-    "R_adv_logic_04",
-    "R_adv_logic_05"
-   ],
-   "conversation_ids": [
-    "C_R_adv_manner_07"
-   ],
-   "base_room": "R_adv_manner",
-   "words": [
-    "fr_aisement_adv",
-    "fr_volontairement_adv",
-    "fr_gratuitement_adv",
-    "fr_pele_mele_adv",
-    "fr_eperdument_adv",
-    "fr_systematiquement_adv",
-    "fr_parallelement_adv",
-    "fr_indirectement_adv",
-    "fr_scientifiquement_adv",
-    "fr_consciemment_adv",
-    "fr_financierement_adv",
-    "fr_individuellement_adv",
-    "fr_artificiellement_adv",
-    "fr_intentionnellement_adv"
-   ],
-   "item_count": 14,
-   "total_items_incl_zooms": 14,
-   "side_counts": {
-    "n/a": 14
+    "n/a": 15
    }
   },
   {
@@ -18634,8 +18521,8 @@
    "related_rooms": [
     "R_idioms_01",
     "R_idioms_04",
-    "R_adv_manner_07",
-    "R_abs_work_02"
+    "R_abs_work_02",
+    "ST_existence_seg004"
    ],
    "conversation_ids": [
     "C_R_idioms_02"
@@ -18780,6 +18667,312 @@
    "side_counts": {
     "right": 1,
     "n/a": 10
+   }
+  },
+  {
+   "id": "ST_cooking_seg001",
+   "name": "Ruelle des Gourmets — étape 1 · eat, feed",
+   "name_fr": "Étape 1 · Manger et nourrir",
+   "type": "verb_segment",
+   "setting": "One stop on the walking route through Ruelle des Gourmets (sector square -> stops 1..N -> back to the square), whimsical houses (Bistro façades shaped like teapots, cakes and copper pans) seen down the lane: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT; the most common verbs at street level (doorways), rarer ones on first-floor balconies and upper windows, the rarest on roofs and chimneys; mirror in the scene if reflexive, prepositions on the verb's sign; small arrow signs lead forward to the next stop and back.",
+   "kind": "street_segment",
+   "sector_id": "S04_cafes",
+   "building_id": "ST_cooking",
+   "links_back_to_sector": "S04_cafes",
+   "cefr_band": "B2",
+   "mean_level": 3.5,
+   "related_rooms": [
+    "ST_cooking_seg003",
+    "R_dining",
+    "R_resto_kitchen_01"
+   ],
+   "conversation_ids": [
+    "C_ST_cooking_seg001"
+   ],
+   "base_room": "ST_cooking",
+   "layout": "tiered",
+   "tiers": {
+    "left_street": [
+     "fr_manger_verb",
+     "fr_diner_verb",
+     "fr_dejeuner_verb",
+     "fr_devorer_verb",
+     "fr_bouffer_verb",
+     "fr_regaler_verb"
+    ],
+    "left_balcony": [
+     "fr_croquer_verb",
+     "fr_souper_verb",
+     "fr_alimenter_verb"
+    ],
+    "left_upper": [
+     "fr_engouffrer_verb",
+     "fr_grignoter_verb",
+     "fr_attabler_verb"
+    ],
+    "left_roof": [
+     "fr_pique_niquer_verb",
+     "fr_rassasier_verb"
+    ],
+    "right_street": [
+     "fr_servir_verb",
+     "fr_nourrir_verb"
+    ],
+    "right_balcony": [
+     "fr_engloutir_verb"
+    ],
+    "right_upper": [],
+    "right_roof": [
+     "fr_desservir_verb"
+    ]
+   },
+   "words": [
+    "fr_manger_verb",
+    "fr_diner_verb",
+    "fr_dejeuner_verb",
+    "fr_devorer_verb",
+    "fr_bouffer_verb",
+    "fr_regaler_verb",
+    "fr_servir_verb",
+    "fr_nourrir_verb",
+    "fr_croquer_verb",
+    "fr_souper_verb",
+    "fr_alimenter_verb",
+    "fr_engloutir_verb",
+    "fr_engouffrer_verb",
+    "fr_grignoter_verb",
+    "fr_attabler_verb",
+    "fr_pique_niquer_verb",
+    "fr_rassasier_verb",
+    "fr_desservir_verb"
+   ],
+   "item_count": 18,
+   "side_counts": {
+    "n/a": 18
+   }
+  },
+  {
+   "id": "ST_cooking_seg002",
+   "name": "Ruelle des Gourmets — étape 2 · taste, fill, drink",
+   "name_fr": "Étape 2 · Goûter, remplir et boire",
+   "type": "verb_segment",
+   "setting": "One stop on the walking route through Ruelle des Gourmets (sector square -> stops 1..N -> back to the square), whimsical houses (Bistro façades shaped like teapots, cakes and copper pans) seen down the lane: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT; the most common verbs at street level (doorways), rarer ones on first-floor balconies and upper windows, the rarest on roofs and chimneys; mirror in the scene if reflexive, prepositions on the verb's sign; small arrow signs lead forward to the next stop and back.",
+   "kind": "street_segment",
+   "sector_id": "S04_cafes",
+   "building_id": "ST_cooking",
+   "links_back_to_sector": "S04_cafes",
+   "cefr_band": "B2",
+   "mean_level": 3.71,
+   "related_rooms": [
+    "ST_cooking_seg003",
+    "ST_cooking_seg004",
+    "R_resto_kitchen_01",
+    "R_grocery_02"
+   ],
+   "conversation_ids": [
+    "C_ST_cooking_seg002"
+   ],
+   "base_room": "ST_cooking",
+   "layout": "tiered",
+   "tiers": {
+    "left_street": [
+     "fr_gouter_verb",
+     "fr_verser_verb",
+     "fr_consommer_verb",
+     "fr_deguster_verb",
+     "fr_trinquer_verb"
+    ],
+    "left_balcony": [
+     "fr_savourer_verb",
+     "fr_saler_verb",
+     "fr_diluer_verb"
+    ],
+    "left_upper": [
+     "fr_epicer_verb",
+     "fr_ailler_verb"
+    ],
+    "left_roof": [
+     "fr_sucrer_verb",
+     "fr_truffer_verb",
+     "fr_desalterer_verb"
+    ],
+    "right_street": [
+     "fr_boire_verb",
+     "fr_remplir_verb"
+    ],
+    "right_balcony": [
+     "fr_emplir_verb"
+    ],
+    "right_upper": [],
+    "right_roof": [
+     "fr_farcir_verb"
+    ]
+   },
+   "words": [
+    "fr_gouter_verb",
+    "fr_verser_verb",
+    "fr_consommer_verb",
+    "fr_deguster_verb",
+    "fr_trinquer_verb",
+    "fr_boire_verb",
+    "fr_remplir_verb",
+    "fr_savourer_verb",
+    "fr_saler_verb",
+    "fr_diluer_verb",
+    "fr_emplir_verb",
+    "fr_epicer_verb",
+    "fr_ailler_verb",
+    "fr_sucrer_verb",
+    "fr_truffer_verb",
+    "fr_desalterer_verb",
+    "fr_farcir_verb"
+   ],
+   "item_count": 17,
+   "side_counts": {
+    "n/a": 17
+   }
+  },
+  {
+   "id": "ST_cooking_seg003",
+   "name": "Ruelle des Gourmets — étape 3 · cut, cut up",
+   "name_fr": "Étape 3 · Couper et découper",
+   "type": "verb_segment",
+   "setting": "One stop on the walking route through Ruelle des Gourmets (sector square -> stops 1..N -> back to the square), whimsical houses (Bistro façades shaped like teapots, cakes and copper pans) seen down the lane: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT; the most common verbs at street level (doorways), rarer ones on first-floor balconies and upper windows, the rarest on roofs and chimneys; mirror in the scene if reflexive, prepositions on the verb's sign; small arrow signs lead forward to the next stop and back.",
+   "kind": "street_segment",
+   "sector_id": "S04_cafes",
+   "building_id": "ST_cooking",
+   "links_back_to_sector": "S04_cafes",
+   "cefr_band": "B2",
+   "mean_level": 3.64,
+   "related_rooms": [
+    "ST_cooking_seg001",
+    "ST_cooking_seg002",
+    "R_kitchen_01",
+    "ST_control_seg009"
+   ],
+   "conversation_ids": [
+    "C_ST_cooking_seg003"
+   ],
+   "base_room": "ST_cooking",
+   "layout": "tiered",
+   "tiers": {
+    "left_street": [
+     "fr_couper_verb",
+     "fr_meler_verb",
+     "fr_ecraser_verb",
+     "fr_tailler_verb",
+     "fr_melanger_verb"
+    ],
+    "left_balcony": [
+     "fr_trancher_verb",
+     "fr_decouper_verb",
+     "fr_entamer_verb"
+    ],
+    "left_upper": [
+     "fr_eplucher_verb",
+     "fr_broyer_verb"
+    ],
+    "left_roof": [
+     "fr_aiguiser_verb",
+     "fr_ciseler_verb"
+    ],
+    "right_street": [
+     "fr_dissoudre_verb"
+    ],
+    "right_balcony": [
+     "fr_petrir_verb"
+    ],
+    "right_upper": [],
+    "right_roof": []
+   },
+   "words": [
+    "fr_couper_verb",
+    "fr_meler_verb",
+    "fr_ecraser_verb",
+    "fr_tailler_verb",
+    "fr_melanger_verb",
+    "fr_dissoudre_verb",
+    "fr_trancher_verb",
+    "fr_decouper_verb",
+    "fr_entamer_verb",
+    "fr_petrir_verb",
+    "fr_eplucher_verb",
+    "fr_broyer_verb",
+    "fr_aiguiser_verb",
+    "fr_ciseler_verb"
+   ],
+   "item_count": 14,
+   "side_counts": {
+    "n/a": 14
+   }
+  },
+  {
+   "id": "ST_cooking_seg004",
+   "name": "Ruelle des Gourmets — étape 4 · cook, fry",
+   "name_fr": "Étape 4 · Cuire et frire",
+   "type": "verb_segment",
+   "setting": "One stop on the walking route through Ruelle des Gourmets (sector square -> stops 1..N -> back to the square), whimsical houses (Bistro façades shaped like teapots, cakes and copper pans) seen down the lane: -er verbs on the LEFT houses, -ir/-re verbs on the RIGHT; the most common verbs at street level (doorways), rarer ones on first-floor balconies and upper windows, the rarest on roofs and chimneys; mirror in the scene if reflexive, prepositions on the verb's sign; small arrow signs lead forward to the next stop and back.",
+   "kind": "street_segment",
+   "sector_id": "S04_cafes",
+   "building_id": "ST_cooking",
+   "links_back_to_sector": "S04_cafes",
+   "cefr_band": "B2",
+   "mean_level": 4.08,
+   "related_rooms": [
+    "ST_cooking_seg002",
+    "R_resto_kitchen_01",
+    "R_resto_kitchen_02"
+   ],
+   "conversation_ids": [
+    "C_ST_cooking_seg004"
+   ],
+   "base_room": "ST_cooking",
+   "layout": "tiered",
+   "tiers": {
+    "left_street": [
+     "fr_remuer_verb",
+     "fr_rechauffer_verb",
+     "fr_cuisiner_verb",
+     "fr_saurer_verb"
+    ],
+    "left_balcony": [
+     "fr_griller_verb"
+    ],
+    "left_upper": [],
+    "left_roof": [
+     "fr_flamber_verb",
+     "fr_congeler_verb",
+     "fr_surgeler_verb"
+    ],
+    "right_street": [
+     "fr_cuire_verb",
+     "fr_bouillir_verb"
+    ],
+    "right_balcony": [
+     "fr_frire_verb"
+    ],
+    "right_upper": [],
+    "right_roof": [
+     "fr_rotir_verb"
+    ]
+   },
+   "words": [
+    "fr_remuer_verb",
+    "fr_rechauffer_verb",
+    "fr_cuisiner_verb",
+    "fr_saurer_verb",
+    "fr_cuire_verb",
+    "fr_bouillir_verb",
+    "fr_griller_verb",
+    "fr_frire_verb",
+    "fr_flamber_verb",
+    "fr_congeler_verb",
+    "fr_surgeler_verb",
+    "fr_rotir_verb"
+   ],
+   "item_count": 12,
+   "side_counts": {
+    "n/a": 12
    }
   },
   {
@@ -23054,7 +23247,7 @@
     "ST_perception_seg011",
     "ST_perception_seg012",
     "R_abs_senses_02",
-    "R_adj_senses_09"
+    "R_colors_02"
    ],
    "conversation_ids": [
     "C_ST_perception_seg013"
@@ -23087,7 +23280,7 @@
     "ST_control_seg003",
     "ST_control_seg007",
     "R_adj_senses_05",
-    "ST_cooking_seg004"
+    "ST_change_seg012"
    ],
    "conversation_ids": [
     "C_ST_control_seg001"
@@ -23323,8 +23516,8 @@
    "related_rooms": [
     "ST_control_seg007",
     "ST_control_seg009",
-    "ST_cooking_seg004",
-    "ST_routine_seg006"
+    "ST_routine_seg006",
+    "ST_cooking_seg003"
    ],
    "conversation_ids": [
     "C_ST_control_seg008"
@@ -23358,7 +23551,7 @@
     "ST_control_seg008",
     "ST_control_seg010",
     "ST_routine_seg006",
-    "ST_movement_seg005"
+    "ST_cooking_seg003"
    ],
    "conversation_ids": [
     "C_ST_control_seg009"
@@ -23527,7 +23720,7 @@
    "related_rooms": [
     "ST_control_seg012",
     "ST_control_seg015",
-    "R_shapes_02",
+    "R_shapes_03",
     "R_abs_space_01"
    ],
    "conversation_ids": [
@@ -23662,7 +23855,7 @@
    "related_rooms": [
     "ST_control_seg019",
     "ST_routine_seg008",
-    "ST_cooking_seg004"
+    "R_laundry_01"
    ],
    "conversation_ids": [
     "C_ST_control_seg018"
@@ -23896,8 +24089,8 @@
    "related_rooms": [
     "ST_routine_seg013",
     "ST_routine_seg010",
-    "ST_cooking_seg004",
-    "ST_control_seg009"
+    "ST_control_seg009",
+    "ST_existence_seg012"
    ],
    "conversation_ids": [
     "C_ST_routine_seg006"
@@ -23931,7 +24124,7 @@
     "ST_routine_seg014",
     "ST_routine_seg015",
     "ST_body_seg012",
-    "ST_cooking_seg004"
+    "R_laundry_02"
    ],
    "conversation_ids": [
     "C_ST_routine_seg007"
@@ -24067,7 +24260,7 @@
     "ST_routine_seg009",
     "ST_routine_seg012",
     "R_laundry_01",
-    "R_wardrobe_01"
+    "R_wardrobe_04"
    ],
    "conversation_ids": [
     "C_ST_routine_seg011"
@@ -24946,7 +25139,7 @@
    "related_rooms": [
     "ST_change_seg015",
     "ST_change_seg016",
-    "R_shapes_02",
+    "ST_cooking_seg003",
     "ST_body_seg005"
    ],
    "conversation_ids": [
@@ -25112,8 +25305,8 @@
    "related_rooms": [
     "ST_body_seg003",
     "ST_body_seg005",
-    "ST_cooking_seg009",
-    "ST_cooking_seg002"
+    "ST_cooking_seg002",
+    "ST_cooking_seg001"
    ],
    "conversation_ids": [
     "C_ST_body_seg004"
@@ -25146,8 +25339,8 @@
    "related_rooms": [
     "ST_body_seg004",
     "ST_body_seg007",
-    "ST_cooking_seg004",
-    "ST_cooking_seg009"
+    "ST_cooking_seg002",
+    "ST_nature_seg001"
    ],
    "conversation_ids": [
     "C_ST_body_seg005"
@@ -25752,7 +25945,7 @@
     "ST_conflict_seg009",
     "ST_conflict_seg011",
     "R_emo_fear_02",
-    "R_society_03"
+    "R_society_02"
    ],
    "conversation_ids": [
     "C_ST_conflict_seg010"
@@ -26290,8 +26483,8 @@
    "related_rooms": [
     "ST_play_seg004",
     "ST_play_seg006",
-    "R_shapes_02",
-    "R_colors_01"
+    "R_wardrobe_02",
+    "R_entrance_03"
    ],
    "conversation_ids": [
     "C_ST_play_seg005"
@@ -26323,7 +26516,7 @@
    "related_rooms": [
     "ST_play_seg005",
     "ST_play_seg007",
-    "R_shapes_02",
+    "R_shapes_03",
     "R_art_01"
    ],
    "conversation_ids": [
@@ -26390,7 +26583,7 @@
     "ST_play_seg007",
     "ST_play_seg009",
     "R_sports_01",
-    "R_shapes_02"
+    "R_sports_04"
    ],
    "conversation_ids": [
     "C_ST_play_seg008"
@@ -26760,7 +26953,7 @@
     "ST_social_seg009",
     "ST_social_seg011",
     "R_adj_relation_02",
-    "R_people_04"
+    "R_politics_05"
    ],
    "conversation_ids": [
     "C_ST_social_seg010"
@@ -26810,373 +27003,6 @@
    "item_count": 6,
    "side_counts": {
     "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg001",
-   "name": "Ruelle des Gourmets — segment 1 · eat, feed, lunch",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "A2",
-   "mean_level": 1.67,
-   "related_rooms": [
-    "ST_cooking_seg002",
-    "ST_cooking_seg005",
-    "R_dining",
-    "R_grocery_02"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg001"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_nourrir_verb",
-    "fr_ecraser_verb",
-    "fr_devorer_verb",
-    "fr_dejeuner_verb",
-    "fr_servir_verb",
-    "fr_manger_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg002",
-   "name": "Ruelle des Gourmets — segment 2 · mix, taste, drink",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "A2",
-   "mean_level": 1.5,
-   "related_rooms": [
-    "ST_cooking_seg001",
-    "R_resto_kitchen_01",
-    "R_cafe_01"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg002"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_diner_verb",
-    "fr_couper_verb",
-    "fr_remplir_verb",
-    "fr_boire_verb",
-    "fr_gouter_verb",
-    "fr_meler_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg003",
-   "name": "Ruelle des Gourmets — segment 3 · cut, cut up, cut into",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B2",
-   "mean_level": 3.67,
-   "related_rooms": [
-    "ST_cooking_seg004",
-    "ST_cooking_seg006",
-    "ST_control_seg009",
-    "ST_making_seg007"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg003"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_decouper_verb",
-    "fr_entamer_verb",
-    "fr_tailler_verb",
-    "fr_trancher_verb",
-    "fr_dissoudre_verb",
-    "fr_eplucher_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg004",
-   "name": "Ruelle des Gourmets — segment 4 · fill, crunch, gulp",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B2",
-   "mean_level": 3.5,
-   "related_rooms": [
-    "ST_cooking_seg005",
-    "ST_cooking_seg003",
-    "ST_routine_seg006",
-    "ST_body_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg004"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_engloutir_verb",
-    "fr_croquer_verb",
-    "fr_remuer_verb",
-    "fr_melanger_verb",
-    "fr_trinquer_verb",
-    "fr_emplir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg005",
-   "name": "Ruelle des Gourmets — segment 5 · eat, consume, feed",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg004",
-    "R_grocery_01",
-    "R_resto_kitchen_01"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg005"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_consommer_verb",
-    "fr_deguster_verb",
-    "fr_verser_verb",
-    "fr_sucrer_verb",
-    "fr_bouffer_verb",
-    "fr_alimenter_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg006",
-   "name": "Ruelle des Gourmets — segment 6 · toast, salt, dine",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B2",
-   "mean_level": 4.0,
-   "related_rooms": [
-    "ST_cooking_seg003",
-    "ST_cooking_seg007",
-    "R_resto_kitchen_01",
-    "R_grocery_02"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg006"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_griller_verb",
-    "fr_souper_verb",
-    "fr_saler_verb",
-    "fr_saurer_verb",
-    "fr_savourer_verb",
-    "fr_ailler_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "ST_cooking_seg007",
-   "name": "Ruelle des Gourmets — segment 7 · fry, boil, spice",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B2",
-   "mean_level": 4.0,
-   "related_rooms": [
-    "ST_cooking_seg006",
-    "ST_cooking_seg008",
-    "R_resto_kitchen_02",
-    "R_resto_kitchen_01"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg007"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_flamber_verb",
-    "fr_rechauffer_verb",
-    "fr_frire_verb",
-    "fr_epicer_verb",
-    "fr_bouillir_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   }
-  },
-  {
-   "id": "ST_cooking_seg008",
-   "name": "Ruelle des Gourmets — segment 8 · cook, cook a really good meal",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "B2",
-   "mean_level": 4.2,
-   "related_rooms": [
-    "ST_cooking_seg007",
-    "ST_cooking_seg010",
-    "R_resto_kitchen_01",
-    "R_resto_kitchen_02"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg008"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_regaler_verb",
-    "fr_cuisiner_verb",
-    "fr_cuire_verb",
-    "fr_surgeler_verb",
-    "fr_congeler_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   }
-  },
-  {
-   "id": "ST_cooking_seg009",
-   "name": "Ruelle des Gourmets — segment 9 · engulf, quench the thirst, nibble",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "C1",
-   "mean_level": 5.2,
-   "related_rooms": [
-    "ST_cooking_seg010",
-    "ST_cooking_seg011",
-    "ST_body_seg004",
-    "ST_body_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg009"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_desalterer_verb",
-    "fr_engouffrer_verb",
-    "fr_diluer_verb",
-    "fr_farcir_verb",
-    "fr_grignoter_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   }
-  },
-  {
-   "id": "ST_cooking_seg010",
-   "name": "Ruelle des Gourmets — segment 10 · roast, serve, picnic",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "C1",
-   "mean_level": 5.0,
-   "related_rooms": [
-    "ST_cooking_seg008",
-    "ST_cooking_seg009",
-    "R_kitchen_01",
-    "R_dining"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg010"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_pique_niquer_verb",
-    "fr_rotir_verb",
-    "fr_petrir_verb",
-    "fr_broyer_verb",
-    "fr_desservir_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   }
-  },
-  {
-   "id": "ST_cooking_seg011",
-   "name": "Ruelle des Gourmets — segment 11 · sharpen, satiate, chisel",
-   "type": "verb_segment",
-   "setting": "A stretch of Ruelle des Gourmets (Bistro façades shaped like teapots, cakes and copper pans); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S04_cafes",
-   "building_id": "ST_cooking",
-   "links_back_to_sector": "S04_cafes",
-   "cefr_band": "C2",
-   "mean_level": 5.6,
-   "related_rooms": [
-    "ST_cooking_seg009",
-    "R_resto_kitchen_02",
-    "R_bakery_02"
-   ],
-   "conversation_ids": [
-    "C_ST_cooking_seg011"
-   ],
-   "base_room": "ST_cooking",
-   "words": [
-    "fr_attabler_verb",
-    "fr_aiguiser_verb",
-    "fr_ciseler_verb",
-    "fr_truffer_verb",
-    "fr_rassasier_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
    }
   },
   {
@@ -27362,8 +27188,8 @@
    "related_rooms": [
     "ST_making_seg008",
     "ST_making_seg009",
-    "R_industry_02",
-    "R_garage_01"
+    "R_garage_01",
+    "R_industry_02"
    ],
    "conversation_ids": [
     "C_ST_making_seg006"
@@ -28563,7 +28389,7 @@
    "related_rooms": [
     "ST_nature_seg002",
     "R_river_01",
-    "R_camping_01"
+    "ST_cooking_seg004"
    ],
    "conversation_ids": [
     "C_ST_nature_seg001"
@@ -28765,8 +28591,8 @@
    "related_rooms": [
     "ST_nature_seg005",
     "ST_nature_seg008",
-    "ST_play_seg003",
-    "ST_cooking_seg009"
+    "ST_cooking_seg004",
+    "ST_play_seg003"
    ],
    "conversation_ids": [
     "C_ST_nature_seg007"
@@ -28798,8 +28624,8 @@
    "related_rooms": [
     "ST_nature_seg007",
     "ST_nature_seg009",
-    "ST_perception_seg010",
-    "ST_cooking_seg009"
+    "ST_cooking_seg002",
+    "ST_perception_seg010"
    ],
    "conversation_ids": [
     "C_ST_nature_seg008"
@@ -28935,13 +28761,13 @@
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_numbers2",
    "furniture": "school desk",
-   "sign": "School desk: sixty, forty, seventy",
+   "sign": "School desk: forty, sixty, seventy",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "A2",
-   "mean_level": 2.18,
+   "mean_level": 2.25,
    "related_rooms": [
     "R_numbers2"
    ],
@@ -28952,6 +28778,7 @@
     "fr_trentaine_noun",
     "fr_douzaine_noun",
     "fr_milliard_noun",
+    "fr_tiers_noun",
     "fr_cinquieme_noun",
     "fr_quarante_num",
     "fr_soixante_num",
@@ -28959,10 +28786,46 @@
     "fr_quatre_vingts_num",
     "fr_quatre_vingt_dix_num"
    ],
-   "item_count": 11,
+   "item_count": 12,
    "side_counts": {
     "left": 4,
-    "right": 2,
+    "right": 3,
+    "n/a": 5
+   }
+  },
+  {
+   "id": "R_conjunctions_z1",
+   "name": "Connectors & conjunctions — school desk (center)",
+   "type": "zoom",
+   "setting": "A school desk on the back wall of 'Connectors & conjunctions' (Petite École (first schoolhouse)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B02_ecole",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_conjunctions",
+   "furniture": "school desk",
+   "sign": "School desk: since, to, when",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B1",
+   "mean_level": 3.17,
+   "related_rooms": [
+    "R_conjunctions"
+   ],
+   "base_room": "R_conjunctions",
+   "words": [
+    "fr_demeurant_noun",
+    "fr_soit_conj",
+    "fr_lorsque_conj",
+    "fr_puisque_conj",
+    "fr_afin_conj",
+    "fr_quoique_conj"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "right": 1,
     "n/a": 5
    }
   },
@@ -28977,25 +28840,25 @@
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_time_days_01",
    "furniture": "school desk",
-   "sign": "School desk: january, november, march",
+   "sign": "School desk: january, november, december",
    "position": {
     "side": "right",
     "wall": "right wall"
    },
    "cefr_band": "A2",
-   "mean_level": 2.5,
+   "mean_level": 2.38,
    "related_rooms": [
     "R_time_days_01"
    ],
    "base_room": "R_time_days",
    "words": [
+    "fr_aout_noun",
     "fr_automne_noun",
     "fr_avril_noun",
     "fr_novembre_noun",
     "fr_mars_noun",
     "fr_decembre_noun",
     "fr_janvier_noun",
-    "fr_ressort_noun",
     "fr_annuaire_noun"
    ],
    "item_count": 8,
@@ -29020,13 +28883,12 @@
     "wall": "right wall"
    },
    "cefr_band": "B1",
-   "mean_level": 2.78,
+   "mean_level": 2.88,
    "related_rooms": [
     "R_time_days_02"
    ],
    "base_room": "R_time_days",
    "words": [
-    "fr_vendredi_noun",
     "fr_jeudi_noun",
     "fr_mardi_noun",
     "fr_mercredi_noun",
@@ -29036,9 +28898,9 @@
     "fr_calendrier_noun",
     "fr_planning_noun"
    ],
-   "item_count": 9,
+   "item_count": 8,
    "side_counts": {
-    "right": 9
+    "right": 8
    }
   },
   {
@@ -29081,191 +28943,185 @@
    }
   },
   {
-   "id": "R_time_clock_02_z1",
-   "name": "Clock & time of day [first floor & upstairs] — school desk (center)",
+   "id": "R_adv_time_01_z1",
+   "name": "Clock-tower stairway — when & how often [ground floor] — school desk (center)",
    "type": "zoom",
-   "setting": "A school desk on the back wall of 'Clock & time of day [first floor & upstairs]' (Tour de l'Horloge (clock & calendar tower)); zoom in to see its items.",
+   "setting": "A school desk on the back wall of 'Clock-tower stairway — when & how often [ground floor]' (Tour de l'Horloge (clock & calendar tower)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
-   "parent_room_id": "R_time_clock_02",
+   "parent_room_id": "R_adv_time_01",
    "furniture": "school desk",
-   "sign": "School desk: millennium, session, interim",
+   "sign": "School desk: sometimes, soon",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
-   "cefr_band": "C1",
-   "mean_level": 5.17,
+   "cefr_band": "A1",
+   "mean_level": 1.45,
    "related_rooms": [
-    "R_time_clock_02"
+    "R_adv_time_01"
    ],
-   "base_room": "R_time_clock",
+   "base_room": "R_adv_time",
    "words": [
-    "fr_session_noun",
-    "fr_centime_noun",
-    "fr_millenaire_noun",
-    "fr_interim_noun",
-    "fr_pourpoint_noun",
-    "fr_retardataire_noun"
+    "fr_parfois_adv",
+    "fr_souvent_adv",
+    "fr_puis_adv",
+    "fr_bientot_adv",
+    "fr_hier_adv",
+    "fr_tot_adv",
+    "fr_autrefois_adv",
+    "fr_lors_adv",
+    "fr_quelquefois_adv",
+    "fr_malheureusement_adv",
+    "fr_actuellement_adv"
    ],
-   "item_count": 6,
+   "item_count": 11,
    "side_counts": {
-    "left": 1,
-    "right": 5
+    "n/a": 11
    }
   },
   {
-   "id": "R_colors_01_z1",
-   "name": "Colors [ground floor] — school desk (center)",
+   "id": "R_adv_time_02_z1",
+   "name": "Clock-tower stairway — when & how often [first floor] — school desk (center)",
    "type": "zoom",
-   "setting": "A school desk on the back wall of 'Colors [ground floor]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "setting": "A school desk on the back wall of 'Clock-tower stairway — when & how often [first floor]' (Tour de l'Horloge (clock & calendar tower)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
-   "building_id": "B04_atelier_couleurs",
+   "building_id": "B03_horloge",
    "links_back_to_sector": "S01_beginner",
-   "parent_room_id": "R_colors_01",
+   "parent_room_id": "R_adv_time_02",
    "furniture": "school desk",
-   "sign": "School desk: reddish, tricolored, burgundy",
+   "sign": "School desk: usually, lately, constantly",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
-   "cefr_band": "C1",
-   "mean_level": 5.0,
+   "cefr_band": "B2",
+   "mean_level": 3.86,
    "related_rooms": [
-    "R_colors_01"
+    "R_adv_time_02"
    ],
-   "base_room": "R_colors",
+   "base_room": "R_adv_time",
    "words": [
-    "fr_blancheur_noun",
-    "fr_emeraude_noun",
-    "fr_store_noun",
-    "fr_pourpre_noun",
-    "fr_verglas_noun",
-    "fr_brun_adj",
-    "fr_tricolore_adj",
-    "fr_rougeatre_adj",
-    "fr_inactif_adj"
+    "fr_constamment_adv",
+    "fr_apres_demain_adv",
+    "fr_eternellement_adv",
+    "fr_avant_hier_adv",
+    "fr_dernierement_adv",
+    "fr_habituellement_adv",
+    "fr_traditionnellement_adv"
    ],
-   "item_count": 9,
+   "item_count": 7,
    "side_counts": {
-    "left": 2,
-    "right": 3,
-    "n/a": 4
+    "n/a": 7
    }
   },
   {
    "id": "R_colors_02_z1",
-   "name": "Colors [first floor] — school desk (center)",
+   "name": "Colors [first floor & upstairs] — school desk (center)",
    "type": "zoom",
-   "setting": "A school desk on the back wall of 'Colors [first floor]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "setting": "A school desk on the back wall of 'Colors [first floor & upstairs]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_colors_02",
    "furniture": "school desk",
-   "sign": "School desk: blue-green, verdure, chestnut",
+   "sign": "School desk: reddish, tricolored, blue-green",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "B2",
-   "mean_level": 4.0,
+   "mean_level": 4.33,
    "related_rooms": [
     "R_colors_02"
    ],
    "base_room": "R_colors",
    "words": [
-    "fr_teinte_noun",
-    "fr_verdure_noun",
-    "fr_contraste_noun",
-    "fr_lilas_noun",
     "fr_distinct_adj",
     "fr_varie_adj",
     "fr_chatain_adj",
-    "fr_pers_adj"
+    "fr_pers_adj",
+    "fr_tricolore_adj",
+    "fr_rougeatre_adj"
    ],
-   "item_count": 8,
+   "item_count": 6,
    "side_counts": {
-    "left": 2,
-    "right": 2,
-    "n/a": 4
+    "n/a": 6
    }
   },
   {
-   "id": "R_shapes_02_z1",
-   "name": "Shapes & sizes [first floor] — school desk (left)",
+   "id": "R_shapes_03_z1",
+   "name": "Shapes & sizes [first floor & upstairs 2] — school desk (right)",
    "type": "zoom",
-   "setting": "A school desk on the left wall of 'Shapes & sizes [first floor]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "setting": "A school desk on the right wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
-   "parent_room_id": "R_shapes_02",
+   "parent_room_id": "R_shapes_03",
    "furniture": "school desk",
-   "sign": "School desk: size, thickness, wrinkle",
-   "position": {
-    "side": "left",
-    "wall": "left wall"
-   },
-   "cefr_band": "B2",
-   "mean_level": 3.57,
-   "related_rooms": [
-    "R_shapes_02"
-   ],
-   "base_room": "R_shapes",
-   "words": [
-    "fr_file_noun",
-    "fr_grandeur_noun",
-    "fr_tonne_noun",
-    "fr_ride_noun",
-    "fr_epaisseur_noun",
-    "fr_courbe_noun",
-    "fr_resolution_noun"
-   ],
-   "item_count": 7,
-   "side_counts": {
-    "left": 7
-   }
-  },
-  {
-   "id": "R_shapes_02_z2",
-   "name": "Shapes & sizes [first floor] — chalkboard ledge (right)",
-   "type": "zoom",
-   "setting": "A chalkboard ledge on the right wall of 'Shapes & sizes [first floor]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S01_beginner",
-   "building_id": "B04_atelier_couleurs",
-   "links_back_to_sector": "S01_beginner",
-   "parent_room_id": "R_shapes_02",
-   "furniture": "chalkboard ledge",
-   "sign": "Chalkboard ledge: bend, square",
+   "sign": "School desk: bend, contour",
    "position": {
     "side": "right",
     "wall": "right wall"
    },
    "cefr_band": "B2",
-   "mean_level": 3.62,
+   "mean_level": 4.33,
    "related_rooms": [
-    "R_shapes_02"
+    "R_shapes_03"
    ],
    "base_room": "R_shapes",
    "words": [
-    "fr_geant_noun",
-    "fr_foudre_noun_m",
     "fr_tournant_noun",
-    "fr_carreau_noun",
     "fr_virage_noun",
     "fr_recoin_noun",
     "fr_axe_noun",
-    "fr_diametre_noun"
+    "fr_contour_noun",
+    "fr_pointille_noun"
    ],
-   "item_count": 8,
+   "item_count": 6,
    "side_counts": {
-    "right": 8
+    "right": 6
+   }
+  },
+  {
+   "id": "R_shapes_03_z2",
+   "name": "Shapes & sizes [first floor & upstairs 2] — chalkboard ledge (center)",
+   "type": "zoom",
+   "setting": "A chalkboard ledge on the back wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_shapes_03",
+   "furniture": "chalkboard ledge",
+   "sign": "Chalkboard ledge: curve, circular, wrinkle",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C1",
+   "mean_level": 4.67,
+   "related_rooms": [
+    "R_shapes_03"
+   ],
+   "base_room": "R_shapes",
+   "words": [
+    "fr_file_noun",
+    "fr_ride_noun",
+    "fr_courbe_noun",
+    "fr_diagonale_noun",
+    "fr_deformation_noun",
+    "fr_circulaire_adj"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "left": 5,
+    "n/a": 1
    }
   },
   {
@@ -29314,13 +29170,13 @@
    "links_back_to_sector": "S02_home",
    "parent_room_id": "R_living_02",
    "furniture": "shelf",
-   "sign": "Shelf: furniture, sofa, bulb",
+   "sign": "Shelf: furniture, bulb, sofa",
    "position": {
     "side": "right",
     "wall": "right wall"
    },
    "cefr_band": "C1",
-   "mean_level": 4.71,
+   "mean_level": 4.75,
    "related_rooms": [
     "R_living_02"
    ],
@@ -29330,13 +29186,14 @@
     "fr_cable_noun",
     "fr_vestiaire_noun",
     "fr_chandelier_noun",
+    "fr_store_noun",
     "fr_mobilier_noun",
     "fr_pamphlet_noun",
     "fr_bulbe_noun"
    ],
-   "item_count": 7,
+   "item_count": 8,
    "side_counts": {
-    "right": 7
+    "right": 8
    }
   },
   {
@@ -29442,14 +29299,15 @@
     "fr_pointure_noun",
     "fr_domino_noun",
     "fr_polo_noun",
+    "fr_pourpoint_noun",
     "fr_textile_noun",
     "fr_pret_a_porter_noun",
     "fr_vestimentaire_adj"
    ],
-   "item_count": 6,
+   "item_count": 7,
    "side_counts": {
     "left": 1,
-    "right": 4,
+    "right": 5,
     "n/a": 1
    }
   },
@@ -29464,18 +29322,19 @@
    "links_back_to_sector": "S02_home",
    "parent_room_id": "R_garage_01",
    "furniture": "shelf",
-   "sign": "Shelf: fix, screw, fastener",
+   "sign": "Shelf: claw, screw, fastener",
    "position": {
     "side": "left",
     "wall": "left wall"
    },
    "cefr_band": "C1",
-   "mean_level": 5.0,
+   "mean_level": 4.88,
    "related_rooms": [
     "R_garage_01"
    ],
    "base_room": "R_garage",
    "words": [
+    "fr_griffe_noun",
     "fr_reparation_noun",
     "fr_restauration_noun",
     "fr_vis_noun",
@@ -29484,9 +29343,9 @@
     "fr_marelle_noun",
     "fr_reinsertion_noun"
    ],
-   "item_count": 7,
+   "item_count": 8,
    "side_counts": {
-    "left": 7
+    "left": 8
    }
   },
   {
@@ -29754,6 +29613,7 @@
   {
    "id": "R_resto_room_z1",
    "name": "Dining hall (menu & service) — bar counter (right)",
+   "name_fr": "Le comptoir",
    "type": "zoom",
    "setting": "A bar counter on the right wall of 'Dining hall (menu & service)' (Restaurant Le Bon Goût); zoom in to see its items.",
    "kind": "zoom",
@@ -29790,6 +29650,7 @@
   {
    "id": "R_wine_01_z1",
    "name": "Wine cellar [ground & first floor] — bar counter (right)",
+   "name_fr": "Le comptoir",
    "type": "zoom",
    "setting": "A bar counter on the right wall of 'Wine cellar [ground & first floor]' (Restaurant Le Bon Goût); zoom in to see its items.",
    "kind": "zoom",
@@ -29849,12 +29710,13 @@
     "fr_banquier_noun",
     "fr_alibi_noun",
     "fr_transfert_noun",
+    "fr_centime_noun",
     "fr_enjeu_noun",
     "fr_paiement_noun"
    ],
-   "item_count": 6,
+   "item_count": 7,
    "side_counts": {
-    "right": 6
+    "right": 7
    }
   },
   {
@@ -32995,7 +32857,7 @@
    "links_back_to_sector": "S15_feelings",
    "parent_room_id": "R_people_03",
    "furniture": "garden bench",
-   "sign": "Garden bench: old age, one who pulls, brute",
+   "sign": "Garden bench: old age, aging, one who pulls",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -33011,15 +32873,56 @@
     "fr_vieillesse_noun",
     "fr_adolescence_noun",
     "fr_quinzaine_noun",
+    "fr_fecondite_noun",
     "fr_tireur_noun",
     "fr_gentleman_noun",
     "fr_bienvenu_noun",
     "fr_vieillissement_noun"
    ],
-   "item_count": 8,
+   "item_count": 9,
    "side_counts": {
-    "left": 4,
+    "left": 5,
     "right": 4
+   }
+  },
+  {
+   "id": "R_people_04_z1",
+   "name": "People & life stages [upstairs] — garden bench (center)",
+   "type": "zoom",
+   "setting": "A garden bench on the back wall of 'People & life stages [upstairs]' (Galerie des portraits (people & character)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S15_feelings",
+   "building_id": "B51_portraits",
+   "links_back_to_sector": "S15_feelings",
+   "parent_room_id": "R_people_04",
+   "furniture": "garden bench",
+   "sign": "Garden bench: city dweller, teen, senior",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 5.67,
+   "related_rooms": [
+    "R_people_04"
+   ],
+   "base_room": "R_people",
+   "words": [
+    "fr_milady_noun",
+    "fr_natalite_noun",
+    "fr_feminisme_noun",
+    "fr_senior_noun",
+    "fr_charcutier_noun",
+    "fr_preneur_noun",
+    "fr_individualisme_noun",
+    "fr_citadin_noun",
+    "fr_ado_noun"
+   ],
+   "item_count": 9,
+   "side_counts": {
+    "left": 2,
+    "right": 5,
+    "center": 2
    }
   },
   {
@@ -33473,26 +33376,104 @@
    "links_back_to_sector": "S16_park",
    "parent_room_id": "R_adv_manner_01",
    "furniture": "ticket booth",
-   "sign": "Ticket booth: easily, simply, suddenly",
+   "sign": "Ticket booth: easily, simply, speedily",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "A2",
-   "mean_level": 1.88,
+   "mean_level": 1.83,
    "related_rooms": [
     "R_adv_manner_01"
    ],
    "base_room": "R_adv_manner",
    "words": [
+    "fr_immediatement_adv",
     "fr_rapidement_adv",
     "fr_debout_adv",
     "fr_simplement_adv",
+    "fr_parfaitement_adv",
     "fr_brusquement_adv",
     "fr_naturellement_adv",
     "fr_directement_adv",
     "fr_facilement_adv",
-    "fr_tranquillement_adv"
+    "fr_particulierement_adv",
+    "fr_tranquillement_adv",
+    "fr_notamment_adv"
+   ],
+   "item_count": 12,
+   "side_counts": {
+    "n/a": 12
+   }
+  },
+  {
+   "id": "R_adv_manner_02_z1",
+   "name": "Circus ring — how things are done [first floor 1] — ticket booth (center)",
+   "type": "zoom",
+   "setting": "A ticket booth on the back wall of 'Circus ring — how things are done [first floor 1]' (Chapiteau du Cirque (circus big top)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S16_park",
+   "building_id": "B55_cirque",
+   "links_back_to_sector": "S16_park",
+   "parent_room_id": "R_adv_manner_02",
+   "furniture": "ticket booth",
+   "sign": "Ticket booth: calmly, patiently, sternly",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 4.0,
+   "related_rooms": [
+    "R_adv_manner_02"
+   ],
+   "base_room": "R_adv_manner",
+   "words": [
+    "fr_calmement_adv",
+    "fr_silencieusement_adv",
+    "fr_faiblement_adv",
+    "fr_tendrement_adv",
+    "fr_durement_adv",
+    "fr_patiemment_adv",
+    "fr_joyeusement_adv",
+    "fr_progressivement_adv"
+   ],
+   "item_count": 8,
+   "side_counts": {
+    "n/a": 8
+   }
+  },
+  {
+   "id": "R_adv_manner_03_z1",
+   "name": "Circus ring — how things are done [first floor 2] — ticket booth (center)",
+   "type": "zoom",
+   "setting": "A ticket booth on the back wall of 'Circus ring — how things are done [first floor 2]' (Chapiteau du Cirque (circus big top)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S16_park",
+   "building_id": "B55_cirque",
+   "links_back_to_sector": "S16_park",
+   "parent_room_id": "R_adv_manner_03",
+   "furniture": "ticket booth",
+   "sign": "Ticket booth: desperately, firstly, automatically",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 4.0,
+   "related_rooms": [
+    "R_adv_manner_03"
+   ],
+   "base_room": "R_adv_manner",
+   "words": [
+    "fr_bizarrement_adv",
+    "fr_physiquement_adv",
+    "fr_desesperement_adv",
+    "fr_fixement_adv",
+    "fr_expres_adv",
+    "fr_principalement_adv",
+    "fr_premierement_adv",
+    "fr_automatiquement_adv"
    ],
    "item_count": 8,
    "side_counts": {

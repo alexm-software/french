@@ -5,20 +5,21 @@
  "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_resto_room",
- "note": "Zoom on the right-wall bar counter of R_resto_room: every item is masculine, so the whole close-up counts as the right (masculine) side and there is no divider.",
+ "note": "Round 2 from-scratch repaint. Every word here is masculine, so every item sits in the RIGHT half (x >= ~490) and the left half holds only the sign.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    433,
-    28,
-    836,
-    150
+    112,
+    38,
+    512,
+    175
    ],
    "text_box": [
-    468,
-    48,
-    800,
-    132
+    140,
+    58,
+    485,
+    155
    ]
   }
  },
@@ -31,10 +32,10 @@
    "side": "right",
    "label": "le cabaret",
    "box": [
-    23,
-    172,
-    297,
-    516
+    491,
+    179,
+    714,
+    496
    ]
   },
   {
@@ -45,12 +46,12 @@
    "side": "right",
    "label": "le classement",
    "box": [
-    320,
-    289,
-    531,
-    484
+    715,
+    238,
+    912,
+    400
    ],
-   "mnemonic_label": "class race winners"
+   "scene": "class race winners on a podium"
   },
   {
    "id": "fr_couscous_noun",
@@ -60,10 +61,10 @@
    "side": "right",
    "label": "le couscous",
    "box": [
-    559,
-    375,
-    690,
-    477
+    725,
+    402,
+    875,
+    500
    ]
   },
   {
@@ -74,10 +75,10 @@
    "side": "right",
    "label": "l'arrangement",
    "box": [
-    692,
-    188,
-    826,
-    456
+    919,
+    162,
+    1098,
+    410
    ]
   },
   {
@@ -88,10 +89,10 @@
    "side": "right",
    "label": "le banquet",
    "box": [
-    830,
-    375,
-    1050,
-    461
+    878,
+    412,
+    1094,
+    485
    ]
   },
   {
@@ -102,10 +103,10 @@
    "side": "right",
    "label": "l'hors-d'œuvre",
    "box": [
-    1059,
-    367,
-    1250,
-    445
+    1098,
+    381,
+    1262,
+    462
    ]
   },
   {
@@ -117,10 +118,24 @@
    "label": "le bistro",
    "box": [
     956,
-    484,
+    488,
     1280,
     720
    ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_resto_room",
+   "box": [
+    0,
+    600,
+    160,
+    720
+   ],
+   "label": "Back to the dining hall",
+   "name": "Restaurant Le Bon Goût — salle",
+   "kind": "zoom_back"
   }
  ]
 }

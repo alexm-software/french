@@ -4,34 +4,37 @@
  "height": 720,
  "divider_x": null,
  "kind": "building_exterior",
- "note": "Exterior of B08_cafe (Café de la Place). No vocabulary words live here; links lead into the café rooms. Same 'links' key that build_hs.py writes and draws (target, box, label).",
+ "note": "Exterior of B08_cafe (Café de la Place), Round 2 recolour/repaint: white facade, green shopfront, cream fascia. No vocabulary here; links lead into the café rooms.",
  "text_areas": {
-  "sign": {
+  "name": {
+   "role": "building_name",
+   "text": "Café de la Place",
    "box": [
-    488,
-    292,
-    772,
-    359
+    461,
+    305,
+    813,
+    363
    ],
    "text_box": [
-    508,
-    302,
-    752,
-    349
+    478,
+    312,
+    796,
+    356
    ]
   },
   "plaque": {
+   "role": "door_plaque",
    "box": [
-    720,
-    507,
-    745,
-    541
+    719,
+    508,
+    742,
+    539
    ],
    "text_box": [
-    722,
+    721,
     510,
-    743,
-    538
+    740,
+    537
    ]
   }
  },
@@ -40,22 +43,27 @@
   {
    "target": "R_cafe_01",
    "box": [
-    569,
-    434,
-    697,
-    659
+    578,
+    437,
+    695,
+    656
    ],
-   "label": "Enter the café (ground floor terrace)"
+   "label": "Enter the café (ground floor)",
+   "name": "Café de la Place — salle",
+   "kind": "door"
   },
   {
    "target": "R_cafe_02",
    "box": [
-    367,
-    123,
-    903,
-    290
+    594,
+    140,
+    680,
+    297
    ],
-   "label": "Upstairs room"
+   "label": "Upstairs room (balcony door)",
+   "name": "Café de la Place — étage",
+   "kind": "window"
   }
- ]
+ ],
+ "building_name": "Café de la Place"
 }

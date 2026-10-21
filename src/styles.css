@@ -271,6 +271,7 @@ body.walking #walk { flex: 1 1 auto; min-height: 0; }
 .frame { position: absolute; inset: 0; }
 .frame img, .frame svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .frame img { object-fit: cover; object-position: center; }
+.frame svg text, .frame .plate { pointer-events: none; }
 .frame svg text { font-family: "Baloo 2", "Patrick Hand", sans-serif; }
 .frame .sign, .frame .plaque, .frame .lbl {
   fill: #2f3428;
@@ -281,18 +282,26 @@ body.walking #walk { flex: 1 1 auto; min-height: 0; }
 }
 .frame .lbl.f { fill: var(--f); }
 .frame .lbl.m { fill: var(--m); }
-.frame .direction {
-  font-family: "Patrick Hand", cursive;
-  fill: rgba(55, 52, 44, 0.78);
-  stroke: rgba(255, 250, 240, 0.55);
-  stroke-width: 2px;
+.frame .sign-plate .plate,
+.frame .verb-sign .plate {
+  fill: rgba(255, 252, 246, 0.94);
+  stroke: #2c3324;
+  stroke-width: 1.15;
 }
-.frame .verb-sign text { font-weight: 700; }
-.frame .verb-sign .plate { fill: rgba(255, 252, 246, 0.94); stroke: #2c3324; stroke-width: 1.6; }
+.frame .sign-plate text,
+.frame .direction-sign text {
+  fill: #2a2e24;
+  stroke: none;
+  font-family: "Patrick Hand", cursive;
+}
+.frame .direction-sign.side-left text { fill: #1d6a44; font-weight: 700; }
+.frame .direction-sign.side-right text { fill: #234e86; font-weight: 700; }
+.frame .building-name text,
+.frame .street-name text { fill: var(--olive-deep); stroke: none; font-weight: 700; }
+.frame .room-name text { fill: #2a2e24; stroke: none; }
+.frame .verb-sign text { font-weight: 700; stroke: none; }
 .frame .verb-sign.left text { fill: #1d6a44; }
 .frame .verb-sign.right text { fill: #234e86; }
-.frame .building-name .plate { fill: rgba(255, 250, 240, 0.92); stroke: #5d6b3c; }
-.frame .building-name text { fill: var(--olive-deep); }
 .frame .name-tag { opacity: 0; pointer-events: none; }
 .frame .name-tag .plate { fill: rgba(255, 252, 246, 0.94); stroke: #c9d0b8; }
 .frame .name-tag text { fill: var(--olive-deep); stroke: none; font-family: "Patrick Hand", cursive; }

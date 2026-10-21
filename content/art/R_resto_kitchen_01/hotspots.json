@@ -3,20 +3,22 @@
  "width": 1280,
  "height": 720,
  "divider_x": 640,
- "note": "Adjectives (délicieux, grillé, culinaire) sit on the centre island.",
+ "kind": "room",
+ "note": "Round 2 repaint (neutral white kitchen; back door, swing door and staircase added). Adjectives (délicieux, grillé, culinaire) sit centre. One box per item.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
     469,
-    39,
-    809,
-    153
+    47,
+    805,
+    148
    ],
    "text_box": [
-    500,
-    58,
-    778,
-    136
+    495,
+    62,
+    780,
+    132
    ]
   }
  },
@@ -31,10 +33,10 @@
    "box": [
     39,
     117,
-    234,
-    504
+    230,
+    502
    ],
-   "mnemonic_label": "mare with a sore tum"
+   "scene": "mare with a sore tum sipping bitter lemon juice"
   },
   {
    "id": "fr_saveur_noun",
@@ -45,11 +47,11 @@
    "label": "la saveur",
    "box": [
     234,
-    180,
-    395,
-    348
+    184,
+    453,
+    345
    ],
-   "mnemonic_label": "cook savouring"
+   "scene": "cook savouring the flavour from her spoon"
   },
   {
    "id": "fr_soupe_noun",
@@ -59,10 +61,10 @@
    "side": "left",
    "label": "la soupe",
    "box": [
-    320,
-    352,
-    445,
-    430
+    312,
+    348,
+    453,
+    432
    ]
   },
   {
@@ -73,32 +75,12 @@
    "side": "left",
    "label": "la recette",
    "box": [
-    398,
-    180,
-    513,
-    266
+    515,
+    250,
+    668,
+    390
    ],
-   "mnemonic_box": [
-    540,
-    290,
-    660,
-    367
-   ],
-   "mnemonic_label": "cake set in the oven"
-  },
-  {
-   "id": "fr_sauce_noun",
-   "lemma": "sauce",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la sauce",
-   "box": [
-    23,
-    555,
-    147,
-    656
-   ]
+   "scene": "cake set in the oven by the recipe"
   },
   {
    "id": "fr_frite_noun",
@@ -108,10 +90,24 @@
    "side": "left",
    "label": "la frite",
    "box": [
-    170,
+    210,
     505,
-    320,
-    578
+    336,
+    575
+   ]
+  },
+  {
+   "id": "fr_sauce_noun",
+   "lemma": "sauce",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la sauce",
+   "box": [
+    16,
+    555,
+    145,
+    656
    ]
   },
   {
@@ -123,9 +119,9 @@
    "label": "la préparation",
    "box": [
     148,
-    582,
-    318,
-    688
+    578,
+    305,
+    680
    ]
   },
   {
@@ -136,8 +132,8 @@
    "side": "left",
    "label": "la menthe",
    "box": [
-    322,
-    477,
+    336,
+    484,
     469,
     703
    ]
@@ -151,8 +147,8 @@
    "label": "délicieux",
    "box": [
     547,
-    438,
-    700,
+    437,
+    695,
     516
    ]
   },
@@ -164,8 +160,8 @@
    "side": "center",
    "label": "grillé",
    "box": [
-    711,
-    438,
+    703,
+    445,
     875,
     523
    ]
@@ -179,9 +175,9 @@
    "label": "culinaire",
    "box": [
     516,
-    575,
-    789,
-    688
+    570,
+    797,
+    711
    ]
   },
   {
@@ -192,12 +188,12 @@
    "side": "right",
    "label": "le goût",
    "box": [
-    669,
+    672,
     156,
-    891,
-    434
+    888,
+    436
    ],
-   "mnemonic_label": "chef sipping green goo"
+   "scene": "chef tastes green goo"
   },
   {
    "id": "fr_cuisinier_noun",
@@ -207,46 +203,11 @@
    "side": "right",
    "label": "le cuisinier",
    "box": [
-    891,
-    141,
-    1080,
-    360
+    890,
+    140,
+    1084,
+    453
    ]
-  },
-  {
-   "id": "fr_haricot_noun",
-   "lemma": "haricot",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le haricot",
-   "box": [
-    805,
-    590,
-    1125,
-    695
-   ]
-  },
-  {
-   "id": "fr_guichet_noun",
-   "lemma": "guichet",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le guichet",
-   "box": [
-    940,
-    445,
-    1280,
-    584
-   ],
-   "mnemonic_box": [
-    1078,
-    362,
-    1234,
-    584
-   ],
-   "mnemonic_label": "goose selling tickets"
   },
   {
    "id": "fr_rechauffement_noun",
@@ -256,18 +217,79 @@
    "side": "right",
    "label": "le réchauffement",
    "box": [
-    1150,
-    290,
-    1262,
-    358
-   ],
-   "mnemonic_box": [
     1086,
     180,
-    1258,
-    358
+    1266,
+    372
    ],
-   "mnemonic_label": "polar bear fanning"
+   "scene": "polar bear fanning itself as the ice melts"
+  },
+  {
+   "id": "fr_guichet_noun",
+   "lemma": "guichet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le guichet",
+   "box": [
+    1088,
+    375,
+    1278,
+    585
+   ],
+   "scene": "goose selling tickets through the hatch"
+  },
+  {
+   "id": "fr_haricot_noun",
+   "lemma": "haricot",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le haricot",
+   "box": [
+    800,
+    590,
+    1125,
+    719
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B09_restaurant",
+   "box": [
+    250,
+    62,
+    335,
+    180
+   ],
+   "label": "Back door: out to the street",
+   "name": "Restaurant Le Bon Goût (outside)",
+   "kind": "exit"
+  },
+  {
+   "target": "R_resto_room",
+   "box": [
+    455,
+    180,
+    505,
+    410
+   ],
+   "label": "Swing door to the dining hall",
+   "name": "Restaurant Le Bon Goût — salle",
+   "kind": "door"
+  },
+  {
+   "target": "R_resto_kitchen_02",
+   "box": [
+    883,
+    25,
+    1000,
+    135
+   ],
+   "label": "Stairs up to the upper kitchen",
+   "name": "Restaurant Le Bon Goût — cuisine (étage)",
+   "kind": "stairs_up"
   }
  ]
 }

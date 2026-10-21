@@ -3,19 +3,22 @@
  "width": 1280,
  "height": 720,
  "divider_x": 640,
+ "kind": "room",
+ "note": "Round 2 repaint (white tiles instead of peach walls; staircase + back door added). One box per item.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    441,
-    28,
+    446,
+    31,
     820,
-    153
+    148
    ],
    "text_box": [
     472,
     48,
-    790,
-    136
+    795,
+    132
    ]
   }
  },
@@ -30,7 +33,7 @@
    "box": [
     44,
     86,
-    141,
+    133,
     184
    ]
   },
@@ -42,10 +45,10 @@
    "side": "left",
    "label": "la vanille",
    "box": [
-    156,
-    52,
+    153,
+    50,
     281,
-    203
+    200
    ]
   },
   {
@@ -57,9 +60,9 @@
    "label": "la purée",
    "box": [
     19,
-    294,
-    156,
-    372
+    289,
+    153,
+    375
    ]
   },
   {
@@ -71,11 +74,10 @@
    "label": "la salsa",
    "box": [
     31,
-    374,
+    377,
     175,
-    466
-   ],
-   "note": "tomato salsa bowl; chips in the bowl beside it"
+    461
+   ]
   },
   {
    "id": "fr_bouillabaisse_noun",
@@ -85,10 +87,10 @@
    "side": "left",
    "label": "la bouillabaisse",
    "box": [
-    16,
+    8,
     469,
-    258,
-    609
+    266,
+    640
    ]
   },
   {
@@ -99,18 +101,12 @@
    "side": "left",
    "label": "la cuisson",
    "box": [
-    320,
-    450,
-    477,
-    605
+    312,
+    178,
+    610,
+    625
    ],
-   "mnemonic_box": [
-    305,
-    180,
-    609,
-    448
-   ],
-   "mnemonic_label": "chef checks doneness with a thermometer"
+   "scene": "chef checks the doneness of a steak with a thermometer"
   },
   {
    "id": "fr_barbecue_noun",
@@ -120,32 +116,11 @@
    "side": "right",
    "label": "le barbecue",
    "box": [
-    683,
-    318,
-    863,
-    389
-   ]
-  },
-  {
-   "id": "fr_chauffage_noun",
-   "lemma": "chauffage",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le chauffage",
-   "box": [
-    1047,
+    680,
     320,
-    1227,
-    444
-   ],
-   "mnemonic_box": [
-    930,
-    133,
-    1046,
-    388
-   ],
-   "mnemonic_label": "chauffeur warming his hands"
+    862,
+    430
+   ]
   },
   {
    "id": "fr_ingredient_noun",
@@ -155,10 +130,10 @@
    "side": "right",
    "label": "l'ingrédient",
    "box": [
-    763,
-    391,
-    1036,
-    578
+    735,
+    435,
+    1044,
+    586
    ]
   },
   {
@@ -169,11 +144,26 @@
    "side": "right",
    "label": "le préparatif",
    "box": [
-    653,
-    586,
-    997,
-    711
+    648,
+    594,
+    992,
+    690
    ]
+  },
+  {
+   "id": "fr_chauffage_noun",
+   "lemma": "chauffage",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le chauffage",
+   "box": [
+    890,
+    133,
+    1235,
+    432
+   ],
+   "scene": "chauffeur warming his hands at the radiator"
   },
   {
    "id": "fr_deboire_noun",
@@ -183,12 +173,38 @@
    "side": "right",
    "label": "le déboire",
    "box": [
-    1039,
-    446,
+    1044,
+    445,
     1280,
-    688
+    695
    ],
-   "mnemonic_label": "boar biting a sour crab apple"
+   "scene": "boar biting a sour crab apple"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_resto_kitchen_01",
+   "box": [
+    297,
+    23,
+    438,
+    175
+   ],
+   "label": "Stairs down to the main kitchen",
+   "name": "Restaurant Le Bon Goût — cuisine",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "B09_restaurant",
+   "box": [
+    844,
+    72,
+    888,
+    320
+   ],
+   "label": "Back door: outside stair to the street",
+   "name": "Restaurant Le Bon Goût (outside)",
+   "kind": "exit"
   }
  ]
 }

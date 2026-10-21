@@ -2,34 +2,38 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 650,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Round 2 repaint (neutral colour). One box per item. links = in-building navigation.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    434,
-    28,
-    844,
-    156
+    440,
+    32,
+    848,
+    158
    ],
    "text_box": [
     470,
     50,
-    808,
-    135
+    818,
+    140
    ]
   },
   "plaque": {
+   "role": "room_plaque",
    "box": [
-    472,
-    203,
-    559,
-    328
+    478,
+    208,
+    552,
+    318
    ],
    "text_box": [
-    486,
-    218,
-    546,
-    313
+    488,
+    220,
+    542,
+    306
    ]
   }
  },
@@ -43,10 +47,11 @@
    "label": "la tuilerie",
    "box": [
     0,
-    344,
-    320,
-    508
-   ]
+    300,
+    345,
+    540
+   ],
+   "scene": "tile works: stacks of roof tiles beside a small kiln"
   },
   {
    "id": "fr_carafe_noun",
@@ -57,31 +62,10 @@
    "label": "la carafe",
    "box": [
     148,
-    512,
-    234,
-    688
+    545,
+    232,
+    682
    ]
-  },
-  {
-   "id": "fr_troc_noun",
-   "lemma": "troc",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le troc",
-   "box": [
-    598,
-    604,
-    781,
-    720
-   ],
-   "mnemonic_box": [
-    653,
-    442,
-    812,
-    602
-   ],
-   "mnemonic_label": "goat swapped"
   },
   {
    "id": "fr_barman_noun",
@@ -91,24 +75,10 @@
    "side": "right",
    "label": "le barman",
    "box": [
-    719,
-    219,
-    852,
-    406
-   ]
-  },
-  {
-   "id": "fr_loueur_noun",
-   "lemma": "loueur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le loueur",
-   "box": [
-    848,
-    16,
-    1162,
-    134
+    712,
+    215,
+    810,
+    392
    ]
   },
   {
@@ -119,11 +89,27 @@
    "side": "right",
    "label": "l'ermitage",
    "box": [
-    855,
-    161,
-    987,
-    250
-   ]
+    815,
+    160,
+    985,
+    300
+   ],
+   "scene": "painting of a hermitage"
+  },
+  {
+   "id": "fr_loueur_noun",
+   "lemma": "loueur",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le loueur",
+   "box": [
+    852,
+    15,
+    1150,
+    138
+   ],
+   "scene": "hire canoe + 'for hire' pennant"
   },
   {
    "id": "fr_non_fumeur_noun",
@@ -134,9 +120,9 @@
    "label": "le non-fumeur",
    "box": [
     1020,
-    136,
-    1152,
-    248
+    140,
+    1150,
+    275
    ]
   },
   {
@@ -147,18 +133,12 @@
    "side": "right",
    "label": "l'apéro",
    "box": [
-    960,
-    252,
+    945,
+    302,
     1280,
-    400
+    398
    ],
-   "mnemonic_box": [
-    1165,
-    57,
-    1266,
-    230
-   ],
-   "mnemonic_label": "up-arrow lamp"
+   "scene": "friends clinking juice under the up-arrow lamp"
   },
   {
    "id": "fr_buveur_noun",
@@ -168,12 +148,27 @@
    "side": "right",
    "label": "le buveur",
    "box": [
-    813,
-    408,
-    1060,
-    668
+    815,
+    400,
+    1000,
+    680
    ],
-   "mnemonic_label": "beaver"
+   "scene": "beaver drinker"
+  },
+  {
+   "id": "fr_troc_noun",
+   "lemma": "troc",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le troc",
+   "box": [
+    590,
+    440,
+    812,
+    720
+   ],
+   "scene": "goat swapped for a crate of cabbages"
   },
   {
    "id": "fr_soda_noun",
@@ -183,10 +178,10 @@
    "side": "right",
    "label": "le soda",
    "box": [
-    1083,
-    404,
-    1132,
-    554
+    1078,
+    440,
+    1142,
+    555
    ]
   },
   {
@@ -197,10 +192,10 @@
    "side": "right",
    "label": "le caviar",
    "box": [
-    1062,
-    556,
-    1167,
-    615
+    1070,
+    558,
+    1148,
+    628
    ]
   },
   {
@@ -211,11 +206,37 @@
    "side": "right",
    "label": "le breuvage",
    "box": [
-    1168,
-    450,
-    1270,
-    607
+    1150,
+    445,
+    1272,
+    625
    ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_cafe_01",
+   "box": [
+    370,
+    352,
+    575,
+    585
+   ],
+   "label": "Stairs down to the café ground floor",
+   "name": "Café de la Place — rez-de-chaussée",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "B08_cafe",
+   "box": [
+    402,
+    165,
+    470,
+    345
+   ],
+   "label": "Balcony door: outside stair to the street",
+   "name": "Café de la Place (outside)",
+   "kind": "exit"
   }
  ]
 }

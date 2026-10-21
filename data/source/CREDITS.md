@@ -1,19 +1,65 @@
-# Credits & licences
+# Credits and licences
 
-| Source | Used for | Licence | Notes |
-|---|---|---|---|
-| **Lexique 3.83** (New, Pallier et al., lexique.org) — `sources/Lexique383.tsv` | lemma list, POS, gender, frequency (film+book per million), syllables → respelling, phonology fallback | **CC BY-SA 4.0** | Fields `frequency`, `respelling` (derived), parts of `gender`/`pos` are derived from Lexique → share-alike applies to those fields. |
-| **FLELex – TT Beacco** (François et al., CENTAL, UCLouvain) — `sources/FleLex_TT_Beacco.tsv` | first CEFR estimate, `cefr_flelex`, `flelex_freq`, part of the re-grade key | **CC BY-NC-SA 4.0** | ⚠ **Non-commercial.** If the site is commercial, drop `cefr_flelex`/`flelex_freq` and re-run `assign.py` with frequency-only grading (re-grade key then uses Lexique only), or obtain permission from CENTAL. |
-| **Wiktionary** (French entries) via **kaikki.org** Wiktextract dump — `sources/kaikki-French.jsonl` | glosses (`gloss_source` = "Wiktionary via kaikki.org…"), IPA, topical categories, plurals, feminine forms, synonyms/antonyms (`related`, `opposites`) | **CC BY-SA 4.0** (and GFDL) | Attribution per field: any entry whose `gloss_source` starts with "Wiktionary" carries a shortened Wiktionary gloss and must be shown with attribution and shared alike. `ipa` is Wiktionary-derived unless listed in `curated/pron_fix.tsv`. Entries with `gloss_source: original` were written for this project. |
-| **all-MiniLM-L6-v2** (sentence-transformers) | gloss embeddings used for room assignment only (no output text) | Apache-2.0 | Model files in `../models`, not redistributed with the data. |
-| cmudict, google-10000-english | downloaded to `sources/`, **not used** in outputs | BSD / unclear | Can be deleted. |
-| Project-original content | mnemonic hooks (`hooks/*.tsv` and templates in `finalize.py`), room/sector/street design, conversation premises, grammar rules, curated lemmas (`curated/extra_lemmas.txt`), phrases, idioms glosses, opposites | yours (suggest CC BY-SA 4.0 for the whole data set, compatible with the inputs) | Hooks are the author's own wording. |
+Memory Village is a free, non-commercial French learning site. This page lists every outside source used in the words, prayers, fonts and pictures, with its licence.
 
-## Prayers (`prayers.json`)
-All eleven prayers are ancient/traditional texts in the public domain in their traditional French and English forms: Notre Père (2017 French missal wording), Je vous salue Marie, Gloire au Père, Symbole des Apôtres, Angélus, Divine Mercy short prayers, Souvenez-vous (Memorare), Bénédicité (French family grace; English is our translation), Requiem aeternam, Agnus Dei, Sanctus.
-Caveats recorded per prayer in its `source` field:
-- **Current official liturgical translations** of the Mass parts (Agnus Dei, Sanctus, and the modern Notre Père) are © **AELF** (French) and © **ICEL 2010** (English). The texts here are the traditional/common forms; verify with AELF/ICEL before commercial publication.
-- Divine Mercy: the short prayers are public devotional texts; translations of St Faustina's *Diary* are © Marian Fathers and are not reproduced.
+## Word data
 
-## Content policy notes
-Vulgar and sexual/drug terms are excluded editorially (`curated/blocklist.txt`, `curated/excluded_sensitive.txt`); mature-but-necessary words (death, crime, medical) are kept with `display: "museum_text"`.
+The word data (data/source/vocab.jsonl and the room, building and sector files built from it) is released under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0), https://creativecommons.org/licenses/by-sa/4.0/ . This is required because it is adapted from the CC BY-SA sources below. You may reuse it if you credit the sources listed here and share your changes under the same licence.
+
+| Source | What we use | Licence |
+|---|---|---|
+| **Wiktionary** (English Wiktionary, French entries), via the **kaikki.org** Wiktextract extraction by Tatu Ylonen, https://kaikki.org/dictionary/French/ | English glosses marked "from Wiktionary" (shortened and edited by us), IPA pronunciations, plural and feminine forms, synonyms and antonyms, topic categories | CC BY-SA 4.0 and GFDL, https://en.wiktionary.org/wiki/Wiktionary:Copyrights |
+| **Lexique 3.83**, Boris New and Christophe Pallier, http://www.lexique.org/ | word list, part of speech, gender, frequencies, syllables (used to build the respellings) | CC BY-SA 4.0, http://www.lexique.org/databases/Lexique383/README-Lexique.txt |
+| **FLELex / Beacco**, CENTAL (UCLouvain), Aix-Marseille Université and EarlyTracks, https://cental.uclouvain.be/cefrlex/flelex/ | one input to our own CEFR grading. FLELex values themselves are not published on this site or in its data files. | CC BY-NC-SA 4.0, https://cental.uclouvain.be/cefrlex/flelex/download/ |
+
+Changes: Wiktionary glosses were shortened, filtered and in places rewritten; frequencies were combined and re-graded; respellings were generated from Lexique syllables. Glosses marked "original", including every word in Rue des Saveurs (the café quarter), were written for this project.
+
+FLELex citations: François, T., Gala, N., Watrin, P. and Fairon, C. (2014). FLELex: a graded lexical resource for French foreign learners. LREC 2014. Pintard, A. and François, T. (2020). Combining expert knowledge with frequency information to infer CEFR levels for words. READI 2020.
+
+Lexique citation: New, B., Pallier, C., Brysbaert, M. and Ferrand, L. (2004). Lexique 2: A New French Lexical Database. Behavior Research Methods, Instruments, and Computers, 36(3), 516-524.
+
+## Written for this project
+
+Mnemonic scenes, example sentences, dialogues, room and street design, the English glosses marked "original", and the project's own translations of the Divine Mercy prayers are © the Memory Village authors and are shared under CC BY-SA 4.0 together with the word data.
+
+## Verb tables
+
+Conjugation tables were generated with **verbecc** by Brett Tolbert (LGPL-3.0), https://github.com/bretttolbert/verbecc , whose French templates derive from **Verbiste** by Pierre Sarrazin. The tables are machine-generated verb forms.
+
+## Prayers
+
+The prayers are shown in older public-domain French and English wordings, not in the current copyrighted liturgical translations (AELF in French, ICEL in English). Each prayer page names its exact source.
+
+- Notre Père: the current common French text. The French bishops' liturgy service treats the Notre Père as public domain (SNPLS, Annexe juridique, question 5). English: traditional text.
+- Je vous salue Marie and Symbole des Apôtres (Apostles' Creed): Catéchisme illustré des vérités nécessaires (Paris, 1906). English: The Catholic's Pocket Prayer-Book (1899).
+- Symbole de Nicée-Constantinople (Nicene Creed): abbé J.-C. Moreau, La Liturgie du dimanche (Paris, 1852). English: The Catholic's Pocket Prayer-Book (1899).
+- Gloire au Père: Dom Prosper Guéranger, L'Année liturgique (1858).
+- Angélus: Comtesse de Ségur, Livre de messe des petits enfants (1858), and Dom Guéranger (1858). English: The Catholic's Pocket Prayer-Book (1899).
+- Souvenez-vous (Memorare): as printed in J.-B. Proulx, L'Enfant perdu et retrouvé (1887). English: The Catholic's Pocket Prayer-Book (1899).
+- Donnez-leur, Seigneur, le repos éternel: Pierre Corneille, Les sept psaumes pénitentiaux (Marty-Laveaux edition, 1862).
+- Agneau de Dieu and Saint, Saint, Saint: traditional wording (Ségur 1858, Guéranger 1858, Bible de Sacy). English: The Catholic's Pocket Prayer-Book (1899).
+- Bénissez-nous, Seigneur: traditional anonymous family grace. The English is our own translation.
+- Chapelet de la Divine Miséricorde: our own French and English translations of the prayers in St Faustina Kowalska's Diary (no. 476). They are not the Marian Fathers' copyrighted English Diary translation.
+
+Public-domain texts were transcribed from Wikisource (fr.wikisource.org and en.wikisource.org).
+
+## Fonts
+
+| Font | Copyright | Licence |
+|---|---|---|
+| **Baloo 2** | Copyright 2019 The Baloo 2 Project Authors, https://github.com/EkType/Baloo2 | SIL Open Font License 1.1 |
+| **Patrick Hand** | Copyright (c) 2010-2012 Patrick Wagesreiter | SIL Open Font License 1.1 |
+
+The full licence text is in src/fonts/ beside each font file and at https://openfontlicense.org/ . The fonts are unmodified.
+
+## Pictures
+
+The room, street and building paintings were generated with Grok Imagine, an AI image tool, from prompts written for this project. They were then recoloured and marked up by the project. They are AI-generated images, and they contain no third-party artwork.
+
+## Speech
+
+"Listen" uses your own browser's speech synthesis (the Web Speech API). This site does not include any recorded audio.
+
+## Software
+
+The site is built with Vite (MIT licence), https://vitejs.dev/ . The site's own code is © the Memory Village authors (see LICENSE in the repository).

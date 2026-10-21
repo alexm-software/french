@@ -2,50 +2,39 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 650,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Round 2 repaint (neutral colour, arcade + terrace added, front door + stairs). One box per item.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    609,
+    614,
     28,
-    978,
-    158
+    976,
+    156
    ],
    "text_box": [
     640,
-    48,
-    945,
+    46,
+    950,
     140
-   ]
-  },
-  "plaque": {
-   "box": [
-    161,
-    52,
-    302,
-    253
-   ],
-   "text_box": [
-    180,
-    72,
-    284,
-    234
    ]
   }
  },
  "items": [
   {
-   "id": "fr_grille_noun",
-   "lemma": "grille",
-   "article": "la",
+   "id": "fr_arcade_noun",
+   "lemma": "arcade",
+   "article": "l'",
    "gender": "f",
    "side": "left",
-   "label": "la grille",
+   "label": "l'arcade",
    "box": [
     0,
-    94,
-    88,
-    455
+    44,
+    315,
+    150
    ]
   },
   {
@@ -56,24 +45,24 @@
    "side": "left",
    "label": "la coupole",
    "box": [
-    347,
+    352,
     0,
-    586,
-    90
+    610,
+    86
    ]
   },
   {
-   "id": "fr_arcade_noun",
-   "lemma": "arcade",
-   "article": "l'",
+   "id": "fr_grille_noun",
+   "lemma": "grille",
+   "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "l'arcade",
+   "label": "la grille",
    "box": [
-    354,
-    95,
-    586,
-    328
+    232,
+    152,
+    322,
+    260
    ]
   },
   {
@@ -84,10 +73,10 @@
    "side": "left",
    "label": "la terrasse",
    "box": [
-    354,
-    330,
-    584,
-    386
+    15,
+    230,
+    168,
+    420
    ]
   },
   {
@@ -98,12 +87,27 @@
    "side": "left",
    "label": "la soif",
    "box": [
-    90,
-    266,
-    352,
-    455
+    172,
+    268,
+    328,
+    490
    ],
-   "mnemonic_label": "camel swaddled in wet towels"
+   "scene": "thirsty camel in a wet towel sipping from a tiny cup"
+  },
+  {
+   "id": "fr_boisson_noun",
+   "lemma": "boisson",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la boisson",
+   "box": [
+    330,
+    388,
+    562,
+    585
+   ],
+   "scene": "boa and its son share a drink through two straws"
   },
   {
    "id": "fr_glace_noun",
@@ -113,10 +117,10 @@
    "side": "left",
    "label": "la glace",
    "box": [
-    34,
+    31,
     461,
-    128,
-    669
+    133,
+    672
    ]
   },
   {
@@ -130,29 +134,8 @@
     133,
     497,
     231,
-    641
+    640
    ]
-  },
-  {
-   "id": "fr_boisson_noun",
-   "lemma": "boisson",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la boisson",
-   "box": [
-    328,
-    456,
-    396,
-    570
-   ],
-   "mnemonic_box": [
-    398,
-    388,
-    567,
-    620
-   ],
-   "mnemonic_label": "boa & son"
   },
   {
    "id": "fr_tasse_noun",
@@ -163,17 +146,11 @@
    "label": "la tasse",
    "box": [
     242,
-    572,
-    367,
-    688
+    588,
+    383,
+    700
    ],
-   "mnemonic_box": [
-    318,
-    615,
-    368,
-    690
-   ],
-   "mnemonic_label": "tassel"
+   "scene": "cup with a tassel"
   },
   {
    "id": "fr_cigarette_noun",
@@ -184,58 +161,9 @@
    "label": "la cigarette",
    "box": [
     390,
-    622,
-    484,
-    672
-   ]
-  },
-  {
-   "id": "fr_tilleul_noun",
-   "lemma": "tilleul",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le tilleul",
-   "box": [
-    1105,
-    0,
-    1280,
-    250
-   ],
-   "mnemonic_box": [
-    1010,
-    312,
-    1250,
-    465
-   ],
-   "mnemonic_label": "granny's linden tea by the Yule log"
-  },
-  {
-   "id": "fr_pavillon_noun",
-   "lemma": "pavillon",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le pavillon",
-   "box": [
-    980,
-    105,
-    1100,
-    310
-   ]
-  },
-  {
-   "id": "fr_bar_noun",
-   "lemma": "bar",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le bar",
-   "box": [
-    761,
-    566,
-    1280,
-    720
+    625,
+    485,
+    678
    ]
   },
   {
@@ -246,10 +174,24 @@
    "side": "right",
    "label": "le café",
    "box": [
-    831,
-    419,
-    922,
-    484
+    840,
+    415,
+    925,
+    478
+   ]
+  },
+  {
+   "id": "fr_jus_noun",
+   "lemma": "jus",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le jus",
+   "box": [
+    940,
+    398,
+    1000,
+    470
    ]
   },
   {
@@ -262,22 +204,8 @@
    "box": [
     925,
     478,
-    1013,
-    523
-   ]
-  },
-  {
-   "id": "fr_jus_noun",
-   "lemma": "jus",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le jus",
-   "box": [
-    948,
-    403,
-    997,
-    476
+    1018,
+    530
    ]
   },
   {
@@ -288,11 +216,80 @@
    "side": "right",
    "label": "l'apéritif",
    "box": [
-    1013,
-    473,
+    1039,
+    492,
     1172,
-    562
+    575
    ]
+  },
+  {
+   "id": "fr_pavillon_noun",
+   "lemma": "pavillon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le pavillon",
+   "box": [
+    978,
+    100,
+    1062,
+    330
+   ]
+  },
+  {
+   "id": "fr_tilleul_noun",
+   "lemma": "tilleul",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le tilleul",
+   "box": [
+    1065,
+    20,
+    1280,
+    470
+   ],
+   "scene": "linden tree; granny pours lime-blossom tea"
+  },
+  {
+   "id": "fr_bar_noun",
+   "lemma": "bar",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bar",
+   "box": [
+    765,
+    580,
+    1280,
+    720
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_cafe_02",
+   "box": [
+    456,
+    106,
+    580,
+    385
+   ],
+   "label": "Stairs up to the first floor",
+   "name": "Café de la Place — étage",
+   "kind": "stairs_up"
+  },
+  {
+   "target": "B08_cafe",
+   "box": [
+    347,
+    195,
+    425,
+    385
+   ],
+   "label": "Front door: out to the street",
+   "name": "Café de la Place (outside)",
+   "kind": "exit"
   }
  ]
 }

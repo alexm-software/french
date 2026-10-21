@@ -5,19 +5,20 @@
  "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_wine_01",
- "note": "Zoom on the right-wall bar counter of R_wine_01: every item is masculine, so the whole close-up counts as the right (masculine) side and there is no divider.",
+ "note": "Round 2 from-scratch repaint. Every word here is masculine, so every item sits in the RIGHT half (x >= ~640) and the left half holds only the sign. Old wrong link fixed: rhum box used to show a wine bottle with straws; now a rum bottle and keg.",
  "text_areas": {
   "sign": {
+   "role": "room_name",
    "box": [
-    469,
-    28,
-    846,
-    162
+    188,
+    31,
+    556,
+    163
    ],
    "text_box": [
-    495,
-    45,
-    820,
+    215,
+    50,
+    530,
     145
    ]
   }
@@ -31,32 +32,12 @@
    "side": "right",
    "label": "l'embouteillage",
    "box": [
-    81,
-    19,
-    438,
-    331
+    672,
+    44,
+    944,
+    280
    ],
-   "mnemonic_box": [
-    140,
-    60,
-    345,
-    272
-   ],
-   "mnemonic_label": "man in socks telling tales in the jam"
-  },
-  {
-   "id": "fr_alcoolisme_noun",
-   "lemma": "alcoolisme",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'alcoolisme",
-   "box": [
-    722,
-    200,
-    834,
-    319
-   ]
+   "scene": "man in socks telling tales in a traffic jam"
   },
   {
    "id": "fr_vignoble_noun",
@@ -66,18 +47,26 @@
    "side": "right",
    "label": "le vignoble",
    "box": [
-    885,
-    22,
-    1183,
-    244
+    991,
+    44,
+    1231,
+    204
    ],
-   "mnemonic_box": [
-    965,
-    62,
-    1100,
-    244
-   ],
-   "mnemonic_label": "noble lord in his vines"
+   "scene": "noble lord in his vines"
+  },
+  {
+   "id": "fr_alcoolisme_noun",
+   "lemma": "alcoolisme",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'alcoolisme",
+   "box": [
+    931,
+    281,
+    1030,
+    384
+   ]
   },
   {
    "id": "fr_cidre_noun",
@@ -87,10 +76,10 @@
    "side": "right",
    "label": "le cidre",
    "box": [
-    25,
-    346,
-    203,
-    585
+    644,
+    378,
+    724,
+    550
    ]
   },
   {
@@ -101,10 +90,10 @@
    "side": "right",
    "label": "le whisky",
    "box": [
-    231,
-    364,
-    369,
-    588
+    726,
+    372,
+    798,
+    546
    ]
   },
   {
@@ -115,10 +104,10 @@
    "side": "right",
    "label": "le rhum",
    "box": [
-    383,
-    350,
-    538,
-    584
+    800,
+    348,
+    893,
+    535
    ]
   },
   {
@@ -129,24 +118,10 @@
    "side": "right",
    "label": "le cognac",
    "box": [
-    540,
-    352,
-    690,
-    590
-   ]
-  },
-  {
-   "id": "fr_cigare_noun",
-   "lemma": "cigare",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cigare",
-   "box": [
-    692,
-    412,
-    878,
-    600
+    894,
+    388,
+    1010,
+    550
    ]
   },
   {
@@ -157,18 +132,25 @@
    "side": "right",
    "label": "le tire-bouchon",
    "box": [
-    880,
-    244,
-    962,
-    578
-   ],
-   "mnemonic_box": [
-    866,
-    244,
-    960,
-    300
-   ],
-   "mnemonic_label": "bush-shaped cork"
+    1030,
+    322,
+    1100,
+    470
+   ]
+  },
+  {
+   "id": "fr_cigare_noun",
+   "lemma": "cigare",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cigare",
+   "box": [
+    1040,
+    472,
+    1156,
+    559
+   ]
   },
   {
    "id": "fr_gourmet_noun",
@@ -178,11 +160,25 @@
    "side": "right",
    "label": "le gourmet",
    "box": [
-    990,
-    248,
-    1238,
-    544
+    1102,
+    206,
+    1280,
+    470
    ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_wine_01",
+   "box": [
+    0,
+    600,
+    160,
+    720
+   ],
+   "label": "Back to the wine room",
+   "name": "Restaurant Le Bon Goût — cave à vin",
+   "kind": "zoom_back"
   }
  ]
 }
