@@ -380,7 +380,7 @@ def main():
     assert index["open_sectors"] == ["S01_beginner", "S02_home", "S03_market", "S04_cafes"], index["open_sectors"]
     site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
     assert index["open_rooms"] == site_rooms, index["open_rooms"]
-    assert len(site_rooms) == 130
+    assert len(site_rooms) == 161
     assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001", "R_entrance_01", "R_bathroom"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
@@ -528,7 +528,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 145, len(room_files)
+    assert len(room_files) == 176, len(room_files)
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -571,11 +571,12 @@ def main():
     assert market["open"] is True
     assert market["scene"]["image"].endswith("art/S03_sector/base.jpg")
     soon_market = {link["target"] for link in market["scene"]["links"] if link.get("soon")}
-    assert soon_market == {
-        "B62_couture", "B06_marche", "B07_rue_commercante", "B61_reparation", "B59_brocante",
-    }, soon_market
+    assert soon_market == {"B06_marche", "B59_brocante"}, soon_market
     open_market = {link["target"] for link in market["scene"]["links"] if not link.get("soon")}
-    assert open_market == {"B60_balance", "ST_commerce_seg001", "S01_sector", "S02_sector"}, open_market
+    assert open_market == {
+        "B60_balance", "B07_rue_commercante", "B62_couture", "B61_reparation",
+        "ST_commerce_seg001", "S01_sector", "S02_sector",
+    }, open_market
     source_rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
     shop_art = [
         "R_shop_general_01", "R_shop_general_02", "R_shop_general_02_z1",
@@ -586,6 +587,7 @@ def main():
         "R_florist", "R_florist_z1",
         "R_abs_beauty_01", "R_abs_beauty_01_z1", "R_abs_beauty_02", "R_abs_beauty_02_z1",
         "R_abs_beauty_03", "R_abs_beauty_03_z1",
+        "R_adj_state_02", "R_adj_state_03", "R_adj_state_04", "R_adj_state_04_z1", "R_adj_state_05",
     ]
     for room_id in shop_art:
         raw = load(ROOT / "content" / "art" / room_id / "hotspots.json")
@@ -595,6 +597,11 @@ def main():
     assert {link["target"] for link in shopping["links"]} == {"R_shop_general_01", "S03_sector"}
     couture = load(ROOT / "content" / "art" / "B62_couture" / "hotspots.json")
     assert {link["target"] for link in couture["links"]} == {"R_abs_beauty_02", "S03_sector"}
+    repair = load(ROOT / "content" / "art" / "B61_reparation" / "hotspots.json")
+    assert {link["target"] for link in repair["links"]} == {"R_adj_state_02", "S03_sector"}
+    up = next(item for item in load(ROOT / "content" / "art" / "R_adj_state_03" / "hotspots.json")["links"] if item["target"] == "R_adj_state_04")
+    down = next(item for item in load(ROOT / "content" / "art" / "R_adj_state_04" / "hotspots.json")["links"] if item["target"] == "R_adj_state_03")
+    assert up["kind"] == "stairs_up" and down["kind"] == "stairs_down"
     commerce = load(ROOT / "content" / "art" / "ST_commerce_seg001" / "hotspots.json")
     assert commerce["view"] == "street_perspective"
     assert commerce["exits"]["forward"]["target"] == "ST_commerce_seg002"
