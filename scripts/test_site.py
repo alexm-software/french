@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -211,8 +212,12 @@ def assert_back_strip_stays_visible(client):
     assert "a.back" in css
     assert 'preserveAspectRatio="xMidYMid meet"' in client
     assert 'preserveAspectRatio="xMidYMid slice"' not in client
+    assert 'class="bleed"' in client and 'class="painting"' in client
     assert "object-fit: contain" in css
-    assert "object-fit: cover" not in css
+    painting_css = css.split(".frame img.painting", 1)[1].split("}", 1)[0]
+    bleed_css = css.split(".frame img.bleed", 1)[1].split("}", 1)[0]
+    assert "object-fit: contain" in painting_css
+    assert "object-fit: cover" in bleed_css and "blur" in bleed_css
     narrow = css.split("@media (max-width: 820px)", 1)[1].split("@media", 1)[0]
     assert "display: none" in narrow and ".nav" in narrow
     assert "a.back" in narrow
@@ -611,7 +616,23 @@ def finish(quiz):
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
     assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'
+    assert_paintings_fit()
     print("ok", len(quiz["items"]), "quiz items;", len(scene["hotspots"]), "church hotspots")
+
+
+def assert_paintings_fit():
+    """Every item box and exit box is on screen and clear of the cream strip."""
+    script = ROOT / "scripts" / "check_viewport.mjs"
+    result = subprocess.run(
+        ["node", str(script)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    output = ((result.stdout or "") + (result.stderr or "")).strip()
+    if result.returncode != 0:
+        raise AssertionError(output or "viewport check failed")
+    print(output)
 
 
 if __name__ == "__main__":

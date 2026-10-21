@@ -600,7 +600,7 @@ function bindSceneHover() {
 
 function toneSigns() {
   const frame = document.querySelector("#walk .frame");
-  const img = frame?.querySelector("img");
+  const img = frame?.querySelector("img.painting");
   const svg = frame?.querySelector("svg");
   if (!img || !svg) return;
   if (!img.complete || !img.naturalWidth) {
@@ -1062,7 +1062,7 @@ function walkHtml(dialog) {
   const ratio = scene ? `${scene.width} / ${scene.height}` : "16 / 9";
   return `<div class="walk-root mood-${moodFor(place)} ${state.hits ? "show-hits" : ""}" style="--ratio:${ratio}">
     <div class="frame">
-      ${scene?.image ? `<img src="${esc(url(scene.image))}" alt="${esc(alt)}">${sceneMarkup(scene, words, zooms)}` : ""}
+      ${scene?.image ? `<img class="bleed" src="${esc(url(scene.image))}" alt="" aria-hidden="true"><img class="painting" src="${esc(url(scene.image))}" alt="${esc(alt)}">${sceneMarkup(scene, words, zooms)}` : ""}
     </div>
     <div class="dialog-host">${dialog || ""}</div>
   </div>`;
