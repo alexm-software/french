@@ -337,7 +337,34 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 850, len(rooms)
+    assert len(rooms) == 859, len(rooms)
+    # Close-ups hold 3–12 items. A mixed-gender shelf is the back wall, not a side wall.
+    genders = {}
+    with (source / "vocab.jsonl").open(encoding="utf-8") as handle:
+        for line in handle:
+            if not line.strip():
+                continue
+            word = json.loads(line)
+            genders[word["id"]] = word.get("gender") if word.get("pos") == "noun" else None
+    new_zooms = {
+        "R_abs_beauty_01_z1", "R_abs_beauty_02_z1", "R_abs_beauty_03_z1",
+        "R_florist_z1", "R_hardware_01_z1", "R_hardware_02_z1",
+        "R_shop_general_02_z1", "R_shop_general_03_z1", "R_shop_general_04_z1",
+    }
+    seen_zooms = set()
+    for room in rooms:
+        if room.get("kind") != "zoom":
+            continue
+        count = len(room.get("words") or [])
+        assert 3 <= count <= 12, (room["id"], count)
+        if room["id"] not in new_zooms:
+            continue
+        seen_zooms.add(room["id"])
+        noun_genders = {genders.get(word_id) for word_id in room["words"]} - {None}
+        wall = (room.get("position") or {}).get("wall")
+        if noun_genders >= {"m", "f"}:
+            assert wall == "back wall", (room["id"], wall, noun_genders)
+    assert seen_zooms == new_zooms
     assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
