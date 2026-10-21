@@ -75,6 +75,8 @@ def _area(area):
     payload = {"box": box, "text_box": text_box}
     if area.get("text"):
         payload["text"] = str(area["text"])
+    if area.get("role"):
+        payload["role"] = str(area["role"])
     return payload
 
 
@@ -103,11 +105,15 @@ def normalize_scene(raw):
         box = _box(item.get("box"))
         if not box or not item.get("target"):
             continue
-        links.append({
+        link = {
             "target": item["target"],
             "box": box,
             "label": item.get("label") or "",
-        })
+        }
+        for key in ("name", "name_fr", "name_en", "label_fr", "label_en"):
+            if item.get(key):
+                link[key] = str(item[key])
+        links.append(link)
 
     exits = {}
     for key, item in (raw.get("exits") or {}).items():
@@ -116,7 +122,11 @@ def normalize_scene(raw):
         box = _box(item.get("box"))
         if not box:
             continue
-        exits[key] = {"box": box, "target": item.get("target")}
+        exit_item = {"box": box, "target": item.get("target")}
+        for field in ("label", "name", "name_fr", "name_en", "label_fr", "label_en"):
+            if item.get(field):
+                exit_item[field] = str(item[field])
+        exits[key] = exit_item
 
     zoom_from = None
     raw_zoom = raw.get("zoom_from")
