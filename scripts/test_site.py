@@ -315,7 +315,7 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 848, len(rooms)
+    assert len(rooms) == 850, len(rooms)
     assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
@@ -569,8 +569,24 @@ def finish(quiz):
     paths_fr = next(item["body"] for item in guide["fr"]["sections"] if item["icon"] == "path")
     assert "olive arrow" in paths_en and "magnifying glass" in paths_en
     assert "flèche olive" in paths_fr and "loupe" in paths_fr
-    assert "way-badge" in (ROOT / "src" / "main.js").read_text(encoding="utf-8")
-    assert ".way-badge" in (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
+    client_src = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    css_src = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
+    assert "way-badge" in client_src
+    assert ".way-badge" in css_src
+    assert "paintedSign(" in client_src
+    assert "way-pill" in client_src
+    assert "function toneSigns" in client_src
+    way_fn = client_src.split("function placeWayBadges", 1)[1].split("function placeZoomBadges", 1)[0]
+    assert "node.title" not in way_fn
+    assert "way-pill" in way_fn
+    assert "stairs" in way_fn
+    assert "${nameTag(label, link.box)}" not in client_src
+    assert "nameTag(label, hot.box)" in client_src
+    assert ".painted-sign" in css_src
+    assert ".way-pill" in css_src
+    assert ".painted-sign.ink-gold" in css_src
+    assert ".painted-sign.lit" in css_src
+    assert ".way-badge.up > svg" in css_src
     assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()
 
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))
@@ -590,11 +606,11 @@ def finish(quiz):
     assert shown and hidden
     assert not set(shown) & set(hidden)
     assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
-    assert len(source_conv) == 722
-    assert len(hidden) == 10
+    assert len(source_conv) == 720
+    assert len(hidden) == 9
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
-    assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a COKE bottle ("KOK") and crows at dawn.'
+    assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'
     print("ok", len(quiz["items"]), "quiz items;", len(scene["hotspots"]), "church hotspots")
 
 

@@ -331,26 +331,49 @@ html:-webkit-full-screen body {
 }
 .frame .lbl.f { fill: var(--f); }
 .frame .lbl.m { fill: var(--m); }
-.frame .sign-plate .plate,
 .frame .verb-sign .plate {
   fill: rgba(255, 252, 246, 0.94);
   stroke: #2c3324;
   stroke-width: 1.15;
 }
-.frame .sign-plate text,
-.frame .direction-sign text {
-  fill: #2a2e24;
-  stroke: none;
-  font-family: "Patrick Hand", cursive;
+.frame .painted-sign {
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 160ms ease;
 }
-.frame .direction-sign.side-left text { fill: #1d6a44; font-weight: 700; }
-.frame .direction-sign.side-right text { fill: #234e86; font-weight: 700; }
-.frame .building-name text,
-.frame .street-name text { fill: var(--olive-deep); stroke: none; font-weight: 700; }
-.frame .room-name text { fill: #2a2e24; stroke: none; }
+.frame .painted-sign text {
+  fill: #2a2418;
+  stroke: none;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  filter: drop-shadow(0 1px 0 rgba(255, 250, 236, 0.55)) drop-shadow(0 1px 0 rgba(42, 32, 16, 0.28));
+}
+.frame .painted-sign.ink-gold text {
+  fill: #f6e7b2;
+  filter: drop-shadow(0 1px 0 rgba(28, 16, 6, 0.7));
+}
+.frame .painted-sign.side-left text { fill: #1d6a44; }
+.frame .painted-sign.side-right text { fill: #234e86; }
+.frame .painted-sign.lit {
+  transform: translateY(-4px);
+}
+.frame .painted-sign.lit text {
+  filter: drop-shadow(0 0 7px rgba(255, 236, 180, 0.95)) drop-shadow(0 1px 0 rgba(42, 32, 16, 0.35));
+}
 .frame .verb-sign text { font-weight: 700; stroke: none; }
 .frame .verb-sign.left text { fill: #1d6a44; }
 .frame .verb-sign.right text { fill: #234e86; }
+.frame .verb-sign.lit .plate {
+  stroke: #5d6b3c;
+  filter: drop-shadow(0 0 6px rgba(255, 236, 170, 0.95));
+}
+.frame .hot.word:hover .lbl,
+.frame .hot.word:focus .lbl,
+.frame .hot.word.glow .lbl {
+  stroke: rgba(255, 250, 236, 0.98);
+  stroke-width: 6px;
+}
 .frame .name-tag { opacity: 0; pointer-events: none; }
 .frame .name-tag .plate { fill: rgba(255, 252, 246, 0.94); stroke: #c9d0b8; }
 .frame .name-tag text { fill: var(--olive-deep); stroke: none; font-family: "Patrick Hand", cursive; }
@@ -401,7 +424,7 @@ html:-webkit-full-screen body {
   box-shadow: 0 2px 6px rgba(70, 55, 30, 0.2);
   cursor: pointer;
 }
-.way-badge svg {
+.way-badge > svg {
   width: 15px;
   height: 15px;
   fill: none;
@@ -410,13 +433,60 @@ html:-webkit-full-screen body {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.way-badge.up svg { transform: rotate(-90deg); }
-.way-badge.down svg { transform: rotate(90deg); }
-.way-badge.left svg { transform: rotate(180deg); }
-.way-badge.door svg { transform: none; }
+.way-badge.up > svg { transform: rotate(-90deg); }
+.way-badge.down > svg { transform: rotate(90deg); }
+.way-badge.left > svg { transform: rotate(180deg); }
+.way-badge.door > svg,
+.way-badge.stairs > svg { transform: none; }
+.way-badge.stairs.down > svg { transform: scaleY(-1); }
+.way-pill {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  max-width: min(24rem, 70vw);
+  padding: 0.1rem 0.55rem 0.12rem 0.38rem;
+  border-radius: 999px;
+  border: 1px solid #d7dec8;
+  background: rgba(255, 252, 246, 0.94);
+  color: var(--olive-deep);
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  box-shadow: 0 2px 6px rgba(70, 55, 30, 0.16);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+.way-pill.show-label { opacity: 1; visibility: visible; }
+.way-pill.pill-left { transform: translate(calc(-100% - 2px), -50%); }
+.way-pill > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.way-pill > svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.way-pill.up > svg { transform: rotate(-90deg); }
+.way-pill.down > svg { transform: rotate(90deg); }
+.way-pill.left > svg { transform: rotate(180deg); }
+.way-pill.stairs > svg { transform: none; }
+.way-pill.stairs.down > svg { transform: scaleY(-1); }
 @media (max-width: 700px) {
   .way-badge { width: 20px; height: 20px; }
-  .way-badge svg { width: 12px; height: 12px; }
+  .way-badge > svg { width: 12px; height: 12px; }
+  .way-pill { font-size: 0.95rem; }
 }
 .zoom-badge {
   position: absolute;

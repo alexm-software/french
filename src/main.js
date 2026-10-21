@@ -425,6 +425,8 @@ function fitHits() {
   });
   placeWayBadges();
   placeZoomBadges();
+  bindSceneHover();
+  toneSigns();
 }
 
 function isZoomTarget(target) {
@@ -434,7 +436,7 @@ function isZoomTarget(target) {
 function placeWayBadges() {
   const frame = document.querySelector("#walk .frame");
   if (!frame) return;
-  frame.querySelectorAll(":scope > .way-badge").forEach((node) => node.remove());
+  frame.querySelectorAll(":scope > .way-badge, :scope > .way-pill").forEach((node) => node.remove());
   const svg = frame.querySelector("svg");
   const ctm = svg?.getScreenCTM();
   const inverse = ctm?.inverse();
@@ -503,11 +505,9 @@ function placeWayBadges() {
     node.type = "button";
     node.className = `way-badge ${el.dataset.wayIcon || "door"} ${dir}`;
     node.dataset.target = el.dataset.target || "";
-    node.title = el.dataset.wayLabel || "";
-    node.setAttribute("aria-label", el.dataset.wayLabel || "");
-    node.innerHTML = el.dataset.wayIcon === "arrow"
-      ? `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6.5 18.5 12 13 17.5"/></svg>`
-      : `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5.2h8.4v13.6H6.2z"/><path d="M15.8 12h3.4M17.8 10.2 20.2 12l-2.4 1.8"/><circle cx="12.2" cy="12" r="0.85" fill="currentColor" stroke="none"/></svg>`;
+    const wayName = el.dataset.wayName || "";
+    node.setAttribute("aria-label", wayName);
+    node.innerHTML = wayIconSvg(el.dataset.wayIcon || "door");
     const origin = toScreen(0, 0);
     const end = toScreen(view.width || 1280, view.height || 720);
     const minX = Math.max(4, Math.min(origin.x, end.x));
@@ -516,9 +516,126 @@ function placeWayBadges() {
     const maxY = Math.max(minY, Math.max(origin.y, end.y) - badgePx - 4);
     node.style.left = `${Math.max(minX, Math.min(screen.x, maxX))}px`;
     node.style.top = `${Math.max(minY, Math.min(screen.y, maxY))}px`;
-    node.addEventListener("pointerenter", () => el.classList.add("glow"));
-    node.addEventListener("pointerleave", () => el.classList.remove("glow"));
+    const light = (on) => {
+      el.classList.toggle("glow", on);
+      const signId = el.dataset.lightsSign;
+      if (!signId || !window.CSS?.escape) return;
+      svg.querySelector(`[data-sign-id="${CSS.escape(signId)}"]`)?.classList.toggle("lit", on);
+    };
+    node.addEventListener("pointerenter", () => light(true));
+    node.addEventListener("pointerleave", () => light(false));
     frame.appendChild(node);
+    if (!el.dataset.lightsSign && wayName) {
+      const pill = document.createElement("span");
+      const pillIcon = el.dataset.wayIcon === "stairs" ? "stairs" : "arrow";
+      pill.className = `way-pill ${pillIcon} ${dir}`;
+      pill.innerHTML = wayIconSvg(pillIcon);
+      const caption = document.createElement("span");
+      caption.textContent = wayName;
+      pill.appendChild(caption);
+      const left = Number.parseFloat(node.style.left) || 0;
+      const top = Number.parseFloat(node.style.top) || 0;
+      const frameW = frame.clientWidth || 320;
+      const placeLeft = left > frameW * 0.58;
+      pill.style.top = `${top + badgePx / 2}px`;
+      if (placeLeft) {
+        pill.classList.add("pill-left");
+        pill.style.left = `${Math.max(8, left - 6)}px`;
+        pill.style.maxWidth = `${Math.max(72, left - 12)}px`;
+      } else {
+        pill.style.left = `${left + badgePx + 6}px`;
+        pill.style.maxWidth = `${Math.max(72, frameW - left - badgePx - 16)}px`;
+      }
+      const show = (on) => pill.classList.toggle("show-label", on);
+      pill.dataset.for = el.dataset.wayBox || "";
+      node.addEventListener("pointerenter", () => show(true));
+      node.addEventListener("pointerleave", () => show(false));
+      frame.appendChild(pill);
+    }
+  });
+}
+
+function wayIconSvg(icon) {
+  if (icon === "stairs") {
+    return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5h4.5v-4h4.5v-4H18V5.5"/></svg>`;
+  }
+  if (icon === "arrow") {
+    return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6.5 18.5 12 13 17.5"/></svg>`;
+  }
+  return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5.2h8.4v13.6H6.2z"/><path d="M15.8 12h3.4M17.8 10.2 20.2 12l-2.4 1.8"/><circle cx="12.2" cy="12" r="0.85" fill="currentColor" stroke="none"/></svg>`;
+}
+
+function bindSceneHover() {
+  const svg = document.querySelector("#walk svg");
+  if (!svg || svg.dataset.hoverBound || !window.CSS?.escape) return;
+  svg.dataset.hoverBound = "1";
+  svg.querySelectorAll("[data-lights-sign]").forEach((hot) => {
+    const sign = svg.querySelector(`[data-sign-id="${CSS.escape(hot.dataset.lightsSign)}"]`);
+    hot.addEventListener("pointerenter", () => {
+      hot.classList.add("glow");
+      sign?.classList.add("lit");
+    });
+    hot.addEventListener("pointerleave", () => {
+      hot.classList.remove("glow");
+      sign?.classList.remove("lit");
+    });
+  });
+  svg.querySelectorAll(".hot.word").forEach((hot) => {
+    const sign = svg.querySelector(`.verb-sign[data-word="${CSS.escape(hot.dataset.word || "")}"]`);
+    if (!sign) return;
+    hot.addEventListener("pointerenter", () => sign.classList.add("lit"));
+    hot.addEventListener("pointerleave", () => sign.classList.remove("lit"));
+  });
+  svg.querySelectorAll("[data-way-box]").forEach((hot) => {
+    if (hot.dataset.lightsSign) return;
+    const show = (on) => {
+      svg.closest(".frame")?.querySelectorAll(".way-pill").forEach((pill) => {
+        if (pill.dataset.for === hot.dataset.wayBox) pill.classList.toggle("show-label", on);
+      });
+    };
+    hot.addEventListener("pointerenter", () => show(true));
+    hot.addEventListener("pointerleave", () => show(false));
+  });
+}
+
+function toneSigns() {
+  const frame = document.querySelector("#walk .frame");
+  const img = frame?.querySelector("img");
+  const svg = frame?.querySelector("svg");
+  if (!img || !svg) return;
+  if (!img.complete || !img.naturalWidth) {
+    img.addEventListener("load", toneSigns, { once: true });
+    return;
+  }
+  const scale = Math.min(1, 360 / img.naturalWidth);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
+  canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  if (!ctx) return;
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  svg.querySelectorAll(".painted-sign").forEach((sign) => {
+    if (sign.classList.contains("side-left") || sign.classList.contains("side-right")) return;
+    const parts = (sign.dataset.signBox || "").split(",").map(Number);
+    if (parts.length < 4 || parts.some((n) => !Number.isFinite(n))) return;
+    const [x0, y0, x1, y1] = parts;
+    const sx = Math.max(0, Math.floor(x0 * scale));
+    const sy = Math.max(0, Math.floor(y0 * scale));
+    const sw = Math.max(1, Math.min(canvas.width - sx, Math.ceil((x1 - x0) * scale)));
+    const sh = Math.max(1, Math.min(canvas.height - sy, Math.ceil((y1 - y0) * scale)));
+    let pixels;
+    try {
+      pixels = ctx.getImageData(sx, sy, sw, sh).data;
+    } catch {
+      return;
+    }
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < pixels.length; i += 16) {
+      sum += 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
+      count += 1;
+    }
+    sign.classList.toggle("ink-gold", sum / Math.max(1, count) < 105);
   });
 }
 
@@ -677,10 +794,33 @@ function fittedPlate(className, text, box, opts = {}) {
     `<text x="${cx.toFixed(1)}" y="${(top + index * lineHeight).toFixed(1)}" text-anchor="middle" font-size="${wrapped.size.toFixed(1)}">${esc(line)}</text>`
   ).join("");
   const rx = Math.min(5, height / 4);
-  return `<g class="${className}" data-sign-box="${box.join(",")}">
+  const word = opts.wordId ? ` data-word="${esc(opts.wordId)}"` : "";
+  return `<g class="${className}" data-sign-box="${box.join(",")}"${word}>
     <rect class="plate" x="${(x0 + 0.5).toFixed(1)}" y="${(y0 + 0.5).toFixed(1)}" width="${(width - 1).toFixed(1)}" height="${(height - 1).toFixed(1)}" rx="${rx.toFixed(1)}"></rect>
     ${lines}
   </g>`;
+}
+
+function paintedSign(className, text, box, opts = {}) {
+  const [x0, y0, x1, y1] = box;
+  const width = Math.max(12, x1 - x0);
+  const height = Math.max(12, y1 - y0);
+  const inset = Math.min(3, width * 0.08, height * 0.14);
+  const wrapped = wrapLines(
+    text,
+    Math.max(8, width - inset * 2),
+    Math.max(8, height - inset * 2),
+    opts.maxSize || Math.max(11, (height - inset * 2) * 0.72),
+    opts.widthFactor || 0.56,
+  );
+  const cx = (x0 + x1) / 2;
+  const lineHeight = wrapped.size * 1.08;
+  const top = (y0 + y1) / 2 - (wrapped.lines.length * lineHeight) / 2 + wrapped.size * 0.78;
+  const lines = wrapped.lines.map((line, index) =>
+    `<text x="${cx.toFixed(1)}" y="${(top + index * lineHeight).toFixed(1)}" text-anchor="middle" font-size="${wrapped.size.toFixed(1)}">${esc(line)}</text>`
+  ).join("");
+  const id = opts.signId ? ` data-sign-id="${esc(opts.signId)}"` : "";
+  return `<g class="painted-sign ${className}" data-sign-box="${box.join(",")}"${id}>${lines}</g>`;
 }
 
 function wordLabel(word, box, labelXy) {
@@ -713,8 +853,8 @@ function nameTag(text, box) {
 function wayCue(item, exitKey) {
   const kind = String(item?.kind || "");
   const key = exitKind(exitKey) || "";
-  if (kind === "stairs_up") return { icon: "arrow", dir: "up" };
-  if (kind === "stairs_down") return { icon: "arrow", dir: "down" };
+  if (kind === "stairs_up") return { icon: "stairs", dir: "up" };
+  if (kind === "stairs_down") return { icon: "stairs", dir: "down" };
   if (key === "left" || key === "right" || key === "forward" || key === "back") {
     return { icon: "arrow", dir: { left: "left", right: "right", forward: "up", back: "down" }[key] };
   }
@@ -723,26 +863,79 @@ function wayCue(item, exitKey) {
   return { icon: "door", dir: "through" };
 }
 
-function enterLabel(item, fallbackKey) {
-  return tf("nav.enterPlace", { place: hoverLabel(item, fallbackKey) });
+function foldName(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
-function wayMarkup(item, exitKey) {
+function boxGap(signBox, linkBox) {
+  if (!signBox || !linkBox) return Infinity;
+  const cx = (Number(signBox[0]) + Number(signBox[2])) / 2;
+  const cy = (Number(signBox[1]) + Number(signBox[3])) / 2;
+  const dx = cx < linkBox[0] ? linkBox[0] - cx : cx > linkBox[2] ? cx - linkBox[2] : 0;
+  const dy = cy < linkBox[1] ? linkBox[1] - cy : cy > linkBox[3] ? cy - linkBox[3] : 0;
+  return Math.hypot(dx, dy);
+}
+
+function signAssignments(scene) {
+  const areas = scene.text_areas || {};
+  const portals = [];
+  (scene.links || []).forEach((link, index) => {
+    if (!link?.box || !link.target || isZoomTarget(link.target)) return;
+    portals.push({ id: `link:${index}`, item: link, exitKey: "" });
+  });
+  Object.entries(scene.exits || {}).forEach(([key, exit]) => {
+    const kind = exitKind(key);
+    if (!kind || !exit?.box || !exit.target || isZoomTarget(exit.target)) return;
+    portals.push({ id: `exit:${key}`, item: exit, exitKey: key });
+  });
+  const assigned = new Map();
+  const usedSigns = new Set();
+  const usedPortals = new Set();
+  const claim = (portal, signId) => {
+    if (!portal || usedSigns.has(signId) || usedPortals.has(portal.id)) return;
+    usedSigns.add(signId);
+    usedPortals.add(portal.id);
+    assigned.set(portal.id, signId);
+  };
+  Object.entries(areas).forEach(([id, area]) => {
+    if (area.role !== "direction" || !area.for_exit) return;
+    const kind = exitKind(area.for_exit) || area.for_exit;
+    claim(portals.find((item) => item.exitKey === area.for_exit || item.exitKey === kind), id);
+  });
+  Object.entries(areas).forEach(([id, area]) => {
+    if (usedSigns.has(id)) return;
+    if (area.role !== "building_name" && area.role !== "street_name" && id !== "building_name") return;
+    const text = foldName(area.text || "");
+    if (text.length < 3) return;
+    const box = area.box || area.text_box;
+    let best = null;
+    let bestDist = 180;
+    portals.forEach((portal) => {
+      if (usedPortals.has(portal.id)) return;
+      const name = foldName(portal.item.name || portal.item.label || "");
+      if (!name.includes(text)) return;
+      const dist = boxGap(box, portal.item.box);
+      if (dist <= bestDist) {
+        bestDist = dist;
+        best = portal;
+      }
+    });
+    claim(best, id);
+  });
+  return assigned;
+}
+
+function wayMarkup(item, exitKey, signId) {
   if (!item?.box || !item.target || isZoomTarget(item.target)) return "";
   const cue = wayCue(item, exitKey);
-  const label = enterLabel(item, exitKey ? `nav.${exitKind(exitKey) || "forward"}` : "open");
-  return ` data-way-box="${item.box.join(",")}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-label="${esc(label)}"`;
-}
-
-function arrowGraphic(kind, box) {
-  const [x0, y0, x1, y1] = box;
-  const rot = { forward: 0, back: 180, left: -90, right: 90 }[kind] || 0;
-  const cx = (x0 + x1) / 2;
-  const cy = (y0 + y1) / 2;
-  return `<g class="arrow" transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)}) rotate(${rot})">
-    <circle r="26"></circle>
-    <path d="M-8 0h14M2-7l8 7-8 7"></path>
-  </g>`;
+  const name = hoverLabel(item, exitKey ? `nav.${exitKind(exitKey) || "forward"}` : "open");
+  const lights = signId ? ` data-lights-sign="${esc(signId)}"` : "";
+  return ` data-way-box="${item.box.join(",")}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-name="${esc(name)}"${lights}`;
 }
 
 function hitShape(item) {
@@ -757,30 +950,26 @@ function hitShape(item) {
 function sceneMarkup(scene, words, zooms) {
   const byId = Object.fromEntries((words || []).map((word) => [word.id, word]));
   const areas = scene.text_areas || {};
+  const signs = signAssignments(scene);
   const signed = new Set(Object.keys(areas).filter((key) => key.endsWith("_sign")).map((key) => key.slice(0, -5)));
-  const signedExits = new Set(
-    Object.values(areas)
-      .filter((area) => area.role === "direction" && area.for_exit)
-      .map((area) => exitKind(area.for_exit) || area.for_exit)
-  );
   state.nav = { forward: null, back: null, left: null, right: null };
   const parts = [];
-  (scene.links || []).forEach((link) => {
+  (scene.links || []).forEach((link, index) => {
     if (!link?.box || !link.target) return;
     const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
-    const way = wayMarkup(link);
-    const label = way ? enterLabel(link, "open") : hoverLabel(link, "open");
-    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${nameTag(label, link.box)}</g>`);
+    const way = wayMarkup(link, "", signs.get(`link:${index}`) || "");
+    const label = hoverLabel(link, "open");
+    const tag = way ? "" : nameTag(label, link.box);
+    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${tag}</g>`);
   });
   Object.entries(scene.exits || {}).forEach(([key, exit]) => {
     const kind = exitKind(key);
     if (!kind || !exit?.box || !exit.target) return;
     state.nav[kind] = hashFor(exit.target);
-    const graphic = signedExits.has(kind) ? "" : arrowGraphic(kind, exit.box);
     const zoomBox = isZoomTarget(exit.target) ? ` data-zoom-box="${exit.box.join(",")}"` : "";
-    const way = wayMarkup(exit, key);
-    const label = way ? enterLabel(exit, `nav.${kind}`) : hoverLabel(exit, `nav.${kind}`);
-    parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(exit)}${graphic}</g>`);
+    const way = wayMarkup(exit, key, signs.get(`exit:${key}`) || "");
+    const label = hoverLabel(exit, `nav.${kind}`);
+    parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(exit)}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
     if (hot.helper) return;
@@ -824,21 +1013,21 @@ function sceneMarkup(scene, words, zooms) {
     if (area.role === "direction") {
       const trimmed = text.trim();
       const sideClass = /^-er\b/.test(trimmed) ? " side-left" : /^-ir\b|-re\b/.test(trimmed) ? " side-right" : "";
-      parts.push(fittedPlate(`sign-plate direction-sign${sideClass}`, text, box, { maxSize: 18 }));
+      parts.push(paintedSign(`direction-sign${sideClass}`, text, box, { maxSize: sideClass ? 15 : 18, signId: key }));
       return;
     }
     if (area.role === "building_name" || area.role === "street_name" || key === "building_name") {
-      const klass = area.role === "street_name" ? "sign-plate street-name" : "sign-plate building-name";
-      parts.push(fittedPlate(klass, text, box, { maxSize: 32 }));
+      const klass = area.role === "street_name" ? "street-name" : "building-name";
+      parts.push(paintedSign(klass, text, box, { maxSize: 32, signId: key }));
       return;
     }
     if (area.role === "room_name" || key === "sign") {
-      parts.push(fittedPlate("sign-plate room-name", text, box, { maxSize: 40 }));
+      parts.push(paintedSign("room-name", text, box, { maxSize: 40, signId: key }));
       return;
     }
     if (area.role === "verb_sign" || (word && word.pos === "verb")) {
       const side = verbSide(word, scene);
-      parts.push(fittedPlate(`verb-sign ${side}`, text, box, { maxSize: 16 }));
+      parts.push(fittedPlate(`verb-sign ${side}`, text, box, { maxSize: 16, wordId }));
       return;
     }
     const klass = key.endsWith("_plaque") || key === "plaque" ? "plaque" : "sign";
@@ -1610,6 +1799,7 @@ function onKey(event) {
 
 document.addEventListener("click", onClick);
 document.addEventListener("fullscreenchange", () => {
+  fitHits();
   const fullscreen = Boolean(document.fullscreenElement);
   const label = fullscreen ? t("tools.leave") : t("tools.fullscreen");
   const icon = doodle(fullscreen ? "collapse" : "expand");
