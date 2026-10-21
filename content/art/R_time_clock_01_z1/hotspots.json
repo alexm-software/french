@@ -1,0 +1,195 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "zoom",
+ "parent_room_id": "R_time_clock_01",
+ "note": "Zoom on the sideboard against the back wall of the entrance hall. Feminine on the left (la soirée, la veille, la demi-heure), l'après-midi (both genders) in the middle, masculine on the right (le lendemain, le retard, le midi, le minuit). The blank card on the wall is the sign.",
+ "text_areas": {
+  "sign": {
+   "role": "zoom_name",
+   "text": "Le buffet des heures",
+   "box": [
+    222,
+    106,
+    330,
+    220
+   ],
+   "text_box": [
+    230,
+    114,
+    322,
+    212
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_soiree_noun",
+   "lemma": "soirée",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la soirée",
+   "box": [
+    106,
+    269,
+    215,
+    452
+   ],
+   "label_xy": [
+    160,
+    442
+   ],
+   "scene": "porcelain swan in a party hat among confetti"
+  },
+  {
+   "id": "fr_veille_noun",
+   "lemma": "veille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la veille",
+   "box": [
+    229,
+    290,
+    412,
+    456
+   ],
+   "label_xy": [
+    320,
+    446
+   ],
+   "scene": "bridal veil draped over a desk calendar"
+  },
+  {
+   "id": "fr_demi_heure_noun",
+   "lemma": "demi-heure",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la demi-heure",
+   "box": [
+    425,
+    352,
+    562,
+    462
+   ],
+   "label_xy": [
+    494,
+    452
+   ],
+   "scene": "clock-face cake cut exactly in half"
+  },
+  {
+   "id": "fr_apres_midi_noun",
+   "lemma": "après-midi",
+   "article": "l'",
+   "gender": "mf",
+   "side": "center",
+   "label": "l'après-midi",
+   "box": [
+    587,
+    327,
+    703,
+    452
+   ],
+   "label_xy": [
+    645,
+    442
+   ],
+   "scene": "baby pram with a little sun just past its handle"
+  },
+  {
+   "id": "fr_lendemain_noun",
+   "lemma": "lendemain",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le lendemain",
+   "box": [
+    708,
+    285,
+    815,
+    462
+   ],
+   "label_xy": [
+    762,
+    452
+   ],
+   "scene": "toy parachutist landing on a tear-off calendar"
+  },
+  {
+   "id": "fr_retard_noun",
+   "lemma": "retard",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le retard",
+   "box": [
+    818,
+    390,
+    929,
+    477
+   ],
+   "label_xy": [
+    874,
+    467
+   ],
+   "scene": "toy snail stuck in a black puddle of tar"
+  },
+  {
+   "id": "fr_midi_noun",
+   "lemma": "midi",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le midi",
+   "box": [
+    933,
+    256,
+    1030,
+    465
+   ],
+   "label_xy": [
+    982,
+    455
+   ],
+   "scene": "brass sundial with the sun straight overhead"
+  },
+  {
+   "id": "fr_minuit_noun",
+   "lemma": "minuit",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le minuit",
+   "box": [
+    1032,
+    344,
+    1175,
+    462
+   ],
+   "label_xy": [
+    1104,
+    452
+   ],
+   "scene": "tiny owl beside a clock with both hands pointing up"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_time_clock_01",
+   "box": [
+    125,
+    530,
+    1160,
+    672
+   ],
+   "label": "Step back into the entrance hall",
+   "name": "Tour — les heures (1)",
+   "kind": "zoom_back"
+  }
+ ]
+}

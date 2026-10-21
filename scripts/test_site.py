@@ -337,7 +337,7 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 848, len(rooms)
+    assert len(rooms) == 850, len(rooms)
     assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
@@ -352,10 +352,14 @@ def main():
     index = load(DATA / "index.json")
     assert index["open_sectors"] == ["S01_beginner", "S04_cafes"], index["open_sectors"]
     assert index["open_rooms"] == [
+        "R_abs_time_01", "R_abs_time_02",
+        "R_adv_time_01", "R_adv_time_01_z1", "R_adv_time_02", "R_adv_time_02_z1", "R_adv_time_03",
         "R_colors_01", "R_colors_02", "R_colors_02_z1",
         "R_exclaim_01", "R_exclaim_02", "R_exclaim_03", "R_farewell",
         "R_greet", "R_polite", "R_polite_z1",
         "R_shapes_02", "R_shapes_03", "R_shapes_03_z1", "R_shapes_03_z2",
+        "R_time_clock_01", "R_time_clock_01_z1", "R_time_clock_02",
+        "R_time_days_01", "R_time_days_01_z1", "R_time_days_02", "R_time_days_02_z1",
     ], index["open_rooms"]
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
@@ -503,7 +507,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 29, room_files
+    assert len(room_files) == 43, room_files
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -511,9 +515,22 @@ def main():
     assert square["open"] is True
     assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
-    assert soon == {"B02_ecole", "B03_horloge"}, soon
+    assert soon == {"B02_ecole"}, soon
     open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
-    assert open_doors == {"B01_fontaine", "B04_atelier_couleurs", "S04_sector"}, open_doors
+    assert open_doors == {"B01_fontaine", "B03_horloge", "B04_atelier_couleurs", "S04_sector"}, open_doors
+    stairs = {
+        ("B04_atelier_couleurs", "R_shapes_03"): ("stairs", "stairs_down"),
+        ("R_colors_02", "R_shapes_02"): ("stairs", "stairs_down"),
+        ("R_adv_time_01", "R_time_clock_02"): ("stairs_up", "stairs_down"),
+        ("R_abs_time_01", "R_adv_time_03"): ("stairs_up", "stairs_down"),
+    }
+    for (src, dest), (up_kind, down_kind) in stairs.items():
+        raw = load(ROOT / "content" / "art" / src / "hotspots.json")
+        link = next(item for item in raw["links"] if item["target"] == dest)
+        assert link["kind"] == up_kind, (src, link["kind"])
+        back = load(ROOT / "content" / "art" / dest / "hotspots.json")
+        returns = [item for item in back["links"] if item["target"] == src]
+        assert returns and returns[0]["kind"] == down_kind, (dest, returns)
     colors = load(DATA / "rooms" / "R_colors_01.json")
     assert colors["building_id"] == "B04_atelier_couleurs"
     assert any(link["target"] == "R_colors_02" for link in colors["scene"]["links"])
@@ -650,8 +667,8 @@ def finish(quiz):
     assert shown and hidden
     assert not set(shown) & set(hidden)
     assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
-    assert len(source_conv) == 722
-    assert len(hidden) == 10
+    assert len(source_conv) == 720
+    assert len(hidden) == 9
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
     assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'

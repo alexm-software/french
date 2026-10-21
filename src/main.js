@@ -898,7 +898,7 @@ function nameTag(text, box) {
 function wayCue(item, exitKey) {
   const kind = String(item?.kind || "");
   const key = exitKind(exitKey) || "";
-  if (kind === "stairs_up") return { icon: "stairs", dir: "up" };
+  if (kind === "stairs_up" || kind === "stairs") return { icon: "stairs", dir: "up" };
   if (kind === "stairs_down") return { icon: "stairs", dir: "down" };
   if (key === "left" || key === "right" || key === "forward" || key === "back") {
     return { icon: "arrow", dir: { left: "left", right: "right", forward: "up", back: "down" }[key] };
