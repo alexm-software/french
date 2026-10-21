@@ -703,7 +703,7 @@ function sceneMarkup(scene, words, zooms) {
     const klass = key.endsWith("_plaque") || key === "plaque" ? "plaque" : "sign";
     parts.push(textBlock(klass, text, box));
   });
-  return `<svg viewBox="0 0 ${scene.width} ${scene.height}" preserveAspectRatio="xMidYMid slice">${parts.join("")}</svg>`;
+  return `<svg viewBox="0 0 ${scene.width} ${scene.height}" preserveAspectRatio="xMidYMid meet">${parts.join("")}</svg>`;
 }
 
 function walkHtml(dialog) {

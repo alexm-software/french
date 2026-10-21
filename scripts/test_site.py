@@ -116,6 +116,10 @@ def assert_back_strip_stays_visible(client):
     css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
     assert ".nav a.back" not in css
     assert "a.back" in css
+    assert 'preserveAspectRatio="xMidYMid meet"' in client
+    assert 'preserveAspectRatio="xMidYMid slice"' not in client
+    assert "object-fit: contain" in css
+    assert "object-fit: cover" not in css
     narrow = css.split("@media (max-width: 820px)", 1)[1].split("@media", 1)[0]
     assert "display: none" in narrow and ".nav" in narrow
     assert "a.back" in narrow
