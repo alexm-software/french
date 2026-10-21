@@ -63,7 +63,12 @@ async function routes(page) {
     const room = await page.evaluate(async (root, roomId) => {
       const response = await fetch(`${root}data/rooms/${roomId}.json`);
       if (!response.ok) return null;
-      return response.json();
+      const text = await response.text();
+      try {
+        return JSON.parse(text);
+      } catch {
+        return null;
+      }
     }, base, id);
     if (room?.scene?.image) list.push({ id, hash: `#/room/${id}`, image: room.scene.image });
     for (const zoom of room?.zooms || []) addRoom(zoom.id);

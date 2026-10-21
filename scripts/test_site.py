@@ -350,11 +350,11 @@ def walk_site_graph():
 
 def main():
     index = load(DATA / "index.json")
-    assert index["open_sectors"] == ["S01_beginner", "S03_market", "S04_cafes"], index["open_sectors"]
+    assert index["open_sectors"] == ["S01_beginner", "S02_home", "S03_market", "S04_cafes"], index["open_sectors"]
     site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
     assert index["open_rooms"] == site_rooms, index["open_rooms"]
-    assert len(site_rooms) == 64
-    assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001"} <= set(site_rooms)
+    assert len(site_rooms) == 93
+    assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001", "R_entrance_01", "R_bathroom"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
     assert len(index["sectors"]) == 16
@@ -362,7 +362,7 @@ def main():
     assert any(item["id"] == "faith_first" for item in index["alternatives"])
     assert index["route_legs"], "walking legs missing"
     locked = [sector["id"] for sector in index["sectors"] if not sector["open"]]
-    assert "S01_beginner" not in locked and "S03_market" not in locked and "S11_church" in locked
+    assert "S01_beginner" not in locked and "S02_home" not in locked and "S03_market" not in locked and "S11_church" in locked
     assert all(sector["x"] and sector["y"] for sector in index["sectors"])
 
     sector = load(DATA / "sectors" / "S04_cafes.json")
@@ -501,7 +501,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 79, room_files
+    assert len(room_files) == 108, room_files
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -520,6 +520,8 @@ def main():
         ("R_pronouns_01", "R_numbers2"): ("stairs_up", "stairs_down"),
         ("R_conjunctions", "R_pronouns_03"): ("stairs_up", "stairs_down"),
         ("R_abs_quantity_03", "R_adv_degree_02"): ("stairs_up", "stairs_down"),
+        ("R_living", "R_bedroom_01"): ("stairs_up", "stairs_down"),
+        ("R_bedroom_02", "R_attic"): ("stairs_up", "stairs_down"),
     }
     for (src, dest), (up_kind, down_kind) in stairs.items():
         raw = load(ROOT / "content" / "art" / src / "hotspots.json")
@@ -528,6 +530,10 @@ def main():
         back = load(ROOT / "content" / "art" / dest / "hotspots.json")
         returns = [item for item in back["links"] if item["target"] == src]
         assert returns and returns[0]["kind"] == down_kind, (dest, returns)
+    gallery = load(ROOT / "content" / "art" / "R_entrance_01_z1" / "hotspots.json")
+    assert next(item for item in gallery["links"] if item["target"] == "R_bedroom_02")["kind"] == "stairs_up"
+    dream = load(ROOT / "content" / "art" / "R_bedroom_02" / "hotspots.json")
+    assert next(item for item in dream["links"] if item["target"] == "R_entrance_01")["kind"] == "stairs_down"
     colors = load(DATA / "rooms" / "R_colors_01.json")
     assert colors["building_id"] == "B04_atelier_couleurs"
     assert any(link["target"] == "R_colors_02" for link in colors["scene"]["links"])
@@ -539,10 +545,10 @@ def main():
     assert market["scene"]["image"].endswith("art/S03_sector/base.jpg")
     soon_market = {link["target"] for link in market["scene"]["links"] if link.get("soon")}
     assert soon_market == {
-        "B62_couture", "B06_marche", "B07_rue_commercante", "B61_reparation", "B59_brocante", "S02_sector",
+        "B62_couture", "B06_marche", "B07_rue_commercante", "B61_reparation", "B59_brocante",
     }, soon_market
     open_market = {link["target"] for link in market["scene"]["links"] if not link.get("soon")}
-    assert open_market == {"B60_balance", "ST_commerce_seg001", "S01_sector"}, open_market
+    assert open_market == {"B60_balance", "ST_commerce_seg001", "S01_sector", "S02_sector"}, open_market
     commerce = load(ROOT / "content" / "art" / "ST_commerce_seg001" / "hotspots.json")
     assert commerce["view"] == "street_perspective"
     assert commerce["exits"]["forward"]["target"] == "ST_commerce_seg002"
@@ -550,6 +556,27 @@ def main():
     quantity = load(DATA / "rooms" / "R_abs_quantity_01.json")
     assert quantity["building_id"] == "B60_balance"
     assert any(link["target"] == "R_abs_quantity_02" for link in quantity["scene"]["links"])
+    home = load(DATA / "sectors" / "S02_home.json")
+    assert home["open"] is True
+    assert home["scene"]["image"].endswith("art/S02_sector/base.jpg")
+    assert {link["target"] for link in home["scene"]["links"]} == {"B05_maison", "S01_sector"}
+    assert not any(link.get("soon") for link in home["scene"]["links"])
+    house = next(item for item in home["buildings"] if item["id"] == "B05_maison")
+    assert house["scene"]["image"].endswith("art/B05_maison/base.jpg")
+    assert any(link["target"] == "R_entrance_04" and not link.get("soon") for link in house["scene"]["links"])
+    entrance = load(DATA / "rooms" / "R_entrance_01.json")
+    assert entrance["building_id"] == "B05_maison"
+    assert any(link["target"] == "R_living" for link in entrance["scene"]["links"])
+    outside = {"R_entrance_03", "R_garage", "R_garden", "R_kitchen_01", "R_pets"}
+    upstairs = {
+        "R_bedroom_01", "R_bedroom_02", "R_attic", "R_playroom", "R_bathroom", "R_bathroom_z1",
+    }
+    for room_id in upstairs:
+        links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
+        assert all(link["target"] not in {"B05_maison", "S02_sector"} for link in links), room_id
+    for room_id in outside:
+        links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
+        assert any(link["target"] == "B05_maison" for link in links), room_id
     quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
     seen = []
     for path in (DATA / "rooms").glob("*.json"):

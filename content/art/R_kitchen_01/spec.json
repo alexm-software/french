@@ -1,0 +1,183 @@
+{
+ "divider_x": 430,
+ "kind": "room",
+ "note": "House kitchen, ground floor. Feminine left (window pane, queen at the hearth, girl with the saucepan, garden back door), masculine right (cookers, oven, stove, fridges, freezer, pot, lid, ashtray). Door ajar in the back wall to the living room; pantry archway top right to the scullery (R_kitchen_02). The worktop is scenery (plan de travail is not in the word list; comptoir moved to the shop). One box per item.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La cuisine",
+   "box": [
+    520,
+    39,
+    739,
+    106
+   ],
+   "text_box": [
+    535,
+    48,
+    724,
+    98
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_vitre_noun",
+   "box": [
+    150,
+    60,
+    300,
+    292
+   ]
+  },
+  {
+   "id": "fr_cuisine_noun",
+   "box": [
+    302,
+    156,
+    412,
+    545
+   ]
+  },
+  {
+   "id": "fr_casserole_noun",
+   "box": [
+    47,
+    390,
+    300,
+    656
+   ]
+  },
+  {
+   "id": "fr_fourneau_noun",
+   "box": [
+    445,
+    281,
+    650,
+    476
+   ],
+   "label_xy": [
+    547,
+    466
+   ]
+  },
+  {
+   "id": "fr_frigo_noun",
+   "box": [
+    612,
+    478,
+    844,
+    703
+   ],
+   "label_xy": [
+    728,
+    690
+   ]
+  },
+  {
+   "id": "fr_four_noun",
+   "box": [
+    683,
+    150,
+    915,
+    296
+   ]
+  },
+  {
+   "id": "fr_poele_noun",
+   "box": [
+    680,
+    298,
+    867,
+    476
+   ]
+  },
+  {
+   "id": "fr_refrigerateur_noun",
+   "box": [
+    919,
+    164,
+    1117,
+    332
+   ]
+  },
+  {
+   "id": "fr_pot_noun",
+   "box": [
+    891,
+    336,
+    1109,
+    436
+   ]
+  },
+  {
+   "id": "fr_couvercle_noun",
+   "box": [
+    1117,
+    336,
+    1242,
+    436
+   ]
+  },
+  {
+   "id": "fr_cendrier_noun",
+   "box": [
+    1156,
+    269,
+    1250,
+    334
+   ]
+  },
+  {
+   "id": "fr_congelateur_noun",
+   "box": [
+    914,
+    440,
+    1270,
+    716
+   ],
+   "label_xy": [
+    1090,
+    700
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B05_maison",
+   "box": [
+    0,
+    86,
+    95,
+    385
+   ],
+   "label": "Back door to the garden path",
+   "name": "La Maison familiale (outside)",
+   "kind": "door"
+  },
+  {
+   "target": "R_living",
+   "box": [
+    477,
+    125,
+    617,
+    277
+   ],
+   "label": "Door to the living room",
+   "name": "Le salon",
+   "kind": "door"
+  },
+  {
+   "target": "R_kitchen_02",
+   "box": [
+    1000,
+    94,
+    1078,
+    162
+   ],
+   "label": "Archway to the scullery",
+   "name": "La cuisine — l'office",
+   "kind": "door"
+  }
+ ]
+}
