@@ -1,0 +1,181 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Upstairs shapes-and-sizes studio (first floor, rarer words). Feminine nouns on the left (la grandeur, la tonne, l'épaisseur, la résolution); masculine nouns on the right (le centimètre, le géant, le foudre, le carreau, le diamètre, le pourtour, l'hexagone); adjectives régulier and carré in the centre. Stairs DOWN at the far left lead back to the colour studio; the blue door on the back wall leads to the second shapes room.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Formes et tailles (1)",
+   "box": [
+    539,
+    123,
+    691,
+    221
+   ],
+   "text_box": [
+    547,
+    130,
+    683,
+    214
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_grandeur_noun",
+   "box": [
+    127,
+    89,
+    287,
+    376
+   ],
+   "scene": "a tiny grandmother gazes up at a gigantic sunflower"
+  },
+  {
+   "id": "fr_tonne_noun",
+   "box": [
+    291,
+    232,
+    412,
+    367
+   ],
+   "scene": "a mouse in a striped leotard lifts an iron weight on a crate"
+  },
+  {
+   "id": "fr_epaisseur_noun",
+   "box": [
+    421,
+    223,
+    531,
+    413
+   ],
+   "scene": "a chimpanzee in a bow tie hugs a very thick book"
+  },
+  {
+   "id": "fr_resolution_noun",
+   "box": [
+    242,
+    379,
+    404,
+    592
+   ],
+   "scene": "a girl shows framed lion portraits"
+  },
+  {
+   "id": "fr_regulier_adj",
+   "box": [
+    574,
+    252,
+    672,
+    421
+   ],
+   "scene": "drummer boy marches over evenly spaced footprints"
+  },
+  {
+   "id": "fr_carre_adj",
+   "box": [
+    436,
+    447,
+    586,
+    581
+   ],
+   "scene": "a boxy square red toy car in a sunbeam"
+  },
+  {
+   "id": "fr_centimetre_noun",
+   "box": [
+    695,
+    174,
+    824,
+    385
+   ],
+   "scene": "Santa walks along a yellow ruler"
+  },
+  {
+   "id": "fr_geant_noun",
+   "box": [
+    874,
+    99,
+    1050,
+    345
+   ],
+   "scene": "a giant towers over a little lady, a blue jay on his thumb"
+  },
+  {
+   "id": "fr_foudre_noun_m",
+   "box": [
+    1055,
+    243,
+    1196,
+    369
+   ],
+   "scene": "a huge wooden vat topped with bread and apples"
+  },
+  {
+   "id": "fr_carreau_noun",
+   "box": [
+    916,
+    374,
+    1191,
+    475
+   ],
+   "scene": "a row of toy cars, each on its own checked tile"
+  },
+  {
+   "id": "fr_diametre_noun",
+   "box": [
+    676,
+    390,
+    812,
+    565
+   ],
+   "scene": "a boy lays a measuring stick straight across a cartwheel"
+  },
+  {
+   "id": "fr_pourtour_noun",
+   "box": [
+    817,
+    389,
+    906,
+    604
+   ],
+   "scene": "a boy pours sand all the way round a circle"
+  },
+  {
+   "id": "fr_hexagone_noun",
+   "box": [
+    910,
+    480,
+    1125,
+    626
+   ],
+   "scene": "a hen on a green hexagon stone beside an empty nest"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_colors_02",
+   "box": [
+    0,
+    387,
+    222,
+    649
+   ],
+   "label": "Down the stairs to the colour studio",
+   "name": "Atelier — les couleurs (2)",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_shapes_03",
+   "box": [
+    827,
+    142,
+    865,
+    302
+   ],
+   "label": "Through the blue door to the next shapes room",
+   "name": "Atelier — les formes (2)",
+   "kind": "door"
+  }
+ ]
+}

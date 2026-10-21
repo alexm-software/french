@@ -1,0 +1,169 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "sector_overview",
+ "note": "Place du Village, the start of the whole village. Fountain garden gate (B01) front left, Petite École (B02) left, Tour de l'Horloge (B03) centre back, Atelier des Couleurs (B04) right; the lane on the far right walks to the Cafés quarter (S04). Suggested walk: B01 -> B04 -> B03 -> B02 (by level).",
+ "text_areas": {
+  "sector_name": {
+   "role": "sector_name",
+   "text": "Place du Village",
+   "box": [
+    40,
+    640,
+    300,
+    700
+   ],
+   "text_box": [
+    50,
+    646,
+    290,
+    694
+   ]
+  },
+  "b02_name": {
+   "role": "building_name",
+   "text": "Petite École",
+   "box": [
+    203,
+    294,
+    328,
+    336
+   ],
+   "text_box": [
+    209,
+    299,
+    322,
+    331
+   ]
+  },
+  "b03_name": {
+   "role": "building_name",
+   "text": "Tour de l'Horloge",
+   "box": [
+    566,
+    347,
+    641,
+    375
+   ],
+   "text_box": [
+    569,
+    350,
+    638,
+    372
+   ]
+  },
+  "b04_name": {
+   "role": "building_name",
+   "text": "Atelier des Couleurs & Formes",
+   "box": [
+    867,
+    325,
+    977,
+    366
+   ],
+   "text_box": [
+    872,
+    329,
+    972,
+    362
+   ]
+  },
+  "b01_name": {
+   "role": "building_name",
+   "text": "Fontaine des Salutations",
+   "box": [
+    372,
+    403,
+    485,
+    433
+   ],
+   "text_box": [
+    376,
+    406,
+    481,
+    430
+   ]
+  },
+  "dir_cafes": {
+   "role": "direction",
+   "text": "→ Rue des Saveurs (cafés)",
+   "box": [
+    1130,
+    330,
+    1270,
+    362
+   ],
+   "text_box": [
+    1134,
+    333,
+    1266,
+    359
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "B01_fontaine",
+   "box": [
+    305,
+    492,
+    563,
+    672
+   ],
+   "label": "Through the gate into the fountain garden",
+   "name": "Fontaine des Salutations",
+   "kind": "gate"
+  },
+  {
+   "target": "B02_ecole",
+   "box": [
+    210,
+    345,
+    303,
+    500
+   ],
+   "label": "Into the schoolhouse",
+   "name": "Petite École",
+   "kind": "door"
+  },
+  {
+   "target": "B03_horloge",
+   "box": [
+    575,
+    388,
+    630,
+    480
+   ],
+   "label": "Into the clock tower",
+   "name": "Tour de l'Horloge",
+   "kind": "door"
+  },
+  {
+   "target": "B04_atelier_couleurs",
+   "box": [
+    880,
+    375,
+    963,
+    524
+   ],
+   "label": "Into the colour workshop",
+   "name": "Atelier des Couleurs & Formes",
+   "kind": "door"
+  },
+  {
+   "target": "S04_sector",
+   "box": [
+    1149,
+    469,
+    1280,
+    656
+   ],
+   "label": "Walk down the lane to the Cafés quarter",
+   "name": "Rue des Saveurs — Cafés & restaurants",
+   "kind": "path"
+  }
+ ]
+}

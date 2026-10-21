@@ -642,7 +642,13 @@ def rooms_to_paint(open_sectors):
         for line in handle:
             word = json.loads(line)
             words[word["id"]] = word
-    selected = [r for r in rooms if r["sector_id"] in open_sectors]
+    live_ids = set(load_json(ROOT / "content" / "site.json").get("open_rooms") or [])
+    restricted = {room["sector_id"] for room in rooms if room["id"] in live_ids}
+    selected = [
+        room for room in rooms
+        if room["sector_id"] in open_sectors
+        and not (room["sector_id"] in restricted and room["id"] not in live_ids)
+    ]
     by_id = {r["id"]: r for r in selected}
     for room in selected:
         if room.get("zoom_ids"):

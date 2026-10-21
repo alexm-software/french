@@ -30,13 +30,12 @@ function chromePath() {
 }
 
 async function routes(page) {
-  const sector = await page.evaluate(async (root) => {
-    const response = await fetch(`${root}data/sectors/S04_cafes.json`);
-    if (!response.ok) throw new Error(`sector json ${response.status}`);
+  const index = await page.evaluate(async (root) => {
+    const response = await fetch(`${root}data/index.json`);
+    if (!response.ok) throw new Error(`index json ${response.status}`);
     return response.json();
   }, base);
   const list = [];
-  if (sector.scene?.image) list.push({ id: sector.id, hash: `#/sector/${sector.id}`, image: sector.scene.image });
   const rooms = [];
   const seen = new Set();
   const addRoom = (id) => {
@@ -44,13 +43,21 @@ async function routes(page) {
     seen.add(id);
     rooms.push(id);
   };
-  for (const building of sector.buildings || []) {
-    if (building.scene?.image) list.push({ id: building.id, hash: `#/building/${building.id}`, image: building.scene.image });
-    for (const floor of building.floors || []) {
-      for (const room of floor.rooms || []) addRoom(room.id);
+  for (const sectorId of index.open_sectors || []) {
+    const sector = await page.evaluate(async (root, id) => {
+      const response = await fetch(`${root}data/sectors/${id}.json`);
+      if (!response.ok) throw new Error(`sector json ${response.status}`);
+      return response.json();
+    }, base, sectorId);
+    if (sector.scene?.image) list.push({ id: sector.id, hash: `#/sector/${sector.id}`, image: sector.scene.image });
+    for (const building of sector.buildings || []) {
+      if (building.scene?.image) list.push({ id: building.id, hash: `#/building/${building.id}`, image: building.scene.image });
+      for (const floor of building.floors || []) {
+        for (const room of floor.rooms || []) if (room.open !== false) addRoom(room.id);
+      }
     }
+    for (const alley of sector.alleys || []) addRoom(alley.id);
   }
-  for (const alley of sector.alleys || []) addRoom(alley.id);
   for (let index = 0; index < rooms.length; index += 1) {
     const id = rooms[index];
     const room = await page.evaluate(async (root, roomId) => {
@@ -150,8 +157,8 @@ function measure() {
     return overlap > eps && overlapY > eps;
   });
   const offscreen = (rect) => rect.left < -eps || rect.top < -eps || rect.right > innerWidth + eps || rect.bottom > innerHeight + eps;
-  for (const node of svg.querySelectorAll("[data-item-box], [data-way-box], [data-zoom-box]")) {
-    const raw = node.dataset.itemBox || node.dataset.wayBox || node.dataset.zoomBox;
+  for (const node of svg.querySelectorAll("[data-item-box], [data-way-box], [data-zoom-box], [data-soon-box]")) {
+    const raw = node.dataset.itemBox || node.dataset.wayBox || node.dataset.zoomBox || node.dataset.soonBox;
     if (!raw) continue;
     const rect = project(raw);
     if (rect.right - rect.left < 1 || rect.bottom - rect.top < 1) continue;

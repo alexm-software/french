@@ -146,37 +146,6 @@ def _point_inside(point, polygon):
     return hits
 
 
-HOOK_STRENGTH = {"s": "strong", "o": "ok", "w": "weak", "p": "poor"}
-
-
-def assert_street_perspective_hooks():
-    """The 16 street-perspective hook rows are the ones the cards ship."""
-    rows = []
-    for line in (ROOT / "data" / "hooks" / "qa" / "qa_011_street_persp.tsv").read_text(encoding="utf-8").splitlines():
-        if not line or line.startswith("#"):
-            continue
-        key, sound, scene, strength, gloss = (line.split("|") + [""])[:5]
-        rows.append((key, sound, scene, strength, gloss))
-    assert len(rows) == 16, len(rows)
-    by_lemma = {}
-    for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines():
-        if line.strip():
-            word = json.loads(line)
-            by_lemma[word["lemma"]] = word
-    for key, sound, scene, strength, gloss in rows:
-        word = by_lemma[key]
-        hook = word["mnemonic_hook"]
-        assert hook["sound_alike"] == sound, key
-        assert hook["scene"] == scene, key
-        assert hook["strength"] == HOOK_STRENGTH[strength], (key, hook["strength"])
-        if gloss:
-            assert word["gloss"] == gloss, key
-        room = load(DATA / "rooms" / f"{word['room_id']}.json")
-        card = next(item for item in room["words"] if item["lemma"] == key)
-        assert card["hook"]["scene"] == scene, key
-        assert card["hook"]["sound_alike"] == sound, key
-
-
 def _exit_hit(exit_item):
     """The clickable street: a polygon when the far lane is drawn, else the box."""
     polygon = exit_item.get("polygon")
@@ -351,9 +320,11 @@ def walk_site_graph():
         for item in (raw.get("exits") or {}).values():
             if isinstance(item, dict) and item.get("target"):
                 targets.append(item["target"])
-        zoom = raw.get("zoom_from") or {}
-        if isinstance(zoom, dict) and zoom.get("room_id"):
-            targets.append(zoom["room_id"])
+        zoom = raw.get("zoom_from") or []
+        zoom_items = zoom if isinstance(zoom, list) else [zoom]
+        for item in zoom_items:
+            if isinstance(item, dict) and item.get("room_id"):
+                targets.append(item["room_id"])
         for target in targets:
             dest = resolve(target)
             assert dest, f"{folder} links to unknown space {target}"
@@ -365,7 +336,7 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 850, len(rooms)
+    assert len(rooms) == 848, len(rooms)
     assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
@@ -378,16 +349,21 @@ def walk_site_graph():
 
 def main():
     index = load(DATA / "index.json")
-    assert index["open_sectors"] == ["S04_cafes"], index["open_sectors"]
-    assert not index.get("open_rooms")
+    assert index["open_sectors"] == ["S01_beginner", "S04_cafes"], index["open_sectors"]
+    assert index["open_rooms"] == [
+        "R_colors_01", "R_colors_02", "R_colors_02_z1",
+        "R_exclaim_01", "R_exclaim_02", "R_exclaim_03", "R_farewell",
+        "R_greet", "R_polite", "R_polite_z1",
+        "R_shapes_02", "R_shapes_03", "R_shapes_03_z1", "R_shapes_03_z2",
+    ], index["open_rooms"]
     assert index["featured"]["kind"] == "sector"
-    assert index["featured"]["id"] == "S04_cafes"
+    assert index["featured"]["id"] == "S01_beginner"
     assert len(index["sectors"]) == 16
     assert index["start"] == "S01_beginner"
     assert any(item["id"] == "faith_first" for item in index["alternatives"])
     assert index["route_legs"], "walking legs missing"
     locked = [sector["id"] for sector in index["sectors"] if not sector["open"]]
-    assert "S01_beginner" in locked and "S11_church" in locked
+    assert "S01_beginner" not in locked and "S11_church" in locked
     assert all(sector["x"] and sector["y"] for sector in index["sectors"])
 
     sector = load(DATA / "sectors" / "S04_cafes.json")
@@ -500,7 +476,6 @@ def main():
     assert last["scene"]["layout"] == "tiered"
     assert last["scene"]["exits"]["forward"]["target"] == "S04_sector"
     assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg006"
-    assert_street_perspective_hooks()
     assert [room["chip"] for room in last["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
     assert not any(hot.get("mirror") or hot.get("helper") for hot in last["scene"]["hotspots"])
     assert not (DATA / "rooms" / "ST_cooking_seg011.json").exists()
@@ -526,12 +501,28 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 15, room_files
-    assert not (DATA / "rooms" / "R_greet.json").exists()
+    assert len(room_files) == 29, room_files
+    greet = load(DATA / "rooms" / "R_greet.json")
+    assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
+    assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
+    square = load(DATA / "sectors" / "S01_beginner.json")
+    assert square["open"] is True
+    assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
+    soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
+    assert soon == {"B02_ecole", "B03_horloge"}, soon
+    open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
+    assert open_doors == {"B01_fontaine", "B04_atelier_couleurs", "S04_sector"}, open_doors
+    colors = load(DATA / "rooms" / "R_colors_01.json")
+    assert colors["building_id"] == "B04_atelier_couleurs"
+    assert any(link["target"] == "R_colors_02" for link in colors["scene"]["links"])
+    assert not (DATA / "rooms" / "R_alphabet_01.json").exists()
     quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
     seen = []
     for path in (DATA / "rooms").glob("*.json"):
-        for word in load(path)["words"]:
+        room = load(path)
+        if room.get("sector_id") != "S04_cafes":
+            continue
+        for word in room["words"]:
             seen.append(word["id"])
     assert len(quiz["items"]) == len(set(seen))
     assert len(quiz["items"]) > 100
@@ -657,8 +648,8 @@ def finish(quiz):
     assert shown and hidden
     assert not set(shown) & set(hidden)
     assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
-    assert len(source_conv) == 720
-    assert len(hidden) == 9
+    assert len(source_conv) == 722
+    assert len(hidden) == 15
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
     assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'

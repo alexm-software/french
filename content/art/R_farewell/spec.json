@@ -1,0 +1,141 @@
+{
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Farewell corner at the second garden gate. All phrases (no gender). The gate leads out to the fountain entrance and the square.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Au revoir ! — Adieux",
+   "box": [
+    175,
+    141,
+    338,
+    218
+   ],
+   "text_box": [
+    182,
+    147,
+    331,
+    211
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_a_tout_a_l_heure_phrase",
+   "box": [
+    128,
+    235,
+    443,
+    360
+   ],
+   "scene": "tugboat gives a toot, fisherman waves a lure"
+  },
+  {
+   "id": "fr_a_plus_tard_phrase",
+   "box": [
+    107,
+    365,
+    309,
+    634
+   ],
+   "scene": "A-plus boy steps in tar: see you later!"
+  },
+  {
+   "id": "fr_bon_week_end_phrase",
+   "box": [
+    314,
+    385,
+    509,
+    579
+   ],
+   "scene": "dog with a bone lounges all weekend"
+  },
+  {
+   "id": "fr_au_revoir_phrase",
+   "box": [
+    579,
+    173,
+    699,
+    302
+   ],
+   "scene": "car revs 'vwah!' and drives off waving"
+  },
+  {
+   "id": "fr_a_demain_phrase",
+   "box": [
+    524,
+    311,
+    736,
+    530
+   ],
+   "scene": "girl waves to the snowman, 'Duh-man'"
+  },
+  {
+   "id": "fr_bonne_journee_phrase",
+   "box": [
+    769,
+    214,
+    899,
+    454
+   ],
+   "scene": "boy with a bun sets off on a day's journey"
+  },
+  {
+   "id": "fr_bonne_soiree_phrase",
+   "box": [
+    929,
+    173,
+    1100,
+    327
+   ],
+   "scene": "waiter hands a bun at an evening soirée"
+  },
+  {
+   "id": "fr_bonne_nuit_phrase",
+   "box": [
+    739,
+    459,
+    961,
+    613
+   ],
+   "scene": "bun tucked into bed for the night"
+  },
+  {
+   "id": "fr_a_bientot_phrase",
+   "box": [
+    965,
+    332,
+    1201,
+    620
+   ],
+   "scene": "a bee lands on a toe: see you soon"
+  }
+ ],
+ "links": [
+  {
+   "target": "B01_fontaine",
+   "box": [
+    517,
+    103,
+    575,
+    306
+   ],
+   "label": "Out through the garden gate (to the square)",
+   "name": "Fontaine des Salutations (entrance)",
+   "kind": "exit"
+  },
+  {
+   "target": "R_exclaim_03",
+   "box": [
+    0,
+    58,
+    167,
+    231
+   ],
+   "label": "Back into the exclamation garden",
+   "name": "Fontaine — jardin des exclamations (3)",
+   "kind": "path"
+  }
+ ]
+}

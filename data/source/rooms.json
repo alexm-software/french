@@ -259,7 +259,7 @@
     "R_opposites_01",
     "R_opposites_02",
     "R_adj_senses_02",
-    "R_adv_manner_01"
+    "R_adj_intensity_02"
    ],
    "conversation_ids": [
     "C_R_opposites_05"
@@ -2867,7 +2867,7 @@
     "R_wardrobe_03",
     "R_wardrobe_02",
     "R_hardware_02",
-    "R_text_crime_01"
+    "R_text_crime_02"
    ],
    "conversation_ids": [
     "C_R_garage"
@@ -2966,7 +2966,7 @@
     "R_kitchen_02",
     "R_bedroom_02",
     "R_wildlife_01",
-    "R_wildlife_02"
+    "R_wildlife_03"
    ],
    "conversation_ids": [
     "C_R_pets"
@@ -3040,7 +3040,7 @@
   },
   {
    "id": "R_fruits_02",
-   "name": "Fruit stall [upstairs] · grapefruit, monstrosity, coconut",
+   "name": "Fruit stall [upstairs] · grapefruit, monstrosity, rom",
    "type": "theme",
    "setting": "Fruit stall inside Marché couvert (covered market).",
    "kind": "full",
@@ -3048,11 +3048,11 @@
    "building_id": "B06_marche",
    "links_back_to_sector": "S03_market",
    "cefr_band": "C2",
-   "mean_level": 5.89,
+   "mean_level": 5.73,
    "related_rooms": [
     "R_bakery_02",
     "R_appearance_07",
-    "R_forest_02"
+    "R_kitchen_02"
    ],
    "conversation_ids": [
     "C_R_fruits_02"
@@ -3060,6 +3060,8 @@
    "small_objects": true,
    "base_room": "R_fruits",
    "words": [
+    "fr_entrailles_noun",
+    "fr_bohemien_noun",
     "fr_pamplemousse_noun",
     "fr_benne_noun",
     "fr_macadam_noun",
@@ -3070,11 +3072,11 @@
     "fr_cocotier_noun",
     "fr_cantatrice_noun"
    ],
-   "item_count": 9,
-   "total_items_incl_zooms": 9,
+   "item_count": 11,
+   "total_items_incl_zooms": 11,
    "side_counts": {
-    "right": 5,
-    "left": 4
+    "left": 5,
+    "right": 6
    }
   },
   {
@@ -3090,7 +3092,7 @@
     "R_vegetables_z1"
    ],
    "cefr_band": "C1",
-   "mean_level": 4.57,
+   "mean_level": 4.59,
    "related_rooms": [
     "R_grocery_02",
     "R_butcher_02",
@@ -3116,12 +3118,14 @@
     "fr_tic_noun",
     "fr_kiosque_noun",
     "fr_souplesse_noun",
-    "fr_navet_noun"
+    "fr_intestin_noun",
+    "fr_choucroute_noun",
+    "fr_feve_noun"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 21,
+   "item_count": 16,
+   "total_items_incl_zooms": 22,
    "side_counts": {
-    "left": 6,
+    "left": 8,
     "right": 8
    }
   },
@@ -3172,7 +3176,7 @@
   },
   {
    "id": "R_butcher_02",
-   "name": "Butcher & fishmonger [upstairs] · steak, eater, oyster",
+   "name": "Butcher & fishmonger [upstairs] · steak, butchery, oyster",
    "type": "theme",
    "setting": "Butcher & fishmonger inside Marché couvert (covered market).",
    "kind": "full",
@@ -3180,12 +3184,12 @@
    "building_id": "B06_marche",
    "links_back_to_sector": "S03_market",
    "cefr_band": "C1",
-   "mean_level": 5.11,
+   "mean_level": 5.27,
    "related_rooms": [
     "R_vegetables",
     "R_bakery_02",
-    "R_kitchen_02",
-    "R_farm_animals_02"
+    "R_farm_animals_02",
+    "R_resto_room"
    ],
    "conversation_ids": [
     "C_R_butcher_02"
@@ -3201,12 +3205,14 @@
     "fr_abattoir_noun",
     "fr_mousquetaire_noun",
     "fr_mangeur_noun",
-    "fr_charcutier_noun"
+    "fr_charcutier_noun",
+    "fr_charnier_noun",
+    "fr_hammam_noun"
    ],
-   "item_count": 9,
-   "total_items_incl_zooms": 9,
+   "item_count": 11,
+   "total_items_incl_zooms": 11,
    "side_counts": {
-    "right": 6,
+    "right": 8,
     "left": 3
    }
   },
@@ -3264,7 +3270,7 @@
    "building_id": "B06_marche",
    "links_back_to_sector": "S03_market",
    "cefr_band": "C1",
-   "mean_level": 5.33,
+   "mean_level": 5.38,
    "related_rooms": [
     "R_butcher_02",
     "R_fruits_02",
@@ -3288,13 +3294,14 @@
     "fr_gratin_noun",
     "fr_madeleine_noun",
     "fr_lut_noun",
-    "fr_quiche_noun"
+    "fr_quiche_noun",
+    "fr_mantille_noun"
    ],
-   "item_count": 12,
-   "total_items_incl_zooms": 12,
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
    "side_counts": {
     "right": 6,
-    "left": 6
+    "left": 7
    }
   },
   {
@@ -3358,12 +3365,12 @@
    "building_id": "B06_marche",
    "links_back_to_sector": "S03_market",
    "cefr_band": "B2",
-   "mean_level": 3.62,
+   "mean_level": 3.58,
    "related_rooms": [
     "R_fruits_01",
     "R_vegetables",
     "R_resto_kitchen_01",
-    "R_resto_kitchen_02"
+    "ST_cooking_seg004"
    ],
    "conversation_ids": [
     "C_R_grocery_02"
@@ -3379,16 +3386,15 @@
     "fr_miel_noun",
     "fr_graisse_noun",
     "fr_sieste_noun",
-    "fr_coca_noun",
     "fr_spaghetti_noun",
     "fr_epice_noun",
     "fr_yaourt_noun",
     "fr_cereale_noun"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
+   "item_count": 12,
+   "total_items_incl_zooms": 12,
    "side_counts": {
-    "right": 7,
+    "right": 6,
     "left": 5,
     "n/a": 1
    }
@@ -3671,11 +3677,8 @@
    "sector_id": "S03_market",
    "building_id": "B07_rue_commercante",
    "links_back_to_sector": "S03_market",
-   "zoom_ids": [
-    "R_boutique_03_z1"
-   ],
    "cefr_band": "C1",
-   "mean_level": 5.48,
+   "mean_level": 5.42,
    "related_rooms": [
     "R_bookshop_02",
     "R_shop_general_04",
@@ -3701,13 +3704,19 @@
     "fr_parfumeur_noun",
     "fr_palette_noun",
     "fr_bijoutier_noun",
-    "fr_jade_noun"
+    "fr_jade_noun",
+    "fr_enchanteur_noun",
+    "fr_saphir_noun",
+    "fr_glamour_noun",
+    "fr_joaillier_noun",
+    "fr_styliste_noun"
    ],
-   "item_count": 14,
-   "total_items_incl_zooms": 21,
+   "item_count": 19,
+   "total_items_incl_zooms": 19,
    "side_counts": {
     "left": 6,
-    "right": 8
+    "right": 12,
+    "center": 1
    }
   },
   {
@@ -4081,7 +4090,7 @@
     "R_adj_time_07",
     "R_adj_time_05",
     "R_adj_mind_04",
-    "R_character_08"
+    "R_abs_study_03"
    ],
    "conversation_ids": [
     "C_R_adj_time_04"
@@ -4720,7 +4729,7 @@
    "related_rooms": [
     "R_abs_beauty_02",
     "R_abs_beauty_03",
-    "R_character_07",
+    "R_character_09",
     "R_adj_senses_07"
    ],
    "conversation_ids": [
@@ -4976,8 +4985,7 @@
     "right": 8,
     "left": 3
    },
-   "name_fr": "La salle",
-   "name_en": "Dining hall (menu & service)"
+   "name_fr": "La salle"
   },
   {
    "id": "R_resto_kitchen_01",
@@ -5177,7 +5185,7 @@
    "mean_level": 3.61,
    "related_rooms": [
     "R_bank_economy_01",
-    "R_bank_counter_03",
+    "R_bank_economy_03",
     "R_shop_general_01",
     "ST_commerce_seg003"
    ],
@@ -5219,7 +5227,7 @@
    "cefr_band": "C2",
    "mean_level": 5.5,
    "related_rooms": [
-    "R_bank_counter_02",
+    "R_bank_economy_03",
     "R_bank_economy_04",
     "R_shop_general_02",
     "R_shop_general_01"
@@ -5342,7 +5350,51 @@
   },
   {
    "id": "R_bank_economy_03",
-   "name": "Economy & finance office [upstairs 1] · fiscal, funding, taxpayer",
+   "name": "Economy & finance office [upstairs 1] · investment, market, capitalism",
+   "type": "theme",
+   "setting": "Economy & finance office inside Banque du Village.",
+   "kind": "full",
+   "sector_id": "S05_bank",
+   "building_id": "B10_banque",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C1",
+   "mean_level": 5.46,
+   "related_rooms": [
+    "R_bank_counter_02",
+    "R_bank_counter_03",
+    "R_adj_relation_09",
+    "R_adj_relation_06"
+   ],
+   "conversation_ids": [
+    "C_R_bank_economy_03"
+   ],
+   "base_room": "R_bank_economy",
+   "words": [
+    "fr_samba_noun",
+    "fr_investissement_noun",
+    "fr_prosperite_noun",
+    "fr_capitalisme_noun",
+    "fr_placement_noun",
+    "fr_actionnaire_noun",
+    "fr_hypermarche_noun",
+    "fr_debouche_noun",
+    "fr_eleveur_noun",
+    "fr_prospection_noun",
+    "fr_rentabilite_noun",
+    "fr_trust_noun",
+    "fr_economiste_noun"
+   ],
+   "item_count": 13,
+   "total_items_incl_zooms": 13,
+   "side_counts": {
+    "right": 8,
+    "left": 3,
+    "center": 2
+   }
+  },
+  {
+   "id": "R_bank_economy_04",
+   "name": "Economy & finance office [upstairs 2] · fiscal, funding, taxpayer",
    "type": "theme",
    "setting": "Economy & finance office inside Banque du Village.",
    "kind": "full",
@@ -5350,14 +5402,14 @@
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
    "cefr_band": "C2",
-   "mean_level": 5.67,
+   "mean_level": 5.69,
    "related_rooms": [
-    "R_bank_economy_04",
+    "R_bank_counter_03",
     "ST_commerce_seg007",
     "ST_commerce_seg003"
    ],
    "conversation_ids": [
-    "C_R_bank_economy_03"
+    "C_R_bank_economy_04"
    ],
    "base_room": "R_bank_economy",
    "words": [
@@ -5367,64 +5419,21 @@
     "fr_financement_noun",
     "fr_rente_noun",
     "fr_subvention_noun",
+    "fr_expertise_noun",
     "fr_deficit_noun",
     "fr_remboursement_noun",
     "fr_contribuable_noun",
-    "fr_devis_noun",
     "fr_fluctuation_noun",
-    "fr_imposition_noun"
-   ],
-   "item_count": 12,
-   "total_items_incl_zooms": 12,
-   "side_counts": {
-    "left": 5,
-    "n/a": 2,
-    "right": 4,
-    "center": 1
-   }
-  },
-  {
-   "id": "R_bank_economy_04",
-   "name": "Economy & finance office [upstairs 2] · investment, market, placement",
-   "type": "theme",
-   "setting": "Economy & finance office inside Banque du Village.",
-   "kind": "full",
-   "sector_id": "S05_bank",
-   "building_id": "B10_banque",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.54,
-   "related_rooms": [
-    "R_bank_counter_03",
-    "R_bank_economy_03",
-    "R_adj_relation_09",
-    "R_adj_relation_06"
-   ],
-   "conversation_ids": [
-    "C_R_bank_economy_04"
-   ],
-   "base_room": "R_bank_economy",
-   "words": [
-    "fr_investissement_noun",
-    "fr_prosperite_noun",
-    "fr_capitalisme_noun",
-    "fr_placement_noun",
-    "fr_actionnaire_noun",
-    "fr_hypermarche_noun",
-    "fr_debouche_noun",
-    "fr_eleveur_noun",
-    "fr_expertise_noun",
-    "fr_prospection_noun",
-    "fr_rentabilite_noun",
-    "fr_trust_noun",
-    "fr_economiste_noun"
+    "fr_imposition_noun",
+    "fr_devis_noun"
    ],
    "item_count": 13,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "right": 7,
-    "left": 4,
-    "center": 2
+    "left": 6,
+    "n/a": 2,
+    "right": 4,
+    "center": 1
    }
   },
   {
@@ -6784,7 +6793,7 @@
     "R_adv_logic_02",
     "R_admin_02",
     "R_adj_senses_08",
-    "R_character_09"
+    "R_character_03"
    ],
    "conversation_ids": [
     "C_R_adj_relation_03"
@@ -6910,7 +6919,7 @@
    "related_rooms": [
     "R_adj_relation_05",
     "R_adv_logic_02",
-    "R_bank_economy_04",
+    "R_bank_economy_03",
     "R_bank_economy_02"
    ],
    "conversation_ids": [
@@ -7037,7 +7046,7 @@
    "related_rooms": [
     "R_adj_relation_07",
     "R_adj_relation_08",
-    "R_bank_economy_04",
+    "R_bank_economy_03",
     "R_bank_economy_01"
    ],
    "conversation_ids": [
@@ -7123,7 +7132,7 @@
    "related_rooms": [
     "R_adj_logic_03",
     "R_court_02",
-    "R_text_crime_02",
+    "R_text_crime_01",
     "R_text_crime_03"
    ],
    "conversation_ids": [
@@ -7211,7 +7220,7 @@
    "mean_level": 5.36,
    "related_rooms": [
     "R_adj_logic_05",
-    "R_police_04",
+    "R_adj_logic_04",
     "R_abs_action_02",
     "R_politics_02"
    ],
@@ -7253,7 +7262,7 @@
    "mean_level": 1.92,
    "related_rooms": [
     "R_adj_logic_03",
-    "R_text_crime_02",
+    "R_text_crime_01",
     "R_text_crime_03"
    ],
    "conversation_ids": [
@@ -7295,8 +7304,8 @@
    "related_rooms": [
     "R_abs_moral_03",
     "R_police_03",
-    "R_text_crime_02",
-    "R_text_crime_03"
+    "R_text_crime_03",
+    "R_text_crime_01"
    ],
    "conversation_ids": [
     "C_R_police_02"
@@ -7338,7 +7347,7 @@
    "related_rooms": [
     "R_police_02",
     "R_abs_moral_05",
-    "R_text_crime_02",
+    "R_text_crime_01",
     "R_text_crime_03"
    ],
    "conversation_ids": [
@@ -7368,23 +7377,20 @@
   },
   {
    "id": "R_police_04",
-   "name": "Police station [upstairs] · detention, imprisonment, detriment",
+   "name": "Police station [upstairs 1] · investigator, investigation, smuggler",
    "type": "theme",
    "setting": "Police station inside Palais de Justice.",
    "kind": "full",
    "sector_id": "S06_townhall",
    "building_id": "B14_tribunal",
    "links_back_to_sector": "S06_townhall",
-   "zoom_ids": [
-    "R_police_04_z1"
-   ],
    "cefr_band": "C1",
-   "mean_level": 5.41,
+   "mean_level": 5.18,
    "related_rooms": [
-    "R_court_03",
-    "R_adj_logic_04",
-    "R_text_crime_03",
-    "R_text_crime_02"
+    "R_abs_moral_05",
+    "R_adj_logic_05",
+    "ST_perception_seg006",
+    "R_text_crime_01"
    ],
    "conversation_ids": [
     "C_R_police_04"
@@ -7394,24 +7400,61 @@
     "fr_occupant_noun",
     "fr_interrogation_noun",
     "fr_corruption_noun",
-    "fr_detention_noun",
     "fr_imposteur_noun",
     "fr_enqueteur_noun",
     "fr_extrait_noun",
-    "fr_captivite_noun",
     "fr_malfaiteur_noun",
+    "fr_perquisition_noun",
+    "fr_investigation_noun",
+    "fr_capture_noun",
+    "fr_contrebandier_noun"
+   ],
+   "item_count": 11,
+   "total_items_incl_zooms": 11,
+   "side_counts": {
+    "right": 6,
+    "left": 5
+   }
+  },
+  {
+   "id": "R_police_05",
+   "name": "Police station [upstairs 2] · imprisonment, detention, delinquent",
+   "type": "theme",
+   "setting": "Police station inside Palais de Justice.",
+   "kind": "full",
+   "sector_id": "S06_townhall",
+   "building_id": "B14_tribunal",
+   "links_back_to_sector": "S06_townhall",
+   "cefr_band": "C2",
+   "mean_level": 5.58,
+   "related_rooms": [
+    "R_abs_moral_04",
+    "R_text_crime_03",
+    "R_abs_power_04"
+   ],
+   "conversation_ids": [
+    "C_R_police_05"
+   ],
+   "base_room": "R_police",
+   "words": [
+    "fr_detention_noun",
+    "fr_captivite_noun",
     "fr_delinquant_noun",
+    "fr_delinquance_noun",
+    "fr_monte_noun",
+    "fr_infraction_noun",
+    "fr_expulsion_noun",
     "fr_detriment_noun",
     "fr_vandalisme_noun",
     "fr_emprisonnement_noun",
-    "fr_contrebandier_noun",
+    "fr_obtention_noun",
     "fr_rapatriement_noun"
    ],
-   "item_count": 15,
-   "total_items_incl_zooms": 22,
+   "item_count": 12,
+   "total_items_incl_zooms": 12,
    "side_counts": {
-    "right": 11,
-    "left": 4
+    "left": 7,
+    "right": 5
    }
   },
   {
@@ -7513,7 +7556,8 @@
    "mean_level": 5.53,
    "related_rooms": [
     "R_adj_logic_04",
-    "R_character_06",
+    "R_police_05",
+    "R_character_08",
     "R_character_05"
    ],
    "conversation_ids": [
@@ -7560,7 +7604,7 @@
    "mean_level": 3.96,
    "related_rooms": [
     "R_police_03",
-    "R_adj_logic_05",
+    "R_police_04",
     "R_character_04",
     "R_emo_joy_02"
    ],
@@ -7700,7 +7744,7 @@
    "cefr_band": "C2",
    "mean_level": 5.5,
    "related_rooms": [
-    "R_police_04",
+    "R_court_03",
     "R_abs_moral_04",
     "R_abs_relation",
     "R_abs_mind_03"
@@ -7742,7 +7786,7 @@
    "cefr_band": "C1",
    "mean_level": 5.33,
    "related_rooms": [
-    "R_abs_moral_05",
+    "R_police_04",
     "R_court_03",
     "R_adj_senses_06",
     "R_adj_quality_04"
@@ -7828,7 +7872,7 @@
    "related_rooms": [
     "R_military_02",
     "ST_conflict_seg013",
-    "R_text_crime_01"
+    "R_text_crime_02"
    ],
    "conversation_ids": [
     "C_R_military_01"
@@ -7922,7 +7966,7 @@
     "R_military_02",
     "R_military_04",
     "ST_conflict_seg013",
-    "R_text_crime_01"
+    "ST_conflict_seg012"
    ],
    "conversation_ids": [
     "C_R_military_03"
@@ -8311,7 +8355,7 @@
     "R_body_01",
     "R_doctor_01",
     "R_appearance_07",
-    "R_appearance_03"
+    "R_text_medical"
    ],
    "conversation_ids": [
     "C_R_body_04"
@@ -8347,7 +8391,7 @@
   },
   {
    "id": "R_body_05",
-   "name": "Body (anatomy wall chart) [upstairs] · forearm, complement, artery",
+   "name": "Body (anatomy wall chart) [upstairs] · forearm, facelift, complement",
    "type": "theme",
    "setting": "Body (anatomy wall chart) inside Cabinet médical.",
    "kind": "full",
@@ -8355,7 +8399,7 @@
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
    "cefr_band": "C1",
-   "mean_level": 5.18,
+   "mean_level": 5.22,
    "related_rooms": [
     "R_body_03",
     "R_doctor_02",
@@ -8368,23 +8412,21 @@
    "small_objects": true,
    "base_room": "R_body",
    "words": [
-    "fr_entrailles_noun",
     "fr_avant_bras_noun",
     "fr_artere_noun",
     "fr_natte_noun",
     "fr_rubrique_noun",
     "fr_reticence_noun",
     "fr_manchette_noun",
-    "fr_intestin_noun",
     "fr_complement_noun",
     "fr_facette_noun",
     "fr_lifting_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 9,
+   "total_items_incl_zooms": 9,
    "side_counts": {
-    "left": 7,
-    "right": 4
+    "right": 3,
+    "left": 6
    }
   },
   {
@@ -8405,7 +8447,7 @@
     "R_body_04",
     "R_body_03",
     "R_text_medical",
-    "R_character_09"
+    "R_character_07"
    ],
    "conversation_ids": [
     "C_R_doctor_01"
@@ -8450,7 +8492,7 @@
    "related_rooms": [
     "R_body_05",
     "R_text_medical",
-    "R_character_09"
+    "R_character_07"
    ],
    "conversation_ids": [
     "C_R_doctor_02"
@@ -8585,7 +8627,7 @@
    "related_rooms": [
     "R_dentist_02",
     "ST_body_seg011",
-    "R_text_medical"
+    "R_character_07"
    ],
    "conversation_ids": [
     "C_R_hospital_02"
@@ -8988,11 +9030,11 @@
    "building_id": "B22_hotel",
    "links_back_to_sector": "S08_travel",
    "cefr_band": "C2",
-   "mean_level": 5.55,
+   "mean_level": 5.5,
    "related_rooms": [
     "R_hotel_02",
     "R_entrance_01",
-    "R_camping_02"
+    "R_entrance_03"
    ],
    "conversation_ids": [
     "C_R_hotel_03"
@@ -9008,14 +9050,13 @@
     "fr_recepteur_noun",
     "fr_flanerie_noun",
     "fr_hotellerie_noun",
-    "fr_hammam_noun",
     "fr_hotelier_noun",
     "fr_emigration_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 10,
+   "total_items_incl_zooms": 10,
    "side_counts": {
-    "right": 6,
+    "right": 5,
     "left": 4,
     "center": 1
    }
@@ -9674,19 +9715,20 @@
   },
   {
    "id": "R_forest_01",
-   "name": "Forest trees & plants [gate & middle paths 1] · forest, wood, pine",
+   "name": "Forest trees & plants [whole site 1] · tree, pine, wood",
    "type": "theme",
    "setting": "Forest trees & plants inside Forêt.",
    "kind": "full",
    "sector_id": "S09_nature",
    "building_id": "B27_foret",
    "links_back_to_sector": "S09_nature",
-   "cefr_band": "B1",
-   "mean_level": 3.0,
+   "cefr_band": "B2",
+   "mean_level": 3.6,
    "related_rooms": [
-    "R_birds_01",
+    "R_forest_02",
+    "R_insects",
     "R_garage",
-    "ST_nature_seg001"
+    "R_wine_01"
    ],
    "conversation_ids": [
     "C_R_forest_01"
@@ -9694,68 +9736,72 @@
    "base_room": "R_forest",
    "words": [
     "fr_bois_noun",
-    "fr_foret_noun",
+    "fr_arbre_noun",
     "fr_branche_noun",
     "fr_sapin_noun",
     "fr_racine_noun",
     "fr_tronc_noun",
     "fr_buisson_noun",
     "fr_pin_noun",
+    "fr_chene_noun",
     "fr_noix_noun",
     "fr_buche_noun",
-    "fr_bucheron_noun"
+    "fr_ecorce_noun",
+    "fr_bucheron_noun",
+    "fr_gland_noun",
+    "fr_orme_noun"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
-    "right": 6,
+    "right": 10,
     "left": 5
    }
   },
   {
    "id": "R_forest_02",
-   "name": "Forest trees & plants [gate & middle paths 2] · tree, leaf, foliage",
+   "name": "Forest trees & plants [whole site 2] · foliage, leaf, forest",
    "type": "theme",
    "setting": "Forest trees & plants inside Forêt.",
    "kind": "full",
    "sector_id": "S09_nature",
    "building_id": "B27_foret",
    "links_back_to_sector": "S09_nature",
-   "zoom_ids": [
-    "R_forest_02_z1"
-   ],
    "cefr_band": "B2",
-   "mean_level": 3.95,
+   "mean_level": 3.53,
    "related_rooms": [
-    "R_wildlife_01",
-    "R_insects",
+    "R_wildlife_02",
+    "R_forest_01",
     "R_florist",
     "ST_nature_seg004"
    ],
    "conversation_ids": [
     "C_R_forest_02"
    ],
-   "merged_from": [
-    "Forest trees & plants [upstairs] · bush, flora, apple tree"
-   ],
    "base_room": "R_forest",
    "words": [
-    "fr_arbre_noun",
     "fr_feuille_noun",
     "fr_nature_noun",
+    "fr_foret_noun",
     "fr_tabac_noun",
     "fr_feuillage_noun",
     "fr_mousse_noun_f",
-    "fr_chene_noun",
     "fr_champignon_noun",
     "fr_palmier_noun",
-    "fr_olivier_noun"
+    "fr_olivier_noun",
+    "fr_palme_noun",
+    "fr_vegetation_noun",
+    "fr_flore_noun",
+    "fr_pommier_noun",
+    "fr_arbuste_noun",
+    "fr_forestier_adj"
    ],
-   "item_count": 10,
-   "total_items_incl_zooms": 20,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
+    "left": 7,
     "right": 7,
-    "left": 3
+    "n/a": 1
    }
   },
   {
@@ -9770,19 +9816,15 @@
    "zoom_ids": [
     "R_wildlife_01_z1"
    ],
-   "cefr_band": "B2",
-   "mean_level": 3.84,
+   "cefr_band": "B1",
+   "mean_level": 3.06,
    "related_rooms": [
-    "R_wildlife_02",
-    "R_forest_02",
+    "R_birds_01",
     "R_pets",
     "R_farm_animals_03"
    ],
    "conversation_ids": [
     "C_R_wildlife_01"
-   ],
-   "merged_from": [
-    "Forest animals [upstairs] · mammal, rodent, rat"
    ],
    "base_room": "R_wildlife",
    "words": [
@@ -9796,15 +9838,13 @@
     "fr_dragon_noun",
     "fr_jungle_noun",
     "fr_tigre_noun",
-    "fr_faune_noun_f",
-    "fr_autruche_noun",
-    "fr_savane_noun"
+    "fr_faune_noun_f"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 25,
+   "item_count": 11,
+   "total_items_incl_zooms": 17,
    "side_counts": {
     "right": 7,
-    "left": 6
+    "left": 4
    }
   },
   {
@@ -9823,7 +9863,7 @@
    "mean_level": 3.47,
    "related_rooms": [
     "R_birds_01",
-    "R_wildlife_01",
+    "R_forest_02",
     "R_farm_animals_01",
     "R_farm_animals_03"
    ],
@@ -9852,6 +9892,45 @@
    }
   },
   {
+   "id": "R_wildlife_03",
+   "name": "Forest animals [far end] · rat, mammal, rodent",
+   "type": "theme",
+   "setting": "Forest animals inside Forêt.",
+   "kind": "full",
+   "sector_id": "S09_nature",
+   "building_id": "B27_foret",
+   "links_back_to_sector": "S09_nature",
+   "cefr_band": "C1",
+   "mean_level": 5.4,
+   "related_rooms": [
+    "R_birds_02",
+    "R_farm_animals_03",
+    "R_farm_animals_02"
+   ],
+   "conversation_ids": [
+    "C_R_wildlife_03"
+   ],
+   "base_room": "R_wildlife",
+   "words": [
+    "fr_lievre_noun",
+    "fr_western_noun",
+    "fr_jasmin_noun",
+    "fr_autruche_noun",
+    "fr_reptile_noun",
+    "fr_rongeur_noun",
+    "fr_savane_noun",
+    "fr_mammifere_noun",
+    "fr_habitat_noun",
+    "fr_gaspard_noun"
+   ],
+   "item_count": 10,
+   "total_items_incl_zooms": 10,
+   "side_counts": {
+    "right": 8,
+    "left": 2
+   }
+  },
+  {
    "id": "R_birds_01",
    "name": "Birdsong clearing [gate & middle paths] · bird, chick, hen",
    "type": "theme",
@@ -9866,7 +9945,7 @@
    "cefr_band": "B1",
    "mean_level": 3.25,
    "related_rooms": [
-    "R_forest_01",
+    "R_wildlife_01",
     "R_wildlife_02",
     "R_farm_animals_02",
     "R_appearance_07"
@@ -9907,6 +9986,7 @@
    "mean_level": 5.2,
    "related_rooms": [
     "R_insects",
+    "R_wildlife_03",
     "R_farm_animals_02",
     "R_appearance_07"
    ],
@@ -9949,7 +10029,7 @@
    "cefr_band": "B2",
    "mean_level": 4.26,
    "related_rooms": [
-    "R_forest_02",
+    "R_forest_01",
     "R_birds_02",
     "R_playroom",
     "R_road_03"
@@ -10264,7 +10344,7 @@
    "related_rooms": [
     "R_fields_01",
     "R_wildlife_02",
-    "R_wildlife_01"
+    "R_wildlife_03"
    ],
    "conversation_ids": [
     "C_R_farm_animals_01"
@@ -10334,7 +10414,7 @@
   },
   {
    "id": "R_farm_animals_03",
-   "name": "Farm animals (barn) [upstairs] · horse, camel, livestock farming",
+   "name": "Farm animals (barn) [upstairs] · horse, clay, camel",
    "type": "theme",
    "setting": "Farm animals (barn) inside Ferme.",
    "kind": "full",
@@ -10342,10 +10422,10 @@
    "building_id": "B31_ferme",
    "links_back_to_sector": "S09_nature",
    "cefr_band": "C1",
-   "mean_level": 5.36,
+   "mean_level": 5.43,
    "related_rooms": [
     "R_fields_02",
-    "R_wildlife_01",
+    "R_wildlife_03",
     "R_butcher_01"
    ],
    "conversation_ids": [
@@ -10361,18 +10441,18 @@
     "fr_paillette_noun",
     "fr_elevage_noun",
     "fr_bourgade_noun",
-    "fr_monte_noun",
     "fr_humus_noun",
     "fr_pature_noun",
     "fr_equitation_noun",
     "fr_dinosaure_noun",
-    "fr_dada_noun"
+    "fr_dada_noun",
+    "fr_boubou_noun"
    ],
    "item_count": 14,
    "total_items_incl_zooms": 14,
    "side_counts": {
-    "right": 7,
-    "left": 6,
+    "right": 8,
+    "left": 5,
     "center": 1
    }
   },
@@ -11486,7 +11566,7 @@
    "related_rooms": [
     "R_linguistics_01",
     "R_linguistics_02",
-    "R_character_08",
+    "R_character_06",
     "R_character_03"
    ],
    "conversation_ids": [
@@ -11526,8 +11606,8 @@
    "related_rooms": [
     "R_literature_04",
     "R_linguistics_03",
-    "R_adj_mind_03",
-    "R_character_08"
+    "R_character_06",
+    "R_adj_mind_03"
    ],
    "conversation_ids": [
     "C_R_social_science_02"
@@ -13149,8 +13229,8 @@
    "related_rooms": [
     "R_abs_senses_02",
     "R_adj_senses_03",
-    "R_boutique_03",
-    "R_occupations_02"
+    "R_occupations_02",
+    "R_cinema_02"
    ],
    "conversation_ids": [
     "C_R_art_02"
@@ -13243,10 +13323,10 @@
    "building_id": "B44_musee",
    "links_back_to_sector": "S13_museum",
    "cefr_band": "B1",
-   "mean_level": 3.28,
+   "mean_level": 3.24,
    "related_rooms": [
     "R_text_crime_01",
-    "R_abs_power_03",
+    "R_text_crime_02",
     "R_history_02",
     "R_military_03"
    ],
@@ -13267,7 +13347,6 @@
     "fr_valet_noun",
     "fr_forteresse_noun",
     "fr_rempart_noun",
-    "fr_arc_noun",
     "fr_bouclier_noun",
     "fr_poignard_noun",
     "fr_noblesse_noun",
@@ -13275,10 +13354,10 @@
     "fr_armure_noun",
     "fr_ecu_noun"
    ],
-   "item_count": 18,
-   "total_items_incl_zooms": 18,
+   "item_count": 17,
+   "total_items_incl_zooms": 17,
    "side_counts": {
-    "right": 11,
+    "right": 10,
     "left": 7
    }
   },
@@ -13328,7 +13407,7 @@
   },
   {
    "id": "R_text_crime_01",
-   "name": "Text gallery: crime & violence [ground & first floor 1] · weapon, rifle, gun",
+   "name": "Text gallery: crime & violence [ground & first floor 1] · murder, murderer, criminal",
    "type": "theme",
    "setting": "Text gallery: crime & violence inside Musée des Beaux-Arts et d'Histoire.",
    "kind": "full",
@@ -13336,59 +13415,15 @@
    "building_id": "B44_musee",
    "links_back_to_sector": "S13_museum",
    "cefr_band": "B1",
-   "mean_level": 3.23,
+   "mean_level": 3.07,
    "related_rooms": [
-    "R_text_crime_02",
+    "R_adj_senses_02",
     "R_heraldry_01",
-    "ST_conflict_seg013",
-    "ST_conflict_seg002"
+    "R_police_03",
+    "R_court_01"
    ],
    "conversation_ids": [
     "C_R_text_crime_01"
-   ],
-   "small_objects": true,
-   "base_room": "R_text_crime",
-   "words": [
-    "fr_arme_noun",
-    "fr_fusil_noun",
-    "fr_bombe_noun",
-    "fr_pistolet_noun",
-    "fr_bagarre_noun",
-    "fr_lance_noun",
-    "fr_hache_noun",
-    "fr_fleche_noun",
-    "fr_battement_noun",
-    "fr_injure_noun",
-    "fr_gifle_noun",
-    "fr_recul_noun",
-    "fr_abus_noun"
-   ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
-   "side_counts": {
-    "left": 8,
-    "right": 5
-   }
-  },
-  {
-   "id": "R_text_crime_02",
-   "name": "Text gallery: crime & violence [ground & first floor 2] · murderer, murder, criminal",
-   "type": "theme",
-   "setting": "Text gallery: crime & violence inside Musée des Beaux-Arts et d'Histoire.",
-   "kind": "full",
-   "sector_id": "S13_museum",
-   "building_id": "B44_musee",
-   "links_back_to_sector": "S13_museum",
-   "cefr_band": "B1",
-   "mean_level": 3.0,
-   "related_rooms": [
-    "R_adj_senses_02",
-    "R_text_crime_01",
-    "R_police_03",
-    "R_police_04"
-   ],
-   "conversation_ids": [
-    "C_R_text_crime_02"
    ],
    "small_objects": true,
    "base_room": "R_text_crime",
@@ -13399,14 +13434,14 @@
     "fr_assassin_noun",
     "fr_meurtre_noun",
     "fr_tueur_noun",
-    "fr_revolver_noun",
     "fr_assaut_noun",
     "fr_criminel_noun",
     "fr_execution_noun",
     "fr_meurtrier_noun",
     "fr_assassinat_noun",
     "fr_terroriste_noun",
-    "fr_impasse_noun"
+    "fr_impasse_noun",
+    "fr_abus_noun"
    ],
    "item_count": 14,
    "total_items_incl_zooms": 14,
@@ -13414,6 +13449,53 @@
     "left": 3,
     "right": 10,
     "center": 1
+   }
+  },
+  {
+   "id": "R_text_crime_02",
+   "name": "Text gallery: crime & violence [ground & first floor 2] · weapon, rifle, gun",
+   "type": "theme",
+   "setting": "Text gallery: crime & violence inside Musée des Beaux-Arts et d'Histoire.",
+   "kind": "full",
+   "sector_id": "S13_museum",
+   "building_id": "B44_musee",
+   "links_back_to_sector": "S13_museum",
+   "cefr_band": "B1",
+   "mean_level": 3.27,
+   "related_rooms": [
+    "R_heraldry_01",
+    "R_abs_power_03",
+    "ST_conflict_seg013",
+    "ST_conflict_seg002"
+   ],
+   "conversation_ids": [
+    "C_R_text_crime_02"
+   ],
+   "small_objects": true,
+   "base_room": "R_text_crime",
+   "words": [
+    "fr_arme_noun",
+    "fr_fusil_noun",
+    "fr_bombe_noun",
+    "fr_revolver_noun",
+    "fr_pistolet_noun",
+    "fr_bagarre_noun",
+    "fr_lance_noun",
+    "fr_hache_noun",
+    "fr_fleche_noun",
+    "fr_battement_noun",
+    "fr_arc_noun",
+    "fr_injure_noun",
+    "fr_gifle_noun",
+    "fr_recul_noun",
+    "fr_stable_adj"
+   ],
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
+   "side_counts": {
+    "left": 8,
+    "right": 6,
+    "n/a": 1
    }
   },
   {
@@ -13431,7 +13513,7 @@
     "R_text_medical",
     "R_heraldry_02",
     "R_emo_fear_03",
-    "R_police_04"
+    "R_police_03"
    ],
    "conversation_ids": [
     "C_R_text_crime_03"
@@ -13481,12 +13563,12 @@
     "R_text_medical_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 4.41,
+   "mean_level": 4.32,
    "related_rooms": [
     "R_text_death",
     "R_text_crime_03",
     "R_doctor_01",
-    "R_character_09"
+    "R_character_07"
    ],
    "conversation_ids": [
     "C_R_text_medical"
@@ -13503,17 +13585,17 @@
     "fr_plaie_noun",
     "fr_cancer_noun",
     "fr_sanglant_adj",
+    "fr_coca_noun",
     "fr_epidemie_noun",
     "fr_infection_noun",
     "fr_sanguin_adj",
-    "fr_avortement_noun",
-    "fr_tuberculose_noun"
+    "fr_avortement_noun"
    ],
    "item_count": 14,
    "total_items_incl_zooms": 22,
    "side_counts": {
-    "right": 5,
-    "left": 7,
+    "right": 6,
+    "left": 6,
     "n/a": 2
    }
   },
@@ -13527,12 +13609,12 @@
    "building_id": "B44_musee",
    "links_back_to_sector": "S13_museum",
    "cefr_band": "B2",
-   "mean_level": 3.93,
+   "mean_level": 3.79,
    "related_rooms": [
     "R_abs_power_02",
     "R_text_medical",
-    "ST_body_seg013",
-    "ST_body_seg007"
+    "ST_body_seg007",
+    "ST_body_seg013"
    ],
    "conversation_ids": [
     "C_R_text_death"
@@ -13552,14 +13634,13 @@
     "fr_supplice_noun",
     "fr_mourant_adj",
     "fr_decomposition_noun",
-    "fr_charnier_noun",
     "fr_tortueux_adj",
     "fr_mortalite_noun"
    ],
-   "item_count": 15,
-   "total_items_incl_zooms": 15,
+   "item_count": 14,
+   "total_items_incl_zooms": 14,
    "side_counts": {
-    "right": 9,
+    "right": 8,
     "left": 4,
     "n/a": 2
    }
@@ -13580,7 +13661,7 @@
    "mean_level": 2.9,
    "related_rooms": [
     "R_art_01",
-    "R_text_crime_02",
+    "R_text_crime_01",
     "R_opposites_05",
     "R_character_01"
    ],
@@ -13623,7 +13704,7 @@
    "related_rooms": [
     "R_art_02",
     "R_adj_senses_04",
-    "R_adj_intensity_03",
+    "R_adj_intensity_01",
     "R_opposites_06"
    ],
    "conversation_ids": [
@@ -13666,7 +13747,7 @@
     "R_adj_senses_03",
     "R_adj_senses_05",
     "R_emo_joy_04",
-    "R_appearance_01"
+    "R_adj_intensity_03"
    ],
    "conversation_ids": [
     "C_R_adj_senses_04"
@@ -13754,7 +13835,7 @@
     "R_abs_senses_03",
     "R_adj_senses_08",
     "R_appearance_06",
-    "R_abs_beauty_01"
+    "R_adj_intensity_03"
    ],
    "conversation_ids": [
     "C_R_adj_senses_06"
@@ -13795,7 +13876,7 @@
    "related_rooms": [
     "R_abs_power_05",
     "R_adj_senses_09",
-    "R_adj_intensity_02",
+    "R_adj_intensity_03",
     "R_abs_beauty_01"
    ],
    "conversation_ids": [
@@ -13837,7 +13918,7 @@
    "related_rooms": [
     "R_adj_senses_06",
     "R_adj_mind_04",
-    "R_character_09"
+    "R_adj_logic_04"
    ],
    "conversation_ids": [
     "C_R_adj_senses_08"
@@ -14132,7 +14213,7 @@
    "cefr_band": "B1",
    "mean_level": 3.36,
    "related_rooms": [
-    "R_heraldry_01",
+    "R_text_crime_02",
     "R_abs_senses_02",
     "ST_rule_seg004",
     "ST_rule_seg005"
@@ -14350,7 +14431,7 @@
    "building_id": "B45_theatre",
    "links_back_to_sector": "S14_culture",
    "cefr_band": "C1",
-   "mean_level": 5.31,
+   "mean_level": 5.33,
    "related_rooms": [
     "R_adj_mind_03",
     "R_adj_mind_05",
@@ -14364,7 +14445,6 @@
    "base_room": "R_theatre",
    "words": [
     "fr_coulisse_noun",
-    "fr_samba_noun",
     "fr_theatral_adj",
     "fr_divertissement_noun",
     "fr_expose_noun",
@@ -14377,12 +14457,12 @@
     "fr_jongleur_noun",
     "fr_show_noun"
    ],
-   "item_count": 13,
-   "total_items_incl_zooms": 13,
+   "item_count": 12,
+   "total_items_incl_zooms": 12,
    "side_counts": {
     "left": 2,
-    "right": 9,
     "n/a": 1,
+    "right": 8,
     "center": 1
    }
   },
@@ -14493,11 +14573,11 @@
    "building_id": "B45_theatre",
    "links_back_to_sector": "S14_culture",
    "cefr_band": "C2",
-   "mean_level": 5.55,
+   "mean_level": 5.6,
    "related_rooms": [
     "R_adj_mind_04",
-    "ST_play_seg004",
-    "R_art_03"
+    "R_art_03",
+    "ST_play_seg004"
    ],
    "conversation_ids": [
     "C_R_cinema_03"
@@ -14507,7 +14587,6 @@
    "words": [
     "fr_tournage_noun",
     "fr_sequence_noun",
-    "fr_western_noun",
     "fr_cineaste_noun",
     "fr_expansion_noun",
     "fr_photographique_adj",
@@ -14517,10 +14596,10 @@
     "fr_metrage_noun",
     "fr_televisuel_adj"
    ],
-   "item_count": 11,
-   "total_items_incl_zooms": 11,
+   "item_count": 10,
+   "total_items_incl_zooms": 10,
    "side_counts": {
-    "right": 5,
+    "right": 4,
     "left": 3,
     "center": 1,
     "n/a": 2
@@ -14670,7 +14749,7 @@
    "related_rooms": [
     "R_adj_mind_05",
     "R_cinema_03",
-    "R_character_08",
+    "R_character_06",
     "R_adj_senses_08"
    ],
    "conversation_ids": [
@@ -14713,7 +14792,7 @@
     "R_theatre_03",
     "R_adj_mind_04",
     "R_adj_senses_09",
-    "R_character_09"
+    "R_character_07"
    ],
    "conversation_ids": [
     "C_R_adj_mind_05"
@@ -15479,7 +15558,7 @@
     "R_abs_speech_02",
     "R_abs_speech_03",
     "R_theatre_02",
-    "R_theatre_03"
+    "ST_communication_seg005"
    ],
    "conversation_ids": [
     "C_R_media_02"
@@ -16065,7 +16144,7 @@
    "related_rooms": [
     "R_emo_love_03",
     "R_emo_joy_03",
-    "R_adj_intensity_03",
+    "R_adj_intensity_01",
     "R_adj_intensity_07"
    ],
    "conversation_ids": [
@@ -16495,7 +16574,7 @@
    "mean_level": 5.32,
    "related_rooms": [
     "R_appearance_07",
-    "R_character_07",
+    "R_character_09",
     "R_family_01",
     "R_abs_time_01"
    ],
@@ -16621,7 +16700,7 @@
    "mean_level": 3.87,
    "related_rooms": [
     "R_appearance_05",
-    "R_character_06",
+    "R_character_08",
     "R_adj_senses_02",
     "R_social_science_01"
    ],
@@ -16741,7 +16820,7 @@
   },
   {
    "id": "R_character_06",
-   "name": "Character traits [upstairs 1] · disdainful, imprudent, conceited",
+   "name": "Character traits [upstairs 1] · aspiring, inexperienced, passionate",
    "type": "adjectives",
    "setting": "Character traits inside Galerie des portraits (people & character).",
    "kind": "full",
@@ -16750,6 +16829,89 @@
    "links_back_to_sector": "S15_feelings",
    "zoom_ids": [
     "R_character_06_z1"
+   ],
+   "cefr_band": "C2",
+   "mean_level": 5.56,
+   "related_rooms": [
+    "R_character_07",
+    "R_social_science_01",
+    "R_adj_mind_04"
+   ],
+   "conversation_ids": [
+    "C_R_character_06"
+   ],
+   "base_room": "R_character",
+   "words": [
+    "fr_spontane_adj",
+    "fr_precoce_adj",
+    "fr_accueillant_adj",
+    "fr_infantile_adj",
+    "fr_passionnel_adj",
+    "fr_affectif_adj",
+    "fr_demographique_adj",
+    "fr_aventureux_adj",
+    "fr_impulsif_adj",
+    "fr_immateriel_adj"
+   ],
+   "item_count": 10,
+   "total_items_incl_zooms": 16,
+   "side_counts": {
+    "n/a": 10
+   }
+  },
+  {
+   "id": "R_character_07",
+   "name": "Character traits [upstairs 2] · clinical, therapeutic, surgical",
+   "type": "adjectives",
+   "setting": "Character traits inside Galerie des portraits (people & character).",
+   "kind": "full",
+   "sector_id": "S15_feelings",
+   "building_id": "B51_portraits",
+   "links_back_to_sector": "S15_feelings",
+   "zoom_ids": [
+    "R_character_07_z1"
+   ],
+   "cefr_band": "C2",
+   "mean_level": 5.53,
+   "related_rooms": [
+    "R_appearance_06",
+    "R_character_06",
+    "R_text_medical",
+    "R_doctor_02"
+   ],
+   "conversation_ids": [
+    "C_R_character_07"
+   ],
+   "base_room": "R_character",
+   "words": [
+    "fr_formel_adj",
+    "fr_sobre_adj",
+    "fr_humiliant_adj",
+    "fr_hereditaire_adj",
+    "fr_angoissant_adj",
+    "fr_incurable_adj",
+    "fr_respiratoire_adj",
+    "fr_indirect_adj",
+    "fr_chirurgical_adj",
+    "fr_cordial_adj"
+   ],
+   "item_count": 10,
+   "total_items_incl_zooms": 17,
+   "side_counts": {
+    "n/a": 10
+   }
+  },
+  {
+   "id": "R_character_08",
+   "name": "Character traits [upstairs 3] · disdainful, imprudent, conceited",
+   "type": "adjectives",
+   "setting": "Character traits inside Galerie des portraits (people & character).",
+   "kind": "full",
+   "sector_id": "S15_feelings",
+   "building_id": "B51_portraits",
+   "links_back_to_sector": "S15_feelings",
+   "zoom_ids": [
+    "R_character_08_z1"
    ],
    "cefr_band": "C1",
    "mean_level": 5.12,
@@ -16760,7 +16922,7 @@
     "R_emo_fear_05"
    ],
    "conversation_ids": [
-    "C_R_character_06"
+    "C_R_character_08"
    ],
    "base_room": "R_character",
    "words": [
@@ -16782,8 +16944,8 @@
    }
   },
   {
-   "id": "R_character_07",
-   "name": "Character traits [upstairs 2] · modest, extravagant, mischievous",
+   "id": "R_character_09",
+   "name": "Character traits [upstairs 4] · modest, extravagant, mischievous",
    "type": "adjectives",
    "setting": "Character traits inside Galerie des portraits (people & character).",
    "kind": "full",
@@ -16791,7 +16953,7 @@
    "building_id": "B51_portraits",
    "links_back_to_sector": "S15_feelings",
    "zoom_ids": [
-    "R_character_07_z1"
+    "R_character_09_z1"
    ],
    "cefr_band": "C1",
    "mean_level": 5.35,
@@ -16802,7 +16964,7 @@
     "R_adj_senses_07"
    ],
    "conversation_ids": [
-    "C_R_character_07"
+    "C_R_character_09"
    ],
    "base_room": "R_character",
    "words": [
@@ -16823,90 +16985,6 @@
    "side_counts": {
     "n/a": 10,
     "right": 1
-   }
-  },
-  {
-   "id": "R_character_08",
-   "name": "Character traits [upstairs 3] · inexperienced, aspiring, passionate",
-   "type": "adjectives",
-   "setting": "Character traits inside Galerie des portraits (people & character).",
-   "kind": "full",
-   "sector_id": "S15_feelings",
-   "building_id": "B51_portraits",
-   "links_back_to_sector": "S15_feelings",
-   "zoom_ids": [
-    "R_character_08_z1"
-   ],
-   "cefr_band": "C2",
-   "mean_level": 5.5,
-   "related_rooms": [
-    "R_appearance_06",
-    "R_character_09",
-    "R_social_science_01",
-    "R_adj_mind_04"
-   ],
-   "conversation_ids": [
-    "C_R_character_08"
-   ],
-   "base_room": "R_character",
-   "words": [
-    "fr_spontane_adj",
-    "fr_precoce_adj",
-    "fr_accueillant_adj",
-    "fr_infantile_adj",
-    "fr_bohemien_noun",
-    "fr_passionnel_adj",
-    "fr_affectif_adj",
-    "fr_demographique_adj",
-    "fr_aventureux_adj",
-    "fr_impulsif_adj"
-   ],
-   "item_count": 10,
-   "total_items_incl_zooms": 16,
-   "side_counts": {
-    "n/a": 9,
-    "right": 1
-   }
-  },
-  {
-   "id": "R_character_09",
-   "name": "Character traits [upstairs 4] · clinical, therapeutic, surgical",
-   "type": "adjectives",
-   "setting": "Character traits inside Galerie des portraits (people & character).",
-   "kind": "full",
-   "sector_id": "S15_feelings",
-   "building_id": "B51_portraits",
-   "links_back_to_sector": "S15_feelings",
-   "zoom_ids": [
-    "R_character_09_z1"
-   ],
-   "cefr_band": "C2",
-   "mean_level": 5.53,
-   "related_rooms": [
-    "R_character_08",
-    "R_text_medical",
-    "R_adj_senses_08"
-   ],
-   "conversation_ids": [
-    "C_R_character_09"
-   ],
-   "base_room": "R_character",
-   "words": [
-    "fr_formel_adj",
-    "fr_sobre_adj",
-    "fr_humiliant_adj",
-    "fr_hereditaire_adj",
-    "fr_angoissant_adj",
-    "fr_incurable_adj",
-    "fr_respiratoire_adj",
-    "fr_indirect_adj",
-    "fr_chirurgical_adj",
-    "fr_cordial_adj"
-   ],
-   "item_count": 10,
-   "total_items_incl_zooms": 17,
-   "side_counts": {
-    "n/a": 10
    }
   },
   {
@@ -17129,8 +17207,8 @@
    "cefr_band": "C1",
    "mean_level": 5.43,
    "related_rooms": [
+    "R_character_09",
     "R_character_07",
-    "R_character_08",
     "R_adj_senses_06",
     "R_abs_beauty_02"
    ],
@@ -17171,7 +17249,7 @@
    "cefr_band": "C1",
    "mean_level": 5.27,
    "related_rooms": [
-    "R_character_06",
+    "R_character_08",
     "R_people_04",
     "R_body_02",
     "R_body_04"
@@ -17281,7 +17359,7 @@
   },
   {
    "id": "R_adj_intensity_01",
-   "name": "Strongman tent — strength & intensity [ground & first floor 1] · stable, motionless, secure",
+   "name": "Strongman tent — strength & intensity [ground & first floor 1] · violent, aggressive, ferocious",
    "type": "adjectives",
    "setting": "A test-your-strength tower: the puck rises past painted marks from 'weak' and 'gentle' up to 'intense', 'extreme' and 'total' at the bell.",
    "kind": "full",
@@ -17289,32 +17367,33 @@
    "building_id": "B53_hercule",
    "links_back_to_sector": "S16_park",
    "cefr_band": "B1",
-   "mean_level": 3.2,
+   "mean_level": 3.47,
    "related_rooms": [
-    "R_adj_intensity_04",
-    "R_adv_manner_02",
-    "R_character_01"
+    "R_adj_intensity_03",
+    "R_adj_intensity_02",
+    "R_emo_fear_03",
+    "R_adv_manner_05"
    ],
    "conversation_ids": [
     "C_R_adj_intensity_01"
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_capable_adj",
-    "fr_immobile_adj",
-    "fr_portable_adj",
-    "fr_solide_adj",
-    "fr_arme_adj",
-    "fr_lache_adj",
-    "fr_confortable_adj",
-    "fr_passionnant_adj",
-    "fr_dynamique_adj",
-    "fr_las_adj",
-    "fr_aerien_adj",
-    "fr_funebre_adj",
-    "fr_souterrain_adj",
-    "fr_stable_adj",
-    "fr_durable_adj"
+    "fr_violent_adj",
+    "fr_furieux_adj",
+    "fr_cruel_adj",
+    "fr_delicat_adj",
+    "fr_intense_adj",
+    "fr_strict_adj",
+    "fr_dramatique_adj",
+    "fr_agressif_adj",
+    "fr_feroce_adj",
+    "fr_excessif_adj",
+    "fr_menacant_adj",
+    "fr_force_adj",
+    "fr_exigeant_adj",
+    "fr_imposant_adj",
+    "fr_contagieux_adj"
    ],
    "item_count": 15,
    "total_items_incl_zooms": 15,
@@ -17324,7 +17403,7 @@
   },
   {
    "id": "R_adj_intensity_02",
-   "name": "Strongman tent — strength & intensity [ground & first floor 2] · peaceful, delicate, majestic",
+   "name": "Strongman tent — strength & intensity [ground & first floor 2] · powerful, ultimate, extreme",
    "type": "adjectives",
    "setting": "A test-your-strength tower: the puck rises past painted marks from 'weak' and 'gentle' up to 'intense', 'extreme' and 'total' at the bell.",
    "kind": "full",
@@ -17335,28 +17414,28 @@
     "R_adj_intensity_02_z1"
    ],
    "cefr_band": "B2",
-   "mean_level": 3.62,
+   "mean_level": 3.56,
    "related_rooms": [
-    "R_adj_intensity_03",
+    "R_adj_intensity_01",
     "R_adj_intensity_06",
-    "R_adj_senses_07",
-    "R_abs_beauty_01"
+    "R_adj_quality_04",
+    "R_adj_quality_06"
    ],
    "conversation_ids": [
     "C_R_adj_intensity_02"
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_sacre_adj",
-    "fr_total_adj",
-    "fr_delicat_adj",
-    "fr_tiede_adj",
-    "fr_paisible_adj",
-    "fr_constant_adj",
-    "fr_genant_adj",
-    "fr_gracieux_adj",
-    "fr_emouvant_adj",
-    "fr_vulnerable_adj"
+    "fr_puissant_adj",
+    "fr_extreme_adj",
+    "fr_absolu_adj",
+    "fr_brutal_adj",
+    "fr_fatal_adj",
+    "fr_terrifiant_adj",
+    "fr_supreme_adj",
+    "fr_ultime_adj",
+    "fr_monstrueux_adj",
+    "fr_insignifiant_adj"
    ],
    "item_count": 10,
    "total_items_incl_zooms": 16,
@@ -17366,49 +17445,51 @@
   },
   {
    "id": "R_adj_intensity_03",
-   "name": "Strongman tent — strength & intensity [ground & first floor 3] · violent, aggressive, intense",
+   "name": "Strongman tent — strength & intensity [ground & first floor 3] · majestic, graceful, sensual",
    "type": "adjectives",
    "setting": "A test-your-strength tower: the puck rises past painted marks from 'weak' and 'gentle' up to 'intense', 'extreme' and 'total' at the bell.",
    "kind": "full",
    "sector_id": "S16_park",
    "building_id": "B53_hercule",
    "links_back_to_sector": "S16_park",
-   "zoom_ids": [
-    "R_adj_intensity_03_z1"
-   ],
-   "cefr_band": "B2",
-   "mean_level": 3.5,
+   "cefr_band": "B1",
+   "mean_level": 3.4,
    "related_rooms": [
     "R_adj_intensity_04",
-    "R_adj_intensity_02",
-    "R_emo_fear_03",
-    "R_adv_manner_05"
+    "R_adj_intensity_01",
+    "R_adj_senses_06",
+    "R_adj_senses_07"
    ],
    "conversation_ids": [
     "C_R_adj_intensity_03"
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_violent_adj",
-    "fr_furieux_adj",
-    "fr_cruel_adj",
-    "fr_brutal_adj",
-    "fr_intense_adj",
-    "fr_strict_adj",
-    "fr_dramatique_adj",
-    "fr_agressif_adj",
-    "fr_feroce_adj",
-    "fr_excessif_adj"
+    "fr_extraordinaire_adj",
+    "fr_immobile_adj",
+    "fr_sacre_adj",
+    "fr_paisible_adj",
+    "fr_passionnant_adj",
+    "fr_las_adj",
+    "fr_sublime_adj",
+    "fr_funebre_adj",
+    "fr_genant_adj",
+    "fr_gracieux_adj",
+    "fr_emouvant_adj",
+    "fr_viril_adj",
+    "fr_sensuel_adj",
+    "fr_conjugal_adj",
+    "fr_majestueux_adj"
    ],
-   "item_count": 10,
-   "total_items_incl_zooms": 16,
+   "item_count": 15,
+   "total_items_incl_zooms": 15,
    "side_counts": {
-    "n/a": 10
+    "n/a": 15
    }
   },
   {
    "id": "R_adj_intensity_04",
-   "name": "Strongman tent — strength & intensity [ground & first floor 4] · ultimate, extreme, powerful",
+   "name": "Strongman tent — strength & intensity [ground & first floor 4] · secure, armed, portable",
    "type": "adjectives",
    "setting": "A test-your-strength tower: the puck rises past painted marks from 'weak' and 'gentle' up to 'intense', 'extreme' and 'total' at the bell.",
    "kind": "full",
@@ -17419,28 +17500,27 @@
     "R_adj_intensity_04_z1"
    ],
    "cefr_band": "B1",
-   "mean_level": 3.38,
+   "mean_level": 3.25,
    "related_rooms": [
-    "R_adj_intensity_01",
     "R_adj_intensity_03",
-    "R_adj_quality_04",
-    "R_adj_quality_03"
+    "R_adj_size_02",
+    "R_adj_size_01"
    ],
    "conversation_ids": [
     "C_R_adj_intensity_04"
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_extraordinaire_adj",
-    "fr_puissant_adj",
-    "fr_extreme_adj",
-    "fr_absolu_adj",
-    "fr_fatal_adj",
+    "fr_capable_adj",
+    "fr_portable_adj",
+    "fr_total_adj",
+    "fr_solide_adj",
+    "fr_tiede_adj",
+    "fr_arme_adj",
+    "fr_lache_adj",
+    "fr_confortable_adj",
     "fr_supplementaire_adj",
-    "fr_terrifiant_adj",
-    "fr_supreme_adj",
-    "fr_ultime_adj",
-    "fr_monstrueux_adj"
+    "fr_dynamique_adj"
    ],
    "item_count": 10,
    "total_items_incl_zooms": 16,
@@ -17763,8 +17843,8 @@
    "related_rooms": [
     "R_adj_quality_02",
     "R_adj_quality_03",
-    "R_adj_intensity_04",
-    "R_adj_senses_02"
+    "R_adj_senses_02",
+    "R_adj_intensity_02"
    ],
    "conversation_ids": [
     "C_R_adj_quality_04"
@@ -17842,7 +17922,7 @@
    "related_rooms": [
     "R_adj_quality_03",
     "R_adj_quality_05",
-    "R_adj_intensity_04",
+    "R_adj_intensity_02",
     "R_adj_senses_02"
    ],
    "conversation_ids": [
@@ -18008,7 +18088,7 @@
     "R_adv_manner_03",
     "R_adv_manner_05",
     "R_adv_logic_04",
-    "R_adj_intensity_05"
+    "R_adj_intensity_03"
    ],
    "conversation_ids": [
     "C_R_adv_manner_02"
@@ -18132,7 +18212,7 @@
     "R_adv_manner_02",
     "R_adv_manner_07",
     "R_adv_degree_03",
-    "R_adj_intensity_03"
+    "R_adj_intensity_01"
    ],
    "conversation_ids": [
     "C_R_adv_manner_05"
@@ -19330,7 +19410,7 @@
    "related_rooms": [
     "ST_existence_seg010",
     "ST_existence_seg013",
-    "R_police_04",
+    "R_police_05",
     "R_ch_confessional"
    ],
    "conversation_ids": [
@@ -21220,7 +21300,7 @@
     "ST_movement_seg021",
     "ST_movement_seg024",
     "R_abs_action_01",
-    "R_police_04"
+    "R_hospital_02"
    ],
    "conversation_ids": [
     "C_ST_movement_seg023"
@@ -21828,7 +21908,7 @@
     "ST_communication_seg016",
     "ST_communication_seg027",
     "R_abs_speech_02",
-    "R_text_crime_01"
+    "R_abs_mind_03"
    ],
    "conversation_ids": [
     "C_ST_communication_seg017"
@@ -23044,8 +23124,8 @@
    "related_rooms": [
     "ST_perception_seg007",
     "ST_perception_seg009",
-    "R_abs_action_01",
-    "ST_conflict_seg014"
+    "R_police_04",
+    "R_abs_action_01"
    ],
    "conversation_ids": [
     "C_ST_perception_seg006"
@@ -23718,7 +23798,7 @@
    "related_rooms": [
     "ST_control_seg010",
     "ST_control_seg009",
-    "R_text_crime_01",
+    "R_text_crime_02",
     "ST_conflict_seg002"
    ],
    "conversation_ids": [
@@ -25374,8 +25454,8 @@
    "related_rooms": [
     "ST_body_seg008",
     "ST_body_seg009",
-    "R_emo_sad_03",
-    "ST_conflict_seg002"
+    "R_adj_intensity_02",
+    "R_emo_sad_03"
    ],
    "conversation_ids": [
     "C_ST_body_seg006"
@@ -25408,8 +25488,8 @@
    "related_rooms": [
     "ST_body_seg005",
     "ST_body_seg008",
-    "ST_conflict_seg002",
-    "R_text_death"
+    "R_text_death",
+    "ST_conflict_seg002"
    ],
    "conversation_ids": [
     "C_ST_body_seg007"
@@ -25673,7 +25753,7 @@
    "mean_level": 1.5,
    "related_rooms": [
     "ST_conflict_seg001",
-    "R_text_crime_01",
+    "R_text_crime_02",
     "ST_control_seg005"
    ],
    "conversation_ids": [
@@ -26014,7 +26094,7 @@
     "ST_conflict_seg005",
     "ST_conflict_seg007",
     "R_military_03",
-    "R_text_crime_01"
+    "R_text_crime_02"
    ],
    "conversation_ids": [
     "C_ST_conflict_seg012"
@@ -26048,7 +26128,7 @@
     "ST_conflict_seg008",
     "ST_conflict_seg014",
     "R_military_03",
-    "R_text_crime_01"
+    "R_text_crime_02"
    ],
    "conversation_ids": [
     "C_ST_conflict_seg013"
@@ -26081,8 +26161,8 @@
    "related_rooms": [
     "ST_conflict_seg013",
     "ST_conflict_seg016",
-    "R_text_crime_01",
-    "R_text_crime_02"
+    "R_text_crime_02",
+    "R_text_crime_01"
    ],
    "conversation_ids": [
     "C_ST_conflict_seg014"
@@ -26115,7 +26195,7 @@
    "related_rooms": [
     "ST_conflict_seg011",
     "ST_conflict_seg006",
-    "R_text_crime_01",
+    "R_text_crime_02",
     "R_emo_fear_03"
    ],
    "conversation_ids": [
@@ -26217,7 +26297,7 @@
    "related_rooms": [
     "ST_conflict_seg017",
     "ST_conflict_seg019",
-    "R_text_crime_01",
+    "R_text_crime_02",
     "R_military_03"
    ],
    "conversation_ids": [
@@ -26251,7 +26331,7 @@
    "related_rooms": [
     "ST_conflict_seg018",
     "ST_conflict_seg021",
-    "R_text_crime_01",
+    "R_text_crime_02",
     "R_emo_fear_03"
    ],
    "conversation_ids": [
@@ -27655,7 +27735,7 @@
    "related_rooms": [
     "ST_commerce_seg005",
     "ST_commerce_seg008",
-    "R_bank_economy_03",
+    "R_bank_economy_04",
     "R_bank_economy_01"
    ],
    "conversation_ids": [
@@ -28659,8 +28739,8 @@
    "mean_level": 5.2,
    "related_rooms": [
     "ST_nature_seg008",
-    "R_wildlife_01",
-    "R_wildlife_02"
+    "R_wildlife_02",
+    "R_wildlife_03"
    ],
    "conversation_ids": [
     "C_ST_nature_seg009"
@@ -29349,39 +29429,37 @@
   },
   {
    "id": "R_vegetables_z1",
-   "name": "Vegetable stall — market crate (center)",
+   "name": "Vegetable stall — market crate (right)",
    "type": "zoom",
-   "setting": "A market crate on the back wall of 'Vegetable stall' (Marché couvert (covered market)); zoom in to see its items.",
+   "setting": "A market crate on the right wall of 'Vegetable stall' (Marché couvert (covered market)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S03_market",
    "building_id": "B06_marche",
    "links_back_to_sector": "S03_market",
    "parent_room_id": "R_vegetables",
    "furniture": "market crate",
-   "sign": "Market crate: spinach plant, artichoke, parsley",
+   "sign": "Market crate: spindle, spinach plant, artichoke",
    "position": {
-    "side": "center",
-    "wall": "back wall"
+    "side": "right",
+    "wall": "right wall"
    },
    "cefr_band": "C2",
-   "mean_level": 6.0,
+   "mean_level": 5.83,
    "related_rooms": [
     "R_vegetables"
    ],
    "base_room": "R_vegetables",
    "words": [
-    "fr_choucroute_noun",
-    "fr_feve_noun",
+    "fr_navet_noun",
     "fr_artichaut_noun",
     "fr_epinard_noun",
     "fr_persil_noun",
     "fr_saladier_noun",
     "fr_fuseau_noun"
    ],
-   "item_count": 7,
+   "item_count": 6,
    "side_counts": {
-    "left": 2,
-    "right": 5
+    "right": 6
    }
   },
   {
@@ -29418,44 +29496,6 @@
    "side_counts": {
     "left": 3,
     "right": 3
-   }
-  },
-  {
-   "id": "R_boutique_03_z1",
-   "name": "Fashion boutique & jeweller [upstairs] — market crate (center)",
-   "type": "zoom",
-   "setting": "A market crate on the back wall of 'Fashion boutique & jeweller [upstairs]' (Rue Commerçante (shopping street)); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S03_market",
-   "building_id": "B07_rue_commercante",
-   "links_back_to_sector": "S03_market",
-   "parent_room_id": "R_boutique_03",
-   "furniture": "market crate",
-   "sign": "Market crate: designer, glamour, jeweller",
-   "position": {
-    "side": "center",
-    "wall": "back wall"
-   },
-   "cefr_band": "C2",
-   "mean_level": 6.0,
-   "related_rooms": [
-    "R_boutique_03"
-   ],
-   "base_room": "R_boutique",
-   "words": [
-    "fr_mantille_noun",
-    "fr_enchanteur_noun",
-    "fr_saphir_noun",
-    "fr_boubou_noun",
-    "fr_glamour_noun",
-    "fr_joaillier_noun",
-    "fr_styliste_noun"
-   ],
-   "item_count": 7,
-   "side_counts": {
-    "left": 1,
-    "right": 5,
-    "center": 1
    }
   },
   {
@@ -30247,42 +30287,6 @@
    "item_count": 6,
    "side_counts": {
     "n/a": 6
-   }
-  },
-  {
-   "id": "R_police_04_z1",
-   "name": "Police station [upstairs] — clerk desk (left)",
-   "type": "zoom",
-   "setting": "A clerk desk on the left wall of 'Police station [upstairs]' (Palais de Justice); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S06_townhall",
-   "building_id": "B14_tribunal",
-   "links_back_to_sector": "S06_townhall",
-   "parent_room_id": "R_police_04",
-   "furniture": "clerk desk",
-   "sign": "Clerk desk: act of obtaining, investigation, delinquency",
-   "position": {
-    "side": "left",
-    "wall": "left wall"
-   },
-   "cefr_band": "C2",
-   "mean_level": 5.57,
-   "related_rooms": [
-    "R_police_04"
-   ],
-   "base_room": "R_police",
-   "words": [
-    "fr_perquisition_noun",
-    "fr_investigation_noun",
-    "fr_delinquance_noun",
-    "fr_infraction_noun",
-    "fr_capture_noun",
-    "fr_expulsion_noun",
-    "fr_obtention_noun"
-   ],
-   "item_count": 7,
-   "side_counts": {
-    "left": 7
    }
   },
   {
@@ -31133,47 +31137,6 @@
    }
   },
   {
-   "id": "R_forest_02_z1",
-   "name": "Forest trees & plants [gate & middle paths 2] — tree stump (center)",
-   "type": "zoom",
-   "setting": "A tree stump on the back wall of 'Forest trees & plants [ground & first floor 2]' (Forêt); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S09_nature",
-   "building_id": "B27_foret",
-   "links_back_to_sector": "S09_nature",
-   "parent_room_id": "R_forest_02",
-   "furniture": "tree stump",
-   "sign": "Tree stump: bush, vegetation, apple tree",
-   "position": {
-    "side": "center",
-    "wall": "back wall"
-   },
-   "cefr_band": "C1",
-   "mean_level": 5.0,
-   "related_rooms": [
-    "R_forest_02"
-   ],
-   "base_room": "R_forest",
-   "words": [
-    "fr_palme_noun",
-    "fr_ecorce_noun",
-    "fr_vegetation_noun",
-    "fr_flore_noun",
-    "fr_pommier_noun",
-    "fr_arbuste_noun",
-    "fr_jasmin_noun",
-    "fr_gland_noun",
-    "fr_orme_noun",
-    "fr_forestier_adj"
-   ],
-   "item_count": 10,
-   "side_counts": {
-    "left": 4,
-    "right": 5,
-    "n/a": 1
-   }
-  },
-  {
    "id": "R_wildlife_01_z1",
    "name": "Forest animals [gate & middle paths 1] — tree stump (right)",
    "type": "zoom",
@@ -31184,13 +31147,13 @@
    "links_back_to_sector": "S09_nature",
    "parent_room_id": "R_wildlife_01",
    "furniture": "tree stump",
-   "sign": "Tree stump: mammal, squirrel, rat",
+   "sign": "Tree stump: crocodile, lizard, zoo",
    "position": {
     "side": "right",
     "wall": "right wall"
    },
-   "cefr_band": "C1",
-   "mean_level": 4.67,
+   "cefr_band": "B2",
+   "mean_level": 3.83,
    "related_rooms": [
     "R_wildlife_01"
    ],
@@ -31201,17 +31164,11 @@
     "fr_ecureuil_noun",
     "fr_lezard_noun",
     "fr_fauve_noun",
-    "fr_crocodile_noun",
-    "fr_lievre_noun",
-    "fr_reptile_noun",
-    "fr_rongeur_noun",
-    "fr_mammifere_noun",
-    "fr_habitat_noun",
-    "fr_gaspard_noun"
+    "fr_crocodile_noun"
    ],
-   "item_count": 12,
+   "item_count": 6,
    "side_counts": {
-    "right": 12
+    "right": 6
    }
   },
   {
@@ -32376,32 +32333,32 @@
    "links_back_to_sector": "S13_museum",
    "parent_room_id": "R_text_medical",
    "furniture": "display case",
-   "sign": "Display case: alcoholism, pathological, alcoholic",
+   "sign": "Display case: pathological, tuberculosis, cholera",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "C2",
-   "mean_level": 6.0,
+   "mean_level": 5.88,
    "related_rooms": [
     "R_text_medical"
    ],
    "base_room": "R_text_medical",
    "words": [
+    "fr_tuberculose_noun",
     "fr_contagion_noun",
     "fr_secretion_noun",
     "fr_pathologie_noun",
     "fr_cholera_noun",
     "fr_alcoolisme_noun",
     "fr_tabagisme_noun",
-    "fr_ivrogne_adj",
     "fr_pathologique_adj"
    ],
    "item_count": 8,
    "side_counts": {
-    "left": 3,
+    "left": 4,
     "right": 3,
-    "n/a": 2
+    "n/a": 1
    }
   },
   {
@@ -33157,24 +33114,24 @@
    "links_back_to_sector": "S15_feelings",
    "parent_room_id": "R_character_06",
    "furniture": "garden bench",
-   "sign": "Garden bench: dishonest, judicious, unhurt",
+   "sign": "Garden bench: aspiring, inexperienced, humanist",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
-   "cefr_band": "C1",
-   "mean_level": 5.33,
+   "cefr_band": "C2",
+   "mean_level": 6.0,
    "related_rooms": [
     "R_character_06"
    ],
    "base_room": "R_character",
    "words": [
-    "fr_malhonnete_adj",
-    "fr_indemne_adj",
-    "fr_insultant_adj",
-    "fr_vaniteux_adj",
-    "fr_judicieux_adj",
-    "fr_tolerant_adj"
+    "fr_intransigeant_adj",
+    "fr_dependant_adj",
+    "fr_obsessionnel_adj",
+    "fr_inexperimente_adj",
+    "fr_aspirant_adj",
+    "fr_humaniste_adj"
    ],
    "item_count": 6,
    "side_counts": {
@@ -33192,28 +33149,29 @@
    "links_back_to_sector": "S15_feelings",
    "parent_room_id": "R_character_07",
    "furniture": "garden bench",
-   "sign": "Garden bench: congenial, modest, copious",
+   "sign": "Garden bench: clinical, therapeutic, infectious",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "C2",
-   "mean_level": 5.83,
+   "mean_level": 6.0,
    "related_rooms": [
     "R_character_07"
    ],
    "base_room": "R_character",
    "words": [
-    "fr_copieux_adj",
-    "fr_snob_adj",
-    "fr_modique_adj",
-    "fr_emblematique_adj",
-    "fr_convivial_adj",
-    "fr_depensier_adj"
+    "fr_ivrogne_adj",
+    "fr_clinique_adj",
+    "fr_methodique_adj",
+    "fr_matrimonial_adj",
+    "fr_therapeutique_adj",
+    "fr_sabbatique_adj",
+    "fr_infectieux_adj"
    ],
-   "item_count": 6,
+   "item_count": 7,
    "side_counts": {
-    "n/a": 6
+    "n/a": 7
    }
   },
   {
@@ -33227,24 +33185,24 @@
    "links_back_to_sector": "S15_feelings",
    "parent_room_id": "R_character_08",
    "furniture": "garden bench",
-   "sign": "Garden bench: aspiring, inexperienced, humanist",
+   "sign": "Garden bench: dishonest, judicious, unhurt",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
-   "cefr_band": "C2",
-   "mean_level": 6.0,
+   "cefr_band": "C1",
+   "mean_level": 5.33,
    "related_rooms": [
     "R_character_08"
    ],
    "base_room": "R_character",
    "words": [
-    "fr_intransigeant_adj",
-    "fr_dependant_adj",
-    "fr_obsessionnel_adj",
-    "fr_inexperimente_adj",
-    "fr_aspirant_adj",
-    "fr_humaniste_adj"
+    "fr_malhonnete_adj",
+    "fr_indemne_adj",
+    "fr_insultant_adj",
+    "fr_vaniteux_adj",
+    "fr_judicieux_adj",
+    "fr_tolerant_adj"
    ],
    "item_count": 6,
    "side_counts": {
@@ -33262,29 +33220,28 @@
    "links_back_to_sector": "S15_feelings",
    "parent_room_id": "R_character_09",
    "furniture": "garden bench",
-   "sign": "Garden bench: clinical, therapeutic, infectious",
+   "sign": "Garden bench: congenial, modest, copious",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "C2",
-   "mean_level": 6.0,
+   "mean_level": 5.83,
    "related_rooms": [
     "R_character_09"
    ],
    "base_room": "R_character",
    "words": [
-    "fr_clinique_adj",
-    "fr_immateriel_adj",
-    "fr_methodique_adj",
-    "fr_matrimonial_adj",
-    "fr_therapeutique_adj",
-    "fr_sabbatique_adj",
-    "fr_infectieux_adj"
+    "fr_copieux_adj",
+    "fr_snob_adj",
+    "fr_modique_adj",
+    "fr_emblematique_adj",
+    "fr_convivial_adj",
+    "fr_depensier_adj"
    ],
-   "item_count": 7,
+   "item_count": 6,
    "side_counts": {
-    "n/a": 7
+    "n/a": 6
    }
   },
   {
@@ -33420,7 +33377,7 @@
    "links_back_to_sector": "S16_park",
    "parent_room_id": "R_adj_intensity_02",
    "furniture": "ticket booth",
-   "sign": "Ticket booth: conjugal, virile, majestic",
+   "sign": "Ticket booth: powerless, vulnerable, dominant",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -33432,47 +33389,12 @@
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_viril_adj",
-    "fr_conjugal_adj",
-    "fr_majestueux_adj",
-    "fr_contagieux_adj",
-    "fr_abondant_adj",
-    "fr_numerique_adj"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   }
-  },
-  {
-   "id": "R_adj_intensity_03_z1",
-   "name": "Strongman tent — strength & intensity [ground & first floor 3] — ticket booth (center)",
-   "type": "zoom",
-   "setting": "A ticket booth on the back wall of 'Strongman tent — strength & intensity [ground & first floor 3]' (Tente de l'Hercule (strongman tent)); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S16_park",
-   "building_id": "B53_hercule",
-   "links_back_to_sector": "S16_park",
-   "parent_room_id": "R_adj_intensity_03",
-   "furniture": "ticket booth",
-   "sign": "Ticket booth: forced, demanding, powerless",
-   "position": {
-    "side": "center",
-    "wall": "back wall"
-   },
-   "cefr_band": "B2",
-   "mean_level": 4.0,
-   "related_rooms": [
-    "R_adj_intensity_03"
-   ],
-   "base_room": "R_adj_intensity",
-   "words": [
-    "fr_menacant_adj",
     "fr_impuissant_adj",
-    "fr_force_adj",
-    "fr_sensuel_adj",
-    "fr_exigeant_adj",
-    "fr_imposant_adj"
+    "fr_secondaire_adj",
+    "fr_heroique_adj",
+    "fr_vulnerable_adj",
+    "fr_radical_adj",
+    "fr_dominant_adj"
    ],
    "item_count": 6,
    "side_counts": {
@@ -33490,7 +33412,7 @@
    "links_back_to_sector": "S16_park",
    "parent_room_id": "R_adj_intensity_04",
    "furniture": "ticket booth",
-   "sign": "Ticket booth: dominant, secondary, heroic",
+   "sign": "Ticket booth: constant, abundant, durable",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -33502,12 +33424,12 @@
    ],
    "base_room": "R_adj_intensity",
    "words": [
-    "fr_sublime_adj",
-    "fr_insignifiant_adj",
-    "fr_secondaire_adj",
-    "fr_heroique_adj",
-    "fr_radical_adj",
-    "fr_dominant_adj"
+    "fr_aerien_adj",
+    "fr_constant_adj",
+    "fr_souterrain_adj",
+    "fr_abondant_adj",
+    "fr_durable_adj",
+    "fr_numerique_adj"
    ],
    "item_count": 6,
    "side_counts": {

@@ -402,6 +402,23 @@ html:-webkit-full-screen body.walking {
 .show-hits .name-tag { opacity: 1; }
 .frame .hot,
 .frame .hit { cursor: pointer; }
+.frame .hot.soon,
+.frame .hot.soon .hit { cursor: default; pointer-events: none; }
+.soon-pill {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: #fffdf8;
+  color: #5c5346;
+  border: 1px dashed #8a8478;
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 15px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
 .frame .hit { fill: transparent; stroke: transparent; stroke-width: 3; pointer-events: all; }
 .frame .hot:hover .hit,
 .frame .hot:focus .hit {

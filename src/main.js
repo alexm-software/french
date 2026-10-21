@@ -424,6 +424,7 @@ function fitHits() {
     pad.setAttribute("height", String(h));
   });
   placeWayBadges();
+  placeSoonMarks();
   placeZoomBadges();
   bindSceneHover();
   toneSigns();
@@ -431,6 +432,33 @@ function fitHits() {
 
 function isZoomTarget(target) {
   return /_z\d+$/i.test(String(target || ""));
+}
+
+function placeSoonMarks() {
+  const frame = document.querySelector("#walk .frame");
+  if (!frame) return;
+  frame.querySelectorAll(":scope > .soon-pill").forEach((node) => node.remove());
+  const svg = frame.querySelector("svg");
+  const ctm = svg?.getScreenCTM();
+  if (!svg || !ctm) return;
+  const frameRect = frame.getBoundingClientRect();
+  const toScreen = (x, y) => {
+    const point = svg.createSVGPoint();
+    point.x = x;
+    point.y = y;
+    const mapped = point.matrixTransform(ctm);
+    return { x: mapped.x - frameRect.left, y: mapped.y - frameRect.top };
+  };
+  svg.querySelectorAll("[data-soon-box]").forEach((el) => {
+    const [x0, y0, x1, y1] = el.dataset.soonBox.split(",").map(Number);
+    const screen = toScreen((x0 + x1) / 2, (y0 + y1) / 2);
+    const pill = document.createElement("span");
+    pill.className = "soon-pill";
+    pill.textContent = t("seal.soon");
+    pill.style.left = `${screen.x}px`;
+    pill.style.top = `${screen.y}px`;
+    frame.appendChild(pill);
+  });
 }
 
 function placeWayBadges() {
@@ -926,6 +954,28 @@ function signAssignments(scene) {
   });
   Object.entries(areas).forEach(([id, area]) => {
     if (usedSigns.has(id)) return;
+    if (area.role !== "direction" || area.for_exit) return;
+    const trimmed = String(area.text || "").trim();
+    if (trimmed.startsWith("-")) return;
+    const text = foldName(trimmed);
+    if (text.length < 3) return;
+    const box = area.box || area.text_box;
+    let best = null;
+    let bestDist = 180;
+    portals.forEach((portal) => {
+      if (usedPortals.has(portal.id) || portal.item.soon) return;
+      const name = foldName(`${portal.item.name || ""} ${portal.item.label || ""}`);
+      if (!name.includes(text)) return;
+      const dist = boxGap(box, portal.item.box);
+      if (dist <= bestDist) {
+        bestDist = dist;
+        best = portal;
+      }
+    });
+    claim(best, id);
+  });
+  Object.entries(areas).forEach(([id, area]) => {
+    if (usedSigns.has(id)) return;
     if (area.role !== "building_name" && area.role !== "street_name" && id !== "building_name") return;
     const text = foldName(area.text || "");
     if (text.length < 3) return;
@@ -973,6 +1023,11 @@ function sceneMarkup(scene, words, zooms) {
   const parts = [];
   (scene.links || []).forEach((link, index) => {
     if (!link?.box || !link.target) return;
+    if (link.soon) {
+      const name = hoverLabel(link, "open");
+      parts.push(`<g class="hot soon" data-soon-box="${link.box.join(",")}" role="img" aria-label="${esc(`${name}. ${t("seal.soon")}`)}">${hitShape(link)}</g>`);
+      return;
+    }
     const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
     const way = wayMarkup(link, "", signs.get(`link:${index}`) || "");
     const label = hoverLabel(link, "open");
@@ -1031,6 +1086,10 @@ function sceneMarkup(scene, words, zooms) {
       const trimmed = text.trim();
       const sideClass = /^-er\b/.test(trimmed) ? " side-left" : /^-ir\b|-re\b/.test(trimmed) ? " side-right" : "";
       parts.push(paintedSign(`direction-sign${sideClass}`, text, box, { maxSize: sideClass ? 15 : 18, signId: key }));
+      return;
+    }
+    if (area.role === "sector_name") {
+      parts.push(paintedSign("sector-name", text, box, { maxSize: 28, signId: key }));
       return;
     }
     if (area.role === "building_name" || area.role === "street_name" || key === "building_name") {

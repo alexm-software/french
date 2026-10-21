@@ -1,0 +1,225 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "kind": "room",
+ "note": "Greeting basin at the front of the fountain garden. Phrases have no gender (placed freely); la salutation (f) far left, le prénom (m) far right. One box per item.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Bonjour ! — Salutations",
+   "box": [
+    710,
+    75,
+    842,
+    134
+   ],
+   "text_box": [
+    717,
+    80,
+    835,
+    129
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_salutation_noun",
+   "lemma": "salutation",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la salutation",
+   "box": [
+    100,
+    311,
+    286,
+    621
+   ],
+   "label_xy": [
+    193,
+    611
+   ],
+   "scene": "two knights raise their visors in salute"
+  },
+  {
+   "id": "fr_comment_allez_vous_phrase",
+   "lemma": "comment allez-vous ?",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comment allez-vous ?",
+   "box": [
+    289,
+    192,
+    463,
+    441
+   ],
+   "label_xy": [
+    376,
+    431
+   ],
+   "scene": "gentleman fox tips his hat to a badger with a tally counter"
+  },
+  {
+   "id": "fr_bonsoir_phrase",
+   "lemma": "bonsoir",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "bonsoir",
+   "box": [
+    472,
+    265,
+    576,
+    431
+   ],
+   "label_xy": [
+    524,
+    421
+   ],
+   "scene": "girl with a jar and a swarm of fireflies"
+  },
+  {
+   "id": "fr_comment_vous_appelez_vous_phrase",
+   "lemma": "comment vous appelez-vous ?",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comment vous appelez-vous ?",
+   "box": [
+    465,
+    435,
+    622,
+    628
+   ],
+   "label_xy": [
+    544,
+    618
+   ],
+   "scene": "shy robot zaps a blank name badge"
+  },
+  {
+   "id": "fr_comment_ca_va_phrase",
+   "lemma": "comment ça va ?",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comment ça va ?",
+   "box": [
+    638,
+    331,
+    781,
+    562
+   ],
+   "label_xy": [
+    710,
+    552
+   ],
+   "scene": "pirate parrot on a barrel: 'come on, savvy?'"
+  },
+  {
+   "id": "fr_coucou_phrase",
+   "lemma": "coucou",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "coucou",
+   "box": [
+    916,
+    135,
+    1054,
+    248
+   ],
+   "label_xy": [
+    985,
+    238
+   ],
+   "scene": "cuckoo pops out of a cuckoo clock"
+  },
+  {
+   "id": "fr_je_m_appelle_phrase",
+   "lemma": "je m'appelle…",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "je m'appelle…",
+   "box": [
+    785,
+    272,
+    980,
+    458
+   ],
+   "label_xy": [
+    882,
+    448
+   ],
+   "scene": "boy with a maple leaf name badge shakes hands"
+  },
+  {
+   "id": "fr_ca_va_bien_merci_phrase",
+   "lemma": "ça va bien, merci",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "ça va bien, merci",
+   "box": [
+    1016,
+    253,
+    1185,
+    458
+   ],
+   "label_xy": [
+    1100,
+    448
+   ],
+   "scene": "old lady thumbs-up with a big bee"
+  },
+  {
+   "id": "fr_prenom_noun",
+   "lemma": "prénom",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le prénom",
+   "box": [
+    870,
+    464,
+    1185,
+    662
+   ],
+   "label_xy": [
+    1028,
+    652
+   ],
+   "scene": "mother pins a first-name tag on her toddler"
+  }
+ ],
+ "links": [
+  {
+   "target": "B01_fontaine",
+   "box": [
+    723,
+    138,
+    830,
+    264
+   ],
+   "label": "Back through the gateway (to the square)",
+   "name": "Fontaine des Salutations (entrance)",
+   "kind": "exit"
+  },
+  {
+   "target": "R_polite",
+   "box": [
+    180,
+    86,
+    282,
+    247
+   ],
+   "label": "Path on to the tea pavilion",
+   "name": "Fontaine — le pavillon des politesses",
+   "kind": "path"
+  }
+ ]
+}

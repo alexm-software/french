@@ -142,16 +142,20 @@ def normalize_scene(raw):
             exit_item["polygon"] = polygon
         exits[key] = exit_item
 
-    zoom_from = None
     raw_zoom = raw.get("zoom_from")
-    if isinstance(raw_zoom, dict):
-        box = _box(raw_zoom.get("box"))
-        if box and raw_zoom.get("room_id"):
-            zoom_from = {
-                "room_id": raw_zoom["room_id"],
+    zoom_items = raw_zoom if isinstance(raw_zoom, list) else [raw_zoom] if isinstance(raw_zoom, dict) else []
+    zoom_regions = []
+    for item in zoom_items:
+        if not isinstance(item, dict):
+            continue
+        box = _box(item.get("box"))
+        if box and item.get("room_id"):
+            zoom_regions.append({
+                "room_id": str(item["room_id"]),
                 "box": box,
-                "label": raw_zoom.get("label") or "",
-            }
+                "label": item.get("label") or "",
+            })
+    zoom_from = zoom_regions[0] if len(zoom_regions) == 1 else None
 
     return {
         "image": raw.get("image") or "base.jpg",
@@ -166,4 +170,5 @@ def normalize_scene(raw):
         "links": links,
         "exits": exits,
         "zoom_from": zoom_from,
+        "zoom_regions": zoom_regions,
     }
