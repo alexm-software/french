@@ -511,7 +511,7 @@ def main():
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
     assert soon == set(), soon
     open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
-    assert open_doors == {"B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs", "S04_sector"}, open_doors
+    assert open_doors == {"B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs", "S02_sector", "S04_sector"}, open_doors
     stairs = {
         ("B04_atelier_couleurs", "R_shapes_03"): ("stairs", "stairs_down"),
         ("R_colors_02", "R_shapes_02"): ("stairs", "stairs_down"),

@@ -4,7 +4,7 @@
  "height": 720,
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Place du Village, the start of the whole village. Fountain garden gate (B01) front left, Petite École (B02) left, Tour de l'Horloge (B03) centre back, Atelier des Couleurs (B04) right; the lane on the far right walks to the Cafés quarter (S04). Suggested walk: B01 -> B04 -> B03 -> B02 (by level).",
+ "note": "Place du Village, the start of the whole village. Fountain garden gate (B01) front left, Petite École (B02) left, Tour de l'Horloge (B03) centre back, Atelier des Couleurs (B04) right; the lane on the far left walks to the Home quarter (S02) and the lane on the far right walks to the Cafés quarter (S04). Suggested walk: B01 -> B04 -> B03 -> B02 (by level).",
  "text_areas": {
   "sector_name": {
    "role": "sector_name",
@@ -101,6 +101,22 @@
     1266,
     359
    ]
+  },
+  "dir_maisons": {
+   "role": "direction",
+   "text": "← Rue des Maisons",
+   "box": [
+    6,
+    456,
+    158,
+    494
+   ],
+   "text_box": [
+    12,
+    460,
+    152,
+    490
+   ]
   }
  },
  "items": [],
@@ -152,6 +168,18 @@
    "label": "Into the colour workshop",
    "name": "Atelier des Couleurs & Formes",
    "kind": "door"
+  },
+  {
+   "target": "S02_sector",
+   "box": [
+    0,
+    500,
+    150,
+    628
+   ],
+   "label": "Walk down the lane to the Home quarter",
+   "name": "Rue des Maisons",
+   "kind": "path"
   },
   {
    "target": "S04_sector",
