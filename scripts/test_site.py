@@ -150,13 +150,18 @@ def main():
     cave = next(word for word in wine["words"] if word["lemma"] == "cave")
     assert cave["cognate_type"] == "false_cognate"
     assert cave["false_cognate_note"]
-    whisky = next(word for word in wine["words"] if word["lemma"] == "whisky")
-    assert whisky["painted"] is False
+    assert len(wine["words"]) == 15
+    assert all(word["lemma"] not in {"whisky", "rhum", "cognac", "cigare"} for word in wine["words"])
+    assert all(word["painted"] for word in wine["words"])
     zoom_wine = load(DATA / "rooms" / "R_wine_01_z1.json")
     assert zoom_wine["parent"]["id"] == "R_wine_01"
-    drawn = next(word for word in zoom_wine["words"] if word["lemma"] == "whisky")
-    assert drawn["painted"] is True
+    assert len(zoom_wine["words"]) == 10
+    for lemma in ("whisky", "rhum", "cognac", "cigare"):
+        drawn = next(word for word in zoom_wine["words"] if word["lemma"] == lemma)
+        assert drawn["painted"] is True, lemma
     assert any(hot.get("word_id") == "fr_whisky_noun" and not hot.get("helper") for hot in zoom_wine["scene"]["hotspots"])
+    assert "plaque" not in load(ROOT / "content" / "art" / "B08_cafe" / "hotspots.json")["text_areas"]
+    assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
     assert len(room_files) == 12, room_files

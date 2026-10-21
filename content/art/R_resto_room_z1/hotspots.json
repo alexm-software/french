@@ -5,54 +5,25 @@
  "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_resto_room",
- "note": "Round 2 from-scratch repaint. Every word here is masculine, so every item sits in the RIGHT half (x >= ~490) and the left half holds only the sign.",
+ "note": "Round 3 recompose: all words masculine, so the counter with every item runs across the RIGHT two-thirds (x >= ~400); the left third holds the sign and a small window setting. Cabaret moved to the far right end (was near the centre).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    112,
-    38,
-    512,
-    175
+    102,
+    39,
+    508,
+    180
    ],
    "text_box": [
-    140,
+    130,
     58,
-    485,
-    155
+    480,
+    160
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_cabaret_noun",
-   "lemma": "cabaret",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le cabaret",
-   "box": [
-    491,
-    179,
-    714,
-    496
-   ]
-  },
-  {
-   "id": "fr_classement_noun",
-   "lemma": "classement",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le classement",
-   "box": [
-    715,
-    238,
-    912,
-    400
-   ],
-   "scene": "class race winners on a podium"
-  },
   {
    "id": "fr_couscous_noun",
    "lemma": "couscous",
@@ -61,24 +32,10 @@
    "side": "right",
    "label": "le couscous",
    "box": [
-    725,
-    402,
-    875,
-    500
-   ]
-  },
-  {
-   "id": "fr_arrangement_noun",
-   "lemma": "arrangement",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'arrangement",
-   "box": [
-    919,
-    162,
-    1098,
-    410
+    403,
+    419,
+    557,
+    520
    ]
   },
   {
@@ -89,11 +46,27 @@
    "side": "right",
    "label": "le banquet",
    "box": [
-    878,
-    412,
-    1094,
-    485
-   ]
+    559,
+    414,
+    789,
+    512
+   ],
+   "scene": "roast turkey banquet platter"
+  },
+  {
+   "id": "fr_arrangement_noun",
+   "lemma": "arrangement",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'arrangement",
+   "box": [
+    625,
+    156,
+    850,
+    405
+   ],
+   "scene": "flower arrangement of sunflowers and roses"
   },
   {
    "id": "fr_hors_d_oeuvre_noun",
@@ -103,11 +76,41 @@
    "side": "right",
    "label": "l'hors-d'œuvre",
    "box": [
-    1098,
-    381,
-    1262,
-    462
+    789,
+    409,
+    1003,
+    497
    ]
+  },
+  {
+   "id": "fr_classement_noun",
+   "lemma": "classement",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le classement",
+   "box": [
+    852,
+    247,
+    1020,
+    398
+   ],
+   "scene": "class race winners on a podium"
+  },
+  {
+   "id": "fr_cabaret_noun",
+   "lemma": "cabaret",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cabaret",
+   "box": [
+    1023,
+    180,
+    1242,
+    461
+   ],
+   "scene": "miniature cabaret theatre with dancers"
   },
   {
    "id": "fr_bistro_noun",
@@ -118,10 +121,11 @@
    "label": "le bistro",
    "box": [
     956,
-    488,
+    500,
     1280,
     720
-   ]
+   ],
+   "scene": "little bistro table with coffee"
   }
  ],
  "links": [

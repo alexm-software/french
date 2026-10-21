@@ -5,25 +5,39 @@
  "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_wine_01",
- "note": "Round 2 from-scratch repaint. Every word here is masculine, so every item sits in the RIGHT half (x >= ~640) and the left half holds only the sign. Old wrong link fixed: rhum box used to show a wine bottle with straws; now a rum bottle and keg.",
+ "note": "Round 3 recompose: all words masculine, so the counter items fill the RIGHT two-thirds (x >= ~270); the left holds the sign and a small lamp niche. Corkscrew cork now bush-shaped (topiary). Data now matches: whisky/rhum/cognac/cigare pinned to this zoom in room_overrides.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    188,
-    31,
-    556,
-    163
+    97,
+    39,
+    508,
+    180
    ],
    "text_box": [
-    215,
-    50,
-    530,
-    145
+    125,
+    58,
+    480,
+    160
    ]
   }
  },
  "items": [
+  {
+   "id": "fr_alcoolisme_noun",
+   "lemma": "alcoolisme",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'alcoolisme",
+   "box": [
+    430,
+    216,
+    534,
+    320
+   ]
+  },
   {
    "id": "fr_embouteillage_noun",
    "lemma": "embouteillage",
@@ -32,10 +46,10 @@
    "side": "right",
    "label": "l'embouteillage",
    "box": [
-    672,
-    44,
-    944,
-    280
+    578,
+    70,
+    805,
+    284
    ],
    "scene": "man in socks telling tales in a traffic jam"
   },
@@ -47,26 +61,12 @@
    "side": "right",
    "label": "le vignoble",
    "box": [
-    991,
-    44,
-    1231,
-    204
+    841,
+    75,
+    1066,
+    292
    ],
    "scene": "noble lord in his vines"
-  },
-  {
-   "id": "fr_alcoolisme_noun",
-   "lemma": "alcoolisme",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'alcoolisme",
-   "box": [
-    931,
-    281,
-    1030,
-    384
-   ]
   },
   {
    "id": "fr_cidre_noun",
@@ -76,10 +76,10 @@
    "side": "right",
    "label": "le cidre",
    "box": [
-    644,
-    378,
-    724,
-    550
+    269,
+    356,
+    445,
+    539
    ]
   },
   {
@@ -90,10 +90,10 @@
    "side": "right",
    "label": "le whisky",
    "box": [
-    726,
-    372,
-    798,
-    546
+    456,
+    336,
+    581,
+    520
    ]
   },
   {
@@ -104,11 +104,12 @@
    "side": "right",
    "label": "le rhum",
    "box": [
-    800,
-    348,
-    893,
-    535
-   ]
+    594,
+    331,
+    738,
+    516
+   ],
+   "scene": "rum bottle and small rum keg"
   },
   {
    "id": "fr_cognac_noun",
@@ -118,10 +119,10 @@
    "side": "right",
    "label": "le cognac",
    "box": [
-    894,
-    388,
-    1010,
-    550
+    742,
+    344,
+    820,
+    503
    ]
   },
   {
@@ -132,11 +133,12 @@
    "side": "right",
    "label": "le tire-bouchon",
    "box": [
-    1030,
-    322,
-    1100,
-    470
-   ]
+    852,
+    297,
+    950,
+    516
+   ],
+   "scene": "corkscrew with a bush-shaped cork"
   },
   {
    "id": "fr_cigare_noun",
@@ -146,10 +148,10 @@
    "side": "right",
    "label": "le cigare",
    "box": [
-    1040,
-    472,
-    1156,
-    559
+    956,
+    383,
+    1106,
+    503
    ]
   },
   {
@@ -160,11 +162,12 @@
    "side": "right",
    "label": "le gourmet",
    "box": [
-    1102,
-    206,
-    1280,
-    470
-   ]
+    1070,
+    184,
+    1258,
+    380
+   ],
+   "scene": "gourmet sniffing red wine"
   }
  ],
  "links": [

@@ -1,0 +1,641 @@
+# Manual corrections after spot-checking A1-A2 assignments.
+# Format: <lemma or word id> <room_id | street_id | EXCLUDE | display=drawn>
+argent R_bank_counter
+pâté R_butcher
+paysan R_fields
+domaine R_abs_space
+texte R_literature
+signe R_linguistics
+esclave R_history
+vestige R_history
+monsieur R_people
+dame R_people
+madame R_people
+mademoiselle R_people
+mistral R_weather
+client R_shop_general
+liste R_office
+collection R_art
+maître R_school
+secrétariat R_office
+reste R_abs_quantity
+sort R_abs_time
+renaissance R_history
+pyramide R_history
+base R_abs_space
+place R_world
+chambre R_bedroom
+feuilleton R_cinema
+rive R_river
+menthe R_resto_kitchen
+part R_abs_quantity
+pays R_world
+mail R_computing
+disque R_music
+blouson R_wardrobe
+queue R_shop_general
+perle R_boutique
+cour R_entrance
+union R_society
+chéri R_emo_love
+chaîne R_hardware
+bœuf R_farm_animals
+couscous R_resto_room
+cire R_hardware
+plante R_florist
+bout R_abs_space
+zoé EXCLUDE
+oublie EXCLUDE
+ben EXCLUDE
+mec EXCLUDE
+bowling R_sports
+baguette R_bakery
+taille R_measures
+morceau R_abs_quantity
+foyer R_entrance
+planche R_garage
+prix R_shop_general
+fac R_school
+institut R_school
+grâce R_ch_catechism
+genre R_linguistics
+console R_computing
+plat R_resto_room
+secret R_abs_mind
+panneau R_road
+carrière R_occupations
+comédie R_theatre
+fonction R_office
+chômage R_office
+sympathie R_emo_love
+apéritif R_cafe
+chose R_attic
+retard R_time_clock
+pâte R_bakery
+billet R_station
+yaourt R_grocery
+francophonie R_world
+accord R_abs_relation
+gardien R_police
+peine R_court
+mystère R_literature
+métropole R_world
+version R_linguistics
+échange R_shop_general
+libération R_history
+huile R_grocery
+alcool R_wine
+auberge R_hotel
+écurie R_farm_animals
+roue R_road
+paradis R_ch_catechism
+herbe R_garden
+vol R_airport
+ciel R_sky
+bière R_cafe
+corps R_body
+coup R_abs_action
+balle R_playroom
+cimetière R_ch_crypt
+dieu R_ch_catechism
+diable R_ch_catechism
+coupe R_sports
+piste R_sports
+salut EXCLUDE
+bonjour EXCLUDE
+pardon EXCLUDE
+bienvenue EXCLUDE
+désolé EXCLUDE
+enchanté EXCLUDE
+adieu EXCLUDE
+salutation R_greet
+coup display=drawn
+balle display=drawn
+roue display=drawn
+paradis display=drawn
+huile display=drawn
+alcool display=drawn
+auberge display=drawn
+écurie display=drawn
+herbe display=drawn
+vol display=drawn
+ciel display=drawn
+bière display=drawn
+corps display=drawn
+cimetière display=drawn
+mentir ST_communication
+promettre ST_communication
+respecter ST_social
+confirmer ST_communication
+exagérer ST_communication
+enchanter ST_emotion
+raconter ST_communication
+plaire ST_emotion
+réussir ST_change
+pouvoir ST_existence
+falloir ST_existence
+posséder ST_possession
+dater ST_existence
+numéroter ST_cognition
+moquer ST_emotion
+ramasser ST_control
+casser ST_control
+habiter ST_routine
+durer ST_existence
+prouver ST_cognition
+vérifier ST_cognition
+avouer ST_communication
+déposer ST_control
+descendre ST_movement
+remonter ST_movement
+fumer ST_body
+tirer ST_control
+indiquer ST_communication
+recouvrir ST_control
+reprendre ST_possession
+restaurer ST_making
+mesurer ST_cognition
+réfléchir ST_cognition
+coller ST_making
+ranger ST_routine
+exprimer ST_communication
+intéresser ST_emotion
+brûler ST_nature
+dévorer ST_cooking
+dépêcher ST_movement
+fatiguer ST_body
+affoler ST_emotion
+déguiser ST_play
+enlever ST_control
+héler ST_communication
+allumer ST_control
+évoluer ST_change
+symboliser ST_cognition
+agir ST_existence
+attendre ST_routine
+cacher ST_play
+marquer ST_play
+couvrir ST_control
+diriger ST_rule
+habiller ST_routine
+laisser ST_possession
+rentraire EXCLUDE
+# --- pass 2: misfits found in the former idea halls (cache/lowfit.tsv), moved to rooms they genuinely fit
+as R_games
+bûche R_forest
+canular R_games
+chargement R_station
+effondrement R_abs_problem
+expédition R_post
+garantie R_shop_general
+guillotine R_history
+humiliation R_emo_fear
+intervention R_abs_problem
+manifestation R_society
+naufragé R_harbour
+refus R_adv_logic
+rentrée R_school
+bruyère R_mountain
+caprice R_emo_joy
+désillusion R_emo_sad
+engouement R_emo_love
+oubliette R_heraldry
+sorcier R_theatre
+timbre R_post
+vernissage R_art
+baisse R_bank_economy
+crotte R_pets
+migration R_birds
+ralentissement R_road
+reconstitution R_history
+retouche R_art
+rédaction R_media
+réduction R_shop_general
+discothèque R_music
+embuscade R_military
+flânerie R_hotel
+information R_media
+partisan R_politics
+répétition R_theatre
+donjon R_heraldry
+gage R_bank_counter
+gentleman R_people
+patrimoine R_history
+proverbe R_idioms
+serment R_court
+unanimité R_politics
+accession R_politics
+adversaire R_sports
+avènement R_history
+curé R_ch_hierarchy
+syndicat R_office
+lueur R_abs_senses
+polémique R_media
+impunité R_court
+exploit R_abs_action
+installation R_entrance
+matrice R_math
+allocation R_bank_counter
+cinquième R_numbers2
+combinaison R_games
+débit R_bank_counter
+finale R_sports
+moyenne R_math
+poignée R_entrance
+tas R_attic
+trentaine R_numbers2
+vingtaine R_numbers2
+conscrit R_military
+interférence R_physics
+propagation R_physics
+remerciement R_polite
+apéro R_cafe
+défaillance R_doctor
+grincement R_abs_senses
+non-fumeur R_cafe
+piège R_wildlife
+trame R_wardrobe
+voyant R_road
+faisceau R_physics
+latitude R_world
+périple R_hotel
+éventail R_boutique
+bavardage R_abs_speech
+dandy R_boutique
+gaffe R_abs_problem
+ogre R_literature
+riverain R_road
+souk R_shop_general
+télégramme R_post
+cigale R_insects
+maquette R_engineering
+scanner R_hospital
+simulation R_computing
+sélection R_sports
+acclamation R_celebrations
+cadence R_music
+fermeture R_shop_general
+implantation R_industry
+prénom R_greet
+stop R_road
+tabagisme R_text_medical
+tampon R_admin
+bricolage R_garage
+imposteur R_police
+mobilisation R_military
+récompense R_abs_action
+soupir R_emo_sad
+# --- pass 2: A1-A2 spot-check corrections
+chien R_pets
+bonheur R_emo_joy
+chef R_office
+colonel R_military
+blague R_emo_joy
+cigarette R_cafe
+collège R_school
+esprit R_abs_mind
+attente R_station
+appel R_abs_speech
+contact R_abs_speech
+regard R_abs_senses
+menu R_resto_room
+studio R_entrance
+tradition R_celebrations
+source R_river
+village R_world
+directeur R_office
+direction R_abs_space
+généreux R_character
+normal R_adj_quality
+francophone R_linguistics
+espagnol R_adj_relation
+italien R_adj_relation
+direct R_adj_logic
+délicieux R_resto_kitchen
+commercial R_shop_general
+agent R_police
+actuel R_adj_time
+africain R_adj_relation
+attitude R_character
+arrière R_abs_space
+air R_weather
+bar R_cafe
+arrondissement R_admin
+champion R_sports
+croix R_ch_catechism
+crème R_grocery
+crise R_bank_economy
+culture R_art
+couteau R_kitchen
+couteau display=drawn
+désir R_emo_love
+doute R_abs_mind
+existence R_abs_time
+expression R_abs_speech
+fait R_abs_action
+fantôme R_literature
+glace R_cafe
+habitant R_people
+marche R_road
+masse R_abs_quantity
+mine R_geology
+mission R_abs_work
+modèle R_art
+motif R_art
+monnaie R_bank_counter
+nature R_forest
+or R_boutique
+ordre R_abs_relation
+paquet R_post
+parc R_garden
+passion R_emo_love
+patte R_pets
+place R_road
+plateau R_mountain
+point R_shapes
+possibilité R_abs_relation
+rapport R_office
+relation R_emo_love
+rencontre R_emo_love
+rien R_pronouns
+rock R_music
+sac R_boutique
+secteur R_bank_economy
+sein R_abs_space
+sortie R_entrance
+souffle R_body
+surface R_shapes
+système R_computing
+terre R_geology
+toile R_art
+trace R_police
+truc R_attic
+vacance R_hotel
+vie R_people
+volonté R_abs_moral
+loisir R_games
+ménage R_laundry
+congé R_office
+membre R_society
+invitation R_celebrations
+garage R_garage
+fr_etre_noun R_people
+tempe R_body
+# Pass 3: words placed in religious rooms only because an English gloss was misread
+ramassage R_station
+demeurant R_conjunctions
+maillot R_sports
+trust R_bank_economy
+méfiance R_emo_fear
+lady R_people
+loyal R_character
+festin R_celebrations
+médaille R_sports
+cassation EXCLUDE
+survivance EXCLUDE
+cassoulet EXCLUDE
+raffinerie R_energy
+# Ruelle des Gourmets (ST_cooking) clean-up 2026-10-21: off-theme verbs moved to better streets, food/eating verbs pulled in.
+couler ST_nature
+engueuler ST_communication
+loger ST_routine
+déshonorer ST_social
+galoper ST_movement
+abattre ST_control
+aspirer ST_emotion
+ravir ST_emotion
+plaquer ST_making
+assommer ST_conflict
+dévoiler ST_communication
+faufiler ST_movement
+susciter ST_emotion
+sombrer ST_nature
+poignarder ST_conflict
+boucher ST_control
+percer ST_making
+maigrir ST_body
+pincer ST_control
+extraire ST_making
+fendre ST_making
+craquer ST_control
+paver ST_making
+affamer ST_body
+déverser ST_nature
+redécouvrir ST_cognition
+bannir ST_rule
+scinder ST_change
+transpercer ST_conflict
+déjouer ST_conflict
+affiner ST_change
+démarquer ST_commerce
+démasquer ST_communication
+dîner ST_cooking
+souper ST_cooking
+goûter ST_cooking
+déguster ST_cooking
+sucrer ST_cooking
+farcir ST_cooking
+désaltérer ST_cooking
+engouffrer ST_cooking
+remuer ST_cooking
+trinquer ST_cooking
+rassasier ST_cooking
+saurer ST_cooking
+attabler ST_cooking
+surgeler ST_cooking
+congeler ST_cooking
+# Pass 3 (2026-10-21): Ruelle des Gourmets becomes 7 self-contained ALLEYS off the S04 square.
+# Format: <word id> <street>_segNNN <left|right> <street|roof>   (-er verbs left, -ir/-re right; rarer verbs on rooftops).
+# Line order = order down the alley (front to back) within each side/level. assign.py builds the segments from these lines.
+# allée 1 — meals & the table
+#OLD3 fr_manger_verb ST_cooking_seg001 left street
+#OLD3 fr_dejeuner_verb ST_cooking_seg001 left street
+#OLD3 fr_diner_verb ST_cooking_seg001 left street
+#OLD3 fr_souper_verb ST_cooking_seg001 left street
+#OLD3 fr_regaler_verb ST_cooking_seg001 left street
+#OLD3 fr_servir_verb ST_cooking_seg001 right street
+#OLD3 fr_attabler_verb ST_cooking_seg001 left roof
+#OLD3 fr_pique_niquer_verb ST_cooking_seg001 left roof
+#OLD3 fr_desservir_verb ST_cooking_seg001 right roof
+# allée 2 — hearty eating & feeding
+#OLD3 fr_bouffer_verb ST_cooking_seg002 left street
+#OLD3 fr_devorer_verb ST_cooking_seg002 left street
+#OLD3 fr_croquer_verb ST_cooking_seg002 left street
+#OLD3 fr_alimenter_verb ST_cooking_seg002 left street
+#OLD3 fr_nourrir_verb ST_cooking_seg002 right street
+#OLD3 fr_engloutir_verb ST_cooking_seg002 right street
+#OLD3 fr_grignoter_verb ST_cooking_seg002 left roof
+#OLD3 fr_engouffrer_verb ST_cooking_seg002 left roof
+#OLD3 fr_rassasier_verb ST_cooking_seg002 left roof
+# allée 3 — drinks & pouring
+#OLD3 fr_verser_verb ST_cooking_seg003 left street
+#OLD3 fr_trinquer_verb ST_cooking_seg003 left street
+#OLD3 fr_consommer_verb ST_cooking_seg003 left street
+#OLD3 fr_boire_verb ST_cooking_seg003 right street
+#OLD3 fr_remplir_verb ST_cooking_seg003 right street
+#OLD3 fr_emplir_verb ST_cooking_seg003 right street
+#OLD3 fr_desalterer_verb ST_cooking_seg003 left roof
+#OLD3 fr_diluer_verb ST_cooking_seg003 left roof
+# allée 4 — tasting, seasoning & stuffing
+#OLD3 fr_gouter_verb ST_cooking_seg004 left street
+#OLD3 fr_deguster_verb ST_cooking_seg004 left street
+#OLD3 fr_savourer_verb ST_cooking_seg004 left street
+#OLD3 fr_saler_verb ST_cooking_seg004 left street
+#OLD3 fr_sucrer_verb ST_cooking_seg004 left street
+#OLD3 fr_farcir_verb ST_cooking_seg004 right street
+#OLD3 fr_epicer_verb ST_cooking_seg004 left roof
+#OLD3 fr_ailler_verb ST_cooking_seg004 left roof
+#OLD3 fr_truffer_verb ST_cooking_seg004 left roof
+# allée 5 — cutting, peeling & kneading
+#OLD3 fr_couper_verb ST_cooking_seg005 left street
+#OLD3 fr_trancher_verb ST_cooking_seg005 left street
+#OLD3 fr_decouper_verb ST_cooking_seg005 left street
+#OLD3 fr_tailler_verb ST_cooking_seg005 left street
+#OLD3 fr_entamer_verb ST_cooking_seg005 left street
+#OLD3 fr_eplucher_verb ST_cooking_seg005 left street
+#OLD3 fr_petrir_verb ST_cooking_seg005 right street
+#OLD3 fr_ciseler_verb ST_cooking_seg005 left roof
+#OLD3 fr_aiguiser_verb ST_cooking_seg005 left roof
+# allée 6 — mixing, crushing, dissolving & freezing
+#OLD3 fr_melanger_verb ST_cooking_seg006 left street
+#OLD3 fr_meler_verb ST_cooking_seg006 left street
+#OLD3 fr_remuer_verb ST_cooking_seg006 left street
+#OLD3 fr_ecraser_verb ST_cooking_seg006 left street
+#OLD3 fr_congeler_verb ST_cooking_seg006 left street
+#OLD3 fr_dissoudre_verb ST_cooking_seg006 right street
+#OLD3 fr_broyer_verb ST_cooking_seg006 left roof
+#OLD3 fr_surgeler_verb ST_cooking_seg006 left roof
+# allée 7 — heat & cooking
+#OLD3 fr_cuisiner_verb ST_cooking_seg007 left street
+#OLD3 fr_griller_verb ST_cooking_seg007 left street
+#OLD3 fr_rechauffer_verb ST_cooking_seg007 left street
+#OLD3 fr_saurer_verb ST_cooking_seg007 left street
+#OLD3 fr_cuire_verb ST_cooking_seg007 right street
+#OLD3 fr_bouillir_verb ST_cooking_seg007 right street
+#OLD3 fr_frire_verb ST_cooking_seg007 right street
+#OLD3 fr_flamber_verb ST_cooking_seg007 left roof
+#OLD3 fr_rotir_verb ST_cooking_seg007 right roof
+# Pass 4 (2026-10-21): Ruelle des Gourmets consolidated from 7 alleys into 4 TIERED verb places (user: fewer verb places, use the
+# upper parts of the houses). Format: <word id> <street>_segNNN <left|right> <street|balcony|upper|roof>
+# -er verbs on the LEFT houses, -ir/-re on the RIGHT; tier by rarity (CEFR, then frequency): most common at street level (doorways),
+# then first-floor balconies, upper windows, and the rarest on roofs/chimneys. Line order = order within side+tier (front to back).
+# Route: S04 square -> seg001 -> seg002 -> seg003 -> seg004 -> square. 4 segments, 61 verbs.
+# place 1 — eating & the table
+fr_manger_verb ST_cooking_seg001 left street
+fr_diner_verb ST_cooking_seg001 left street
+fr_dejeuner_verb ST_cooking_seg001 left street
+fr_devorer_verb ST_cooking_seg001 left street
+fr_bouffer_verb ST_cooking_seg001 left street
+fr_regaler_verb ST_cooking_seg001 left street
+fr_croquer_verb ST_cooking_seg001 left balcony
+fr_souper_verb ST_cooking_seg001 left balcony
+fr_alimenter_verb ST_cooking_seg001 left balcony
+fr_engouffrer_verb ST_cooking_seg001 left upper
+fr_grignoter_verb ST_cooking_seg001 left upper
+fr_attabler_verb ST_cooking_seg001 left upper
+fr_pique_niquer_verb ST_cooking_seg001 left roof
+fr_rassasier_verb ST_cooking_seg001 left roof
+fr_servir_verb ST_cooking_seg001 right street
+fr_nourrir_verb ST_cooking_seg001 right street
+fr_engloutir_verb ST_cooking_seg001 right balcony
+fr_desservir_verb ST_cooking_seg001 right roof
+# place 2 — drinking, tasting & seasoning
+fr_gouter_verb ST_cooking_seg002 left street
+fr_verser_verb ST_cooking_seg002 left street
+fr_consommer_verb ST_cooking_seg002 left street
+fr_deguster_verb ST_cooking_seg002 left street
+fr_trinquer_verb ST_cooking_seg002 left street
+fr_savourer_verb ST_cooking_seg002 left balcony
+fr_saler_verb ST_cooking_seg002 left balcony
+fr_sucrer_verb ST_cooking_seg002 left roof   # painted on the roof (Round 2 painting sync)
+fr_epicer_verb ST_cooking_seg002 left upper
+fr_ailler_verb ST_cooking_seg002 left upper
+fr_diluer_verb ST_cooking_seg002 left balcony   # painted on a balcony (Round 2 painting sync)
+fr_truffer_verb ST_cooking_seg002 left roof
+fr_desalterer_verb ST_cooking_seg002 left roof
+fr_boire_verb ST_cooking_seg002 right street
+fr_remplir_verb ST_cooking_seg002 right street
+fr_emplir_verb ST_cooking_seg002 right balcony
+fr_farcir_verb ST_cooking_seg002 right roof
+# place 3 — cutting, peeling, kneading & mixing
+fr_couper_verb ST_cooking_seg003 left street
+fr_meler_verb ST_cooking_seg003 left street
+fr_ecraser_verb ST_cooking_seg003 left street
+fr_tailler_verb ST_cooking_seg003 left street
+fr_melanger_verb ST_cooking_seg003 left street
+fr_trancher_verb ST_cooking_seg003 left balcony
+fr_decouper_verb ST_cooking_seg003 left balcony
+fr_entamer_verb ST_cooking_seg003 left balcony
+fr_eplucher_verb ST_cooking_seg003 left upper
+fr_broyer_verb ST_cooking_seg003 left upper
+fr_aiguiser_verb ST_cooking_seg003 left roof
+fr_ciseler_verb ST_cooking_seg003 left roof
+fr_dissoudre_verb ST_cooking_seg003 right street
+fr_petrir_verb ST_cooking_seg003 right balcony
+# place 4 — cooking, heat & cold
+fr_remuer_verb ST_cooking_seg004 left street
+fr_rechauffer_verb ST_cooking_seg004 left street
+fr_cuisiner_verb ST_cooking_seg004 left street
+fr_saurer_verb ST_cooking_seg004 left street
+fr_griller_verb ST_cooking_seg004 left balcony
+fr_flamber_verb ST_cooking_seg004 left roof   # painted at a roof dormer (Round 2 painting sync)
+fr_congeler_verb ST_cooking_seg004 left roof   # penguin on the roof (Round 2 painting sync)
+fr_surgeler_verb ST_cooking_seg004 left roof
+fr_cuire_verb ST_cooking_seg004 right street
+fr_bouillir_verb ST_cooking_seg004 right street
+fr_frire_verb ST_cooking_seg004 right balcony
+fr_rotir_verb ST_cooking_seg004 right roof
+# --- S01 Beginner Quarter review (2026-10-21, S01 art lead): misfits moved out of the fountain/school/tower/atelier
+# clock tower: non-time words
+centimètre R_shapes
+centime R_bank_counter
+pourpoint R_wardrobe
+ressort R_garage
+tiers R_numbers2
+# tower timeline: life-stage / medical words belong with people and health, not the clock tower of the beginner quarter
+grossesse R_people
+maternité R_people
+nouveau-né R_people
+natalité R_people
+fécondité R_people
+précarité R_society
+avortement display=museum_text
+avortement R_text_medical
+# clock-tower stairway: manner/focus adverbs (not 'when & how often') go to the circus ring of manner adverbs
+personnellement R_adv_manner
+uniquement R_adv_manner
+spécialement R_adv_manner
+principalement R_adv_manner
+particulièrement R_adv_manner
+notamment R_adv_manner
+justement R_adv_manner
+parfaitement R_adv_manner
+ouvertement R_adv_manner
+inutilement R_adv_manner
+consciencieusement R_adv_manner
+loyalement R_adv_manner
+typiquement R_adv_manner
+automatiquement R_adv_manner
+forcément R_adv_manner
+pourtant R_conjunctions
+# colour atelier: non-colour words
+store R_living
+verglas R_weather
+inactif R_adj_state
+bis R_exclaim
+régulier R_shapes
+# shapes: beach object
+parasol R_beach
+# school: accent marks belong with the accents rule
+accent R_grammar_general
+# --- S04 round 3 (2026-10-21, S04 art lead): wine-bar zoom follows sectors/S04/assignment.json (zoom pins: <word id> <zoom id>)
+fr_whisky_noun R_wine_01_z1
+fr_rhum_noun R_wine_01_z1
+fr_cognac_noun R_wine_01_z1
+fr_cigare_noun R_wine_01_z1
+fr_embouteillage_noun R_wine_01_z1
+fr_cidre_noun R_wine_01_z1
+fr_vignoble_noun R_wine_01_z1
+fr_tire_bouchon_noun R_wine_01_z1
+fr_alcoolisme_noun R_wine_01_z1
+fr_gourmet_noun R_wine_01_z1
