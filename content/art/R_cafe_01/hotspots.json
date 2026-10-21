@@ -1,233 +1,298 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        430,
-        18,
-        850,
-        128
-      ],
-      "text_box": [
-        458,
-        34,
-        822,
-        112
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        22,
-        236,
-        146
-      ],
-      "text_box": [
-        64,
-        40,
-        220,
-        128
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 650,
+ "text_areas": {
+  "sign": {
+   "box": [
+    609,
+    28,
+    978,
+    158
+   ],
+   "text_box": [
+    640,
+    48,
+    945,
+    140
+   ]
   },
-  "hotspots": [
-    {
-      "word_id": "fr_glace_noun",
-      "slug": "fr_glace_noun",
-      "side": "left",
-      "box": [
-        88,
-        206,
-        273,
-        270
-      ]
-    },
-    {
-      "word_id": "fr_biere_noun",
-      "slug": "fr_biere_noun",
-      "side": "left",
-      "box": [
-        378,
-        206,
-        563,
-        270
-      ],
-      "mnemonic_box": [
-        525,
-        242,
-        571,
-        274
-      ]
-    },
-    {
-      "word_id": "fr_cigarette_noun",
-      "slug": "fr_cigarette_noun",
-      "side": "left",
-      "box": [
-        88,
-        309,
-        273,
-        373
-      ]
-    },
-    {
-      "word_id": "fr_terrasse_noun",
-      "slug": "fr_terrasse_noun",
-      "side": "left",
-      "box": [
-        378,
-        309,
-        563,
-        373
-      ]
-    },
-    {
-      "word_id": "fr_soif_noun",
-      "slug": "fr_soif_noun",
-      "side": "left",
-      "box": [
-        88,
-        412,
-        273,
-        476
-      ]
-    },
-    {
-      "word_id": "fr_boisson_noun",
-      "slug": "fr_boisson_noun",
-      "side": "left",
-      "box": [
-        378,
-        412,
-        563,
-        476
-      ]
-    },
-    {
-      "word_id": "fr_grille_noun",
-      "slug": "fr_grille_noun",
-      "side": "left",
-      "box": [
-        88,
-        515,
-        273,
-        578
-      ]
-    },
-    {
-      "word_id": "fr_tasse_noun",
-      "slug": "fr_tasse_noun",
-      "side": "left",
-      "box": [
-        378,
-        515,
-        563,
-        578
-      ]
-    },
-    {
-      "word_id": "fr_arcade_noun",
-      "slug": "fr_arcade_noun",
-      "side": "left",
-      "box": [
-        88,
-        618,
-        273,
-        681
-      ]
-    },
-    {
-      "word_id": "fr_coupole_noun",
-      "slug": "fr_coupole_noun",
-      "side": "left",
-      "box": [
-        378,
-        618,
-        563,
-        681
-      ]
-    },
-    {
-      "word_id": "fr_cafe_noun",
-      "slug": "fr_cafe_noun",
-      "side": "right",
-      "box": [
-        716,
-        214,
-        901,
-        294
-      ]
-    },
-    {
-      "word_id": "fr_bar_noun",
-      "slug": "fr_bar_noun",
-      "side": "right",
-      "box": [
-        1006,
-        214,
-        1191,
-        294
-      ]
-    },
-    {
-      "word_id": "fr_the_noun",
-      "slug": "fr_the_noun",
-      "side": "right",
-      "box": [
-        716,
-        343,
-        901,
-        422
-      ]
-    },
-    {
-      "word_id": "fr_jus_noun",
-      "slug": "fr_jus_noun",
-      "side": "right",
-      "box": [
-        1006,
-        343,
-        1191,
-        422
-      ]
-    },
-    {
-      "word_id": "fr_aperitif_noun",
-      "slug": "fr_aperitif_noun",
-      "side": "right",
-      "box": [
-        716,
-        471,
-        901,
-        551
-      ]
-    },
-    {
-      "word_id": "fr_pavillon_noun",
-      "slug": "fr_pavillon_noun",
-      "side": "right",
-      "box": [
-        1006,
-        471,
-        1191,
-        551
-      ]
-    },
-    {
-      "word_id": "fr_tilleul_noun",
-      "slug": "fr_tilleul_noun",
-      "side": "right",
-      "box": [
-        716,
-        600,
-        901,
-        679
-      ]
-    }
-  ]
+  "plaque": {
+   "box": [
+    161,
+    52,
+    302,
+    253
+   ],
+   "text_box": [
+    180,
+    72,
+    284,
+    234
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_grille_noun",
+   "lemma": "grille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la grille",
+   "box": [
+    0,
+    94,
+    88,
+    455
+   ]
+  },
+  {
+   "id": "fr_coupole_noun",
+   "lemma": "coupole",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la coupole",
+   "box": [
+    347,
+    0,
+    586,
+    90
+   ]
+  },
+  {
+   "id": "fr_arcade_noun",
+   "lemma": "arcade",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'arcade",
+   "box": [
+    354,
+    95,
+    586,
+    328
+   ]
+  },
+  {
+   "id": "fr_terrasse_noun",
+   "lemma": "terrasse",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la terrasse",
+   "box": [
+    354,
+    330,
+    584,
+    386
+   ]
+  },
+  {
+   "id": "fr_soif_noun",
+   "lemma": "soif",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la soif",
+   "box": [
+    90,
+    266,
+    352,
+    455
+   ],
+   "mnemonic_label": "camel swaddled in wet towels"
+  },
+  {
+   "id": "fr_glace_noun",
+   "lemma": "glace",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la glace",
+   "box": [
+    34,
+    461,
+    128,
+    669
+   ]
+  },
+  {
+   "id": "fr_biere_noun",
+   "lemma": "bière",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la bière",
+   "box": [
+    133,
+    497,
+    231,
+    641
+   ]
+  },
+  {
+   "id": "fr_boisson_noun",
+   "lemma": "boisson",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la boisson",
+   "box": [
+    328,
+    456,
+    396,
+    570
+   ],
+   "mnemonic_box": [
+    398,
+    388,
+    567,
+    620
+   ],
+   "mnemonic_label": "boa & son"
+  },
+  {
+   "id": "fr_tasse_noun",
+   "lemma": "tasse",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la tasse",
+   "box": [
+    242,
+    572,
+    367,
+    688
+   ],
+   "mnemonic_box": [
+    318,
+    615,
+    368,
+    690
+   ],
+   "mnemonic_label": "tassel"
+  },
+  {
+   "id": "fr_cigarette_noun",
+   "lemma": "cigarette",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la cigarette",
+   "box": [
+    390,
+    622,
+    484,
+    672
+   ]
+  },
+  {
+   "id": "fr_tilleul_noun",
+   "lemma": "tilleul",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le tilleul",
+   "box": [
+    1105,
+    0,
+    1280,
+    250
+   ],
+   "mnemonic_box": [
+    1010,
+    312,
+    1250,
+    465
+   ],
+   "mnemonic_label": "granny's linden tea by the Yule log"
+  },
+  {
+   "id": "fr_pavillon_noun",
+   "lemma": "pavillon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le pavillon",
+   "box": [
+    980,
+    105,
+    1100,
+    310
+   ]
+  },
+  {
+   "id": "fr_bar_noun",
+   "lemma": "bar",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bar",
+   "box": [
+    761,
+    566,
+    1280,
+    720
+   ]
+  },
+  {
+   "id": "fr_cafe_noun",
+   "lemma": "café",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le café",
+   "box": [
+    831,
+    419,
+    922,
+    484
+   ]
+  },
+  {
+   "id": "fr_the_noun",
+   "lemma": "thé",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le thé",
+   "box": [
+    925,
+    478,
+    1013,
+    523
+   ]
+  },
+  {
+   "id": "fr_jus_noun",
+   "lemma": "jus",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le jus",
+   "box": [
+    948,
+    403,
+    997,
+    476
+   ]
+  },
+  {
+   "id": "fr_aperitif_noun",
+   "lemma": "apéritif",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'apéritif",
+   "box": [
+    1013,
+    473,
+    1172,
+    562
+   ]
+  }
+ ]
 }

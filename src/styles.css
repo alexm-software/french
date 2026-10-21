@@ -148,6 +148,7 @@ main { width: min(1120px, calc(100% - 1.5rem)); margin: 0 auto; padding: 1.1rem 
   text-decoration: none;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
 }
+button.card-link { width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
 .card-link h2 { font-size: 1.15rem; }
 .card-link.locked { opacity: 0.72; }
 .kicker { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 0; }
@@ -177,7 +178,14 @@ main { width: min(1120px, calc(100% - 1.5rem)); margin: 0 auto; padding: 1.1rem 
 .stage .lbl.f { fill: var(--f); }
 .stage .lbl.m { fill: var(--m); }
 .stage .lbl.mf, .stage .lbl.na { fill: #3a2c22; }
-.stage .prep { font-family: Cinzel, serif; font-size: 13px; fill: #3a2716; }
+.stage .prep, .stage .exit-label {
+  font-family: Cinzel, serif;
+  font-size: 15px;
+  fill: #3a2716;
+  paint-order: stroke fill;
+  stroke: rgba(247, 241, 226, 0.94);
+  stroke-width: 4px;
+}
 .stage .hit { fill: transparent; stroke: transparent; stroke-width: 2; }
 .stage .hot:hover .hit, .stage .hot:focus .hit { fill: rgba(255, 236, 190, 0.33); stroke: rgba(90, 60, 20, 0.55); }
 .stage .zoom .hit { fill: rgba(255, 244, 220, 0.08); }
@@ -204,6 +212,7 @@ main { width: min(1120px, calc(100% - 1.5rem)); margin: 0 auto; padding: 1.1rem 
   justify-content: space-between;
   gap: 0.6rem;
 }
+.wordlist .unpainted { border-style: dashed; }
 .wordlist .f { color: var(--f); }
 .wordlist .m { color: var(--m); }
 .wordlist small { color: var(--ink-soft); }
@@ -215,6 +224,30 @@ main { width: min(1120px, calc(100% - 1.5rem)); margin: 0 auto; padding: 1.1rem 
 .line .fr, .line .en { font-family: "IM Fell English", serif; font-size: 1.15rem; margin: 0.15rem 0; }
 .line .en { color: var(--ink-soft); font-size: 1.02rem; }
 .premise { font-style: italic; color: var(--ink-soft); }
+
+.signpost-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(42, 28, 18, 0.46);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.signpost {
+  width: min(40rem, 100%);
+  max-height: min(80vh, 680px);
+  overflow: auto;
+  background: var(--paper);
+  border-radius: 16px;
+  padding: 1rem 1.15rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+.signpost .ghost { float: right; }
+.alleys { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.alleys li { margin: 0.15rem 0; }
+.alleys a { display: flex; gap: 0.55rem; align-items: baseline; min-height: 44px; padding: 0.35rem 0; }
+.alleys strong { font-family: Cinzel, serif; min-width: 1.4rem; }
 
 .card-layer {
   position: fixed;

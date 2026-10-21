@@ -317,16 +317,56 @@ def sign_text(room, building, signs):
     return room["name"]
 
 
-def bind_scene(room, words, building, signs, plaques=None):
-    path = ART / room["id"] / "hotspots.json"
-    if not path.exists():
+def sector_art_id(sector_id):
+    return f"{sector_id.split('_')[0]}_sector"
+
+
+def load_place_scene(place_id, sign=None, plaque=None):
+    path = ART / place_id / "hotspots.json"
+    if not path.exists() or not (ART / place_id / "base.jpg").exists():
         return None
     scene = normalize_scene(load_json(path))
-    scene["image"] = f"art/{room['id']}/{Path(scene['image']).name}"
-    scene["placeholder"] = (ART / room["id"] / "placeholder.json").exists() or scene.get("placeholder")
-    scene["sign_text"] = sign_text(room, building, signs)
-    plaque = (scene.get("text_areas") or {}).get("plaque") or {}
-    scene["plaque_text"] = plaque.get("text") or (plaques or {}).get(room["id"]) or ""
+    scene["image"] = f"art/{place_id}/base.jpg"
+    scene["placeholder"] = (ART / place_id / "placeholder.json").exists() or scene.get("placeholder")
+    areas = scene.setdefault("text_areas", {})
+    if sign:
+        for key in ("sign", "street_sign"):
+            if key in areas and not areas[key].get("text"):
+                areas[key]["text"] = sign
+    if plaque and "plaque" in areas and not areas["plaque"].get("text"):
+        areas["plaque"]["text"] = plaque
+    scene["sign_text"] = (areas.get("sign") or areas.get("street_sign") or {}).get("text") or sign or ""
+    scene["plaque_text"] = (areas.get("plaque") or {}).get("text") or plaque or ""
+    return scene
+
+
+def bind_scene(room, words, building, signs, plaques=None):
+    scene = load_place_scene(
+        room["id"],
+        sign_text(room, building, signs),
+        (plaques or {}).get(room["id"]) or "",
+    )
+    if not scene:
+        return None
+    # Alleys leave the square and come back to it. They do not open into each other.
+    if room.get("kind") == "street_segment":
+        exits = scene.get("exits") or {}
+        box = (exits.get("prev") or exits.get("next") or {}).get("box") or [0, 620, 240, 720]
+        scene["links"] = [{
+            "target": sector_art_id(room["sector_id"]),
+            "box": box,
+            "label": "Back to the square",
+            "exit": True,
+        }]
+        scene["exits"] = {}
+    zoom = scene.get("zoom_from")
+    if zoom:
+        scene["hotspots"].insert(0, {
+            "zoom_id": zoom["room_id"],
+            "label": signs.get(zoom["room_id"]) or zoom.get("label") or "Look closer",
+            "box": zoom["box"],
+            "slug": "zoom",
+        })
     by_slug = {}
     for word in words:
         by_slug[fold(word["lemma"])] = word["id"]
@@ -353,6 +393,15 @@ def bind_scene(room, words, building, signs, plaques=None):
                 "box": hot["mnemonic_box"],
                 "side": hot.get("side"),
                 "slug": (hot.get("slug") or "") + "-helper",
+            })
+        if hot.get("mirror_box") and hot.get("word_id"):
+            extras.append({
+                "word_id": hot["word_id"],
+                "helper": True,
+                "mirror": True,
+                "box": hot["mirror_box"],
+                "side": hot.get("side"),
+                "slug": (hot.get("slug") or "") + "-mirror",
             })
     scene["hotspots"].extend(extras)
     return scene
@@ -588,7 +637,7 @@ def building_payload(building, rooms_by_id, signs, open_sectors, live_ids=None):
         "sector_id": building["sector_id"],
         "architectural_theme": building.get("architectural_theme"),
         "meaning_group": building.get("meaning_group"),
-        "verb_count": building.get("verb_count"),
+        "verb_count": sum(len(room.get("words") or []) for room in rooms) or building.get("verb_count"),
         "floors": floors,
         "x": positions[0][0] if False else None,
     }
@@ -599,6 +648,8 @@ def main():
     signs = load_json(ROOT / "content" / "signs.json")
     plaques_path = ROOT / "content" / "plaques.json"
     plaques = load_json(plaques_path) if plaques_path.exists() else {}
+    assignment_path = ROOT / "content" / "assignment.json"
+    assignment = load_json(assignment_path) if assignment_path.exists() else {}
     open_sectors = set(site.get("open_sectors") or [])
     # When set, only these rooms are walkable. Everything else in the quarter stays coming soon.
     live_ids = set(site.get("open_rooms") or [])
@@ -681,9 +732,14 @@ def main():
                     "type": building["type"],
                     "sector_id": sector["id"],
                 })
+                exterior = load_place_scene(building["id"], signs.get(building["id"]) or building["name"])
+                if exterior:
+                    payload["scene"] = exterior
+                    copy_art(building["id"])
                 for floor in payload["floors"]:
                     for stub in floor["rooms"]:
-                        if stub["kind"] != "zoom" and stub.get("open"):
+                        # Alleys are chosen from the square. They are not steps on the walk.
+                        if stub["kind"] not in {"zoom", "street_segment"} and stub.get("open"):
                             walk.append(stub["id"])
         # Stable positions inside the sector plan, buildings then the street.
         positions = pack_positions(len(building_payloads))
@@ -716,7 +772,33 @@ def main():
             "next_sector": next_sector,
             "buildings": building_payloads,
             "walk": walk,
+            "scene": None,
+            "alleys": [],
         }
+        if open_now:
+            sector_scene = load_place_scene(sector_art_id(sector["id"]), signs.get(sector_art_id(sector["id"])) or french)
+            if sector_scene:
+                sector_payload["scene"] = sector_scene
+                copy_art(sector_art_id(sector["id"]))
+            alleys = []
+            for building in building_payloads:
+                if building["type"] != "verb_street":
+                    continue
+                for floor in building["floors"]:
+                    for stub in floor["rooms"]:
+                        source = rooms_by_id.get(stub["id"]) or {}
+                        verbs = []
+                        for word_id in source.get("words") or []:
+                            word = words_by_id.get(word_id)
+                            if word:
+                                verbs.append(word["lemma"])
+                        alleys.append({
+                            "id": stub["id"],
+                            "chip": stub.get("chip") or "",
+                            "verbs": verbs,
+                            "name": stub["name"],
+                        })
+            sector_payload["alleys"] = alleys
         sector_payloads[sector["id"]] = sector_payload
         write_json(PUBLIC / "data" / "sectors" / f"{sector['id']}.json", sector_payload)
         index_sectors.append({
@@ -747,9 +829,20 @@ def main():
             if not is_live(room, open_sectors, live_ids):
                 continue
             building = buildings_by_id.get(room["building_id"])
-            room_words = [words_by_id[word_id] for word_id in room["words"] if word_id in words_by_id]
+            word_ids = list(room.get("words") or [])
+            for word_id in assignment.get(room["id"]) or []:
+                if word_id not in word_ids:
+                    word_ids.append(word_id)
+            room_words = [words_by_id[word_id] for word_id in word_ids if word_id in words_by_id]
             cards = [card(word, by_lemma, rooms_by_id, open_sectors, cache, live_ids) for word in room_words]
             scene = bind_scene(room, room_words, building, signs, plaques)
+            painted_ids = {
+                hot.get("word_id")
+                for hot in (scene or {}).get("hotspots") or []
+                if hot.get("word_id") and not hot.get("helper") and not hot.get("zoom_id")
+            }
+            for item in cards:
+                item["painted"] = item["id"] in painted_ids
             copy_art(room["id"])
             floor = floor_of(room)
             parent = rooms_by_id.get(room.get("parent_room_id") or "")
@@ -795,6 +888,9 @@ def main():
             for related_id in room.get("related_rooms") or []:
                 other = rooms_by_id.get(related_id)
                 if not other:
+                    continue
+                # Alleys are picked from the square. They do not point at each other.
+                if room.get("kind") == "street_segment" and other.get("kind") == "street_segment":
                     continue
                 other_sector = sectors_by_id[other["sector_id"]]
                 related.append({
@@ -885,7 +981,10 @@ def main():
                 "sign": sign_text(featured_room, featured_building, signs),
                 "building": featured_building["name"] if featured_building else "",
                 "sector_id": featured_room["sector_id"],
+                "kind": "room",
             }
+    elif "S04_cafes" in open_sectors:
+        featured = {"id": "S04_cafes", "sign": signs.get("S04_sector") or "Rue des Saveurs", "kind": "sector"}
     write_json(PUBLIC / "data" / "index.json", {
         "title": site.get("title") or "Memory Village",
         "tagline": site.get("tagline") or "",

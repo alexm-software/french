@@ -1,131 +1,313 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg010",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    23,
+    76,
+    127,
+    157
+   ],
+   "text_box": [
+    33,
+    88,
+    117,
+    145
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_decouper_verb",
-      "slug": "fr_decouper_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        265,
-        640
-      ],
-      "door_plaque": [
-        124,
-        562,
-        180,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_entamer_verb",
-      "slug": "fr_entamer_verb",
-      "side": "n/a",
-      "box": [
-        283,
-        150,
-        509,
-        640
-      ],
-      "door_plaque": [
-        368,
-        562,
-        424,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_fendre_verb",
-      "slug": "fr_fendre_verb",
-      "side": "n/a",
-      "box": [
-        527,
-        150,
-        752,
-        640
-      ],
-      "door_plaque": [
-        611,
-        562,
-        667,
-        598
-      ],
-      "mirror_box": [
-        543,
-        198,
-        579,
-        246
-      ]
-    },
-    {
-      "word_id": "fr_craquer_verb",
-      "slug": "fr_craquer_verb",
-      "side": "n/a",
-      "box": [
-        770,
-        150,
-        996,
-        640
-      ],
-      "door_plaque": [
-        855,
-        562,
-        911,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_grignoter_verb",
-      "slug": "fr_grignoter_verb",
-      "side": "n/a",
-      "box": [
-        1014,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1099,
-        562,
-        1155,
-        598
-      ]
-    }
-  ]
+  "fr_pique_niquer_verb_sign": {
+   "box": [
+    88,
+    250,
+    220,
+    299
+   ],
+   "text_box": [
+    101,
+    257,
+    207,
+    292
+   ],
+   "text": "pique-niquer"
+  },
+  "fr_pique_niquer_verb_plaque": {
+   "box": [
+    228,
+    360,
+    270,
+    391
+   ],
+   "text_box": [
+    233,
+    364,
+    265,
+    387
+   ],
+   "text": ""
+  },
+  "fr_rotir_verb_sign": {
+   "box": [
+    352,
+    253,
+    478,
+    297
+   ],
+   "text_box": [
+    365,
+    260,
+    465,
+    290
+   ],
+   "text": "rôtir"
+  },
+  "fr_rotir_verb_plaque": {
+   "box": [
+    494,
+    361,
+    538,
+    391
+   ],
+   "text_box": [
+    499,
+    365,
+    533,
+    387
+   ],
+   "text": ""
+  },
+  "fr_petrir_verb_sign": {
+   "box": [
+    601,
+    250,
+    738,
+    299
+   ],
+   "text_box": [
+    615,
+    257,
+    724,
+    292
+   ],
+   "text": "pétrir"
+  },
+  "fr_petrir_verb_plaque": {
+   "box": [
+    740,
+    360,
+    781,
+    393
+   ],
+   "text_box": [
+    745,
+    364,
+    776,
+    389
+   ],
+   "text": ""
+  },
+  "fr_broyer_verb_sign": {
+   "box": [
+    845,
+    253,
+    968,
+    299
+   ],
+   "text_box": [
+    857,
+    260,
+    956,
+    292
+   ],
+   "text": "broyer"
+  },
+  "fr_broyer_verb_plaque": {
+   "box": [
+    977,
+    360,
+    1013,
+    391
+   ],
+   "text_box": [
+    981,
+    364,
+    1009,
+    387
+   ],
+   "text": ""
+  },
+  "fr_desservir_verb_sign": {
+   "box": [
+    1079,
+    253,
+    1209,
+    300
+   ],
+   "text_box": [
+    1092,
+    260,
+    1196,
+    293
+   ],
+   "text": "desservir"
+  },
+  "fr_desservir_verb_plaque": {
+   "box": [
+    1210,
+    318,
+    1246,
+    348
+   ],
+   "text_box": [
+    1214,
+    322,
+    1242,
+    344
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_pique_niquer_verb",
+   "lemma": "pique-niquer",
+   "box": [
+    45,
+    500,
+    318,
+    694
+   ],
+   "mnemonic_box": [
+    12,
+    413,
+    293,
+    616
+   ],
+   "mnemonic_label": "picnic",
+   "door_plaque_box": [
+    228,
+    360,
+    270,
+    391
+   ]
+  },
+  {
+   "id": "fr_rotir_verb",
+   "lemma": "rôtir",
+   "box": [
+    340,
+    436,
+    559,
+    651
+   ],
+   "mnemonic_box": [
+    322,
+    331,
+    430,
+    624
+   ],
+   "mnemonic_label": "rotisserie",
+   "door_plaque_box": [
+    494,
+    361,
+    538,
+    391
+   ]
+  },
+  {
+   "id": "fr_petrir_verb",
+   "lemma": "pétrir",
+   "box": [
+    575,
+    499,
+    800,
+    655
+   ],
+   "mnemonic_box": [
+    703,
+    437,
+    788,
+    652
+   ],
+   "mnemonic_label": "pet tree",
+   "door_plaque_box": [
+    740,
+    360,
+    781,
+    393
+   ]
+  },
+  {
+   "id": "fr_broyer_verb",
+   "lemma": "broyer",
+   "box": [
+    843,
+    400,
+    1038,
+    652
+   ],
+   "mnemonic_box": [
+    802,
+    328,
+    950,
+    630
+   ],
+   "mnemonic_label": "brew, yay",
+   "door_plaque_box": [
+    977,
+    360,
+    1013,
+    391
+   ]
+  },
+  {
+   "id": "fr_desservir_verb",
+   "lemma": "desservir",
+   "box": [
+    1040,
+    498,
+    1232,
+    640
+   ],
+   "mnemonic_box": [
+    1056,
+    350,
+    1272,
+    678
+   ],
+   "mnemonic_label": "dessert serve",
+   "door_plaque_box": [
+    1210,
+    318,
+    1246,
+    348
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    600,
+    44,
+    720
+   ],
+   "target": "ST_cooking_seg009"
+  },
+  "next": {
+   "box": [
+    1200,
+    680,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg011"
+  }
+ }
 }

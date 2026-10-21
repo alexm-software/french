@@ -1,123 +1,126 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        430,
-        18,
-        850,
-        128
-      ],
-      "text_box": [
-        458,
-        34,
-        822,
-        112
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        22,
-        236,
-        146
-      ],
-      "text_box": [
-        64,
-        40,
-        220,
-        128
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "zoom",
+ "parent_room_id": "R_resto_room",
+ "note": "Zoom on the right-wall bar counter of R_resto_room: every item is masculine, so the whole close-up counts as the right (masculine) side and there is no divider.",
+ "text_areas": {
+  "sign": {
+   "box": [
+    433,
+    28,
+    836,
+    150
+   ],
+   "text_box": [
+    468,
+    48,
+    800,
+    132
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_cabaret_noun",
+   "lemma": "cabaret",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cabaret",
+   "box": [
+    23,
+    172,
+    297,
+    516
+   ]
   },
-  "hotspots": [
-    {
-      "word_id": "fr_cabaret_noun",
-      "slug": "fr_cabaret_noun",
-      "side": "right",
-      "box": [
-        716,
-        214,
-        901,
-        294
-      ],
-      "mnemonic_box": [
-        863,
-        266,
-        909,
-        298
-      ]
-    },
-    {
-      "word_id": "fr_classement_noun",
-      "slug": "fr_classement_noun",
-      "side": "right",
-      "box": [
-        1006,
-        214,
-        1191,
-        294
-      ]
-    },
-    {
-      "word_id": "fr_couscous_noun",
-      "slug": "fr_couscous_noun",
-      "side": "right",
-      "box": [
-        716,
-        343,
-        901,
-        422
-      ]
-    },
-    {
-      "word_id": "fr_arrangement_noun",
-      "slug": "fr_arrangement_noun",
-      "side": "right",
-      "box": [
-        1006,
-        343,
-        1191,
-        422
-      ]
-    },
-    {
-      "word_id": "fr_banquet_noun",
-      "slug": "fr_banquet_noun",
-      "side": "right",
-      "box": [
-        716,
-        471,
-        901,
-        551
-      ]
-    },
-    {
-      "word_id": "fr_hors_d_oeuvre_noun",
-      "slug": "fr_hors_d_oeuvre_noun",
-      "side": "right",
-      "box": [
-        1006,
-        471,
-        1191,
-        551
-      ]
-    },
-    {
-      "word_id": "fr_bistro_noun",
-      "slug": "fr_bistro_noun",
-      "side": "right",
-      "box": [
-        716,
-        600,
-        901,
-        679
-      ]
-    }
-  ]
+  {
+   "id": "fr_classement_noun",
+   "lemma": "classement",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le classement",
+   "box": [
+    320,
+    289,
+    531,
+    484
+   ],
+   "mnemonic_label": "class race winners"
+  },
+  {
+   "id": "fr_couscous_noun",
+   "lemma": "couscous",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le couscous",
+   "box": [
+    559,
+    375,
+    690,
+    477
+   ]
+  },
+  {
+   "id": "fr_arrangement_noun",
+   "lemma": "arrangement",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'arrangement",
+   "box": [
+    692,
+    188,
+    826,
+    456
+   ]
+  },
+  {
+   "id": "fr_banquet_noun",
+   "lemma": "banquet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le banquet",
+   "box": [
+    830,
+    375,
+    1050,
+    461
+   ]
+  },
+  {
+   "id": "fr_hors_d_oeuvre_noun",
+   "lemma": "hors-d'œuvre",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'hors-d'œuvre",
+   "box": [
+    1059,
+    367,
+    1250,
+    445
+   ]
+  },
+  {
+   "id": "fr_bistro_noun",
+   "lemma": "bistro",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le bistro",
+   "box": [
+    956,
+    484,
+    1280,
+    720
+   ]
+  }
+ ]
 }
