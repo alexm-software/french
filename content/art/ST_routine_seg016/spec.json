@@ -1,0 +1,17 @@
+{"divider_x": 1000,
+ "name": "Allée du Quotidien — étape 16 · alléger, dégainer, culminer",
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low garden wall with hedges, no verbs). Tiers: street (porter lightening his handcart, knight drawing his sword beside a neighing pony, schoolgirl rubbing out a chalk cat), balcony (lady powdering her poodle), upper (mouse chauffeur driving a hamster along the sill), roof (goat on top of the chimney). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_alleger_verb", "box": [56, 344, 425, 672], "tier": "street"},
+  {"id": "fr_degainer_verb", "box": [428, 350, 660, 662], "tier": "street"},
+  {"id": "fr_gommer_verb", "box": [662, 406, 790, 612], "tier": "street"},
+  {"id": "fr_poudrer_verb", "box": [206, 31, 431, 269], "tier": "balcony"},
+  {"id": "fr_voiturer_verb", "box": [537, 169, 669, 288], "tier": "upper"},
+  {"id": "fr_culminer_verb", "box": [712, 10, 812, 190], "tier": "roof"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_routine_seg017", "box": [840, 440, 1000, 560], "label": "Walk on down the lane", "name": "Allée du Quotidien, étape 17", "sign": "étape 17 →"},
+  "back": {"target": "ST_routine_seg015", "box": [470, 668, 960, 712], "label": "Back up the lane to étape 15", "name": "Allée du Quotidien, étape 15", "sign": "← étape 15"}
+ },
+ "signs": {"er": [880, 25, 980, 59], "irre": [1000, 25, 1120, 59]}
+}

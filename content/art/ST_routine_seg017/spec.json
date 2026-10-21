@@ -1,0 +1,109 @@
+{
+ "divider_x": 900,
+ "name": "Allée du Quotidien — étape 17 · se doucher, alarmer, s'abstenir",
+ "note": "Tiered verb place. -er LEFT (duchess in a shower cap under the garden shower with her wall mirror, man leaping from a giant ringing alarm clock, woman shelling green peas on the balcony, jockey rippling a bedsheet at the upper window, outraged man whose cake a seagull steals on the roof terrace), -ir/-re RIGHT (strongman refusing the baker's cream cake, mirror on the wall). Forward = far lane; back = near cobbles.",
+ "items": [
+  {
+   "id": "fr_doucher_verb",
+   "box": [
+    10,
+    294,
+    210,
+    672
+   ],
+   "tier": "street",
+   "mirror": "oval mirror on the wall beside the shower"
+  },
+  {
+   "id": "fr_alarmer_verb",
+   "box": [
+    287,
+    412,
+    537,
+    662
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_egrener_verb",
+   "box": [
+    325,
+    175,
+    450,
+    356
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_rider_verb",
+   "box": [
+    469,
+    44,
+    744,
+    238
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_outrer_verb",
+   "box": [
+    62,
+    8,
+    319,
+    175
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_abstenir_verb",
+   "box": [
+    931,
+    369,
+    1269,
+    672
+   ],
+   "tier": "street",
+   "mirror": "oval mirror on the wall beside the baker"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg018",
+   "box": [
+    780,
+    450,
+    925,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 18",
+   "sign": "étape 18 →"
+  },
+  "back": {
+   "target": "ST_routine_seg016",
+   "box": [
+    470,
+    668,
+    920,
+    712
+   ],
+   "label": "Back up the lane to étape 16",
+   "name": "Allée du Quotidien, étape 16",
+   "sign": "← étape 16"
+  }
+ },
+ "signs": {
+  "er": [
+   752,
+   25,
+   852,
+   59
+  ],
+  "irre": [
+   870,
+   25,
+   990,
+   59
+  ]
+ }
+}

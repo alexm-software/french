@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg013",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 13 · arracher, barrer, redescendre",
+ "divider_x": 840,
+ "note": "Tiered verb place. -er LEFT (gardener pulling out a giant weed, police officer lowering a striped barrier, chauffeur warming his hands at a stove on the balcony, man pasting up a fish poster at the upper window, fireman pouring sand on a burning straw hut on the roof terrace), -ir/-re RIGHT (ginger cat climbing back down the lamppost). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_arracher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_arracher_verb",
+   "text": "arracher",
+   "box": [
+    236,
+    640,
+    324,
+    666
+   ],
+   "text_box": [
+    240,
+    644,
+    320,
+    662
+   ]
+  },
+  "fr_barrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_barrer_verb",
+   "text": "barrer",
+   "box": [
+    658,
+    608,
+    726,
+    634
+   ],
+   "text_box": [
+    662,
+    612,
+    722,
+    630
+   ]
+  },
+  "fr_chauffer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_chauffer_verb",
+   "text": "chauffer",
+   "box": [
+    306,
+    363,
+    394,
+    389
+   ],
+   "text_box": [
+    310,
+    367,
+    390,
+    385
+   ]
+  },
+  "fr_afficher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_afficher_verb",
+   "text": "afficher",
+   "box": [
+    478,
+    196,
+    566,
+    222
+   ],
+   "text_box": [
+    482,
+    200,
+    562,
+    218
+   ]
+  },
+  "fr_incendier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_incendier_verb",
+   "text": "incendier",
+   "box": [
+    229,
+    146,
+    325,
+    172
+   ],
+   "text_box": [
+    233,
+    150,
+    321,
+    168
+   ]
+  },
+  "fr_redescendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_redescendre_verb",
+   "text": "redescendre",
+   "box": [
+    1107,
+    430,
+    1197,
+    456
+   ],
+   "text_box": [
+    1111,
+    434,
+    1193,
+    452
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 14 →",
+   "box": [
+    880,
+    430,
+    1040,
+    560
+   ],
+   "text_box": [
+    886,
+    436,
+    1034,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 12",
+   "box": [
+    470,
+    668,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    674,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    640,
+    30,
+    740,
+    64
+   ],
+   "text_box": [
+    643,
+    33,
+    737,
+    61
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    900,
+    30,
+    1020,
+    64
+   ],
+   "text_box": [
+    903,
+    33,
+    1017,
+    61
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_arracher_verb",
+   "lemma": "arracher",
+   "gloss": "to pull out",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    130,
+    420,
+    430,
+    672
+   ],
+   "label_xy": [
+    280,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_barrer_verb",
+   "lemma": "barrer",
+   "gloss": "to bar, bar up; to bar off",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    570,
+    465,
+    815,
+    640
+   ],
+   "label_xy": [
+    692,
+    628
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_chauffer_verb",
+   "lemma": "chauffer",
+   "gloss": "to heat",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    275,
+    205,
+    425,
+    395
+   ],
+   "label_xy": [
+    350,
+    383
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_afficher_verb",
+   "lemma": "afficher",
+   "gloss": "to display, put up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    445,
+    80,
+    600,
+    228
+   ],
+   "label_xy": [
+    522,
+    216
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_incendier_verb",
+   "lemma": "incendier",
+   "gloss": "to burn down; to roast",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 5,
+   "box": [
+    165,
+    15,
+    390,
+    178
+   ],
+   "label_xy": [
+    277,
+    166
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_redescendre_verb",
+   "lemma": "redescendre",
+   "gloss": "to come back down; to redescend",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    1105,
+    300,
+    1200,
+    462
+   ],
+   "label_xy": [
+    1152,
+    450
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg014",
+   "box": [
+    880,
+    430,
+    1040,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 14",
+   "sign": "étape 14 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg012",
+   "box": [
+    470,
+    668,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 12",
+   "name": "Allée du Quotidien, étape 12",
+   "sign": "← étape 12",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

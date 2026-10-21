@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg009",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 9 · essuyer, redresser, masser",
+ "divider_x": 880,
+ "note": "Tiered verb place. -er LEFT (scarecrow straightening his hat, girl wiping the sticky sweet spill, hiker pulling off his boots at his lodging on the balcony, dad's dancing embarrassing his son at the upper window, octopus massaging the postman on the roof terrace), -ir RIGHT (the splash flattening Annie's tiered sandcastle). Forward = far lane; back = near cobbles. Regraded neutral (neutralize.py).",
+ "text_areas": {
+  "fr_redresser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_redresser_verb",
+   "text": "redresser",
+   "box": [
+    87,
+    640,
+    183,
+    666
+   ],
+   "text_box": [
+    91,
+    644,
+    179,
+    662
+   ]
+  },
+  "fr_essuyer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_essuyer_verb",
+   "text": "essuyer",
+   "box": [
+    406,
+    628,
+    484,
+    654
+   ],
+   "text_box": [
+    410,
+    632,
+    480,
+    650
+   ]
+  },
+  "fr_loger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_loger_verb",
+   "text": "loger",
+   "box": [
+    348,
+    393,
+    406,
+    419
+   ],
+   "text_box": [
+    352,
+    397,
+    402,
+    415
+   ]
+  },
+  "fr_embarrasser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_embarrasser_verb",
+   "text": "embarrasser",
+   "box": [
+    289,
+    140,
+    405,
+    166
+   ],
+   "text_box": [
+    293,
+    144,
+    401,
+    162
+   ]
+  },
+  "fr_masser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_masser_verb",
+   "text": "masser",
+   "box": [
+    644,
+    183,
+    712,
+    209
+   ],
+   "text_box": [
+    648,
+    187,
+    708,
+    205
+   ]
+  },
+  "fr_aneantir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_aneantir_verb",
+   "text": "anéantir",
+   "box": [
+    1018,
+    668,
+    1106,
+    694
+   ],
+   "text_box": [
+    1022,
+    672,
+    1102,
+    690
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 10 →",
+   "box": [
+    940,
+    370,
+    1090,
+    448
+   ],
+   "text_box": [
+    946,
+    376,
+    1084,
+    442
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 8",
+   "box": [
+    430,
+    665,
+    880,
+    712
+   ],
+   "text_box": [
+    436,
+    671,
+    874,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    470,
+    20,
+    570,
+    54
+   ],
+   "text_box": [
+    473,
+    23,
+    567,
+    51
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    900,
+    40,
+    1030,
+    74
+   ],
+   "text_box": [
+    903,
+    43,
+    1027,
+    71
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_redresser_verb",
+   "lemma": "redresser",
+   "gloss": "to straighten",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    35,
+    255,
+    235,
+    672
+   ],
+   "label_xy": [
+    135,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_essuyer_verb",
+   "lemma": "essuyer",
+   "gloss": "to wipe",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    330,
+    455,
+    560,
+    660
+   ],
+   "label_xy": [
+    445,
+    648
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_loger_verb",
+   "lemma": "loger",
+   "gloss": "to lodge; to find a place to stay",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    285,
+    262,
+    470,
+    425
+   ],
+   "label_xy": [
+    377,
+    413
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_embarrasser_verb",
+   "lemma": "embarrasser",
+   "gloss": "to embarrass; clutter; block",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    255,
+    28,
+    440,
+    172
+   ],
+   "label_xy": [
+    347,
+    160
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_masser_verb",
+   "lemma": "masser",
+   "gloss": "to massage",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 5,
+   "box": [
+    595,
+    72,
+    762,
+    215
+   ],
+   "label_xy": [
+    678,
+    203
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_aneantir_verb",
+   "lemma": "anéantir",
+   "gloss": "to wipe out; to hit someone for six",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    885,
+    450,
+    1240,
+    700
+   ],
+   "label_xy": [
+    1062,
+    688
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg010",
+   "box": [
+    940,
+    370,
+    1090,
+    448
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 10",
+   "sign": "étape 10 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg008",
+   "box": [
+    430,
+    665,
+    880,
+    712
+   ],
+   "label": "Back up the lane to étape 8",
+   "name": "Allée du Quotidien, étape 8",
+   "sign": "← étape 8",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

@@ -1,0 +1,16 @@
+{"divider_x": 680,
+ "name": "Allée du Quotidien — étape 19 · s'adosser, se rendormir, se dégourdir",
+ "note": "Last place of the Allée du Quotidien (five verbs). -er LEFT (detective leaning back against the wall beside his gold-framed mirror, man in a dinner jacket cramming the little red car full of suitcases, man striking a pose with his rubber stamp on the balcony), -ir/-re RIGHT (man in pyjamas dozing off again in his deckchair, wren on the door knocker, round mirror; man stretching on the balcony beside his gourd and mirror). Forward = lane end, round back to the square; back = near cobbles.",
+ "items": [
+  {"id": "fr_adosser_verb", "box": [40, 262, 262, 669], "tier": "street", "mirror": "gold-framed wall mirror reflecting the detective"},
+  {"id": "fr_bonder_verb", "box": [265, 350, 562, 625], "tier": "street"},
+  {"id": "fr_apposer_verb", "box": [281, 12, 431, 169], "tier": "balcony"},
+  {"id": "fr_rendormir_verb", "box": [794, 360, 1215, 672], "tier": "street", "mirror": "round mirror on the wall beside the deckchair"},
+  {"id": "fr_degourdir_verb", "box": [950, 38, 1181, 250], "tier": "balcony", "mirror": "mirror beside the gourd on the balcony"}
+ ],
+ "exits": {
+  "forward": {"target": "S02_sector", "box": [600, 390, 780, 500], "label": "Lane's end: round the corner back to the square", "name": "Place de la Rue des Maisons", "sign": "place →"},
+  "back": {"target": "ST_routine_seg018", "box": [470, 674, 780, 712], "label": "Back up the lane to étape 18", "name": "Allée du Quotidien, étape 18", "sign": "← étape 18"}
+ },
+ "signs": {"er": [470, 25, 570, 59], "irre": [700, 25, 820, 59]}
+}

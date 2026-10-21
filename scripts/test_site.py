@@ -353,7 +353,7 @@ def main():
     assert index["open_sectors"] == ["S01_beginner", "S02_home", "S03_market", "S04_cafes"], index["open_sectors"]
     site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
     assert index["open_rooms"] == site_rooms, index["open_rooms"]
-    assert len(site_rooms) == 93
+    assert len(site_rooms) == 112
     assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001", "R_entrance_01", "R_bathroom"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
@@ -501,7 +501,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 108, room_files
+    assert len(room_files) == 127, room_files
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -559,8 +559,15 @@ def main():
     home = load(DATA / "sectors" / "S02_home.json")
     assert home["open"] is True
     assert home["scene"]["image"].endswith("art/S02_sector/base.jpg")
-    assert {link["target"] for link in home["scene"]["links"]} == {"B05_maison", "S01_sector"}
+    assert {link["target"] for link in home["scene"]["links"]} == {"B05_maison", "S01_sector", "ST_routine_seg001"}
     assert not any(link.get("soon") for link in home["scene"]["links"])
+    routine = load(ROOT / "content" / "art" / "ST_routine_seg001" / "hotspots.json")
+    assert routine["view"] == "street_perspective"
+    assert routine["exits"]["forward"]["target"] == "ST_routine_seg002"
+    assert routine["exits"]["back"]["target"] == "S02_sector"
+    last = load(ROOT / "content" / "art" / "ST_routine_seg019" / "hotspots.json")
+    assert last["exits"]["forward"]["target"] == "S02_sector"
+    assert last["exits"]["back"]["target"] == "ST_routine_seg018"
     house = next(item for item in home["buildings"] if item["id"] == "B05_maison")
     assert house["scene"]["image"].endswith("art/B05_maison/base.jpg")
     assert any(link["target"] == "R_entrance_04" and not link.get("soon") for link in house["scene"]["links"])

@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg007",
+ "street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée du Quotidien — étape 7 · repasser, sécher, tremper",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is a flowery stone wall with no verbs). Street: woman rubbing her hands over frothy hot chocolate, grandma ironing, socks drying with a lavender sachet; balcony: trumpeter dunking a biscuit in milk; upper window: bushy-haired heir pouring from his inherited teapot; roof terrace: dog snapping its chain. Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_frotter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_frotter_verb",
+   "text": "frotter",
+   "box": [
+    202,
+    656,
+    280,
+    682
+   ],
+   "text_box": [
+    206,
+    660,
+    276,
+    678
+   ]
+  },
+  "fr_repasser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_repasser_verb",
+   "text": "repasser",
+   "box": [
+    387,
+    643,
+    475,
+    669
+   ],
+   "text_box": [
+    391,
+    647,
+    471,
+    665
+   ]
+  },
+  "fr_secher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_secher_verb",
+   "text": "sécher",
+   "box": [
+    551,
+    573,
+    619,
+    599
+   ],
+   "text_box": [
+    555,
+    577,
+    615,
+    595
+   ]
+  },
+  "fr_tremper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tremper_verb",
+   "text": "tremper",
+   "box": [
+    446,
+    400,
+    524,
+    426
+   ],
+   "text_box": [
+    450,
+    404,
+    520,
+    422
+   ]
+  },
+  "fr_heriter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_heriter_verb",
+   "text": "hériter",
+   "box": [
+    455,
+    260,
+    533,
+    286
+   ],
+   "text_box": [
+    459,
+    264,
+    529,
+    282
+   ]
+  },
+  "fr_dechainer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_dechainer_verb",
+   "text": "déchaîner",
+   "box": [
+    397,
+    98,
+    493,
+    124
+   ],
+   "text_box": [
+    401,
+    102,
+    489,
+    120
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 8 →",
+   "box": [
+    900,
+    520,
+    1060,
+    610
+   ],
+   "text_box": [
+    906,
+    526,
+    1054,
+    604
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 6",
+   "box": [
+    560,
+    665,
+    1000,
+    712
+   ],
+   "text_box": [
+    566,
+    671,
+    994,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    640,
+    40,
+    740,
+    74
+   ],
+   "text_box": [
+    643,
+    43,
+    737,
+    71
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1080,
+    40,
+    1200,
+    74
+   ],
+   "text_box": [
+    1083,
+    43,
+    1197,
+    71
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_frotter_verb",
+   "lemma": "frotter",
+   "gloss": "to rub",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    150,
+    462,
+    332,
+    688
+   ],
+   "label_xy": [
+    241,
+    676
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_repasser_verb",
+   "lemma": "repasser",
+   "gloss": "to iron",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    358,
+    505,
+    505,
+    675
+   ],
+   "label_xy": [
+    431,
+    663
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_secher_verb",
+   "lemma": "sécher",
+   "gloss": "to dry; to skip (class)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    510,
+    520,
+    660,
+    605
+   ],
+   "label_xy": [
+    585,
+    593
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_tremper_verb",
+   "lemma": "tremper",
+   "gloss": "to soak",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    425,
+    318,
+    545,
+    432
+   ],
+   "label_xy": [
+    485,
+    420
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_heriter_verb",
+   "lemma": "hériter",
+   "gloss": "to inherit",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    440,
+    180,
+    548,
+    292
+   ],
+   "label_xy": [
+    494,
+    280
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_dechainer_verb",
+   "lemma": "déchaîner",
+   "gloss": "to unleash; to arouse, rouse",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    330,
+    28,
+    560,
+    130
+   ],
+   "label_xy": [
+    445,
+    118
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg008",
+   "box": [
+    900,
+    520,
+    1060,
+    610
+   ],
+   "label": "Walk on down the lane",
+   "name": "Allée du Quotidien, étape 8",
+   "sign": "étape 8 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg006",
+   "box": [
+    560,
+    665,
+    1000,
+    712
+   ],
+   "label": "Back up the lane to étape 6",
+   "name": "Allée du Quotidien, étape 6",
+   "sign": "← étape 6",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}
