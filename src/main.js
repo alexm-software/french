@@ -421,11 +421,103 @@ function fitHits() {
     pad.setAttribute("width", String(w));
     pad.setAttribute("height", String(h));
   });
+  placeWayBadges();
   placeZoomBadges();
 }
 
 function isZoomTarget(target) {
   return /_z\d+$/i.test(String(target || ""));
+}
+
+function placeWayBadges() {
+  const frame = document.querySelector("#walk .frame");
+  if (!frame) return;
+  frame.querySelectorAll(":scope > .way-badge").forEach((node) => node.remove());
+  const svg = frame.querySelector("svg");
+  const ctm = svg?.getScreenCTM();
+  const inverse = ctm?.inverse();
+  if (!svg || !ctm || !inverse) return;
+  const frameRect = frame.getBoundingClientRect();
+  const badgePx = window.matchMedia("(max-width: 700px)").matches ? 20 : 26;
+  const toScreen = (x, y) => {
+    const point = svg.createSVGPoint();
+    point.x = x;
+    point.y = y;
+    const mapped = point.matrixTransform(ctm);
+    return { x: mapped.x - frameRect.left, y: mapped.y - frameRect.top };
+  };
+  const toSvg = (px) => {
+    const origin = svg.createSVGPoint();
+    const shifted = svg.createSVGPoint();
+    origin.x = frameRect.left;
+    origin.y = frameRect.top;
+    shifted.x = frameRect.left + px;
+    shifted.y = frameRect.top;
+    return Math.abs(shifted.matrixTransform(inverse).x - origin.matrixTransform(inverse).x) || badgePx;
+  };
+  const size = toSvg(badgePx);
+  const boxesOf = (selector, attr) => [...svg.querySelectorAll(selector)].map((el) => {
+    const [x0, y0, x1, y1] = (el.dataset[attr] || "").split(",").map(Number);
+    return { x0, y0, x1, y1 };
+  }).filter((box) => Number.isFinite(box.x0));
+  const obstacles = [
+    ...boxesOf("[data-item-box]", "itemBox"),
+    ...boxesOf("[data-sign-box]", "signBox"),
+    ...boxesOf("[data-zoom-box]", "zoomBox"),
+  ];
+  const placed = [];
+  const view = svg.viewBox.baseVal;
+  const hits = (x, y, rects) => rects.some((rect) => x < rect.x1 && x + size > rect.x0 && y < rect.y1 && y + size > rect.y0);
+  svg.querySelectorAll("[data-way-box]").forEach((el) => {
+    const [x0, y0, x1, y1] = el.dataset.wayBox.split(",").map(Number);
+    const dir = el.dataset.wayDir || "through";
+    const midX = (x0 + x1) / 2 - size / 2;
+    const midY = (y0 + y1) / 2 - size / 2;
+    const inset = Math.max(size * 0.2, 6);
+    const spots = {
+      through: [[midX, midY], [midX, y1 - size - inset], [midX, y0 + inset], [x0 + inset, midY], [x1 - size - inset, midY]],
+      up: [[midX, y0 + inset], [midX, midY], [x0 + inset, y0 + inset], [x1 - size - inset, y0 + inset]],
+      down: [[midX, y1 - size - inset], [midX, midY], [x0 + inset, y1 - size - inset], [x1 - size - inset, y1 - size - inset]],
+      left: [[x0 + inset, midY], [midX, midY], [x0 + inset, y0 + inset], [x0 + inset, y1 - size - inset]],
+      right: [[x1 - size - inset, midY], [midX, midY], [x1 - size - inset, y0 + inset], [x1 - size - inset, y1 - size - inset]],
+    }[dir] || [[midX, midY]];
+    let x = midX;
+    let y = midY;
+    const found = spots.some(([sx, sy]) => {
+      const cx = Math.max(4, Math.min(sx, (view.width || 1280) - size - 4));
+      const cy = Math.max(4, Math.min(sy, (view.height || 720) - size - 4));
+      if (hits(cx, cy, obstacles) || hits(cx, cy, placed)) return false;
+      x = cx;
+      y = cy;
+      return true;
+    });
+    if (!found) {
+      x = Math.max(4, Math.min(midX, (view.width || 1280) - size - 4));
+      y = Math.max(4, Math.min(midY, (view.height || 720) - size - 4));
+    }
+    placed.push({ x0: x, y0: y, x1: x + size, y1: y + size });
+    const screen = toScreen(x, y);
+    const node = document.createElement("button");
+    node.type = "button";
+    node.className = `way-badge ${el.dataset.wayIcon || "door"} ${dir}`;
+    node.dataset.target = el.dataset.target || "";
+    node.title = el.dataset.wayLabel || "";
+    node.setAttribute("aria-label", el.dataset.wayLabel || "");
+    node.innerHTML = el.dataset.wayIcon === "arrow"
+      ? `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6.5 18.5 12 13 17.5"/></svg>`
+      : `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5.2h8.4v13.6H6.2z"/><path d="M15.8 12h3.4M17.8 10.2 20.2 12l-2.4 1.8"/><circle cx="12.2" cy="12" r="0.85" fill="currentColor" stroke="none"/></svg>`;
+    const origin = toScreen(0, 0);
+    const end = toScreen(view.width || 1280, view.height || 720);
+    const minX = Math.max(4, Math.min(origin.x, end.x));
+    const minY = Math.max(4, Math.min(origin.y, end.y));
+    const maxX = Math.max(minX, Math.max(origin.x, end.x) - badgePx - 4);
+    const maxY = Math.max(minY, Math.max(origin.y, end.y) - badgePx - 4);
+    node.style.left = `${Math.max(minX, Math.min(screen.x, maxX))}px`;
+    node.style.top = `${Math.max(minY, Math.min(screen.y, maxY))}px`;
+    node.addEventListener("pointerenter", () => el.classList.add("glow"));
+    node.addEventListener("pointerleave", () => el.classList.remove("glow"));
+    frame.appendChild(node);
+  });
 }
 
 function placeZoomBadges() {
@@ -583,7 +675,7 @@ function fittedPlate(className, text, box, opts = {}) {
     `<text x="${cx.toFixed(1)}" y="${(top + index * lineHeight).toFixed(1)}" text-anchor="middle" font-size="${wrapped.size.toFixed(1)}">${esc(line)}</text>`
   ).join("");
   const rx = Math.min(5, height / 4);
-  return `<g class="${className}">
+  return `<g class="${className}" data-sign-box="${box.join(",")}">
     <rect class="plate" x="${(x0 + 0.5).toFixed(1)}" y="${(y0 + 0.5).toFixed(1)}" width="${(width - 1).toFixed(1)}" height="${(height - 1).toFixed(1)}" rx="${rx.toFixed(1)}"></rect>
     ${lines}
   </g>`;
@@ -600,6 +692,30 @@ function nameTag(text, box) {
     <rect class="plate" x="${(cx - width / 2).toFixed(1)}" y="${(y - size).toFixed(1)}" width="${width.toFixed(1)}" height="${(size * 1.7).toFixed(1)}" rx="12"></rect>
     <text x="${cx.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="middle" font-size="${size}">${esc(text)}</text>
   </g>`;
+}
+
+function wayCue(item, exitKey) {
+  const kind = String(item?.kind || "");
+  const key = exitKind(exitKey) || "";
+  if (kind === "stairs_up") return { icon: "arrow", dir: "up" };
+  if (kind === "stairs_down") return { icon: "arrow", dir: "down" };
+  if (key === "left" || key === "right" || key === "forward" || key === "back") {
+    return { icon: "arrow", dir: { left: "left", right: "right", forward: "up", back: "down" }[key] };
+  }
+  if (kind === "street" || kind === "path") return { icon: "arrow", dir: "up" };
+  if (kind === "zoom_back") return { icon: "arrow", dir: "down" };
+  return { icon: "door", dir: "through" };
+}
+
+function enterLabel(item, fallbackKey) {
+  return tf("nav.enterPlace", { place: hoverLabel(item, fallbackKey) });
+}
+
+function wayMarkup(item, exitKey) {
+  if (!item?.box || !item.target || isZoomTarget(item.target)) return "";
+  const cue = wayCue(item, exitKey);
+  const label = enterLabel(item, exitKey ? `nav.${exitKind(exitKey) || "forward"}` : "open");
+  return ` data-way-box="${item.box.join(",")}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-label="${esc(label)}"`;
 }
 
 function arrowGraphic(kind, box) {
@@ -627,19 +743,21 @@ function sceneMarkup(scene, words, zooms) {
   (scene.links || []).forEach((link) => {
     if (!link?.box || !link.target) return;
     const [x0, y0, x1, y1] = link.box;
-    const label = hoverLabel(link, "open");
     const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
-    parts.push(`<g class="hot link${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${nameTag(label, link.box)}</g>`);
+    const way = wayMarkup(link);
+    const label = way ? enterLabel(link, "open") : hoverLabel(link, "open");
+    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${nameTag(label, link.box)}</g>`);
   });
   Object.entries(scene.exits || {}).forEach(([key, exit]) => {
     const kind = exitKind(key);
     if (!kind || !exit?.box || !exit.target) return;
     state.nav[kind] = hashFor(exit.target);
     const [x0, y0, x1, y1] = exit.box;
-    const label = hoverLabel(exit, `nav.${kind}`);
     const graphic = signedExits.has(kind) ? "" : arrowGraphic(kind, exit.box);
     const zoomBox = isZoomTarget(exit.target) ? ` data-zoom-box="${exit.box.join(",")}"` : "";
-    parts.push(`<g class="hot exit ${kind}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
+    const way = wayMarkup(exit, key);
+    const label = way ? enterLabel(exit, `nav.${kind}`) : hoverLabel(exit, `nav.${kind}`);
+    parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}"><rect class="hit" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"></rect>${graphic}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
     if (hot.helper) return;

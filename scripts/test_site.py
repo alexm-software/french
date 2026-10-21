@@ -419,7 +419,11 @@ def finish(quiz):
     assert street["hotspots"][0]["tier"] in {"street", "balcony", "upper", "roof"}
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
     assert [link["target"] for link in sector["links"]] == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"]
+    assert {link["kind"] for link in sector["links"]} == {"building", "street"}
     assert sector["exits"] == {}
+    restaurant = normalize_scene(load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json"))
+    assert {link["kind"] for link in restaurant["links"]} >= {"door", "window"}
+    assert street["exits"]["forward"]["kind"] == "street"
 
     pointed = normalize_scene({
         "width": 100,
@@ -444,6 +448,8 @@ def finish(quiz):
 
     assert flat(i18n["en"]) == flat(i18n["fr"])
     assert i18n["en"]["nav"]["backTo"] == "Back to {place}"
+    assert i18n["en"]["nav"]["enterPlace"] == "Enter: {place}"
+    assert i18n["fr"]["nav"]["enterPlace"] == "Entrer : {place}"
     assert i18n["fr"]["nav"]["backMap"] == "Retour au plan du village"
     walk_site_graph()
     dining = load(DATA / "rooms" / "R_resto_room_z1.json")
@@ -455,6 +461,12 @@ def finish(quiz):
     rooms_fr = next(item["body"] for item in guide["fr"]["sections"] if item["icon"] == "house")
     assert "magnifying glass" in rooms_en
     assert "loupe" in rooms_fr
+    paths_en = next(item["body"] for item in guide["en"]["sections"] if item["icon"] == "path")
+    paths_fr = next(item["body"] for item in guide["fr"]["sections"] if item["icon"] == "path")
+    assert "olive arrow" in paths_en and "magnifying glass" in paths_en
+    assert "flèche olive" in paths_fr and "loupe" in paths_fr
+    assert "way-badge" in (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert ".way-badge" in (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
     assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()
 
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))

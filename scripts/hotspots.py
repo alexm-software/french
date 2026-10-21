@@ -115,7 +115,7 @@ def normalize_scene(raw):
             "box": box,
             "label": item.get("label") or "",
         }
-        for key in ("name", "name_fr", "name_en", "label_fr", "label_en"):
+        for key in ("name", "name_fr", "name_en", "label_fr", "label_en", "kind"):
             if item.get(key):
                 link[key] = str(item[key])
         links.append(link)
@@ -128,7 +128,7 @@ def normalize_scene(raw):
         if not box:
             continue
         exit_item = {"box": box, "target": item.get("target")}
-        for field in ("label", "name", "name_fr", "name_en", "label_fr", "label_en"):
+        for field in ("label", "name", "name_fr", "name_en", "label_fr", "label_en", "kind"):
             if item.get(field):
                 exit_item[field] = str(item[field])
         exits[key] = exit_item
