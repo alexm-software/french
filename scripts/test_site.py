@@ -102,6 +102,30 @@ def assert_s04_explicit(hierarchy, sectors, buildings, rooms):
             assert built.get("building_id") == parent, view
 
 
+def assert_fullscreen_overlays():
+    """Overlays stay visible in fullscreen, and the strip button is one toggle."""
+    html = (ROOT / "index.html").read_text(encoding="utf-8")
+    body = html.split("<body>", 1)[1].split("</body>", 1)[0]
+    assert body.index('<div id="stage">') < body.index('id="guide-host"') < body.rindex("</div>")
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert 'document.documentElement.requestFullscreen' in client
+    assert "stage.requestFullscreen" not in client
+    assert "exitFullscreen" not in client.split("function render", 1)[1].split("function onClick", 1)[0]
+    mount = client.split("function mountGuide", 1)[1].split("let playToken", 1)[0]
+    assert 'querySelector("#stage")' in mount
+    assert "document.body.appendChild" not in mount
+    assert "collapse:" in client
+    shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
+    assert 'doodle(fullscreen ? "collapse" : "expand")' in shell
+    sync = client.split('addEventListener("fullscreenchange"', 1)[1].split("window.addEventListener(\"hashchange\"", 1)[0]
+    assert ".tool-icon" in sync
+    assert 'doodle(fullscreen ? "collapse" : "expand")' in sync
+    keys = client.split("function onKey", 1)[1].split("window.addEventListener(\"keydown\"", 1)[0]
+    dialog = keys.split('querySelector(".dialog-layer")', 1)[1].split("fullscreenElement", 1)[0]
+    assert "preventDefault" in dialog
+    assert keys.index("fullscreenElement") < keys.index('room?.kind === "zoom"')
+
+
 def assert_back_strip_stays_visible(client):
     """The strip back is a header control, not an item in the menu that hides under 820px."""
     shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
@@ -451,6 +475,11 @@ def finish(quiz):
     assert i18n["en"]["nav"]["enterPlace"] == "Enter: {place}"
     assert i18n["fr"]["nav"]["enterPlace"] == "Entrer : {place}"
     assert i18n["fr"]["nav"]["backMap"] == "Retour au plan du village"
+    assert i18n["en"]["tools"]["fullscreen"] == "Fullscreen"
+    assert i18n["en"]["tools"]["leave"] == "Exit fullscreen"
+    assert i18n["fr"]["tools"]["fullscreen"] == "Plein écran"
+    assert i18n["fr"]["tools"]["leave"] == "Quitter le plein écran"
+    assert_fullscreen_overlays()
     walk_site_graph()
     dining = load(DATA / "rooms" / "R_resto_room_z1.json")
     assert dining["parent"]["id"] == "R_resto_room"

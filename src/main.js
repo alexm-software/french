@@ -176,6 +176,7 @@ function doodle(name) {
     speaker: '<path d="M4 10h3l4-3v10l-4-3H4z"/><path d="M15 9.5a3.5 3.5 0 0 1 0 5"/><path d="M17 7.5a6 6 0 0 1 0 9"/>',
     spark: '<path d="M12 4v4M12 16v4M4 12h4M16 12h4M6.5 6.5l2.2 2.2M15.3 15.3l2.2 2.2M17.5 6.5l-2.2 2.2M8.7 15.3l-2.2 2.2"/>',
     expand: '<path d="M9 5H5v4M15 5h4v4M9 19H5v-4M15 19h4v-4"/>',
+    collapse: '<path d="M9 5v4H5M15 5v4h4M9 19v-4H5M15 19v-4h4"/>',
   };
   return `<svg class="doodle" viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.star}</svg>`;
 }
@@ -221,7 +222,8 @@ function shell(body, current, opts = {}) {
     ["/about", t("nav.about")],
     ["/credits", t("nav.credits")],
   ];
-  const fullLabel = document.fullscreenElement ? t("tools.leave") : t("tools.fullscreen");
+  const fullscreen = Boolean(document.fullscreenElement);
+  const fullLabel = fullscreen ? t("tools.leave") : t("tools.fullscreen");
   return `
     <div class="shell ${opts.scene ? "scene-mode" : ""}">
       <header class="top ${state.menu ? "open" : ""}">
@@ -239,7 +241,7 @@ function shell(body, current, opts = {}) {
           </div>
           ${toolButton(`data-guide aria-label="${esc(t("tools.guideLabel"))}"`, doodle("book"), t("tools.guide"), state.guideOpen)}
           ${toolButton(`data-hits aria-label="${esc(t("tools.spotsLabel"))}"`, doodle("spark"), t("tools.spots"), state.hits)}
-          ${toolButton(`data-fs aria-label="${esc(fullLabel)}"`, doodle("expand"), fullLabel)}
+          ${toolButton(`data-fs aria-label="${esc(fullLabel)}"`, doodle(fullscreen ? "collapse" : "expand"), fullLabel)}
         </div>
       </header>
       <main id="main">${body}</main>
@@ -1231,7 +1233,7 @@ function mountGuide() {
   if (!host) {
     host = document.createElement("div");
     host.id = "guide-host";
-    document.body.appendChild(host);
+    (document.querySelector("#stage") || document.body).appendChild(host);
   }
   host.innerHTML = state.guideOpen ? guideDialog() : "";
 }
@@ -1353,9 +1355,7 @@ async function render() {
     walk.innerHTML = walkHtml(activeDialog());
   } else {
     document.body.classList.remove("walking");
-    const stage = document.querySelector("#stage");
     if (walk) {
-      if (document.fullscreenElement === walk || document.fullscreenElement === stage) document.exitFullscreen?.();
       walk.hidden = true;
       walk.innerHTML = "";
     }
@@ -1413,10 +1413,7 @@ function onClick(event) {
     return;
   }
   if (event.target.closest("[data-fs]")) {
-    const walk = document.querySelector("#walk");
-    const stage = document.querySelector("#stage");
     if (document.fullscreenElement) document.exitFullscreen?.();
-    else if (walk && !walk.hidden && stage) stage.requestFullscreen?.();
     else document.documentElement.requestFullscreen?.();
     return;
   }
@@ -1551,6 +1548,7 @@ function onKey(event) {
     const tag = event.target?.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA") return;
     if (document.querySelector(".dialog-layer")) {
+      event.preventDefault();
       if (state.guideOpen) {
         state.guideOpen = false;
         mountGuide();
@@ -1559,6 +1557,7 @@ function onKey(event) {
       closeDialog();
       return;
     }
+    if (document.fullscreenElement) return;
     const room = state.place?.kind === "room" ? state.place.room : null;
     if (room?.kind === "zoom") {
       const target = backTarget(state.place);
@@ -1590,11 +1589,15 @@ function onKey(event) {
 
 document.addEventListener("click", onClick);
 document.addEventListener("fullscreenchange", () => {
-  const label = document.fullscreenElement ? t("tools.leave") : t("tools.fullscreen");
+  const fullscreen = Boolean(document.fullscreenElement);
+  const label = fullscreen ? t("tools.leave") : t("tools.fullscreen");
+  const icon = doodle(fullscreen ? "collapse" : "expand");
   document.querySelectorAll("[data-fs]").forEach((button) => {
     button.setAttribute("aria-label", label);
     const caption = button.querySelector(".tool-label");
     if (caption) caption.textContent = label;
+    const mark = button.querySelector(".tool-icon");
+    if (mark) mark.innerHTML = icon;
   });
 });
 window.addEventListener("hashchange", render);

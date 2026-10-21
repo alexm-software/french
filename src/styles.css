@@ -288,8 +288,15 @@ body.walking #walk { flex: 1 1 auto; min-height: 0; overflow: hidden; }
 #stage:-webkit-full-screen #app { flex: 0 0 auto; }
 #stage:fullscreen #walk,
 #stage:-webkit-full-screen #walk { flex: 1 1 auto; min-height: 0; overflow: hidden; position: relative; }
-#stage:fullscreen main,
-#stage:-webkit-full-screen main { display: none; }
+html:fullscreen,
+html:-webkit-full-screen {
+  background: var(--paper);
+}
+html:fullscreen body,
+html:-webkit-full-screen body {
+  min-height: 100%;
+  background: var(--paper);
+}
 
 .walk-root { position: absolute; inset: 0; background: #efe8d8; }
 .walk-root.mood-blossom { background: #f6eef1; }
