@@ -1,0 +1,17 @@
+{"divider_x": 860,
+ "name": "Rue des Gestes — étape 18 · délier, chiper, sévir",
+ "note": "Last place of the Rue des Gestes. -er LEFT (deli man untying the string round his sausages, seagull pinching a chip from a man's cone, woman and puppy tugging a tea towel on the balcony, man pumping dumbbells at the upper window, peacock strutting before a tall mirror on the roof), -ir/-re RIGHT (stern policeman cracking down on a naughty goose). Forward = lane's end, round back to the square; back = near cobbles.",
+ "items": [
+  {"id": "fr_delier_verb", "box": [30, 325, 350, 588], "tier": "street"},
+  {"id": "fr_chiper_verb", "box": [487, 406, 762, 672], "tier": "street"},
+  {"id": "fr_tirailler_verb", "box": [444, 169, 694, 306], "tier": "balcony"},
+  {"id": "fr_muscler_verb", "box": [94, 62, 281, 206], "tier": "upper"},
+  {"id": "fr_pavaner_verb", "box": [344, 8, 688, 138], "tier": "roof", "mirror": "tall oval mirror on the roof terrace"},
+  {"id": "fr_sevir_verb", "box": [931, 412, 1169, 672], "tier": "street"}
+ ],
+ "exits": {
+  "forward": {"target": "S02_sector", "box": [770, 430, 925, 530], "label": "Lane's end: round the corner back to the square", "name": "Place de la Rue des Maisons", "sign": "place →"},
+  "back": {"target": "ST_control_seg017", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 17", "name": "Rue des Gestes, étape 17", "sign": "← étape 17"}
+ },
+ "signs": {"er": [700, 25, 800, 59], "irre": [840, 25, 960, 59]}
+}

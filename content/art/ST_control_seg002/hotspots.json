@@ -1,0 +1,369 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg002",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 2 · tirer, se lever, accrocher",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man pulling the pulley rope that lifts a tea tray, old man springing up from his lever armchair beside a tall mirror, man loading sacks onto a horse), balcony (boy dragging a toy train), upper (woman leaning on the sill by her puppy and little mirror), roof (granny hanging her crochet blanket on a hook). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_tirer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tirer_verb",
+   "text": "tirer",
+   "box": [
+    205,
+    640,
+    263,
+    666
+   ],
+   "text_box": [
+    209,
+    644,
+    259,
+    662
+   ]
+  },
+  "fr_lever_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_lever_verb",
+   "text": "se lever",
+   "box": [
+    490,
+    640,
+    578,
+    666
+   ],
+   "text_box": [
+    494,
+    644,
+    574,
+    662
+   ]
+  },
+  "fr_charger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_charger_verb",
+   "text": "charger (de)",
+   "box": [
+    718,
+    606,
+    844,
+    632
+   ],
+   "text_box": [
+    722,
+    610,
+    840,
+    628
+   ]
+  },
+  "fr_trainer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_trainer_verb",
+   "text": "traîner",
+   "box": [
+    689,
+    312,
+    767,
+    338
+   ],
+   "text_box": [
+    693,
+    316,
+    763,
+    334
+   ]
+  },
+  "fr_appuyer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_appuyer_verb",
+   "text": "s'appuyer",
+   "box": [
+    468,
+    168,
+    564,
+    194
+   ],
+   "text_box": [
+    472,
+    172,
+    560,
+    190
+   ]
+  },
+  "fr_accrocher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_accrocher_verb",
+   "text": "accrocher",
+   "box": [
+    208,
+    274,
+    304,
+    300
+   ],
+   "text_box": [
+    212,
+    278,
+    300,
+    296
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 3 →",
+   "box": [
+    900,
+    470,
+    1040,
+    570
+   ],
+   "text_box": [
+    906,
+    476,
+    1034,
+    564
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 1",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    880,
+    25,
+    980,
+    59
+   ],
+   "text_box": [
+    883,
+    28,
+    977,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1000,
+    25,
+    1120,
+    59
+   ],
+   "text_box": [
+    1003,
+    28,
+    1117,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_tirer_verb",
+   "lemma": "tirer",
+   "gloss": "to pull; to shoot",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    94,
+    310,
+    375,
+    672
+   ],
+   "label_xy": [
+    234,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_lever_verb",
+   "lemma": "lever",
+   "gloss": "to raise, lift (se lever = to get up)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    406,
+    438,
+    662,
+    672
+   ],
+   "label_xy": [
+    534,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se lever",
+   "scene": "",
+   "mirror": "tall standing mirror beside the armchair"
+  },
+  {
+   "id": "fr_charger_verb",
+   "lemma": "charger",
+   "gloss": "to load",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    681,
+    431,
+    881,
+    638
+   ],
+   "label_xy": [
+    781,
+    626
+   ],
+   "prepositions": [
+    "de"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_trainer_verb",
+   "lemma": "traîner",
+   "gloss": "to drag",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    631,
+    175,
+    825,
+    344
+   ],
+   "label_xy": [
+    728,
+    332
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_appuyer_verb",
+   "lemma": "appuyer",
+   "gloss": "to press; to lean",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    444,
+    94,
+    588,
+    200
+   ],
+   "label_xy": [
+    516,
+    188
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'appuyer",
+   "scene": "",
+   "mirror": "small round mirror on the window sill"
+  },
+  {
+   "id": "fr_accrocher_verb",
+   "lemma": "accrocher",
+   "gloss": "to hang up, hook",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    150,
+    10,
+    362,
+    306
+   ],
+   "label_xy": [
+    256,
+    294
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg003",
+   "box": [
+    900,
+    470,
+    1040,
+    570
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 3",
+   "sign": "étape 3 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg001",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 1",
+   "name": "Rue des Gestes, étape 1",
+   "sign": "← étape 1",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

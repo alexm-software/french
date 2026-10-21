@@ -1,7 +1,7 @@
 {
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Rue des Maisons (S02 Home) square. La Maison familiale (duvet roof, teapot chimney) centre; the Allée du Quotidien (daily-routine verbs) leaves under the wooden arch on the left, the Rue des Gestes (gesture verbs) under the stone pulley arch on the right (the Allée du Quotidien is linked; the Rue des Gestes lane carries its name board but no link until its places are built). The cobbles at the bottom walk back to the village square (S01).",
+ "note": "Rue des Maisons (S02 Home) square. La Maison familiale (duvet roof, teapot chimney) centre; the Allée du Quotidien (daily-routine verbs) leaves under the wooden arch on the left, the Rue des Gestes (gesture verbs) under the stone pulley arch on the right (both lanes are linked). The cobbles at the bottom walk back to the village square (S01).",
  "text_areas": {
   "sector_name": {
    "role": "sector_name",
@@ -104,6 +104,18 @@
    ],
    "label": "Under the wooden arch into the Allée du Quotidien",
    "name": "Allée du Quotidien",
+   "kind": "street"
+  },
+  {
+   "target": "ST_control_seg001",
+   "box": [
+    1055,
+    452,
+    1195,
+    560
+   ],
+   "label": "Under the stone pulley arch into the Rue des Gestes",
+   "name": "Rue des Gestes",
    "kind": "street"
   }
  ]

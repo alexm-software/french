@@ -1,0 +1,109 @@
+{
+ "divider_x": 1000,
+ "name": "Rue des Gestes — étape 2 · tirer, se lever, accrocher",
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man pulling the pulley rope that lifts a tea tray, old man springing up from his lever armchair beside a tall mirror, man loading sacks onto a horse), balcony (boy dragging a toy train), upper (woman leaning on the sill by her puppy and little mirror), roof (granny hanging her crochet blanket on a hook). Forward = far lane; back = near cobbles.",
+ "items": [
+  {
+   "id": "fr_tirer_verb",
+   "box": [
+    94,
+    310,
+    375,
+    672
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_lever_verb",
+   "box": [
+    406,
+    438,
+    662,
+    672
+   ],
+   "tier": "street",
+   "mirror": "tall standing mirror beside the armchair"
+  },
+  {
+   "id": "fr_charger_verb",
+   "box": [
+    681,
+    431,
+    881,
+    638
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_trainer_verb",
+   "box": [
+    631,
+    175,
+    825,
+    344
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_appuyer_verb",
+   "box": [
+    444,
+    94,
+    588,
+    200
+   ],
+   "tier": "upper",
+   "mirror": "small round mirror on the window sill"
+  },
+  {
+   "id": "fr_accrocher_verb",
+   "box": [
+    150,
+    10,
+    362,
+    306
+   ],
+   "tier": "roof"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg003",
+   "box": [
+    900,
+    470,
+    1040,
+    570
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 3",
+   "sign": "étape 3 →"
+  },
+  "back": {
+   "target": "ST_control_seg001",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 1",
+   "name": "Rue des Gestes, étape 1",
+   "sign": "← étape 1"
+  }
+ },
+ "signs": {
+  "er": [
+   880,
+   25,
+   980,
+   59
+  ],
+  "irre": [
+   1000,
+   25,
+   1120,
+   59
+  ]
+ }
+}

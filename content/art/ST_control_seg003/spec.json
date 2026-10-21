@@ -1,0 +1,17 @@
+{"divider_x": 800,
+ "name": "Rue des Gestes — étape 3 · pousser, glisser, pendre",
+ "note": "Tiered verb place. -er LEFT (man pushing three cats in a wheelbarrow, penguin sliding down a wooden slide, woman at her loom by the lantern on the balcony, grocer weighing one pea on brass scales at the upper window), -ir/-re RIGHT (man hanging a pendulum clock by his door; singer interrupted by a squawking parrot on the balcony). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_pousser_verb", "box": [125, 388, 388, 672], "tier": "street"},
+  {"id": "fr_glisser_verb", "box": [394, 444, 612, 625], "tier": "street"},
+  {"id": "fr_allumer_verb", "box": [10, 106, 244, 319], "tier": "balcony"},
+  {"id": "fr_peser_verb", "box": [306, 112, 462, 244], "tier": "upper"},
+  {"id": "fr_pendre_verb", "box": [1000, 344, 1156, 662], "tier": "street"},
+  {"id": "fr_interrompre_verb", "box": [975, 112, 1181, 294], "tier": "balcony"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg004", "box": [630, 440, 800, 560], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 4", "sign": "étape 4 →"},
+  "back": {"target": "ST_control_seg002", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 2", "name": "Rue des Gestes, étape 2", "sign": "← étape 2"}
+ },
+ "signs": {"er": [560, 25, 660, 59], "irre": [820, 25, 940, 59]}
+}

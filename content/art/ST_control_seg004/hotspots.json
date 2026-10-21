@@ -1,0 +1,367 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg004",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 4 · tourner, presser, s'ouvrir",
+ "divider_x": 800,
+ "note": "Tiered verb place. -er LEFT (organ grinder turning his handle, woman resting on a bench beside a tall mirror, man squeezing oranges in a press on the balcony, man picking up apples at the upper window with a ram peeking in and a little mirror), -ir/-re RIGHT (gift box springing open by itself with a jack-in-the-box, round wall mirror; man blowing out ten candles on the balcony). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_tourner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tourner_verb",
+   "text": "tourner",
+   "box": [
+    129,
+    640,
+    207,
+    666
+   ],
+   "text_box": [
+    133,
+    644,
+    203,
+    662
+   ]
+  },
+  "fr_reposer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_reposer_verb",
+   "text": "se reposer",
+   "box": [
+    359,
+    587,
+    465,
+    613
+   ],
+   "text_box": [
+    363,
+    591,
+    461,
+    609
+   ]
+  },
+  "fr_presser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_presser_verb",
+   "text": "presser",
+   "box": [
+    376,
+    218,
+    454,
+    244
+   ],
+   "text_box": [
+    380,
+    222,
+    450,
+    240
+   ]
+  },
+  "fr_ramasser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ramasser_verb",
+   "text": "se ramasser",
+   "box": [
+    98,
+    162,
+    214,
+    188
+   ],
+   "text_box": [
+    102,
+    166,
+    210,
+    184
+   ]
+  },
+  "fr_ouvrir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ouvrir_verb",
+   "text": "s'ouvrir",
+   "box": [
+    1057,
+    637,
+    1145,
+    663
+   ],
+   "text_box": [
+    1061,
+    641,
+    1141,
+    659
+   ]
+  },
+  "fr_eteindre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_eteindre_verb",
+   "text": "éteindre",
+   "box": [
+    1075,
+    256,
+    1163,
+    282
+   ],
+   "text_box": [
+    1079,
+    260,
+    1159,
+    278
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 5 →",
+   "box": [
+    660,
+    430,
+    820,
+    540
+   ],
+   "text_box": [
+    666,
+    436,
+    814,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 3",
+   "box": [
+    470,
+    676,
+    930,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    924,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    560,
+    25,
+    660,
+    59
+   ],
+   "text_box": [
+    563,
+    28,
+    657,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    820,
+    25,
+    940,
+    59
+   ],
+   "text_box": [
+    823,
+    28,
+    937,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_tourner_verb",
+   "lemma": "tourner",
+   "gloss": "to turn",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    62,
+    350,
+    275,
+    672
+   ],
+   "label_xy": [
+    168,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_reposer_verb",
+   "lemma": "reposer",
+   "gloss": "to put back; (se reposer = rest)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    312,
+    375,
+    512,
+    619
+   ],
+   "label_xy": [
+    412,
+    607
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se reposer",
+   "scene": "",
+   "mirror": "tall mirror on the wall beside the bench"
+  },
+  {
+   "id": "fr_presser_verb",
+   "lemma": "presser",
+   "gloss": "to press, squeeze",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    319,
+    75,
+    512,
+    250
+   ],
+   "label_xy": [
+    415,
+    238
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ramasser_verb",
+   "lemma": "ramasser",
+   "gloss": "to pick up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    81,
+    44,
+    231,
+    194
+   ],
+   "label_xy": [
+    156,
+    182
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se ramasser",
+   "scene": "",
+   "mirror": "small round mirror on the window sill"
+  },
+  {
+   "id": "fr_ouvrir_verb",
+   "lemma": "ouvrir",
+   "gloss": "to open",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    938,
+    350,
+    1265,
+    669
+   ],
+   "label_xy": [
+    1101,
+    657
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'ouvrir",
+   "scene": "",
+   "mirror": "round mirror on the wall by the door"
+  },
+  {
+   "id": "fr_eteindre_verb",
+   "lemma": "éteindre",
+   "gloss": "to switch off, put out",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    1038,
+    75,
+    1200,
+    288
+   ],
+   "label_xy": [
+    1119,
+    276
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg005",
+   "box": [
+    660,
+    430,
+    820,
+    540
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 5",
+   "sign": "étape 5 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg003",
+   "box": [
+    470,
+    676,
+    930,
+    712
+   ],
+   "label": "Back up the lane to étape 3",
+   "name": "Rue des Gestes, étape 3",
+   "sign": "← étape 3",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 2,
+  "upper": 1
+ }
+}

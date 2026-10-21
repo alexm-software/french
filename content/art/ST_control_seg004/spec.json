@@ -1,0 +1,17 @@
+{"divider_x": 800,
+ "name": "Rue des Gestes — étape 4 · tourner, presser, s'ouvrir",
+ "note": "Tiered verb place. -er LEFT (organ grinder turning his handle, woman resting on a bench beside a tall mirror, man squeezing oranges in a press on the balcony, man picking up apples at the upper window with a ram peeking in and a little mirror), -ir/-re RIGHT (gift box springing open by itself with a jack-in-the-box, round wall mirror; man blowing out ten candles on the balcony). Forward = far lane; back = near cobbles.",
+ "items": [
+  {"id": "fr_tourner_verb", "box": [62, 350, 275, 672], "tier": "street"},
+  {"id": "fr_reposer_verb", "box": [312, 375, 512, 619], "tier": "street", "mirror": "tall mirror on the wall beside the bench"},
+  {"id": "fr_presser_verb", "box": [319, 75, 512, 250], "tier": "balcony"},
+  {"id": "fr_ramasser_verb", "box": [81, 44, 231, 194], "tier": "upper", "mirror": "small round mirror on the window sill"},
+  {"id": "fr_ouvrir_verb", "box": [938, 350, 1265, 669], "tier": "street", "mirror": "round mirror on the wall by the door"},
+  {"id": "fr_eteindre_verb", "box": [1038, 75, 1200, 288], "tier": "balcony"}
+ ],
+ "exits": {
+  "forward": {"target": "ST_control_seg005", "box": [660, 430, 820, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 5", "sign": "étape 5 →"},
+  "back": {"target": "ST_control_seg003", "box": [470, 676, 930, 712], "label": "Back up the lane to étape 3", "name": "Rue des Gestes, étape 3", "sign": "← étape 3"}
+ },
+ "signs": {"er": [560, 25, 660, 59], "irre": [820, 25, 940, 59]}
+}

@@ -1,0 +1,365 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg011",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 11 · plier, boucher, inciter",
+ "divider_x": 1000,
+ "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT buildings (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman folding a sheet into pleats, butcher corking the leaking pump, double-bass player tipping over on his chair), balcony (woman whose birdhouses fill up with sparrows), upper (mule kicking up its hind legs in the barn's hayloft door), roof (man urging the pigeons to take off). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_plier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_plier_verb",
+   "text": "plier",
+   "box": [
+    158,
+    640,
+    216,
+    666
+   ],
+   "text_box": [
+    162,
+    644,
+    212,
+    662
+   ]
+  },
+  "fr_boucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_boucher_verb",
+   "text": "boucher",
+   "box": [
+    417,
+    640,
+    495,
+    666
+   ],
+   "text_box": [
+    421,
+    644,
+    491,
+    662
+   ]
+  },
+  "fr_basculer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_basculer_verb",
+   "text": "basculer",
+   "box": [
+    728,
+    593,
+    816,
+    619
+   ],
+   "text_box": [
+    732,
+    597,
+    812,
+    615
+   ]
+  },
+  "fr_peupler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_peupler_verb",
+   "text": "peupler",
+   "box": [
+    604,
+    330,
+    682,
+    356
+   ],
+   "text_box": [
+    608,
+    334,
+    678,
+    352
+   ]
+  },
+  "fr_ruer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ruer_verb",
+   "text": "ruer",
+   "box": [
+    256,
+    237,
+    306,
+    263
+   ],
+   "text_box": [
+    260,
+    241,
+    302,
+    259
+   ]
+  },
+  "fr_inciter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_inciter_verb",
+   "text": "inciter",
+   "box": [
+    601,
+    130,
+    679,
+    156
+   ],
+   "text_box": [
+    605,
+    134,
+    675,
+    152
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 12 →",
+   "box": [
+    930,
+    450,
+    1060,
+    560
+   ],
+   "text_box": [
+    936,
+    456,
+    1054,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 10",
+   "box": [
+    560,
+    676,
+    1000,
+    712
+   ],
+   "text_box": [
+    566,
+    682,
+    994,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    900,
+    25,
+    1000,
+    59
+   ],
+   "text_box": [
+    903,
+    28,
+    997,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    1020,
+    25,
+    1140,
+    59
+   ],
+   "text_box": [
+    1023,
+    28,
+    1137,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_plier_verb",
+   "lemma": "plier",
+   "gloss": "to fold",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    75,
+    375,
+    300,
+    672
+   ],
+   "label_xy": [
+    187,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_boucher_verb",
+   "lemma": "boucher",
+   "gloss": "to plug, block",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    362,
+    419,
+    550,
+    672
+   ],
+   "label_xy": [
+    456,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_basculer_verb",
+   "lemma": "basculer",
+   "gloss": "to topple, to tip over; to sway from side to side",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    694,
+    419,
+    850,
+    625
+   ],
+   "label_xy": [
+    772,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_peupler_verb",
+   "lemma": "peupler",
+   "gloss": "to populate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    500,
+    194,
+    787,
+    362
+   ],
+   "label_xy": [
+    643,
+    350
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ruer_verb",
+   "lemma": "ruer",
+   "gloss": "to kick with its hind legs; to mob, jump on",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    162,
+    56,
+    400,
+    269
+   ],
+   "label_xy": [
+    281,
+    257
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_inciter_verb",
+   "lemma": "inciter",
+   "gloss": "to urge; to impel",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    519,
+    12,
+    762,
+    162
+   ],
+   "label_xy": [
+    640,
+    150
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg012",
+   "box": [
+    930,
+    450,
+    1060,
+    560
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 12",
+   "sign": "étape 12 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg010",
+   "box": [
+    560,
+    676,
+    1000,
+    712
+   ],
+   "label": "Back up the lane to étape 10",
+   "name": "Rue des Gestes, étape 10",
+   "sign": "← étape 10",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
+}

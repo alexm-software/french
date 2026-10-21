@@ -1,0 +1,366 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg007",
+ "street_id": "ST_control",
+ "sector_id": "S02_home",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Gestes — étape 7 · lancer, frissonner, couvrir",
+ "divider_x": 760,
+ "note": "Tiered verb place. -er LEFT (man throwing a lance at a straw target, woman rushing to snatch her washing from under a little rain cloud, brawny man rattling the balcony railing, shivering man in a blanket at the icicled upper window), -ir/-re RIGHT (woman covering the dove's cage with a cloth; man throwing a striped sheet over his balcony sofa). Forward = far lane; back = near cobbles.",
+ "text_areas": {
+  "fr_lancer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_lancer_verb",
+   "text": "lancer",
+   "box": [
+    206,
+    624,
+    274,
+    650
+   ],
+   "text_box": [
+    210,
+    628,
+    270,
+    646
+   ]
+  },
+  "fr_precipiter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_precipiter_verb",
+   "text": "précipiter",
+   "box": [
+    484,
+    537,
+    590,
+    563
+   ],
+   "text_box": [
+    488,
+    541,
+    586,
+    559
+   ]
+  },
+  "fr_ebranler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ebranler_verb",
+   "text": "ébranler",
+   "box": [
+    293,
+    268,
+    381,
+    294
+   ],
+   "text_box": [
+    297,
+    272,
+    377,
+    290
+   ]
+  },
+  "fr_frissonner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_frissonner_verb",
+   "text": "frissonner",
+   "box": [
+    81,
+    156,
+    187,
+    182
+   ],
+   "text_box": [
+    85,
+    160,
+    183,
+    178
+   ]
+  },
+  "fr_couvrir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_couvrir_verb",
+   "text": "couvrir (de)",
+   "box": [
+    949,
+    630,
+    1075,
+    656
+   ],
+   "text_box": [
+    953,
+    634,
+    1071,
+    652
+   ]
+  },
+  "fr_recouvrir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_recouvrir_verb",
+   "text": "recouvrir",
+   "box": [
+    1055,
+    306,
+    1151,
+    332
+   ],
+   "text_box": [
+    1059,
+    310,
+    1147,
+    328
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "étape 8 →",
+   "box": [
+    680,
+    440,
+    840,
+    540
+   ],
+   "text_box": [
+    686,
+    446,
+    834,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← étape 6",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "text_box": [
+    476,
+    682,
+    954,
+    706
+   ]
+  },
+  "dir_side_er": {
+   "role": "direction",
+   "text": "-er",
+   "box": [
+    560,
+    25,
+    660,
+    59
+   ],
+   "text_box": [
+    563,
+    28,
+    657,
+    56
+   ]
+  },
+  "dir_side_irre": {
+   "role": "direction",
+   "text": "-ir / -re",
+   "box": [
+    790,
+    25,
+    910,
+    59
+   ],
+   "text_box": [
+    793,
+    28,
+    907,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_lancer_verb",
+   "lemma": "lancer",
+   "gloss": "to throw; to launch",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    81,
+    369,
+    400,
+    656
+   ],
+   "label_xy": [
+    240,
+    644
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_precipiter_verb",
+   "lemma": "précipiter",
+   "gloss": "to hurl; to rush",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    437,
+    319,
+    637,
+    569
+   ],
+   "label_xy": [
+    537,
+    557
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ebranler_verb",
+   "lemma": "ébranler",
+   "gloss": "to shake, rattle; to weaken, disturb, unhinge",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    244,
+    100,
+    431,
+    300
+   ],
+   "label_xy": [
+    337,
+    288
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_frissonner_verb",
+   "lemma": "frissonner",
+   "gloss": "to tremble; shiver",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 4,
+   "box": [
+    50,
+    8,
+    219,
+    188
+   ],
+   "label_xy": [
+    134,
+    176
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_couvrir_verb",
+   "lemma": "couvrir",
+   "gloss": "to cover",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    906,
+    388,
+    1119,
+    662
+   ],
+   "label_xy": [
+    1012,
+    650
+   ],
+   "prepositions": [
+    "de"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_recouvrir_verb",
+   "lemma": "recouvrir",
+   "gloss": "to cover",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    969,
+    106,
+    1238,
+    338
+   ],
+   "label_xy": [
+    1103,
+    326
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg008",
+   "box": [
+    680,
+    440,
+    840,
+    540
+   ],
+   "label": "Walk on down the lane",
+   "name": "Rue des Gestes, étape 8",
+   "sign": "étape 8 →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg006",
+   "box": [
+    470,
+    676,
+    960,
+    712
+   ],
+   "label": "Back up the lane to étape 6",
+   "name": "Rue des Gestes, étape 6",
+   "sign": "← étape 6",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 2,
+  "upper": 1
+ }
+}
