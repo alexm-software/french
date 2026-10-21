@@ -258,7 +258,9 @@ function backTarget(place) {
     const room = place.room;
     if (room?.kind === "zoom" && room.parent?.id) {
       const parent = room.parent;
-      const name = localizedName(parent) || parent.sign || parent.name || parent.id;
+      const name = state.lang === "fr"
+        ? (parent.name_fr || parent.sign || parent.name || parent.id)
+        : (parent.name || parent.name_en || parent.sign || parent.id);
       return { href: `#/room/${parent.id}`, label: tf("nav.backTo", { place: name }) };
     }
     if (room?.building_id) {

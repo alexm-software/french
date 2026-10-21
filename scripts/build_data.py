@@ -1089,11 +1089,9 @@ def main():
                     "id": parent["id"],
                     "name": parent["name"],
                     "sign": sign_text(parent, building, signs),
-                    **{
-                        key: value
-                        for key, value in locale_fields(parent, "room", parent["id"], signs, log=False).items()
-                        if key in {"name_fr", "name_en"}
-                    },
+                    # Keep an explicit French sign. Do not split "Name (detail)" into a fake translation.
+                    **({"name_fr": parent["name_fr"]} if parent.get("name_fr") else {}),
+                    **({"name_en": parent["name_en"]} if parent.get("name_en") else {}),
                 },
                 "zooms": zooms,
                 "floors": floors,
