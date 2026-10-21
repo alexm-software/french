@@ -1,0 +1,310 @@
+{
+ "image": "room.png",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "note": "Pixel coords on room.png. 'box' = [x0,y0,x1,y1]; 'polygon' when given is the precise clickable shape. Hotspots later in the list sit on top (z-order), so the chalice, rosary and piggy bank win over the altar and pew. 'mnemonic_box' marks the helper character, which is a separate region from the item.",
+ "text_areas": {
+  "sign": {
+   "box": [
+    432,
+    30,
+    850,
+    158
+   ],
+   "text_box": [
+    470,
+    48,
+    812,
+    140
+   ]
+  },
+  "plaque": {
+   "box": [
+    155,
+    52,
+    297,
+    250
+   ],
+   "text_box": [
+    180,
+    84,
+    274,
+    234
+   ]
+  }
+ },
+ "hotspots": [
+  {
+   "slug": "eau_benite",
+   "label": "l'eau bénite (f)",
+   "side": "left",
+   "box": [
+    5,
+    400,
+    138,
+    622
+   ]
+  },
+  {
+   "slug": "bougie",
+   "label": "la bougie",
+   "side": "left",
+   "box": [
+    18,
+    118,
+    182,
+    272
+   ]
+  },
+  {
+   "slug": "cloche",
+   "label": "la cloche",
+   "side": "left",
+   "box": [
+    185,
+    295,
+    292,
+    420
+   ]
+  },
+  {
+   "slug": "croix",
+   "label": "la croix",
+   "side": "left",
+   "box": [
+    330,
+    160,
+    450,
+    562
+   ],
+   "polygon": [
+    [
+     378,
+     160
+    ],
+    [
+     404,
+     160
+    ],
+    [
+     404,
+     205
+    ],
+    [
+     450,
+     207
+    ],
+    [
+     450,
+     230
+    ],
+    [
+     404,
+     230
+    ],
+    [
+     402,
+     468
+    ],
+    [
+     440,
+     470
+    ],
+    [
+     440,
+     562
+    ],
+    [
+     343,
+     562
+    ],
+    [
+     343,
+     468
+    ],
+    [
+     378,
+     468
+    ],
+    [
+     380,
+     230
+    ],
+    [
+     330,
+     228
+    ],
+    [
+     330,
+     204
+    ],
+    [
+     378,
+     204
+    ]
+   ],
+   "mnemonic_box": [
+    335,
+    535,
+    448,
+    652
+   ],
+   "mnemonic_label": "crow"
+  },
+  {
+   "slug": "chaise",
+   "label": "la chaise",
+   "side": "left",
+   "box": [
+    443,
+    405,
+    618,
+    692
+   ]
+  },
+  {
+   "slug": "autel",
+   "label": "l'autel",
+   "side": "right",
+   "box": [
+    670,
+    335,
+    1002,
+    580
+   ],
+   "polygon": [
+    [
+     730,
+     335
+    ],
+    [
+     1000,
+     335
+    ],
+    [
+     1000,
+     398
+    ],
+    [
+     975,
+     400
+    ],
+    [
+     975,
+     478
+    ],
+    [
+     1000,
+     488
+    ],
+    [
+     1000,
+     560
+    ],
+    [
+     670,
+     580
+    ],
+    [
+     670,
+     535
+    ],
+    [
+     700,
+     500
+    ],
+    [
+     738,
+     488
+    ],
+    [
+     738,
+     400
+    ],
+    [
+     730,
+     398
+    ]
+   ]
+  },
+  {
+   "slug": "calice",
+   "label": "le calice",
+   "side": "right",
+   "box": [
+    843,
+    283,
+    883,
+    345
+   ]
+  },
+  {
+   "slug": "cierge",
+   "label": "le cierge",
+   "side": "right",
+   "box": [
+    974,
+    215,
+    1022,
+    478
+   ]
+  },
+  {
+   "slug": "vitrail",
+   "label": "le vitrail",
+   "side": "right",
+   "box": [
+    1058,
+    22,
+    1162,
+    302
+   ]
+  },
+  {
+   "slug": "encens",
+   "label": "l'encens",
+   "side": "right",
+   "box": [
+    1140,
+    130,
+    1258,
+    472
+   ]
+  },
+  {
+   "slug": "banc",
+   "label": "le banc",
+   "side": "right",
+   "box": [
+    958,
+    462,
+    1280,
+    720
+   ]
+  },
+  {
+   "slug": "chapelet",
+   "label": "le chapelet",
+   "side": "right",
+   "box": [
+    988,
+    475,
+    1044,
+    692
+   ]
+  },
+  {
+   "slug": "piggy_bank",
+   "label": "(mnemonic) piggy bank → le banc",
+   "side": "right",
+   "box": [
+    1064,
+    558,
+    1144,
+    634
+   ],
+   "mnemonic_for": "banc"
+  }
+ ]
+}

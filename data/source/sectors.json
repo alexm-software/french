@@ -1,0 +1,476 @@
+{
+ "sectors": [
+  {
+   "id": "S01_beginner",
+   "name": "Place du Village — Beginner Quarter",
+   "description": "Starting square: greetings, alphabet, sounds, numbers, articles, pronouns, first grammar rules.",
+   "entry_level": "A1",
+   "buildings": [
+    "B02_ecole",
+    "B01_fontaine",
+    "B03_horloge",
+    "B04_atelier_couleurs"
+   ],
+   "streets": [],
+   "adjacent_sectors": [
+    "S02_home",
+    "S03_market",
+    "S06_townhall",
+    "S11_church"
+   ],
+   "word_count": 493,
+   "cefr_counts": {
+    "A1": 245,
+    "A2": 60,
+    "B1": 59,
+    "B2": 60,
+    "C1": 37,
+    "C2": 32
+   }
+  },
+  {
+   "id": "S02_home",
+   "name": "Rue des Maisons — Home",
+   "description": "A family house with every room, garden, garage and attic.",
+   "entry_level": "A1",
+   "buildings": [
+    "B05_maison"
+   ],
+   "streets": [
+    "ST_routine",
+    "ST_control"
+   ],
+   "adjacent_sectors": [
+    "S01_beginner",
+    "S03_market",
+    "S09_nature",
+    "S15_feelings"
+   ],
+   "word_count": 686,
+   "cefr_counts": {
+    "A1": 82,
+    "A2": 87,
+    "B1": 167,
+    "B2": 182,
+    "C1": 106,
+    "C2": 62
+   }
+  },
+  {
+   "id": "S03_market",
+   "name": "Place du Marché — Shops & Market",
+   "description": "Open-air market and the shopping street.",
+   "entry_level": "A1",
+   "buildings": [
+    "B60_balance",
+    "B07_rue_commercante",
+    "B62_couture",
+    "B61_reparation",
+    "B06_marche",
+    "B59_brocante"
+   ],
+   "streets": [
+    "ST_commerce"
+   ],
+   "adjacent_sectors": [
+    "S01_beginner",
+    "S02_home",
+    "S04_cafes",
+    "S05_bank"
+   ],
+   "word_count": 649,
+   "cefr_counts": {
+    "A1": 53,
+    "A2": 67,
+    "B1": 122,
+    "B2": 153,
+    "C1": 147,
+    "C2": 107
+   }
+  },
+  {
+   "id": "S04_cafes",
+   "name": "Rue des Saveurs — Restaurants & Cafés",
+   "description": "Café terrace, bistro, restaurant kitchen and wine cellar.",
+   "entry_level": "A2",
+   "buildings": [
+    "B09_restaurant",
+    "B08_cafe"
+   ],
+   "streets": [
+    "ST_cooking"
+   ],
+   "adjacent_sectors": [
+    "S03_market",
+    "S08_travel",
+    "S14_culture"
+   ],
+   "word_count": 182,
+   "cefr_counts": {
+    "A1": 14,
+    "A2": 21,
+    "B1": 32,
+    "B2": 59,
+    "C1": 35,
+    "C2": 21
+   }
+  },
+  {
+   "id": "S05_bank",
+   "name": "Quai de la Banque — Bank, Work & Economy",
+   "description": "Bank, offices and the business district.",
+   "entry_level": "B1",
+   "buildings": [
+    "B11_bureaux",
+    "B12_zone_artisanale",
+    "B10_banque"
+   ],
+   "streets": [
+    "ST_making",
+    "ST_possession"
+   ],
+   "adjacent_sectors": [
+    "S03_market",
+    "S06_townhall",
+    "S10_university"
+   ],
+   "word_count": 463,
+   "cefr_counts": {
+    "A1": 55,
+    "A2": 63,
+    "B1": 94,
+    "B2": 99,
+    "C1": 74,
+    "C2": 78
+   }
+  },
+  {
+   "id": "S06_townhall",
+   "name": "Place de la Mairie — Town Hall & Government",
+   "description": "Town hall, courthouse, police station, post office and memorial.",
+   "entry_level": "B1",
+   "buildings": [
+    "B63_pompiers",
+    "B16_caserne",
+    "B15_poste",
+    "B14_tribunal",
+    "B13_mairie"
+   ],
+   "streets": [
+    "ST_social",
+    "ST_conflict",
+    "ST_rule"
+   ],
+   "adjacent_sectors": [
+    "S01_beginner",
+    "S05_bank",
+    "S07_health",
+    "S13_museum"
+   ],
+   "word_count": 988,
+   "cefr_counts": {
+    "A1": 81,
+    "A2": 111,
+    "B1": 190,
+    "B2": 276,
+    "C1": 194,
+    "C2": 136
+   }
+  },
+  {
+   "id": "S07_health",
+   "name": "Quartier de la Santé — Health",
+   "description": "Doctor's surgery, pharmacy, hospital, dentist.",
+   "entry_level": "A2",
+   "buildings": [
+    "B17_cabinet",
+    "B18_pharmacie",
+    "B19_hopital"
+   ],
+   "streets": [
+    "ST_body"
+   ],
+   "adjacent_sectors": [
+    "S06_townhall",
+    "S08_travel",
+    "S15_feelings"
+   ],
+   "word_count": 266,
+   "cefr_counts": {
+    "A1": 27,
+    "A2": 29,
+    "B1": 62,
+    "B2": 65,
+    "C1": 45,
+    "C2": 38
+   }
+  },
+  {
+   "id": "S08_travel",
+   "name": "Carrefour des Voyages — Travel",
+   "description": "Railway station, airport, harbour, hotel and the roads.",
+   "entry_level": "A2",
+   "buildings": [
+    "B25_monde",
+    "B23_route",
+    "B22_hotel",
+    "B21_aeroport",
+    "B20_gare",
+    "B24_port"
+   ],
+   "streets": [
+    "ST_movement"
+   ],
+   "adjacent_sectors": [
+    "S04_cafes",
+    "S07_health",
+    "S09_nature"
+   ],
+   "word_count": 430,
+   "cefr_counts": {
+    "A1": 76,
+    "A2": 69,
+    "B1": 78,
+    "B2": 96,
+    "C1": 62,
+    "C2": 49
+   }
+  },
+  {
+   "id": "S09_nature",
+   "name": "Vallée Verte — Nature",
+   "description": "Mountain ski resort, forest, river, beach, campsite and farm around the village.",
+   "entry_level": "A2",
+   "buildings": [
+    "B28_riviere",
+    "B32_ciel",
+    "B30_camping",
+    "B26_montagne",
+    "B27_foret",
+    "B31_ferme",
+    "B29_plage",
+    "B64_serre"
+   ],
+   "streets": [
+    "ST_change",
+    "ST_nature"
+   ],
+   "adjacent_sectors": [
+    "S02_home",
+    "S08_travel",
+    "S11_church",
+    "S16_park"
+   ],
+   "word_count": 596,
+   "cefr_counts": {
+    "A1": 40,
+    "A2": 65,
+    "B1": 124,
+    "B2": 186,
+    "C1": 122,
+    "C2": 59
+   }
+  },
+  {
+   "id": "S10_university",
+   "name": "Campus — University & Schools",
+   "description": "Lycée and university faculties.",
+   "entry_level": "B2",
+   "buildings": [
+    "B33_lycee",
+    "B36_maths",
+    "B34_humanites",
+    "B38_ingenierie",
+    "B37_informatique",
+    "B35_sciences"
+   ],
+   "streets": [
+    "ST_cognition"
+   ],
+   "adjacent_sectors": [
+    "S05_bank",
+    "S13_museum"
+   ],
+   "word_count": 625,
+   "cefr_counts": {
+    "A1": 69,
+    "A2": 86,
+    "B1": 104,
+    "B2": 145,
+    "C1": 113,
+    "C2": 108
+   }
+  },
+  {
+   "id": "S11_church",
+   "name": "Abbaye & Paroisse Notre-Dame — Catholic Quarter",
+   "description": "Parish church, abbey, presbytery and cathedral: Catholic faith, liturgy and prayer.",
+   "entry_level": "A2",
+   "buildings": [
+    "B41_presbytere",
+    "B39_eglise",
+    "B42_cathedrale",
+    "B40_abbaye"
+   ],
+   "streets": [
+    "ST_faith"
+   ],
+   "adjacent_sectors": [
+    "S01_beginner",
+    "S09_nature",
+    "S12_faiths",
+    "S13_museum"
+   ],
+   "word_count": 235,
+   "cefr_counts": {
+    "A1": 7,
+    "A2": 19,
+    "B1": 29,
+    "B2": 43,
+    "C1": 49,
+    "C2": 88
+   }
+  },
+  {
+   "id": "S12_faiths",
+   "name": "Rue de la Concorde — Other Places of Worship",
+   "description": "Respectful visits to a synagogue, a mosque, a Protestant temple and an Orthodox church.",
+   "entry_level": "B2",
+   "buildings": [
+    "B43_concorde"
+   ],
+   "streets": [],
+   "adjacent_sectors": [
+    "S11_church",
+    "S13_museum"
+   ],
+   "word_count": 19,
+   "cefr_counts": {
+    "A2": 1,
+    "B1": 2,
+    "B2": 5,
+    "C1": 8,
+    "C2": 3
+   }
+  },
+  {
+   "id": "S13_museum",
+   "name": "Musée du Village — Museum",
+   "description": "Art galleries, history wing and the text gallery for mature words.",
+   "entry_level": "B2",
+   "buildings": [
+    "B44_musee"
+   ],
+   "streets": [
+    "ST_perception",
+    "ST_existence"
+   ],
+   "adjacent_sectors": [
+    "S06_townhall",
+    "S10_university",
+    "S11_church",
+    "S12_faiths",
+    "S14_culture"
+   ],
+   "word_count": 554,
+   "cefr_counts": {
+    "A1": 51,
+    "A2": 61,
+    "B1": 85,
+    "B2": 151,
+    "C1": 121,
+    "C2": 85
+   }
+  },
+  {
+   "id": "S14_culture",
+   "name": "Boulevard des Loisirs — Culture, Media & Sport",
+   "description": "Theatre, cinema, music school, stadium, games room and the newsstand.",
+   "entry_level": "B1",
+   "buildings": [
+    "B49_kiosque",
+    "B48_jeux",
+    "B47_stade",
+    "B46_conservatoire",
+    "B45_theatre"
+   ],
+   "streets": [
+    "ST_communication",
+    "ST_play"
+   ],
+   "adjacent_sectors": [
+    "S04_cafes",
+    "S13_museum",
+    "S15_feelings",
+    "S16_park"
+   ],
+   "word_count": 660,
+   "cefr_counts": {
+    "A1": 80,
+    "A2": 96,
+    "B1": 123,
+    "B2": 157,
+    "C1": 112,
+    "C2": 92
+   }
+  },
+  {
+   "id": "S15_feelings",
+   "name": "Jardin des Cœurs — Emotions & People",
+   "description": "A walled garden of pavilions for feelings, character and relationships.",
+   "entry_level": "A2",
+   "buildings": [
+    "B51_portraits",
+    "B50_pavillons"
+   ],
+   "streets": [
+    "ST_emotion"
+   ],
+   "adjacent_sectors": [
+    "S02_home",
+    "S07_health",
+    "S14_culture",
+    "S16_park"
+   ],
+   "word_count": 631,
+   "cefr_counts": {
+    "A1": 62,
+    "A2": 70,
+    "B1": 114,
+    "B2": 169,
+    "C1": 131,
+    "C2": 85
+   }
+  },
+  {
+   "id": "S16_park",
+   "name": "Parc des Curiosités — Fairground & Park",
+   "description": "A fairground park by the pond: hall of mirrors, strongman tent, show-judging tent, circus big top, hedge maze, the Opposites Bridge and the Idiom Garden.",
+   "entry_level": "A2",
+   "buildings": [
+    "B57_pont",
+    "B58_proverbes",
+    "B56_labyrinthe",
+    "B54_concours",
+    "B52_miroirs",
+    "B55_cirque",
+    "B53_hercule"
+   ],
+   "streets": [],
+   "adjacent_sectors": [
+    "S09_nature",
+    "S14_culture",
+    "S15_feelings"
+   ],
+   "word_count": 523,
+   "cefr_counts": {
+    "A1": 73,
+    "A2": 66,
+    "B1": 77,
+    "B2": 115,
+    "C1": 123,
+    "C2": 69
+   }
+  }
+ ]
+}

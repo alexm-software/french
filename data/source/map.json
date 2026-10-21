@@ -1,0 +1,654 @@
+{
+ "start": "S01_beginner",
+ "start_room": "R_greet",
+ "sectors": [
+  "S01_beginner",
+  "S02_home",
+  "S03_market",
+  "S04_cafes",
+  "S05_bank",
+  "S06_townhall",
+  "S07_health",
+  "S08_travel",
+  "S09_nature",
+  "S10_university",
+  "S11_church",
+  "S12_faiths",
+  "S13_museum",
+  "S14_culture",
+  "S15_feelings",
+  "S16_park"
+ ],
+ "adjacency": {
+  "S01_beginner": [
+   "S02_home",
+   "S03_market",
+   "S06_townhall",
+   "S11_church"
+  ],
+  "S02_home": [
+   "S01_beginner",
+   "S03_market",
+   "S09_nature",
+   "S15_feelings"
+  ],
+  "S03_market": [
+   "S01_beginner",
+   "S02_home",
+   "S04_cafes",
+   "S05_bank"
+  ],
+  "S04_cafes": [
+   "S03_market",
+   "S08_travel",
+   "S14_culture"
+  ],
+  "S05_bank": [
+   "S03_market",
+   "S06_townhall",
+   "S10_university"
+  ],
+  "S06_townhall": [
+   "S01_beginner",
+   "S05_bank",
+   "S07_health",
+   "S13_museum"
+  ],
+  "S07_health": [
+   "S06_townhall",
+   "S08_travel",
+   "S15_feelings"
+  ],
+  "S08_travel": [
+   "S04_cafes",
+   "S07_health",
+   "S09_nature"
+  ],
+  "S09_nature": [
+   "S02_home",
+   "S08_travel",
+   "S11_church",
+   "S16_park"
+  ],
+  "S10_university": [
+   "S05_bank",
+   "S13_museum"
+  ],
+  "S11_church": [
+   "S01_beginner",
+   "S09_nature",
+   "S12_faiths",
+   "S13_museum"
+  ],
+  "S12_faiths": [
+   "S11_church",
+   "S13_museum"
+  ],
+  "S13_museum": [
+   "S06_townhall",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S14_culture"
+  ],
+  "S14_culture": [
+   "S04_cafes",
+   "S13_museum",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S15_feelings": [
+   "S02_home",
+   "S07_health",
+   "S14_culture",
+   "S16_park"
+  ],
+  "S16_park": [
+   "S09_nature",
+   "S14_culture",
+   "S15_feelings"
+  ]
+ },
+ "overview_map_links": {
+  "S01_beginner": [
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S02_home": [
+   "S01_beginner",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S03_market": [
+   "S01_beginner",
+   "S02_home",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S04_cafes": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S05_bank": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S06_townhall": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S07_health": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S08_travel": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S09_nature": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S10_university": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S11_church": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S12_faiths": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S13_museum": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S14_culture",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S14_culture": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S15_feelings",
+   "S16_park"
+  ],
+  "S15_feelings": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S16_park"
+  ],
+  "S16_park": [
+   "S01_beginner",
+   "S02_home",
+   "S03_market",
+   "S04_cafes",
+   "S05_bank",
+   "S06_townhall",
+   "S07_health",
+   "S08_travel",
+   "S09_nature",
+   "S10_university",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum",
+   "S14_culture",
+   "S15_feelings"
+  ]
+ },
+ "suggested_route": [
+  {
+   "order": 1,
+   "sector_id": "S01_beginner",
+   "cefr_focus": "A1",
+   "note": "start: greetings, alphabet, numbers, articles, pronouns, grammar"
+  },
+  {
+   "order": 2,
+   "sector_id": "S02_home",
+   "cefr_focus": "A1",
+   "note": ""
+  },
+  {
+   "order": 3,
+   "sector_id": "S03_market",
+   "cefr_focus": "A1",
+   "note": ""
+  },
+  {
+   "order": 4,
+   "sector_id": "S04_cafes",
+   "cefr_focus": "A2",
+   "note": ""
+  },
+  {
+   "order": 5,
+   "sector_id": "S11_church",
+   "cefr_focus": "A2",
+   "note": "brought forward (A2) at the user's request: prayers and Mass vocabulary early"
+  },
+  {
+   "order": 6,
+   "sector_id": "S09_nature",
+   "cefr_focus": "A2",
+   "note": ""
+  },
+  {
+   "order": 7,
+   "sector_id": "S08_travel",
+   "cefr_focus": "A2",
+   "note": ""
+  },
+  {
+   "order": 8,
+   "sector_id": "S07_health",
+   "cefr_focus": "A2",
+   "note": ""
+  },
+  {
+   "order": 9,
+   "sector_id": "S15_feelings",
+   "cefr_focus": "A2",
+   "note": ""
+  },
+  {
+   "order": 10,
+   "sector_id": "S16_park",
+   "cefr_focus": "A2",
+   "note": "fairground park after the emotions garden: size, strength, quality, manner, place words, opposites bridge, idiom garden"
+  },
+  {
+   "order": 11,
+   "sector_id": "S14_culture",
+   "cefr_focus": "B1",
+   "note": ""
+  },
+  {
+   "order": 12,
+   "sector_id": "S06_townhall",
+   "cefr_focus": "B1",
+   "note": ""
+  },
+  {
+   "order": 13,
+   "sector_id": "S05_bank",
+   "cefr_focus": "B1",
+   "note": ""
+  },
+  {
+   "order": 14,
+   "sector_id": "S10_university",
+   "cefr_focus": "B2",
+   "note": ""
+  },
+  {
+   "order": 15,
+   "sector_id": "S13_museum",
+   "cefr_focus": "B2",
+   "note": ""
+  },
+  {
+   "order": 16,
+   "sector_id": "S12_faiths",
+   "cefr_focus": "B2",
+   "note": ""
+  }
+ ],
+ "route_legs": [
+  {
+   "from": "S01_beginner",
+   "to": "S02_home",
+   "walk": [
+    "S01_beginner",
+    "S02_home"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S02_home",
+   "to": "S03_market",
+   "walk": [
+    "S02_home",
+    "S03_market"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S03_market",
+   "to": "S04_cafes",
+   "walk": [
+    "S03_market",
+    "S04_cafes"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S04_cafes",
+   "to": "S11_church",
+   "walk": [
+    "S04_cafes",
+    "S03_market",
+    "S01_beginner",
+    "S11_church"
+   ],
+   "neighbours": false
+  },
+  {
+   "from": "S11_church",
+   "to": "S09_nature",
+   "walk": [
+    "S11_church",
+    "S09_nature"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S09_nature",
+   "to": "S08_travel",
+   "walk": [
+    "S09_nature",
+    "S08_travel"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S08_travel",
+   "to": "S07_health",
+   "walk": [
+    "S08_travel",
+    "S07_health"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S07_health",
+   "to": "S15_feelings",
+   "walk": [
+    "S07_health",
+    "S15_feelings"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S15_feelings",
+   "to": "S16_park",
+   "walk": [
+    "S15_feelings",
+    "S16_park"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S16_park",
+   "to": "S14_culture",
+   "walk": [
+    "S16_park",
+    "S14_culture"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S14_culture",
+   "to": "S06_townhall",
+   "walk": [
+    "S14_culture",
+    "S13_museum",
+    "S06_townhall"
+   ],
+   "neighbours": false
+  },
+  {
+   "from": "S06_townhall",
+   "to": "S05_bank",
+   "walk": [
+    "S06_townhall",
+    "S05_bank"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S05_bank",
+   "to": "S10_university",
+   "walk": [
+    "S05_bank",
+    "S10_university"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S10_university",
+   "to": "S13_museum",
+   "walk": [
+    "S10_university",
+    "S13_museum"
+   ],
+   "neighbours": true
+  },
+  {
+   "from": "S13_museum",
+   "to": "S12_faiths",
+   "walk": [
+    "S13_museum",
+    "S12_faiths"
+   ],
+   "neighbours": true
+  }
+ ],
+ "alternative_routes": {
+  "faith_first": [
+   "S01_beginner",
+   "S11_church",
+   "S12_faiths",
+   "S13_museum"
+  ],
+  "traveller": [
+   "S01_beginner",
+   "S03_market",
+   "S04_cafes",
+   "S08_travel",
+   "S07_health"
+  ],
+  "professional": [
+   "S01_beginner",
+   "S06_townhall",
+   "S05_bank",
+   "S10_university",
+   "S13_museum"
+  ],
+  "family_day_out": [
+   "S01_beginner",
+   "S02_home",
+   "S15_feelings",
+   "S16_park",
+   "S09_nature"
+  ]
+ },
+ "notes": "Every sector is reachable from the overview map (teleport) and by walking between neighbouring sectors (adjacency). Inside a sector, buildings are ordered by mean CEFR level; rooms likewise."
+}
