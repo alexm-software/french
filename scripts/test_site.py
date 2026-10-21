@@ -19,28 +19,12 @@ def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def assert_real_cafe(room):
-    assert room["sign"] == "Café de la Place"
-    assert room["scene"]["placeholder"] is False
-    assert room["scene"]["plaque_text"] == "L'étage"
-    assert room["scene"]["text_areas"]["sign"]["text_box"]
-    assert room["scene"]["text_areas"]["plaque"]["text_box"]
-    ids = {word["id"] for word in room["words"]}
-    assert "fr_troc_noun" in ids and len(ids) == 12
-    hot_ids = {hot.get("word_id") for hot in room["scene"]["hotspots"] if hot.get("word_id")}
-    assert ids <= hot_ids
-    assert any(hot.get("helper") and hot.get("word_id") == "fr_troc_noun" for hot in room["scene"]["hotspots"])
-    troc = next(word for word in room["words"] if word["id"] == "fr_troc_noun")
-    assert troc["mnemonic_explain"]
-    assert troc["gender"] == "m" and troc["head"] == "le troc"
-    carafe = next(word for word in room["words"] if word["lemma"] == "carafe")
-    assert carafe["cognate_type"] == "true_cognate"
-    assert carafe["ipa"] and carafe["respelling"]
-
-
 def main():
     index = load(DATA / "index.json")
     assert index["open_sectors"] == ["S04_cafes"], index["open_sectors"]
+    assert not index.get("open_rooms")
+    assert index["featured"]["kind"] == "sector"
+    assert index["featured"]["id"] == "S04_cafes"
     assert len(index["sectors"]) == 16
     assert index["start"] == "S01_beginner"
     assert any(item["id"] == "faith_first" for item in index["alternatives"])
@@ -53,91 +37,110 @@ def main():
     assert sector["open"] is True
     ids = [building["id"] for building in sector["buildings"]]
     assert ids == ["B09_restaurant", "B08_cafe", "ST_cooking"], ids
+    assert sector["scene"]["image"].endswith("art/S04_sector/base.jpg")
+    assert sector["scene"]["sign_text"] == "Rue des Saveurs"
+    assert sector["scene"]["placeholder"] is False
+    link_targets = [link["target"] for link in sector["scene"]["links"]]
+    assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
+    assert len(sector["alleys"]) == 11
+    assert sector["alleys"][0]["verbs"][0] == "nourrir"
+    assert "bannir" not in {verb for alley in sector["alleys"] for verb in alley["verbs"]}
+
     street = next(building for building in sector["buildings"] if building["id"] == "ST_cooking")
     segments = [room["id"] for room in street["floors"][0]["rooms"]]
-    assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 15)], segments
-    assert [room["chip"] for room in street["floors"][0]["rooms"]] == [str(i) for i in range(1, 15)]
+    assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 12)], segments
+    assert [room["chip"] for room in street["floors"][0]["rooms"]] == [str(i) for i in range(1, 12)]
+    assert "ST_cooking" not in sector["walk"]
+    assert not any(room_id.startswith("ST_cooking") for room_id in sector["walk"])
 
     restaurant = next(building for building in sector["buildings"] if building["id"] == "B09_restaurant")
     ground = restaurant["floors"][0]["rooms"]
     assert [room["id"] for room in ground] == ["R_resto_kitchen_01", "R_resto_room", "R_wine_01"], [room["id"] for room in ground]
-
-    if index.get("open_rooms"):
-        assert index["open_rooms"] == ["R_cafe_02"]
-        assert index["featured"]["id"] == "R_cafe_02"
-        assert index["featured"]["sign"] == "Café de la Place"
-        cafe_building = next(building for building in sector["buildings"] if building["id"] == "B08_cafe")
-        cafe_flags = {room["id"]: room["open"] for floor in cafe_building["floors"] for room in floor["rooms"]}
-        assert cafe_flags == {"R_cafe_01": False, "R_cafe_02": True}, cafe_flags
-        assert all(not room["open"] for floor in restaurant["floors"] for room in floor["rooms"])
-        assert [path.name for path in sorted((DATA / "rooms").glob("*.json"))] == ["R_cafe_02.json"]
-        assert_real_cafe(load(DATA / "rooms" / "R_cafe_02.json"))
-        quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
-        assert len(quiz["items"]) == 12
-        finish(quiz)
-        return
+    assert any(link["target"] == "R_resto_room" for link in restaurant["scene"]["links"])
+    cafe_building = next(building for building in sector["buildings"] if building["id"] == "B08_cafe")
+    assert {link["target"] for link in cafe_building["scene"]["links"]} == {"R_cafe_01", "R_cafe_02"}
 
     cafe = load(DATA / "rooms" / "R_cafe_01.json")
     assert cafe["sign"] == "La terrasse"
+    assert cafe["scene"]["placeholder"] is False
     assert [floor["label"] for floor in cafe["floors"]] == ["Ground floor", "Upstairs"]
-    assert cafe["scene"]["placeholder"] is True
-    assert cafe["scene"]["text_areas"]["sign"]["text_box"]
     word_ids = {word["id"] for word in cafe["words"]}
-    hot_ids = {hot.get("word_id") for hot in cafe["scene"]["hotspots"] if hot.get("word_id")}
+    hot_ids = {hot.get("word_id") for hot in cafe["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper")}
     assert word_ids <= hot_ids
 
     upstairs = load(DATA / "rooms" / "R_cafe_02.json")
     assert upstairs["floor_label"] == "Upstairs"
-    assert_real_cafe(upstairs)
+    assert upstairs["sign"] == "L'étage"
+    assert upstairs["scene"]["placeholder"] is False
+    assert not upstairs["scene"].get("plaque_text")
+    assert len(upstairs["words"]) == 12
+    troc = next(word for word in upstairs["words"] if word["id"] == "fr_troc_noun")
+    assert troc["mnemonic_explain"] and troc["gender"] == "m" and troc["head"] == "le troc"
+    assert any(hot.get("helper") and hot.get("word_id") == "fr_troc_noun" for hot in upstairs["scene"]["hotspots"])
 
     dining = load(DATA / "rooms" / "R_resto_room.json")
     zoom = next(hot for hot in dining["scene"]["hotspots"] if hot.get("zoom_id") == "R_resto_room_z1")
-    assert zoom["polygon"] and len(zoom["polygon"]) >= 3
+    assert zoom["box"] and zoom["label"] == "Le comptoir"
     ground_ids = [room["id"] for room in dining["floors"][0]["rooms"]]
     assert ground_ids == ["R_resto_kitchen_01", "R_resto_room", "R_wine_01"], ground_ids
     bar = load(DATA / "rooms" / "R_resto_room_z1.json")
     assert bar["parent"]["id"] == "R_resto_room"
     assert bar["words"]
+    assert (ROOT / "public" / "art" / "R_resto_room" / "base.jpg").stat().st_size > 100000
+    assert (ROOT / "public" / "art" / "R_resto_kitchen_01" / "base.jpg").stat().st_size > 100000
 
     kitchen = load(DATA / "rooms" / "R_resto_kitchen_02.json")
     assert kitchen["floor"] == 2
 
     seg = load(DATA / "rooms" / "ST_cooking_seg001.json")
     lemmas = {word["lemma"] for word in seg["words"]}
-    assert "déshonorer" not in lemmas  # it lives on a later segment, and must not be invented here
-    boire = next(word for word in seg["words"] if word["lemma"] == "boire")
-    assert boire["conjugations"]["present"][0] == "je bois"
-    assert "ils/elles boivent" in boire["conjugations"]["present"]
+    assert lemmas == {"nourrir", "écraser", "dévorer", "déjeuner", "servir", "manger"}
+    assert seg["scene"]["links"] == [{
+        "target": "S04_sector",
+        "box": seg["scene"]["links"][0]["box"],
+        "label": "Back to the square",
+        "exit": True,
+    }] or (len(seg["scene"]["links"]) == 1 and seg["scene"]["links"][0]["target"] == "S04_sector" and seg["scene"]["links"][0]["exit"] is True)
+    assert seg["scene"]["exits"] == {}
+    assert seg["prev"] is None and seg["next"] is None
+    assert not any(str(item["id"]).startswith("ST_") for item in seg["related"])
     servir = next(word for word in seg["words"] if word["lemma"] == "servir")
     assert servir["prepositions"] == ["à", "de"]
     assert servir["conjugations"]["present"][0] == "je sers"
     assert servir["conjugations"]["imperatif"] == ["sers", "servons", "servez"]
+    assert seg["scene"]["text_areas"]["fr_servir_verb_plaque"]["text"] == "à / de"
     assert seg["conversation"]["lines"]
-    assert any("boire" in line["fr"] or "bois" in line["fr"] or "boire" in line["fr"] for line in seg["conversation"]["lines"]) or any(
-        word["lemma"] in line["fr"] for line in seg["conversation"]["lines"] for word in seg["words"]
-    )
+    assert any(word["lemma"] in line["fr"] for line in seg["conversation"]["lines"] for word in seg["words"])
 
-    later = load(DATA / "rooms" / "ST_cooking_seg013.json")
-    assert any(word["lemma"] == "bannir" for word in later["words"]), "corrected later; do not drop current data"
-    street_chips = [room["chip"] for room in later["floors"][0]["rooms"]]
-    assert street_chips == [str(i) for i in range(1, 15)], street_chips
+    later = load(DATA / "rooms" / "ST_cooking_seg011.json")
     assert later["sign"] == "Ruelle des Gourmets"
-    museum_room = load(DATA / "rooms" / "ST_cooking_seg005.json")
-    museum = next(word for word in museum_room["words"] if word["lemma"] == "abattre")
-    assert museum["display"] == "museum_text"
-    assert "plaque" in museum["mnemonic_explain"].lower()
-    assert "drawing" in museum["mnemonic_explain"].lower()
+    assert [room["chip"] for room in later["floors"][0]["rooms"]] == [str(i) for i in range(1, 12)]
+    assert not (DATA / "rooms" / "ST_cooking_seg013.json").exists()
+    mirrored = load(DATA / "rooms" / "ST_cooking_seg004.json")
+    assert any(hot.get("mirror") for hot in mirrored["scene"]["hotspots"])
 
     wine = load(DATA / "rooms" / "R_wine_01.json")
     cave = next(word for word in wine["words"] if word["lemma"] == "cave")
     assert cave["cognate_type"] == "false_cognate"
     assert cave["false_cognate_note"]
+    whisky = next(word for word in wine["words"] if word["lemma"] == "whisky")
+    assert whisky["painted"] is False
     zoom_wine = load(DATA / "rooms" / "R_wine_01_z1.json")
     assert zoom_wine["parent"]["id"] == "R_wine_01"
+    drawn = next(word for word in zoom_wine["words"] if word["lemma"] == "whisky")
+    assert drawn["painted"] is True
+    assert any(hot.get("word_id") == "fr_whisky_noun" and not hot.get("helper") for hot in zoom_wine["scene"]["hotspots"])
 
-    quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
-    assert len(quiz["items"]) == 182
+    room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
+    assert len(room_files) == 19, room_files
     assert not (DATA / "rooms" / "R_greet.json").exists()
+    quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
+    seen = []
+    for path in (DATA / "rooms").glob("*.json"):
+        for word in load(path)["words"]:
+            seen.append(word["id"])
+    assert len(quiz["items"]) == len(set(seen))
+    assert len(quiz["items"]) > 100
 
     finish(quiz)
 
@@ -154,6 +157,15 @@ def finish(quiz):
     assert croix["polygon"] and croix["mnemonic_box"]
     pig = next(hot for hot in scene["hotspots"] if hot.get("mnemonic_for") == "banc")
     assert pig["box"]
+
+    street = normalize_scene(load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json"))
+    assert street["exits"]["prev"]["target"] == "S04_sector"
+    assert street["exits"]["next"]["target"] == "ST_cooking_seg002"
+    assert street["links"] == []
+    sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
+    assert [link["target"] for link in sector["links"]] == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"]
+    assert sector["exits"] == {}
+
     delivered = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_02" / "hotspots.json"))
     assert len(delivered["hotspots"]) == 12
     assert delivered["hotspots"][0]["word_id"] == "fr_tuilerie_noun"

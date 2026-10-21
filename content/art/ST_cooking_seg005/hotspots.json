@@ -1,142 +1,366 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg005",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    22,
+    68,
+    168,
+    142
+   ],
+   "text_box": [
+    37,
+    79,
+    153,
+    131
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_galoper_verb",
-      "slug": "fr_galoper_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_griller_verb",
-      "slug": "fr_griller_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_abattre_verb",
-      "slug": "fr_abattre_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_aspirer_verb",
-      "slug": "fr_aspirer_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_ravir_verb",
-      "slug": "fr_ravir_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_plaquer_verb",
-      "slug": "fr_plaquer_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_consommer_verb_sign": {
+   "box": [
+    98,
+    302,
+    228,
+    342
+   ],
+   "text_box": [
+    111,
+    308,
+    215,
+    336
+   ],
+   "text": "consommer"
+  },
+  "fr_consommer_verb_plaque": {
+   "box": [
+    228,
+    388,
+    256,
+    420
+   ],
+   "text_box": [
+    231,
+    392,
+    253,
+    416
+   ],
+   "text": ""
+  },
+  "fr_deguster_verb_sign": {
+   "box": [
+    312,
+    302,
+    440,
+    342
+   ],
+   "text_box": [
+    325,
+    308,
+    427,
+    336
+   ],
+   "text": "déguster"
+  },
+  "fr_deguster_verb_plaque": {
+   "box": [
+    438,
+    388,
+    464,
+    420
+   ],
+   "text_box": [
+    441,
+    392,
+    461,
+    416
+   ],
+   "text": ""
+  },
+  "fr_verser_verb_sign": {
+   "box": [
+    510,
+    302,
+    632,
+    342
+   ],
+   "text_box": [
+    522,
+    308,
+    620,
+    336
+   ],
+   "text": "verser"
+  },
+  "fr_verser_verb_plaque": {
+   "box": [
+    470,
+    380,
+    498,
+    410
+   ],
+   "text_box": [
+    473,
+    384,
+    495,
+    406
+   ],
+   "text": ""
+  },
+  "fr_sucrer_verb_sign": {
+   "box": [
+    705,
+    302,
+    835,
+    345
+   ],
+   "text_box": [
+    718,
+    308,
+    822,
+    339
+   ],
+   "text": "sucrer"
+  },
+  "fr_sucrer_verb_plaque": {
+   "box": [
+    828,
+    392,
+    860,
+    422
+   ],
+   "text_box": [
+    832,
+    396,
+    856,
+    418
+   ],
+   "text": ""
+  },
+  "fr_bouffer_verb_sign": {
+   "box": [
+    905,
+    302,
+    1030,
+    347
+   ],
+   "text_box": [
+    917,
+    309,
+    1018,
+    340
+   ],
+   "text": "bouffer"
+  },
+  "fr_bouffer_verb_plaque": {
+   "box": [
+    1020,
+    388,
+    1045,
+    420
+   ],
+   "text_box": [
+    1023,
+    392,
+    1042,
+    416
+   ],
+   "text": ""
+  },
+  "fr_alimenter_verb_sign": {
+   "box": [
+    1098,
+    302,
+    1220,
+    345
+   ],
+   "text_box": [
+    1110,
+    308,
+    1208,
+    339
+   ],
+   "text": "alimenter"
+  },
+  "fr_alimenter_verb_plaque": {
+   "box": [
+    1056,
+    385,
+    1078,
+    410
+   ],
+   "text_box": [
+    1059,
+    388,
+    1075,
+    407
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_consommer_verb",
+   "lemma": "consommer",
+   "box": [
+    110,
+    440,
+    250,
+    540
+   ],
+   "mnemonic_box": [
+    30,
+    400,
+    180,
+    665
+   ],
+   "mnemonic_label": "consume",
+   "door_plaque_box": [
+    228,
+    388,
+    256,
+    420
+   ]
+  },
+  {
+   "id": "fr_deguster_verb",
+   "lemma": "déguster",
+   "box": [
+    300,
+    422,
+    480,
+    560
+   ],
+   "mnemonic_box": [
+    272,
+    345,
+    420,
+    660
+   ],
+   "mnemonic_label": "degust",
+   "door_plaque_box": [
+    438,
+    388,
+    464,
+    420
+   ]
+  },
+  {
+   "id": "fr_verser_verb",
+   "lemma": "verser",
+   "box": [
+    505,
+    420,
+    610,
+    525
+   ],
+   "mnemonic_box": [
+    505,
+    360,
+    655,
+    670
+   ],
+   "mnemonic_label": "Versailles",
+   "door_plaque_box": [
+    470,
+    380,
+    498,
+    410
+   ]
+  },
+  {
+   "id": "fr_sucrer_verb",
+   "lemma": "sucrer",
+   "box": [
+    740,
+    435,
+    840,
+    550
+   ],
+   "mnemonic_box": [
+    660,
+    385,
+    800,
+    655
+   ],
+   "mnemonic_label": "su-KRAY",
+   "door_plaque_box": [
+    828,
+    392,
+    860,
+    422
+   ]
+  },
+  {
+   "id": "fr_bouffer_verb",
+   "lemma": "bouffer",
+   "box": [
+    920,
+    440,
+    1078,
+    560
+   ],
+   "mnemonic_box": [
+    870,
+    410,
+    970,
+    650
+   ],
+   "mnemonic_label": "boo-FAY",
+   "door_plaque_box": [
+    1020,
+    388,
+    1045,
+    420
+   ]
+  },
+  {
+   "id": "fr_alimenter_verb",
+   "lemma": "alimenter",
+   "box": [
+    1080,
+    415,
+    1170,
+    645
+   ],
+   "mnemonic_box": [
+    1145,
+    375,
+    1270,
+    660
+   ],
+   "mnemonic_label": "a-lee-mon-TAY",
+   "door_plaque_box": [
+    1056,
+    385,
+    1078,
+    410
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    670,
+    100,
+    720
+   ],
+   "target": "ST_cooking_seg004"
+  },
+  "next": {
+   "box": [
+    1180,
+    668,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg006"
+  }
+ }
 }

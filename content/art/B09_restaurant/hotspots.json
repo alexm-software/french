@@ -1,0 +1,81 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "Exterior of B09_restaurant (Restaurant Le Bon Goût). No vocabulary words live here; links lead into the restaurant rooms (same 'links' key build_hs.py writes and draws).",
+ "text_areas": {
+  "sign": {
+   "box": [
+    485,
+    184,
+    794,
+    275
+   ],
+   "text_box": [
+    508,
+    196,
+    770,
+    262
+   ]
+  },
+  "plaque": {
+   "box": [
+    385,
+    425,
+    415,
+    455
+   ],
+   "text_box": [
+    388,
+    428,
+    412,
+    452
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_resto_room",
+   "box": [
+    546,
+    362,
+    728,
+    646
+   ],
+   "label": "Main door: dining hall"
+  },
+  {
+   "target": "R_resto_kitchen_01",
+   "box": [
+    60,
+    362,
+    375,
+    650
+   ],
+   "label": "Kitchen side door"
+  },
+  {
+   "target": "R_resto_kitchen_02",
+   "box": [
+    146,
+    187,
+    320,
+    328
+   ],
+   "label": "Upstairs kitchen window"
+  },
+  {
+   "target": "R_wine_01",
+   "box": [
+    893,
+    362,
+    1181,
+    644
+   ],
+   "label": "Wine cellar door"
+  }
+ ]
+}

@@ -1,112 +1,188 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        430,
-        18,
-        850,
-        128
-      ],
-      "text_box": [
-        458,
-        34,
-        822,
-        112
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        22,
-        236,
-        146
-      ],
-      "text_box": [
-        64,
-        40,
-        220,
-        128
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "zoom",
+ "parent_room_id": "R_wine_01",
+ "note": "Zoom on the right-wall bar counter of R_wine_01: every item is masculine, so the whole close-up counts as the right (masculine) side and there is no divider.",
+ "text_areas": {
+  "sign": {
+   "box": [
+    469,
+    28,
+    846,
+    162
+   ],
+   "text_box": [
+    495,
+    45,
+    820,
+    145
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_embouteillage_noun",
+   "lemma": "embouteillage",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'embouteillage",
+   "box": [
+    81,
+    19,
+    438,
+    331
+   ],
+   "mnemonic_box": [
+    140,
+    60,
+    345,
+    272
+   ],
+   "mnemonic_label": "man in socks telling tales in the jam"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_embouteillage_noun",
-      "slug": "fr_embouteillage_noun",
-      "side": "right",
-      "box": [
-        716,
-        227,
-        901,
-        333
-      ]
-    },
-    {
-      "word_id": "fr_cidre_noun",
-      "slug": "fr_cidre_noun",
-      "side": "right",
-      "box": [
-        1006,
-        227,
-        1191,
-        333
-      ]
-    },
-    {
-      "word_id": "fr_vignoble_noun",
-      "slug": "fr_vignoble_noun",
-      "side": "right",
-      "box": [
-        716,
-        398,
-        901,
-        504
-      ],
-      "mnemonic_box": [
-        863,
-        476,
-        909,
-        508
-      ]
-    },
-    {
-      "word_id": "fr_tire_bouchon_noun",
-      "slug": "fr_tire_bouchon_noun",
-      "side": "right",
-      "box": [
-        1006,
-        398,
-        1191,
-        504
-      ]
-    },
-    {
-      "word_id": "fr_alcoolisme_noun",
-      "slug": "fr_alcoolisme_noun",
-      "side": "right",
-      "box": [
-        716,
-        570,
-        901,
-        676
-      ]
-    },
-    {
-      "word_id": "fr_gourmet_noun",
-      "slug": "fr_gourmet_noun",
-      "side": "right",
-      "box": [
-        1006,
-        570,
-        1191,
-        676
-      ]
-    }
-  ]
+  {
+   "id": "fr_alcoolisme_noun",
+   "lemma": "alcoolisme",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'alcoolisme",
+   "box": [
+    722,
+    200,
+    834,
+    319
+   ]
+  },
+  {
+   "id": "fr_vignoble_noun",
+   "lemma": "vignoble",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le vignoble",
+   "box": [
+    885,
+    22,
+    1183,
+    244
+   ],
+   "mnemonic_box": [
+    965,
+    62,
+    1100,
+    244
+   ],
+   "mnemonic_label": "noble lord in his vines"
+  },
+  {
+   "id": "fr_cidre_noun",
+   "lemma": "cidre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cidre",
+   "box": [
+    25,
+    346,
+    203,
+    585
+   ]
+  },
+  {
+   "id": "fr_whisky_noun",
+   "lemma": "whisky",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le whisky",
+   "box": [
+    231,
+    364,
+    369,
+    588
+   ]
+  },
+  {
+   "id": "fr_rhum_noun",
+   "lemma": "rhum",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le rhum",
+   "box": [
+    383,
+    350,
+    538,
+    584
+   ]
+  },
+  {
+   "id": "fr_cognac_noun",
+   "lemma": "cognac",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cognac",
+   "box": [
+    540,
+    352,
+    690,
+    590
+   ]
+  },
+  {
+   "id": "fr_cigare_noun",
+   "lemma": "cigare",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le cigare",
+   "box": [
+    692,
+    412,
+    878,
+    600
+   ]
+  },
+  {
+   "id": "fr_tire_bouchon_noun",
+   "lemma": "tire-bouchon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le tire-bouchon",
+   "box": [
+    880,
+    244,
+    962,
+    578
+   ],
+   "mnemonic_box": [
+    866,
+    244,
+    960,
+    300
+   ],
+   "mnemonic_label": "bush-shaped cork"
+  },
+  {
+   "id": "fr_gourmet_noun",
+   "lemma": "gourmet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le gourmet",
+   "box": [
+    990,
+    248,
+    1238,
+    544
+   ]
+  }
+ ]
 }

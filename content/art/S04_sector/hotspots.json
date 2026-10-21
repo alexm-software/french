@@ -1,0 +1,57 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": null,
+ "kind": "sector_overview",
+ "note": "Overview of sector S04_cafes (Rue des Saveurs). No vocabulary words; clickable links to the two buildings and the verb street Ruelle des Gourmets (enters at segment 1). Blank arch sign over the lane entrance is the sector name area. Same 'links' key build_hs.py writes and draws.",
+ "text_areas": {
+  "sign": {
+   "box": [
+    533,
+    459,
+    730,
+    525
+   ],
+   "text_box": [
+    548,
+    470,
+    715,
+    518
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "B08_cafe",
+   "box": [
+    0,
+    62,
+    419,
+    600
+   ],
+   "label": "Café de la Place"
+  },
+  {
+   "target": "B09_restaurant",
+   "box": [
+    856,
+    75,
+    1280,
+    650
+   ],
+   "label": "Restaurant Le Bon Goût"
+  },
+  {
+   "target": "ST_cooking_seg001",
+   "box": [
+    420,
+    170,
+    855,
+    456
+   ],
+   "label": "Ruelle des Gourmets (cooking verbs)"
+  }
+ ]
+}

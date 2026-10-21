@@ -1,5 +1,9 @@
-"""Normalize hotspot JSON from either the current vocab-id format or the
-older church specimen (slug, polygon, mnemonic_box, mnemonic_for)."""
+"""Normalize hotspot JSON.
+
+Accepts the church specimen (hotspots, slug, polygon, mnemonic_box) and the
+painting delivery format (items, links, exits, zoom_from, text on text_areas,
+door_plaque_box).
+"""
 
 from __future__ import annotations
 
@@ -26,6 +30,54 @@ def _polygon(value):
     return points
 
 
+def _hot(item):
+    if not isinstance(item, dict):
+        return None
+    box = _box(item.get("box"))
+    polygon = _polygon(item.get("polygon"))
+    if not box and polygon:
+        xs = [p[0] for p in polygon]
+        ys = [p[1] for p in polygon]
+        box = [min(xs), min(ys), max(xs), max(ys)]
+    if not box:
+        return None
+    hot = {
+        "word_id": item.get("word_id") or item.get("id") or None,
+        "slug": item.get("slug") or item.get("lemma") or None,
+        "zoom_id": item.get("zoom_id") or None,
+        "mnemonic_for": item.get("mnemonic_for") or None,
+        "side": item.get("side") or None,
+        "label": item.get("label") or None,
+        "helper": bool(item.get("helper")),
+        "box": box,
+    }
+    if polygon:
+        hot["polygon"] = polygon
+    mnemonic_box = _box(item.get("mnemonic_box"))
+    if mnemonic_box:
+        hot["mnemonic_box"] = mnemonic_box
+    door = _box(item.get("door_plaque")) or _box(item.get("door_plaque_box"))
+    if door:
+        hot["door_plaque"] = door
+    mirror = _box(item.get("mirror_box"))
+    if mirror:
+        hot["mirror_box"] = mirror
+    return hot
+
+
+def _area(area):
+    if not isinstance(area, dict):
+        return None
+    box = _box(area.get("box"))
+    text_box = _box(area.get("text_box")) or box
+    if not box:
+        return None
+    payload = {"box": box, "text_box": text_box}
+    if area.get("text"):
+        payload["text"] = str(area["text"])
+    return payload
+
+
 def normalize_scene(raw):
     """Return a scene dict the client can draw without guessing formats."""
     if not isinstance(raw, dict):
@@ -34,56 +86,59 @@ def normalize_scene(raw):
     height = int(raw.get("height") or 720)
     text_areas = {}
     for name, area in (raw.get("text_areas") or {}).items():
-        if not isinstance(area, dict):
-            continue
-        box = _box(area.get("box"))
-        text_box = _box(area.get("text_box")) or box
-        if not box:
-            continue
-        text_areas[name] = {"box": box, "text_box": text_box}
+        parsed = _area(area)
+        if parsed:
+            text_areas[name] = parsed
 
     hotspots = []
-    # `items` is the delivery format (id, lemma, box). `hotspots` is the older specimen.
     for item in raw.get("hotspots") or raw.get("items") or []:
+        hot = _hot(item)
+        if hot:
+            hotspots.append(hot)
+
+    links = []
+    for item in raw.get("links") or []:
         if not isinstance(item, dict):
             continue
         box = _box(item.get("box"))
-        polygon = _polygon(item.get("polygon"))
-        if not box and polygon:
-            xs = [p[0] for p in polygon]
-            ys = [p[1] for p in polygon]
-            box = [min(xs), min(ys), max(xs), max(ys)]
+        if not box or not item.get("target"):
+            continue
+        links.append({
+            "target": item["target"],
+            "box": box,
+            "label": item.get("label") or "",
+        })
+
+    exits = {}
+    for key, item in (raw.get("exits") or {}).items():
+        if not isinstance(item, dict):
+            continue
+        box = _box(item.get("box"))
         if not box:
             continue
-        hot = {
-            "word_id": item.get("word_id") or item.get("id") or None,
-            "slug": item.get("slug") or item.get("lemma") or None,
-            "zoom_id": item.get("zoom_id") or None,
-            "mnemonic_for": item.get("mnemonic_for") or None,
-            "side": item.get("side") or None,
-            "label": item.get("label") or None,
-            "helper": bool(item.get("helper")),
-            "box": box,
-        }
-        if polygon:
-            hot["polygon"] = polygon
-        mnemonic_box = _box(item.get("mnemonic_box"))
-        if mnemonic_box:
-            hot["mnemonic_box"] = mnemonic_box
-        door = _box(item.get("door_plaque"))
-        if door:
-            hot["door_plaque"] = door
-        mirror = _box(item.get("mirror_box"))
-        if mirror:
-            hot["mirror_box"] = mirror
-        hotspots.append(hot)
+        exits[key] = {"box": box, "target": item.get("target")}
+
+    zoom_from = None
+    raw_zoom = raw.get("zoom_from")
+    if isinstance(raw_zoom, dict):
+        box = _box(raw_zoom.get("box"))
+        if box and raw_zoom.get("room_id"):
+            zoom_from = {
+                "room_id": raw_zoom["room_id"],
+                "box": box,
+                "label": raw_zoom.get("label") or "",
+            }
 
     return {
         "image": raw.get("image") or "base.jpg",
         "width": width,
         "height": height,
-        "divider_x": int(raw.get("divider_x") or width // 2),
+        "divider_x": raw.get("divider_x"),
+        "kind": raw.get("kind"),
         "placeholder": bool(raw.get("placeholder")),
         "text_areas": text_areas,
         "hotspots": hotspots,
+        "links": links,
+        "exits": exits,
+        "zoom_from": zoom_from,
     }

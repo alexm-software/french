@@ -1,142 +1,373 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg004",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    15,
+    168,
+    125,
+    240
+   ],
+   "text_box": [
+    26,
+    179,
+    114,
+    229
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_rechauffer_verb",
-      "slug": "fr_rechauffer_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_loger_verb",
-      "slug": "fr_loger_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_savourer_verb",
-      "slug": "fr_savourer_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_flamber_verb",
-      "slug": "fr_flamber_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_ailler_verb",
-      "slug": "fr_ailler_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_deshonorer_verb",
-      "slug": "fr_deshonorer_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_engloutir_verb_sign": {
+   "box": [
+    118,
+    272,
+    280,
+    328
+   ],
+   "text_box": [
+    134,
+    280,
+    264,
+    320
+   ],
+   "text": "engloutir"
+  },
+  "fr_engloutir_verb_plaque": {
+   "box": [
+    262,
+    402,
+    290,
+    428
+   ],
+   "text_box": [
+    265,
+    405,
+    287,
+    425
+   ],
+   "text": ""
+  },
+  "fr_croquer_verb_sign": {
+   "box": [
+    355,
+    285,
+    488,
+    333
+   ],
+   "text_box": [
+    368,
+    292,
+    475,
+    326
+   ],
+   "text": "croquer"
+  },
+  "fr_croquer_verb_plaque": {
+   "box": [
+    478,
+    390,
+    500,
+    412
+   ],
+   "text_box": [
+    481,
+    393,
+    497,
+    409
+   ],
+   "text": ""
+  },
+  "fr_remuer_verb_sign": {
+   "box": [
+    555,
+    292,
+    660,
+    340
+   ],
+   "text_box": [
+    565,
+    299,
+    650,
+    333
+   ],
+   "text": "remuer"
+  },
+  "fr_remuer_verb_plaque": {
+   "box": [
+    672,
+    405,
+    694,
+    426
+   ],
+   "text_box": [
+    675,
+    408,
+    691,
+    423
+   ],
+   "text": ""
+  },
+  "fr_melanger_verb_sign": {
+   "box": [
+    748,
+    305,
+    858,
+    352
+   ],
+   "text_box": [
+    759,
+    312,
+    847,
+    345
+   ],
+   "text": "mélanger"
+  },
+  "fr_melanger_verb_plaque": {
+   "box": [
+    858,
+    406,
+    880,
+    432
+   ],
+   "text_box": [
+    861,
+    409,
+    877,
+    429
+   ],
+   "text": ""
+  },
+  "fr_trinquer_verb_sign": {
+   "box": [
+    925,
+    340,
+    1020,
+    372
+   ],
+   "text_box": [
+    935,
+    345,
+    1010,
+    367
+   ],
+   "text": "trinquer"
+  },
+  "fr_trinquer_verb_plaque": {
+   "box": [
+    1040,
+    350,
+    1065,
+    375
+   ],
+   "text_box": [
+    1043,
+    353,
+    1062,
+    372
+   ],
+   "text": ""
+  },
+  "fr_emplir_verb_sign": {
+   "box": [
+    1148,
+    322,
+    1262,
+    362
+   ],
+   "text_box": [
+    1159,
+    328,
+    1251,
+    356
+   ],
+   "text": "emplir"
+  },
+  "fr_emplir_verb_plaque": {
+   "box": [
+    1150,
+    370,
+    1176,
+    392
+   ],
+   "text_box": [
+    1153,
+    373,
+    1173,
+    389
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_engloutir_verb",
+   "lemma": "engloutir",
+   "box": [
+    145,
+    495,
+    308,
+    580
+   ],
+   "mnemonic_box": [
+    5,
+    405,
+    240,
+    570
+   ],
+   "mnemonic_label": "on-gloo-TEER",
+   "door_plaque_box": [
+    262,
+    402,
+    290,
+    428
+   ]
+  },
+  {
+   "id": "fr_croquer_verb",
+   "lemma": "croquer",
+   "box": [
+    400,
+    445,
+    500,
+    580
+   ],
+   "mnemonic_box": [
+    310,
+    405,
+    476,
+    590
+   ],
+   "mnemonic_label": "kro-KAY",
+   "door_plaque_box": [
+    478,
+    390,
+    500,
+    412
+   ]
+  },
+  {
+   "id": "fr_remuer_verb",
+   "lemma": "remuer",
+   "box": [
+    570,
+    465,
+    705,
+    595
+   ],
+   "mnemonic_box": [
+    515,
+    350,
+    668,
+    585
+   ],
+   "mnemonic_label": "ruh-mu-AY",
+   "door_plaque_box": [
+    672,
+    405,
+    694,
+    426
+   ]
+  },
+  {
+   "id": "fr_melanger_verb",
+   "lemma": "mélanger",
+   "box": [
+    740,
+    495,
+    890,
+    590
+   ],
+   "mnemonic_box": [
+    728,
+    355,
+    845,
+    540
+   ],
+   "mnemonic_label": "melange",
+   "door_plaque_box": [
+    858,
+    406,
+    880,
+    432
+   ]
+  },
+  {
+   "id": "fr_trinquer_verb",
+   "lemma": "trinquer",
+   "box": [
+    945,
+    415,
+    1000,
+    460
+   ],
+   "mnemonic_box": [
+    895,
+    385,
+    1066,
+    560
+   ],
+   "mnemonic_label": "trinket",
+   "door_plaque_box": [
+    1040,
+    350,
+    1065,
+    375
+   ]
+  },
+  {
+   "id": "fr_emplir_verb",
+   "lemma": "emplir",
+   "box": [
+    1110,
+    410,
+    1240,
+    575
+   ],
+   "mnemonic_box": [
+    1180,
+    368,
+    1270,
+    560
+   ],
+   "mnemonic_label": "ample",
+   "door_plaque_box": [
+    1150,
+    370,
+    1176,
+    392
+   ],
+   "mirror_box": [
+    1068,
+    295,
+    1140,
+    438
+   ],
+   "pronominal_form": "s'emplir"
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    692,
+    140,
+    720
+   ],
+   "target": "ST_cooking_seg003"
+  },
+  "next": {
+   "box": [
+    1170,
+    600,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg005"
+  }
+ }
 }

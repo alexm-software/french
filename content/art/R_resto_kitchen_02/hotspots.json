@@ -1,161 +1,194 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        430,
-        18,
-        850,
-        128
-      ],
-      "text_box": [
-        458,
-        34,
-        822,
-        112
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        22,
-        236,
-        146
-      ],
-      "text_box": [
-        64,
-        40,
-        220,
-        128
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 640,
+ "text_areas": {
+  "sign": {
+   "box": [
+    441,
+    28,
+    820,
+    153
+   ],
+   "text_box": [
+    472,
+    48,
+    790,
+    136
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_moutarde_noun",
+   "lemma": "moutarde",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la moutarde",
+   "box": [
+    44,
+    86,
+    141,
+    184
+   ]
   },
-  "hotspots": [
-    {
-      "word_id": "fr_puree_noun",
-      "slug": "fr_puree_noun",
-      "side": "left",
-      "box": [
-        88,
-        227,
-        273,
-        333
-      ]
-    },
-    {
-      "word_id": "fr_moutarde_noun",
-      "slug": "fr_moutarde_noun",
-      "side": "left",
-      "box": [
-        378,
-        227,
-        563,
-        333
-      ]
-    },
-    {
-      "word_id": "fr_vanille_noun",
-      "slug": "fr_vanille_noun",
-      "side": "left",
-      "box": [
-        88,
-        398,
-        273,
-        504
-      ]
-    },
-    {
-      "word_id": "fr_cuisson_noun",
-      "slug": "fr_cuisson_noun",
-      "side": "left",
-      "box": [
-        378,
-        398,
-        563,
-        504
-      ]
-    },
-    {
-      "word_id": "fr_salsa_noun",
-      "slug": "fr_salsa_noun",
-      "side": "left",
-      "box": [
-        88,
-        570,
-        273,
-        676
-      ]
-    },
-    {
-      "word_id": "fr_bouillabaisse_noun",
-      "slug": "fr_bouillabaisse_noun",
-      "side": "left",
-      "box": [
-        378,
-        570,
-        563,
-        676
-      ]
-    },
-    {
-      "word_id": "fr_chauffage_noun",
-      "slug": "fr_chauffage_noun",
-      "side": "right",
-      "box": [
-        768,
-        206,
-        1139,
-        270
-      ]
-    },
-    {
-      "word_id": "fr_preparatif_noun",
-      "slug": "fr_preparatif_noun",
-      "side": "right",
-      "box": [
-        768,
-        309,
-        1139,
-        373
-      ]
-    },
-    {
-      "word_id": "fr_barbecue_noun",
-      "slug": "fr_barbecue_noun",
-      "side": "right",
-      "box": [
-        768,
-        412,
-        1139,
-        476
-      ]
-    },
-    {
-      "word_id": "fr_ingredient_noun",
-      "slug": "fr_ingredient_noun",
-      "side": "right",
-      "box": [
-        768,
-        515,
-        1139,
-        578
-      ]
-    },
-    {
-      "word_id": "fr_deboire_noun",
-      "slug": "fr_deboire_noun",
-      "side": "right",
-      "box": [
-        768,
-        618,
-        1139,
-        681
-      ]
-    }
-  ]
+  {
+   "id": "fr_vanille_noun",
+   "lemma": "vanille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la vanille",
+   "box": [
+    156,
+    52,
+    281,
+    203
+   ]
+  },
+  {
+   "id": "fr_puree_noun",
+   "lemma": "purée",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la purée",
+   "box": [
+    19,
+    294,
+    156,
+    372
+   ]
+  },
+  {
+   "id": "fr_salsa_noun",
+   "lemma": "salsa",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la salsa",
+   "box": [
+    31,
+    374,
+    175,
+    466
+   ],
+   "note": "tomato salsa bowl; chips in the bowl beside it"
+  },
+  {
+   "id": "fr_bouillabaisse_noun",
+   "lemma": "bouillabaisse",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la bouillabaisse",
+   "box": [
+    16,
+    469,
+    258,
+    609
+   ]
+  },
+  {
+   "id": "fr_cuisson_noun",
+   "lemma": "cuisson",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la cuisson",
+   "box": [
+    320,
+    450,
+    477,
+    605
+   ],
+   "mnemonic_box": [
+    305,
+    180,
+    609,
+    448
+   ],
+   "mnemonic_label": "chef checks doneness with a thermometer"
+  },
+  {
+   "id": "fr_barbecue_noun",
+   "lemma": "barbecue",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le barbecue",
+   "box": [
+    683,
+    318,
+    863,
+    389
+   ]
+  },
+  {
+   "id": "fr_chauffage_noun",
+   "lemma": "chauffage",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le chauffage",
+   "box": [
+    1047,
+    320,
+    1227,
+    444
+   ],
+   "mnemonic_box": [
+    930,
+    133,
+    1046,
+    388
+   ],
+   "mnemonic_label": "chauffeur warming his hands"
+  },
+  {
+   "id": "fr_ingredient_noun",
+   "lemma": "ingrédient",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'ingrédient",
+   "box": [
+    763,
+    391,
+    1036,
+    578
+   ]
+  },
+  {
+   "id": "fr_preparatif_noun",
+   "lemma": "préparatif",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le préparatif",
+   "box": [
+    653,
+    586,
+    997,
+    711
+   ]
+  },
+  {
+   "id": "fr_deboire_noun",
+   "lemma": "déboire",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le déboire",
+   "box": [
+    1039,
+    446,
+    1280,
+    688
+   ],
+   "mnemonic_label": "boar biting a sour crab apple"
+  }
+ ]
 }

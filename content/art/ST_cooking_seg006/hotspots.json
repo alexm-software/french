@@ -1,154 +1,366 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg006",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    15,
+    82,
+    118,
+    152
+   ],
+   "text_box": [
+    25,
+    92,
+    108,
+    142
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_assommer_verb",
-      "slug": "fr_assommer_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_devoiler_verb",
-      "slug": "fr_devoiler_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ],
-      "mirror_box": [
-        259,
-        198,
-        295,
-        246
-      ]
-    },
-    {
-      "word_id": "fr_faufiler_verb",
-      "slug": "fr_faufiler_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ],
-      "mirror_box": [
-        462,
-        198,
-        498,
-        246
-      ]
-    },
-    {
-      "word_id": "fr_alimenter_verb",
-      "slug": "fr_alimenter_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_bouffer_verb",
-      "slug": "fr_bouffer_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_saler_verb",
-      "slug": "fr_saler_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_griller_verb_sign": {
+   "box": [
+    98,
+    245,
+    220,
+    295
+   ],
+   "text_box": [
+    110,
+    253,
+    208,
+    287
+   ],
+   "text": "griller"
+  },
+  "fr_griller_verb_plaque": {
+   "box": [
+    222,
+    340,
+    242,
+    372
+   ],
+   "text_box": [
+    224,
+    344,
+    240,
+    368
+   ],
+   "text": ""
+  },
+  "fr_souper_verb_sign": {
+   "box": [
+    305,
+    248,
+    435,
+    300
+   ],
+   "text_box": [
+    318,
+    256,
+    422,
+    292
+   ],
+   "text": "souper"
+  },
+  "fr_souper_verb_plaque": {
+   "box": [
+    262,
+    312,
+    290,
+    338
+   ],
+   "text_box": [
+    265,
+    315,
+    287,
+    335
+   ],
+   "text": ""
+  },
+  "fr_saler_verb_sign": {
+   "box": [
+    528,
+    255,
+    640,
+    300
+   ],
+   "text_box": [
+    539,
+    262,
+    629,
+    293
+   ],
+   "text": "saler"
+  },
+  "fr_saler_verb_plaque": {
+   "box": [
+    640,
+    362,
+    665,
+    392
+   ],
+   "text_box": [
+    643,
+    366,
+    662,
+    388
+   ],
+   "text": ""
+  },
+  "fr_saurer_verb_sign": {
+   "box": [
+    718,
+    258,
+    835,
+    300
+   ],
+   "text_box": [
+    730,
+    264,
+    823,
+    294
+   ],
+   "text": "saurer"
+  },
+  "fr_saurer_verb_plaque": {
+   "box": [
+    830,
+    368,
+    858,
+    395
+   ],
+   "text_box": [
+    833,
+    371,
+    855,
+    392
+   ],
+   "text": ""
+  },
+  "fr_savourer_verb_sign": {
+   "box": [
+    920,
+    258,
+    1035,
+    302
+   ],
+   "text_box": [
+    932,
+    265,
+    1023,
+    295
+   ],
+   "text": "savourer"
+  },
+  "fr_savourer_verb_plaque": {
+   "box": [
+    1048,
+    368,
+    1068,
+    395
+   ],
+   "text_box": [
+    1050,
+    371,
+    1066,
+    392
+   ],
+   "text": ""
+  },
+  "fr_ailler_verb_sign": {
+   "box": [
+    1100,
+    262,
+    1205,
+    305
+   ],
+   "text_box": [
+    1110,
+    268,
+    1195,
+    299
+   ],
+   "text": "ailler"
+  },
+  "fr_ailler_verb_plaque": {
+   "box": [
+    1210,
+    308,
+    1240,
+    332
+   ],
+   "text_box": [
+    1214,
+    311,
+    1236,
+    329
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_griller_verb",
+   "lemma": "griller",
+   "box": [
+    30,
+    385,
+    165,
+    635
+   ],
+   "mnemonic_box": [
+    145,
+    375,
+    250,
+    615
+   ],
+   "mnemonic_label": "gree-YAY",
+   "door_plaque_box": [
+    222,
+    340,
+    242,
+    372
+   ]
+  },
+  {
+   "id": "fr_souper_verb",
+   "lemma": "souper",
+   "box": [
+    285,
+    485,
+    468,
+    600
+   ],
+   "mnemonic_box": [
+    252,
+    340,
+    500,
+    615
+   ],
+   "mnemonic_label": "soo-PAY",
+   "door_plaque_box": [
+    262,
+    312,
+    290,
+    338
+   ]
+  },
+  {
+   "id": "fr_saler_verb",
+   "lemma": "saler",
+   "box": [
+    510,
+    490,
+    665,
+    620
+   ],
+   "mnemonic_box": [
+    505,
+    345,
+    638,
+    600
+   ],
+   "mnemonic_label": "sa-LAY",
+   "door_plaque_box": [
+    640,
+    362,
+    665,
+    392
+   ]
+  },
+  {
+   "id": "fr_saurer_verb",
+   "lemma": "saurer",
+   "box": [
+    680,
+    440,
+    905,
+    625
+   ],
+   "mnemonic_box": [
+    700,
+    335,
+    812,
+    560
+   ],
+   "mnemonic_label": "sorry",
+   "door_plaque_box": [
+    830,
+    368,
+    858,
+    395
+   ]
+  },
+  {
+   "id": "fr_savourer_verb",
+   "lemma": "savourer",
+   "box": [
+    907,
+    350,
+    1045,
+    590
+   ],
+   "mnemonic_box": [
+    880,
+    110,
+    1050,
+    250
+   ],
+   "mnemonic_label": "savour",
+   "door_plaque_box": [
+    1048,
+    368,
+    1068,
+    395
+   ]
+  },
+  {
+   "id": "fr_ailler_verb",
+   "lemma": "ailler",
+   "box": [
+    1085,
+    505,
+    1230,
+    605
+   ],
+   "mnemonic_box": [
+    1080,
+    340,
+    1205,
+    505
+   ],
+   "mnemonic_label": "eye, yay",
+   "door_plaque_box": [
+    1210,
+    308,
+    1240,
+    332
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    650,
+    100,
+    720
+   ],
+   "target": "ST_cooking_seg005"
+  },
+  "next": {
+   "box": [
+    1180,
+    640,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg007"
+  }
+ }
 }

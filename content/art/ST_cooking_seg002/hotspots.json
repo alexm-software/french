@@ -1,142 +1,366 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg002",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    28,
+    55,
+    152,
+    122
+   ],
+   "text_box": [
+    40,
+    65,
+    140,
+    112
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_nourrir_verb",
-      "slug": "fr_nourrir_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_meler_verb",
-      "slug": "fr_meler_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_couler_verb",
-      "slug": "fr_couler_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_remplir_verb",
-      "slug": "fr_remplir_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_devorer_verb",
-      "slug": "fr_devorer_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_cuire_verb",
-      "slug": "fr_cuire_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_diner_verb_sign": {
+   "box": [
+    92,
+    298,
+    208,
+    334
+   ],
+   "text_box": [
+    104,
+    303,
+    196,
+    329
+   ],
+   "text": "dîner"
+  },
+  "fr_diner_verb_plaque": {
+   "box": [
+    212,
+    372,
+    242,
+    396
+   ],
+   "text_box": [
+    216,
+    375,
+    238,
+    393
+   ],
+   "text": ""
+  },
+  "fr_couper_verb_sign": {
+   "box": [
+    302,
+    300,
+    415,
+    335
+   ],
+   "text_box": [
+    313,
+    305,
+    404,
+    330
+   ],
+   "text": "couper"
+  },
+  "fr_couper_verb_plaque": {
+   "box": [
+    418,
+    372,
+    445,
+    398
+   ],
+   "text_box": [
+    421,
+    375,
+    442,
+    395
+   ],
+   "text": ""
+  },
+  "fr_remplir_verb_sign": {
+   "box": [
+    510,
+    300,
+    615,
+    338
+   ],
+   "text_box": [
+    520,
+    306,
+    605,
+    332
+   ],
+   "text": "remplir"
+  },
+  "fr_remplir_verb_plaque": {
+   "box": [
+    617,
+    375,
+    642,
+    400
+   ],
+   "text_box": [
+    620,
+    378,
+    639,
+    397
+   ],
+   "text": "de"
+  },
+  "fr_boire_verb_sign": {
+   "box": [
+    700,
+    300,
+    805,
+    340
+   ],
+   "text_box": [
+    710,
+    306,
+    795,
+    334
+   ],
+   "text": "boire"
+  },
+  "fr_boire_verb_plaque": {
+   "box": [
+    810,
+    375,
+    836,
+    404
+   ],
+   "text_box": [
+    813,
+    378,
+    833,
+    401
+   ],
+   "text": ""
+  },
+  "fr_gouter_verb_sign": {
+   "box": [
+    918,
+    300,
+    1025,
+    338
+   ],
+   "text_box": [
+    929,
+    306,
+    1014,
+    332
+   ],
+   "text": "goûter"
+  },
+  "fr_gouter_verb_plaque": {
+   "box": [
+    1018,
+    378,
+    1044,
+    402
+   ],
+   "text_box": [
+    1021,
+    381,
+    1041,
+    399
+   ],
+   "text": ""
+  },
+  "fr_meler_verb_sign": {
+   "box": [
+    1112,
+    300,
+    1213,
+    340
+   ],
+   "text_box": [
+    1122,
+    306,
+    1203,
+    334
+   ],
+   "text": "mêler"
+  },
+  "fr_meler_verb_plaque": {
+   "box": [
+    1215,
+    380,
+    1245,
+    410
+   ],
+   "text_box": [
+    1219,
+    384,
+    1241,
+    406
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_diner_verb",
+   "lemma": "dîner",
+   "box": [
+    60,
+    455,
+    240,
+    600
+   ],
+   "mnemonic_box": [
+    30,
+    398,
+    270,
+    640
+   ],
+   "mnemonic_label": "dine",
+   "door_plaque_box": [
+    212,
+    372,
+    242,
+    396
+   ]
+  },
+  {
+   "id": "fr_couper_verb",
+   "lemma": "couper",
+   "box": [
+    288,
+    336,
+    415,
+    500
+   ],
+   "mnemonic_box": [
+    315,
+    430,
+    460,
+    640
+   ],
+   "mnemonic_label": "coo-pay",
+   "door_plaque_box": [
+    418,
+    372,
+    445,
+    398
+   ]
+  },
+  {
+   "id": "fr_remplir_verb",
+   "lemma": "remplir",
+   "box": [
+    500,
+    425,
+    640,
+    600
+   ],
+   "mnemonic_box": [
+    500,
+    418,
+    600,
+    600
+   ],
+   "mnemonic_label": "re-ample",
+   "door_plaque_box": [
+    617,
+    375,
+    642,
+    400
+   ]
+  },
+  {
+   "id": "fr_boire_verb",
+   "lemma": "boire",
+   "box": [
+    745,
+    440,
+    810,
+    600
+   ],
+   "mnemonic_box": [
+    655,
+    370,
+    800,
+    600
+   ],
+   "mnemonic_label": "bwar",
+   "door_plaque_box": [
+    810,
+    375,
+    836,
+    404
+   ]
+  },
+  {
+   "id": "fr_gouter_verb",
+   "lemma": "goûter",
+   "box": [
+    895,
+    470,
+    1060,
+    620
+   ],
+   "mnemonic_box": [
+    885,
+    415,
+    1060,
+    600
+   ],
+   "mnemonic_label": "goo-TAY",
+   "door_plaque_box": [
+    1018,
+    378,
+    1044,
+    402
+   ]
+  },
+  {
+   "id": "fr_meler_verb",
+   "lemma": "mêler",
+   "box": [
+    1085,
+    495,
+    1265,
+    620
+   ],
+   "mnemonic_box": [
+    1065,
+    355,
+    1210,
+    520
+   ],
+   "mnemonic_label": "melee",
+   "door_plaque_box": [
+    1215,
+    380,
+    1245,
+    410
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    645,
+    120,
+    720
+   ],
+   "target": "ST_cooking_seg001"
+  },
+  "next": {
+   "box": [
+    1160,
+    645,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg003"
+  }
+ }
 }

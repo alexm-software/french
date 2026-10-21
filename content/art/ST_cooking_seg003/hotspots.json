@@ -1,148 +1,366 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 640,
-  "placeholder": true,
-  "note": "Text-free placeholder. Signs and labels are drawn by the site from text_areas and word records. Replace base.jpg and hotspots.json, then delete placeholder.json, when the real painting arrives.",
-  "text_areas": {
-    "sign": {
-      "box": [
-        340,
-        16,
-        940,
-        108
-      ],
-      "text_box": [
-        368,
-        32,
-        912,
-        92
-      ]
-    },
-    "plaque": {
-      "box": [
-        48,
-        24,
-        220,
-        120
-      ],
-      "text_box": [
-        64,
-        42,
-        204,
-        102
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg003",
+ "street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "note": "Pixel coords on base.jpg, box=[x0,y0,x1,y1]. Buildings left->right follow rooms.json words order. item box = the verb's action props; mnemonic_box = helper character/mnemonic scene next to it; door_plaque_box = blank brass plaque by the door (text = prepositions, empty when none); mirror_box only for reflexive verbs. Text areas never overlap item/mnemonic/mirror boxes. Exits: prev = left street edge, next = right street edge.",
+ "text_areas": {
+  "street_sign": {
+   "box": [
+    38,
+    55,
+    158,
+    118
+   ],
+   "text_box": [
+    50,
+    64,
+    146,
+    109
+   ],
+   "text": "Ruelle des Gourmets"
   },
-  "hotspots": [
-    {
-      "word_id": "fr_cuisiner_verb",
-      "slug": "fr_cuisiner_verb",
-      "side": "n/a",
-      "box": [
-        40,
-        150,
-        225,
-        640
-      ],
-      "door_plaque": [
-        104,
-        562,
-        160,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_regaler_verb",
-      "slug": "fr_regaler_verb",
-      "side": "n/a",
-      "box": [
-        243,
-        150,
-        428,
-        640
-      ],
-      "door_plaque": [
-        307,
-        562,
-        363,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_bouillir_verb",
-      "slug": "fr_bouillir_verb",
-      "side": "n/a",
-      "box": [
-        446,
-        150,
-        631,
-        640
-      ],
-      "door_plaque": [
-        510,
-        562,
-        566,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_frire_verb",
-      "slug": "fr_frire_verb",
-      "side": "n/a",
-      "box": [
-        649,
-        150,
-        834,
-        640
-      ],
-      "door_plaque": [
-        713,
-        562,
-        769,
-        598
-      ]
-    },
-    {
-      "word_id": "fr_engueuler_verb",
-      "slug": "fr_engueuler_verb",
-      "side": "n/a",
-      "box": [
-        852,
-        150,
-        1037,
-        640
-      ],
-      "door_plaque": [
-        916,
-        562,
-        972,
-        598
-      ],
-      "mirror_box": [
-        868,
-        198,
-        904,
-        246
-      ]
-    },
-    {
-      "word_id": "fr_epicer_verb",
-      "slug": "fr_epicer_verb",
-      "side": "n/a",
-      "box": [
-        1055,
-        150,
-        1240,
-        640
-      ],
-      "door_plaque": [
-        1119,
-        562,
-        1175,
-        598
-      ]
-    }
-  ]
+  "fr_decouper_verb_sign": {
+   "box": [
+    82,
+    272,
+    198,
+    312
+   ],
+   "text_box": [
+    94,
+    278,
+    186,
+    306
+   ],
+   "text": "découper"
+  },
+  "fr_decouper_verb_plaque": {
+   "box": [
+    210,
+    372,
+    232,
+    398
+   ],
+   "text_box": [
+    213,
+    375,
+    229,
+    395
+   ],
+   "text": ""
+  },
+  "fr_entamer_verb_sign": {
+   "box": [
+    302,
+    272,
+    438,
+    318
+   ],
+   "text_box": [
+    316,
+    279,
+    424,
+    311
+   ],
+   "text": "entamer"
+  },
+  "fr_entamer_verb_plaque": {
+   "box": [
+    432,
+    372,
+    456,
+    400
+   ],
+   "text_box": [
+    435,
+    375,
+    453,
+    397
+   ],
+   "text": ""
+  },
+  "fr_tailler_verb_sign": {
+   "box": [
+    492,
+    278,
+    612,
+    318
+   ],
+   "text_box": [
+    504,
+    284,
+    600,
+    312
+   ],
+   "text": "tailler"
+  },
+  "fr_tailler_verb_plaque": {
+   "box": [
+    612,
+    375,
+    638,
+    402
+   ],
+   "text_box": [
+    615,
+    378,
+    635,
+    399
+   ],
+   "text": ""
+  },
+  "fr_trancher_verb_sign": {
+   "box": [
+    682,
+    280,
+    800,
+    320
+   ],
+   "text_box": [
+    694,
+    286,
+    788,
+    314
+   ],
+   "text": "trancher"
+  },
+  "fr_trancher_verb_plaque": {
+   "box": [
+    808,
+    378,
+    832,
+    405
+   ],
+   "text_box": [
+    811,
+    381,
+    829,
+    402
+   ],
+   "text": ""
+  },
+  "fr_dissoudre_verb_sign": {
+   "box": [
+    880,
+    282,
+    1000,
+    325
+   ],
+   "text_box": [
+    892,
+    288,
+    988,
+    319
+   ],
+   "text": "dissoudre"
+  },
+  "fr_dissoudre_verb_plaque": {
+   "box": [
+    1004,
+    382,
+    1028,
+    408
+   ],
+   "text_box": [
+    1007,
+    385,
+    1025,
+    405
+   ],
+   "text": ""
+  },
+  "fr_eplucher_verb_sign": {
+   "box": [
+    1075,
+    280,
+    1195,
+    322
+   ],
+   "text_box": [
+    1087,
+    286,
+    1183,
+    316
+   ],
+   "text": "éplucher"
+  },
+  "fr_eplucher_verb_plaque": {
+   "box": [
+    1215,
+    380,
+    1240,
+    408
+   ],
+   "text_box": [
+    1218,
+    383,
+    1237,
+    405
+   ],
+   "text": ""
+  }
+ },
+ "items": [
+  {
+   "id": "fr_decouper_verb",
+   "lemma": "découper",
+   "box": [
+    100,
+    415,
+    240,
+    540
+   ],
+   "mnemonic_box": [
+    40,
+    365,
+    170,
+    630
+   ],
+   "mnemonic_label": "day coupé",
+   "door_plaque_box": [
+    210,
+    372,
+    232,
+    398
+   ]
+  },
+  {
+   "id": "fr_entamer_verb",
+   "lemma": "entamer",
+   "box": [
+    280,
+    495,
+    440,
+    585
+   ],
+   "mnemonic_box": [
+    262,
+    352,
+    410,
+    560
+   ],
+   "mnemonic_label": "on tam-ay",
+   "door_plaque_box": [
+    432,
+    372,
+    456,
+    400
+   ]
+  },
+  {
+   "id": "fr_tailler_verb",
+   "lemma": "tailler",
+   "box": [
+    458,
+    500,
+    638,
+    600
+   ],
+   "mnemonic_box": [
+    458,
+    340,
+    608,
+    540
+   ],
+   "mnemonic_label": "tailor",
+   "door_plaque_box": [
+    612,
+    375,
+    638,
+    402
+   ]
+  },
+  {
+   "id": "fr_trancher_verb",
+   "lemma": "trancher",
+   "box": [
+    680,
+    505,
+    860,
+    590
+   ],
+   "mnemonic_box": [
+    640,
+    325,
+    790,
+    545
+   ],
+   "mnemonic_label": "tranche",
+   "door_plaque_box": [
+    808,
+    378,
+    832,
+    405
+   ]
+  },
+  {
+   "id": "fr_dissoudre_verb",
+   "lemma": "dissoudre",
+   "box": [
+    870,
+    480,
+    1010,
+    630
+   ],
+   "mnemonic_box": [
+    862,
+    95,
+    1050,
+    255
+   ],
+   "mnemonic_label": "dissolve",
+   "door_plaque_box": [
+    1004,
+    382,
+    1028,
+    408
+   ]
+  },
+  {
+   "id": "fr_eplucher_verb",
+   "lemma": "éplucher",
+   "box": [
+    1080,
+    460,
+    1195,
+    610
+   ],
+   "mnemonic_box": [
+    1035,
+    325,
+    1200,
+    560
+   ],
+   "mnemonic_label": "a pluck",
+   "door_plaque_box": [
+    1215,
+    380,
+    1240,
+    408
+   ]
+  }
+ ],
+ "exits": {
+  "prev": {
+   "box": [
+    0,
+    655,
+    110,
+    720
+   ],
+   "target": "ST_cooking_seg002"
+  },
+  "next": {
+   "box": [
+    1170,
+    655,
+    1280,
+    720
+   ],
+   "target": "ST_cooking_seg004"
+  }
+ }
 }

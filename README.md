@@ -2,11 +2,11 @@
 
 A French vocabulary memory palace, from A1 to C2. You walk a map of sixteen quarters. Each word lives in a room, on a piece of furniture, or along a verb street, so the place brings the word back.
 
-Rue des Saveurs (S04, cafés and restaurants) is the quarter under construction: Café de la Place, Restaurant Le Bon Goût, and the verb street Ruelle des Gourmets. The other quarters are on the map and marked coming soon. The long walk still begins in the beginner quarter; that door is drawn, and it is not open yet.
+Rue des Saveurs (S04, cafés and restaurants) is the open quarter: the square, Café de la Place, Restaurant Le Bon Goût, and eleven short cooking alleys off that square. The other quarters are on the map and marked coming soon. The long walk still begins in the beginner quarter; that door is drawn, and it is not open yet.
 
-The upstairs room of Café de la Place (`R_cafe_02`) has a finished painting. Set `open_rooms` in `content/site.json` to `["R_cafe_02"]` when that room should be the only one you can walk; leave `open_rooms` out to build every room in the open quarters. A room listed in `content/vocab/*.jsonl` replaces the matching vocabulary entry for its card.
+Each alley is its own lane. The arch on the square opens a signpost, and the only way out of an alley is back to the square. A later street, with fewer two-sided alleys, can replace `ST_cooking` by dropping in new paintings and room data. Do not hard-code the verb list.
 
-The pictures are placeholders. Signs and word labels are type, set in Cinzel and IM Fell English from the hotspot text areas, so they can be corrected without repainting.
+`content/assignment.json` decides which words are drawn in a painting. A word that `rooms.json` still lists, but the painting does not draw, stays in that room’s word list and is marked as not in the painting. Street paintings store prev/next under `exits`. Building fronts and the sector view store doors under `links`. The build accepts both.
 
 ## Run it
 
@@ -25,7 +25,7 @@ npm run preview
 
 `content/site.json` lists `open_sectors`. Only those sectors get full word cards, quizzes, conversations and paintings. To open another quarter later, add its id and rebuild. Rooms outside that list stay on the map as coming soon and are not loaded as word files.
 
-Street contents are not hard-coded. Ruelle des Gourmets is read from `rooms.json` and `vocab.jsonl`. When a corrected verb list arrives, replace those files and rebuild. The current segments still show every verb that is in the data today, including a few that do not belong on a cooking street.
+Street contents are not hard-coded. Ruelle des Gourmets is read from `rooms.json` and `vocab.jsonl`. The live street is the current eleven segments. When the two-sided alley paintings arrive, replace the `ST_cooking` art and those data files, then rebuild.
 
 ## Add a room’s painting
 
@@ -46,9 +46,11 @@ A hotspot may include:
 - `box` — `[x0, y0, x1, y1]`, and `polygon` when the clickable shape is not a rectangle
 - `text_areas.sign` and `text_areas.plaque` — each with `box` and `text_box`
 - `mnemonic_box` — the helper character, separate from the object
-- `door_plaque` — where a verb’s preposition is set in type
+- `links` — doors on a building front or the sector square (`target`, `box`, `label`)
+- `exits.prev` and `exits.next` — the street painting’s two ends. An alley keeps only the return to the sector square
+- `door_plaque` or `door_plaque_box` — where a verb’s preposition is set in type
 - `mirror_box` — a reflexive verb
-- `zoom_id` — a closer view, such as the bar counter
+- `zoom_from` — a closer view, such as the bar counter (`room_id`, `box`, `label`)
 
 Do not paint signs or labels into the image. The site draws them in the text boxes.
 
