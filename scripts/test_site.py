@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -17,6 +18,118 @@ EXAMPLE = ROOT / "content" / "examples" / "eglise" / "hotspots.json"
 
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+MAP = "village_map"
+
+
+def _reachable(start, graph):
+    seen = set()
+    stack = [start]
+    while stack:
+        node = stack.pop()
+        if node in seen:
+            continue
+        seen.add(node)
+        stack.extend(graph.get(node, ()))
+    return seen
+
+
+def walk_site_graph():
+    """Every space can reach the village map, and the map can reach every space.
+
+    Upward edges are the strip back button (sector → map, building → sector,
+    room → building, zoom → parent). Downward edges are the same hierarchy
+    plus painted links and exits. A dead end cannot get back to the map.
+    An orphan cannot be reached from it.
+    """
+    source = ROOT / "data" / "source"
+    sectors = load(source / "sectors.json")["sectors"]
+    buildings = load(source / "buildings.json")["buildings"]
+    rooms = load(source / "rooms.json")["rooms"]
+    sector_ids = {sector["id"] for sector in sectors}
+    building_ids = {building["id"] for building in buildings}
+    room_ids = {room["id"] for room in rooms}
+    art_to_sector = {f"{sector['id'].split('_')[0]}_sector": sector["id"] for sector in sectors}
+    nodes = {MAP} | sector_ids | building_ids | room_ids
+    graph = {node: set() for node in nodes}
+    reverse = defaultdict(set)
+
+    def edge(src, dst, why):
+        if src not in nodes or dst not in nodes:
+            raise AssertionError(f"{why}: {src} -> {dst} leaves the site graph")
+        graph[src].add(dst)
+        reverse[dst].add(src)
+
+    listed = defaultdict(set)
+    for sector in sectors:
+        edge(MAP, sector["id"], "map pin")
+        edge(sector["id"], MAP, "back to the village map")
+        for key in ("buildings", "streets"):
+            for building_id in sector.get(key) or []:
+                listed[building_id].add(sector["id"])
+                edge(sector["id"], building_id, "sector contains building")
+
+    for building in buildings:
+        owners = listed.get(building["id"]) or set()
+        assert owners == {building["sector_id"]}, (building["id"], owners, building.get("sector_id"))
+        edge(building["id"], building["sector_id"], "back to the sector")
+        for room_id in building.get("rooms") or []:
+            edge(building["id"], room_id, "building contains room")
+
+    zoom_ids = {room["id"]: set(room.get("zoom_ids") or []) for room in rooms}
+    for room in rooms:
+        if room.get("kind") == "zoom":
+            parent = room.get("parent_room_id")
+            assert parent in room_ids, room["id"]
+            assert room["id"] in zoom_ids.get(parent, ()), room["id"]
+            edge(room["id"], parent, "back to the parent room")
+        else:
+            assert room.get("building_id") in building_ids, room["id"]
+            edge(room["id"], room["building_id"], "back to the building")
+        for zoom_id in zoom_ids[room["id"]]:
+            edge(room["id"], zoom_id, "room contains zoom")
+
+    def resolve(target):
+        if str(target).endswith("_sector"):
+            return art_to_sector.get(target)
+        if target in building_ids:
+            return target
+        if target in room_ids:
+            return target
+        return None
+
+    art = ROOT / "content" / "art"
+    for path in sorted(art.glob("*/hotspots.json")):
+        folder = path.parent.name
+        owner = art_to_sector.get(folder) or (folder if folder in nodes else None)
+        assert owner, f"painted folder {folder} is not a space"
+        raw = load(path)
+        targets = []
+        for item in raw.get("links") or []:
+            if isinstance(item, dict) and item.get("target"):
+                targets.append(item["target"])
+        for item in (raw.get("exits") or {}).values():
+            if isinstance(item, dict) and item.get("target"):
+                targets.append(item["target"])
+        zoom = raw.get("zoom_from") or {}
+        if isinstance(zoom, dict) and zoom.get("room_id"):
+            targets.append(zoom["room_id"])
+        for target in targets:
+            dest = resolve(target)
+            assert dest, f"{folder} links to unknown space {target}"
+            edge(owner, dest, "painted link")
+
+    reached = _reachable(MAP, graph)
+    can_leave = _reachable(MAP, reverse)
+    orphans = sorted(nodes - reached)
+    dead = sorted(nodes - can_leave)
+    assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
+    assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
+    assert len(nodes) == 1 + 16 + 84 + 845, len(nodes)
+
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert "data-back" in client and "nav.backMap" in client and "nav.backTo" in client
 
 
 def main():
@@ -230,6 +343,12 @@ def finish(quiz):
         return found
 
     assert flat(i18n["en"]) == flat(i18n["fr"])
+    assert i18n["en"]["nav"]["backTo"] == "Back to {place}"
+    assert i18n["fr"]["nav"]["backMap"] == "Retour au plan du village"
+    walk_site_graph()
+    dining = load(DATA / "rooms" / "R_resto_room_z1.json")
+    assert dining["parent"]["id"] == "R_resto_room"
+    assert dining["parent"]["name_fr"] == "La salle"
     assert [item["icon"] for item in guide["en"]["sections"]] == [item["icon"] for item in guide["fr"]["sections"]]
     assert len(guide["en"]["sections"]) == 9
     assert (DATA / "i18n.json").exists() and (DATA / "guide.json").exists()

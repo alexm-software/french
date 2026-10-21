@@ -1089,6 +1089,11 @@ def main():
                     "id": parent["id"],
                     "name": parent["name"],
                     "sign": sign_text(parent, building, signs),
+                    **{
+                        key: value
+                        for key, value in locale_fields(parent, "room", parent["id"], signs, log=False).items()
+                        if key in {"name_fr", "name_en"}
+                    },
                 },
                 "zooms": zooms,
                 "floors": floors,

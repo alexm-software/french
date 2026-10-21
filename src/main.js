@@ -246,6 +246,36 @@ function shell(body, current, opts = {}) {
     </div>`;
 }
 
+function backTarget(place) {
+  if (!place) return null;
+  if (place.kind === "sector") return { href: "#/", label: t("nav.backMap") };
+  if (place.kind === "building") {
+    const sector = place.sector;
+    if (!sector?.id) return null;
+    return { href: `#/sector/${sector.id}`, label: tf("nav.backTo", { place: localizedName(sector) || sector.id }) };
+  }
+  if (place.kind === "room") {
+    const room = place.room;
+    if (room?.kind === "zoom" && room.parent?.id) {
+      const parent = room.parent;
+      const name = localizedName(parent) || parent.sign || parent.name || parent.id;
+      return { href: `#/room/${parent.id}`, label: tf("nav.backTo", { place: name }) };
+    }
+    if (room?.building_id) {
+      const building = (state.index?.buildings || []).find((item) => item.id === room.building_id);
+      const name = localizedName(building) || room.building_name || room.building_id;
+      return { href: `#/building/${room.building_id}`, label: tf("nav.backTo", { place: name }) };
+    }
+  }
+  return null;
+}
+
+function backNav(place) {
+  const target = backTarget(place);
+  if (!target) return "";
+  return `<a class="back" data-back href="${esc(target.href)}">${esc(target.label)}</a>`;
+}
+
 function sceneNav(place) {
   if (!place) return "";
   const room = place.room;
@@ -256,6 +286,7 @@ function sceneNav(place) {
       : "";
   const talk = room?.conversation ? `#/room/${room.id}/talk` : "";
   return `
+    ${backNav(place)}
     ${room ? `<button type="button" data-words>${esc(t("tools.words"))}</button>` : ""}
     ${quiz ? `<a href="${quiz}">${esc(t("tools.quiz"))}</a>` : ""}
     ${talk ? `<a href="${talk}">${esc(t("tools.talk"))}</a>` : ""}
@@ -347,7 +378,7 @@ function sectorView(sector, extraDialog = "") {
       <p class="lede">${esc(localizedDescription(sector))}</p>
       <p>${esc(t("sector.closed"))}</p>
       ${open && open !== sector.id ? `<a class="btn primary" href="#/sector/${open}">${esc(t("sector.walkOpen"))}</a>` : ""}
-    `, `/sector/${sector.id}`);
+    `, `/sector/${sector.id}`, backNav({ kind: "sector", id: sector.id, sector }));
   }
   state.place = { kind: "sector", id: sector.id, sector, extraDialog };
   return null;
@@ -355,11 +386,12 @@ function sectorView(sector, extraDialog = "") {
 
 function buildingView(sector, building, extraDialog = "") {
   if (!sector.open || !building.scene?.image) {
+    const back = backTarget({ kind: "building", sector, building });
     return pageShell(`
       <h1>${esc(localizedName(building))}</h1>
       <p>${esc(localizedDescription(building) || t("building.unpainted"))}</p>
-      <a class="btn primary" href="#/sector/${sector.id}">${esc(t("building.back"))}</a>
-    `, `/building/${building.id}`);
+      ${back ? `<a class="btn primary" href="${esc(back.href)}">${esc(back.label)}</a>` : ""}
+    `, `/building/${building.id}`, backNav({ kind: "building", sector, building }));
   }
   state.place = { kind: "building", id: building.id, sector, building };
   return null;
@@ -642,9 +674,9 @@ function wordsDialog(room) {
   </div>`;
 }
 
-function pageShell(body, current) {
+function pageShell(body, current, extraNav = "") {
   state.place = null;
-  return shell(body, current);
+  return shell(body, current, { extraNav });
 }
 
 function conversationHtml(room) {
