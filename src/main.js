@@ -742,24 +742,41 @@ function verbSide(word, scene) {
 function wrapLines(text, boxWidth, boxHeight, maxSize = 36, widthFactor = 0.56) {
   const words = String(text).split(/\s+/).filter(Boolean);
   const widthOf = (value, size) => Array.from(value).length * size * widthFactor;
-  let size = Math.min(maxSize, Math.max(8, boxHeight * 0.72));
-  while (size >= 8) {
-    const lines = [];
-    let current = "";
-    let fits = true;
-    for (const word of words) {
-      const trial = current ? `${current} ${word}` : word;
-      if (widthOf(trial, size) <= boxWidth) current = trial;
-      else if (!current || widthOf(word, size) > boxWidth) {
-        fits = false;
-        break;
-      } else {
-        lines.push(current);
-        current = word;
+  const layout = (size) => {
+    if (!words.length) return [];
+    if (words.some((word) => widthOf(word, size) > boxWidth + 0.5)) return null;
+    const space = widthOf(" ", size);
+    const widths = words.map((word) => widthOf(word, size));
+    const n = words.length;
+    const best = Array(n + 1).fill(Infinity);
+    const next = Array(n).fill(n);
+    best[n] = 0;
+    for (let start = n - 1; start >= 0; start -= 1) {
+      let width = 0;
+      for (let end = start + 1; end <= n; end += 1) {
+        width += widths[end - 1] + (end > start + 1 ? space : 0);
+        if (width > boxWidth + 0.5) break;
+        const score = (boxWidth - width) ** 2 + best[end];
+        if (score < best[start]) {
+          best[start] = score;
+          next[start] = end;
+        }
       }
     }
-    if (current) lines.push(current);
-    if (fits && lines.length * size * 1.15 <= boxHeight + 1) return { size, lines };
+    if (!Number.isFinite(best[0])) return null;
+    const lines = [];
+    for (let index = 0; index < n;) {
+      const end = next[index];
+      lines.push(words.slice(index, end).join(" "));
+      index = end;
+    }
+    if (lines.length * size * 1.15 > boxHeight + 1) return null;
+    return lines;
+  };
+  let size = Math.min(maxSize, Math.max(8, Math.floor(boxHeight * 0.72)));
+  while (size >= 8) {
+    const lines = layout(size);
+    if (lines) return { size, lines };
     size -= 1;
   }
   return { size: 8, lines: [String(text)] };
