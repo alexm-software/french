@@ -715,35 +715,38 @@ function hookBlurb(word) {
   return parts.filter(Boolean).join(" — ");
 }
 
-function cardIcon(word) {
-  if (word.pos === "verb") return doodle("sprig");
-  if (word.reflexive) return doodle("twins");
-  return doodle(word.gender === "f" ? "creature" : "star");
+function speakButton(word) {
+  return `<button class="speak" type="button" data-speak="${esc(word.head)}" data-lang="fr-FR" aria-label="${esc(t("card.listen"))}">${doodle("speaker")}</button>`;
 }
 
 function cardLayer(word) {
   const hook = hookBlurb(word);
   const verb = word.pos === "verb" ? verbBlock(word) : "";
-  const example = word.example_fr || word.example_en
-    ? `<p class="example"><span class="field">${esc(t("card.example"))}</span> <span lang="fr">${esc(word.example_fr || "")}</span></p>${word.example_en ? `<p class="example en" lang="en">${esc(word.example_en)}</p>` : ""}`
-    : "";
+  const kind = word.pos === "verb" ? "verb" : "noun";
+  const french = word.example_fr ? `<p class="example" lang="fr">${esc(word.example_fr)}</p>` : "";
+  const english = word.example_en ? `<p class="example en" lang="en">${esc(word.example_en)}</p>` : "";
+  const example = french || english
+    ? `<div class="example-block"><div class="example-row"><div class="examples">${french}${english}</div>${speakButton(word)}</div></div>`
+    : `<div class="example-block lone-speak">${speakButton(word)}</div>`;
+  const respell = [word.respelling, word.ipa].filter(Boolean).join(" · ");
+  const cautions = [
+    word.false_cognate_note ? `<p class="caution">${esc(word.false_cognate_note)}</p>` : "",
+    word.usage_warning ? `<p class="caution">${esc(word.usage_warning)}</p>` : "",
+  ].join("");
   return `<div class="dialog-layer">
-    <article class="dialog" role="dialog" aria-labelledby="card-title">
+    <div class="card-shell ${kind}">
       <button class="x" type="button" data-close-dialog aria-label="${esc(t("close"))}">×</button>
-      <div class="card-title">
-        <span class="card-icon">${cardIcon(word)}</span>
-        <h2 id="card-title" class="head">${esc(word.head)} ${word.reflexive ? mirrorIcon() : ""}</h2>
-      </div>
-      <p class="gloss">${esc(word.gloss || "")}</p>
-      <p class="meta">${esc(word.respelling || "")} ${word.ipa ? `· ${esc(word.ipa)}` : ""}</p>
-      ${hook ? `<p class="hook"><span class="field">${esc(t("card.mnemonic"))}</span> ${esc(hook)}</p>` : ""}
-      ${example}
-      ${word.false_cognate_note ? `<p class="caution">${esc(word.false_cognate_note)}</p>` : ""}
-      ${word.usage_warning ? `<p class="caution">${esc(word.usage_warning)}</p>` : ""}
-      <button class="speak" type="button" data-speak="${esc(word.head)}" data-lang="fr-FR" aria-label="${esc(t("card.listen"))}">${doodle("speaker")}</button>
-      <p class="note" data-speech-note>${esc(speechHint("fr-FR"))}</p>
-      ${verb}
-    </article>
+      <article class="dialog word-card" role="dialog" aria-labelledby="card-title">
+        <h2 id="card-title" class="head">${esc(word.head)}${word.reflexive ? ` ${mirrorIcon()}` : ""}</h2>
+        ${word.gloss ? `<p class="gloss"><span>${esc(word.gloss)}</span></p>` : ""}
+        ${respell ? `<p class="respell">${esc(respell)}</p>` : ""}
+        ${hook ? `<p class="hook"><span class="field">${esc(t("card.mnemonic"))}:</span> ${esc(hook)}</p>` : ""}
+        ${verb}
+        ${example}
+        ${cautions}
+        <p class="note" data-speech-note>${esc(speechHint("fr-FR"))}</p>
+      </article>
+    </div>
   </div>`;
 }
 
@@ -751,16 +754,30 @@ function mirrorIcon() {
   return `<span class="mirror" title="${esc(t("card.reflexive"))}">${doodle("twins")}</span>`;
 }
 
+function formParts(text, name) {
+  const value = String(text || "").trim();
+  const who = String(name || "").trim();
+  if (!value) return ["", ""];
+  if (who === "je" && value.startsWith("j'")) return ["j'", value.slice(2).trim()];
+  if (who && value.startsWith(who)) return [who, value.slice(who.length).trim()];
+  if (who && !value.includes(" ")) return [who, value];
+  return ["", value];
+}
+
+function conjLine(text, name) {
+  const [who, form] = formParts(text, name);
+  if (!who) return `<p>${esc(form)}</p>`;
+  return `<p><span class="who">${esc(who)}</span> ${esc(form)}</p>`;
+}
+
 function conjugationTable(rows, names) {
-  if (names.length <= 3) {
-    return `<table class="conj">${rows.map((row, index) => `<tr><th>${esc(names[index] || "")}</th><td>${esc(row)}</td></tr>`).join("")}</table>`;
+  const cells = rows.map((row, index) => conjLine(row, names[index]));
+  if (cells.length <= 3) {
+    return `<div class="conj-grid single">${cells.join("")}</div>`;
   }
-  const lines = [0, 1, 2].map((index) => `
-    <tr>
-      <th>${esc(names[index] || "")}</th><td>${esc(rows[index] || "")}</td>
-      <th>${esc(names[index + 3] || "")}</th><td>${esc(rows[index + 3] || "")}</td>
-    </tr>`).join("");
-  return `<table class="conj two">${lines}</table>`;
+  const left = cells.slice(0, 3).join("");
+  const right = cells.slice(3, 6).join("");
+  return `<div class="conj-grid"><div>${left}</div><div>${right}</div></div>`;
 }
 
 function verbBlock(word) {
@@ -787,16 +804,23 @@ function verbBlock(word) {
     parts.push(`${t("card.pastParticiple")} ${tables.participe_passe}${fem}`);
   }
   if (tables.participe_present) parts.push(`${t("card.presentParticiple")} ${tables.participe_present}`);
+  const passe = tables.passe?.[0]
+    ? `<p class="passe-line">${esc(t("tense.passe"))}: ${esc(tables.passe[0])}</p>`
+    : "";
   const prep = word.prepositions?.length
     ? `<p class="field">${esc(t("card.onTheDoor"))}</p><div class="door-plaque">${word.prepositions.map((item) => `<span>${esc(item)}</span>`).join("")}</div>`
     : "";
   return `
     <div class="verb-card">
       ${word.reflexive ? `<p class="meta">${mirrorIcon()} ${esc(t("card.reflexive"))}${word.pronominal_form ? ` · ${esc(word.pronominal_form)}` : ""}</p>` : ""}
+      <div class="tenses" role="tablist">${tabs}</div>
+      <div class="conj-frame">
+        <h3 class="tense-title">${esc(t(`tense.${current}`))}</h3>
+        ${table}
+      </div>
+      ${passe}
       ${parts.length ? `<p class="parts">${esc(parts.join(" · "))}</p>` : ""}
       ${prep}
-      <div class="tenses" role="tablist">${tabs}</div>
-      ${table}
     </div>`;
 }
 
