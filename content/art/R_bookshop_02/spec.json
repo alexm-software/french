@@ -1,0 +1,151 @@
+{
+ "divider_x": 400,
+ "kind": "room",
+ "note": "Bookshop (2) with its print room: printing, pamphlets, leaflets and landmarks. The wooden post on the left divides it: feminine nouns on its left, masculine on its right. The open door on the left goes back to the florist's; the wide opening at the back right, behind the printer, leads into the boutique (3).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La librairie (2)",
+   "box": [
+    480,
+    15,
+    720,
+    50
+   ],
+   "text_box": [
+    486,
+    21,
+    714,
+    44
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_rene_noun",
+   "box": [
+    100,
+    256,
+    331,
+    556
+   ],
+   "scene": "boy on a rocking horse holding the reins tight"
+  },
+  {
+   "id": "fr_imprimerie_noun",
+   "box": [
+    131,
+    62,
+    325,
+    250
+   ],
+   "scene": "freshly printed sheets flying through the air"
+  },
+  {
+   "id": "fr_repere_noun",
+   "box": [
+    425,
+    56,
+    628,
+    269
+   ],
+   "scene": "map on the wall with a red marker flag"
+  },
+  {
+   "id": "fr_agenda_noun",
+   "box": [
+    632,
+    112,
+    769,
+    427
+   ],
+   "scene": "busy woman flipping through her appointment diary"
+  },
+  {
+   "id": "fr_livret_noun",
+   "box": [
+    419,
+    419,
+    571,
+    612
+   ],
+   "scene": "cat reading a little opera booklet"
+  },
+  {
+   "id": "fr_correspondant_noun",
+   "box": [
+    575,
+    431,
+    800,
+    676
+   ],
+   "scene": "hedgehog writing a letter covered in stamps"
+  },
+  {
+   "id": "fr_pamphlet_noun",
+   "box": [
+    781,
+    175,
+    956,
+    428
+   ],
+   "scene": "artist drawing the mayor as a vain peacock"
+  },
+  {
+   "id": "fr_imprimeur_noun",
+   "box": [
+    975,
+    81,
+    1203,
+    365
+   ],
+   "scene": "old printer pulling the lever of an iron press"
+  },
+  {
+   "id": "fr_essuie_glace_noun",
+   "box": [
+    812,
+    444,
+    956,
+    550
+   ],
+   "scene": "toy car in a puddle with tiny windscreen wipers"
+  },
+  {
+   "id": "fr_depliant_noun",
+   "box": [
+    960,
+    369,
+    1203,
+    676
+   ],
+   "scene": "hiker unfolding a giant leaflet trail map"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_florist",
+   "box": [
+    0,
+    75,
+    96,
+    450
+   ],
+   "label": "Back through the left door to the florist's",
+   "name": "Le fleuriste",
+   "kind": "door"
+  },
+  {
+   "target": "R_boutique_03",
+   "box": [
+    862,
+    75,
+    968,
+    162
+   ],
+   "label": "Through the wide opening at the back right into the boutique (3)",
+   "name": "La boutique (3)",
+   "kind": "arch"
+  }
+ ]
+}

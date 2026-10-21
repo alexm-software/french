@@ -576,6 +576,25 @@ def main():
     }, soon_market
     open_market = {link["target"] for link in market["scene"]["links"] if not link.get("soon")}
     assert open_market == {"B60_balance", "ST_commerce_seg001", "S01_sector", "S02_sector"}, open_market
+    source_rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    shop_art = [
+        "R_shop_general_01", "R_shop_general_02", "R_shop_general_02_z1",
+        "R_shop_general_03", "R_shop_general_03_z1", "R_shop_general_04", "R_shop_general_04_z1",
+        "R_bookshop_01", "R_bookshop_01_z1", "R_bookshop_02",
+        "R_boutique_01", "R_boutique_02", "R_boutique_03", "R_boutique_03_z1",
+        "R_hardware_01", "R_hardware_01_z1", "R_hardware_02", "R_hardware_02_z1",
+        "R_florist", "R_florist_z1",
+        "R_abs_beauty_01", "R_abs_beauty_01_z1", "R_abs_beauty_02", "R_abs_beauty_02_z1",
+        "R_abs_beauty_03", "R_abs_beauty_03_z1",
+    ]
+    for room_id in shop_art:
+        raw = load(ROOT / "content" / "art" / room_id / "hotspots.json")
+        painted_ids = [item["id"] for item in raw["items"]]
+        assert set(painted_ids) == set(source_rooms[room_id]["words"]), room_id
+    shopping = load(ROOT / "content" / "art" / "B07_rue_commercante" / "hotspots.json")
+    assert {link["target"] for link in shopping["links"]} == {"R_shop_general_01", "S03_sector"}
+    couture = load(ROOT / "content" / "art" / "B62_couture" / "hotspots.json")
+    assert {link["target"] for link in couture["links"]} == {"R_abs_beauty_02", "S03_sector"}
     commerce = load(ROOT / "content" / "art" / "ST_commerce_seg001" / "hotspots.json")
     assert commerce["view"] == "street_perspective"
     assert commerce["exits"]["forward"]["target"] == "ST_commerce_seg002"

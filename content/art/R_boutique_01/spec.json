@@ -1,0 +1,181 @@
+{
+ "divider_x": 620,
+ "kind": "room",
+ "note": "Jeweller's boutique (1): gold, rings, pearls and watches. Feminine nouns to the left of x=620, masculine to the right. The left doorway goes back to the hardware shop; the right doorway leads on to the general shop (2).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La boutique (1)",
+   "box": [
+    880,
+    20,
+    1130,
+    62
+   ],
+   "text_box": [
+    886,
+    26,
+    1124,
+    56
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_montre_noun",
+   "box": [
+    106,
+    156,
+    265,
+    456
+   ],
+   "scene": "furry monster checking a tiny wristwatch"
+  },
+  {
+   "id": "fr_bague_noun",
+   "box": [
+    269,
+    219,
+    400,
+    519
+   ],
+   "scene": "girl finding a ring in her handbag"
+  },
+  {
+   "id": "fr_ronde_noun",
+   "box": [
+    431,
+    169,
+    594,
+    427
+   ],
+   "scene": "night watchman doing his round with a lantern"
+  },
+  {
+   "id": "fr_sonnerie_noun",
+   "box": [
+    431,
+    431,
+    525,
+    531
+   ],
+   "scene": "alarm clock ringing beside a yawning cat"
+  },
+  {
+   "id": "fr_perle_noun",
+   "box": [
+    250,
+    536,
+    444,
+    644
+   ],
+   "scene": "open oyster showing off a pearl"
+  },
+  {
+   "id": "fr_lustre_noun",
+   "box": [
+    500,
+    45,
+    770,
+    165
+   ],
+   "scene": "glittering crystal chandelier"
+  },
+  {
+   "id": "fr_or_noun",
+   "box": [
+    631,
+    225,
+    790,
+    556
+   ],
+   "scene": "miner pushing a cart of gold nuggets"
+  },
+  {
+   "id": "fr_poignet_noun",
+   "box": [
+    794,
+    340,
+    920,
+    587
+   ],
+   "scene": "pony with a bracelet on its front leg"
+  },
+  {
+   "id": "fr_diamant_noun",
+   "box": [
+    925,
+    319,
+    1040,
+    419
+   ],
+   "scene": "huge diamond on the jeweller's desk"
+  },
+  {
+   "id": "fr_collier_noun",
+   "box": [
+    906,
+    131,
+    1040,
+    315
+   ],
+   "scene": "collie wearing a pearl necklace"
+  },
+  {
+   "id": "fr_bijou_noun",
+   "box": [
+    775,
+    140,
+    881,
+    215
+   ],
+   "scene": "bee looking at itself in a round gold jewel"
+  },
+  {
+   "id": "fr_eventail_noun",
+   "box": [
+    1044,
+    175,
+    1200,
+    430
+   ],
+   "scene": "lady fluttering a fan like a peacock tail"
+  },
+  {
+   "id": "fr_bracelet_noun",
+   "box": [
+    956,
+    437,
+    1119,
+    675
+   ],
+   "scene": "toddler jingling a bracelet of tiny bells"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hardware_02",
+   "box": [
+    20,
+    75,
+    100,
+    450
+   ],
+   "label": "Back through the left doorway to the hardware shop",
+   "name": "La quincaillerie (2)",
+   "kind": "door"
+  },
+  {
+   "target": "R_shop_general_02",
+   "box": [
+    1206,
+    80,
+    1270,
+    460
+   ],
+   "label": "Through the right doorway to the general shop",
+   "name": "Les commerces (2)",
+   "kind": "door"
+  }
+ ]
+}

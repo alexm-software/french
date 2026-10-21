@@ -1,0 +1,244 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 400,
+ "kind": "room",
+ "note": "Bookshop (2) with its print room: printing, pamphlets, leaflets and landmarks. The wooden post on the left divides it: feminine nouns on its left, masculine on its right. The open door on the left goes back to the florist's; the wide opening at the back right, behind the printer, leads into the boutique (3).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La librairie (2)",
+   "box": [
+    480,
+    15,
+    720,
+    50
+   ],
+   "text_box": [
+    486,
+    21,
+    714,
+    44
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_rene_noun",
+   "lemma": "rêne",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la rêne",
+   "box": [
+    100,
+    256,
+    331,
+    556
+   ],
+   "label_xy": [
+    216,
+    546
+   ],
+   "scene": "boy on a rocking horse holding the reins tight"
+  },
+  {
+   "id": "fr_imprimerie_noun",
+   "lemma": "imprimerie",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'imprimerie",
+   "box": [
+    131,
+    62,
+    325,
+    250
+   ],
+   "label_xy": [
+    228,
+    240
+   ],
+   "scene": "freshly printed sheets flying through the air"
+  },
+  {
+   "id": "fr_repere_noun",
+   "lemma": "repère",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le repère",
+   "box": [
+    425,
+    56,
+    628,
+    269
+   ],
+   "label_xy": [
+    526,
+    259
+   ],
+   "scene": "map on the wall with a red marker flag"
+  },
+  {
+   "id": "fr_agenda_noun",
+   "lemma": "agenda",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'agenda",
+   "box": [
+    632,
+    112,
+    769,
+    427
+   ],
+   "label_xy": [
+    700,
+    417
+   ],
+   "scene": "busy woman flipping through her appointment diary"
+  },
+  {
+   "id": "fr_livret_noun",
+   "lemma": "livret",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le livret",
+   "box": [
+    419,
+    419,
+    571,
+    612
+   ],
+   "label_xy": [
+    495,
+    602
+   ],
+   "scene": "cat reading a little opera booklet"
+  },
+  {
+   "id": "fr_correspondant_noun",
+   "lemma": "correspondant",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le correspondant",
+   "box": [
+    575,
+    431,
+    800,
+    676
+   ],
+   "label_xy": [
+    688,
+    666
+   ],
+   "scene": "hedgehog writing a letter covered in stamps"
+  },
+  {
+   "id": "fr_pamphlet_noun",
+   "lemma": "pamphlet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le pamphlet",
+   "box": [
+    781,
+    175,
+    956,
+    428
+   ],
+   "label_xy": [
+    868,
+    418
+   ],
+   "scene": "artist drawing the mayor as a vain peacock"
+  },
+  {
+   "id": "fr_imprimeur_noun",
+   "lemma": "imprimeur",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'imprimeur",
+   "box": [
+    975,
+    81,
+    1203,
+    365
+   ],
+   "label_xy": [
+    1089,
+    355
+   ],
+   "scene": "old printer pulling the lever of an iron press"
+  },
+  {
+   "id": "fr_essuie_glace_noun",
+   "lemma": "essuie-glace",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'essuie-glace",
+   "box": [
+    812,
+    444,
+    956,
+    550
+   ],
+   "label_xy": [
+    884,
+    540
+   ],
+   "scene": "toy car in a puddle with tiny windscreen wipers"
+  },
+  {
+   "id": "fr_depliant_noun",
+   "lemma": "dépliant",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le dépliant",
+   "box": [
+    960,
+    369,
+    1203,
+    676
+   ],
+   "label_xy": [
+    1082,
+    666
+   ],
+   "scene": "hiker unfolding a giant leaflet trail map"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_florist",
+   "box": [
+    0,
+    75,
+    96,
+    450
+   ],
+   "label": "Back through the left door to the florist's",
+   "name": "Le fleuriste",
+   "kind": "door"
+  },
+  {
+   "target": "R_boutique_03",
+   "box": [
+    862,
+    75,
+    968,
+    162
+   ],
+   "label": "Through the wide opening at the back right into the boutique (3)",
+   "name": "La boutique (3)",
+   "kind": "arch"
+  }
+ ]
+}
