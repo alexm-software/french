@@ -161,6 +161,18 @@ a.back {
 }
 .tool .doodle { width: 18px; height: 18px; }
 .tool-label { font-size: 0.72rem; }
+.tool[data-fs] {
+  width: auto;
+  max-width: 9.2rem;
+  min-width: 4.4rem;
+  height: auto;
+  padding: 0.28rem 0.62rem 0.32rem;
+}
+.tool[data-fs] .tool-label {
+  font-size: 0.78rem;
+  line-height: 1.05;
+  text-align: center;
+}
 .tool[aria-pressed="true"] { background: #e7f0d4; border-color: var(--olive); }
 .doodle { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -714,6 +726,7 @@ footer.site {
   .top.open .nav { display: flex; }
   .brand small { display: none; }
   .tool { width: 50px; min-height: 50px; }
+  .tool[data-fs] { width: auto; min-height: 50px; max-width: 8.4rem; }
   .pin { width: 5.6rem; }
 }
 @media (prefers-reduced-motion: reduce) {

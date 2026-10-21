@@ -124,6 +124,8 @@ def assert_fullscreen_overlays():
     dialog = keys.split('querySelector(".dialog-layer")', 1)[1].split("fullscreenElement", 1)[0]
     assert "preventDefault" in dialog
     assert keys.index("fullscreenElement") < keys.index('room?.kind === "zoom"')
+    css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
+    assert ".tool[data-fs]" in css
 
 
 def assert_back_strip_stays_visible(client):
