@@ -1,0 +1,133 @@
+{
+ "divider_x": 780,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 8: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 8",
+   "box": [
+    780,
+    200,
+    1120,
+    244
+   ],
+   "text_box": [
+    786,
+    206,
+    1114,
+    238
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Place du Marché →",
+   "box": [
+    790,
+    320,
+    1040,
+    354
+   ],
+   "text_box": [
+    796,
+    326,
+    1034,
+    348
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 7",
+   "box": [
+    880,
+    592,
+    1060,
+    624
+   ],
+   "text_box": [
+    886,
+    598,
+    1054,
+    618
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_entreposer_verb",
+   "box": [
+    90,
+    194,
+    285,
+    540
+   ],
+   "scene": "strongman posing as he lifts a crate onto tall warehouse shelves"
+  },
+  {
+   "id": "fr_allouer_verb",
+   "box": [
+    419,
+    344,
+    762,
+    556
+   ],
+   "scene": "farmer handing exactly one carrot to each of three ponies"
+  },
+  {
+   "id": "fr_miner_verb",
+   "box": [
+    194,
+    543,
+    416,
+    656
+   ],
+   "scene": "mole in a miner's helmet popping up from a hole with a gold nugget"
+  },
+  {
+   "id": "fr_demarquer_verb",
+   "box": [
+    419,
+    72,
+    581,
+    269
+   ],
+   "scene": "shopkeeper peeling a big label off a woolly jumper with tweezers"
+  },
+  {
+   "id": "fr_equilibrer_verb",
+   "box": [
+    594,
+    44,
+    756,
+    188
+   ],
+   "scene": "seal balancing a big brass key on its nose while a donkey brays"
+  }
+ ],
+ "links": [
+  {
+   "target": "S03_sector",
+   "box": [
+    780,
+    360,
+    960,
+    520
+   ],
+   "label": "Walk on round the corner back to the Place du Marché",
+   "name": "Place du Marché",
+   "kind": "street_forward"
+  },
+  {
+   "target": "ST_commerce_seg008",
+   "box": [
+    450,
+    630,
+    1100,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 7",
+   "name": "Rue du Commerce — étape 7",
+   "kind": "street_back"
+  }
+ ]
+}

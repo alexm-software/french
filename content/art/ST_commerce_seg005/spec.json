@@ -1,0 +1,133 @@
+{
+ "divider_x": 760,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 5: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 5",
+   "box": [
+    640,
+    30,
+    980,
+    74
+   ],
+   "text_box": [
+    646,
+    36,
+    974,
+    68
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 6 →",
+   "box": [
+    696,
+    322,
+    852,
+    356
+   ],
+   "text_box": [
+    702,
+    328,
+    846,
+    350
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 4",
+   "box": [
+    640,
+    560,
+    820,
+    594
+   ],
+   "text_box": [
+    646,
+    566,
+    814,
+    588
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_negocier_verb",
+   "box": [
+    85,
+    330,
+    402,
+    676
+   ],
+   "scene": "goat offering three turnips to a sighing hatter at a straw-hat stall"
+  },
+  {
+   "id": "fr_combler_verb",
+   "box": [
+    406,
+    340,
+    598,
+    656
+   ],
+   "scene": "ice-cream man filling a waffle cone until it overflows"
+  },
+  {
+   "id": "fr_decreter_verb",
+   "box": [
+    460,
+    152,
+    622,
+    290
+   ],
+   "scene": "red crab in a gold crown on a wooden crate raising a claw"
+  },
+  {
+   "id": "fr_distribuer_verb",
+   "box": [
+    250,
+    75,
+    456,
+    212
+   ],
+   "scene": "postman bear in a tree handing letters to the birds in their nests"
+  },
+  {
+   "id": "fr_repartir_verb_2",
+   "box": [
+    856,
+    331,
+    1194,
+    676
+   ],
+   "scene": "cheerful man at a party table cutting a cake into equal slices for three children"
+  }
+ ],
+ "links": [
+  {
+   "target": "ST_commerce_seg007",
+   "box": [
+    700,
+    360,
+    850,
+    470
+   ],
+   "label": "Walk on to Rue du Commerce — étape 6",
+   "name": "Rue du Commerce — étape 6",
+   "kind": "street_forward"
+  },
+  {
+   "target": "ST_commerce_seg003",
+   "box": [
+    606,
+    600,
+    852,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 4",
+   "name": "Rue du Commerce — étape 4",
+   "kind": "street_back"
+  }
+ ]
+}

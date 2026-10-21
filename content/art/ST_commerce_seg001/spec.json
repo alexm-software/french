@@ -1,0 +1,143 @@
+{
+ "divider_x": 700,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 1: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 1",
+   "box": [
+    720,
+    50,
+    1060,
+    94
+   ],
+   "text_box": [
+    726,
+    56,
+    1054,
+    88
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 2 →",
+   "box": [
+    700,
+    290,
+    860,
+    324
+   ],
+   "text_box": [
+    706,
+    296,
+    854,
+    318
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Place du Marché",
+   "box": [
+    640,
+    624,
+    860,
+    656
+   ],
+   "text_box": [
+    646,
+    630,
+    854,
+    650
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_couter_verb",
+   "box": [
+    100,
+    495,
+    212,
+    652
+   ],
+   "scene": "grey pigeon on the counter cooing at a big price tag"
+  },
+  {
+   "id": "fr_payer_verb",
+   "box": [
+    214,
+    400,
+    383,
+    656
+   ],
+   "scene": "girl in red hands a shiny coin to the beaming shopkeeper"
+  },
+  {
+   "id": "fr_acheter_verb",
+   "box": [
+    394,
+    437,
+    619,
+    638
+   ],
+   "scene": "man buying a white teapot while a big tabby cat sneezes on the table"
+  },
+  {
+   "id": "fr_preter_verb",
+   "box": [
+    162,
+    100,
+    348,
+    268
+   ],
+   "scene": "girl on a balcony lending her pretty flowered umbrella"
+  },
+  {
+   "id": "fr_louer_verb",
+   "box": [
+    397,
+    181,
+    506,
+    318
+   ],
+   "scene": "landlord on a balcony holding out a big iron key"
+  },
+  {
+   "id": "fr_degager_verb",
+   "box": [
+    481,
+    56,
+    625,
+    175
+   ],
+   "scene": "man shovelling a heap of snow off a roof"
+  }
+ ],
+ "links": [
+  {
+   "target": "ST_commerce_seg002",
+   "box": [
+    690,
+    330,
+    900,
+    520
+   ],
+   "label": "Walk on to Rue du Commerce — étape 2",
+   "name": "Rue du Commerce — étape 2",
+   "kind": "street_forward"
+  },
+  {
+   "target": "S03_sector",
+   "box": [
+    420,
+    662,
+    1125,
+    720
+   ],
+   "label": "Back to Place du Marché",
+   "name": "Place du Marché",
+   "kind": "street_back"
+  }
+ ]
+}

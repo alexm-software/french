@@ -1,0 +1,133 @@
+{
+ "divider_x": 760,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 7: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 7",
+   "box": [
+    760,
+    30,
+    1100,
+    74
+   ],
+   "text_box": [
+    766,
+    36,
+    1094,
+    68
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 8 →",
+   "box": [
+    780,
+    342,
+    936,
+    376
+   ],
+   "text_box": [
+    786,
+    348,
+    930,
+    370
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 6",
+   "box": [
+    700,
+    612,
+    880,
+    644
+   ],
+   "text_box": [
+    706,
+    618,
+    874,
+    638
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_surcharger_verb",
+   "box": [
+    131,
+    369,
+    438,
+    644
+   ],
+   "scene": "porter piling one more suitcase on an overloaded donkey"
+  },
+  {
+   "id": "fr_recharger_verb",
+   "box": [
+    440,
+    320,
+    662,
+    632
+   ],
+   "scene": "silver robot on a bench plugged into a lamppost"
+  },
+  {
+   "id": "fr_acquitter_verb",
+   "box": [
+    469,
+    200,
+    625,
+    306
+   ],
+   "scene": "ginger cat tipping coins from its jar to pay the waiter's bill"
+  },
+  {
+   "id": "fr_enraciner_verb",
+   "box": [
+    100,
+    81,
+    388,
+    306
+   ],
+   "scene": "red racing car in a planter box, roots growing from its wheels, an oval mirror beside it"
+  },
+  {
+   "id": "fr_deposseder_verb",
+   "box": [
+    394,
+    44,
+    688,
+    144
+   ],
+   "scene": "three geese in cowboy hats taking a sack of loot from a fox on the roof"
+  }
+ ],
+ "links": [
+  {
+   "target": "ST_commerce_seg006",
+   "box": [
+    790,
+    380,
+    925,
+    520
+   ],
+   "label": "Walk on to Rue du Commerce — étape 8",
+   "name": "Rue du Commerce — étape 8",
+   "kind": "street_forward"
+  },
+  {
+   "target": "ST_commerce_seg007",
+   "box": [
+    450,
+    650,
+    1100,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 6",
+   "name": "Rue du Commerce — étape 6",
+   "kind": "street_back"
+  }
+ ]
+}

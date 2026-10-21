@@ -1,0 +1,225 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 740,
+ "kind": "verb_place",
+ "note": "Rue du Commerce — étape 3: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+ "text_areas": {
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Commerce — étape 3",
+   "box": [
+    560,
+    40,
+    900,
+    84
+   ],
+   "text_box": [
+    566,
+    46,
+    894,
+    78
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "text": "Rue du Commerce — étape 4 →",
+   "box": [
+    730,
+    322,
+    880,
+    356
+   ],
+   "text_box": [
+    736,
+    328,
+    874,
+    350
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "text": "← Rue du Commerce — étape 2",
+   "box": [
+    660,
+    628,
+    880,
+    660
+   ],
+   "text_box": [
+    666,
+    634,
+    874,
+    654
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_revendiquer_verb",
+   "lemma": "revendiquer",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "revendiquer",
+   "box": [
+    77,
+    330,
+    382,
+    640
+   ],
+   "label_xy": [
+    230,
+    630
+   ],
+   "scene": "man by his red van holding up a big key to claim his parking spot",
+   "gloss": "to demand; to claim",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_accumuler_verb",
+   "lemma": "accumuler",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "accumuler",
+   "box": [
+    385,
+    362,
+    650,
+    632
+   ],
+   "label_xy": [
+    518,
+    622
+   ],
+   "scene": "grey mule loaded with a huge bundle of snooker cues",
+   "gloss": "to accumulate",
+   "verb_group": 1,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  },
+  {
+   "id": "fr_ecouler_verb",
+   "lemma": "écouler",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "s'écouler",
+   "box": [
+    290,
+    106,
+    438,
+    262
+   ],
+   "label_xy": [
+    364,
+    252
+   ],
+   "scene": "girl handing melons out of a blue cooler box, an oval mirror beside her",
+   "gloss": "to flow; to sell off",
+   "verb_group": 1,
+   "tier": "balcony",
+   "level": "balcony",
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'écouler",
+   "mirror": "painted inside the item box"
+  },
+  {
+   "id": "fr_ecrier_verb",
+   "lemma": "écrier",
+   "article": "",
+   "gender": null,
+   "side": "left",
+   "label": "s'écrier",
+   "box": [
+    125,
+    75,
+    270,
+    188
+   ],
+   "label_xy": [
+    198,
+    178
+   ],
+   "scene": "girl at a window crying out with joy, an oval mirror beside her",
+   "gloss": "to cry out",
+   "verb_group": 1,
+   "tier": "upper",
+   "level": "upper",
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'écrier",
+   "mirror": "painted inside the item box"
+  },
+  {
+   "id": "fr_debattre_verb",
+   "lemma": "débattre",
+   "article": "",
+   "gender": null,
+   "side": "right",
+   "label": "débattre",
+   "box": [
+    881,
+    394,
+    1181,
+    662
+   ],
+   "label_xy": [
+    1031,
+    652
+   ],
+   "scene": "two cats in suits debating at podiums, each waving a cricket bat",
+   "gloss": "to negotiate; to discuss, debate",
+   "verb_group": 3,
+   "tier": "street",
+   "level": "street",
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null
+  }
+ ],
+ "links": [],
+ "segment_id": "ST_commerce_seg004",
+ "street_id": "ST_commerce",
+ "sector_id": "S03_market",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue du Commerce — étape 3",
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg003",
+   "box": [
+    740,
+    360,
+    875,
+    470
+   ],
+   "label": "Walk on to Rue du Commerce — étape 4",
+   "name": "Rue du Commerce — étape 4",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_commerce_seg002",
+   "box": [
+    400,
+    665,
+    1100,
+    720
+   ],
+   "label": "Back to Rue du Commerce — étape 2",
+   "name": "Rue du Commerce — étape 2",
+   "kind": "street"
+  }
+ }
+}
