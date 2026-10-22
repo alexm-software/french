@@ -295,8 +295,7 @@ function shell(body, current, opts = {}) {
       <header class="top ${state.menu ? "open" : ""}">
         <a class="brand" href="#/">${doodle("compass")}<span><strong>${esc(t("brand"))}</strong><small>${esc(t("tagline"))}</small></span></a>
         <button class="menu-btn" type="button" data-menu aria-expanded="${state.menu ? "true" : "false"}">${esc(t("menu"))}</button>
-        ${opts.backNav || ""}
-        ${opts.sectorUp || ""}
+        ${opts.trail || ""}
         <nav class="nav">
           ${nav.map(([href, label]) => `<a href="#${href}" ${current === href ? 'aria-current="page"' : ""}>${esc(label)}</a>`).join("")}
           ${opts.extraNav || ""}
@@ -365,6 +364,111 @@ function sectorUpNav(sectorId, place) {
   if (!target) return "";
   if (place && backTarget(place)?.href === target.href) return "";
   return `<a class="sector-up" data-sector-up href="${esc(target.href)}">${esc(target.label)}</a>`;
+}
+
+function trailName(record, fallback = "") {
+  if (!record) return fallback;
+  return record.fr_name || record.name_fr || record.sign || record.name_en || record.en_name || record.name || fallback;
+}
+
+function sectorRecord(id) {
+  return (state.index?.sectors || []).find((item) => item.id === id) || null;
+}
+
+function buildingRecord(id) {
+  return (state.index?.buildings || []).find((item) => item.id === id) || null;
+}
+
+function trailItems(place) {
+  const village = { href: "#/", label: t("nav.village") };
+  if (!place) return [village];
+  if (place.kind === "sector") {
+    const sector = place.sector || sectorRecord(place.id);
+    return [village, { label: trailName(sector, place.id || "") }];
+  }
+  if (place.kind === "building") {
+    const sector = place.sector || sectorRecord(place.building?.sector_id);
+    const building = place.building || buildingRecord(place.id);
+    return [
+      village,
+      { href: `#/sector/${sector?.id || ""}`, label: trailName(sector, sector?.id || "") },
+      { label: trailName(building, building?.id || place.id || "") },
+    ];
+  }
+  if (place.kind === "room") {
+    const room = place.room || {};
+    const sector = sectorRecord(room.sector_id);
+    const building = buildingRecord(room.building_id);
+    const items = [
+      village,
+      { href: `#/sector/${room.sector_id}`, label: trailName(sector, room.sector_name || room.sector_id || "") },
+    ];
+    if (room.building_id && !room.no_building_layer && !building?.no_building_layer) {
+      items.push({
+        href: `#/building/${room.building_id}`,
+        label: trailName(building, room.building_name || room.building_id),
+      });
+    }
+    if (room.kind === "zoom" && room.parent?.id) {
+      items.push({
+        href: `#/room/${room.parent.id}`,
+        label: trailName(room.parent, room.parent.id),
+      });
+    }
+    items.push({ label: trailName(room, room.id || "") });
+    return items;
+  }
+  if (place.kind === "prayer") {
+    const sector = sectorRecord(place.sectorId);
+    return [
+      village,
+      sector ? { href: `#/sector/${sector.id}`, label: trailName(sector, place.sectorId) } : null,
+      { label: place.label || "" },
+    ].filter(Boolean);
+  }
+  return [village];
+}
+
+function trailNav(place) {
+  const items = trailItems(place).filter((item) => item?.label && (item.href !== "#/sector/" && item.href !== "#/building/" && item.href !== "#/room/"));
+  if (items.length < 2) return "";
+  const sep = '<span class="sep" aria-hidden="true">›</span>';
+  const link = (item) => `<a class="crumb" href="${esc(item.href)}">${esc(item.label)}</a>`;
+  const first = items[0];
+  const body = items.slice(1);
+  const current = body.pop();
+  const back = body.length ? body.pop() : null;
+  const hidden = body.filter((item) => item.href);
+  const mid = hidden.length
+    ? `<span class="crumb-mid">${hidden.map((item, index) => `${index ? sep : ""}${link(item)}`).join("")}</span><span class="sep mid-sep" aria-hidden="true">›</span>`
+    : "";
+  const more = hidden.length
+    ? `<button type="button" class="crumb-more" data-crumb-more hidden aria-expanded="false" aria-label="${esc(t("nav.more"))}">…</button><span class="sep more-sep" aria-hidden="true">›</span>`
+    : "";
+  const backHtml = back?.href ? `${link(back)}${sep}` : "";
+  return `<nav class="trail" data-trail aria-label="${esc(t("nav.trail"))}">${link(first)}${sep}${mid}${more}${backHtml}<span class="crumb current" aria-current="page">${esc(current.label)}</span></nav>`;
+}
+
+function fitTrail() {
+  const trail = document.querySelector("nav.trail");
+  if (!trail) return;
+  const more = trail.querySelector("[data-crumb-more]");
+  if (!more || trail.dataset.open === "1") {
+    trail.classList.remove("collapsed");
+    return;
+  }
+  trail.classList.remove("collapsed");
+  more.hidden = true;
+  const available = trail.clientWidth;
+  trail.classList.add("measuring");
+  const needed = trail.scrollWidth;
+  trail.classList.remove("measuring");
+  const overflow = needed > available + 1;
+  if (overflow) {
+    trail.classList.add("collapsed");
+    more.hidden = false;
+    more.setAttribute("aria-expanded", "false");
+  }
 }
 
 function sceneNav(place) {
@@ -468,7 +572,7 @@ function sectorView(sector, extraDialog = "") {
       <p class="lede">${esc(localizedDescription(sector))}</p>
       <p>${esc(t("sector.closed"))}</p>
       ${open && open !== sector.id ? `<a class="btn primary" href="#/sector/${open}">${esc(t("sector.walkOpen"))}</a>` : ""}
-    `, `/sector/${sector.id}`, backNav({ kind: "sector", id: sector.id, sector }));
+    `, `/sector/${sector.id}`, trailNav({ kind: "sector", id: sector.id, sector }));
   }
   state.place = { kind: "sector", id: sector.id, sector, extraDialog };
   return null;
@@ -482,7 +586,7 @@ function buildingView(sector, building, extraDialog = "") {
       <h1>${esc(localizedName(building))}</h1>
       <p>${esc(localizedDescription(building) || t("building.unpainted"))}</p>
       ${back ? `<a class="btn primary" href="${esc(back.href)}">${esc(back.label)}</a>` : ""}
-    `, `/building/${building.id}`, backNav(place), sectorUpNav(sector?.id, place));
+    `, `/building/${building.id}`, trailNav(place));
   }
   state.place = { kind: "building", id: building.id, sector, building };
   return null;
@@ -495,6 +599,7 @@ function roomView(room, wordId, talk, extraDialog = "") {
 }
 
 function fitHits() {
+  fitTrail();
   const svg = document.querySelector("#walk svg");
   if (!svg) return;
   const width = svg.getBoundingClientRect().width || 320;
@@ -551,7 +656,7 @@ function placeSoonMarks() {
 function placeWayBadges() {
   const frame = document.querySelector("#walk .frame");
   if (!frame) return;
-  frame.querySelectorAll(":scope > .way-badge, :scope > .way-pill").forEach((node) => node.remove());
+  frame.querySelectorAll(":scope > .way-badge, :scope > .way-pill, :scope > .way-preview").forEach((node) => node.remove());
   const svg = frame.querySelector("svg");
   const ctm = svg?.getScreenCTM();
   const inverse = ctm?.inverse();
@@ -608,47 +713,67 @@ function placeWayBadges() {
   const placed = [];
   const view = svg.viewBox.baseVal;
   const hits = (x, y, rects) => rects.some((rect) => x < rect.x1 && x + size > rect.x0 && y < rect.y1 && y + size > rect.y0);
-  const addPill = (left, top, el, anchor) => {
+  const ancestors = new Set(
+    [...document.querySelectorAll("nav.trail a.crumb")].map((node) => node.getAttribute("href") || "").filter(Boolean),
+  );
+  const addPreview = (el) => {
     const wayName = el.dataset.wayName || "";
-    if (!wayName || el.dataset.lightsSign) return;
-    const dir = el.dataset.wayDir || "through";
-    const pill = document.createElement("span");
-    const pillIcon = el.dataset.wayIcon === "stairs" ? "stairs" : "arrow";
-    pill.className = `way-pill ${pillIcon} ${dir}`;
-    pill.innerHTML = wayIconSvg(pillIcon);
+    if (!wayName) return null;
+    const card = document.createElement("div");
+    card.className = "way-preview";
+    card.dataset.for = el.dataset.wayBox || "";
+    if (el.dataset.wayThumb) {
+      const img = document.createElement("img");
+      img.alt = "";
+      img.src = url(el.dataset.wayThumb);
+      img.addEventListener("error", () => img.remove());
+      card.appendChild(img);
+    }
     const caption = document.createElement("span");
     caption.textContent = wayName;
-    pill.appendChild(caption);
-    const frameW = frame.clientWidth || 320;
-    const placeLeft = left > frameW * 0.58;
-    pill.style.top = `${top + badgePx / 2}px`;
-    if (placeLeft) {
-      pill.classList.add("pill-left");
-      pill.style.left = `${Math.max(8, left - 6)}px`;
-      pill.style.maxWidth = `${Math.max(72, left - 12)}px`;
-    } else {
-      pill.style.left = `${left + badgePx + 6}px`;
-      pill.style.maxWidth = `${Math.max(72, frameW - left - badgePx - 16)}px`;
-    }
-    pill.dataset.for = el.dataset.wayBox || "";
-    if (anchor) {
-      const show = (on) => pill.classList.toggle("show-label", on);
-      anchor.addEventListener("pointerenter", () => show(true));
-      anchor.addEventListener("pointerleave", () => show(false));
-    }
-    frame.appendChild(pill);
+    card.appendChild(caption);
+    frame.appendChild(card);
+    const frameRect = frame.getBoundingClientRect();
+    const raw = (el.querySelector(".hit") || el).getBoundingClientRect();
+    const hit = {
+      left: raw.left - frameRect.left,
+      top: raw.top - frameRect.top,
+      right: raw.right - frameRect.left,
+      bottom: raw.bottom - frameRect.top,
+    };
+    const margin = 8;
+    const fw = frame.clientWidth || 320;
+    const fh = frame.clientHeight || 320;
+    const room = Math.max(hit.left - margin, fw - margin - hit.right, hit.top - margin, fh - margin - hit.bottom);
+    card.style.width = `${Math.max(96, Math.min(148, room - 8))}px`;
+    const w = card.offsetWidth || 148;
+    const h = card.offsetHeight || 108;
+    const spots = [
+      { left: hit.right + margin, top: (hit.top + hit.bottom) / 2 - h / 2 },
+      { left: hit.left - w - margin, top: (hit.top + hit.bottom) / 2 - h / 2 },
+      { left: (hit.left + hit.right) / 2 - w / 2, top: hit.bottom + margin },
+      { left: (hit.left + hit.right) / 2 - w / 2, top: hit.top - h - margin },
+    ];
+    const score = (spot) => {
+      const left = Math.max(margin, Math.min(spot.left, fw - w - margin));
+      const top = Math.max(margin, Math.min(spot.top, fh - h - margin));
+      const overlapX = Math.min(left + w, hit.right) - Math.max(left, hit.left);
+      const overlapY = Math.min(top + h, hit.bottom) - Math.max(top, hit.top);
+      const overlap = overlapX > 0 && overlapY > 0 ? overlapX * overlapY : 0;
+      const shift = Math.abs(left - spot.left) + Math.abs(top - spot.top);
+      return { left, top, overlap, shift };
+    };
+    const best = spots.map(score).sort((p, q) => p.overlap - q.overlap || p.shift - q.shift)[0];
+    card.style.left = `${best.left}px`;
+    card.style.top = `${best.top}px`;
+    return card;
   };
   svg.querySelectorAll("[data-way-box]").forEach((el) => {
     const [x0, y0, x1, y1] = el.dataset.wayBox.split(",").map(Number);
     const dir = el.dataset.wayDir || "through";
     const wayHref = el.dataset.wayHref || "";
-    const backHref = backTarget(state.place)?.href || "";
-    const sectorHref = document.querySelector("a.sector-up")?.getAttribute("href") || "";
-    if (wayHref && (wayHref === backHref || wayHref === sectorHref)) {
-      const screen = toScreen((x0 + x1) / 2, (y0 + y1) / 2);
-      addPill(screen.x, screen.y, el);
-      return;
-    }
+    addPreview(el);
+    if (wayHref && ancestors.has(wayHref)) return;
     const midX = (x0 + x1) / 2 - size / 2;
     const midY = (y0 + y1) / 2 - size / 2;
     const inset = Math.max(size * 0.2, 6);
@@ -692,6 +817,7 @@ function placeWayBadges() {
     node.className = `way-badge ${el.dataset.wayIcon || "door"} ${dir}`;
     node.dataset.target = el.dataset.target || "";
     node.dataset.wayHref = wayHref;
+    node.dataset.previewFor = el.dataset.wayBox || "";
     const wayName = el.dataset.wayName || "";
     node.setAttribute("aria-label", wayName);
     node.innerHTML = wayIconSvg(el.dataset.wayIcon || "door");
@@ -709,10 +835,25 @@ function placeWayBadges() {
       if (!signId || !window.CSS?.escape) return;
       svg.querySelector(`[data-sign-id="${CSS.escape(signId)}"]`)?.classList.toggle("lit", on);
     };
-    node.addEventListener("pointerenter", () => light(true));
-    node.addEventListener("pointerleave", () => light(false));
+    const box = el.dataset.wayBox || "";
+    node.addEventListener("pointerenter", (event) => {
+      light(true);
+      if (event.pointerType !== "touch") showPreview(box, true);
+    });
+    node.addEventListener("pointerleave", (event) => {
+      light(false);
+      if (event.pointerType !== "touch") showPreview(box, false);
+    });
+    node.addEventListener("focus", () => showPreview(box, true));
+    node.addEventListener("blur", () => showPreview(box, false));
     frame.appendChild(node);
-    addPill(Number.parseFloat(node.style.left) || 0, Number.parseFloat(node.style.top) || 0, el, node);
+  });
+}
+
+function showPreview(box, on) {
+  document.querySelectorAll("#walk .way-preview").forEach((card) => {
+    const match = card.dataset.for === box;
+    card.classList.toggle("show-label", on && match);
   });
 }
 
@@ -748,14 +889,17 @@ function bindSceneHover() {
     hot.addEventListener("pointerleave", () => sign.classList.remove("lit"));
   });
   svg.querySelectorAll("[data-way-box]").forEach((hot) => {
-    if (hot.dataset.lightsSign) return;
-    const show = (on) => {
-      svg.closest(".frame")?.querySelectorAll(".way-pill").forEach((pill) => {
-        if (pill.dataset.for === hot.dataset.wayBox) pill.classList.toggle("show-label", on);
-      });
-    };
-    hot.addEventListener("pointerenter", () => show(true));
-    hot.addEventListener("pointerleave", () => show(false));
+    const box = hot.dataset.wayBox || "";
+    hot.addEventListener("pointerenter", (event) => {
+      if (event.pointerType === "touch") return;
+      showPreview(box, true);
+    });
+    hot.addEventListener("pointerleave", (event) => {
+      if (event.pointerType === "touch") return;
+      showPreview(box, false);
+    });
+    hot.addEventListener("focus", () => showPreview(box, true));
+    hot.addEventListener("blur", () => showPreview(box, false));
   });
 }
 
@@ -1142,12 +1286,21 @@ function signAssignments(scene) {
   return assigned;
 }
 
+function thumbPath(target) {
+  const value = String(target || "");
+  let folder = value;
+  if (/^S\d{2}_/.test(value) && !value.endsWith("_sector") && !value.startsWith("ST_")) {
+    folder = `${value.split("_")[0]}_sector`;
+  }
+  return `art/${folder}/thumb.webp`;
+}
+
 function wayMarkup(item, exitKey, signId) {
   if (!item?.box || !item.target || isZoomTarget(item.target)) return "";
   const cue = wayCue(item, exitKey);
   const name = wayLabel(item, exitKey);
   const lights = signId ? ` data-lights-sign="${esc(signId)}"` : "";
-  return ` data-way-box="${item.box.join(",")}" data-way-href="${esc(hashFor(item.target))}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-name="${esc(name)}"${lights}`;
+  return ` data-way-box="${item.box.join(",")}" data-way-href="${esc(hashFor(item.target))}" data-way-thumb="${esc(thumbPath(item.target))}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-name="${esc(name)}"${lights}`;
 }
 
 function hitShape(item) {
@@ -1301,9 +1454,9 @@ function wordsDialog(room) {
   </div>`;
 }
 
-function pageShell(body, current, back = "", sectorUp = "") {
+function pageShell(body, current, trail = "") {
   state.place = null;
-  return shell(body, current, { backNav: back, sectorUp });
+  return shell(body, current, { trail });
 }
 
 function conversationHtml(room) {
@@ -1681,7 +1834,7 @@ function prayerView(prayer) {
     <p class="prayer" id="prayer-fr">${esc(prayer.fr)}</p>
     ${state.showEn ? `<p class="prayer en">${esc(prayer.en)}</p>` : ""}
     <p class="source">${esc(prayer.source || "")}</p>
-  `, `/prayer/${prayer.id}`, { sectorUp: sectorUpNav(prayer.sector_id) });
+  `, `/prayer/${prayer.id}`, { trail: trailNav({ kind: "prayer", sectorId: prayer.sector_id, label: state.lang === "fr" ? prayer.title_fr : prayer.title_en }) });
 }
 
 function aboutView() {
@@ -1888,15 +2041,9 @@ async function render() {
       : state.place.kind === "building"
         ? `/building/${state.place.id}`
         : `/sector/${state.place.id}`;
-    const sectorId = state.place.kind === "room"
-      ? state.place.room?.sector_id
-      : state.place.kind === "building"
-        ? (state.place.sector?.id || state.place.building?.sector_id)
-        : "";
     app.innerHTML = shell("", current, {
       scene: true,
-      backNav: backNav(state.place),
-      sectorUp: state.place.kind === "sector" ? "" : sectorUpNav(sectorId, state.place),
+      trail: trailNav(state.place),
       extraNav: sceneNav(state.place),
     });
     walk.innerHTML = walkHtml(activeDialog());
@@ -1932,6 +2079,35 @@ async function render() {
 }
 
 function onClick(event) {
+  const more = event.target.closest("[data-crumb-more]");
+  if (more) {
+    const trail = more.closest("nav.trail");
+    const open = trail?.dataset.open === "1";
+    if (trail) {
+      trail.dataset.open = open ? "0" : "1";
+      trail.classList.toggle("open", !open);
+      trail.classList.toggle("collapsed", open);
+    }
+    more.hidden = Boolean(open);
+    more.setAttribute("aria-expanded", open ? "false" : "true");
+    if (open) fitTrail();
+    return;
+  }
+  if (lastPointer === "touch") {
+    const exit = event.target.closest("[data-way-box], .way-badge");
+    if (!exit) {
+      document.querySelectorAll("#walk .way-preview.show-label").forEach((card) => card.classList.remove("show-label"));
+    } else {
+      const box = exit.dataset.wayBox || exit.dataset.previewFor || "";
+      const shown = [...document.querySelectorAll("#walk .way-preview.show-label")].some((card) => card.dataset.for === box);
+      if (!shown) {
+        showPreview(box, true);
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+    }
+  }
   const menu = event.target.closest("[data-menu]");
   if (menu) {
     state.menu = !state.menu;
@@ -2134,6 +2310,10 @@ function onKey(event) {
   }
 }
 
+let lastPointer = "mouse";
+document.addEventListener("pointerdown", (event) => {
+  lastPointer = event.pointerType || "mouse";
+}, true);
 document.addEventListener("click", onClick);
 document.addEventListener("fullscreenchange", () => {
   fitHits();
@@ -2151,6 +2331,7 @@ document.addEventListener("fullscreenchange", () => {
 window.addEventListener("hashchange", render);
 window.addEventListener("keydown", onKey);
 window.addEventListener("resize", fitHits);
+document.fonts?.ready?.then(() => fitTrail());
 window.speechSynthesis?.addEventListener?.("voiceschanged", () => {
   if (state.speechNote) return;
   const hint = speechHint("fr-FR");

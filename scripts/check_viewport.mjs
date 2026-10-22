@@ -185,21 +185,29 @@ function measure() {
     else if (hitsStrip(rect)) failures.push(`${name} is under a strip`);
   }
   const hash = location.hash || "";
-  const up = document.querySelector("[data-sector-up]");
-  const backHref = document.querySelector("a.back")?.getAttribute("href") || "";
-  if (/^#\/(building|room)\//.test(hash)) {
-    if (!backHref.startsWith("#/")) failures.push("missing back");
-    const href = up?.getAttribute("href") || "";
-    if (up && href === backHref) failures.push("sector button duplicates back");
-    if (!up && !backHref.startsWith("#/sector/")) failures.push("missing sector button");
-    else if (up && !/^#\/sector\/S\d{2}_/.test(href)) failures.push(`sector button target ${href}`);
-  } else if (/^#\/sector\//.test(hash) && up) {
-    failures.push("sector view shows a sector button");
+  if (document.querySelector("a.back, a.sector-up")) failures.push("strip back still shown");
+  if (/^#\/(sector|building|room)\//.test(hash)) {
+    const trail = document.querySelector("nav.trail");
+    if (!trail) failures.push("missing breadcrumb");
+    else {
+      const current = trail.querySelector(".crumb.current");
+      if (!current || current.closest("a")) failures.push("current crumb is a link");
+      const links = [...trail.querySelectorAll("a.crumb")];
+      if (!links.length) failures.push("breadcrumb has no way out");
+      const hrefs = links.map((link) => link.getAttribute("href") || "");
+      if (hrefs.some((href) => !href.startsWith("#/"))) failures.push("crumb href");
+      if (new Set(hrefs).size !== hrefs.length) failures.push("duplicate crumbs");
+      const parent = hrefs[hrefs.length - 1];
+      if (/^#\/sector\//.test(hash) && parent !== "#/") failures.push(`sector parent crumb ${parent}`);
+      if (/^#\/building\//.test(hash) && !parent.startsWith("#/sector/")) failures.push(`building parent crumb ${parent}`);
+      if (/^#\/room\//.test(hash) && !/^#\/(room|building|sector)\//.test(parent)) failures.push(`room parent crumb ${parent}`);
+      if (trail.scrollWidth > trail.clientWidth + 2) failures.push("breadcrumb overflows");
+    }
   }
   const generic = /^(open|forward|back|step back|left|right|ouvrir|avancer|reculer|gauche|droite)$/i;
   const seen = new Map();
   const controls = [];
-  for (const link of document.querySelectorAll("a.back, a.sector-up")) {
+  for (const link of document.querySelectorAll("nav.trail a.crumb")) {
     controls.push({ href: link.getAttribute("href") || "", label: (link.textContent || "").replace(/\s+/g, " ").trim() });
   }
   for (const badge of document.querySelectorAll("#walk .way-badge")) {
@@ -211,15 +219,29 @@ function measure() {
     if (seen.has(control.href)) failures.push(`two controls to ${control.href}`);
     seen.set(control.href, control.label);
   }
-  for (const node of document.querySelectorAll("#walk .hot.link, #walk .hot.exit, #walk .way-pill")) {
+  for (const node of document.querySelectorAll("#walk .hot.link, #walk .hot.exit, #walk .way-pill, #walk .way-preview")) {
     const label = (node.getAttribute("aria-label") || node.textContent || "").replace(/\s+/g, " ").trim();
     if (generic.test(label)) failures.push(`generic exit label: ${label}`);
+  }
+  for (const preview of document.querySelectorAll("#walk .way-preview")) {
+    if (preview.classList.contains("show-label")) failures.push("preview is always on");
   }
   const covers = (a, b) => {
     const overlapX = Math.min(a.right, b.right) - Math.max(a.left, b.left);
     const overlapY = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
     return overlapX > 8 && overlapY > 6;
   };
+  const frameRect = document.querySelector("#walk .frame")?.getBoundingClientRect();
+  for (const preview of document.querySelectorAll("#walk .way-preview")) {
+    const rect = preview.getBoundingClientRect();
+    if (rect.width < 2 || rect.height < 2) continue;
+    if (frameRect && (rect.left < frameRect.left - 1 || rect.top < frameRect.top - 1 || rect.right > frameRect.right + 1 || rect.bottom > frameRect.bottom + 1)) {
+      failures.push("preview outside the frame");
+    }
+    const hot = [...document.querySelectorAll("#walk [data-way-box]")].find((node) => node.dataset.wayBox === preview.dataset.for);
+    const hit = hot?.getBoundingClientRect();
+    if (hit && covers(rect, hit)) failures.push("preview covers the exit");
+  }
   for (const badge of document.querySelectorAll("#walk .way-badge")) {
     const badgeRect = badge.getBoundingClientRect();
     for (const text of svg.querySelectorAll(".painted-sign text, .verb-sign text, text.lbl")) {
