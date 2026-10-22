@@ -162,6 +162,19 @@ function measure() {
     return overlap > eps && overlapY > eps;
   });
   const offscreen = (rect) => rect.left < -eps || rect.top < -eps || rect.right > innerWidth + eps || rect.bottom > innerHeight + eps;
+  const endingOnly = (value) => {
+    const parts = String(value || "").trim().split(/\s*\/\s*/).map((part) => part.trim()).filter(Boolean);
+    return parts.length > 0 && parts.every((part) => /^-(?:er|ir|re)$/i.test(part));
+  };
+  for (const sign of svg.querySelectorAll(".painted-sign, .way-pill, .soon-pill, .name-tag")) {
+    const value = [...sign.querySelectorAll("text, span")].map((node) => node.textContent || "").join(" ").replace(/\s+/g, " ").trim()
+      || (sign.textContent || "").replace(/\s+/g, " ").trim();
+    if (endingOnly(value)) failures.push(`ending overlay still shown: ${value}`);
+  }
+  for (const node of document.querySelectorAll("#walk .way-pill, #walk .soon-pill")) {
+    const value = (node.textContent || "").replace(/\s+/g, " ").trim();
+    if (endingOnly(value)) failures.push(`ending label still shown: ${value}`);
+  }
   for (const node of svg.querySelectorAll("[data-item-box], [data-way-box], [data-zoom-box], [data-soon-box]")) {
     const raw = node.dataset.itemBox || node.dataset.wayBox || node.dataset.zoomBox || node.dataset.soonBox;
     if (!raw) continue;

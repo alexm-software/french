@@ -643,7 +643,6 @@ function toneSigns() {
   if (!ctx) return;
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   svg.querySelectorAll(".painted-sign").forEach((sign) => {
-    if (sign.classList.contains("side-left") || sign.classList.contains("side-right")) return;
     const parts = (sign.dataset.signBox || "").split(",").map(Number);
     if (parts.length < 4 || parts.some((n) => !Number.isFinite(n))) return;
     const [x0, y0, x1, y1] = parts;
@@ -755,6 +754,11 @@ function moodFor(place) {
 
 function exitKind(key) {
   return { prev: "back", back: "back", next: "forward", forward: "forward", left: "left", right: "right" }[key] || "";
+}
+
+function endingMarker(text) {
+  const parts = String(text || "").trim().split(/\s*\/\s*/).map((part) => part.trim()).filter(Boolean);
+  return parts.length > 0 && parts.every((part) => /^-(?:er|ir|re)$/i.test(part));
 }
 
 function verbSide(word, scene) {
@@ -1083,9 +1087,8 @@ function sceneMarkup(scene, words, zooms) {
     const wordId = key.endsWith("_sign") ? key.slice(0, -5) : "";
     const word = byId[wordId];
     if (area.role === "direction") {
-      const trimmed = text.trim();
-      const sideClass = /^-er\b/.test(trimmed) ? " side-left" : /^-ir\b|-re\b/.test(trimmed) ? " side-right" : "";
-      parts.push(paintedSign(`direction-sign${sideClass}`, text, box, { maxSize: sideClass ? 15 : 18, signId: key }));
+      if (endingMarker(text)) return;
+      parts.push(paintedSign("direction-sign", text, box, { maxSize: 18, signId: key }));
       return;
     }
     if (area.role === "sector_name") {
