@@ -731,14 +731,13 @@ function placeWayBadges() {
     caption.textContent = wayName;
     card.appendChild(caption);
     frame.appendChild(card);
-    const [x0, y0, x1, y1] = (el.dataset.wayBox || "").split(",").map(Number);
-    const a = toScreen(x0, y0);
-    const b = toScreen(x1, y1);
+    const frameRect = frame.getBoundingClientRect();
+    const raw = (el.querySelector(".hit") || el).getBoundingClientRect();
     const hit = {
-      left: Math.min(a.x, b.x),
-      top: Math.min(a.y, b.y),
-      right: Math.max(a.x, b.x),
-      bottom: Math.max(a.y, b.y),
+      left: raw.left - frameRect.left,
+      top: raw.top - frameRect.top,
+      right: raw.right - frameRect.left,
+      bottom: raw.bottom - frameRect.top,
     };
     const margin = 8;
     const fw = frame.clientWidth || 320;
