@@ -1,0 +1,125 @@
+{
+ "kind": "room",
+ "divider_x": 750,
+ "note": "The wide wooden jetty at the far end of the harbour, low camera on the planks; landmark: the towering coral-and-white cruise ship along the left with its escalator gangway (repainted so it no longer looks like R_harbour_01; gate 13). Feminine LEFT: passengers riding the escalator gangway down at the stopover (escale), otter in sunglasses on a deckchair on the jetty (jetée), anchor going down from the blue boat with a crab riding it (ancre); maritime (adj): four otters rowing past the signal-flag mast. Masculine RIGHT: seal clapping on the planks (phoque), newcomer with suitcase hugging a welcome bouquet (arrivant), penguin navigator with map at a ship's wheel (navigateur). Exception: the container ship (la container, f) sits on the horizon far right, the only open sea in view. Exits: fingerpost near left -> R_harbour_01; stone steps right -> the cove R_harbour_02_z1. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La jetée",
+   "box": [
+    1000,
+    96,
+    1180,
+    132
+   ],
+   "text_box": [
+    1004,
+    99,
+    1176,
+    129
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_escale_noun",
+   "box": [
+    200,
+    82,
+    474,
+    318
+   ]
+  },
+  {
+   "id": "fr_jetee_noun",
+   "box": [
+    240,
+    382,
+    482,
+    626
+   ]
+  },
+  {
+   "id": "fr_ancre_noun",
+   "box": [
+    538,
+    372,
+    616,
+    500
+   ]
+  },
+  {
+   "id": "fr_maritime_adj",
+   "box": [
+    600,
+    88,
+    856,
+    366
+   ]
+  },
+  {
+   "id": "fr_container_noun",
+   "box": [
+    998,
+    180,
+    1086,
+    246
+   ]
+  },
+  {
+   "id": "fr_phoque_noun",
+   "box": [
+    766,
+    375,
+    856,
+    538
+   ]
+  },
+  {
+   "id": "fr_arrivant_noun",
+   "box": [
+    860,
+    204,
+    966,
+    476
+   ],
+   "scene": "newcomer with her suitcase hugging a big welcome bouquet (no other figure)"
+  },
+  {
+   "id": "fr_navigateur_noun",
+   "box": [
+    968,
+    272,
+    1056,
+    470
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_harbour_01",
+   "box": [
+    110,
+    300,
+    196,
+    500
+   ],
+   "label": "Back along the jetty to the harbour",
+   "name": "Le port de pêche",
+   "kind": "path"
+  },
+  {
+   "target": "R_harbour_02_z1",
+   "box": [
+    962,
+    494,
+    1156,
+    656
+   ],
+   "label": "Down the steps to the cove",
+   "name": "La crique",
+   "kind": "stairs_down"
+  }
+ ],
+ "boxes_estimated": false
+}

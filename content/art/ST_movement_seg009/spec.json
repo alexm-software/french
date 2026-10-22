@@ -1,0 +1,109 @@
+{
+ "name": "Rue des Pressés",
+ "street_name": "Boulevard des Départs",
+ "divider_x": 1210,
+ "art_style": "clean realism 4",
+ "landmark": "bronze statue of a running sprinter on a stone plinth in the middle of the boulevard",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_lasser_verb",
+   "box": [
+    80,
+    265,
+    238,
+    570
+   ],
+   "tier": "street",
+   "mirror": "oval mirror on the house wall above the rocking chair"
+  },
+  {
+   "id": "fr_hater_verb",
+   "box": [
+    248,
+    328,
+    425,
+    560
+   ],
+   "tier": "street",
+   "mirror": "tall standing mirror outside the mirror shop reflects the hatter"
+  },
+  {
+   "id": "fr_accelerer_verb",
+   "box": [
+    444,
+    512,
+    638,
+    625
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_empresser_verb",
+   "box": [
+    722,
+    302,
+    853,
+    600
+   ],
+   "tier": "street",
+   "mirror": "round convex traffic mirror on a pole shows the reporter"
+  },
+  {
+   "id": "fr_exalter_verb",
+   "box": [
+    881,
+    318,
+    1094,
+    590
+   ],
+   "tier": "street",
+   "mirror": "the big wall mirror in the barber-shop window"
+  },
+  {
+   "id": "fr_acceder_verb",
+   "box": [
+    1052,
+    119,
+    1175,
+    256
+   ],
+   "tier": "upper"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_movement_seg010",
+   "box": [
+    492,
+    418,
+    552,
+    490
+   ],
+   "label": "Walk on to Allée des Galopins",
+   "name": "Allée des Galopins",
+   "sign": "Allée des Galopins →"
+  },
+  "back": {
+   "target": "ST_movement_seg008",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Chemin des Grimpeurs",
+   "name": "Chemin des Grimpeurs",
+   "sign": "← Chemin des Grimpeurs"
+  }
+ },
+ "signs": {
+  "name": [
+   560,
+   48,
+   760,
+   86
+  ]
+ },
+ "note": "Boulevard des Départs place 4/5; landmark: bronze statue of a running sprinter on a stone plinth in the middle of the boulevard. Rue des Pressés: a busy stretch around a sprinter statue; every verb is -er (divider at the far right). The four pronominal verbs each have a mirror inside their box (oval wall mirror, standing mirror, convex traffic mirror, barber-shop mirror). Repainted once (shop signs blank, stray figures removed); cooled k 0.5; shrunk 0.9. No -er/-ir markers, no painted text. 10:50Z streets worker 4: facades recoloured salmon-pink plaster for gate 13 (was 0.817 vs seg007). Backup work/backups/streets/dep_g13/."
+}

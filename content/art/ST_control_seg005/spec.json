@@ -1,111 +1,105 @@
 {
-  "divider_x": 900,
-  "name": "Rue des Gestes — Chemin de la Barrière · fermer, casser, mettre",
-  "note": "Tiered verb place. -er LEFT (farmer closing the gate on three geese, cook whose casserole dish breaks on the cobbles, kangaroo rolling a beach ball on the balcony, man catching a butterfly at the upper window, stork setting a parcel down on the roof terrace), -ir/-re RIGHT (tailor putting on his top hat, tape measure round his neck). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_fermer_verb",
-      "box": [
-        56,
-        369,
-        262,
-        662
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_casser_verb",
-      "box": [
-        400,
-        431,
-        669,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_rouler_verb",
-      "box": [
-        494,
-        212,
-        675,
-        362
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_attraper_verb",
-      "box": [
-        137,
-        31,
-        394,
-        188
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_deposer_verb",
-      "box": [
-        506,
-        25,
-        656,
-        131
-      ],
-      "tier": "roof"
-    },
-    {
-      "id": "fr_mettre_verb",
-      "box": [
-        1119,
-        400,
-        1200,
-        638
-      ],
-      "tier": "street"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg006",
-      "box": [
-        880,
-        440,
-        1040,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Allée des Porteurs",
-      "sign": "Allée des Porteurs →",
-      "name_fr": "Allée des Porteurs",
-      "name_en": "Porters' Alley"
-    },
-    "back": {
-      "target": "ST_control_seg004",
-      "box": [
-        690,
-        676,
-        1100,
-        712
-      ],
-      "label": "Back up the lane to Barrel-Organ Square",
-      "name": "Place de l'Orgue-de-Barbarie",
-      "sign": "← Place de l'Orgue-de-Barbarie",
-      "name_fr": "Place de l'Orgue-de-Barbarie",
-      "name_en": "Barrel-Organ Square"
-    }
+ "name": "Chemin de la Barrière",
+ "street_name": "Rue des Débardeurs",
+ "divider_x": 1000,
+ "art_style": "painterly realism 3.5",
+ "landmark": "wooden barrel-rolling ramp from a cart down to a cellar hatch beside a round stone fountain",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_fermer_verb",
+   "box": [
+    125,
+    362,
+    319,
+    619
+   ],
+   "tier": "street"
   },
-  "signs": {
-    "er": [
-      740,
-      25,
-      840,
-      59
-    ],
-    "irre": [
-      870,
-      25,
-      990,
-      59
-    ]
+  {
+   "id": "fr_casser_verb",
+   "box": [
+    438,
+    419,
+    669,
+    625
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_rouler_verb",
+   "box": [
+    519,
+    225,
+    669,
+    356
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_attraper_verb",
+   "box": [
+    206,
+    62,
+    431,
+    225
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_deposer_verb",
+   "box": [
+    525,
+    62,
+    656,
+    162
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_mettre_verb",
+   "box": [
+    1056,
+    388,
+    1131,
+    600
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg006",
+   "box": [
+    840,
+    430,
+    940,
+    530
+   ],
+   "label": "Walk on to Allée des Porteurs",
+   "name": "Allée des Porteurs",
+   "sign": "Allée des Porteurs →"
+  },
+  "back": {
+   "target": "S03_sector",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Place du Marché",
+   "name": "Place du Marché",
+   "sign": "← Place du Marché"
+  }
+ },
+ "signs": {
+  "name": [
+   700,
+   280,
+   940,
+   320
+  ]
+ },
+ "note": "Rue des Débardeurs place 1/5; landmark: wooden barrel-rolling ramp from a cart down to a cellar hatch beside a round stone fountain. First place: the porters' street leaves the market square behind the viewer (back = near cobbles). -er figures on the left; mettre (the tailor) on the right past the fountain. Top margin extended a little (scenery stretch) so the stork clears the 6% band. No -er/-ir markers, no painted text."
 }

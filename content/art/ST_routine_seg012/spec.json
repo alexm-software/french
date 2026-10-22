@@ -1,111 +1,105 @@
 {
-  "divider_x": 760,
-  "name": "Allée du Quotidien — Allée des Hérons · faillir, épuiser, suspendre",
-  "note": "Tiered verb place. -er LEFT (exhausted spaniel among the tennis balls, heron spreading its wings on the balcony rail, bear housing a little jay in a teacup bed at the upper window, coach whistling on a tortoise on the roof terrace), -ir/-re RIGHT (waiter almost dropping his tower of cups, panda suspended from the balcony washing line). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_epuiser_verb",
-      "box": [
-        80,
-        578,
-        450,
-        698
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_deployer_verb",
-      "box": [
-        275,
-        165,
-        555,
-        390
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_heberger_verb",
-      "box": [
-        105,
-        70,
-        262,
-        205
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_motiver_verb",
-      "box": [
-        315,
-        15,
-        560,
-        152
-      ],
-      "tier": "roof"
-    },
-    {
-      "id": "fr_faillir_verb",
-      "box": [
-        1012,
-        360,
-        1128,
-        688
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_suspendre_verb",
-      "box": [
-        1045,
-        108,
-        1170,
-        335
-      ],
-      "tier": "balcony"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg013",
-      "box": [
-        680,
-        440,
-        840,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue des Affiches",
-      "sign": "Rue des Affiches →",
-      "name_fr": "Rue des Affiches",
-      "name_en": "Posters Street"
-    },
-    "back": {
-      "target": "ST_routine_seg011",
-      "box": [
-        470,
-        668,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Slippers Lane",
-      "name": "Ruelle des Chaussons",
-      "sign": "← Ruelle des Chaussons",
-      "name_fr": "Ruelle des Chaussons",
-      "name_en": "Slippers Lane"
-    }
+ "name": "Allée des Hérons",
+ "street_name": "Montée des Habitudes",
+ "divider_x": 760,
+ "art_style": "richer painterly realism 4",
+ "landmark": "rope footbridge slung across the alley between two upper floors",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_motiver_verb",
+   "box": [
+    425,
+    46,
+    560,
+    222
+   ],
+   "tier": "roof"
   },
-  "signs": {
-    "er": [
-      590,
-      30,
-      690,
-      64
-    ],
-    "irre": [
-      780,
-      30,
-      900,
-      64
-    ]
+  {
+   "id": "fr_heberger_verb",
+   "box": [
+    195,
+    110,
+    315,
+    245
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_deployer_verb",
+   "box": [
+    340,
+    228,
+    565,
+    400
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_epuiser_verb",
+   "box": [
+    190,
+    580,
+    570,
+    672
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_faillir_verb",
+   "box": [
+    915,
+    368,
+    1030,
+    666
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_suspendre_verb",
+   "box": [
+    975,
+    140,
+    1085,
+    320
+   ],
+   "tier": "balcony"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg013",
+   "box": [
+    620,
+    330,
+    770,
+    570
+   ],
+   "label": "Walk on to Rue des Affiches",
+   "name": "Rue des Affiches",
+   "sign": "Rue des Affiches →"
+  },
+  "back": {
+   "target": "ST_routine_seg011",
+   "box": [
+    380,
+    682,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Chaussons",
+   "name": "Ruelle des Chaussons",
+   "sign": "← Ruelle des Chaussons"
+  }
+ },
+ "signs": {
+  "name": [
+   600,
+   40,
+   820,
+   80
+  ]
+ },
+ "note": "Montée des Habitudes place 3/5; landmark: rope footbridge slung across the alley between two upper floors.  No -er/-ir markers, no painted text."
 }

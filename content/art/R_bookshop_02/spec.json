@@ -1,150 +1,150 @@
 {
- "divider_x": 400,
+ "divider_x": 285,
  "kind": "room",
- "note": "Bookshop (2) with its print room: printing, pamphlets, leaflets and landmarks. The wooden post on the left divides it: feminine nouns on its left, masculine on its right. The open door on the left goes back to the florist's; the wide opening at the back right, behind the printer, leads into the boutique (3).",
+ "note": "Tenth shop of the B07 covered arcade (glass skylight, honey limestone, dark oak joinery, as on the exterior): the print room and bookshop, with deep red damask walls and a blue-grey slate floor. LANDMARK: the huge black iron printing press in the middle. The glazed door on the left shows the florist's greenhouse with its palm (way back); the arch on the right shows the violet perfumery with its bottle shelves (next shop). Feminine nouns on the left, masculine on the right.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "La librairie (2)",
+   "text": "L'imprimerie",
    "box": [
-    480,
+    550,
     15,
-    720,
-    50
+    730,
+    42
    ],
    "text_box": [
-    486,
+    556,
     21,
-    714,
-    44
+    724,
+    36
    ]
   }
  },
  "items": [
   {
-   "id": "fr_rene_noun",
-   "box": [
-    100,
-    256,
-    331,
-    556
-   ],
-   "scene": "boy on a rocking horse holding the reins tight"
-  },
-  {
    "id": "fr_imprimerie_noun",
    "box": [
-    131,
-    62,
-    325,
-    250
+    78,
+    244,
+    331,
+    381
    ],
-   "scene": "freshly printed sheets flying through the air"
+   "scene": "fresh prints from the PRINTSHOP hang on the line to dry, each a wet IMPRINT"
+  },
+  {
+   "id": "fr_rene_noun",
+   "box": [
+    135,
+    470,
+    390,
+    675
+   ],
+   "scene": "a little brown WREN pecks at the REINS of the rocking horse"
   },
   {
    "id": "fr_repere_noun",
    "box": [
-    425,
-    56,
-    628,
-    269
+    335,
+    312,
+    462,
+    465
    ],
-   "scene": "map on the wall with a red marker flag"
-  },
-  {
-   "id": "fr_agenda_noun",
-   "box": [
-    632,
-    112,
-    769,
-    427
-   ],
-   "scene": "busy woman flipping through her appointment diary"
-  },
-  {
-   "id": "fr_livret_noun",
-   "box": [
-    419,
-    419,
-    571,
-    612
-   ],
-   "scene": "cat reading a little opera booklet"
-  },
-  {
-   "id": "fr_correspondant_noun",
-   "box": [
-    575,
-    431,
-    800,
-    676
-   ],
-   "scene": "hedgehog writing a letter covered in stamps"
-  },
-  {
-   "id": "fr_pamphlet_noun",
-   "box": [
-    781,
-    175,
-    956,
-    428
-   ],
-   "scene": "artist drawing the mayor as a vain peacock"
+   "scene": "the REPAIR man plants a red flag MARKER on the globe"
   },
   {
    "id": "fr_imprimeur_noun",
    "box": [
-    975,
-    81,
-    1203,
-    365
+    465,
+    125,
+    719,
+    490
    ],
-   "scene": "old printer pulling the lever of an iron press"
+   "scene": "the PRINTER pulls the long lever of his press"
+  },
+  {
+   "id": "fr_livret_noun",
+   "box": [
+    724,
+    231,
+    815,
+    490
+   ],
+   "scene": "LIV RAY reads her little BOOKLET"
+  },
+  {
+   "id": "fr_agenda_noun",
+   "box": [
+    820,
+    219,
+    910,
+    430
+   ],
+   "scene": "the man reads out his packed appointment DIARY: his whole AGENDA"
+  },
+  {
+   "id": "fr_pamphlet_noun",
+   "box": [
+    915,
+    200,
+    1100,
+    431
+   ],
+   "scene": "PAN and FLAY: the artist mocks the vain peacock in a LAMPOON"
   },
   {
    "id": "fr_essuie_glace_noun",
    "box": [
-    812,
-    444,
-    956,
-    550
+    1105,
+    328,
+    1202,
+    432
    ],
-   "scene": "toy car in a puddle with tiny windscreen wipers"
+   "scene": "the toy car WIPERS go SWEE across the rainy GLASS"
+  },
+  {
+   "id": "fr_correspondant_noun",
+   "box": [
+    600,
+    498,
+    851,
+    675
+   ],
+   "scene": "CORRESPOND ON! the hedgehog reads the latest letter from his PEN PAL"
   },
   {
    "id": "fr_depliant_noun",
    "box": [
-    960,
-    369,
-    1203,
-    676
+    856,
+    438,
+    1202,
+    675
    ],
-   "scene": "hiker unfolding a giant leaflet trail map"
+   "scene": "the hiker unfolds a PLIANT LEAFLET into a giant trail map"
   }
  ],
  "links": [
   {
    "target": "R_florist",
    "box": [
-    0,
-    75,
-    96,
-    450
+    78,
+    62,
+    225,
+    238
    ],
-   "label": "Back through the left door to the florist's",
+   "label": "Back through the glazed door to the florist's",
    "name": "Le fleuriste",
    "kind": "door"
   },
   {
    "target": "R_boutique_03",
    "box": [
-    862,
+    1100,
     75,
-    968,
-    162
+    1204,
+    328
    ],
-   "label": "Through the wide opening at the back right into the boutique (3)",
-   "name": "La boutique (3)",
+   "label": "Through the arch into the perfumery",
+   "name": "La parfumerie",
    "kind": "arch"
   }
  ]

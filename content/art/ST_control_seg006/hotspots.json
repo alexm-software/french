@@ -1,372 +1,358 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_control_seg006",
-  "street_id": "ST_control",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Rue des Gestes — Allée des Porteurs · porter, poser, placer",
-  "divider_x": 1000,
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hotel porter carrying a tower of suitcases, woman posing as she puts down a vase, traveller returning home with his globe), balcony (man throwing an old boot down into the bin), upper (woman taking off her huge feathered hat), roof (man seating a tabby cat on a chair). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_porter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_porter_verb",
-      "text": "porter",
-      "box": [
-        331,
-        640,
-        399,
-        666
-      ],
-      "text_box": [
-        335,
-        644,
-        395,
-        662
-      ]
-    },
-    "fr_poser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_poser_verb",
-      "text": "poser",
-      "box": [
-        549,
-        618,
-        607,
-        644
-      ],
-      "text_box": [
-        553,
-        622,
-        603,
-        640
-      ]
-    },
-    "fr_retourner_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_retourner_verb",
-      "text": "retourner (à / en)",
-      "box": [
-        789,
-        587,
-        903,
-        613
-      ],
-      "text_box": [
-        793,
-        591,
-        899,
-        609
-      ]
-    },
-    "fr_jeter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_jeter_verb",
-      "text": "jeter",
-      "box": [
-        527,
-        299,
-        585,
-        325
-      ],
-      "text_box": [
-        531,
-        303,
-        581,
-        321
-      ]
-    },
-    "fr_enlever_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_enlever_verb",
-      "text": "enlever",
-      "box": [
-        679,
-        212,
-        757,
-        238
-      ],
-      "text_box": [
-        683,
-        216,
-        753,
-        234
-      ]
-    },
-    "fr_placer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_placer_verb",
-      "text": "placer",
-      "box": [
-        166,
-        156,
-        234,
-        182
-      ],
-      "text_box": [
-        170,
-        160,
-        230,
-        178
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Rue des Lanceurs →",
-      "box": [
-        960,
-        440,
-        1100,
-        540
-      ],
-      "text_box": [
-        966,
-        446,
-        1094,
-        534
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Chemin de la Barrière",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        682,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        880,
-        25,
-        980,
-        59
-      ],
-      "text_box": [
-        883,
-        28,
-        977,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        1000,
-        25,
-        1120,
-        59
-      ],
-      "text_box": [
-        1003,
-        28,
-        1117,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg006",
+ "street_id": "ST_porteurs",
+ "theme_street_id": "ST_control",
+ "sector_id": "S03_market",
+ "place_index": 2,
+ "place_count": 5,
+ "street_name": "Rue des Débardeurs",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée des Porteurs",
+ "divider_x": 1100,
+ "note": "Rue des Débardeurs place 2/5; landmark: tall wooden porters' hoist tower with a big pulley wheel lifting a pallet of crates. All six verbs are -er, so they are on the whitewashed houses on the left; the hoist tower stands on the right where the street goes on. Top margin extended a little so the roof-terrace man clears the 6% band. No -er/-ir markers, no painted text.",
+ "landmark": "tall wooden porters' hoist tower with a big pulley wheel lifting a pallet of crates",
+ "art_style": "painterly realism 3.5",
+ "text_areas": {
+  "fr_porter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_porter_verb",
+   "text": "porter",
+   "box": [
+    369,
+    644,
+    437,
+    670
+   ],
+   "text_box": [
+    373,
+    648,
+    433,
+    666
+   ]
   },
-  "items": [
-    {
-      "id": "fr_porter_verb",
-      "lemma": "porter",
-      "gloss": "to carry; to wear",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        287,
-        238,
-        444,
-        672
-      ],
-      "label_xy": [
-        365,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_poser_verb",
-      "lemma": "poser",
-      "gloss": "to put down; to ask (a question)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        456,
-        394,
-        700,
-        650
-      ],
-      "label_xy": [
-        578,
-        638
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_retourner_verb",
-      "lemma": "retourner",
-      "gloss": "to return; to turn over",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        787,
-        400,
-        906,
-        619
-      ],
-      "label_xy": [
-        846,
-        607
-      ],
-      "prepositions": [
-        "à",
-        "en"
-      ],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_jeter_verb",
-      "lemma": "jeter",
-      "gloss": "to throw (away)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        469,
-        62,
-        644,
-        331
-      ],
-      "label_xy": [
-        556,
-        319
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_enlever_verb",
-      "lemma": "enlever",
-      "gloss": "to remove, take off",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        662,
-        88,
-        775,
-        244
-      ],
-      "label_xy": [
-        718,
-        232
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_placer_verb",
-      "lemma": "placer",
-      "gloss": "to place; to seat",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 6,
-      "box": [
-        100,
-        12,
-        300,
-        188
-      ],
-      "label_xy": [
-        200,
-        176
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg007",
-      "box": [
-        960,
-        440,
-        1100,
-        540
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue des Lanceurs",
-      "sign": "Rue des Lanceurs →",
-      "kind": "street",
-      "name_fr": "Rue des Lanceurs",
-      "name_en": "Throwers' Street"
-    },
-    "back": {
-      "target": "ST_control_seg005",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Farm-Gate Lane",
-      "name": "Chemin de la Barrière",
-      "sign": "← Chemin de la Barrière",
-      "kind": "street",
-      "name_fr": "Chemin de la Barrière",
-      "name_en": "Farm-Gate Lane"
-    }
+  "fr_poser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_poser_verb",
+   "text": "poser",
+   "box": [
+    568,
+    612,
+    626,
+    638
+   ],
+   "text_box": [
+    572,
+    616,
+    622,
+    634
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_retourner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_retourner_verb",
+   "text": "retourner (à / en)",
+   "box": [
+    796,
+    580,
+    872,
+    606
+   ],
+   "text_box": [
+    800,
+    584,
+    868,
+    602
+   ]
+  },
+  "fr_jeter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_jeter_verb",
+   "text": "jeter",
+   "box": [
+    549,
+    280,
+    607,
+    306
+   ],
+   "text_box": [
+    553,
+    284,
+    603,
+    302
+   ]
+  },
+  "fr_enlever_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enlever_verb",
+   "text": "enlever",
+   "box": [
+    686,
+    237,
+    764,
+    263
+   ],
+   "text_box": [
+    690,
+    241,
+    760,
+    259
+   ]
+  },
+  "fr_placer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_placer_verb",
+   "text": "placer",
+   "box": [
+    213,
+    174,
+    281,
+    200
+   ],
+   "text_box": [
+    217,
+    178,
+    277,
+    196
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Lanceurs →",
+   "box": [
+    890,
+    470,
+    980,
+    570
+   ],
+   "text_box": [
+    896,
+    476,
+    974,
+    564
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Chemin de la Barrière",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée des Porteurs",
+   "box": [
+    700,
+    50,
+    940,
+    90
+   ],
+   "text_box": [
+    704,
+    54,
+    936,
+    86
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_porter_verb",
+   "lemma": "porter",
+   "gloss": "to carry; to wear",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    331,
+    262,
+    475,
+    676
+   ],
+   "label_xy": [
+    403,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_poser_verb",
+   "lemma": "poser",
+   "gloss": "to put down; to ask (a question)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    488,
+    400,
+    706,
+    644
+   ],
+   "label_xy": [
+    597,
+    632
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_retourner_verb",
+   "lemma": "retourner",
+   "gloss": "to return; to turn over",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    794,
+    406,
+    875,
+    612
+   ],
+   "label_xy": [
+    834,
+    600
+   ],
+   "prepositions": [
+    "à",
+    "en"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_jeter_verb",
+   "lemma": "jeter",
+   "gloss": "to throw (away)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    478,
+    106,
+    678,
+    312
+   ],
+   "label_xy": [
+    578,
+    300
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_enlever_verb",
+   "lemma": "enlever",
+   "gloss": "to remove, take off",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    681,
+    119,
+    769,
+    269
+   ],
+   "label_xy": [
+    725,
+    257
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_placer_verb",
+   "lemma": "placer",
+   "gloss": "to place; to seat",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    150,
+    56,
+    344,
+    206
+   ],
+   "label_xy": [
+    247,
+    194
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg007",
+   "box": [
+    890,
+    470,
+    980,
+    570
+   ],
+   "label": "Walk on to Rue des Lanceurs",
+   "name": "Rue des Lanceurs",
+   "sign": "Rue des Lanceurs →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg005",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Chemin de la Barrière",
+   "name": "Chemin de la Barrière",
+   "sign": "← Chemin de la Barrière",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 3,
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1
+ }
 }

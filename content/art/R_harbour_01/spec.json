@@ -1,0 +1,146 @@
+{
+ "kind": "room",
+ "divider_x": 660,
+ "note": "The fishing harbour just inside the gate, camera on the wet cobbled quay facing east to the sea; landmark: the old red harbour crane. Feminine LEFT: sailor shouting as the gust fills the striped sail (voile), dog barking in the little rowing boat at a duck (barque), parade of six toy-like boats (flotte); captain tipping his cap to the row of gulls (capitaine, m/f). Masculine RIGHT: bat in a sailor hat steering the red motor boat (bateau), gull on the bollard at the quay edge (quai), seal napping in the hauled net (filet), walrus harbour master pouring sardines by his kiosk (port). Exits: harbour gate near left -> B24_port; breakwater to the lighthouse far left -> R_harbour_01_z2; ferry pontoon centre -> zoom R_harbour_01_z1; long jetty far right -> R_harbour_02. Painted 2026-10-22. UPDATE 2026-10-22 (s08p4, queue row INDEP s08_b24 voile): the sailor in the dinghy is now an adult bearded sailor in a yellow life jacket, seated at the tiller, one arm raised (local repaint of the boat area only).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le port",
+   "box": [
+    1140,
+    230,
+    1200,
+    270
+   ],
+   "text_box": [
+    1144,
+    233,
+    1196,
+    267
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_voile_noun_f",
+   "box": [
+    260,
+    148,
+    442,
+    345
+   ]
+  },
+  {
+   "id": "fr_barque_noun",
+   "box": [
+    448,
+    292,
+    622,
+    362
+   ]
+  },
+  {
+   "id": "fr_flotte_noun",
+   "box": [
+    380,
+    378,
+    636,
+    432
+   ]
+  },
+  {
+   "id": "fr_capitaine_noun",
+   "box": [
+    244,
+    362,
+    374,
+    632
+   ]
+  },
+  {
+   "id": "fr_bateau_noun",
+   "box": [
+    676,
+    306,
+    850,
+    466
+   ]
+  },
+  {
+   "id": "fr_quai_noun",
+   "box": [
+    734,
+    470,
+    832,
+    660
+   ]
+  },
+  {
+   "id": "fr_filet_noun",
+   "box": [
+    856,
+    416,
+    1100,
+    588
+   ]
+  },
+  {
+   "id": "fr_port_noun",
+   "box": [
+    1000,
+    214,
+    1132,
+    412
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_harbour_01_z1",
+  "box": [
+   488,
+   140,
+   700,
+   284
+  ],
+  "label": "Look closer at the ferry pontoon"
+ },
+ "links": [
+  {
+   "target": "B24_port",
+   "box": [
+    88,
+    282,
+    188,
+    556
+   ],
+   "label": "Out through the harbour gate",
+   "name": "Port de pêche",
+   "kind": "door"
+  },
+  {
+   "target": "R_harbour_01_z2",
+   "box": [
+    40,
+    136,
+    256,
+    262
+   ],
+   "label": "Along the breakwater to the lighthouse",
+   "name": "Le phare",
+   "kind": "path"
+  },
+  {
+   "target": "R_harbour_02",
+   "box": [
+    860,
+    200,
+    996,
+    270
+   ],
+   "label": "Out along the long jetty",
+   "name": "La jetée",
+   "kind": "path"
+  }
+ ],
+ "boxes_estimated": false
+}

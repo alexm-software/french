@@ -1,370 +1,356 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_control_seg013",
-  "street_id": "ST_control",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Rue des Gestes — Chemin des Faucheurs · repousser, se hisser, abattre",
-  "divider_x": 820,
-  "note": "Tiered verb place. -er LEFT (man pushing back a charging goat with his broom, man hoisting himself up a rope onto the wall while a goose hisses, little mirror on the wall; man chaining his bicycle to the balcony rail; cook trapping a jay under a pie dish at the upper window; farmer mowing the grass roof with a scythe), -ir/-re RIGHT (man knocking down a tower of tin cans with a cricket bat). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_repousser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_repousser_verb",
-      "text": "repousser",
-      "box": [
-        211,
-        640,
-        307,
-        666
-      ],
-      "text_box": [
-        215,
-        644,
-        303,
-        662
-      ]
-    },
-    "fr_hisser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_hisser_verb",
-      "text": "se hisser",
-      "box": [
-        539,
-        599,
-        635,
-        625
-      ],
-      "text_box": [
-        543,
-        603,
-        631,
-        621
-      ]
-    },
-    "fr_enchainer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_enchainer_verb",
-      "text": "enchaîner",
-      "box": [
-        436,
-        324,
-        532,
-        350
-      ],
-      "text_box": [
-        440,
-        328,
-        528,
-        346
-      ]
-    },
-    "fr_pieger_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_pieger_verb",
-      "text": "piéger",
-      "box": [
-        222,
-        299,
-        290,
-        325
-      ],
-      "text_box": [
-        226,
-        303,
-        286,
-        321
-      ]
-    },
-    "fr_faucher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_faucher_verb",
-      "text": "faucher",
-      "box": [
-        189,
-        93,
-        267,
-        119
-      ],
-      "text_box": [
-        193,
-        97,
-        263,
-        115
-      ]
-    },
-    "fr_abattre_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_abattre_verb",
-      "text": "abattre",
-      "box": [
-        995,
-        630,
-        1073,
-        656
-      ],
-      "text_box": [
-        999,
-        634,
-        1069,
-        652
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Allée de l'Écureuil →",
-      "box": [
-        760,
-        430,
-        905,
-        540
-      ],
-      "text_box": [
-        766,
-        436,
-        899,
-        534
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Passage des Pinces-à-Linge",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        682,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        700,
-        25,
-        800,
-        59
-      ],
-      "text_box": [
-        703,
-        28,
-        797,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        840,
-        25,
-        960,
-        59
-      ],
-      "text_box": [
-        843,
-        28,
-        957,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg013",
+ "street_id": "ST_campeur",
+ "theme_street_id": "ST_control",
+ "sector_id": "S09_nature",
+ "place_index": 4,
+ "place_count": 5,
+ "street_name": "Sentier du Campeur",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Chemin des Faucheurs",
+ "divider_x": 790,
+ "note": "Sentier du Campeur place 4/5; landmark: tall white wooden flag mast with a pulley wheel and a blue-and-white striped flag beside the path. -er scenes on the left (turf roof, cottage, wall); the flag mast stands at the divider and abattre (cricket bat and tin cans) is on the right. Local patch: the jay is trapped under the pie dish on the sill (no floating bird). Shrunk 0.9, cooled k 0.6. No -er/-ir markers, no painted text. ROUND2 (10:35Z): abattre top cans carry speed lines so they read as flying off the bat, not hanging in mid-air.",
+ "landmark": "tall white wooden flag mast with a pulley wheel and a blue-and-white striped flag beside the path",
+ "art_style": "outdoor realism 4",
+ "text_areas": {
+  "fr_faucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_faucher_verb",
+   "text": "faucher",
+   "box": [
+    205,
+    139,
+    283,
+    165
+   ],
+   "text_box": [
+    209,
+    143,
+    279,
+    161
+   ]
   },
-  "items": [
-    {
-      "id": "fr_repousser_verb",
-      "lemma": "repousser",
-      "gloss": "to push back",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        56,
-        400,
-        462,
-        672
-      ],
-      "label_xy": [
-        259,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_hisser_verb",
-      "lemma": "hisser",
-      "gloss": "to hoist",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        475,
-        412,
-        700,
-        631
-      ],
-      "label_xy": [
-        587,
-        619
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se hisser",
-      "scene": "",
-      "mirror": "small oval mirror on the wall beside the rope"
-    },
-    {
-      "id": "fr_enchainer_verb",
-      "lemma": "enchaîner",
-      "gloss": "to chain, to shackle; to subjugate, to enslave",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 3,
-      "box": [
-        394,
-        194,
-        575,
-        356
-      ],
-      "label_xy": [
-        484,
-        344
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_pieger_verb",
-      "lemma": "piéger",
-      "gloss": "to trap",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 4,
-      "box": [
-        200,
-        194,
-        312,
-        331
-      ],
-      "label_xy": [
-        256,
-        319
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_faucher_verb",
-      "lemma": "faucher",
-      "gloss": "to mow, to reap; to run over",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 5,
-      "box": [
-        112,
-        8,
-        344,
-        125
-      ],
-      "label_xy": [
-        228,
-        113
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_abattre_verb",
-      "lemma": "abattre",
-      "gloss": "to knock down; to slaughter",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 6,
-      "box": [
-        912,
-        369,
-        1156,
-        662
-      ],
-      "label_xy": [
-        1034,
-        650
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg014",
-      "box": [
-        760,
-        430,
-        905,
-        540
-      ],
-      "label": "Walk on down the lane",
-      "name": "Allée de l'Écureuil",
-      "sign": "Allée de l'Écureuil →",
-      "kind": "street",
-      "name_fr": "Allée de l'Écureuil",
-      "name_en": "Squirrel Alley"
-    },
-    "back": {
-      "target": "ST_control_seg012",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Clothes-Pegs Passage",
-      "name": "Passage des Pinces-à-Linge",
-      "sign": "← Passage des Pinces-à-Linge",
-      "kind": "street",
-      "name_fr": "Passage des Pinces-à-Linge",
-      "name_en": "Clothes-Pegs Passage"
-    }
+  "fr_pieger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_pieger_verb",
+   "text": "piéger",
+   "box": [
+    195,
+    326,
+    263,
+    352
+   ],
+   "text_box": [
+    199,
+    330,
+    259,
+    348
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_enchainer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enchainer_verb",
+   "text": "enchaîner",
+   "box": [
+    463,
+    302,
+    559,
+    328
+   ],
+   "text_box": [
+    467,
+    306,
+    555,
+    324
+   ]
+  },
+  "fr_hisser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_hisser_verb",
+   "text": "se hisser",
+   "box": [
+    235,
+    612,
+    331,
+    638
+   ],
+   "text_box": [
+    239,
+    616,
+    327,
+    634
+   ]
+  },
+  "fr_repousser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_repousser_verb",
+   "text": "repousser",
+   "box": [
+    539,
+    538,
+    635,
+    564
+   ],
+   "text_box": [
+    543,
+    542,
+    631,
+    560
+   ]
+  },
+  "fr_abattre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_abattre_verb",
+   "text": "abattre",
+   "box": [
+    958,
+    533,
+    1036,
+    559
+   ],
+   "text_box": [
+    962,
+    537,
+    1032,
+    555
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Allée de l'Écureuil →",
+   "box": [
+    714,
+    310,
+    775,
+    355
+   ],
+   "text_box": [
+    720,
+    316,
+    769,
+    349
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Passage des Pinces-à-Linge",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Chemin des Faucheurs",
+   "box": [
+    450,
+    56,
+    690,
+    96
+   ],
+   "text_box": [
+    454,
+    60,
+    686,
+    92
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_faucher_verb",
+   "lemma": "faucher",
+   "gloss": "to mow, to reap; to run over",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    154,
+    44,
+    334,
+    171
+   ],
+   "label_xy": [
+    244,
+    159
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_pieger_verb",
+   "lemma": "piéger",
+   "gloss": "to trap",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    124,
+    240,
+    334,
+    358
+   ],
+   "label_xy": [
+    229,
+    346
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_enchainer_verb",
+   "lemma": "enchaîner",
+   "gloss": "to chain, to shackle; to subjugate, to enslave",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    418,
+    182,
+    604,
+    334
+   ],
+   "label_xy": [
+    511,
+    322
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_hisser_verb",
+   "lemma": "hisser",
+   "gloss": "to hoist",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    131,
+    362,
+    435,
+    644
+   ],
+   "label_xy": [
+    283,
+    632
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se hisser",
+   "scene": "",
+   "mirror": "small oval mirror on the stone wall beside the climber"
+  },
+  {
+   "id": "fr_repousser_verb",
+   "lemma": "repousser",
+   "gloss": "to push back",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    463,
+    357,
+    711,
+    570
+   ],
+   "label_xy": [
+    587,
+    558
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_abattre_verb",
+   "lemma": "abattre",
+   "gloss": "to knock down; to slaughter",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    868,
+    227,
+    1127,
+    565
+   ],
+   "label_xy": [
+    997,
+    553
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg014",
+   "box": [
+    714,
+    310,
+    775,
+    355
+   ],
+   "label": "Walk on to Allée de l'Écureuil",
+   "name": "Allée de l'Écureuil",
+   "sign": "Allée de l'Écureuil →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg012",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Passage des Pinces-à-Linge",
+   "name": "Passage des Pinces-à-Linge",
+   "sign": "← Passage des Pinces-à-Linge",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "upper": 1,
+  "balcony": 1,
+  "street": 3
+ }
 }

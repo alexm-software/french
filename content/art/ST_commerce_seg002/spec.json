@@ -1,147 +1,105 @@
 {
-  "divider_x": 700,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Allée des Livreurs: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Allée des Livreurs",
-      "box": [
-        520,
-        30,
-        860,
-        74
-      ],
-      "text_box": [
-        526,
-        36,
-        854,
-        68
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Rue du Commerce — Passage du Marchandage →",
-      "box": [
-        630,
-        318,
-        776,
-        352
-      ],
-      "text_box": [
-        636,
-        324,
-        770,
-        346
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Rue du Commerce — Rue des Acheteurs",
-      "box": [
-        630,
-        640,
-        776,
-        674
-      ],
-      "text_box": [
-        636,
-        646,
-        770,
-        668
-      ]
-    }
+ "name": "Allée des Livreurs",
+ "street_name": "Rue des Écus",
+ "divider_x": 720,
+ "art_style": "realism 4 (money = serious)",
+ "landmark": "glass-roofed entrance arch of the covered arcade Passage du Marchandage at the end of the street, with the navy-and-cream parcel tram at its stop; pale-green (left) and blue-grey (right) plaster houses",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_rembourser_verb",
+   "box": [
+    230,
+    75,
+    382,
+    262
+   ],
+   "tier": "balcony"
   },
-  "items": [
-    {
-      "id": "fr_commander_verb",
-      "box": [
-        102,
-        362,
-        381,
-        662
-      ],
-      "scene": "little girl in a toy general's hat orders three scoops at the ice-cream kiosk"
-    },
-    {
-      "id": "fr_livrer_verb",
-      "box": [
-        402,
-        360,
-        623,
-        672
-      ],
-      "scene": "delivery man in a coachman's livery coat hands a parcel to a lady"
-    },
-    {
-      "id": "fr_racheter_verb",
-      "box": [
-        362,
-        140,
-        556,
-        250
-      ],
-      "scene": "brown rat counting coins to buy back a gold pocket watch from the pawnbroker"
-    },
-    {
-      "id": "fr_rembourser_verb",
-      "box": [
-        156,
-        94,
-        306,
-        244
-      ],
-      "scene": "wild boar in new boots holding out his shoebox for a refund"
-    },
-    {
-      "id": "fr_vendre_verb",
-      "box": [
-        781,
-        385,
-        1203,
-        676
-      ],
-      "scene": "man selling apples and pears from the back of a blue van"
-    },
-    {
-      "id": "fr_investir_verb",
-      "box": [
-        962,
-        106,
-        1112,
-        238
-      ],
-      "scene": "beaver in a gold waistcoat dropping coins into a pink piggy bank"
-    }
-  ],
-  "links": [
-    {
-      "target": "ST_commerce_seg004",
-      "box": [
-        628,
-        360,
-        778,
-        520
-      ],
-      "label": "Walk on to Haggling Passage",
-      "name": "Passage du Marchandage",
-      "kind": "street_forward",
-      "name_fr": "Passage du Marchandage",
-      "name_en": "Haggling Passage"
-    },
-    {
-      "target": "ST_commerce_seg001",
-      "box": [
-        130,
-        678,
-        780,
-        720
-      ],
-      "label": "Back to Shoppers' Street",
-      "name": "Rue des Acheteurs",
-      "kind": "street_back",
-      "name_fr": "Rue des Acheteurs",
-      "name_en": "Shoppers' Street"
-    }
+  {
+   "id": "fr_racheter_verb",
+   "box": [
+    384,
+    155,
+    520,
+    312
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_investir_verb",
+   "box": [
+    990,
+    175,
+    1095,
+    300
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_commander_verb",
+   "box": [
+    180,
+    437,
+    382,
+    664
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_livrer_verb",
+   "box": [
+    444,
+    380,
+    645,
+    662
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_vendre_verb",
+   "box": [
+    792,
+    412,
+    1195,
+    664
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg004",
+   "box": [
+    648,
+    235,
+    790,
+    548
+   ],
+   "label": "Walk on to Passage du Marchandage",
+   "name": "Passage du Marchandage",
+   "sign": "Passage du Marchandage →"
+  },
+  "back": {
+   "target": "ST_commerce_seg001",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Acheteurs",
+   "name": "Rue des Acheteurs",
+   "sign": "← Rue des Acheteurs"
+  }
+ },
+ "signs": {
+  "name": [
+   600,
+   40,
+   820,
+   80
   ]
+ },
+ "note": "Rue des Écus place 2/4; landmark: the street ends at the glass-roofed entrance of Passage du Marchandage (the covered arcade painted in ST_commerce_seg004), tram at its stop. 09:40Z streets b9: the far end repainted (GenerateImage edit, pasted outside item boxes) and facades recoloured pale green / blue-grey (gate 13 vs seg003 0.807 -> 0.771). Bottom 42 px of cobbles extended by band stretch (tools/extend.py). No -er/-ir markers, no painted text."
 }

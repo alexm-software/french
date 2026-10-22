@@ -1,22 +1,22 @@
 {
  "divider_x": 640,
  "kind": "room",
- "note": "Ground-floor classroom with the second half of the alphabet. The only gendered word, la lettre (feminine), is the postwoman on the far left; the letters themselves have no gender. The white door on the far left goes back to the entrance classroom. Zoom: the green chalkboard on the back wall and its ledge.",
+ "note": "Mint-green alphabet classroom with a blue lino floor N–Z (cartoon style). Landmark: the big red post box with the postwoman (la lettre, feminine, front left). Letters N to U as sound figures in reading order: back row left to right N O P Q, front row R S T U. Zooms: the reading nook with beanbags in the back right corner holds V to Z; the blank chalkboard's ledge holds the grammar words. The open white door at the back left goes out to the school yard; the blue door on the right leads to the counting room.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "L'alphabet (2)",
+   "text": "L'alphabet N–Z",
    "box": [
-    360,
-    84,
-    594,
-    210
+    400,
+    30,
+    832,
+    172
    ],
    "text_box": [
-    370,
-    94,
-    584,
-    200
+    412,
+    42,
+    820,
+    160
    ]
   }
  },
@@ -24,167 +24,139 @@
   {
    "id": "fr_lettre_noun",
    "box": [
-    131,
-    181,
-    250,
-    372
+    116,
+    152,
+    360,
+    445
    ],
    "scene": "postwoman holding up a sealed envelope"
   },
   {
-   "id": "fr_c_letter",
-   "box": [
-    131,
-    377,
-    356,
-    625
-   ],
-   "scene": "photographer at a box camera on a tripod"
-  },
-  {
-   "id": "fr_d_letter",
-   "box": [
-    253,
-    231,
-    472,
-    374
-   ],
-   "scene": "woman lounging on a daybed"
-  },
-  {
-   "id": "fr_e_letter",
-   "box": [
-    475,
-    216,
-    540,
-    384
-   ],
-   "scene": "puzzled boy scratching his head"
-  },
-  {
-   "id": "fr_f_letter",
-   "box": [
-    652,
-    179,
-    785,
-    375
-   ],
-   "scene": "weightlifter straining under a barbell"
-  },
-  {
-   "id": "fr_o_letter",
-   "box": [
-    831,
-    175,
-    938,
-    316
-   ],
-   "scene": "woman gasping at a giant ring doughnut"
-  },
-  {
-   "id": "fr_p_letter",
-   "box": [
-    962,
-    175,
-    1098,
-    330
-   ],
-   "scene": "man paying coins beside a shop till"
-  },
-  {
-   "id": "fr_l_letter",
-   "box": [
-    397,
-    412,
-    556,
-    562
-   ],
-   "scene": "small grey elephant"
-  },
-  {
-   "id": "fr_m_letter",
-   "box": [
-    572,
-    300,
-    648,
-    515
-   ],
-   "scene": "boy licking an ice-cream cone"
-  },
-  {
    "id": "fr_n_letter",
    "box": [
-    672,
-    416,
-    760,
-    506
+    362,
+    300,
+    465,
+    440
    ],
    "scene": "brown hen"
   },
   {
+   "id": "fr_o_letter",
+   "box": [
+    475,
+    181,
+    629,
+    446
+   ],
+   "scene": "girl in a yellow top gasping OH! at a giant ring doughnut"
+  },
+  {
+   "id": "fr_p_letter",
+   "box": [
+    650,
+    200,
+    806,
+    446
+   ],
+   "scene": "boy in a red jumper pressing the key of an old till on a little table"
+  },
+  {
+   "id": "fr_q_letter",
+   "box": [
+    919,
+    228,
+    1031,
+    472
+   ],
+   "scene": "boy in a blue t-shirt holding a tall billiard cue"
+  },
+  {
    "id": "fr_r_letter",
    "box": [
-    788,
-    319,
-    885,
-    528
+    228,
+    448,
+    400,
+    672
    ],
    "scene": "girl blowing up a red balloon"
   },
   {
    "id": "fr_s_letter",
    "box": [
-    666,
-    531,
-    850,
-    650
+    416,
+    478,
+    591,
+    665
    ],
    "scene": "green snake coiled on a cushion"
   },
   {
    "id": "fr_t_letter",
    "box": [
-    889,
-    406,
-    1006,
-    622
+    629,
+    448,
+    823,
+    675
    ],
-   "scene": "lady pouring tea"
+   "scene": "girl in pink pouring tea into a cup on a stool"
   },
   {
-   "id": "fr_v_letter",
+   "id": "fr_u_letter",
    "box": [
-    1010,
-    335,
-    1182,
-    648
+    898,
+    488,
+    1085,
+    669
    ],
-   "scene": "vain young man admiring himself in a hand mirror"
+   "scene": "white ewe sheep"
   }
  ],
  "zoom_from": [
   {
+   "room_id": "R_alphabet_02_z1",
+   "box": [
+    1035,
+    219,
+    1170,
+    405
+   ],
+   "label": "the reading nook with the beanbags (letters V to Z)"
+  },
+  {
    "room_id": "R_grammar_general",
    "box": [
-    660,
-    100,
-    956,
-    170
+    869,
+    41,
+    1106,
+    204
    ],
-   "label": "the green chalkboard and its ledge"
+   "label": "the chalkboard and its ledge"
   }
  ],
  "links": [
   {
-   "target": "R_alphabet_01",
+   "target": "B02_ecole",
    "box": [
-    65,
-    119,
-    128,
-    431
+    28,
+    40,
+    114,
+    397
    ],
-   "label": "Back through the white door to the entrance classroom",
-   "name": "L'alphabet (1)",
+   "label": "Out through the open door to the school yard",
+   "name": "Petite École",
+   "kind": "door"
+  },
+  {
+   "target": "R_numbers1",
+   "box": [
+    1173,
+    50,
+    1272,
+    400
+   ],
+   "label": "Through the blue door to the counting room",
+   "name": "Les nombres",
    "kind": "door"
   }
  ]

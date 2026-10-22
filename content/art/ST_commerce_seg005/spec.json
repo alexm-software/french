@@ -1,137 +1,95 @@
 {
-  "divider_x": 760,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Allée du Partage: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Allée du Partage",
-      "box": [
-        640,
-        30,
-        980,
-        74
-      ],
-      "text_box": [
-        646,
-        36,
-        974,
-        68
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Rue du Commerce — Rue de la Monnaie →",
-      "box": [
-        696,
-        322,
-        852,
-        356
-      ],
-      "text_box": [
-        702,
-        328,
-        846,
-        350
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Rue du Commerce — Ruelle des Tirelires",
-      "box": [
-        640,
-        560,
-        820,
-        594
-      ],
-      "text_box": [
-        646,
-        566,
-        814,
-        588
-      ]
-    }
+ "name": "Allée du Partage",
+ "street_name": "Passage de la Brocante",
+ "divider_x": 840,
+ "art_style": "cartoony 2.5 flea-market whimsy",
+ "landmark": "little round bandstand kiosk with a pointed roof and a bunch of colourful balloons",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_negocier_verb",
+   "box": [
+    88,
+    331,
+    406,
+    676
+   ],
+   "tier": "street"
   },
-  "items": [
-    {
-      "id": "fr_negocier_verb",
-      "box": [
-        85,
-        330,
-        402,
-        676
-      ],
-      "scene": "goat offering three turnips to a sighing hatter at a straw-hat stall"
-    },
-    {
-      "id": "fr_combler_verb",
-      "box": [
-        406,
-        340,
-        598,
-        656
-      ],
-      "scene": "ice-cream man filling a waffle cone until it overflows"
-    },
-    {
-      "id": "fr_decreter_verb",
-      "box": [
-        460,
-        152,
-        622,
-        290
-      ],
-      "scene": "red crab in a gold crown on a wooden crate raising a claw"
-    },
-    {
-      "id": "fr_distribuer_verb",
-      "box": [
-        250,
-        75,
-        456,
-        212
-      ],
-      "scene": "postman bear in a tree handing letters to the birds in their nests"
-    },
-    {
-      "id": "fr_repartir_verb_2",
-      "box": [
-        856,
-        331,
-        1194,
-        676
-      ],
-      "scene": "cheerful man at a party table cutting a cake into equal slices for three children"
-    }
-  ],
-  "links": [
-    {
-      "target": "ST_commerce_seg007",
-      "box": [
-        700,
-        360,
-        850,
-        470
-      ],
-      "label": "Walk on to Mint Street",
-      "name": "Rue de la Monnaie",
-      "kind": "street_forward",
-      "name_fr": "Rue de la Monnaie",
-      "name_en": "Mint Street"
-    },
-    {
-      "target": "ST_commerce_seg003",
-      "box": [
-        606,
-        600,
-        852,
-        720
-      ],
-      "label": "Back to Piggy-Bank Lane",
-      "name": "Ruelle des Tirelires",
-      "kind": "street_back",
-      "name_fr": "Ruelle des Tirelires",
-      "name_en": "Piggy-Bank Lane"
-    }
+  {
+   "id": "fr_combler_verb",
+   "box": [
+    412,
+    350,
+    612,
+    662
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_decreter_verb",
+   "box": [
+    469,
+    156,
+    631,
+    294
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_distribuer_verb",
+   "box": [
+    244,
+    62,
+    466,
+    206
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_repartir_verb_2",
+   "box": [
+    869,
+    338,
+    1200,
+    676
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg007",
+   "box": [
+    775,
+    375,
+    860,
+    450
+   ],
+   "label": "Walk on to Rue de la Monnaie",
+   "name": "Rue de la Monnaie",
+   "sign": "Rue de la Monnaie →"
+  },
+  "back": {
+   "target": "S03_sector",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Place du Marché",
+   "name": "Place du Marché",
+   "sign": "← Place du Marché"
+  }
+ },
+ "signs": {
+  "name": [
+   640,
+   120,
+   860,
+   160
   ]
+ },
+ "note": "Passage de la Brocante place 1/4; landmark: little round bandstand kiosk with a pointed roof and a bunch of colourful balloons. First place: the flea-market passage leaves the market square behind the viewer (back = near cobbles). -er figures on the left, Ray's party (répartir) on the right; the balloon bandstand stands in the middle. Autumn leaves cooled to pass the colour gate. No -er/-ir markers, no painted text."
 }

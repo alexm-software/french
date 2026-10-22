@@ -1,529 +1,478 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_cooking_seg007",
-  "street_id": "ST_cooking",
-  "sector_id": "S04_cafes",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Ruelle des Gourmets — Allée des Cuisiniers · Heat & cook",
-  "divider_x": 685,
-  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
-  "tier_counts": {
-    "street": 4,
-    "balcony": 2,
-    "upper": 2,
-    "roof": 1
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg007",
+ "street_id": "ST_fourneaux",
+ "theme_street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "place_index": 4,
+ "place_count": 4,
+ "street_name": "Impasse des Fourneaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée des Cuisiniers",
+ "divider_x": 760,
+ "note": "Impasse des Fourneaux place 4/4; landmark: the restaurant (B09) kitchen door at the far end: grey stone gable with the crossed knife and fork, porthole double doors (destination). Last place: the alley ends at the B09 restaurant (same grey stone, green trim and crossed knife-and-fork gable as its exterior); the forward exit goes to the restaurant building B09_restaurant (data walk_next), whose own view leads on into its rooms. The saurer fisherman has no pipe (s04 QA finding on the old art). The balcony fryer was repainted as a friar to match the frire hook. Last place: the far end shows the destination. No -er/-ir markers, no painted text.",
+ "landmark": "the restaurant (B09) kitchen door at the far end: grey stone gable with the crossed knife and fork, porthole double doors (destination)",
+ "art_style": "cartoony storybook 2.5 (same as S04)",
+ "text_areas": {
+  "fr_flamber_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_flamber_verb",
+   "text": "flamber",
+   "box": [
+    299,
+    208,
+    377,
+    234
+   ],
+   "text_box": [
+    303,
+    212,
+    373,
+    230
+   ]
   },
-  "text_areas": {
-    "fr_rechauffer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_rechauffer_verb",
-      "text": "réchauffer",
-      "box": [
-        167,
-        634,
-        271,
-        660
-      ],
-      "text_box": [
-        171,
-        638,
-        267,
-        656
-      ]
-    },
-    "fr_cuisiner_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_cuisiner_verb",
-      "text": "cuisiner",
-      "box": [
-        338,
-        510,
-        422,
-        536
-      ],
-      "text_box": [
-        342,
-        514,
-        418,
-        532
-      ]
-    },
-    "fr_saurer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_saurer_verb",
-      "text": "saurer",
-      "box": [
-        475,
-        476,
-        547,
-        502
-      ],
-      "text_box": [
-        479,
-        480,
-        543,
-        498
-      ]
-    },
-    "fr_cuire_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_cuire_verb",
-      "text": "cuire",
-      "box": [
-        950,
-        612,
-        1010,
-        638
-      ],
-      "text_box": [
-        954,
-        616,
-        1006,
-        634
-      ]
-    },
-    "fr_griller_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_griller_verb",
-      "text": "griller",
-      "box": [
-        209,
-        296,
-        277,
-        322
-      ],
-      "text_box": [
-        213,
-        300,
-        273,
-        318
-      ]
-    },
-    "fr_bouillir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_bouillir_verb",
-      "text": "bouillir",
-      "box": [
-        930,
-        414,
-        1006,
-        440
-      ],
-      "text_box": [
-        934,
-        418,
-        1002,
-        436
-      ]
-    },
-    "fr_flamber_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_flamber_verb",
-      "text": "flamber",
-      "box": [
-        316,
-        206,
-        398,
-        232
-      ],
-      "text_box": [
-        320,
-        210,
-        394,
-        228
-      ]
-    },
-    "fr_frire_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_frire_verb",
-      "text": "frire",
-      "box": [
-        845,
-        328,
-        899,
-        354
-      ],
-      "text_box": [
-        849,
-        332,
-        895,
-        350
-      ]
-    },
-    "fr_rotir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_rotir_verb",
-      "text": "rôtir",
-      "box": [
-        854,
-        186,
-        908,
-        212
-      ],
-      "text_box": [
-        858,
-        190,
-        904,
-        208
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Rue des Saveurs →",
-      "box": [
-        598,
-        308,
-        774,
-        336
-      ],
-      "text_box": [
-        601,
-        311,
-        771,
-        333
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue des Sorbetières",
-      "box": [
-        707,
-        684,
-        805,
-        712
-      ],
-      "text_box": [
-        710,
-        687,
-        802,
-        709
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        470,
-        20,
-        511,
-        50
-      ],
-      "text_box": [
-        473,
-        23,
-        508,
-        47
-      ],
-      "style": "direction_plate",
-      "points": "left"
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        705,
-        30,
-        781,
-        60
-      ],
-      "text_box": [
-        708,
-        33,
-        778,
-        57
-      ],
-      "style": "direction_plate",
-      "points": "right"
-    },
-    "street_name": {
-      "role": "street_name",
-      "text": "Allée des Cuisiniers",
-      "box": [
-        1040,
-        278,
-        1118,
-        338
-      ],
-      "text_box": [
-        1046,
-        284,
-        1112,
-        332
-      ],
-      "surface": "blank hanging sign board"
-    }
+  "fr_griller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_griller_verb",
+   "text": "griller",
+   "box": [
+    186,
+    303,
+    264,
+    329
+   ],
+   "text_box": [
+    190,
+    307,
+    260,
+    325
+   ]
   },
-  "items": [
-    {
-      "id": "fr_rechauffer_verb",
-      "lemma": "réchauffer",
-      "gloss": "to reheat, to warm up",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        140,
-        424,
-        298,
-        664
-      ],
-      "label_xy": [
-        219,
-        654
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "RAY on his SOFA (ray-SHOH-fay) WARMS UP his soup in a little pan on a stove beside him."
-    },
-    {
-      "id": "fr_cuisiner_verb",
-      "lemma": "cuisiner",
-      "gloss": "to cook (make a meal)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        302,
-        320,
-        458,
-        540
-      ],
-      "label_xy": [
-        380,
-        530
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A QUEASY-looking horse in an apron, mouth wide, goes 'NEIGH!' (kwee-zee-NAY) as it COOKS a steaming meal at the stove."
-    },
-    {
-      "id": "fr_saurer_verb",
-      "lemma": "saurer",
-      "gloss": "to smoke (fish or meat)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        462,
-        364,
-        560,
-        506
-      ],
-      "label_xy": [
-        511,
-        496
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A SORRY-looking fisherman (soh-RAY) SMOKES herrings hung over a smoky wood fire."
-    },
-    {
-      "id": "fr_cuire_verb",
-      "lemma": "cuire",
-      "gloss": "to cook (with heat)",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 6,
-      "box": [
-        884,
-        460,
-        1076,
-        642
-      ],
-      "label_xy": [
-        980,
-        632
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A CHOIR (KWEER) of carrots sings as they COOK in a bubbling pot."
-    },
-    {
-      "id": "fr_griller_verb",
-      "lemma": "griller",
-      "gloss": "to grill; to toast",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        188,
-        164,
-        298,
-        326
-      ],
-      "label_xy": [
-        243,
-        316
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A GREEDY bear (gree-YAY) cheers 'YAY!' as it GRILLS sausages over the coals."
-    },
-    {
-      "id": "fr_bouillir_verb",
-      "lemma": "bouillir",
-      "gloss": "to boil",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 7,
-      "box": [
-        932,
-        306,
-        1004,
-        444
-      ],
-      "label_xy": [
-        968,
-        434
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A red BUOY with big floppy EARS (boo-YEER) bobs in a pot of BOILING water."
-    },
-    {
-      "id": "fr_flamber_verb",
-      "lemma": "flamber",
-      "gloss": "to flambé, to set alight",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        302,
-        110,
-        412,
-        236
-      ],
-      "label_xy": [
-        357,
-        226
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A FLAN in a BAY window (flahn-BAY) bursts into FLAMES as a waiter FLAMBÉS it."
-    },
-    {
-      "id": "fr_frire_verb",
-      "lemma": "frire",
-      "gloss": "to fry",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "upper",
-      "level": "upper",
-      "order": 8,
-      "box": [
-        814,
-        244,
-        930,
-        358
-      ],
-      "label_xy": [
-        872,
-        348
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A jolly FRIAR (FREER) FRIES golden fish in a big sizzling pan."
-    },
-    {
-      "id": "fr_rotir_verb",
-      "lemma": "rôtir",
-      "gloss": "to roast",
-      "verb_group": 2,
-      "side": "right",
-      "tier": "roof",
-      "level": "roof",
-      "order": 9,
-      "box": [
-        810,
-        104,
-        952,
-        216
-      ],
-      "label_xy": [
-        881,
-        206
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "Like 'rotisserie', said roh-TEER: a wide-eyed cook on the rooftop ROASTS a whole chicken on a spit over leaping flames."
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "S04_sector",
-      "box": [
-        566,
-        300,
-        806,
-        600
-      ],
-      "polygon": [
-        [
-          566,
-          300
-        ],
-        [
-          806,
-          300
-        ],
-        [
-          806,
-          600
-        ],
-        [
-          566,
-          600
-        ]
-      ],
-      "label": "next: Rue des Saveurs (square)",
-      "name": "Rue des Saveurs (square)",
-      "kind": "street",
-      "area": "far street / vanishing point"
-    },
-    "back": {
-      "target": "ST_cooking_seg006",
-      "box": [
-        302,
-        646,
-        1210,
-        720
-      ],
-      "label": "Rue des Sorbetières",
-      "name": "Rue des Sorbetières",
-      "kind": "street",
-      "area": "near foreground cobbles",
-      "name_fr": "Rue des Sorbetières",
-      "name_en": "Ice-Cream Makers Street"
-    }
+  "fr_rechauffer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rechauffer_verb",
+   "text": "réchauffer",
+   "box": [
+    174,
+    643,
+    280,
+    669
+   ],
+   "text_box": [
+    178,
+    647,
+    276,
+    665
+   ]
   },
-  "links": []
+  "fr_cuisiner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cuisiner_verb",
+   "text": "cuisiner",
+   "box": [
+    350,
+    443,
+    438,
+    469
+   ],
+   "text_box": [
+    354,
+    447,
+    434,
+    465
+   ]
+  },
+  "fr_saurer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_saurer_verb",
+   "text": "saurer",
+   "box": [
+    475,
+    487,
+    543,
+    513
+   ],
+   "text_box": [
+    479,
+    491,
+    539,
+    509
+   ]
+  },
+  "fr_rotir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rotir_verb",
+   "text": "rôtir",
+   "box": [
+    876,
+    174,
+    934,
+    200
+   ],
+   "text_box": [
+    880,
+    178,
+    930,
+    196
+   ]
+  },
+  "fr_frire_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_frire_verb",
+   "text": "frire",
+   "box": [
+    921,
+    290,
+    979,
+    316
+   ],
+   "text_box": [
+    925,
+    294,
+    975,
+    312
+   ]
+  },
+  "fr_bouillir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bouillir_verb",
+   "text": "bouillir",
+   "box": [
+    912,
+    420,
+    1000,
+    446
+   ],
+   "text_box": [
+    916,
+    424,
+    996,
+    442
+   ]
+  },
+  "fr_cuire_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cuire_verb",
+   "text": "cuire",
+   "box": [
+    968,
+    624,
+    1026,
+    650
+   ],
+   "text_box": [
+    972,
+    628,
+    1022,
+    646
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Restaurant Le Bon Goût →",
+   "box": [
+    570,
+    240,
+    720,
+    490
+   ],
+   "text_box": [
+    576,
+    246,
+    714,
+    484
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Sorbetières",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée des Cuisiniers",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_flamber_verb",
+   "lemma": "flamber",
+   "gloss": "to flambé, to set alight",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    286,
+    128,
+    390,
+    240
+   ],
+   "label_xy": [
+    338,
+    228
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_griller_verb",
+   "lemma": "griller",
+   "gloss": "to grill; to toast",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    168,
+    158,
+    283,
+    335
+   ],
+   "label_xy": [
+    225,
+    323
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rechauffer_verb",
+   "lemma": "réchauffer",
+   "gloss": "to reheat, to warm up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    125,
+    425,
+    330,
+    675
+   ],
+   "label_xy": [
+    227,
+    663
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_cuisiner_verb",
+   "lemma": "cuisiner",
+   "gloss": "to cook (make a meal)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    332,
+    319,
+    456,
+    475
+   ],
+   "label_xy": [
+    394,
+    463
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_saurer_verb",
+   "lemma": "saurer",
+   "gloss": "to smoke (fish or meat)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    469,
+    362,
+    550,
+    519
+   ],
+   "label_xy": [
+    509,
+    507
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rotir_verb",
+   "lemma": "rôtir",
+   "gloss": "to roast",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "roof",
+   "level": "roof",
+   "order": 6,
+   "box": [
+    835,
+    94,
+    975,
+    206
+   ],
+   "label_xy": [
+    905,
+    194
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_frire_verb",
+   "lemma": "frire",
+   "gloss": "to fry",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 7,
+   "box": [
+    856,
+    244,
+    1044,
+    322
+   ],
+   "label_xy": [
+    950,
+    310
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_bouillir_verb",
+   "lemma": "bouillir",
+   "gloss": "to boil",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 8,
+   "box": [
+    875,
+    324,
+    1038,
+    452
+   ],
+   "label_xy": [
+    956,
+    440
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_cuire_verb",
+   "lemma": "cuire",
+   "gloss": "to cook (with heat)",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 9,
+   "box": [
+    900,
+    469,
+    1094,
+    656
+   ],
+   "label_xy": [
+    997,
+    644
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B09_restaurant",
+   "box": [
+    570,
+    240,
+    720,
+    490
+   ],
+   "label": "Through the kitchen door into the Restaurant Le Bon Goût",
+   "name": "Restaurant Le Bon Goût",
+   "sign": "Restaurant Le Bon Goût →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_cooking_seg006",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Sorbetières",
+   "name": "Rue des Sorbetières",
+   "sign": "← Rue des Sorbetières",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 3,
+  "street": 4,
+  "roof": 1
+ }
 }

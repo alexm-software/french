@@ -4,54 +4,102 @@
  "height": 720,
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Overview of sector S04_cafes (Rue des Saveurs), repainted Oct 22 2026 with the building exteriors as reference so the square shows the same buildings: the Café de la Place on the left (big coffee cup on the roof, green shopfront, green-and-white striped awning, cup-handle sign board, pastry arch door, sugar-cube windows, bistro tables), the Restaurant Le Bon Goût on the right (toque chimney, fork-and-knife gable over the sign board, round plate-shaped doorway with a ribbon bow, copper-pan kitchen window and wooden side door, round barrel cellar door), and the verb lane through the stone arch topped by a rolling pin in the centre (route start = Place du Grand-Festin, the route returns here from Allée des Cuisiniers).",
+ "note": "Overview of sector S04_cafes (Rue des Saveurs), widened Oct 22 2026 to paint the street mouths around the same buildings: the Café de la Place in the centre-left (big coffee cup on the roof, green shopfront, striped awning, sugar-cube windows, bistro tables), the Restaurant Le Bon Goût centre-right (toque chimney, fork-and-knife gable, round bow doorway, barrel cellar door), the Ruelle des Gourmets through the stone arch with the rolling pin between them, and at the far left the frosty arch of the Impasse des Fourneaux with steaming chimneys and a woodpile. On the right, the red telephone kiosks (mouth of the Rue des Appels) and the autumn plane-tree avenue with the milestone obelisk (mouth of the Rue des Pas Perdus); their links are added when those streets are installed.",
  "text_areas": {
   "cafe_name": {
    "role": "building_name",
    "text": "Café de la Place",
    "box": [
-    212,
-    302,
-    444,
-    350
+    378,
+    296,
+    528,
+    334
    ],
    "text_box": [
-    220,
-    308,
-    436,
-    344
+    386,
+    302,
+    520,
+    328
    ]
   },
   "resto_name": {
    "role": "building_name",
    "text": "Restaurant Le Bon Goût",
    "box": [
-    878,
-    224,
-    1050,
-    298
+    794,
+    250,
+    900,
+    296
    ],
    "text_box": [
-    886,
-    230,
-    1042,
-    292
+    800,
+    256,
+    894,
+    290
    ]
   },
   "lane_name": {
    "role": "street_name",
    "text": "Ruelle des Gourmets",
    "box": [
-    572,
-    346,
-    686,
-    372
+    598,
+    326,
+    682,
+    354
    ],
    "text_box": [
-    580,
-    352,
+    602,
+    330,
     678,
-    366
+    350
+   ]
+  },
+  "fourneaux_name": {
+   "role": "street_name",
+   "text": "Impasse des Fourneaux",
+   "box": [
+    96,
+    330,
+    262,
+    360
+   ],
+   "text_box": [
+    102,
+    334,
+    256,
+    356
+   ]
+  },
+  "pas_name": {
+   "role": "street_name",
+   "text": "Rue des Pas Perdus",
+   "box": [
+    1118,
+    284,
+    1240,
+    314
+   ],
+   "text_box": [
+    1124,
+    290,
+    1234,
+    310
+   ]
+  },
+  "appels_name": {
+   "role": "street_name",
+   "text": "Rue des Appels",
+   "box": [
+    1034,
+    354,
+    1108,
+    382
+   ],
+   "text_box": [
+    1038,
+    358,
+    1104,
+    378
    ]
   }
  },
@@ -60,10 +108,10 @@
   {
    "target": "B08_cafe",
    "box": [
-    80,
-    356,
-    535,
-    612
+    270,
+    336,
+    594,
+    508
    ],
    "label": "Café de la Place",
    "name": "Café de la Place",
@@ -73,10 +121,10 @@
   {
    "target": "B09_restaurant",
    "box": [
-    700,
-    330,
-    1200,
-    600
+    690,
+    300,
+    1030,
+    505
    ],
    "label": "Restaurant Le Bon Goût",
    "name": "Restaurant Le Bon Goût",
@@ -86,17 +134,54 @@
   {
    "target": "ST_cooking_seg001",
    "box": [
-    590,
-    392,
-    688,
-    610
+    606,
+    358,
+    678,
+    482
    ],
-   "label": "Ruelle des Gourmets: cooking verbs, Place du Grand-Festin · Eat & feed",
-   "name": "Place du Grand-Festin",
+   "label": "Ruelle des Gourmets · Eat & feed",
+   "name": "Ruelle des Gourmets",
    "kind": "street",
-   "signed_by": "lane_name",
-   "name_fr": "Place du Grand-Festin",
-   "name_en": "Great-Feast Square"
+   "signed_by": "lane_name"
+  },
+  {
+   "target": "ST_cooking_seg004",
+   "box": [
+    100,
+    366,
+    236,
+    500
+   ],
+   "label": "Impasse des Fourneaux · Cook & chill",
+   "name": "Impasse des Fourneaux",
+   "kind": "street",
+   "signed_by": "fourneaux_name"
+  },
+  {
+   "target": "ST_movement_seg001",
+   "box": [
+    1112,
+    318,
+    1200,
+    470
+   ],
+   "label": "Rue des Pas Perdus · Come & go",
+   "name": "Rue des Pas Perdus",
+   "kind": "street",
+   "signed_by": "pas_name"
+  },
+  {
+   "target": "ST_communication_seg001",
+   "box": [
+    1036,
+    386,
+    1108,
+    515
+   ],
+   "label": "Rue des Appels · Call & tell",
+   "name": "Rue des Appels",
+   "kind": "street",
+   "signed_by": "appels_name"
   }
  ]
 }

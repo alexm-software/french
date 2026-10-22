@@ -1,0 +1,363 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_movement_seg004",
+ "street_id": "ST_pas",
+ "theme_street_id": "ST_movement",
+ "sector_id": "S04_cafes",
+ "place_index": 4,
+ "place_count": 5,
+ "street_name": "Rue des Pas Perdus",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Coureurs",
+ "divider_x": 795,
+ "note": "Rue des Pas Perdus place 4/5; landmark: tall wooden signpost with many blank arrow boards beside a round stone pond. The avenue reaches a little round pond at a fork; the signpost boards are blank. Repainted (v b) so the courier (courir) runs on the right side with the puppies breaking the fence (rompre); -er scenes on the left. Warm cast cooled (k 0.35); margins extended. No -er/-ir markers, no painted text. ROUND2 (10:27Z): stray dog behind the peach removed (cobble texture fill); mirrors added for se dépêcher and se passer.",
+ "landmark": "tall wooden signpost with many blank arrow boards beside a round stone pond",
+ "art_style": "realism 3.5",
+ "text_areas": {
+  "fr_sauter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_sauter_verb",
+   "text": "sauter",
+   "box": [
+    241,
+    170,
+    309,
+    196
+   ],
+   "text_box": [
+    245,
+    174,
+    305,
+    192
+   ]
+  },
+  "fr_depecher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_depecher_verb",
+   "text": "se dépêcher (de)",
+   "box": [
+    88,
+    524,
+    252,
+    550
+   ],
+   "text_box": [
+    92,
+    528,
+    248,
+    546
+   ]
+  },
+  "fr_passer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_passer_verb",
+   "text": "se passer (par / à / chez)",
+   "box": [
+    357,
+    570,
+    537,
+    596
+   ],
+   "text_box": [
+    361,
+    574,
+    533,
+    592
+   ]
+  },
+  "fr_tomber_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tomber_verb",
+   "text": "tomber (sur / de / dans)",
+   "box": [
+    564,
+    546,
+    788,
+    572
+   ],
+   "text_box": [
+    568,
+    550,
+    784,
+    568
+   ]
+  },
+  "fr_courir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_courir_verb",
+   "text": "courir",
+   "box": [
+    845,
+    558,
+    913,
+    584
+   ],
+   "text_box": [
+    849,
+    562,
+    909,
+    580
+   ]
+  },
+  "fr_rompre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rompre_verb",
+   "text": "rompre",
+   "box": [
+    1048,
+    608,
+    1116,
+    634
+   ],
+   "text_box": [
+    1052,
+    612,
+    1112,
+    630
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue de la Descente →",
+   "box": [
+    600,
+    360,
+    740,
+    415
+   ],
+   "text_box": [
+    606,
+    366,
+    734,
+    409
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Allée des Promeneurs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue des Coureurs",
+   "box": [
+    570,
+    50,
+    740,
+    88
+   ],
+   "text_box": [
+    574,
+    54,
+    736,
+    84
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_sauter_verb",
+   "lemma": "sauter",
+   "gloss": "to jump",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 1,
+   "box": [
+    205,
+    86,
+    345,
+    202
+   ],
+   "label_xy": [
+    275,
+    190
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_depecher_verb",
+   "lemma": "dépêcher",
+   "gloss": "to hurry (se dépêcher)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    78,
+    272,
+    262,
+    556
+   ],
+   "label_xy": [
+    170,
+    544
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se dépêcher (de)",
+   "scene": "",
+   "mirror": "round dark-framed hall mirror on the house wall that the peach dashes past"
+  },
+  {
+   "id": "fr_passer_verb",
+   "lemma": "passer",
+   "gloss": "to pass; to spend (time)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    355,
+    323,
+    540,
+    602
+   ],
+   "label_xy": [
+    447,
+    590
+   ],
+   "prepositions": [
+    "par",
+    "à",
+    "chez"
+   ],
+   "reflexive": true,
+   "pronominal_form": "se passer",
+   "scene": "",
+   "mirror": "small round dark-framed mirror on the house wall behind the runner"
+  },
+  {
+   "id": "fr_tomber_verb",
+   "lemma": "tomber",
+   "gloss": "to fall",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    562,
+    422,
+    790,
+    578
+   ],
+   "label_xy": [
+    676,
+    566
+   ],
+   "prepositions": [
+    "sur",
+    "de",
+    "dans"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_courir_verb",
+   "lemma": "courir",
+   "gloss": "to run",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    800,
+    255,
+    958,
+    590
+   ],
+   "label_xy": [
+    879,
+    578
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rompre_verb",
+   "lemma": "rompre",
+   "gloss": "to break",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    962,
+    400,
+    1203,
+    640
+   ],
+   "label_xy": [
+    1082,
+    628
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_movement_seg005",
+   "box": [
+    600,
+    360,
+    740,
+    415
+   ],
+   "label": "Walk on to Rue de la Descente",
+   "name": "Rue de la Descente",
+   "sign": "Rue de la Descente →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_movement_seg003",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Allée des Promeneurs",
+   "name": "Allée des Promeneurs",
+   "sign": "← Allée des Promeneurs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "balcony": 1,
+  "street": 5
+ }
+}

@@ -2,66 +2,28 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 620,
+ "divider_x": 644,
  "kind": "room",
- "note": "Boutique (3): scents, jewels, purses and the latest vogue. Feminine nouns to the left of x=620, masculine to the right. The glass display cabinet at the back is a zoom (R_boutique_03_z1). The arched doorway on the left goes back to the bookshop (2); the tall doorway on the far right leads into the trading hall at the end of the arcade.",
+ "note": "Eleventh shop of the B07 covered arcade (glass skylight, honey limestone, dark oak joinery, as on the exterior): the perfumery and fashion boutique, with violet walls and a parquet floor inlaid with a big compass star. LANDMARK: the round glass dome over the tall curved oak shelves of perfume bottles. The arch on the left shows the red print room with its iron press (way back); the tall doorway on the right opens onto the glass-roofed trading hall (next). Feminine nouns on the left, masculine on the right. Zooms: the glass jewel cabinet (z1) and the watchman's desk with its lantern (z2).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "La boutique (3)",
+   "text": "La parfumerie",
    "box": [
-    560,
-    15,
-    800,
-    55
+    550,
+    10,
+    730,
+    38
    ],
    "text_box": [
-    566,
-    21,
-    794,
-    49
+    556,
+    16,
+    724,
+    32
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_faction_noun",
-   "lemma": "faction",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la faction",
-   "box": [
-    100,
-    137,
-    188,
-    450
-   ],
-   "label_xy": [
-    144,
-    440
-   ],
-   "scene": "guard in a bearskin standing watch by the door"
-  },
-  {
-   "id": "fr_vogue_noun",
-   "lemma": "vogue",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la vogue",
-   "box": [
-    192,
-    300,
-    333,
-    512
-   ],
-   "label_xy": [
-    262,
-    502
-   ],
-   "scene": "penguins in sunglasses strutting on a catwalk"
-  },
   {
    "id": "fr_senteur_noun",
    "lemma": "senteur",
@@ -70,35 +32,16 @@
    "side": "left",
    "label": "la senteur",
    "box": [
-    337,
-    181,
-    469,
-    412
+    135,
+    338,
+    280,
+    675
    ],
    "label_xy": [
-    403,
-    402
+    208,
+    665
    ],
-   "scene": "Santa sniffing a jar of pine scent"
-  },
-  {
-   "id": "fr_rondelle_noun",
-   "lemma": "rondelle",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la rondelle",
-   "box": [
-    481,
-    288,
-    556,
-    415
-   ],
-   "label_xy": [
-    518,
-    405
-   ],
-   "scene": "tall stack of round metal washers"
+   "scene": "SANTA sniffs a jar of pine SCENT and smiles"
   },
   {
    "id": "fr_icone_noun",
@@ -108,16 +51,35 @@
    "side": "left",
    "label": "l'icône",
    "box": [
-    520,
-    87,
-    640,
-    284
+    285,
+    150,
+    425,
+    408
    ],
    "label_xy": [
-    580,
-    274
+    355,
+    398
    ],
-   "scene": "giraffe fashion icon in a cone party hat posing for a camera"
+   "scene": "the giraffe fashion ICON poses in a CONE party hat"
+  },
+  {
+   "id": "fr_vogue_noun",
+   "lemma": "vogue",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la vogue",
+   "box": [
+    356,
+    412,
+    495,
+    575
+   ],
+   "label_xy": [
+    426,
+    565
+   ],
+   "scene": "the latest VOGUE: two penguins in sunglasses on the purple rug"
   },
   {
    "id": "fr_palette_noun",
@@ -127,111 +89,16 @@
    "side": "left",
    "label": "la palette",
    "box": [
-    337,
-    419,
-    569,
-    676
+    500,
+    300,
+    650,
+    544
    ],
    "label_xy": [
-    453,
-    666
+    575,
+    534
    ],
-   "scene": "painter whose kitten adds pawprints to the canvas"
-  },
-  {
-   "id": "fr_joyau_noun",
-   "lemma": "joyau",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le joyau",
-   "box": [
-    644,
-    112,
-    715,
-    419
-   ],
-   "label_xy": [
-    680,
-    409
-   ],
-   "scene": "man leaping for joy under a sparkling jewel"
-  },
-  {
-   "id": "fr_dandy_noun",
-   "lemma": "dandy",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le dandy",
-   "box": [
-    719,
-    219,
-    827,
-    476
-   ],
-   "label_xy": [
-    773,
-    466
-   ],
-   "scene": "dandy twirling his moustache in a mirror"
-  },
-  {
-   "id": "fr_porte_monnaie_noun",
-   "lemma": "porte-monnaie",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le porte-monnaie",
-   "box": [
-    619,
-    481,
-    762,
-    581
-   ],
-   "label_xy": [
-    690,
-    571
-   ],
-   "scene": "velvet purse spilling gold coins"
-  },
-  {
-   "id": "fr_veilleur_noun",
-   "lemma": "veilleur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le veilleur",
-   "box": [
-    831,
-    212,
-    915,
-    428
-   ],
-   "label_xy": [
-    873,
-    418
-   ],
-   "scene": "night watchman holding a lantern"
-  },
-  {
-   "id": "fr_ambre_noun",
-   "lemma": "ambre",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'ambre",
-   "box": [
-    919,
-    150,
-    1060,
-    280
-   ],
-   "label_xy": [
-    990,
-    270
-   ],
-   "scene": "jeweller holding a piece of amber to the light"
+   "scene": "the painter's PAL LETS a kitten dab paw prints on his PALETTE"
   },
   {
    "id": "fr_parfumeur_noun",
@@ -241,90 +108,119 @@
    "side": "right",
    "label": "le parfumeur",
    "box": [
-    981,
-    287,
-    1081,
-    428
+    655,
+    245,
+    752,
+    494
    ],
    "label_xy": [
-    1031,
-    418
+    704,
+    266
    ],
-   "scene": "cat perfumer mixing rose oil"
+   "scene": "the cat PERFUMER PURRS as she stirs rose oil in a copper bowl"
   },
   {
-   "id": "fr_bijoutier_noun",
-   "lemma": "bijoutier",
+   "id": "fr_joyau_noun",
+   "lemma": "joyau",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le bijoutier",
+   "label": "le joyau",
    "box": [
-    1085,
-    306,
-    1200,
-    600
+    758,
+    278,
+    908,
+    531
    ],
    "label_xy": [
-    1142,
-    590
+    833,
+    521
    ],
-   "scene": "bee jeweller beside a tiered glass jewel stand"
+   "scene": "the man leaps for JOY under the huge purple JEWEL: YO!"
   },
   {
-   "id": "fr_jade_noun",
-   "lemma": "jade",
+   "id": "fr_dandy_noun",
+   "lemma": "dandy",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le jade",
+   "label": "le dandy",
    "box": [
-    850,
-    432,
-    1062,
-    676
+    912,
+    328,
+    1025,
+    675
    ],
    "label_xy": [
-    956,
-    666
+    968,
+    665
    ],
-   "scene": "panda slipping on a green jade bangle"
+   "scene": "the DANDY twirls his moustache in his hand mirror"
+  },
+  {
+   "id": "fr_ambre_noun",
+   "lemma": "ambre",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'ambre",
+   "box": [
+    1030,
+    381,
+    1169,
+    675
+   ],
+   "label_xy": [
+    1100,
+    665
+   ],
+   "scene": "the jeweller holds the glowing AMBER up to the light"
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_boutique_03_z1",
    "box": [
-    740,
-    100,
-    1080,
-    146
+    819,
+    131,
+    928,
+    240
    ],
-   "label": "the glass display cabinet"
+   "label": "the glass jewel cabinet"
+  },
+  {
+   "room_id": "R_boutique_03_z2",
+   "box": [
+    428,
+    308,
+    498,
+    408
+   ],
+   "label": "the watchman's desk"
   }
  ],
  "links": [
   {
    "target": "R_bookshop_02",
    "box": [
-    192,
-    50,
-    330,
-    236
+    138,
+    119,
+    282,
+    331
    ],
-   "label": "Back through the arched doorway to the bookshop (2)",
-   "name": "La librairie (2)",
+   "label": "Back through the arch to the print room",
+   "name": "L'imprimerie",
    "kind": "arch"
   },
   {
    "target": "R_shop_general_04",
    "box": [
-    1160,
-    88,
-    1280,
-    300
+    1032,
+    119,
+    1125,
+    375
    ],
-   "label": "Through the tall doorway on the right into the trading hall",
+   "label": "Through the tall doorway into the trading hall",
    "name": "La halle marchande",
    "kind": "door"
   }

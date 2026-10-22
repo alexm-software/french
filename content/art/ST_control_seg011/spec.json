@@ -1,111 +1,105 @@
 {
-  "divider_x": 1000,
-  "name": "Rue des Gestes — Rue des Bouchons · plier, boucher, inciter",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT buildings (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman folding a sheet into pleats, butcher corking the leaking pump, double-bass player tipping over on his chair), balcony (woman whose birdhouses fill up with sparrows), upper (mule kicking up its hind legs in the barn's hayloft door), roof (man urging the pigeons to take off). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_plier_verb",
-      "box": [
-        75,
-        375,
-        300,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_boucher_verb",
-      "box": [
-        362,
-        419,
-        550,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_basculer_verb",
-      "box": [
-        694,
-        419,
-        850,
-        625
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_peupler_verb",
-      "box": [
-        500,
-        194,
-        787,
-        362
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_ruer_verb",
-      "box": [
-        162,
-        56,
-        400,
-        269
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_inciter_verb",
-      "box": [
-        519,
-        12,
-        762,
-        162
-      ],
-      "tier": "roof"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg012",
-      "box": [
-        930,
-        450,
-        1060,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Passage des Pinces-à-Linge",
-      "sign": "Passage des Pinces-à-Linge →",
-      "name_fr": "Passage des Pinces-à-Linge",
-      "name_en": "Clothes-Pegs Passage"
-    },
-    "back": {
-      "target": "ST_control_seg010",
-      "box": [
-        560,
-        676,
-        1000,
-        712
-      ],
-      "label": "Back up the lane to Landing Quay",
-      "name": "Quai du Débarquement",
-      "sign": "← Quai du Débarquement",
-      "name_fr": "Quai du Débarquement",
-      "name_en": "Landing Quay"
-    }
+ "name": "Rue des Bouchons",
+ "street_name": "Sentier du Campeur",
+ "divider_x": 1210,
+ "art_style": "outdoor realism 4",
+ "landmark": "big old stone archway overgrown with green and red grapevines that the path passes through",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_inciter_verb",
+   "box": [
+    177,
+    44,
+    525,
+    177
+   ],
+   "tier": "roof"
   },
-  "signs": {
-    "er": [
-      900,
-      25,
-      1000,
-      59
-    ],
-    "irre": [
-      1020,
-      25,
-      1140,
-      59
-    ]
+  {
+   "id": "fr_peupler_verb",
+   "box": [
+    188,
+    182,
+    396,
+    362
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_basculer_verb",
+   "box": [
+    233,
+    385,
+    492,
+    638
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_ruer_verb",
+   "box": [
+    992,
+    70,
+    1133,
+    267
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_boucher_verb",
+   "box": [
+    801,
+    373,
+    962,
+    627
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_plier_verb",
+   "box": [
+    966,
+    379,
+    1178,
+    652
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg012",
+   "box": [
+    610,
+    350,
+    728,
+    505
+   ],
+   "label": "Walk on to Passage des Pinces-à-Linge",
+   "name": "Passage des Pinces-à-Linge",
+   "sign": "Passage des Pinces-à-Linge →"
+  },
+  "back": {
+   "target": "ST_control_seg010",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Quai du Débarquement",
+   "name": "Quai du Débarquement",
+   "sign": "← Quai du Débarquement"
+  }
+ },
+ "signs": {
+  "name": [
+   548,
+   58,
+   806,
+   103
+  ]
+ },
+ "note": "Sentier du Campeur place 2/5; landmark: big old stone archway overgrown with green and red grapevines that the path passes through. All six verbs are -er (divider at the far right). The path goes on through the vine archway. Local patch: the double-bass player now tips over backwards on his chair. Shrunk 0.9 (thin top strip so the roof man's raised hands are not smeared), cooled k 0.6. No -er/-ir markers, no painted text. Gate-13 fix 0953Z: cottages now honey-ochre Cotswold-style stone (was grey), stretched top band repainted as sky / mirrored wall."
 }

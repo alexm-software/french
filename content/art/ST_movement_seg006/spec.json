@@ -1,0 +1,105 @@
+{
+ "name": "Place des Départs",
+ "street_name": "Boulevard des Départs",
+ "divider_x": 650,
+ "art_style": "clean realism 4",
+ "landmark": "tall green iron column with a big round station clock in the middle of the poplar boulevard",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_rentrer_verb",
+   "box": [
+    112,
+    92,
+    198,
+    202
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_remonter_verb",
+   "box": [
+    141,
+    352,
+    328,
+    563
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_rapprocher_verb",
+   "box": [
+    447,
+    490,
+    600,
+    603
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_aller_verb",
+   "box": [
+    700,
+    412,
+    823,
+    575
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_sortir_verb",
+   "box": [
+    843,
+    350,
+    985,
+    527
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_partir_verb",
+   "box": [
+    1006,
+    328,
+    1156,
+    556
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_movement_seg007",
+   "box": [
+    530,
+    400,
+    630,
+    484
+   ],
+   "label": "Walk on to Quai des Retours",
+   "name": "Quai des Retours",
+   "sign": "Quai des Retours →"
+  },
+  "back": {
+   "target": "S08_sector",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Carrefour des Voyages",
+   "name": "Carrefour des Voyages",
+   "sign": "← Carrefour des Voyages"
+  }
+ },
+ "signs": {
+  "name": [
+   540,
+   48,
+   740,
+   86
+  ]
+ },
+ "note": "Boulevard des Départs place 1/5; landmark: tall green iron column with a big round station clock in the middle of the poplar boulevard. First place: the poplar boulevard leaves the S08 square (the poplar avenue between the globe-sign house and the station). Clock column in the middle: -er scenes left of it; aller (irregular), sortir and partir on the right. Repainted once so the hikers (aller) are on the right and the balcony man stands behind the railing; cooled k 0.5; shrunk 0.9. No -er/-ir markers, no painted text."
+}

@@ -1,0 +1,360 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_movement_seg002",
+ "street_id": "ST_pas",
+ "theme_street_id": "ST_movement",
+ "sector_id": "S04_cafes",
+ "place_index": 2,
+ "place_count": 5,
+ "street_name": "Rue des Pas Perdus",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Quai des Voyageurs",
+ "divider_x": 700,
+ "note": "Rue des Pas Perdus place 2/5; landmark: level crossing: striped barrier and a tall crossing-signal post with two red lamps and a bell. The avenue crosses an old railway: the level-crossing signal is the landmark and the avenue goes on along the tracks. The duck line (suivre) is on the right lawn. No -er/-ir markers, no painted text.",
+ "landmark": "level crossing: striped barrier and a tall crossing-signal post with two red lamps and a bell",
+ "art_style": "realism 3.5",
+ "text_areas": {
+  "fr_penetrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_penetrer_verb",
+   "text": "pénétrer",
+   "box": [
+    91,
+    213,
+    179,
+    239
+   ],
+   "text_box": [
+    95,
+    217,
+    175,
+    235
+   ]
+  },
+  "fr_croiser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_croiser_verb",
+   "text": "croiser",
+   "box": [
+    258,
+    250,
+    336,
+    276
+   ],
+   "text_box": [
+    262,
+    254,
+    332,
+    272
+   ]
+  },
+  "fr_monter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_monter_verb",
+   "text": "monter (dans / sur)",
+   "box": [
+    332,
+    463,
+    518,
+    489
+   ],
+   "text_box": [
+    336,
+    467,
+    514,
+    485
+   ]
+  },
+  "fr_arriver_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_arriver_verb",
+   "text": "arriver (à / de)",
+   "box": [
+    107,
+    533,
+    271,
+    559
+   ],
+   "text_box": [
+    111,
+    537,
+    267,
+    555
+   ]
+  },
+  "fr_voyager_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_voyager_verb",
+   "text": "voyager",
+   "box": [
+    345,
+    600,
+    423,
+    626
+   ],
+   "text_box": [
+    349,
+    604,
+    419,
+    622
+   ]
+  },
+  "fr_suivre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_suivre_verb",
+   "text": "suivre",
+   "box": [
+    982,
+    590,
+    1050,
+    616
+   ],
+   "text_box": [
+    986,
+    594,
+    1046,
+    612
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Allée des Promeneurs →",
+   "box": [
+    915,
+    385,
+    1010,
+    450
+   ],
+   "text_box": [
+    921,
+    391,
+    1004,
+    444
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue de la Traversée",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Quai des Voyageurs",
+   "box": [
+    400,
+    80,
+    580,
+    120
+   ],
+   "text_box": [
+    404,
+    84,
+    576,
+    116
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_penetrer_verb",
+   "lemma": "pénétrer",
+   "gloss": "to enter, to get in; to penetrate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    80,
+    172,
+    190,
+    245
+   ],
+   "label_xy": [
+    135,
+    233
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_croiser_verb",
+   "lemma": "croiser",
+   "gloss": "to cross",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    200,
+    160,
+    395,
+    282
+   ],
+   "label_xy": [
+    297,
+    270
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_monter_verb",
+   "lemma": "monter",
+   "gloss": "to go up, climb",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    330,
+    285,
+    520,
+    495
+   ],
+   "label_xy": [
+    425,
+    483
+   ],
+   "prepositions": [
+    "dans",
+    "sur"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_arriver_verb",
+   "lemma": "arriver",
+   "gloss": "to arrive; to happen",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    78,
+    385,
+    300,
+    565
+   ],
+   "label_xy": [
+    189,
+    553
+   ],
+   "prepositions": [
+    "à",
+    "de"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_voyager_verb",
+   "lemma": "voyager",
+   "gloss": "to travel, to voyage",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    304,
+    525,
+    465,
+    632
+   ],
+   "label_xy": [
+    384,
+    620
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_suivre_verb",
+   "lemma": "suivre",
+   "gloss": "to follow",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    830,
+    535,
+    1203,
+    622
+   ],
+   "label_xy": [
+    1016,
+    610
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_movement_seg003",
+   "box": [
+    915,
+    385,
+    1010,
+    450
+   ],
+   "label": "Walk on to Allée des Promeneurs",
+   "name": "Allée des Promeneurs",
+   "sign": "Allée des Promeneurs →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_movement_seg001",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue de la Traversée",
+   "name": "Rue de la Traversée",
+   "sign": "← Rue de la Traversée",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 1,
+  "street": 4
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "kind": "room",
+ "divider_x": 600,
+ "note": "Hôtel des Voyageurs first-floor lounge (Le salon du premier), camera at the top of the main staircase. Landmark: marble fireplace with the gilt mirror. Feminine LEFT: animal band riding a neighing pony (tournée), donkey with picnic baskets and a guide flag (excursion), poodle posing on the rows of little gold chairs (disposition). Centre: mouse with three cameras squealing at the Eiffel Tower model (touristique, adj). Masculine RIGHT: goose with a long fluttering itinerary (itinéraire), badger in a suit dragging a huge suitcase that rucks up the rug (déplacement), garden pavilion with a peacock seen through the arched window (pavillon). Exits: stairs down (near left) -> R_hotel_01; open double doors (back left) -> breakfast room R_hotel_02_z1; narrow stairs up (back right) -> R_hotel_03. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le salon du premier",
+   "box": [
+    712,
+    78,
+    868,
+    116
+   ],
+   "text_box": [
+    716,
+    82,
+    864,
+    112
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_tournee_noun",
+   "box": [
+    106,
+    262,
+    338,
+    531
+   ]
+  },
+  {
+   "id": "fr_excursion_noun",
+   "box": [
+    340,
+    382,
+    556,
+    588
+   ]
+  },
+  {
+   "id": "fr_disposition_noun",
+   "box": [
+    465,
+    237,
+    665,
+    380
+   ]
+  },
+  {
+   "id": "fr_touristique_adj",
+   "box": [
+    558,
+    382,
+    742,
+    556
+   ]
+  },
+  {
+   "id": "fr_itineraire_noun",
+   "box": [
+    744,
+    206,
+    958,
+    386
+   ]
+  },
+  {
+   "id": "fr_deplacement_noun",
+   "box": [
+    831,
+    388,
+    1112,
+    600
+   ]
+  },
+  {
+   "id": "fr_pavillon_noun",
+   "box": [
+    1120,
+    125,
+    1200,
+    378
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hotel_01",
+   "box": [
+    10,
+    535,
+    170,
+    676
+   ],
+   "label": "Down the stairs to the lobby",
+   "name": "Le hall de l'hôtel",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_hotel_02_z1",
+   "box": [
+    231,
+    88,
+    400,
+    258
+   ],
+   "label": "Through the double doors to the breakfast room",
+   "name": "La salle du petit-déjeuner",
+   "kind": "door"
+  },
+  {
+   "target": "R_hotel_03",
+   "box": [
+    962,
+    236,
+    1046,
+    386
+   ],
+   "label": "Up the little staircase to the top floor",
+   "name": "Le dernier étage",
+   "kind": "stairs_up"
+  }
+ ],
+ "boxes_estimated": false
+}

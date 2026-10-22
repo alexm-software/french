@@ -1,0 +1,235 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 740,
+ "kind": "zoom",
+ "parent_room_id": "R_road_01",
+ "note": "Zone of the B23 traffic garden (R_road_01): Le bout de la piste, where the yard meets the countryside, camera facing east. Plane-tree lane, a stream with a rustic wooden footbridge (landmark), two whitewashed sheds, a grassy ditch, the motorway on its embankment by the rocade. Feminine LEFT: squirrel holding a long ruler across the narrow alley between the hangar wall and the plane tree (ruelle); hen laying an egg in the tree-lined lane (allée); duck on the handrail of the footbridge (passerelle); mother hedgehog and three babies crossing the lane in single file (traversée); car with a huge pile of logs on its roof speeding along the motorway (autoroute). Masculine RIGHT: waiter carrying a tiny toy jet on a tray (trajet); fox at the muddy ditch (fossé); golfer in tweed following chalk arrows (parcours); beagle sitting outside the shed door (dehors). Centre/mf: lady cyclist with a small dog in her basket (cycliste). Exits: the open timber hangar on the left -> R_road_04 Le hangar-musée (vintage cab visible inside); the grey path near right -> back to R_road_01. Squirrel moved to the left and the old one removed by local edits. Painted 2026-10-22 (track s08p4).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le bout de la piste",
+   "box": [
+    50,
+    164,
+    250,
+    190
+   ],
+   "text_box": [
+    56,
+    166,
+    244,
+    188
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_ruelle_noun",
+   "lemma": "ruelle",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la ruelle",
+   "box": [
+    290,
+    286,
+    398,
+    380
+   ],
+   "label_xy": [
+    344,
+    370
+   ]
+  },
+  {
+   "id": "fr_allee_noun",
+   "lemma": "allée",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'allée",
+   "box": [
+    400,
+    318,
+    470,
+    394
+   ],
+   "label_xy": [
+    435,
+    384
+   ]
+  },
+  {
+   "id": "fr_passerelle_noun",
+   "lemma": "passerelle",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la passerelle",
+   "box": [
+    206,
+    402,
+    498,
+    612
+   ],
+   "label_xy": [
+    352,
+    602
+   ]
+  },
+  {
+   "id": "fr_traversee_noun",
+   "lemma": "traversée",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la traversée",
+   "box": [
+    500,
+    366,
+    690,
+    420
+   ],
+   "label_xy": [
+    595,
+    410
+   ]
+  },
+  {
+   "id": "fr_autoroute_noun",
+   "lemma": "autoroute",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'autoroute",
+   "box": [
+    640,
+    48,
+    812,
+    152
+   ],
+   "label_xy": [
+    726,
+    142
+   ]
+  },
+  {
+   "id": "fr_trajet_noun",
+   "lemma": "trajet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le trajet",
+   "box": [
+    700,
+    256,
+    800,
+    444
+   ],
+   "label_xy": [
+    750,
+    434
+   ]
+  },
+  {
+   "id": "fr_cycliste_noun",
+   "lemma": "cycliste",
+   "article": "le/la",
+   "gender": "mf",
+   "side": "center",
+   "label": "le/la cycliste",
+   "box": [
+    835,
+    231,
+    935,
+    376
+   ],
+   "label_xy": [
+    885,
+    366
+   ]
+  },
+  {
+   "id": "fr_fosse_noun",
+   "lemma": "fossé",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le fossé",
+   "box": [
+    694,
+    498,
+    856,
+    600
+   ],
+   "label_xy": [
+    775,
+    590
+   ]
+  },
+  {
+   "id": "fr_parcours_noun",
+   "lemma": "parcours",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le parcours",
+   "box": [
+    940,
+    382,
+    1110,
+    674
+   ],
+   "label_xy": [
+    1025,
+    664
+   ]
+  },
+  {
+   "id": "fr_dehors_noun",
+   "lemma": "dehors",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le dehors",
+   "box": [
+    1150,
+    380,
+    1203,
+    452
+   ],
+   "label_xy": [
+    1176,
+    442
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_road_04",
+   "box": [
+    20,
+    192,
+    204,
+    470
+   ],
+   "label": "Into the old hangar museum",
+   "name": "Le hangar-musée",
+   "kind": "door"
+  },
+  {
+   "target": "R_road_01",
+   "box": [
+    1112,
+    540,
+    1240,
+    716
+   ],
+   "label": "Back along the path to the traffic garden",
+   "name": "La piste",
+   "kind": "path"
+  }
+ ]
+}

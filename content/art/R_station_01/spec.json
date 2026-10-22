@@ -1,0 +1,149 @@
+{
+ "kind": "room",
+ "divider_x": 726,
+ "note": "Station hall, camera at the east end facing west. Feminine LEFT (guard with model station, girl in a tent, ice-cream cone in a locker, porter with a stack of cases, stationmistress on a tree-stump rostrum), masculine RIGHT (old wooden carriage with roses, mole driving a metro carriage, painter pouring paint on a column, bee with a ticket). Front doors left, platform arches right, grand staircase at the back. UPDATE 2026-10-22 (s08p4): la tribune hook rewritten to the art (a little girl on the tree-stump rostrum with the giant bun).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le hall de la gare",
+   "box": [
+    545,
+    166,
+    695,
+    206
+   ],
+   "text_box": [
+    548,
+    169,
+    692,
+    203
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_gare_noun",
+   "box": [
+    500,
+    356,
+    606,
+    590
+   ]
+  },
+  {
+   "id": "fr_attente_noun",
+   "box": [
+    100,
+    506,
+    400,
+    662
+   ]
+  },
+  {
+   "id": "fr_consigne_noun",
+   "box": [
+    250,
+    298,
+    354,
+    500
+   ],
+   "label_xy": [
+    305,
+    322
+   ]
+  },
+  {
+   "id": "fr_station_noun",
+   "box": [
+    356,
+    362,
+    498,
+    504
+   ]
+  },
+  {
+   "id": "fr_tribune_noun",
+   "box": [
+    608,
+    294,
+    725,
+    600
+   ]
+  },
+  {
+   "id": "fr_carrosse_noun",
+   "box": [
+    932,
+    276,
+    1200,
+    568
+   ]
+  },
+  {
+   "id": "fr_metro_noun",
+   "box": [
+    776,
+    500,
+    928,
+    625
+   ]
+  },
+  {
+   "id": "fr_support_noun",
+   "box": [
+    838,
+    75,
+    956,
+    272
+   ]
+  },
+  {
+   "id": "fr_billet_noun",
+   "box": [
+    728,
+    300,
+    848,
+    498
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B20_gare",
+   "box": [
+    100,
+    165,
+    244,
+    500
+   ],
+   "label": "Out through the front doors to the square",
+   "name": "La gare (dehors)",
+   "kind": "door"
+  },
+  {
+   "target": "R_station_01_z1",
+   "box": [
+    960,
+    110,
+    1205,
+    272
+   ],
+   "label": "Through the arches to platform 1",
+   "name": "Le quai",
+   "kind": "door"
+  },
+  {
+   "target": "R_station_02",
+   "box": [
+    520,
+    215,
+    720,
+    292
+   ],
+   "label": "Up the grand staircase to the gallery",
+   "name": "La galerie",
+   "kind": "stairs_up"
+  }
+ ],
+ "boxes_estimated": false
+}

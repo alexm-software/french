@@ -1,0 +1,362 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_movement_seg005",
+ "street_id": "ST_pas",
+ "theme_street_id": "ST_movement",
+ "sector_id": "S04_cafes",
+ "place_index": 5,
+ "place_count": 5,
+ "street_name": "Rue des Pas Perdus",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue de la Descente",
+ "divider_x": 800,
+ "note": "Rue des Pas Perdus place 5/5; landmark: cream stone arch at the end of the avenue opening onto the travel square (fountain globe and the station clock tower visible). Last place: the avenue ends at a cream stone arch; through it the S08 square shows its globe fountain and the station clock tower, and the forward exit goes in through the arch. Margins extended; warm cast cooled (k 0.35). Last place: the far end shows the destination. No -er/-ir markers, no painted text. ROUND2 (10:27Z): reflexive mirrors added inside the boxes.",
+ "landmark": "cream stone arch at the end of the avenue opening onto the travel square (fountain globe and the station clock tower visible)",
+ "art_style": "realism 3.5",
+ "text_areas": {
+  "fr_briser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_briser_verb",
+   "text": "se briser",
+   "box": [
+    289,
+    318,
+    385,
+    344
+   ],
+   "text_box": [
+    293,
+    322,
+    381,
+    340
+   ]
+  },
+  "fr_deplacer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_deplacer_verb",
+   "text": "se déplacer",
+   "box": [
+    159,
+    633,
+    275,
+    659
+   ],
+   "text_box": [
+    163,
+    637,
+    271,
+    655
+   ]
+  },
+  "fr_refermer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_refermer_verb",
+   "text": "se refermer",
+   "box": [
+    362,
+    560,
+    450,
+    586
+   ],
+   "text_box": [
+    366,
+    564,
+    446,
+    582
+   ]
+  },
+  "fr_bouger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bouger_verb",
+   "text": "bouger",
+   "box": [
+    520,
+    490,
+    588,
+    516
+   ],
+   "text_box": [
+    524,
+    494,
+    584,
+    512
+   ]
+  },
+  "fr_descendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_descendre_verb",
+   "text": "descendre (de)",
+   "box": [
+    1047,
+    298,
+    1133,
+    324
+   ],
+   "text_box": [
+    1051,
+    302,
+    1129,
+    320
+   ]
+  },
+  "fr_venir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_venir_verb",
+   "text": "venir (de / à / chez)",
+   "box": [
+    895,
+    624,
+    1053,
+    650
+   ],
+   "text_box": [
+    899,
+    628,
+    1049,
+    646
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Carrefour des Voyages →",
+   "box": [
+    738,
+    240,
+    888,
+    488
+   ],
+   "text_box": [
+    744,
+    246,
+    882,
+    482
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Coureurs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue de la Descente",
+   "box": [
+    680,
+    60,
+    840,
+    100
+   ],
+   "text_box": [
+    684,
+    64,
+    836,
+    96
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_briser_verb",
+   "lemma": "briser",
+   "gloss": "to break",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    225,
+    118,
+    450,
+    350
+   ],
+   "label_xy": [
+    337,
+    338
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se briser",
+   "scene": "",
+   "mirror": "small round dark-framed mirror, intact, on the wall below the breaking window"
+  },
+  {
+   "id": "fr_deplacer_verb",
+   "lemma": "déplacer",
+   "gloss": "to move",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    78,
+    400,
+    356,
+    665
+   ],
+   "label_xy": [
+    217,
+    653
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se déplacer",
+   "scene": "",
+   "mirror": "gold-framed oval mirror strapped to the side of the piano"
+  },
+  {
+   "id": "fr_refermer_verb",
+   "lemma": "refermer",
+   "gloss": "to close again",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    360,
+    362,
+    452,
+    592
+   ],
+   "label_xy": [
+    406,
+    580
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se refermer",
+   "scene": "",
+   "mirror": "small gold-framed oval mirror on the door he pushes shut"
+  },
+  {
+   "id": "fr_bouger_verb",
+   "lemma": "bouger",
+   "gloss": "to move",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    456,
+    346,
+    652,
+    522
+   ],
+   "label_xy": [
+    554,
+    510
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_descendre_verb",
+   "lemma": "descendre",
+   "gloss": "to go down",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    1045,
+    240,
+    1135,
+    330
+   ],
+   "label_xy": [
+    1090,
+    318
+   ],
+   "prepositions": [
+    "de"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_venir_verb",
+   "lemma": "venir",
+   "gloss": "to come",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    893,
+    425,
+    1056,
+    656
+   ],
+   "label_xy": [
+    974,
+    644
+   ],
+   "prepositions": [
+    "de",
+    "à",
+    "chez"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "S08_sector",
+   "box": [
+    738,
+    240,
+    888,
+    488
+   ],
+   "label": "Through the arch to the Carrefour des Voyages",
+   "name": "Carrefour des Voyages",
+   "sign": "Carrefour des Voyages →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_movement_seg004",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Coureurs",
+   "name": "Rue des Coureurs",
+   "sign": "← Rue des Coureurs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 2,
+  "street": 4
+ }
+}

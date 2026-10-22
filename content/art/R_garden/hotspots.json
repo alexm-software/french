@@ -2,27 +2,10 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 640,
+ "divider_x": 700,
  "kind": "room",
- "note": "Back garden behind the house; the glass veranda is painted onto the back of the house. Feminine left (veranda grandma, irrigation grandad, sheep's fence, horse over the hedge, cow's grass, pea on the lawn, shovel and pail), masculine right (jar of bees on the garden post, playpen, terrier, fox's path, little public garden with fountain, gardener, lawn-mower turf, flower bed, rabbit's vegetable patch, hamster hammock, kneeling gardening). Exits: back into the house, garden gate to the street, garage beyond the garden.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "Le jardin",
-   "box": [
-    555,
-    39,
-    719,
-    117
-   ],
-   "text_box": [
-    570,
-    47,
-    704,
-    109
-   ]
-  }
- },
+ "note": "Le jardin (s02maison repaint 2026-10-22, session 3): the back/side garden west of the laundry and the garage (plan), camera at the west end looking east. LEFT: back wall of the house (white render, half-timbering, green shutters, blue wavy slate roof with the teapot chimney, as in the S02 sector view) with the laundry's open back door (-> R_laundry_01) and a glass veranda. RIGHT: the single-storey garage wing (whitewashed brick, blue slate roof) with its side door open on the workshop (-> R_garage), then the garden wall and gate with the village street seen through the gateway (-> S02_sector; under PR 19 the sector is a crumb, so this way is hover-preview only). LANDMARK: the glass veranda + teapot chimney; the tall hedge with the leaping horse. Feminine left of x=700: grandma in the veranda (véranda), cow munching grass and herbs (herbe), horse leaping the hedge toward a haystack (haie), giant pea on the striped lawn (pelouse). Masculine right: man mowing with a red jerry can of gas (gazon), fox on the gravel path (sentier), glass jar of bees on the gatepost (jardin), fountain in a little box-hedge square (square), big teddy bear in a wooden playpen with toy blocks (parc; b15: the toddler was replaced, no child in the garden), terrier running across the ground (terrain). Zoom: the vegetable patch with the white picket fence (R_garden_z1, Le potager).",
+ "text_areas": {},
  "items": [
   {
    "id": "fr_veranda_noun",
@@ -32,68 +15,14 @@
    "side": "left",
    "label": "la véranda",
    "box": [
-    8,
-    281,
-    146,
-    430
+    330,
+    160,
+    530,
+    368
    ],
    "label_xy": [
-    77,
-    420
-   ]
-  },
-  {
-   "id": "fr_irrigation_noun",
-   "lemma": "irrigation",
-   "article": "l'",
-   "gender": "f",
-   "side": "left",
-   "label": "l'irrigation",
-   "box": [
-    148,
-    359,
-    313,
-    640
-   ],
-   "label_xy": [
-    230,
-    630
-   ]
-  },
-  {
-   "id": "fr_cloture_noun",
-   "lemma": "clôture",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la clôture",
-   "box": [
-    8,
-    523,
-    146,
-    712
-   ],
-   "label_xy": [
-    77,
-    700
-   ]
-  },
-  {
-   "id": "fr_haie_noun",
-   "lemma": "haie",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la haie",
-   "box": [
-    414,
-    133,
-    602,
-    289
-   ],
-   "label_xy": [
-    508,
-    279
+    430,
+    360
    ]
   },
   {
@@ -104,14 +33,32 @@
    "side": "left",
    "label": "l'herbe",
    "box": [
-    445,
-    312,
-    578,
-    422
+    362,
+    372,
+    545,
+    478
    ],
    "label_xy": [
-    512,
-    412
+    454,
+    470
+   ]
+  },
+  {
+   "id": "fr_haie_noun",
+   "lemma": "haie",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la haie",
+   "box": [
+    535,
+    112,
+    760,
+    250
+   ],
+   "label_xy": [
+    648,
+    242
    ]
   },
   {
@@ -122,140 +69,14 @@
    "side": "left",
    "label": "la pelouse",
    "box": [
-    336,
-    445,
-    578,
-    562
+    612,
+    306,
+    704,
+    394
    ],
    "label_xy": [
-    457,
-    552
-   ]
-  },
-  {
-   "id": "fr_pelle_noun",
-   "lemma": "pelle",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la pelle",
-   "box": [
-    383,
-    570,
-    617,
-    711
-   ],
-   "label_xy": [
-    500,
-    700
-   ]
-  },
-  {
-   "id": "fr_jardin_noun",
-   "lemma": "jardin",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le jardin",
-   "box": [
-    758,
-    95,
-    815,
-    220
-   ],
-   "label_xy": [
-    786,
-    210
-   ]
-  },
-  {
-   "id": "fr_parc_noun",
-   "lemma": "parc",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le parc",
-   "box": [
-    641,
-    266,
-    756,
-    383
-   ],
-   "label_xy": [
-    698,
-    373
-   ]
-  },
-  {
-   "id": "fr_terrain_noun",
-   "lemma": "terrain",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le terrain",
-   "box": [
-    758,
-    359,
-    852,
-    438
-   ],
-   "label_xy": [
-    805,
-    428
-   ]
-  },
-  {
-   "id": "fr_sentier_noun",
-   "lemma": "sentier",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le sentier",
-   "box": [
-    914,
-    352,
-    1055,
-    453
-   ],
-   "label_xy": [
-    984,
-    443
-   ]
-  },
-  {
-   "id": "fr_square_noun",
-   "lemma": "square",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le square",
-   "box": [
-    925,
-    270,
-    1092,
-    350
-   ],
-   "label_xy": [
-    1008,
-    340
-   ]
-  },
-  {
-   "id": "fr_jardinier_noun",
-   "lemma": "jardinier",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le jardinier",
-   "box": [
-    1000,
-    190,
-    1108,
-    268
-   ],
-   "label_xy": [
-    1054,
-    258
+    658,
+    386
    ]
   },
   {
@@ -266,125 +87,155 @@
    "side": "right",
    "label": "le gazon",
    "box": [
-    1110,
-    227,
-    1270,
-    469
+    706,
+    258,
+    862,
+    460
    ],
    "label_xy": [
-    1190,
-    459
+    784,
+    452
    ]
   },
   {
-   "id": "fr_parterre_noun",
-   "lemma": "parterre",
+   "id": "fr_sentier_noun",
+   "lemma": "sentier",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le parterre",
+   "label": "le sentier",
    "box": [
-    641,
-    445,
-    873,
-    529
+    870,
+    405,
+    1000,
+    472
    ],
    "label_xy": [
-    757,
-    519
+    935,
+    464
    ]
   },
   {
-   "id": "fr_potager_noun",
-   "lemma": "potager",
+   "id": "fr_jardin_noun",
+   "lemma": "jardin",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le potager",
+   "label": "le jardin",
    "box": [
-    648,
-    531,
-    873,
-    711
+    1120,
+    218,
+    1188,
+    312
    ],
    "label_xy": [
-    760,
-    700
+    1154,
+    304
    ]
   },
   {
-   "id": "fr_hamac_noun",
-   "lemma": "hamac",
+   "id": "fr_square_noun",
+   "lemma": "square",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le hamac",
+   "label": "le square",
    "box": [
-    875,
-    461,
-    1092,
-    625
+    972,
+    474,
+    1194,
+    620
    ],
    "label_xy": [
-    984,
-    615
+    1083,
+    612
    ]
   },
   {
-   "id": "fr_jardinage_noun",
-   "lemma": "jardinage",
+   "id": "fr_parc_noun",
+   "lemma": "parc",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le jardinage",
+   "label": "le parc",
    "box": [
-    1094,
-    516,
-    1266,
-    703
+    656,
+    468,
+    850,
+    628
    ],
    "label_xy": [
-    1180,
-    692
+    753,
+    620
+   ]
+  },
+  {
+   "id": "fr_terrain_noun",
+   "lemma": "terrain",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le terrain",
+   "box": [
+    852,
+    560,
+    958,
+    658
+   ],
+   "label_xy": [
+    905,
+    650
+   ]
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_garden_z1",
+   "label": "Le potager",
+   "box": [
+    90,
+    478,
+    355,
+    656
    ]
   }
  ],
  "links": [
   {
    "target": "R_laundry_01",
-   "box": [
-    60,
-    150,
-    250,
-    245
-   ],
-   "label": "Back door into the house (laundry room)",
+   "kind": "door",
    "name": "La buanderie",
-   "kind": "door"
-  },
-  {
-   "target": "S02_sector",
+   "label": "In through the back door to the laundry",
    "box": [
-    818,
-    180,
-    953,
-    268
-   ],
-   "label": "Garden gate to the street",
-   "name": "La rue",
-   "kind": "door"
+    106,
+    170,
+    278,
+    362
+   ]
   },
   {
    "target": "R_garage",
-   "box": [
-    925,
-    130,
-    998,
-    177
-   ],
-   "label": "To the garage",
+   "kind": "door",
    "name": "Le garage",
-   "kind": "door"
+   "label": "Through the open side door into the garage",
+   "box": [
+    868,
+    200,
+    1002,
+    340
+   ]
+  },
+  {
+   "target": "S02_sector",
+   "kind": "door",
+   "name": "La rue des Maisons",
+   "label": "Out through the garden gate to the street",
+   "box": [
+    1050,
+    232,
+    1116,
+    412
+   ]
   }
  ]
 }

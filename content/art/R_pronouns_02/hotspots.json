@@ -4,22 +4,22 @@
  "height": 720,
  "divider_x": null,
  "kind": "room",
- "note": "First-floor room of the second pronouns (vous, nous, elle, on, chacun, aucun...). Pronouns have no grammatical gender here, so no left/right rule (divider null). The white door on the far left goes back to the bigger numbers room; the white door at the back, beside the mirror, leads to the first prepositions room.",
+ "note": "First-floor parlour of the second pronouns (cartoon style): cream walls, cherry-red lower panels, blue patterned rug. Landmark: the tall standing oval mirror where the man shaves himself (se). Back row: vous (butler bowing to an elderly couple), on (girl switching on a tall lamp), elle (girl ringing a brass bell), se. Front row (the painter stands well to the right of the shaving man so the two never overlap): nous (two friends sharing one noodle), te (girl holding out a teddy), toi (boy with a toy horse pointing at you), lui-même (painting his own self-portrait). Pronouns have no gender here (divider null). The red curtain nook in the back right corner zooms in on the someone/each-one pronouns. The teal door on the left goes back to the big-numbers room; the lime door on the right goes on to the first prepositions room.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les pronoms (2)",
+   "text": "Pronoms (2)",
    "box": [
-    544,
-    135,
-    652,
-    256
+    490,
+    98,
+    719,
+    175
    ],
    "text_box": [
-    550,
-    141,
-    646,
-    250
+    502,
+    110,
+    707,
+    163
    ]
   }
  },
@@ -32,14 +32,14 @@
    "side": "center",
    "label": "vous",
    "box": [
-    106,
-    215,
-    356,
-    515
+    258,
+    192,
+    469,
+    412
    ],
    "label_xy": [
-    231,
-    505
+    364,
+    402
    ],
    "scene": "butler bowing politely to an elderly couple"
   },
@@ -51,16 +51,16 @@
    "side": "center",
    "label": "on",
    "box": [
-    362,
-    190,
-    432,
-    385
+    475,
+    192,
+    607,
+    397
    ],
    "label_xy": [
-    397,
-    375
+    541,
+    387
    ],
-   "scene": "woman switching on a tall standing lamp"
+   "scene": "girl in a yellow top pointing at the tall standing lamp she has switched on"
   },
   {
    "id": "fr_elle_pron",
@@ -70,16 +70,16 @@
    "side": "center",
    "label": "elle",
    "box": [
-    462,
-    190,
-    540,
-    322
+    644,
+    202,
+    723,
+    385
    ],
    "label_xy": [
-    501,
-    312
+    684,
+    375
    ],
-   "scene": "woman ringing a brass hand bell"
+   "scene": "girl in pink ringing a brass hand bell"
   },
   {
    "id": "fr_se_pron",
@@ -89,16 +89,16 @@
    "side": "center",
    "label": "se",
    "box": [
-    656,
-    181,
-    778,
-    316
+    811,
+    172,
+    894,
+    411
    ],
    "label_xy": [
-    717,
-    306
+    852,
+    401
    ],
-   "scene": "man shaving himself in front of a standing mirror"
+   "scene": "man in a blue shirt shaving himself, face full of suds, beside the tall standing mirror (whole figure, head to shoes)"
   },
   {
    "id": "fr_nous_pron",
@@ -108,14 +108,14 @@
    "side": "center",
    "label": "nous",
    "box": [
-    452,
-    325,
-    652,
-    432
+    211,
+    422,
+    473,
+    582
    ],
    "label_xy": [
-    552,
-    422
+    342,
+    572
    ],
    "scene": "two friends sharing one long noodle from a bowl"
   },
@@ -127,14 +127,14 @@
    "side": "center",
    "label": "te",
    "box": [
-    672,
-    319,
-    790,
-    436
+    527,
+    400,
+    659,
+    615
    ],
    "label_xy": [
-    731,
-    426
+    593,
+    605
    ],
    "scene": "girl holding out a teddy bear toward the viewer"
   },
@@ -146,54 +146,16 @@
    "side": "center",
    "label": "toi",
    "box": [
-    806,
-    269,
-    886,
-    436
+    698,
+    396,
+    805,
+    620
    ],
    "label_xy": [
-    846,
-    426
+    752,
+    610
    ],
-   "scene": "boy pointing at the viewer with a toy horse"
-  },
-  {
-   "id": "fr_quelqu_un_pron",
-   "lemma": "quelqu'un",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "quelqu'un",
-   "box": [
-    856,
-    192,
-    918,
-    266
-   ],
-   "label_xy": [
-    887,
-    256
-   ],
-   "scene": "raccoon hooded in green kelp peeking from behind the curtain"
-  },
-  {
-   "id": "fr_chacun_pron",
-   "lemma": "chacun",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "chacun",
-   "box": [
-    920,
-    198,
-    1022,
-    402
-   ],
-   "label_xy": [
-    971,
-    392
-   ],
-   "scene": "woman handing a little tin can to each child"
+   "scene": "boy holding a toy horse in one hand, thumbs-up to the viewer with the other"
   },
   {
    "id": "fr_lui_meme_pron",
@@ -203,98 +165,53 @@
    "side": "center",
    "label": "lui-même",
    "box": [
-    1026,
-    152,
-    1198,
-    402
+    907,
+    312,
+    1114,
+    632
    ],
    "label_xy": [
-    1112,
-    392
+    1010,
+    622
    ],
-   "scene": "man painting his own self-portrait at an easel"
-  },
+   "scene": "man in a purple t-shirt painting his own self-portrait at an easel"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_celui_pron",
-   "lemma": "celui",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "celui",
+   "room_id": "R_pronouns_02_z1",
    "box": [
-    360,
-    437,
-    575,
-    662
+    897,
+    78,
+    983,
+    307
    ],
-   "label_xy": [
-    468,
-    652
-   ],
-   "scene": "boy holding up one puppy from a basket of puppies"
-  },
-  {
-   "id": "fr_aucun_pron",
-   "lemma": "aucun",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "aucun",
-   "box": [
-    665,
-    440,
-    886,
-    674
-   ],
-   "label_xy": [
-    776,
-    664
-   ],
-   "scene": "man peering sadly into an empty biscuit tin"
-  },
-  {
-   "id": "fr_tel_pron",
-   "lemma": "tel",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "tel",
-   "box": [
-    890,
-    406,
-    1156,
-    674
-   ],
-   "label_xy": [
-    1023,
-    664
-   ],
-   "scene": "man holding an old candlestick telephone"
+   "label": "the red curtain nook (someone, each one, none...)"
   }
  ],
  "links": [
   {
    "target": "R_numbers2",
    "box": [
-    70,
-    97,
-    168,
-    212
+    196,
+    114,
+    254,
+    393
    ],
-   "label": "Back through the white door to the bigger numbers room",
-   "name": "Les nombres (2)",
+   "label": "Through the teal door back to the big-numbers room",
+   "name": "Les grands nombres",
    "kind": "door"
   },
   {
    "target": "R_prepositions_01",
    "box": [
-    781,
-    137,
-    850,
-    265
+    1003,
+    114,
+    1091,
+    307
    ],
-   "label": "Through the white door at the back to the first prepositions room",
-   "name": "Les prépositions (1)",
+   "label": "Through the lime door to the first prepositions room",
+   "name": "Prépositions (1)",
    "kind": "door"
   }
  ]

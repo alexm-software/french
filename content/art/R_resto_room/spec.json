@@ -1,21 +1,21 @@
 {
- "divider_x": 528,
+ "divider_x": 540,
  "kind": "room",
- "note": "Comptoir fix 2026-10-21: recomposed (pulled back, border outpainted) from the fit-audit repaint so the bar counter on the right back wall (the 'Le comptoir' zoom) is complete with a closed end and wall beyond it, and every figure sits inside the cover-crop safe area (x 72-1208, y 45-675). Raised back platform removed: all figures on one floor. Same characters and hooks. Polygons used where figures stand close; one shape per item. S04 v3 (2026-10-21): adopted into S04; the cellar arch now shows an open trapdoor with stairs going DOWN (warm glow from below) instead of stairs climbing up; serveur hook rewritten to match the painting (a plate held high in each hand); every box kept at least 6% in from the edges.",
+ "note": "v4 repaint 2026-10-22 (s04 track): dining hall, cream plaster, dark wainscot, oak floor, brass chandelier landmark. Kitchen exit is ONE wide pair of swinging porthole doors standing half open on the kitchen (stove, copper pans, steam). Bar shelves hold plates, jam jars and a copper coffee urn: no bottles anywhere (children present, no alcohol words). Duck/le plat moved to the bar zoom. Divider at the centre column (x=540): feminine left, masculine right. 10 items.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    388,
-    48,
-    690,
-    138
+    412,
+    56,
+    719,
+    144
    ],
    "text_box": [
-    410,
-    60,
-    668,
-    126
+    440,
+    70,
+    690,
+    132
    ]
   }
  },
@@ -23,325 +23,151 @@
   {
    "id": "fr_commande_noun",
    "box": [
-    77,
-    318,
-    305,
-    585
+    80,
+    344,
+    300,
+    644
    ],
-   "scene": "A small boy points like a general, 'I COMMAND!' (koh-MAHND), while the waitress writes his ORDER on her notepad."
+   "scene": "A small boy points like a general, 'I COMMAND!' (koh-MAHND), while the waitress writes his ORDER on her notepad.",
+   "label_xy": [
+    190,
+    634
+   ]
   },
   {
    "id": "fr_addition_noun",
    "box": [
-    310,
-    255,
-    448,
-    425
+    306,
+    269,
+    440,
+    450
    ],
-   "scene": "A waiter ADDS each DISH ON (ah-dee-SYOHN) to a long paper strip: THE BILL, curling down beside the table.",
-   "polygon": [
-    [
-     310,
-     255
-    ],
-    [
-     400,
-     255
-    ],
-    [
-     400,
-     328
-    ],
-    [
-     448,
-     328
-    ],
-    [
-     448,
-     425
-    ],
-    [
-     310,
-     425
-    ]
-   ],
+   "scene": "A waiter ADDS each DISH ON (ah-dee-SYOHN) to a very long paper strip: THE BILL, curling down towards the rabbit's table.",
    "label_xy": [
-    379,
-    415
+    373,
+    440
    ]
   },
   {
    "id": "fr_crudite_noun",
    "box": [
-    372,
-    428,
-    515,
-    580
+    375,
+    462,
+    537,
+    632
    ],
-   "scene": "Same as English 'crudités' (said krew-dee-TAY): a rabbit nibbles a platter of RAW VEGETABLE sticks with a dip."
+   "scene": "A white rabbit nibbles a platter of CRUDITÉS (krew-dee-TAY), RAW carrot and celery sticks with a pot of dip.",
+   "label_xy": [
+    456,
+    622
+   ]
   },
   {
    "id": "fr_restaurant_noun",
    "box": [
-    552,
-    148,
-    738,
-    318
+    575,
+    150,
+    755,
+    344
    ],
-   "scene": "Same as English 'restaurant' with a silent t (rehs-toh-RAHN): a smiling host in a bow tie welcomes a family into the RESTAURANT."
-  },
-  {
-   "id": "fr_plat_noun",
-   "box": [
-    662,
-    212,
-    792,
-    342
-   ],
-   "scene": "SPLAT! (PLAH) A clumsy duck drops a DISH of spaghetti that lands on the plate with a splash of sauce.",
-   "polygon": [
-    [
-     740,
-     212
-    ],
-    [
-     792,
-     212
-    ],
-    [
-     792,
-     335
-    ],
-    [
-     740,
-     335
-    ],
-    [
-     740,
-     342
-    ],
-    [
-     662,
-     342
-    ],
-    [
-     662,
-     320
-    ],
-    [
-     740,
-     320
-    ]
-   ],
+   "scene": "A smiling host in a bow tie welcomes a mother, father and small son: 'REST, oh, you RAN so far!' (rehs-toh-RAHN) Welcome to the RESTAURANT.",
    "label_xy": [
-    701,
-    332
+    665,
+    334
    ]
   },
   {
    "id": "fr_serveur_noun",
    "box": [
-    745,
-    122,
-    878,
-    325
+    758,
+    120,
+    925,
+    362
    ],
-   "scene": "Like English 'server' (said sehr-VUHR): a WAITER SWERVES between the tables with a plate of food held high in each hand.",
-   "polygon": [
-    [
-     745,
-     122
-    ],
-    [
-     878,
-     122
-    ],
-    [
-     878,
-     325
-    ],
-    [
-     794,
-     325
-    ],
-    [
-     794,
-     180
-    ],
-    [
-     745,
-     180
-    ]
-   ],
+   "scene": "A WAITER SWERVES (sehr-VUHR) between the tables with a plate of food held high in each hand.",
    "label_xy": [
-    836,
-    315
+    842,
+    352
    ]
   },
   {
    "id": "fr_dessert_noun",
    "box": [
-    880,
-    128,
-    992,
-    332
+    928,
+    130,
+    1050,
+    355
    ],
-   "scene": "Same as English 'dessert' with the stress at the end (day-SEHR): a little girl gazes up at a towering chocolate DESSERT."
+   "scene": "A little girl at her table gazes up at a towering chocolate DESSERT (day-SEHR) with a cherry on top.",
+   "label_xy": [
+    989,
+    345
+   ]
   },
   {
    "id": "fr_menu_noun",
    "box": [
-    532,
-    345,
-    656,
-    600
+    544,
+    369,
+    672,
+    560
    ],
-   "scene": "Same as English 'menu' (said muh-NEW): a grandfather peers at a huge MENU card through a magnifying glass."
+   "scene": "A grandfather peers at a huge MENU card through a magnifying glass, hunting for 'MORE NEW' dishes (muh-NEW).",
+   "label_xy": [
+    608,
+    550
+   ]
   },
   {
    "id": "fr_pourboire_noun",
    "box": [
-    660,
-    338,
-    832,
-    562
+    676,
+    375,
+    858,
+    560
    ],
-   "scene": "A POOR BOAR (poor-BWAHR) in a patched waiter's jacket beams as a lady drops a coin TIP into his cup.",
-   "polygon": [
-    [
-     660,
-     346
-    ],
-    [
-     760,
-     346
-    ],
-    [
-     760,
-     338
-    ],
-    [
-     832,
-     338
-    ],
-    [
-     832,
-     500
-    ],
-    [
-     745,
-     500
-    ],
-    [
-     745,
-     562
-    ],
-    [
-     660,
-     562
-    ]
-   ],
+   "scene": "A POOR BOAR (poor-BWAHR) in a patched waiter's jacket beams as a lady drops a little TIP into the cup he holds out.",
    "label_xy": [
-    702,
-    552
+    767,
+    550
    ]
   },
   {
    "id": "fr_resto_noun",
    "box": [
-    748,
-    380,
-    903,
-    645
+    860,
+    412,
+    965,
+    676
    ],
-   "scene": "A tired hiker takes off her boots to REST her feet (rehs-TOH), sighing 'oh!' in a cosy little RESTO.",
-   "polygon": [
-    [
-     835,
-     380
-    ],
-    [
-     903,
-     380
-    ],
-    [
-     903,
-     645
-    ],
-    [
-     790,
-     645
-    ],
-    [
-     790,
-     562
-    ],
-    [
-     748,
-     562
-    ],
-    [
-     748,
-     503
-    ],
-    [
-     835,
-     503
-    ]
-   ],
+   "scene": "A tired hiker slumps in her chair to REST (rehs-TOH), boots off and backpack down, in this cosy little RESTO.",
    "label_xy": [
-    846,
-    635
+    912,
+    666
    ]
   },
   {
    "id": "fr_couvert_noun",
    "box": [
-    906,
-    335,
-    1042,
-    612
+    968,
+    362,
+    1131,
+    662
    ],
-   "scene": "A bear lays a PLACE SETTING, fork, knife and glass, and pops a silver COVER (koo-VEHR) over the plate.",
-   "polygon": [
-    [
-     906,
-     335
-    ],
-    [
-     992,
-     335
-    ],
-    [
-     992,
-     386
-    ],
-    [
-     1042,
-     386
-    ],
-    [
-     1042,
-     612
-    ],
-    [
-     906,
-     612
-    ]
-   ],
+   "scene": "A bear lays a PLACE SETTING, fork, knife and plate, and pops a silver COVER (koo-VEHR) over the plate.",
    "label_xy": [
-    974,
-    602
+    1050,
+    652
    ]
   }
  ],
  "zoom_from": {
   "room_id": "R_resto_room_z1",
   "box": [
-   994,
-   70,
-   1188,
-   382
+   1052,
+   60,
+   1200,
+   300
   ],
   "label": "bar counter (right wall)"
  },
@@ -349,10 +175,10 @@
   {
    "target": "B09_restaurant",
    "box": [
-    77,
-    46,
+    60,
+    45,
     180,
-    314
+    335
    ],
    "label": "Glazed front door: out to the street",
    "name": "Restaurant Le Bon Goût (outside)",
@@ -361,22 +187,22 @@
   {
    "target": "R_resto_kitchen_01",
    "box": [
-    222,
-    148,
-    378,
-    250
+    210,
+    140,
+    380,
+    265
    ],
-   "label": "Porthole swing doors to the kitchen",
+   "label": "Swinging kitchen doors: into the kitchen",
    "name": "Restaurant Le Bon Goût — cuisine",
    "kind": "door"
   },
   {
    "target": "R_wine_01",
    "box": [
-    452,
-    156,
-    522,
-    384
+    442,
+    150,
+    535,
+    385
    ],
    "label": "Stone arch with an open trapdoor: stairs DOWN to the wine cellar",
    "name": "Restaurant Le Bon Goût — cave à vin",

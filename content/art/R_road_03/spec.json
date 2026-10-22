@@ -1,0 +1,166 @@
+{
+ "kind": "room",
+ "divider_x": 700,
+ "note": "B23 ground floor, L'atelier: the garage workshop, camera at the south wall facing north. Honey-cream stone walls, sage-green plank panels, tool pegboards, roof beams, grey concrete floor. Landmark: the little cream car up on the blue lift. Feminine LEFT: woman in a headscarf with a frying pan over the steaming engine of the broken-down blue car (panne); mole at the workbench holding up the gearbox (transmission); otter in goggles at the wheel of the little cream car on the lift (auto); hen nesting with a cracked egg and yolk in the rusty green banger (bagnole); bear leaning on and polishing the long black saloon (berline). Masculine RIGHT: dachshund pulling the red hand-brake lever (frein, centre); gnu with a hoof on the tyre (pneu); bear mechanic in a jester's cap working on the brake caliper of a wheel (garagiste); moustached chauffeur bowing with the car key to the cat in the fur coat (chauffeur); blue jay with a tiny suitcase on the waiting chair (passager). Exits: barn doors on the left wall -> B23_route (square and fountain visible); glass-paned back door -> R_road_03_z1 station-service (red pumps visible); wooden stairs up at the back right -> R_road_02 loft; green back door right -> R_road_01 traffic garden (yard visible). Painted 2026-10-22 (track s08p4).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "L'atelier",
+   "box": [
+    460,
+    50,
+    590,
+    96
+   ],
+   "text_box": [
+    466,
+    54,
+    584,
+    92
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_panne_noun",
+   "box": [
+    150,
+    284,
+    370,
+    482
+   ]
+  },
+  {
+   "id": "fr_transmission_noun",
+   "box": [
+    172,
+    486,
+    366,
+    674
+   ]
+  },
+  {
+   "id": "fr_auto_noun",
+   "box": [
+    598,
+    76,
+    790,
+    244
+   ]
+  },
+  {
+   "id": "fr_bagnole_noun",
+   "box": [
+    372,
+    388,
+    632,
+    674
+   ]
+  },
+  {
+   "id": "fr_berline_noun",
+   "box": [
+    374,
+    200,
+    596,
+    382
+   ]
+  },
+  {
+   "id": "fr_frein_noun",
+   "box": [
+    640,
+    318,
+    770,
+    500
+   ]
+  },
+  {
+   "id": "fr_pneu_noun",
+   "box": [
+    772,
+    246,
+    940,
+    428
+   ]
+  },
+  {
+   "id": "fr_garagiste_noun",
+   "box": [
+    790,
+    432,
+    1046,
+    674
+   ]
+  },
+  {
+   "id": "fr_chauffeur_noun",
+   "box": [
+    1000,
+    214,
+    1182,
+    430
+   ]
+  },
+  {
+   "id": "fr_passager_noun",
+   "box": [
+    1076,
+    456,
+    1200,
+    656
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B23_route",
+   "box": [
+    60,
+    60,
+    262,
+    280
+   ],
+   "label": "Out through the barn doors to the square",
+   "name": "Route & garage",
+   "kind": "door"
+  },
+  {
+   "target": "R_road_03_z1",
+   "box": [
+    485,
+    100,
+    575,
+    198
+   ],
+   "label": "Through the glass door to the petrol pumps",
+   "name": "La station-service",
+   "kind": "door"
+  },
+  {
+   "target": "R_road_02",
+   "box": [
+    850,
+    50,
+    990,
+    226
+   ],
+   "label": "Up the stairs to the driving school",
+   "name": "L'auto-école",
+   "kind": "stairs_up"
+  },
+  {
+   "target": "R_road_01",
+   "box": [
+    992,
+    84,
+    1182,
+    210
+   ],
+   "label": "Out the back door to the traffic garden",
+   "name": "La piste",
+   "kind": "door"
+  }
+ ],
+ "boxes_estimated": false
+}

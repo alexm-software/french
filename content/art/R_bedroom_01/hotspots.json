@@ -2,82 +2,11 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 490,
+ "divider_x": 655,
  "kind": "room",
- "note": "Shared family bedroom, first floor. Feminine left of the divider (the shah's bedroom bed, blanket turtle, wardrobe, brass plate, quilt layers on the couch, alarm clock), masculine right (boat bed, nap, drawer, sheet, pillow, comfort, velvet, mattress, pyjamas, satin). Stairwell going DOWN in the floor to the living room; white door in the back wall to the bathroom. One box per item.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "La chambre",
-   "box": [
-    500,
-    23,
-    778,
-    106
-   ],
-   "text_box": [
-    515,
-    32,
-    763,
-    98
-   ]
-  }
- },
+ "note": "La chambre (s02maison repaint 2026-10-22): first-floor family bedroom NW of the house, camera facing west (plan). Pale grey-blue walls, beamed ceiling, oak floorboards; LANDMARKS tall walnut wardrobe (left wall, zoom z1), big wooden double bed, tall curtained window on the right (north, back garden). Back (west) wall: white door half open onto the white-tiled bathroom (-> R_bathroom). Front-right corner: stairwell with banister going DOWN to the living room (-> R_living). Feminine left of x=655: boy in a toy knight costume polishing the brass plate (plaque), quilt layers piled on the sofa (couche), tortoise pulling the blanket over its shell (couverture), the shah claiming the bedroom (chambre). Masculine right: two children draping a sheet over chairs (drap), grandmother knitting in the bed (lit), hare in the pillow (oreiller), sloth napping on the chaise (somme), kitten in a cone basket (confort), llama on the spare mattress (matelas).",
+ "text_areas": {},
  "items": [
-  {
-   "id": "fr_chambre_noun",
-   "lemma": "chambre",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la chambre",
-   "box": [
-    8,
-    265,
-    208,
-    455
-   ],
-   "label_xy": [
-    108,
-    445
-   ]
-  },
-  {
-   "id": "fr_couverture_noun",
-   "lemma": "couverture",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la couverture",
-   "box": [
-    250,
-    380,
-    372,
-    500
-   ],
-   "label_xy": [
-    311,
-    490
-   ]
-  },
-  {
-   "id": "fr_armoire_noun",
-   "lemma": "armoire",
-   "article": "l'",
-   "gender": "f",
-   "side": "left",
-   "label": "l'armoire",
-   "box": [
-    62,
-    39,
-    208,
-    262
-   ],
-   "label_xy": [
-    135,
-    252
-   ]
-  },
   {
    "id": "fr_plaque_noun",
    "lemma": "plaque",
@@ -86,14 +15,14 @@
    "side": "left",
    "label": "la plaque",
    "box": [
-    211,
-    180,
-    320,
-    367
+    78,
+    186,
+    194,
+    440
    ],
    "label_xy": [
-    266,
-    357
+    136,
+    432
    ]
   },
   {
@@ -104,86 +33,50 @@
    "side": "left",
    "label": "la couche",
    "box": [
-    328,
-    242,
-    547,
-    375
+    196,
+    281,
+    437,
+    470
    ],
    "label_xy": [
-    438,
-    365
+    316,
+    462
    ]
   },
   {
-   "id": "fr_alarme_noun",
-   "lemma": "alarme",
-   "article": "l'",
+   "id": "fr_couverture_noun",
+   "lemma": "couverture",
+   "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "l'alarme",
+   "label": "la couverture",
    "box": [
-    16,
-    472,
-    200,
-    690
+    225,
+    478,
+    560,
+    665
    ],
    "label_xy": [
-    108,
-    678
+    392,
+    657
    ]
   },
   {
-   "id": "fr_lit_noun",
-   "lemma": "lit",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le lit",
+   "id": "fr_chambre_noun",
+   "lemma": "chambre",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la chambre",
    "box": [
-    925,
-    210,
-    1113,
-    354
+    480,
+    110,
+    650,
+    470
    ],
    "label_xy": [
-    1019,
-    344
-   ]
-  },
-  {
-   "id": "fr_pyjama_noun",
-   "lemma": "pyjama",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le pyjama",
-   "box": [
-    805,
-    205,
-    922,
-    312
-   ],
-   "label_xy": [
-    864,
-    302
-   ]
-  },
-  {
-   "id": "fr_satin_noun",
-   "lemma": "satin",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le satin",
-   "box": [
-    740,
-    272,
-    803,
-    340
-   ],
-   "label_xy": [
-    772,
-    330
+    565,
+    462
    ]
   },
   {
@@ -194,50 +87,32 @@
    "side": "right",
    "label": "le drap",
    "box": [
-    711,
-    356,
-    980,
-    523
+    660,
+    300,
+    915,
+    520
    ],
    "label_xy": [
-    846,
-    513
+    788,
+    512
    ]
   },
   {
-   "id": "fr_tiroir_noun",
-   "lemma": "tiroir",
+   "id": "fr_lit_noun",
+   "lemma": "lit",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le tiroir",
+   "label": "le lit",
    "box": [
-    1117,
-    320,
-    1266,
-    410
+    800,
+    195,
+    960,
+    295
    ],
    "label_xy": [
-    1192,
-    400
-   ]
-  },
-  {
-   "id": "fr_somme_noun_m",
-   "lemma": "somme",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le somme",
-   "box": [
-    1094,
-    47,
-    1195,
-    156
-   ],
-   "label_xy": [
-    1144,
-    146
+    880,
+    287
    ]
   },
   {
@@ -248,14 +123,32 @@
    "side": "right",
    "label": "l'oreiller",
    "box": [
-    374,
-    437,
-    640,
-    695
+    962,
+    255,
+    1040,
+    335
    ],
    "label_xy": [
-    507,
-    682
+    1001,
+    327
+   ]
+  },
+  {
+   "id": "fr_somme_noun_m",
+   "lemma": "somme",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le somme",
+   "box": [
+    1062,
+    325,
+    1203,
+    430
+   ],
+   "label_xy": [
+    1132,
+    422
    ]
   },
   {
@@ -266,32 +159,14 @@
    "side": "right",
    "label": "le confort",
    "box": [
-    664,
-    531,
-    844,
-    672
+    962,
+    435,
+    1106,
+    528
    ],
    "label_xy": [
-    754,
-    662
-   ]
-  },
-  {
-   "id": "fr_velours_noun",
-   "lemma": "velours",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le velours",
-   "box": [
-    852,
-    547,
-    1102,
-    688
-   ],
-   "label_xy": [
-    977,
-    676
+    1034,
+    520
    ]
   },
   {
@@ -302,41 +177,53 @@
    "side": "right",
    "label": "le matelas",
    "box": [
-    984,
-    414,
-    1275,
-    540
+    632,
+    530,
+    1075,
+    676
    ],
    "label_xy": [
-    1130,
-    530
+    854,
+    668
+   ]
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_bedroom_01_z1",
+   "label": "L'armoire",
+   "box": [
+    78,
+    50,
+    186,
+    182
    ]
   }
  ],
  "links": [
   {
-   "target": "R_living",
+   "target": "R_bathroom",
+   "kind": "door",
+   "name": "La salle de bains",
+   "label": "Through the half-open door to the bathroom",
    "box": [
-    380,
-    377,
-    640,
-    432
-   ],
-   "label": "Stairs down to the living room",
-   "name": "Le salon (ground floor)",
-   "kind": "stairs_down"
+    372,
+    100,
+    476,
+    276
+   ]
   },
   {
-   "target": "R_bathroom",
+   "target": "R_living",
+   "kind": "stairs",
+   "name": "Le salon (ground floor)",
+   "label": "Down the stairs to the living room",
    "box": [
-    727,
-    122,
-    800,
-    268
-   ],
-   "label": "Door to the bathroom",
-   "name": "La salle de bains",
-   "kind": "door"
+    1110,
+    440,
+    1280,
+    720
+   ]
   }
  ]
 }

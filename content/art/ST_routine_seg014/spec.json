@@ -1,112 +1,106 @@
 {
-  "divider_x": 900,
-  "name": "Allée du Quotidien — Rue des Veilleurs-de-Nuit · veiller, rincer, accourir",
-  "note": "Tiered verb place. -er LEFT (veiled woman watching over a sleeping baby's pram, ballerina wrapping herself in red ribbon by the tall mirror, woman rinsing red boots under a watering can on the balcony, manager directing a workman fitting out the upper room, skunk spoiling the rain barrel on the roof terrace), -ir/-re RIGHT (courier rushing up on his bicycle). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_veiller_verb",
-      "box": [
-        200,
-        462,
-        475,
-        666
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_emballer_verb",
-      "box": [
-        518,
-        444,
-        718,
-        644
-      ],
-      "tier": "street",
-      "mirror": "tall standing mirror beside the ballerina"
-    },
-    {
-      "id": "fr_rincer_verb",
-      "box": [
-        125,
-        112,
-        268,
-        340
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_amenager_verb",
-      "box": [
-        270,
-        40,
-        506,
-        219
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_contaminer_verb",
-      "box": [
-        550,
-        75,
-        794,
-        231
-      ],
-      "tier": "roof"
-    },
-    {
-      "id": "fr_accourir_verb",
-      "box": [
-        1012,
-        437,
-        1175,
-        662
-      ],
-      "tier": "street"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg015",
-      "box": [
-        760,
-        440,
-        960,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Allée des Bricoleurs",
-      "sign": "Allée des Bricoleurs →",
-      "name_fr": "Allée des Bricoleurs",
-      "name_en": "Do-It-Yourselfers' Alley"
-    },
-    "back": {
-      "target": "ST_routine_seg013",
-      "box": [
-        480,
-        668,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Posters Street",
-      "name": "Rue des Affiches",
-      "sign": "← Rue des Affiches",
-      "name_fr": "Rue des Affiches",
-      "name_en": "Posters Street"
-    }
+ "name": "Rue des Veilleurs-de-Nuit",
+ "street_name": "Montée des Habitudes",
+ "divider_x": 760,
+ "art_style": "richer painterly realism 4",
+ "landmark": "ivy-and-rose arch gate opening into the Jardin des Cœurs (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_contaminer_verb",
+   "box": [
+    512,
+    80,
+    712,
+    240
+   ],
+   "tier": "roof"
   },
-  "signs": {
-    "er": [
-      700,
-      25,
-      800,
-      59
-    ],
-    "irre": [
-      940,
-      25,
-      1060,
-      59
-    ]
+  {
+   "id": "fr_amenager_verb",
+   "box": [
+    304,
+    56,
+    481,
+    188
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_rincer_verb",
+   "box": [
+    188,
+    112,
+    300,
+    312
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_veiller_verb",
+   "box": [
+    250,
+    462,
+    475,
+    670
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_emballer_verb",
+   "box": [
+    492,
+    425,
+    645,
+    632
+   ],
+   "tier": "street",
+   "mirror": "tall gilt standing mirror"
+  },
+  {
+   "id": "fr_accourir_verb",
+   "box": [
+    905,
+    430,
+    1070,
+    652
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "S15_sector",
+   "box": [
+    750,
+    290,
+    880,
+    590
+   ],
+   "label": "Through the rose arch into the Jardin des Cœurs",
+   "name": "Jardin des Cœurs",
+   "sign": "Jardin des Cœurs →"
+  },
+  "back": {
+   "target": "ST_routine_seg013",
+   "box": [
+    400,
+    682,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Affiches",
+   "name": "Rue des Affiches",
+   "sign": "← Rue des Affiches"
+  }
+ },
+ "signs": {
+  "name": [
+   700,
+   36,
+   900,
+   76
+  ]
+ },
+ "note": "Montée des Habitudes place 5/5; landmark: ivy-and-rose arch gate opening into the Jardin des Cœurs (destination).  Last place: the far end shows the destination. No -er/-ir markers, no painted text."
 }

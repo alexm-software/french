@@ -2,46 +2,11 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 430,
+ "divider_x": 420,
  "kind": "room",
- "note": "House kitchen, ground floor. Feminine left (window pane, queen at the hearth, girl with the saucepan, garden back door), masculine right (cookers, oven, stove, fridges, freezer, pot, lid, ashtray). Door ajar in the back wall to the living room; pantry archway top right to the scullery (R_kitchen_02). The worktop is scenery (plan de travail is not in the word list; comptoir moved to the shop). One box per item.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "La cuisine",
-   "box": [
-    520,
-    39,
-    739,
-    106
-   ],
-   "text_box": [
-    535,
-    48,
-    724,
-    98
-   ]
-  }
- },
+ "note": "La cuisine (s02maison repaint 2026-10-22): big ground-floor family kitchen (plan), camera facing north. White walls, blue-and-white Delft tile band, grey flagstones, dark ceiling beams, scrubbed table; LANDMARK the white enamel range on the left wall (the bright white range seen through the kitchen_02 arch and the living-room door). Back (north) wall: stone archway into the mint-green scullery with the hand pump (R_kitchen_02). Left (west) wall: half-glazed door to the laundry (R_laundry_01). Right (east) wall: door at the back to the sage-green living room with its white stairs (R_living). The table is the zoom spot (z1, Le coin des frigos). Feminine left: young queen in crown and apron stirring soup at the white range (cuisine), girl drawing a V on the misted glass pane of the laundry door (vitre). Masculine right: hen warming herself by the black pot-bellied stove (poêle), cook holding up four fingers by the brick bread oven (four), man frying eggs on the cream coal range (fourneau), hippo blowing bubbles in a giant pot (pot), blank cream museum plaque for le cendrier (museum_text: no ashtray painted; staged display change, see README).",
+ "text_areas": {},
  "items": [
-  {
-   "id": "fr_vitre_noun",
-   "lemma": "vitre",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la vitre",
-   "box": [
-    150,
-    60,
-    300,
-    292
-   ],
-   "label_xy": [
-    225,
-    282
-   ]
-  },
   {
    "id": "fr_cuisine_noun",
    "lemma": "cuisine",
@@ -50,86 +15,32 @@
    "side": "left",
    "label": "la cuisine",
    "box": [
-    302,
-    156,
-    412,
-    545
+    100,
+    165,
+    305,
+    530
    ],
    "label_xy": [
-    357,
-    535
+    202,
+    522
    ]
   },
   {
-   "id": "fr_casserole_noun",
-   "lemma": "casserole",
+   "id": "fr_vitre_noun",
+   "lemma": "vitre",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la casserole",
+   "label": "la vitre",
    "box": [
-    47,
-    390,
-    300,
-    656
+    308,
+    220,
+    395,
+    412
    ],
    "label_xy": [
-    174,
-    646
-   ]
-  },
-  {
-   "id": "fr_fourneau_noun",
-   "lemma": "fourneau",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le fourneau",
-   "box": [
-    445,
-    281,
-    650,
-    476
-   ],
-   "label_xy": [
-    547,
-    466
-   ]
-  },
-  {
-   "id": "fr_frigo_noun",
-   "lemma": "frigo",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le frigo",
-   "box": [
-    612,
-    478,
-    844,
-    703
-   ],
-   "label_xy": [
-    728,
-    690
-   ]
-  },
-  {
-   "id": "fr_four_noun",
-   "lemma": "four",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le four",
-   "box": [
-    683,
-    150,
-    915,
-    296
-   ],
-   "label_xy": [
-    799,
-    286
+    352,
+    404
    ]
   },
   {
@@ -140,32 +51,50 @@
    "side": "right",
    "label": "le poêle",
    "box": [
-    680,
-    298,
-    867,
-    476
+    790,
+    256,
+    880,
+    384
    ],
    "label_xy": [
-    774,
-    466
+    835,
+    376
    ]
   },
   {
-   "id": "fr_refrigerateur_noun",
-   "lemma": "réfrigérateur",
+   "id": "fr_four_noun",
+   "lemma": "four",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le réfrigérateur",
+   "label": "le four",
    "box": [
-    919,
-    164,
-    1117,
-    332
+    884,
+    192,
+    1030,
+    345
    ],
    "label_xy": [
-    1018,
-    322
+    957,
+    337
+   ]
+  },
+  {
+   "id": "fr_fourneau_noun",
+   "lemma": "fourneau",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le fourneau",
+   "box": [
+    1034,
+    175,
+    1200,
+    590
+   ],
+   "label_xy": [
+    1117,
+    582
    ]
   },
   {
@@ -176,32 +105,14 @@
    "side": "right",
    "label": "le pot",
    "box": [
-    891,
-    336,
-    1109,
-    436
+    700,
+    388,
+    1030,
+    676
    ],
    "label_xy": [
-    1000,
-    426
-   ]
-  },
-  {
-   "id": "fr_couvercle_noun",
-   "lemma": "couvercle",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le couvercle",
-   "box": [
-    1117,
-    336,
-    1242,
-    436
-   ],
-   "label_xy": [
-    1180,
-    426
+    865,
+    668
    ]
   },
   {
@@ -212,70 +123,62 @@
    "side": "right",
    "label": "le cendrier",
    "box": [
-    1156,
-    269,
-    1250,
-    334
+    962,
+    128,
+    1030,
+    188
    ],
    "label_xy": [
-    1203,
-    324
-   ]
-  },
-  {
-   "id": "fr_congelateur_noun",
-   "lemma": "congélateur",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le congélateur",
-   "box": [
-    914,
-    440,
-    1270,
-    716
-   ],
-   "label_xy": [
-    1090,
-    700
+    986,
+    180
    ]
   }
  ],
+ "zoom_from": {
+  "room_id": "R_kitchen_01_z1",
+  "box": [
+   400,
+   385,
+   660,
+   560
+  ],
+  "label": "Look at the kitchen table and the fridges"
+ },
  "links": [
   {
-   "target": "S02_sector",
+   "target": "R_laundry_01",
    "box": [
-    0,
-    86,
-    95,
-    385
+    312,
+    112,
+    400,
+    215
    ],
-   "label": "Back door to the garden path",
-   "name": "La Maison familiale (outside)",
-   "kind": "door"
-  },
-  {
-   "target": "R_living",
-   "box": [
-    477,
-    125,
-    617,
-    277
-   ],
-   "label": "Door to the living room",
-   "name": "Le salon",
+   "label": "Glass door to the laundry",
+   "name": "La buanderie",
    "kind": "door"
   },
   {
    "target": "R_kitchen_02",
    "box": [
-    1000,
+    438,
     94,
-    1078,
-    162
+    637,
+    375
    ],
-   "label": "Archway to the scullery",
-   "name": "La cuisine — l'office",
+   "label": "Archway into the scullery",
+   "name": "L'office",
+   "kind": "door"
+  },
+  {
+   "target": "R_living",
+   "box": [
+    690,
+    100,
+    786,
+    384
+   ],
+   "label": "Door to the living room",
+   "name": "Le salon",
    "kind": "door"
   }
  ]

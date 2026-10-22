@@ -1,0 +1,134 @@
+{
+ "kind": "room",
+ "divider_x": 640,
+ "note": "B25 Office de tourisme, ground floor: the map room (La salle des cartes), camera at the doorway from the hall. Deep teal-blue walls hung with antique maps, cream stone floor; landmark: the enormous antique world map on the back wall with its rolling ladder. Feminine LEFT: father bear showing his cub the way to fold a map (façon); deer in a captain's coat turning the brass pointer (direction); zebra with a paint roller inside its freshly striped zone (zone). Masculine RIGHT: polar bear gnawing an icicle (nord); ginger cat sauntering onto the bullseye of the target mat (centre); wooden chair with a navy coat hung over its side (côté); stork in its nest on the sunny window sill (est); model windmill with a mouse miller in the middle of the bench (milieu). Exits: doorway near left -> hall R_world_01; white arch back right -> town-plan alcove R_abs_space_01_z2; zoom on the chart table -> R_abs_space_01_z1. Painted 2026-10-22 (track s08p3). 2026-10-22: fox tailor replaced by a chair with a coat over its side (user hook qa_020: a COAT hangs over the SIDE of a chair); source _work/p2/b25_maproom_c_cote.jpg (full-image edit of maproom_b).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Les cartes",
+   "box": [
+    563,
+    48,
+    650,
+    71
+   ],
+   "text_box": [
+    566,
+    50,
+    647,
+    69
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_facon_noun",
+   "box": [
+    110,
+    290,
+    322,
+    625
+   ]
+  },
+  {
+   "id": "fr_direction_noun",
+   "box": [
+    326,
+    180,
+    452,
+    384
+   ]
+  },
+  {
+   "id": "fr_zone_noun",
+   "box": [
+    372,
+    388,
+    622,
+    662
+   ]
+  },
+  {
+   "id": "fr_nord_noun",
+   "box": [
+    780,
+    312,
+    898,
+    464
+   ]
+  },
+  {
+   "id": "fr_centre_noun",
+   "box": [
+    656,
+    472,
+    914,
+    658
+   ]
+  },
+  {
+   "id": "fr_cote_noun",
+   "box": [
+    918,
+    380,
+    1100,
+    674
+   ]
+  },
+  {
+   "id": "fr_est_noun",
+   "box": [
+    1036,
+    74,
+    1202,
+    240
+   ]
+  },
+  {
+   "id": "fr_milieu_noun",
+   "box": [
+    1104,
+    285,
+    1203,
+    488
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_abs_space_01_z1",
+  "box": [
+   478,
+   318,
+   772,
+   386
+  ],
+  "label": "Look closer at the chart table"
+ },
+ "links": [
+  {
+   "target": "R_world_01",
+   "box": [
+    60,
+    35,
+    256,
+    286
+   ],
+   "label": "Back through the doorway to the hall",
+   "name": "Le hall du monde",
+   "kind": "door"
+  },
+  {
+   "target": "R_abs_space_01_z2",
+   "box": [
+    902,
+    246,
+    1075,
+    376
+   ],
+   "label": "Through the arch to the town-plan corner",
+   "name": "Le plan du quartier",
+   "kind": "arch"
+  }
+ ],
+ "boxes_estimated": false
+}

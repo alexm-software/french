@@ -2,24 +2,24 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 427,
+ "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_resto_room",
- "note": "Fit-audit repaint 2026-10-21 (hook standard v2). Bar-counter close-up: all six words are masculine and stand on the right of the divider (sign, plant and stool form the setting on the left). One box per item; zoom_back bottom-left. S04 v3 (2026-10-21): reviewed (objects all stand on the counter, the owner stands behind it at true scale); border outpainted so the snow globe and every item sit at least 6% in from each edge.",
+ "note": "v4 repaint 2026-10-22 (s04 track): close-up of the dining-hall bar counter (le comptoir). No bottles or alcohol. No on-image back control: the strip Back ('Back to ... salle') is the single control to the dining hall (gate 8); the dining hall is visible beyond the counter end on the left. All words masculine. | 2026-10-22 09:00 s04 full: user feedback 'the comptoir's way back to the salle must clearly show the dining room and name it': the painted dining tables at the left edge are now the way back, named 'Back to the dining room (la salle)'. Under the PR 19 viewer this is a hover preview on a painted way to a crumb (no badge), so the breadcrumb stays the one control.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    133,
-    48,
-    434,
-    327
+    281,
+    56,
+    556,
+    169
    ],
    "text_box": [
-    157,
-    117,
-    411,
-    252
+    300,
+    70,
+    540,
+    158
    ]
   }
  },
@@ -32,16 +32,16 @@
    "side": "right",
    "label": "le cabaret",
    "box": [
-    439,
-    201,
-    574,
-    464
+    100,
+    169,
+    344,
+    402
    ],
    "label_xy": [
-    506,
-    454
+    222,
+    392
    ],
-   "scene": "Same as English 'cabaret' (said kah-bah-REH): a frog in a top hat sings on a tiny CABARET stage at the end of the bar."
+   "scene": "A frog in a top hat sings on a tiny CABARET stage (kah-bah-REH) at the end of the bar, one bright RAY of spotlight on him."
   },
   {
    "id": "fr_couscous_noun",
@@ -51,16 +51,35 @@
    "side": "right",
    "label": "le couscous",
    "box": [
-    576,
-    328,
-    760,
-    480
+    188,
+    405,
+    470,
+    520
    ],
    "label_xy": [
-    668,
-    470
+    329,
+    510
    ],
-   "scene": "Same as English 'couscous' (said koos-KOOS): a steaming dome of COUSCOUS crowned with vegetables in a painted dish."
+   "scene": "A pigeon goes 'COO! COO!' (koos-KOOS) as it pecks at a steaming dome of COUSCOUS crowned with vegetables."
+  },
+  {
+   "id": "fr_plat_noun",
+   "lemma": "plat",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le plat",
+   "box": [
+    472,
+    244,
+    660,
+    506
+   ],
+   "label_xy": [
+    566,
+    496
+   ],
+   "scene": "SPLAT! (PLAH) A clumsy duck in a blue waistcoat tips a DISH of spaghetti so it pours down onto the plate below."
   },
   {
    "id": "fr_restaurateur_noun",
@@ -70,16 +89,16 @@
    "side": "right",
    "label": "le restaurateur",
    "box": [
-    830,
-    100,
-    1124,
-    354
+    662,
+    144,
+    935,
+    370
    ],
    "label_xy": [
-    977,
-    344
+    798,
+    360
    ],
-   "scene": "Same as English 'restaurateur' (said rehs-toh-rah-TUHR): the proud RESTAURANT OWNER, a silver-haired lady, counts the day's takings beside her brass till."
+   "scene": "The RESTAURANT OWNER, a silver-haired lady, counts the day's banknotes while her helper, a RAT in a waistcoat (rehs-toh-rah-TUHR), stacks the coins."
   },
   {
    "id": "fr_banquet_noun",
@@ -89,16 +108,16 @@
    "side": "right",
    "label": "le banquet",
    "box": [
-    764,
-    358,
-    951,
-    437
+    662,
+    395,
+    866,
+    556
    ],
    "label_xy": [
-    858,
-    427
+    764,
+    546
    ],
-   "scene": "Same as English 'banquet' (said bahn-KEH, no 't'): a long BANQUET platter piled with a roast, grapes and bread."
+   "scene": "A brass KEY-ring skewer (bahn-KEH) stands upright in the roast chicken on a long BANQUET platter with grapes and bread."
   },
   {
    "id": "fr_hors_d_oeuvre_noun",
@@ -108,16 +127,16 @@
    "side": "right",
    "label": "l'hors-d'œuvre",
    "box": [
-    830,
-    440,
-    1041,
-    522
+    869,
+    372,
+    1050,
+    594
    ],
    "label_xy": [
-    936,
-    512
+    960,
+    584
    ],
-   "scene": "Same as English 'hors d'oeuvre' (said or-DUHVR): a little tray of STARTERS, cheese and tomatoes on cocktail sticks."
+   "scene": "A white DOVE (or-DUHVR) pecks at a little tray of HORS D'OEUVRES: cheese and tomato STARTERS on cocktail sticks."
   },
   {
    "id": "fr_bistro_noun",
@@ -127,17 +146,30 @@
    "side": "right",
    "label": "le bistro",
    "box": [
-    1078,
-    357,
+    1056,
+    410,
     1188,
-    496
+    594
    ],
    "label_xy": [
-    1133,
-    486
+    1122,
+    584
    ],
-   "scene": "Same as English 'bistro' (said bees-TROH): a tiny model BISTRO with a red awning sits in a snow globe on the bar."
+   "scene": "A tiny model BISTRO (bees-TROH) with a red awning sits inside a snow globe on the bar."
   }
  ],
- "links": []
+ "links": [
+  {
+   "target": "R_resto_room",
+   "box": [
+    18,
+    405,
+    150,
+    620
+   ],
+   "label": "Back to the dining room (la salle)",
+   "name": "La salle — Dining hall",
+   "kind": "path"
+  }
+ ]
 }

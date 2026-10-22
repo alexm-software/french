@@ -654,6 +654,22 @@
  "notes": "Every sector is reachable from the overview map (teleport) and by walking between neighbouring sectors (adjacency). Inside a sector, buildings are ordered by mean CEFR level; rooms likewise.",
  "short_streets": [
   {
+   "id": "ST_habitudes",
+   "name_fr": "Montée des Habitudes",
+   "name_en": "Habits Climb",
+   "start": "S02_home",
+   "end": "S15_feelings",
+   "end_room": null,
+   "edge": "chord",
+   "places": [
+    "ST_routine_seg010",
+    "ST_routine_seg011",
+    "ST_routine_seg012",
+    "ST_routine_seg013",
+    "ST_routine_seg014"
+   ]
+  },
+  {
    "id": "ST_bricoleurs",
    "name_fr": "Avenue des Petits Travaux",
    "name_en": "Odd-jobs Avenue",
@@ -670,6 +686,53 @@
    ]
   },
   {
+   "id": "ST_poignees",
+   "name_fr": "Chemin des Gestes",
+   "name_en": "Gestures Way",
+   "start": "S02_home",
+   "end": "S01_beginner",
+   "end_room": null,
+   "edge": "loop",
+   "places": [
+    "ST_control_seg001",
+    "ST_control_seg002",
+    "ST_control_seg003",
+    "ST_control_seg004"
+   ]
+  },
+  {
+   "id": "ST_porteurs",
+   "name_fr": "Rue des Débardeurs",
+   "name_en": "Porters Street",
+   "start": "S03_market",
+   "end": "B06_marche",
+   "end_room": null,
+   "edge": "spur",
+   "places": [
+    "ST_control_seg005",
+    "ST_control_seg006",
+    "ST_control_seg007",
+    "ST_control_seg008",
+    "ST_control_seg009"
+   ]
+  },
+  {
+   "id": "ST_campeur",
+   "name_fr": "Sentier du Campeur",
+   "name_en": "Camper's Trail",
+   "start": "S09_nature",
+   "end": "B30_camping",
+   "end_room": null,
+   "edge": "spur",
+   "places": [
+    "ST_control_seg010",
+    "ST_control_seg011",
+    "ST_control_seg012",
+    "ST_control_seg013",
+    "ST_control_seg014"
+   ]
+  },
+  {
    "id": "ST_paquets",
    "name_fr": "Passage des Paquets",
    "name_en": "Parcels Passage",
@@ -682,6 +745,113 @@
     "ST_control_seg016",
     "ST_control_seg017",
     "ST_control_seg018"
+   ]
+  },
+  {
+   "id": "ST_ecus",
+   "name_fr": "Rue des Écus",
+   "name_en": "Coins Street",
+   "start": "S03_market",
+   "end": "S05_bank",
+   "end_room": null,
+   "edge": "chord",
+   "places": [
+    "ST_commerce_seg001",
+    "ST_commerce_seg002",
+    "ST_commerce_seg004",
+    "ST_commerce_seg003"
+   ]
+  },
+  {
+   "id": "ST_brocante",
+   "name_fr": "Passage de la Brocante",
+   "name_en": "Flea-market Passage",
+   "start": "S03_market",
+   "end": "B59_brocante",
+   "end_room": null,
+   "edge": "spur",
+   "places": [
+    "ST_commerce_seg005",
+    "ST_commerce_seg007",
+    "ST_commerce_seg008",
+    "ST_commerce_seg006"
+   ]
+  },
+  {
+   "id": "ST_gourmets",
+   "name_fr": "Ruelle des Gourmets",
+   "name_en": "Gourmets Lane",
+   "start": "S04_cafes",
+   "end": "S03_market",
+   "end_room": null,
+   "edge": "loop",
+   "places": [
+    "ST_cooking_seg001",
+    "ST_cooking_seg002",
+    "ST_cooking_seg003"
+   ]
+  },
+  {
+   "id": "ST_fourneaux",
+   "name_fr": "Impasse des Fourneaux",
+   "name_en": "Stoves Close",
+   "start": "S04_cafes",
+   "end": "B09_restaurant",
+   "end_room": null,
+   "edge": "spur",
+   "places": [
+    "ST_cooking_seg004",
+    "ST_cooking_seg005",
+    "ST_cooking_seg006",
+    "ST_cooking_seg007"
+   ]
+  },
+  {
+   "id": "ST_appels",
+   "name_fr": "Rue des Appels",
+   "name_en": "Calls Street",
+   "start": "S04_cafes",
+   "end": "S14_culture",
+   "end_room": null,
+   "edge": "chord",
+   "places": [
+    "ST_communication_seg001",
+    "ST_communication_seg002",
+    "ST_communication_seg003",
+    "ST_communication_seg004",
+    "ST_communication_seg005"
+   ]
+  },
+  {
+   "id": "ST_pas",
+   "name_fr": "Rue des Pas Perdus",
+   "name_en": "Lost Steps Street",
+   "start": "S04_cafes",
+   "end": "S08_travel",
+   "end_room": null,
+   "edge": "loop",
+   "places": [
+    "ST_movement_seg001",
+    "ST_movement_seg002",
+    "ST_movement_seg003",
+    "ST_movement_seg004",
+    "ST_movement_seg005"
+   ]
+  },
+  {
+   "id": "ST_departs",
+   "name_fr": "Boulevard des Départs",
+   "name_en": "Departures Boulevard",
+   "start": "S08_travel",
+   "end": "B21_aeroport",
+   "end_room": null,
+   "edge": "spur",
+   "places": [
+    "ST_movement_seg006",
+    "ST_movement_seg007",
+    "ST_movement_seg008",
+    "ST_movement_seg009",
+    "ST_movement_seg010"
    ]
   }
  ]

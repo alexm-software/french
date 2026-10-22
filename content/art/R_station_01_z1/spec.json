@@ -1,0 +1,129 @@
+{
+ "kind": "zoom",
+ "parent_room_id": "R_station_01",
+ "divider_x": 632,
+ "note": "Platform 1, camera facing west along the tracks. Feminine LEFT (locomotive with pigeon, magician unveiling a track section, waiter with a mouse on a plate), masculine RIGHT (lone carriage rolling to the tunnel, tunnel with brass bell, worker with rail and rye, train with cow and top hat, shark float). Hall arch near left; signal box with outside stair at the far left.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le quai",
+   "box": [
+    600,
+    196,
+    780,
+    228
+   ],
+   "text_box": [
+    603,
+    199,
+    777,
+    225
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_locomotive_noun",
+   "box": [
+    290,
+    325,
+    481,
+    625
+   ]
+  },
+  {
+   "id": "fr_voie_noun",
+   "box": [
+    81,
+    356,
+    286,
+    656
+   ]
+  },
+  {
+   "id": "fr_plate_forme_noun",
+   "box": [
+    500,
+    331,
+    631,
+    575
+   ]
+  },
+  {
+   "id": "fr_tunnel_noun",
+   "box": [
+    637,
+    240,
+    725,
+    420
+   ],
+   "label_xy": [
+    682,
+    300
+   ]
+  },
+  {
+   "id": "fr_wagon_noun",
+   "box": [
+    732,
+    296,
+    890,
+    428
+   ]
+  },
+  {
+   "id": "fr_rail_noun",
+   "box": [
+    962,
+    437,
+    1144,
+    656
+   ]
+  },
+  {
+   "id": "fr_train_noun",
+   "box": [
+    930,
+    250,
+    1200,
+    430
+   ]
+  },
+  {
+   "id": "fr_char_noun",
+   "box": [
+    719,
+    432,
+    915,
+    594
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_station_01",
+   "box": [
+    156,
+    119,
+    281,
+    350
+   ],
+   "label": "Back through the arch to the station hall",
+   "name": "Le hall de la gare",
+   "kind": "door"
+  },
+  {
+   "target": "R_abs_relation",
+   "box": [
+    440,
+    175,
+    570,
+    322
+   ],
+   "label": "Up the outside stair to the signal box",
+   "name": "Le poste d'aiguillage",
+   "kind": "stairs_up"
+  }
+ ],
+ "boxes_estimated": false
+}

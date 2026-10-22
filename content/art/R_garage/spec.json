@@ -1,250 +1,115 @@
 {
- "divider_x": 640,
+ "divider_x": 700,
  "kind": "room",
- "note": "Garage workshop. Feminine left (clay key, plank surfer, ladder and seashell, crank, kite twine, robot repair, screw in the vice, moustache fastener), masculine right (pegboard tools, detective's nail, hammer on toe, mole's hole, garage car, spring cat, carpenter's workshop ladder, chisel, assembling robot, brick DIY). Le verrou (bolt man at the side door) sits centre-left, so the split is rough there. Big garage door to the street; small side door to the garden.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "Le garage",
-   "box": [
-    656,
-    31,
-    922,
-    117
-   ],
-   "text_box": [
-    671,
-    39,
-    907,
-    109
-   ]
-  }
- },
+ "note": "Le garage (s02maison repaint 2026-10-22): single-storey garage workshop in the west wing (plan), camera facing west. Whitewashed brick, concrete floor, roof trusses; LANDMARKS tool pegboard over the workbench (zoom z1), green locker, plank store-room door with a big iron bolt. Back (west) wall: doorway with its white door swung open onto the sunny garden (-> R_garden, plan door x0 y4.5). The street garage door (south wall) is not in view; the PR19 breadcrumb leads back to the sector. Feminine left of x=700: woman holding a big slab of orange modelling clay with a key shape pressed into it against the locker padlock (clé; b15 fix: clay clearly visible), frog in swim goggles crouched on the plank on trestles as if on a diving board (planche), woman on the stepladder reaching a pink seashell (échelle), robot Ray fixing the bicycle (réparation). Masculine right: red little car (garage), carpenter holding up the tall stool he made (atelier), mole with a golf ball popping out of a hole (trou), workman sliding the iron bolt (verrou), father gluing a brick collage (bricolage). le outil moved to the workbench zone with the pegboard. Fix 0850: outpainted (all figures fully in frame), children removed from the plank/ladder.",
+ "text_areas": {},
  "items": [
   {
    "id": "fr_cle_noun",
    "box": [
-    8,
-    180,
-    130,
-    380
+    108,
+    185,
+    255,
+    578
    ]
   },
   {
    "id": "fr_planche_noun",
    "box": [
-    133,
-    47,
-    300,
-    250
+    258,
+    330,
+    522,
+    552
    ]
   },
   {
    "id": "fr_echelle_noun",
    "box": [
-    330,
-    39,
-    440,
-    250
-   ]
-  },
-  {
-   "id": "fr_manivelle_noun",
-   "box": [
-    188,
-    252,
-    443,
-    428
-   ]
-  },
-  {
-   "id": "fr_verrou_noun",
-   "box": [
-    445,
-    141,
-    547,
-    428
-   ]
-  },
-  {
-   "id": "fr_ficelle_noun",
-   "box": [
-    549,
-    100,
-    631,
-    414
+    478,
+    92,
+    590,
+    328
    ]
   },
   {
    "id": "fr_reparation_noun",
    "box": [
-    8,
-    383,
-    175,
-    700
-   ],
-   "label_xy": [
-    90,
-    688
-   ]
-  },
-  {
-   "id": "fr_vis_noun",
-   "box": [
-    423,
-    430,
-    638,
-    715
-   ],
-   "label_xy": [
-    530,
-    704
-   ]
-  },
-  {
-   "id": "fr_attache_noun",
-   "box": [
-    266,
-    453,
-    421,
-    715
-   ],
-   "label_xy": [
-    343,
-    704
-   ]
-  },
-  {
-   "id": "fr_outil_noun",
-   "box": [
-    633,
-    172,
-    805,
-    264
-   ]
-  },
-  {
-   "id": "fr_clou_noun",
-   "box": [
-    640,
-    336,
-    803,
-    695
-   ],
-   "label_xy": [
-    721,
-    684
-   ]
-  },
-  {
-   "id": "fr_marteau_noun",
-   "box": [
-    805,
-    266,
-    922,
-    500
-   ]
-  },
-  {
-   "id": "fr_trou_noun",
-   "box": [
-    805,
-    539,
-    938,
-    688
-   ],
-   "label_xy": [
-    871,
-    676
+    600,
+    244,
+    790,
+    410
    ]
   },
   {
    "id": "fr_garage_noun",
    "box": [
-    940,
-    266,
-    1148,
-    357
+    706,
+    414,
+    1032,
+    554
    ]
   },
   {
-   "id": "fr_ressort_noun",
+   "id": "fr_trou_noun",
    "box": [
-    890,
-    133,
-    1039,
-    242
+    800,
+    558,
+    988,
+    656
    ]
   },
   {
    "id": "fr_atelier_noun",
    "box": [
-    1150,
-    78,
-    1273,
-    330
+    800,
+    162,
+    970,
+    412
    ]
   },
   {
-   "id": "fr_ciseau_noun",
+   "id": "fr_verrou_noun",
    "box": [
-    953,
-    359,
-    1076,
-    592
-   ]
-  },
-  {
-   "id": "fr_assemblage_noun",
-   "box": [
-    953,
-    594,
-    1076,
-    715
-   ],
-   "label_xy": [
-    1014,
-    704
+    1036,
+    232,
+    1203,
+    600
    ]
   },
   {
    "id": "fr_bricolage_noun",
    "box": [
-    1078,
-    469,
-    1273,
-    703
-   ],
-   "label_xy": [
-    1175,
-    692
+    1000,
+    78,
+    1203,
+    226
    ]
   }
  ],
  "links": [
   {
-   "target": "S02_sector",
-   "box": [
-    1045,
-    135,
-    1145,
-    262
-   ],
-   "label": "Out through the big garage door to the street",
-   "name": "La rue",
-   "kind": "door"
-  },
-  {
    "target": "R_garden",
-   "box": [
-    8,
-    120,
-    128,
-    178
-   ],
-   "label": "Side door to the garden",
+   "kind": "door",
    "name": "Le jardin",
-   "kind": "door"
+   "label": "Out through the open side door to the garden",
+   "box": [
+    312,
+    156,
+    438,
+    326
+   ]
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_garage_z1",
+   "label": "L'établi",
+   "box": [
+    592,
+    150,
+    798,
+    240
+   ]
   }
  ]
 }

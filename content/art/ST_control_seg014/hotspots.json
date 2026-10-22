@@ -1,370 +1,356 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_control_seg014",
-  "street_id": "ST_control",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Rue des Gestes — Allée de l'Écureuil · enfoncer, enterrer, s'étendre",
-  "divider_x": 900,
-  "note": "Tiered verb place. -er LEFT (man driving a fence post in with a mallet, squirrel burying an acorn in the flower bed, man cracking a walnut on the balcony, man launching a paper aeroplane from the upper window, man hauling a cart of bricks on the roof terrace), -ir/-re RIGHT (long tabby cat stretching out on the bench under a round mirror). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_enfoncer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_enfoncer_verb",
-      "text": "enfoncer",
-      "box": [
-        237,
-        640,
-        325,
-        666
-      ],
-      "text_box": [
-        241,
-        644,
-        321,
-        662
-      ]
-    },
-    "fr_enterrer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_enterrer_verb",
-      "text": "enterrer",
-      "box": [
-        456,
-        618,
-        544,
-        644
-      ],
-      "text_box": [
-        460,
-        622,
-        540,
-        640
-      ]
-    },
-    "fr_craquer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_craquer_verb",
-      "text": "craquer",
-      "box": [
-        370,
-        230,
-        448,
-        256
-      ],
-      "text_box": [
-        374,
-        234,
-        444,
-        252
-      ]
-    },
-    "fr_projeter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_projeter_verb",
-      "text": "projeter",
-      "box": [
-        208,
-        118,
-        296,
-        144
-      ],
-      "text_box": [
-        212,
-        122,
-        292,
-        140
-      ]
-    },
-    "fr_charrier_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_charrier_verb",
-      "text": "charrier",
-      "box": [
-        596,
-        212,
-        684,
-        238
-      ],
-      "text_box": [
-        600,
-        216,
-        680,
-        234
-      ]
-    },
-    "fr_etendre_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_etendre_verb",
-      "text": "s'étendre",
-      "box": [
-        1133,
-        580,
-        1229,
-        606
-      ],
-      "text_box": [
-        1137,
-        584,
-        1225,
-        602
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Ruelle des Bousculades →",
-      "box": [
-        860,
-        420,
-        1020,
-        520
-      ],
-      "text_box": [
-        866,
-        426,
-        1014,
-        514
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Chemin des Faucheurs",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        682,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        700,
-        25,
-        800,
-        59
-      ],
-      "text_box": [
-        703,
-        28,
-        797,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        830,
-        25,
-        950,
-        59
-      ],
-      "text_box": [
-        833,
-        28,
-        947,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg014",
+ "street_id": "ST_campeur",
+ "theme_street_id": "ST_control",
+ "sector_id": "S09_nature",
+ "place_index": 5,
+ "place_count": 5,
+ "street_name": "Sentier du Campeur",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée de l'Écureuil",
+ "divider_x": 820,
+ "note": "Sentier du Campeur place 5/5; landmark: rustic log-arch campsite gate (B30 Camping) with canvas tents among pines beyond (destination). Last place: the path ends at the open log-arch gate of the campsite B30 with tents beyond; the forward exit goes through it. -er scenes on the left cottage; s'étendre (tabby cat stretched out on the bench under a round mirror) on the right. Local patch: the cat now stretches out full length. Shrunk 0.9, cooled k 0.6. Last place: the far end shows the destination. No -er/-ir markers, no painted text. Gate-13 fix 0953Z: cottages now old-rose render (was grey), background foliage autumn-gold, stretched top band repainted as sky / mirrored wall.",
+ "landmark": "rustic log-arch campsite gate (B30 Camping) with canvas tents among pines beyond (destination)",
+ "art_style": "outdoor realism 4",
+ "text_areas": {
+  "fr_charrier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_charrier_verb",
+   "text": "charrier",
+   "box": [
+    202,
+    117,
+    290,
+    143
+   ],
+   "text_box": [
+    206,
+    121,
+    286,
+    139
+   ]
   },
-  "items": [
-    {
-      "id": "fr_enfoncer_verb",
-      "lemma": "enfoncer",
-      "gloss": "to push in",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        169,
-        344,
-        394,
-        672
-      ],
-      "label_xy": [
-        281,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_enterrer_verb",
-      "lemma": "enterrer",
-      "gloss": "to bury",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        444,
-        550,
-        556,
-        650
-      ],
-      "label_xy": [
-        500,
-        638
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_craquer_verb",
-      "lemma": "craquer",
-      "gloss": "to crack",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 3,
-      "box": [
-        344,
-        100,
-        475,
-        262
-      ],
-      "label_xy": [
-        409,
-        250
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_projeter_verb",
-      "lemma": "projeter",
-      "gloss": "to project",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 4,
-      "box": [
-        162,
-        44,
-        342,
-        150
-      ],
-      "label_xy": [
-        252,
-        138
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_charrier_verb",
-      "lemma": "charrier",
-      "gloss": "to carry; to pull someone's leg",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 5,
-      "box": [
-        550,
-        119,
-        731,
-        244
-      ],
-      "label_xy": [
-        640,
-        232
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_etendre_verb",
-      "lemma": "étendre",
-      "gloss": "to spread, stretch",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 6,
-      "box": [
-        1094,
-        331,
-        1269,
-        612
-      ],
-      "label_xy": [
-        1181,
-        600
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'étendre",
-      "scene": "",
-      "mirror": "round mirror on the wall above the bench"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg015",
-      "box": [
-        860,
-        420,
-        1020,
-        520
-      ],
-      "label": "Walk on down the lane",
-      "name": "Ruelle des Bousculades",
-      "sign": "Ruelle des Bousculades →",
-      "kind": "street",
-      "name_fr": "Ruelle des Bousculades",
-      "name_en": "Jostling Lane"
-    },
-    "back": {
-      "target": "ST_control_seg013",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Mowers' Lane",
-      "name": "Chemin des Faucheurs",
-      "sign": "← Chemin des Faucheurs",
-      "kind": "street",
-      "name_fr": "Chemin des Faucheurs",
-      "name_en": "Mowers' Lane"
-    }
+  "fr_projeter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_projeter_verb",
+   "text": "projeter",
+   "box": [
+    335,
+    218,
+    423,
+    244
+   ],
+   "text_box": [
+    339,
+    222,
+    419,
+    240
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_craquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_craquer_verb",
+   "text": "craquer",
+   "box": [
+    330,
+    370,
+    408,
+    396
+   ],
+   "text_box": [
+    334,
+    374,
+    404,
+    392
+   ]
+  },
+  "fr_enfoncer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enfoncer_verb",
+   "text": "enfoncer",
+   "box": [
+    135,
+    508,
+    223,
+    534
+   ],
+   "text_box": [
+    139,
+    512,
+    219,
+    530
+   ]
+  },
+  "fr_enterrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_enterrer_verb",
+   "text": "enterrer",
+   "box": [
+    141,
+    606,
+    229,
+    632
+   ],
+   "text_box": [
+    145,
+    610,
+    225,
+    628
+   ]
+  },
+  "fr_etendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_etendre_verb",
+   "text": "s'étendre",
+   "box": [
+    978,
+    567,
+    1074,
+    593
+   ],
+   "text_box": [
+    982,
+    571,
+    1070,
+    589
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Camping →",
+   "box": [
+    593,
+    362,
+    716,
+    475
+   ],
+   "text_box": [
+    599,
+    368,
+    710,
+    469
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Chemin des Faucheurs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée de l'Écureuil",
+   "box": [
+    540,
+    50,
+    780,
+    90
+   ],
+   "text_box": [
+    544,
+    54,
+    776,
+    86
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_charrier_verb",
+   "lemma": "charrier",
+   "gloss": "to carry; to pull someone's leg",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    165,
+    44,
+    328,
+    149
+   ],
+   "label_xy": [
+    246,
+    137
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_projeter_verb",
+   "lemma": "projeter",
+   "gloss": "to project",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    278,
+    160,
+    480,
+    250
+   ],
+   "label_xy": [
+    379,
+    238
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_craquer_verb",
+   "lemma": "craquer",
+   "gloss": "to crack",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    258,
+    272,
+    480,
+    402
+   ],
+   "label_xy": [
+    369,
+    390
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_enfoncer_verb",
+   "lemma": "enfoncer",
+   "gloss": "to push in",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    103,
+    357,
+    255,
+    540
+   ],
+   "label_xy": [
+    179,
+    528
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_enterrer_verb",
+   "lemma": "enterrer",
+   "gloss": "to bury",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    109,
+    542,
+    261,
+    638
+   ],
+   "label_xy": [
+    185,
+    626
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_etendre_verb",
+   "lemma": "étendre",
+   "gloss": "to spread, stretch",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    880,
+    238,
+    1172,
+    599
+   ],
+   "label_xy": [
+    1026,
+    587
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'étendre",
+   "scene": "",
+   "mirror": "round mirror on the cottage wall above the bench"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B30_camping",
+   "box": [
+    593,
+    362,
+    716,
+    475
+   ],
+   "label": "Through the log gate into the Camping",
+   "name": "Camping",
+   "sign": "Camping →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg013",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Chemin des Faucheurs",
+   "name": "Chemin des Faucheurs",
+   "sign": "← Chemin des Faucheurs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "upper": 1,
+  "balcony": 1,
+  "street": 3
+ }
 }

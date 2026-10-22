@@ -1,137 +1,97 @@
 {
-  "divider_x": 740,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Passage du Marchandage: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Passage du Marchandage",
-      "box": [
-        560,
-        40,
-        900,
-        84
-      ],
-      "text_box": [
-        566,
-        46,
-        894,
-        78
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Rue du Commerce — Ruelle des Tirelires →",
-      "box": [
-        730,
-        322,
-        880,
-        356
-      ],
-      "text_box": [
-        736,
-        328,
-        874,
-        350
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Rue du Commerce — Allée des Livreurs",
-      "box": [
-        660,
-        628,
-        880,
-        660
-      ],
-      "text_box": [
-        666,
-        634,
-        874,
-        654
-      ]
-    }
+ "name": "Passage du Marchandage",
+ "street_name": "Rue des Écus",
+ "divider_x": 780,
+ "art_style": "realism 4 (money = serious)",
+ "landmark": "covered glass-and-iron arcade roof over a mosaic floor (galerie couverte), glazed doorway at the far end",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_ecrier_verb",
+   "box": [
+    150,
+    44,
+    352,
+    200
+   ],
+   "tier": "upper",
+   "mirror": "oval gilt mirror beside the window"
   },
-  "items": [
-    {
-      "id": "fr_revendiquer_verb",
-      "box": [
-        77,
-        330,
-        382,
-        640
-      ],
-      "scene": "man by his red van holding up a big key to claim his parking spot"
-    },
-    {
-      "id": "fr_accumuler_verb",
-      "box": [
-        385,
-        362,
-        650,
-        632
-      ],
-      "scene": "grey mule loaded with a huge bundle of snooker cues"
-    },
-    {
-      "id": "fr_ecouler_verb",
-      "box": [
-        290,
-        106,
-        438,
-        262
-      ],
-      "scene": "girl handing melons out of a blue cooler box, an oval mirror beside her"
-    },
-    {
-      "id": "fr_ecrier_verb",
-      "box": [
-        125,
-        75,
-        270,
-        188
-      ],
-      "scene": "girl at a window crying out with joy, an oval mirror beside her"
-    },
-    {
-      "id": "fr_debattre_verb",
-      "box": [
-        881,
-        394,
-        1181,
-        662
-      ],
-      "scene": "two cats in suits debating at podiums, each waving a cricket bat"
-    }
-  ],
-  "links": [
-    {
-      "target": "ST_commerce_seg003",
-      "box": [
-        740,
-        360,
-        875,
-        470
-      ],
-      "label": "Walk on to Piggy-Bank Lane",
-      "name": "Ruelle des Tirelires",
-      "kind": "street_forward",
-      "name_fr": "Ruelle des Tirelires",
-      "name_en": "Piggy-Bank Lane"
-    },
-    {
-      "target": "ST_commerce_seg002",
-      "box": [
-        400,
-        665,
-        1100,
-        720
-      ],
-      "label": "Back to Delivery Drivers' Alley",
-      "name": "Allée des Livreurs",
-      "kind": "street_back",
-      "name_fr": "Allée des Livreurs",
-      "name_en": "Delivery Drivers' Alley"
-    }
+  {
+   "id": "fr_ecouler_verb",
+   "box": [
+    356,
+    125,
+    475,
+    270
+   ],
+   "tier": "balcony",
+   "mirror": "round gilt mirror on the balcony wall"
+  },
+  {
+   "id": "fr_revendiquer_verb",
+   "box": [
+    318,
+    388,
+    462,
+    646
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_accumuler_verb",
+   "box": [
+    468,
+    405,
+    682,
+    636
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_debattre_verb",
+   "box": [
+    875,
+    430,
+    1144,
+    676
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg003",
+   "box": [
+    720,
+    244,
+    850,
+    480
+   ],
+   "label": "Walk on to Ruelle des Tirelires",
+   "name": "Ruelle des Tirelires",
+   "sign": "Ruelle des Tirelires →"
+  },
+  "back": {
+   "target": "ST_commerce_seg002",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Allée des Livreurs",
+   "name": "Allée des Livreurs",
+   "sign": "← Allée des Livreurs"
+  }
+ },
+ "signs": {
+  "name": [
+   500,
+   36,
+   760,
+   76
   ]
+ },
+ "note": "Rue des Écus place 3/4; landmark: covered glass-and-iron arcade roof over a mosaic floor (galerie couverte), glazed doorway at the far end. Repainted as a covered passage (look-alike fix vs seg002). Five verbs (data). The parked red van is scenery cut by the left edge; the revendiquer box covers the man, key and flag. Girl at the upper window: hair top ~5% from the top edge. No -er/-ir markers, no painted text."
 }
