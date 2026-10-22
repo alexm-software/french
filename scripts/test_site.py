@@ -200,10 +200,22 @@ def assert_wide_passages():
                 item_center = ((item_box[0] + item_box[2]) / 2, (item_box[1] + item_box[3]) / 2)
                 assert not _point_inside(item_center, polygon), (segment, key, item["word_id"])
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
-    street = next(link for link in sector["links"] if link["kind"] == "street")
-    assert street["polygon"]
-    street_width = max(point[0] for point in street["polygon"]) - min(point[0] for point in street["polygon"])
-    assert street_width >= int(sector["width"] * 0.15)
+    # The repainted arch is a narrow opening under its own board, not a wide polygon.
+    expected_signs = {
+        "B08_cafe": "cafe_name",
+        "B09_restaurant": "resto_name",
+        "ST_cooking_seg001": "lane_name",
+    }
+    by_target = {link["target"]: link for link in sector["links"]}
+    for target, sign_id in expected_signs.items():
+        link = by_target[target]
+        assert link["signed_by"] == sign_id
+        assert sector["text_areas"][sign_id]["text"]
+        box = link["box"]
+        width, height = box[2] - box[0], box[3] - box[1]
+        assert width >= 80 and height >= 180, (target, width, height)
+    street = by_target["ST_cooking_seg001"]
+    assert street["name"] == "Place du Grand-Festin"
     room = normalize_scene(load(ROOT / "content" / "art" / "R_resto_room" / "hotspots.json"))
     door = next(link for link in room["links"] if link["kind"] == "door")
     arch = next(link for link in room["links"] if "rch" in link["label"].lower())
@@ -431,6 +443,14 @@ def main():
     assert sector["description_fr"].startswith("La terrasse")
     cooking = next(link for link in sector["scene"]["links"] if link["target"] == "ST_cooking_seg001")
     assert cooking["name"] == "Place du Grand-Festin"
+    assert cooking["name_en"] == "Great-Feast Square"
+    assert cooking["signed_by"] == "lane_name"
+    scene_areas = sector["scene"]["text_areas"]
+    assert scene_areas["cafe_name"]["text"] == "Café de la Place"
+    assert scene_areas["resto_name"]["text"] == "Restaurant Le Bon Goût"
+    assert scene_areas["lane_name"]["text"] == "Ruelle des Gourmets"
+    assert sector["scene"]["links"][0]["signed_by"] == "cafe_name"
+    assert sector["scene"]["links"][1]["signed_by"] == "resto_name"
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
     assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
