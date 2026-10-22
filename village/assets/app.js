@@ -23,10 +23,28 @@ var $=function(s,e){return (e||document).querySelector(s)};
  '.abcl:nth-child(4n+2){background:#e6f4ff}.abcl:nth-child(4n+3){background:#eaf7e4}.abcl:nth-child(4n){background:#ffeaea}'+
  '.abcl b{font-size:1.45em;line-height:1.1}.abcl span{font-size:.85em}.abcl:hover,.abcl:focus-visible{outline:3px solid #e0a030;outline-offset:1px}'+
  '.abcacc{display:grid;gap:6px;margin-top:6px}.acc{display:grid;grid-template-columns:5.2em 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:6px 8px;border-radius:8px;background:#fff8e6;border:1px solid #d9c4a0}'+
- '.acc b{grid-row:1/3;font-size:1.35em;text-align:center}.acc .an{font-weight:600}.acc .ae{font-size:.9em;opacity:.85}';
+ '.acc b{grid-row:1/3;font-size:1.35em;text-align:center}.acc .an{font-weight:600}.acc .ae{font-size:.9em;opacity:.85}'+
+ // in-building doorways: a hit area (painted door or a separate plaque) with a preview pill on hover, focus or first tap
+ '.doorway{position:absolute;display:block;border-radius:calc(10px*var(--s,1));outline:none;-webkit-tap-highlight-color:transparent;z-index:2}'+
+ '.doorimg{position:absolute;pointer-events:none;user-select:none;-webkit-user-drag:none}'+
+ '.doorway:hover,.doorway:focus-visible,.doorway.armed,.hl .doorway{box-shadow:0 0 0 calc(3px*var(--s,1)) rgba(255,216,107,.95),0 0 calc(18px*var(--s,1)) rgba(255,216,107,.7)}'+
+ '.dpill{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:none;align-items:center;gap:calc(6px*var(--s,1));white-space:nowrap;pointer-events:none;font-family:Georgia,serif;font-weight:700;color:#fff8e6;background:#2f5a5e;border:calc(2px*var(--s,1) + .5px) solid #16292b;border-radius:calc(12px*var(--s,1));font-size:calc(16px*var(--s,1));padding:calc(4px*var(--s,1)) calc(10px*var(--s,1)) calc(4px*var(--s,1)) calc(4px*var(--s,1));box-shadow:0 calc(3px*var(--s,1)) 0 rgba(0,0,0,.35)}'+
+ '.dpill img{width:calc(96px*var(--s,1));height:calc(54px*var(--s,1));border-radius:calc(7px*var(--s,1));display:block;object-fit:cover}'+
+ '.doorway:hover .dpill,.doorway:focus-visible .dpill,.doorway.armed .dpill,.hl .doorway .dpill{display:inline-flex}'+
+ '#rooms{display:flex;align-items:center;margin-left:8px;font-family:Georgia,serif;font-size:14px;line-height:1;color:rgba(251,245,230,.55);white-space:nowrap}'+
+ '#rooms[hidden]{display:none}'+
+ '#rooms a{color:#fbf5e6;text-decoration:none;padding:5px 7px;border-radius:999px;opacity:.75}'+
+ '#rooms a:hover,#rooms a:focus-visible{opacity:1;background:rgba(255,255,255,.12);outline:none}'+
+ '#rooms a[aria-current="page"]{opacity:1;color:#ffd86b;font-weight:700;cursor:default}'+
+ '#rooms .dot{padding:0 1px}'+
+ '#app.roomsdrop #rooms{position:absolute;left:8px;top:calc(var(--h) + 6px);margin:0;z-index:6;background:rgba(43,69,73,.88);border:1px solid rgba(0,0,0,.35);border-radius:999px;padding:1px 3px;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3)}'+
+ '.strip-left{display:flex;align-items:center}';
  document.head.appendChild(st) })();
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
 var curTense='present';
+stage.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('.doorway'))return; stage.querySelectorAll('.doorway.armed').forEach(function(o){o.classList.remove('armed')}) });
+var rooms=document.createElement('nav'); rooms.id='rooms'; rooms.setAttribute('aria-label','Rooms in this building'); rooms.hidden=true;
+back.parentNode.appendChild(rooms);
 // ---------- label mode: 'always' (default) or 'hover' (show on hover / first tap) ----------
 var LKEY='village.labelMode', labelMode='always', lastPointer='mouse', armed=-1;
 try{ if(localStorage.getItem(LKEY)==='hover') labelMode='hover' }catch(e){}
@@ -45,7 +63,13 @@ var cardWrap=$('#cardWrap'), card=$('#card'), lastFocus=null, view=null;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function pct(v){return v+'%'}
 // ---------- layout: aspect-locked 16:9 stage, contain-fit; portrait phones pan sideways ----------
+function placeRooms(){
+  app.classList.remove('roomsdrop'); if(rooms.hidden)return;
+  var strip=$('#strip'), t=$('#title'), side=(strip.clientWidth-t.offsetWidth)/2-14, need=back.offsetWidth+8+rooms.offsetWidth;
+  app.classList.toggle('roomsdrop',need>side);
+}
 function fit(){
+  placeRooms();
   var vw=scroller.clientWidth, vh=scroller.clientHeight, ar=16/9, w, h, pan=false;
   if(vw/vh>=ar){h=vh;w=h*ar}else{w=vw;h=w/ar}
   if(vw/vh<0.9){ // tall phone: make the painting taller and let the user swipe across it
@@ -68,7 +92,7 @@ scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#p
 // ---------- map ----------
 function renderMap(){
   view='map'; document.title='Le Village · French vocabulary memory village';
-  back.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
+  back.hidden=true; rooms.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
   var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: the stone church with its bell tower, the yellow town hall with its clock and French flag, the pink school with its clock and playground, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
   MAP.soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+b.pts+'"><title>'+esc(b.name)+' (bientôt)</title></polygon>'});
@@ -98,9 +122,17 @@ function renderMap(){
 }
 // ---------- room / zoom ----------
 var R=null, B=null;
+function roomHref(bld,key){ return key===bld?'#/'+bld:'#/'+bld+'/'+key }
+function renderRooms(bld,key){
+  var D=window.VILLAGE_DATA[bld], L=D.roomList||[], cur=D.rooms[key];
+  rooms.hidden=!(L.length>1&&!cur.parent);
+  if(rooms.hidden){ rooms.innerHTML=''; return }
+  rooms.innerHTML=L.map(function(r){ var on=r.key===key;
+    return '<a href="'+roomHref(bld,r.key)+'"'+(on?' aria-current="page"':'')+'>'+esc(r.short)+'</a>' }).join('<span class="dot" aria-hidden="true">·</span>');
+}
 function renderRoom(bld,key){
-  B=bld; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+' · Le Village';
-  back.hidden=false;
+  B=bld; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
+  back.hidden=false; renderRooms(bld,key);
   if(R.parent){ $('#backLabel').textContent=D.rooms[R.parent].name; back.title='Back to '+D.rooms[R.parent].name; }
   else { $('#backLabel').textContent='Le village'; back.title='Back to the village map'; }
   blur.style.backgroundImage='url('+R.image+')';
@@ -111,6 +143,12 @@ function renderRoom(bld,key){
     h+='<img class="ov" id="ov'+i+'" src="'+R.placed+it.id+'.webp" alt="" style="left:'+pct(g[0])+';top:'+pct(g[1])+';width:'+pct(g[2])+';height:'+pct(g[3])+'">';
     h+='<button class="hot" data-i="'+i+'" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'" aria-label="'+esc(headword(it))+': '+esc(it.en)+'"></button>';
     h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(headword(it))+'</button>';
+  });
+  (R.doors||[]).forEach(function(d,i){
+    var g=d.hit, T=D.rooms[d.to];
+    if(d.img){ var q=d.img.box; h+='<img class="doorimg" src="'+d.img.src+'" alt="" style="left:'+pct(q[0]/12.8)+';top:'+pct(q[1]/7.2)+';width:'+pct(q[2]/12.8)+'">'; }
+    h+='<a class="doorway" data-d="'+i+'" href="'+roomHref(bld,d.to)+'" title="'+esc(d.hint)+'" aria-label="'+esc(d.label)+': '+esc(d.hint)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+';height:'+pct(g[3]/7.2)+'">';
+    h+='<span class="dpill" aria-hidden="true">'+(d.thumb?'<img src="'+d.thumb+'" alt="">':'')+'<span>'+esc(d.label)+' ›</span></span></a>';
   });
   R.zooms.forEach(function(z){
     h+='<a class="zoombadge" href="#/'+bld+'/'+z.to+'" title="'+esc(z.hint)+'" style="left:'+pct(z.at[0]/12.8)+';top:'+pct(z.at[1]/7.2)+'"><span class="mag" aria-hidden="true">🔍</span>'+esc(z.label)+'</a>';
@@ -131,7 +169,11 @@ function renderRoom(bld,key){
       disarm(); openCard(R.items[i],btn);
     });
   });
-  stage.addEventListener('click',function(){ disarm() });
+  stage.querySelectorAll('.doorway').forEach(function(a){
+    a.addEventListener('click',function(e){ e.stopPropagation(); // touch: the first tap shows where the door leads, the second goes through
+      if((lastPointer==='touch'||lastPointer==='pen')&&!a.classList.contains('armed')){ e.preventDefault(); disarm(); stage.querySelectorAll('.doorway.armed').forEach(function(o){o.classList.remove('armed')}); a.classList.add('armed') }
+    });
+  });
   applyLabelMode();
   fit();
 }
@@ -153,7 +195,7 @@ function openCard(it,from){
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
   if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
-  else h+='<div class="gram">'+(it.g==='f'?'feminine':'masculine')+' noun · '+esc(it.ind)+' '+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
+  else h+='<div class="gram">'+(it.g==='f'?'feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   h+='</div></div>';
   h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
@@ -192,7 +234,7 @@ card.addEventListener('keydown',function(e){ var t=e.target; if(!t.classList||!t
 cardWrap.addEventListener('click',function(e){ var t=e.target; var tb=t.closest('.tab'); if(tb){selectTense(tb.dataset.tense);return}
   if(t.closest('[data-close]'))closeCard(); var s=t.closest('[data-say]'); if(s)speak(s.dataset.say) });
 // ---------- controls ----------
-back.addEventListener('click',function(){ location.hash=(view==='zoom'&&R&&R.parent)?'#/'+B:'#/' });
+back.addEventListener('click',function(){ location.hash=(view==='zoom'&&R&&R.parent)?roomHref(B,R.parent):'#/' });
 $('#hl').addEventListener('click',toggleHL);
 $('#labMode').addEventListener('click',function(){ setLabelMode(labelMode==='always'?'hover':'always') });
 function toggleHL(){ var on=!stage.classList.contains('hl'); stage.classList.toggle('hl',on); $('#hl').setAttribute('aria-pressed',on) }
@@ -210,7 +252,8 @@ function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.
   if(!live){ renderMap(); return }
   loadData(bld,function(ok){
     var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
-    if(!D||!D.rooms[key]||(m[2]&&D.rooms[key].parent!==bld)){ location.replace('#/'); return }
+    var Rk=D&&D.rooms[key], ok2=Rk&&(!m[2]||(key!==bld&&(Rk.parent?!!D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent:(D.roomList||[]).some(function(r){return r.key===key}))));
+    if(!ok2){ location.replace('#/'); return }
     renderRoom(bld,key);
   });
 }
