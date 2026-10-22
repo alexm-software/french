@@ -1,16 +1,17 @@
 (function(){
 'use strict';
-var D=window.VILLAGE;
 var MAP={image:'assets/map/village.jpg',
  // polygons in the 1280x720 painting's pixel space (viewBox), so they stay aligned at any size
- live:{id:'boulangerie',name:'La boulangerie',pts:'22,418 55,366 180,340 229,404 222,440 233,470 233,522 150,530 100,524 22,506',tag:[128,338],door:[150,470]},
+ live:[
+  {id:'boulangerie',name:'La boulangerie',pts:'22,418 55,366 180,340 229,404 222,440 233,470 233,522 150,530 100,524 22,506',tag:[128,338],door:[150,470]},
+  {id:'cafe',name:'Le café',pts:'285,447 322,404 415,352 440,400 482,465 500,515 490,560 400,585 300,580 280,520',tag:[385,356],door:[392,508]}
+ ],
  soon:[
   {name:"L'église",pts:'88,14 312,14 312,288 88,288',tag:[205,14]},
   {name:'La mairie',pts:'432,40 688,40 688,205 432,205',tag:[560,40]},
   {name:"L'école",pts:'735,40 965,40 965,160 735,160',tag:[850,40]},
   {name:'Le moulin',pts:'1012,8 1128,8 1128,158 1012,158',tag:[1070,10]},
   {name:'La place et la fontaine',pts:'540,280 690,280 690,372 540,372',tag:[615,282]},
-  {name:'Le café',pts:'283,360 486,360 486,520 283,520',tag:[384,362]},
   {name:'Le marché',pts:'892,212 1228,300 1228,448 892,330',tag:[1060,238]},
   {name:'La gare',pts:'955,416 1190,416 1190,604 955,604',tag:[1072,418]},
   {name:'Le port',pts:'515,560 745,560 745,705 515,705',tag:[630,562]}
@@ -60,19 +61,25 @@ scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#p
 function renderMap(){
   view='map'; document.title='Le Village · French vocabulary memory village';
   back.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
-  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: church, town hall, school, windmill, market, café, station, port and the purple boulangerie with a giant baguette on its roof">';
+  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: church, town hall, school, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
   MAP.soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+b.pts+'"><title>'+esc(b.name)+' (bientôt)</title></polygon>'});
-  var L=MAP.live;
-  h+='<a href="#/'+L.id+'" class="lnk" aria-label="Enter '+esc(L.name)+'"><polygon class="bld live" tabindex="-1" points="'+L.pts+'"></polygon></a></svg>';
-  h+='<div class="door" style="left:'+pct(L.door[0]/12.8)+';top:'+pct(L.door[1]/7.2)+'" aria-hidden="true">➜</div>';
-  h+='<div class="tag live" id="tagLive" style="left:'+pct(L.tag[0]/12.8)+';top:'+pct(L.tag[1]/7.2)+'">'+esc(L.name)+'</div>';
+  MAP.live.forEach(function(L,i){
+    h+='<a href="#/'+L.id+'" class="lnk" data-i="'+i+'" aria-label="Enter '+esc(L.name)+'"><polygon class="bld live" tabindex="-1" points="'+L.pts+'"></polygon></a>';
+  });
+  h+='</svg>';
+  MAP.live.forEach(function(L,i){
+    h+='<div class="door" style="left:'+pct(L.door[0]/12.8)+';top:'+pct(L.door[1]/7.2)+'" aria-hidden="true">➜</div>';
+    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(L.tag[0]/12.8)+';top:'+pct(L.tag[1]/7.2)+'">'+esc(L.name)+'</div>';
+  });
   h+='<div class="tag" id="tagSoon"></div>';
   stage.innerHTML=h;
-  var poly=$('.bld.live',stage), tl=$('#tagLive'), ts=$('#tagSoon');
-  var lnk=$('a.lnk',stage);
-  function on(){tl.classList.add('show');poly.classList.add('hot')} function off(){tl.classList.remove('show');poly.classList.remove('hot')}
-  lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
+  var ts=$('#tagSoon');
+  stage.querySelectorAll('a.lnk').forEach(function(lnk){
+    var poly=$('.bld.live',lnk), tl=$('#tagLive'+lnk.dataset.i);
+    function on(){tl.classList.add('show');poly.classList.add('hot')} function off(){tl.classList.remove('show');poly.classList.remove('hot')}
+    lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
+  });
   stage.querySelectorAll('.bld.soon').forEach(function(p){
     var b=MAP.soon[+p.dataset.i];
     function show(){ts.innerHTML=esc(b.name)+'<small>bientôt</small>';ts.style.left=pct(b.tag[0]/12.8);ts.style.top=pct(Math.max(b.tag[1],60)/7.2);ts.classList.add('show')}
@@ -82,15 +89,14 @@ function renderMap(){
   fit();
 }
 // ---------- room / zoom ----------
-var R=null;
-function renderRoom(key){
-  R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+' · Le Village';
+var R=null, B=null;
+function renderRoom(bld,key){
+  B=bld; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+' · Le Village';
   back.hidden=false;
   if(R.parent){ $('#backLabel').textContent=D.rooms[R.parent].name; back.title='Back to '+D.rooms[R.parent].name; }
   else { $('#backLabel').textContent='Le village'; back.title='Back to the village map'; }
   blur.style.backgroundImage='url('+R.image+')';
-  var alt=R.parent?'Close-up of the long wooden bakery counter, with the stone oven behind it':'Inside the boulangerie: yellow walls, a blue door, a big stone oven, a cash desk and a long wooden counter';
-  var h='<img class="bg" src="'+R.image+'" alt="'+alt+'">';
+  var h='<img class="bg" src="'+R.image+'" alt="'+esc(R.alt||'')+'">';
   if(R.sign){ var g=R.sign.box; h+='<img class="signimg" src="'+R.sign.src+'" alt="Sign: '+esc(R.sign.text)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+'">'; }
   R.items.forEach(function(it,i){
     var g=it.img,b=it.box,l=it.label;
@@ -99,7 +105,7 @@ function renderRoom(key){
     h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(headword(it))+'</button>';
   });
   R.zooms.forEach(function(z){
-    h+='<a class="zoombadge" href="#/'+key+'/'+z.to+'" title="'+esc(z.hint)+'" style="left:'+pct(z.at[0]/12.8)+';top:'+pct(z.at[1]/7.2)+'"><span class="mag" aria-hidden="true">🔍</span>'+esc(z.label)+'</a>';
+    h+='<a class="zoombadge" href="#/'+bld+'/'+z.to+'" title="'+esc(z.hint)+'" style="left:'+pct(z.at[0]/12.8)+';top:'+pct(z.at[1]/7.2)+'"><span class="mag" aria-hidden="true">🔍</span>'+esc(z.label)+'</a>';
   });
   stage.innerHTML=h;
   var hideT=null;
@@ -138,7 +144,7 @@ function openCard(it,from){
   h+='<h2 id="cardTitle">'+(it.verb?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
-  if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+'</div>';
+  if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':'masculine')+' noun · '+esc(it.ind)+' '+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   h+='</div></div>';
   h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
@@ -171,7 +177,7 @@ card.addEventListener('keydown',function(e){ var t=e.target; if(!t.classList||!t
 cardWrap.addEventListener('click',function(e){ var t=e.target; var tb=t.closest('.tab'); if(tb){selectTense(tb.dataset.tense);return}
   if(t.closest('[data-close]'))closeCard(); var s=t.closest('[data-say]'); if(s)speak(s.dataset.say) });
 // ---------- controls ----------
-back.addEventListener('click',function(){ location.hash=(view==='zoom'&&R&&R.parent)?'#/'+R.parent:'#/' });
+back.addEventListener('click',function(){ location.hash=(view==='zoom'&&R&&R.parent)?'#/'+B:'#/' });
 $('#hl').addEventListener('click',toggleHL);
 $('#labMode').addEventListener('click',function(){ setLabelMode(labelMode==='always'?'hover':'always') });
 function toggleHL(){ var on=!stage.classList.contains('hl'); stage.classList.toggle('hl',on); $('#hl').setAttribute('aria-pressed',on) }
@@ -185,7 +191,25 @@ document.addEventListener('keydown',function(e){
   else if(e.key==='Backspace'&&(view==='room'||view==='zoom')){back.click();e.preventDefault()}
 });
 function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  var m=location.hash.match(/^#\/(boulangerie)(?:\/(comptoir))?$/); if(m) renderRoom(m[2]||m[1]); else renderMap(); }
+  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], live=MAP.live.some(function(L){return L.id===bld});
+  if(!live){ renderMap(); return }
+  loadData(bld,function(ok){
+    var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
+    if(!D||!D.rooms[key]||(m[2]&&D.rooms[key].parent!==bld)){ location.replace('#/'); return }
+    renderRoom(bld,key);
+  });
+}
+var loading={};
+function loadData(bld,cb){
+  window.VILLAGE_DATA=window.VILLAGE_DATA||{};
+  if(window.VILLAGE_DATA[bld]){ cb(true); return }
+  if(loading[bld]){ loading[bld].push(cb); return }
+  loading[bld]=[cb];
+  var sc=document.createElement('script'); sc.src='assets/data/'+bld+'.js'; sc.async=true;
+  function done(ok){ var l=loading[bld]; delete loading[bld]; l.forEach(function(f){f(ok)}) }
+  sc.onload=function(){done(true)}; sc.onerror=function(){sc.remove(); done(false)};
+  document.head.appendChild(sc);
+}
 window.addEventListener('hashchange',route);
 applyLabelMode();
 route();
