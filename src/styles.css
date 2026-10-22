@@ -113,8 +113,18 @@ nav.trail {
   line-height: 1.1;
   color: var(--ink);
 }
-nav.trail.measuring { overflow: visible; }
-nav.trail.measuring .crumb { flex: none; max-width: none; }
+nav.trail.measuring {
+  overflow: visible;
+  flex: none;
+  width: max-content;
+  max-width: none;
+}
+nav.trail.measuring .crumb,
+nav.trail.measuring .crumb-mid {
+  flex: none;
+  max-width: none;
+  overflow: visible;
+}
 nav.trail.open { flex-wrap: wrap; overflow: visible; }
 nav.trail .sep { color: var(--ink-soft); flex: none; }
 nav.trail .crumb-mid { display: inline-flex; align-items: center; gap: 0.28rem; min-width: 0; }

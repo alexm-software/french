@@ -459,9 +459,11 @@ function fitTrail() {
   }
   trail.classList.remove("collapsed");
   more.hidden = true;
+  const available = trail.clientWidth;
   trail.classList.add("measuring");
-  const overflow = trail.scrollWidth > trail.clientWidth + 1;
+  const needed = trail.scrollWidth;
   trail.classList.remove("measuring");
+  const overflow = needed > available + 1;
   if (overflow) {
     trail.classList.add("collapsed");
     more.hidden = false;
