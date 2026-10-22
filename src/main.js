@@ -290,7 +290,7 @@ function backNav(place) {
 function sectorUpTarget(sectorId) {
   if (!sectorId) return null;
   const sector = (state.index?.sectors || []).find((item) => item.id === sectorId);
-  const name = localizedName(sector) || sector?.fr_name || sectorId;
+  const name = sector?.fr_name || sector?.name_fr || localizedName(sector) || sectorId;
   return { href: `#/sector/${sectorId}`, label: tf("nav.sectorUp", { place: name }) };
 }
 
@@ -511,20 +511,22 @@ function placeWayBadges() {
     const [x0, y0, x1, y1] = (el.dataset[attr] || "").split(",").map(Number);
     return { x0, y0, x1, y1 };
   }).filter((box) => Number.isFinite(box.x0));
+  const signObstacles = [...svg.querySelectorAll("[data-sign-box]")].map((el) => {
+    const [x0, y0, x1, y1] = el.dataset.signBox.split(",").map(Number);
+    const box = { x0, y0, x1, y1 };
+    if (!el.classList.contains("painted-sign") || !Number.isFinite(x0)) return box;
+    const width = x1 - x0;
+    const height = y1 - y0;
+    // The words are centred in the lane. Avoid that line, not the whole exit.
+    const coreW = Math.min(width - 4, Math.max(72, width * 0.7));
+    const coreH = Math.min(height - 4, Math.max(26, Math.min(height * 0.62, 48)));
+    const cx = (x0 + x1) / 2;
+    const cy = (y0 + y1) / 2;
+    return { x0: cx - coreW / 2, y0: cy - coreH / 2, x1: cx + coreW / 2, y1: cy + coreH / 2 };
+  }).filter((box) => Number.isFinite(box.x0));
   const obstacles = [
     ...boxesOf("[data-item-box]", "itemBox"),
-    ...boxesOf("[data-sign-box]", "signBox").map((box) => {
-      const width = box.x1 - box.x0;
-      const height = box.y1 - box.y0;
-      // A lane sign shares the whole exit. Keep the arrow off the centred words,
-      // and still treat a small plate as a solid obstacle.
-      if (width < 160 || height < 90) return box;
-      const coreW = Math.min(width * 0.78, Math.max(140, width * 0.62));
-      const coreH = Math.min(height * 0.46, Math.max(40, height * 0.36));
-      const cx = (box.x0 + box.x1) / 2;
-      const cy = (box.y0 + box.y1) / 2;
-      return { x0: cx - coreW / 2, y0: cy - coreH / 2, x1: cx + coreW / 2, y1: cy + coreH / 2 };
-    }),
+    ...signObstacles,
     ...boxesOf("[data-zoom-box]", "zoomBox"),
   ];
   const placed = [];
@@ -554,8 +556,20 @@ function placeWayBadges() {
       return true;
     });
     if (!found) {
-      x = Math.max(4, Math.min(midX, (view.width || 1280) - size - 4));
-      y = Math.max(4, Math.min(midY, (view.height || 720) - size - 4));
+      const ring = [size * 1.4, size * 2.4, size * 3.4].flatMap((dist) => [
+        [midX, midY - dist],
+        [midX, midY + dist],
+        [midX - dist, midY],
+        [midX + dist, midY],
+      ]);
+      ring.some(([sx, sy]) => {
+        const cx = Math.max(4, Math.min(sx, (view.width || 1280) - size - 4));
+        const cy = Math.max(4, Math.min(sy, (view.height || 720) - size - 4));
+        if (hits(cx, cy, obstacles) || hits(cx, cy, placed)) return false;
+        x = cx;
+        y = cy;
+        return true;
+      });
     }
     placed.push({ x0: x, y0: y, x1: x + size, y1: y + size });
     const screen = toScreen(x, y);
