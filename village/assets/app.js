@@ -6,10 +6,10 @@ var MAP={image:'assets/map/village.jpg',
   {id:'boulangerie',name:'La boulangerie',pts:'22,418 55,366 180,340 229,404 222,440 233,470 233,522 150,530 100,524 22,506',tag:[128,338],door:[150,470]},
   {id:'cafe',name:'Le café',pts:'285,447 322,404 415,352 440,400 482,465 500,515 490,560 400,585 300,580 280,520',tag:[385,356],door:[392,508]},
   {id:'eglise',name:"L'église",pts:'80,140 125,88 228,60 247,2 268,60 285,82 320,165 320,240 300,282 185,282 80,228',tag:[205,62],door:[262,232]},
-  {id:'mairie',name:'La mairie',pts:'434,92 462,46 545,44 548,8 592,20 590,38 612,34 641,96 616,108 612,172 585,184 545,186 470,180 436,170 436,104',tag:[520,44],door:[552,170]}
+  {id:'mairie',name:'La mairie',pts:'434,92 462,46 545,44 548,8 592,20 590,38 612,34 641,96 616,108 612,172 585,184 545,186 470,180 436,170 436,104',tag:[520,44],door:[552,170]},
+  {id:'ecole',name:"L'école",pts:'740,80 772,34 880,60 912,88 904,138 860,152 785,140 742,126',tag:[826,34],door:[797,115]}
  ],
  soon:[
-  {name:"L'école",pts:'735,40 965,40 965,160 735,160',tag:[850,40]},
   {name:'Le moulin',pts:'1012,8 1128,8 1128,158 1012,158',tag:[1070,10]},
   {name:'La place et la fontaine',pts:'540,280 690,280 690,372 540,372',tag:[615,282]},
   {name:'Le marché',pts:'892,212 1228,300 1228,448 892,330',tag:[1060,238]},
@@ -17,6 +17,14 @@ var MAP={image:'assets/map/village.jpg',
   {name:'Le port',pts:'515,560 745,560 745,705 515,705',tag:[630,562]}
  ]};
 var $=function(s,e){return (e||document).querySelector(s)};
+(function(){ var st=document.createElement('style'); st.textContent=
+ '.abcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px;margin:6px 0 12px}'+
+ '.abcl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:58px;padding:4px 2px;border:2px solid #6b4a2b;border-radius:8px;background:#fff8e6;font:inherit;color:#3c2414;cursor:pointer}'+
+ '.abcl:nth-child(4n+2){background:#e6f4ff}.abcl:nth-child(4n+3){background:#eaf7e4}.abcl:nth-child(4n){background:#ffeaea}'+
+ '.abcl b{font-size:1.45em;line-height:1.1}.abcl span{font-size:.85em}.abcl:hover,.abcl:focus-visible{outline:3px solid #e0a030;outline-offset:1px}'+
+ '.abcacc{display:grid;gap:6px;margin-top:6px}.acc{display:grid;grid-template-columns:5.2em 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:6px 8px;border-radius:8px;background:#fff8e6;border:1px solid #d9c4a0}'+
+ '.acc b{grid-row:1/3;font-size:1.35em;text-align:center}.acc .an{font-weight:600}.acc .ae{font-size:.9em;opacity:.85}';
+ document.head.appendChild(st) })();
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
 var curTense='present';
 // ---------- label mode: 'always' (default) or 'hover' (show on hover / first tap) ----------
@@ -61,7 +69,7 @@ scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#p
 function renderMap(){
   view='map'; document.title='Le Village · French vocabulary memory village';
   back.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
-  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: the stone church with its bell tower, the yellow town hall with its clock and French flag, school, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
+  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: the stone church with its bell tower, the yellow town hall with its clock and French flag, the pink school with its clock and playground, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
   MAP.soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+b.pts+'"><title>'+esc(b.name)+' (bientôt)</title></polygon>'});
   MAP.live.forEach(function(L,i){
@@ -150,6 +158,13 @@ function openCard(it,from){
   h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
   h+=exH;
+  if(it.alphabet){
+    h+='<div class="sec abc"><h3>L\u2019alphabet</h3><p class="small">Tap a letter to hear its French name.</p><div class="abcgrid">';
+    it.alphabet.letters.forEach(function(x){ h+='<button class="abcl" '+(sp?'data-say="'+esc(x.l)+'" ':'')+'aria-label="'+esc(x.l)+': '+esc(x.name)+'"><b>'+esc(x.l)+'</b><span>'+esc(x.name)+'</span></button>' });
+    h+='</div><h3>Les accents</h3><div class="abcacc">';
+    it.alphabet.accents.forEach(function(x){ h+='<div class="acc"><b>'+esc(x.chars)+'</b><span class="an">'+esc(x.name)+(sp?' <button class="say" data-say="'+esc(x.name)+'" aria-label="Listen: '+esc(x.name)+'">🔊</button>':'')+'</span><span class="ae">'+esc(x.ex)+'</span></div>' });
+    h+='</div></div>';
+  }
   if(it.verb&&it.tenses){
     var cur=it.tenses.some(function(t){return t.key===curTense})?curTense:'present';
     h+='<div class="sec conjsec"><h3>Conjugation</h3>';
