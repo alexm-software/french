@@ -4,94 +4,157 @@
  "height": 720,
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Rue des Maisons (S02 Home) square. La Maison familiale (duvet roof, teapot chimney) centre; the Allée du Quotidien (daily-routine verbs) leaves under the wooden arch on the left, the Rue des Gestes (gesture verbs) under the stone pulley arch on the right (both lanes are linked). The cobbles at the bottom walk back to the village square (S01).",
+ "no_building_layer": true,
+ "building_rooms_direct": "B05_maison",
+ "note": "Rue des Maisons (S02 Home) square, repainted Oct 22 2026 to match B05_maison exactly (quilted blue-grey duvet roof, white teapot chimney, white stucco, green shutters). No building layer: the Maison familiale's doors open the rooms directly (garage, kitchen side door with copper pan, arched front door under the name board, French doors, front-garden gate, kennel and stone garden arch to the pets' yard). The Allée du Quotidien (daily-routine verbs) leaves under the rose-covered wooden arch on the left, the Rue des Gestes (gesture verbs) under the stone pulley arch on the right. The cobbles at the bottom walk back to the village square (S01).",
  "text_areas": {
   "sector_name": {
    "role": "sector_name",
    "text": "Rue des Maisons",
    "box": [
-    55,
-    547,
-    176,
+    45,
+    540,
+    173,
     633
    ],
    "text_box": [
-    64,
-    556,
-    167,
-    624
+    66,
+    555,
+    160,
+    616
    ]
   },
   "maison_name": {
    "role": "building_name",
    "text": "La Maison familiale",
    "box": [
-    581,
-    347,
-    685,
-    381
+    614,
+    340,
+    714,
+    372
    ],
    "text_box": [
-    586,
-    351,
-    680,
-    377
+    620,
+    344,
+    708,
+    368
    ]
   },
   "routine_name": {
    "role": "street_name",
    "text": "Allée du Quotidien",
    "box": [
-    255,
-    409,
-    352,
-    441
+    200,
+    407,
+    288,
+    443
    ],
    "text_box": [
-    259,
-    412,
-    348,
-    438
+    204,
+    411,
+    284,
+    439
    ]
   },
   "control_name": {
    "role": "street_name",
    "text": "Rue des Gestes",
    "box": [
-    1078,
-    409,
-    1175,
-    444
+    1092,
+    402,
+    1198,
+    442
    ],
    "text_box": [
-    1082,
-    412,
-    1171,
-    441
+    1097,
+    406,
+    1193,
+    438
    ]
   }
  },
  "items": [],
  "links": [
   {
-   "target": "B05_maison",
+   "target": "R_garage",
    "box": [
-    590,
-    395,
-    690,
-    565
+    356,
+    406,
+    424,
+    520
    ],
-   "label": "Walk up to the family house",
-   "name": "La Maison familiale",
-   "kind": "building"
+   "label": "Garage door",
+   "name": "Le garage",
+   "kind": "door"
+  },
+  {
+   "target": "R_kitchen_01",
+   "box": [
+    478,
+    372,
+    586,
+    515
+   ],
+   "label": "Kitchen side door",
+   "name": "La cuisine",
+   "kind": "door"
+  },
+  {
+   "target": "R_entrance_04",
+   "box": [
+    616,
+    374,
+    712,
+    522
+   ],
+   "label": "In through the front door to the vestibule",
+   "name": "Le vestibule",
+   "kind": "door",
+   "signed_by": "maison_name"
+  },
+  {
+   "target": "R_dining",
+   "box": [
+    744,
+    372,
+    876,
+    520
+   ],
+   "label": "French windows into the dining room",
+   "name": "La salle à manger",
+   "kind": "door"
+  },
+  {
+   "target": "R_entrance_03",
+   "box": [
+    536,
+    526,
+    722,
+    614
+   ],
+   "label": "Through the garden gate to the front garden and porch",
+   "name": "Le jardin de devant",
+   "kind": "path"
+  },
+  {
+   "target": "R_pets",
+   "box": [
+    888,
+    474,
+    1076,
+    612
+   ],
+   "label": "Garden arch by the kennel to the pets' yard",
+   "name": "Les animaux",
+   "kind": "door"
   },
   {
    "target": "S01_sector",
    "box": [
-    380,
-    600,
-    900,
-    715
+    300,
+    628,
+    980,
+    674
    ],
    "label": "Back along the cobbles to the village square",
    "name": "Place du Village",
@@ -100,26 +163,28 @@
   {
    "target": "ST_routine_seg001",
    "box": [
-    230,
-    450,
-    370,
+    182,
+    448,
+    304,
     560
    ],
    "label": "Under the wooden arch into the Allée du Quotidien",
    "name": "Allée du Quotidien",
-   "kind": "street"
+   "kind": "street",
+   "signed_by": "routine_name"
   },
   {
    "target": "ST_control_seg001",
    "box": [
-    1055,
-    452,
-    1195,
-    560
+    1088,
+    446,
+    1200,
+    600
    ],
    "label": "Under the stone pulley arch into the Rue des Gestes",
    "name": "Rue des Gestes",
-   "kind": "street"
+   "kind": "street",
+   "signed_by": "control_name"
   }
  ]
 }

@@ -256,10 +256,46 @@ def is_live(room, open_sectors, live_ids):
     return True
 
 
+def direct_building_layers():
+    """Sector paintings that open a building's rooms and skip its exterior page."""
+    cached = getattr(direct_building_layers, "_cached", None)
+    if cached is not None:
+        return cached
+    found = {}
+    for path in ART.glob("*/hotspots.json"):
+        raw = load_json(path)
+        if not raw.get("no_building_layer"):
+            continue
+        building_id = str(raw.get("building_rooms_direct") or "").strip()
+        if building_id:
+            found[building_id] = path.parent.name
+    direct_building_layers._cached = found
+    return found
+
+
+def retarget_direct_layers(scene, direct):
+    """A door aimed at a skipped exterior opens the sector square instead."""
+    if not scene or not direct:
+        return scene
+
+    def rewrite(item):
+        target = item.get("target")
+        if target in direct:
+            item["target"] = direct[target]
+
+    for link in scene.get("links") or []:
+        rewrite(link)
+    for exit_item in (scene.get("exits") or {}).values():
+        if isinstance(exit_item, dict):
+            rewrite(exit_item)
+    return scene
+
+
 def mark_soon_links(scene, rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids):
     """Doors into a closed building stay visible and are not clickable."""
     if not scene:
         return scene
+    retarget_direct_layers(scene, direct_building_layers())
     art_to_sector = {}
     for sector_id in sectors_by_id:
         art_to_sector[f"{sector_id.split('_')[0]}_sector"] = sector_id
@@ -903,9 +939,15 @@ def main():
                     "type": building["type"],
                     "sector_id": sector["id"],
                 }
+                if building["id"] in direct_building_layers():
+                    index_building["no_building_layer"] = True
+                    payload["no_building_layer"] = True
                 index_building.update(locale_fields(building, "building", building["id"], signs, log=False))
                 index_buildings.append(index_building)
-                exterior = load_place_scene(building["id"], signs.get(building["id"]) or building["name"])
+                # The square opens these rooms. The exterior page is not a step.
+                exterior = None
+                if building["id"] not in direct_building_layers():
+                    exterior = load_place_scene(building["id"], signs.get(building["id"]) or building["name"])
                 if exterior:
                     payload["scene"] = mark_soon_links(
                         exterior, rooms_by_id, buildings_by_id, sectors_by_id, open_sectors, live_ids,
@@ -1118,6 +1160,7 @@ def main():
                 "sector_id": room["sector_id"],
                 "sector_name": split_name(sectors_by_id[room["sector_id"]]["name"])[0],
                 "building_id": room["building_id"],
+                **({"no_building_layer": True} if room["building_id"] in direct_building_layers() else {}),
                 "building_name": building["name"] if building else "",
                 "building_type": building["type"] if building else "",
                 "architectural_theme": building.get("architectural_theme") if building else None,
