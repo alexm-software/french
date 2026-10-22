@@ -1,531 +1,478 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_cooking_seg005",
-  "street_id": "ST_cooking",
-  "sector_id": "S04_cafes",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Ruelle des Gourmets — Chemin des Épluchures · Cut & knead",
-  "divider_x": 800,
-  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
-  "tier_counts": {
-    "street": 4,
-    "balcony": 2,
-    "upper": 2,
-    "roof": 1
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg005",
+ "street_id": "ST_fourneaux",
+ "theme_street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "place_index": 2,
+ "place_count": 4,
+ "street_name": "Impasse des Fourneaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Chemin des Épluchures",
+ "divider_x": 880,
+ "note": "Impasse des Fourneaux place 2/4; landmark: giant cheese-wheel house mid-alley and a white flour windmill with blue sails at the far end. Restyled from the live painting (same figures): snowy alley, flour white and cornflower blue, windmill at the far end. Crossed-knife prop on the roof removed; the pigeon now offers its coin at the end of the baker's table. Minor: the baker's table runs into the bottom 6% band (box stops at 676). No -er/-ir markers, no painted text.",
+ "landmark": "giant cheese-wheel house mid-alley and a white flour windmill with blue sails at the far end",
+ "art_style": "cartoony storybook 2.5 (same as S04)",
+ "text_areas": {
+  "fr_aiguiser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_aiguiser_verb",
+   "text": "aiguiser",
+   "box": [
+    211,
+    140,
+    299,
+    166
+   ],
+   "text_box": [
+    215,
+    144,
+    295,
+    162
+   ]
   },
-  "text_areas": {
-    "fr_couper_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_couper_verb",
-      "text": "couper",
-      "box": [
-        240,
-        632,
-        316,
-        658
-      ],
-      "text_box": [
-        244,
-        636,
-        312,
-        654
-      ]
-    },
-    "fr_tailler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_tailler_verb",
-      "text": "tailler",
-      "box": [
-        159,
-        500,
-        227,
-        526
-      ],
-      "text_box": [
-        163,
-        504,
-        223,
-        522
-      ]
-    },
-    "fr_trancher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_trancher_verb",
-      "text": "trancher",
-      "box": [
-        430,
-        612,
-        520,
-        638
-      ],
-      "text_box": [
-        434,
-        616,
-        516,
-        634
-      ]
-    },
-    "fr_decouper_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_decouper_verb",
-      "text": "découper",
-      "box": [
-        567,
-        572,
-        663,
-        598
-      ],
-      "text_box": [
-        571,
-        576,
-        659,
-        594
-      ]
-    },
-    "fr_entamer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_entamer_verb",
-      "text": "entamer",
-      "box": [
-        206,
-        336,
-        294,
-        362
-      ],
-      "text_box": [
-        210,
-        340,
-        290,
-        358
-      ]
-    },
-    "fr_eplucher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_eplucher_verb",
-      "text": "éplucher",
-      "box": [
-        500,
-        412,
-        590,
-        438
-      ],
-      "text_box": [
-        504,
-        416,
-        586,
-        434
-      ]
-    },
-    "fr_aiguiser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_aiguiser_verb",
-      "text": "aiguiser",
-      "box": [
-        195,
-        170,
-        281,
-        196
-      ],
-      "text_box": [
-        199,
-        174,
-        277,
-        192
-      ]
-    },
-    "fr_petrir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_petrir_verb",
-      "text": "pétrir",
-      "box": [
-        1019,
-        246,
-        1085,
-        272
-      ],
-      "text_box": [
-        1023,
-        250,
-        1081,
-        268
-      ]
-    },
-    "fr_ciseler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_ciseler_verb",
-      "text": "ciseler",
-      "box": [
-        397,
-        142,
-        469,
-        168
-      ],
-      "text_box": [
-        401,
-        146,
-        465,
-        164
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Rue des Sorbetières →",
-      "box": [
-        740,
-        308,
-        838,
-        336
-      ],
-      "text_box": [
-        743,
-        311,
-        835,
-        333
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Ruelle des Épices",
-      "box": [
-        772,
-        684,
-        870,
-        712
-      ],
-      "text_box": [
-        775,
-        687,
-        867,
-        709
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        580,
-        24,
-        621,
-        54
-      ],
-      "text_box": [
-        583,
-        27,
-        618,
-        51
-      ],
-      "style": "direction_plate",
-      "points": "left"
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        820,
-        24,
-        896,
-        54
-      ],
-      "text_box": [
-        823,
-        27,
-        893,
-        51
-      ],
-      "style": "direction_plate",
-      "points": "right"
-    },
-    "street_name": {
-      "role": "street_name",
-      "text": "Chemin des Épluchures",
-      "box": [
-        898,
-        376,
-        986,
-        446
-      ],
-      "text_box": [
-        904,
-        382,
-        980,
-        440
-      ],
-      "surface": "blank hanging sign board"
-    }
+  "fr_ciseler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ciseler_verb",
+   "text": "ciseler",
+   "box": [
+    426,
+    143,
+    504,
+    169
+   ],
+   "text_box": [
+    430,
+    147,
+    500,
+    165
+   ]
   },
-  "items": [
-    {
-      "id": "fr_couper_verb",
-      "lemma": "couper",
-      "gloss": "to cut",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        160,
-        534,
-        396,
-        662
-      ],
-      "label_xy": [
-        278,
-        652
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A pigeon goes 'COO' and PAYS a gold coin (koo-PAY) so the baker will CUT its baguette in two."
-    },
-    {
-      "id": "fr_tailler_verb",
-      "lemma": "tailler",
-      "gloss": "to cut, to trim, to prune",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        100,
-        378,
-        286,
-        530
-      ],
-      "label_xy": [
-        193,
-        520
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A gardener in a big red bow TIE cheers 'YAY!' (tah-YAY) as he TRIMS a hedge into a giant bow-tie shape."
-    },
-    {
-      "id": "fr_trancher_verb",
-      "lemma": "trancher",
-      "gloss": "to slice; to settle (a question)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        406,
-        452,
-        544,
-        642
-      ],
-      "label_xy": [
-        475,
-        632
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "Down in a TRENCH (TRAHN-shay) a miner mole SLICES a big round cheese into neat wedges."
-    },
-    {
-      "id": "fr_decouper_verb",
-      "lemma": "découper",
-      "gloss": "to cut up, to carve; to cut out",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 4,
-      "box": [
-        548,
-        444,
-        682,
-        602
-      ],
-      "label_xy": [
-        615,
-        592
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "Contains couper (cut), said day-koo-PAY: a girl CUTS OUT paper doves with big scissors and they COO as they flutter off the table."
-    },
-    {
-      "id": "fr_entamer_verb",
-      "lemma": "entamer",
-      "gloss": "to start on, to cut into (a loaf, a cake)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 5,
-      "box": [
-        124,
-        204,
-        376,
-        366
-      ],
-      "label_xy": [
-        250,
-        356
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "An ANT TAMER (ahn-tah-MAY) in a red circus jacket CUTS INTO a fresh loaf while his row of ants watches."
-    },
-    {
-      "id": "fr_eplucher_verb",
-      "lemma": "éplucher",
-      "gloss": "to peel; to go through with a fine-tooth comb",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 6,
-      "box": [
-        508,
-        288,
-        582,
-        442
-      ],
-      "label_xy": [
-        545,
-        432
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A PLUSH teddy (ay-PLEW-shay) PEELS a long ribbon of potato skin."
-    },
-    {
-      "id": "fr_aiguiser_verb",
-      "lemma": "aiguiser",
-      "gloss": "to sharpen",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 7,
-      "box": [
-        140,
-        60,
-        336,
-        200
-      ],
-      "label_xy": [
-        238,
-        190
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A GEYSER (ay-gee-ZAY) spouts behind a man who SHARPENS his knife on a whetstone, sparks flying."
-    },
-    {
-      "id": "fr_petrir_verb",
-      "lemma": "pétrir",
-      "gloss": "to knead",
-      "verb_group": 2,
-      "side": "right",
-      "tier": "upper",
-      "level": "upper",
-      "order": 9,
-      "box": [
-        918,
-        44,
-        1186,
-        276
-      ],
-      "label_xy": [
-        1052,
-        266
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A baker KNEADS dough on the stump of a PEAR TREE (pay-TREER)."
-    },
-    {
-      "id": "fr_ciseler_verb",
-      "lemma": "ciseler",
-      "gloss": "to chisel; to chop finely (herbs)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 8,
-      "box": [
-        394,
-        60,
-        472,
-        172
-      ],
-      "label_xy": [
-        433,
-        162
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "With tiny SCISSORS (see-zuh-LAY) a gnome CHOPS herbs FINELY and lays them in a neat pile."
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_cooking_seg006",
-      "box": [
-        686,
-        300,
-        892,
-        560
-      ],
-      "polygon": [
-        [
-          686,
-          300
-        ],
-        [
-          892,
-          300
-        ],
-        [
-          892,
-          560
-        ],
-        [
-          686,
-          560
-        ]
-      ],
-      "label": "Rue des Sorbetières",
-      "name": "Rue des Sorbetières",
-      "kind": "street",
-      "area": "far street / vanishing point",
-      "name_fr": "Rue des Sorbetières",
-      "name_en": "Ice-Cream Makers Street"
-    },
-    "back": {
-      "target": "ST_cooking_seg004",
-      "box": [
-        402,
-        646,
-        1240,
-        720
-      ],
-      "label": "Ruelle des Épices",
-      "name": "Ruelle des Épices",
-      "kind": "street",
-      "area": "near foreground cobbles",
-      "name_fr": "Ruelle des Épices",
-      "name_en": "Spice Lane"
-    }
+  "fr_entamer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_entamer_verb",
+   "text": "entamer",
+   "box": [
+    212,
+    318,
+    290,
+    344
+   ],
+   "text_box": [
+    216,
+    322,
+    286,
+    340
+   ]
   },
-  "links": []
+  "fr_eplucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_eplucher_verb",
+   "text": "éplucher",
+   "box": [
+    510,
+    408,
+    588,
+    434
+   ],
+   "text_box": [
+    514,
+    412,
+    584,
+    430
+   ]
+  },
+  "fr_tailler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tailler_verb",
+   "text": "tailler",
+   "box": [
+    152,
+    608,
+    230,
+    634
+   ],
+   "text_box": [
+    156,
+    612,
+    226,
+    630
+   ]
+  },
+  "fr_couper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_couper_verb",
+   "text": "couper",
+   "box": [
+    329,
+    644,
+    397,
+    670
+   ],
+   "text_box": [
+    333,
+    648,
+    393,
+    666
+   ]
+  },
+  "fr_trancher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_trancher_verb",
+   "text": "trancher",
+   "box": [
+    455,
+    608,
+    543,
+    634
+   ],
+   "text_box": [
+    459,
+    612,
+    539,
+    630
+   ]
+  },
+  "fr_decouper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decouper_verb",
+   "text": "découper",
+   "box": [
+    581,
+    593,
+    669,
+    619
+   ],
+   "text_box": [
+    585,
+    597,
+    665,
+    615
+   ]
+  },
+  "fr_petrir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_petrir_verb",
+   "text": "pétrir",
+   "box": [
+    1019,
+    230,
+    1087,
+    256
+   ],
+   "text_box": [
+    1023,
+    234,
+    1083,
+    252
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Sorbetières →",
+   "box": [
+    690,
+    250,
+    830,
+    430
+   ],
+   "text_box": [
+    696,
+    256,
+    824,
+    424
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Ruelle des Épices",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Chemin des Épluchures",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_aiguiser_verb",
+   "lemma": "aiguiser",
+   "gloss": "to sharpen",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    172,
+    56,
+    338,
+    172
+   ],
+   "label_xy": [
+    255,
+    160
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ciseler_verb",
+   "lemma": "ciseler",
+   "gloss": "to chisel; to chop finely (herbs)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 2,
+   "box": [
+    405,
+    55,
+    525,
+    175
+   ],
+   "label_xy": [
+    465,
+    163
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_entamer_verb",
+   "lemma": "entamer",
+   "gloss": "to start on, to cut into (a loaf, a cake)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    125,
+    190,
+    378,
+    350
+   ],
+   "label_xy": [
+    251,
+    338
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_eplucher_verb",
+   "lemma": "éplucher",
+   "gloss": "to peel; to go through with a fine-tooth comb",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    508,
+    290,
+    590,
+    440
+   ],
+   "label_xy": [
+    549,
+    428
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_tailler_verb",
+   "lemma": "tailler",
+   "gloss": "to cut, to trim, to prune",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    100,
+    385,
+    282,
+    640
+   ],
+   "label_xy": [
+    191,
+    628
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_couper_verb",
+   "lemma": "couper",
+   "gloss": "to cut",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    286,
+    455,
+    440,
+    676
+   ],
+   "label_xy": [
+    363,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_trancher_verb",
+   "lemma": "trancher",
+   "gloss": "to slice; to settle (a question)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 7,
+   "box": [
+    444,
+    470,
+    555,
+    640
+   ],
+   "label_xy": [
+    499,
+    628
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_decouper_verb",
+   "lemma": "découper",
+   "gloss": "to cut up, to carve; to cut out",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 8,
+   "box": [
+    558,
+    450,
+    692,
+    625
+   ],
+   "label_xy": [
+    625,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_petrir_verb",
+   "lemma": "pétrir",
+   "gloss": "to knead",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 9,
+   "box": [
+    918,
+    44,
+    1188,
+    262
+   ],
+   "label_xy": [
+    1053,
+    250
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_cooking_seg006",
+   "box": [
+    690,
+    250,
+    830,
+    430
+   ],
+   "label": "Walk on to Rue des Sorbetières",
+   "name": "Rue des Sorbetières",
+   "sign": "Rue des Sorbetières →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_cooking_seg004",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Épices",
+   "name": "Ruelle des Épices",
+   "sign": "← Ruelle des Épices",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 2,
+  "roof": 1,
+  "balcony": 2,
+  "street": 4
+ }
 }

@@ -1,532 +1,479 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_cooking_seg004",
-  "street_id": "ST_cooking",
-  "sector_id": "S04_cafes",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Ruelle des Gourmets — Ruelle des Épices · Taste & season",
-  "divider_x": 951,
-  "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
-  "tier_counts": {
-    "street": 4,
-    "balcony": 2,
-    "upper": 2,
-    "roof": 1
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_cooking_seg004",
+ "street_id": "ST_fourneaux",
+ "theme_street_id": "ST_cooking",
+ "sector_id": "S04_cafes",
+ "place_index": 1,
+ "place_count": 4,
+ "street_name": "Impasse des Fourneaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Ruelle des Épices",
+ "divider_x": 900,
+ "note": "Impasse des Fourneaux place 1/4; landmark: giant wooden pepper-mill tower on the left and a clock tower at the far end of the snowy alley. Restyled from the live painting (same figures) to cartoony storybook 2.5, snowy winter alley with steaming chimneys, pale grey and green. Minor: the pirate's garlic bulb reaches ~5% from the top edge; the salt shaker prop runs to the left edge (box starts at 180). No -er/-ir markers, no painted text.",
+ "landmark": "giant wooden pepper-mill tower on the left and a clock tower at the far end of the snowy alley",
+ "art_style": "cartoony storybook 2.5 (same as S04)",
+ "text_areas": {
+  "fr_truffer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_truffer_verb",
+   "text": "truffer",
+   "box": [
+    126,
+    188,
+    204,
+    214
+   ],
+   "text_box": [
+    130,
+    192,
+    200,
+    210
+   ]
   },
-  "text_areas": {
-    "fr_gouter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_gouter_verb",
-      "text": "goûter",
-      "box": [
-        390,
-        593,
-        464,
-        619
-      ],
-      "text_box": [
-        394,
-        597,
-        460,
-        615
-      ]
-    },
-    "fr_deguster_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_deguster_verb",
-      "text": "déguster",
-      "box": [
-        485,
-        406,
-        577,
-        432
-      ],
-      "text_box": [
-        489,
-        410,
-        573,
-        428
-      ]
-    },
-    "fr_savourer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_savourer_verb",
-      "text": "savourer",
-      "box": [
-        687,
-        597,
-        779,
-        623
-      ],
-      "text_box": [
-        691,
-        601,
-        775,
-        619
-      ]
-    },
-    "fr_saler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_saler_verb",
-      "text": "saler",
-      "box": [
-        237,
-        622,
-        295,
-        648
-      ],
-      "text_box": [
-        241,
-        626,
-        291,
-        644
-      ]
-    },
-    "fr_sucrer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_sucrer_verb",
-      "text": "sucrer",
-      "box": [
-        328,
-        348,
-        398,
-        374
-      ],
-      "text_box": [
-        332,
-        352,
-        394,
-        370
-      ]
-    },
-    "fr_epicer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_epicer_verb",
-      "text": "épicer",
-      "box": [
-        536,
-        237,
-        606,
-        263
-      ],
-      "text_box": [
-        540,
-        241,
-        602,
-        259
-      ]
-    },
-    "fr_ailler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_ailler_verb",
-      "text": "ailler",
-      "box": [
-        296,
-        152,
-        356,
-        178
-      ],
-      "text_box": [
-        300,
-        156,
-        352,
-        174
-      ]
-    },
-    "fr_farcir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_farcir_verb",
-      "text": "se farcir",
-      "box": [
-        1013,
-        345,
-        1099,
-        371
-      ],
-      "text_box": [
-        1017,
-        349,
-        1095,
-        367
-      ]
-    },
-    "fr_truffer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_truffer_verb",
-      "text": "truffer",
-      "box": [
-        135,
-        195,
-        207,
-        221
-      ],
-      "text_box": [
-        139,
-        199,
-        203,
-        217
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Chemin des Épluchures →",
-      "box": [
-        742,
-        300,
-        840,
-        328
-      ],
-      "text_box": [
-        745,
-        303,
-        837,
-        325
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue des Carafes",
-      "box": [
-        804,
-        684,
-        902,
-        712
-      ],
-      "text_box": [
-        807,
-        687,
-        899,
-        709
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        408,
-        31,
-        449,
-        61
-      ],
-      "text_box": [
-        411,
-        34,
-        446,
-        58
-      ],
-      "style": "direction_plate",
-      "points": "left"
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        971,
-        40,
-        1047,
-        70
-      ],
-      "text_box": [
-        974,
-        43,
-        1044,
-        67
-      ],
-      "style": "direction_plate",
-      "points": "right"
-    },
-    "street_name": {
-      "role": "street_name",
-      "text": "Ruelle des Épices",
-      "box": [
-        1126,
-        391,
-        1198,
-        476
-      ],
-      "text_box": [
-        1132,
-        397,
-        1192,
-        470
-      ],
-      "surface": "blank hanging sign board"
-    }
+  "fr_ailler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ailler_verb",
+   "text": "ailler",
+   "box": [
+    285,
+    146,
+    353,
+    172
+   ],
+   "text_box": [
+    289,
+    150,
+    349,
+    168
+   ]
   },
-  "items": [
-    {
-      "id": "fr_gouter_verb",
-      "lemma": "goûter",
-      "gloss": "to taste, to try (food); (as a noun) the afternoon snack",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        345,
-        440,
-        509,
-        623
-      ],
-      "label_xy": [
-        427,
-        613
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A child TASTES a spoonful of sticky GOO with her TEA (goo-TAY) at snack time."
-    },
-    {
-      "id": "fr_deguster_verb",
-      "lemma": "déguster",
-      "gloss": "to savour, to taste slowly",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        455,
-        290,
-        608,
-        436
-      ],
-      "label_xy": [
-        531,
-        426
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A GUSTY wind (day-GEWS-tay) swirls round a lady in a big hat, perched on a ledge, who SAVOURS her slice of tart bite by bite."
-    },
-    {
-      "id": "fr_savourer_verb",
-      "lemma": "savourer",
-      "gloss": "to savour, to enjoy slowly",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        543,
-        452,
-        923,
-        627
-      ],
-      "label_xy": [
-        733,
-        617
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "Like English 'savour', said sah-voo-RAY: a tortoise SAVOURS a giant strawberry while a party popper bursts 'hoo-RAY!'."
-    },
-    {
-      "id": "fr_saler_verb",
-      "lemma": "saler",
-      "gloss": "to salt",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 4,
-      "box": [
-        192,
-        380,
-        341,
-        652
-      ],
-      "label_xy": [
-        266,
-        642
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "SALLY the sailor (sah-LAY) SALTS a big pot of potatoes with a giant shaker."
-    },
-    {
-      "id": "fr_sucrer_verb",
-      "lemma": "sucrer",
-      "gloss": "to sweeten, to add sugar",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 5,
-      "box": [
-        293,
-        225,
-        433,
-        378
-      ],
-      "label_xy": [
-        363,
-        368
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "SUE drops SUGAR cubes into a CRAYfish's tea (sew-KRAY) to SWEETEN it."
-    },
-    {
-      "id": "fr_epicer_verb",
-      "lemma": "épicer",
-      "gloss": "to spice, to season",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 6,
-      "box": [
-        476,
-        107,
-        667,
-        267
-      ],
-      "label_xy": [
-        571,
-        257
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A green PEA (ay-PEE-say) shouts 'SAY!' as a jolly cook SPICES a bubbling curry."
-    },
-    {
-      "id": "fr_ailler_verb",
-      "lemma": "ailler",
-      "gloss": "to flavour with garlic",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 7,
-      "box": [
-        262,
-        43,
-        390,
-        182
-      ],
-      "label_xy": [
-        326,
-        172
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A pirate cheers 'AYE-AYE!' (ah-YAY), waving a fat GARLIC bulb over the GARLICKY toast he is munching."
-    },
-    {
-      "id": "fr_farcir_verb",
-      "lemma": "farcir",
-      "gloss": "to stuff (with a filling)",
-      "verb_group": 2,
-      "side": "right",
-      "tier": "upper",
-      "level": "upper",
-      "order": 9,
-      "box": [
-        979,
-        242,
-        1133,
-        375
-      ],
-      "label_xy": [
-        1056,
-        365
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se farcir",
-      "scene": "A FAR-SEER (fahr-SEER) stargazer peers through her brass telescope from inside a giant STUFFED-tomato house, a bowl of rice stuffing at her feet, and checks herself in an oval MIRROR (se farcir).",
-      "mirror": "painted inside the item box"
-    },
-    {
-      "id": "fr_truffer_verb",
-      "lemma": "truffer",
-      "gloss": "to add truffles to; to pack, to fill (with)",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 8,
-      "box": [
-        96,
-        65,
-        246,
-        225
-      ],
-      "label_xy": [
-        171,
-        215
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": "A TRUE FAIRY (trew-FAY) on the rooftop sprinkles black TRUFFLES all over an omelette."
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_cooking_seg005",
-      "box": [
-        617,
-        292,
-        966,
-        449
-      ],
-      "polygon": [
-        [
-          617,
-          292
-        ],
-        [
-          966,
-          292
-        ],
-        [
-          966,
-          449
-        ],
-        [
-          617,
-          449
-        ]
-      ],
-      "label": "Chemin des Épluchures",
-      "name": "Chemin des Épluchures",
-      "kind": "street",
-      "area": "far street / vanishing point",
-      "name_fr": "Chemin des Épluchures",
-      "name_en": "Peelings Lane"
-    },
-    "back": {
-      "target": "ST_cooking_seg003",
-      "box": [
-        516,
-        630,
-        1191,
-        720
-      ],
-      "label": "Rue des Carafes",
-      "name": "Rue des Carafes",
-      "kind": "street",
-      "area": "near foreground cobbles",
-      "name_fr": "Rue des Carafes",
-      "name_en": "Carafes Street"
-    }
+  "fr_epicer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_epicer_verb",
+   "text": "épicer",
+   "box": [
+    531,
+    238,
+    599,
+    264
+   ],
+   "text_box": [
+    535,
+    242,
+    595,
+    260
+   ]
   },
-  "links": []
+  "fr_sucrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_sucrer_verb",
+   "text": "sucrer",
+   "box": [
+    326,
+    338,
+    394,
+    364
+   ],
+   "text_box": [
+    330,
+    342,
+    390,
+    360
+   ]
+  },
+  "fr_deguster_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_deguster_verb",
+   "text": "déguster",
+   "box": [
+    490,
+    388,
+    578,
+    414
+   ],
+   "text_box": [
+    494,
+    392,
+    574,
+    410
+   ]
+  },
+  "fr_saler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_saler_verb",
+   "text": "saler",
+   "box": [
+    229,
+    644,
+    287,
+    670
+   ],
+   "text_box": [
+    233,
+    648,
+    283,
+    666
+   ]
+  },
+  "fr_gouter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_gouter_verb",
+   "text": "goûter",
+   "box": [
+    389,
+    632,
+    457,
+    658
+   ],
+   "text_box": [
+    393,
+    636,
+    453,
+    654
+   ]
+  },
+  "fr_savourer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_savourer_verb",
+   "text": "savourer",
+   "box": [
+    666,
+    620,
+    754,
+    646
+   ],
+   "text_box": [
+    670,
+    624,
+    750,
+    642
+   ]
+  },
+  "fr_farcir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_farcir_verb",
+   "text": "se farcir",
+   "box": [
+    1002,
+    370,
+    1098,
+    396
+   ],
+   "text_box": [
+    1006,
+    374,
+    1094,
+    392
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Chemin des Épluchures →",
+   "box": [
+    700,
+    280,
+    860,
+    415
+   ],
+   "text_box": [
+    706,
+    286,
+    854,
+    409
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Saveurs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Ruelle des Épices",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_truffer_verb",
+   "lemma": "truffer",
+   "gloss": "to add truffles to; to pack, to fill (with)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    86,
+    50,
+    244,
+    220
+   ],
+   "label_xy": [
+    165,
+    208
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ailler_verb",
+   "lemma": "ailler",
+   "gloss": "to flavour with garlic",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    256,
+    44,
+    382,
+    178
+   ],
+   "label_xy": [
+    319,
+    166
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_epicer_verb",
+   "lemma": "épicer",
+   "gloss": "to spice, to season",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    470,
+    100,
+    660,
+    270
+   ],
+   "label_xy": [
+    565,
+    258
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_sucrer_verb",
+   "lemma": "sucrer",
+   "gloss": "to sweeten, to add sugar",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    288,
+    232,
+    432,
+    370
+   ],
+   "label_xy": [
+    360,
+    358
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_deguster_verb",
+   "lemma": "déguster",
+   "gloss": "to savour, to taste slowly",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 5,
+   "box": [
+    456,
+    300,
+    612,
+    420
+   ],
+   "label_xy": [
+    534,
+    408
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_saler_verb",
+   "lemma": "saler",
+   "gloss": "to salt",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    180,
+    410,
+    336,
+    676
+   ],
+   "label_xy": [
+    258,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_gouter_verb",
+   "lemma": "goûter",
+   "gloss": "to taste, to try (food); (as a noun) the afternoon snack",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 7,
+   "box": [
+    340,
+    452,
+    506,
+    664
+   ],
+   "label_xy": [
+    423,
+    652
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_savourer_verb",
+   "lemma": "savourer",
+   "gloss": "to savour, to enjoy slowly",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 8,
+   "box": [
+    540,
+    470,
+    880,
+    652
+   ],
+   "label_xy": [
+    710,
+    640
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_farcir_verb",
+   "lemma": "farcir",
+   "gloss": "to stuff (with a filling)",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "upper",
+   "level": "upper",
+   "order": 9,
+   "box": [
+    952,
+    258,
+    1148,
+    402
+   ],
+   "label_xy": [
+    1050,
+    390
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se farcir",
+   "scene": "",
+   "mirror": "oval gilt mirror in the tomato-house window"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_cooking_seg005",
+   "box": [
+    700,
+    280,
+    860,
+    415
+   ],
+   "label": "Walk on to Chemin des Épluchures",
+   "name": "Chemin des Épluchures",
+   "sign": "Chemin des Épluchures →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "S04_sector",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Saveurs",
+   "name": "Rue des Saveurs",
+   "sign": "← Rue des Saveurs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "upper": 2,
+  "balcony": 3,
+  "street": 3
+ }
 }

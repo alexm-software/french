@@ -1,113 +1,107 @@
 {
-  "divider_x": 1000,
-  "name": "Rue des Gestes — Rue des Crochets · tirer, se lever, accrocher",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man pulling the pulley rope that lifts a tea tray, old man springing up from his lever armchair beside a tall mirror, man loading sacks onto a horse), balcony (boy dragging a toy train), upper (woman leaning on the sill by her puppy and little mirror), roof (granny hanging her crochet blanket on a hook). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_tirer_verb",
-      "box": [
-        94,
-        310,
-        375,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_lever_verb",
-      "box": [
-        406,
-        438,
-        662,
-        672
-      ],
-      "tier": "street",
-      "mirror": "tall standing mirror beside the armchair"
-    },
-    {
-      "id": "fr_charger_verb",
-      "box": [
-        681,
-        431,
-        881,
-        638
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_trainer_verb",
-      "box": [
-        631,
-        175,
-        825,
-        344
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_appuyer_verb",
-      "box": [
-        444,
-        94,
-        588,
-        200
-      ],
-      "tier": "upper",
-      "mirror": "small round mirror on the window sill"
-    },
-    {
-      "id": "fr_accrocher_verb",
-      "box": [
-        150,
-        10,
-        362,
-        306
-      ],
-      "tier": "roof"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg003",
-      "box": [
-        900,
-        470,
-        1040,
-        570
-      ],
-      "label": "Walk on down the lane",
-      "name": "Ruelle des Brouettes",
-      "sign": "Ruelle des Brouettes →",
-      "name_fr": "Ruelle des Brouettes",
-      "name_en": "Wheelbarrows Lane"
-    },
-    "back": {
-      "target": "ST_control_seg001",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Handshakes Street",
-      "name": "Rue des Poignées-de-Main",
-      "sign": "← Rue des Poignées-de-Main",
-      "name_fr": "Rue des Poignées-de-Main",
-      "name_en": "Handshakes Street"
-    }
+ "name": "Rue des Crochets",
+ "street_name": "Chemin des Gestes",
+ "divider_x": 940,
+ "art_style": "storybook 3 (beginner-adjacent)",
+ "landmark": "old round stone well with a big wooden winch wheel under a little tiled roof",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_tirer_verb",
+   "box": [
+    150,
+    312,
+    406,
+    676
+   ],
+   "tier": "street"
   },
-  "signs": {
-    "er": [
-      880,
-      25,
-      980,
-      59
-    ],
-    "irre": [
-      1000,
-      25,
-      1120,
-      59
-    ]
+  {
+   "id": "fr_lever_verb",
+   "box": [
+    425,
+    425,
+    662,
+    662
+   ],
+   "tier": "street",
+   "mirror": "tall standing mirror beside the armchair"
+  },
+  {
+   "id": "fr_charger_verb",
+   "box": [
+    681,
+    419,
+    862,
+    619
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_trainer_verb",
+   "box": [
+    475,
+    181,
+    800,
+    344
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_appuyer_verb",
+   "box": [
+    462,
+    44,
+    619,
+    180
+   ],
+   "tier": "upper",
+   "mirror": "little round mirror on the wall beside the puppy"
+  },
+  {
+   "id": "fr_accrocher_verb",
+   "box": [
+    200,
+    44,
+    388,
+    306
+   ],
+   "tier": "roof"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg003",
+   "box": [
+    950,
+    362,
+    1088,
+    562
+   ],
+   "label": "Walk on to Ruelle des Brouettes",
+   "name": "Ruelle des Brouettes",
+   "sign": "Ruelle des Brouettes →"
+  },
+  "back": {
+   "target": "ST_control_seg001",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Poignées-de-Main",
+   "name": "Rue des Poignées-de-Main",
+   "sign": "← Rue des Poignées-de-Main"
+  }
+ },
+ "signs": {
+  "name": [
+   640,
+   60,
+   880,
+   100
+  ]
+ },
+ "note": "Chemin des Gestes place 2/4; landmark: old round stone well with a big wooden winch wheel under a little tiled roof. All six verbs are -er, so they live on the left cottages; the right side is a stone wall with hedges and the well landmark where the lane continues. No -er/-ir markers, no painted text."
 }

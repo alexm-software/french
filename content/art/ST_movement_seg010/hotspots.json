@@ -1,0 +1,352 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_movement_seg010",
+ "street_id": "ST_departs",
+ "theme_street_id": "ST_movement",
+ "sector_id": "S08_travel",
+ "place_index": 5,
+ "place_count": 5,
+ "street_name": "Boulevard des Départs",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée des Galopins",
+ "divider_x": 1000,
+ "note": "Boulevard des Départs place 5/5 (last); landmark: the airport control tower and glass terminal at the end of the boulevard, which IS the destination (B21_aeroport). Painted 10:46Z with the built-in GenerateImage tool (one full scene, 16:9, upscaled to 1280x720). Allée des Galopins: -er verbs left of the divider (galoper, émerger, traquer, tâcher), bondir and entreprendre right of it. No reflexive verbs. bondir follows the user's PENDING qa_020 hook (deer leaping over a fence). The baker is named in the galoper hook and stands inside its box. No -er/-ir markers, no painted text.",
+ "landmark": "the white airport control tower and the glass terminal at the end of the boulevard (destination)",
+ "art_style": "clean realism 4",
+ "text_areas": {
+  "fr_galoper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_galoper_verb",
+   "text": "galoper",
+   "box": [
+    192,
+    468,
+    270,
+    494
+   ],
+   "text_box": [
+    196,
+    472,
+    266,
+    490
+   ]
+  },
+  "fr_emerger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_emerger_verb",
+   "text": "émerger",
+   "box": [
+    373,
+    644,
+    451,
+    670
+   ],
+   "text_box": [
+    377,
+    648,
+    447,
+    666
+   ]
+  },
+  "fr_traquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_traquer_verb",
+   "text": "traquer",
+   "box": [
+    481,
+    468,
+    559,
+    494
+   ],
+   "text_box": [
+    485,
+    472,
+    555,
+    490
+   ]
+  },
+  "fr_tacher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tacher_verb",
+   "text": "tâcher",
+   "box": [
+    817,
+    483,
+    885,
+    509
+   ],
+   "text_box": [
+    821,
+    487,
+    881,
+    505
+   ]
+  },
+  "fr_bondir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bondir_verb",
+   "text": "bondir",
+   "box": [
+    1085,
+    308,
+    1153,
+    334
+   ],
+   "text_box": [
+    1089,
+    312,
+    1149,
+    330
+   ]
+  },
+  "fr_entreprendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_entreprendre_verb",
+   "text": "entreprendre",
+   "box": [
+    979,
+    638,
+    1105,
+    664
+   ],
+   "text_box": [
+    983,
+    642,
+    1101,
+    660
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Aéroport →",
+   "box": [
+    470,
+    195,
+    690,
+    248
+   ],
+   "text_box": [
+    476,
+    201,
+    684,
+    242
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Pressés",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée des Galopins",
+   "box": [
+    560,
+    48,
+    760,
+    86
+   ],
+   "text_box": [
+    564,
+    52,
+    756,
+    82
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_galoper_verb",
+   "lemma": "galoper",
+   "gloss": "to gallop",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 1,
+   "box": [
+    77,
+    220,
+    385,
+    500
+   ],
+   "label_xy": [
+    231,
+    488
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_emerger_verb",
+   "lemma": "émerger",
+   "gloss": "to arrive at the top; to move upwards; emerge",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    300,
+    500,
+    525,
+    676
+   ],
+   "label_xy": [
+    412,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_traquer_verb",
+   "lemma": "traquer",
+   "gloss": "to track down",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    440,
+    250,
+    600,
+    500
+   ],
+   "label_xy": [
+    520,
+    488
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_tacher_verb",
+   "lemma": "tâcher",
+   "gloss": "to try",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    690,
+    228,
+    1012,
+    515
+   ],
+   "label_xy": [
+    851,
+    503
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_bondir_verb",
+   "lemma": "bondir",
+   "gloss": "to leap",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    1035,
+    185,
+    1203,
+    340
+   ],
+   "label_xy": [
+    1119,
+    328
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_entreprendre_verb",
+   "lemma": "entreprendre",
+   "gloss": "to undertake",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    935,
+    515,
+    1150,
+    670
+   ],
+   "label_xy": [
+    1042,
+    658
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B21_aeroport",
+   "box": [
+    470,
+    195,
+    690,
+    248
+   ],
+   "label": "Through the gateway to the Aéroport",
+   "name": "Aéroport",
+   "sign": "Aéroport →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_movement_seg009",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Pressés",
+   "name": "Rue des Pressés",
+   "sign": "← Rue des Pressés",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "street": 6
+ }
+}

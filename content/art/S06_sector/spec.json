@@ -1,0 +1,191 @@
+{
+ "kind": "sector",
+ "space": "S06_sector",
+ "building_id": null,
+ "floor": "outdoors",
+ "name": "Place de la Mairie",
+ "parent_room_id": null,
+ "divider_x": null,
+ "camera": "south edge of the square, eye level, facing north",
+ "setting": {
+  "walls": "five facades: B14 white columned Palais de Justice (left), B63 red-brick fire station with hose tower (back left), B13 cream town hall with slate mansard, belfry and tricolour (back centre), B16 ochre barracks museum gate with striped sentry boxes (back right), B15 yellow-and-blue post office with round clock (right)",
+  "floor": "pale beige paving stones with two curved flower beds",
+  "landmark": "a white-and-sage-green wrought-iron bandstand (kiosque) in the centre",
+  "light": "neutral spring daylight, light clouds",
+  "style": "S06 square: calm civic storybook painterly 3/5"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Place de la Mairie",
+   "box": [
+    92,
+    392,
+    178,
+    450
+   ],
+   "text_box": [
+    94,
+    394,
+    176,
+    448
+   ]
+  },
+  "b14": {
+   "role": "building_name",
+   "text": "Palais de Justice",
+   "box": [
+    190,
+    190,
+    300,
+    228
+   ],
+   "text_box": [
+    192,
+    192,
+    298,
+    226
+   ]
+  },
+  "b63": {
+   "role": "building_name",
+   "text": "Pompiers",
+   "box": [
+    425,
+    352,
+    512,
+    374
+   ],
+   "text_box": [
+    427,
+    354,
+    510,
+    372
+   ]
+  },
+  "b13": {
+   "role": "building_name",
+   "text": "Hôtel de Ville",
+   "box": [
+    735,
+    312,
+    815,
+    334
+   ],
+   "text_box": [
+    737,
+    314,
+    813,
+    332
+   ]
+  },
+  "b16": {
+   "role": "building_name",
+   "text": "Caserne-musée",
+   "box": [
+    955,
+    352,
+    1040,
+    372
+   ],
+   "text_box": [
+    957,
+    354,
+    1038,
+    370
+   ]
+  },
+  "b15": {
+   "role": "building_name",
+   "text": "La Poste",
+   "box": [
+    1122,
+    300,
+    1196,
+    322
+   ],
+   "text_box": [
+    1124,
+    302,
+    1194,
+    320
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "B14_tribunal",
+   "box": [
+    190,
+    336,
+    330,
+    472
+   ],
+   "label": "Walk to the courthouse",
+   "name": "Le Palais de Justice",
+   "kind": "door",
+   "painted_as": "B14's tall bronze doors at the top of the wide steps, LEFT"
+  },
+  {
+   "target": "B63_pompiers",
+   "box": [
+    412,
+    378,
+    520,
+    455
+   ],
+   "label": "Walk to the fire station",
+   "name": "La Caserne des pompiers",
+   "kind": "door",
+   "painted_as": "B63's two arched red engine doors, BACK LEFT"
+  },
+  {
+   "target": "B13_mairie",
+   "box": [
+    742,
+    338,
+    815,
+    445
+   ],
+   "label": "Walk to the town hall",
+   "name": "L'Hôtel de Ville",
+   "kind": "door",
+   "painted_as": "B13's grand arched front door up three steps, BACK CENTRE (right of the bandstand)"
+  },
+  {
+   "target": "B16_caserne",
+   "box": [
+    925,
+    376,
+    1060,
+    462
+   ],
+   "label": "Walk to the barracks museum",
+   "name": "La Caserne-musée",
+   "kind": "door",
+   "painted_as": "B16's round-arched gateway between two striped sentry boxes, BACK RIGHT"
+  },
+  {
+   "target": "R_post_01",
+   "box": [
+    1140,
+    374,
+    1200,
+    496
+   ],
+   "label": "Into the post office",
+   "name": "La Poste",
+   "kind": "door",
+   "painted_as": "B15's glazed blue door beside the yellow letter boxes, RIGHT"
+  }
+ ],
+ "street_mouths_painted": [
+  "ST_guerison (front-left corner)",
+  "ST_accueil (front-right corner)",
+  "lanes between B63/B13 (Rue du Conseil) and B13/B16 (Allée des Influences); others per S06_plan.png, painted openings only, not clickable yet"
+ ],
+ "no_building_layer": true,
+ "building_rooms_direct": "B15_poste",
+ "note": "B15 La Poste is a one-hall building: its square door opens straight into R_post_01 (no exterior layer; viewer rule building_rooms_direct)."
+}

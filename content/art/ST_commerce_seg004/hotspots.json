@@ -1,229 +1,315 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "divider_x": 740,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Passage du Marchandage: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Passage du Marchandage",
-      "box": [
-        560,
-        40,
-        900,
-        84
-      ],
-      "text_box": [
-        566,
-        46,
-        894,
-        78
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Ruelle des Tirelires →",
-      "box": [
-        730,
-        322,
-        880,
-        356
-      ],
-      "text_box": [
-        736,
-        328,
-        874,
-        350
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Allée des Livreurs",
-      "box": [
-        660,
-        628,
-        880,
-        660
-      ],
-      "text_box": [
-        666,
-        634,
-        874,
-        654
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_commerce_seg004",
+ "street_id": "ST_ecus",
+ "theme_street_id": "ST_commerce",
+ "sector_id": "S03_market",
+ "place_index": 3,
+ "place_count": 4,
+ "street_name": "Rue des Écus",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Passage du Marchandage",
+ "divider_x": 780,
+ "note": "Rue des Écus place 3/4; landmark: covered glass-and-iron arcade roof over a mosaic floor (galerie couverte), glazed doorway at the far end. Repainted as a covered passage (look-alike fix vs seg002). Five verbs (data). The parked red van is scenery cut by the left edge; the revendiquer box covers the man, key and flag. Girl at the upper window: hair top ~5% from the top edge. No -er/-ir markers, no painted text.",
+ "landmark": "covered glass-and-iron arcade roof over a mosaic floor (galerie couverte), glazed doorway at the far end",
+ "art_style": "realism 4 (money = serious)",
+ "text_areas": {
+  "fr_ecrier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecrier_verb",
+   "text": "s'écrier",
+   "box": [
+    207,
+    168,
+    295,
+    194
+   ],
+   "text_box": [
+    211,
+    172,
+    291,
+    190
+   ]
   },
-  "items": [
-    {
-      "id": "fr_revendiquer_verb",
-      "lemma": "revendiquer",
-      "article": "",
-      "gender": null,
-      "side": "left",
-      "label": "revendiquer",
-      "box": [
-        77,
-        330,
-        382,
-        640
-      ],
-      "label_xy": [
-        230,
-        630
-      ],
-      "scene": "man by his red van holding up a big key to claim his parking spot",
-      "gloss": "to demand; to claim",
-      "verb_group": 1,
-      "tier": "street",
-      "level": "street",
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null
-    },
-    {
-      "id": "fr_accumuler_verb",
-      "lemma": "accumuler",
-      "article": "",
-      "gender": null,
-      "side": "left",
-      "label": "accumuler",
-      "box": [
-        385,
-        362,
-        650,
-        632
-      ],
-      "label_xy": [
-        518,
-        622
-      ],
-      "scene": "grey mule loaded with a huge bundle of snooker cues",
-      "gloss": "to accumulate",
-      "verb_group": 1,
-      "tier": "street",
-      "level": "street",
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null
-    },
-    {
-      "id": "fr_ecouler_verb",
-      "lemma": "écouler",
-      "article": "",
-      "gender": null,
-      "side": "left",
-      "label": "s'écouler",
-      "box": [
-        290,
-        106,
-        438,
-        262
-      ],
-      "label_xy": [
-        364,
-        252
-      ],
-      "scene": "girl handing melons out of a blue cooler box, an oval mirror beside her",
-      "gloss": "to flow; to sell off",
-      "verb_group": 1,
-      "tier": "balcony",
-      "level": "balcony",
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'écouler",
-      "mirror": "painted inside the item box"
-    },
-    {
-      "id": "fr_ecrier_verb",
-      "lemma": "écrier",
-      "article": "",
-      "gender": null,
-      "side": "left",
-      "label": "s'écrier",
-      "box": [
-        125,
-        75,
-        270,
-        188
-      ],
-      "label_xy": [
-        198,
-        178
-      ],
-      "scene": "girl at a window crying out with joy, an oval mirror beside her",
-      "gloss": "to cry out",
-      "verb_group": 1,
-      "tier": "upper",
-      "level": "upper",
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'écrier",
-      "mirror": "painted inside the item box"
-    },
-    {
-      "id": "fr_debattre_verb",
-      "lemma": "débattre",
-      "article": "",
-      "gender": null,
-      "side": "right",
-      "label": "débattre",
-      "box": [
-        881,
-        394,
-        1181,
-        662
-      ],
-      "label_xy": [
-        1031,
-        652
-      ],
-      "scene": "two cats in suits debating at podiums, each waving a cricket bat",
-      "gloss": "to negotiate; to discuss, debate",
-      "verb_group": 3,
-      "tier": "street",
-      "level": "street",
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null
-    }
-  ],
-  "links": [],
-  "segment_id": "ST_commerce_seg004",
-  "street_id": "ST_commerce",
-  "sector_id": "S03_market",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Passage du Marchandage",
-  "exits": {
-    "forward": {
-      "target": "ST_commerce_seg003",
-      "box": [
-        740,
-        360,
-        875,
-        470
-      ],
-      "label": "Walk on to Piggy-Bank Lane",
-      "name": "Ruelle des Tirelires",
-      "kind": "street",
-      "name_fr": "Ruelle des Tirelires",
-      "name_en": "Piggy-Bank Lane"
-    },
-    "back": {
-      "target": "ST_commerce_seg002",
-      "box": [
-        400,
-        665,
-        1100,
-        720
-      ],
-      "label": "Back to Delivery Drivers' Alley",
-      "name": "Allée des Livreurs",
-      "kind": "street",
-      "name_fr": "Allée des Livreurs",
-      "name_en": "Delivery Drivers' Alley"
-    }
+  "fr_ecouler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecouler_verb",
+   "text": "s'écouler",
+   "box": [
+    367,
+    238,
+    463,
+    264
+   ],
+   "text_box": [
+    371,
+    242,
+    459,
+    260
+   ]
+  },
+  "fr_revendiquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_revendiquer_verb",
+   "text": "revendiquer",
+   "box": [
+    332,
+    614,
+    448,
+    640
+   ],
+   "text_box": [
+    336,
+    618,
+    444,
+    636
+   ]
+  },
+  "fr_accumuler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_accumuler_verb",
+   "text": "accumuler",
+   "box": [
+    527,
+    604,
+    623,
+    630
+   ],
+   "text_box": [
+    531,
+    608,
+    619,
+    626
+   ]
+  },
+  "fr_debattre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_debattre_verb",
+   "text": "débattre",
+   "box": [
+    965,
+    644,
+    1053,
+    670
+   ],
+   "text_box": [
+    969,
+    648,
+    1049,
+    666
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Ruelle des Tirelires →",
+   "box": [
+    720,
+    244,
+    850,
+    480
+   ],
+   "text_box": [
+    726,
+    250,
+    844,
+    474
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Allée des Livreurs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Passage du Marchandage",
+   "box": [
+    500,
+    36,
+    760,
+    76
+   ],
+   "text_box": [
+    504,
+    40,
+    756,
+    72
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_ecrier_verb",
+   "lemma": "écrier",
+   "gloss": "to cry out",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    150,
+    44,
+    352,
+    200
+   ],
+   "label_xy": [
+    251,
+    188
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'écrier",
+   "scene": "",
+   "mirror": "oval gilt mirror beside the window"
+  },
+  {
+   "id": "fr_ecouler_verb",
+   "lemma": "écouler",
+   "gloss": "to flow; to sell off",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    356,
+    125,
+    475,
+    270
+   ],
+   "label_xy": [
+    415,
+    258
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'écouler",
+   "scene": "",
+   "mirror": "round gilt mirror on the balcony wall"
+  },
+  {
+   "id": "fr_revendiquer_verb",
+   "lemma": "revendiquer",
+   "gloss": "to demand; to claim",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    318,
+    388,
+    462,
+    646
+   ],
+   "label_xy": [
+    390,
+    634
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_accumuler_verb",
+   "lemma": "accumuler",
+   "gloss": "to accumulate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    468,
+    405,
+    682,
+    636
+   ],
+   "label_xy": [
+    575,
+    624
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_debattre_verb",
+   "lemma": "débattre",
+   "gloss": "to negotiate; to discuss, debate",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    875,
+    430,
+    1144,
+    676
+   ],
+   "label_xy": [
+    1009,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg003",
+   "box": [
+    720,
+    244,
+    850,
+    480
+   ],
+   "label": "Walk on to Ruelle des Tirelires",
+   "name": "Ruelle des Tirelires",
+   "sign": "Ruelle des Tirelires →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_commerce_seg002",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Allée des Livreurs",
+   "name": "Allée des Livreurs",
+   "sign": "← Allée des Livreurs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 1,
+  "street": 3
+ }
 }

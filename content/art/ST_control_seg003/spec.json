@@ -1,111 +1,105 @@
 {
-  "divider_x": 800,
-  "name": "Rue des Gestes — Ruelle des Brouettes · pousser, glisser, pendre",
-  "note": "Tiered verb place. -er LEFT (man pushing three cats in a wheelbarrow, penguin sliding down a wooden slide, woman at her loom by the lantern on the balcony, grocer weighing one pea on brass scales at the upper window), -ir/-re RIGHT (man hanging a pendulum clock by his door; singer interrupted by a squawking parrot on the balcony). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_pousser_verb",
-      "box": [
-        125,
-        388,
-        388,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_glisser_verb",
-      "box": [
-        394,
-        444,
-        612,
-        625
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_allumer_verb",
-      "box": [
-        10,
-        106,
-        244,
-        319
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_peser_verb",
-      "box": [
-        306,
-        112,
-        462,
-        244
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_pendre_verb",
-      "box": [
-        1000,
-        344,
-        1156,
-        662
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_interrompre_verb",
-      "box": [
-        975,
-        112,
-        1181,
-        294
-      ],
-      "tier": "balcony"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg004",
-      "box": [
-        630,
-        440,
-        800,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Place de l'Orgue-de-Barbarie",
-      "sign": "Place de l'Orgue-de-Barbarie →",
-      "name_fr": "Place de l'Orgue-de-Barbarie",
-      "name_en": "Barrel-Organ Square"
-    },
-    "back": {
-      "target": "ST_control_seg002",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Hooks Street",
-      "name": "Rue des Crochets",
-      "sign": "← Rue des Crochets",
-      "name_fr": "Rue des Crochets",
-      "name_en": "Hooks Street"
-    }
+ "name": "Ruelle des Brouettes",
+ "street_name": "Chemin des Gestes",
+ "divider_x": 900,
+ "art_style": "storybook 3 (beginner-adjacent)",
+ "landmark": "giant hanging market scale with two brass pans on an ornate iron bracket over the lane",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_pousser_verb",
+   "box": [
+    188,
+    388,
+    431,
+    676
+   ],
+   "tier": "street"
   },
-  "signs": {
-    "er": [
-      560,
-      25,
-      660,
-      59
-    ],
-    "irre": [
-      820,
-      25,
-      940,
-      59
-    ]
+  {
+   "id": "fr_glisser_verb",
+   "box": [
+    436,
+    438,
+    631,
+    612
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_allumer_verb",
+   "box": [
+    80,
+    125,
+    300,
+    338
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_peser_verb",
+   "box": [
+    356,
+    125,
+    469,
+    262
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_pendre_verb",
+   "box": [
+    981,
+    338,
+    1125,
+    656
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_interrompre_verb",
+   "box": [
+    950,
+    125,
+    1175,
+    312
+   ],
+   "tier": "balcony"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg004",
+   "box": [
+    640,
+    400,
+    780,
+    520
+   ],
+   "label": "Walk on to Place de l'Orgue-de-Barbarie",
+   "name": "Place de l'Orgue-de-Barbarie",
+   "sign": "Place de l'Orgue-de-Barbarie →"
+  },
+  "back": {
+   "target": "ST_control_seg002",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Crochets",
+   "name": "Rue des Crochets",
+   "sign": "← Rue des Crochets"
+  }
+ },
+ "signs": {
+  "name": [
+   540,
+   170,
+   740,
+   215
+  ]
+ },
+ "note": "Chemin des Gestes place 3/4; landmark: giant hanging market scale with two brass pans on an ornate iron bracket over the lane. -er figures on the left; pendre and interrompre on the right. The giant market scale hangs over the middle of the lane. No -er/-ir markers, no painted text."
 }

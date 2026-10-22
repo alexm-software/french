@@ -2,29 +2,67 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 1,
+ "divider_x": 299,
  "kind": "zoom",
  "parent_room_id": "R_hardware_02",
- "note": "Close-up of the hardware shop's back shelves: pipes, copper, bronze and cords. All masculine nouns (plus the adjective métallique), so no left/right split.",
+ "note": "Zoom (S03 repaint) on the corner under the high copper shelf of the B07 hardware shop: slate-grey brick, copper pots on the oak shelf, grey concrete floor. The strip's Back button returns to the shop. Feminine left, masculine right (the adjective metallique mid-right).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les étagères du fond",
+   "text": "L’étagère de cuivre",
    "box": [
-    500,
-    660,
-    780,
-    700
+    875,
+    25,
+    1000,
+    62
    ],
    "text_box": [
-    506,
-    666,
-    774,
-    694
+    881,
+    31,
+    994,
+    56
    ]
   }
  },
  "items": [
+  {
+   "id": "fr_liaison_noun",
+   "lemma": "liaison",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la liaison",
+   "box": [
+    138,
+    181,
+    350,
+    402
+   ],
+   "label_xy": [
+    244,
+    392
+   ],
+   "scene": "monkey swings from LINK to LINK of the hanging chain"
+  },
+  {
+   "id": "fr_rayure_noun",
+   "lemma": "rayure",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la rayure",
+   "box": [
+    102,
+    431,
+    298,
+    578
+   ],
+   "label_xy": [
+    200,
+    568
+   ],
+   "scene": "a stingray (RAY) slides over the toolbox lid leaving a long SCRATCH"
+  },
   {
    "id": "fr_tuyau_noun",
    "lemma": "tuyau",
@@ -33,16 +71,16 @@
    "side": "right",
    "label": "le tuyau",
    "box": [
-    194,
-    94,
-    420,
-    381
+    300,
+    506,
+    431,
+    612
    ],
    "label_xy": [
-    307,
-    371
+    366,
+    602
    ],
-   "scene": "songbird tweeting out of a curved metal pipe"
+   "scene": "a bird TWEETS YO! from inside a big metal PIPE"
   },
   {
    "id": "fr_barreau_noun",
@@ -52,16 +90,16 @@
    "side": "right",
    "label": "le barreau",
    "box": [
-    425,
-    52,
-    819,
-    232
+    398,
+    175,
+    554,
+    504
    ],
    "label_xy": [
-    622,
-    222
+    476,
+    494
    ],
-   "scene": "workman pushing a barrow of law books up the ladder rungs"
+   "scene": "a wheelBARROW at the foot of the ladder, a cat sitting on one RUNG"
   },
   {
    "id": "fr_metallique_adj",
@@ -72,15 +110,15 @@
    "label": "métallique",
    "box": [
     556,
-    237,
-    781,
-    338
+    338,
+    681,
+    612
    ],
    "label_xy": [
-    668,
-    328
+    618,
+    602
    ],
-   "scene": "shiny metallic leek on a shelf"
+   "scene": "a shiny METALLIC LEEK standing in its crate"
   },
   {
    "id": "fr_cuivre_noun",
@@ -90,16 +128,16 @@
    "side": "right",
    "label": "le cuivre",
    "box": [
-    587,
-    362,
-    858,
-    440
+    684,
+    406,
+    829,
+    538
    ],
    "label_xy": [
-    722,
-    430
+    756,
+    528
    ],
-   "scene": "copper pot and brass trumpet"
+   "scene": "the COPPER pot and brass trumpet QUIVER on the bench"
   },
   {
    "id": "fr_bronze_noun",
@@ -109,16 +147,16 @@
    "side": "right",
    "label": "le bronze",
    "box": [
-    481,
-    444,
-    838,
-    637
+    831,
+    438,
+    952,
+    615
    ],
    "label_xy": [
-    660,
-    627
+    892,
+    605
    ],
-   "scene": "beagle sniffing a bronze dog statue"
+   "scene": "a real beagle sniffs the BRONZE dog: why won’t you play?"
   },
   {
    "id": "fr_cordon_noun",
@@ -128,17 +166,35 @@
    "side": "right",
    "label": "le cordon",
    "box": [
-    862,
-    94,
-    1100,
+    952,
+    88,
+    1065,
+    522
+   ],
+   "label_xy": [
+    1008,
+    512
+   ],
+   "scene": "DON tugs the red CORD and the shop bell clangs"
+  },
+  {
+   "id": "fr_couchage_noun",
+   "lemma": "couchage",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le couchage",
+   "box": [
+    1068,
+    406,
+    1202,
     625
    ],
    "label_xy": [
-    981,
+    1135,
     615
    ],
-   "scene": "boy tugging a red cord that rings a bell"
+   "scene": "a camper asleep in a SLEEPING bag on an old COUCH"
   }
- ],
- "links": []
+ ]
 }

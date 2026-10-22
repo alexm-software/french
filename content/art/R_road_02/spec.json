@@ -1,0 +1,77 @@
+{
+ "kind": "room",
+ "divider_x": 540,
+ "note": "B23 upstairs, L'auto-école: the driving-school loft under the garage roof (stone walls, dark beams and rafters, skylights, plank floor), camera at the south end facing north. A big play-mat road with a crossroads and a small roundabout covers the floor. Landmark: the tall glazed French doors at the back, open onto the terrace (exit to R_road_02_z1). Feminine LEFT: circus bear in a red waistcoat riding a unicycle round the little roundabout (circulation); white mother duck leading three ducklings over the zebra crossing (priorité); one giant red high-heeled shoe standing on the road mat (chaussée). Masculine RIGHT: four little toy cars meeting at the crossroads (carrefour); big snail riding past a line of toy cars (trafic); giraffe crossing guard in a hi-vis vest holding up a blank red octagon sign (stop); panda shaking its head beside a blank round sign on a post (panneau); boy in a cardboard-box car turning right round to go back (demi-tour); orange traffic cone closing the road so cars must go round it (détour); giant brown lace-up boot standing in the road with a queue of toy cars jammed behind it (embouteillage, matches the user hook qa_020 'boot'). Exits: the stair hole with banister at near left -> down to the workshop R_road_03; the French doors -> R_road_02_z1. Zoom: the driving simulator on the right -> R_road_02_z2. Colour: warm stone/wood toned down so it passes colour_check (walls read a little greyer than downstairs). 2026-10-22 09:05: the milk bottle was replaced by the giant boot (local 1:1 crop edit, feathered composite) so the painting matches the user's qa_020 hook; the boot heel sits about 30 px from the right edge (box clipped to the 6% margin). Painted 2026-10-22 (track s08p4).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "L'auto-école",
+   "box": [290, 150, 490, 200],
+   "text_box": [296, 154, 484, 196]
+  }
+ },
+ "zoom_from": {
+  "room_id": "R_road_02_z2",
+  "box": [1025, 135, 1203, 408],
+  "label": "Sit in the driving simulator"
+ },
+ "items": [
+  {
+   "id": "fr_circulation_noun",
+   "box": [165, 328, 268, 585]
+  },
+  {
+   "id": "fr_priorite_noun",
+   "box": [273, 290, 428, 402]
+  },
+  {
+   "id": "fr_chaussee_noun",
+   "box": [440, 285, 531, 390]
+  },
+  {
+   "id": "fr_carrefour_noun",
+   "box": [544, 419, 745, 550]
+  },
+  {
+   "id": "fr_trafic_noun",
+   "box": [556, 310, 760, 410]
+  },
+  {
+   "id": "fr_stop_noun",
+   "box": [762, 100, 914, 382]
+  },
+  {
+   "id": "fr_panneau_noun",
+   "box": [916, 185, 1020, 410]
+  },
+  {
+   "id": "fr_demi_tour_noun",
+   "box": [760, 444, 950, 650]
+  },
+  {
+   "id": "fr_detour_noun",
+   "box": [681, 556, 758, 664]
+  },
+  {
+   "id": "fr_embouteillage_noun",
+   "box": [956, 412, 1203, 645]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_road_03",
+   "box": [20, 320, 156, 545],
+   "label": "Go down the stairs to the workshop",
+   "name": "L'atelier",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_road_02_z1",
+   "box": [506, 72, 756, 284],
+   "label": "Step out through the French doors onto the terrace",
+   "name": "La terrasse sur la rocade",
+   "kind": "door"
+  }
+ ],
+ "boxes_estimated": false
+}

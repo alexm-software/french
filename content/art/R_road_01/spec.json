@@ -1,0 +1,24 @@
+{
+ "kind": "room",
+ "divider_x": 640,
+ "note": "B23 back yard, La piste: the garage's traffic-education garden, camera at the garage back door facing east. Grey mini roads with white dashes, cobbled kerbs, lawns, plane trees, a stream; landmark: the little stone humpback bridge. Feminine LEFT: goose on the last seat of the bench in the tiny square by the fountain (place); pig looking rueful at his dropped ice cream on the little street (rue); rabbit in a pedal go-kart bumping over the tree root that burst through the road (route); boy in a helmet on a new scooter down the avenue (avenue); frog in a bandsman's jacket beating a drum as he marches (marche). Masculine RIGHT: showman in a top hat strolling the winding gravel path (chemin); chess pawn at the humpback bridge (pont); pony trotting along the pavement (trottoir); bulldog in a beret strutting down the boulevard (boulevard); cat popping out through the clipped hedge (à travers). Exits: green back door of the garage near left -> R_road_03 (sign 'La piste' on its lintel board); timber bike shelter left -> R_road_01_z1; gravel path running on ahead -> R_road_01_z2. Painted 2026-10-22 (track s08p4).",
+ "text_areas": {"sign": {"role": "room_name", "text": "La piste", "box": [86, 126, 256, 148], "text_box": [92, 128, 250, 146]}},
+ "items": [
+  {"id": "fr_place_noun", "box": [140, 236, 336, 346]},
+  {"id": "fr_rue_noun", "box": [376, 218, 522, 282]},
+  {"id": "fr_route_noun", "box": [338, 306, 556, 482]},
+  {"id": "fr_avenue_noun", "box": [166, 360, 272, 550]},
+  {"id": "fr_marche_noun", "box": [368, 500, 482, 644]},
+  {"id": "fr_chemin_noun", "box": [976, 168, 1070, 296]},
+  {"id": "fr_pont_noun", "box": [694, 280, 940, 462]},
+  {"id": "fr_trottoir_noun", "box": [1006, 310, 1184, 458]},
+  {"id": "fr_boulevard_noun", "box": [800, 496, 932, 624]},
+  {"id": "fr_travers_noun", "box": [1106, 518, 1200, 594]}
+ ],
+ "links": [
+  {"target": "R_road_03", "box": [94, 152, 240, 232], "label": "Back through the green door to the workshop", "name": "L'atelier", "kind": "door"},
+  {"target": "R_road_01_z1", "box": [330, 128, 560, 214], "label": "Into the bike shelter", "name": "L'abri des vélos", "kind": "door"},
+  {"target": "R_road_01_z2", "box": [586, 176, 690, 600], "label": "Along the gravel path to the end of the yard", "name": "Le bout de la piste", "kind": "path"}
+ ],
+ "boxes_estimated": false
+}

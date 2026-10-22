@@ -1,0 +1,105 @@
+{
+ "name": "Allée des Galopins",
+ "street_name": "Boulevard des Départs",
+ "divider_x": 1000,
+ "art_style": "clean realism 4",
+ "landmark": "the white airport control tower and the glass terminal at the end of the boulevard (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_galoper_verb",
+   "box": [
+    77,
+    220,
+    385,
+    500
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_emerger_verb",
+   "box": [
+    300,
+    500,
+    525,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_traquer_verb",
+   "box": [
+    440,
+    250,
+    600,
+    500
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_tacher_verb",
+   "box": [
+    690,
+    228,
+    1012,
+    515
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_bondir_verb",
+   "box": [
+    1035,
+    185,
+    1203,
+    340
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_entreprendre_verb",
+   "box": [
+    935,
+    515,
+    1150,
+    670
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B21_aeroport",
+   "box": [
+    470,
+    195,
+    690,
+    248
+   ],
+   "label": "Through the gateway to the Aéroport",
+   "name": "Aéroport",
+   "sign": "Aéroport →"
+  },
+  "back": {
+   "target": "ST_movement_seg009",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Pressés",
+   "name": "Rue des Pressés",
+   "sign": "← Rue des Pressés"
+  }
+ },
+ "signs": {
+  "name": [
+   560,
+   48,
+   760,
+   86
+  ]
+ },
+ "note": "Boulevard des Départs place 5/5 (last); landmark: the airport control tower and glass terminal at the end of the boulevard, which IS the destination (B21_aeroport). Painted 10:46Z with the built-in GenerateImage tool (one full scene, 16:9, upscaled to 1280x720). Allée des Galopins: -er verbs left of the divider (galoper, émerger, traquer, tâcher), bondir and entreprendre right of it. No reflexive verbs. bondir follows the user's PENDING qa_020 hook (deer leaping over a fence). The baker is named in the galoper hook and stands inside its box. No -er/-ir markers, no painted text."
+}

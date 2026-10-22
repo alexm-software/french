@@ -1,137 +1,95 @@
 {
-  "divider_x": 760,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Rue de la Monnaie: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Rue de la Monnaie",
-      "box": [
-        620,
-        40,
-        960,
-        84
-      ],
-      "text_box": [
-        626,
-        46,
-        954,
-        78
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Rue du Commerce — Impasse des Surcharges →",
-      "box": [
-        696,
-        340,
-        856,
-        374
-      ],
-      "text_box": [
-        702,
-        346,
-        850,
-        368
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Rue du Commerce — Allée du Partage",
-      "box": [
-        880,
-        612,
-        1060,
-        638
-      ],
-      "text_box": [
-        886,
-        618,
-        1054,
-        632
-      ]
-    }
+ "name": "Rue de la Monnaie",
+ "street_name": "Passage de la Brocante",
+ "divider_x": 1210,
+ "art_style": "cartoony 2.5 flea-market whimsy",
+ "landmark": "red-and-white striped toll-booth gate with a lifting barrier across the street",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_liquider_verb",
+   "box": [
+    119,
+    331,
+    338,
+    631
+   ],
+   "tier": "street"
   },
-  "items": [
-    {
-      "id": "fr_liquider_verb",
-      "box": [
-        119,
-        331,
-        344,
-        612
-      ],
-      "scene": "shopkeeper under a leaking awning selling off the last umbrellas, a squirrel grabbing the very last"
-    },
-    {
-      "id": "fr_subventionner_verb",
-      "box": [
-        346,
-        338,
-        681,
-        544
-      ],
-      "scene": "mayor by a submarine-shaped van handing a giant cheque to a puppet-theatre owner"
-    },
-    {
-      "id": "fr_cumuler_verb",
-      "box": [
-        482,
-        140,
-        694,
-        306
-      ],
-      "scene": "kitten mewing on top of a tall heap of yarn balls"
-    },
-    {
-      "id": "fr_monnayer_verb",
-      "box": [
-        337,
-        65,
-        478,
-        319
-      ],
-      "scene": "worker at a coin press cheering as gold coins pour out"
-    },
-    {
-      "id": "fr_taxer_verb",
-      "box": [
-        869,
-        310,
-        1203,
-        610
-      ],
-      "scene": "taxi driver holding out his hand to a parrot on the taxi roof"
-    }
-  ],
-  "links": [
-    {
-      "target": "ST_commerce_seg008",
-      "box": [
-        690,
-        380,
-        860,
-        520
-      ],
-      "label": "Walk on to Overload Close",
-      "name": "Impasse des Surcharges",
-      "kind": "street_forward",
-      "name_fr": "Impasse des Surcharges",
-      "name_en": "Overload Close"
-    },
-    {
-      "target": "ST_commerce_seg005",
-      "box": [
-        350,
-        640,
-        1100,
-        720
-      ],
-      "label": "Back to Sharing Alley",
-      "name": "Allée du Partage",
-      "kind": "street_back",
-      "name_fr": "Allée du Partage",
-      "name_en": "Sharing Alley"
-    }
+  {
+   "id": "fr_subventionner_verb",
+   "box": [
+    340,
+    350,
+    694,
+    575
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_cumuler_verb",
+   "box": [
+    488,
+    131,
+    706,
+    306
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_monnayer_verb",
+   "box": [
+    338,
+    50,
+    486,
+    325
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_taxer_verb",
+   "box": [
+    875,
+    312,
+    1200,
+    638
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_commerce_seg008",
+   "box": [
+    780,
+    381,
+    870,
+    470
+   ],
+   "label": "Walk on to Impasse des Surcharges",
+   "name": "Impasse des Surcharges",
+   "sign": "Impasse des Surcharges →"
+  },
+  "back": {
+   "target": "ST_commerce_seg005",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Allée du Partage",
+   "name": "Allée du Partage",
+   "sign": "← Allée du Partage"
+  }
+ },
+ "signs": {
+  "name": [
+   690,
+   80,
+   900,
+   120
   ]
+ },
+ "note": "Passage de la Brocante place 2/4; landmark: red-and-white striped toll-booth gate with a lifting barrier across the street. All five verbs are -er. The taxi (taxer) is parked on the right by the striped toll gate, where the street goes on. No -er/-ir markers, no painted text."
 }

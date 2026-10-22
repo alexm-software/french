@@ -1372,6 +1372,91 @@ fr_descendant_noun R_family_02_z2
 fr_bambin_noun R_family_02_z2
 fr_demi_frere_noun R_family_02_z2
 fr_parental_adj R_family_02_z2
+# --- R_entrance_02 [READY] ---
+#   R_entrance_02_z1: La voûte (vault and old stone wall) (7 words)
+fr_voute_noun R_entrance_02_z1
+fr_muraille_noun R_entrance_02_z1
+fr_fondation_noun R_entrance_02_z1
+fr_edifice_noun R_entrance_02_z1
+fr_architecture_noun R_entrance_02_z1
+fr_structure_noun R_entrance_02_z1
+fr_paroi_noun R_entrance_02_z1
+# --- R_entrance_03 [READY] ---
+#   R_entrance_03_z1: Le porche (front porch) (8 words)
+fr_porche_noun R_entrance_03_z1
+fr_locataire_noun R_entrance_03_z1
+fr_loyer_noun R_entrance_03_z1
+fr_location_noun R_entrance_03_z1
+fr_colocation_noun R_entrance_03_z1
+fr_demenagement_noun R_entrance_03_z1
+fr_baraque_noun R_entrance_03_z1
+fr_logis_noun R_entrance_03_z1
+# --- R_bedroom_01 [READY] ---
+#   R_bedroom_01_z1: L'armoire de la chambre (bedroom wardrobe) (6 words)
+fr_armoire_noun R_bedroom_01_z1
+fr_tiroir_noun R_bedroom_01_z1
+fr_velours_noun R_bedroom_01_z1
+fr_satin_noun R_bedroom_01_z1
+fr_pyjama_noun R_bedroom_01_z1
+fr_alarme_noun R_bedroom_01_z1
+# --- R_bathroom [READY] ---
+#   R_bathroom_z1: Le lavabo (washbasin, 6 kept + 4 moved) (10 words)
+fr_proprete_noun R_bathroom_z1
+fr_lavabo_noun R_bathroom_z1
+fr_peigne_noun R_bathroom_z1
+fr_egout_noun R_bathroom_z1
+fr_germe_noun R_bathroom_z1
+fr_frottement_noun R_bathroom_z1
+fr_miroir_noun R_bathroom_z1
+fr_reflet_noun R_bathroom_z1
+fr_brosse_noun R_bathroom_z1
+fr_rasoir_noun R_bathroom_z1
+# --- R_laundry_01 [READY] ---
+#   R_laundry_01_z1: La machine à laver (washing machine, 9 kept + 1 moved) (10 words)
+fr_pagaille_noun R_laundry_01_z1
+fr_ventilation_noun R_laundry_01_z1
+fr_vidange_noun R_laundry_01_z1
+fr_buanderie_noun R_laundry_01_z1
+fr_filtre_noun R_laundry_01_z1
+fr_lavage_noun R_laundry_01_z1
+fr_haillon_noun R_laundry_01_z1
+fr_boudoir_noun R_laundry_01_z1
+fr_eboueur_noun R_laundry_01_z1
+fr_lessive_noun R_laundry_01_z1
+#   R_laundry_01_z2: Le placard à balais (broom cupboard) (4 words)
+fr_balai_noun R_laundry_01_z2
+fr_seau_noun R_laundry_01_z2
+fr_chiffon_noun R_laundry_01_z2
+fr_aspirateur_noun R_laundry_01_z2
+# --- R_garage [READY] ---
+#   R_garage_z1: L'établi (workbench + tool pegboard) (10 words)
+fr_outil_noun R_garage_z1
+fr_marteau_noun R_garage_z1
+fr_clou_noun R_garage_z1
+fr_vis_noun R_garage_z1
+fr_ciseau_noun R_garage_z1
+fr_ressort_noun R_garage_z1
+fr_manivelle_noun R_garage_z1
+fr_ficelle_noun R_garage_z1
+fr_attache_noun R_garage_z1
+fr_assemblage_noun R_garage_z1
+# --- R_garden [READY] ---
+#   R_garden_z1: Le potager (vegetable patch by the fence) (8 words)
+fr_potager_noun R_garden_z1
+fr_pelle_noun R_garden_z1
+fr_jardinier_noun R_garden_z1
+fr_jardinage_noun R_garden_z1
+fr_irrigation_noun R_garden_z1
+fr_parterre_noun R_garden_z1
+fr_cloture_noun R_garden_z1
+fr_hamac_noun R_garden_z1
+# --- R_kitchen_01 [READY] ---
+#   R_kitchen_01_z1: Le coin des frigos (fridges and pans) (5 words)
+fr_frigo_noun R_kitchen_01_z1
+fr_refrigerateur_noun R_kitchen_01_z1
+fr_congelateur_noun R_kitchen_01_z1
+fr_couvercle_noun R_kitchen_01_z1
+fr_casserole_noun R_kitchen_01_z1
 # zone pins for s07_B18_pharmacie: append to data/curated/room_overrides.txt, then run data/assign.py
 fr_vitamine_noun R_pharmacy_z1
 fr_cohorte_noun R_pharmacy_z1
@@ -1473,7 +1558,61 @@ fr_evacuation_noun R_hospital_02_z2
 fr_scanner_noun R_hospital_02_z2
 fr_sauvetage_noun R_hospital_02_z2
 fr_handicap_noun R_hospital_02_z2
-# S08 zone split pins (integrator, from sectors/S08/S08_zone_split.json)
+# S08 zone split pins (integrator, from sectors/S08/S08_zone_split.json; zones painted by included packages only)
+fr_voie_noun R_station_01_z1
+fr_locomotive_noun R_station_01_z1
+fr_plate_forme_noun R_station_01_z1
+fr_train_noun R_station_01_z1
+fr_wagon_noun R_station_01_z1
+fr_tunnel_noun R_station_01_z1
+fr_rail_noun R_station_01_z1
+fr_char_noun R_station_01_z1
+fr_espece_noun R_abs_relation_z2
+fr_condition_noun R_abs_relation_z2
+fr_possibilite_noun R_abs_relation_z2
+fr_coincidence_noun R_abs_relation_z2
+fr_guise_noun R_abs_relation_z2
+fr_etat_noun R_abs_relation_z2
+fr_critere_noun R_abs_relation_z2
+fr_cabine_noun R_airport_z1
+fr_avion_noun R_airport_z1
+fr_vol_noun R_airport_z1
+fr_helicoptere_noun R_airport_z1
+fr_enlevement_noun R_airport_z1
+fr_atterrissage_noun R_airport_z1
+fr_decollage_noun R_airport_z1
+fr_parachute_noun R_airport_z1
+fr_essor_noun R_airport_z1
+fr_pilotage_noun R_airport_z1
+fr_hotel_noun R_hotel_01_z1
+fr_accueil_noun R_hotel_01_z1
+fr_invite_noun R_hotel_01_z1
+fr_sejour_noun R_hotel_01_z1
+fr_visite_noun R_hotel_01_z1
+fr_reserve_noun R_hotel_01_z1
+fr_auberge_noun R_hotel_01_z1
+fr_restauration_noun R_hotel_02_z1
+fr_tripe_noun R_hotel_02_z1
+fr_reservation_noun R_hotel_02_z1
+fr_reception_noun R_hotel_02_z1
+fr_hote_noun R_hotel_02_z1
+fr_hammam_noun R_hotel_03_z1
+fr_hospitalite_noun R_hotel_03_z1
+fr_hotellerie_noun R_hotel_03_z1
+fr_hotelier_noun R_hotel_03_z1
+fr_recepteur_noun R_hotel_03_z1
+fr_marin_adj R_harbour_01_z2
+fr_vaisseau_noun R_harbour_01_z2
+fr_navire_noun R_harbour_01_z2
+fr_phare_noun R_harbour_01_z2
+fr_equipage_noun R_harbour_01_z2
+fr_bac_noun R_harbour_01_z2
+fr_pirogue_noun R_harbour_02_z1
+fr_navigation_noun R_harbour_02_z1
+fr_nautique_adj R_harbour_02_z1
+fr_detroit_noun R_harbour_02_z1
+fr_naufrage_noun R_harbour_02_z1
+fr_explorateur_noun R_harbour_02_z1
 fr_campagne_noun R_world_01_z1
 fr_region_noun R_world_01_z1
 fr_province_noun R_world_01_z1
@@ -1501,27 +1640,21 @@ fr_proximite_noun R_abs_space_02_z2
 fr_etendue_noun R_abs_space_02_z2
 fr_revers_noun R_abs_space_02_z2
 fr_voisinage_noun R_abs_space_02_z2
-# S08 all zone pins from sectors/S08/assignment.json (integrator)
-fr_roue_noun R_road_01_z1
-fr_avenue_noun R_road_01_z1
-fr_bicyclette_noun R_road_01_z1
-fr_vehicule_noun R_road_01_z1
-fr_transport_noun R_road_01_z1
-fr_parking_noun R_road_01_z1
-fr_bus_noun R_road_01_z1
-fr_chaussee_noun R_road_03_z1
-fr_priorite_noun R_road_03_z1
-fr_cycle_noun R_road_03_z1
-fr_voyant_noun R_road_03_z1
-fr_carburant_noun R_road_03_z1
-fr_embouteillage_noun R_road_03_z1
-fr_encombrement_noun R_road_04_z1
-fr_clignotant_noun R_road_04_z1
-fr_ducat_noun R_road_04_z1
-fr_loueur_noun R_road_04_z1
-fr_ralentissement_noun R_road_04_z1
-fr_colporteur_noun R_road_04_z1
-fr_riverain_noun R_road_04_z1
+# S08 zone pins from sectors/S08/assignment.json (integrator; zones painted by included packages only)
+fr_comparaison_noun R_abs_relation_z1
+fr_ressemblance_noun R_abs_relation_z1
+fr_distinction_noun R_abs_relation_z1
+fr_contrepartie_noun R_abs_relation_z1
+fr_incidence_noun R_abs_relation_z1
+fr_impact_noun R_abs_relation_z1
+fr_tri_noun R_abs_relation_z1
+fr_decalage_noun R_abs_relation_z1
+fr_antenne_noun R_harbour_01_z1
+fr_rame_noun R_harbour_01_z1
+fr_exploration_noun R_harbour_01_z1
+fr_mousse_noun_m R_harbour_01_z1
+fr_porteur_noun R_harbour_01_z1
+fr_paquebot_noun R_harbour_01_z1
 fr_position_noun R_abs_space_01_z1
 fr_base_noun R_abs_space_01_z1
 fr_distance_noun R_abs_space_01_z1
@@ -1537,7 +1670,58 @@ fr_metteur_noun R_abs_space_02_z1
 fr_amenagement_noun R_abs_space_02_z1
 fr_antipode_noun R_abs_space_02_z1
 fr_pivot_noun R_abs_space_02_z1
+fr_voiture_noun R_road_01_z1
+fr_roue_noun R_road_01_z1
+fr_bicyclette_noun R_road_01_z1
+fr_velo_noun R_road_01_z1
+fr_bus_noun R_road_01_z1
+fr_vehicule_noun R_road_01_z1
+fr_parking_noun R_road_01_z1
+fr_transport_noun R_road_01_z1
+fr_allee_noun R_road_01_z2
+fr_ruelle_noun R_road_01_z2
+fr_passerelle_noun R_road_01_z2
+fr_traversee_noun R_road_01_z2
+fr_autoroute_noun R_road_01_z2
+fr_dehors_noun R_road_01_z2
+fr_fosse_noun R_road_01_z2
+fr_parcours_noun R_road_01_z2
+fr_trajet_noun R_road_01_z2
+fr_cycliste_noun R_road_01_z2
+fr_automobiliste_noun R_road_02_z1
+fr_conducteur_noun R_road_02_z1
+fr_autobus_noun R_road_02_z1
+fr_cycle_noun R_road_02_z1
+fr_ralentissement_noun R_road_02_z1
+fr_encombrement_noun R_road_02_z1
+fr_stationnement_noun R_road_02_z1
+fr_riverain_noun R_road_02_z1
+fr_loueur_noun R_road_02_z1
+fr_ducat_noun R_road_04_z1
+fr_roulette_noun R_road_04_z1
+fr_contravention_noun R_road_04_z1
+fr_rouage_noun R_road_04_z1
+fr_mobilite_noun R_road_04_z1
+fr_essence_noun R_road_03_z1
+fr_camionnette_noun R_road_03_z1
+fr_moto_noun R_road_03_z1
+fr_mobylette_noun R_road_03_z1
+fr_carburant_noun R_road_03_z1
+fr_petrolier_adj R_road_03_z1
+fr_routier_adj R_road_03_z1
+fr_camion_noun R_road_03_z1
+fr_taxi_noun R_road_03_z1
+fr_pedale_noun R_road_02_z2
+fr_vitesse_noun R_road_02_z2
+fr_volant_noun R_road_02_z2
+fr_voyant_noun R_road_02_z2
+fr_clignotant_noun R_road_02_z2
+fr_accelerateur_noun R_road_02_z2
 # S04 wine bar zoom: live art and s04_0620 both show champagne + cru on the zoom (integrator; unconditional)
+fr_champagne_noun R_wine_01_z1
+fr_cru_noun R_wine_01_z1
+R_abs_relation_z2 name=Le bout du poste
+R_airport_z1 name=La piste
 R_body_01_z1 name=Le miroir
 R_body_02_z1 name=Le bassin
 R_body_03_z1 name=Le palier
@@ -1548,8 +1732,92 @@ R_family_02_z1 name=Les photos de famille
 R_family_02_z2 name=L'arbre de famille
 R_hospital_01_z2 name=Le jardin d'hiver
 R_hospital_02_z2 name=La radiologie
+R_hotel_01_z1 name=L'accueil
+R_hotel_02_z1 name=La salle du petit-déjeuner
+R_hotel_03_z1 name=Le hammam
 R_pharmacy_z2 name=Le préparatoire
+R_station_01_z1 name=Le quai
 R_wardrobe_04_z1 name=Le coin du poêle
+# S08 part 2 zone split for B21_aeroport (append to data/curated/room_overrides.txt AFTER the zone rooms below exist; see S08_zone_split.json)
+# S08 part 2 zone split for B22_hotel (append to data/curated/room_overrides.txt AFTER the zone rooms below exist; see S08_zone_split.json)
+# s08p2 B24 zone split (R_harbour_01 14 -> 8 + z2 6; R_harbour_02 14 -> 8 + z1 6)
+# S06 zone pins for B15_poste: append to data/curated/room_overrides.txt, then run data/assign.py
+fr_change_noun R_post_01_z1
+fr_guichet_noun R_post_01_z1
+fr_envoi_noun R_post_01_z1
+fr_postier_noun R_post_01_z1
+fr_philtre_noun R_post_01_z1
+fr_poincon_noun R_post_01_z1
+fr_colis_noun R_post_01_z1
+fr_expediteur_noun R_post_01_z1
+fr_demandeur_noun R_post_01_z1
+fr_emballage_noun R_post_01_z1
+fr_postal_adj R_post_01_z2
+fr_distribution_noun R_post_01_z2
+fr_repartition_noun R_post_01_z2
+fr_livraison_noun R_post_01_z2
+fr_remise_noun R_post_01_z2
+fr_parcelle_noun R_post_01_z2
+# s08p3 B25 zone split (R_world_01 17 -> 9 + z1 8; R_abs_space_01 14 -> 8 + z2 6; R_world_02 15 -> 8 + z1 7; R_abs_space_02 14 -> 8 + z2 6)
+# la berline (saloon car) moved out of the geography attic R_world_03 to the car room of B23 (unpainted until B23 ships)
+fr_berline_noun R_road_03
+# s08p4 B23 word allocation (83 words over 4 rooms + 6 zones; see work/s08p4/b23_alloc.json and sectors/S08/assignment.json). Every B23 word is pinned to its painted space.
+fr_panne_noun R_road_03
+fr_transmission_noun R_road_03
+fr_auto_noun R_road_03
+fr_bagnole_noun R_road_03
+fr_pneu_noun R_road_03
+fr_chauffeur_noun R_road_03
+fr_garagiste_noun R_road_03
+fr_frein_noun R_road_03
+fr_passager_noun R_road_03
+fr_place_noun R_road_01
+fr_rue_noun R_road_01
+fr_route_noun R_road_01
+fr_avenue_noun R_road_01
+fr_marche_noun R_road_01
+fr_chemin_noun R_road_01
+fr_pont_noun R_road_01
+fr_trottoir_noun R_road_01
+fr_boulevard_noun R_road_01
+fr_travers_noun R_road_01
+fr_circulation_noun R_road_02
+fr_priorite_noun R_road_02
+fr_chaussee_noun R_road_02
+fr_carrefour_noun R_road_02
+fr_trafic_noun R_road_02
+fr_stop_noun R_road_02
+fr_panneau_noun R_road_02
+fr_detour_noun R_road_02
+fr_demi_tour_noun R_road_02
+fr_embouteillage_noun R_road_02
+fr_caravane_noun R_road_04
+fr_traverse_noun R_road_04
+fr_fiacre_noun R_road_04
+fr_autocar_noun R_road_04
+fr_chariot_noun R_road_04
+fr_colporteur_noun R_road_04
+# S04 fix 2026-10-22 (s04 track): R_cafe_01 split -> room (9) + zoom R_cafe_01_z1 zinc counter (6). Zoom pins:
+fr_biere_noun R_cafe_01_z1
+fr_cigarette_noun R_cafe_01_z1
+fr_bar_noun R_cafe_01_z1
+fr_cafe_noun R_cafe_01_z1
+fr_the_noun R_cafe_01_z1
+fr_aperitif_noun R_cafe_01_z1
+# S04 fix 2026-10-22: R_resto_kitchen_01 split -> room (9) + zoom R_resto_kitchen_01_z1 big worktable (5). Zoom pins:
+fr_menthe_noun R_resto_kitchen_01_z1
+fr_preparation_noun R_resto_kitchen_01_z1
+fr_frite_noun R_resto_kitchen_01_z1
+fr_sauce_noun R_resto_kitchen_01_z1
+fr_culinaire_adj R_resto_kitchen_01_z1
+# S04 fix 2026-10-22: le plat (clumsy duck) moves from the dining hall to the bar zoom (dining hall 10 items, bar 7).
+fr_plat_noun R_resto_room_z1
+# S04 fix 2026-10-22: R_wine_01 split -> room (10) + bar zoom z1 (10, unchanged) + new delivery-ramp zoom R_wine_01_z2 (4). Zoom pins:
+fr_alcool_noun R_wine_01_z2
+fr_bouchon_noun R_wine_01_z2
+fr_tonneau_noun R_wine_01_z2
+fr_vin_noun R_wine_01_z2
+# S04 full 2026-10-22 09:10: the R_wine_01_z1 tasting-bar painting shows le champagne (sham-PAN) and le cru (crew packing a crate); pin them to the zoom so the data matches the art (s04_0620 left them in R_wine_01: 12 data words vs 10 painted).
 
 # S03 B62 Maison de Couture repaint (2026-10-22, S03 track): three salon words move into the painted shop-window zone (the other six were already pinned there).
 fr_merci_noun_m R_abs_beauty_02_z1
@@ -1574,3 +1842,79 @@ fr_intermittent_adj R_adj_state_05_z1
 fr_compatible_adj R_adj_state_05_z1
 fr_inexistant_adj R_adj_state_05_z1
 fr_defaillant_adj R_adj_state_05_z1
+
+# S03 B07 Rue Commerçante repaint (2026-10-22, S03 track): every word in a B07 painted zone is pinned to it (words stay in their room; only main room -> zone).
+fr_inscription_noun R_shop_general_01_z1
+fr_echange_noun R_shop_general_01_z1
+fr_produit_noun R_shop_general_01_z1
+fr_commerce_noun R_shop_general_01_z1
+fr_composition_noun R_boutique_02_z1
+fr_purete_noun R_boutique_02_z1
+fr_maquillage_noun R_boutique_02_z1
+fr_parfum_noun R_boutique_02_z1
+fr_accessoire_noun R_boutique_02_z1
+fr_liaison_noun R_hardware_02_z1
+fr_rayure_noun R_hardware_02_z1
+fr_tuyau_noun R_hardware_02_z1
+fr_barreau_noun R_hardware_02_z1
+fr_metallique_adj R_hardware_02_z1
+fr_cuivre_noun R_hardware_02_z1
+fr_bronze_noun R_hardware_02_z1
+fr_cordon_noun R_hardware_02_z1
+fr_couchage_noun R_hardware_02_z1
+fr_sonnerie_noun R_boutique_01_z1
+fr_poignet_noun R_boutique_01_z1
+fr_bijou_noun R_boutique_01_z1
+fr_bracelet_noun R_boutique_01_z1
+fr_eventail_noun R_boutique_01_z1
+fr_provision_noun R_shop_general_02_z1
+fr_clientele_noun R_shop_general_02_z1
+fr_negociation_noun R_shop_general_02_z1
+fr_reduction_noun R_shop_general_02_z1
+fr_cout_noun R_shop_general_02_z1
+fr_enregistrement_noun R_shop_general_02_z1
+fr_compromis_noun R_shop_general_02_z1
+fr_epicerie_noun R_shop_general_03_z1
+fr_panier_noun R_shop_general_03_z1
+fr_caissier_noun R_shop_general_03_z1
+fr_collectionneur_noun R_shop_general_03_z1
+fr_consommateur_noun R_shop_general_03_z1
+fr_depot_noun R_shop_general_03_z1
+fr_bourg_noun R_shop_general_03_z1
+fr_enceinte_noun R_hardware_01_z1
+fr_adhesion_noun R_hardware_01_z1
+fr_resine_noun R_hardware_01_z1
+fr_plastique_noun R_hardware_01_z1
+fr_sabot_noun R_hardware_01_z1
+fr_materiel_adj R_hardware_01_z1
+fr_materiau_noun R_hardware_01_z1
+fr_adherent_noun R_hardware_01_z1
+fr_tulipe_noun R_florist_z1
+fr_lavande_noun R_florist_z1
+fr_marmotte_noun R_florist_z1
+fr_floraison_noun R_florist_z1
+fr_cocarde_noun R_florist_z1
+fr_muguet_noun R_florist_z1
+fr_bulbe_noun R_florist_z1
+fr_floral_adj R_florist_z1
+fr_mantille_noun R_boutique_03_z1
+fr_enchanteur_noun R_boutique_03_z1
+fr_saphir_noun R_boutique_03_z1
+fr_boubou_noun R_boutique_03_z1
+fr_glamour_noun R_boutique_03_z1
+fr_joaillier_noun R_boutique_03_z1
+fr_styliste_noun R_boutique_03_z1
+fr_rondelle_noun R_boutique_03_z2
+fr_faction_noun R_boutique_03_z2
+fr_porte_monnaie_noun R_boutique_03_z2
+fr_veilleur_noun R_boutique_03_z2
+fr_bijoutier_noun R_boutique_03_z2
+fr_jade_noun R_boutique_03_z2
+fr_acquisition_noun R_shop_general_04_z1
+fr_shopping_noun R_shop_general_04_z1
+fr_rabais_noun R_shop_general_04_z1
+fr_abonne_noun R_shop_general_04_z1
+fr_troc_noun R_shop_general_04_z1
+fr_negociant_noun R_shop_general_04_z1
+fr_abonnement_noun R_shop_general_04_z1
+fr_prelevement_noun R_shop_general_04_z1

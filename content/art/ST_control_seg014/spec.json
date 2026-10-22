@@ -1,112 +1,106 @@
 {
-  "divider_x": 900,
-  "name": "Rue des Gestes — Allée de l'Écureuil · enfoncer, enterrer, s'étendre",
-  "note": "Tiered verb place. -er LEFT (man driving a fence post in with a mallet, squirrel burying an acorn in the flower bed, man cracking a walnut on the balcony, man launching a paper aeroplane from the upper window, man hauling a cart of bricks on the roof terrace), -ir/-re RIGHT (long tabby cat stretching out on the bench under a round mirror). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_enfoncer_verb",
-      "box": [
-        169,
-        344,
-        394,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_enterrer_verb",
-      "box": [
-        444,
-        550,
-        556,
-        650
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_craquer_verb",
-      "box": [
-        344,
-        100,
-        475,
-        262
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_projeter_verb",
-      "box": [
-        162,
-        44,
-        342,
-        150
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_charrier_verb",
-      "box": [
-        550,
-        119,
-        731,
-        244
-      ],
-      "tier": "roof"
-    },
-    {
-      "id": "fr_etendre_verb",
-      "box": [
-        1094,
-        331,
-        1269,
-        612
-      ],
-      "tier": "street",
-      "mirror": "round mirror on the wall above the bench"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg015",
-      "box": [
-        860,
-        420,
-        1020,
-        520
-      ],
-      "label": "Walk on down the lane",
-      "name": "Ruelle des Bousculades",
-      "sign": "Ruelle des Bousculades →",
-      "name_fr": "Ruelle des Bousculades",
-      "name_en": "Jostling Lane"
-    },
-    "back": {
-      "target": "ST_control_seg013",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Mowers' Lane",
-      "name": "Chemin des Faucheurs",
-      "sign": "← Chemin des Faucheurs",
-      "name_fr": "Chemin des Faucheurs",
-      "name_en": "Mowers' Lane"
-    }
+ "name": "Allée de l'Écureuil",
+ "street_name": "Sentier du Campeur",
+ "divider_x": 820,
+ "art_style": "outdoor realism 4",
+ "landmark": "rustic log-arch campsite gate (B30 Camping) with canvas tents among pines beyond (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_charrier_verb",
+   "box": [
+    165,
+    44,
+    328,
+    149
+   ],
+   "tier": "roof"
   },
-  "signs": {
-    "er": [
-      700,
-      25,
-      800,
-      59
-    ],
-    "irre": [
-      830,
-      25,
-      950,
-      59
-    ]
+  {
+   "id": "fr_projeter_verb",
+   "box": [
+    278,
+    160,
+    480,
+    250
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_craquer_verb",
+   "box": [
+    258,
+    272,
+    480,
+    402
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_enfoncer_verb",
+   "box": [
+    103,
+    357,
+    255,
+    540
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_enterrer_verb",
+   "box": [
+    109,
+    542,
+    261,
+    638
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_etendre_verb",
+   "box": [
+    880,
+    238,
+    1172,
+    599
+   ],
+   "tier": "street",
+   "mirror": "round mirror on the cottage wall above the bench"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B30_camping",
+   "box": [
+    593,
+    362,
+    716,
+    475
+   ],
+   "label": "Through the log gate into the Camping",
+   "name": "Camping",
+   "sign": "Camping →"
+  },
+  "back": {
+   "target": "ST_control_seg013",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Chemin des Faucheurs",
+   "name": "Chemin des Faucheurs",
+   "sign": "← Chemin des Faucheurs"
+  }
+ },
+ "signs": {
+  "name": [
+   540,
+   50,
+   780,
+   90
+  ]
+ },
+ "note": "Sentier du Campeur place 5/5; landmark: rustic log-arch campsite gate (B30 Camping) with canvas tents among pines beyond (destination). Last place: the path ends at the open log-arch gate of the campsite B30 with tents beyond; the forward exit goes through it. -er scenes on the left cottage; s'étendre (tabby cat stretched out on the bench under a round mirror) on the right. Local patch: the cat now stretches out full length. Shrunk 0.9, cooled k 0.6. Last place: the far end shows the destination. No -er/-ir markers, no painted text. Gate-13 fix 0953Z: cottages now old-rose render (was grey), background foliage autumn-gold, stretched top band repainted as sky / mirrored wall."
 }

@@ -1,369 +1,355 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg012",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Allée des Hérons · faillir, épuiser, suspendre",
-  "divider_x": 760,
-  "note": "Tiered verb place. -er LEFT (exhausted spaniel among the tennis balls, heron spreading its wings on the balcony rail, bear housing a little jay in a teacup bed at the upper window, coach whistling on a tortoise on the roof terrace), -ir/-re RIGHT (waiter almost dropping his tower of cups, panda suspended from the balcony washing line). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_epuiser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_epuiser_verb",
-      "text": "épuiser",
-      "box": [
-        226,
-        666,
-        304,
-        692
-      ],
-      "text_box": [
-        230,
-        670,
-        300,
-        688
-      ]
-    },
-    "fr_deployer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_deployer_verb",
-      "text": "déployer",
-      "box": [
-        371,
-        358,
-        459,
-        384
-      ],
-      "text_box": [
-        375,
-        362,
-        455,
-        380
-      ]
-    },
-    "fr_heberger_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_heberger_verb",
-      "text": "héberger",
-      "box": [
-        139,
-        173,
-        227,
-        199
-      ],
-      "text_box": [
-        143,
-        177,
-        223,
-        195
-      ]
-    },
-    "fr_motiver_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_motiver_verb",
-      "text": "motiver",
-      "box": [
-        398,
-        120,
-        476,
-        146
-      ],
-      "text_box": [
-        402,
-        124,
-        472,
-        142
-      ]
-    },
-    "fr_faillir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_faillir_verb",
-      "text": "faillir",
-      "box": [
-        1031,
-        656,
-        1109,
-        682
-      ],
-      "text_box": [
-        1035,
-        660,
-        1105,
-        678
-      ]
-    },
-    "fr_suspendre_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_suspendre_verb",
-      "text": "suspendre",
-      "box": [
-        1059,
-        303,
-        1155,
-        329
-      ],
-      "text_box": [
-        1063,
-        307,
-        1151,
-        325
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Rue des Affiches →",
-      "box": [
-        680,
-        440,
-        840,
-        560
-      ],
-      "text_box": [
-        686,
-        446,
-        834,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Ruelle des Chaussons",
-      "box": [
-        470,
-        668,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        674,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        590,
-        30,
-        690,
-        64
-      ],
-      "text_box": [
-        593,
-        33,
-        687,
-        61
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        780,
-        30,
-        900,
-        64
-      ],
-      "text_box": [
-        783,
-        33,
-        897,
-        61
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg012",
+ "street_id": "ST_habitudes",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 3,
+ "place_count": 5,
+ "street_name": "Montée des Habitudes",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée des Hérons",
+ "divider_x": 760,
+ "note": "Montée des Habitudes place 3/5; landmark: rope footbridge slung across the alley between two upper floors.  No -er/-ir markers, no painted text.",
+ "landmark": "rope footbridge slung across the alley between two upper floors",
+ "art_style": "richer painterly realism 4",
+ "text_areas": {
+  "fr_motiver_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_motiver_verb",
+   "text": "motiver",
+   "box": [
+    453,
+    190,
+    531,
+    216
+   ],
+   "text_box": [
+    457,
+    194,
+    527,
+    212
+   ]
   },
-  "items": [
-    {
-      "id": "fr_epuiser_verb",
-      "lemma": "épuiser",
-      "gloss": "to exhaust",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        80,
-        578,
-        450,
-        698
-      ],
-      "label_xy": [
-        265,
-        686
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_deployer_verb",
-      "lemma": "déployer",
-      "gloss": "to spread out, to unfold; to deploy",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 2,
-      "box": [
-        275,
-        165,
-        555,
-        390
-      ],
-      "label_xy": [
-        415,
-        378
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_heberger_verb",
-      "lemma": "héberger",
-      "gloss": "to house, accommodate",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 3,
-      "box": [
-        105,
-        70,
-        262,
-        205
-      ],
-      "label_xy": [
-        183,
-        193
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_motiver_verb",
-      "lemma": "motiver",
-      "gloss": "to motivate; to justify",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 4,
-      "box": [
-        315,
-        15,
-        560,
-        152
-      ],
-      "label_xy": [
-        437,
-        140
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_faillir_verb",
-      "lemma": "faillir",
-      "gloss": "to almost (do)",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 5,
-      "box": [
-        1012,
-        360,
-        1128,
-        688
-      ],
-      "label_xy": [
-        1070,
-        676
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_suspendre_verb",
-      "lemma": "suspendre",
-      "gloss": "to suspend",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 6,
-      "box": [
-        1045,
-        108,
-        1170,
-        335
-      ],
-      "label_xy": [
-        1107,
-        323
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg013",
-      "box": [
-        680,
-        440,
-        840,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue des Affiches",
-      "sign": "Rue des Affiches →",
-      "kind": "street",
-      "name_fr": "Rue des Affiches",
-      "name_en": "Posters Street"
-    },
-    "back": {
-      "target": "ST_routine_seg011",
-      "box": [
-        470,
-        668,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Slippers Lane",
-      "name": "Ruelle des Chaussons",
-      "sign": "← Ruelle des Chaussons",
-      "kind": "street",
-      "name_fr": "Ruelle des Chaussons",
-      "name_en": "Slippers Lane"
-    }
+  "fr_heberger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_heberger_verb",
+   "text": "héberger",
+   "box": [
+    211,
+    213,
+    299,
+    239
+   ],
+   "text_box": [
+    215,
+    217,
+    295,
+    235
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 2,
-    "balcony": 2,
-    "upper": 1,
-    "roof": 1
+  "fr_deployer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_deployer_verb",
+   "text": "déployer",
+   "box": [
+    408,
+    368,
+    496,
+    394
+   ],
+   "text_box": [
+    412,
+    372,
+    492,
+    390
+   ]
+  },
+  "fr_epuiser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_epuiser_verb",
+   "text": "épuiser",
+   "box": [
+    341,
+    640,
+    419,
+    666
+   ],
+   "text_box": [
+    345,
+    644,
+    415,
+    662
+   ]
+  },
+  "fr_faillir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_faillir_verb",
+   "text": "faillir",
+   "box": [
+    933,
+    634,
+    1011,
+    660
+   ],
+   "text_box": [
+    937,
+    638,
+    1007,
+    656
+   ]
+  },
+  "fr_suspendre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_suspendre_verb",
+   "text": "suspendre",
+   "box": [
+    982,
+    288,
+    1078,
+    314
+   ],
+   "text_box": [
+    986,
+    292,
+    1074,
+    310
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Affiches →",
+   "box": [
+    620,
+    330,
+    770,
+    570
+   ],
+   "text_box": [
+    626,
+    336,
+    764,
+    564
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Ruelle des Chaussons",
+   "box": [
+    380,
+    682,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    688,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée des Hérons",
+   "box": [
+    600,
+    40,
+    820,
+    80
+   ],
+   "text_box": [
+    604,
+    44,
+    816,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_motiver_verb",
+   "lemma": "motiver",
+   "gloss": "to motivate; to justify",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    425,
+    46,
+    560,
+    222
+   ],
+   "label_xy": [
+    492,
+    210
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_heberger_verb",
+   "lemma": "héberger",
+   "gloss": "to house, accommodate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    195,
+    110,
+    315,
+    245
+   ],
+   "label_xy": [
+    255,
+    233
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_deployer_verb",
+   "lemma": "déployer",
+   "gloss": "to spread out, to unfold; to deploy",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    340,
+    228,
+    565,
+    400
+   ],
+   "label_xy": [
+    452,
+    388
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_epuiser_verb",
+   "lemma": "épuiser",
+   "gloss": "to exhaust",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    190,
+    580,
+    570,
+    672
+   ],
+   "label_xy": [
+    380,
+    660
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_faillir_verb",
+   "lemma": "faillir",
+   "gloss": "to almost (do)",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    915,
+    368,
+    1030,
+    666
+   ],
+   "label_xy": [
+    972,
+    654
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_suspendre_verb",
+   "lemma": "suspendre",
+   "gloss": "to suspend",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 6,
+   "box": [
+    975,
+    140,
+    1085,
+    320
+   ],
+   "label_xy": [
+    1030,
+    308
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg013",
+   "box": [
+    620,
+    330,
+    770,
+    570
+   ],
+   "label": "Walk on to Rue des Affiches",
+   "name": "Rue des Affiches",
+   "sign": "Rue des Affiches →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg011",
+   "box": [
+    380,
+    682,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Chaussons",
+   "name": "Ruelle des Chaussons",
+   "sign": "← Ruelle des Chaussons",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "upper": 1,
+  "balcony": 2,
+  "street": 2
+ }
 }

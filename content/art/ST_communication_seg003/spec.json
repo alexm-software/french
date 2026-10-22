@@ -1,0 +1,107 @@
+{
+ "name": "Rue des Déclarations",
+ "street_name": "Rue des Appels",
+ "divider_x": 1210,
+ "art_style": "retro storybook 3",
+ "landmark": "striped radio tower with a big loudspeaker horn above a green newspaper kiosk",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_interroger_verb",
+   "box": [
+    119,
+    81,
+    344,
+    236
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_declarer_verb",
+   "box": [
+    170,
+    240,
+    330,
+    330
+   ],
+   "tier": "balcony",
+   "mirror": "round green-framed mirror on the wall behind the herald cat"
+  },
+  {
+   "id": "fr_realiser_verb",
+   "box": [
+    81,
+    425,
+    356,
+    669
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_adresser_verb",
+   "box": [
+    375,
+    381,
+    512,
+    644
+   ],
+   "tier": "street",
+   "mirror": "standing cheval mirror beside her soapbox"
+  },
+  {
+   "id": "fr_murmurer_verb",
+   "box": [
+    855,
+    305,
+    975,
+    400
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_engager_verb",
+   "box": [
+    950,
+    406,
+    1169,
+    625
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_communication_seg004",
+   "box": [
+    600,
+    450,
+    760,
+    540
+   ],
+   "label": "Walk on to Rue des Écrivains",
+   "name": "Rue des Écrivains",
+   "sign": "Rue des Écrivains →"
+  },
+  "back": {
+   "target": "ST_communication_seg002",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Passage des Panneaux",
+   "name": "Passage des Panneaux",
+   "sign": "← Passage des Panneaux"
+  }
+ },
+ "signs": {
+  "name": [
+   540,
+   60,
+   740,
+   100
+  ]
+ },
+ "note": "Rue des Appels place 3/5; landmark: striped radio tower with a big loudspeaker horn above a green newspaper kiosk. All six verbs are -er. The stingray (murmurer) sits on the kiosk roof under the radio tower (local edit: it no longer floats in the sky). Shrunk 0.92; cooled k 0.6. No -er/-ir markers, no painted text. ROUND2 P1 (11:02Z, streets worker 4): reflexive mirrors added inside the boxes of declarer, adresser (ink-and-wash mirror sprites cut from one GenerateImage sheet, soft contact shadow); hooks mention them. Backup work/backups/streets/appels_mirrors/."
+}

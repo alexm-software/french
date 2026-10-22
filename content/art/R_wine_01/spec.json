@@ -1,21 +1,21 @@
 {
- "divider_x": 706,
+ "divider_x": 760,
  "kind": "room",
- "note": "Grounded repaint v3 2026-10-21: one vaulted cellar with a single flagstone floor; every figure stands or sits on the floor, a tub rim or a barrel at true scale (no shelves, nothing floating, adults only around the wine). Feminine words left of the vine pillar, masculine right. One box per item. Exits: stone stairs UP to the dining hall (top left), arched door and ramp up to the street (right, where the delivery van came in). The back tasting bar is the zoom spot. Champagne and cru moved to the tasting-bar zoom to keep the room uncrowded.",
+ "note": "v4 repaint 2026-10-22 (s04 track): vaulted cellar, honey-grey stone, flagstones, vine-wrapped central pillar landmark. l'ivresse repainted cleanly (user-confirmed: Eve on the tub rim, purple feet, nothing in her hands); la cave calf repainted. Adults and animals only (no child or child-looking worker), nobody drinking. Split: room 10 + bar zoom R_wine_01_z1 + new zoom R_wine_01_z2 (delivery ramp: alcool, bouchon, tonneau, vin). | 2026-10-22 09:10 s04 full: user rule 'l'ivresse only as a gentle grape-stomping scene': the woman sitting on the tub rim in purple socks was inpainted as a grown-up woman standing in the tub, actively stomping grapes, purple feet, nothing in her hands. Bouteille box trimmed to [231,105,350,312] (boot + bottle neck and shoulders); cave box trimmed to the calf + straw ([80,231,228,313]); ivresse box [80,314,281,645]. | 2026-10-22 20261022T0954Z s04_ivresse_fix (independent-review P2 on s04_full_0905): the ring of stars and the wide dizzy eyes read as tipsy, so the head area only was repainted (GenerateImage crop edit, aligned and feather-blended): plain happy smiling eyes, no stars, no halo. The rest of the painting is byte-identical except a 127x93 px patch round her head; boxes unchanged.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    500,
-    78,
-    800,
-    172
+    506,
+    75,
+    819,
+    175
    ],
    "text_box": [
-    515,
+    530,
     90,
-    785,
-    160
+    795,
+    162
    ]
   }
  },
@@ -23,162 +23,174 @@
   {
    "id": "fr_cave_noun",
    "box": [
-    78,
-    222,
-    218,
-    306
+    80,
+    231,
+    228,
+    313
    ],
-   "scene": "A CALF (KAHV) naps on the straw at the foot of the stone steps down into the wine CELLAR."
+   "scene": "A CALF (KAHV) naps on a bed of straw at the foot of the stone steps, down here in the vaulted wine CELLAR.",
+   "label_xy": [
+    154,
+    297
+   ]
   },
   {
    "id": "fr_bouteille_noun",
    "box": [
-    226,
-    165,
-    344,
-    328
+    231,
+    105,
+    350,
+    312
    ],
-   "scene": "A BOOT (boo-TEHY) is stuck upside down in the neck of a huge green BOTTLE standing on the cellar floor."
+   "scene": "A BOOT (boo-TEHY) is stuck upside down in the neck of a huge green BOTTLE standing on the cellar floor.",
+   "label_xy": [
+    290,
+    297
+   ]
   },
   {
    "id": "fr_brasserie_noun",
    "box": [
-    346,
-    120,
+    350,
+    119,
     452,
-    352
+    372
    ],
-   "scene": "Same as English 'brasserie' (said brah-suh-REE): a waiter in a long white apron hurries his tray of shiny BRASS tankards up to the BRASSERIE."
+   "scene": "A grey-moustached waiter hurries his tray of empty shiny BRASS tankards (brah-suh-REE) up to the BRASSERIE.",
+   "label_xy": [
+    401,
+    362
+   ]
   },
   {
    "id": "fr_appellation_noun",
    "box": [
     454,
-    222,
-    560,
-    420
+    231,
+    578,
+    372
    ],
-   "scene": "Same as English 'appellation' (said ah-pay-lah-SYOHN): an old winemaker leans on his barrel and stamps a big red royal wax seal on his bottle: by decree, a wine of NAMED ORIGIN!"
+   "scene": "An old winemaker leans on his barrel and presses a big red wax seal onto a bottle: by decree, a wine of NAMED ORIGIN (ah-pay-lah-SYOHN, like 'a-PELL-ation').",
+   "label_xy": [
+    516,
+    362
+   ]
   },
   {
    "id": "fr_ivresse_noun",
    "box": [
-    78,
-    332,
-    282,
-    572
+    77,
+    314,
+    281,
+    645
    ],
-   "scene": "EVE RESTS (ee-VREHS) on the rim of the grape tub, purple-footed and swirly-eyed: the HEADY DIZZINESS of too much grape-stomping."
+   "scene": "EVE won't REST (ee-VREHS): barefoot in the grape tub she stomps and stomps, beaming and laughing, purple juice splashing round her purple feet: the joyful, HEADY THRILL of grape-stomping day. Nothing in her hands, no glass.",
+   "label_xy": [
+    180,
+    635
+   ]
   },
   {
    "id": "fr_degustation_noun",
    "box": [
-    306,
-    356,
-    452,
-    488
+    340,
+    375,
+    480,
+    508
    ],
-   "scene": "At the little TASTING table a goat sniffs glass after glass, unsure whether to be DISGUSTED (day-GEWS-) or delighted."
+   "scene": "A white goat sniffs glass after glass at the little TASTING table, unsure whether to be DISGUSTED (day-GEWS-) or delighted; nobody drinks.",
+   "label_xy": [
+    410,
+    498
+   ]
   },
   {
    "id": "fr_capsule_noun",
    "box": [
-    284,
-    490,
-    410,
-    620
+    283,
+    512,
+    431,
+    676
    ],
-   "scene": "Same as English 'capsule' (said kahp-SEWL): a squirrel wears a shiny bottle CAP as a helmet while hugging his acorn: CAP-sule!"
+   "scene": "A squirrel wears a shiny bottle CAP as a helmet (kahp-SEWL) while hugging his acorn: a CAPSULE hat!",
+   "label_xy": [
+    357,
+    666
+   ]
   },
   {
    "id": "fr_vodka_noun",
    "box": [
-    470,
-    422,
-    574,
-    602
+    481,
+    456,
+    578,
+    650
    ],
-   "scene": "Same as English 'vodka' but stressed at the end, vod-KAH: a crow perched on the ice bucket croaks 'KAH!' at the frosty VODKA bottle chilling inside."
+   "scene": "A crow perched on the ice bucket croaks 'KAH!' (vod-KAH) at the frosty VODKA bottle chilling inside.",
+   "label_xy": [
+    530,
+    640
+   ]
   },
   {
    "id": "fr_vigne_noun",
    "box": [
-    576,
-    176,
-    700,
-    545
+    580,
+    187,
+    731,
+    600
    ],
-   "scene": "A TEENY gnome (VEENY) stands at the foot of a stone pillar wrapped in a curling grape VINE heavy with purple bunches."
-  },
-  {
-   "id": "fr_alcool_noun",
-   "box": [
-    716,
-    310,
-    790,
-    450
-   ],
-   "scene": "Like English 'alcohol', said ahl-KOL: a glass of wine in tiny sunglasses looks so al-COOL on its barrel."
-  },
-  {
-   "id": "fr_bouchon_noun",
-   "box": [
-    793,
-    330,
-    906,
-    515
-   ],
-   "scene": "A ghost shouts 'BOO!' (boo-SHOHN) as he heaves a giant CORK over his head."
+   "scene": "A TEENY gnome (VEENY) stands at the foot of the stone pillar wrapped in a curling grape VINE heavy with purple bunches.",
+   "label_xy": [
+    656,
+    590
+   ]
   },
   {
    "id": "fr_verre_noun",
    "box": [
-    872,
-    148,
-    985,
-    328
+    869,
+    162,
+    1031,
+    531
    ],
-   "scene": "A woman balances a GLASS of red wine on her head and shrugs 'WHERE?' (VEHR): it is right on top of her!"
-  },
-  {
-   "id": "fr_vin_noun",
-   "box": [
-    990,
-    282,
-    1200,
-    398
-   ],
-   "scene": "A delivery VAN (VAN) backs into the cellar with its doors open, packed with crates of WINE."
-  },
-  {
-   "id": "fr_tonneau_noun",
-   "box": [
-    908,
-    400,
-    1058,
-    622
-   ],
-   "scene": "A cellar hand yells 'TOE! NO!' (toh-NOH) as a runaway BARREL rolls right over his foot."
+   "scene": "A woman balances a GLASS of red wine on her head and shrugs 'WHERE?' (VEHR): it is right on top of her!",
+   "label_xy": [
+    950,
+    521
+   ]
   }
  ],
- "zoom_from": {
-  "room_id": "R_wine_01_z1",
-  "box": [
-   722,
-   176,
-   868,
-   300
-  ],
-  "label": "tasting bar (back wall)"
- },
+ "zoom_from": [
+  {
+   "room_id": "R_wine_01_z1",
+   "box": [
+    762,
+    125,
+    866,
+    340
+   ],
+   "label": "tasting bar (back wall)"
+  },
+  {
+   "room_id": "R_wine_01_z2",
+   "box": [
+    1140,
+    250,
+    1205,
+    430
+   ],
+   "label": "delivery ramp (right)"
+  }
+ ],
  "links": [
   {
    "target": "R_resto_room",
    "box": [
-    80,
-    50,
-    222,
-    215
+    85,
+    40,
+    228,
+    225
    ],
    "label": "Stone stairs up to the dining hall",
    "name": "Restaurant Le Bon Goût — salle",
@@ -187,10 +199,10 @@
   {
    "target": "B09_restaurant",
    "box": [
-    990,
-    95,
-    1130,
-    275
+    1031,
+    94,
+    1135,
+    387
    ],
    "label": "Arched door and ramp up to the street",
    "name": "Restaurant Le Bon Goût (outside)",

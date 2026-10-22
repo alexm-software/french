@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "Attic room of the rarer pronouns (dont, soi, quiconque, auquel, duquel, the -même forms). Pronouns have no gender, so no left/right rule (divider null). The open stairwell with its banister at the front left goes back down to the conjunctions room; the white door on the far right leads to the third prepositions room. The room name sits on the small wall board left of the round window.",
+ "note": "Attic of the third pronouns (cartoon style): sloping beamed ceiling, sage walls, round window, big blue travel trunk (landmark). dont (Spanish don with the feathered hat), moi-même (girl blowing herself a kiss in the mirror), elle-même (girl tying her own laces), soi (boy swaying in the hammock hugging himself), quiconque (whoever blows the conch wins the key on the door), auquel (letter handed to Kelly), toi-même (mirror held out to you), duquel (duck nibbling seaweed from the trunk), quelques-uns (calling the cousins: a few heads peek up the stairs). Stairwell down to the music room bottom-left; open white door to the starry observatory on the right.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Les pronoms (3)",
    "box": [
-    565,
-    106,
-    706,
-    184
+    682,
+    108,
+    864,
+    198
    ],
    "text_box": [
-    571,
-    112,
-    700,
-    178
+    696,
+    118,
+    850,
+    188
    ]
   }
  },
@@ -24,116 +24,152 @@
   {
    "id": "fr_dont_pron",
    "box": [
-    135,
-    152,
-    315,
-    548
+    118,
+    150,
+    252,
+    416
    ],
-   "scene": "Spanish nobleman in a black cape and feathered hat"
+   "scene": "Spanish don whose hat bears a big feather",
+   "label_xy": [
+    184,
+    406
+   ]
   },
   {
    "id": "fr_moi_meme_pron",
    "box": [
-    318,
-    187,
-    472,
-    368
+    290,
+    150,
+    462,
+    372
    ],
-   "scene": "man in front of a standing mirror pointing at himself"
+   "scene": "girl blowing a kiss to herself in the mirror",
+   "label_xy": [
+    376,
+    362
+   ]
   },
   {
    "id": "fr_elle_meme_pron",
    "box": [
-    362,
-    372,
-    549,
-    606
+    470,
+    215,
+    562,
+    352
    ],
-   "scene": "woman kneeling and tying her own shoelaces"
+   "scene": "girl tying her own shoelaces",
+   "label_xy": [
+    516,
+    344
+   ]
   },
   {
    "id": "fr_soi_pron",
    "box": [
-    553,
-    187,
-    644,
-    506
+    745,
+    200,
+    836,
+    350
    ],
-   "scene": "man swaying with his arms hugging himself"
+   "scene": "boy swaying in the hammock hugging himself",
+   "label_xy": [
+    790,
+    342
+   ]
   },
   {
    "id": "fr_quelques_uns_pron",
    "box": [
-    660,
-    260,
-    762,
-    446
+    330,
+    392,
+    428,
+    612
    ],
-   "scene": "girl holding a few kittens in her arms"
+   "scene": "boy calling the cousins up; only a few heads peek up the stairs",
+   "label_xy": [
+    380,
+    604
+   ]
   },
   {
    "id": "fr_auquel_pron",
    "box": [
-    765,
-    56,
-    940,
-    396
+    785,
+    404,
+    1040,
+    615
    ],
-   "scene": "man pointing at a long strand of kelp hanging from a hook"
+   "scene": "old postman handing the letter to Kelly",
+   "label_xy": [
+    900,
+    606
+   ]
   },
   {
    "id": "fr_duquel_pron",
    "box": [
-    902,
-    400,
-    982,
-    515
+    448,
+    470,
+    672,
+    595
    ],
-   "scene": "duck with a strand of kelp in its beak"
+   "scene": "duck nibbling the seaweed strand from the trunk",
+   "label_xy": [
+    540,
+    588
+   ]
   },
   {
    "id": "fr_quiconque_pron",
    "box": [
-    985,
-    181,
-    1140,
-    548
+    895,
+    215,
+    1016,
+    398
    ],
-   "scene": "man holding a big key and a large conch shell"
+   "scene": "boy blowing the conch to win the golden key on the door",
+   "label_xy": [
+    955,
+    390
+   ]
   },
   {
    "id": "fr_toi_meme_pron",
    "box": [
-    715,
-    450,
-    898,
-    674
+    1080,
+    385,
+    1200,
+    625
    ],
-   "scene": "boy holding out a small hand mirror toward the viewer"
+   "scene": "boy holding the mirror out to you",
+   "label_xy": [
+    1140,
+    616
+   ]
   }
  ],
  "links": [
   {
    "target": "R_conjunctions",
    "box": [
-    40,
-    553,
-    359,
-    662
+    74,
+    424,
+    312,
+    672
    ],
-   "label": "Down the open stairwell to the conjunctions room",
+   "label": "Down the stairwell to the music room (conjunctions)",
    "name": "Les conjonctions",
    "kind": "stairs_down"
   },
   {
    "target": "R_prepositions_03",
    "box": [
-    1144,
-    169,
-    1219,
-    469
+    1020,
+    140,
+    1192,
+    380
    ],
-   "label": "Through the white door to the third prepositions room",
+   "label": "Through the open white door to the starry observatory (prepositions 3)",
    "name": "Les prépositions (3)",
    "kind": "door"
   }

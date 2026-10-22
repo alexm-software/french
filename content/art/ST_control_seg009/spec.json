@@ -1,113 +1,107 @@
 {
-  "divider_x": 700,
-  "name": "Rue des Gestes — Allée des Balançoires · balancer, se courber, rougir",
-  "note": "Tiered verb place. -er LEFT (girl swinging on the rope swing, man setting off a confetti cannon, old man bending to sniff his flowers on the balcony beside a wall mirror), -ir/-re RIGHT (shy young man blushing as a lady hands him a rose; door half-opening by itself with a cat peeking out, small mirror on the wall by it; baker rounding dough at the upper window). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_balancer_verb",
-      "box": [
-        125,
-        330,
-        270,
-        585
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_declencher_verb",
-      "box": [
-        294,
-        331,
-        525,
-        644
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_courber_verb",
-      "box": [
-        262,
-        119,
-        487,
-        300
-      ],
-      "tier": "balcony",
-      "mirror": "framed mirror on the wall beside the balcony"
-    },
-    {
-      "id": "fr_rougir_verb",
-      "box": [
-        869,
-        350,
-        1075,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_entrouvrir_verb",
-      "box": [
-        1078,
-        300,
-        1170,
-        600
-      ],
-      "tier": "street",
-      "mirror": "small framed mirror on the wall just left of the door"
-    },
-    {
-      "id": "fr_arrondir_verb",
-      "box": [
-        1100,
-        38,
-        1200,
-        169
-      ],
-      "tier": "upper"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg010",
-      "box": [
-        600,
-        430,
-        780,
-        540
-      ],
-      "label": "Walk on down the lane",
-      "name": "Quai du Débarquement",
-      "sign": "Quai du Débarquement →",
-      "name_fr": "Quai du Débarquement",
-      "name_en": "Landing Quay"
-    },
-    "back": {
-      "target": "ST_control_seg008",
-      "box": [
-        470,
-        676,
-        860,
-        712
-      ],
-      "label": "Back up the lane to Spilt-Pail Lane",
-      "name": "Ruelle du Seau-Renversé",
-      "sign": "← Ruelle du Seau-Renversé",
-      "name_fr": "Ruelle du Seau-Renversé",
-      "name_en": "Spilt-Pail Lane"
-    }
+ "name": "Allée des Balançoires",
+ "street_name": "Rue des Débardeurs",
+ "divider_x": 840,
+ "art_style": "painterly realism 3.5",
+ "landmark": "the side of the covered market (B06) at the far end: dark-green iron-and-glass hall with a curved ribbed glass roof (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_balancer_verb",
+   "box": [
+    188,
+    375,
+    306,
+    562
+   ],
+   "tier": "street"
   },
-  "signs": {
-    "er": [
-      560,
-      25,
-      660,
-      59
-    ],
-    "irre": [
-      700,
-      25,
-      820,
-      59
-    ]
+  {
+   "id": "fr_declencher_verb",
+   "box": [
+    325,
+    412,
+    550,
+    631
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_courber_verb",
+   "box": [
+    306,
+    119,
+    512,
+    294
+   ],
+   "tier": "balcony",
+   "mirror": "framed mirror on the wall beside the balcony"
+  },
+  {
+   "id": "fr_rougir_verb",
+   "box": [
+    838,
+    330,
+    1022,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_entrouvrir_verb",
+   "box": [
+    1028,
+    275,
+    1160,
+    470
+   ],
+   "tier": "street",
+   "mirror": "little framed mirror hung on the half-open door"
+  },
+  {
+   "id": "fr_arrondir_verb",
+   "box": [
+    1050,
+    44,
+    1196,
+    180
+   ],
+   "tier": "upper"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "B06_marche",
+   "box": [
+    562,
+    319,
+    688,
+    519
+   ],
+   "label": "Into Marché couvert (covered market)",
+   "name": "Marché couvert (covered market)",
+   "sign": "Marché couvert (covered market) →"
+  },
+  "back": {
+   "target": "ST_control_seg008",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle du Seau-Renversé",
+   "name": "Ruelle du Seau-Renversé",
+   "sign": "← Ruelle du Seau-Renversé"
+  }
+ },
+ "signs": {
+  "name": [
+   470,
+   60,
+   700,
+   100
+  ]
+ },
+ "note": "Rue des Débardeurs place 5/5; landmark: the side of the covered market (B06) at the far end: dark-green iron-and-glass hall with a curved ribbed glass roof (destination). Last place: the street ends at the open iron-and-glass side door of the covered market B06 (the same green hall as in the market-square view); the forward exit goes into the market. Moved the little mirror onto the half-open door (local patch) so it sits inside the entrouvrir box. Last place: the far end shows the destination. No -er/-ir markers, no painted text."
 }

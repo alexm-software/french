@@ -1,0 +1,136 @@
+{
+ "name": "Allée du Pique-Nique",
+ "street_name": "Ruelle des Gourmets",
+ "divider_x": 720,
+ "art_style": "cartoony storybook 2.5 (keep the food-shaped houses)",
+ "landmark": "picnic lawn with a white bandstand with a cherry-red roof",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_rassasier_verb",
+   "box": [
+    120,
+    44,
+    378,
+    194
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_pique_niquer_verb",
+   "box": [
+    438,
+    180,
+    590,
+    294
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_grignoter_verb",
+   "box": [
+    256,
+    250,
+    376,
+    362
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_attabler_verb",
+   "box": [
+    475,
+    306,
+    578,
+    414
+   ],
+   "tier": "balcony",
+   "mirror": "oval gilt mirror beside the goat"
+  },
+  {
+   "id": "fr_croquer_verb",
+   "box": [
+    292,
+    380,
+    452,
+    656
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_engouffrer_verb",
+   "box": [
+    456,
+    505,
+    580,
+    612
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_desservir_verb",
+   "box": [
+    968,
+    168,
+    1106,
+    306
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_servir_verb",
+   "box": [
+    794,
+    375,
+    985,
+    632
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_engloutir_verb",
+   "box": [
+    985,
+    462,
+    1180,
+    670
+   ],
+   "tier": "street"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_cooking_seg003",
+   "box": [
+    690,
+    360,
+    790,
+    500
+   ],
+   "label": "Walk on to Rue des Carafes",
+   "name": "Rue des Carafes",
+   "sign": "Rue des Carafes →"
+  },
+  "back": {
+   "target": "ST_cooking_seg001",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Place du Grand-Festin",
+   "name": "Place du Grand-Festin",
+   "sign": "← Place du Grand-Festin"
+  }
+ },
+ "signs": {
+  "name": [
+   560,
+   40,
+   800,
+   80
+  ]
+ },
+ "note": "Ruelle des Gourmets place 2/3; landmark: picnic lawn with a white bandstand with a cherry-red roof. Restyled from the live painting (same figures): white and cherry red, bandstand on the picnic lawn. Minor: the pom-pom tops reach ~5% from the top edge. No -er/-ir markers, no painted text."
+}

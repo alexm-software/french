@@ -1,22 +1,22 @@
 {
- "divider_x": 620,
+ "divider_x": 762,
  "kind": "room",
- "note": "Jeweller's boutique (1): gold, rings, pearls and watches. Feminine nouns to the left of x=620, masculine to the right. The left doorway goes back to the hardware shop; the right doorway leads on to the general shop (2).",
+ "note": "Fifth shop of the B07 covered arcade (glass skylight, honey limestone, dark oak joinery, as on the exterior): the jeweller's, with deep emerald velvet walls and a white-grey marble floor. LANDMARK: the giant round brass safe door, half open, in the back wall. The oak doorway on the far left shows the slate-brick metal shop with its hanging chains (way back); the doorway on the far right shows the cream-and-cobalt general store with its wall of jars (next shop). Feminine nouns on the left, masculine on the right. Zoom: the glass display counter (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "La boutique (1)",
+   "text": "La bijouterie",
    "box": [
-    880,
-    20,
-    1130,
-    62
+    625,
+    119,
+    750,
+    150
    ],
    "text_box": [
-    886,
-    26,
-    1124,
-    56
+    631,
+    125,
+    744,
+    144
    ]
   }
  },
@@ -25,156 +25,118 @@
    "id": "fr_montre_noun",
    "box": [
     106,
-    156,
-    265,
-    456
+    285,
+    310,
+    605
    ],
-   "scene": "furry monster checking a tiny wristwatch"
+   "scene": "a friendly furry MONSTER checks the tiny WATCH on its wrist"
   },
   {
    "id": "fr_bague_noun",
    "box": [
-    269,
-    219,
-    400,
-    519
+    312,
+    344,
+    412,
+    600
    ],
-   "scene": "girl finding a ring in her handbag"
-  },
-  {
-   "id": "fr_ronde_noun",
-   "box": [
-    431,
-    169,
-    594,
-    427
-   ],
-   "scene": "night watchman doing his round with a lantern"
-  },
-  {
-   "id": "fr_sonnerie_noun",
-   "box": [
-    431,
-    431,
-    525,
-    531
-   ],
-   "scene": "alarm clock ringing beside a yawning cat"
+   "scene": "a girl pulls a gold RING out of her BAG"
   },
   {
    "id": "fr_perle_noun",
    "box": [
-    250,
-    536,
-    444,
-    644
+    418,
+    392,
+    618,
+    622
    ],
-   "scene": "open oyster showing off a pearl"
+   "scene": "a giant oyster opens to show off its PEARL"
   },
   {
-   "id": "fr_lustre_noun",
+   "id": "fr_ronde_noun",
    "box": [
-    500,
-    45,
-    770,
-    165
+    640,
+    322,
+    760,
+    602
    ],
-   "scene": "glittering crystal chandelier"
+   "scene": "RON the night watchman does his ROUND with his lantern"
   },
   {
    "id": "fr_or_noun",
    "box": [
-    631,
-    225,
-    790,
-    556
+    765,
+    322,
+    902,
+    605
    ],
-   "scene": "miner pushing a cart of gold nuggets"
-  },
-  {
-   "id": "fr_poignet_noun",
-   "box": [
-    794,
-    340,
-    920,
-    587
-   ],
-   "scene": "pony with a bracelet on its front leg"
+   "scene": "a miner pushes a cart full of GOLD ORE"
   },
   {
    "id": "fr_diamant_noun",
    "box": [
-    925,
-    319,
-    1040,
-    419
+    905,
+    320,
+    1090,
+    618
    ],
-   "scene": "huge diamond on the jeweller's desk"
+   "scene": "Oh DEAR, MAN! a man staggers under a DIAMOND as big as a pumpkin"
   },
   {
    "id": "fr_collier_noun",
    "box": [
-    906,
-    131,
-    1040,
-    315
+    1092,
+    452,
+    1202,
+    631
    ],
-   "scene": "collie wearing a pearl necklace"
+   "scene": "a COLLIE wears a pearl NECKLACE on her collar"
   },
   {
-   "id": "fr_bijou_noun",
+   "id": "fr_lustre_noun",
    "box": [
-    775,
-    140,
-    881,
-    215
+    815,
+    50,
+    1022,
+    202
    ],
-   "scene": "bee looking at itself in a round gold jewel"
-  },
+   "scene": "the crystal CHANDELIER glitters with LUSTRE"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_eventail_noun",
+   "room_id": "R_boutique_01_z1",
    "box": [
-    1044,
-    175,
-    1200,
-    430
+    418,
+    290,
+    530,
+    388
    ],
-   "scene": "lady fluttering a fan like a peacock tail"
-  },
-  {
-   "id": "fr_bracelet_noun",
-   "box": [
-    956,
-    437,
-    1119,
-    675
-   ],
-   "scene": "toddler jingling a bracelet of tiny bells"
+   "label": "the glass display counter"
   }
  ],
  "links": [
   {
    "target": "R_hardware_02",
    "box": [
-    20,
-    75,
-    100,
-    450
+    78,
+    125,
+    225,
+    282
    ],
-   "label": "Back through the left doorway to the hardware shop",
-   "name": "La quincaillerie (2)",
+   "label": "Back through the doorway to the metal shop",
+   "name": "La quincaillerie",
    "kind": "door"
   },
   {
    "target": "R_shop_general_02",
    "box": [
-    1206,
-    80,
-    1270,
-    460
+    1095,
+    125,
+    1202,
+    444
    ],
-   "label": "Through the right doorway to the general shop",
-   "name": "Les commerces (2)",
+   "label": "Through the doorway into the general store",
+   "name": "Le bazar",
    "kind": "door"
   }
  ]

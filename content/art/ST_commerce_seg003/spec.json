@@ -1,147 +1,106 @@
 {
-  "divider_x": 760,
-  "kind": "verb_place",
-  "note": "Rue du Commerce — Ruelle des Tirelires: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
-  "text_areas": {
-    "street_name": {
-      "role": "street_name",
-      "text": "Ruelle des Tirelires",
-      "box": [
-        620,
-        40,
-        960,
-        84
-      ],
-      "text_box": [
-        626,
-        46,
-        954,
-        78
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "text": "Rue du Commerce — Allée du Partage →",
-      "box": [
-        696,
-        346,
-        848,
-        380
-      ],
-      "text_box": [
-        702,
-        352,
-        842,
-        374
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "text": "← Rue du Commerce — Passage du Marchandage",
-      "box": [
-        696,
-        630,
-        846,
-        662
-      ],
-      "text_box": [
-        702,
-        636,
-        840,
-        656
-      ]
-    }
+ "name": "Ruelle des Tirelires",
+ "street_name": "Rue des Écus",
+ "divider_x": 950,
+ "art_style": "realism 4 (money = serious)",
+ "landmark": "stone archway opening onto the canal quay and the columned bank (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_economiser_verb",
+   "box": [
+    100,
+    44,
+    195,
+    238
+   ],
+   "tier": "upper"
   },
-  "items": [
-    {
-      "id": "fr_financer_verb",
-      "box": [
-        100,
-        362,
-        296,
-        662
-      ],
-      "scene": "young woman tips coins from a jar into her fiance's hands at his lemonade stand"
-    },
-    {
-      "id": "fr_depenser_verb",
-      "box": [
-        318,
-        375,
-        414,
-        625
-      ],
-      "scene": "woman carrying a giant copper frying pan, her purse empty"
-    },
-    {
-      "id": "fr_piller_verb",
-      "box": [
-        460,
-        380,
-        690,
-        652
-      ],
-      "scene": "seagulls plunder the chip stall while the owner flaps a tea towel"
-    },
-    {
-      "id": "fr_emprunter_verb",
-      "box": [
-        318,
-        140,
-        432,
-        285
-      ],
-      "scene": "woman on a balcony borrowing a jar of prunes from her neighbour"
-    },
-    {
-      "id": "fr_economiser_verb",
-      "box": [
-        125,
-        75,
-        265,
-        248
-      ],
-      "scene": "red squirrel dropping one more acorn into a full glass jar"
-    },
-    {
-      "id": "fr_revendre_verb",
-      "box": [
-        850,
-        368,
-        1197,
-        656
-      ],
-      "scene": "black raven at a stall reselling shiny spoons and buttons to a customer"
-    }
-  ],
-  "links": [
-    {
-      "target": "ST_commerce_seg005",
-      "box": [
-        700,
-        385,
-        845,
-        520
-      ],
-      "label": "Walk on to Sharing Alley",
-      "name": "Allée du Partage",
-      "kind": "street_forward",
-      "name_fr": "Allée du Partage",
-      "name_en": "Sharing Alley"
-    },
-    {
-      "target": "ST_commerce_seg004",
-      "box": [
-        120,
-        668,
-        1100,
-        720
-      ],
-      "label": "Back to Haggling Passage",
-      "name": "Passage du Marchandage",
-      "kind": "street_back",
-      "name_fr": "Passage du Marchandage",
-      "name_en": "Haggling Passage"
-    }
+  {
+   "id": "fr_emprunter_verb",
+   "box": [
+    430,
+    175,
+    550,
+    300
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_financer_verb",
+   "box": [
+    80,
+    395,
+    338,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_depenser_verb",
+   "box": [
+    362,
+    388,
+    555,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_piller_verb",
+   "box": [
+    557,
+    412,
+    885,
+    660
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_revendre_verb",
+   "box": [
+    1012,
+    490,
+    1188,
+    676
+   ],
+   "tier": "street",
+   "note": "ROUND2 (10:38Z): both men (customer in dark coat, unboxed stallholder in fur hood) removed; raven alone at its spoon table (GenerateImage edit of crop 800,240-1280,720, feathered paste)."
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "S05_sector",
+   "box": [
+    760,
+    262,
+    960,
+    405
+   ],
+   "label": "Through the arch onto the Quai de la Banque",
+   "name": "Quai de la Banque",
+   "sign": "Quai de la Banque →"
+  },
+  "back": {
+   "target": "ST_commerce_seg004",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Passage du Marchandage",
+   "name": "Passage du Marchandage",
+   "sign": "← Passage du Marchandage"
+  }
+ },
+ "signs": {
+  "name": [
+   560,
+   40,
+   800,
+   80
   ]
+ },
+ "note": "Rue des Écus place 4/4; landmark: stone archway opening onto the canal quay and the columned bank (destination). Minor: feet and table legs of the street-level stalls reach y~690-705 (inside the bottom 6% band; boxes stop at 676; nothing cropped by the edge). Last place: the far end shows the destination. No -er/-ir markers, no painted text. ROUND2 (10:38Z): both men (customer in dark coat, unboxed stallholder in fur hood) removed; raven alone at its spoon table (GenerateImage edit of crop 800,240-1280,720, feathered paste)."
 }

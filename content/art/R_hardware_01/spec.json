@@ -1,22 +1,22 @@
 {
- "divider_x": 640,
+ "divider_x": 700,
  "kind": "room",
- "note": "Hardware shop (1): fabrics, wax, glue, leather and rubber. The wooden post in the middle divides it: feminine nouns on its left, masculine on its right. The timber corner on the right is a zoom (R_hardware_01_z1). The opening on the left goes back to the general shop (3); the opening on the right leads on to the florist's.",
+ "note": "Eighth shop of the B07 covered arcade (glass skylight, honey limestone, dark oak joinery, as on the exterior): the fabric and materials shop, with teal walls and a pale pine plank floor. LANDMARK: the whole back wall of pine shelves stacked with colourful fabric bolts. The doorway on the far left shows the butter-yellow corner shop with its bay window (way back); the doorway on the far right opens into the glass greenhouse of the florist's (next shop). Feminine nouns on the left, masculine on the right. Zoom: the timber planks against the pillar (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "La quincaillerie (1)",
+   "text": "La mercerie",
    "box": [
-    700,
-    15,
-    960,
-    55
+    475,
+    25,
+    600,
+    52
    ],
    "text_box": [
-    706,
-    21,
-    954,
-    49
+    481,
+    31,
+    594,
+    46
    ]
   }
  },
@@ -24,158 +24,128 @@
   {
    "id": "fr_matiere_noun",
    "box": [
-    77,
-    325,
-    256,
-    420
+    102,
+    200,
+    278,
+    619
    ],
-   "scene": "pink brain jelly wobbling on an open science book"
+   "scene": "MA TEARS a length of MATERIAL in two"
   },
   {
    "id": "fr_cire_noun",
    "box": [
-    137,
-    181,
-    296,
-    320
+    280,
+    278,
+    438,
+    569
    ],
-   "scene": "fortune-teller gazing into a ball of melting wax"
-  },
-  {
-   "id": "fr_etoffe_noun",
-   "box": [
-    300,
-    150,
-    421,
-    406
-   ],
-   "scene": "posh gentleman in a top hat unrolling fine fabric"
-  },
-  {
-   "id": "fr_adhesion_noun",
-   "box": [
-    219,
-    45,
-    425,
-    146
-   ],
-   "scene": "cat stuck flat to a taped plank"
-  },
-  {
-   "id": "fr_colle_noun",
-   "box": [
-    425,
-    300,
-    569,
-    484
-   ],
-   "scene": "boy gluing a model, glue on his collar"
+   "scene": "the SEER reads the future in a ball of melting candle WAX"
   },
   {
    "id": "fr_fibre_noun",
    "box": [
-    469,
-    87,
-    587,
-    269
-   ],
-   "scene": "elephant swinging from a single rope fibre"
-  },
-  {
-   "id": "fr_enceinte_noun",
-   "box": [
-    77,
-    425,
-    375,
-    650
-   ],
-   "scene": "round stone enclosure with sheep inside"
-  },
-  {
-   "id": "fr_resine_noun",
-   "box": [
-    381,
-    487,
-    594,
-    669
-   ],
-   "scene": "sticky resin oozing from a log over a beetle"
-  },
-  {
-   "id": "fr_tissu_noun",
-   "box": [
-    725,
+    352,
     119,
-    900,
-    333
+    448,
+    244
    ],
-   "scene": "tailor unrolling bright flowery cloth"
+   "scene": "one single FIBRE holds up the toy elephant"
   },
   {
-   "id": "fr_carton_noun",
+   "id": "fr_etoffe_noun",
    "box": [
-    687,
-    337,
-    806,
-    462
+    505,
+    181,
+    665,
+    448
    ],
-   "scene": "cat squeezed into a cardboard box"
+   "scene": "the posh TOFF holds up a length of fine FABRIC"
+  },
+  {
+   "id": "fr_colle_noun",
+   "box": [
+    440,
+    452,
+    668,
+    675
+   ],
+   "scene": "the boy GLUES his model boat and gets glue on his COLLAR"
   },
   {
    "id": "fr_cuir_noun",
    "box": [
-    694,
-    466,
-    850,
-    625
+    735,
+    172,
+    875,
+    550
    ],
-   "scene": "pair of stiff leather cowboy boots"
+   "scene": "the stiff new LEATHER cowboy boots squeak KWEE-EAR"
+  },
+  {
+   "id": "fr_carton_noun",
+   "box": [
+    730,
+    558,
+    898,
+    675
+   ],
+   "scene": "the cat squeezes into a CARDBOARD box tons too small"
+  },
+  {
+   "id": "fr_tissu_noun",
+   "box": [
+    900,
+    275,
+    1050,
+    585
+   ],
+   "scene": "TEA, SEW: the tailor sips TEA and SEWS bright FABRIC"
   },
   {
    "id": "fr_caoutchouc_noun",
    "box": [
-    862,
-    337,
-    969,
-    537
+    1052,
+    310,
+    1181,
+    675
    ],
-   "scene": "boy in rubber boots sneezing into a hanky"
+   "scene": "the boy in RUBBER boots sneezes KA-CHOO!"
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_hardware_01_z1",
    "box": [
-    975,
-    140,
-    1140,
-    330
+    988,
+    160,
+    1075,
+    270
    ],
-   "label": "the timber corner"
+   "label": "the timber planks against the pillar"
   }
  ],
  "links": [
   {
    "target": "R_shop_general_03",
    "box": [
-    10,
-    60,
-    130,
-    300
+    78,
+    75,
+    225,
+    194
    ],
-   "label": "Back through the left opening to the general shop (3)",
-   "name": "Les commerces (3)",
+   "label": "Back through the doorway to the corner shop",
+   "name": "La boutique du coin",
    "kind": "door"
   },
   {
    "target": "R_florist",
    "box": [
-    1150,
-    60,
-    1262,
-    440
+    1080,
+    75,
+    1202,
+    305
    ],
-   "label": "Through the right opening to the florist's",
+   "label": "Through the doorway into the florist's greenhouse",
    "name": "Le fleuriste",
    "kind": "door"
   }

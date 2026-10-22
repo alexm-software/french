@@ -1,0 +1,155 @@
+{
+ "kind": "room",
+ "divider_x": 620,
+ "note": "B25 Office de tourisme, ground floor: the hall of the world (Le hall du monde), camera at the entrance looking in. Sage-green walls, navy wainscot, white pilasters, grey-oak floor with an inlaid navy compass rose; landmark: the relief landscape model table under the big arched window. Feminine LEFT: girl in a yellow dress cranking the Ferris wheel of a toy town (ville); giraffe in a tall red cap beside the Eiffel Tower model (capitale); green parrot holding up a blue passport for the clerk's rubber stamp (nationalité). Masculine RIGHT: mole on the earthy globe mound (monde); raccoon behind a striped border barrier with a pennant (pays); beaver smoothing a town map on a plank bench (plan); grandmother in a traffic-cone hat at the floor jigsaw of continents (continent); penguin in a tub of soap suds (sud); bear-cub cowboy on a rocking horse (ouest). Exits: blue front door far left -> B25_monde; doorway in the right wall -> map room R_abs_space_01; staircase back right up -> R_world_02; zoom on the relief model -> R_world_01_z1. Painted 2026-10-22 (track s08p3).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le hall du monde",
+   "box": [
+    554,
+    54,
+    728,
+    97
+   ],
+   "text_box": [
+    560,
+    58,
+    722,
+    93
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_ville_noun",
+   "box": [
+    150,
+    372,
+    402,
+    644
+   ]
+  },
+  {
+   "id": "fr_capitale_noun",
+   "box": [
+    444,
+    205,
+    562,
+    434
+   ]
+  },
+  {
+   "id": "fr_nationalite_noun",
+   "box": [
+    298,
+    178,
+    440,
+    300
+   ]
+  },
+  {
+   "id": "fr_monde_noun",
+   "box": [
+    680,
+    330,
+    798,
+    408
+   ]
+  },
+  {
+   "id": "fr_pays_noun",
+   "box": [
+    812,
+    250,
+    956,
+    358
+   ]
+  },
+  {
+   "id": "fr_plan_noun",
+   "box": [
+    866,
+    362,
+    1046,
+    480
+   ]
+  },
+  {
+   "id": "fr_continent_noun",
+   "box": [
+    662,
+    412,
+    862,
+    668
+   ]
+  },
+  {
+   "id": "fr_sud_noun",
+   "box": [
+    908,
+    494,
+    1048,
+    656
+   ]
+  },
+  {
+   "id": "fr_ouest_noun",
+   "box": [
+    1052,
+    362,
+    1202,
+    562
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_world_01_z1",
+  "box": [
+   566,
+   230,
+   782,
+   326
+  ],
+  "label": "Look closer at the relief model"
+ },
+ "links": [
+  {
+   "target": "B25_monde",
+   "box": [
+    70,
+    20,
+    292,
+    368
+   ],
+   "label": "Out through the front door to the street",
+   "name": "Office de tourisme",
+   "kind": "door"
+  },
+  {
+   "target": "R_abs_space_01",
+   "box": [
+    1020,
+    50,
+    1188,
+    358
+   ],
+   "label": "Through the doorway to the map room",
+   "name": "La salle des cartes",
+   "kind": "door"
+  },
+  {
+   "target": "R_world_02",
+   "box": [
+    910,
+    130,
+    1000,
+    244
+   ],
+   "label": "Up the stairs to the first floor",
+   "name": "La galerie des pays",
+   "kind": "stairs_up"
+  }
+ ],
+ "boxes_estimated": false
+}

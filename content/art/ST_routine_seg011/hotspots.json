@@ -1,369 +1,355 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg011",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Ruelle des Chaussons · déplier, gaspiller, froisser",
-  "divider_x": 1000,
-  "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is an orchard with no verbs). Street: girl sweet-talking the grumpy cat flat, fox cheating at cards under a little potted tree, cobbler shoeing a pony; balcony: man gasping at the hose he left running; upper window: boy unfolding a huge map; roof terrace: boy crumpling paper beside a frowning frog. Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_flatter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_flatter_verb",
-      "text": "flatter",
-      "box": [
-        171,
-        656,
-        249,
-        682
-      ],
-      "text_box": [
-        175,
-        660,
-        245,
-        678
-      ]
-    },
-    "fr_tricher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_tricher_verb",
-      "text": "tricher",
-      "box": [
-        401,
-        636,
-        479,
-        662
-      ],
-      "text_box": [
-        405,
-        640,
-        475,
-        658
-      ]
-    },
-    "fr_chausser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_chausser_verb",
-      "text": "chausser",
-      "box": [
-        691,
-        573,
-        779,
-        599
-      ],
-      "text_box": [
-        695,
-        577,
-        775,
-        595
-      ]
-    },
-    "fr_gaspiller_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_gaspiller_verb",
-      "text": "gaspiller",
-      "box": [
-        637,
-        386,
-        733,
-        412
-      ],
-      "text_box": [
-        641,
-        390,
-        729,
-        408
-      ]
-    },
-    "fr_deplier_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_deplier_verb",
-      "text": "déplier",
-      "box": [
-        311,
-        220,
-        389,
-        246
-      ],
-      "text_box": [
-        315,
-        224,
-        385,
-        242
-      ]
-    },
-    "fr_froisser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_froisser_verb",
-      "text": "froisser",
-      "box": [
-        546,
-        93,
-        634,
-        119
-      ],
-      "text_box": [
-        550,
-        97,
-        630,
-        115
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Allée des Hérons →",
-      "box": [
-        900,
-        470,
-        1030,
-        560
-      ],
-      "text_box": [
-        906,
-        476,
-        1024,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue des Vieilles-Baskets",
-      "box": [
-        450,
-        668,
-        950,
-        712
-      ],
-      "text_box": [
-        456,
-        674,
-        944,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        760,
-        40,
-        860,
-        74
-      ],
-      "text_box": [
-        763,
-        43,
-        857,
-        71
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        1060,
-        40,
-        1190,
-        74
-      ],
-      "text_box": [
-        1063,
-        43,
-        1187,
-        71
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg011",
+ "street_id": "ST_habitudes",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 2,
+ "place_count": 5,
+ "street_name": "Montée des Habitudes",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Ruelle des Chaussons",
+ "divider_x": 1000,
+ "note": "Montée des Habitudes place 2/5; landmark: slipper-shaped cottage at the top of the flight. All six verbs are -er, so all sit on the LEFT houses; the right side is houses and an orchard wall with no verbs. No -er/-ir markers, no painted text.",
+ "landmark": "slipper-shaped cottage at the top of the flight",
+ "art_style": "richer painterly realism 4",
+ "text_areas": {
+  "fr_froisser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_froisser_verb",
+   "text": "froisser",
+   "box": [
+    541,
+    120,
+    629,
+    146
+   ],
+   "text_box": [
+    545,
+    124,
+    625,
+    142
+   ]
   },
-  "items": [
-    {
-      "id": "fr_flatter_verb",
-      "lemma": "flatter",
-      "gloss": "to flatter; to pet, to caress",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        80,
-        480,
-        340,
-        688
-      ],
-      "label_xy": [
-        210,
-        676
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_tricher_verb",
-      "lemma": "tricher",
-      "gloss": "to cheat",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        355,
-        405,
-        525,
-        668
-      ],
-      "label_xy": [
-        440,
-        656
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_chausser_verb",
-      "lemma": "chausser",
-      "gloss": "to put footwear; to shoe",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        630,
-        420,
-        840,
-        605
-      ],
-      "label_xy": [
-        735,
-        593
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_gaspiller_verb",
-      "lemma": "gaspiller",
-      "gloss": "to waste",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        610,
-        165,
-        760,
-        418
-      ],
-      "label_xy": [
-        685,
-        406
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_deplier_verb",
-      "lemma": "déplier",
-      "gloss": "to unfold",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        270,
-        58,
-        430,
-        252
-      ],
-      "label_xy": [
-        350,
-        240
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_froisser_verb",
-      "lemma": "froisser",
-      "gloss": "to crumple, rumple, crease; to offend",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 6,
-      "box": [
-        500,
-        15,
-        680,
-        125
-      ],
-      "label_xy": [
-        590,
-        113
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg012",
-      "box": [
-        900,
-        470,
-        1030,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Allée des Hérons",
-      "sign": "Allée des Hérons →",
-      "kind": "street",
-      "name_fr": "Allée des Hérons",
-      "name_en": "Herons Alley"
-    },
-    "back": {
-      "target": "ST_routine_seg010",
-      "box": [
-        450,
-        668,
-        950,
-        712
-      ],
-      "label": "Back up the lane to Old-Trainers Street",
-      "name": "Rue des Vieilles-Baskets",
-      "sign": "← Rue des Vieilles-Baskets",
-      "kind": "street",
-      "name_fr": "Rue des Vieilles-Baskets",
-      "name_en": "Old-Trainers Street"
-    }
+  "fr_deplier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_deplier_verb",
+   "text": "déplier",
+   "box": [
+    331,
+    253,
+    409,
+    279
+   ],
+   "text_box": [
+    335,
+    257,
+    405,
+    275
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_gaspiller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_gaspiller_verb",
+   "text": "gaspiller",
+   "box": [
+    617,
+    340,
+    713,
+    366
+   ],
+   "text_box": [
+    621,
+    344,
+    709,
+    362
+   ]
+  },
+  "fr_flatter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_flatter_verb",
+   "text": "flatter",
+   "box": [
+    211,
+    644,
+    289,
+    670
+   ],
+   "text_box": [
+    215,
+    648,
+    285,
+    666
+   ]
+  },
+  "fr_tricher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_tricher_verb",
+   "text": "tricher",
+   "box": [
+    453,
+    603,
+    531,
+    629
+   ],
+   "text_box": [
+    457,
+    607,
+    527,
+    625
+   ]
+  },
+  "fr_chausser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_chausser_verb",
+   "text": "chausser",
+   "box": [
+    676,
+    558,
+    764,
+    584
+   ],
+   "text_box": [
+    680,
+    562,
+    760,
+    580
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Allée des Hérons →",
+   "box": [
+    830,
+    280,
+    960,
+    560
+   ],
+   "text_box": [
+    836,
+    286,
+    954,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Vieilles-Baskets",
+   "box": [
+    400,
+    682,
+    1100,
+    716
+   ],
+   "text_box": [
+    406,
+    688,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Ruelle des Chaussons",
+   "box": [
+    960,
+    36,
+    1180,
+    76
+   ],
+   "text_box": [
+    964,
+    40,
+    1176,
+    72
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_froisser_verb",
+   "lemma": "froisser",
+   "gloss": "to crumple, rumple, crease; to offend",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    505,
+    44,
+    665,
+    152
+   ],
+   "label_xy": [
+    585,
+    140
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_deplier_verb",
+   "lemma": "déplier",
+   "gloss": "to unfold",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    295,
+    82,
+    445,
+    285
+   ],
+   "label_xy": [
+    370,
+    273
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_gaspiller_verb",
+   "lemma": "gaspiller",
+   "gloss": "to waste",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    560,
+    185,
+    770,
+    372
+   ],
+   "label_xy": [
+    665,
+    360
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_flatter_verb",
+   "lemma": "flatter",
+   "gloss": "to flatter; to pet, to caress",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    115,
+    480,
+    385,
+    676
+   ],
+   "label_xy": [
+    250,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_tricher_verb",
+   "lemma": "tricher",
+   "gloss": "to cheat",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    395,
+    415,
+    590,
+    635
+   ],
+   "label_xy": [
+    492,
+    623
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_chausser_verb",
+   "lemma": "chausser",
+   "gloss": "to put footwear; to shoe",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    630,
+    425,
+    810,
+    590
+   ],
+   "label_xy": [
+    720,
+    578
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg012",
+   "box": [
+    830,
+    280,
+    960,
+    560
+   ],
+   "label": "Walk on to Allée des Hérons",
+   "name": "Allée des Hérons",
+   "sign": "Allée des Hérons →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg010",
+   "box": [
+    400,
+    682,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Vieilles-Baskets",
+   "name": "Rue des Vieilles-Baskets",
+   "sign": "← Rue des Vieilles-Baskets",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "upper": 1,
+  "balcony": 1,
+  "street": 3
+ }
 }

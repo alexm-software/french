@@ -1,0 +1,361 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_communication_seg004",
+ "street_id": "ST_appels",
+ "theme_street_id": "ST_communication",
+ "sector_id": "S04_cafes",
+ "place_index": 4,
+ "place_count": 5,
+ "street_name": "Rue des Appels",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Écrivains",
+ "divider_x": 1000,
+ "note": "Rue des Appels place 4/5; landmark: small red-and-white striped lighthouse at the harbour end of the street. Seaside stretch: the street runs down to the harbour and its little lighthouse. The town crier (écrire) writes on the right; speech bubbles, scroll and sign are blank. Shrunk 0.92. No -er/-ir markers, no painted text.",
+ "landmark": "small red-and-white striped lighthouse at the harbour end of the street",
+ "art_style": "retro storybook 3",
+ "text_areas": {
+  "fr_hurler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_hurler_verb",
+   "text": "hurler",
+   "box": [
+    326,
+    126,
+    394,
+    152
+   ],
+   "text_box": [
+    330,
+    130,
+    390,
+    148
+   ]
+  },
+  "fr_citer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_citer_verb",
+   "text": "citer",
+   "box": [
+    211,
+    299,
+    269,
+    325
+   ],
+   "text_box": [
+    215,
+    303,
+    265,
+    321
+   ]
+  },
+  "fr_parler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_parler_verb",
+   "text": "parler (à / de / avec)",
+   "box": [
+    131,
+    593,
+    351,
+    619
+   ],
+   "text_box": [
+    135,
+    597,
+    347,
+    615
+   ]
+  },
+  "fr_prononcer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_prononcer_verb",
+   "text": "prononcer",
+   "box": [
+    393,
+    644,
+    489,
+    670
+   ],
+   "text_box": [
+    397,
+    648,
+    485,
+    666
+   ]
+  },
+  "fr_signifier_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_signifier_verb",
+   "text": "signifier",
+   "box": [
+    862,
+    462,
+    958,
+    488
+   ],
+   "text_box": [
+    866,
+    466,
+    954,
+    484
+   ]
+  },
+  "fr_ecrire_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecrire_verb",
+   "text": "écrire (à)",
+   "box": [
+    1051,
+    644,
+    1157,
+    670
+   ],
+   "text_box": [
+    1055,
+    648,
+    1153,
+    666
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Place des Crieurs →",
+   "box": [
+    730,
+    500,
+    822,
+    560
+   ],
+   "text_box": [
+    736,
+    506,
+    816,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Déclarations",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue des Écrivains",
+   "box": [
+    700,
+    60,
+    880,
+    100
+   ],
+   "text_box": [
+    704,
+    64,
+    876,
+    96
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_hurler_verb",
+   "lemma": "hurler",
+   "gloss": "to yell; to howl",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    250,
+    44,
+    470,
+    158
+   ],
+   "label_xy": [
+    360,
+    146
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_citer_verb",
+   "lemma": "citer",
+   "gloss": "to cite, quote; to summon",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    131,
+    162,
+    350,
+    331
+   ],
+   "label_xy": [
+    240,
+    319
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_parler_verb",
+   "lemma": "parler",
+   "gloss": "to speak",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    125,
+    369,
+    358,
+    625
+   ],
+   "label_xy": [
+    241,
+    613
+   ],
+   "prepositions": [
+    "à",
+    "de",
+    "avec"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_prononcer_verb",
+   "lemma": "prononcer",
+   "gloss": "to pronounce; to say, mention",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    362,
+    512,
+    520,
+    676
+   ],
+   "label_xy": [
+    441,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_signifier_verb",
+   "lemma": "signifier",
+   "gloss": "to signify, mean",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 5,
+   "box": [
+    825,
+    200,
+    996,
+    494
+   ],
+   "label_xy": [
+    910,
+    482
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ecrire_verb",
+   "lemma": "écrire",
+   "gloss": "to write",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    1005,
+    356,
+    1203,
+    676
+   ],
+   "label_xy": [
+    1104,
+    664
+   ],
+   "prepositions": [
+    "à"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_communication_seg005",
+   "box": [
+    730,
+    500,
+    822,
+    560
+   ],
+   "label": "Walk on to Place des Crieurs",
+   "name": "Place des Crieurs",
+   "sign": "Place des Crieurs →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_communication_seg003",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Déclarations",
+   "name": "Rue des Déclarations",
+   "sign": "← Rue des Déclarations",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "balcony": 1,
+  "street": 3,
+  "upper": 1
+ }
+}

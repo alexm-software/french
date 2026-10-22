@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "Ground-floor counting room, numbers 2 to 10 and 20. Numbers have no gender, so no left/right rule (divider null). The archway on the far left goes back to the entrance classroom; the white door at the back right leads to the articles room. Zoom: the little grey desk at the back left with the teen numbers.",
+ "note": "Sky-blue counting room with a chequered floor (cartoon style). Landmark: the giant wooden abacus on the back wall (zoom: the abacus counting corner holds 0 and 11 to 19). Numbers in counting order: back row left to right 2 3 4 5 6, front row 7 8 9 10 20. Vingt is a small blue delivery VAN (minivan shape, side door slid open) packed with twenty crates (4 rows of 5). The open door on the left goes out to the school yard; the lavender door on the right leads to the articles room. Numbers have no gender (divider null).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les nombres (1)",
+   "text": "Les nombres",
    "box": [
-    572,
-    52,
-    925,
-    176
+    445,
+    58,
+    850,
+    185
    ],
    "text_box": [
-    582,
-    62,
-    915,
-    166
+    457,
+    70,
+    838,
+    173
    ]
   }
  },
@@ -24,138 +24,138 @@
   {
    "id": "fr_deux_num",
    "box": [
-    85,
-    381,
-    285,
-    556
+    185,
+    256,
+    336,
+    435
    ],
    "scene": "identical twin boys shrugging together"
   },
   {
    "id": "fr_trois_num",
    "box": [
-    297,
-    197,
-    400,
-    525
+    412,
+    194,
+    550,
+    425
    ],
    "scene": "boy juggling three balls"
   },
   {
    "id": "fr_quatre_num",
    "box": [
-    403,
-    387,
-    569,
-    452
+    552,
+    281,
+    727,
+    423
    ],
    "scene": "grey cat lying with kittens"
   },
   {
+   "id": "fr_cinq_num",
+   "box": [
+    729,
+    281,
+    888,
+    410
+   ],
+   "scene": "washtub with a sunken toy boat and five rubber ducks"
+  },
+  {
    "id": "fr_six_num",
    "box": [
-    577,
-    181,
-    752,
-    469
+    892,
+    194,
+    1105,
+    425
    ],
-   "scene": "girl juggling six balls on a seesaw"
+   "scene": "girl juggling exactly six balls beside the seesaw"
   },
   {
    "id": "fr_sept_num",
    "box": [
-    756,
-    206,
-    897,
-    432
+    125,
+    437,
+    278,
+    625
    ],
    "scene": "tennis player with a racket and a basket of tennis balls"
   },
   {
    "id": "fr_huit_num",
    "box": [
-    902,
-    197,
-    1037,
-    426
+    340,
+    427,
+    485,
+    629
    ],
    "scene": "farmer carrying sheaves of wheat"
   },
   {
-   "id": "fr_vingt_num",
-   "box": [
-    1040,
-    244,
-    1200,
-    422
-   ],
-   "scene": "little blue delivery van loaded with crates"
-  },
-  {
-   "id": "fr_cinq_num",
-   "box": [
-    419,
-    490,
-    650,
-    660
-   ],
-   "scene": "washtub with a sunken toy boat and five rubber ducks"
-  },
-  {
    "id": "fr_neuf_num",
    "box": [
-    772,
+    500,
     435,
-    994,
-    635
+    685,
+    652
    ],
    "scene": "boy pushing away a tall stack of pancakes"
   },
   {
    "id": "fr_dix_num",
    "box": [
-    1015,
-    429,
-    1172,
-    629
+    697,
+    438,
+    828,
+    631
    ],
    "scene": "boy holding up ten spread fingers"
+  },
+  {
+   "id": "fr_vingt_num",
+   "box": [
+    835,
+    428,
+    1160,
+    635
+   ],
+   "scene": "small blue delivery van (minivan shape, sliding side door open) packed with twenty wooden crates, 4 rows of 5"
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_numbers1_z1",
    "box": [
-    404,
-    266,
-    562,
-    368
+    300,
+    160,
+    400,
+    250
    ],
-   "label": "the little grey desk at the back"
+   "label": "the giant abacus (zero and 11 to 19)"
   }
  ],
  "links": [
   {
-   "target": "R_alphabet_01",
+   "target": "B02_ecole",
    "box": [
-    70,
-    50,
-    250,
-    375
+    88,
+    69,
+    180,
+    381
    ],
-   "label": "Back through the archway to the entrance classroom",
-   "name": "L'alphabet (1)",
-   "kind": "arch"
+   "label": "Out through the open door to the school yard",
+   "name": "Petite École",
+   "kind": "door"
   },
   {
    "target": "R_articles",
    "box": [
-    1122,
-    112,
-    1203,
-    240
+    1110,
+    75,
+    1198,
+    381
    ],
-   "label": "Through the white door to the articles room",
+   "label": "Through the lavender door to the articles room",
    "name": "Les articles",
    "kind": "door"
   }

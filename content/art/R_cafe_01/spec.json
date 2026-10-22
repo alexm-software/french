@@ -1,21 +1,21 @@
 {
  "divider_x": 640,
  "kind": "room",
- "note": "v3 GROUNDED repaint 2026-10-21: one café ground floor on a single terracotta floor; every figure sits on a chair, stands on the floor or sits on the zinc counter at real size. Wooden column in the middle: feminine words left (street door, terrace window, front tables), masculine right (zinc counter, giraffe window, back tables, stairs up). Items kept >=6% from every edge. One box per item. Round 4 (2026-10-21 15:30): the front-left table is a grown-up table (a grey-haired lady in a green cardigan with the ice-cream glass; the beer with its bee and the ashtray with one unlit cigarette sit there, nobody drinking or smoking); the extra boy at the poodle's table was removed. Neutral daylight colour grade (tools/neutralize.py; warm original kept as base_warm_v3.jpg).",
+ "note": "v5 repaint 2026-10-22 (S04 fixes): café ground floor, off-white limewash walls, oak beams, terracotta floor, dark wooden column centre. Split into room (9 items) + zoom R_cafe_01_z1 (zinc counter, 6 items). No children anywhere; no beer, wine, cigarettes or ashtray in this view (beer and cigarette moved to the counter close-up as closed/untouched objects). Juggler has two arms. Feminine left of the column, masculine right. | 2026-10-22 09:00 s04 full: fr_boisson box inpainted (INDEP s04_0620 FAIL): the boa sings over a lemonade bottle (lemon label) standing on the chair seat inside its coils; no straw, no hand, no drinking.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "box": [
-    505,
-    85,
-    780,
-    172
+    630,
+    78,
+    795,
+    150
    ],
    "text_box": [
-    525,
-    95,
-    760,
-    162
+    652,
+    90,
+    772,
+    138
    ]
   }
  },
@@ -23,216 +23,164 @@
   {
    "id": "fr_glace_noun",
    "box": [
-    100,
-    335,
-    268,
-    600
+    105,
+    330,
+    300,
+    640
    ],
-   "scene": "A grey-haired lady in a green cardigan happily licks an ICE CREAM piled high in a tall GLASS (GLAHS)."
-  },
-  {
-   "id": "fr_biere_noun",
-   "box": [
-    272,
-    446,
-    324,
-    568
-   ],
-   "scene": "A BEE in the AIR (BYEHR) hovers over a frothy glass of BEER on the green-cardigan lady's grown-up table; nobody drinks it."
-  },
-  {
-   "id": "fr_cigarette_noun",
-   "box": [
-    327,
-    520,
-    380,
-    568
-   ],
-   "scene": "Same as English 'cigarette' (said see-gah-REHT): one unlit CIGARETTE lies in the ashtray on the green-cardigan lady's grown-up table; nobody smokes it."
+   "scene": "A grey-haired lady in a green cardigan happily licks an ICE CREAM sundae piled high in a tall GLASS (GLAHS) at her round marble table.",
+   "label_xy": [
+    202,
+    630
+   ]
   },
   {
    "id": "fr_terrasse_noun",
    "box": [
-    265,
-    100,
-    415,
-    296
+    282,
+    108,
+    410,
+    300
    ],
-   "scene": "Same as English 'terrace' (said teh-RAHS): through the open window, two friends chat at a sunny café TERRACE table under a parasol."
+   "scene": "Two grown-up friends chat at a sunny café TERRACE table (teh-RAHS) under a cream parasol, seen through the open window.",
+   "label_xy": [
+    346,
+    290
+   ]
   },
   {
    "id": "fr_soif_noun",
    "box": [
-    270,
-    300,
-    420,
-    442
+    305,
+    312,
+    435,
+    505
    ],
-   "scene": "A SUAVE fox in a bow tie (SWAHF) is dying of THIRST, tongue out, reaching for a water jug."
-  },
-  {
-   "id": "fr_boisson_noun",
-   "box": [
-    438,
-    304,
-    588,
-    600
-   ],
-   "scene": "A BOY sings a SONG (bwah-SOHN) into a bottle of fizzy DRINK as if it were a microphone."
+   "scene": "A SUAVE fox in a bow tie (SWAHF) is dying of THIRST, tongue hanging out, reaching a paw for the water jug on his little table.",
+   "label_xy": [
+    370,
+    495
+   ]
   },
   {
    "id": "fr_tasse_noun",
    "box": [
-    428,
-    192,
-    548,
-    300
+    437,
+    125,
+    540,
+    520
    ],
-   "scene": "A juggler TOSSES (TAHS) a CUP and saucer high in the air."
+   "scene": "A bearded juggler in a striped shirt TOSSES (TAHS) a white CUP high into the air with one hand, its saucer ready in the other.",
+   "label_xy": [
+    488,
+    510
+   ]
   },
   {
-   "id": "fr_cafe_noun",
+   "id": "fr_boisson_noun",
    "box": [
-    660,
-    228,
-    708,
-    335
+    541,
+    335,
+    652,
+    595
    ],
-   "scene": "Same as English 'café' (said kah-FAY): a sleepy owl perched on the zinc bar sips a tiny cup of black COFFEE to stay awake."
-  },
-  {
-   "id": "fr_the_noun",
-   "box": [
-    712,
-    255,
-    810,
-    388
-   ],
-   "scene": "A ginger cat sitting on the bar swishes its long TAIL (TAY) down the counter side, its cup of TEA by its paw."
-  },
-  {
-   "id": "fr_bar_noun",
-   "box": [
-    650,
-    392,
-    850,
-    490
-   ],
-   "scene": "Same as English 'bar' (said BAHR): the zinc BAR counter is polished so bright it gleams like one giant silver BAR."
+   "scene": "A big green BOA sings a SONG (bwah-SOHN) on a café chair, music notes flying, its coils hugging a bottle of fizzy lemonade DRINK that stands on the seat like a microphone.",
+   "label_xy": [
+    596,
+    585
+   ]
   },
   {
    "id": "fr_plateau_noun",
    "box": [
-    816,
-    205,
-    922,
-    388
+    675,
+    180,
+    832,
+    462
    ],
-   "scene": "A waitress gasps 'OH!' as her TRAY of flat ('PLAT') plates wobbles (plah-TOH)."
+   "scene": "A moustached waiter hops on one leg holding his TRAY of cups up FLAT ('plat'), with one more cup balanced on his raised TOE (plah-TOH).",
+   "label_xy": [
+    754,
+    452
+   ]
   },
   {
    "id": "fr_jus_noun",
    "box": [
-    928,
-    135,
-    1060,
-    306
+    855,
+    118,
+    965,
+    252
    ],
-   "scene": "A ZOO giraffe (ZHEW) pokes its head in through the window to sip orange JUICE through a very long straw."
-  },
-  {
-   "id": "fr_aperitif_noun",
-   "box": [
-    925,
-    322,
-    1001,
-    420
-   ],
-   "scene": "Same as English 'aperitif' (said ah-pay-ree-TEEF): a white goose sits at a little table with its small pre-dinner APERITIF glass and a bowl of olives."
+   "scene": "A ZOO giraffe (ZHEW) pokes its head in through the window, its very long straw dipped in a glass of orange JUICE on the sill.",
+   "label_xy": [
+    910,
+    242
+   ]
   },
   {
    "id": "fr_bistrot_noun",
    "box": [
-    1114,
-    284,
-    1182,
-    402
+    905,
+    255,
+    1095,
+    350
    ],
-   "scene": "Same as English 'bistro', silent t (bees-TROH): a curly poodle sits at its favourite little BISTRO table by the stairs, sipping coffee."
+   "scene": "Two BEES THROW (bees-TROH) a sugar cube to each other above the little red-checked tables of the BISTRO.",
+   "label_xy": [
+    1000,
+    340
+   ]
   },
   {
    "id": "fr_tilleul_noun",
    "box": [
-    870,
-    350,
-    1150,
-    588
+    835,
+    355,
+    1190,
+    640
    ],
-   "scene": "Beside a chocolate YULE log, granny pours LIME-BLOSSOM TEA (tee-YUHL), a sprig of yellow linden flowers on her table.",
-   "polygon": [
-    [
-     1005,
-     350
-    ],
-    [
-     1108,
-     350
-    ],
-    [
-     1108,
-     408
-    ],
-    [
-     1150,
-     408
-    ],
-    [
-     1150,
-     588
-    ],
-    [
-     870,
-     588
-    ],
-    [
-     870,
-     426
-    ],
-    [
-     1005,
-     426
-    ]
-   ],
+   "scene": "A granny in spectacles pours pale LIME-BLOSSOM TEA (tee-YUHL) beside a chocolate YULE log, a sprig of yellow linden flowers on her table.",
    "label_xy": [
-    1010,
-    578
+    1012,
+    630
    ]
   }
  ],
+ "zoom_from": {
+  "room_id": "R_cafe_01_z1",
+  "box": [
+   598,
+   228,
+   672,
+   332
+  ],
+  "label": "zinc counter (back wall)"
+ },
  "links": [
+  {
+   "target": "B08_cafe",
+   "box": [
+    70,
+    70,
+    228,
+    328
+   ],
+   "label": "Front door: out to the square",
+   "name": "Café de la Place (outside)",
+   "kind": "exit"
+  },
   {
    "target": "R_cafe_02",
    "box": [
-    1130,
-    45,
-    1203,
-    280
+    1100,
+    55,
+    1235,
+    260
    ],
    "label": "Stairs up to the first floor",
    "name": "Café de la Place — étage",
    "kind": "stairs_up"
-  },
-  {
-   "target": "B08_cafe",
-   "box": [
-    77,
-    105,
-    215,
-    330
-   ],
-   "label": "Front door: out to the street",
-   "name": "Café de la Place (outside)",
-   "kind": "exit"
   }
  ]
 }

@@ -1,0 +1,361 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_movement_seg007",
+ "street_id": "ST_departs",
+ "theme_street_id": "ST_movement",
+ "sector_id": "S08_travel",
+ "place_index": 2,
+ "place_count": 5,
+ "street_name": "Boulevard des Départs",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Quai des Retours",
+ "divider_x": 935,
+ "note": "Boulevard des Départs place 2/5; landmark: tall red-and-white striped mast with a big orange windsock. Windsock mast in the middle of the boulevard. All -er scenes left of the divider; the carpenter bringing the table back (revenir) alone on the right. Repainted once (weightlifter gives up, crow on the ledge), terrier+crow tug edit pasted, a stray rat cloned out; cooled k 0.5; shrunk 0.9. No -er/-ir markers, no painted text. 10:50Z streets worker 4: stray second rat (outside the rattraper box, the \"friend\" of the data hook) removed with a shifted cobble copy; rattraper hook rewritten without the friend (qa_025). Facades recoloured sage-green plaster for gate 13 (was 0.817 vs seg009). Backup work/backups/streets/dep_g13/.",
+ "landmark": "tall red-and-white striped mast with a big orange windsock",
+ "art_style": "clean realism 4",
+ "text_areas": {
+  "fr_recuperer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_recuperer_verb",
+   "text": "récupérer",
+   "box": [
+    158,
+    203,
+    254,
+    229
+   ],
+   "text_box": [
+    162,
+    207,
+    250,
+    225
+   ]
+  },
+  "fr_rester_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rester_verb",
+   "text": "rester (à / chez)",
+   "box": [
+    142,
+    531,
+    266,
+    557
+   ],
+   "text_box": [
+    146,
+    535,
+    262,
+    553
+   ]
+  },
+  "fr_renoncer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_renoncer_verb",
+   "text": "renoncer (à)",
+   "box": [
+    363,
+    534,
+    489,
+    560
+   ],
+   "text_box": [
+    367,
+    538,
+    485,
+    556
+   ]
+  },
+  "fr_rattraper_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rattraper_verb",
+   "text": "rattraper",
+   "box": [
+    581,
+    586,
+    677,
+    612
+   ],
+   "text_box": [
+    585,
+    590,
+    673,
+    608
+   ]
+  },
+  "fr_reculer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_reculer_verb",
+   "text": "reculer",
+   "box": [
+    806,
+    593,
+    884,
+    619
+   ],
+   "text_box": [
+    810,
+    597,
+    880,
+    615
+   ]
+  },
+  "fr_revenir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_revenir_verb",
+   "text": "revenir (de / à)",
+   "box": [
+    977,
+    524,
+    1129,
+    550
+   ],
+   "text_box": [
+    981,
+    528,
+    1125,
+    546
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Chemin des Grimpeurs →",
+   "box": [
+    585,
+    405,
+    665,
+    470
+   ],
+   "text_box": [
+    591,
+    411,
+    659,
+    464
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Place des Départs",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Quai des Retours",
+   "box": [
+    380,
+    48,
+    580,
+    86
+   ],
+   "text_box": [
+    384,
+    52,
+    576,
+    82
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_recuperer_verb",
+   "lemma": "récupérer",
+   "gloss": "to get back",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    135,
+    148,
+    278,
+    235
+   ],
+   "label_xy": [
+    206,
+    223
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rester_verb",
+   "lemma": "rester",
+   "gloss": "to stay",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    140,
+    494,
+    269,
+    563
+   ],
+   "label_xy": [
+    204,
+    551
+   ],
+   "prepositions": [
+    "à",
+    "chez"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_renoncer_verb",
+   "lemma": "renoncer",
+   "gloss": "to give up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    330,
+    365,
+    522,
+    566
+   ],
+   "label_xy": [
+    426,
+    554
+   ],
+   "prepositions": [
+    "à"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rattraper_verb",
+   "lemma": "rattraper",
+   "gloss": "to catch up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    524,
+    515,
+    735,
+    618
+   ],
+   "label_xy": [
+    629,
+    606
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_reculer_verb",
+   "lemma": "reculer",
+   "gloss": "to move back",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    795,
+    472,
+    895,
+    625
+   ],
+   "label_xy": [
+    845,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_revenir_verb",
+   "lemma": "revenir",
+   "gloss": "to come back",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    975,
+    390,
+    1131,
+    556
+   ],
+   "label_xy": [
+    1053,
+    544
+   ],
+   "prepositions": [
+    "de",
+    "à"
+   ],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_movement_seg008",
+   "box": [
+    585,
+    405,
+    665,
+    470
+   ],
+   "label": "Walk on to Chemin des Grimpeurs",
+   "name": "Chemin des Grimpeurs",
+   "sign": "Chemin des Grimpeurs →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_movement_seg006",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Place des Départs",
+   "name": "Place des Départs",
+   "sign": "← Place des Départs",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "street": 5
+ }
+}

@@ -1,111 +1,105 @@
 {
-  "divider_x": 1000,
-  "name": "Rue des Gestes — Allée des Porteurs · porter, poser, placer",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hotel porter carrying a tower of suitcases, woman posing as she puts down a vase, traveller returning home with his globe), balcony (man throwing an old boot down into the bin), upper (woman taking off her huge feathered hat), roof (man seating a tabby cat on a chair). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_porter_verb",
-      "box": [
-        287,
-        238,
-        444,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_poser_verb",
-      "box": [
-        456,
-        394,
-        700,
-        650
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_retourner_verb",
-      "box": [
-        787,
-        400,
-        906,
-        619
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_jeter_verb",
-      "box": [
-        469,
-        62,
-        644,
-        331
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_enlever_verb",
-      "box": [
-        662,
-        88,
-        775,
-        244
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_placer_verb",
-      "box": [
-        100,
-        12,
-        300,
-        188
-      ],
-      "tier": "roof"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg007",
-      "box": [
-        960,
-        440,
-        1100,
-        540
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue des Lanceurs",
-      "sign": "Rue des Lanceurs →",
-      "name_fr": "Rue des Lanceurs",
-      "name_en": "Throwers' Street"
-    },
-    "back": {
-      "target": "ST_control_seg005",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Farm-Gate Lane",
-      "name": "Chemin de la Barrière",
-      "sign": "← Chemin de la Barrière",
-      "name_fr": "Chemin de la Barrière",
-      "name_en": "Farm-Gate Lane"
-    }
+ "name": "Allée des Porteurs",
+ "street_name": "Rue des Débardeurs",
+ "divider_x": 1100,
+ "art_style": "painterly realism 3.5",
+ "landmark": "tall wooden porters' hoist tower with a big pulley wheel lifting a pallet of crates",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_porter_verb",
+   "box": [
+    331,
+    262,
+    475,
+    676
+   ],
+   "tier": "street"
   },
-  "signs": {
-    "er": [
-      880,
-      25,
-      980,
-      59
-    ],
-    "irre": [
-      1000,
-      25,
-      1120,
-      59
-    ]
+  {
+   "id": "fr_poser_verb",
+   "box": [
+    488,
+    400,
+    706,
+    644
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_retourner_verb",
+   "box": [
+    794,
+    406,
+    875,
+    612
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_jeter_verb",
+   "box": [
+    478,
+    106,
+    678,
+    312
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_enlever_verb",
+   "box": [
+    681,
+    119,
+    769,
+    269
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_placer_verb",
+   "box": [
+    150,
+    56,
+    344,
+    206
+   ],
+   "tier": "roof"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg007",
+   "box": [
+    890,
+    470,
+    980,
+    570
+   ],
+   "label": "Walk on to Rue des Lanceurs",
+   "name": "Rue des Lanceurs",
+   "sign": "Rue des Lanceurs →"
+  },
+  "back": {
+   "target": "ST_control_seg005",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Chemin de la Barrière",
+   "name": "Chemin de la Barrière",
+   "sign": "← Chemin de la Barrière"
+  }
+ },
+ "signs": {
+  "name": [
+   700,
+   50,
+   940,
+   90
+  ]
+ },
+ "note": "Rue des Débardeurs place 2/5; landmark: tall wooden porters' hoist tower with a big pulley wheel lifting a pallet of crates. All six verbs are -er, so they are on the whitewashed houses on the left; the hoist tower stands on the right where the street goes on. Top margin extended a little so the roof-terrace man clears the 6% band. No -er/-ir markers, no painted text."
 }
