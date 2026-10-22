@@ -1093,10 +1093,13 @@ function sceneMarkup(scene, words, zooms) {
       return;
     }
     const zoomBox = isZoomTarget(link.target) ? ` data-zoom-box="${link.box.join(",")}"` : "";
+    const arrow = exitKind(link.arrow);
+    if (arrow && !state.nav[arrow]) state.nav[arrow] = hashFor(link.target);
     const way = wayMarkup(link, "", signs.get(`link:${index}`) || "");
     const label = hoverLabel(link, "open");
     const tag = way ? "" : nameTag(label, link.box);
-    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${tag}</g>`);
+    const arrowAttr = arrow ? ` data-arrow="${arrow}"` : "";
+    parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${arrowAttr}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${tag}</g>`);
   });
   Object.entries(scene.exits || {}).forEach(([key, exit]) => {
     const kind = exitKind(key);

@@ -237,6 +237,56 @@ def assert_wide_passages():
     assert labelled["label_xy"][1] > labelled["box"][1]
 
 
+def assert_fontaine_arrows():
+    """Every fountain door is an arrow key, and the two gates open the square."""
+    arrows = {
+        "B01_fontaine": {"R_greet": "forward", "R_polite": "left", "R_farewell": "right", "S01_sector": "back"},
+        "R_greet": {"B01_fontaine": "left", "R_polite": "right"},
+        "R_polite": {"R_exclaim_01": "left", "R_greet": "right"},
+        "R_polite_z1": {"R_polite": "back"},
+        "R_exclaim_01": {"R_exclaim_02": "left", "B01_fontaine": "forward", "R_polite": "right"},
+        "R_exclaim_02": {"R_exclaim_03": "left", "B01_fontaine": "forward", "R_exclaim_01": "right"},
+        "R_exclaim_03": {"R_farewell": "left", "B01_fontaine": "forward", "R_exclaim_02": "right"},
+        "R_farewell": {"R_exclaim_03": "left", "S01_sector": "forward", "B01_fontaine": "back"},
+    }
+    rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    graph = {}
+    for room_id, expected in arrows.items():
+        raw = load(ROOT / "content" / "art" / room_id / "hotspots.json")
+        scene = normalize_scene(raw)
+        got = {link["target"]: link.get("arrow") for link in scene["links"]}
+        assert got == expected, (room_id, got)
+        if room_id != "B01_fontaine":
+            painted = {item["id"] for item in raw["items"]}
+            assert painted == set(rooms[room_id]["words"]), room_id
+            assert rooms[room_id]["sector_id"] == "S01_beginner"
+        graph[room_id] = set(expected)
+    # Painted steps back to Place du Village. The pavilion and its desk sit
+    # further along the ring, so they take the sector button (one click).
+    reverse = {}
+    for node, dests in graph.items():
+        for dest in dests:
+            reverse.setdefault(dest, []).append(node)
+    hops = {"S01_sector": 0}
+    queue = ["S01_sector"]
+    while queue:
+        node = queue.pop(0)
+        for src in reverse.get(node, []):
+            if src in hops:
+                continue
+            hops[src] = hops[node] + 1
+            queue.append(src)
+    assert hops["B01_fontaine"] == 1
+    assert hops["R_farewell"] == 1
+    assert hops["R_greet"] == 2
+    for room_id in ("R_exclaim_01", "R_exclaim_02", "R_exclaim_03"):
+        assert hops[room_id] == 2, (room_id, hops[room_id])
+    assert hops["R_polite"] == 3
+    assert hops["R_polite_z1"] == 4
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert "exitKind(link.arrow)" in client and 'data-arrow="' in client
+
+
 def assert_back_strip_stays_visible(client):
     """The strip back is a header control, not an item in the menu that hides under 820px."""
     shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
@@ -594,7 +644,18 @@ def main():
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
+    assert_fontaine_arrows()
+    greet_gate = next(link for link in greet["scene"]["links"] if link["target"] == "B01_fontaine")
+    assert greet_gate["arrow"] == "left"
+    desk = load(DATA / "rooms" / "R_polite_z1.json")
+    assert desk["scene"]["links"][0]["arrow"] == "back"
+    assert "back" not in desk["scene"]["exits"]
+    assert desk["sector_id"] == "S01_beginner"
     square = load(DATA / "sectors" / "S01_beginner.json")
+    fontaine = next(building for building in square["buildings"] if building["id"] == "B01_fontaine")
+    square_gate = next(link for link in fontaine["scene"]["links"] if link["target"] == "S01_sector")
+    assert square_gate["arrow"] == "back" and square_gate["signed_by"] == "dir_square"
+    assert fontaine["sector_id"] == "S01_beginner"
     assert square["open"] is True
     assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}

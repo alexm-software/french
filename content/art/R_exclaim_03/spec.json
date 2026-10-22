@@ -1,161 +1,176 @@
 {
- "divider_x": 640,
  "kind": "room",
- "note": "Exclamation garden 3 (pond, puppet theatre, carter's lane). Interjections only (no gender).",
+ "divider_x": 640,
+ "note": "Pond garden (east), looking west. Top-hat fountain in the distance (back to the entrance), rose arch back right (back to the rose garden), path branching off left toward the farewell corner. Interjections only (no gender).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Aïe ! Zut ! — Exclamations (3)",
    "box": [
-    497,
-    71,
-    788,
+    522,
+    80,
+    760,
     160
    ],
    "text_box": [
-    506,
-    79,
-    779,
-    152
+    528,
+    86,
+    754,
+    154
    ]
   }
  },
- "items": [
-  {
-   "id": "fr_vlan_intj",
-   "box": [
-    130,
-    132,
-    367,
-    369
-   ],
-   "scene": "garden shed door slams VLAN, pots jump"
-  },
-  {
-   "id": "fr_zut_intj",
-   "box": [
-    429,
-    178,
-    513,
-    367
-   ],
-   "scene": "juggler drops his balls: zut!"
-  },
-  {
-   "id": "fr_aie_intj",
-   "box": [
-    123,
-    385,
-    314,
-    596
-   ],
-   "scene": "boy stubs his toe on a chair: aïe!"
-  },
-  {
-   "id": "fr_ciao_intj",
-   "box": [
-    329,
-    372,
-    494,
-    462
-   ],
-   "scene": "girl in a gondola waves ciao"
-  },
-  {
-   "id": "fr_ouh_intj",
-   "box": [
-    543,
-    218,
-    709,
-    409
-   ],
-   "scene": "children go ouh! at the puppet dragon"
-  },
-  {
-   "id": "fr_ouah_intj",
-   "box": [
-    722,
-    165,
-    797,
-    416
-   ],
-   "scene": "boy shouts ouah! (wow) at his giant kite"
-  },
-  {
-   "id": "fr_pff_intj",
-   "box": [
-    498,
-    413,
-    669,
-    629
-   ],
-   "scene": "boy puffs pff! pushing his bike"
-  },
-  {
-   "id": "fr_ohe_intj",
-   "box": [
-    801,
-    282,
-    933,
-    334
-   ],
-   "scene": "boy in a rowing boat waves his cap: ohé!"
-  },
-  {
-   "id": "fr_hue_intj",
-   "box": [
-    822,
-    338,
-    1116,
-    544
-   ],
-   "scene": "carter calls hue! and the pony trots off"
-  },
-  {
-   "id": "fr_beurk_intj",
-   "box": [
-    715,
-    548,
-    909,
-    649
-   ],
-   "scene": "dachshund turns from a bowl of soggy broccoli: beurk!"
-  },
-  {
-   "id": "fr_dia_intj",
-   "box": [
-    1001,
-    119,
-    1179,
-    334
-   ],
-   "scene": "carthorse gets a light-bulb idea and turns left: dia"
-  }
- ],
  "links": [
+  {
+   "target": "B01_fontaine",
+   "box": [
+    600,
+    190,
+    690,
+    278
+   ],
+   "label": "Path back to the fountain and the entrance",
+   "name": "Fontaine des Salutations (entrée)",
+   "kind": "path",
+   "arrow": "forward"
+  },
   {
    "target": "R_exclaim_02",
    "box": [
-    266,
-    600,
-    470,
-    720
+    1065,
+    135,
+    1190,
+    228
    ],
-   "label": "Back down the path to the rose garden",
-   "name": "Fontaine — jardin des exclamations (2)",
-   "kind": "path"
+   "label": "Through the rose arch back to the rose garden",
+   "name": "Fontaine — roseraie des exclamations (2)",
+   "kind": "arch",
+   "arrow": "right"
   },
   {
    "target": "R_farewell",
    "box": [
-    1121,
-    413,
-    1280,
-    545
+    0,
+    420,
+    112,
+    480
    ],
-   "label": "On along the lane to the farewell gate",
+   "label": "Path on to the farewell corner",
    "name": "Fontaine — porte des adieux",
-   "kind": "path"
+   "kind": "path",
+   "arrow": "left"
+  }
+ ],
+ "items": [
+  {
+   "id": "fr_vlan_intj",
+   "box": [
+    156,
+    172,
+    356,
+    362
+   ],
+   "scene": "garden shed door slams VLAN, flowerpots jump"
+  },
+  {
+   "id": "fr_zut_intj",
+   "box": [
+    383,
+    133,
+    430,
+    375
+   ],
+   "scene": "juggler drops his balls: zut!"
+  },
+  {
+   "id": "fr_ouh_intj",
+   "box": [
+    436,
+    200,
+    563,
+    419
+   ],
+   "scene": "children go ouh! at the puppet dragon"
+  },
+  {
+   "id": "fr_ciao_intj",
+   "box": [
+    605,
+    281,
+    776,
+    497
+   ],
+   "scene": "girl in a gondola waves ciao to friends on the bridge"
+  },
+  {
+   "id": "fr_ohe_intj",
+   "box": [
+    779,
+    325,
+    909,
+    456
+   ],
+   "scene": "sailor waves ohé from his little sailboat"
+  },
+  {
+   "id": "fr_hue_intj",
+   "box": [
+    852,
+    94,
+    978,
+    322
+   ],
+   "scene": "carter's grey horse sets off under the rainbow: hue!"
+  },
+  {
+   "id": "fr_dia_intj",
+   "box": [
+    981,
+    231,
+    1188,
+    494
+   ],
+   "scene": "carthorse with a light-bulb idea turns left: dia!"
+  },
+  {
+   "id": "fr_aie_intj",
+   "box": [
+    117,
+    400,
+    328,
+    609
+   ],
+   "scene": "boy stubs his toe on a chair: aïe!"
+  },
+  {
+   "id": "fr_pff_intj",
+   "box": [
+    419,
+    425,
+    602,
+    638
+   ],
+   "scene": "tired boy pushes his bike: pff!"
+  },
+  {
+   "id": "fr_beurk_intj",
+   "box": [
+    617,
+    544,
+    820,
+    675
+   ],
+   "scene": "dachshund turns away from soggy broccoli: beurk!"
+  },
+  {
+   "id": "fr_ouah_intj",
+   "box": [
+    852,
+    497,
+    1031,
+    628
+   ],
+   "scene": "terrier barks wah! at a giant bone"
   }
  ]
 }

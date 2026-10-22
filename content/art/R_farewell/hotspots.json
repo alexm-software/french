@@ -4,22 +4,38 @@
  "height": 720,
  "divider_x": 640,
  "kind": "room",
- "note": "Farewell corner at the second garden gate. All phrases (no gender). The gate leads out to the fountain entrance and the square.",
+ "note": "Farewell corner (south-east), looking east at the farewell gate in the garden wall, which opens onto the Place du Village. Path back along the pond to the pond garden on the left; foreground path back to the fountain. All phrases (no gender).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Au revoir ! — Adieux",
    "box": [
-    175,
-    141,
-    338,
-    218
+    388,
+    190,
+    488,
+    246
    ],
    "text_box": [
-    182,
-    147,
-    331,
-    211
+    394,
+    196,
+    482,
+    240
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "Place du Village",
+   "box": [
+    592,
+    108,
+    752,
+    142
+   ],
+   "text_box": [
+    598,
+    112,
+    746,
+    138
    ]
   }
  },
@@ -32,16 +48,16 @@
    "side": "center",
    "label": "à tout à l'heure",
    "box": [
-    128,
-    235,
-    443,
-    360
+    203,
+    250,
+    484,
+    380
    ],
    "label_xy": [
-    286,
-    350
+    344,
+    370
    ],
-   "scene": "tugboat gives a toot, fisherman waves a lure"
+   "scene": "tugboat toots, fisherman waves a lure"
   },
   {
    "id": "fr_a_plus_tard_phrase",
@@ -51,14 +67,14 @@
    "side": "center",
    "label": "à plus tard",
    "box": [
-    107,
-    365,
-    309,
-    634
+    169,
+    385,
+    360,
+    644
    ],
    "label_xy": [
-    208,
-    624
+    264,
+    634
    ],
    "scene": "A-plus boy steps in tar: see you later!"
   },
@@ -70,16 +86,16 @@
    "side": "center",
    "label": "bon week-end",
    "box": [
-    314,
-    385,
-    509,
-    579
+    366,
+    398,
+    539,
+    575
    ],
    "label_xy": [
-    412,
-    569
+    452,
+    565
    ],
-   "scene": "dog with a bone lounges all weekend"
+   "scene": "dog with a bone lounges all weekend in a deckchair"
   },
   {
    "id": "fr_au_revoir_phrase",
@@ -89,16 +105,16 @@
    "side": "center",
    "label": "au revoir",
    "box": [
-    579,
-    173,
-    699,
-    302
+    594,
+    250,
+    711,
+    333
    ],
    "label_xy": [
-    639,
-    292
+    652,
+    323
    ],
-   "scene": "car revs 'vwah!' and drives off waving"
+   "scene": "little car revs out through the gate, driver waving"
   },
   {
    "id": "fr_a_demain_phrase",
@@ -108,14 +124,14 @@
    "side": "center",
    "label": "à demain",
    "box": [
-    524,
-    311,
-    736,
-    530
+    544,
+    338,
+    735,
+    531
    ],
    "label_xy": [
-    630,
-    520
+    640,
+    521
    ],
    "scene": "girl waves to the snowman, 'Duh-man'"
   },
@@ -127,16 +143,16 @@
    "side": "center",
    "label": "bonne journée",
    "box": [
-    769,
-    214,
-    899,
-    454
+    758,
+    242,
+    875,
+    469
    ],
    "label_xy": [
-    834,
-    444
+    816,
+    459
    ],
-   "scene": "boy with a bun sets off on a day's journey"
+   "scene": "boy with a bun in his rucksack sets off on a journey"
   },
   {
    "id": "fr_bonne_soiree_phrase",
@@ -146,16 +162,16 @@
    "side": "center",
    "label": "bonne soirée",
    "box": [
-    929,
-    173,
-    1100,
-    327
+    898,
+    203,
+    1050,
+    340
    ],
    "label_xy": [
-    1014,
-    317
+    974,
+    330
    ],
-   "scene": "waiter hands a bun at an evening soirée"
+   "scene": "waiter hands a warm bun to an evening guest"
   },
   {
    "id": "fr_bonne_nuit_phrase",
@@ -165,16 +181,16 @@
    "side": "center",
    "label": "bonne nuit",
    "box": [
-    739,
-    459,
-    961,
-    613
+    738,
+    472,
+    930,
+    609
    ],
    "label_xy": [
-    850,
-    603
+    834,
+    599
    ],
-   "scene": "bun tucked into bed for the night"
+   "scene": "bun in a nightcap tucked into a little bed"
   },
   {
    "id": "fr_a_bientot_phrase",
@@ -184,42 +200,58 @@
    "side": "center",
    "label": "à bientôt",
    "box": [
-    965,
-    332,
-    1201,
-    620
+    934,
+    343,
+    1164,
+    613
    ],
    "label_xy": [
-    1083,
-    610
+    1049,
+    603
    ],
-   "scene": "a bee lands on a toe: see you soon"
+   "scene": "bee lands on the old man's toe"
   }
  ],
  "links": [
   {
-   "target": "B01_fontaine",
+   "target": "S01_sector",
    "box": [
-    517,
-    103,
-    575,
-    306
+    540,
+    146,
+    790,
+    240
    ],
-   "label": "Out through the garden gate (to the square)",
-   "name": "Fontaine des Salutations (entrance)",
-   "kind": "exit"
+   "label": "Out through the farewell gate to the village square",
+   "name": "Place du Village",
+   "kind": "gate",
+   "arrow": "forward",
+   "signed_by": "dir_square"
   },
   {
    "target": "R_exclaim_03",
    "box": [
-    0,
-    58,
-    167,
-    231
+    60,
+    80,
+    480,
+    185
    ],
-   "label": "Back into the exclamation garden",
-   "name": "Fontaine — jardin des exclamations (3)",
-   "kind": "path"
+   "label": "Path back along the pond to the pond garden",
+   "name": "Fontaine — mare des exclamations (3)",
+   "kind": "path",
+   "arrow": "left"
+  },
+  {
+   "target": "B01_fontaine",
+   "box": [
+    400,
+    625,
+    930,
+    720
+   ],
+   "label": "Path back to the fountain and the garden entrance",
+   "name": "Fontaine des Salutations (entrée)",
+   "kind": "path",
+   "arrow": "back"
   }
  ]
 }

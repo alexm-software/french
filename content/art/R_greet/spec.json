@@ -1,141 +1,143 @@
 {
- "divider_x": 640,
  "kind": "room",
- "note": "Greeting basin at the front of the fountain garden. Phrases have no gender (placed freely); la salutation (f) far left, le prénom (m) far right. One box per item.",
+ "divider_x": 640,
+ "note": "Greeting basin: standing at the top-hat fountain, looking back south-west. Entrance iron gate back left (to the entrance), white domed tea pavilion back right (next). Phrases have no gender; la salutation (f) far left, le prénom (m) far right.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Bonjour ! — Salutations",
    "box": [
-    710,
-    75,
-    842,
-    134
+    753,
+    144,
+    859,
+    200
    ],
    "text_box": [
-    717,
-    80,
-    835,
-    129
+    759,
+    150,
+    853,
+    194
    ]
   }
  },
- "items": [
-  {
-   "id": "fr_salutation_noun",
-   "box": [
-    100,
-    311,
-    286,
-    621
-   ],
-   "scene": "two knights raise their visors in salute"
-  },
-  {
-   "id": "fr_comment_allez_vous_phrase",
-   "box": [
-    289,
-    192,
-    463,
-    441
-   ],
-   "scene": "gentleman fox tips his hat to a badger with a tally counter"
-  },
-  {
-   "id": "fr_bonsoir_phrase",
-   "box": [
-    472,
-    265,
-    576,
-    431
-   ],
-   "scene": "girl with a jar and a swarm of fireflies"
-  },
-  {
-   "id": "fr_comment_vous_appelez_vous_phrase",
-   "box": [
-    465,
-    435,
-    622,
-    628
-   ],
-   "scene": "shy robot zaps a blank name badge"
-  },
-  {
-   "id": "fr_comment_ca_va_phrase",
-   "box": [
-    638,
-    331,
-    781,
-    562
-   ],
-   "scene": "pirate parrot on a barrel: 'come on, savvy?'"
-  },
-  {
-   "id": "fr_coucou_phrase",
-   "box": [
-    916,
-    135,
-    1054,
-    248
-   ],
-   "scene": "cuckoo pops out of a cuckoo clock"
-  },
-  {
-   "id": "fr_je_m_appelle_phrase",
-   "box": [
-    785,
-    272,
-    980,
-    458
-   ],
-   "scene": "boy with a maple leaf name badge shakes hands"
-  },
-  {
-   "id": "fr_ca_va_bien_merci_phrase",
-   "box": [
-    1016,
-    253,
-    1185,
-    458
-   ],
-   "scene": "old lady thumbs-up with a big bee"
-  },
-  {
-   "id": "fr_prenom_noun",
-   "box": [
-    870,
-    464,
-    1185,
-    662
-   ],
-   "scene": "mother pins a first-name tag on her toddler"
-  }
- ],
  "links": [
   {
    "target": "B01_fontaine",
    "box": [
-    723,
-    138,
-    830,
-    264
+    358,
+    110,
+    440,
+    330
    ],
-   "label": "Back through the gateway (to the square)",
-   "name": "Fontaine des Salutations (entrance)",
-   "kind": "exit"
+   "label": "Back through the iron gate to the garden entrance",
+   "name": "Fontaine des Salutations (entrée)",
+   "kind": "gate",
+   "arrow": "left"
   },
   {
    "target": "R_polite",
    "box": [
-    180,
-    86,
-    282,
-    247
+    950,
+    70,
+    1085,
+    262
    ],
-   "label": "Path on to the tea pavilion",
+   "label": "Path on to the white tea pavilion",
    "name": "Fontaine — le pavillon des politesses",
-   "kind": "path"
+   "kind": "path",
+   "arrow": "right"
+  }
+ ],
+ "items": [
+  {
+   "id": "fr_salutation_noun",
+   "box": [
+    128,
+    211,
+    356,
+    391
+   ],
+   "scene": "two knights in armour raise their visors in greeting"
+  },
+  {
+   "id": "fr_comment_allez_vous_phrase",
+   "box": [
+    133,
+    393,
+    430,
+    628
+   ],
+   "scene": "gentleman fox tips his top hat to a badger holding a tally counter"
+  },
+  {
+   "id": "fr_bonsoir_phrase",
+   "box": [
+    434,
+    331,
+    500,
+    539
+   ],
+   "scene": "girl lifts a glowing jar as fireflies drift out"
+  },
+  {
+   "id": "fr_comment_vous_appelez_vous_phrase",
+   "box": [
+    508,
+    438,
+    602,
+    622
+   ],
+   "scene": "shy little robot zaps a blank name badge"
+  },
+  {
+   "id": "fr_comment_ca_va_phrase",
+   "box": [
+    604,
+    367,
+    716,
+    591
+   ],
+   "scene": "pirate parrot in a tricorn hat on a barrel"
+  },
+  {
+   "id": "fr_je_m_appelle_phrase",
+   "box": [
+    722,
+    347,
+    912,
+    606
+   ],
+   "scene": "boy with a maple-leaf badge shakes hands with a girl"
+  },
+  {
+   "id": "fr_coucou_phrase",
+   "box": [
+    820,
+    203,
+    934,
+    342
+   ],
+   "scene": "cuckoo bird at a cuckoo clock on a post"
+  },
+  {
+   "id": "fr_ca_va_bien_merci_phrase",
+   "box": [
+    938,
+    266,
+    1195,
+    421
+   ],
+   "scene": "old lady gives a thumbs-up beside a big bumblebee"
+  },
+  {
+   "id": "fr_prenom_noun",
+   "box": [
+    917,
+    425,
+    1125,
+    650
+   ],
+   "scene": "mother pins a blank name tag on her toddler"
   }
  ]
 }
