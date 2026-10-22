@@ -268,6 +268,11 @@ function backTarget(place) {
     }
     if (room?.building_id) {
       const building = (state.index?.buildings || []).find((item) => item.id === room.building_id);
+      if (building?.no_building_layer || room.no_building_layer) {
+        const sector = (state.index?.sectors || []).find((item) => item.id === room.sector_id);
+        const name = localizedName(sector) || room.sector_name || room.sector_id;
+        return { href: `#/sector/${room.sector_id}`, label: tf("nav.backTo", { place: name }) };
+      }
       const name = localizedName(building) || room.building_name || room.building_id;
       return { href: `#/building/${room.building_id}`, label: tf("nav.backTo", { place: name }) };
     }
@@ -737,7 +742,11 @@ function hashFor(target) {
     const sector = (state.index?.sectors || []).find((item) => item.id.startsWith(`${prefix}_`));
     return `#/sector/${sector ? sector.id : value}`;
   }
-  if (value.startsWith("B")) return `#/building/${value}`;
+  if (value.startsWith("B")) {
+    const building = (state.index?.buildings || []).find((item) => item.id === value);
+    if (building?.no_building_layer && building.sector_id) return `#/sector/${building.sector_id}`;
+    return `#/building/${value}`;
+  }
   return `#/room/${value}`;
 }
 
@@ -951,6 +960,10 @@ function signAssignments(scene) {
     usedPortals.add(portal.id);
     assigned.set(portal.id, signId);
   };
+  portals.forEach((portal) => {
+    const signId = portal.item.signed_by;
+    if (signId && areas[signId]) claim(portal, signId);
+  });
   Object.entries(areas).forEach(([id, area]) => {
     if (area.role !== "direction" || !area.for_exit) return;
     const kind = exitKind(area.for_exit) || area.for_exit;
@@ -1592,6 +1605,10 @@ async function render() {
     else if (kind === "sector") html = sectorView(await getJSON(`data/sectors/${a}.json`));
     else if (kind === "building") {
       const buildingInfo = state.index.buildings.find((item) => item.id === a);
+      if (buildingInfo?.no_building_layer && buildingInfo.sector_id) {
+        location.replace(`#/sector/${buildingInfo.sector_id}`);
+        return;
+      }
       if (!buildingInfo) html = soonView(t("soon.unknown"));
       else {
         const sector = await getJSON(`data/sectors/${buildingInfo.sector_id}.json`);

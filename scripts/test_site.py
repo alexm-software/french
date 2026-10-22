@@ -21,6 +21,19 @@ def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+def _scene_targets(node):
+    found = []
+    if isinstance(node, dict):
+        if isinstance(node.get("target"), str):
+            found.append(node["target"])
+        for value in node.values():
+            found.extend(_scene_targets(value))
+    elif isinstance(node, list):
+        for value in node:
+            found.extend(_scene_targets(value))
+    return found
+
+
 MAP = "village_map"
 
 # Every open café-quarter view and the strip button's hierarchy parent.
@@ -242,9 +255,10 @@ def walk_site_graph():
     """Every space can reach the village map, and the map can reach every space.
 
     Upward edges are the strip back button (sector → map, building → sector,
-    room → building, zoom → parent). Downward edges are the same hierarchy
-    plus painted links and exits. A dead end cannot get back to the map.
-    An orphan cannot be reached from it.
+    room → building, or room → sector when that exterior is not a step,
+    zoom → parent). Downward edges are the same hierarchy plus painted links
+    and exits. A dead end cannot get back to the map. An orphan cannot be
+    reached from it.
     """
     source = ROOT / "data" / "source"
     sectors = load(source / "sectors.json")["sectors"]
@@ -254,7 +268,14 @@ def walk_site_graph():
     building_ids = {building["id"] for building in buildings}
     room_ids = {room["id"] for room in rooms}
     art_to_sector = {f"{sector['id'].split('_')[0]}_sector": sector["id"] for sector in sectors}
-    nodes = {MAP} | sector_ids | building_ids | room_ids
+    direct_layer = {}
+    for path in (ROOT / "content" / "art").glob("*/hotspots.json"):
+        raw = load(path)
+        building_id = raw.get("building_rooms_direct") if raw.get("no_building_layer") else ""
+        if building_id:
+            direct_layer[building_id] = art_to_sector[path.parent.name]
+    # A skipped exterior is not a page, so the map must reach its rooms without it.
+    nodes = {MAP} | sector_ids | (building_ids - set(direct_layer)) | room_ids
     graph = {node: set() for node in nodes}
     reverse = defaultdict(set)
     hierarchy = {}
@@ -277,11 +298,14 @@ def walk_site_graph():
         for key in ("buildings", "streets"):
             for building_id in sector.get(key) or []:
                 listed[building_id].add(sector["id"])
-                edge(sector["id"], building_id, "sector contains building")
+                if building_id not in direct_layer:
+                    edge(sector["id"], building_id, "sector contains building")
 
     for building in buildings:
         owners = listed.get(building["id"]) or set()
         assert owners == {building["sector_id"]}, (building["id"], owners, building.get("sector_id"))
+        if building["id"] in direct_layer:
+            continue
         back_edge(building["id"], building["sector_id"], "back to the sector")
         for room_id in building.get("rooms") or []:
             edge(building["id"], room_id, "building contains room")
@@ -295,7 +319,10 @@ def walk_site_graph():
             back_edge(room["id"], parent, "back to the parent room")
         else:
             assert room.get("building_id") in building_ids, room["id"]
-            back_edge(room["id"], room["building_id"], "back to the building")
+            if room["building_id"] in direct_layer:
+                back_edge(room["id"], direct_layer[room["building_id"]], "back to the sector")
+            else:
+                back_edge(room["id"], room["building_id"], "back to the building")
         for zoom_id in zoom_ids[room["id"]]:
             edge(room["id"], zoom_id, "room contains zoom")
 
@@ -311,6 +338,8 @@ def walk_site_graph():
     art = ROOT / "content" / "art"
     for path in sorted(art.glob("*/hotspots.json")):
         folder = path.parent.name
+        if folder in direct_layer:
+            continue
         owner = art_to_sector.get(folder) or (folder if folder in nodes else None)
         assert owner, f"painted folder {folder} is not a space"
         raw = load(path)
@@ -365,7 +394,7 @@ def walk_site_graph():
         if noun_genders >= {"m", "f"}:
             assert wall == "back wall", (room["id"], wall, noun_genders)
     assert seen_zooms == new_zooms
-    assert len(nodes) == 1 + len(sectors) + len(buildings) + len(rooms), len(nodes)
+    assert len(nodes) == 1 + len(sectors) + len(buildings) - len(direct_layer) + len(rooms), len(nodes)
     stray = sorted(nodes - {MAP} - set(hierarchy))
     assert not stray, f"strip back missing: {stray[:12]}"
 
@@ -622,8 +651,14 @@ def main():
     home = load(DATA / "sectors" / "S02_home.json")
     assert home["open"] is True
     assert home["scene"]["image"].endswith("art/S02_sector/base.jpg")
-    assert {link["target"] for link in home["scene"]["links"]} == {"B05_maison", "S01_sector", "ST_routine_seg001", "ST_control_seg001"}
+    assert {link["target"] for link in home["scene"]["links"]} == {
+        "R_garage", "R_kitchen_01", "R_entrance_04", "R_dining", "R_entrance_03", "R_pets",
+        "S01_sector", "ST_routine_seg001", "ST_control_seg001",
+    }
+    front = next(link for link in home["scene"]["links"] if link["target"] == "R_entrance_04")
+    assert front["signed_by"] == "maison_name"
     assert not any(link.get("soon") for link in home["scene"]["links"])
+    assert "B05_maison" not in {link["target"] for link in home["scene"]["links"]}
     control = load(ROOT / "content" / "art" / "ST_control_seg001" / "hotspots.json")
     assert control["view"] == "street_perspective"
     assert control["exits"]["forward"]["target"] == "ST_control_seg002"
@@ -643,10 +678,13 @@ def main():
     assert last["exits"]["forward"]["target"] == "S02_sector"
     assert last["exits"]["back"]["target"] == "ST_routine_seg018"
     house = next(item for item in home["buildings"] if item["id"] == "B05_maison")
-    assert house["scene"]["image"].endswith("art/B05_maison/base.jpg")
-    assert any(link["target"] == "R_entrance_04" and not link.get("soon") for link in house["scene"]["links"])
+    assert house["no_building_layer"] is True
+    assert not house.get("scene")
+    house_index = next(item for item in load(DATA / "index.json")["buildings"] if item["id"] == "B05_maison")
+    assert house_index["no_building_layer"] is True and house_index["sector_id"] == "S02_home"
     entrance = load(DATA / "rooms" / "R_entrance_01.json")
     assert entrance["building_id"] == "B05_maison"
+    assert entrance["no_building_layer"] is True
     assert any(link["target"] == "R_living" for link in entrance["scene"]["links"])
     outside = {"R_entrance_03", "R_garage", "R_garden", "R_kitchen_01", "R_pets"}
     upstairs = {
@@ -655,9 +693,19 @@ def main():
     for room_id in upstairs:
         links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
         assert all(link["target"] not in {"B05_maison", "S02_sector"} for link in links), room_id
+        built = load(DATA / "rooms" / f"{room_id}.json")
+        assert built["no_building_layer"] is True
+        assert "B05_maison" not in _scene_targets(built.get("scene"))
     for room_id in outside:
         links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
-        assert any(link["target"] == "B05_maison" for link in links), room_id
+        assert any(link["target"] == "S02_sector" for link in links), room_id
+        assert all(link["target"] != "B05_maison" for link in links), room_id
+    leaked = []
+    for path in DATA.rglob("*.json"):
+        for target in _scene_targets(load(path)):
+            if target == "B05_maison":
+                leaked.append(f"{path.name}:{target}")
+    assert not leaked, leaked[:8]
     quiz = load(DATA / "quiz" / "sector" / "S04_cafes.json")
     seen = []
     for path in (DATA / "rooms").glob("*.json"):

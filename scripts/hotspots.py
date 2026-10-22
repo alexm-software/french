@@ -118,7 +118,7 @@ def normalize_scene(raw):
             "box": box,
             "label": item.get("label") or "",
         }
-        for key in ("name", "name_fr", "name_en", "label_fr", "label_en", "kind"):
+        for key in ("name", "name_fr", "name_en", "label_fr", "label_en", "kind", "signed_by"):
             if item.get(key):
                 link[key] = str(item[key])
         polygon = _polygon(item.get("polygon"))
