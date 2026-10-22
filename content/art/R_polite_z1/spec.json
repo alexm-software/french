@@ -1,110 +1,111 @@
 {
- "divider_x": null,
  "kind": "zoom",
  "parent_room_id": "R_polite",
- "note": "Zoom on the pavilion writing desk. All phrases (no gender), so no side rule applies.",
+ "divider_x": null,
+ "note": "Zoom on the white writing desk inside the tea pavilion (top-hat fountain in the distance). All phrases (no gender).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Le bureau des politesses",
    "box": [
-    186,
-    56,
-    418,
-    158
+    208,
+    62,
+    434,
+    164
    ],
    "text_box": [
-    200,
+    214,
     68,
-    405,
-    147
+    428,
+    158
    ]
   }
  },
+ "links": [
+  {
+   "target": "R_polite",
+   "box": [
+    300,
+    600,
+    1000,
+    720
+   ],
+   "label": "Step back into the pavilion",
+   "name": "Fontaine — le pavillon des politesses",
+   "kind": "zoom_back",
+   "arrow": "back"
+  }
+ ],
  "items": [
   {
    "id": "fr_pouvez_vous_repeter_phrase",
    "box": [
-    130,
-    227,
-    250,
-    429
+    133,
+    231,
+    262,
+    456
    ],
    "scene": "mynah bird in a cage: can you repeat?"
   },
   {
    "id": "fr_s_il_te_plait_phrase",
    "box": [
-    254,
-    348,
-    429,
-    491
+    265,
+    367,
+    418,
+    519
    ],
-   "scene": "seal pup with a ball asks you to play"
+   "scene": "seal pup with a red ball asks you to play"
   },
   {
    "id": "fr_s_il_vous_plait_phrase",
    "box": [
-    432,
-    288,
-    525,
-    429
+    422,
+    297,
+    523,
+    453
    ],
    "scene": "stone seal statue bowing politely"
   },
   {
    "id": "fr_avec_plaisir_phrase",
    "box": [
-    555,
-    213,
-    693,
-    416
+    539,
+    216,
+    686,
+    434
    ],
    "scene": "mouse butler serves tea with pleasure"
   },
   {
    "id": "fr_je_vous_en_prie_phrase",
    "box": [
-    697,
-    220,
-    879,
-    423
+    690,
+    219,
+    875,
+    441
    ],
-   "scene": "hedgehog doorman: after you"
+   "scene": "hedgehog doorman holds a little door open"
   },
   {
    "id": "fr_sante_phrase",
    "box": [
     883,
     247,
-    1002,
-    416
+    1010,
+    438
    ],
-   "scene": "Santa raises a glass: cheers!"
+   "scene": "Santa raises a glass of milk"
   },
   {
    "id": "fr_si_phrase",
    "box": [
-    1012,
-    187,
-    1186,
-    608
+    1015,
+    164,
+    1191,
+    644
    ],
-   "scene": "boy insists: yes I did!"
-  }
- ],
- "links": [
-  {
-   "target": "R_polite",
-   "box": [
-    369,
-    574,
-    997,
-    720
-   ],
-   "label": "Step back into the pavilion",
-   "name": "Fontaine — le pavillon des politesses",
-   "kind": "zoom_back"
+   "scene": "boy shouts 'si!' with a finger raised"
   }
  ]
 }

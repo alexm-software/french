@@ -4,38 +4,38 @@
  "height": 720,
  "divider_x": null,
  "kind": "building_exterior",
- "note": "Entrance of the fountain garden (site B01). The top-hat fountain tips its hat in greeting. Walking ring inside: R_greet -> R_polite -> R_exclaim_01 -> R_exclaim_02 -> R_exclaim_03 -> R_farewell -> back here. The pavilion path and the farewell gate are short cuts into the ring.",
+ "note": "Entrance of the walled fountain garden, seen from the open iron double gate on the Place du Village (looking north). See sectors/S01/B01_PLAN.md. Top-hat fountain in the round court, stone arch with the name board behind it (rose garden beyond), white domed tea pavilion back left, pond and puppet theatre back right, farewell corner with the small iron farewell gate in the east wall on the right. Ring: R_greet > R_polite > R_exclaim_01 > R_exclaim_02 > R_exclaim_03 > R_farewell > farewell gate > Place du Village.",
  "text_areas": {
   "name": {
    "role": "building_name",
    "text": "Fontaine des Salutations",
    "box": [
-    485,
-    122,
-    735,
-    200
+    497,
+    120,
+    733,
+    202
    ],
    "text_box": [
-    500,
-    132,
+    510,
+    130,
     720,
-    190
+    192
    ]
   },
   "dir_square": {
    "role": "direction",
    "text": "↓ Place du Village",
    "box": [
-    520,
-    676,
-    760,
-    712
+    530,
+    570,
+    750,
+    604
    ],
    "text_box": [
-    526,
-    680,
-    754,
-    708
+    536,
+    574,
+    744,
+    600
    ]
   }
  },
@@ -44,50 +44,55 @@
   {
    "target": "R_greet",
    "box": [
-    492,
-    230,
-    665,
-    470
+    455,
+    250,
+    810,
+    560
    ],
-   "label": "Through the gateway to the greeting basin",
+   "label": "Into the garden, to the greeting basin at the fountain",
    "name": "Fontaine — Bonjour ! (salutations)",
-   "kind": "gate"
+   "kind": "path",
+   "arrow": "forward"
   },
   {
    "target": "R_polite",
    "box": [
     180,
-    230,
-    430,
-    420
+    160,
+    322,
+    330
    ],
-   "label": "Path to the tea pavilion",
+   "label": "Path to the white tea pavilion",
    "name": "Fontaine — le pavillon des politesses",
-   "kind": "path"
+   "kind": "path",
+   "arrow": "left"
   },
   {
    "target": "R_farewell",
    "box": [
-    922,
-    336,
-    992,
-    469
+    1050,
+    270,
+    1135,
+    420
    ],
-   "label": "Little gate to the farewell corner",
-   "name": "Fontaine — au revoir !",
-   "kind": "gate"
+   "label": "Path to the farewell corner and its little gate",
+   "name": "Fontaine — porte des adieux",
+   "kind": "path",
+   "arrow": "right"
   },
   {
    "target": "S01_sector",
    "box": [
-    0,
-    600,
-    500,
+    300,
+    612,
+    960,
     720
    ],
-   "label": "Back to the village square",
+   "label": "Back out through the iron gate to the village square",
    "name": "Place du Village",
-   "kind": "path"
+   "kind": "gate",
+   "arrow": "back",
+   "signed_by": "dir_square"
   }
  ],
  "building_name": "Fontaine des Salutations"

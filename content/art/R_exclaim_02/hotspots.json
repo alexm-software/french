@@ -4,22 +4,22 @@
  "height": 720,
  "divider_x": 640,
  "kind": "room",
- "note": "Exclamation garden 2 (round rose garden with bandstand). Interjections only (no gender).",
+ "note": "Round rose garden (north), looking south. Back of the stone-and-hedge arch in the centre with the top-hat fountain through it (back to the entrance); hedge arch on the left leads east to the pond, hedge arch on the right leads west back to the bandstand lawn. Interjections only (no gender).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Hélas ! Ouf ! — Exclamations (2)",
    "box": [
-    145,
-    108,
-    292,
-    194
+    144,
+    106,
+    297,
+    195
    ],
    "text_box": [
-    152,
-    115,
-    285,
-    188
+    150,
+    112,
+    291,
+    189
    ]
   }
  },
@@ -32,14 +32,14 @@
    "side": "center",
    "label": "hélas",
    "box": [
-    147,
-    333,
-    268,
-    594
+    128,
+    347,
+    244,
+    612
    ],
    "label_xy": [
-    208,
-    584
+    186,
+    602
    ],
    "scene": "little prince's ice cream falls: hélas!"
   },
@@ -51,14 +51,14 @@
    "side": "center",
    "label": "hum",
    "box": [
-    273,
-    300,
-    385,
-    443
+    247,
+    312,
+    387,
+    477
    ],
    "label_xy": [
-    329,
-    433
+    317,
+    467
    ],
    "scene": "wise old tortoise on a stump ponders: hum..."
   },
@@ -70,14 +70,14 @@
    "side": "center",
    "label": "chut",
    "box": [
-    359,
-    165,
-    527,
-    289
+    356,
+    169,
+    528,
+    308
    ],
    "label_xy": [
-    443,
-    279
+    442,
+    298
    ],
    "scene": "librarian with a book cart shushes a cawing raven: chut!"
   },
@@ -89,14 +89,14 @@
    "side": "center",
    "label": "hop",
    "box": [
-    410,
-    294,
-    602,
-    504
+    425,
+    311,
+    606,
+    523
    ],
    "label_xy": [
-    506,
-    494
+    516,
+    513
    ],
    "scene": "magician pulls a rabbit from a hat: hop!"
   },
@@ -108,14 +108,14 @@
    "side": "center",
    "label": "bah",
    "box": [
-    616,
-    303,
-    720,
-    386
+    617,
+    312,
+    718,
+    406
    ],
    "label_xy": [
     668,
-    376
+    396
    ],
    "scene": "sheep bleats bah and wanders off"
   },
@@ -127,14 +127,14 @@
    "side": "center",
    "label": "ouf",
    "box": [
-    614,
-    389,
-    771,
-    635
+    617,
+    412,
+    718,
+    659
    ],
    "label_xy": [
-    692,
-    625
+    668,
+    649
    ],
    "scene": "boy has set down a heavy suitcase: ouf!"
   },
@@ -146,16 +146,16 @@
    "side": "center",
    "label": "bof",
    "box": [
-    725,
-    294,
-    899,
-    386
+    785,
+    305,
+    910,
+    492
    ],
    "label_xy": [
-    812,
-    376
+    848,
+    482
    ],
-   "scene": "bored teen flops on the bench and shrugs: bof"
+   "scene": "bored teen flops back on the garden sofa: bof"
   },
   {
    "id": "fr_tchao_intj",
@@ -165,16 +165,16 @@
    "side": "center",
    "label": "tchao",
    "box": [
-    709,
-    161,
-    872,
-    279
+    711,
+    169,
+    883,
+    281
    ],
    "label_xy": [
-    790,
-    269
+    797,
+    271
    ],
-   "scene": "girl waves tchao from a little train"
+   "scene": "girl waves tchao from the little garden train"
   },
   {
    "id": "fr_bis_adj",
@@ -184,42 +184,57 @@
    "side": "center",
    "label": "bis",
    "box": [
-    903,
-    81,
-    1167,
-    440
+    914,
+    137,
+    1172,
+    391
    ],
    "label_xy": [
-    1035,
-    430
+    1043,
+    381
    ],
-   "scene": "children clap 'bis!' for the singer on the bandstand"
+   "scene": "children clap 'bis!' for the singer on the rose bandstand"
   }
  ],
  "links": [
   {
-   "target": "R_exclaim_01",
+   "target": "B01_fontaine",
    "box": [
-    0,
-    200,
-    196,
-    327
+    591,
+    106,
+    672,
+    281
    ],
-   "label": "Back along the path to the first garden",
-   "name": "Fontaine — jardin des exclamations (1)",
-   "kind": "path"
+   "label": "Through the arch, back to the fountain and the entrance",
+   "name": "Fontaine des Salutations (entrée)",
+   "kind": "arch",
+   "arrow": "forward"
   },
   {
    "target": "R_exclaim_03",
    "box": [
-    1085,
-    447,
-    1280,
-    607
+    0,
+    150,
+    110,
+    340
    ],
-   "label": "Along the path to the next garden",
-   "name": "Fontaine — jardin des exclamations (3)",
-   "kind": "path"
+   "label": "Through the hedge arch to the pond garden",
+   "name": "Fontaine — mare des exclamations (3)",
+   "kind": "arch",
+   "arrow": "left"
+  },
+  {
+   "target": "R_exclaim_01",
+   "box": [
+    1180,
+    140,
+    1280,
+    360
+   ],
+   "label": "Through the hedge arch back to the bandstand lawn",
+   "name": "Fontaine — jardin des exclamations (1)",
+   "kind": "arch",
+   "arrow": "right"
   }
  ]
 }

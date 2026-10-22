@@ -200,10 +200,22 @@ def assert_wide_passages():
                 item_center = ((item_box[0] + item_box[2]) / 2, (item_box[1] + item_box[3]) / 2)
                 assert not _point_inside(item_center, polygon), (segment, key, item["word_id"])
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
-    street = next(link for link in sector["links"] if link["kind"] == "street")
-    assert street["polygon"]
-    street_width = max(point[0] for point in street["polygon"]) - min(point[0] for point in street["polygon"])
-    assert street_width >= int(sector["width"] * 0.15)
+    # The repainted arch is a narrow opening under its own board, not a wide polygon.
+    expected_signs = {
+        "B08_cafe": "cafe_name",
+        "B09_restaurant": "resto_name",
+        "ST_cooking_seg001": "lane_name",
+    }
+    by_target = {link["target"]: link for link in sector["links"]}
+    for target, sign_id in expected_signs.items():
+        link = by_target[target]
+        assert link["signed_by"] == sign_id
+        assert sector["text_areas"][sign_id]["text"]
+        box = link["box"]
+        width, height = box[2] - box[0], box[3] - box[1]
+        assert width >= 80 and height >= 180, (target, width, height)
+    street = by_target["ST_cooking_seg001"]
+    assert street["name"] == "Place du Grand-Festin"
     room = normalize_scene(load(ROOT / "content" / "art" / "R_resto_room" / "hotspots.json"))
     door = next(link for link in room["links"] if link["kind"] == "door")
     arch = next(link for link in room["links"] if "rch" in link["label"].lower())
@@ -223,6 +235,119 @@ def assert_wide_passages():
     cafe = normalize_scene(load(ROOT / "content" / "art" / "R_cafe_01" / "hotspots.json"))
     labelled = next(hot for hot in cafe["hotspots"] if hot.get("label_xy"))
     assert labelled["label_xy"][1] > labelled["box"][1]
+
+
+def assert_fontaine_arrows():
+    """Every fountain door is an arrow key, and the two gates open the square."""
+    arrows = {
+        "B01_fontaine": {"R_greet": "forward", "R_polite": "left", "R_farewell": "right", "S01_sector": "back"},
+        "R_greet": {"B01_fontaine": "left", "R_polite": "right"},
+        "R_polite": {"R_exclaim_01": "left", "R_greet": "right"},
+        "R_polite_z1": {"R_polite": "back"},
+        "R_exclaim_01": {"R_exclaim_02": "left", "B01_fontaine": "forward", "R_polite": "right"},
+        "R_exclaim_02": {"R_exclaim_03": "left", "B01_fontaine": "forward", "R_exclaim_01": "right"},
+        "R_exclaim_03": {"R_farewell": "left", "B01_fontaine": "forward", "R_exclaim_02": "right"},
+        "R_farewell": {"R_exclaim_03": "left", "S01_sector": "forward", "B01_fontaine": "back"},
+    }
+    rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    graph = {}
+    for room_id, expected in arrows.items():
+        raw = load(ROOT / "content" / "art" / room_id / "hotspots.json")
+        scene = normalize_scene(raw)
+        got = {link["target"]: link.get("arrow") for link in scene["links"]}
+        assert got == expected, (room_id, got)
+        if room_id != "B01_fontaine":
+            painted = {item["id"] for item in raw["items"]}
+            assert painted == set(rooms[room_id]["words"]), room_id
+            assert rooms[room_id]["sector_id"] == "S01_beginner"
+        graph[room_id] = set(expected)
+    # Painted steps back to Place du Village. The pavilion and its desk sit
+    # further along the ring, so they take the sector button (one click).
+    reverse = {}
+    for node, dests in graph.items():
+        for dest in dests:
+            reverse.setdefault(dest, []).append(node)
+    hops = {"S01_sector": 0}
+    queue = ["S01_sector"]
+    while queue:
+        node = queue.pop(0)
+        for src in reverse.get(node, []):
+            if src in hops:
+                continue
+            hops[src] = hops[node] + 1
+            queue.append(src)
+    assert hops["B01_fontaine"] == 1
+    assert hops["R_farewell"] == 1
+    assert hops["R_greet"] == 2
+    for room_id in ("R_exclaim_01", "R_exclaim_02", "R_exclaim_03"):
+        assert hops[room_id] == 2, (room_id, hops[room_id])
+    assert hops["R_polite"] == 3
+    assert hops["R_polite_z1"] == 4
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert "exitKind(link.arrow)" in client and 'data-arrow="' in client
+
+
+S03_WITHOUT_PAINTED_RETURN = [
+    "R_abs_beauty_01_z1", "R_abs_beauty_02_z1", "R_abs_beauty_03_z1",
+    "R_adj_state_04_z1", "R_adv_degree_01_z1", "R_adv_degree_03_z1",
+    "R_bookshop_01_z1", "R_boutique_03_z1", "R_florist_z1",
+    "R_grocery_01_z1", "R_hardware_01_z1", "R_hardware_02_z1",
+    "R_shop_general_02_z1", "R_shop_general_03_z1", "R_shop_general_04_z1",
+    "R_vegetables_z1",
+]
+
+
+def assert_market_square():
+    """The repainted square names each door, and the brocante stays closed.
+
+    Sixteen market zooms have no painted path back to the square. Each one
+    still belongs to S03, so the sector button is that path.
+    """
+    painted = normalize_scene(load(ROOT / "content" / "art" / "S03_sector" / "hotspots.json"))
+    assert [link["target"] for link in painted["links"]] == [
+        "S02_sector", "B62_couture", "B60_balance", "B06_marche", "B07_rue_commercante",
+        "ST_commerce_seg001", "B61_reparation", "B59_brocante", "S01_sector",
+    ]
+    for link in painted["links"]:
+        assert painted["text_areas"][link["signed_by"]]["text"], link["target"]
+    art_targets = {}
+    for path in (ROOT / "content" / "art").glob("*/hotspots.json"):
+        raw = load(path)
+        dests = []
+        for item in raw.get("links") or []:
+            if isinstance(item, dict) and item.get("target"):
+                dests.append(item["target"])
+        for item in (raw.get("exits") or {}).values():
+            if isinstance(item, dict) and item.get("target"):
+                dests.append(item["target"])
+        art_targets[path.parent.name] = dests
+
+    def reaches(start):
+        seen = set()
+        queue = [start]
+        while queue:
+            node = queue.pop(0)
+            if node == "S03_sector" or node in seen:
+                if node == "S03_sector":
+                    return True
+                continue
+            seen.add(node)
+            queue.extend(art_targets.get(node, []))
+        return False
+
+    source = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    open_ids = set(load(ROOT / "content" / "site.json")["open_rooms"])
+    detached = sorted(
+        room_id for room_id in open_ids
+        if room_id.startswith("R_")
+        and source.get(room_id, {}).get("sector_id") == "S03_market"
+        and not reaches(room_id)
+    )
+    assert detached == sorted(S03_WITHOUT_PAINTED_RETURN), detached
+    for room_id in detached:
+        built = load(DATA / "rooms" / f"{room_id}.json")
+        assert built["sector_id"] == "S03_market", room_id
+        assert built["kind"] == "zoom"
 
 
 def assert_back_strip_stays_visible(client):
@@ -431,6 +556,14 @@ def main():
     assert sector["description_fr"].startswith("La terrasse")
     cooking = next(link for link in sector["scene"]["links"] if link["target"] == "ST_cooking_seg001")
     assert cooking["name"] == "Place du Grand-Festin"
+    assert cooking["name_en"] == "Great-Feast Square"
+    assert cooking["signed_by"] == "lane_name"
+    scene_areas = sector["scene"]["text_areas"]
+    assert scene_areas["cafe_name"]["text"] == "Café de la Place"
+    assert scene_areas["resto_name"]["text"] == "Restaurant Le Bon Goût"
+    assert scene_areas["lane_name"]["text"] == "Ruelle des Gourmets"
+    assert sector["scene"]["links"][0]["signed_by"] == "cafe_name"
+    assert sector["scene"]["links"][1]["signed_by"] == "resto_name"
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
     assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
@@ -574,7 +707,18 @@ def main():
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
+    assert_fontaine_arrows()
+    greet_gate = next(link for link in greet["scene"]["links"] if link["target"] == "B01_fontaine")
+    assert greet_gate["arrow"] == "left"
+    desk = load(DATA / "rooms" / "R_polite_z1.json")
+    assert desk["scene"]["links"][0]["arrow"] == "back"
+    assert "back" not in desk["scene"]["exits"]
+    assert desk["sector_id"] == "S01_beginner"
     square = load(DATA / "sectors" / "S01_beginner.json")
+    fontaine = next(building for building in square["buildings"] if building["id"] == "B01_fontaine")
+    square_gate = next(link for link in fontaine["scene"]["links"] if link["target"] == "S01_sector")
+    assert square_gate["arrow"] == "back" and square_gate["signed_by"] == "dir_square"
+    assert fontaine["sector_id"] == "S01_beginner"
     assert square["open"] is True
     assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
@@ -619,6 +763,9 @@ def main():
         "B60_balance", "B06_marche", "B07_rue_commercante", "B62_couture", "B61_reparation",
         "ST_commerce_seg001", "S01_sector", "S02_sector",
     }, open_market
+    assert_market_square()
+    for link in market["scene"]["links"]:
+        assert link.get("signed_by"), link["target"]
     source_rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
     shop_art = [
         "R_shop_general_01", "R_shop_general_02", "R_shop_general_02_z1",

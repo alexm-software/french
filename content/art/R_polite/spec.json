@@ -1,171 +1,173 @@
 {
- "divider_x": 640,
  "kind": "room",
- "note": "Tea pavilion of the fountain garden. Phrases have no gender; le remerciement (m) far right. Zoom: the writing desk in the centre.",
+ "divider_x": 640,
+ "note": "Lawn in front of the white domed tea pavilion (west side), looking north-east. Hedge arch back left (on to the bandstand lawn), top-hat fountain back right (back to the greeting basin). Phrases have no gender; le remerciement (m) far right. Zoom: the writing desk in the pavilion.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Le pavillon des politesses",
    "box": [
-    546,
-    77,
-    743,
-    129
+    562,
+    177,
+    719,
+    223
    ],
    "text_box": [
-    553,
-    83,
-    736,
-    124
+    568,
+    183,
+    713,
+    217
    ]
   }
  },
- "items": [
-  {
-   "id": "fr_bon_appetit_phrase",
-   "box": [
-    91,
-    426,
-    220,
-    627
-   ],
-   "scene": "dog with a bone and a big appetite"
-  },
-  {
-   "id": "fr_d_accord_phrase",
-   "box": [
-    226,
-    314,
-    385,
-    557
-   ],
-   "scene": "two friends hold a cord and shake on it"
-  },
-  {
-   "id": "fr_excusez_moi_phrase",
-   "box": [
-    300,
-    156,
-    457,
-    311
-   ],
-   "scene": "penguin taps a gentleman's shoulder"
-  },
-  {
-   "id": "fr_je_ne_comprends_pas_phrase",
-   "box": [
-    460,
-    233,
-    546,
-    500
-   ],
-   "scene": "puzzled grandpa ('Pa') with an upside-down map"
-  },
-  {
-   "id": "fr_merci_phrase",
-   "box": [
-    548,
-    186,
-    619,
-    315
-   ],
-   "scene": "girl handed a cake: 'mercy!'"
-  },
-  {
-   "id": "fr_de_rien_phrase",
-   "box": [
-    630,
-    414,
-    845,
-    627
-   ],
-   "scene": "'Duh, Ryan!' a girl laughs off Ryan's thanks"
-  },
-  {
-   "id": "fr_merci_beaucoup_phrase",
-   "box": [
-    654,
-    223,
-    731,
-    264
-   ],
-   "scene": "pigeon bows (beau-) and coos"
-  },
-  {
-   "id": "fr_non_phrase",
-   "box": [
-    697,
-    270,
-    792,
-    410
-   ],
-   "scene": "toddler says no to broccoli"
-  },
-  {
-   "id": "fr_oui_phrase",
-   "box": [
-    794,
-    274,
-    870,
-    393
-   ],
-   "scene": "child goes 'whee!' down the slide"
-  },
-  {
-   "id": "fr_parlez_vous_anglais_phrase",
-   "box": [
-    872,
-    250,
-    1015,
-    567
-   ],
-   "scene": "tourist parleys with a policeman"
-  },
-  {
-   "id": "fr_remerciement_noun",
-   "box": [
-    1017,
-    333,
-    1194,
-    614
-   ],
-   "scene": "girl gives a thank-you card"
-  }
- ],
  "zoom_from": {
   "room_id": "R_polite_z1",
   "box": [
-   572,
-   317,
-   694,
-   410
+   581,
+   417,
+   685,
+   440
   ],
   "label": "the writing desk (centre)"
  },
  "links": [
   {
-   "target": "R_greet",
-   "box": [
-    0,
-    212,
-    220,
-    410
-   ],
-   "label": "Path back to the greeting basin",
-   "name": "Fontaine — Bonjour ! (salutations)",
-   "kind": "path"
-  },
-  {
    "target": "R_exclaim_01",
    "box": [
-    1020,
-    129,
-    1169,
-    290
+    156,
+    137,
+    273,
+    320
    ],
-   "label": "Hedge arch on to the exclamation garden",
+   "label": "Through the hedge arch to the bandstand lawn",
    "name": "Fontaine — jardin des exclamations (1)",
-   "kind": "arch"
+   "kind": "arch",
+   "arrow": "left"
+  },
+  {
+   "target": "R_greet",
+   "box": [
+    992,
+    144,
+    1164,
+    328
+   ],
+   "label": "Back along the path to the fountain",
+   "name": "Fontaine — Bonjour ! (salutations)",
+   "kind": "path",
+   "arrow": "right"
+  }
+ ],
+ "items": [
+  {
+   "id": "fr_bon_appetit_phrase",
+   "box": [
+    144,
+    447,
+    328,
+    617
+   ],
+   "scene": "dog drools at a big bone on a plate"
+  },
+  {
+   "id": "fr_d_accord_phrase",
+   "box": [
+    273,
+    341,
+    419,
+    445
+   ],
+   "scene": "two boys hold the ends of a cord and shake hands"
+  },
+  {
+   "id": "fr_je_ne_comprends_pas_phrase",
+   "box": [
+    450,
+    273,
+    536,
+    419
+   ],
+   "scene": "puzzled grandpa holds his map upside down"
+  },
+  {
+   "id": "fr_excusez_moi_phrase",
+   "box": [
+    469,
+    425,
+    575,
+    523
+   ],
+   "scene": "polite tabby cat squeezes past the map-reading tourist's legs, blowing a kiss"
+  },
+  {
+   "id": "fr_merci_phrase",
+   "box": [
+    540,
+    231,
+    625,
+    414
+   ],
+   "scene": "smiling girl handed a cake"
+  },
+  {
+   "id": "fr_merci_beaucoup_phrase",
+   "box": [
+    653,
+    258,
+    722,
+    305
+   ],
+   "scene": "pigeon takes a bow on the railing"
+  },
+  {
+   "id": "fr_non_phrase",
+   "box": [
+    688,
+    307,
+    750,
+    438
+   ],
+   "scene": "toddler in a high chair shakes her head at broccoli"
+  },
+  {
+   "id": "fr_oui_phrase",
+   "box": [
+    753,
+    273,
+    833,
+    438
+   ],
+   "scene": "child slides down the slide, arms up: whee!"
+  },
+  {
+   "id": "fr_de_rien_phrase",
+   "box": [
+    630,
+    442,
+    805,
+    633
+   ],
+   "scene": "girl laughs as Ryan thanks her"
+  },
+  {
+   "id": "fr_parlez_vous_anglais_phrase",
+   "box": [
+    836,
+    278,
+    960,
+    563
+   ],
+   "scene": "tourist with camera and phrasebook talks to a policeman"
+  },
+  {
+   "id": "fr_remerciement_noun",
+   "box": [
+    964,
+    352,
+    1141,
+    606
+   ],
+   "scene": "girl hands a thank-you card to an old lady"
   }
  ]
 }

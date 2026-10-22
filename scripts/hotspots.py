@@ -69,6 +69,17 @@ def _hot(item):
     return hot
 
 
+def exit_kind(key):
+    return {
+        "prev": "back",
+        "back": "back",
+        "next": "forward",
+        "forward": "forward",
+        "left": "left",
+        "right": "right",
+    }.get(str(key or ""), "")
+
+
 def _area(area):
     if not isinstance(area, dict):
         return None
@@ -121,6 +132,9 @@ def normalize_scene(raw):
         for key in ("name", "name_fr", "name_en", "label_fr", "label_en", "kind", "signed_by"):
             if item.get(key):
                 link[key] = str(item[key])
+        arrow = exit_kind(item.get("arrow"))
+        if arrow:
+            link["arrow"] = arrow
         polygon = _polygon(item.get("polygon"))
         if polygon:
             link["polygon"] = polygon

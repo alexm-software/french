@@ -1,278 +1,294 @@
 {
  "divider_x": null,
  "kind": "sector_overview",
- "note": "Place du Marché, the market square (sector S03). Around it: Maison de Couture (hat-roofed townhouse, B62) far left, Halle aux Poids (giant balance on the roof, B60), Marché couvert (iron-and-glass hall with a basket roof, B06) centre, the stone arch into the Rue Commerçante (B07), the arcaded Rue du Commerce verb street (ST_commerce), the Atelier de Réparation (cog and spanner, B61) and the Brocante gate (B59) on the right. The near cobbles lead back to the Place du Village (S01); the iron gate on the far left is the lane to the Home quarter (S02).",
+ "note": "Place du Marché, the market square (sector S03), second match pass Oct 22 2026: framed tighter so the building row fills the picture (town roofs behind, sky ~11%), each building painted after its own exterior. Left to right: the arched iron gate to the Home quarter (S02), Maison de Couture (limestone townhouse, slate mansard, giant black top hat, long cream name board, arched door between mannequin windows, B62), Halle aux Poids (single-storey stone weighing hall, giant brass balance on the ridge, green arched double door, bay trees, B60), Marché couvert (dark-green iron-and-glass hall with curved ribbed glass roof, open arched entrance with fruit stalls, B06), the tall stone archway onto the glass-roofed Rue Commerçante arcade (B07), the open mouth of the Rue du Commerce lane with a hanging name board (ST_commerce_seg001), the brick half-timbered Atelier de Réparation (timber gable, cog-and-crossed-spanners sign, clock windows either side of the open wooden plank door, no awnings, B61), and the arched iron gate into the Brocante yard (B59, not built yet). The near cobbles lead back to the Place du Village (S01). No people.",
  "text_areas": {
   "sector_name": {
    "role": "sector_name",
    "text": "Place du Marché",
    "box": [
     470,
-    22,
+    50,
     830,
-    72
+    96
    ],
    "text_box": [
-    476,
-    28,
-    824,
-    66
+    473,
+    52,
+    827,
+    94
    ]
   },
   "b62_name": {
    "role": "building_name",
    "text": "Maison de Couture",
    "box": [
-    104,
-    370,
-    230,
-    408
+    199,
+    398,
+    347,
+    436
    ],
    "text_box": [
-    110,
-    376,
-    224,
-    402
-   ]
+    204,
+    402,
+    342,
+    432
+   ],
+   "painted_board": true
   },
   "b60_name": {
    "role": "building_name",
    "text": "Halle aux Poids",
    "box": [
-    316,
-    328,
-    420,
-    364
+    360,
+    378,
+    478,
+    412
    ],
    "text_box": [
-    322,
-    334,
-    414,
-    358
-   ]
+    365,
+    382,
+    473,
+    408
+   ],
+   "painted_board": true
   },
   "b06_name": {
    "role": "building_name",
    "text": "Marché couvert",
    "box": [
-    450,
-    288,
-    596,
-    324
+    502,
+    403,
+    624,
+    434
    ],
    "text_box": [
-    456,
-    294,
-    590,
-    318
-   ]
+    507,
+    407,
+    619,
+    430
+   ],
+   "painted_board": true
   },
   "b07_name": {
    "role": "building_name",
    "text": "Rue Commerçante",
    "box": [
-    624,
+    652,
     334,
-    716,
-    370
+    762,
+    364
    ],
    "text_box": [
-    630,
-    340,
-    710,
-    364
-   ]
+    657,
+    338,
+    757,
+    360
+   ],
+   "painted_board": true
   },
   "st_name": {
-   "role": "building_name",
+   "role": "street_name",
    "text": "Rue du Commerce",
    "box": [
-    720,
-    372,
-    834,
-    406
+    770,
+    391,
+    878,
+    420
    ],
    "text_box": [
-    726,
-    378,
-    828,
-    400
-   ]
+    775,
+    395,
+    873,
+    416
+   ],
+   "painted_board": true
   },
   "b61_name": {
    "role": "building_name",
    "text": "Atelier de Réparation",
    "box": [
-    862,
-    352,
-    972,
-    390
+    905,
+    397,
+    1065,
+    428
    ],
    "text_box": [
-    868,
-    358,
-    966,
-    384
-   ]
+    910,
+    401,
+    1060,
+    424
+   ],
+   "painted_board": true
   },
   "b59_name": {
    "role": "building_name",
    "text": "Brocante",
    "box": [
-    1050,
-    318,
-    1190,
-    354
+    1120,
+    386,
+    1198,
+    409
    ],
    "text_box": [
-    1056,
-    324,
-    1184,
-    348
-   ]
+    1125,
+    390,
+    1193,
+    405
+   ],
+   "painted_board": true
   },
   "dir_s01": {
    "role": "direction",
    "text": "← Place du Village",
    "box": [
-    420,
-    566,
-    760,
-    602
+    480,
+    600,
+    800,
+    628
    ],
    "text_box": [
-    426,
-    572,
-    754,
-    596
+    483,
+    602,
+    797,
+    626
    ]
   },
   "dir_s02": {
    "role": "direction",
    "text": "← Quartier de la Maison",
    "box": [
-    6,
-    650,
-    190,
-    686
+    60,
+    600,
+    262,
+    628
    ],
    "text_box": [
-    12,
-    656,
-    184,
-    680
+    63,
+    602,
+    259,
+    626
    ]
   }
  },
  "items": [],
  "links": [
   {
+   "target": "S02_sector",
+   "box": [
+    78,
+    410,
+    198,
+    598
+   ],
+   "label": "Through the iron gate to the Home quarter",
+   "name": "Quartier de la Maison",
+   "kind": "gate",
+   "signed_by": "dir_s02"
+  },
+  {
    "target": "B62_couture",
    "box": [
-    131,
-    412,
-    206,
-    494
+    200,
+    437,
+    350,
+    598
    ],
    "label": "Into the fashion house",
    "name": "Maison de Couture",
-   "kind": "door"
+   "kind": "door",
+   "signed_by": "b62_name"
   },
   {
    "target": "B60_balance",
    "box": [
-    335,
-    369,
-    402,
-    494
+    354,
+    414,
+    476,
+    598
    ],
    "label": "Into the weighing hall",
    "name": "Halle aux Poids",
-   "kind": "door"
+   "kind": "door",
+   "signed_by": "b60_name"
   },
   {
    "target": "B06_marche",
    "box": [
-    444,
-    330,
-    600,
-    490
+    480,
+    436,
+    644,
+    598
    ],
    "label": "Into the covered market",
    "name": "Marché couvert",
-   "kind": "door"
+   "kind": "door",
+   "signed_by": "b06_name"
   },
   {
    "target": "B07_rue_commercante",
    "box": [
-    637,
-    375,
-    700,
-    488
+    646,
+    366,
+    766,
+    598
    ],
    "label": "Through the arch into the shopping street",
    "name": "Rue Commerçante",
-   "kind": "arch"
+   "kind": "arch",
+   "signed_by": "b07_name"
   },
   {
    "target": "ST_commerce_seg001",
    "box": [
-    715,
-    410,
-    830,
-    495
+    768,
+    422,
+    888,
+    598
    ],
-   "label": "Walk down the arcades of Rue du Commerce",
+   "label": "Walk down the lane into Rue du Commerce",
    "name": "Rue du Commerce",
-   "kind": "path"
+   "kind": "path",
+   "signed_by": "st_name"
   },
   {
    "target": "B61_reparation",
    "box": [
-    881,
-    394,
-    950,
-    500
+    890,
+    430,
+    1084,
+    598
    ],
    "label": "Into the repair café",
    "name": "Atelier de Réparation",
-   "kind": "door"
+   "kind": "door",
+   "signed_by": "b61_name"
   },
   {
    "target": "B59_brocante",
    "box": [
-    1040,
-    360,
-    1200,
-    560
+    1086,
+    411,
+    1203,
+    598
    ],
    "label": "Through the gate into the flea market",
    "name": "Brocante",
-   "kind": "gate"
+   "kind": "gate",
+   "signed_by": "b59_name"
   },
   {
    "target": "S01_sector",
    "box": [
-    200,
-    610,
-    1000,
-    720
+    190,
+    632,
+    1090,
+    676
    ],
    "label": "Back across the cobbles to the Place du Village",
    "name": "Place du Village",
-   "kind": "path"
-  },
-  {
-   "target": "S02_sector",
-   "box": [
-    0,
-    412,
-    88,
-    640
-   ],
-   "label": "Through the iron gate to the Home quarter",
-   "name": "Quartier de la Maison",
-   "kind": "gate"
+   "kind": "path",
+   "signed_by": "dir_s01"
   }
  ]
 }
