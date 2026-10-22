@@ -8,7 +8,7 @@
   "kind": "verb_place",
   "layout": "tiered",
   "view": "street_perspective",
-  "name": "Ruelle des Gourmets — étape 2 · Snack & sit down",
+  "name": "Ruelle des Gourmets — Allée du Pique-Nique · Snack & sit down",
   "divider_x": 689,
   "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
   "tier_counts": {
@@ -174,7 +174,7 @@
     "dir_forward": {
       "role": "direction",
       "for_exit": "forward",
-      "text": "étape 3 →",
+      "text": "Rue des Carafes →",
       "box": [
         640,
         269,
@@ -191,7 +191,7 @@
     "dir_back": {
       "role": "direction",
       "for_exit": "back",
-      "text": "← étape 1",
+      "text": "← Place du Grand-Festin",
       "box": [
         571,
         684,
@@ -243,7 +243,7 @@
     },
     "street_name": {
       "role": "street_name",
-      "text": "Snack & sit down",
+      "text": "Allée du Pique-Nique",
       "box": [
         830,
         192,
@@ -508,10 +508,12 @@
           578
         ]
       ],
-      "label": "next: Ruelle des Gourmets — étape 3",
-      "name": "Ruelle des Gourmets — étape 3",
+      "label": "Rue des Carafes",
+      "name": "Rue des Carafes",
       "kind": "street",
-      "area": "far street / vanishing point"
+      "area": "far street / vanishing point",
+      "name_fr": "Rue des Carafes",
+      "name_en": "Carafes Street"
     },
     "back": {
       "target": "ST_cooking_seg001",
@@ -521,10 +523,12 @@
         791,
         720
       ],
-      "label": "back: Ruelle des Gourmets — étape 1",
-      "name": "Ruelle des Gourmets — étape 1",
+      "label": "Place du Grand-Festin",
+      "name": "Place du Grand-Festin",
       "kind": "street",
-      "area": "near foreground cobbles"
+      "area": "near foreground cobbles",
+      "name_fr": "Place du Grand-Festin",
+      "name_en": "Great-Feast Square"
     }
   },
   "links": []

@@ -1,107 +1,111 @@
 {
- "divider_x": 880,
- "name": "Allée du Quotidien — étape 9 · essuyer, redresser, masser",
- "note": "Tiered verb place. -er LEFT (scarecrow straightening his hat, girl wiping the sticky sweet spill, hiker pulling off his boots at his lodging on the balcony, dad's dancing embarrassing his son at the upper window, octopus massaging the postman on the roof terrace), -ir RIGHT (the splash flattening Annie's tiered sandcastle). Forward = far lane; back = near cobbles. Regraded neutral (neutralize.py).",
- "items": [
-  {
-   "id": "fr_redresser_verb",
-   "box": [
-    35,
-    255,
-    235,
-    672
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_essuyer_verb",
-   "box": [
-    330,
-    455,
-    560,
-    660
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_loger_verb",
-   "box": [
-    285,
-    262,
-    470,
-    425
-   ],
-   "tier": "balcony"
-  },
-  {
-   "id": "fr_embarrasser_verb",
-   "box": [
-    255,
-    28,
-    440,
-    172
-   ],
-   "tier": "upper"
-  },
-  {
-   "id": "fr_masser_verb",
-   "box": [
-    595,
-    72,
-    762,
-    215
-   ],
-   "tier": "roof"
-  },
-  {
-   "id": "fr_aneantir_verb",
-   "box": [
-    885,
-    450,
-    1240,
-    700
-   ],
-   "tier": "street"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg010",
-   "box": [
-    940,
-    370,
-    1090,
-    448
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 10",
-   "sign": "étape 10 →"
-  },
-  "back": {
-   "target": "ST_routine_seg008",
-   "box": [
-    430,
-    665,
-    880,
-    712
-   ],
-   "label": "Back up the lane to étape 8",
-   "name": "Allée du Quotidien, étape 8",
-   "sign": "← étape 8"
-  }
- },
- "signs": {
-  "er": [
-   470,
-   20,
-   570,
-   54
+  "divider_x": 880,
+  "name": "Allée du Quotidien — Rue des Torchons · essuyer, redresser, masser",
+  "note": "Tiered verb place. -er LEFT (scarecrow straightening his hat, girl wiping the sticky sweet spill, hiker pulling off his boots at his lodging on the balcony, dad's dancing embarrassing his son at the upper window, octopus massaging the postman on the roof terrace), -ir RIGHT (the splash flattening Annie's tiered sandcastle). Forward = far lane; back = near cobbles. Regraded neutral (neutralize.py).",
+  "items": [
+    {
+      "id": "fr_redresser_verb",
+      "box": [
+        35,
+        255,
+        235,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_essuyer_verb",
+      "box": [
+        330,
+        455,
+        560,
+        660
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_loger_verb",
+      "box": [
+        285,
+        262,
+        470,
+        425
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_embarrasser_verb",
+      "box": [
+        255,
+        28,
+        440,
+        172
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_masser_verb",
+      "box": [
+        595,
+        72,
+        762,
+        215
+      ],
+      "tier": "roof"
+    },
+    {
+      "id": "fr_aneantir_verb",
+      "box": [
+        885,
+        450,
+        1240,
+        700
+      ],
+      "tier": "street"
+    }
   ],
-  "irre": [
-   900,
-   40,
-   1030,
-   74
-  ]
- }
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg010",
+      "box": [
+        940,
+        370,
+        1090,
+        448
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Vieilles-Baskets",
+      "sign": "Rue des Vieilles-Baskets →",
+      "name_fr": "Rue des Vieilles-Baskets",
+      "name_en": "Old-Trainers Street"
+    },
+    "back": {
+      "target": "ST_routine_seg008",
+      "box": [
+        430,
+        665,
+        880,
+        712
+      ],
+      "label": "Back up the lane to Clowns' Lane",
+      "name": "Ruelle des Clowns",
+      "sign": "← Ruelle des Clowns",
+      "name_fr": "Ruelle des Clowns",
+      "name_en": "Clowns' Lane"
+    }
+  },
+  "signs": {
+    "er": [
+      470,
+      20,
+      570,
+      54
+    ],
+    "irre": [
+      900,
+      40,
+      1030,
+      74
+    ]
+  }
 }

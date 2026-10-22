@@ -101,7 +101,7 @@ p { margin: 0.4rem 0; }
   min-height: 44px;
 }
 .nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--olive); }
-a.back {
+a.back, a.sector-up {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -686,6 +686,13 @@ html:-webkit-full-screen body.walking {
 }
 .gloss::after { transform: scaleX(-1); }
 .respell { color: var(--ink-soft); font-size: 1rem; margin: 0.15rem 0 0; }
+.adj-tag, .adj-pl, .adj-vowel, .adj-note, .adj-also, .adj-reveal {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+.adj-note { font-style: italic; }
+.adj-reveal { text-align: center; }
 .field { color: var(--olive); font-family: "Baloo 2", "Patrick Hand", sans-serif; }
 .hook { margin: 0.85rem 0 0; line-height: 1.45; }
 .example-block {
@@ -812,7 +819,7 @@ footer.site {
   .brand { flex: 1 1 auto; order: 0; }
   .brand strong { font-size: 1.15rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .menu-btn { display: inline-flex; flex: none; order: 1; }
-  a.back { order: 2; flex: 1 1 100%; max-width: 100%; }
+  a.back, a.sector-up { order: 2; flex: 1 1 100%; max-width: 100%; }
   .tools { order: 3; flex: 1 1 100%; justify-content: flex-end; margin-left: 0; }
   .nav {
     order: 4;

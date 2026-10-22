@@ -1,143 +1,147 @@
 {
- "divider_x": 760,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 4: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 4",
-   "box": [
-    620,
-    40,
-    960,
-    84
-   ],
-   "text_box": [
-    626,
-    46,
-    954,
-    78
-   ]
+  "divider_x": 760,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Ruelle des Tirelires: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Ruelle des Tirelires",
+      "box": [
+        620,
+        40,
+        960,
+        84
+      ],
+      "text_box": [
+        626,
+        46,
+        954,
+        78
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Rue du Commerce — Allée du Partage →",
+      "box": [
+        696,
+        346,
+        848,
+        380
+      ],
+      "text_box": [
+        702,
+        352,
+        842,
+        374
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Rue du Commerce — Passage du Marchandage",
+      "box": [
+        696,
+        630,
+        846,
+        662
+      ],
+      "text_box": [
+        702,
+        636,
+        840,
+        656
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 5 →",
-   "box": [
-    696,
-    346,
-    848,
-    380
-   ],
-   "text_box": [
-    702,
-    352,
-    842,
-    374
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 3",
-   "box": [
-    696,
-    630,
-    846,
-    662
-   ],
-   "text_box": [
-    702,
-    636,
-    840,
-    656
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_financer_verb",
-   "box": [
-    100,
-    362,
-    296,
-    662
-   ],
-   "scene": "young woman tips coins from a jar into her fiance's hands at his lemonade stand"
-  },
-  {
-   "id": "fr_depenser_verb",
-   "box": [
-    318,
-    375,
-    414,
-    625
-   ],
-   "scene": "woman carrying a giant copper frying pan, her purse empty"
-  },
-  {
-   "id": "fr_piller_verb",
-   "box": [
-    460,
-    380,
-    690,
-    652
-   ],
-   "scene": "seagulls plunder the chip stall while the owner flaps a tea towel"
-  },
-  {
-   "id": "fr_emprunter_verb",
-   "box": [
-    318,
-    140,
-    432,
-    285
-   ],
-   "scene": "woman on a balcony borrowing a jar of prunes from her neighbour"
-  },
-  {
-   "id": "fr_economiser_verb",
-   "box": [
-    125,
-    75,
-    265,
-    248
-   ],
-   "scene": "red squirrel dropping one more acorn into a full glass jar"
-  },
-  {
-   "id": "fr_revendre_verb",
-   "box": [
-    850,
-    368,
-    1197,
-    656
-   ],
-   "scene": "black raven at a stall reselling shiny spoons and buttons to a customer"
-  }
- ],
- "links": [
-  {
-   "target": "ST_commerce_seg005",
-   "box": [
-    700,
-    385,
-    845,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 5",
-   "name": "Rue du Commerce — étape 5",
-   "kind": "street_forward"
-  },
-  {
-   "target": "ST_commerce_seg004",
-   "box": [
-    120,
-    668,
-    1100,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 3",
-   "name": "Rue du Commerce — étape 3",
-   "kind": "street_back"
-  }
- ]
+  "items": [
+    {
+      "id": "fr_financer_verb",
+      "box": [
+        100,
+        362,
+        296,
+        662
+      ],
+      "scene": "young woman tips coins from a jar into her fiance's hands at his lemonade stand"
+    },
+    {
+      "id": "fr_depenser_verb",
+      "box": [
+        318,
+        375,
+        414,
+        625
+      ],
+      "scene": "woman carrying a giant copper frying pan, her purse empty"
+    },
+    {
+      "id": "fr_piller_verb",
+      "box": [
+        460,
+        380,
+        690,
+        652
+      ],
+      "scene": "seagulls plunder the chip stall while the owner flaps a tea towel"
+    },
+    {
+      "id": "fr_emprunter_verb",
+      "box": [
+        318,
+        140,
+        432,
+        285
+      ],
+      "scene": "woman on a balcony borrowing a jar of prunes from her neighbour"
+    },
+    {
+      "id": "fr_economiser_verb",
+      "box": [
+        125,
+        75,
+        265,
+        248
+      ],
+      "scene": "red squirrel dropping one more acorn into a full glass jar"
+    },
+    {
+      "id": "fr_revendre_verb",
+      "box": [
+        850,
+        368,
+        1197,
+        656
+      ],
+      "scene": "black raven at a stall reselling shiny spoons and buttons to a customer"
+    }
+  ],
+  "links": [
+    {
+      "target": "ST_commerce_seg005",
+      "box": [
+        700,
+        385,
+        845,
+        520
+      ],
+      "label": "Walk on to Sharing Alley",
+      "name": "Allée du Partage",
+      "kind": "street_forward",
+      "name_fr": "Allée du Partage",
+      "name_en": "Sharing Alley"
+    },
+    {
+      "target": "ST_commerce_seg004",
+      "box": [
+        120,
+        668,
+        1100,
+        720
+      ],
+      "label": "Back to Haggling Passage",
+      "name": "Passage du Marchandage",
+      "kind": "street_back",
+      "name_fr": "Passage du Marchandage",
+      "name_en": "Haggling Passage"
+    }
+  ]
 }

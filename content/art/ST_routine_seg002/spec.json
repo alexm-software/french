@@ -1,110 +1,114 @@
 {
- "divider_x": 660,
- "name": "Allée du Quotidien — étape 2 · se réveiller, s'habiller, dormir",
- "note": "Tiered verb place down the Allée du Quotidien. -er LEFT (five houses' floors), -ir RIGHT (dormir). Tiers: street, balcony, upper, roof. Reflexive verbs have their mirror inside the box. Forward = far lane; back = near cobbles to étape 1. No painted text.",
- "items": [
-  {
-   "id": "fr_reveiller_verb",
-   "box": [
-    125,
-    385,
-    375,
-    650
-   ],
-   "tier": "street",
-   "mirror": "gilt mirror by the door"
-  },
-  {
-   "id": "fr_habiter_verb",
-   "box": [
-    378,
-    465,
-    615,
-    655
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_habiller_verb",
-   "box": [
-    280,
-    190,
-    450,
-    320
-   ],
-   "tier": "balcony",
-   "mirror": "oval mirror on the balcony"
-  },
-  {
-   "id": "fr_ennuyer_verb",
-   "box": [
-    160,
-    15,
-    285,
-    140
-   ],
-   "tier": "upper",
-   "mirror": "hand mirror on the sill"
-  },
-  {
-   "id": "fr_eclairer_verb",
-   "box": [
-    425,
-    20,
-    590,
-    185
-   ],
-   "tier": "roof"
-  },
-  {
-   "id": "fr_dormir_verb",
-   "box": [
-    890,
-    505,
-    1200,
-    660
-   ],
-   "tier": "street"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg003",
-   "box": [
-    680,
-    440,
-    860,
-    560
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 3",
-   "sign": "étape 3 →"
-  },
-  "back": {
-   "target": "ST_routine_seg001",
-   "box": [
-    430,
-    665,
-    880,
-    712
-   ],
-   "label": "Back up the lane to étape 1",
-   "name": "Allée du Quotidien, étape 1",
-   "sign": "← étape 1"
-  }
- },
- "signs": {
-  "er": [
-   610,
-   40,
-   700,
-   74
+  "divider_x": 660,
+  "name": "Allée du Quotidien — Rue des Lève-tôt · se réveiller, s'habiller, dormir",
+  "note": "Tiered verb place down the Allée du Quotidien. -er LEFT (five houses' floors), -ir RIGHT (dormir). Tiers: street, balcony, upper, roof. Reflexive verbs have their mirror inside the box. Forward = far lane; back = near cobbles to Rue du Marchand-de-Sable. No painted text.",
+  "items": [
+    {
+      "id": "fr_reveiller_verb",
+      "box": [
+        125,
+        385,
+        375,
+        650
+      ],
+      "tier": "street",
+      "mirror": "gilt mirror by the door"
+    },
+    {
+      "id": "fr_habiter_verb",
+      "box": [
+        378,
+        465,
+        615,
+        655
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_habiller_verb",
+      "box": [
+        280,
+        190,
+        450,
+        320
+      ],
+      "tier": "balcony",
+      "mirror": "oval mirror on the balcony"
+    },
+    {
+      "id": "fr_ennuyer_verb",
+      "box": [
+        160,
+        15,
+        285,
+        140
+      ],
+      "tier": "upper",
+      "mirror": "hand mirror on the sill"
+    },
+    {
+      "id": "fr_eclairer_verb",
+      "box": [
+        425,
+        20,
+        590,
+        185
+      ],
+      "tier": "roof"
+    },
+    {
+      "id": "fr_dormir_verb",
+      "box": [
+        890,
+        505,
+        1200,
+        660
+      ],
+      "tier": "street"
+    }
   ],
-  "irre": [
-   820,
-   40,
-   950,
-   74
-  ]
- }
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg003",
+      "box": [
+        680,
+        440,
+        860,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Lavandières",
+      "sign": "Allée des Lavandières →",
+      "name_fr": "Allée des Lavandières",
+      "name_en": "Washerwomen's Alley"
+    },
+    "back": {
+      "target": "ST_routine_seg001",
+      "box": [
+        430,
+        665,
+        880,
+        712
+      ],
+      "label": "Back up the lane to Sandman Street",
+      "name": "Rue du Marchand-de-Sable",
+      "sign": "← Rue du Marchand-de-Sable",
+      "name_fr": "Rue du Marchand-de-Sable",
+      "name_en": "Sandman Street"
+    }
+  },
+  "signs": {
+    "er": [
+      610,
+      40,
+      700,
+      74
+    ],
+    "irre": [
+      820,
+      40,
+      950,
+      74
+    ]
+  }
 }

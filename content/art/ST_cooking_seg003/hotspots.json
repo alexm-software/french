@@ -8,7 +8,7 @@
   "kind": "verb_place",
   "layout": "tiered",
   "view": "street_perspective",
-  "name": "Ruelle des Gourmets — étape 3 · Drink & pour",
+  "name": "Ruelle des Gourmets — Rue des Carafes · Drink & pour",
   "divider_x": 648,
   "note": "Tiered verb place painted as a one-point-perspective street view (walking down the lane). -er verbs on the LEFT houses, -ir/-re on the RIGHT. tier: street (doorways/pavement, commonest) -> balcony (first floor) -> upper (upper windows) -> roof (rarest). ONE box per verb; label_xy = label baseline (text-anchor middle) inside the bottom of its own box (= verb_sign). Every item box is >= 6% in from every edge. Exits: forward = large area over the far street / vanishing point; back = the near foreground cobbles at the bottom edge. Signage (dir_forward/dir_back inside their exits, -er / -ir / -re direction plates, street_name on a hanging board or upper facade) is a site overlay; no painted text.",
   "tier_counts": {
@@ -157,7 +157,7 @@
     "dir_forward": {
       "role": "direction",
       "for_exit": "forward",
-      "text": "étape 4 →",
+      "text": "Ruelle des Épices →",
       "box": [
         657,
         369,
@@ -174,7 +174,7 @@
     "dir_back": {
       "role": "direction",
       "for_exit": "back",
-      "text": "← étape 2",
+      "text": "← Allée du Pique-Nique",
       "box": [
         466,
         684,
@@ -226,7 +226,7 @@
     },
     "street_name": {
       "role": "street_name",
-      "text": "Drink & pour",
+      "text": "Rue des Carafes",
       "box": [
         1077,
         273,
@@ -466,10 +466,12 @@
           472
         ]
       ],
-      "label": "next: Ruelle des Gourmets — étape 4",
-      "name": "Ruelle des Gourmets — étape 4",
+      "label": "Ruelle des Épices",
+      "name": "Ruelle des Épices",
       "kind": "street",
-      "area": "far street / vanishing point"
+      "area": "far street / vanishing point",
+      "name_fr": "Ruelle des Épices",
+      "name_en": "Spice Lane"
     },
     "back": {
       "target": "ST_cooking_seg002",
@@ -479,10 +481,12 @@
         626,
         720
       ],
-      "label": "back: Ruelle des Gourmets — étape 2",
-      "name": "Ruelle des Gourmets — étape 2",
+      "label": "Allée du Pique-Nique",
+      "name": "Allée du Pique-Nique",
       "kind": "street",
-      "area": "near foreground cobbles"
+      "area": "near foreground cobbles",
+      "name_fr": "Allée du Pique-Nique",
+      "name_en": "Picnic Alley"
     }
   },
   "links": []

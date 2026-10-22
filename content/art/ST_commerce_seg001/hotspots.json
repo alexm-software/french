@@ -1,255 +1,257 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "divider_x": 700,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 1: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 1",
-   "box": [
-    720,
-    50,
-    1060,
-    94
-   ],
-   "text_box": [
-    726,
-    56,
-    1054,
-    88
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "divider_x": 700,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Rue des Acheteurs: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Rue des Acheteurs",
+      "box": [
+        720,
+        50,
+        1060,
+        94
+      ],
+      "text_box": [
+        726,
+        56,
+        1054,
+        88
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Allée des Livreurs →",
+      "box": [
+        700,
+        290,
+        860,
+        324
+      ],
+      "text_box": [
+        706,
+        296,
+        854,
+        318
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Place du Marché",
+      "box": [
+        640,
+        624,
+        860,
+        656
+      ],
+      "text_box": [
+        646,
+        630,
+        854,
+        650
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 2 →",
-   "box": [
-    700,
-    290,
-    860,
-    324
-   ],
-   "text_box": [
-    706,
-    296,
-    854,
-    318
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Place du Marché",
-   "box": [
-    640,
-    624,
-    860,
-    656
-   ],
-   "text_box": [
-    646,
-    630,
-    854,
-    650
-   ]
+  "items": [
+    {
+      "id": "fr_couter_verb",
+      "lemma": "coûter",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "coûter",
+      "box": [
+        100,
+        495,
+        212,
+        652
+      ],
+      "label_xy": [
+        156,
+        642
+      ],
+      "scene": "grey pigeon on the counter cooing at a big price tag",
+      "gloss": "to cost",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_payer_verb",
+      "lemma": "payer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "payer (pour)",
+      "box": [
+        214,
+        400,
+        383,
+        656
+      ],
+      "label_xy": [
+        298,
+        646
+      ],
+      "scene": "girl in red hands a shiny coin to the beaming shopkeeper",
+      "gloss": "to pay; to buy",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [
+        "pour"
+      ],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_acheter_verb",
+      "lemma": "acheter",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "acheter (à)",
+      "box": [
+        394,
+        437,
+        619,
+        638
+      ],
+      "label_xy": [
+        506,
+        628
+      ],
+      "scene": "man buying a white teapot while a big tabby cat sneezes on the table",
+      "gloss": "to buy",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [
+        "à"
+      ],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_preter_verb",
+      "lemma": "prêter",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "prêter (à)",
+      "box": [
+        162,
+        100,
+        348,
+        268
+      ],
+      "label_xy": [
+        255,
+        258
+      ],
+      "scene": "girl on a balcony lending her pretty flowered umbrella",
+      "gloss": "to lend",
+      "verb_group": 1,
+      "tier": "balcony",
+      "level": "balcony",
+      "prepositions": [
+        "à"
+      ],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_louer_verb",
+      "lemma": "louer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "louer",
+      "box": [
+        397,
+        181,
+        506,
+        318
+      ],
+      "label_xy": [
+        452,
+        308
+      ],
+      "scene": "landlord on a balcony holding out a big iron key",
+      "gloss": "to rent; to praise",
+      "verb_group": 1,
+      "tier": "balcony",
+      "level": "balcony",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_degager_verb",
+      "lemma": "dégager",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "dégager",
+      "box": [
+        481,
+        56,
+        625,
+        175
+      ],
+      "label_xy": [
+        553,
+        165
+      ],
+      "scene": "man shovelling a heap of snow off a roof",
+      "gloss": "to clear, free",
+      "verb_group": 1,
+      "tier": "roof",
+      "level": "roof",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    }
+  ],
+  "links": [],
+  "segment_id": "ST_commerce_seg001",
+  "street_id": "ST_commerce",
+  "sector_id": "S03_market",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Acheteurs",
+  "exits": {
+    "forward": {
+      "target": "ST_commerce_seg002",
+      "box": [
+        690,
+        330,
+        900,
+        520
+      ],
+      "label": "Walk on to Delivery Drivers' Alley",
+      "name": "Allée des Livreurs",
+      "kind": "street",
+      "name_fr": "Allée des Livreurs",
+      "name_en": "Delivery Drivers' Alley"
+    },
+    "back": {
+      "target": "S03_sector",
+      "box": [
+        420,
+        662,
+        1125,
+        720
+      ],
+      "label": "Back to Place du Marché",
+      "name": "Place du Marché",
+      "kind": "street"
+    }
   }
- },
- "items": [
-  {
-   "id": "fr_couter_verb",
-   "lemma": "coûter",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "coûter",
-   "box": [
-    100,
-    495,
-    212,
-    652
-   ],
-   "label_xy": [
-    156,
-    642
-   ],
-   "scene": "grey pigeon on the counter cooing at a big price tag",
-   "gloss": "to cost",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_payer_verb",
-   "lemma": "payer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "payer (pour)",
-   "box": [
-    214,
-    400,
-    383,
-    656
-   ],
-   "label_xy": [
-    298,
-    646
-   ],
-   "scene": "girl in red hands a shiny coin to the beaming shopkeeper",
-   "gloss": "to pay; to buy",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [
-    "pour"
-   ],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_acheter_verb",
-   "lemma": "acheter",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "acheter (à)",
-   "box": [
-    394,
-    437,
-    619,
-    638
-   ],
-   "label_xy": [
-    506,
-    628
-   ],
-   "scene": "man buying a white teapot while a big tabby cat sneezes on the table",
-   "gloss": "to buy",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [
-    "à"
-   ],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_preter_verb",
-   "lemma": "prêter",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "prêter (à)",
-   "box": [
-    162,
-    100,
-    348,
-    268
-   ],
-   "label_xy": [
-    255,
-    258
-   ],
-   "scene": "girl on a balcony lending her pretty flowered umbrella",
-   "gloss": "to lend",
-   "verb_group": 1,
-   "tier": "balcony",
-   "level": "balcony",
-   "prepositions": [
-    "à"
-   ],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_louer_verb",
-   "lemma": "louer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "louer",
-   "box": [
-    397,
-    181,
-    506,
-    318
-   ],
-   "label_xy": [
-    452,
-    308
-   ],
-   "scene": "landlord on a balcony holding out a big iron key",
-   "gloss": "to rent; to praise",
-   "verb_group": 1,
-   "tier": "balcony",
-   "level": "balcony",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_degager_verb",
-   "lemma": "dégager",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "dégager",
-   "box": [
-    481,
-    56,
-    625,
-    175
-   ],
-   "label_xy": [
-    553,
-    165
-   ],
-   "scene": "man shovelling a heap of snow off a roof",
-   "gloss": "to clear, free",
-   "verb_group": 1,
-   "tier": "roof",
-   "level": "roof",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  }
- ],
- "links": [],
- "segment_id": "ST_commerce_seg001",
- "street_id": "ST_commerce",
- "sector_id": "S03_market",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue du Commerce — étape 1",
- "exits": {
-  "forward": {
-   "target": "ST_commerce_seg002",
-   "box": [
-    690,
-    330,
-    900,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 2",
-   "name": "Rue du Commerce — étape 2",
-   "kind": "street"
-  },
-  "back": {
-   "target": "S03_sector",
-   "box": [
-    420,
-    662,
-    1125,
-    720
-   ],
-   "label": "Back to Place du Marché",
-   "name": "Place du Marché",
-   "kind": "street"
-  }
- }
 }

@@ -4,7 +4,7 @@ A French vocabulary memory palace, from A1 to C2. You walk a map of sixteen quar
 
 Rue des Saveurs (S04, cafés and restaurants) is the open quarter: the square, Café de la Place, Restaurant Le Bon Goût, and seven tiered cooking places along Ruelle des Gourmets. The other quarters are on the map and marked coming soon. The long walk still begins in the beginner quarter; that door is drawn, and it is not open yet.
 
-You walk by the painted doors, paths and stairs. Forward and back (and left or right, when the picture has them) stay on the painting as `exits`. The cooking walk is the square, then étapes 1 through 7, then back to the square. Rooms in one building connect by the painted stairs and doors. Do not hard-code the verb list. Each painted item has one clickable box: if a `mnemonic_box` is still present, it widens that box and is not a second target. A word label uses `label_xy` when the hotspot has it, centred on that point; otherwise it sits inside the bottom of its own box.
+You walk by the painted doors, paths and stairs. Forward and back (and left or right, when the picture has them) stay on the painting as `exits`. The cooking walk is the square, then the seven named stops from Place du Grand-Festin to Allée des Cuisiniers, then back to the square. Rooms in one building connect by the painted stairs and doors. Do not hard-code the verb list. Each painted item has one clickable box: if a `mnemonic_box` is still present, it widens that box and is not a second target. A word label uses `label_xy` when the hotspot has it, centred on that point; otherwise it sits inside the bottom of its own box.
 
 `content/assignment.json` decides which words are drawn in a painting. A word that `rooms.json` still lists, but the painting does not draw, stays in that room’s word list and is marked as not in the painting. Street paintings store prev/next under `exits`. Building fronts and the sector view store doors under `links`. The build accepts both.
 
@@ -25,7 +25,7 @@ npm run preview
 
 `content/site.json` lists `open_sectors`. Only those sectors get full word cards, quizzes, conversations and paintings. To open another quarter later, add its id and rebuild. Rooms outside that list stay on the map as coming soon and are not loaded as word files.
 
-Street contents are not hard-coded. Ruelle des Gourmets is read from `rooms.json` and `vocab.jsonl`. The live street is seven étapes (`ST_cooking_seg001` to `seg007`), laid out in tiers: street, balcony, upper and roof, with `-er` verbs on the left and `-ir` / `-re` verbs on the right. Replace those paintings and data files, then rebuild, when a later street arrives.
+Street contents are not hard-coded. Ruelle des Gourmets is read from `rooms.json` and `vocab.jsonl`. The live street is seven named stops (`ST_cooking_seg001` to `seg007`, Place du Grand-Festin through Allée des Cuisiniers), laid out in tiers: street, balcony, upper and roof. Each stop is labelled with its own street name. Replace those paintings and data files, then rebuild, when a later street arrives.
 
 ## Add a room’s painting
 

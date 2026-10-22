@@ -1,223 +1,225 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "divider_x": 780,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 8: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 8",
-   "box": [
-    780,
-    200,
-    1120,
-    244
-   ],
-   "text_box": [
-    786,
-    206,
-    1114,
-    238
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "divider_x": 780,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Quai des Entrepôts: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Quai des Entrepôts",
+      "box": [
+        780,
+        200,
+        1120,
+        244
+      ],
+      "text_box": [
+        786,
+        206,
+        1114,
+        238
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Place du Marché →",
+      "box": [
+        790,
+        320,
+        1040,
+        354
+      ],
+      "text_box": [
+        796,
+        326,
+        1034,
+        348
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Impasse des Surcharges",
+      "box": [
+        880,
+        592,
+        1060,
+        624
+      ],
+      "text_box": [
+        886,
+        598,
+        1054,
+        618
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Place du Marché →",
-   "box": [
-    790,
-    320,
-    1040,
-    354
-   ],
-   "text_box": [
-    796,
-    326,
-    1034,
-    348
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 7",
-   "box": [
-    880,
-    592,
-    1060,
-    624
-   ],
-   "text_box": [
-    886,
-    598,
-    1054,
-    618
-   ]
+  "items": [
+    {
+      "id": "fr_entreposer_verb",
+      "lemma": "entreposer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "entreposer",
+      "box": [
+        90,
+        194,
+        285,
+        540
+      ],
+      "label_xy": [
+        188,
+        530
+      ],
+      "scene": "strongman posing as he lifts a crate onto tall warehouse shelves",
+      "gloss": "to store goods in a warehouse",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_allouer_verb",
+      "lemma": "allouer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "allouer",
+      "box": [
+        419,
+        344,
+        762,
+        556
+      ],
+      "label_xy": [
+        590,
+        546
+      ],
+      "scene": "farmer handing exactly one carrot to each of three ponies",
+      "gloss": "to allot, allocate",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_miner_verb",
+      "lemma": "miner",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "miner",
+      "box": [
+        194,
+        543,
+        416,
+        656
+      ],
+      "label_xy": [
+        305,
+        646
+      ],
+      "scene": "mole in a miner's helmet popping up from a hole with a gold nugget",
+      "gloss": "to mine, exploit natural riches; to undermine; to erode",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_demarquer_verb",
+      "lemma": "démarquer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "démarquer",
+      "box": [
+        419,
+        72,
+        581,
+        269
+      ],
+      "label_xy": [
+        500,
+        259
+      ],
+      "scene": "shopkeeper peeling a big label off a woolly jumper with tweezers",
+      "gloss": "to remove a mark or label from; to remove a bookmark from",
+      "verb_group": 1,
+      "tier": "balcony",
+      "level": "balcony",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_equilibrer_verb",
+      "lemma": "équilibrer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "équilibrer",
+      "box": [
+        594,
+        44,
+        756,
+        188
+      ],
+      "label_xy": [
+        675,
+        178
+      ],
+      "scene": "seal balancing a big brass key on its nose while a donkey brays",
+      "gloss": "to balance; to counterbalance",
+      "verb_group": 1,
+      "tier": "roof",
+      "level": "roof",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    }
+  ],
+  "links": [],
+  "segment_id": "ST_commerce_seg006",
+  "street_id": "ST_commerce",
+  "sector_id": "S03_market",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Quai des Entrepôts",
+  "exits": {
+    "forward": {
+      "target": "S03_sector",
+      "box": [
+        780,
+        360,
+        960,
+        520
+      ],
+      "label": "Walk on round the corner back to the Place du Marché",
+      "name": "Place du Marché",
+      "kind": "street"
+    },
+    "back": {
+      "target": "ST_commerce_seg008",
+      "box": [
+        450,
+        630,
+        1100,
+        720
+      ],
+      "label": "Back to Overload Close",
+      "name": "Impasse des Surcharges",
+      "kind": "street",
+      "name_fr": "Impasse des Surcharges",
+      "name_en": "Overload Close"
+    }
   }
- },
- "items": [
-  {
-   "id": "fr_entreposer_verb",
-   "lemma": "entreposer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "entreposer",
-   "box": [
-    90,
-    194,
-    285,
-    540
-   ],
-   "label_xy": [
-    188,
-    530
-   ],
-   "scene": "strongman posing as he lifts a crate onto tall warehouse shelves",
-   "gloss": "to store goods in a warehouse",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_allouer_verb",
-   "lemma": "allouer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "allouer",
-   "box": [
-    419,
-    344,
-    762,
-    556
-   ],
-   "label_xy": [
-    590,
-    546
-   ],
-   "scene": "farmer handing exactly one carrot to each of three ponies",
-   "gloss": "to allot, allocate",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_miner_verb",
-   "lemma": "miner",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "miner",
-   "box": [
-    194,
-    543,
-    416,
-    656
-   ],
-   "label_xy": [
-    305,
-    646
-   ],
-   "scene": "mole in a miner's helmet popping up from a hole with a gold nugget",
-   "gloss": "to mine, exploit natural riches; to undermine; to erode",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_demarquer_verb",
-   "lemma": "démarquer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "démarquer",
-   "box": [
-    419,
-    72,
-    581,
-    269
-   ],
-   "label_xy": [
-    500,
-    259
-   ],
-   "scene": "shopkeeper peeling a big label off a woolly jumper with tweezers",
-   "gloss": "to remove a mark or label from; to remove a bookmark from",
-   "verb_group": 1,
-   "tier": "balcony",
-   "level": "balcony",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_equilibrer_verb",
-   "lemma": "équilibrer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "équilibrer",
-   "box": [
-    594,
-    44,
-    756,
-    188
-   ],
-   "label_xy": [
-    675,
-    178
-   ],
-   "scene": "seal balancing a big brass key on its nose while a donkey brays",
-   "gloss": "to balance; to counterbalance",
-   "verb_group": 1,
-   "tier": "roof",
-   "level": "roof",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  }
- ],
- "links": [],
- "segment_id": "ST_commerce_seg006",
- "street_id": "ST_commerce",
- "sector_id": "S03_market",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue du Commerce — étape 8",
- "exits": {
-  "forward": {
-   "target": "S03_sector",
-   "box": [
-    780,
-    360,
-    960,
-    520
-   ],
-   "label": "Walk on round the corner back to the Place du Marché",
-   "name": "Place du Marché",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_commerce_seg008",
-   "box": [
-    450,
-    630,
-    1100,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 7",
-   "name": "Rue du Commerce — étape 7",
-   "kind": "street"
-  }
- }
 }

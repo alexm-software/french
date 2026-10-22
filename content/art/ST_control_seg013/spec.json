@@ -1,17 +1,112 @@
-{"divider_x": 820,
- "name": "Rue des Gestes — étape 13 · repousser, se hisser, abattre",
- "note": "Tiered verb place. -er LEFT (man pushing back a charging goat with his broom, man hoisting himself up a rope onto the wall while a goose hisses, little mirror on the wall; man chaining his bicycle to the balcony rail; cook trapping a jay under a pie dish at the upper window; farmer mowing the grass roof with a scythe), -ir/-re RIGHT (man knocking down a tower of tin cans with a cricket bat). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_repousser_verb", "box": [56, 400, 462, 672], "tier": "street"},
-  {"id": "fr_hisser_verb", "box": [475, 412, 700, 631], "tier": "street", "mirror": "small oval mirror on the wall beside the rope"},
-  {"id": "fr_enchainer_verb", "box": [394, 194, 575, 356], "tier": "balcony"},
-  {"id": "fr_pieger_verb", "box": [200, 194, 312, 331], "tier": "upper"},
-  {"id": "fr_faucher_verb", "box": [112, 8, 344, 125], "tier": "roof"},
-  {"id": "fr_abattre_verb", "box": [912, 369, 1156, 662], "tier": "street"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg014", "box": [760, 430, 905, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 14", "sign": "étape 14 →"},
-  "back": {"target": "ST_control_seg012", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 12", "name": "Rue des Gestes, étape 12", "sign": "← étape 12"}
- },
- "signs": {"er": [700, 25, 800, 59], "irre": [840, 25, 960, 59]}
+{
+  "divider_x": 820,
+  "name": "Rue des Gestes — Chemin des Faucheurs · repousser, se hisser, abattre",
+  "note": "Tiered verb place. -er LEFT (man pushing back a charging goat with his broom, man hoisting himself up a rope onto the wall while a goose hisses, little mirror on the wall; man chaining his bicycle to the balcony rail; cook trapping a jay under a pie dish at the upper window; farmer mowing the grass roof with a scythe), -ir/-re RIGHT (man knocking down a tower of tin cans with a cricket bat). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_repousser_verb",
+      "box": [
+        56,
+        400,
+        462,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_hisser_verb",
+      "box": [
+        475,
+        412,
+        700,
+        631
+      ],
+      "tier": "street",
+      "mirror": "small oval mirror on the wall beside the rope"
+    },
+    {
+      "id": "fr_enchainer_verb",
+      "box": [
+        394,
+        194,
+        575,
+        356
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_pieger_verb",
+      "box": [
+        200,
+        194,
+        312,
+        331
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_faucher_verb",
+      "box": [
+        112,
+        8,
+        344,
+        125
+      ],
+      "tier": "roof"
+    },
+    {
+      "id": "fr_abattre_verb",
+      "box": [
+        912,
+        369,
+        1156,
+        662
+      ],
+      "tier": "street"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg014",
+      "box": [
+        760,
+        430,
+        905,
+        540
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée de l'Écureuil",
+      "sign": "Allée de l'Écureuil →",
+      "name_fr": "Allée de l'Écureuil",
+      "name_en": "Squirrel Alley"
+    },
+    "back": {
+      "target": "ST_control_seg012",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Clothes-Pegs Passage",
+      "name": "Passage des Pinces-à-Linge",
+      "sign": "← Passage des Pinces-à-Linge",
+      "name_fr": "Passage des Pinces-à-Linge",
+      "name_en": "Clothes-Pegs Passage"
+    }
+  },
+  "signs": {
+    "er": [
+      700,
+      25,
+      800,
+      59
+    ],
+    "irre": [
+      840,
+      25,
+      960,
+      59
+    ]
+  }
 }

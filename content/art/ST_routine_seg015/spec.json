@@ -1,17 +1,112 @@
-{"divider_x": 860,
- "name": "Allée du Quotidien — étape 15 · bricoler, ruser, s'adjoindre",
- "note": "Tiered verb place. -er LEFT (man laying bricks for a little wall, fox in a fake moustache sneaking past the hen house, juggler with six balls on the balcony, decorator shelling peanuts at the upper window, man pulling on a pirate costume on the roof terrace), -ir/-re RIGHT (duckling hurrying to join the line of ducks, round mirror on the wall). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_bricoler_verb", "box": [56, 450, 368, 672], "tier": "street"},
-  {"id": "fr_ruser_verb", "box": [370, 425, 600, 625], "tier": "street"},
-  {"id": "fr_conjuguer_verb", "box": [450, 169, 588, 362], "tier": "balcony"},
-  {"id": "fr_decortiquer_verb", "box": [106, 212, 281, 375], "tier": "upper"},
-  {"id": "fr_costumer_verb", "box": [106, 10, 294, 150], "tier": "roof"},
-  {"id": "fr_adjoindre_verb", "box": [912, 368, 1262, 650], "tier": "street", "mirror": "round mirror on the cottage wall beside the ducks"}
- ],
- "exits": {
-  "forward": {"target": "ST_routine_seg016", "box": [700, 400, 880, 520], "label": "Walk on down the lane", "name": "Allée du Quotidien, étape 16", "sign": "étape 16 →"},
-  "back": {"target": "ST_routine_seg014", "box": [470, 668, 900, 712], "label": "Back up the lane to étape 14", "name": "Allée du Quotidien, étape 14", "sign": "← étape 14"}
- },
- "signs": {"er": [620, 25, 720, 59], "irre": [880, 25, 1000, 59]}
+{
+  "divider_x": 860,
+  "name": "Allée du Quotidien — Allée des Bricoleurs · bricoler, ruser, s'adjoindre",
+  "note": "Tiered verb place. -er LEFT (man laying bricks for a little wall, fox in a fake moustache sneaking past the hen house, juggler with six balls on the balcony, decorator shelling peanuts at the upper window, man pulling on a pirate costume on the roof terrace), -ir/-re RIGHT (duckling hurrying to join the line of ducks, round mirror on the wall). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_bricoler_verb",
+      "box": [
+        56,
+        450,
+        368,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_ruser_verb",
+      "box": [
+        370,
+        425,
+        600,
+        625
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_conjuguer_verb",
+      "box": [
+        450,
+        169,
+        588,
+        362
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_decortiquer_verb",
+      "box": [
+        106,
+        212,
+        281,
+        375
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_costumer_verb",
+      "box": [
+        106,
+        10,
+        294,
+        150
+      ],
+      "tier": "roof"
+    },
+    {
+      "id": "fr_adjoindre_verb",
+      "box": [
+        912,
+        368,
+        1262,
+        650
+      ],
+      "tier": "street",
+      "mirror": "round mirror on the cottage wall beside the ducks"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg016",
+      "box": [
+        700,
+        400,
+        880,
+        520
+      ],
+      "label": "Walk on down the lane",
+      "name": "Ruelle des Houppettes",
+      "sign": "Ruelle des Houppettes →",
+      "name_fr": "Ruelle des Houppettes",
+      "name_en": "Powder-Puffs Lane"
+    },
+    "back": {
+      "target": "ST_routine_seg014",
+      "box": [
+        470,
+        668,
+        900,
+        712
+      ],
+      "label": "Back up the lane to Night-Watchers' Street",
+      "name": "Rue des Veilleurs-de-Nuit",
+      "sign": "← Rue des Veilleurs-de-Nuit",
+      "name_fr": "Rue des Veilleurs-de-Nuit",
+      "name_en": "Night-Watchers' Street"
+    }
+  },
+  "signs": {
+    "er": [
+      620,
+      25,
+      720,
+      59
+    ],
+    "irre": [
+      880,
+      25,
+      1000,
+      59
+    ]
+  }
 }

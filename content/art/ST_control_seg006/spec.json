@@ -1,17 +1,111 @@
-{"divider_x": 1000,
- "name": "Rue des Gestes — étape 6 · porter, poser, placer",
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hotel porter carrying a tower of suitcases, woman posing as she puts down a vase, traveller returning home with his globe), balcony (man throwing an old boot down into the bin), upper (woman taking off her huge feathered hat), roof (man seating a tabby cat on a chair). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_porter_verb", "box": [287, 238, 444, 672], "tier": "street"},
-  {"id": "fr_poser_verb", "box": [456, 394, 700, 650], "tier": "street"},
-  {"id": "fr_retourner_verb", "box": [787, 400, 906, 619], "tier": "street"},
-  {"id": "fr_jeter_verb", "box": [469, 62, 644, 331], "tier": "balcony"},
-  {"id": "fr_enlever_verb", "box": [662, 88, 775, 244], "tier": "upper"},
-  {"id": "fr_placer_verb", "box": [100, 12, 300, 188], "tier": "roof"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg007", "box": [960, 440, 1100, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 7", "sign": "étape 7 →"},
-  "back": {"target": "ST_control_seg005", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 5", "name": "Rue des Gestes, étape 5", "sign": "← étape 5"}
- },
- "signs": {"er": [880, 25, 980, 59], "irre": [1000, 25, 1120, 59]}
+{
+  "divider_x": 1000,
+  "name": "Rue des Gestes — Allée des Porteurs · porter, poser, placer",
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hotel porter carrying a tower of suitcases, woman posing as she puts down a vase, traveller returning home with his globe), balcony (man throwing an old boot down into the bin), upper (woman taking off her huge feathered hat), roof (man seating a tabby cat on a chair). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_porter_verb",
+      "box": [
+        287,
+        238,
+        444,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_poser_verb",
+      "box": [
+        456,
+        394,
+        700,
+        650
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_retourner_verb",
+      "box": [
+        787,
+        400,
+        906,
+        619
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_jeter_verb",
+      "box": [
+        469,
+        62,
+        644,
+        331
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_enlever_verb",
+      "box": [
+        662,
+        88,
+        775,
+        244
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_placer_verb",
+      "box": [
+        100,
+        12,
+        300,
+        188
+      ],
+      "tier": "roof"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg007",
+      "box": [
+        960,
+        440,
+        1100,
+        540
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Lanceurs",
+      "sign": "Rue des Lanceurs →",
+      "name_fr": "Rue des Lanceurs",
+      "name_en": "Throwers' Street"
+    },
+    "back": {
+      "target": "ST_control_seg005",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Farm-Gate Lane",
+      "name": "Chemin de la Barrière",
+      "sign": "← Chemin de la Barrière",
+      "name_fr": "Chemin de la Barrière",
+      "name_en": "Farm-Gate Lane"
+    }
+  },
+  "signs": {
+    "er": [
+      880,
+      25,
+      980,
+      59
+    ],
+    "irre": [
+      1000,
+      25,
+      1120,
+      59
+    ]
+  }
 }

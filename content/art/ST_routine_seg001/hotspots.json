@@ -1,367 +1,369 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_routine_seg001",
- "street_id": "ST_routine",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Allée du Quotidien — étape 1 · se coucher, s'asseoir, attendre",
- "divider_x": 640,
- "note": "Tiered verb place, one-point perspective down the Allée du Quotidien (half-timbered Alsatian cottages). -er verbs on the LEFT houses, -ir/-re/-oir on the RIGHT. Tiers: street (doorways), balcony (first floor), roof (rarest). Reflexive verbs have their mirror painted inside their box. Forward = far lane; back = near cobbles to the square. No painted text.",
- "text_areas": {
-  "fr_coucher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_coucher_verb",
-   "text": "se coucher",
-   "box": [
-    222,
-    608,
-    328,
-    634
-   ],
-   "text_box": [
-    226,
-    612,
-    324,
-    630
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_routine_seg001",
+  "street_id": "ST_routine",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Allée du Quotidien — Rue du Marchand-de-Sable · se coucher, s'asseoir, attendre",
+  "divider_x": 640,
+  "note": "Tiered verb place, one-point perspective down the Allée du Quotidien (half-timbered Alsatian cottages). -er verbs on the LEFT houses, -ir/-re/-oir on the RIGHT. Tiers: street (doorways), balcony (first floor), roof (rarest). Reflexive verbs have their mirror painted inside their box. Forward = far lane; back = near cobbles to the square. No painted text.",
+  "text_areas": {
+    "fr_coucher_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_coucher_verb",
+      "text": "se coucher",
+      "box": [
+        222,
+        608,
+        328,
+        634
+      ],
+      "text_box": [
+        226,
+        612,
+        324,
+        630
+      ]
+    },
+    "fr_relever_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_relever_verb",
+      "text": "relever",
+      "box": [
+        306,
+        326,
+        384,
+        352
+      ],
+      "text_box": [
+        310,
+        330,
+        380,
+        348
+      ]
+    },
+    "fr_allonger_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_allonger_verb",
+      "text": "allonger",
+      "box": [
+        218,
+        93,
+        306,
+        119
+      ],
+      "text_box": [
+        222,
+        97,
+        302,
+        115
+      ]
+    },
+    "fr_attendre_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_attendre_verb",
+      "text": "attendre",
+      "box": [
+        996,
+        643,
+        1084,
+        669
+      ],
+      "text_box": [
+        1000,
+        647,
+        1080,
+        665
+      ]
+    },
+    "fr_asseoir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_asseoir_verb",
+      "text": "s'asseoir",
+      "box": [
+        1022,
+        368,
+        1118,
+        394
+      ],
+      "text_box": [
+        1026,
+        372,
+        1114,
+        390
+      ]
+    },
+    "fr_endormir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_endormir_verb",
+      "text": "s'endormir",
+      "box": [
+        1059,
+        173,
+        1165,
+        199
+      ],
+      "text_box": [
+        1063,
+        177,
+        1161,
+        195
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Rue des Lève-tôt →",
+      "box": [
+        560,
+        390,
+        760,
+        520
+      ],
+      "text_box": [
+        566,
+        396,
+        754,
+        514
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Rue des Maisons",
+      "box": [
+        480,
+        652,
+        900,
+        712
+      ],
+      "text_box": [
+        486,
+        658,
+        894,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        440,
+        40,
+        540,
+        74
+      ],
+      "text_box": [
+        443,
+        43,
+        537,
+        71
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        660,
+        40,
+        790,
+        74
+      ],
+      "text_box": [
+        663,
+        43,
+        787,
+        71
+      ]
+    }
   },
-  "fr_relever_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_relever_verb",
-   "text": "relever",
-   "box": [
-    306,
-    326,
-    384,
-    352
-   ],
-   "text_box": [
-    310,
-    330,
-    380,
-    348
-   ]
+  "items": [
+    {
+      "id": "fr_coucher_verb",
+      "lemma": "coucher",
+      "gloss": "to put to bed (se coucher = go to bed)",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        110,
+        440,
+        440,
+        640
+      ],
+      "label_xy": [
+        275,
+        628
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "se coucher",
+      "scene": "",
+      "mirror": "tall standing mirror beside the bed"
+    },
+    {
+      "id": "fr_relever_verb",
+      "lemma": "relever",
+      "gloss": "to raise; to note",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 2,
+      "box": [
+        215,
+        170,
+        475,
+        358
+      ],
+      "label_xy": [
+        345,
+        346
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_allonger_verb",
+      "lemma": "allonger",
+      "gloss": "to lengthen; to lie down",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 3,
+      "box": [
+        140,
+        15,
+        385,
+        125
+      ],
+      "label_xy": [
+        262,
+        113
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_attendre_verb",
+      "lemma": "attendre",
+      "gloss": "to wait (for)",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 4,
+      "box": [
+        960,
+        470,
+        1120,
+        675
+      ],
+      "label_xy": [
+        1040,
+        663
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_asseoir_verb",
+      "lemma": "asseoir",
+      "gloss": "to sit (s'asseoir = to sit down)",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 5,
+      "box": [
+        930,
+        285,
+        1210,
+        400
+      ],
+      "label_xy": [
+        1070,
+        388
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'asseoir",
+      "scene": "",
+      "mirror": "round mirror on the balcony wall"
+    },
+    {
+      "id": "fr_endormir_verb",
+      "lemma": "endormir",
+      "gloss": "to put to sleep (s'endormir = fall asleep)",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "roof",
+      "level": "roof",
+      "order": 6,
+      "box": [
+        1020,
+        50,
+        1205,
+        205
+      ],
+      "label_xy": [
+        1112,
+        193
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'endormir",
+      "scene": "",
+      "mirror": "small round mirror inside the dormer"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg002",
+      "box": [
+        560,
+        390,
+        760,
+        520
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Lève-tôt",
+      "sign": "Rue des Lève-tôt →",
+      "kind": "street",
+      "name_fr": "Rue des Lève-tôt",
+      "name_en": "Early Risers' Street"
+    },
+    "back": {
+      "target": "S02_sector",
+      "box": [
+        480,
+        652,
+        900,
+        712
+      ],
+      "label": "Back to the Rue des Maisons square",
+      "name": "Rue des Maisons",
+      "sign": "← Rue des Maisons",
+      "kind": "street"
+    }
   },
-  "fr_allonger_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_allonger_verb",
-   "text": "allonger",
-   "box": [
-    218,
-    93,
-    306,
-    119
-   ],
-   "text_box": [
-    222,
-    97,
-    302,
-    115
-   ]
-  },
-  "fr_attendre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_attendre_verb",
-   "text": "attendre",
-   "box": [
-    996,
-    643,
-    1084,
-    669
-   ],
-   "text_box": [
-    1000,
-    647,
-    1080,
-    665
-   ]
-  },
-  "fr_asseoir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_asseoir_verb",
-   "text": "s'asseoir",
-   "box": [
-    1022,
-    368,
-    1118,
-    394
-   ],
-   "text_box": [
-    1026,
-    372,
-    1114,
-    390
-   ]
-  },
-  "fr_endormir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_endormir_verb",
-   "text": "s'endormir",
-   "box": [
-    1059,
-    173,
-    1165,
-    199
-   ],
-   "text_box": [
-    1063,
-    177,
-    1161,
-    195
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 2 →",
-   "box": [
-    560,
-    390,
-    760,
-    520
-   ],
-   "text_box": [
-    566,
-    396,
-    754,
-    514
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← Rue des Maisons",
-   "box": [
-    480,
-    652,
-    900,
-    712
-   ],
-   "text_box": [
-    486,
-    658,
-    894,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    440,
-    40,
-    540,
-    74
-   ],
-   "text_box": [
-    443,
-    43,
-    537,
-    71
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    660,
-    40,
-    790,
-    74
-   ],
-   "text_box": [
-    663,
-    43,
-    787,
-    71
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 2,
+    "balcony": 2,
+    "roof": 2
   }
- },
- "items": [
-  {
-   "id": "fr_coucher_verb",
-   "lemma": "coucher",
-   "gloss": "to put to bed (se coucher = go to bed)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    110,
-    440,
-    440,
-    640
-   ],
-   "label_xy": [
-    275,
-    628
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "se coucher",
-   "scene": "",
-   "mirror": "tall standing mirror beside the bed"
-  },
-  {
-   "id": "fr_relever_verb",
-   "lemma": "relever",
-   "gloss": "to raise; to note",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 2,
-   "box": [
-    215,
-    170,
-    475,
-    358
-   ],
-   "label_xy": [
-    345,
-    346
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_allonger_verb",
-   "lemma": "allonger",
-   "gloss": "to lengthen; to lie down",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 3,
-   "box": [
-    140,
-    15,
-    385,
-    125
-   ],
-   "label_xy": [
-    262,
-    113
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_attendre_verb",
-   "lemma": "attendre",
-   "gloss": "to wait (for)",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 4,
-   "box": [
-    960,
-    470,
-    1120,
-    675
-   ],
-   "label_xy": [
-    1040,
-    663
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_asseoir_verb",
-   "lemma": "asseoir",
-   "gloss": "to sit (s'asseoir = to sit down)",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 5,
-   "box": [
-    930,
-    285,
-    1210,
-    400
-   ],
-   "label_xy": [
-    1070,
-    388
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'asseoir",
-   "scene": "",
-   "mirror": "round mirror on the balcony wall"
-  },
-  {
-   "id": "fr_endormir_verb",
-   "lemma": "endormir",
-   "gloss": "to put to sleep (s'endormir = fall asleep)",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "roof",
-   "level": "roof",
-   "order": 6,
-   "box": [
-    1020,
-    50,
-    1205,
-    205
-   ],
-   "label_xy": [
-    1112,
-    193
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'endormir",
-   "scene": "",
-   "mirror": "small round mirror inside the dormer"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg002",
-   "box": [
-    560,
-    390,
-    760,
-    520
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 2",
-   "sign": "étape 2 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "S02_sector",
-   "box": [
-    480,
-    652,
-    900,
-    712
-   ],
-   "label": "Back to the Rue des Maisons square",
-   "name": "Rue des Maisons",
-   "sign": "← Rue des Maisons",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 2,
-  "balcony": 2,
-  "roof": 2
- }
 }

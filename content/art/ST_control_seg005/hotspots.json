@@ -1,365 +1,369 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg005",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 5 · fermer, casser, mettre",
- "divider_x": 900,
- "note": "Tiered verb place. -er LEFT (farmer closing the gate on three geese, cook whose casserole dish breaks on the cobbles, kangaroo rolling a beach ball on the balcony, man catching a butterfly at the upper window, stork setting a parcel down on the roof terrace), -ir/-re RIGHT (tailor putting on his top hat, tape measure round his neck). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_fermer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_fermer_verb",
-   "text": "fermer",
-   "box": [
-    125,
-    630,
-    193,
-    656
-   ],
-   "text_box": [
-    129,
-    634,
-    189,
-    652
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg005",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Chemin de la Barrière · fermer, casser, mettre",
+  "divider_x": 900,
+  "note": "Tiered verb place. -er LEFT (farmer closing the gate on three geese, cook whose casserole dish breaks on the cobbles, kangaroo rolling a beach ball on the balcony, man catching a butterfly at the upper window, stork setting a parcel down on the roof terrace), -ir/-re RIGHT (tailor putting on his top hat, tape measure round his neck). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_fermer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_fermer_verb",
+      "text": "fermer",
+      "box": [
+        125,
+        630,
+        193,
+        656
+      ],
+      "text_box": [
+        129,
+        634,
+        189,
+        652
+      ]
+    },
+    "fr_casser_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_casser_verb",
+      "text": "casser",
+      "box": [
+        500,
+        640,
+        568,
+        666
+      ],
+      "text_box": [
+        504,
+        644,
+        564,
+        662
+      ]
+    },
+    "fr_rouler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_rouler_verb",
+      "text": "rouler",
+      "box": [
+        550,
+        330,
+        618,
+        356
+      ],
+      "text_box": [
+        554,
+        334,
+        614,
+        352
+      ]
+    },
+    "fr_attraper_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_attraper_verb",
+      "text": "attraper",
+      "box": [
+        221,
+        156,
+        309,
+        182
+      ],
+      "text_box": [
+        225,
+        160,
+        305,
+        178
+      ]
+    },
+    "fr_deposer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_deposer_verb",
+      "text": "déposer",
+      "box": [
+        542,
+        99,
+        620,
+        125
+      ],
+      "text_box": [
+        546,
+        103,
+        616,
+        121
+      ]
+    },
+    "fr_mettre_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_mettre_verb",
+      "text": "mettre",
+      "box": [
+        1125,
+        606,
+        1193,
+        632
+      ],
+      "text_box": [
+        1129,
+        610,
+        1189,
+        628
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Allée des Porteurs →",
+      "box": [
+        880,
+        440,
+        1040,
+        560
+      ],
+      "text_box": [
+        886,
+        446,
+        1034,
+        554
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Place de l'Orgue-de-Barbarie",
+      "box": [
+        690,
+        676,
+        1100,
+        712
+      ],
+      "text_box": [
+        696,
+        682,
+        1094,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        740,
+        25,
+        840,
+        59
+      ],
+      "text_box": [
+        743,
+        28,
+        837,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        870,
+        25,
+        990,
+        59
+      ],
+      "text_box": [
+        873,
+        28,
+        987,
+        56
+      ]
+    }
   },
-  "fr_casser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_casser_verb",
-   "text": "casser",
-   "box": [
-    500,
-    640,
-    568,
-    666
-   ],
-   "text_box": [
-    504,
-    644,
-    564,
-    662
-   ]
+  "items": [
+    {
+      "id": "fr_fermer_verb",
+      "lemma": "fermer",
+      "gloss": "to close",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        56,
+        369,
+        262,
+        662
+      ],
+      "label_xy": [
+        159,
+        650
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_casser_verb",
+      "lemma": "casser",
+      "gloss": "to break",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        400,
+        431,
+        669,
+        672
+      ],
+      "label_xy": [
+        534,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_rouler_verb",
+      "lemma": "rouler",
+      "gloss": "to roll; to drive",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        494,
+        212,
+        675,
+        362
+      ],
+      "label_xy": [
+        584,
+        350
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_attraper_verb",
+      "lemma": "attraper",
+      "gloss": "to catch",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 4,
+      "box": [
+        137,
+        31,
+        394,
+        188
+      ],
+      "label_xy": [
+        265,
+        176
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_deposer_verb",
+      "lemma": "déposer",
+      "gloss": "to put down; to drop off",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 5,
+      "box": [
+        506,
+        25,
+        656,
+        131
+      ],
+      "label_xy": [
+        581,
+        119
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_mettre_verb",
+      "lemma": "mettre",
+      "gloss": "to put; to put on",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 6,
+      "box": [
+        1119,
+        400,
+        1200,
+        638
+      ],
+      "label_xy": [
+        1159,
+        626
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg006",
+      "box": [
+        880,
+        440,
+        1040,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Porteurs",
+      "sign": "Allée des Porteurs →",
+      "kind": "street",
+      "name_fr": "Allée des Porteurs",
+      "name_en": "Porters' Alley"
+    },
+    "back": {
+      "target": "ST_control_seg004",
+      "box": [
+        690,
+        676,
+        1100,
+        712
+      ],
+      "label": "Back up the lane to Barrel-Organ Square",
+      "name": "Place de l'Orgue-de-Barbarie",
+      "sign": "← Place de l'Orgue-de-Barbarie",
+      "kind": "street",
+      "name_fr": "Place de l'Orgue-de-Barbarie",
+      "name_en": "Barrel-Organ Square"
+    }
   },
-  "fr_rouler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rouler_verb",
-   "text": "rouler",
-   "box": [
-    550,
-    330,
-    618,
-    356
-   ],
-   "text_box": [
-    554,
-    334,
-    614,
-    352
-   ]
-  },
-  "fr_attraper_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_attraper_verb",
-   "text": "attraper",
-   "box": [
-    221,
-    156,
-    309,
-    182
-   ],
-   "text_box": [
-    225,
-    160,
-    305,
-    178
-   ]
-  },
-  "fr_deposer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_deposer_verb",
-   "text": "déposer",
-   "box": [
-    542,
-    99,
-    620,
-    125
-   ],
-   "text_box": [
-    546,
-    103,
-    616,
-    121
-   ]
-  },
-  "fr_mettre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_mettre_verb",
-   "text": "mettre",
-   "box": [
-    1125,
-    606,
-    1193,
-    632
-   ],
-   "text_box": [
-    1129,
-    610,
-    1189,
-    628
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 6 →",
-   "box": [
-    880,
-    440,
-    1040,
-    560
-   ],
-   "text_box": [
-    886,
-    446,
-    1034,
-    554
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 4",
-   "box": [
-    690,
-    676,
-    1100,
-    712
-   ],
-   "text_box": [
-    696,
-    682,
-    1094,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    740,
-    25,
-    840,
-    59
-   ],
-   "text_box": [
-    743,
-    28,
-    837,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    870,
-    25,
-    990,
-    59
-   ],
-   "text_box": [
-    873,
-    28,
-    987,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 3,
+    "balcony": 1,
+    "upper": 1,
+    "roof": 1
   }
- },
- "items": [
-  {
-   "id": "fr_fermer_verb",
-   "lemma": "fermer",
-   "gloss": "to close",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    56,
-    369,
-    262,
-    662
-   ],
-   "label_xy": [
-    159,
-    650
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_casser_verb",
-   "lemma": "casser",
-   "gloss": "to break",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    400,
-    431,
-    669,
-    672
-   ],
-   "label_xy": [
-    534,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_rouler_verb",
-   "lemma": "rouler",
-   "gloss": "to roll; to drive",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    494,
-    212,
-    675,
-    362
-   ],
-   "label_xy": [
-    584,
-    350
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_attraper_verb",
-   "lemma": "attraper",
-   "gloss": "to catch",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 4,
-   "box": [
-    137,
-    31,
-    394,
-    188
-   ],
-   "label_xy": [
-    265,
-    176
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_deposer_verb",
-   "lemma": "déposer",
-   "gloss": "to put down; to drop off",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 5,
-   "box": [
-    506,
-    25,
-    656,
-    131
-   ],
-   "label_xy": [
-    581,
-    119
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_mettre_verb",
-   "lemma": "mettre",
-   "gloss": "to put; to put on",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 6,
-   "box": [
-    1119,
-    400,
-    1200,
-    638
-   ],
-   "label_xy": [
-    1159,
-    626
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg006",
-   "box": [
-    880,
-    440,
-    1040,
-    560
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 6",
-   "sign": "étape 6 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_control_seg004",
-   "box": [
-    690,
-    676,
-    1100,
-    712
-   ],
-   "label": "Back up the lane to étape 4",
-   "name": "Rue des Gestes, étape 4",
-   "sign": "← étape 4",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 3,
-  "balcony": 1,
-  "upper": 1,
-  "roof": 1
- }
 }

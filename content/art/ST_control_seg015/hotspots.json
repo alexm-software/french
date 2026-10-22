@@ -1,366 +1,370 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg015",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 15 · coincer, étaler, caler",
- "divider_x": 1000,
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man stuck in his doorway with a giant gold coin, tall baker spreading butter on a huge loaf slice, woman wrapping a present), balcony (goose jostling a man aside), upper (kittens piled up on a tasselled cushion beside an oval mirror), roof (man wedging a book under a wobbly table leg). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_coincer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_coincer_verb",
-   "text": "coincer",
-   "box": [
-    123,
-    618,
-    201,
-    644
-   ],
-   "text_box": [
-    127,
-    622,
-    197,
-    640
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg015",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Ruelle des Bousculades · coincer, étaler, caler",
+  "divider_x": 1000,
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man stuck in his doorway with a giant gold coin, tall baker spreading butter on a huge loaf slice, woman wrapping a present), balcony (goose jostling a man aside), upper (kittens piled up on a tasselled cushion beside an oval mirror), roof (man wedging a book under a wobbly table leg). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_coincer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_coincer_verb",
+      "text": "coincer",
+      "box": [
+        123,
+        618,
+        201,
+        644
+      ],
+      "text_box": [
+        127,
+        622,
+        197,
+        640
+      ]
+    },
+    "fr_etaler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_etaler_verb",
+      "text": "étaler",
+      "box": [
+        391,
+        640,
+        459,
+        666
+      ],
+      "text_box": [
+        395,
+        644,
+        455,
+        662
+      ]
+    },
+    "fr_envelopper_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_envelopper_verb",
+      "text": "envelopper",
+      "box": [
+        595,
+        630,
+        701,
+        656
+      ],
+      "text_box": [
+        599,
+        634,
+        697,
+        652
+      ]
+    },
+    "fr_bousculer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_bousculer_verb",
+      "text": "bousculer",
+      "box": [
+        474,
+        206,
+        570,
+        232
+      ],
+      "text_box": [
+        478,
+        210,
+        566,
+        228
+      ]
+    },
+    "fr_entasser_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_entasser_verb",
+      "text": "s'entasser",
+      "box": [
+        209,
+        156,
+        315,
+        182
+      ],
+      "text_box": [
+        213,
+        160,
+        311,
+        178
+      ]
+    },
+    "fr_caler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_caler_verb",
+      "text": "caler",
+      "box": [
+        705,
+        168,
+        763,
+        194
+      ],
+      "text_box": [
+        709,
+        172,
+        759,
+        190
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Rue de la Mise-en-Place →",
+      "box": [
+        930,
+        440,
+        1060,
+        540
+      ],
+      "text_box": [
+        936,
+        446,
+        1054,
+        534
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Allée de l'Écureuil",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "text_box": [
+        476,
+        682,
+        954,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        880,
+        25,
+        980,
+        59
+      ],
+      "text_box": [
+        883,
+        28,
+        977,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        1000,
+        25,
+        1120,
+        59
+      ],
+      "text_box": [
+        1003,
+        28,
+        1117,
+        56
+      ]
+    }
   },
-  "fr_etaler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_etaler_verb",
-   "text": "étaler",
-   "box": [
-    391,
-    640,
-    459,
-    666
-   ],
-   "text_box": [
-    395,
-    644,
-    455,
-    662
-   ]
+  "items": [
+    {
+      "id": "fr_coincer_verb",
+      "lemma": "coincer",
+      "gloss": "to wedge, get stuck",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        69,
+        300,
+        256,
+        650
+      ],
+      "label_xy": [
+        162,
+        638
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_etaler_verb",
+      "lemma": "étaler",
+      "gloss": "to spread out",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        300,
+        319,
+        550,
+        672
+      ],
+      "label_xy": [
+        425,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_envelopper_verb",
+      "lemma": "envelopper",
+      "gloss": "to wrap",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 3,
+      "box": [
+        552,
+        350,
+        745,
+        662
+      ],
+      "label_xy": [
+        648,
+        650
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_bousculer_verb",
+      "lemma": "bousculer",
+      "gloss": "to jostle",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 4,
+      "box": [
+        425,
+        75,
+        619,
+        238
+      ],
+      "label_xy": [
+        522,
+        226
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_entasser_verb",
+      "lemma": "entasser",
+      "gloss": "to pile, to hoard; to pile up",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 5,
+      "box": [
+        106,
+        25,
+        419,
+        188
+      ],
+      "label_xy": [
+        262,
+        176
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'entasser",
+      "scene": "",
+      "mirror": "oval mirror on the wall beside the window"
+    },
+    {
+      "id": "fr_caler_verb",
+      "lemma": "caler",
+      "gloss": "to wedge; to jam, to stall",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 6,
+      "box": [
+        656,
+        38,
+        812,
+        200
+      ],
+      "label_xy": [
+        734,
+        188
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg016",
+      "box": [
+        930,
+        440,
+        1060,
+        540
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue de la Mise-en-Place",
+      "sign": "Rue de la Mise-en-Place →",
+      "kind": "street",
+      "name_fr": "Rue de la Mise-en-Place",
+      "name_en": "Setting-Up Street"
+    },
+    "back": {
+      "target": "ST_control_seg014",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Squirrel Alley",
+      "name": "Allée de l'Écureuil",
+      "sign": "← Allée de l'Écureuil",
+      "kind": "street",
+      "name_fr": "Allée de l'Écureuil",
+      "name_en": "Squirrel Alley"
+    }
   },
-  "fr_envelopper_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_envelopper_verb",
-   "text": "envelopper",
-   "box": [
-    595,
-    630,
-    701,
-    656
-   ],
-   "text_box": [
-    599,
-    634,
-    697,
-    652
-   ]
-  },
-  "fr_bousculer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_bousculer_verb",
-   "text": "bousculer",
-   "box": [
-    474,
-    206,
-    570,
-    232
-   ],
-   "text_box": [
-    478,
-    210,
-    566,
-    228
-   ]
-  },
-  "fr_entasser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_entasser_verb",
-   "text": "s'entasser",
-   "box": [
-    209,
-    156,
-    315,
-    182
-   ],
-   "text_box": [
-    213,
-    160,
-    311,
-    178
-   ]
-  },
-  "fr_caler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_caler_verb",
-   "text": "caler",
-   "box": [
-    705,
-    168,
-    763,
-    194
-   ],
-   "text_box": [
-    709,
-    172,
-    759,
-    190
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 16 →",
-   "box": [
-    930,
-    440,
-    1060,
-    540
-   ],
-   "text_box": [
-    936,
-    446,
-    1054,
-    534
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 14",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "text_box": [
-    476,
-    682,
-    954,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    880,
-    25,
-    980,
-    59
-   ],
-   "text_box": [
-    883,
-    28,
-    977,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    1000,
-    25,
-    1120,
-    59
-   ],
-   "text_box": [
-    1003,
-    28,
-    1117,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 3,
+    "balcony": 1,
+    "upper": 1,
+    "roof": 1
   }
- },
- "items": [
-  {
-   "id": "fr_coincer_verb",
-   "lemma": "coincer",
-   "gloss": "to wedge, get stuck",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    69,
-    300,
-    256,
-    650
-   ],
-   "label_xy": [
-    162,
-    638
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_etaler_verb",
-   "lemma": "étaler",
-   "gloss": "to spread out",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    300,
-    319,
-    550,
-    672
-   ],
-   "label_xy": [
-    425,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_envelopper_verb",
-   "lemma": "envelopper",
-   "gloss": "to wrap",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    552,
-    350,
-    745,
-    662
-   ],
-   "label_xy": [
-    648,
-    650
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_bousculer_verb",
-   "lemma": "bousculer",
-   "gloss": "to jostle",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 4,
-   "box": [
-    425,
-    75,
-    619,
-    238
-   ],
-   "label_xy": [
-    522,
-    226
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_entasser_verb",
-   "lemma": "entasser",
-   "gloss": "to pile, to hoard; to pile up",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 5,
-   "box": [
-    106,
-    25,
-    419,
-    188
-   ],
-   "label_xy": [
-    262,
-    176
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'entasser",
-   "scene": "",
-   "mirror": "oval mirror on the wall beside the window"
-  },
-  {
-   "id": "fr_caler_verb",
-   "lemma": "caler",
-   "gloss": "to wedge; to jam, to stall",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 6,
-   "box": [
-    656,
-    38,
-    812,
-    200
-   ],
-   "label_xy": [
-    734,
-    188
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg016",
-   "box": [
-    930,
-    440,
-    1060,
-    540
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 16",
-   "sign": "étape 16 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_control_seg014",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "label": "Back up the lane to étape 14",
-   "name": "Rue des Gestes, étape 14",
-   "sign": "← étape 14",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 3,
-  "balcony": 1,
-  "upper": 1,
-  "roof": 1
- }
 }

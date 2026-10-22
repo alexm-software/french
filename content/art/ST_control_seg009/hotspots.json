@@ -1,366 +1,370 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg009",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 9 · balancer, se courber, rougir",
- "divider_x": 700,
- "note": "Tiered verb place. -er LEFT (girl swinging on the rope swing, man setting off a confetti cannon, old man bending to sniff his flowers on the balcony beside a wall mirror), -ir/-re RIGHT (shy young man blushing as a lady hands him a rose; door half-opening by itself with a cat peeking out, small mirror on the wall by it; baker rounding dough at the upper window). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_balancer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_balancer_verb",
-   "text": "balancer",
-   "box": [
-    153,
-    553,
-    241,
-    579
-   ],
-   "text_box": [
-    157,
-    557,
-    237,
-    575
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg009",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Allée des Balançoires · balancer, se courber, rougir",
+  "divider_x": 700,
+  "note": "Tiered verb place. -er LEFT (girl swinging on the rope swing, man setting off a confetti cannon, old man bending to sniff his flowers on the balcony beside a wall mirror), -ir/-re RIGHT (shy young man blushing as a lady hands him a rose; door half-opening by itself with a cat peeking out, small mirror on the wall by it; baker rounding dough at the upper window). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_balancer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_balancer_verb",
+      "text": "balancer",
+      "box": [
+        153,
+        553,
+        241,
+        579
+      ],
+      "text_box": [
+        157,
+        557,
+        237,
+        575
+      ]
+    },
+    "fr_declencher_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_declencher_verb",
+      "text": "déclencher",
+      "box": [
+        356,
+        612,
+        462,
+        638
+      ],
+      "text_box": [
+        360,
+        616,
+        458,
+        634
+      ]
+    },
+    "fr_courber_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_courber_verb",
+      "text": "se courber",
+      "box": [
+        321,
+        268,
+        427,
+        294
+      ],
+      "text_box": [
+        325,
+        272,
+        423,
+        290
+      ]
+    },
+    "fr_rougir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_rougir_verb",
+      "text": "rougir",
+      "box": [
+        938,
+        640,
+        1006,
+        666
+      ],
+      "text_box": [
+        942,
+        644,
+        1002,
+        662
+      ]
+    },
+    "fr_entrouvrir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_entrouvrir_verb",
+      "text": "s'entrouvrir",
+      "box": [
+        1080,
+        568,
+        1168,
+        594
+      ],
+      "text_box": [
+        1084,
+        572,
+        1164,
+        590
+      ]
+    },
+    "fr_arrondir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_arrondir_verb",
+      "text": "arrondir",
+      "box": [
+        1106,
+        137,
+        1194,
+        163
+      ],
+      "text_box": [
+        1110,
+        141,
+        1190,
+        159
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Quai du Débarquement →",
+      "box": [
+        600,
+        430,
+        780,
+        540
+      ],
+      "text_box": [
+        606,
+        436,
+        774,
+        534
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Ruelle du Seau-Renversé",
+      "box": [
+        470,
+        676,
+        860,
+        712
+      ],
+      "text_box": [
+        476,
+        682,
+        854,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        560,
+        25,
+        660,
+        59
+      ],
+      "text_box": [
+        563,
+        28,
+        657,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        700,
+        25,
+        820,
+        59
+      ],
+      "text_box": [
+        703,
+        28,
+        817,
+        56
+      ]
+    }
   },
-  "fr_declencher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_declencher_verb",
-   "text": "déclencher",
-   "box": [
-    356,
-    612,
-    462,
-    638
-   ],
-   "text_box": [
-    360,
-    616,
-    458,
-    634
-   ]
+  "items": [
+    {
+      "id": "fr_balancer_verb",
+      "lemma": "balancer",
+      "gloss": "to swing; to throw away",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        125,
+        330,
+        270,
+        585
+      ],
+      "label_xy": [
+        197,
+        573
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_declencher_verb",
+      "lemma": "déclencher",
+      "gloss": "to trigger; to set off",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        294,
+        331,
+        525,
+        644
+      ],
+      "label_xy": [
+        409,
+        632
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_courber_verb",
+      "lemma": "courber",
+      "gloss": "to bend",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        262,
+        119,
+        487,
+        300
+      ],
+      "label_xy": [
+        374,
+        288
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "se courber",
+      "scene": "",
+      "mirror": "framed mirror on the wall beside the balcony"
+    },
+    {
+      "id": "fr_rougir_verb",
+      "lemma": "rougir",
+      "gloss": "to blush",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 4,
+      "box": [
+        869,
+        350,
+        1075,
+        672
+      ],
+      "label_xy": [
+        972,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_entrouvrir_verb",
+      "lemma": "entrouvrir",
+      "gloss": "to half-open; to leave ajar",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 5,
+      "box": [
+        1078,
+        300,
+        1170,
+        600
+      ],
+      "label_xy": [
+        1124,
+        588
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'entrouvrir",
+      "scene": "",
+      "mirror": "small framed mirror on the wall just left of the door"
+    },
+    {
+      "id": "fr_arrondir_verb",
+      "lemma": "arrondir",
+      "gloss": "to round; to round up",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "upper",
+      "level": "upper",
+      "order": 6,
+      "box": [
+        1100,
+        38,
+        1200,
+        169
+      ],
+      "label_xy": [
+        1150,
+        157
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg010",
+      "box": [
+        600,
+        430,
+        780,
+        540
+      ],
+      "label": "Walk on down the lane",
+      "name": "Quai du Débarquement",
+      "sign": "Quai du Débarquement →",
+      "kind": "street",
+      "name_fr": "Quai du Débarquement",
+      "name_en": "Landing Quay"
+    },
+    "back": {
+      "target": "ST_control_seg008",
+      "box": [
+        470,
+        676,
+        860,
+        712
+      ],
+      "label": "Back up the lane to Spilt-Pail Lane",
+      "name": "Ruelle du Seau-Renversé",
+      "sign": "← Ruelle du Seau-Renversé",
+      "kind": "street",
+      "name_fr": "Ruelle du Seau-Renversé",
+      "name_en": "Spilt-Pail Lane"
+    }
   },
-  "fr_courber_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_courber_verb",
-   "text": "se courber",
-   "box": [
-    321,
-    268,
-    427,
-    294
-   ],
-   "text_box": [
-    325,
-    272,
-    423,
-    290
-   ]
-  },
-  "fr_rougir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rougir_verb",
-   "text": "rougir",
-   "box": [
-    938,
-    640,
-    1006,
-    666
-   ],
-   "text_box": [
-    942,
-    644,
-    1002,
-    662
-   ]
-  },
-  "fr_entrouvrir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_entrouvrir_verb",
-   "text": "s'entrouvrir",
-   "box": [
-    1080,
-    568,
-    1168,
-    594
-   ],
-   "text_box": [
-    1084,
-    572,
-    1164,
-    590
-   ]
-  },
-  "fr_arrondir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_arrondir_verb",
-   "text": "arrondir",
-   "box": [
-    1106,
-    137,
-    1194,
-    163
-   ],
-   "text_box": [
-    1110,
-    141,
-    1190,
-    159
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 10 →",
-   "box": [
-    600,
-    430,
-    780,
-    540
-   ],
-   "text_box": [
-    606,
-    436,
-    774,
-    534
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 8",
-   "box": [
-    470,
-    676,
-    860,
-    712
-   ],
-   "text_box": [
-    476,
-    682,
-    854,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    560,
-    25,
-    660,
-    59
-   ],
-   "text_box": [
-    563,
-    28,
-    657,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    700,
-    25,
-    820,
-    59
-   ],
-   "text_box": [
-    703,
-    28,
-    817,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 4,
+    "balcony": 1,
+    "upper": 1
   }
- },
- "items": [
-  {
-   "id": "fr_balancer_verb",
-   "lemma": "balancer",
-   "gloss": "to swing; to throw away",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    125,
-    330,
-    270,
-    585
-   ],
-   "label_xy": [
-    197,
-    573
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_declencher_verb",
-   "lemma": "déclencher",
-   "gloss": "to trigger; to set off",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    294,
-    331,
-    525,
-    644
-   ],
-   "label_xy": [
-    409,
-    632
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_courber_verb",
-   "lemma": "courber",
-   "gloss": "to bend",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    262,
-    119,
-    487,
-    300
-   ],
-   "label_xy": [
-    374,
-    288
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "se courber",
-   "scene": "",
-   "mirror": "framed mirror on the wall beside the balcony"
-  },
-  {
-   "id": "fr_rougir_verb",
-   "lemma": "rougir",
-   "gloss": "to blush",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 4,
-   "box": [
-    869,
-    350,
-    1075,
-    672
-   ],
-   "label_xy": [
-    972,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_entrouvrir_verb",
-   "lemma": "entrouvrir",
-   "gloss": "to half-open; to leave ajar",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 5,
-   "box": [
-    1078,
-    300,
-    1170,
-    600
-   ],
-   "label_xy": [
-    1124,
-    588
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'entrouvrir",
-   "scene": "",
-   "mirror": "small framed mirror on the wall just left of the door"
-  },
-  {
-   "id": "fr_arrondir_verb",
-   "lemma": "arrondir",
-   "gloss": "to round; to round up",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "upper",
-   "level": "upper",
-   "order": 6,
-   "box": [
-    1100,
-    38,
-    1200,
-    169
-   ],
-   "label_xy": [
-    1150,
-    157
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg010",
-   "box": [
-    600,
-    430,
-    780,
-    540
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 10",
-   "sign": "étape 10 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_control_seg008",
-   "box": [
-    470,
-    676,
-    860,
-    712
-   ],
-   "label": "Back up the lane to étape 8",
-   "name": "Rue des Gestes, étape 8",
-   "sign": "← étape 8",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 4,
-  "balcony": 1,
-  "upper": 1
- }
 }

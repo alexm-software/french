@@ -1,17 +1,112 @@
-{"divider_x": 1000,
- "name": "Rue des Gestes — étape 15 · coincer, étaler, caler",
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man stuck in his doorway with a giant gold coin, tall baker spreading butter on a huge loaf slice, woman wrapping a present), balcony (goose jostling a man aside), upper (kittens piled up on a tasselled cushion beside an oval mirror), roof (man wedging a book under a wobbly table leg). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_coincer_verb", "box": [69, 300, 256, 650], "tier": "street"},
-  {"id": "fr_etaler_verb", "box": [300, 319, 550, 672], "tier": "street"},
-  {"id": "fr_envelopper_verb", "box": [552, 350, 745, 662], "tier": "street"},
-  {"id": "fr_bousculer_verb", "box": [425, 75, 619, 238], "tier": "balcony"},
-  {"id": "fr_entasser_verb", "box": [106, 25, 419, 188], "tier": "upper", "mirror": "oval mirror on the wall beside the window"},
-  {"id": "fr_caler_verb", "box": [656, 38, 812, 200], "tier": "roof"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg016", "box": [930, 440, 1060, 540], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 16", "sign": "étape 16 →"},
-  "back": {"target": "ST_control_seg014", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 14", "name": "Rue des Gestes, étape 14", "sign": "← étape 14"}
- },
- "signs": {"er": [880, 25, 980, 59], "irre": [1000, 25, 1120, 59]}
+{
+  "divider_x": 1000,
+  "name": "Rue des Gestes — Ruelle des Bousculades · coincer, étaler, caler",
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man stuck in his doorway with a giant gold coin, tall baker spreading butter on a huge loaf slice, woman wrapping a present), balcony (goose jostling a man aside), upper (kittens piled up on a tasselled cushion beside an oval mirror), roof (man wedging a book under a wobbly table leg). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_coincer_verb",
+      "box": [
+        69,
+        300,
+        256,
+        650
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_etaler_verb",
+      "box": [
+        300,
+        319,
+        550,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_envelopper_verb",
+      "box": [
+        552,
+        350,
+        745,
+        662
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_bousculer_verb",
+      "box": [
+        425,
+        75,
+        619,
+        238
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_entasser_verb",
+      "box": [
+        106,
+        25,
+        419,
+        188
+      ],
+      "tier": "upper",
+      "mirror": "oval mirror on the wall beside the window"
+    },
+    {
+      "id": "fr_caler_verb",
+      "box": [
+        656,
+        38,
+        812,
+        200
+      ],
+      "tier": "roof"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg016",
+      "box": [
+        930,
+        440,
+        1060,
+        540
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue de la Mise-en-Place",
+      "sign": "Rue de la Mise-en-Place →",
+      "name_fr": "Rue de la Mise-en-Place",
+      "name_en": "Setting-Up Street"
+    },
+    "back": {
+      "target": "ST_control_seg014",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Squirrel Alley",
+      "name": "Allée de l'Écureuil",
+      "sign": "← Allée de l'Écureuil",
+      "name_fr": "Allée de l'Écureuil",
+      "name_en": "Squirrel Alley"
+    }
+  },
+  "signs": {
+    "er": [
+      880,
+      25,
+      980,
+      59
+    ],
+    "irre": [
+      1000,
+      25,
+      1120,
+      59
+    ]
+  }
 }

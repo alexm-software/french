@@ -1,364 +1,368 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg010",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 10 · claquer, s'affairer, atterrir",
- "divider_x": 760,
- "note": "Tiered verb place. -er LEFT (man slamming his door in a puff of dust, sailor stepping off his boat down the gangplank, grey-haired woman busily dusting at the ground-floor window with a round mirror just beside it, woman soaking up the spill with yellow sponges on the balcony), -ir/-re RIGHT (strongman twisting an iron bar; terrier landing on the balcony by parachute). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_claquer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_claquer_verb",
-   "text": "claquer",
-   "box": [
-    135,
-    624,
-    213,
-    650
-   ],
-   "text_box": [
-    139,
-    628,
-    209,
-    646
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg010",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Quai du Débarquement · claquer, s'affairer, atterrir",
+  "divider_x": 760,
+  "note": "Tiered verb place. -er LEFT (man slamming his door in a puff of dust, sailor stepping off his boat down the gangplank, grey-haired woman busily dusting at the ground-floor window with a round mirror just beside it, woman soaking up the spill with yellow sponges on the balcony), -ir/-re RIGHT (strongman twisting an iron bar; terrier landing on the balcony by parachute). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_claquer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_claquer_verb",
+      "text": "claquer",
+      "box": [
+        135,
+        624,
+        213,
+        650
+      ],
+      "text_box": [
+        139,
+        628,
+        209,
+        646
+      ]
+    },
+    "fr_debarquer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_debarquer_verb",
+      "text": "débarquer",
+      "box": [
+        499,
+        640,
+        595,
+        666
+      ],
+      "text_box": [
+        503,
+        644,
+        591,
+        662
+      ]
+    },
+    "fr_affairer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_affairer_verb",
+      "text": "s'affairer",
+      "box": [
+        303,
+        438,
+        409,
+        464
+      ],
+      "text_box": [
+        307,
+        442,
+        405,
+        460
+      ]
+    },
+    "fr_absorber_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_absorber_verb",
+      "text": "absorber",
+      "box": [
+        396,
+        306,
+        484,
+        332
+      ],
+      "text_box": [
+        400,
+        310,
+        480,
+        328
+      ]
+    },
+    "fr_tordre_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_tordre_verb",
+      "text": "tordre",
+      "box": [
+        972,
+        640,
+        1040,
+        666
+      ],
+      "text_box": [
+        976,
+        644,
+        1036,
+        662
+      ]
+    },
+    "fr_atterrir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_atterrir_verb",
+      "text": "atterrir",
+      "box": [
+        1003,
+        262,
+        1091,
+        288
+      ],
+      "text_box": [
+        1007,
+        266,
+        1087,
+        284
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Rue des Bouchons →",
+      "box": [
+        690,
+        400,
+        840,
+        500
+      ],
+      "text_box": [
+        696,
+        406,
+        834,
+        494
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Allée des Balançoires",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "text_box": [
+        476,
+        682,
+        954,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        600,
+        25,
+        700,
+        59
+      ],
+      "text_box": [
+        603,
+        28,
+        697,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        780,
+        25,
+        900,
+        59
+      ],
+      "text_box": [
+        783,
+        28,
+        897,
+        56
+      ]
+    }
   },
-  "fr_debarquer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_debarquer_verb",
-   "text": "débarquer",
-   "box": [
-    499,
-    640,
-    595,
-    666
-   ],
-   "text_box": [
-    503,
-    644,
-    591,
-    662
-   ]
+  "items": [
+    {
+      "id": "fr_claquer_verb",
+      "lemma": "claquer",
+      "gloss": "to slam, clap",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        50,
+        392,
+        298,
+        656
+      ],
+      "label_xy": [
+        174,
+        644
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_debarquer_verb",
+      "lemma": "débarquer",
+      "gloss": "to land",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        414,
+        350,
+        681,
+        672
+      ],
+      "label_xy": [
+        547,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_affairer_verb",
+      "lemma": "affairer",
+      "gloss": "to busy oneself",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 3,
+      "box": [
+        300,
+        340,
+        412,
+        470
+      ],
+      "label_xy": [
+        356,
+        458
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'affairer",
+      "scene": "",
+      "mirror": "small round mirror on the wall just left of the window"
+    },
+    {
+      "id": "fr_absorber_verb",
+      "lemma": "absorber",
+      "gloss": "to absorb",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 4,
+      "box": [
+        356,
+        112,
+        525,
+        338
+      ],
+      "label_xy": [
+        440,
+        326
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_tordre_verb",
+      "lemma": "tordre",
+      "gloss": "to twist",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 5,
+      "box": [
+        869,
+        375,
+        1144,
+        672
+      ],
+      "label_xy": [
+        1006,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_atterrir_verb",
+      "lemma": "atterrir",
+      "gloss": "to land",
+      "verb_group": 2,
+      "side": "right",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 6,
+      "box": [
+        969,
+        62,
+        1125,
+        294
+      ],
+      "label_xy": [
+        1047,
+        282
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg011",
+      "box": [
+        690,
+        400,
+        840,
+        500
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Bouchons",
+      "sign": "Rue des Bouchons →",
+      "kind": "street",
+      "name_fr": "Rue des Bouchons",
+      "name_en": "Corks Street"
+    },
+    "back": {
+      "target": "ST_control_seg009",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Swings Alley",
+      "name": "Allée des Balançoires",
+      "sign": "← Allée des Balançoires",
+      "kind": "street",
+      "name_fr": "Allée des Balançoires",
+      "name_en": "Swings Alley"
+    }
   },
-  "fr_affairer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_affairer_verb",
-   "text": "s'affairer",
-   "box": [
-    303,
-    438,
-    409,
-    464
-   ],
-   "text_box": [
-    307,
-    442,
-    405,
-    460
-   ]
-  },
-  "fr_absorber_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_absorber_verb",
-   "text": "absorber",
-   "box": [
-    396,
-    306,
-    484,
-    332
-   ],
-   "text_box": [
-    400,
-    310,
-    480,
-    328
-   ]
-  },
-  "fr_tordre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_tordre_verb",
-   "text": "tordre",
-   "box": [
-    972,
-    640,
-    1040,
-    666
-   ],
-   "text_box": [
-    976,
-    644,
-    1036,
-    662
-   ]
-  },
-  "fr_atterrir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_atterrir_verb",
-   "text": "atterrir",
-   "box": [
-    1003,
-    262,
-    1091,
-    288
-   ],
-   "text_box": [
-    1007,
-    266,
-    1087,
-    284
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 11 →",
-   "box": [
-    690,
-    400,
-    840,
-    500
-   ],
-   "text_box": [
-    696,
-    406,
-    834,
-    494
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 9",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "text_box": [
-    476,
-    682,
-    954,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    600,
-    25,
-    700,
-    59
-   ],
-   "text_box": [
-    603,
-    28,
-    697,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    780,
-    25,
-    900,
-    59
-   ],
-   "text_box": [
-    783,
-    28,
-    897,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 4,
+    "balcony": 2
   }
- },
- "items": [
-  {
-   "id": "fr_claquer_verb",
-   "lemma": "claquer",
-   "gloss": "to slam, clap",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    50,
-    392,
-    298,
-    656
-   ],
-   "label_xy": [
-    174,
-    644
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_debarquer_verb",
-   "lemma": "débarquer",
-   "gloss": "to land",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    414,
-    350,
-    681,
-    672
-   ],
-   "label_xy": [
-    547,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_affairer_verb",
-   "lemma": "affairer",
-   "gloss": "to busy oneself",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 3,
-   "box": [
-    300,
-    340,
-    412,
-    470
-   ],
-   "label_xy": [
-    356,
-    458
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'affairer",
-   "scene": "",
-   "mirror": "small round mirror on the wall just left of the window"
-  },
-  {
-   "id": "fr_absorber_verb",
-   "lemma": "absorber",
-   "gloss": "to absorb",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 4,
-   "box": [
-    356,
-    112,
-    525,
-    338
-   ],
-   "label_xy": [
-    440,
-    326
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_tordre_verb",
-   "lemma": "tordre",
-   "gloss": "to twist",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 5,
-   "box": [
-    869,
-    375,
-    1144,
-    672
-   ],
-   "label_xy": [
-    1006,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_atterrir_verb",
-   "lemma": "atterrir",
-   "gloss": "to land",
-   "verb_group": 2,
-   "side": "right",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 6,
-   "box": [
-    969,
-    62,
-    1125,
-    294
-   ],
-   "label_xy": [
-    1047,
-    282
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg011",
-   "box": [
-    690,
-    400,
-    840,
-    500
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 11",
-   "sign": "étape 11 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_control_seg009",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "label": "Back up the lane to étape 9",
-   "name": "Rue des Gestes, étape 9",
-   "sign": "← étape 9",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 4,
-  "balcony": 2
- }
 }
