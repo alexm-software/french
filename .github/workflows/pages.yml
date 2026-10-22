@@ -19,32 +19,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: npm
-      - name: Install Pillow for placeholder art
-        run: pip install pillow
-      - run: npm ci
-      - run: npm run build
-      - name: Publish Le Village at the site root and the previous site at old/
+      - name: Check the static site
         run: |
-          rm -rf publish
-          mkdir -p publish/old
-          cp -a village/. publish/
-          cp -a dist/. publish/old/
-          test -f publish/.nojekyll
-          test -f publish/index.html
-          test -f publish/assets/app.js
-          test -f publish/assets/map/village.jpg
-          test -f publish/old/index.html
-          test -f publish/old/data/index.json
+          test -f village/.nojekyll
+          test -f village/index.html
+          test -f village/assets/app.js
+          test -f village/assets/map/village.jpg
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: publish
+          path: village
 
   deploy:
     needs: build
