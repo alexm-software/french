@@ -4,22 +4,22 @@
  "height": 720,
  "divider_x": 640,
  "kind": "room",
- "note": "Ground-floor colour studio (g6). Only noun: la couleur (f), front left. All the others are colour adjectives (no gender). Green doors on the left back out to the workshop yard; the arch on the right leads to the second colour studio.",
+ "note": "Le mur des pots: ground-floor front room (west half) of L'Atelier du Peintre, camera facing north. Cornflower-blue limewash, pale limed-oak floorboards; landmark = the floor-to-ceiling rainbow wall of paint pots with its rolling ladder. Only noun: la couleur (f), front left; the other words are colour adjectives (no gender). Glazed double door on the left (west) shows the square (fountain, clock tower) and leads out; spiral stair in the back-left corner goes UP to the loft frame room (R_shapes_03); the arch on the right (east) shows the sage-tiled dye room (R_colors_02). Zone z1 = the upper-left paint-pot shelves.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les couleurs (1)",
+   "text": "Le mur des pots",
    "box": [
-    506,
-    59,
-    785,
-    194
+    615,
+    147,
+    735,
+    200
    ],
    "text_box": [
-    518,
-    70,
-    773,
-    183
+    622,
+    154,
+    728,
+    193
    ]
   }
  },
@@ -32,16 +32,16 @@
    "side": "left",
    "label": "la couleur",
    "box": [
-    94,
-    300,
-    215,
-    569
+    165,
+    340,
+    292,
+    628
    ],
    "label_xy": [
-    154,
-    559
+    228,
+    619
    ],
-   "scene": "girl in cool sunglasses holds up a big colour wheel"
+   "scene": "girl in dark sunglasses holds up a big rainbow colour wheel"
   },
   {
    "id": "fr_noir_adj",
@@ -51,16 +51,16 @@
    "side": "center",
    "label": "noir",
    "box": [
-    228,
-    175,
-    410,
-    368
+    314,
+    246,
+    476,
+    553
    ],
    "label_xy": [
-    319,
-    358
+    395,
+    544
    ],
-   "scene": "detective in black with a black umbrella beside a black-and-white striped easel"
+   "scene": "detective in black coat and hat with a closed black umbrella beside a black-and-white striped easel"
   },
   {
    "id": "fr_blanc_adj",
@@ -70,73 +70,16 @@
    "side": "center",
    "label": "blanc",
    "box": [
-    229,
-    372,
-    427,
-    619
+    480,
+    262,
+    602,
+    432
    ],
    "label_xy": [
-    328,
-    609
+    541,
+    423
    ],
-   "scene": "young painter sneezes white paint onto a blank canvas"
-  },
-  {
-   "id": "fr_gris_adj",
-   "lemma": "gris",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "gris",
-   "box": [
-    431,
-    200,
-    615,
-    404
-   ],
-   "label_xy": [
-    523,
-    394
-   ],
-   "scene": "grey elephant gobbles peanuts from a sack"
-  },
-  {
-   "id": "fr_rouge_adj",
-   "lemma": "rouge",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "rouge",
-   "box": [
-    644,
-    198,
-    840,
-    348
-   ],
-   "label_xy": [
-    742,
-    338
-   ],
-   "scene": "red fire engine beside a red postbox"
-  },
-  {
-   "id": "fr_vert_adj",
-   "lemma": "vert",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "vert",
-   "box": [
-    620,
-    352,
-    785,
-    506
-   ],
-   "label_xy": [
-    702,
-    496
-   ],
-   "scene": "very green frog in green wellies on the fountain"
+   "scene": "young painter in a white smock holds up a totally blank white canvas"
   },
   {
    "id": "fr_jaune_adj",
@@ -146,35 +89,54 @@
    "side": "center",
    "label": "jaune",
    "box": [
-    472,
-    419,
-    616,
+    560,
+    434,
+    692,
     648
    ],
    "label_xy": [
-    544,
-    638
+    626,
+    639
    ],
-   "scene": "boy in yellow overalls paints a yellow zone on the floor"
+   "scene": "boy in yellow overalls and green wellies rolls a yellow zone onto the floor"
   },
   {
-   "id": "fr_rose_adj",
-   "lemma": "rose",
+   "id": "fr_rouge_adj",
+   "lemma": "rouge",
    "article": "",
    "gender": null,
    "side": "center",
-   "label": "rose",
+   "label": "rouge",
    "box": [
-    906,
-    175,
-    1052,
-    431
+    684,
+    238,
+    800,
+    428
    ],
    "label_xy": [
-    979,
-    421
+    742,
+    419
    ],
-   "scene": "pink flamingo beside a pot of pink roses"
+   "scene": "clown in a red suit dabs red rouge on his cheek from a little pot"
+  },
+  {
+   "id": "fr_vert_adj",
+   "lemma": "vert",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "vert",
+   "box": [
+    742,
+    432,
+    876,
+    612
+   ],
+   "label_xy": [
+    809,
+    603
+   ],
+   "scene": "very green frog in green wellies sits on a tin of green paint"
   },
   {
    "id": "fr_bleu_adj",
@@ -184,79 +146,84 @@
    "side": "center",
    "label": "bleu",
    "box": [
-    788,
-    381,
-    903,
-    616
-   ],
-   "label_xy": [
     846,
-    606
+    318,
+    944,
+    428
    ],
-   "scene": "boy blows up a big blue balloon"
+   "label_xy": [
+    895,
+    419
+   ],
+   "scene": "little boy blows up a big blue balloon"
   },
   {
-   "id": "fr_brun_adj",
-   "lemma": "brun",
+   "id": "fr_rose_adj",
+   "lemma": "rose",
    "article": "",
    "gender": null,
    "side": "center",
-   "label": "brun",
+   "label": "rose",
    "box": [
-    907,
-    437,
-    1050,
-    628
+    952,
+    310,
+    1202,
+    614
    ],
    "label_xy": [
-    978,
-    618
+    1077,
+    605
    ],
-   "scene": "brown bear munches a chocolate bun"
-  },
+   "scene": "pink flamingo beside a big pot of pink roses"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_pale_adj",
-   "lemma": "pâle",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "pâle",
+   "room_id": "R_colors_01_z1",
    "box": [
-    1056,
-    300,
-    1203,
-    565
+    498,
+    138,
+    612,
+    250
    ],
-   "label_xy": [
-    1130,
-    555
-   ],
-   "scene": "two friends compare a deep blue card with a pale blue one"
+   "label": "the paint-pot shelves (back wall)"
   }
  ],
  "links": [
   {
    "target": "B04_atelier_couleurs",
    "box": [
-    62,
-    65,
-    222,
-    296
+    200,
+    90,
+    310,
+    335
    ],
-   "label": "Out through the green doors to the workshop yard",
+   "label": "Out through the glazed double door to the square",
    "name": "Atelier des Couleurs & Formes (entrance)",
    "kind": "door"
   },
   {
+   "target": "R_shapes_03",
+   "box": [
+    384,
+    100,
+    494,
+    240
+   ],
+   "label": "Up the spiral staircase to the frame room in the loft",
+   "name": "Atelier — la salle des cadres",
+   "kind": "stairs_up"
+  },
+  {
    "target": "R_colors_02",
    "box": [
-    1095,
-    48,
-    1280,
-    296
+    990,
+    105,
+    1158,
+    305
    ],
-   "label": "Through the arch to the second colour studio",
-   "name": "Atelier — les couleurs (2)",
+   "label": "Through the arch to the dye room",
+   "name": "Atelier — la teinturerie",
    "kind": "arch"
   }
  ]

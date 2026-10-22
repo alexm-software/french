@@ -1,0 +1,202 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 510,
+ "kind": "room",
+ "parent_room_id": null,
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le cabinet dentaire",
+   "box": [
+    919,
+    102,
+    1062,
+    215
+   ],
+   "text_box": [
+    923,
+    106,
+    1058,
+    211
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_dent_noun",
+   "lemma": "dent",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la dent",
+   "box": [
+    78,
+    328,
+    212,
+    512
+   ],
+   "label_xy": [
+    145,
+    502
+   ],
+   "scene": "A giant smiling TOOTH (\"DAHN\") stretches and wakes at DAWN, the sunrise glowing through the window behind it."
+  },
+  {
+   "id": "fr_fente_noun",
+   "lemma": "fente",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la fente",
+   "box": [
+    78,
+    164,
+    198,
+    324
+   ],
+   "label_xy": [
+    138,
+    314
+   ],
+   "scene": "A tiny FAWN (\"FAHNT\") peers through the narrow CRACK of the half-open shutter, its big eye in the slit."
+  },
+  {
+   "id": "fr_crete_noun",
+   "lemma": "crête",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la crête",
+   "box": [
+    219,
+    262,
+    340,
+    500
+   ],
+   "label_xy": [
+    280,
+    490
+   ],
+   "scene": "A rooster with a tall red CREST stands on a wooden CRATE (\"KREHT\") waiting his turn, comb held high."
+  },
+  {
+   "id": "fr_correspondance_noun",
+   "lemma": "correspondance",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la correspondance",
+   "box": [
+    350,
+    248,
+    498,
+    488
+   ],
+   "label_xy": [
+    424,
+    478
+   ],
+   "scene": "A postbag of CORRESPONDENCE (\"koh-rehs-pohn-DAHNS\") spills on the waiting bench, and the letters DANCE out."
+  },
+  {
+   "id": "fr_reflexe_noun",
+   "lemma": "réflexe",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le réflexe",
+   "box": [
+    502,
+    262,
+    690,
+    506
+   ],
+   "label_xy": [
+    596,
+    496
+   ],
+   "scene": "The dentist taps a cat's knee, and the REFLEX (\"ray-FLEHKS\") kick FLEXES its leg and sends a slipper flying."
+  },
+  {
+   "id": "fr_interlocuteur_noun",
+   "lemma": "interlocuteur",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'interlocuteur",
+   "box": [
+    706,
+    210,
+    916,
+    494
+   ],
+   "label_xy": [
+    811,
+    484
+   ],
+   "scene": "A patient chats with his INTERLOCUTOR (\"an-tehr-loh-kew-TUHR\"), a parrot, who answers every question by opening wide."
+  },
+  {
+   "id": "fr_dentiste_noun",
+   "lemma": "dentiste",
+   "article": "le/la",
+   "gender": "mf",
+   "side": "center",
+   "label": "le/la dentiste",
+   "box": [
+    925,
+    244,
+    1150,
+    562
+   ],
+   "label_xy": [
+    1038,
+    552
+   ],
+   "scene": "The DENTIST (\"dahn-TEEST\"), a cheerful beaver, polishes a crocodile's teeth while it pretends to be TEASED."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hospital_01",
+   "box": [
+    0,
+    312,
+    72,
+    512
+   ],
+   "label": "Down the stairs to the hall",
+   "name": "Le hall des urgences",
+   "kind": "stairs_down",
+   "painted_as": "the staircase top and banister going DOWN in the near left foreground"
+  },
+  {
+   "target": "R_hospital_02",
+   "box": [
+    278,
+    112,
+    390,
+    244
+   ],
+   "label": "Up the stairs to the ward",
+   "name": "La salle des lits",
+   "kind": "stairs_up",
+   "painted_as": "a staircase going UP at the BACK LEFT"
+  },
+  {
+   "target": "R_dentist_01_z1",
+   "box": [
+    1188,
+    56,
+    1275,
+    475
+   ],
+   "label": "Into the optician's room",
+   "name": "L'opticien",
+   "kind": "door",
+   "painted_as": "a door on the RIGHT wall with midnight-blue walls and spectacle frames beyond"
+  }
+ ]
+}

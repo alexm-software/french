@@ -1,0 +1,192 @@
+{
+ "divider_x": 680,
+ "kind": "room",
+ "note": "Finance office, ground floor (repainted 2026-10-22 fix2, realistic B10 bank style: cream stone, grey marble floor, tall windows). Stone arch at the left back to the economy office, curved staircase going UP at the back to the fiscal office, the long mahogany desk against the right wall (zoom R_bank_economy_02_z1). Feminine LEFT: banker staring at a chart creased down the middle (crise), giant piggy bank with coins flying in (économie), man dragging a ball and chain tied to a blank slip (dette), bowing clerk handing a beribboned bond (obligation). Centre: meek mouse carrying a report bigger than itself (économique), Nancy counting fees under a green lamp (financier). Masculine RIGHT: coins hopping into the in-tray (intérêt), waiter serving one slice of a pie-chart pizza (secteur), big brass key balancing a stack of coins on the Libra scales (équilibre), budgie on the coin jar (budget).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le bureau des finances",
+   "box": [
+    380,
+    36,
+    640,
+    88
+   ],
+   "text_box": [
+    390,
+    42,
+    630,
+    82
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_crise_noun",
+   "box": [
+    78,
+    262,
+    252,
+    508
+   ],
+   "label_xy": [
+    164,
+    502
+   ]
+  },
+  {
+   "id": "fr_economie_noun",
+   "box": [
+    256,
+    318,
+    360,
+    500
+   ],
+   "label_xy": [
+    306,
+    494
+   ]
+  },
+  {
+   "id": "fr_dette_noun",
+   "box": [
+    362,
+    318,
+    470,
+    545
+   ],
+   "label_xy": [
+    416,
+    539
+   ]
+  },
+  {
+   "id": "fr_obligation_noun",
+   "box": [
+    472,
+    290,
+    582,
+    468
+   ],
+   "label_xy": [
+    534,
+    420
+   ]
+  },
+  {
+   "id": "fr_economique_adj",
+   "box": [
+    584,
+    425,
+    668,
+    535
+   ],
+   "label_xy": [
+    626,
+    529
+   ]
+  },
+  {
+   "id": "fr_financier_adj",
+   "box": [
+    670,
+    312,
+    770,
+    508
+   ],
+   "label_xy": [
+    720,
+    502
+   ]
+  },
+  {
+   "id": "fr_interet_noun",
+   "box": [
+    772,
+    222,
+    840,
+    488
+   ],
+   "label_xy": [
+    806,
+    300
+   ]
+  },
+  {
+   "id": "fr_secteur_noun",
+   "box": [
+    842,
+    240,
+    955,
+    488
+   ],
+   "label_xy": [
+    900,
+    482
+   ]
+  },
+  {
+   "id": "fr_equilibre_noun",
+   "box": [
+    958,
+    205,
+    1095,
+    478
+   ],
+   "label_xy": [
+    1028,
+    472
+   ]
+  },
+  {
+   "id": "fr_budget_noun",
+   "box": [
+    975,
+    480,
+    1110,
+    665
+   ],
+   "label_xy": [
+    1041,
+    659
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_bank_economy_02_z1",
+  "box": [
+   1112,
+   385,
+   1272,
+   540
+  ],
+  "label": "Look closer at the long desk by the window"
+ },
+ "links": [
+  {
+   "target": "R_bank_economy_01",
+   "box": [
+    182,
+    100,
+    330,
+    258
+   ],
+   "label": "Back through the stone arch to the economy office",
+   "name": "Le bureau de l'économie",
+   "kind": "door"
+  },
+  {
+   "target": "R_bank_economy_03",
+   "box": [
+    598,
+    140,
+    740,
+    288
+   ],
+   "label": "Stairs up to the fiscal office",
+   "name": "Le bureau fiscal",
+   "kind": "stairs_up"
+  }
+ ],
+ "painted": "2026-10-22 S05 fix2 repaint (GenerateImage + outpaint/retouch); boxes by hand"
+}

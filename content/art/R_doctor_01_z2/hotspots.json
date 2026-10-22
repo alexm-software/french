@@ -1,0 +1,215 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 797,
+ "kind": "zone",
+ "parent_room_id": "R_doctor_01",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La salle d'attente",
+   "box": [
+    540,
+    84,
+    662,
+    159
+   ],
+   "text_box": [
+    544,
+    88,
+    658,
+    155
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_sante_noun",
+   "lemma": "santé",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la santé",
+   "box": [
+    112,
+    284,
+    318,
+    602
+   ],
+   "label_xy": [
+    215,
+    592
+   ],
+   "scene": "A rosy, fit grandma standing in a bright SUN-beam raises her cup of TEA (\"sahn-TAY\") to wish everyone good HEALTH."
+  },
+  {
+   "id": "fr_fatigue_noun",
+   "lemma": "fatigue",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la fatigue",
+   "box": [
+    322,
+    290,
+    446,
+    465
+   ],
+   "label_xy": [
+    384,
+    455
+   ],
+   "scene": "A FAT TIGER cub (\"fah-TEEG\") lies sprawled asleep across two waiting-room chairs, worn out with TIREDNESS, one paw dangling."
+  },
+  {
+   "id": "fr_grippe_noun",
+   "lemma": "grippe",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la grippe",
+   "box": [
+    465,
+    408,
+    590,
+    595
+   ],
+   "label_xy": [
+    528,
+    585
+   ],
+   "scene": "A penguin with the FLU, scarf round its neck, GRIPS (\"GREEP\") a hot-water bottle tight and sneezes a puff of snowflakes."
+  },
+  {
+   "id": "fr_toux_noun",
+   "lemma": "toux",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la toux",
+   "box": [
+    450,
+    215,
+    571,
+    402
+   ],
+   "label_xy": [
+    510,
+    392
+   ],
+   "scene": "A girl with a COUGH covers her face politely, and the TOUCAN (\"TOO\") perched on her chair back looks on with concern."
+  },
+  {
+   "id": "fr_ardeur_noun",
+   "lemma": "ardeur",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'ardeur",
+   "box": [
+    594,
+    274,
+    709,
+    435
+   ],
+   "label_xy": [
+    652,
+    425
+   ],
+   "scene": "A puppy leaps up at the little coat-cupboard DOOR (\"DUHR\") with such ARDOUR that its tail is a blur."
+  },
+  {
+   "id": "fr_virus_noun",
+   "lemma": "virus",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le virus",
+   "box": [
+    865,
+    102,
+    1052,
+    365
+   ],
+   "label_xy": [
+    958,
+    355
+   ],
+   "scene": "A grumpy green fuzzy VIRUS (\"vee-REWS\") puppet bounces off old RUTH's open umbrella as she sits waiting."
+  },
+  {
+   "id": "fr_soulagement_noun",
+   "lemma": "soulagement",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le soulagement",
+   "box": [
+    713,
+    375,
+    1175,
+    656
+   ],
+   "label_xy": [
+    944,
+    646
+   ],
+   "scene": "Sue (recurring character: a cheerful 10-year-old girl with two black bunches tied with yellow ribbons, red raincoat, yellow wellies) lifts a huge sack of potatoes off a LARGE MAN's back (\"soo-LAHZH-MAHN\"), and he sighs with RELIEF, arms flung wide."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_body_01",
+   "box": [
+    140,
+    60,
+    269,
+    269
+   ],
+   "label": "Through the arch to the ear-nose-throat room",
+   "name": "Le cabinet ORL",
+   "kind": "door",
+   "painted_as": "an open arch on the LEFT (west) wall showing a primrose-yellow room"
+  },
+  {
+   "target": "R_body_03_z1",
+   "box": [
+    306,
+    38,
+    388,
+    281
+   ],
+   "label": "Up the stairs to the first-floor landing",
+   "name": "Le palier",
+   "kind": "stairs_up",
+   "painted_as": "a wooden staircase climbing UP at the BACK LEFT along the north wall"
+  },
+  {
+   "target": "R_doctor_01",
+   "box": [
+    756,
+    148,
+    835,
+    365
+   ],
+   "label": "Into the doctor's consulting room",
+   "name": "Le cabinet du docteur",
+   "kind": "door",
+   "painted_as": "a white panelled door at the BACK RIGHT"
+  },
+  {
+   "target": "B17_cabinet",
+   "box": [
+    1060,
+    6,
+    1188,
+    365
+   ],
+   "label": "Out through the front door to the square",
+   "name": "Dehors",
+   "kind": "door",
+   "painted_as": "the glazed green front door on the RIGHT (east) wall with the square's cobbles beyond"
+  }
+ ]
+}

@@ -2,47 +2,28 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 645,
+ "divider_x": 700,
  "kind": "room",
- "note": "The showroom atelier of the Maison de Couture: choice, luxury, customs and cunning. The gilded mirror-pillar in the middle divides it: feminine nouns on its left, masculine (and élégant) on its right. The blank wall left of the pillar opens a zoom onto the cushion corner (R_abs_beauty_01_z1). The doorway on the left goes back to the salon; the doorway on the right leads on to the picture gallery.",
+ "note": "Ground-floor atelier of the Maison de Couture (B62), east of the salon: sage-green wood panelling with white trim, pale limestone floor, fabric bolts. LANDMARK: the gigantic black-and-gold antique sewing machine at the back. Camera faces north: the open doorway in the left (west) wall shows the rose salon with its chandelier and leads back there; the curved white staircase along the right (east) wall goes UP to the navy picture gallery; the back window looks onto the courtyard. Feminine nouns left of x=700, masculine (and élégant) right. Zoom: the cushion-piled window seat under the back window.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "L'atelier",
    "box": [
-    100,
-    650,
-    380,
-    690
+    644,
+    106,
+    744,
+    188
    ],
    "text_box": [
-    106,
-    656,
-    374,
-    684
+    650,
+    112,
+    738,
+    182
    ]
   }
  },
  "items": [
-  {
-   "id": "fr_curiosite_noun",
-   "lemma": "curiosité",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la curiosité",
-   "box": [
-    112,
-    462,
-    281,
-    606
-   ],
-   "label_xy": [
-    196,
-    596
-   ],
-   "scene": "kitten peeking curiously into a striped hatbox"
-  },
   {
    "id": "fr_coutume_noun",
    "lemma": "coutume",
@@ -51,16 +32,35 @@
    "side": "left",
    "label": "la coutume",
    "box": [
-    125,
-    331,
-    225,
-    437
+    102,
+    437,
+    203,
+    550
    ],
    "label_xy": [
-    175,
-    427
+    152,
+    540
    ],
-   "scene": "old pigeon cooing at an arriving guest"
+   "scene": "old pigeon by the doorway cooing at every guest"
+  },
+  {
+   "id": "fr_curiosite_noun",
+   "lemma": "curiosité",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la curiosité",
+   "box": [
+    222,
+    469,
+    331,
+    590
+   ],
+   "label_xy": [
+    276,
+    580
+   ],
+   "scene": "kitten peeking curiously out of a striped hatbox"
   },
   {
    "id": "fr_revelation_noun",
@@ -70,14 +70,14 @@
    "side": "left",
    "label": "la révélation",
    "box": [
-    237,
-    50,
-    381,
-    308
+    250,
+    94,
+    410,
+    316
    ],
    "label_xy": [
-    309,
-    298
+    330,
+    306
    ],
    "scene": "velvet curtain whipped back to reveal a model in a gown"
   },
@@ -89,14 +89,14 @@
    "side": "left",
    "label": "la ruse",
    "box": [
-    306,
-    312,
-    421,
-    569
+    350,
+    319,
+    490,
+    588
    ],
    "label_xy": [
-    364,
-    559
+    420,
+    578
    ],
    "scene": "fox dressed up in a hen costume"
   },
@@ -108,35 +108,16 @@
    "side": "left",
    "label": "l'harmonie",
    "box": [
-    425,
-    337,
-    587,
-    550
+    494,
+    388,
+    721,
+    556
    ],
    "label_xy": [
-    506,
-    540
+    608,
+    546
    ],
-   "scene": "three cats singing together on a sofa"
-  },
-  {
-   "id": "fr_choix_noun",
-   "lemma": "choix",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le choix",
-   "box": [
-    687,
-    119,
-    950,
-    390
-   ],
-   "label_xy": [
-    818,
-    380
-   ],
-   "scene": "shah choosing between two velvet capes"
+   "scene": "three cats singing together on a little sofa"
   },
   {
    "id": "fr_eclat_noun",
@@ -146,16 +127,16 @@
    "side": "right",
    "label": "l'éclat",
    "box": [
-    687,
-    444,
-    800,
-    519
+    725,
+    335,
+    872,
+    420
    ],
    "label_xy": [
-    744,
-    509
+    798,
+    410
    ],
-   "scene": "diamond tiara on a cushion bursting with sparkle"
+   "scene": "diamond tiara bursting with sparkle on a cushion"
   },
   {
    "id": "fr_luxe_noun",
@@ -165,16 +146,35 @@
    "side": "right",
    "label": "le luxe",
    "box": [
-    819,
-    394,
-    1021,
-    612
+    748,
+    425,
+    965,
+    669
    ],
    "label_xy": [
-    920,
-    602
+    856,
+    659
    ],
    "scene": "poodle on a velvet pouffe eating grapes"
+  },
+  {
+   "id": "fr_choix_noun",
+   "lemma": "choix",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le choix",
+   "box": [
+    819,
+    156,
+    1058,
+    330
+   ],
+   "label_xy": [
+    938,
+    320
+   ],
+   "scene": "shah choosing between two velvet capes"
   },
   {
    "id": "fr_semblant_noun",
@@ -184,14 +184,14 @@
    "side": "right",
    "label": "le semblant",
    "box": [
-    962,
-    125,
-    1200,
-    376
+    1062,
+    212,
+    1203,
+    400
    ],
    "label_xy": [
-    1081,
-    366
+    1132,
+    390
    ],
    "scene": "mannequin dressed as a duchess"
   },
@@ -203,14 +203,14 @@
    "side": "center",
    "label": "élégant",
    "box": [
-    1025,
-    381,
-    1187,
-    619
+    1012,
+    404,
+    1163,
+    648
    ],
    "label_xy": [
-    1106,
-    609
+    1088,
+    638
    ],
    "scene": "flamingo in pearls gliding on one leg"
   }
@@ -219,22 +219,22 @@
   {
    "room_id": "R_abs_beauty_01_z1",
    "box": [
-    412,
-    40,
-    575,
-    305
+    414,
+    262,
+    588,
+    316
    ],
-   "label": "the cushion corner"
+   "label": "the cushion window seat"
   }
  ],
  "links": [
   {
    "target": "R_abs_beauty_02",
    "box": [
-    150,
-    40,
-    232,
-    326
+    106,
+    60,
+    246,
+    430
    ],
    "label": "Back through the left doorway to the salon",
    "name": "Le salon",
@@ -243,14 +243,14 @@
   {
    "target": "R_abs_beauty_03",
    "box": [
-    800,
-    50,
-    958,
-    118
+    905,
+    30,
+    1210,
+    150
    ],
-   "label": "Through the right doorway to the picture gallery",
+   "label": "Up the curved staircase to the picture gallery",
    "name": "La galerie",
-   "kind": "door"
+   "kind": "stairs_up"
   }
  ]
 }

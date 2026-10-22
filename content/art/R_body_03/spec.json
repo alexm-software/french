@@ -1,0 +1,142 @@
+{
+ "kind": "room",
+ "space": "R_body_03",
+ "building_id": "B17_cabinet",
+ "floor": "first floor (north)",
+ "name": "L'atelier de la main",
+ "parent_room_id": null,
+ "divider_x": 580,
+ "camera": "from the landing door, facing north into the hand workshop",
+ "setting": {
+  "walls": "soft grey-blue painted wood panelling with a pegboard of hand tools",
+  "floor": "wide pine boards with curls of wood shavings",
+  "landmark": "a giant two-metre wooden artist's hand mannequin on a plinth, beside a long carpenter's workbench",
+  "light": "northern daylight from a row of high windows",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "L'atelier de la main",
+   "box": [
+    650,
+    106,
+    902,
+    210
+   ],
+   "text_box": [
+    654,
+    110,
+    898,
+    206
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_paume_noun",
+   "box": [
+    148,
+    262,
+    268,
+    494
+   ],
+   "row": "back",
+   "scene": "A girl holds a shiny POMEgranate (\"POHM\") balanced flat on the PALM of her open hand."
+  },
+  {
+   "id": "fr_menotte_noun",
+   "box": [
+    271,
+    331,
+    392,
+    492
+   ],
+   "row": "front",
+   "scene": "A toddler's SMALL HAND tugs at a big rope KNOT (\"muh-NOT\") on the workbench, giggling."
+  },
+  {
+   "id": "fr_habilete_noun",
+   "box": [
+    412,
+    256,
+    587,
+    438
+   ],
+   "row": "back",
+   "scene": "A clockmaker with great SKILL fixes a tiny watch with tweezers while A BEE arrives LATE (\"ah-BEE-luh-TAY\"), holding a pocket watch."
+  },
+  {
+   "id": "fr_pouce_noun",
+   "box": [
+    591,
+    248,
+    731,
+    490
+   ],
+   "row": "front",
+   "scene": "PUSS (\"POOS\") in Boots, feathered hat and all, gives a big THUMBS-UP from the top of a tool chest."
+  },
+  {
+   "id": "fr_index_noun",
+   "box": [
+    735,
+    213,
+    875,
+    374
+   ],
+   "row": "back",
+   "scene": "A sailor points his INDEX (\"an-DEHKS\") finger at the DECKS of a model ship on the bench."
+  },
+  {
+   "id": "fr_ongle_noun",
+   "box": [
+    878,
+    213,
+    998,
+    374
+   ],
+   "row": "front",
+   "scene": "A manicurist files a girl's FINGERNAIL to a perfect ANGLE (\"OHNGL\"), checking it with a giant wooden protractor."
+  },
+  {
+   "id": "fr_manche_noun_m",
+   "box": [
+    862,
+    378,
+    1100,
+    538
+   ],
+   "row": "back",
+   "scene": "A beaver MUNCHES (\"MAHNSH\") the long wooden HANDLE of a broom like a carrot, chips flying."
+  },
+  {
+   "id": "fr_coude_noun",
+   "box": [
+    1103,
+    212,
+    1202,
+    500
+   ],
+   "row": "front",
+   "scene": "A dove COOED (\"KOOD\") softly, perched on an old carpenter's bent ELBOW as he leans on the bench."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_body_03_z1",
+   "box": [
+    100,
+    88,
+    144,
+    488
+   ],
+   "label": "Back to the landing",
+   "name": "Le palier",
+   "kind": "door",
+   "painted_as": "the open oak door behind, in the near left foreground, showing the fern-papered landing"
+  }
+ ],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: L'atelier de la main in the B17_cabinet building, first floor (north). Camera: from the landing door, facing north into the hand workshop.\nSetting: soft grey-blue painted wood panelling with a pegboard of hand tools; floor: wide pine boards with curls of wood shavings. Landmark: a giant two-metre wooden artist's hand mannequin on a plinth, beside a long carpenter's workbench. Light: northern daylight from a row of high windows. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the open oak door behind, in the near left foreground, showing the fern-papered landing (way to Le palier).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: A girl holds a shiny POMEgranate balanced flat on the PALM of her open hand.\n- left, foreground: A toddler's SMALL HAND tugs at a big rope KNOT on the workbench, giggling.\n- centre-left, middle distance: A clockmaker with great SKILL fixes a tiny watch with tweezers while A BEE arrives LATE, holding a pocket watch.\n- centre, foreground: PUSS in Boots, feathered hat and all, gives a big THUMBS-UP from the top of a tool chest.\n- centre-right, middle distance: A sailor points his INDEX finger at the DECKS of a model ship on the bench.\n- right, foreground: A manicurist files a girl's FINGERNAIL to a perfect ANGLE, checking it with a giant wooden protractor.\n- far right, middle distance: A beaver MUNCHES the long wooden HANDLE of a broom like a carrot, chips flying.\n- far right, foreground: A dove COOED softly, perched on an old carpenter's bent ELBOW as he leans on the bench.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

@@ -1,327 +1,315 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg019",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Impasse des Rendormis · s'adosser, se rendormir, se dégourdir",
-  "divider_x": 680,
-  "note": "Last place of the Allée du Quotidien (five verbs). -er LEFT (detective leaning back against the wall beside his gold-framed mirror, man in a dinner jacket cramming the little red car full of suitcases, man striking a pose with his rubber stamp on the balcony), -ir/-re RIGHT (man in pyjamas dozing off again in his deckchair, wren on the door knocker, round mirror; man stretching on the balcony beside his gourd and mirror). Forward = lane end, round back to the square; back = near cobbles.",
-  "text_areas": {
-    "fr_adosser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_adosser_verb",
-      "text": "s'adosser",
-      "box": [
-        103,
-        637,
-        199,
-        663
-      ],
-      "text_box": [
-        107,
-        641,
-        195,
-        659
-      ]
-    },
-    "fr_bonder_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_bonder_verb",
-      "text": "bonder",
-      "box": [
-        379,
-        593,
-        447,
-        619
-      ],
-      "text_box": [
-        383,
-        597,
-        443,
-        615
-      ]
-    },
-    "fr_apposer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_apposer_verb",
-      "text": "apposer",
-      "box": [
-        317,
-        137,
-        395,
-        163
-      ],
-      "text_box": [
-        321,
-        141,
-        391,
-        159
-      ]
-    },
-    "fr_rendormir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_rendormir_verb",
-      "text": "se rendormir",
-      "box": [
-        941,
-        640,
-        1067,
-        666
-      ],
-      "text_box": [
-        945,
-        644,
-        1063,
-        662
-      ]
-    },
-    "fr_degourdir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_degourdir_verb",
-      "text": "se dégourdir",
-      "box": [
-        1002,
-        218,
-        1128,
-        244
-      ],
-      "text_box": [
-        1006,
-        222,
-        1124,
-        240
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "place →",
-      "box": [
-        600,
-        390,
-        780,
-        500
-      ],
-      "text_box": [
-        606,
-        396,
-        774,
-        494
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue des Selliers",
-      "box": [
-        470,
-        674,
-        780,
-        712
-      ],
-      "text_box": [
-        476,
-        680,
-        774,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        470,
-        25,
-        570,
-        59
-      ],
-      "text_box": [
-        473,
-        28,
-        567,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        700,
-        25,
-        820,
-        59
-      ],
-      "text_box": [
-        703,
-        28,
-        817,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg019",
+ "street_id": "ST_bricoleurs",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 5,
+ "place_count": 5,
+ "street_name": "Avenue des Petits Travaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Impasse des Rendormis",
+ "divider_x": 760,
+ "note": "Avenue des Petits Travaux place 5/5; landmark: humped wooden footbridge over the river into the Vallée Verte meadow (destination). Last place: the avenue ends at the footbridge into the S09 meadow (S09 square not painted yet). Deckchair foot touches the right edge (box stops at 1200). Last place: the far end shows the destination. No -er/-ir markers, no painted text.",
+ "landmark": "humped wooden footbridge over the river into the Vallée Verte meadow (destination)",
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "text_areas": {
+  "fr_apposer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_apposer_verb",
+   "text": "apposer",
+   "box": [
+    258,
+    238,
+    336,
+    264
+   ],
+   "text_box": [
+    262,
+    242,
+    332,
+    260
+   ]
   },
-  "items": [
-    {
-      "id": "fr_adosser_verb",
-      "lemma": "adosser",
-      "gloss": "to back up ); to lean",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        40,
-        262,
-        262,
-        669
-      ],
-      "label_xy": [
-        151,
-        657
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'adosser",
-      "scene": "",
-      "mirror": "gold-framed wall mirror reflecting the detective"
-    },
-    {
-      "id": "fr_bonder_verb",
-      "lemma": "bonder",
-      "gloss": "to fill up",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        265,
-        350,
-        562,
-        625
-      ],
-      "label_xy": [
-        413,
-        613
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_apposer_verb",
-      "lemma": "apposer",
-      "gloss": "to put up; to stamp, sign",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 3,
-      "box": [
-        281,
-        12,
-        431,
-        169
-      ],
-      "label_xy": [
-        356,
-        157
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_rendormir_verb",
-      "lemma": "rendormir",
-      "gloss": "to fall asleep again",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 4,
-      "box": [
-        794,
-        360,
-        1215,
-        672
-      ],
-      "label_xy": [
-        1004,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se rendormir",
-      "scene": "",
-      "mirror": "round mirror on the wall beside the deckchair"
-    },
-    {
-      "id": "fr_degourdir_verb",
-      "lemma": "dégourdir",
-      "gloss": "to warm up ; to stretch; to teach a thing or two",
-      "verb_group": 2,
-      "side": "right",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 5,
-      "box": [
-        950,
-        38,
-        1181,
-        250
-      ],
-      "label_xy": [
-        1065,
-        238
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se dégourdir",
-      "scene": "",
-      "mirror": "mirror beside the gourd on the balcony"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "S02_sector",
-      "box": [
-        600,
-        390,
-        780,
-        500
-      ],
-      "label": "Lane's end: round the corner back to the square",
-      "name": "Place de la Rue des Maisons",
-      "sign": "place →",
-      "kind": "street"
-    },
-    "back": {
-      "target": "ST_routine_seg018",
-      "box": [
-        470,
-        674,
-        780,
-        712
-      ],
-      "label": "Back up the lane to Saddlers' Street",
-      "name": "Rue des Selliers",
-      "sign": "← Rue des Selliers",
-      "kind": "street",
-      "name_fr": "Rue des Selliers",
-      "name_en": "Saddlers' Street"
-    }
+  "fr_adosser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_adosser_verb",
+   "text": "s'adosser",
+   "box": [
+    104,
+    588,
+    200,
+    614
+   ],
+   "text_box": [
+    108,
+    592,
+    196,
+    610
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 2
+  "fr_bonder_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bonder_verb",
+   "text": "bonder",
+   "box": [
+    335,
+    568,
+    403,
+    594
+   ],
+   "text_box": [
+    339,
+    572,
+    399,
+    590
+   ]
+  },
+  "fr_degourdir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_degourdir_verb",
+   "text": "se dégourdir",
+   "box": [
+    1057,
+    262,
+    1183,
+    288
+   ],
+   "text_box": [
+    1061,
+    266,
+    1179,
+    284
+   ]
+  },
+  "fr_rendormir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rendormir_verb",
+   "text": "se rendormir",
+   "box": [
+    1009,
+    614,
+    1135,
+    640
+   ],
+   "text_box": [
+    1013,
+    618,
+    1131,
+    636
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Vallée Verte →",
+   "box": [
+    570,
+    380,
+    725,
+    512
+   ],
+   "text_box": [
+    576,
+    386,
+    719,
+    506
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Selliers",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Impasse des Rendormis",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_apposer_verb",
+   "lemma": "apposer",
+   "gloss": "to put up; to stamp, sign",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 1,
+   "box": [
+    232,
+    130,
+    362,
+    270
+   ],
+   "label_xy": [
+    297,
+    258
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_adosser_verb",
+   "lemma": "adosser",
+   "gloss": "to back up ); to lean",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 2,
+   "box": [
+    77,
+    355,
+    228,
+    620
+   ],
+   "label_xy": [
+    152,
+    608
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'adosser",
+   "scene": "",
+   "mirror": "gold-framed mirror on the cottage wall"
+  },
+  {
+   "id": "fr_bonder_verb",
+   "lemma": "bonder",
+   "gloss": "to fill up",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    238,
+    400,
+    500,
+    600
+   ],
+   "label_xy": [
+    369,
+    588
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_degourdir_verb",
+   "lemma": "dégourdir",
+   "gloss": "to warm up ; to stretch; to teach a thing or two",
+   "verb_group": 2,
+   "side": "right",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 4,
+   "box": [
+    1040,
+    100,
+    1200,
+    294
+   ],
+   "label_xy": [
+    1120,
+    282
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se dégourdir",
+   "scene": "",
+   "mirror": "tall gilt mirror on the balcony"
+  },
+  {
+   "id": "fr_rendormir_verb",
+   "lemma": "rendormir",
+   "gloss": "to fall asleep again",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    945,
+    412,
+    1200,
+    646
+   ],
+   "label_xy": [
+    1072,
+    634
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se rendormir",
+   "scene": "",
+   "mirror": "round gilt mirror on the garden wall"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "S09_sector",
+   "box": [
+    570,
+    380,
+    725,
+    512
+   ],
+   "label": "Over the wooden bridge into the Vallée Verte",
+   "name": "Vallée Verte",
+   "sign": "Vallée Verte →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg018",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Selliers",
+   "name": "Rue des Selliers",
+   "sign": "← Rue des Selliers",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "balcony": 2,
+  "street": 3
+ }
 }

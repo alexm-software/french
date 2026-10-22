@@ -651,5 +651,38 @@
    "S09_nature"
   ]
  },
- "notes": "Every sector is reachable from the overview map (teleport) and by walking between neighbouring sectors (adjacency). Inside a sector, buildings are ordered by mean CEFR level; rooms likewise."
+ "notes": "Every sector is reachable from the overview map (teleport) and by walking between neighbouring sectors (adjacency). Inside a sector, buildings are ordered by mean CEFR level; rooms likewise.",
+ "short_streets": [
+  {
+   "id": "ST_bricoleurs",
+   "name_fr": "Avenue des Petits Travaux",
+   "name_en": "Odd-jobs Avenue",
+   "start": "S02_home",
+   "end": "S09_nature",
+   "end_room": null,
+   "edge": "chord",
+   "places": [
+    "ST_routine_seg015",
+    "ST_routine_seg016",
+    "ST_routine_seg017",
+    "ST_routine_seg018",
+    "ST_routine_seg019"
+   ]
+  },
+  {
+   "id": "ST_paquets",
+   "name_fr": "Passage des Paquets",
+   "name_en": "Parcels Passage",
+   "start": "S02_home",
+   "end": "B05_maison",
+   "end_room": "R_garage",
+   "edge": "spur",
+   "places": [
+    "ST_control_seg015",
+    "ST_control_seg016",
+    "ST_control_seg017",
+    "ST_control_seg018"
+   ]
+  }
+ ]
 }

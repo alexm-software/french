@@ -1,369 +1,355 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_control_seg017",
-  "street_id": "ST_control",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Rue des Gestes — Impasse des Yeux-Écarquillés · relancer, injecter, décaler",
-  "divider_x": 1000,
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (man throwing the ball back to his spaniel, vet giving the cow an injection, man goggling at a giant golden car key), balcony (man steadying the ladder to help a woman hang a picture), upper (woman scurrying about with an old vacuum cleaner), roof (man shifting a pot of calla lilies). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_relancer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_relancer_verb",
-      "text": "relancer",
-      "box": [
-        224,
-        618,
-        312,
-        644
-      ],
-      "text_box": [
-        228,
-        622,
-        308,
-        640
-      ]
-    },
-    "fr_injecter_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_injecter_verb",
-      "text": "injecter",
-      "box": [
-        567,
-        580,
-        655,
-        606
-      ],
-      "text_box": [
-        571,
-        584,
-        651,
-        602
-      ]
-    },
-    "fr_ecarquiller_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_ecarquiller_verb",
-      "text": "écarquiller",
-      "box": [
-        773,
-        630,
-        889,
-        656
-      ],
-      "text_box": [
-        777,
-        634,
-        885,
-        652
-      ]
-    },
-    "fr_seconder_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_seconder_verb",
-      "text": "seconder",
-      "box": [
-        584,
-        404,
-        672,
-        430
-      ],
-      "text_box": [
-        588,
-        408,
-        668,
-        426
-      ]
-    },
-    "fr_vaquer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_vaquer_verb",
-      "text": "vaquer",
-      "box": [
-        209,
-        224,
-        277,
-        250
-      ],
-      "text_box": [
-        213,
-        228,
-        273,
-        246
-      ]
-    },
-    "fr_decaler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_decaler_verb",
-      "text": "décaler",
-      "box": [
-        739,
-        110,
-        817,
-        136
-      ],
-      "text_box": [
-        743,
-        114,
-        813,
-        132
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Ruelle des Goélands →",
-      "box": [
-        920,
-        450,
-        1050,
-        560
-      ],
-      "text_box": [
-        926,
-        456,
-        1044,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue de la Mise-en-Place",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        682,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        880,
-        25,
-        980,
-        59
-      ],
-      "text_box": [
-        883,
-        28,
-        977,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        1000,
-        25,
-        1120,
-        59
-      ],
-      "text_box": [
-        1003,
-        28,
-        1117,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg017",
+ "street_id": "ST_paquets",
+ "theme_street_id": "ST_control",
+ "sector_id": "S02_home",
+ "place_index": 3,
+ "place_count": 4,
+ "street_name": "Passage des Paquets",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Impasse des Yeux-Écarquillés",
+ "divider_x": 1080,
+ "note": "Passage des Paquets place 3/4; landmark: little green tram waiting at a glass tram shelter, rails in the wet cobbles. Stray waiting figure at the tram shelter removed (local patch); warm cast softened (chroma only). Minor: the tip of the golden key runs into the injecter box edge (box starts at 748). No -er/-ir markers, no painted text.",
+ "landmark": "little green tram waiting at a glass tram shelter, rails in the wet cobbles",
+ "art_style": "cartoony 2.5",
+ "text_areas": {
+  "fr_vaquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_vaquer_verb",
+   "text": "vaquer",
+   "box": [
+    241,
+    237,
+    309,
+    263
+   ],
+   "text_box": [
+    245,
+    241,
+    305,
+    259
+   ]
   },
-  "items": [
-    {
-      "id": "fr_relancer_verb",
-      "lemma": "relancer",
-      "gloss": "to throw back; to relaunch",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        81,
-        356,
-        456,
-        650
-      ],
-      "label_xy": [
-        268,
-        638
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_injecter_verb",
-      "lemma": "injecter",
-      "gloss": "to inject",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        462,
-        438,
-        760,
-        612
-      ],
-      "label_xy": [
-        611,
-        600
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_ecarquiller_verb",
-      "lemma": "écarquiller",
-      "gloss": "to open wide, to goggle",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        762,
-        481,
-        900,
-        662
-      ],
-      "label_xy": [
-        831,
-        650
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_seconder_verb",
-      "lemma": "seconder",
-      "gloss": "to assist; to help, ease",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        550,
-        144,
-        706,
-        436
-      ],
-      "label_xy": [
-        628,
-        424
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_vaquer_verb",
-      "lemma": "vaquer",
-      "gloss": "to busy oneself with; to scurry about looking for food",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        162,
-        56,
-        325,
-        256
-      ],
-      "label_xy": [
-        243,
-        244
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_decaler_verb",
-      "lemma": "décaler",
-      "gloss": "to shift, move (forward or back); to stagger",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 6,
-      "box": [
-        688,
-        25,
-        869,
-        142
-      ],
-      "label_xy": [
-        778,
-        130
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg018",
-      "box": [
-        920,
-        450,
-        1050,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Ruelle des Goélands",
-      "sign": "Ruelle des Goélands →",
-      "kind": "street",
-      "name_fr": "Ruelle des Goélands",
-      "name_en": "Seagulls Lane"
-    },
-    "back": {
-      "target": "ST_control_seg016",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Setting-Up Street",
-      "name": "Rue de la Mise-en-Place",
-      "sign": "← Rue de la Mise-en-Place",
-      "kind": "street",
-      "name_fr": "Rue de la Mise-en-Place",
-      "name_en": "Setting-Up Street"
-    }
+  "fr_decaler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decaler_verb",
+   "text": "décaler",
+   "box": [
+    726,
+    132,
+    804,
+    158
+   ],
+   "text_box": [
+    730,
+    136,
+    800,
+    154
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_seconder_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_seconder_verb",
+   "text": "seconder",
+   "box": [
+    572,
+    404,
+    660,
+    430
+   ],
+   "text_box": [
+    576,
+    408,
+    656,
+    426
+   ]
+  },
+  "fr_relancer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_relancer_verb",
+   "text": "relancer",
+   "box": [
+    251,
+    599,
+    339,
+    625
+   ],
+   "text_box": [
+    255,
+    603,
+    335,
+    621
+   ]
+  },
+  "fr_injecter_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_injecter_verb",
+   "text": "injecter",
+   "box": [
+    565,
+    564,
+    653,
+    590
+   ],
+   "text_box": [
+    569,
+    568,
+    649,
+    586
+   ]
+  },
+  "fr_ecarquiller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecarquiller_verb",
+   "text": "écarquiller",
+   "box": [
+    753,
+    618,
+    869,
+    644
+   ],
+   "text_box": [
+    757,
+    622,
+    865,
+    640
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Ruelle des Goélands →",
+   "box": [
+    880,
+    250,
+    1060,
+    515
+   ],
+   "text_box": [
+    886,
+    256,
+    1054,
+    509
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue de la Mise-en-Place",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Impasse des Yeux-Écarquillés",
+   "box": [
+    900,
+    40,
+    1140,
+    80
+   ],
+   "text_box": [
+    904,
+    44,
+    1136,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_vaquer_verb",
+   "lemma": "vaquer",
+   "gloss": "to busy oneself with; to scurry about looking for food",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    200,
+    75,
+    350,
+    269
+   ],
+   "label_xy": [
+    275,
+    257
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_decaler_verb",
+   "lemma": "décaler",
+   "gloss": "to shift, move (forward or back); to stagger",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 2,
+   "box": [
+    681,
+    48,
+    850,
+    164
+   ],
+   "label_xy": [
+    765,
+    152
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_seconder_verb",
+   "lemma": "seconder",
+   "gloss": "to assist; to help, ease",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 3,
+   "box": [
+    538,
+    166,
+    694,
+    436
+   ],
+   "label_xy": [
+    616,
+    424
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_relancer_verb",
+   "lemma": "relancer",
+   "gloss": "to throw back; to relaunch",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    119,
+    356,
+    472,
+    631
+   ],
+   "label_xy": [
+    295,
+    619
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_injecter_verb",
+   "lemma": "injecter",
+   "gloss": "to inject",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    474,
+    440,
+    745,
+    596
+   ],
+   "label_xy": [
+    609,
+    584
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ecarquiller_verb",
+   "lemma": "écarquiller",
+   "gloss": "to open wide, to goggle",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    748,
+    481,
+    875,
+    650
+   ],
+   "label_xy": [
+    811,
+    638
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg018",
+   "box": [
+    880,
+    250,
+    1060,
+    515
+   ],
+   "label": "Walk on to Ruelle des Goélands",
+   "name": "Ruelle des Goélands",
+   "sign": "Ruelle des Goélands →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg016",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue de la Mise-en-Place",
+   "name": "Rue de la Mise-en-Place",
+   "sign": "← Rue de la Mise-en-Place",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "roof": 1,
+  "balcony": 1,
+  "street": 3
+ }
 }

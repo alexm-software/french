@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "The ground-floor repair café: adjectives of state 2 (deserted, fixed, urgent, broken, supple...). Adjectives have no gender (divider null). The doorway on the left goes back into the workshop; the wooden staircase on the right goes UP to the first floor.",
+ "note": "Ground-floor café of the B61 half-timbered repair café: duck-egg-blue plaster between dark oak posts and beams, black-and-white chequered tiles, light from the bay window. LANDMARK: the bicycle-wheel chandelier hanging from the centre beam. The open doorway on the left goes back into the workshop (pegboard visible through it), the way back; the wooden staircase on the right goes UP to the first floor. Adjectives have no gender (divider null). Zoom: the cushioned bay-window bench at the back (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Le café",
    "box": [
-    480,
-    52,
-    700,
-    86
+    380,
+    180,
+    495,
+    248
    ],
    "text_box": [
-    486,
-    58,
-    694,
-    80
+    386,
+    186,
+    489,
+    242
    ]
   }
  },
@@ -24,142 +24,104 @@
   {
    "id": "fr_fixe_adj",
    "box": [
-    125,
+    78,
     56,
-    244,
-    175
+    180,
+    168
    ],
-   "scene": "wall clock with a nail through its face"
+   "scene": "wall clock with a nail through its face, hands fixed for ever"
   },
   {
    "id": "fr_desert_adj",
    "box": [
-    106,
-    250,
+    80,
     318,
-    480
+    285,
+    600
    ],
-   "scene": "cat alone at a table eating a slice of cake"
+   "scene": "cat alone in the deserted café with the whole dessert"
   },
   {
    "id": "fr_urgent_adj",
    "box": [
-    387,
-    140,
-    569,
-    356
+    356,
+    256,
+    506,
+    450
    ],
    "scene": "postman running with a parcel flashing a red light"
   },
   {
    "id": "fr_casse_adj",
    "box": [
-    325,
-    390,
-    512,
-    481
+    320,
+    488,
+    537,
+    662
    ],
-   "scene": "cassette tape with its ribbon spilling out"
-  },
-  {
-   "id": "fr_mobile_adj",
-   "box": [
-    306,
-    486,
-    556,
-    650
-   ],
-   "scene": "toy van with a hamster climbing in"
-  },
-  {
-   "id": "fr_illegal_adj",
-   "box": [
-    587,
-    137,
-    800,
-    290
-   ],
-   "scene": "policeman blowing his whistle at a mouse on a scooter"
-  },
-  {
-   "id": "fr_temporaire_adj",
-   "box": [
-    806,
-    80,
-    885,
-    178
-   ],
-   "scene": "cardboard patch taped over a broken window pane"
+   "scene": "cassette tape on a stool spilling its ribbon: broken"
   },
   {
    "id": "fr_souple_adj",
    "box": [
-    525,
-    362,
-    687,
-    450
+    556,
+    494,
+    843,
+    662
    ],
-   "scene": "cat curled up inside a soup bowl"
-  },
-  {
-   "id": "fr_disponible_adj",
-   "box": [
-    731,
-    296,
-    887,
-    462
-   ],
-   "scene": "panda climbing into a little yellow taxi"
+   "scene": "cat bent into a big soup bowl, supple as noodles"
   },
   {
    "id": "fr_fini_adj",
    "box": [
-    890,
-    150,
-    1080,
-    387
+    650,
+    238,
+    843,
+    468
    ],
-   "scene": "repairman proudly holding a mended bicycle"
+   "scene": "repairman slapping his knee beside the mended bicycle: finished"
   },
   {
    "id": "fr_pris_adj",
    "box": [
-    1087,
-    244,
-    1185,
-    345
+    850,
+    306,
+    945,
+    481
    ],
-   "scene": "teddy bear sitting on a chair to save it"
+   "scene": "teddy hugging a wedge of Brie on the chair: this seat is taken"
   },
   {
    "id": "fr_provisoire_adj",
    "box": [
-    975,
-    392,
-    1194,
-    644
+    948,
+    345,
+    1200,
+    625
    ],
-   "scene": "chair with a short leg propped up on a stack of books"
-  },
+   "scene": "man in a visor wedging books under the short chair leg"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_interesse_adj",
+   "room_id": "R_adj_state_03_z1",
    "box": [
-    740,
-    500,
-    890,
-    640
+    510,
+    295,
+    645,
+    400
    ],
-   "scene": "cat watching a repairer's screwdriver closely"
+   "label": "the bay-window bench"
   }
  ],
  "links": [
   {
    "target": "R_adj_state_02",
    "box": [
-    275,
-    44,
-    382,
-    245
+    205,
+    120,
+    345,
+    315
    ],
    "label": "Back through the doorway into the workshop",
    "name": "L'atelier",
@@ -168,10 +130,10 @@
   {
    "target": "R_adj_state_04",
    "box": [
-    1100,
-    44,
+    950,
+    25,
     1280,
-    238
+    300
    ],
    "label": "Up the wooden staircase to the first floor",
    "name": "L'étage",

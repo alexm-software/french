@@ -1,111 +1,105 @@
 {
-  "divider_x": 1000,
-  "name": "Allée du Quotidien — Rue des Selliers · friser, siéger, seller",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hairdresser curling a lady's hair, boy re-tying his kite string, judge sitting in his tall chair with a jay), balcony (girl in a sash drying out the flower box), upper (cook whose pot foams over as he stirs with a snooker cue), roof (cowboy saddling a rocking horse). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_friser_verb",
-      "box": [
-        38,
-        356,
-        262,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_renouer_verb",
-      "box": [
-        275,
-        456,
-        431,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_sieger_verb",
-      "box": [
-        631,
-        350,
-        825,
-        669
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_assecher_verb",
-      "box": [
-        425,
-        231,
-        562,
-        450
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_ecumer_verb",
-      "box": [
-        387,
-        31,
-        550,
-        228
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_seller_verb",
-      "box": [
-        675,
-        10,
-        825,
-        200
-      ],
-      "tier": "roof"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg019",
-      "box": [
-        850,
-        440,
-        1010,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Impasse des Rendormis",
-      "sign": "Impasse des Rendormis →",
-      "name_fr": "Impasse des Rendormis",
-      "name_en": "Back-to-Sleep Close"
-    },
-    "back": {
-      "target": "ST_routine_seg017",
-      "box": [
-        470,
-        674,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Alarm-Clock Street",
-      "name": "Rue du Réveille-Matin",
-      "sign": "← Rue du Réveille-Matin",
-      "name_fr": "Rue du Réveille-Matin",
-      "name_en": "Alarm-Clock Street"
-    }
+ "name": "Rue des Selliers",
+ "street_name": "Avenue des Petits Travaux",
+ "divider_x": 1000,
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "landmark": "wooden saddler's stable with a giant saddled wooden horse in front",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_ecumer_verb",
+   "box": [
+    110,
+    70,
+    256,
+    238
+   ],
+   "tier": "upper"
   },
-  "signs": {
-    "er": [
-      880,
-      25,
-      980,
-      59
-    ],
-    "irre": [
-      1000,
-      25,
-      1120,
-      59
-    ]
+  {
+   "id": "fr_assecher_verb",
+   "box": [
+    100,
+    240,
+    318,
+    388
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_seller_verb",
+   "box": [
+    444,
+    148,
+    556,
+    244
+   ],
+   "tier": "roof"
+  },
+  {
+   "id": "fr_friser_verb",
+   "box": [
+    77,
+    388,
+    275,
+    668
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_renouer_verb",
+   "box": [
+    280,
+    505,
+    428,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_sieger_verb",
+   "box": [
+    430,
+    326,
+    590,
+    595
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg019",
+   "box": [
+    650,
+    470,
+    800,
+    560
+   ],
+   "label": "Walk on to Impasse des Rendormis",
+   "name": "Impasse des Rendormis",
+   "sign": "Impasse des Rendormis →"
+  },
+  "back": {
+   "target": "ST_routine_seg017",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue du Réveille-Matin",
+   "name": "Rue du Réveille-Matin",
+   "sign": "← Rue du Réveille-Matin"
+  }
+ },
+ "signs": {
+  "name": [
+   560,
+   40,
+   800,
+   80
+  ]
+ },
+ "note": "Avenue des Petits Travaux place 4/5; landmark: wooden saddler's stable with a giant saddled wooden horse in front. All verbs are -er (data): everything on the left; the stable landmark fills the right. Stable name board left blank (painted text removed). No -er/-ir markers, no painted text."
 }

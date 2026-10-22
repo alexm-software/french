@@ -291,7 +291,8 @@ def assert_fontaine_arrows():
 
 S03_WITHOUT_PAINTED_RETURN = [
     "R_abs_beauty_01_z1", "R_abs_beauty_02_z1", "R_abs_beauty_03_z1",
-    "R_adj_state_04_z1", "R_adv_degree_01_z1", "R_adv_degree_03_z1",
+    "R_adj_state_02_z1", "R_adj_state_03_z1", "R_adj_state_04_z1", "R_adj_state_05_z1",
+    "R_adv_degree_01_z1", "R_adv_degree_03_z1",
     "R_bookshop_01_z1", "R_boutique_03_z1", "R_florist_z1",
     "R_grocery_01_z1", "R_hardware_01_z1", "R_hardware_02_z1",
     "R_shop_general_02_z1", "R_shop_general_03_z1", "R_shop_general_04_z1",
@@ -302,7 +303,7 @@ S03_WITHOUT_PAINTED_RETURN = [
 def assert_market_square():
     """The repainted square names each door, and the brocante stays closed.
 
-    Sixteen market zooms have no painted path back to the square. Each one
+    Nineteen market zooms have no painted path back to the square. Each one
     still belongs to S03, so the sector button is that path.
     """
     painted = normalize_scene(load(ROOT / "content" / "art" / "S03_sector" / "hotspots.json"))
@@ -494,7 +495,7 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 859, len(rooms)
+    assert len(rooms) == 890, len(rooms)
     # Close-ups hold 3–12 items. A mixed-gender shelf is the back wall, not a side wall.
     genders = {}
     with (source / "vocab.jsonl").open(encoding="utf-8") as handle:
@@ -537,7 +538,7 @@ def main():
     assert index["open_sectors"] == ["S01_beginner", "S02_home", "S03_market", "S04_cafes"], index["open_sectors"]
     site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
     assert index["open_rooms"] == site_rooms, index["open_rooms"]
-    assert len(site_rooms) == 172
+    assert len(site_rooms) == 180
     assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001", "R_entrance_01", "R_bathroom"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
@@ -710,7 +711,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 187, len(room_files)
+    assert len(room_files) == 195, len(room_files)
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -733,8 +734,8 @@ def main():
     open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
     assert open_doors == {"B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs", "S02_sector", "S04_sector"}, open_doors
     stairs = {
-        ("B04_atelier_couleurs", "R_shapes_03"): ("stairs", "stairs_down"),
-        ("R_colors_02", "R_shapes_02"): ("stairs", "stairs_down"),
+        ("R_colors_01", "R_shapes_03"): ("stairs_up", "stairs_down"),
+        ("R_colors_02", "R_shapes_02"): ("stairs_up", "stairs_down"),
         ("R_adv_time_01", "R_time_clock_02"): ("stairs_up", "stairs_down"),
         ("R_abs_time_01", "R_adv_time_03"): ("stairs_up", "stairs_down"),
         ("R_pronouns_01", "R_numbers2"): ("stairs_up", "stairs_down"),
@@ -820,7 +821,8 @@ def main():
     assert home["scene"]["image"].endswith("art/S02_sector/base.jpg")
     assert {link["target"] for link in home["scene"]["links"]} == {
         "R_garage", "R_kitchen_01", "R_entrance_04", "R_dining", "R_entrance_03", "R_pets",
-        "S01_sector", "ST_routine_seg001", "ST_control_seg001",
+        "S01_sector", "ST_routine_seg001", "ST_routine_seg005", "ST_routine_seg010",
+        "ST_control_seg001", "ST_routine_seg015", "ST_control_seg015",
     }
     front = next(link for link in home["scene"]["links"] if link["target"] == "R_entrance_04")
     assert front["signed_by"] == "maison_name"
@@ -830,19 +832,30 @@ def main():
     assert control["view"] == "street_perspective"
     assert control["exits"]["forward"]["target"] == "ST_control_seg002"
     assert control["exits"]["back"]["target"] == "S02_sector"
-    for index in range(2, 18):
+    for index in range(2, 15):
+        segment = load(ROOT / "content" / "art" / f"ST_control_seg{index:03d}" / "hotspots.json")
+        assert segment["exits"]["forward"]["target"] == f"ST_control_seg{index + 1:03d}"
+        assert segment["exits"]["back"]["target"] == f"ST_control_seg{index - 1:03d}"
+    # Passage des Paquets is a short street off the square. The old lane still walks into it.
+    paquets = load(ROOT / "content" / "art" / "ST_control_seg015" / "hotspots.json")
+    assert paquets["exits"]["back"]["target"] == "S02_sector"
+    assert paquets["exits"]["forward"]["target"] == "ST_control_seg016"
+    for index in range(16, 18):
         segment = load(ROOT / "content" / "art" / f"ST_control_seg{index:03d}" / "hotspots.json")
         assert segment["exits"]["forward"]["target"] == f"ST_control_seg{index + 1:03d}"
         assert segment["exits"]["back"]["target"] == f"ST_control_seg{index - 1:03d}"
     end = load(ROOT / "content" / "art" / "ST_control_seg018" / "hotspots.json")
-    assert end["exits"]["forward"]["target"] == "S02_sector"
+    assert end["exits"]["forward"]["target"] == "R_garage"
     assert end["exits"]["back"]["target"] == "ST_control_seg017"
     routine = load(ROOT / "content" / "art" / "ST_routine_seg001" / "hotspots.json")
     assert routine["view"] == "street_perspective"
     assert routine["exits"]["forward"]["target"] == "ST_routine_seg002"
     assert routine["exits"]["back"]["target"] == "S02_sector"
+    travaux = load(ROOT / "content" / "art" / "ST_routine_seg015" / "hotspots.json")
+    assert travaux["exits"]["back"]["target"] == "S02_sector"
+    assert travaux["exits"]["forward"]["target"] == "ST_routine_seg016"
     last = load(ROOT / "content" / "art" / "ST_routine_seg019" / "hotspots.json")
-    assert last["exits"]["forward"]["target"] == "S02_sector"
+    assert last["exits"]["forward"]["target"] == "S09_sector"
     assert last["exits"]["back"]["target"] == "ST_routine_seg018"
     house = next(item for item in home["buildings"] if item["id"] == "B05_maison")
     assert house["no_building_layer"] is True

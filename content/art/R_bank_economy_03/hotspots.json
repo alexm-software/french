@@ -1,0 +1,226 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 660,
+ "kind": "room",
+ "note": "Fiscal office upstairs (repainted 2026-10-22 fix2, realistic B10 bank style: dove-grey walls over dark green wainscot, oak floorboards, filing cabinets, radiator, clock without numbers). Stairwell with banister going DOWN at the left, open door at the right back into the investment office, the iron safe at the back (zoom R_bank_economy_03_z1). Feminine LEFT: moneylender in a coat worn through at the elbows (usure), old man in a rocking chair receiving his monthly envelope from the postman (rente), mayor in a tricolour sash handing a grant cheque to a girl with a toy submarine invention (subvention). Centre: taxpayer dropping coins into the tree-shaped box (contribuable), woman at her counting table (comptable), clerk taking a fees call on the candlestick telephone (fiscal). Masculine RIGHT: banker handing a bag of coins to an inventor with a winged bicycle (financement), glum man on an empty seat beside an empty money tray (déficit), the bourse man running after a lady to give her purse back (remboursement).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le bureau fiscal",
+   "box": [
+    300,
+    18,
+    520,
+    66
+   ],
+   "text_box": [
+    310,
+    24,
+    510,
+    60
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_usure_noun",
+   "lemma": "usure",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'usure",
+   "box": [
+    143,
+    285,
+    240,
+    525
+   ],
+   "label_xy": [
+    193,
+    519
+   ]
+  },
+  {
+   "id": "fr_rente_noun",
+   "lemma": "rente",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la rente",
+   "box": [
+    242,
+    297,
+    388,
+    540
+   ],
+   "label_xy": [
+    316,
+    534
+   ]
+  },
+  {
+   "id": "fr_subvention_noun",
+   "lemma": "subvention",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la subvention",
+   "box": [
+    394,
+    268,
+    556,
+    515
+   ],
+   "label_xy": [
+    476,
+    509
+   ]
+  },
+  {
+   "id": "fr_contribuable_noun",
+   "lemma": "contribuable",
+   "article": "le/la",
+   "gender": "mf",
+   "side": "center",
+   "label": "le/la contribuable",
+   "box": [
+    558,
+    240,
+    655,
+    420
+   ],
+   "label_xy": [
+    652,
+    342
+   ]
+  },
+  {
+   "id": "fr_comptable_adj",
+   "lemma": "comptable",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "comptable",
+   "box": [
+    658,
+    350,
+    758,
+    550
+   ],
+   "label_xy": [
+    708,
+    544
+   ]
+  },
+  {
+   "id": "fr_fiscal_adj",
+   "lemma": "fiscal",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "fiscal",
+   "box": [
+    760,
+    243,
+    850,
+    438
+   ],
+   "label_xy": [
+    806,
+    432
+   ]
+  },
+  {
+   "id": "fr_financement_noun",
+   "lemma": "financement",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le financement",
+   "box": [
+    881,
+    202,
+    1168,
+    395
+   ],
+   "label_xy": [
+    1023,
+    389
+   ]
+  },
+  {
+   "id": "fr_deficit_noun",
+   "lemma": "déficit",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le déficit",
+   "box": [
+    762,
+    440,
+    925,
+    622
+   ],
+   "label_xy": [
+    844,
+    616
+   ]
+  },
+  {
+   "id": "fr_remboursement_noun",
+   "lemma": "remboursement",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le remboursement",
+   "box": [
+    930,
+    397,
+    1175,
+    588
+   ],
+   "label_xy": [
+    1052,
+    582
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_bank_economy_03_z1",
+  "box": [
+   694,
+   160,
+   758,
+   240
+  ],
+  "label": "Look closer at the iron safe"
+ },
+ "links": [
+  {
+   "target": "R_bank_economy_02",
+   "box": [
+    10,
+    300,
+    138,
+    560
+   ],
+   "label": "Stairs down to the finance office",
+   "name": "Le bureau des finances",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_bank_economy_04",
+   "box": [
+    812,
+    70,
+    965,
+    198
+   ],
+   "label": "Through the door to the investment office",
+   "name": "Le bureau des placements",
+   "kind": "door"
+  }
+ ]
+}

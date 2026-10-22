@@ -1,22 +1,22 @@
 {
- "divider_x": 905,
+ "divider_x": 900,
  "kind": "room",
- "note": "The picture gallery of the Maison de Couture: clarity, ugliness, finery and excess. Feminine nouns to the left of x=905, masculine to the right (the column stands just left of the line). The mature word virilité appears only as museum wall text on a blank plaque. The glazed garden door at the back opens a zoom onto the terrace (R_abs_beauty_03_z1); it is not an exit. The doorway on the left goes back to the showroom atelier.",
+ "note": "First-floor picture gallery of the Maison de Couture (B62), above the atelier: deep navy walls with white mouldings, black-and-white chequered marble floor, gilt-framed fashion portraits. LANDMARK: the enormous gilt portrait of a lady in a ball gown. Camera faces north: the curved white staircase at the right (east, above the atelier's staircase) goes DOWN to the atelier; the tall glazed double doors in the back wall open onto the roof-terrace garden (zoom). The mature word virilité appears only as museum wall text on the blank brass plaque at the left. Feminine nouns left of x=900, masculine right.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "La galerie",
    "box": [
-    100,
-    640,
-    380,
-    680
+    110,
+    50,
+    236,
+    120
    ],
    "text_box": [
-    106,
-    646,
-    374,
-    674
+    116,
+    56,
+    230,
+    114
    ]
   }
  },
@@ -24,100 +24,100 @@
   {
    "id": "fr_lucidite_noun",
    "box": [
-    206,
-    281,
-    331,
-    594
+    77,
+    300,
+    219,
+    588
    ],
    "scene": "wise old parrot explaining clearly from a lectern"
   },
   {
+   "id": "fr_virilite_noun",
+   "box": [
+    109,
+    219,
+    166,
+    260
+   ],
+   "scene": "blank brass museum wall plaque (museum wall text only)"
+  },
+  {
    "id": "fr_laideur_noun",
    "box": [
-    350,
-    206,
-    477,
-    402
+    225,
+    212,
+    344,
+    538
    ],
    "scene": "grumpy troll on a stepladder that leans away from him"
   },
   {
-   "id": "fr_virilite_noun",
-   "box": [
-    281,
-    137,
-    345,
-    262
-   ],
-   "scene": "blank museum wall plaque in a plain frame"
-  },
-  {
    "id": "fr_parure_noun",
    "box": [
-    481,
-    156,
-    625,
-    260
+    348,
+    312,
+    490,
+    594
    ],
-   "scene": "duchess trying on a matching necklace, earrings and tiara"
+   "scene": "duchess trying on a matching necklace, earrings and tiara at a mirror"
   },
   {
    "id": "fr_outrance_noun",
    "box": [
-    569,
-    264,
-    758,
-    575
+    494,
+    331,
+    712,
+    619
    ],
    "scene": "dancer whirling in far too many feathers and glitter"
   },
   {
    "id": "fr_fadeur_noun",
    "box": [
-    406,
-    406,
-    565,
-    662
+    640,
+    225,
+    760,
+    329
    ],
-   "scene": "painter whose colours fade to bland grey"
+   "scene": "painter whose painting fades to dull grey"
   },
   {
    "id": "fr_asperite_noun",
    "box": [
-    762,
-    244,
-    937,
-    587
+    722,
+    331,
+    852,
+    581
    ],
    "scene": "model tripping over a rough jagged rock"
   },
   {
    "id": "fr_attrait_noun",
    "box": [
-    941,
-    230,
-    1090,
-    440
+    885,
+    244,
+    1131,
+    384
    ],
    "scene": "guests reaching for a tray of shimmering hats"
   },
   {
    "id": "fr_porte_bonheur_noun",
    "box": [
-    1094,
-    250,
-    1187,
-    394
+    1031,
+    390,
+    1148,
+    466
    ],
-   "scene": "four-leaf clover pendant on a velvet bust"
+   "scene": "four-leaf-clover pendant on a velvet bust"
   },
   {
    "id": "fr_snobisme_noun",
    "box": [
-    969,
-    444,
-    1187,
-    612
+    856,
+    470,
+    1125,
+    638
    ],
    "scene": "poodle turning its nose up at a scruffy mongrel"
   }
@@ -126,26 +126,26 @@
   {
    "room_id": "R_abs_beauty_03_z1",
    "box": [
-    875,
-    50,
-    1050,
-    225
+    764,
+    75,
+    880,
+    325
    ],
-   "label": "the garden terrace"
+   "label": "the roof-terrace garden"
   }
  ],
  "links": [
   {
    "target": "R_abs_beauty_01",
    "box": [
-    69,
-    62,
-    200,
-    480
+    1136,
+    180,
+    1262,
+    385
    ],
-   "label": "Back through the left doorway to the showroom atelier",
+   "label": "Down the curved staircase to the atelier",
    "name": "L'atelier",
-   "kind": "door"
+   "kind": "stairs_down"
   }
  ]
 }

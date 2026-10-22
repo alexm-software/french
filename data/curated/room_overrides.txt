@@ -351,7 +351,7 @@ parc R_garden
 passion R_emo_love
 patte R_pets
 place R_road
-plateau R_mountain
+#FIT1 plateau R_mountain  (moved to the café: waiter's tray)
 point R_shapes
 possibilité R_abs_relation
 rapport R_office
@@ -521,70 +521,70 @@ congeler ST_cooking
 # then first-floor balconies, upper windows, and the rarest on roofs/chimneys. Line order = order within side+tier (front to back).
 # Route: S04 square -> seg001 -> seg002 -> seg003 -> seg004 -> square. 4 segments, 61 verbs.
 # place 1 — eating & the table
-fr_manger_verb ST_cooking_seg001 left street
-fr_diner_verb ST_cooking_seg001 left street
-fr_dejeuner_verb ST_cooking_seg001 left street
-fr_devorer_verb ST_cooking_seg001 left street
-fr_bouffer_verb ST_cooking_seg001 left street
-fr_regaler_verb ST_cooking_seg001 left street
-fr_croquer_verb ST_cooking_seg001 left balcony
-fr_souper_verb ST_cooking_seg001 left balcony
-fr_alimenter_verb ST_cooking_seg001 left balcony
-fr_engouffrer_verb ST_cooking_seg001 left upper
-fr_grignoter_verb ST_cooking_seg001 left upper
-fr_attabler_verb ST_cooking_seg001 left upper
-fr_pique_niquer_verb ST_cooking_seg001 left roof
-fr_rassasier_verb ST_cooking_seg001 left roof
-fr_servir_verb ST_cooking_seg001 right street
-fr_nourrir_verb ST_cooking_seg001 right street
-fr_engloutir_verb ST_cooking_seg001 right balcony
-fr_desservir_verb ST_cooking_seg001 right roof
+#OLD4 fr_manger_verb ST_cooking_seg001 left street
+#OLD4 fr_diner_verb ST_cooking_seg001 left street
+#OLD4 fr_dejeuner_verb ST_cooking_seg001 left street
+#OLD4 fr_devorer_verb ST_cooking_seg001 left street
+#OLD4 fr_bouffer_verb ST_cooking_seg001 left street
+#OLD4 fr_regaler_verb ST_cooking_seg001 left street
+#OLD4 fr_croquer_verb ST_cooking_seg001 left balcony
+#OLD4 fr_souper_verb ST_cooking_seg001 left balcony
+#OLD4 fr_alimenter_verb ST_cooking_seg001 left balcony
+#OLD4 fr_engouffrer_verb ST_cooking_seg001 left upper
+#OLD4 fr_grignoter_verb ST_cooking_seg001 left upper
+#OLD4 fr_attabler_verb ST_cooking_seg001 left upper
+#OLD4 fr_pique_niquer_verb ST_cooking_seg001 left roof
+#OLD4 fr_rassasier_verb ST_cooking_seg001 left roof
+#OLD4 fr_servir_verb ST_cooking_seg001 right street
+#OLD4 fr_nourrir_verb ST_cooking_seg001 right street
+#OLD4 fr_engloutir_verb ST_cooking_seg001 right balcony
+#OLD4 fr_desservir_verb ST_cooking_seg001 right roof
 # place 2 — drinking, tasting & seasoning
-fr_gouter_verb ST_cooking_seg002 left street
-fr_verser_verb ST_cooking_seg002 left street
-fr_consommer_verb ST_cooking_seg002 left street
-fr_deguster_verb ST_cooking_seg002 left street
-fr_trinquer_verb ST_cooking_seg002 left street
-fr_savourer_verb ST_cooking_seg002 left balcony
-fr_saler_verb ST_cooking_seg002 left balcony
-fr_sucrer_verb ST_cooking_seg002 left roof   # painted on the roof (Round 2 painting sync)
-fr_epicer_verb ST_cooking_seg002 left upper
-fr_ailler_verb ST_cooking_seg002 left upper
-fr_diluer_verb ST_cooking_seg002 left balcony   # painted on a balcony (Round 2 painting sync)
-fr_truffer_verb ST_cooking_seg002 left roof
-fr_desalterer_verb ST_cooking_seg002 left roof
-fr_boire_verb ST_cooking_seg002 right street
-fr_remplir_verb ST_cooking_seg002 right street
-fr_emplir_verb ST_cooking_seg002 right balcony
-fr_farcir_verb ST_cooking_seg002 right roof
+#OLD4 fr_gouter_verb ST_cooking_seg002 left street
+#OLD4 fr_verser_verb ST_cooking_seg002 left street
+#OLD4 fr_consommer_verb ST_cooking_seg002 left street
+#OLD4 fr_deguster_verb ST_cooking_seg002 left street
+#OLD4 fr_trinquer_verb ST_cooking_seg002 left street
+#OLD4 fr_savourer_verb ST_cooking_seg002 left balcony
+#OLD4 fr_saler_verb ST_cooking_seg002 left balcony
+#OLD4 fr_sucrer_verb ST_cooking_seg002 left roof   # painted on the roof (Round 2 painting sync)
+#OLD4 fr_epicer_verb ST_cooking_seg002 left upper
+#OLD4 fr_ailler_verb ST_cooking_seg002 left upper
+#OLD4 fr_diluer_verb ST_cooking_seg002 left balcony   # painted on a balcony (Round 2 painting sync)
+#OLD4 fr_truffer_verb ST_cooking_seg002 left roof
+#OLD4 fr_desalterer_verb ST_cooking_seg002 left roof
+#OLD4 fr_boire_verb ST_cooking_seg002 right street
+#OLD4 fr_remplir_verb ST_cooking_seg002 right street
+#OLD4 fr_emplir_verb ST_cooking_seg002 right balcony
+#OLD4 fr_farcir_verb ST_cooking_seg002 right roof
 # place 3 — cutting, peeling, kneading & mixing
-fr_couper_verb ST_cooking_seg003 left street
-fr_meler_verb ST_cooking_seg003 left street
-fr_ecraser_verb ST_cooking_seg003 left street
-fr_tailler_verb ST_cooking_seg003 left street
-fr_melanger_verb ST_cooking_seg003 left street
-fr_trancher_verb ST_cooking_seg003 left balcony
-fr_decouper_verb ST_cooking_seg003 left balcony
-fr_entamer_verb ST_cooking_seg003 left balcony
-fr_eplucher_verb ST_cooking_seg003 left upper
-fr_broyer_verb ST_cooking_seg003 left upper
-fr_aiguiser_verb ST_cooking_seg003 left roof
-fr_ciseler_verb ST_cooking_seg003 left roof
-fr_dissoudre_verb ST_cooking_seg003 right street
-fr_petrir_verb ST_cooking_seg003 right balcony
+#OLD4 fr_couper_verb ST_cooking_seg003 left street
+#OLD4 fr_meler_verb ST_cooking_seg003 left street
+#OLD4 fr_ecraser_verb ST_cooking_seg003 left street
+#OLD4 fr_tailler_verb ST_cooking_seg003 left street
+#OLD4 fr_melanger_verb ST_cooking_seg003 left street
+#OLD4 fr_trancher_verb ST_cooking_seg003 left balcony
+#OLD4 fr_decouper_verb ST_cooking_seg003 left balcony
+#OLD4 fr_entamer_verb ST_cooking_seg003 left balcony
+#OLD4 fr_eplucher_verb ST_cooking_seg003 left upper
+#OLD4 fr_broyer_verb ST_cooking_seg003 left upper
+#OLD4 fr_aiguiser_verb ST_cooking_seg003 left roof
+#OLD4 fr_ciseler_verb ST_cooking_seg003 left roof
+#OLD4 fr_dissoudre_verb ST_cooking_seg003 right street
+#OLD4 fr_petrir_verb ST_cooking_seg003 right balcony
 # place 4 — cooking, heat & cold
-fr_remuer_verb ST_cooking_seg004 left street
-fr_rechauffer_verb ST_cooking_seg004 left street
-fr_cuisiner_verb ST_cooking_seg004 left street
-fr_saurer_verb ST_cooking_seg004 left street
-fr_griller_verb ST_cooking_seg004 left balcony
-fr_flamber_verb ST_cooking_seg004 left roof   # painted at a roof dormer (Round 2 painting sync)
-fr_congeler_verb ST_cooking_seg004 left roof   # penguin on the roof (Round 2 painting sync)
-fr_surgeler_verb ST_cooking_seg004 left roof
-fr_cuire_verb ST_cooking_seg004 right street
-fr_bouillir_verb ST_cooking_seg004 right street
-fr_frire_verb ST_cooking_seg004 right balcony
-fr_rotir_verb ST_cooking_seg004 right roof
+#OLD4 fr_remuer_verb ST_cooking_seg004 left street
+#OLD4 fr_rechauffer_verb ST_cooking_seg004 left street
+#OLD4 fr_cuisiner_verb ST_cooking_seg004 left street
+#OLD4 fr_saurer_verb ST_cooking_seg004 left street
+#OLD4 fr_griller_verb ST_cooking_seg004 left balcony
+#OLD4 fr_flamber_verb ST_cooking_seg004 left roof   # painted at a roof dormer (Round 2 painting sync)
+#OLD4 fr_congeler_verb ST_cooking_seg004 left roof   # penguin on the roof (Round 2 painting sync)
+#OLD4 fr_surgeler_verb ST_cooking_seg004 left roof
+#OLD4 fr_cuire_verb ST_cooking_seg004 right street
+#OLD4 fr_bouillir_verb ST_cooking_seg004 right street
+#OLD4 fr_frire_verb ST_cooking_seg004 right balcony
+#OLD4 fr_rotir_verb ST_cooking_seg004 right roof
 # --- S01 Beginner Quarter review (2026-10-21, S01 art lead): misfits moved out of the fountain/school/tower/atelier
 # clock tower: non-time words
 centimètre R_shapes
@@ -633,9 +633,944 @@ fr_whisky_noun R_wine_01_z1
 fr_rhum_noun R_wine_01_z1
 fr_cognac_noun R_wine_01_z1
 fr_cigare_noun R_wine_01_z1
-fr_embouteillage_noun R_wine_01_z1
+#FIT1 fr_embouteillage_noun R_wine_01_z1  (moved out of S04)
 fr_cidre_noun R_wine_01_z1
 fr_vignoble_noun R_wine_01_z1
 fr_tire_bouchon_noun R_wine_01_z1
-fr_alcoolisme_noun R_wine_01_z1
+#FIT1 fr_alcoolisme_noun R_wine_01_z1  (moved out of S04)
 fr_gourmet_noun R_wine_01_z1
+
+# FIT AUDIT S04 (2026-10-21): meaning-fit fix of the Cafés quarter (see sectors/S04/FIT_AUDIT.md).
+# Misfits moved OUT of S04 (word -> base room whose theme fits its main sense)
+facture R_office
+loge R_theatre
+commandement R_military
+disposition R_hotel
+rangée R_cinema
+priorité R_road
+consigne R_station
+classement R_sports
+arrangement R_music
+grille R_hardware
+pavillon R_hotel
+véranda R_garden
+sous-sol R_attic
+arcade R_ch_parvis
+coupole R_ch_parvis
+ermitage R_ab_refectory
+caviar R_grocery
+troc R_shop_general
+loueur R_road
+tuilerie R_industry
+guichet R_post
+réchauffement R_energy
+chauffage R_energy
+déboire R_emo_sad
+verrière R_station
+embouteillage R_road
+alcoolisme R_text_medical
+alcoolisme display=museum_text
+# Genuine café/restaurant/kitchen/wine words moved IN to S04
+addition R_resto_room
+couvert R_resto_room
+crudité R_resto_room
+restaurateur R_resto_room
+gastronomie R_resto_kitchen
+gastronomique R_resto_kitchen
+bistrot R_cafe
+plateau R_cafe
+guéridon R_cafe
+fast-food R_cafe
+tonneau R_wine
+dégustation R_wine
+cru R_wine
+appellation R_wine
+# bar-counter zoom of the dining hall (masculine, right half)
+fr_cabaret_noun R_resto_room_z1
+fr_couscous_noun R_resto_room_z1
+fr_banquet_noun R_resto_room_z1
+fr_hors_d_oeuvre_noun R_resto_room_z1
+fr_bistro_noun R_resto_room_z1
+fr_restaurateur_noun R_resto_room_z1
+
+# Pass 5 (2026-10-21, user decision): Ruelle des Gourmets re-split into 7 tiered verb places of 8-9 verbs, each with a short name sign.
+# Format as Pass 4; "<segment id> name=<sign>" sets the place name. Tiers by rarity inside each place (CEFR, then frequency).
+# -er verbs LEFT, -ir/-re RIGHT. Pass-4 lines kept above as #OLD4.
+ST_cooking_seg001 name=Eat & feed
+fr_manger_verb ST_cooking_seg001 left street
+fr_diner_verb ST_cooking_seg001 left street
+fr_nourrir_verb ST_cooking_seg001 right street
+fr_dejeuner_verb ST_cooking_seg001 left street
+fr_devorer_verb ST_cooking_seg001 left balcony
+fr_bouffer_verb ST_cooking_seg001 left balcony
+fr_regaler_verb ST_cooking_seg001 left upper
+fr_souper_verb ST_cooking_seg001 left upper
+fr_alimenter_verb ST_cooking_seg001 left roof
+ST_cooking_seg002 name=Snack & sit down
+fr_servir_verb ST_cooking_seg002 right street
+fr_engloutir_verb ST_cooking_seg002 right street
+fr_croquer_verb ST_cooking_seg002 left street
+fr_engouffrer_verb ST_cooking_seg002 left street
+fr_grignoter_verb ST_cooking_seg002 left balcony
+fr_attabler_verb ST_cooking_seg002 left balcony
+fr_desservir_verb ST_cooking_seg002 right upper
+fr_pique_niquer_verb ST_cooking_seg002 left upper
+fr_rassasier_verb ST_cooking_seg002 left roof
+ST_cooking_seg003 name=Drink & pour
+fr_boire_verb ST_cooking_seg003 right street
+fr_remplir_verb ST_cooking_seg003 right street
+fr_verser_verb ST_cooking_seg003 left street
+fr_emplir_verb ST_cooking_seg003 right street
+fr_consommer_verb ST_cooking_seg003 left balcony
+fr_trinquer_verb ST_cooking_seg003 left balcony
+fr_diluer_verb ST_cooking_seg003 left upper
+fr_desalterer_verb ST_cooking_seg003 left roof
+ST_cooking_seg004 name=Taste & season
+fr_gouter_verb ST_cooking_seg004 left street
+fr_deguster_verb ST_cooking_seg004 left street
+fr_savourer_verb ST_cooking_seg004 left street
+fr_saler_verb ST_cooking_seg004 left street
+fr_sucrer_verb ST_cooking_seg004 left balcony
+fr_epicer_verb ST_cooking_seg004 left balcony
+fr_ailler_verb ST_cooking_seg004 left upper
+fr_farcir_verb ST_cooking_seg004 right upper
+fr_truffer_verb ST_cooking_seg004 left roof
+ST_cooking_seg005 name=Cut & knead
+fr_couper_verb ST_cooking_seg005 left street
+fr_tailler_verb ST_cooking_seg005 left street
+fr_trancher_verb ST_cooking_seg005 left street
+fr_decouper_verb ST_cooking_seg005 left street
+fr_entamer_verb ST_cooking_seg005 left balcony
+fr_eplucher_verb ST_cooking_seg005 left balcony
+fr_petrir_verb ST_cooking_seg005 right upper
+fr_aiguiser_verb ST_cooking_seg005 left upper
+fr_ciseler_verb ST_cooking_seg005 left roof
+ST_cooking_seg006 name=Mix & chill
+fr_meler_verb ST_cooking_seg006 left street
+fr_ecraser_verb ST_cooking_seg006 left street
+fr_remuer_verb ST_cooking_seg006 left street
+fr_melanger_verb ST_cooking_seg006 left street
+fr_dissoudre_verb ST_cooking_seg006 right balcony
+fr_broyer_verb ST_cooking_seg006 left balcony
+# congeler synced to the painting (freezer window on the balcony floor beside broyer)
+fr_congeler_verb ST_cooking_seg006 left balcony
+fr_surgeler_verb ST_cooking_seg006 left roof
+ST_cooking_seg007 name=Heat & cook
+fr_cuire_verb ST_cooking_seg007 right street
+fr_rechauffer_verb ST_cooking_seg007 left street
+fr_cuisiner_verb ST_cooking_seg007 left street
+fr_saurer_verb ST_cooking_seg007 left street
+fr_griller_verb ST_cooking_seg007 left balcony
+fr_bouillir_verb ST_cooking_seg007 right balcony
+fr_flamber_verb ST_cooking_seg007 left upper
+fr_frire_verb ST_cooking_seg007 right upper
+fr_rotir_verb ST_cooking_seg007 right roof
+# ===== FIT AUDIT village-wide (step 4, 2026-10-21): clear meaning misfits, unpainted sectors only (source and target) =====
+chauffeur R_road
+cabane R_camping
+entretien R_office
+industrie R_industry
+centrale R_energy
+chaussée R_road
+détour R_road
+demi-tour R_road
+allumette R_camping
+tuyau R_hardware
+bandit R_police
+alibi R_police
+candidature R_office
+cible R_sports
+fiche R_admin
+filet R_harbour
+monstre R_emo_fear
+publication R_media
+recours R_court
+dépit R_emo_sad
+scénario R_cinema
+sketch R_theatre
+syllabe R_linguistics
+expéditeur R_post
+infraction R_police
+racket R_text_crime
+charcutier R_butcher
+clignotant R_road
+patate R_vegetables
+phoque R_harbour
+lamentation R_emo_sad
+rigolo R_emo_joy
+quinquagénaire R_people
+productivité R_industry
+licenciement R_office
+procuration R_admin
+superficie R_measures
+subvention R_bank_economy
+dépliant R_bookshop
+gradin R_sports
+# S02 data fit (2026-10-21, S02 builder): clear misfits out of the house (work/audit/S02_MISFIT_MOVES.md A + B, judged by main sense),
+# plus home words that sat in unrelated rooms. Lemma keys; word-id keys for gender homographs (assign.py reads both).
+comptoir R_shop_general
+pratique R_sports
+fr_guide_noun_f R_camping
+hommage R_celebrations
+possession R_abs_power
+réflexion R_philosophy
+référence R_abs_study
+adhérer ST_existence
+cicatrice R_doctor
+efficacité R_abs_work
+ficelle R_garage
+forger ST_making
+gré R_philosophy
+restauration R_hotel
+saute R_emo_fear
+teint R_appearance
+acharnement R_abs_work
+envoyé R_politics
+glissement R_geology
+gouttière R_entrance
+licencier ST_rule
+malfaiteur R_police
+navet R_vegetables
+panoplie R_playroom
+prétendant R_emo_love
+sillon R_fields
+trajectoire R_physics
+trame R_literature
+capteur R_engineering
+poudrer ST_routine
+prototype R_engineering
+sécrétion R_text_medical
+vendange R_fields
+édit R_history
+jongleur R_theatre
+potager R_garden
+camionnette R_road
+catégorie R_adj_relation
+pasteur R_faiths
+berger R_farm_animals
+écorce R_forest
+fauve R_wildlife
+pétanque R_games
+tronc R_forest
+être R_people
+surcroît R_abs_quantity
+préservation R_energy
+ongle R_body
+tenue R_wardrobe
+remplacement R_abs_change
+griffe R_wildlife
+marelle R_playroom
+bascule R_playroom
+réinsertion R_society
+fainéant R_character
+panne R_road
+emballage R_post
+décharge R_energy
+sécheresse R_weather
+contamination R_energy
+fissure R_entrance
+contagion R_text_medical
+gouvernant R_politics
+suppression R_computing
+scoop R_media
+attachement R_emo_love
+couture R_boutique
+fossé R_road
+bonne R_occupations
+brouhaha R_abs_speech
+fr_faune_noun_m R_literature
+us R_society
+marbre R_hardware
+peloton R_sports
+boulet R_military
+fût R_fields
+lancement R_sky
+aubergiste R_hotel
+basilique R_ch_parvis
+roulotte R_camping
+laissez-passer R_admin
+halle R_shop_general
+tunnel R_station
+rempart R_heraldry
+dossier R_admin
+crèche R_school
+pamphlet R_bookshop
+bulbe R_florist
+vestiaire R_theatre
+coupure R_doctor
+déshonneur R_abs_moral
+routine R_abs_work
+domino R_games
+hamac R_garden
+dogme R_philosophy
+nu R_art
+aménagement R_abs_space
+# backfill: home words that truly belong in the house
+grenier R_attic
+bonnet R_wardrobe
+cravate R_wardrobe
+lessive R_laundry
+figurine R_playroom
+# MISFIT2 (Oct 21, 2026): approved moves from work/audit/MISFIT_PROPOSALS_2.md + hammam/mantille/boubou/charnier/ivrogne
+fr_samba_noun R_theatre
+fr_bohemien_noun R_character
+fr_entrailles_noun R_body
+fr_intestin_noun R_body
+fr_monte_noun R_farm_animals
+fr_jasmin_noun R_forest
+fr_western_noun R_cinema
+fr_arc_noun R_heraldry
+arc display=drawn
+fr_stable_adj R_adj_intensity
+stable display=drawn
+fr_coca_noun R_grocery
+coca display=drawn
+fr_hammam_noun R_hotel
+fr_mantille_noun R_boutique
+fr_boubou_noun R_boutique
+fr_charnier_noun R_text_death
+charnier display=museum_text
+fr_ivrogne_adj R_text_medical
+ivrogne display=museum_text
+# --- S03 zoom split (2026-10-21, S03 painter): B07/B62 rooms over 14 items split into room + close-up zoom; zoom pins follow sectors/S03/*_z1/hotspots.json (see sectors/S03/S03_zoom_split.json)
+# Only R_hardware_02_z1 is pinned; the 8 other painted zooms are held back (#S03Z) because validate.py rejects them: zooms of 3-5 items (must be 6-12) and mixed-gender zooms placed on a gender wall. Awaiting user decision.
+fr_tuyau_noun R_hardware_02_z1
+fr_barreau_noun R_hardware_02_z1
+fr_metallique_adj R_hardware_02_z1
+fr_cuivre_noun R_hardware_02_z1
+fr_bronze_noun R_hardware_02_z1
+fr_cordon_noun R_hardware_02_z1
+fr_plastique_noun R_hardware_01_z1
+fr_sabot_noun R_hardware_01_z1
+fr_materiel_adj R_hardware_01_z1
+fr_materiau_noun R_hardware_01_z1
+fr_adherent_noun R_hardware_01_z1
+fr_tulipe_noun R_florist_z1
+fr_lavande_noun R_florist_z1
+fr_marmotte_noun R_florist_z1
+fr_muguet_noun R_florist_z1
+fr_bulbe_noun R_florist_z1
+fr_troc_noun R_shop_general_04_z1
+fr_shopping_noun R_shop_general_04_z1
+fr_rabais_noun R_shop_general_04_z1
+fr_abonne_noun R_shop_general_04_z1
+fr_negociant_noun R_shop_general_04_z1
+fr_enregistrement_noun R_shop_general_02_z1
+fr_cout_noun R_shop_general_02_z1
+fr_compromis_noun R_shop_general_02_z1
+fr_consommateur_noun R_shop_general_03_z1
+fr_depot_noun R_shop_general_03_z1
+fr_bourg_noun R_shop_general_03_z1
+fr_plaine_noun R_abs_beauty_02_z1
+fr_allure_noun R_abs_beauty_02_z1
+fr_variete_noun R_abs_beauty_02_z1
+fr_admiration_noun R_abs_beauty_02_z1
+fr_perfection_noun R_abs_beauty_02_z1
+fr_abord_noun R_abs_beauty_02_z1
+fr_tranquillite_noun R_abs_beauty_01_z1
+fr_preference_noun R_abs_beauty_01_z1
+fr_splendeur_noun R_abs_beauty_01_z1
+fr_clin_noun R_abs_beauty_01_z1
+fr_scrupule_noun R_abs_beauty_01_z1
+fr_exotisme_noun R_abs_beauty_01_z1
+fr_aubaine_noun R_abs_beauty_03_z1
+fr_agrement_noun R_abs_beauty_03_z1
+fr_vecu_noun R_abs_beauty_03_z1
+fr_avant_gout_noun R_abs_beauty_03_z1
+
+# --- S05 tiered verb places (2026-10-21, S05 builder): sides/tiers read from the painted sectors/S05/<seg>/hotspots.json.
+# ST_possession re-split: painted seg001-010 kept (6 verbs each); the last 26 verbs regrouped into 3 places of 9/9/8 (seg011-013, was seg011-015 of 5-6)
+# to meet the 8-10 verbs-per-place rule. ST_making seg001-013 as painted. Format as Pass 4/5: <word id> <segment> <left|right> <tier>.
+fr_reparer_verb ST_making_seg001 left street
+fr_attacher_verb ST_making_seg001 left street
+fr_fixer_verb ST_making_seg001 left balcony
+fr_supporter_verb ST_making_seg001 left upper
+fr_fonctionner_verb ST_making_seg001 left roof
+fr_remettre_verb ST_making_seg001 right street
+fr_travailler_verb ST_making_seg002 left street
+fr_installer_verb ST_making_seg002 left street
+fr_inventer_verb ST_making_seg002 left street
+fr_coller_verb ST_making_seg002 left balcony
+fr_lier_verb ST_making_seg002 left upper
+fr_etablir_verb ST_making_seg002 right street
+fr_fabriquer_verb ST_making_seg003 left street
+fr_creer_verb ST_making_seg003 left street
+fr_developper_verb ST_making_seg003 left balcony
+fr_construire_verb ST_making_seg003 right street
+fr_produire_verb ST_making_seg003 right street
+fr_batir_verb ST_making_seg003 right roof
+fr_equiper_verb ST_making_seg004 left street
+fr_implanter_verb ST_making_seg004 left balcony
+fr_resoudre_verb ST_making_seg004 right street
+fr_soutenir_verb ST_making_seg004 right street
+fr_fournir_verb ST_making_seg004 right street
+fr_reconstruire_verb ST_making_seg004 right upper
+fr_restaurer_verb ST_making_seg005 left street
+fr_determiner_verb ST_making_seg005 left street
+fr_bosser_verb ST_making_seg005 left street
+fr_rassembler_verb ST_making_seg005 left street
+fr_combiner_verb ST_making_seg005 left balcony
+fr_aventurer_verb ST_making_seg005 left roof
+fr_photographier_verb ST_making_seg006 left street
+fr_ceder_verb ST_making_seg006 left street
+fr_embaucher_verb ST_making_seg006 left balcony
+fr_engendrer_verb ST_making_seg006 left upper
+fr_fendre_verb ST_making_seg006 right street
+fr_reproduire_verb ST_making_seg006 right upper
+fr_percer_verb ST_making_seg007 left street
+fr_plaquer_verb ST_making_seg007 left street
+fr_recomposer_verb ST_making_seg007 left balcony
+fr_accabler_verb ST_making_seg007 left upper
+fr_extraire_verb ST_making_seg007 right street
+fr_entrevoir_verb ST_making_seg007 right upper
+fr_sculpter_verb ST_making_seg008 left street
+fr_forger_verb ST_making_seg008 left street
+fr_graver_verb ST_making_seg008 left balcony
+fr_orner_verb ST_making_seg008 left balcony
+fr_edifier_verb ST_making_seg008 left roof
+fr_coudre_verb ST_making_seg008 right street
+fr_bourrer_verb ST_making_seg009 left street
+fr_tisser_verb ST_making_seg009 left street
+fr_replacer_verb ST_making_seg009 left balcony
+fr_recreer_verb ST_making_seg009 left upper
+fr_retravailler_verb ST_making_seg009 left roof
+fr_recycler_verb ST_making_seg009 left roof
+fr_faconner_verb ST_making_seg010 left street
+fr_assembler_verb ST_making_seg010 left street
+fr_devaster_verb ST_making_seg010 left balcony
+fr_impatienter_verb ST_making_seg010 left upper
+fr_reinventer_verb ST_making_seg010 left roof
+fr_paver_verb ST_making_seg011 left street
+fr_instaurer_verb ST_making_seg011 left street
+fr_structurer_verb ST_making_seg011 left balcony
+fr_approvisionner_verb ST_making_seg011 left upper
+fr_generer_verb ST_making_seg011 left roof
+fr_fuser_verb ST_making_seg012 left street
+fr_exporter_verb ST_making_seg012 left street
+fr_synthetiser_verb ST_making_seg012 left balcony
+fr_axer_verb ST_making_seg012 left upper
+fr_emailler_verb ST_making_seg012 left upper
+fr_superposer_verb ST_making_seg013 left street
+fr_chiner_verb ST_making_seg013 left street
+fr_roser_verb ST_making_seg013 left balcony
+fr_styliser_verb ST_making_seg013 left upper
+fr_sublimer_verb ST_making_seg013 left roof
+fr_trouver_verb ST_possession_seg001 left street
+fr_retrouver_verb ST_possession_seg001 left street
+fr_situer_verb ST_possession_seg001 left street
+fr_rechercher_verb ST_possession_seg001 left balcony
+fr_fonder_verb ST_possession_seg001 left upper
+fr_decouvrir_verb ST_possession_seg001 right street
+fr_chercher_verb ST_possession_seg002 left street
+fr_accepter_verb ST_possession_seg002 left street
+fr_offrir_verb ST_possession_seg002 right street
+fr_recevoir_verb ST_possession_seg002 right street
+fr_avoir_verb ST_possession_seg002 right street
+fr_obtenir_verb ST_possession_seg002 right balcony
+fr_envoyer_verb ST_possession_seg003 left street
+fr_reserver_verb ST_possession_seg003 left street
+fr_posseder_verb ST_possession_seg003 left street
+fr_garder_verb ST_possession_seg003 left street
+fr_conserver_verb ST_possession_seg003 left balcony
+fr_tenir_verb ST_possession_seg003 right street
+fr_changer_verb ST_possession_seg004 left street
+fr_donner_verb ST_possession_seg004 left street
+fr_echanger_verb ST_possession_seg004 left street
+fr_mener_verb ST_possession_seg004 left balcony
+fr_enfermer_verb ST_possession_seg004 left upper
+fr_retenir_verb ST_possession_seg004 right street
+fr_profiter_verb ST_possession_seg005 left street
+fr_occuper_verb ST_possession_seg005 left street
+fr_laisser_verb ST_possession_seg005 left street
+fr_emporter_verb ST_possession_seg005 left balcony
+fr_abandonner_verb ST_possession_seg005 left upper
+fr_prendre_verb ST_possession_seg005 right street
+fr_retirer_verb ST_possession_seg006 left street
+fr_apporter_verb ST_possession_seg006 left street
+fr_emmener_verb ST_possession_seg006 left street
+fr_amener_verb ST_possession_seg006 left balcony
+fr_rendre_verb ST_possession_seg006 right street
+fr_saisir_verb ST_possession_seg006 right balcony
+fr_rapporter_verb ST_possession_seg007 left street
+fr_ramener_verb ST_possession_seg007 left street
+fr_remporter_verb ST_possession_seg007 left balcony
+fr_envoler_verb ST_possession_seg007 left upper
+fr_decoller_verb ST_possession_seg007 left roof
+fr_reprendre_verb ST_possession_seg007 right street
+fr_vider_verb ST_possession_seg008 left street
+fr_oter_verb ST_possession_seg008 left street
+fr_annuler_verb ST_possession_seg008 left street
+fr_demonter_verb ST_possession_seg008 left balcony
+fr_prelever_verb ST_possession_seg008 left upper
+fr_defaire_verb ST_possession_seg008 right street
+fr_bloquer_verb ST_possession_seg009 left street
+fr_delivrer_verb ST_possession_seg009 left street
+fr_epargner_verb ST_possession_seg009 left street
+fr_emparer_verb ST_possession_seg009 left balcony
+fr_contrer_verb ST_possession_seg009 left balcony
+fr_redonner_verb ST_possession_seg009 left upper
+fr_virer_verb ST_possession_seg010 left street
+fr_copier_verb ST_possession_seg010 left street
+fr_agreer_verb ST_possession_seg010 left balcony
+fr_doter_verb ST_possession_seg010 left balcony
+fr_collectionner_verb ST_possession_seg010 left upper
+fr_rejouir_verb ST_possession_seg010 right street
+fr_identifier_verb ST_possession_seg011 left street
+fr_procurer_verb ST_possession_seg011 left street
+fr_exciter_verb ST_possession_seg011 left street
+fr_attribuer_verb ST_possession_seg011 left street
+fr_fouiller_verb ST_possession_seg011 left street
+fr_implorer_verb ST_possession_seg011 left balcony
+fr_expedier_verb ST_possession_seg011 left balcony
+fr_garantir_verb ST_possession_seg011 right street
+fr_acquerir_verb ST_possession_seg011 right street
+fr_localiser_verb ST_possession_seg012 left street
+fr_poster_verb ST_possession_seg012 left street
+fr_refiler_verb ST_possession_seg012 left street
+fr_recopier_verb ST_possession_seg012 left street
+fr_epauler_verb ST_possession_seg012 left street
+fr_stocker_verb ST_possession_seg012 left balcony
+fr_priser_verb ST_possession_seg012 left balcony
+fr_assouvir_verb ST_possession_seg012 right street
+fr_nantir_verb ST_possession_seg012 right street
+fr_intenter_verb ST_possession_seg013 left street
+fr_abonner_verb ST_possession_seg013 left street
+fr_conditionner_verb ST_possession_seg013 left street
+fr_commercialiser_verb ST_possession_seg013 left street
+fr_commercer_verb ST_possession_seg013 left street
+fr_repertorier_verb ST_possession_seg013 left balcony
+fr_enumerer_verb ST_possession_seg013 left balcony
+fr_dementir_verb ST_possession_seg013 right street
+
+# --- B02 Petite École declutter + alphabet order (2026-10-22, S01 art lead; user: "the letters aren't in order",
+# "so much in the school that it's hard to distinguish the rooms"). Max ~8-10 painted items per space.
+# Split pins: '<word id> split=<room id>' (assign.py) put the alphabet A-M in R_alphabet_01 and la lettre + N-Z in R_alphabet_02, in line order.
+fr_a_letter split=R_alphabet_01
+fr_b_letter split=R_alphabet_01
+fr_c_letter split=R_alphabet_01
+fr_d_letter split=R_alphabet_01
+fr_e_letter split=R_alphabet_01
+fr_f_letter split=R_alphabet_01
+fr_g_letter split=R_alphabet_01
+fr_h_letter split=R_alphabet_01
+fr_i_letter split=R_alphabet_01
+fr_j_letter split=R_alphabet_01
+fr_k_letter split=R_alphabet_01
+fr_l_letter split=R_alphabet_01
+fr_m_letter split=R_alphabet_01
+fr_lettre_noun split=R_alphabet_02
+fr_n_letter split=R_alphabet_02
+fr_o_letter split=R_alphabet_02
+fr_p_letter split=R_alphabet_02
+fr_q_letter split=R_alphabet_02
+fr_r_letter split=R_alphabet_02
+fr_s_letter split=R_alphabet_02
+fr_t_letter split=R_alphabet_02
+fr_u_letter split=R_alphabet_02
+fr_v_letter split=R_alphabet_02
+fr_w_letter split=R_alphabet_02
+fr_x_letter split=R_alphabet_02
+fr_y_letter split=R_alphabet_02
+fr_z_letter split=R_alphabet_02
+# Zones (zoom pins, '<word id> <room>_zN'): the second part of each overfull room gets its own painted corner.
+# alphabet 1: A-H in the room, I-M in the letter-block corner
+fr_i_letter R_alphabet_01_z1
+fr_j_letter R_alphabet_01_z1
+fr_k_letter R_alphabet_01_z1
+fr_l_letter R_alphabet_01_z1
+fr_m_letter R_alphabet_01_z1
+# alphabet 2: la lettre + N-U in the room, V-Z in the reading corner
+fr_v_letter R_alphabet_02_z1
+fr_w_letter R_alphabet_02_z1
+fr_x_letter R_alphabet_02_z1
+fr_y_letter R_alphabet_02_z1
+fr_z_letter R_alphabet_02_z1
+# articles: the possessives (my, your, his/her, our, your, their) get the coat-peg corner
+fr_mon_det R_articles_z1
+fr_ton_det R_articles_z1
+fr_son_det R_articles_z1
+fr_notre_det R_articles_z1
+fr_votre_det R_articles_z1
+fr_leur_det R_articles_z1
+# pronouns 1: this / that / nothing corner (tout stays in the hall)
+fr_ce_pron R_pronouns_01_z1
+fr_ceci_pron R_pronouns_01_z1
+fr_cela_pron R_pronouns_01_z1
+fr_rien_noun R_pronouns_01_z1
+# pronouns 2: someone / each / none / the one / such corner
+fr_quelqu_un_pron R_pronouns_02_z1
+fr_chacun_pron R_pronouns_02_z1
+fr_aucun_pron R_pronouns_02_z1
+fr_celui_pron R_pronouns_02_z1
+fr_tel_pron R_pronouns_02_z1
+# prepositions 1: time words (before, since, during, until) at the clock corner
+fr_avant_prep R_prepositions_01_z1
+fr_depuis_prep R_prepositions_01_z1
+fr_pendant_prep R_prepositions_01_z1
+fr_jusque_prep R_prepositions_01_z1
+# prepositions 2: after / from (time) / towards / according to at the window corner
+fr_apres_prep R_prepositions_02_z1
+fr_des_prep R_prepositions_02_z1
+fr_vers_prep R_prepositions_02_z1
+fr_selon_prep R_prepositions_02_z1
+# prepositions 3: out of / except / apart from at the garden gate corner
+fr_hors_prep R_prepositions_03_z1
+fr_hormis_prep R_prepositions_03_z1
+fr_excepte_prep R_prepositions_03_z1
+# numbers 2: tens and approximate numbers on the table (z1), fractions at the pie counter (z2)
+fr_quarante_num R_numbers2_z1
+fr_soixante_num R_numbers2_z1
+fr_soixante_dix_num R_numbers2_z1
+fr_quatre_vingts_num R_numbers2_z1
+fr_quatre_vingt_dix_num R_numbers2_z1
+fr_douzaine_noun R_numbers2_z1
+fr_vingtaine_noun R_numbers2_z1
+fr_trentaine_noun R_numbers2_z1
+fr_milliard_noun R_numbers2_z1
+fr_moitie_noun R_numbers2_z2
+fr_quart_noun R_numbers2_z2
+fr_tiers_noun R_numbers2_z2
+fr_cinquieme_noun R_numbers2_z2
+# --- S05 fix2 (2026-10-22): overfull B10/B11 rooms get their own painted zones (zoom pins, '<word id> <room>_zN'), so every painted
+# space holds <=10 words and no word is shown in another room's zoom (replaces the spec-level overflow_out/overflow_in).
+# bank counter, first floor: the river window behind the banker's desk (rivage + berge) joins the desk zoom
+# (the gate guard of accès stands at the desk too: the first-floor room keeps 9 big figures)
+fr_acces_noun R_bank_counter_02_z1
+fr_gage_noun R_bank_counter_02_z1
+fr_banquier_noun R_bank_counter_02_z1
+fr_transfert_noun R_bank_counter_02_z1
+fr_centime_noun R_bank_counter_02_z1
+fr_enjeu_noun R_bank_counter_02_z1
+fr_paiement_noun R_bank_counter_02_z1
+fr_bancaire_adj R_bank_counter_02_z1
+fr_rivage_noun R_bank_counter_02_z1
+fr_berge_noun R_bank_counter_02_z1
+# bank counter, upstairs: the payments desk corner
+fr_cotisation_noun R_bank_counter_03_z1
+fr_versement_noun R_bank_counter_03_z1
+fr_denomination_noun R_bank_counter_03_z1
+fr_usager_noun R_bank_counter_03_z1
+# economy office, ground floor: the traders' desk corner
+fr_exigence_noun R_bank_economy_01_z1
+fr_taxe_noun R_bank_economy_01_z1
+fr_benefice_noun R_bank_economy_01_z1
+fr_partage_noun R_bank_economy_01_z1
+fr_gain_noun R_bank_economy_01_z1
+# fiscal office: the price-chart desk
+fr_imposition_noun R_bank_economy_03_z1
+fr_fluctuation_noun R_bank_economy_03_z1
+fr_devis_noun R_bank_economy_03_z1
+# investment office: the forecast desk
+fr_rentabilite_noun R_bank_economy_04_z1
+fr_economiste_noun R_bank_economy_04_z1
+fr_trust_noun R_bank_economy_04_z1
+# office floor, first floor: the desk zoom keeps its 9 words; agreements get their own corner (z2)
+fr_reportage_noun R_office_02_z1
+fr_business_noun R_office_02_z1
+fr_collaborateur_noun R_office_02_z1
+fr_prefet_noun R_office_02_z1
+fr_confrere_noun R_office_02_z1
+fr_rassemblement_noun R_office_02_z1
+fr_employeur_noun R_office_02_z1
+fr_arrete_noun R_office_02_z1
+fr_secretariat_noun R_office_02_z1
+fr_convention_noun R_office_02_z2
+fr_pacte_noun R_office_02_z2
+fr_paie_noun R_office_02_z2
+# office floor, top: the cork-board corner
+fr_licenciement_noun R_office_03_z1
+fr_corporation_noun R_office_03_z1
+fr_remuneration_noun R_office_03_z1
+fr_coordinateur_noun R_office_03_z1
+# jobs gallery ground floor: the workshop corner
+fr_ingenieur_noun R_occupations_01_z1
+fr_profession_noun R_occupations_01_z1
+fr_specialite_noun R_occupations_01_z1
+# jobs gallery first floor 1: the parlour corner
+fr_nourrice_noun R_occupations_02_z1
+fr_bourgeoisie_noun R_occupations_02_z1
+fr_magicien_noun R_occupations_02_z1
+fr_epicier_noun R_occupations_02_z1
+fr_psychiatre_noun R_occupations_02_z1
+# jobs gallery upstairs 1: the plumbing / nursery corner
+fr_canalisation_noun R_occupations_04_z1
+fr_garderie_noun R_occupations_04_z1
+fr_promoteur_noun R_occupations_04_z1
+# jobs gallery upstairs 2: the ceremony corner
+fr_doctorat_noun R_occupations_05_z1
+fr_praticien_noun R_occupations_05_z1
+fr_academicien_noun R_occupations_05_z1
+# b04 (2026-10-22): APPEND to data/curated/room_overrides.txt. Zone pins for the repainted B04 art school so each painted close-up gets exactly the words drawn in it.
+# Format: <word id> <zone id>. Every word is already assigned to the zone's parent room (no room moves needed).
+# R_colors_01_z1
+fr_gris_adj R_colors_01_z1
+fr_brun_adj R_colors_01_z1
+fr_pale_adj R_colors_01_z1
+# R_colors_02_z1
+fr_distinct_adj R_colors_02_z1
+fr_varie_adj R_colors_02_z1
+fr_chatain_adj R_colors_02_z1
+fr_pers_adj R_colors_02_z1
+fr_tricolore_adj R_colors_02_z1
+fr_rougeatre_adj R_colors_02_z1
+# R_colors_02_z2
+fr_diversite_noun R_colors_02_z2
+fr_blancheur_noun R_colors_02_z2
+fr_mixte_adj R_colors_02_z2
+fr_multiple_adj R_colors_02_z2
+fr_neutre_adj R_colors_02_z2
+# R_shapes_02_z1
+fr_centimetre_noun R_shapes_02_z1
+fr_diametre_noun R_shapes_02_z1
+fr_pourtour_noun R_shapes_02_z1
+fr_hexagone_noun R_shapes_02_z1
+# R_shapes_03_z1
+fr_tournant_noun R_shapes_03_z1
+fr_virage_noun R_shapes_03_z1
+fr_recoin_noun R_shapes_03_z1
+fr_axe_noun R_shapes_03_z1
+fr_contour_noun R_shapes_03_z1
+fr_pointille_noun R_shapes_03_z1
+# R_shapes_03_z2
+fr_file_noun R_shapes_03_z2
+fr_ride_noun R_shapes_03_z2
+fr_courbe_noun R_shapes_03_z2
+fr_diagonale_noun R_shapes_03_z2
+fr_deformation_noun R_shapes_03_z2
+fr_circulaire_adj R_shapes_03_z2
+# Zone names (needs assign_zone_names.patch; same '<id> name=<sign>' syntax as the ST_ segment names): rooms.json then carries the painted sign as the zone's furniture, name and sign.
+R_colors_01_z1 name=Les étagères de pots
+R_colors_02_z1 name=L'étendoir des étoffes
+R_colors_02_z2 name=Le seuil du jardin
+R_shapes_02_z1 name=L'établi de mesure
+R_shapes_03_z1 name=La table à dessin
+R_shapes_03_z2 name=Le rebord des formes
+# --- R_wardrobe_04 [READY] ---
+#   R_wardrobe_04_z1: Le coin du poêle (shoe bench by the stove) (6 words)
+fr_pantoufle_noun R_wardrobe_04_z1
+fr_pointure_noun R_wardrobe_04_z1
+fr_chausson_noun R_wardrobe_04_z1
+fr_escarpin_noun R_wardrobe_04_z1
+fr_pourpoint_noun R_wardrobe_04_z1
+fr_polo_noun R_wardrobe_04_z1
+# --- R_family_02 [READY] ---
+#   R_family_02_z1: Les photos de famille (mantelpiece, unchanged words) (7 words)
+fr_petite_fille_noun R_family_02_z1
+fr_paternite_noun R_family_02_z1
+fr_epouse_noun R_family_02_z1
+fr_parente_noun R_family_02_z1
+fr_adoption_noun R_family_02_z1
+fr_belle_fille_noun R_family_02_z1
+fr_belle_mere_noun R_family_02_z1
+#   R_family_02_z2: L'arbre de famille (family-tree painting + heirloom chest) (9 words)
+fr_ancetre_noun R_family_02_z2
+fr_beau_frere_noun R_family_02_z2
+fr_heritage_noun R_family_02_z2
+fr_divorce_noun R_family_02_z2
+fr_heritier_noun R_family_02_z2
+fr_descendant_noun R_family_02_z2
+fr_bambin_noun R_family_02_z2
+fr_demi_frere_noun R_family_02_z2
+fr_parental_adj R_family_02_z2
+# zone pins for s07_B18_pharmacie: append to data/curated/room_overrides.txt, then run data/assign.py
+fr_vitamine_noun R_pharmacy_z1
+fr_cohorte_noun R_pharmacy_z1
+fr_ponction_noun R_pharmacy_z1
+fr_antibiotique_noun R_pharmacy_z1
+fr_filon_noun R_pharmacy_z1
+fr_appelant_noun R_pharmacy_z1
+fr_pharmaceutique_adj R_pharmacy_z1
+fr_drogue_noun R_pharmacy_z2
+fr_aiguille_noun R_pharmacy_z2
+fr_pilule_noun R_pharmacy_z2
+fr_traitement_noun R_pharmacy_z2
+fr_flacon_noun R_pharmacy_z2
+fr_platre_noun R_pharmacy_z2
+fr_comprime_noun R_pharmacy_z2
+# zone pins for s07_B17_cabinet: append to data/curated/room_overrides.txt, then run data/assign.py
+fr_sante_noun R_doctor_01_z2
+fr_fatigue_noun R_doctor_01_z2
+fr_grippe_noun R_doctor_01_z2
+fr_toux_noun R_doctor_01_z2
+fr_ardeur_noun R_doctor_01_z2
+fr_virus_noun R_doctor_01_z2
+fr_soulagement_noun R_doctor_01_z2
+fr_nausee_noun R_doctor_01_z1
+fr_irruption_noun R_doctor_01_z1
+fr_consultation_noun R_doctor_01_z1
+fr_symptome_noun R_doctor_01_z1
+fr_rhume_noun R_doctor_01_z1
+fr_vaccin_noun R_doctor_01_z1
+fr_face_noun R_body_01_z1
+fr_peau_noun R_body_01_z1
+fr_joue_noun R_body_01_z1
+fr_figure_noun R_body_01_z1
+fr_visage_noun R_body_01_z1
+fr_cheveu_noun R_body_01_z1
+fr_oeil_noun R_body_01_z1
+fr_poil_noun R_body_01_z1
+fr_poitrine_noun R_body_02_z1
+fr_gorge_noun R_body_02_z1
+fr_coeur_noun R_body_02_z1
+fr_ventre_noun R_body_02_z1
+fr_souffle_noun R_body_02_z1
+fr_poing_noun R_body_02_z1
+fr_doigt_noun R_body_02_z1
+fr_fond_noun R_body_02_z1
+fr_nuque_noun R_body_03_z1
+fr_canne_noun R_body_03_z1
+fr_cheville_noun R_body_03_z1
+fr_tempe_noun R_body_03_z1
+fr_coiffure_noun R_body_03_z1
+fr_sonnette_noun R_body_03_z1
+fr_os_noun R_body_03_z1
+fr_nerf_noun R_body_03_z1
+fr_coiffeur_noun R_body_03_z1
+fr_foulard_noun R_body_03_z1
+fr_cuisse_noun R_body_04_z1
+fr_barbe_noun R_body_04_z1
+fr_moustache_noun R_body_04_z1
+fr_machoire_noun R_body_04_z1
+fr_haleine_noun R_body_04_z1
+fr_narine_noun R_body_04_z1
+fr_pommette_noun R_body_04_z1
+fr_menton_noun R_body_04_z1
+fr_poumon_noun R_body_04_z1
+# zone pins for s07_B19_hopital: append to data/curated/room_overrides.txt, then run data/assign.py
+fr_piqure_noun R_hospital_01_z1
+fr_chirurgie_noun R_hospital_01_z1
+fr_exploitation_noun R_hospital_01_z1
+fr_injection_noun R_hospital_01_z1
+fr_chirurgien_noun R_hospital_01_z1
+fr_degat_noun R_hospital_01_z1
+fr_detachement_noun R_hospital_01_z1
+fr_operateur_noun R_hospital_01_z1
+fr_hanche_noun R_hospital_01_z2
+fr_extremite_noun R_hospital_01_z2
+fr_soin_noun R_hospital_01_z2
+fr_miracle_noun R_hospital_01_z2
+fr_dommage_noun R_hospital_01_z2
+fr_repos_noun R_hospital_01_z2
+fr_asile_noun R_hospital_01_z2
+fr_vision_noun R_dentist_01_z1
+fr_paupiere_noun R_dentist_01_z1
+fr_illusion_noun R_dentist_01_z1
+fr_perspective_noun R_dentist_01_z1
+fr_reconnaissance_noun R_dentist_01_z1
+fr_sourcil_noun R_dentist_01_z1
+fr_prothese_noun R_hospital_02_z1
+fr_reanimation_noun R_hospital_02_z1
+fr_infiltration_noun R_hospital_02_z1
+fr_dejection_noun R_hospital_02_z1
+fr_insertion_noun R_hospital_02_z1
+fr_prejudice_noun R_hospital_02_z1
+fr_ambulancier_noun R_hospital_02_z1
+fr_dam_noun R_hospital_02_z1
+fr_fracture_noun R_hospital_02_z2
+fr_entorse_noun R_hospital_02_z2
+fr_bosse_noun R_hospital_02_z2
+fr_evacuation_noun R_hospital_02_z2
+fr_scanner_noun R_hospital_02_z2
+fr_sauvetage_noun R_hospital_02_z2
+fr_handicap_noun R_hospital_02_z2
+# S08 zone split pins (integrator, from sectors/S08/S08_zone_split.json)
+fr_campagne_noun R_world_01_z1
+fr_region_noun R_world_01_z1
+fr_province_noun R_world_01_z1
+fr_cite_noun R_world_01_z1
+fr_banlieue_noun R_world_01_z1
+fr_village_noun R_world_01_z1
+fr_paysage_noun R_world_01_z1
+fr_territoire_noun R_world_01_z1
+fr_lieu_noun R_abs_space_01_z2
+fr_endroit_noun R_abs_space_01_z2
+fr_quartier_noun R_abs_space_01_z2
+fr_bout_noun R_abs_space_01_z2
+fr_domaine_noun R_abs_space_01_z2
+fr_mouvement_noun R_abs_space_01_z2
+fr_application_noun R_world_02_z1
+fr_bordure_noun R_world_02_z1
+fr_metropole_noun R_world_02_z1
+fr_prefecture_noun R_world_02_z1
+fr_geographie_noun R_world_02_z1
+fr_immigration_noun R_world_02_z1
+fr_regional_adj R_world_02_z1
+fr_cage_noun R_abs_space_02_z2
+fr_cachette_noun R_abs_space_02_z2
+fr_proximite_noun R_abs_space_02_z2
+fr_etendue_noun R_abs_space_02_z2
+fr_revers_noun R_abs_space_02_z2
+fr_voisinage_noun R_abs_space_02_z2
+# S08 all zone pins from sectors/S08/assignment.json (integrator)
+fr_roue_noun R_road_01_z1
+fr_avenue_noun R_road_01_z1
+fr_bicyclette_noun R_road_01_z1
+fr_vehicule_noun R_road_01_z1
+fr_transport_noun R_road_01_z1
+fr_parking_noun R_road_01_z1
+fr_bus_noun R_road_01_z1
+fr_chaussee_noun R_road_03_z1
+fr_priorite_noun R_road_03_z1
+fr_cycle_noun R_road_03_z1
+fr_voyant_noun R_road_03_z1
+fr_carburant_noun R_road_03_z1
+fr_embouteillage_noun R_road_03_z1
+fr_encombrement_noun R_road_04_z1
+fr_clignotant_noun R_road_04_z1
+fr_ducat_noun R_road_04_z1
+fr_loueur_noun R_road_04_z1
+fr_ralentissement_noun R_road_04_z1
+fr_colporteur_noun R_road_04_z1
+fr_riverain_noun R_road_04_z1
+fr_position_noun R_abs_space_01_z1
+fr_base_noun R_abs_space_01_z1
+fr_distance_noun R_abs_space_01_z1
+fr_mise_noun R_abs_space_01_z1
+fr_contraire_noun R_abs_space_01_z1
+fr_arriere_noun R_abs_space_01_z1
+fr_sein_noun R_abs_space_01_z1
+fr_breche_noun R_abs_space_02_z1
+fr_oree_noun R_abs_space_02_z1
+fr_localite_noun R_abs_space_02_z1
+fr_centre_ville_noun R_abs_space_02_z1
+fr_metteur_noun R_abs_space_02_z1
+fr_amenagement_noun R_abs_space_02_z1
+fr_antipode_noun R_abs_space_02_z1
+fr_pivot_noun R_abs_space_02_z1
+# S04 wine bar zoom: live art and s04_0620 both show champagne + cru on the zoom (integrator; unconditional)
+R_body_01_z1 name=Le miroir
+R_body_02_z1 name=Le bassin
+R_body_03_z1 name=Le palier
+R_body_04_z1 name=L'atelier de l'illustrateur
+R_dentist_01_z1 name=L'opticien
+R_doctor_01_z2 name=La salle d'attente
+R_family_02_z1 name=Les photos de famille
+R_family_02_z2 name=L'arbre de famille
+R_hospital_01_z2 name=Le jardin d'hiver
+R_hospital_02_z2 name=La radiologie
+R_pharmacy_z2 name=Le préparatoire
+R_wardrobe_04_z1 name=Le coin du poêle
+
+# S03 B62 Maison de Couture repaint (2026-10-22, S03 track): three salon words move into the painted shop-window zone (the other six were already pinned there).
+fr_merci_noun_m R_abs_beauty_02_z1
+fr_compliment_noun R_abs_beauty_02_z1
+fr_look_noun R_abs_beauty_02_z1
+# end S03 B62
+
+# S03 B61 Atelier de Réparation repaint + split (2026-10-22, S03 track): every word in a new B61 painted zone is pinned to it
+# so a future assign.py run keeps the painted layout (words stay in their room; only main room -> zone).
+fr_polonais_adj R_adj_state_02_z1
+fr_incomprehensible_adj R_adj_state_02_z1
+fr_liquide_adj R_adj_state_02_z1
+fr_menager_adj R_adj_state_02_z1
+fr_soigne_adj R_adj_state_02_z1
+fr_mobile_adj R_adj_state_03_z1
+fr_illegal_adj R_adj_state_03_z1
+fr_temporaire_adj R_adj_state_03_z1
+fr_disponible_adj R_adj_state_03_z1
+fr_interesse_adj R_adj_state_03_z1
+fr_incompatible_adj R_adj_state_05_z1
+fr_intermittent_adj R_adj_state_05_z1
+fr_compatible_adj R_adj_state_05_z1
+fr_inexistant_adj R_adj_state_05_z1
+fr_defaillant_adj R_adj_state_05_z1

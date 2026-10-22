@@ -1,0 +1,182 @@
+{
+ "divider_x": 612,
+ "kind": "room",
+ "note": "Ground-floor banking hall (repainted 2026-10-22 fix2): bottle-green walls with white stucco pilasters, grey-white marble floor, mahogany teller counters with brass grilles and green banker's lamps; LANDMARK the huge round steel vault door standing open at the back left. Glazed entrance door in the left wall (out to the quay, river visible), stone staircase going UP at the right back. Feminine LEFT: pink piggy-bank money box bumping its snout on the vault door (banque), duchess on a throne of gold bars (richesse), lady catching the cascade of coins the cashier pours (monnaie). Masculine RIGHT: cashier stacking towers of silver coins (argent), girl rowing a gold-coin boat across a puddle (euro), caped count licking his thumb over his account ledger (compte), cowboy rag doll waving a green note (dollar), old Uncle Frank with his glass case of old coins (franc), customer shaking the teller's hand over a cheque (chèque), clerk stamping a slip (solde).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le hall des guichets",
+   "box": [
+    600,
+    92,
+    762,
+    140
+   ],
+   "text_box": [
+    610,
+    100,
+    752,
+    132
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_banque_noun",
+   "box": [
+    232,
+    205,
+    350,
+    452
+   ],
+   "label_xy": [
+    290,
+    446
+   ]
+  },
+  {
+   "id": "fr_richesse_noun",
+   "box": [
+    352,
+    258,
+    470,
+    462
+   ],
+   "label_xy": [
+    410,
+    456
+   ]
+  },
+  {
+   "id": "fr_monnaie_noun",
+   "box": [
+    472,
+    240,
+    610,
+    395
+   ],
+   "label_xy": [
+    542,
+    389
+   ]
+  },
+  {
+   "id": "fr_argent_noun",
+   "box": [
+    690,
+    272,
+    778,
+    470
+   ],
+   "label_xy": [
+    732,
+    464
+   ]
+  },
+  {
+   "id": "fr_euro_noun",
+   "box": [
+    548,
+    398,
+    688,
+    545
+   ],
+   "label_xy": [
+    618,
+    539
+   ]
+  },
+  {
+   "id": "fr_compte_noun",
+   "box": [
+    800,
+    225,
+    936,
+    372
+   ],
+   "label_xy": [
+    866,
+    366
+   ]
+  },
+  {
+   "id": "fr_dollar_noun",
+   "box": [
+    780,
+    374,
+    898,
+    515
+   ],
+   "label_xy": [
+    838,
+    509
+   ]
+  },
+  {
+   "id": "fr_franc_noun",
+   "box": [
+    962,
+    252,
+    1125,
+    352
+   ],
+   "label_xy": [
+    1044,
+    346
+   ]
+  },
+  {
+   "id": "fr_cheque_noun",
+   "box": [
+    940,
+    354,
+    1085,
+    585
+   ],
+   "label_xy": [
+    1014,
+    579
+   ]
+  },
+  {
+   "id": "fr_solde_noun_m",
+   "box": [
+    1088,
+    420,
+    1203,
+    672
+   ],
+   "label_xy": [
+    1146,
+    666
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "B10_banque",
+   "box": [
+    118,
+    92,
+    230,
+    420
+   ],
+   "label": "Out through the glass doors to the quay",
+   "name": "Banque du Village (dehors)",
+   "kind": "door"
+  },
+  {
+   "target": "R_bank_counter_02",
+   "box": [
+    1130,
+    100,
+    1280,
+    300
+   ],
+   "label": "Stairs up to the first-floor counters",
+   "name": "Le guichet du premier",
+   "kind": "stairs_up"
+  }
+ ],
+ "painted": "2026-10-22 S05 fix2 repaint (GenerateImage + outpaint/retouch); boxes by hand"
+}

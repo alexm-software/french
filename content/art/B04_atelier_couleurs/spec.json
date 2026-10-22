@@ -1,12 +1,67 @@
-{"divider_x": null, "kind": "building_exterior", "building_name": "Atelier des Couleurs & Formes",
- "note": "Palette-shaped workshop with a paintbrush chimney and shapes painted on the wall. Ground floor (green doors) is the colour studio; the outside stair leads to the shapes studio upstairs. Inside walk: R_colors_01 -> R_colors_02 -> (stairs) -> R_shapes_02 -> R_shapes_03 -> balcony door back out here.",
+{
+ "divider_x": null,
+ "kind": "building_exterior",
+ "note": "L'Atelier du Peintre (B04) seen front-on from the Place du Village: the same palette-shaped white cottage as in the square view (paint-well portholes, thumb-hole knob, blank board over the dark glazed double door, slate roof, stone chimney with the paintbrush tip, dry-stone wall and potted plants). Ground floor + loft under the palette gable. Inside walk (a loop): R_colors_01 -> arch -> R_colors_02 -> stairs up -> R_shapes_02 -> blue door -> R_shapes_03 -> spiral stair down -> R_colors_01 -> glazed door -> out here.",
  "text_areas": {
-  "name": {"role": "building_name", "text": "Atelier des Couleurs & Formes", "box": [369, 335, 590, 390], "text_box": [377, 341, 582, 384]},
-  "dir_square": {"role": "direction", "text": "↙ Place du Village", "box": [300, 665, 560, 705], "text_box": [306, 669, 554, 701]}
+  "name": {
+   "role": "building_name",
+   "text": "Atelier des Couleurs & Formes",
+   "box": [
+    513,
+    362,
+    660,
+    420
+   ],
+   "text_box": [
+    522,
+    371,
+    651,
+    411
+   ]
+  },
+  "dir_square": {
+   "role": "direction",
+   "text": "Place du Village",
+   "box": [
+    55,
+    534,
+    167,
+    602
+   ],
+   "text_box": [
+    64,
+    543,
+    158,
+    593
+   ]
+  }
  },
  "items": [],
  "links": [
-  {"target": "R_colors_01", "box": [290, 394, 669, 631], "label": "In through the green doors to the colour studio", "name": "Atelier — les couleurs (1)", "kind": "door"},
-  {"target": "R_shapes_03", "box": [750, 240, 1050, 630], "label": "Up the outside stairs to the shapes studio", "name": "Atelier — les formes (3)", "kind": "stairs"},
-  {"target": "S01_sector", "box": [0, 560, 287, 720], "label": "Back along the cobbled path to the square", "name": "Place du Village", "kind": "path"}
- ]}
+  {
+   "target": "R_colors_01",
+   "box": [
+    528,
+    426,
+    652,
+    640
+   ],
+   "label": "In through the glazed double door to the colour studio",
+   "name": "Atelier — les couleurs (1)",
+   "kind": "door"
+  },
+  {
+   "target": "S01_sector",
+   "box": [
+    190,
+    652,
+    1120,
+    716
+   ],
+   "label": "Step back across the cobbles to the square",
+   "name": "Place du Village",
+   "kind": "path"
+  }
+ ],
+ "building_name": "Atelier des Couleurs & Formes"
+}

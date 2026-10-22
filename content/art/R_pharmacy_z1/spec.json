@@ -1,0 +1,130 @@
+{
+ "kind": "zoom",
+ "space": "R_pharmacy_z1",
+ "building_id": "B18_pharmacie",
+ "floor": "ground floor (shop window)",
+ "name": "La vitrine",
+ "parent_room_id": "R_pharmacy",
+ "divider_x": 658,
+ "camera": "close view of the shop-window display from inside the shop",
+ "setting": {
+  "walls": "the big shop window behind, showing the square's fountain softly outside; green velvet display steps",
+  "floor": "the same green-and-cream tiles, a low walnut plinth",
+  "landmark": "a tall glass pharmacy show globe filled with clear green water at the centre of the display",
+  "light": "bright daylight straight through the window",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La vitrine",
+   "box": [
+    319,
+    25,
+    494,
+    131
+   ],
+   "text_box": [
+    323,
+    29,
+    490,
+    127
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_vitamine_noun",
+   "box": [
+    162,
+    215,
+    331,
+    376
+   ],
+   "row": "back",
+   "scene": "A strong ant lifts an orange VITAMIN (\"vee-tah-MEEN\") as big as a football, looking MEAN and mighty."
+  },
+  {
+   "id": "fr_cohorte_noun",
+   "box": [
+    335,
+    271,
+    575,
+    432
+   ],
+   "row": "front",
+   "scene": "A COHORT (\"koh-ORT\") of wooden toy ducklings, all hatched the same spring, lines up along the display step."
+  },
+  {
+   "id": "fr_ponction_noun",
+   "box": [
+    106,
+    52,
+    228,
+    212
+   ],
+   "row": "back",
+   "scene": "The small brass plaque says PONCTION (\"pohnk-SYOHN\", close to English PUNCTURE): a medical puncture to draw off fluid, and also a deduction of money.",
+   "drawn": false,
+   "render": "museum_wall_plaque"
+  },
+  {
+   "id": "fr_pharmaceutique_adj",
+   "box": [
+    625,
+    248,
+    800,
+    408
+   ],
+   "row": "front",
+   "scene": "PHARMACEUTICAL (\"fahr-mah-seuh-TEEK\") bottles of every colour stand in a TEAK rack."
+  },
+  {
+   "id": "fr_antibiotique_noun",
+   "box": [
+    804,
+    267,
+    921,
+    427
+   ],
+   "row": "back",
+   "scene": "A capsule knight with a little shield chases cartoon germs off the display step (\"ahn-tee-byoh-TEEK\")."
+  },
+  {
+   "id": "fr_filon_noun",
+   "box": [
+    925,
+    206,
+    1049,
+    372
+   ],
+   "row": "front",
+   "scene": "A toy miner FEELS ON (\"fee-LOHN\") along a rock specimen in the display and finds a glittering gold VEIN."
+  },
+  {
+   "id": "fr_appelant_noun",
+   "box": [
+    1053,
+    165,
+    1185,
+    362
+   ],
+   "row": "back",
+   "scene": "A PELICAN (\"ah-puh-LAHN\") in a little barrister's wig, the APPELLANT, APPEALS by waving a rolled scroll."
+  }
+ ],
+ "links": [],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "painted_way_out": {
+  "box": [
+   980,
+   592,
+   1195,
+   690
+  ],
+  "painted_as": "the tiled floor in the near right foreground",
+  "leads_to": "R_pharmacy",
+  "control": "strip hierarchy Back (gate 8: no second button to the same place)"
+ },
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: La vitrine in the B18_pharmacie building, ground floor (shop window). Camera: close view of the shop-window display from inside the shop.\nSetting: the big shop window behind, showing the square's fountain softly outside; green velvet display steps; floor: the same green-and-cream tiles, a low walnut plinth. Landmark: a tall glass pharmacy show globe filled with clear green water at the centre of the display. Light: bright daylight straight through the window. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the tiled floor in the near right foreground (the way back out).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: A strong ant lifts an orange VITAMIN as big as a football, looking MEAN and mighty.\n- far left, foreground: A COHORT of eight wooden toy ducklings, all hatched the same spring, march in a line up the display steps.\n- centre-left, middle distance: a blank brass museum plaque on the wall (no figure).\n- centre-left, foreground: PHARMACEUTICAL bottles of every colour stand in a TEAK rack.\n- centre-right, middle distance: A capsule knight with a little shield chases cartoon germs off the display step.\n- centre-right, foreground: A toy miner FEELS ON along a rock specimen in the display and finds a glittering gold VEIN.\n- far right, middle distance: A PELICAN in a little barrister's wig, the APPELLANT, APPEALS by waving a rolled scroll.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

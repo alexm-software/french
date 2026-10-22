@@ -1,370 +1,356 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg015",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Allée des Bricoleurs · bricoler, ruser, s'adjoindre",
-  "divider_x": 860,
-  "note": "Tiered verb place. -er LEFT (man laying bricks for a little wall, fox in a fake moustache sneaking past the hen house, juggler with six balls on the balcony, decorator shelling peanuts at the upper window, man pulling on a pirate costume on the roof terrace), -ir/-re RIGHT (duckling hurrying to join the line of ducks, round mirror on the wall). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_bricoler_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_bricoler_verb",
-      "text": "bricoler",
-      "box": [
-        168,
-        640,
-        256,
-        666
-      ],
-      "text_box": [
-        172,
-        644,
-        252,
-        662
-      ]
-    },
-    "fr_ruser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_ruser_verb",
-      "text": "ruser",
-      "box": [
-        456,
-        593,
-        514,
-        619
-      ],
-      "text_box": [
-        460,
-        597,
-        510,
-        615
-      ]
-    },
-    "fr_conjuguer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_conjuguer_verb",
-      "text": "conjuguer",
-      "box": [
-        471,
-        330,
-        567,
-        356
-      ],
-      "text_box": [
-        475,
-        334,
-        563,
-        352
-      ]
-    },
-    "fr_decortiquer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_decortiquer_verb",
-      "text": "décortiquer",
-      "box": [
-        135,
-        343,
-        251,
-        369
-      ],
-      "text_box": [
-        139,
-        347,
-        247,
-        365
-      ]
-    },
-    "fr_costumer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_costumer_verb",
-      "text": "costumer",
-      "box": [
-        156,
-        118,
-        244,
-        144
-      ],
-      "text_box": [
-        160,
-        122,
-        240,
-        140
-      ]
-    },
-    "fr_adjoindre_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_adjoindre_verb",
-      "text": "s'adjoindre",
-      "box": [
-        1029,
-        618,
-        1145,
-        644
-      ],
-      "text_box": [
-        1033,
-        622,
-        1141,
-        640
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Ruelle des Houppettes →",
-      "box": [
-        700,
-        400,
-        880,
-        520
-      ],
-      "text_box": [
-        706,
-        406,
-        874,
-        514
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue des Veilleurs-de-Nuit",
-      "box": [
-        470,
-        668,
-        900,
-        712
-      ],
-      "text_box": [
-        476,
-        674,
-        894,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        620,
-        25,
-        720,
-        59
-      ],
-      "text_box": [
-        623,
-        28,
-        717,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        880,
-        25,
-        1000,
-        59
-      ],
-      "text_box": [
-        883,
-        28,
-        997,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg015",
+ "street_id": "ST_bricoleurs",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 1,
+ "place_count": 5,
+ "street_name": "Avenue des Petits Travaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Allée des Bricoleurs",
+ "divider_x": 760,
+ "note": "Avenue des Petits Travaux place 1/5; landmark: red toolbox-shaped workshop with a little windmill on its roof. First place: the avenue starts from the Home square behind the viewer (back = near paving). Brick stack of bricoler is scenery cut by the left edge. Costumer roof figure stands on the lower roof (mid-height). No -er/-ir markers, no painted text.",
+ "landmark": "red toolbox-shaped workshop with a little windmill on its roof",
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "text_areas": {
+  "fr_decortiquer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_decortiquer_verb",
+   "text": "décortiquer",
+   "box": [
+    113,
+    180,
+    229,
+    206
+   ],
+   "text_box": [
+    117,
+    184,
+    225,
+    202
+   ]
   },
-  "items": [
-    {
-      "id": "fr_bricoler_verb",
-      "lemma": "bricoler",
-      "gloss": "to do DIY; to tinker",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        56,
-        450,
-        368,
-        672
-      ],
-      "label_xy": [
-        212,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_ruser_verb",
-      "lemma": "ruser",
-      "gloss": "to use one's cunning",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        370,
-        425,
-        600,
-        625
-      ],
-      "label_xy": [
-        485,
-        613
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_conjuguer_verb",
-      "lemma": "conjuguer",
-      "gloss": "to conjugate",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 3,
-      "box": [
-        450,
-        169,
-        588,
-        362
-      ],
-      "label_xy": [
-        519,
-        350
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_decortiquer_verb",
-      "lemma": "décortiquer",
-      "gloss": "to decorticate; to dissect",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 4,
-      "box": [
-        106,
-        212,
-        281,
-        375
-      ],
-      "label_xy": [
-        193,
-        363
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_costumer_verb",
-      "lemma": "costumer",
-      "gloss": "to wear a particular costume",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 5,
-      "box": [
-        106,
-        10,
-        294,
-        150
-      ],
-      "label_xy": [
-        200,
-        138
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_adjoindre_verb",
-      "lemma": "adjoindre",
-      "gloss": "to adjoin; to join up",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 6,
-      "box": [
-        912,
-        368,
-        1262,
-        650
-      ],
-      "label_xy": [
-        1087,
-        638
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'adjoindre",
-      "scene": "",
-      "mirror": "round mirror on the cottage wall beside the ducks"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg016",
-      "box": [
-        700,
-        400,
-        880,
-        520
-      ],
-      "label": "Walk on down the lane",
-      "name": "Ruelle des Houppettes",
-      "sign": "Ruelle des Houppettes →",
-      "kind": "street",
-      "name_fr": "Ruelle des Houppettes",
-      "name_en": "Powder-Puffs Lane"
-    },
-    "back": {
-      "target": "ST_routine_seg014",
-      "box": [
-        470,
-        668,
-        900,
-        712
-      ],
-      "label": "Back up the lane to Night-Watchers' Street",
-      "name": "Rue des Veilleurs-de-Nuit",
-      "sign": "← Rue des Veilleurs-de-Nuit",
-      "kind": "street",
-      "name_fr": "Rue des Veilleurs-de-Nuit",
-      "name_en": "Night-Watchers' Street"
-    }
+  "fr_conjuguer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_conjuguer_verb",
+   "text": "conjuguer",
+   "box": [
+    91,
+    368,
+    187,
+    394
+   ],
+   "text_box": [
+    95,
+    372,
+    183,
+    390
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_costumer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_costumer_verb",
+   "text": "costumer",
+   "box": [
+    412,
+    274,
+    498,
+    300
+   ],
+   "text_box": [
+    416,
+    278,
+    494,
+    296
+   ]
+  },
+  "fr_bricoler_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_bricoler_verb",
+   "text": "bricoler",
+   "box": [
+    119,
+    580,
+    207,
+    606
+   ],
+   "text_box": [
+    123,
+    584,
+    203,
+    602
+   ]
+  },
+  "fr_ruser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ruser_verb",
+   "text": "ruser",
+   "box": [
+    377,
+    580,
+    435,
+    606
+   ],
+   "text_box": [
+    381,
+    584,
+    431,
+    602
+   ]
+  },
+  "fr_adjoindre_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_adjoindre_verb",
+   "text": "s'adjoindre",
+   "box": [
+    968,
+    598,
+    1084,
+    624
+   ],
+   "text_box": [
+    972,
+    602,
+    1080,
+    620
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Ruelle des Houppettes →",
+   "box": [
+    660,
+    370,
+    820,
+    540
+   ],
+   "text_box": [
+    666,
+    376,
+    814,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue des Maisons",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Allée des Bricoleurs",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_decortiquer_verb",
+   "lemma": "décortiquer",
+   "gloss": "to decorticate; to dissect",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    110,
+    44,
+    232,
+    212
+   ],
+   "label_xy": [
+    171,
+    200
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_conjuguer_verb",
+   "lemma": "conjuguer",
+   "gloss": "to conjugate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    78,
+    236,
+    200,
+    400
+   ],
+   "label_xy": [
+    139,
+    388
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_costumer_verb",
+   "lemma": "costumer",
+   "gloss": "to wear a particular costume",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 3,
+   "box": [
+    410,
+    150,
+    500,
+    306
+   ],
+   "label_xy": [
+    455,
+    294
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_bricoler_verb",
+   "lemma": "bricoler",
+   "gloss": "to do DIY; to tinker",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    77,
+    450,
+    250,
+    612
+   ],
+   "label_xy": [
+    163,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_ruser_verb",
+   "lemma": "ruser",
+   "gloss": "to use one's cunning",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    288,
+    405,
+    525,
+    612
+   ],
+   "label_xy": [
+    406,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_adjoindre_verb",
+   "lemma": "adjoindre",
+   "gloss": "to adjoin; to join up",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    870,
+    448,
+    1182,
+    630
+   ],
+   "label_xy": [
+    1026,
+    618
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'adjoindre",
+   "scene": "",
+   "mirror": "round gilt mirror on the garden wall"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg016",
+   "box": [
+    660,
+    370,
+    820,
+    540
+   ],
+   "label": "Walk on to Ruelle des Houppettes",
+   "name": "Ruelle des Houppettes",
+   "sign": "Ruelle des Houppettes →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "S02_sector",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue des Maisons",
+   "name": "Rue des Maisons",
+   "sign": "← Rue des Maisons",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 1,
+  "roof": 1,
+  "street": 3
+ }
 }

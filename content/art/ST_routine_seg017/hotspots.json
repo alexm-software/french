@@ -1,371 +1,357 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg017",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Rue du Réveille-Matin · se doucher, alarmer, s'abstenir",
-  "divider_x": 900,
-  "note": "Tiered verb place. -er LEFT (duchess in a shower cap under the garden shower with her wall mirror, man leaping from a giant ringing alarm clock, woman shelling green peas on the balcony, jockey rippling a bedsheet at the upper window, outraged man whose cake a seagull steals on the roof terrace), -ir/-re RIGHT (strongman refusing the baker's cream cake, mirror on the wall). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_doucher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_doucher_verb",
-      "text": "se doucher",
-      "box": [
-        57,
-        640,
-        163,
-        666
-      ],
-      "text_box": [
-        61,
-        644,
-        159,
-        662
-      ]
-    },
-    "fr_alarmer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_alarmer_verb",
-      "text": "alarmer",
-      "box": [
-        373,
-        630,
-        451,
-        656
-      ],
-      "text_box": [
-        377,
-        634,
-        447,
-        652
-      ]
-    },
-    "fr_egrener_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_egrener_verb",
-      "text": "égrener",
-      "box": [
-        348,
-        324,
-        426,
-        350
-      ],
-      "text_box": [
-        352,
-        328,
-        422,
-        346
-      ]
-    },
-    "fr_rider_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_rider_verb",
-      "text": "rider",
-      "box": [
-        577,
-        206,
-        635,
-        232
-      ],
-      "text_box": [
-        581,
-        210,
-        631,
-        228
-      ]
-    },
-    "fr_outrer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_outrer_verb",
-      "text": "outrer",
-      "box": [
-        156,
-        143,
-        224,
-        169
-      ],
-      "text_box": [
-        160,
-        147,
-        220,
-        165
-      ]
-    },
-    "fr_abstenir_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_abstenir_verb",
-      "text": "s'abstenir (de)",
-      "box": [
-        1023,
-        640,
-        1177,
-        666
-      ],
-      "text_box": [
-        1027,
-        644,
-        1173,
-        662
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Rue des Selliers →",
-      "box": [
-        780,
-        450,
-        925,
-        560
-      ],
-      "text_box": [
-        786,
-        456,
-        919,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Ruelle des Houppettes",
-      "box": [
-        470,
-        668,
-        920,
-        712
-      ],
-      "text_box": [
-        476,
-        674,
-        914,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        752,
-        25,
-        852,
-        59
-      ],
-      "text_box": [
-        755,
-        28,
-        849,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        870,
-        25,
-        990,
-        59
-      ],
-      "text_box": [
-        873,
-        28,
-        987,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg017",
+ "street_id": "ST_bricoleurs",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 3,
+ "place_count": 5,
+ "street_name": "Avenue des Petits Travaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue du Réveille-Matin",
+ "divider_x": 900,
+ "note": "Avenue des Petits Travaux place 3/5; landmark: round fountain pouring from a giant brass shower-head with an alarm clock on top. The baker's back and the abstenir mirror touch the right edge (box stops at 1200). Duchess wears a full striped bathing costume. No -er/-ir markers, no painted text.",
+ "landmark": "round fountain pouring from a giant brass shower-head with an alarm clock on top",
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "text_areas": {
+  "fr_egrener_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_egrener_verb",
+   "text": "égrener",
+   "box": [
+    112,
+    262,
+    190,
+    288
+   ],
+   "text_box": [
+    116,
+    266,
+    186,
+    284
+   ]
   },
-  "items": [
-    {
-      "id": "fr_doucher_verb",
-      "lemma": "doucher",
-      "gloss": "to shower; to take a shower",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        10,
-        294,
-        210,
-        672
-      ],
-      "label_xy": [
-        110,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se doucher",
-      "scene": "",
-      "mirror": "oval mirror on the wall beside the shower"
-    },
-    {
-      "id": "fr_alarmer_verb",
-      "lemma": "alarmer",
-      "gloss": "to alarm",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        287,
-        412,
-        537,
-        662
-      ],
-      "label_xy": [
-        412,
-        650
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_egrener_verb",
-      "lemma": "égrener",
-      "gloss": "to shell, pod; to gin",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 3,
-      "box": [
-        325,
-        175,
-        450,
-        356
-      ],
-      "label_xy": [
-        387,
-        344
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_rider_verb",
-      "lemma": "rider",
-      "gloss": "to wrinkle; to ripple",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 4,
-      "box": [
-        469,
-        44,
-        744,
-        238
-      ],
-      "label_xy": [
-        606,
-        226
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_outrer_verb",
-      "lemma": "outrer",
-      "gloss": "to exaggerate; to outrage",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 5,
-      "box": [
-        62,
-        8,
-        319,
-        175
-      ],
-      "label_xy": [
-        190,
-        163
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_abstenir_verb",
-      "lemma": "abstenir",
-      "gloss": "to abstain, to forbear",
-      "verb_group": 3,
-      "side": "right",
-      "tier": "street",
-      "level": "street",
-      "order": 6,
-      "box": [
-        931,
-        369,
-        1269,
-        672
-      ],
-      "label_xy": [
-        1100,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "s'abstenir (de)",
-      "scene": "",
-      "mirror": "oval mirror on the wall beside the baker"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg018",
-      "box": [
-        780,
-        450,
-        925,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue des Selliers",
-      "sign": "Rue des Selliers →",
-      "kind": "street",
-      "name_fr": "Rue des Selliers",
-      "name_en": "Saddlers' Street"
-    },
-    "back": {
-      "target": "ST_routine_seg016",
-      "box": [
-        470,
-        668,
-        920,
-        712
-      ],
-      "label": "Back up the lane to Powder-Puffs Lane",
-      "name": "Ruelle des Houppettes",
-      "sign": "← Ruelle des Houppettes",
-      "kind": "street",
-      "name_fr": "Ruelle des Houppettes",
-      "name_en": "Powder-Puffs Lane"
-    }
+  "fr_rider_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_rider_verb",
+   "text": "rider",
+   "box": [
+    291,
+    194,
+    349,
+    220
+   ],
+   "text_box": [
+    295,
+    198,
+    345,
+    216
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_outrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_outrer_verb",
+   "text": "outrer",
+   "box": [
+    498,
+    212,
+    566,
+    238
+   ],
+   "text_box": [
+    502,
+    216,
+    562,
+    234
+   ]
+  },
+  "fr_doucher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_doucher_verb",
+   "text": "se doucher",
+   "box": [
+    116,
+    633,
+    222,
+    659
+   ],
+   "text_box": [
+    120,
+    637,
+    218,
+    655
+   ]
+  },
+  "fr_alarmer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_alarmer_verb",
+   "text": "alarmer",
+   "box": [
+    351,
+    580,
+    429,
+    606
+   ],
+   "text_box": [
+    355,
+    584,
+    425,
+    602
+   ]
+  },
+  "fr_abstenir_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_abstenir_verb",
+   "text": "s'abstenir (de)",
+   "box": [
+    998,
+    633,
+    1152,
+    659
+   ],
+   "text_box": [
+    1002,
+    637,
+    1148,
+    655
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Selliers →",
+   "box": [
+    800,
+    480,
+    940,
+    600
+   ],
+   "text_box": [
+    806,
+    486,
+    934,
+    594
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Ruelle des Houppettes",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue du Réveille-Matin",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_egrener_verb",
+   "lemma": "égrener",
+   "gloss": "to shell, pod; to gin",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 1,
+   "box": [
+    77,
+    110,
+    225,
+    294
+   ],
+   "label_xy": [
+    151,
+    282
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_rider_verb",
+   "lemma": "rider",
+   "gloss": "to wrinkle; to ripple",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 2,
+   "box": [
+    228,
+    104,
+    412,
+    226
+   ],
+   "label_xy": [
+    320,
+    214
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_outrer_verb",
+   "lemma": "outrer",
+   "gloss": "to exaggerate; to outrage",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 3,
+   "box": [
+    425,
+    118,
+    640,
+    244
+   ],
+   "label_xy": [
+    532,
+    232
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_doucher_verb",
+   "lemma": "doucher",
+   "gloss": "to shower; to take a shower",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    77,
+    350,
+    262,
+    665
+   ],
+   "label_xy": [
+    169,
+    653
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se doucher",
+   "scene": "",
+   "mirror": "oval gilt mirror on the tiled wall"
+  },
+  {
+   "id": "fr_alarmer_verb",
+   "lemma": "alarmer",
+   "gloss": "to alarm",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    280,
+    382,
+    500,
+    612
+   ],
+   "label_xy": [
+    390,
+    600
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_abstenir_verb",
+   "lemma": "abstenir",
+   "gloss": "to abstain, to forbear",
+   "verb_group": 3,
+   "side": "right",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    950,
+    400,
+    1200,
+    665
+   ],
+   "label_xy": [
+    1075,
+    653
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'abstenir (de)",
+   "scene": "",
+   "mirror": "oval gilt mirror on the tiled wall"
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg018",
+   "box": [
+    800,
+    480,
+    940,
+    600
+   ],
+   "label": "Walk on to Rue des Selliers",
+   "name": "Rue des Selliers",
+   "sign": "Rue des Selliers →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg016",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Houppettes",
+   "name": "Ruelle des Houppettes",
+   "sign": "← Ruelle des Houppettes",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "balcony": 1,
+  "upper": 1,
+  "roof": 1,
+  "street": 3
+ }
 }
