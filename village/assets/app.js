@@ -19,6 +19,8 @@ var MAP={image:'assets/map/village.jpg',
 var $=function(s,e){return (e||document).querySelector(s)};
 (function(){ var st=document.createElement('style'); st.textContent=
  '.abcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px;margin:6px 0 12px}'+
+ '.abcgrid.numgrid{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}.numgrid .abcl span{font-size:.8em;text-align:center;overflow-wrap:anywhere}'+
+ '.numnotes{margin:6px 0 0;padding-left:1.2em}.numnotes li{margin:0 0 8px}.numnotes .nx{display:inline-block;margin:3px 8px 0 0;padding:1px 6px;border-radius:6px;background:#fff8e6;border:1px solid #d9c4a0;font-size:.9em}'+
  '.abcl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:58px;padding:4px 2px;border:2px solid #6b4a2b;border-radius:8px;background:#fff8e6;font:inherit;color:#3c2414;cursor:pointer}'+
  '.abcl:nth-child(4n+2){background:#e6f4ff}.abcl:nth-child(4n+3){background:#eaf7e4}.abcl:nth-child(4n){background:#ffeaea}'+
  '.abcl b{font-size:1.45em;line-height:1.1}.abcl span{font-size:.85em}.abcl:hover,.abcl:focus-visible{outline:3px solid #e0a030;outline-offset:1px}'+
@@ -206,6 +208,13 @@ function openCard(it,from){
     h+='</div><h3>Les accents</h3><div class="abcacc">';
     it.alphabet.accents.forEach(function(x){ h+='<div class="acc"><b>'+esc(x.chars)+'</b><span class="an">'+esc(x.name)+(sp?' <button class="say" data-say="'+esc(x.name)+'" aria-label="Listen: '+esc(x.name)+'">🔊</button>':'')+'</span><span class="ae">'+esc(x.ex)+'</span></div>' });
     h+='</div></div>';
+  }
+  if(it.numbers){
+    h+='<div class="sec abc nums"><h3>Les nombres</h3><p class="small">Tap a number to hear it in French.</p><div class="abcgrid numgrid">';
+    it.numbers.items.forEach(function(x){ h+='<button class="abcl" '+(sp?'data-say="'+esc(x.word)+'" ':'')+'aria-label="'+esc(x.n)+': '+esc(x.word)+'"><b>'+esc(x.n)+'</b><span>'+esc(x.word)+'</span></button>' });
+    h+='</div><h3>How French numbers work</h3><ul class="numnotes">';
+    it.numbers.notes.forEach(function(x){ h+='<li><b>'+esc(x.t)+'</b> \u2014 '+esc(x.d)+'<br>'; (x.ex||[]).forEach(function(e){ h+='<span class="nx">'+esc(e.n)+' = '+esc(e.word)+(sp?' <button class="say" data-say="'+esc(e.word)+'" aria-label="Listen: '+esc(e.word)+'">🔊</button>':'')+'</span>' }); h+='</li>' });
+    h+='</ul></div>';
   }
   if(it.verb&&it.tenses){
     var cur=it.tenses.some(function(t){return t.key===curTense})?curTense:'present';
