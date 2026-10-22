@@ -2,80 +2,27 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 640,
+ "divider_x": 700,
  "kind": "room",
- "note": "Laundry and utility room at the back of the ground floor. Feminine left (dust butler, mud pig, sneezing powder poodle, old pipe with chick on the shelf, well away from the children, Cinderella's ash, dirty dog, overflowing laundry foam), masculine right (housekeeper's rag, housework mum, bucket boy, ballet broom, whisking girl, vacuum cleaner, toy-net cleaning). Glass back door to the garden; inner door to the kitchen; zoom on the washing corner.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "La buanderie",
-   "box": [
-    516,
-    23,
-    758,
-    97
-   ],
-   "text_box": [
-    531,
-    31,
-    743,
-    89
-   ]
-  }
- },
+ "note": "La buanderie (s02maison repaint 2026-10-22): laundry room in the NW corner of the ground floor (plan), camera facing north. Blue-grey walls, red-and-cream chequered tiles, white sheets on lines; LANDMARK the big copper laundry boiler on its brick base (left). Left (west) wall: glass door open onto the garden (R_garden). Back wall: window onto the trees, washing machine corner (zoom z1). Right (east) wall: open door to the Delft-tiled kitchen (R_kitchen_01) and the broom cupboard with broom, bucket and a COMPLETE upright vacuum cleaner (zoom z2). Feminine words in the left two-thirds: young woman Cinderella sweeping ash from the boiler firebox (cendre), blank framed plaque for la pipe (museum_text: no pipe painted anywhere; staged display change), butler in a dust cloud at the old armchair (poussière), pig jumping out of a mud tub (boue), poodle sneezing in spilt powder (poudre), muddy spaniel shaking dirt and sand off its coat in the left foreground (saleté). Masculine words on the right: mother with feather duster and mop (ménage), adult maid whisking suds (fouet), girl netting toys off the rag rug (nettoyage). No child near any adult item (there are none).",
+ "text_areas": {},
  "items": [
   {
-   "id": "fr_poussiere_noun",
-   "lemma": "poussière",
+   "id": "fr_cendre_noun",
+   "lemma": "cendre",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la poussière",
+   "label": "la cendre",
    "box": [
-    8,
-    70,
-    234,
-    295
+    94,
+    290,
+    340,
+    494
    ],
    "label_xy": [
-    121,
-    285
-   ]
-  },
-  {
-   "id": "fr_boue_noun",
-   "lemma": "boue",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la boue",
-   "box": [
-    242,
-    258,
-    414,
-    414
-   ],
-   "label_xy": [
-    328,
-    404
-   ]
-  },
-  {
-   "id": "fr_poudre_noun",
-   "lemma": "poudre",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la poudre",
-   "box": [
-    430,
-    273,
-    602,
-    454
-   ],
-   "label_xy": [
-    516,
-    444
+    217,
+    486
    ]
   },
   {
@@ -86,32 +33,68 @@
    "side": "left",
    "label": "la pipe",
    "box": [
-    437,
-    100,
-    602,
-    211
+    281,
+    185,
+    341,
+    240
    ],
    "label_xy": [
-    520,
-    201
+    311,
+    232
    ]
   },
   {
-   "id": "fr_cendre_noun",
-   "lemma": "cendre",
+   "id": "fr_poussiere_noun",
+   "lemma": "poussière",
    "article": "la",
    "gender": "f",
    "side": "left",
-   "label": "la cendre",
+   "label": "la poussière",
    "box": [
-    8,
-    297,
-    240,
-    640
+    344,
+    125,
+    625,
+    420
    ],
    "label_xy": [
-    124,
-    630
+    484,
+    412
+   ]
+  },
+  {
+   "id": "fr_boue_noun",
+   "lemma": "boue",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la boue",
+   "box": [
+    356,
+    425,
+    575,
+    662
+   ],
+   "label_xy": [
+    466,
+    654
+   ]
+  },
+  {
+   "id": "fr_poudre_noun",
+   "lemma": "poudre",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la poudre",
+   "box": [
+    600,
+    450,
+    762,
+    644
+   ],
+   "label_xy": [
+    681,
+    636
    ]
   },
   {
@@ -122,50 +105,14 @@
    "side": "left",
    "label": "la saleté",
    "box": [
-    250,
-    469,
+    125,
+    498,
     350,
-    672
+    662
    ],
    "label_xy": [
-    300,
-    660
-   ]
-  },
-  {
-   "id": "fr_lessive_noun",
-   "lemma": "lessive",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la lessive",
-   "box": [
-    352,
-    456,
-    516,
-    664
-   ],
-   "label_xy": [
-    434,
-    652
-   ]
-  },
-  {
-   "id": "fr_chiffon_noun",
-   "lemma": "chiffon",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le chiffon",
-   "box": [
-    604,
-    100,
-    718,
-    404
-   ],
-   "label_xy": [
-    661,
-    394
+    238,
+    654
    ]
   },
   {
@@ -176,50 +123,14 @@
    "side": "right",
    "label": "le ménage",
    "box": [
-    720,
-    117,
-    865,
-    404
+    718,
+    131,
+    896,
+    446
    ],
    "label_xy": [
-    792,
-    394
-   ]
-  },
-  {
-   "id": "fr_seau_noun",
-   "lemma": "seau",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le seau",
-   "box": [
-    867,
-    219,
-    1068,
-    404
-   ],
-   "label_xy": [
-    968,
-    394
-   ]
-  },
-  {
-   "id": "fr_balai_noun",
-   "lemma": "balai",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le balai",
-   "box": [
-    1070,
-    94,
-    1270,
-    437
-   ],
-   "label_xy": [
-    1170,
-    427
+    807,
+    438
    ]
   },
   {
@@ -230,32 +141,14 @@
    "side": "right",
    "label": "le fouet",
    "box": [
-    656,
-    406,
-    891,
-    656
+    925,
+    194,
+    1120,
+    415
    ],
    "label_xy": [
-    774,
-    646
-   ]
-  },
-  {
-   "id": "fr_aspirateur_noun",
-   "lemma": "aspirateur",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'aspirateur",
-   "box": [
-    960,
-    440,
-    1060,
-    560
-   ],
-   "label_xy": [
-    1010,
-    550
+    1022,
+    407
    ]
   },
   {
@@ -266,47 +159,59 @@
    "side": "right",
    "label": "le nettoyage",
    "box": [
-    1062,
-    440,
-    1270,
-    690
+    944,
+    420,
+    1175,
+    662
    ],
    "label_xy": [
-    1166,
-    678
+    1060,
+    654
    ]
   }
  ],
- "zoom_from": {
-  "room_id": "R_laundry_01_z1",
-  "box": [
-   520,
-   215,
-   600,
-   265
-  ],
-  "label": "Look closer at the washing corner"
- },
+ "zoom_from": [
+  {
+   "room_id": "R_laundry_01_z1",
+   "box": [
+    632,
+    290,
+    714,
+    430
+   ],
+   "label": "Look closer at the washing machine"
+  },
+  {
+   "room_id": "R_laundry_01_z2",
+   "box": [
+    1124,
+    70,
+    1203,
+    330
+   ],
+   "label": "Open the broom cupboard"
+  }
+ ],
  "links": [
   {
    "target": "R_garden",
    "box": [
-    258,
-    31,
-    383,
-    250
+    80,
+    60,
+    270,
+    290
    ],
-   "label": "Glass back door to the garden",
+   "label": "Glass door to the garden",
    "name": "Le jardin",
    "kind": "door"
   },
   {
    "target": "R_kitchen_01",
    "box": [
-    891,
-    31,
-    1031,
-    180
+    900,
+    60,
+    1040,
+    190
    ],
    "label": "Door to the kitchen",
    "name": "La cuisine",

@@ -1,0 +1,50 @@
+{
+ "kind": "building",
+ "note": "B21 Aéroport exterior, seen from the top end of the Boulevard des Départs (poplars). White terminal with a paper-aeroplane roof, control tower and windsock on the right, small plane on the grass left. Open glass doors -> R_airport; the paved path back down the boulevard -> ST_movement_seg010 (last place of Boulevard des Départs; street not built by this track). Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "building_name",
+   "text": "Aéroport",
+   "box": [
+    528,
+    312,
+    766,
+    346
+   ],
+   "text_box": [
+    540,
+    316,
+    754,
+    342
+   ]
+  }
+ },
+ "items": [],
+ "links": [
+  {
+   "target": "R_airport",
+   "box": [
+    572,
+    384,
+    748,
+    512
+   ],
+   "label": "In through the terminal doors",
+   "name": "Le terminal",
+   "kind": "door"
+  },
+  {
+   "target": "ST_movement_seg010",
+   "box": [
+    240,
+    636,
+    1040,
+    676
+   ],
+   "label": "Back down the Boulevard des Départs",
+   "name": "Boulevard des Départs",
+   "kind": "path"
+  }
+ ],
+ "boxes_estimated": false
+}

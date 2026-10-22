@@ -1,0 +1,106 @@
+{
+ "kind": "room",
+ "divider_x": 600,
+ "note": "Hôtel des Voyageurs rooftop terrace (top floor, reached only by the interior stairs), view east over the roofs to the harbour. Landmark: the blue-and-white striped awning. Feminine LEFT: family with old suitcases and a trunk waving goodbye to the steamship in the harbour (émigration), sleepy gentleman strolling in blue flannel pyjamas (flânerie). Centre: innkeeper in an aubergine hat with a tray of lemonade (aubergiste, m/f). Masculine RIGHT: old pilgrim with staff, scallop-shell hat and gourd (pèlerinage, reverent), lass polishing a model of a gold-domed luxury seafront hotel (palace), duck swimming a long loop in the round pool (périple). Exits: stair kiosk door (near left) -> stairs down to R_hotel_02; turquoise arched door of the rooftop spa (far right) -> hammam R_hotel_03_z1. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le dernier étage",
+   "box": [
+    100,
+    396,
+    246,
+    424
+   ],
+   "text_box": [
+    104,
+    399,
+    242,
+    421
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_emigration_noun",
+   "box": [
+    248,
+    160,
+    442,
+    475
+   ]
+  },
+  {
+   "id": "fr_flanerie_noun",
+   "box": [
+    444,
+    365,
+    565,
+    648
+   ]
+  },
+  {
+   "id": "fr_aubergiste_noun",
+   "box": [
+    577,
+    200,
+    702,
+    494
+   ]
+  },
+  {
+   "id": "fr_pelerinage_noun",
+   "box": [
+    722,
+    319,
+    866,
+    588
+   ]
+  },
+  {
+   "id": "fr_palace_noun",
+   "box": [
+    868,
+    272,
+    1112,
+    506
+   ]
+  },
+  {
+   "id": "fr_periple_noun",
+   "box": [
+    925,
+    538,
+    1162,
+    662
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hotel_02",
+   "box": [
+    112,
+    428,
+    238,
+    631
+   ],
+   "label": "Down the stairs to the first-floor lounge",
+   "name": "Le salon du premier",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_hotel_03_z1",
+   "box": [
+    1144,
+    319,
+    1262,
+    525
+   ],
+   "label": "Into the rooftop hammam",
+   "name": "Le hammam",
+   "kind": "door"
+  }
+ ],
+ "boxes_estimated": false
+}

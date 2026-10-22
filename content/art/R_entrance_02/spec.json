@@ -1,177 +1,97 @@
 {
- "divider_x": 768,
+ "divider_x": 520,
  "kind": "room",
- "note": "Vaulted corridor off the vestibule. Feminine left (girl with a giant heraldic key, pony-head door handle, girl painting a sad face on a cardboard house front, roaring lion lock, straw structure, girl architect with her model arch, little king leaning on the inner wall, gymnast vaulting under the vault, cat on the high castle wall, lady laying a model tower's foundation by a tiny fountain), masculine right (man phoning the ceiling from his ladder, man with an ice-cream cone on the balcony, owl across the hall, tap dancer on the ground floor, man nailing a floor plank, tower of dice, man running down the corridor to the golden door). Rarer words sit higher (wall, vault, foundation, ceiling, balcony). The stone archway at the left leads back to the vestibule.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "Le couloir voûté",
-   "box": [
-    592,
-    22,
-    724,
-    120
-   ],
-   "text_box": [
-    605,
-    40,
-    714,
-    105
-   ]
-  }
- },
+ "note": "Le couloir voûté (s02maison repaint 2026-10-22): the vaulted corridor (plan x 7-8, y 4-6) seen lengthwise facing north. Limestone ribbed vaults, white plaster walls, grey flags with a long runner, iron lanterns; LANDMARK the arched niche at the far end with a marble bust and model buildings (zoom z1). Left (west) wall: open door to the brick-and-chequer vestibule (R_entrance_04). Right (east) wall: open door to the deep-teal dining room with its chandelier (R_dining), a little stone balcony above it. Feminine left: girl holding up a giant golden key (clef), pony-head door handle (poignée), girl painting a sad face on a cardboard house front (façade), girl turning a key in the roaring lion lock of an oak chest (serrure). Masculine right: owl swooping under the vault (hall), man on a stepladder phoning the ceiling (plafond), man with an ice-cream cone on the balcony (balcon), man running towards the niche (corridor), tap dancer in a boater (rez-de-chaussée), man nailing a plank (plancher).",
+ "text_areas": {},
  "items": [
   {
    "id": "fr_clef_noun",
    "box": [
-    15,
-    225,
-    118,
-    595
+    77,
+    219,
+    238,
+    662
    ]
   },
   {
    "id": "fr_poignee_noun",
    "box": [
-    145,
-    268,
-    292,
-    466
+    256,
+    319,
+    312,
+    472
    ]
   },
   {
    "id": "fr_facade_noun",
    "box": [
-    294,
-    338,
-    460,
-    515
+    316,
+    231,
+    525,
+    416
    ]
   },
   {
    "id": "fr_serrure_noun",
    "box": [
-    290,
-    518,
-    495,
-    700
-   ]
-  },
-  {
-   "id": "fr_paroi_noun",
-   "box": [
-    120,
-    468,
-    285,
-    710
-   ]
-  },
-  {
-   "id": "fr_structure_noun",
-   "box": [
-    497,
-    418,
-    662,
-    662
-   ]
-  },
-  {
-   "id": "fr_architecture_noun",
-   "box": [
-    664,
-    405,
-    762,
-    655
-   ]
-  },
-  {
-   "id": "fr_voute_noun",
-   "box": [
-    365,
-    155,
-    518,
-    334
-   ]
-  },
-  {
-   "id": "fr_muraille_noun",
-   "box": [
-    215,
-    60,
-    363,
-    266
-   ]
-  },
-  {
-   "id": "fr_fondation_noun",
-   "box": [
-    522,
-    255,
-    722,
-    402
-   ]
-  },
-  {
-   "id": "fr_plafond_noun",
-   "box": [
-    728,
-    68,
-    892,
-    330
-   ]
-  },
-  {
-   "id": "fr_balcon_noun",
-   "box": [
-    1075,
-    60,
-    1232,
-    330
+    330,
+    420,
+    665,
+    644
    ]
   },
   {
    "id": "fr_hall_noun",
    "box": [
-    935,
-    128,
-    1072,
-    238
+    462,
+    44,
+    625,
+    194
    ]
   },
   {
-   "id": "fr_rez_de_chaussee_noun",
+   "id": "fr_plafond_noun",
    "box": [
-    790,
-    365,
-    936,
-    660
+    819,
+    44,
+    900,
+    288
    ]
   },
   {
-   "id": "fr_plancher_noun",
+   "id": "fr_balcon_noun",
    "box": [
-    938,
-    525,
-    1065,
-    668
-   ]
-  },
-  {
-   "id": "fr_edifice_noun",
-   "box": [
-    1068,
-    365,
-    1152,
-    662
+    969,
+    50,
+    1194,
+    225
    ]
   },
   {
    "id": "fr_corridor_noun",
    "box": [
-    1158,
-    380,
-    1268,
-    612
+    681,
+    325,
+    788,
+    538
+   ]
+  },
+  {
+   "id": "fr_rez_de_chaussee_noun",
+   "box": [
+    831,
+    312,
+    1013,
+    625
+   ]
+  },
+  {
+   "id": "fr_plancher_noun",
+   "box": [
+    1017,
+    475,
+    1203,
+    676
    ]
   }
  ],
@@ -179,14 +99,36 @@
   {
    "target": "R_entrance_04",
    "box": [
-    30,
+    88,
     90,
-    140,
-    222
+    250,
+    215
    ],
-   "label": "Archway back to the vestibule",
+   "label": "Door to the vestibule",
    "name": "Le vestibule",
    "kind": "door"
+  },
+  {
+   "target": "R_dining",
+   "box": [
+    1056,
+    250,
+    1195,
+    470
+   ],
+   "label": "Door to the dining room",
+   "name": "La salle à manger",
+   "kind": "door"
   }
- ]
+ ],
+ "zoom_from": {
+  "room_id": "R_entrance_02_z1",
+  "box": [
+   590,
+   262,
+   676,
+   416
+  ],
+  "label": "Look closer at the niche"
+ }
 }

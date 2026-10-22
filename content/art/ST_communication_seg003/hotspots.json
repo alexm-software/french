@@ -1,0 +1,356 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_communication_seg003",
+ "street_id": "ST_appels",
+ "theme_street_id": "ST_communication",
+ "sector_id": "S04_cafes",
+ "place_index": 3,
+ "place_count": 5,
+ "street_name": "Rue des Appels",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Déclarations",
+ "divider_x": 1210,
+ "note": "Rue des Appels place 3/5; landmark: striped radio tower with a big loudspeaker horn above a green newspaper kiosk. All six verbs are -er. The stingray (murmurer) sits on the kiosk roof under the radio tower (local edit: it no longer floats in the sky). Shrunk 0.92; cooled k 0.6. No -er/-ir markers, no painted text.",
+ "landmark": "striped radio tower with a big loudspeaker horn above a green newspaper kiosk",
+ "art_style": "retro storybook 3",
+ "text_areas": {
+  "fr_interroger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_interroger_verb",
+   "text": "interroger",
+   "box": [
+    178,
+    204,
+    284,
+    230
+   ],
+   "text_box": [
+    182,
+    208,
+    280,
+    226
+   ]
+  },
+  "fr_declarer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_declarer_verb",
+   "text": "se déclarer",
+   "box": [
+    192,
+    298,
+    308,
+    324
+   ],
+   "text_box": [
+    196,
+    302,
+    304,
+    320
+   ]
+  },
+  "fr_realiser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_realiser_verb",
+   "text": "réaliser",
+   "box": [
+    174,
+    637,
+    262,
+    663
+   ],
+   "text_box": [
+    178,
+    641,
+    258,
+    659
+   ]
+  },
+  "fr_adresser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_adresser_verb",
+   "text": "s'adresser",
+   "box": [
+    390,
+    612,
+    496,
+    638
+   ],
+   "text_box": [
+    394,
+    616,
+    492,
+    634
+   ]
+  },
+  "fr_murmurer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_murmurer_verb",
+   "text": "murmurer",
+   "box": [
+    871,
+    368,
+    959,
+    394
+   ],
+   "text_box": [
+    875,
+    372,
+    955,
+    390
+   ]
+  },
+  "fr_engager_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_engager_verb",
+   "text": "engager",
+   "box": [
+    1020,
+    593,
+    1098,
+    619
+   ],
+   "text_box": [
+    1024,
+    597,
+    1094,
+    615
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Rue des Écrivains →",
+   "box": [
+    600,
+    450,
+    760,
+    540
+   ],
+   "text_box": [
+    606,
+    456,
+    754,
+    534
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Passage des Panneaux",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue des Déclarations",
+   "box": [
+    540,
+    60,
+    740,
+    100
+   ],
+   "text_box": [
+    544,
+    64,
+    736,
+    96
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_interroger_verb",
+   "lemma": "interroger",
+   "gloss": "to question, interrogate",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    119,
+    81,
+    344,
+    236
+   ],
+   "label_xy": [
+    231,
+    224
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_declarer_verb",
+   "lemma": "déclarer",
+   "gloss": "to declare; to declare oneself",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    170,
+    240,
+    330,
+    330
+   ],
+   "label_xy": [
+    250,
+    318
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se déclarer",
+   "scene": "",
+   "mirror": "painted inside the box"
+  },
+  {
+   "id": "fr_realiser_verb",
+   "lemma": "réaliser",
+   "gloss": "to carry out; to make (a film)",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 3,
+   "box": [
+    81,
+    425,
+    356,
+    669
+   ],
+   "label_xy": [
+    218,
+    657
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_adresser_verb",
+   "lemma": "adresser",
+   "gloss": "to address",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    375,
+    381,
+    512,
+    644
+   ],
+   "label_xy": [
+    443,
+    632
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "s'adresser",
+   "scene": "",
+   "mirror": "painted inside the box"
+  },
+  {
+   "id": "fr_murmurer_verb",
+   "lemma": "murmurer",
+   "gloss": "to murmur",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    855,
+    305,
+    975,
+    400
+   ],
+   "label_xy": [
+    915,
+    388
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_engager_verb",
+   "lemma": "engager",
+   "gloss": "to hire; to commit",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    950,
+    406,
+    1169,
+    625
+   ],
+   "label_xy": [
+    1059,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_communication_seg004",
+   "box": [
+    600,
+    450,
+    760,
+    540
+   ],
+   "label": "Walk on to Rue des Écrivains",
+   "name": "Rue des Écrivains",
+   "sign": "Rue des Écrivains →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_communication_seg002",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Passage des Panneaux",
+   "name": "Passage des Panneaux",
+   "sign": "← Passage des Panneaux",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 1,
+  "street": 4
+ }
+}

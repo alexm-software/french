@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "Ground-floor questions room: the question words. They have no gender, so no left/right rule (divider null). Grouped scene on a rug with a reading chair, a counting table and a hat stand. The white door on the left wall goes back to the articles room; the white door at the back right leads to the pronouns hall. Zoom: the little pale pupil's desk in the front right corner.",
+ "note": "Pale-peach questions room with a green carpet (cartoon style). Landmark: the giant detective's magnifying glass on its stand. Back row left to right: qui (man with a giant key), où (owl with binoculars), pourquoi (poor man with empty pockets), quoi (quacking duck); front row: comment (man puzzling over a booklet and a heap of parts), quel (diver comparing two strands of kelp), combien (woman combing beans), lequel (man pointing at the hats on the stand). Zoom: the little pupil's desk at the back left (la question). The open door at the back left goes out to the school yard; the green door on the right leads to the pronouns hall. Question words have no gender (divider null).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Les questions",
    "box": [
-    505,
-    88,
-    815,
-    155
+    422,
+    65,
+    834,
+    198
    ],
    "text_box": [
-    513,
-    96,
-    807,
-    147
+    434,
+    77,
+    822,
+    186
    ]
   }
  },
@@ -24,80 +24,80 @@
   {
    "id": "fr_qui_pron",
    "box": [
-    159,
-    118,
-    327,
-    525
+    233,
+    194,
+    362,
+    428
    ],
    "scene": "puzzled man holding up a giant iron key"
   },
   {
    "id": "fr_ou_adv",
    "box": [
-    330,
-    250,
-    392,
-    500
+    497,
+    209,
+    640,
+    421
    ],
    "scene": "owl on a stand peering through binoculars"
   },
   {
    "id": "fr_pourquoi_adv",
    "box": [
-    400,
-    160,
-    569,
-    432
+    680,
+    199,
+    842,
+    421
    ],
    "scene": "beggar in patched clothes shrugging with empty pockets"
   },
   {
    "id": "fr_quoi_pron",
    "box": [
-    429,
-    436,
-    565,
-    585
+    894,
+    278,
+    1004,
+    428
    ],
    "scene": "white duck quacking with its beak wide open"
   },
   {
    "id": "fr_comment_adv",
    "box": [
-    573,
-    275,
-    710,
-    585
+    186,
+    430,
+    402,
+    638
    ],
    "scene": "seated man scratching his head over an instruction booklet, a heap of parts on the rug"
   },
   {
    "id": "fr_quel_pron",
    "box": [
-    713,
-    200,
-    838,
-    479
+    419,
+    432,
+    604,
+    634
    ],
    "scene": "old-fashioned diver comparing two strands of kelp"
   },
   {
    "id": "fr_combien_adv",
    "box": [
-    841,
-    266,
-    955,
-    466
+    637,
+    424,
+    840,
+    661
    ],
    "scene": "woman counting beans with a comb at a little table"
   },
   {
    "id": "fr_lequel_pron",
    "box": [
-    958,
-    175,
-    1157,
-    467
+    902,
+    438,
+    1122,
+    649
    ],
    "scene": "man pointing at one of three hats on the hat stand beside him"
   }
@@ -106,37 +106,37 @@
   {
    "room_id": "R_grammar_verbs",
    "box": [
-    885,
-    470,
-    1106,
-    676
+    366,
+    258,
+    474,
+    385
    ],
-   "label": "the little pupil's desk in the corner"
+   "label": "the little pupil's desk"
   }
  ],
  "links": [
   {
-   "target": "R_articles",
+   "target": "B02_ecole",
    "box": [
-    66,
+    98,
     81,
-    156,
-    494
+    186,
+    385
    ],
-   "label": "Back through the white door to the articles room",
-   "name": "Les articles",
+   "label": "Out through the open door to the school yard",
+   "name": "Petite École",
    "kind": "door"
   },
   {
    "target": "R_pronouns_01",
    "box": [
-    1160,
-    121,
-    1212,
-    490
+    1126,
+    81,
+    1200,
+    394
    ],
-   "label": "Through the white door to the pronouns hall",
-   "name": "Les pronoms (1)",
+   "label": "Through the green door to the pronouns hall",
+   "name": "Les pronoms",
    "kind": "door"
   }
  ]

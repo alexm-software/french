@@ -1,162 +1,166 @@
 {
  "divider_x": 640,
  "kind": "room",
- "note": "First-floor room of the bigger numbers and ordinals. The two masculine nouns (le million, le quart) are on the right (lion, pie man); the numbers and ordinal adjectives have no gender. The open stairwell with its banister at the front left goes back down to the pronouns hall; the white door at the back right leads to the second pronouns room. Zoom: the long grey table at the back.",
+ "note": "Teal first-floor room of big numbers with a running-track floor (cartoon style). Landmark: the three-step sports podium (premier gold cup, deuxième silver, troisième bronze) with dernier, the last runner, darning his sock beside it. Front row: trente (boy with a long toy train), cinquante (sinking toy boat with a giant ant), cent (girl building a sandcastle surrounded by about a HUNDRED little sand buckets), mille (a meal of a thousand peas), le million (lion on a mound of gold coins, masculine, right). Zooms: the long grey table (tens 40-90, approximate numbers, milliard) and the pie counter (fractions). The doorway at the back left leads to the stairs down to the pronouns hall; the red door on the right leads to the second pronouns room.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les nombres (2)",
+   "text": "Les grands nombres",
    "box": [
-    594,
-    81,
-    838,
-    225
+    497,
+    89,
+    835,
+    219
    ],
    "text_box": [
-    604,
-    91,
-    828,
-    215
+    509,
+    101,
+    823,
+    207
    ]
   }
  },
  "items": [
   {
-   "id": "fr_deuxieme_adj",
-   "box": [
-    311,
-    160,
-    378,
-    388
-   ],
-   "scene": "runner with a medal on the second podium step"
-  },
-  {
    "id": "fr_premier_adj",
    "box": [
-    381,
-    47,
-    475,
-    432
+    258,
+    133,
+    341,
+    294
    ],
    "scene": "runner on the top podium step lifting a gold cup"
   },
   {
+   "id": "fr_deuxieme_adj",
+   "box": [
+    344,
+    112,
+    416,
+    274
+   ],
+   "scene": "runner with a medal on the second podium step",
+   "label_xy": [
+    380,
+    126
+   ]
+  },
+  {
    "id": "fr_troisieme_adj",
    "box": [
-    481,
-    156,
-    550,
-    432
+    420,
+    180,
+    492,
+    327
    ],
    "scene": "runner with a bronze medal on the third podium step"
   },
   {
    "id": "fr_dernier_adj",
    "box": [
-    554,
-    312,
-    738,
-    519
+    512,
+    258,
+    600,
+    368
    ],
    "scene": "weary runner sitting at the back darning his sock"
   },
   {
-   "id": "fr_mille_num",
-   "box": [
-    106,
-    340,
-    308,
-    612
-   ],
-   "scene": "man eating from a huge bowl of green peas"
-  },
-  {
    "id": "fr_trente_num",
    "box": [
-    359,
-    437,
-    548,
-    644
+    145,
+    422,
+    307,
+    596
    ],
    "scene": "boy playing with a long toy train"
   },
   {
-   "id": "fr_cent_num",
+   "id": "fr_cinquante_num",
    "box": [
-    748,
-    353,
-    975,
-    510
+    310,
+    373,
+    446,
+    483
    ],
-   "scene": "girl building a sand castle in a sandbox"
+   "scene": "basin with a sinking toy boat carrying a giant ant"
   },
   {
-   "id": "fr_quart_noun",
+   "id": "fr_cent_num",
    "box": [
-    885,
-    225,
-    1012,
-    350
+    448,
+    372,
+    812,
+    615
    ],
-   "scene": "seated man holding a pie with one quarter cut out"
+   "scene": "girl building a sandcastle in a sandbox surrounded by about a hundred little sand buckets in rows and a stacked pyramid"
+  },
+  {
+   "id": "fr_mille_num",
+   "box": [
+    816,
+    390,
+    944,
+    598
+   ],
+   "scene": "man eating from a huge bowl of green peas"
   },
   {
    "id": "fr_million_noun",
    "box": [
-    1025,
-    281,
-    1200,
-    585
+    948,
+    373,
+    1190,
+    618
    ],
    "scene": "lion sitting on a mound of gold coins"
-  },
-  {
-   "id": "fr_cinquante_num",
-   "box": [
-    710,
-    550,
-    925,
-    660
-   ],
-   "scene": "basin with a sinking toy boat carrying a giant ant"
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_numbers2_z1",
    "box": [
-    741,
-    318,
-    862,
-    350
+    647,
+    258,
+    808,
+    342
    ],
-   "label": "the long grey table at the back"
+   "label": "the long grey table (40 to 90 and round numbers)"
+  },
+  {
+   "room_id": "R_numbers2_z2",
+   "box": [
+    830,
+    261,
+    1030,
+    356
+   ],
+   "label": "the pie counter (fractions)"
   }
  ],
  "links": [
   {
    "target": "R_pronouns_01",
    "box": [
-    0,
-    380,
-    104,
-    552
+    140,
+    98,
+    240,
+    385
    ],
-   "label": "Down the open stairwell to the pronouns hall",
-   "name": "Les pronoms (1)",
+   "label": "Down the stairs to the pronouns hall",
+   "name": "Les pronoms",
    "kind": "stairs_down"
   },
   {
    "target": "R_pronouns_02",
    "box": [
-    1015,
-    148,
-    1078,
-    278
+    1055,
+    104,
+    1142,
+    371
    ],
-   "label": "Through the white door to the second pronouns room",
-   "name": "Les pronoms (2)",
+   "label": "Through the red door to the second pronouns room",
+   "name": "Pronoms (2)",
    "kind": "door"
   }
  ]

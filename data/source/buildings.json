@@ -373,15 +373,17 @@
    "type": "building",
    "sector_id": "S07_health",
    "rooms": [
+    "R_doctor_01_z2",
     "R_body_02",
     "R_body_01",
     "R_body_04",
     "R_doctor_01",
+    "R_body_03_z1",
     "R_body_03",
     "R_body_05",
     "R_doctor_02"
    ],
-   "mean_level": 3.46
+   "mean_level": 3.47
   },
   {
    "id": "B18_pharmacie",
@@ -1166,11 +1168,6 @@
    "architectural_theme": "Belle Époque theatres and kiosks with posters and loudspeaker horns",
    "rooms": [
     "ST_communication_seg006",
-    "ST_communication_seg001",
-    "ST_communication_seg002",
-    "ST_communication_seg003",
-    "ST_communication_seg004",
-    "ST_communication_seg005",
     "ST_communication_seg007",
     "ST_communication_seg008",
     "ST_communication_seg009",
@@ -1193,14 +1190,9 @@
     "ST_communication_seg026",
     "ST_communication_seg023"
    ],
-   "mean_level": 3.41,
+   "mean_level": 3.83,
    "segments": [
     "ST_communication_seg006",
-    "ST_communication_seg001",
-    "ST_communication_seg002",
-    "ST_communication_seg003",
-    "ST_communication_seg004",
-    "ST_communication_seg005",
     "ST_communication_seg007",
     "ST_communication_seg008",
     "ST_communication_seg009",
@@ -1223,28 +1215,8 @@
     "ST_communication_seg026",
     "ST_communication_seg023"
    ],
-   "verb_count": 162,
+   "verb_count": 132,
    "segment_street_names": {
-    "ST_communication_seg001": {
-     "name_fr": "Rue du Téléphone",
-     "name_en": "Telephone Street"
-    },
-    "ST_communication_seg002": {
-     "name_fr": "Passage des Panneaux",
-     "name_en": "Signposts Passage"
-    },
-    "ST_communication_seg003": {
-     "name_fr": "Rue des Déclarations",
-     "name_en": "Declarations Street"
-    },
-    "ST_communication_seg004": {
-     "name_fr": "Rue des Écrivains",
-     "name_en": "Writers' Street"
-    },
-    "ST_communication_seg005": {
-     "name_fr": "Place des Crieurs",
-     "name_en": "Town Criers' Square"
-    },
     "ST_communication_seg006": {
      "name_fr": "Allée des Conteurs",
      "name_en": "Storytellers' Alley"
@@ -1740,65 +1712,6 @@
      "name_en": "Overload Close"
     }
    }
-  },
-  {
-   "id": "ST_cooking",
-   "name": "Ruelle des Gourmets",
-   "type": "verb_street",
-   "sector_id": "S04_cafes",
-   "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
-   "architectural_theme": "Bistro façades shaped like teapots, cakes and copper pans",
-   "rooms": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg003",
-    "ST_cooking_seg006",
-    "ST_cooking_seg005",
-    "ST_cooking_seg004",
-    "ST_cooking_seg007",
-    "ST_cooking_seg002"
-   ],
-   "mean_level": 3.7,
-   "segments": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg003",
-    "ST_cooking_seg006",
-    "ST_cooking_seg005",
-    "ST_cooking_seg004",
-    "ST_cooking_seg007",
-    "ST_cooking_seg002"
-   ],
-   "verb_count": 61,
-   "segment_street_names": {
-    "ST_cooking_seg001": {
-     "name_fr": "Place du Grand-Festin",
-     "name_en": "Great-Feast Square"
-    },
-    "ST_cooking_seg002": {
-     "name_fr": "Allée du Pique-Nique",
-     "name_en": "Picnic Alley"
-    },
-    "ST_cooking_seg003": {
-     "name_fr": "Rue des Carafes",
-     "name_en": "Carafes Street"
-    },
-    "ST_cooking_seg004": {
-     "name_fr": "Ruelle des Épices",
-     "name_en": "Spice Lane"
-    },
-    "ST_cooking_seg005": {
-     "name_fr": "Chemin des Épluchures",
-     "name_en": "Peelings Lane"
-    },
-    "ST_cooking_seg006": {
-     "name_fr": "Rue des Sorbetières",
-     "name_en": "Ice-Cream Makers Street"
-    },
-    "ST_cooking_seg007": {
-     "name_fr": "Allée des Cuisiniers",
-     "name_en": "Cooks' Alley"
-    }
-   },
-   "name_fr": "Ruelle des Gourmets"
   },
   {
    "id": "ST_making",
@@ -3162,6 +3075,192 @@
     "ST_control_seg018": {
      "name_fr": "Ruelle des Goélands",
      "name_en": "Seagulls Lane"
+    }
+   }
+  },
+  {
+   "id": "ST_gourmets",
+   "name": "Ruelle des Gourmets",
+   "name_fr": "Ruelle des Gourmets",
+   "name_en": "Gourmets Lane",
+   "type": "verb_street",
+   "short_street": true,
+   "sector_id": "S04_cafes",
+   "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
+   "architectural_theme": "lane of café terraces — cartoony storybook 2.5 (keep the food-shaped houses); summer, neutral daylight (fix warm cast)",
+   "art_style": "cartoony storybook 2.5 (keep the food-shaped houses)",
+   "season": "summer, neutral daylight (fix warm cast)",
+   "street_type": "lane of café terraces",
+   "edge": "loop",
+   "start": "S04_cafes",
+   "end": "S03_market",
+   "end_room": null,
+   "end_note": "S03 Place du Marché",
+   "theme_street_id": "ST_cooking",
+   "theme_street_name": "Ruelle des Gourmets",
+   "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
+   "places": [
+    "ST_cooking_seg001",
+    "ST_cooking_seg002",
+    "ST_cooking_seg003"
+   ],
+   "place_count": 3,
+   "data_only_rooms": [],
+   "rooms": [
+    "ST_cooking_seg001",
+    "ST_cooking_seg002",
+    "ST_cooking_seg003"
+   ],
+   "segments": [
+    "ST_cooking_seg001",
+    "ST_cooking_seg002",
+    "ST_cooking_seg003"
+   ],
+   "verb_count": 26,
+   "mean_level": 3.46,
+   "segment_street_names": {
+    "ST_cooking_seg001": {
+     "name_fr": "Place du Grand-Festin",
+     "name_en": "Great-Feast Square"
+    },
+    "ST_cooking_seg002": {
+     "name_fr": "Allée du Pique-Nique",
+     "name_en": "Picnic Alley"
+    },
+    "ST_cooking_seg003": {
+     "name_fr": "Rue des Carafes",
+     "name_en": "Carafes Street"
+    }
+   }
+  },
+  {
+   "id": "ST_fourneaux",
+   "name": "Impasse des Fourneaux",
+   "name_fr": "Impasse des Fourneaux",
+   "name_en": "Stoves Close",
+   "type": "verb_street",
+   "short_street": true,
+   "sector_id": "S04_cafes",
+   "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
+   "architectural_theme": "narrow alley with chimneys steaming — cartoony storybook 2.5 (same as S04); snowy winter (chill/freeze verbs)",
+   "art_style": "cartoony storybook 2.5 (same as S04)",
+   "season": "snowy winter (chill/freeze verbs)",
+   "street_type": "narrow alley with chimneys steaming",
+   "edge": "spur",
+   "start": "S04_cafes",
+   "end": "B09_restaurant",
+   "end_room": null,
+   "end_note": "B09 restaurant kitchen door",
+   "theme_street_id": "ST_cooking",
+   "theme_street_name": "Ruelle des Gourmets",
+   "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
+   "places": [
+    "ST_cooking_seg004",
+    "ST_cooking_seg005",
+    "ST_cooking_seg006",
+    "ST_cooking_seg007"
+   ],
+   "place_count": 4,
+   "data_only_rooms": [],
+   "rooms": [
+    "ST_cooking_seg004",
+    "ST_cooking_seg005",
+    "ST_cooking_seg006",
+    "ST_cooking_seg007"
+   ],
+   "segments": [
+    "ST_cooking_seg004",
+    "ST_cooking_seg005",
+    "ST_cooking_seg006",
+    "ST_cooking_seg007"
+   ],
+   "verb_count": 35,
+   "mean_level": 3.88,
+   "segment_street_names": {
+    "ST_cooking_seg004": {
+     "name_fr": "Ruelle des Épices",
+     "name_en": "Spice Lane"
+    },
+    "ST_cooking_seg005": {
+     "name_fr": "Chemin des Épluchures",
+     "name_en": "Peelings Lane"
+    },
+    "ST_cooking_seg006": {
+     "name_fr": "Rue des Sorbetières",
+     "name_en": "Ice-Cream Makers Street"
+    },
+    "ST_cooking_seg007": {
+     "name_fr": "Allée des Cuisiniers",
+     "name_en": "Cooks' Alley"
+    }
+   }
+  },
+  {
+   "id": "ST_appels",
+   "name": "Rue des Appels",
+   "name_fr": "Rue des Appels",
+   "name_en": "Calls Street",
+   "type": "verb_street",
+   "short_street": true,
+   "sector_id": "S04_cafes",
+   "meaning_group": "speak say tell ask answer call write read explain shout discuss communicate",
+   "architectural_theme": "street of telephone kiosks — retro storybook 3; summer",
+   "art_style": "retro storybook 3",
+   "season": "summer",
+   "street_type": "street of telephone kiosks",
+   "edge": "chord",
+   "start": "S04_cafes",
+   "end": "S14_culture",
+   "end_room": null,
+   "end_note": "S14 Boulevard des Loisirs",
+   "theme_street_id": "ST_communication",
+   "theme_street_name": "Rue de la Parole",
+   "theme_street_theme": "Belle Époque theatres and kiosks with posters and loudspeaker horns",
+   "places": [
+    "ST_communication_seg001",
+    "ST_communication_seg002",
+    "ST_communication_seg003",
+    "ST_communication_seg004",
+    "ST_communication_seg005"
+   ],
+   "place_count": 5,
+   "data_only_rooms": [],
+   "rooms": [
+    "ST_communication_seg001",
+    "ST_communication_seg002",
+    "ST_communication_seg003",
+    "ST_communication_seg004",
+    "ST_communication_seg005"
+   ],
+   "segments": [
+    "ST_communication_seg001",
+    "ST_communication_seg002",
+    "ST_communication_seg003",
+    "ST_communication_seg004",
+    "ST_communication_seg005"
+   ],
+   "verb_count": 30,
+   "mean_level": 1.53,
+   "segment_street_names": {
+    "ST_communication_seg001": {
+     "name_fr": "Rue du Téléphone",
+     "name_en": "Telephone Street"
+    },
+    "ST_communication_seg002": {
+     "name_fr": "Passage des Panneaux",
+     "name_en": "Signposts Passage"
+    },
+    "ST_communication_seg003": {
+     "name_fr": "Rue des Déclarations",
+     "name_en": "Declarations Street"
+    },
+    "ST_communication_seg004": {
+     "name_fr": "Rue des Écrivains",
+     "name_en": "Writers' Street"
+    },
+    "ST_communication_seg005": {
+     "name_fr": "Place des Crieurs",
+     "name_en": "Town Criers' Square"
     }
    }
   }

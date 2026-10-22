@@ -1,0 +1,162 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 600,
+ "kind": "room",
+ "note": "Hôtel des Voyageurs rooftop terrace (top floor, reached only by the interior stairs), view east over the roofs to the harbour. Landmark: the blue-and-white striped awning. Feminine LEFT: family with old suitcases and a trunk waving goodbye to the steamship in the harbour (émigration), sleepy gentleman strolling in blue flannel pyjamas (flânerie). Centre: innkeeper in an aubergine hat with a tray of lemonade (aubergiste, m/f). Masculine RIGHT: old pilgrim with staff, scallop-shell hat and gourd (pèlerinage, reverent), lass polishing a model of a gold-domed luxury seafront hotel (palace), duck swimming a long loop in the round pool (périple). Exits: stair kiosk door (near left) -> stairs down to R_hotel_02; turquoise arched door of the rooftop spa (far right) -> hammam R_hotel_03_z1. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le dernier étage",
+   "box": [
+    100,
+    396,
+    246,
+    424
+   ],
+   "text_box": [
+    104,
+    399,
+    242,
+    421
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_emigration_noun",
+   "lemma": "émigration",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'émigration",
+   "box": [
+    248,
+    160,
+    442,
+    475
+   ],
+   "label_xy": [
+    345,
+    465
+   ]
+  },
+  {
+   "id": "fr_flanerie_noun",
+   "lemma": "flânerie",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la flânerie",
+   "box": [
+    444,
+    365,
+    565,
+    648
+   ],
+   "label_xy": [
+    504,
+    638
+   ]
+  },
+  {
+   "id": "fr_aubergiste_noun",
+   "lemma": "aubergiste",
+   "article": "l'",
+   "gender": "mf",
+   "side": "center",
+   "label": "l'aubergiste",
+   "box": [
+    577,
+    200,
+    702,
+    494
+   ],
+   "label_xy": [
+    640,
+    484
+   ]
+  },
+  {
+   "id": "fr_pelerinage_noun",
+   "lemma": "pèlerinage",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le pèlerinage",
+   "box": [
+    722,
+    319,
+    866,
+    588
+   ],
+   "label_xy": [
+    794,
+    578
+   ]
+  },
+  {
+   "id": "fr_palace_noun",
+   "lemma": "palace",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le palace",
+   "box": [
+    868,
+    272,
+    1112,
+    506
+   ],
+   "label_xy": [
+    990,
+    496
+   ]
+  },
+  {
+   "id": "fr_periple_noun",
+   "lemma": "périple",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le périple",
+   "box": [
+    925,
+    538,
+    1162,
+    662
+   ],
+   "label_xy": [
+    1044,
+    652
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hotel_02",
+   "box": [
+    112,
+    428,
+    238,
+    631
+   ],
+   "label": "Down the stairs to the first-floor lounge",
+   "name": "Le salon du premier",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_hotel_03_z1",
+   "box": [
+    1144,
+    319,
+    1262,
+    525
+   ],
+   "label": "Into the rooftop hammam",
+   "name": "Le hammam",
+   "kind": "door"
+  }
+ ]
+}

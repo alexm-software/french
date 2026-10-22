@@ -1,0 +1,198 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 750,
+ "kind": "room",
+ "note": "The wide wooden jetty at the far end of the harbour, low camera on the planks; landmark: the towering coral-and-white cruise ship along the left with its escalator gangway (repainted so it no longer looks like R_harbour_01; gate 13). Feminine LEFT: passengers riding the escalator gangway down at the stopover (escale), otter in sunglasses on a deckchair on the jetty (jetée), anchor going down from the blue boat with a crab riding it (ancre); maritime (adj): four otters rowing past the signal-flag mast. Masculine RIGHT: seal clapping on the planks (phoque), newcomer with suitcase handed flowers (arrivant), penguin navigator with map at a ship's wheel (navigateur). Exception: the container ship (la container, f) sits on the horizon far right, the only open sea in view. Exits: fingerpost near left -> R_harbour_01; stone steps right -> the cove R_harbour_02_z1. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La jetée",
+   "box": [
+    1000,
+    96,
+    1180,
+    132
+   ],
+   "text_box": [
+    1004,
+    99,
+    1176,
+    129
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_escale_noun",
+   "lemma": "escale",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'escale",
+   "box": [
+    200,
+    82,
+    474,
+    318
+   ],
+   "label_xy": [
+    337,
+    308
+   ]
+  },
+  {
+   "id": "fr_jetee_noun",
+   "lemma": "jetée",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la jetée",
+   "box": [
+    240,
+    382,
+    482,
+    626
+   ],
+   "label_xy": [
+    361,
+    616
+   ]
+  },
+  {
+   "id": "fr_ancre_noun",
+   "lemma": "ancre",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'ancre",
+   "box": [
+    538,
+    372,
+    616,
+    500
+   ],
+   "label_xy": [
+    577,
+    490
+   ]
+  },
+  {
+   "id": "fr_maritime_adj",
+   "lemma": "maritime",
+   "article": "",
+   "gender": null,
+   "side": "center",
+   "label": "maritime",
+   "box": [
+    600,
+    88,
+    856,
+    366
+   ],
+   "label_xy": [
+    728,
+    356
+   ]
+  },
+  {
+   "id": "fr_container_noun",
+   "lemma": "container",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la container",
+   "box": [
+    998,
+    180,
+    1086,
+    246
+   ],
+   "label_xy": [
+    1042,
+    236
+   ]
+  },
+  {
+   "id": "fr_phoque_noun",
+   "lemma": "phoque",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le phoque",
+   "box": [
+    766,
+    375,
+    856,
+    538
+   ],
+   "label_xy": [
+    811,
+    528
+   ]
+  },
+  {
+   "id": "fr_arrivant_noun",
+   "lemma": "arrivant",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'arrivant",
+   "box": [
+    860,
+    204,
+    966,
+    476
+   ],
+   "label_xy": [
+    913,
+    466
+   ]
+  },
+  {
+   "id": "fr_navigateur_noun",
+   "lemma": "navigateur",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le navigateur",
+   "box": [
+    968,
+    272,
+    1056,
+    470
+   ],
+   "label_xy": [
+    1012,
+    460
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_harbour_01",
+   "box": [
+    110,
+    300,
+    196,
+    500
+   ],
+   "label": "Back along the jetty to the harbour",
+   "name": "Le port de pêche",
+   "kind": "path"
+  },
+  {
+   "target": "R_harbour_02_z1",
+   "box": [
+    962,
+    494,
+    1156,
+    656
+   ],
+   "label": "Down the steps to the cove",
+   "name": "La crique",
+   "kind": "stairs_down"
+  }
+ ]
+}

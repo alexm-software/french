@@ -45,22 +45,32 @@ S04_BACK = {
     "S04_cafes": MAP,
     "B08_cafe": "S04_cafes",
     "B09_restaurant": "S04_cafes",
-    "ST_cooking": "S04_cafes",
+    "ST_gourmets": "S04_cafes",
+    "ST_fourneaux": "S04_cafes",
+    "ST_appels": "S04_cafes",
     "R_cafe_01": "B08_cafe",
+    "R_cafe_01_z1": "R_cafe_01",
     "R_cafe_02": "B08_cafe",
     "R_resto_kitchen_01": "B09_restaurant",
+    "R_resto_kitchen_01_z1": "R_resto_kitchen_01",
     "R_resto_kitchen_02": "B09_restaurant",
     "R_resto_room": "B09_restaurant",
     "R_wine_01": "B09_restaurant",
     "R_resto_room_z1": "R_resto_room",
     "R_wine_01_z1": "R_wine_01",
-    "ST_cooking_seg001": "ST_cooking",
-    "ST_cooking_seg002": "ST_cooking",
-    "ST_cooking_seg003": "ST_cooking",
-    "ST_cooking_seg004": "ST_cooking",
-    "ST_cooking_seg005": "ST_cooking",
-    "ST_cooking_seg006": "ST_cooking",
-    "ST_cooking_seg007": "ST_cooking",
+    "R_wine_01_z2": "R_wine_01",
+    "ST_cooking_seg001": "ST_gourmets",
+    "ST_cooking_seg002": "ST_gourmets",
+    "ST_cooking_seg003": "ST_gourmets",
+    "ST_cooking_seg004": "ST_fourneaux",
+    "ST_cooking_seg005": "ST_fourneaux",
+    "ST_cooking_seg006": "ST_fourneaux",
+    "ST_cooking_seg007": "ST_fourneaux",
+    "ST_communication_seg001": "ST_appels",
+    "ST_communication_seg002": "ST_appels",
+    "ST_communication_seg003": "ST_appels",
+    "ST_communication_seg004": "ST_appels",
+    "ST_communication_seg005": "ST_appels",
 }
 
 
@@ -101,7 +111,7 @@ def assert_s04_explicit(hierarchy, sectors, buildings, rooms):
             assert node, f"{view} stops at {seen[-1]} before the village map"
     painted = load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json")
     assert painted["exits"]["back"]["target"] == "S04_sector"
-    assert S04_BACK["ST_cooking_seg001"] == "ST_cooking"
+    assert S04_BACK["ST_cooking_seg001"] == "ST_gourmets"
     for zoom_id in ("R_resto_room_z1", "R_wine_01_z1"):
         art = load(ROOT / "content" / "art" / zoom_id / "hotspots.json")
         assert not any(item.get("kind") == "zoom_back" for item in art.get("links") or []), zoom_id
@@ -185,15 +195,17 @@ def assert_wide_passages():
         items = scene["hotspots"]
         for key in ("forward", "back"):
             exit_item = scene["exits"][key]
-            # Head-on lanes can be a little under 15% of the width at the vanishing
-            # point (one far lane is 183px on a 1280-wide painting). The
-            # near cobbles are a box along the bottom edge, not a polygon.
+            # The far opening is a door at the end of the lane. The way back is a
+            # full-width strip of near cobbles.
             polygon = _exit_hit(exit_item)
             xs = [point[0] for point in polygon]
             ys = [point[1] for point in polygon]
             width = max(xs) - min(xs)
             height = max(ys) - min(ys)
-            assert width >= 180 and height >= 60, (segment, key, width, height)
+            if key == "forward":
+                assert min(width, height) >= 100, (segment, key, width, height)
+            else:
+                assert width >= 700 and height >= 30, (segment, key, width, height)
             box = exit_item["box"]
             center = ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
             assert _point_inside(center, polygon), (segment, key)
@@ -202,22 +214,26 @@ def assert_wide_passages():
                 item_center = ((item_box[0] + item_box[2]) / 2, (item_box[1] + item_box[3]) / 2)
                 assert not _point_inside(item_center, polygon), (segment, key, item["word_id"])
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
-    # The repainted arch is a narrow opening under its own board, not a wide polygon.
-    expected_signs = {
-        "B08_cafe": "cafe_name",
-        "B09_restaurant": "resto_name",
+    # Building doors are wide. The short-street mouths are narrower arches under their boards.
+    building_signs = {"B08_cafe": "cafe_name", "B09_restaurant": "resto_name"}
+    street_signs = {
         "ST_cooking_seg001": "lane_name",
+        "ST_cooking_seg004": "fourneaux_name",
+        "ST_communication_seg001": "appels_name",
     }
     by_target = {link["target"]: link for link in sector["links"]}
-    for target, sign_id in expected_signs.items():
+    for target, sign_id in {**building_signs, **street_signs}.items():
         link = by_target[target]
         assert link["signed_by"] == sign_id
         assert sector["text_areas"][sign_id]["text"]
         box = link["box"]
         width, height = box[2] - box[0], box[3] - box[1]
-        assert width >= 80 and height >= 180, (target, width, height)
+        if target in building_signs:
+            assert width >= 300 and height >= 170, (target, width, height)
+        else:
+            assert width >= 70 and height >= 120, (target, width, height)
     street = by_target["ST_cooking_seg001"]
-    assert street["name"] == "Place du Grand-Festin"
+    assert street["name"] == "Ruelle des Gourmets"
     room = normalize_scene(load(ROOT / "content" / "art" / "R_resto_room" / "hotspots.json"))
     door = next(link for link in room["links"] if link["kind"] == "door")
     arch = next(link for link in room["links"] if "rch" in link["label"].lower())
@@ -293,7 +309,8 @@ S03_WITHOUT_PAINTED_RETURN = [
     "R_abs_beauty_01_z1", "R_abs_beauty_02_z1", "R_abs_beauty_03_z1",
     "R_adj_state_02_z1", "R_adj_state_03_z1", "R_adj_state_04_z1", "R_adj_state_05_z1",
     "R_adv_degree_01_z1", "R_adv_degree_03_z1",
-    "R_bookshop_01_z1", "R_boutique_03_z1", "R_florist_z1",
+    "R_bookshop_01_z1", "R_bookshop_01_z2", "R_boutique_01_z1", "R_boutique_02_z1",
+    "R_boutique_03_z1", "R_boutique_03_z2", "R_florist_z1", "R_shop_general_01_z1",
     "R_grocery_01_z1", "R_hardware_01_z1", "R_hardware_02_z1",
     "R_shop_general_02_z1", "R_shop_general_03_z1", "R_shop_general_04_z1",
     "R_vegetables_z1",
@@ -303,7 +320,7 @@ S03_WITHOUT_PAINTED_RETURN = [
 def assert_market_square():
     """The repainted square names each door, and the brocante stays closed.
 
-    Nineteen market zooms have no painted path back to the square. Each one
+    Twenty-four market zooms have no painted path back to the square. Each one
     still belongs to S03, so the sector button is that path.
     """
     painted = normalize_scene(load(ROOT / "content" / "art" / "S03_sector" / "hotspots.json"))
@@ -495,7 +512,7 @@ def walk_site_graph():
     dead = sorted(nodes - can_leave)
     assert not orphans, f"orphans (map cannot reach): {orphans[:12]}"
     assert not dead, f"dead ends (cannot reach map): {dead[:12]}"
-    assert len(rooms) == 890, len(rooms)
+    assert len(rooms) == 915, len(rooms)
     # Close-ups hold 3–12 items. A mixed-gender shelf is the back wall, not a side wall.
     genders = {}
     with (source / "vocab.jsonl").open(encoding="utf-8") as handle:
@@ -538,7 +555,7 @@ def main():
     assert index["open_sectors"] == ["S01_beginner", "S02_home", "S03_market", "S04_cafes"], index["open_sectors"]
     site_rooms = sorted(load(ROOT / "content" / "site.json")["open_rooms"])
     assert index["open_rooms"] == site_rooms, index["open_rooms"]
-    assert len(site_rooms) == 180
+    assert len(site_rooms) == 200
     assert {"R_alphabet_01", "R_numbers2", "R_pronouns_03", "R_abs_quantity_01", "ST_commerce_seg001", "R_entrance_01", "R_bathroom"} <= set(site_rooms)
     assert index["featured"]["kind"] == "sector"
     assert index["featured"]["id"] == "S01_beginner"
@@ -553,13 +570,12 @@ def main():
     sector = load(DATA / "sectors" / "S04_cafes.json")
     assert sector["open"] is True
     ids = [building["id"] for building in sector["buildings"]]
-    assert ids == ["B08_cafe", "B09_restaurant", "ST_cooking"], ids
+    assert ids == ["B08_cafe", "B09_restaurant", "ST_gourmets", "ST_fourneaux", "ST_appels"], ids
     assert sector["scene"]["image"].endswith("art/S04_sector/base.jpg")
     assert sector["scene"]["sign_text"] == "Rue des Saveurs"
     assert sector["description_fr"].startswith("La terrasse")
     cooking = next(link for link in sector["scene"]["links"] if link["target"] == "ST_cooking_seg001")
-    assert cooking["name"] == "Place du Grand-Festin"
-    assert cooking["name_en"] == "Great-Feast Square"
+    assert cooking["name"] == "Ruelle des Gourmets"
     assert cooking["signed_by"] == "lane_name"
     scene_areas = sector["scene"]["text_areas"]
     assert scene_areas["cafe_name"]["text"] == "Café de la Place"
@@ -569,26 +585,32 @@ def main():
     assert sector["scene"]["links"][1]["signed_by"] == "resto_name"
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
-    assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
-    assert len(sector["alleys"]) == 7
-    assert [alley["id"] for alley in sector["alleys"]] == [f"ST_cooking_seg{i:03d}" for i in range(1, 8)]
+    assert link_targets == [
+        "B08_cafe", "B09_restaurant", "ST_cooking_seg001", "ST_cooking_seg004",
+        "ST_movement_seg001", "ST_communication_seg001",
+    ], link_targets
+    assert len(sector["alleys"]) == 12
+    assert [alley["id"] for alley in sector["alleys"]] == (
+        [f"ST_cooking_seg{i:03d}" for i in range(1, 8)]
+        + [f"ST_communication_seg{i:03d}" for i in range(1, 6)]
+    )
     assert sector["alleys"][0]["verbs"][0] == "manger"
     assert "nourrir" in sector["alleys"][0]["verbs"]
     assert "bannir" not in {verb for alley in sector["alleys"] for verb in alley["verbs"]}
 
-    street = next(building for building in sector["buildings"] if building["id"] == "ST_cooking")
-    segments = [room["id"] for room in street["floors"][0]["rooms"]]
-    assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 8)], segments
-    cooking_names = [
-        "Place du Grand-Festin",
-        "Allée du Pique-Nique",
-        "Rue des Carafes",
+    gourmets = next(building for building in sector["buildings"] if building["id"] == "ST_gourmets")
+    fourneaux = next(building for building in sector["buildings"] if building["id"] == "ST_fourneaux")
+    gourmets_names = ["Place du Grand-Festin", "Allée du Pique-Nique", "Rue des Carafes"]
+    fourneaux_names = [
         "Ruelle des Épices",
         "Chemin des Épluchures",
         "Rue des Sorbetières",
         "Allée des Cuisiniers",
     ]
-    assert [room["chip"] for room in street["floors"][0]["rooms"]] == cooking_names
+    assert [room["id"] for room in gourmets["floors"][0]["rooms"]] == [f"ST_cooking_seg{i:03d}" for i in range(1, 4)]
+    assert [room["chip"] for room in gourmets["floors"][0]["rooms"]] == gourmets_names
+    assert [room["id"] for room in fourneaux["floors"][0]["rooms"]] == [f"ST_cooking_seg{i:03d}" for i in range(4, 8)]
+    assert [room["chip"] for room in fourneaux["floors"][0]["rooms"]] == fourneaux_names
     assert "ST_cooking" not in sector["walk"]
     assert not any(room_id.startswith("ST_cooking") for room_id in sector["walk"])
 
@@ -653,8 +675,8 @@ def main():
     assert areas["dir_forward"]["role"] == "direction" and areas["dir_forward"]["text"] == "Allée du Pique-Nique →"
     assert areas["street_name"]["text"] == "Place du Grand-Festin"
     assert seg["scene"]["exits"]["forward"]["name"] == "Allée du Pique-Nique"
-    assert areas["dir_side_er"]["text"] == "-er"
-    assert areas["dir_side_irre"]["text"] == "-ir / -re"
+    assert areas["fr_manger_verb_sign"]["text"] == "manger"
+    assert areas["fr_nourrir_verb_sign"]["text"] == "nourrir"
     assert "fr_servir_verb_sign" not in areas
     raw_items = load(ROOT / "content" / "art" / "ST_cooking_seg001" / "hotspots.json")["items"]
     for item in raw_items:
@@ -683,9 +705,9 @@ def main():
     assert last["sign"] == "Allée des Cuisiniers"
     assert last["name_fr"] == "Allée des Cuisiniers"
     assert last["scene"]["layout"] == "tiered"
-    assert last["scene"]["exits"]["forward"]["target"] == "S04_sector"
+    assert last["scene"]["exits"]["forward"]["target"] == "B09_restaurant"
     assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg006"
-    assert [room["chip"] for room in last["floors"][0]["rooms"]] == cooking_names
+    assert [room["chip"] for room in last["floors"][0]["rooms"]] == fourneaux_names
     assert not any(hot.get("mirror") or hot.get("helper") for hot in last["scene"]["hotspots"])
     assert not (DATA / "rooms" / "ST_cooking_seg011.json").exists()
     assert (DATA / "rooms" / "ST_cooking_seg005.json").exists()
@@ -695,7 +717,7 @@ def main():
     cave = next(word for word in wine["words"] if word["lemma"] == "cave")
     assert cave["cognate_type"] == "false_cognate"
     assert cave["false_cognate_note"]
-    assert len(wine["words"]) == 14
+    assert len(wine["words"]) == 10
     assert all(word["lemma"] not in {"whisky", "rhum", "cognac", "cigare"} for word in wine["words"])
     assert all(word["painted"] for word in wine["words"])
     zoom_wine = load(DATA / "rooms" / "R_wine_01_z1.json")
@@ -711,7 +733,7 @@ def main():
     assert "plaque" not in load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json")["text_areas"]
 
     room_files = sorted(path.name for path in (DATA / "rooms").glob("*.json"))
-    assert len(room_files) == 195, len(room_files)
+    assert len(room_files) == 223, len(room_files)
     greet = load(DATA / "rooms" / "R_greet.json")
     assert greet["scene"]["image"].endswith("art/R_greet/base.jpg")
     assert all(hot.get("label_xy") for hot in greet["scene"]["hotspots"] if hot.get("word_id") and not hot.get("helper"))
@@ -730,9 +752,12 @@ def main():
     assert square["open"] is True
     assert square["scene"]["image"].endswith("art/S01_sector/base.jpg")
     soon = {link["target"] for link in square["scene"]["links"] if link.get("soon")}
-    assert soon == set(), soon
+    assert soon == {"ST_possession_seg001", "ST_social_seg004"}, soon
     open_doors = {link["target"] for link in square["scene"]["links"] if not link.get("soon")}
-    assert open_doors == {"B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs", "S02_sector", "S04_sector"}, open_doors
+    assert open_doors == {
+        "B01_fontaine", "B02_ecole", "B03_horloge", "B04_atelier_couleurs",
+        "S04_sector", "ST_control_seg004",
+    }, open_doors
     stairs = {
         ("R_colors_01", "R_shapes_03"): ("stairs_up", "stairs_down"),
         ("R_colors_02", "R_shapes_02"): ("stairs_up", "stairs_down"),
@@ -741,7 +766,7 @@ def main():
         ("R_pronouns_01", "R_numbers2"): ("stairs_up", "stairs_down"),
         ("R_conjunctions", "R_pronouns_03"): ("stairs_up", "stairs_down"),
         ("R_abs_quantity_03", "R_adv_degree_02"): ("stairs_up", "stairs_down"),
-        ("R_living", "R_bedroom_01"): ("stairs_up", "stairs_down"),
+        ("R_living", "R_bedroom_01"): ("stairs_up", "stairs"),
         ("R_bedroom_02", "R_attic"): ("stairs_up", "stairs_down"),
     }
     for (src, dest), (up_kind, down_kind) in stairs.items():
@@ -878,8 +903,14 @@ def main():
         assert "B05_maison" not in _scene_targets(built.get("scene"))
     for room_id in outside:
         links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
-        assert any(link["target"] == "S02_sector" for link in links), room_id
         assert all(link["target"] != "B05_maison" for link in links), room_id
+    for room_id in ("R_entrance_03", "R_garden", "R_pets"):
+        links = load(ROOT / "content" / "art" / room_id / "hotspots.json")["links"]
+        assert any(link["target"] == "S02_sector" for link in links), room_id
+    garage_links = load(ROOT / "content" / "art" / "R_garage" / "hotspots.json")["links"]
+    assert any(link["target"] == "R_garden" for link in garage_links)
+    kitchen_links = load(ROOT / "content" / "art" / "R_kitchen_01" / "hotspots.json")["links"]
+    assert any(link["target"] == "R_living" for link in kitchen_links)
     leaked = []
     for path in DATA.rglob("*.json"):
         for target in _scene_targets(load(path)):
@@ -961,10 +992,13 @@ def finish(quiz):
     assert street["exits"]["back"]["target"] == "S04_sector"
     assert street["exits"]["forward"]["target"] == "ST_cooking_seg002"
     assert street["links"] == []
-    assert street["text_areas"]["dir_side_er"]["role"] == "direction"
+    assert street["text_areas"]["fr_manger_verb_sign"]["role"] == "verb_sign"
     assert street["hotspots"][0]["tier"] in {"street", "balcony", "upper", "roof"}
     sector = normalize_scene(load(ROOT / "content" / "art" / "S04_sector" / "hotspots.json"))
-    assert [link["target"] for link in sector["links"]] == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"]
+    assert [link["target"] for link in sector["links"]] == [
+        "B08_cafe", "B09_restaurant", "ST_cooking_seg001", "ST_cooking_seg004",
+        "ST_movement_seg001", "ST_communication_seg001",
+    ]
     assert {link["kind"] for link in sector["links"]} == {"building", "street"}
     assert sector["exits"] == {}
     restaurant = normalize_scene(load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json"))
@@ -1055,13 +1089,70 @@ def finish(quiz):
     assert shown and hidden
     assert not set(shown) & set(hidden)
     assert all(item.get("status") == "premise_only" for item in source_conv if item["id"] in hidden)
-    assert len(source_conv) == 720
-    assert len(hidden) == 9
+    assert len(source_conv) == 722
+    assert len(hidden) == 11
     vocab = [json.loads(line) for line in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     coq = next(word for word in vocab if word["id"] == "fr_coq_noun")
     assert coq["mnemonic_hook"]["scene"] == 'A proud ROOSTER perches on a Coke bottle ("KOK") and crows at dawn.'
+    assert_walk_from_square()
     assert_paintings_fit()
     print("ok", len(quiz["items"]), "quiz items;", len(scene["hotspots"]), "church hotspots")
+
+
+def assert_walk_from_square():
+    """Every painted link resolves, and 238 art spaces can be walked from the square."""
+    from collections import deque
+
+    art_root = ROOT / "content" / "art"
+    rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    buildings = {building["id"]: building for building in load(ROOT / "data" / "source" / "buildings.json")["buildings"]}
+    sectors = {sector["id"]: sector for sector in load(ROOT / "data" / "source" / "sectors.json")["sectors"]}
+    art_ids = {path.parent.name for path in art_root.glob("*/hotspots.json")}
+    art_to_sector = {f"{sector_id.split('_')[0]}_sector": sector_id for sector_id in sectors}
+    sector_to_art = {sector_id: art_id for art_id, sector_id in art_to_sector.items()}
+    edges = {}
+    dead = []
+    for space in art_ids:
+        raw = load(art_root / space / "hotspots.json")
+        dests = []
+        painted = []
+        for item in raw.get("links") or []:
+            if isinstance(item, dict) and item.get("target"):
+                painted.append(item["target"])
+        for item in (raw.get("exits") or {}).values():
+            if isinstance(item, dict) and item.get("target"):
+                painted.append(item["target"])
+        for target in painted:
+            if target in art_ids or target in rooms or target in buildings or target in sectors or target in art_to_sector:
+                dests.append(target)
+            else:
+                dead.append(f"{space} -> {target}")
+        edges[space] = dests
+    assert not dead, dead[:8]
+    seen = set()
+    queue = deque(["S01_sector"])
+    while queue:
+        node = queue.popleft()
+        if node in seen:
+            continue
+        seen.add(node)
+        nxt = list(edges.get(node, []))
+        if node in sector_to_art:
+            nxt.extend(edges.get(sector_to_art[node], []))
+        if node in art_to_sector:
+            nxt.append(art_to_sector[node])
+        if node in buildings:
+            nxt.extend(buildings[node].get("rooms") or [])
+        if node in rooms:
+            nxt.extend(rooms[node].get("zoom_ids") or [])
+            parent = rooms[node].get("parent_room_id")
+            if parent:
+                nxt.append(parent)
+        for dest in nxt:
+            if dest not in seen:
+                queue.append(dest)
+    reached = [node for node in seen if node in art_ids]
+    assert len(reached) == 238, len(reached)
 
 
 def assert_paintings_fit():

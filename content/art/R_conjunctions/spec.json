@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "First-floor conjunctions room (et, mais, ou, quand, car, pourtant...). Conjunctions have no gender, so no left/right rule (divider null). The white door on the far left goes back to the second prepositions room; the narrow wooden staircase on the right climbs to the attic. Zoom: the pale pupil's desk in the middle.",
+ "note": "Music room of the conjunctions (cartoon style): lilac-grey walls, pale grey floor, rainbow ribbon maypole (landmark), upright piano under a cuckoo clock. et (pony eats hay and a carrot), mais (maypole dancer), comme (girl combs her hair like the cat licks its paw), que (cuckoo louder than the piano), ou (two cakes: this or that?), quand (tin-can telephone), ni (bandaged knee), car (toy car), pourtant (poor busker smiling anyway), sinon (cookie jar held up: tidy up, or else). Conjunctions have no gender (divider null). Lilac door back to the cloud playroom (left), staircase up to the attic (right), pupil's desk zoom in the middle.",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Les conjonctions",
    "box": [
-    335,
-    59,
-    557,
-    234
+    652,
+    50,
+    830,
+    176
    ],
    "text_box": [
-    345,
-    69,
-    547,
-    224
+    668,
+    64,
+    814,
+    162
    ]
   }
  },
@@ -24,138 +24,178 @@
   {
    "id": "fr_et_conj",
    "box": [
-    110,
-    327,
-    219,
-    597
+    178,
+    192,
+    446,
+    398
    ],
-   "scene": "boy holding a red apple in each hand"
+   "scene": "girl feeding the pony hay and a carrot",
+   "label_xy": [
+    300,
+    392
+   ]
   },
   {
    "id": "fr_mais_conj",
    "box": [
-    235,
-    269,
-    350,
-    560
+    470,
+    152,
+    592,
+    352
    ],
-   "scene": "girl holding a ribbon maypole"
+   "scene": "girl dancing round the maypole",
+   "label_xy": [
+    530,
+    344
+   ]
   },
   {
    "id": "fr_que_conj",
    "box": [
-    372,
-    244,
-    445,
-    460
+    832,
+    48,
+    1040,
+    318
    ],
-   "scene": "man coughing into his fist"
+   "scene": "cuckoo clock louder than the piano; boy covers his ears",
+   "label_xy": [
+    936,
+    312
+   ]
   },
   {
    "id": "fr_comme_conj",
    "box": [
-    450,
-    269,
-    556,
-    500
+    665,
+    200,
+    830,
+    358
    ],
-   "scene": "woman combing her hair next to a cat licking its fur"
+   "scene": "girl combing her hair like her cat licks its paw",
+   "label_xy": [
+    746,
+    352
+   ]
   },
   {
    "id": "fr_ou_conj",
    "box": [
-    647,
-    310,
-    752,
-    474
+    80,
+    400,
+    214,
+    630
    ],
-   "scene": "girl hesitating between two cakes on a little table"
+   "scene": "boy choosing between two cakes",
+   "label_xy": [
+    146,
+    618
+   ]
   },
   {
    "id": "fr_quand_conj",
    "box": [
-    756,
-    237,
-    856,
-    474
+    216,
+    408,
+    346,
+    628
    ],
-   "scene": "man checking his pocket watch"
+   "scene": "boy listening at a tin-can telephone",
+   "label_xy": [
+    282,
+    618
+   ]
   },
   {
    "id": "fr_ni_conj",
    "box": [
-    887,
-    294,
-    1015,
-    496
+    388,
+    404,
+    498,
+    654
    ],
-   "scene": "man pointing at his knee and shaking his head"
+   "scene": "boy pointing at his bandaged knee",
+   "label_xy": [
+    442,
+    644
+   ]
   },
   {
    "id": "fr_car_conj",
    "box": [
-    750,
-    477,
-    884,
-    640
+    514,
+    502,
+    742,
+    652
    ],
-   "scene": "boy pushing a little toy car"
+   "scene": "boy on his tummy playing with a toy car",
+   "label_xy": [
+    640,
+    644
+   ]
   },
   {
    "id": "fr_sinon_conj",
    "box": [
-    952,
-    500,
-    1037,
-    602
+    1000,
+    324,
+    1200,
+    656
    ],
-   "scene": "naughty little dog"
+   "scene": "mum holds the cookie jar out of reach until the toys are tidied",
+   "label_xy": [
+    1100,
+    646
+   ]
   },
   {
    "id": "fr_pourtant_adv",
    "box": [
-    1043,
-    402,
-    1200,
-    602
+    784,
+    360,
+    986,
+    632
    ],
-   "scene": "poor man in patched clothes smiling cheerfully"
+   "scene": "smiling poor busker with a sun tan and an empty hat",
+   "label_xy": [
+    880,
+    622
+   ]
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_conjunctions_z1",
    "box": [
-    560,
-    425,
-    643,
-    602
+    550,
+    372,
+    720,
+    498
    ],
-   "label": "the pale pupil's desk in the middle"
+   "label": "the little pupil's desk with its slate"
   }
  ],
  "links": [
   {
    "target": "R_prepositions_02",
    "box": [
-    80,
-    181,
-    227,
-    323
+    88,
+    52,
+    272,
+    188
    ],
-   "label": "Back through the white door to the second prepositions room",
+   "label": "Back through the lilac door to the cloud playroom (prepositions 2)",
    "name": "Les prépositions (2)",
    "kind": "door"
   },
   {
    "target": "R_pronouns_03",
    "box": [
-    1100,
-    290,
-    1206,
-    398
+    1088,
+    60,
+    1200,
+    318
    ],
-   "label": "Up the narrow wooden staircase to the attic",
+   "label": "Up the wooden staircase to the attic (pronouns 3)",
    "name": "Les pronoms (3)",
    "kind": "stairs_up"
   }

@@ -1,0 +1,133 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 780,
+ "kind": "zoom",
+ "parent_room_id": "R_hotel_02",
+ "note": "Breakfast room off the first-floor lounge (zone of R_hotel_02). Landmark: buffet with the tall blue-and-white porcelain stand. Feminine LEFT: duck chef pushing the silver buffet trolley (restauration), stork waiter tripping on the rug with the covered dish of tripe (tripe), swan checking her reservation card (réservation), fox maître d' at the podium welcoming guests (réception). Masculine RIGHT: moustached host bowing with a bowl of oats for the pony guest (hôte). Open double door (right) -> back to the lounge. Painted 2026-10-22.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La salle du petit-déjeuner",
+   "box": [
+    700,
+    66,
+    920,
+    104
+   ],
+   "text_box": [
+    704,
+    70,
+    916,
+    100
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_restauration_noun",
+   "lemma": "restauration",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la restauration",
+   "box": [
+    97,
+    185,
+    254,
+    644
+   ],
+   "label_xy": [
+    176,
+    634
+   ]
+  },
+  {
+   "id": "fr_tripe_noun",
+   "lemma": "tripe",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la tripe",
+   "box": [
+    256,
+    206,
+    470,
+    531
+   ],
+   "label_xy": [
+    363,
+    521
+   ]
+  },
+  {
+   "id": "fr_reservation_noun",
+   "lemma": "réservation",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la réservation",
+   "box": [
+    472,
+    225,
+    604,
+    462
+   ],
+   "label_xy": [
+    538,
+    452
+   ]
+  },
+  {
+   "id": "fr_reception_noun",
+   "lemma": "réception",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la réception",
+   "box": [
+    606,
+    160,
+    762,
+    438
+   ],
+   "label_xy": [
+    684,
+    428
+   ]
+  },
+  {
+   "id": "fr_hote_noun",
+   "lemma": "hôte",
+   "article": "l'",
+   "gender": "m",
+   "side": "right",
+   "label": "l'hôte",
+   "box": [
+    800,
+    206,
+    1156,
+    581
+   ],
+   "label_xy": [
+    978,
+    571
+   ]
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hotel_02",
+   "box": [
+    1158,
+    90,
+    1240,
+    440
+   ],
+   "label": "Back through the doors to the lounge",
+   "name": "Le salon du premier",
+   "kind": "door"
+  }
+ ]
+}

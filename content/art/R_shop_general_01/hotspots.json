@@ -2,24 +2,24 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 600,
+ "divider_x": null,
  "kind": "room",
- "note": "First shop of the covered arcade (general shop 1): prices, customers, shops and purchases. Feminine nouns to the left of x=600, masculine to the right (commercial, an adjective, sits on the left). The glazed door on the far left leads out to the forecourt and the square; the doorway on the far right leads on to the bookshop.",
+ "note": "First shop of the B07 Rue Commerçante covered arcade (same glass roof, honey limestone and dark oak shopfronts as the exterior arch): a general store with sage-green panelling and a black-and-white chequer floor under the glass skylight. LANDMARK: the giant ornate brass cash register on the long oak counter. The glazed door on the far left opens onto the cobbled arcade (way back out); the doorway on the far right shows the navy-blue bookshop (next shop). Feminine nouns on the left, masculine on the right; the adjective commercial sits mid-left. Zoom: the long oak counter (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les commerces (1)",
+   "text": "Le magasin",
    "box": [
-    270,
-    18,
-    520,
-    62
+    700,
+    98,
+    825,
+    135
    ],
    "text_box": [
-    276,
-    24,
-    514,
-    56
+    706,
+    104,
+    819,
+    129
    ]
   }
  },
@@ -33,15 +33,15 @@
    "label": "la queue",
    "box": [
     106,
-    300,
-    232,
-    612
+    398,
+    310,
+    650
    ],
    "label_xy": [
-    169,
-    602
+    208,
+    640
    ],
-   "scene": "cat with a very long tail curling across the floor"
+   "scene": "ginger cat whose very long tail (queue) curls in loops across the chequer floor"
   },
   {
    "id": "fr_valeur_noun",
@@ -51,16 +51,16 @@
    "side": "left",
    "label": "la valeur",
    "box": [
-    262,
-    206,
-    406,
-    400
+    269,
+    119,
+    506,
+    392
    ],
    "label_xy": [
-    334,
-    390
+    388,
+    382
    ],
-   "scene": "jeweller holding up a glowing pearl"
+   "scene": "Val angles a fishing rod whose LURE dangles a glowing pearl; two shoppers admire its value"
   },
   {
    "id": "fr_boutique_noun",
@@ -70,16 +70,16 @@
    "side": "left",
    "label": "la boutique",
    "box": [
-    244,
-    431,
-    412,
-    637
+    365,
+    422,
+    535,
+    625
    ],
    "label_xy": [
-    328,
-    627
+    450,
+    615
    ],
-   "scene": "mouse trying on a tiny boot"
+   "scene": "mouse on a footstool trying on one tiny BOOT, squeaking EEK at the price"
   },
   {
    "id": "fr_commercial_adj",
@@ -89,35 +89,16 @@
    "side": "center",
    "label": "commercial",
    "box": [
-    412,
-    188,
-    548,
-    346
+    660,
+    148,
+    855,
+    262
    ],
    "label_xy": [
-    480,
-    336
+    758,
+    252
    ],
-   "scene": "woman filming another who holds up a shiny can"
-  },
-  {
-   "id": "fr_inscription_noun",
-   "lemma": "inscription",
-   "article": "l'",
-   "gender": "f",
-   "side": "left",
-   "label": "l'inscription",
-   "box": [
-    419,
-    350,
-    548,
-    618
-   ],
-   "label_xy": [
-    484,
-    608
-   ],
-   "scene": "girl in a swimming cap and goggles signing up at a desk"
+   "scene": "Sal holds up a shiny can of beans to an old film camera: a commercial"
   },
   {
    "id": "fr_client_noun",
@@ -127,16 +108,16 @@
    "side": "right",
    "label": "le client",
    "box": [
-    552,
-    244,
-    690,
-    520
+    681,
+    269,
+    855,
+    550
    ],
    "label_xy": [
-    621,
-    510
+    768,
+    540
    ],
-   "scene": "customer polishing the counter while she waits"
+   "scene": "customer polishing the end of the counter CLEAN while she waits"
   },
   {
    "id": "fr_prix_noun",
@@ -146,16 +127,16 @@
    "side": "right",
    "label": "le prix",
    "box": [
-    694,
-    195,
-    770,
-    400
+    865,
+    131,
+    1050,
+    278
    ],
    "label_xy": [
-    732,
-    390
+    958,
+    268
    ],
-   "scene": "girl holding up a giant golden price tag"
+   "scene": "lady after a shopping SPREE holds up her prize, a giant golden price tag"
   },
   {
    "id": "fr_magasin_noun",
@@ -165,73 +146,16 @@
    "side": "right",
    "label": "le magasin",
    "box": [
-    644,
-    70,
-    819,
-    190
+    940,
+    282,
+    1078,
+    572
    ],
    "label_xy": [
-    732,
-    180
+    1009,
+    562
    ],
-   "scene": "shelves stacked with magazines"
-  },
-  {
-   "id": "fr_produit_noun",
-   "lemma": "produit",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le produit",
-   "box": [
-    774,
-    200,
-    925,
-    394
-   ],
-   "label_xy": [
-    850,
-    384
-   ],
-   "scene": "salesman unveiling a singing toaster"
-  },
-  {
-   "id": "fr_commerce_noun",
-   "lemma": "commerce",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le commerce",
-   "box": [
-    931,
-    212,
-    1034,
-    380
-   ],
-   "label_xy": [
-    982,
-    370
-   ],
-   "scene": "shopkeeper beckoning with both arms"
-  },
-  {
-   "id": "fr_echange_noun",
-   "lemma": "échange",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'échange",
-   "box": [
-    744,
-    406,
-    1019,
-    676
-   ],
-   "label_xy": [
-    882,
-    666
-   ],
-   "scene": "two boys swapping a bag of marbles for stickers"
+   "scene": "newsboy beside a tower of MAGAZINES taller than himself"
   },
   {
    "id": "fr_achat_noun",
@@ -241,41 +165,53 @@
    "side": "right",
    "label": "l'achat",
    "box": [
-    1038,
-    181,
-    1203,
-    619
+    1085,
+    319,
+    1202,
+    675
    ],
    "label_xy": [
-    1120,
-    609
+    1144,
+    665
    ],
-   "scene": "shah carrying a golden cat in a shopping bag"
+   "scene": "a SHAH cradles his purchase, a little golden cat"
+  }
+ ],
+ "zoom_from": [
+  {
+   "room_id": "R_shop_general_01_z1",
+   "box": [
+    512,
+    302,
+    656,
+    420
+   ],
+   "label": "the long oak counter"
   }
  ],
  "links": [
   {
    "target": "B07_rue_commercante",
    "box": [
-    31,
-    94,
-    100,
-    296
+    62,
+    25,
+    269,
+    395
    ],
-   "label": "Out through the glazed door to the arcade entrance",
-   "name": "Rue Commerçante (outside)",
+   "label": "Out through the glazed door to the arcade",
+   "name": "L’arcade",
    "kind": "door"
   },
   {
    "target": "R_bookshop_01",
    "box": [
-    1040,
-    25,
-    1215,
-    176
+    1088,
+    31,
+    1231,
+    312
    ],
-   "label": "Through the right doorway to the bookshop",
-   "name": "La librairie (1)",
+   "label": "Through the doorway into the bookshop",
+   "name": "La librairie",
    "kind": "door"
   }
  ]

@@ -2,47 +2,12 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 700,
+ "divider_x": 724,
  "kind": "zoom",
  "parent_room_id": "R_laundry_01",
- "note": "Close-up of the washing corner. Feminine left (pug's muddle, wall vent, draining hose, laundry witch), masculine right (raccoon's filter, toddler's washing, rag scarecrow, sponge ghost, dustman at the back door). zoom_back at bottom centre.",
- "text_areas": {
-  "sign": {
-   "role": "room_name",
-   "text": "Le coin lessive",
-   "box": [
-    62,
-    23,
-    359,
-    156
-   ],
-   "text_box": [
-    85,
-    45,
-    336,
-    135
-   ]
-  }
- },
+ "note": "La machine à laver (s02maison repaint 2026-10-22): close-up of the washing corner of R_laundry_01 (same blue-grey walls, chequered red-and-cream tiles, sheets on the line). Back window onto the back lane (dustman). Feminine left: friendly witch sending wet socks up to the line (buanderie), pug winking in suds and odd socks (pagaille), wall vent puffing fresh air (ventilation), foam pouring out of the machine as if through a sieve (lessive), drain hose emptying into the floor drain (vidange). Masculine right: raccoon feeling the lint filter (filtre), toddler washing a toy volcano in a bucket of suds (lavage), scarecrow in rags yawning in the basket (haillon), dustman tossing a bin bag into the lorry seen through the window (éboueur), little sheet ghost going BOO on the window sill (boudoir). No painted back link (gate 8): strip Back returns to the parent.",
+ "text_areas": {},
  "items": [
-  {
-   "id": "fr_pagaille_noun",
-   "lemma": "pagaille",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la pagaille",
-   "box": [
-    20,
-    360,
-    398,
-    690
-   ],
-   "label_xy": [
-    209,
-    678
-   ]
-  },
   {
    "id": "fr_buanderie_noun",
    "lemma": "buanderie",
@@ -51,14 +16,32 @@
    "side": "left",
    "label": "la buanderie",
    "box": [
-    23,
-    158,
-    516,
-    356
+    137,
+    75,
+    476,
+    470
    ],
    "label_xy": [
-    270,
-    346
+    306,
+    462
+   ]
+  },
+  {
+   "id": "fr_pagaille_noun",
+   "lemma": "pagaille",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la pagaille",
+   "box": [
+    100,
+    475,
+    450,
+    640
+   ],
+   "label_xy": [
+    275,
+    632
    ]
   },
   {
@@ -69,14 +52,32 @@
    "side": "left",
    "label": "la ventilation",
    "box": [
-    477,
-    16,
-    672,
-    139
+    569,
+    62,
+    656,
+    144
    ],
    "label_xy": [
-    574,
-    129
+    612,
+    136
+   ]
+  },
+  {
+   "id": "fr_lessive_noun",
+   "lemma": "lessive",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la lessive",
+   "box": [
+    480,
+    250,
+    640,
+    408
+   ],
+   "label_xy": [
+    560,
+    400
    ]
   },
   {
@@ -87,13 +88,13 @@
    "side": "left",
    "label": "la vidange",
    "box": [
-    445,
-    360,
-    670,
-    664
+    588,
+    412,
+    840,
+    662
    ],
    "label_xy": [
-    558,
+    714,
     654
    ]
   },
@@ -105,14 +106,14 @@
    "side": "right",
    "label": "le filtre",
    "box": [
-    672,
-    242,
-    906,
-    372
+    645,
+    231,
+    840,
+    400
    ],
    "label_xy": [
-    789,
-    362
+    742,
+    392
    ]
   },
   {
@@ -123,13 +124,31 @@
    "side": "right",
    "label": "le lavage",
    "box": [
-    773,
-    375,
-    1023,
-    672
+    845,
+    300,
+    965,
+    560
    ],
    "label_xy": [
-    898,
+    905,
+    552
+   ]
+  },
+  {
+   "id": "fr_haillon_noun",
+   "lemma": "haillon",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le haillon",
+   "box": [
+    968,
+    320,
+    1203,
+    668
+   ],
+   "label_xy": [
+    1086,
     660
    ]
   },
@@ -141,32 +160,14 @@
    "side": "right",
    "label": "l'éboueur",
    "box": [
-    945,
-    102,
-    1180,
-    287
+    1030,
+    90,
+    1088,
+    270
    ],
    "label_xy": [
-    1062,
-    277
-   ]
-  },
-  {
-   "id": "fr_haillon_noun",
-   "lemma": "haillon",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le haillon",
-   "box": [
-    1031,
-    289,
-    1273,
-    553
-   ],
-   "label_xy": [
-    1152,
-    543
+    1049,
+    262
    ]
   },
   {
@@ -177,29 +178,16 @@
    "side": "right",
    "label": "le boudoir",
    "box": [
-    1039,
-    555,
-    1180,
-    688
+    1092,
+    185,
+    1195,
+    285
    ],
    "label_xy": [
-    1110,
-    676
+    1144,
+    277
    ]
   }
  ],
- "links": [
-  {
-   "target": "R_laundry_01",
-   "box": [
-    445,
-    668,
-    700,
-    716
-   ],
-   "label": "Back to the laundry",
-   "name": "La buanderie",
-   "kind": "zoom_back"
-  }
- ]
+ "links": []
 }

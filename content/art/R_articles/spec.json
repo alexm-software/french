@@ -1,211 +1,161 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "Ground-floor articles and possessives room. Determiners have no grammatical gender of their own here (they mark it), so no left/right rule (divider null); the feminine-marking la/une figures are women and the masculine-marking le/un figures are men. The white door on the far left goes back to the counting room; the white door on the right leads to the questions room. Zoom: the teacher's desk at the back.",
+ "note": "Lavender articles room with grey-wood boards (cartoon style). Landmark: the little puppet theatre with a red curtain under the sign. Back row left to right: le (man lugging a sack), la (opera singer), les (girl in garlands), un (one finger), une (one huge spoon); front row: des (daisies), du (dew in a cup), au (oar), aux (the wizard pointing at the doors). Zooms: the coat-peg corner (possessives mon, ton, son, notre, votre, leur) and the teacher's desk (le nom, l'article). The open door at the back left goes out to the school yard; the peach door on the right leads to the questions room. Determiners mark gender but have none themselves (divider null).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Les articles",
    "box": [
-    565,
-    69,
+    460,
+    68,
     825,
-    127
+    207
    ],
    "text_box": [
-    573,
-    77,
-    817,
-    119
+    472,
+    80,
+    813,
+    195
    ]
   }
  },
  "items": [
   {
-   "id": "fr_la_det",
-   "box": [
-    78,
-    265,
-    238,
-    547
-   ],
-   "scene": "opera singer singing with arms spread"
-  },
-  {
    "id": "fr_le_det",
    "box": [
-    242,
-    302,
-    360,
-    515
+    179,
+    248,
+    296,
+    477
    ],
    "scene": "man lugging a heavy sack"
   },
   {
+   "id": "fr_la_det",
+   "box": [
+    396,
+    227,
+    542,
+    421
+   ],
+   "scene": "opera singer singing with arms spread"
+  },
+  {
+   "id": "fr_les_det",
+   "box": [
+    609,
+    249,
+    698,
+    432
+   ],
+   "scene": "girl wearing several flower garlands"
+  },
+  {
    "id": "fr_un_det",
    "box": [
-    342,
-    200,
-    428,
-    298
+    791,
+    227,
+    858,
+    443
    ],
    "scene": "man holding up one finger"
   },
   {
    "id": "fr_une_det",
    "box": [
-    431,
-    197,
-    503,
-    322
+    950,
+    242,
+    1082,
+    400
    ],
    "scene": "woman holding one huge wooden spoon"
   },
   {
-   "id": "fr_les_det",
-   "box": [
-    372,
-    347,
-    463,
-    578
-   ],
-   "scene": "girl wearing several flower garlands"
-  },
-  {
    "id": "fr_des_det",
    "box": [
-    477,
-    325,
-    563,
-    528
+    300,
+    424,
+    404,
+    632
    ],
    "scene": "girl holding a bunch of daisies"
   },
   {
    "id": "fr_du_det",
    "box": [
-    568,
-    365,
-    678,
-    603
+    493,
+    436,
+    604,
+    632
    ],
    "scene": "boy catching dew drops in a cup"
   },
   {
    "id": "fr_au_det",
    "box": [
-    650,
-    130,
-    738,
-    361
+    701,
+    434,
+    788,
+    649
    ],
    "scene": "man holding a rowing oar upright"
   },
   {
    "id": "fr_aux_det",
    "box": [
-    864,
-    175,
-    969,
-    350
+    860,
+    405,
+    1004,
+    638
    ],
    "scene": "man in a green robe and tall hat pointing at the doors"
-  },
-  {
-   "id": "fr_son_det",
-   "box": [
-    741,
-    232,
-    860,
-    452
-   ],
-   "scene": "father with his little son holding a toy boat"
-  },
-  {
-   "id": "fr_mon_det",
-   "box": [
-    722,
-    494,
-    831,
-    656
-   ],
-   "scene": "boy moaning and hugging his teddy bear"
-  },
-  {
-   "id": "fr_ton_det",
-   "box": [
-    862,
-    356,
-    995,
-    648
-   ],
-   "scene": "strongman holding two huge iron weights"
-  },
-  {
-   "id": "fr_votre_det",
-   "box": [
-    1000,
-    330,
-    1056,
-    535
-   ],
-   "scene": "paper dropped into a wooden ballot box"
-  },
-  {
-   "id": "fr_notre_det",
-   "box": [
-    998,
-    206,
-    1092,
-    326
-   ],
-   "scene": "woman holding a model of a Gothic cathedral"
-  },
-  {
-   "id": "fr_leur_det",
-   "box": [
-    1104,
-    272,
-    1200,
-    565
-   ],
-   "scene": "fisherman showing his fishing lures"
   }
  ],
  "zoom_from": [
   {
+   "room_id": "R_articles_z1",
+   "box": [
+    300,
+    143,
+    422,
+    223
+   ],
+   "label": "the coat pegs and cubbies (whose is it? my, your, his, our, their)"
+  },
+  {
    "room_id": "R_grammar_basic",
    "box": [
-    566,
-    262,
-    646,
+    883,
+    272,
+    948,
     360
    ],
-   "label": "the teacher's desk at the back"
+   "label": "the teacher's desk"
   }
  ],
  "links": [
   {
-   "target": "R_numbers1",
+   "target": "B02_ecole",
    "box": [
-    70,
-    137,
-    162,
-    260
+    98,
+    76,
+    176,
+    382
    ],
-   "label": "Back through the white door to the counting room",
-   "name": "Les nombres (1)",
+   "label": "Out through the open door to the school yard",
+   "name": "Petite École",
    "kind": "door"
   },
   {
    "target": "R_questions",
    "box": [
-    1104,
-    147,
-    1162,
-    268
+    1099,
+    81,
+    1196,
+    391
    ],
-   "label": "Through the white door to the questions room",
+   "label": "Through the peach door to the questions room",
    "name": "Les questions",
    "kind": "door"
   }

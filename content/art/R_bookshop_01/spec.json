@@ -1,22 +1,22 @@
 {
- "divider_x": 628,
+ "divider_x": null,
  "kind": "room",
- "note": "Bookshop (1): books, pages, notebooks and readers. The tall bookcase-pillar in the middle divides it: feminine nouns on its left, masculine on its right. The left doorway goes back to the first general shop; the right doorway leads on to the fashion boutique. Zoom: the reading desk in the left half.",
+ "note": "Second shop of the B07 covered arcade (glass skylight, honey limestone pilasters, dark oak joinery, as on the exterior): the bookshop, with navy-blue bookshelves and a herringbone oak parquet. LANDMARK: the tall round tower bookcase with its brass spiral library ladder. The doorway on the far left shows the sage-green general store with its brass till (way back); the doorway on the far right shows the pale grey fashion boutique with its chandelier (next shop). Feminine nouns on the left, masculine on the right. Zooms: the round tower bookcase (z1) and the tall left-hand shelves (z2).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "La librairie (1)",
+   "text": "La librairie",
    "box": [
-    180,
-    15,
-    420,
-    60
+    750,
+    115,
+    912,
+    145
    ],
    "text_box": [
-    186,
-    21,
-    414,
-    54
+    756,
+    121,
+    906,
+    139
    ]
   }
  },
@@ -24,179 +24,129 @@
   {
    "id": "fr_page_noun_f",
    "box": [
-    136,
-    256,
-    290,
-    400
+    79,
+    402,
+    378,
+    598
    ],
-   "scene": "cat turning a page of a pop-up book with a paper dragon"
+   "scene": "tabby cat turns a PAGE (\"pahzh\") and a little paper dragon springs up off it"
   },
   {
    "id": "fr_presse_noun",
    "box": [
-    294,
-    198,
-    494,
-    336
+    232,
+    238,
+    452,
+    400
    ],
-   "scene": "old printing press squeezing out blank newspapers"
+   "scene": "the old iron PRESS squeezes out a stack of fresh newspapers as the printer turns the wheel"
   },
   {
    "id": "fr_bibliotheque_noun",
    "box": [
-    431,
-    108,
-    512,
-    194
+    456,
+    369,
+    598,
+    631
    ],
-   "scene": "bee with a tablet flying past a bookcase"
-  },
-  {
-   "id": "fr_edition_noun",
-   "box": [
-    412,
-    340,
-    556,
-    481
-   ],
-   "scene": "mouse bookseller serving a book on a silver dish"
+   "scene": "a huge BIBLE rests on a lectern while a BEE with a TECH tablet hovers over it"
   },
   {
    "id": "fr_livre_noun_m",
    "box": [
-    675,
-    62,
-    838,
-    196
+    605,
+    460,
+    778,
+    648
    ],
-   "scene": "hedgehog bookseller stacking a wobbly tower of books"
+   "scene": "hedgehog stacking a wobbly tower of BOOKs: LEAVE them here"
   },
   {
    "id": "fr_journal_noun",
    "box": [
-    662,
-    200,
-    766,
-    375
+    685,
+    262,
+    872,
+    428
    ],
-   "scene": "old man writing in a battered diary"
-  },
-  {
-   "id": "fr_page_noun_m",
-   "box": [
-    845,
-    188,
-    935,
-    378
-   ],
-   "scene": "page boy in velvet carrying a ring box"
-  },
-  {
-   "id": "fr_papier_noun",
-   "box": [
-    956,
-    125,
-    1106,
-    270
-   ],
-   "scene": "man folding a sheet of paper into a boat"
-  },
-  {
-   "id": "fr_carnet_noun",
-   "box": [
-    938,
-    275,
-    1030,
-    444
-   ],
-   "scene": "pony nuzzling a notebook on a toy car"
-  },
-  {
-   "id": "fr_guide_noun_m",
-   "box": [
-    769,
-    300,
-    842,
-    470
-   ],
-   "scene": "tour guide with a giant guidebook, ducks following"
+   "scene": "old AL with his rucksack writes up his JOURNEY in his DIARY on the bench"
   },
   {
    "id": "fr_crayon_noun",
    "box": [
-    662,
-    380,
-    766,
-    669
+    781,
+    432,
+    960,
+    675
    ],
-   "scene": "girl sharpening a pencil beside a box of crayons"
-  },
-  {
-   "id": "fr_cahier_noun",
-   "box": [
-    806,
-    550,
-    950,
-    638
-   ],
-   "scene": "open notebook in a little toy kayak"
+   "scene": "girl sharpening a long PENCIL beside a box of wax CRAYONS"
   },
   {
    "id": "fr_lecteur_noun",
    "box": [
-    1034,
-    350,
-    1194,
-    520
+    878,
+    260,
+    1062,
+    430
    ],
-   "scene": "reader in an armchair with a cat curled on his head"
+   "scene": "READER so lost in his book that a cat sleeps on his head"
   },
   {
-   "id": "fr_bouquin_noun",
+   "id": "fr_guide_noun_m",
    "box": [
-    969,
-    525,
-    1162,
-    669
+    1065,
+    212,
+    1190,
+    615
    ],
-   "scene": "friendly ghost popping out of an old book"
+   "scene": "tour GUIDE holding up his guidebook, three ducks waddling after him"
   }
  ],
  "zoom_from": [
   {
    "room_id": "R_bookshop_01_z1",
    "box": [
-    312,
-    445,
-    410,
-    520
+    578,
+    50,
+    680,
+    362
    ],
-   "label": "the reading desk"
+   "label": "the round tower bookcase"
+  },
+  {
+   "room_id": "R_bookshop_01_z2",
+   "box": [
+    262,
+    75,
+    375,
+    232
+   ],
+   "label": "the tall left-hand shelves"
   }
  ],
  "links": [
   {
    "target": "R_shop_general_01",
    "box": [
-    12,
-    38,
-    134,
-    437
+    50,
+    50,
+    225,
+    375
    ],
-   "label": "Back through the left doorway to the general shop",
-   "name": "Les commerces (1)",
+   "label": "Back through the doorway to the general store",
+   "name": "Le magasin",
    "kind": "door"
   },
   {
    "target": "R_boutique_02",
    "box": [
-    1110,
-    40,
-    1269,
-    345
+    1191,
+    69,
+    1240,
+    525
    ],
-   "label": "Through the right doorway to the fashion boutique",
-   "name": "La boutique (2)",
+   "label": "Through the doorway into the fashion boutique",
+   "name": "La boutique de mode",
    "kind": "door"
   }
  ]
