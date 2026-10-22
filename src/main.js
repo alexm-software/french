@@ -154,9 +154,75 @@ function localizedDescription(record) {
 }
 
 function hoverLabel(item, fallbackKey) {
-  if (!item) return t(fallbackKey);
-  if (state.lang === "fr") return item.name_fr || item.label_fr || item.name || item.label || t(fallbackKey);
-  return item.label_en || item.name_en || item.name || item.label || t(fallbackKey);
+  const fallback = fallbackKey ? t(fallbackKey) : "";
+  if (!item) return fallback;
+  if (state.lang === "fr") return item.name_fr || item.label_fr || item.name || item.label || fallback;
+  return item.label_en || item.name_en || item.name || item.label || fallback;
+}
+
+function isGenericWayLabel(text) {
+  const folded = String(text || "").trim().toLowerCase();
+  if (!folded) return true;
+  const generic = new Set([
+    "open", "forward", "back", "left", "right", "step back",
+    "ouvrir", "avancer", "reculer", "gauche", "droite",
+    t("open"), t("nav.forward"), t("nav.back"), t("nav.left"), t("nav.right"),
+  ].map((value) => String(value || "").trim().toLowerCase()));
+  return generic.has(folded);
+}
+
+function recordName(record) {
+  if (!record) return "";
+  if (state.lang === "fr") {
+    return record.fr_name || record.name_fr || record.sign_fr || record.sign || record.chip || record.name || "";
+  }
+  return record.name_en || record.en_name || record.name || record.sign || record.chip || record.fr_name || "";
+}
+
+function destinationName(target) {
+  const id = String(target || "");
+  if (!id) return "";
+  const records = [];
+  const remember = (record) => {
+    if (record?.id) records.push(record);
+  };
+  (state.index?.sectors || []).forEach((sector) => {
+    remember(sector);
+    remember({ ...sector, id: `${String(sector.id).split("_")[0]}_sector` });
+  });
+  (state.index?.buildings || []).forEach(remember);
+  const place = state.place || {};
+  const roomsOf = (holder) => (holder?.floors || []).flatMap((floor) => floor.rooms || []);
+  remember(place.building);
+  roomsOf(place.building).forEach(remember);
+  remember(place.sector);
+  (place.sector?.buildings || []).forEach((building) => {
+    remember(building);
+    roomsOf(building).forEach(remember);
+  });
+  (place.sector?.alleys || []).forEach(remember);
+  const room = place.room;
+  if (room) {
+    [room.parent, room.prev, room.next, room.prev_sector, room.next_sector].forEach(remember);
+    (room.related || []).forEach(remember);
+    (room.zooms || []).forEach(remember);
+    roomsOf(room).forEach(remember);
+  }
+  const match = records.find((item) => item.id === id);
+  return recordName(match);
+}
+
+function wayLabel(item, exitKey) {
+  const own = hoverLabel(item, "");
+  if (!isGenericWayLabel(own)) return own;
+  const place = destinationName(item?.target);
+  if (!place) return own;
+  const kind = exitKind(exitKey);
+  const backHref = backTarget(state.place)?.href;
+  if (kind === "back" || item?.kind === "zoom_back" || (backHref && hashFor(item.target) === backHref)) {
+    return tf("nav.backTo", { place });
+  }
+  return place;
 }
 
 function doodle(name) {
@@ -294,9 +360,10 @@ function sectorUpTarget(sectorId) {
   return { href: `#/sector/${sectorId}`, label: tf("nav.sectorUp", { place: name }) };
 }
 
-function sectorUpNav(sectorId) {
+function sectorUpNav(sectorId, place) {
   const target = sectorUpTarget(sectorId);
   if (!target) return "";
+  if (place && backTarget(place)?.href === target.href) return "";
   return `<a class="sector-up" data-sector-up href="${esc(target.href)}">${esc(target.label)}</a>`;
 }
 
@@ -409,12 +476,13 @@ function sectorView(sector, extraDialog = "") {
 
 function buildingView(sector, building, extraDialog = "") {
   if (!sector.open || !building.scene?.image) {
-    const back = backTarget({ kind: "building", sector, building });
+    const place = { kind: "building", sector, building };
+    const back = backTarget(place);
     return pageShell(`
       <h1>${esc(localizedName(building))}</h1>
       <p>${esc(localizedDescription(building) || t("building.unpainted"))}</p>
       ${back ? `<a class="btn primary" href="${esc(back.href)}">${esc(back.label)}</a>` : ""}
-    `, `/building/${building.id}`, backNav({ kind: "building", sector, building }), sectorUpNav(sector?.id));
+    `, `/building/${building.id}`, backNav(place), sectorUpNav(sector?.id, place));
   }
   state.place = { kind: "building", id: building.id, sector, building };
   return null;
@@ -540,9 +608,47 @@ function placeWayBadges() {
   const placed = [];
   const view = svg.viewBox.baseVal;
   const hits = (x, y, rects) => rects.some((rect) => x < rect.x1 && x + size > rect.x0 && y < rect.y1 && y + size > rect.y0);
+  const addPill = (left, top, el, anchor) => {
+    const wayName = el.dataset.wayName || "";
+    if (!wayName || el.dataset.lightsSign) return;
+    const dir = el.dataset.wayDir || "through";
+    const pill = document.createElement("span");
+    const pillIcon = el.dataset.wayIcon === "stairs" ? "stairs" : "arrow";
+    pill.className = `way-pill ${pillIcon} ${dir}`;
+    pill.innerHTML = wayIconSvg(pillIcon);
+    const caption = document.createElement("span");
+    caption.textContent = wayName;
+    pill.appendChild(caption);
+    const frameW = frame.clientWidth || 320;
+    const placeLeft = left > frameW * 0.58;
+    pill.style.top = `${top + badgePx / 2}px`;
+    if (placeLeft) {
+      pill.classList.add("pill-left");
+      pill.style.left = `${Math.max(8, left - 6)}px`;
+      pill.style.maxWidth = `${Math.max(72, left - 12)}px`;
+    } else {
+      pill.style.left = `${left + badgePx + 6}px`;
+      pill.style.maxWidth = `${Math.max(72, frameW - left - badgePx - 16)}px`;
+    }
+    pill.dataset.for = el.dataset.wayBox || "";
+    if (anchor) {
+      const show = (on) => pill.classList.toggle("show-label", on);
+      anchor.addEventListener("pointerenter", () => show(true));
+      anchor.addEventListener("pointerleave", () => show(false));
+    }
+    frame.appendChild(pill);
+  };
   svg.querySelectorAll("[data-way-box]").forEach((el) => {
     const [x0, y0, x1, y1] = el.dataset.wayBox.split(",").map(Number);
     const dir = el.dataset.wayDir || "through";
+    const wayHref = el.dataset.wayHref || "";
+    const backHref = backTarget(state.place)?.href || "";
+    const sectorHref = document.querySelector("a.sector-up")?.getAttribute("href") || "";
+    if (wayHref && (wayHref === backHref || wayHref === sectorHref)) {
+      const screen = toScreen((x0 + x1) / 2, (y0 + y1) / 2);
+      addPill(screen.x, screen.y, el);
+      return;
+    }
     const midX = (x0 + x1) / 2 - size / 2;
     const midY = (y0 + y1) / 2 - size / 2;
     const inset = Math.max(size * 0.2, 6);
@@ -585,6 +691,7 @@ function placeWayBadges() {
     node.type = "button";
     node.className = `way-badge ${el.dataset.wayIcon || "door"} ${dir}`;
     node.dataset.target = el.dataset.target || "";
+    node.dataset.wayHref = wayHref;
     const wayName = el.dataset.wayName || "";
     node.setAttribute("aria-label", wayName);
     node.innerHTML = wayIconSvg(el.dataset.wayIcon || "door");
@@ -605,33 +712,7 @@ function placeWayBadges() {
     node.addEventListener("pointerenter", () => light(true));
     node.addEventListener("pointerleave", () => light(false));
     frame.appendChild(node);
-    if (!el.dataset.lightsSign && wayName) {
-      const pill = document.createElement("span");
-      const pillIcon = el.dataset.wayIcon === "stairs" ? "stairs" : "arrow";
-      pill.className = `way-pill ${pillIcon} ${dir}`;
-      pill.innerHTML = wayIconSvg(pillIcon);
-      const caption = document.createElement("span");
-      caption.textContent = wayName;
-      pill.appendChild(caption);
-      const left = Number.parseFloat(node.style.left) || 0;
-      const top = Number.parseFloat(node.style.top) || 0;
-      const frameW = frame.clientWidth || 320;
-      const placeLeft = left > frameW * 0.58;
-      pill.style.top = `${top + badgePx / 2}px`;
-      if (placeLeft) {
-        pill.classList.add("pill-left");
-        pill.style.left = `${Math.max(8, left - 6)}px`;
-        pill.style.maxWidth = `${Math.max(72, left - 12)}px`;
-      } else {
-        pill.style.left = `${left + badgePx + 6}px`;
-        pill.style.maxWidth = `${Math.max(72, frameW - left - badgePx - 16)}px`;
-      }
-      const show = (on) => pill.classList.toggle("show-label", on);
-      pill.dataset.for = el.dataset.wayBox || "";
-      node.addEventListener("pointerenter", () => show(true));
-      node.addEventListener("pointerleave", () => show(false));
-      frame.appendChild(pill);
-    }
+    addPill(Number.parseFloat(node.style.left) || 0, Number.parseFloat(node.style.top) || 0, el, node);
   });
 }
 
@@ -1064,9 +1145,9 @@ function signAssignments(scene) {
 function wayMarkup(item, exitKey, signId) {
   if (!item?.box || !item.target || isZoomTarget(item.target)) return "";
   const cue = wayCue(item, exitKey);
-  const name = hoverLabel(item, exitKey ? `nav.${exitKind(exitKey) || "forward"}` : "open");
+  const name = wayLabel(item, exitKey);
   const lights = signId ? ` data-lights-sign="${esc(signId)}"` : "";
-  return ` data-way-box="${item.box.join(",")}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-name="${esc(name)}"${lights}`;
+  return ` data-way-box="${item.box.join(",")}" data-way-href="${esc(hashFor(item.target))}" data-way-dir="${cue.dir}" data-way-icon="${cue.icon}" data-way-name="${esc(name)}"${lights}`;
 }
 
 function hitShape(item) {
@@ -1096,7 +1177,7 @@ function sceneMarkup(scene, words, zooms) {
     const arrow = exitKind(link.arrow);
     if (arrow && !state.nav[arrow]) state.nav[arrow] = hashFor(link.target);
     const way = wayMarkup(link, "", signs.get(`link:${index}`) || "");
-    const label = hoverLabel(link, "open");
+    const label = wayLabel(link, "");
     const tag = way ? "" : nameTag(label, link.box);
     const arrowAttr = arrow ? ` data-arrow="${arrow}"` : "";
     parts.push(`<g class="hot link${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(link.target)}"${zoomBox}${arrowAttr}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(link)}${tag}</g>`);
@@ -1107,7 +1188,7 @@ function sceneMarkup(scene, words, zooms) {
     state.nav[kind] = hashFor(exit.target);
     const zoomBox = isZoomTarget(exit.target) ? ` data-zoom-box="${exit.box.join(",")}"` : "";
     const way = wayMarkup(exit, key, signs.get(`exit:${key}`) || "");
-    const label = hoverLabel(exit, `nav.${kind}`);
+    const label = wayLabel(exit, key);
     parts.push(`<g class="hot exit ${kind}${way ? " way" : ""}${zoomBox ? " zoom" : ""}" data-target="${esc(exit.target)}"${zoomBox}${way} tabindex="0" role="button" aria-label="${esc(label)}">${hitShape(exit)}</g>`);
   });
   (scene.hotspots || []).forEach((hot) => {
@@ -1815,7 +1896,7 @@ async function render() {
     app.innerHTML = shell("", current, {
       scene: true,
       backNav: backNav(state.place),
-      sectorUp: state.place.kind === "sector" ? "" : sectorUpNav(sectorId),
+      sectorUp: state.place.kind === "sector" ? "" : sectorUpNav(sectorId, state.place),
       extraNav: sceneNav(state.place),
     });
     walk.innerHTML = walkHtml(activeDialog());

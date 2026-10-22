@@ -186,12 +186,34 @@ function measure() {
   }
   const hash = location.hash || "";
   const up = document.querySelector("[data-sector-up]");
+  const backHref = document.querySelector("a.back")?.getAttribute("href") || "";
   if (/^#\/(building|room)\//.test(hash)) {
+    if (!backHref.startsWith("#/")) failures.push("missing back");
     const href = up?.getAttribute("href") || "";
-    if (!up) failures.push("missing sector button");
-    else if (!/^#\/sector\/S\d{2}_/.test(href)) failures.push(`sector button target ${href}`);
+    if (up && href === backHref) failures.push("sector button duplicates back");
+    if (!up && !backHref.startsWith("#/sector/")) failures.push("missing sector button");
+    else if (up && !/^#\/sector\/S\d{2}_/.test(href)) failures.push(`sector button target ${href}`);
   } else if (/^#\/sector\//.test(hash) && up) {
     failures.push("sector view shows a sector button");
+  }
+  const generic = /^(open|forward|back|step back|left|right|ouvrir|avancer|reculer|gauche|droite)$/i;
+  const seen = new Map();
+  const controls = [];
+  for (const link of document.querySelectorAll("a.back, a.sector-up")) {
+    controls.push({ href: link.getAttribute("href") || "", label: (link.textContent || "").replace(/\s+/g, " ").trim() });
+  }
+  for (const badge of document.querySelectorAll("#walk .way-badge")) {
+    controls.push({ href: badge.dataset.wayHref || "", label: badge.getAttribute("aria-label") || "" });
+  }
+  for (const control of controls) {
+    if (generic.test(control.label)) failures.push(`generic exit label: ${control.label}`);
+    if (!control.href) continue;
+    if (seen.has(control.href)) failures.push(`two controls to ${control.href}`);
+    seen.set(control.href, control.label);
+  }
+  for (const node of document.querySelectorAll("#walk .hot.link, #walk .hot.exit, #walk .way-pill")) {
+    const label = (node.getAttribute("aria-label") || node.textContent || "").replace(/\s+/g, " ").trim();
+    if (generic.test(label)) failures.push(`generic exit label: ${label}`);
   }
   const covers = (a, b) => {
     const overlapX = Math.min(a.right, b.right) - Math.max(a.left, b.left);

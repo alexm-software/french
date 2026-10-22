@@ -104,12 +104,14 @@ def assert_s04_explicit(hierarchy, sectors, buildings, rooms):
     assert S04_BACK["ST_cooking_seg001"] == "ST_cooking"
     for zoom_id in ("R_resto_room_z1", "R_wine_01_z1"):
         art = load(ROOT / "content" / "art" / zoom_id / "hotspots.json")
-        link = next(item for item in art["links"] if item.get("kind") == "zoom_back")
-        # The step back meets the bottom of the painting, even when the box starts higher.
-        assert link["box"][3] >= art["height"] - 120, (zoom_id, link["box"])
+        assert not any(item.get("kind") == "zoom_back" for item in art.get("links") or []), zoom_id
         built = load(DATA / "rooms" / f"{zoom_id}.json")
         assert built["kind"] == "zoom"
         assert built["parent"]["id"] == S04_BACK[zoom_id]
+        assert not any(
+            str(exit_item.get("label") or "").strip().lower() == "step back"
+            for exit_item in (built["scene"].get("exits") or {}).values()
+        )
     for view, parent in S04_BACK.items():
         path = DATA / "rooms" / f"{view}.json"
         if not path.exists():
@@ -594,7 +596,12 @@ def main():
     assert [room["id"] for room in ground] == ["R_resto_kitchen_01", "R_resto_room", "R_wine_01"], [room["id"] for room in ground]
     assert any(link["target"] == "R_resto_room" for link in restaurant["scene"]["links"])
     cafe_building = next(building for building in sector["buildings"] if building["id"] == "B08_cafe")
-    assert {link["target"] for link in cafe_building["scene"]["links"]} == {"R_cafe_01", "R_cafe_02"}
+    assert {link["target"] for link in cafe_building["scene"]["links"]} == {"R_cafe_01"}
+    cafe_stairs = load(ROOT / "content" / "art" / "R_cafe_01" / "hotspots.json")
+    assert any(link["target"] == "R_cafe_02" and link["kind"] == "stairs_up" for link in cafe_stairs["links"])
+    kitchen_art = load(ROOT / "content" / "art" / "R_resto_kitchen_01" / "hotspots.json")
+    assert any(link["target"] == "R_resto_kitchen_02" and link["kind"] == "stairs_up" for link in kitchen_art["links"])
+    assert all(link["target"] != "R_resto_kitchen_02" for link in restaurant["scene"]["links"])
 
     cafe = load(DATA / "rooms" / "R_cafe_01.json")
     assert cafe["sign"] == "La terrasse"

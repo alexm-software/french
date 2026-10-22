@@ -503,21 +503,9 @@ def bind_scene(room, words, building, signs, plaques=None):
     )
     if not scene:
         return None
-    # Exits stay as painted: forward, back, and left or right when the picture has them.
-    # A zoom with no way out gets a back step to its parent. A painted step back
-    # (a link whose arrow is back) already owns that key, so it is not duplicated.
-    painted_back = any(
-        link.get("target") == room.get("parent_room_id") and link.get("arrow") == "back"
-        for link in scene.get("links") or []
-    )
-    if room.get("kind") == "zoom" and room.get("parent_room_id") and not painted_back:
-        exits = scene.setdefault("exits", {})
-        if not any(exits.get(key) for key in ("prev", "back")):
-            exits["back"] = {
-                "box": [24, 24, 120, 96],
-                "target": room["parent_room_id"],
-                "label": "Step back",
-            }
+    # Exits stay as painted. A zoom with no painted way out still leaves through
+    # the strip Back, Esc, and the browser back button. Do not invent a second
+    # "Step back" box in the corner.
     regions = list(scene.get("zoom_regions") or [])
     if not regions and scene.get("zoom_from"):
         regions = [scene["zoom_from"]]
