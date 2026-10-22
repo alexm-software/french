@@ -287,6 +287,69 @@ def assert_fontaine_arrows():
     assert "exitKind(link.arrow)" in client and 'data-arrow="' in client
 
 
+S03_WITHOUT_PAINTED_RETURN = [
+    "R_abs_beauty_01_z1", "R_abs_beauty_02_z1", "R_abs_beauty_03_z1",
+    "R_adj_state_04_z1", "R_adv_degree_01_z1", "R_adv_degree_03_z1",
+    "R_bookshop_01_z1", "R_boutique_03_z1", "R_florist_z1",
+    "R_grocery_01_z1", "R_hardware_01_z1", "R_hardware_02_z1",
+    "R_shop_general_02_z1", "R_shop_general_03_z1", "R_shop_general_04_z1",
+    "R_vegetables_z1",
+]
+
+
+def assert_market_square():
+    """The repainted square names each door, and the brocante stays closed.
+
+    Sixteen market zooms have no painted path back to the square. Each one
+    still belongs to S03, so the sector button is that path.
+    """
+    painted = normalize_scene(load(ROOT / "content" / "art" / "S03_sector" / "hotspots.json"))
+    assert [link["target"] for link in painted["links"]] == [
+        "S02_sector", "B62_couture", "B60_balance", "B06_marche", "B07_rue_commercante",
+        "ST_commerce_seg001", "B61_reparation", "B59_brocante", "S01_sector",
+    ]
+    for link in painted["links"]:
+        assert painted["text_areas"][link["signed_by"]]["text"], link["target"]
+    art_targets = {}
+    for path in (ROOT / "content" / "art").glob("*/hotspots.json"):
+        raw = load(path)
+        dests = []
+        for item in raw.get("links") or []:
+            if isinstance(item, dict) and item.get("target"):
+                dests.append(item["target"])
+        for item in (raw.get("exits") or {}).values():
+            if isinstance(item, dict) and item.get("target"):
+                dests.append(item["target"])
+        art_targets[path.parent.name] = dests
+
+    def reaches(start):
+        seen = set()
+        queue = [start]
+        while queue:
+            node = queue.pop(0)
+            if node == "S03_sector" or node in seen:
+                if node == "S03_sector":
+                    return True
+                continue
+            seen.add(node)
+            queue.extend(art_targets.get(node, []))
+        return False
+
+    source = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
+    open_ids = set(load(ROOT / "content" / "site.json")["open_rooms"])
+    detached = sorted(
+        room_id for room_id in open_ids
+        if room_id.startswith("R_")
+        and source.get(room_id, {}).get("sector_id") == "S03_market"
+        and not reaches(room_id)
+    )
+    assert detached == sorted(S03_WITHOUT_PAINTED_RETURN), detached
+    for room_id in detached:
+        built = load(DATA / "rooms" / f"{room_id}.json")
+        assert built["sector_id"] == "S03_market", room_id
+        assert built["kind"] == "zoom"
+
+
 def assert_back_strip_stays_visible(client):
     """The strip back is a header control, not an item in the menu that hides under 820px."""
     shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
@@ -700,6 +763,9 @@ def main():
         "B60_balance", "B06_marche", "B07_rue_commercante", "B62_couture", "B61_reparation",
         "ST_commerce_seg001", "S01_sector", "S02_sector",
     }, open_market
+    assert_market_square()
+    for link in market["scene"]["links"]:
+        assert link.get("signed_by"), link["target"]
     source_rooms = {room["id"]: room for room in load(ROOT / "data" / "source" / "rooms.json")["rooms"]}
     shop_art = [
         "R_shop_general_01", "R_shop_general_02", "R_shop_general_02_z1",
