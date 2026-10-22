@@ -515,14 +515,22 @@ function placeWayBadges() {
     const [x0, y0, x1, y1] = el.dataset.signBox.split(",").map(Number);
     const box = { x0, y0, x1, y1 };
     if (!el.classList.contains("painted-sign") || !Number.isFinite(x0)) return box;
-    const width = x1 - x0;
-    const height = y1 - y0;
-    // The words are centred in the lane. Avoid that line, not the whole exit.
-    const coreW = Math.min(width - 4, Math.max(72, width * 0.7));
-    const coreH = Math.min(height - 4, Math.max(26, Math.min(height * 0.62, 48)));
-    const cx = (x0 + x1) / 2;
-    const cy = (y0 + y1) / 2;
-    return { x0: cx - coreW / 2, y0: cy - coreH / 2, x1: cx + coreW / 2, y1: cy + coreH / 2 };
+    const glyphs = [...el.querySelectorAll("text")];
+    if (!glyphs.length) return box;
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    glyphs.forEach((text) => {
+      const ink = text.getBBox();
+      minX = Math.min(minX, ink.x);
+      minY = Math.min(minY, ink.y);
+      maxX = Math.max(maxX, ink.x + ink.width);
+      maxY = Math.max(maxY, ink.y + ink.height);
+    });
+    if (!Number.isFinite(minX)) return box;
+    const pad = 14;
+    return { x0: minX - pad, y0: minY - pad, x1: maxX + pad, y1: maxY + pad };
   }).filter((box) => Number.isFinite(box.x0));
   const obstacles = [
     ...boxesOf("[data-item-box]", "itemBox"),
