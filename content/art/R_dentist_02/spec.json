@@ -1,0 +1,164 @@
+{
+ "kind": "room",
+ "space": "R_dentist_02",
+ "building_id": "B19_hopital",
+ "floor": "second floor (west, lab)",
+ "name": "Le laboratoire d'optique",
+ "parent_room_id": null,
+ "divider_x": 683,
+ "camera": "from the ward door, facing west into the optics and dental laboratory (the ward door is in the north wall = right)",
+ "setting": {
+  "walls": "slate-blue walls above honey-brown wooden cabinets",
+  "floor": "dark grey linoleum",
+  "landmark": "a huge brass telescope on a tripod pointing out of a round window, and long workbenches of lenses",
+  "light": "daylight from the round window and green-shaded bench lamps",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le laboratoire d'optique",
+   "box": [
+    659,
+    69,
+    940,
+    220
+   ],
+   "text_box": [
+    663,
+    73,
+    936,
+    216
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_gomme_noun",
+   "box": [
+    125,
+    250,
+    298,
+    556
+   ],
+   "row": "back",
+   "scene": "A little girl rubs out her pencil sketch with a pink ERASER as big as a brick that looks just like a block of bubble GUM (\"GOM\")."
+  },
+  {
+   "id": "fr_lentille_noun",
+   "box": [
+    302,
+    290,
+    395,
+    550
+   ],
+   "row": "front",
+   "scene": "A mouse in a lab coat holds up a contact LENS shaped like a giant LENTIL (\"lahn-TEEY\"), a bowl of lentils on her stool."
+  },
+  {
+   "id": "fr_loupe_noun",
+   "box": [
+    400,
+    288,
+    546,
+    550
+   ],
+   "row": "back",
+   "scene": "A boy holds a MAGNIFYING GLASS with a curly LOOP (\"LOOP\") handle over a beetle, which looks giant through it."
+  },
+  {
+   "id": "fr_prescription_noun",
+   "box": [
+    300,
+    140,
+    494,
+    284
+   ],
+   "row": "front",
+   "scene": "In his brand-new PRESCRIPTION glasses (\"prehs-kreep-SYOHN\") a mole beside the big brass telescope sees the sky clearly for the first time."
+  },
+  {
+   "id": "fr_aberration_noun",
+   "box": [
+    550,
+    225,
+    682,
+    482
+   ],
+   "row": "back",
+   "scene": "An ABERRATION (\"ah-beh-rah-SYOHN\"): the girl's bubble wand blows a perfectly SQUARE soap bubble, and she stares at it."
+  },
+  {
+   "id": "fr_dentaire_adj",
+   "box": [
+    862,
+    402,
+    1068,
+    606
+   ],
+   "row": "front",
+   "scene": "A mouse polishes a big DENTAL model of teeth (\"dahn-TEHR\") on a low table until every tooth shines."
+  },
+  {
+   "id": "fr_iris_noun",
+   "box": [
+    684,
+    250,
+    800,
+    482
+   ],
+   "row": "back",
+   "scene": "A tabby cat sits behind a big brass lens that makes her golden IRIS (\"ee-REES\") huge, a purple iris flower tucked behind her ear."
+  },
+  {
+   "id": "fr_microscope_noun",
+   "box": [
+    803,
+    244,
+    962,
+    398
+   ],
+   "row": "front",
+   "scene": "A raccoon COP (\"mee-krohs-KOP\") in a blue cap peers into a brass MICROSCOPE at a single crumb."
+  },
+  {
+   "id": "fr_girofle_noun",
+   "box": [
+    966,
+    104,
+    1146,
+    326
+   ],
+   "row": "back",
+   "scene": "A GIRAFFE (\"zhee-ROFL\") leans in through the open door to nibble a single CLOVE held out by the lady dentist (clove oil soothes toothache)."
+  },
+  {
+   "id": "fr_optique_adj",
+   "box": [
+    1072,
+    330,
+    1188,
+    556
+   ],
+   "row": "front",
+   "scene": "A toad peers through a brass OPTICAL lens machine (\"op-TEEK\"), his eyes enormous behind the lenses."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_hospital_02",
+   "box": [
+    1148,
+    66,
+    1188,
+    328
+   ],
+   "label": "Back to the ward",
+   "name": "La salle des lits",
+   "kind": "door",
+   "painted_as": "the open door on the RIGHT wall showing the powder-blue ward corridor"
+  }
+ ],
+ "boxes_status": "MEASURED on the 06:40 UTC repaint (track S07 resume); repainted 06:45 UTC: figures spread over the floor (no row behind the bench), no disembodied hands, no stray figures in the doorway",
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: Le laboratoire d'optique in the B19_hopital building, second floor (west, lab). Camera: from the ward door, facing west into the optics and dental laboratory (the ward door is in the north wall = right).\nSetting: slate-blue walls above honey-brown wooden cabinets; floor: dark grey linoleum. Landmark: a huge brass telescope on a tripod pointing out of a round window, and long workbenches of lenses. Light: daylight from the round window and green-shaded bench lamps. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the door on the RIGHT wall showing the powder-blue ward (way to La salle des lits).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: A pink rubber ERASER as big as a brick looks just like a block of chewing GUM, and a pencil sketch vanishes under it.\n- far left, foreground: A contact LENS shaped like a giant LENTIL sits on a fingertip beside a bowl of lentils.\n- left, middle distance: A MAGNIFYING GLASS with a curly LOOP handle makes a beetle look giant.\n- left, foreground: With his new PRESCRIPTION glasses a mole sees the sky for the first time.\n- centre-left, middle distance: An ABERRATION: a perfectly square soap bubble floats out of the bubble wand.\n- centre-left, foreground: A DENTAL model of giant teeth chatters on the bench while a mouse polishes it.\n- centre-right, middle distance: Through a big lens a cat's huge golden IRIS shows, an IRIS flower tucked behind its ear.\n- centre-right, foreground: A COP peers into a MICROSCOPE at a single crumb.\n- right, middle distance: A GIRAFFE ducks her head through the door to nibble a single CLOVE held out by the lab dentist (clove oil soothes toothache).\n- right, foreground: A toad tries OPTICAL lenses and his eyes grow enormous behind them.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

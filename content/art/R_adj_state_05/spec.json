@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "First-floor robot workshop: adjectives of state 5 (respective, frozen, nowhere to be found, missing, faulty...). Adjectives have no gender (divider null). The mature word infidèle appears only as museum wall text on a blank plaque. The doorway on the left goes back to the attic room; this is the last room.",
+ "note": "First-floor robot workshop of the B61 half-timbered repair café: teal-painted brick between dark oak roof beams, deep-blue floorboards, a skylight and an iron pendant lamp. LANDMARK: the big round clock-face window with iron spokes. The open doorway on the left goes back into the attic (sloping beams visible), the way back; this is the last room. The mature word infidèle appears only as museum wall text on the blank framed plaque. Adjectives have no gender (divider null). Zoom: the navy electrics bench on the right (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Les robots",
    "box": [
-    470,
-    52,
-    700,
-    86
+    380,
+    45,
+    560,
+    90
    ],
    "text_box": [
-    476,
-    58,
-    694,
-    80
+    386,
+    51,
+    554,
+    84
    ]
   }
  },
@@ -24,132 +24,94 @@
   {
    "id": "fr_respectif_adj",
    "box": [
-    77,
-    425,
-    295,
-    619
+    81,
+    462,
+    344,
+    656
    ],
-   "scene": "three kittens each in its own place in a basket"
+   "scene": "three kittens each in its own spot in the basket"
   },
   {
    "id": "fr_gele_adj",
    "box": [
-    300,
-    506,
-    431,
-    656
+    375,
+    456,
+    594,
+    668
    ],
-   "scene": "jelly frozen solid inside a block of ice"
+   "scene": "jelly frozen solid in a block of ice"
   },
   {
    "id": "fr_introuvable_adj",
    "box": [
-    300,
-    281,
-    481,
-    420
+    215,
+    245,
+    385,
+    450
    ],
-   "scene": "pirate digging in a sandbox for treasure"
+   "scene": "pirate child digging for the treasure that cannot be found"
   },
   {
    "id": "fr_manquant_adj",
    "box": [
-    512,
-    281,
-    669,
-    425
+    390,
+    256,
+    575,
+    412
    ],
-   "scene": "monkey holding a puzzle with one piece missing"
+   "scene": "monkey who can't finish the puzzle: one piece missing"
   },
   {
    "id": "fr_infidele_adj",
    "box": [
-    369,
-    137,
-    544,
-    269
+    375,
+    94,
+    575,
+    237
    ],
-   "scene": "blank museum wall plaque in a plain frame"
-  },
-  {
-   "id": "fr_incompatible_adj",
-   "box": [
-    672,
-    231,
-    742,
-    320
-   ],
-   "scene": "square plug jammed against a round wall socket"
-  },
-  {
-   "id": "fr_intermittent_adj",
-   "box": [
-    748,
-    119,
-    826,
-    419
-   ],
-   "scene": "termite flicking a light switch, the lamp flickering"
+   "scene": "blank framed museum plaque (wall text only)"
   },
   {
    "id": "fr_operationnel_adj",
    "box": [
-    832,
-    156,
-    1000,
-    450
+    606,
+    206,
+    837,
+    512
    ],
-   "scene": "robot giving a cheerful thumbs-up"
+   "scene": "robot giving a cheerful thumbs-up: operational"
   },
   {
    "id": "fr_inactif_adj",
    "box": [
-    1006,
-    50,
-    1194,
-    212
+    850,
+    87,
+    1200,
+    295
    ],
-   "scene": "old robot lying in a cobwebbed hammock"
-  },
-  {
-   "id": "fr_compatible_adj",
-   "box": [
-    1044,
-    222,
-    1181,
-    312
-   ],
-   "scene": "two gears meshing together on the wall"
+   "scene": "old robot asleep in a cobwebbed hammock"
   },
   {
    "id": "fr_defectueux_adj",
    "box": [
-    1006,
-    318,
-    1203,
-    455
+    937,
+    369,
+    1137,
+    612
    ],
-   "scene": "sparking toaster shooting toast into the air"
-  },
+   "scene": "faulty toaster firing toast at the ceiling"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_inexistant_adj",
+   "room_id": "R_adj_state_05_z1",
    "box": [
-    675,
-    475,
-    825,
-    619
+    1060,
+    298,
+    1200,
+    368
    ],
-   "scene": "mouse shaking an empty piggy bank"
-  },
-  {
-   "id": "fr_defaillant_adj",
-   "box": [
-    875,
-    462,
-    1062,
-    650
-   ],
-   "scene": "wobbly sparking robot spilling lemonade as it pours"
+   "label": "the electrics bench"
   }
  ],
  "links": [
@@ -157,11 +119,11 @@
    "target": "R_adj_state_04",
    "box": [
     94,
-    81,
-    250,
-    412
+    100,
+    212,
+    410
    ],
-   "label": "Back through the doorway to the attic room",
+   "label": "Back through the doorway to the attic",
    "name": "Le grenier",
    "kind": "door"
   }

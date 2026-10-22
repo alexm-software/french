@@ -1,0 +1,167 @@
+{
+ "kind": "room",
+ "space": "R_hospital_02",
+ "building_id": "B19_hopital",
+ "floor": "second floor (ward)",
+ "name": "La salle des lits",
+ "parent_room_id": null,
+ "divider_x": 1039,
+ "camera": "from the top of the stairs, facing east down the long ward (the optics lab lies south = right)",
+ "setting": {
+  "walls": "soft powder-blue walls with a mural of hot-air balloons (no text) and yellow bed curtains",
+  "floor": "pale oak-look floor",
+  "landmark": "a row of tall arched windows looking down on the square's mortar fountain, with white iron beds along the ward",
+  "light": "bright daylight from the arched windows",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La salle des lits",
+   "box": [
+    338,
+    106,
+    515,
+    225
+   ],
+   "text_box": [
+    342,
+    110,
+    511,
+    221
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_anesthesie_noun",
+   "box": [
+    144,
+    228,
+    347,
+    488
+   ],
+   "row": "back",
+   "scene": "Under ANAESTHESIA a sleepy bear snores 'ZZZ' (\"-ZEE\") through his paw operation, dreaming of honey."
+  },
+  {
+   "id": "fr_recuperation_noun",
+   "box": [
+    356,
+    228,
+    467,
+    450
+   ],
+   "row": "front",
+   "scene": "A bear in a dressing gown does slow RECOVERY (\"ray-kew-pay-rah-SYOHN\") exercises, lifting a teaCUP like a dumbbell."
+  },
+  {
+   "id": "fr_interruption_noun",
+   "box": [
+    559,
+    300,
+    700,
+    469
+   ],
+   "row": "back",
+   "scene": "A duck waddles in quacking, an INTERRUPTION (\"an-teh-rewp-SYOHN\") right in the middle of the doctor's round."
+  },
+  {
+   "id": "fr_derision_noun",
+   "box": [
+    706,
+    194,
+    878,
+    375
+   ],
+   "row": "front",
+   "scene": "A pompous crow tries to sing at a bedside and two parrots hoot with DERISION (\"day-ree-ZYOHN\")."
+  },
+  {
+   "id": "fr_infirmerie_noun",
+   "box": [
+    882,
+    260,
+    1015,
+    490
+   ],
+   "row": "back",
+   "scene": "IN FEAR (\"an-feer-muh-REE\"), little MARY carries her teddy to the INFIRMARY bed, where a nurse bandages its paw."
+  },
+  {
+   "id": "fr_veterinaire_noun",
+   "box": [
+    1019,
+    315,
+    1148,
+    428
+   ],
+   "row": "front",
+   "scene": "VET TERRY (\"vay-tay-ree-NEHR\") leans NEAR a nervous hamster in a tiny bed, listening with a tiny stethoscope."
+  },
+  {
+   "id": "fr_chevet_noun",
+   "box": [
+    1056,
+    432,
+    1203,
+    592
+   ],
+   "row": "back",
+   "scene": "A BEDSIDE table shaped like a little red CHEVY car (\"shuh-VEH\") stands by a bed, a glass of water on its bonnet."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_dentist_01",
+   "box": [
+    0,
+    375,
+    138,
+    619
+   ],
+   "label": "Down the stairs to the dentist",
+   "name": "Le cabinet dentaire",
+   "kind": "stairs_down",
+   "painted_as": "the banister and steps going DOWN in the near left foreground"
+  },
+  {
+   "target": "R_hospital_02_z2",
+   "box": [
+    562,
+    200,
+    652,
+    295
+   ],
+   "label": "Through the far door to radiology",
+   "name": "La radiologie",
+   "kind": "door",
+   "painted_as": "a double door at the BACK CENTRE at the far end of the ward"
+  },
+  {
+   "target": "R_dentist_02",
+   "box": [
+    1062,
+    152,
+    1144,
+    312
+   ],
+   "label": "Into the optics laboratory",
+   "name": "Le laboratoire d'optique",
+   "kind": "door",
+   "painted_as": "a door on the RIGHT wall with brass instruments beyond"
+  }
+ ],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "zoom_from": {
+  "room_id": "R_hospital_02_z1",
+  "box": [
+   470,
+   298,
+   556,
+   369
+  ],
+  "painted_as": "the nurses' station counter at the BACK LEFT"
+ },
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: La salle des lits in the B19_hopital building, second floor (ward). Camera: from the top of the stairs, facing east down the long ward (the optics lab lies south = right).\nSetting: soft powder-blue walls with a mural of hot-air balloons (no text) and yellow bed curtains; floor: pale oak-look floor. Landmark: a row of tall arched windows looking down on the square's mortar fountain, with white iron beds along the ward. Light: bright daylight from the arched windows. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the banister and steps going DOWN in the near left foreground (way to Le cabinet dentaire); a double door at the BACK CENTRE at the far end of the ward (way to La radiologie); a door on the RIGHT wall with brass instruments beyond (way to Le laboratoire d'optique); the nurses' station counter at the BACK LEFT (a small spot to look at closer).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: Under ANAESTHESIA a sleepy bear snores 'ZZZ' through his paw operation, dreaming of honey.\n- left, foreground: A bear in a dressing gown does slow RECOVERY exercises, lifting a teaCUP like a dumbbell.\n- left, middle distance: A duck waddles in quacking, an INTERRUPTION right in the middle of the doctor's round.\n- centre, foreground: A pompous crow tries to sing at a bedside and two parrots hoot with DERISION.\n- centre-right, middle distance: IN FEAR, little MARY carries her teddy to the INFIRMARY bed, where a nurse bandages its paw.\n- right, foreground: VET TERRY leans NEAR a nervous hamster in a tiny bed, listening with a tiny stethoscope.\n- right, middle distance: A BEDSIDE table shaped like a little red CHEVY car stands by a bed, a glass of water on its bonnet.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

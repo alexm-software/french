@@ -2,28 +2,46 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 372,
+ "divider_x": 566,
  "kind": "room",
- "note": "Grandparents' sitting room off the second dressing room. Feminine left (little girl with a fish fillet, niece with scraped knees, granny wrapping a boy like a mummy), the ancestor's portrait (ancêtre, either gender) high on the wall above the mantelpiece, masculine right: back row (father with pram and parrot, nephew refusing broccoli, twins with toy elephants, brother-in-law with a bow on his head in a friar's robe, hairy man with the Taj Mahal from the chest, descendant climbing down from the painted family tree, divorced couple with the sawn-in-two sofa), front row (stepfather with bow tie and pear, grandson in a fez, little heir with crown and furry tie, son-in-law with a gander, grandpa with a puppy, toddler with a drum, two half-brothers (one a mini friar, one in football kit), tall parents' boots beside baby booties for parental). Door back to the dressing room on the left; zoom on the mantelpiece photographs.",
+ "note": "Le salon des grands-parents (s02maison redesign 2026-10-22): first-floor parlour, olive damask wallpaper, dark wainscot, Persian rug on oak boards; LANDMARK white carved-stone fireplace with the gilt family-tree painting above and grandpa's green wing chair beside it; bay window with window seat on the east wall (garden trees). Feminine left: granny wrapping a boy in bandages like a mummy (mamie), little girl holding up a fish fillet on a fork (fillette), barefoot girl looking at her two scraped knees (nièce). Masculine right: grandpa in the wing chair hugging a puppy (papi), small boy at the back turning his back on a bowl of broccoli (neveu), father pushing a pram with a green parrot on his shoulder (parent), young man with a big white gander under his arm (gendre), little boy in a red fez (petit-fils), twins on the rug each hugging a toy elephant (jumeau), dapper short man with a bow tie holding up a pear (beau-père). Open door on the left wall shows the sage dressing room with its tall wardrobe (R_wardrobe_02). Zoom on the mantel photographs -> R_family_02_z1; zoom on the family-tree painting -> R_family_02_z2.",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Les grands-parents",
+   "text": "Le salon des grands-parents",
    "box": [
-    25,
-    42,
-    118,
-    88
+    291,
+    125,
+    381,
+    190
    ],
    "text_box": [
-    30,
-    47,
-    113,
-    83
+    297,
+    131,
+    375,
+    184
    ]
   }
  },
  "items": [
+  {
+   "id": "fr_mamie_noun",
+   "lemma": "mamie",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la mamie",
+   "box": [
+    82,
+    242,
+    296,
+    540
+   ],
+   "label_xy": [
+    189,
+    532
+   ]
+  },
   {
    "id": "fr_fillette_noun",
    "lemma": "fillette",
@@ -32,14 +50,14 @@
    "side": "left",
    "label": "la fillette",
    "box": [
-    15,
-    405,
-    112,
-    650
+    326,
+    360,
+    432,
+    618
    ],
    "label_xy": [
-    64,
-    640
+    379,
+    610
    ]
   },
   {
@@ -50,248 +68,14 @@
    "side": "left",
    "label": "la nièce",
    "box": [
-    114,
-    402,
-    212,
-    650
+    458,
+    384,
+    562,
+    666
    ],
    "label_xy": [
-    163,
-    640
-   ]
-  },
-  {
-   "id": "fr_mamie_noun",
-   "lemma": "mamie",
-   "article": "la",
-   "gender": "f",
-   "side": "left",
-   "label": "la mamie",
-   "box": [
-    214,
-    335,
-    372,
-    640
-   ],
-   "label_xy": [
-    293,
-    630
-   ]
-  },
-  {
-   "id": "fr_ancetre_noun",
-   "lemma": "ancêtre",
-   "article": "l'",
-   "gender": "mf",
-   "side": "center",
-   "label": "l'ancêtre",
-   "box": [
-    155,
-    10,
-    302,
-    185
-   ],
-   "label_xy": [
-    228,
-    175
-   ]
-  },
-  {
-   "id": "fr_parent_noun",
-   "lemma": "parent",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le parent",
-   "box": [
-    380,
-    145,
-    500,
-    395
-   ],
-   "label_xy": [
-    440,
-    385
-   ]
-  },
-  {
-   "id": "fr_neveu_noun",
-   "lemma": "neveu",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le neveu",
-   "box": [
-    502,
-    195,
-    568,
-    395
-   ],
-   "label_xy": [
-    535,
-    385
-   ]
-  },
-  {
-   "id": "fr_jumeau_noun",
-   "lemma": "jumeau",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le jumeau",
-   "box": [
-    580,
-    215,
-    700,
-    392
-   ],
-   "label_xy": [
-    640,
-    382
-   ]
-  },
-  {
-   "id": "fr_beau_frere_noun",
-   "lemma": "beau-frère",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le beau-frère",
-   "box": [
-    702,
-    145,
-    805,
-    392
-   ],
-   "label_xy": [
-    754,
-    382
-   ]
-  },
-  {
-   "id": "fr_heritage_noun",
-   "lemma": "héritage",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'héritage",
-   "box": [
-    808,
-    150,
-    935,
-    395
-   ],
-   "label_xy": [
-    872,
-    385
-   ]
-  },
-  {
-   "id": "fr_descendant_noun",
-   "lemma": "descendant",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le descendant",
-   "box": [
-    940,
-    35,
-    1015,
-    385
-   ],
-   "label_xy": [
-    978,
-    375
-   ]
-  },
-  {
-   "id": "fr_divorce_noun",
-   "lemma": "divorce",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le divorce",
-   "box": [
-    1018,
-    150,
-    1268,
-    395
-   ],
-   "label_xy": [
-    1143,
-    385
-   ]
-  },
-  {
-   "id": "fr_beau_pere_noun",
-   "lemma": "beau-père",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le beau-père",
-   "box": [
-    375,
-    398,
-    505,
-    690
-   ],
-   "label_xy": [
-    440,
-    680
-   ]
-  },
-  {
-   "id": "fr_petit_fils_noun",
-   "lemma": "petit-fils",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le petit-fils",
-   "box": [
-    507,
-    470,
-    582,
-    695
-   ],
-   "label_xy": [
-    544,
-    685
-   ]
-  },
-  {
-   "id": "fr_heritier_noun",
-   "lemma": "héritier",
-   "article": "l'",
-   "gender": "m",
-   "side": "right",
-   "label": "l'héritier",
-   "box": [
-    584,
-    405,
-    662,
-    650
-   ],
-   "label_xy": [
-    623,
-    640
-   ]
-  },
-  {
-   "id": "fr_gendre_noun",
-   "lemma": "gendre",
-   "article": "le",
-   "gender": "m",
-   "side": "right",
-   "label": "le gendre",
-   "box": [
-    664,
-    400,
-    762,
-    640
-   ],
-   "label_xy": [
-    713,
-    630
+    510,
+    658
    ]
   },
   {
@@ -302,89 +86,155 @@
    "side": "right",
    "label": "le papi",
    "box": [
-    764,
-    398,
-    935,
-    520
+    568,
+    280,
+    733,
+    390
    ],
    "label_xy": [
-    850,
+    650,
+    382
+   ]
+  },
+  {
+   "id": "fr_neveu_noun",
+   "lemma": "neveu",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le neveu",
+   "box": [
+    740,
+    220,
+    800,
+    372
+   ],
+   "label_xy": [
+    770,
+    364
+   ]
+  },
+  {
+   "id": "fr_parent_noun",
+   "lemma": "parent",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le parent",
+   "box": [
+    806,
+    232,
+    922,
+    512
+   ],
+   "label_xy": [
+    864,
+    504
+   ]
+  },
+  {
+   "id": "fr_gendre_noun",
+   "lemma": "gendre",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le gendre",
+   "box": [
+    924,
+    202,
+    1038,
+    380
+   ],
+   "label_xy": [
+    981,
+    372
+   ]
+  },
+  {
+   "id": "fr_petit_fils_noun",
+   "lemma": "petit-fils",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le petit-fils",
+   "box": [
+    974,
+    384,
+    1034,
     510
+   ],
+   "label_xy": [
+    994,
+    502
    ]
   },
   {
-   "id": "fr_bambin_noun",
-   "lemma": "bambin",
+   "id": "fr_jumeau_noun",
+   "lemma": "jumeau",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le bambin",
+   "label": "le jumeau",
    "box": [
-    880,
-    522,
-    990,
-    680
+    846,
+    514,
+    1030,
+    674
    ],
    "label_xy": [
-    935,
-    670
+    938,
+    666
    ]
   },
   {
-   "id": "fr_demi_frere_noun",
-   "lemma": "demi-frère",
+   "id": "fr_beau_pere_noun",
+   "lemma": "beau-père",
    "article": "le",
    "gender": "m",
    "side": "right",
-   "label": "le demi-frère",
+   "label": "le beau-père",
    "box": [
-    992,
-    420,
-    1135,
-    680
+    1040,
+    372,
+    1180,
+    674
    ],
    "label_xy": [
-    1064,
-    670
-   ]
-  },
-  {
-   "id": "fr_parental_adj",
-   "lemma": "parental",
-   "article": "",
-   "gender": null,
-   "side": "center",
-   "label": "parental",
-   "box": [
-    1137,
-    480,
-    1265,
-    668
-   ],
-   "label_xy": [
-    1201,
-    658
+    1110,
+    666
    ]
   }
  ],
- "zoom_from": {
-  "room_id": "R_family_02_z1",
-  "box": [
-   160,
-   192,
-   300,
-   232
-  ],
-  "label": "Look closer at the family photos on the mantelpiece"
- },
+ "zoom_from": [
+  {
+   "room_id": "R_family_02_z1",
+   "box": [
+    398,
+    190,
+    668,
+    234
+   ],
+   "label": "Look closer at the photos on the mantelpiece"
+  },
+  {
+   "room_id": "R_family_02_z2",
+   "box": [
+    446,
+    48,
+    636,
+    186
+   ],
+   "label": "Look closer at the family-tree painting"
+  }
+ ],
  "links": [
   {
    "target": "R_wardrobe_02",
    "box": [
-    8,
-    105,
-    118,
-    400
+    100,
+    82,
+    270,
+    236
    ],
    "label": "Door back to the dressing room",
    "name": "Le dressing",

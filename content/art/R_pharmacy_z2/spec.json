@@ -1,0 +1,133 @@
+{
+ "kind": "zone",
+ "space": "R_pharmacy_z2",
+ "building_id": "B18_pharmacie",
+ "floor": "ground floor (back room)",
+ "name": "Le préparatoire",
+ "parent_room_id": "R_pharmacy",
+ "divider_x": 573,
+ "camera": "from the shop doorway, facing east into the compounding room",
+ "setting": {
+  "walls": "pale sea-glass green glazed tiles with brass shelves of brown and blue glass jars",
+  "floor": "grey stone flags",
+  "landmark": "a huge marble mortar and pestle and a tall brass apothecary balance on a central oak table",
+  "light": "cool daylight from a high back window",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le préparatoire",
+   "box": [
+    120,
+    45,
+    372,
+    170
+   ],
+   "text_box": [
+    124,
+    49,
+    368,
+    166
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_drogue_noun",
+   "box": [
+    228,
+    195,
+    325,
+    258
+   ],
+   "row": "back",
+   "scene": "The word DROGUE, a harmful DRUG (said DROG), is engraved on a brass wall plaque by the locked cabinet; the word for medicine is médicament.",
+   "drawn": false,
+   "render": "museum_wall_plaque"
+  },
+  {
+   "id": "fr_aiguille_noun",
+   "box": [
+    118,
+    262,
+    338,
+    612
+   ],
+   "row": "front",
+   "scene": "A GOOEY (\"ay-GWEE\") marshmallow sits stuck on the tip of a giant knitting NEEDLE that a granny is using."
+  },
+  {
+   "id": "fr_pilule_noun",
+   "box": [
+    450,
+    405,
+    652,
+    498
+   ],
+   "row": "back",
+   "scene": "A giant soft PILL-shaped cushion LULLS (\"LEWL\") a hamster to sleep on the table."
+  },
+  {
+   "id": "fr_traitement_noun",
+   "box": [
+    500,
+    188,
+    735,
+    402
+   ],
+   "row": "front",
+   "scene": "A MAN (\"MAHN\") carries a TRAY (\"treh\") of TREATMENT, hot towels and a warm drink, to a sneezing bear."
+  },
+  {
+   "id": "fr_flacon_noun",
+   "box": [
+    738,
+    180,
+    838,
+    470
+   ],
+   "row": "back",
+   "scene": "The pharmacist fills a tiny glass VIAL through a paper CONE (\"KOHN\") funnel, and a mouse peeks inside."
+  },
+  {
+   "id": "fr_platre_noun",
+   "box": [
+    842,
+    365,
+    1004,
+    625
+   ],
+   "row": "front",
+   "scene": "A golden puppy proudly holds up his PLASTER cast covered in paw prints, right beside the shiny silver PLATTER (\"PLAHTR\") on the worktable."
+  },
+  {
+   "id": "fr_comprime_noun",
+   "box": [
+    1008,
+    180,
+    1200,
+    440
+   ],
+   "row": "back",
+   "scene": "A rabbit pulls the lever of a big brass press that squashes white powder into a round TABLET: COMPRESSED (\"kohn-pree-MAY\")!"
+  }
+ ],
+ "links": [
+  {
+   "target": "R_pharmacy",
+   "box": [
+    62,
+    174,
+    160,
+    445
+   ],
+   "label": "Back into the shop",
+   "name": "La pharmacie",
+   "kind": "door",
+   "painted_as": "the open doorway on the LEFT wall showing the walnut drawers of the shop"
+  }
+ ],
+ "boxes_status": "MEASURED on the 06:40 UTC repaint (track S07 resume); repainted 06:40 UTC: one continuous stone floor (the old painting had a hard floor seam cutting feet and table legs)",
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: Le préparatoire in the B18_pharmacie building, ground floor (back room). Camera: from the shop doorway, facing east into the compounding room.\nSetting: pale sea-glass green glazed tiles with brass shelves of brown and blue glass jars; floor: grey stone flags. Landmark: a huge marble mortar and pestle and a tall brass apothecary balance on a central oak table. Light: cool daylight from a high back window. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the doorway behind, in the near left foreground, showing the walnut drawers of the shop (way to La pharmacie).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: a blank brass museum plaque on the wall (no figure).\n- left, foreground: A GOOEY marshmallow sits stuck on the tip of a giant knitting NEEDLE that a granny is using.\n- centre-left, middle distance: A giant soft PILL-shaped cushion LULLS a hamster to sleep on the table.\n- centre-right, foreground: A MAN carries a TRAY of TREATMENT, hot towels and a warm drink, to a sneezing bear.\n- centre-right, middle distance: The pharmacist fills a tiny glass VIAL through a paper CONE funnel, and a mouse peeks inside.\n- far right, foreground: A puppy proudly holds out his PLASTER cast, covered in paw prints, resting on a silver PLATTER.\n- far right, middle distance: A big brass press squashes white powder into a neat TABLET: COMPRESSED! A rabbit pulls the lever.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

@@ -659,13 +659,14 @@
   },
   {
    "id": "R_alphabet_01",
-   "name": "Alphabet & pronunciation hall [ground floor 1] · letter I (said \"i\"), letter A (said \"a\"), letter U (said \"u\")",
+   "name": "Alphabet & pronunciation hall [ground floor 1] · letters A–M",
    "type": "grammar",
    "setting": "Alphabet & pronunciation hall inside Petite École (first schoolhouse).",
    "kind": "full",
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.0,
    "related_rooms": [
@@ -687,42 +688,43 @@
    ],
    "base_room": "R_alphabet",
    "words": [
+    "fr_a_letter",
+    "fr_b_letter",
+    "fr_g_letter",
+    "fr_h_letter",
     "fr_j_letter",
     "fr_z_letter",
     "fr_q_letter",
-    "fr_h_letter",
-    "fr_g_letter",
     "fr_k_letter",
     "fr_i_letter",
     "fr_y_letter",
     "fr_x_letter",
     "fr_u_letter",
-    "fr_b_letter",
-    "fr_a_letter",
     "fr_w_letter"
    ],
    "item_count": 13,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
    "id": "R_alphabet_02",
-   "name": "Alphabet & pronunciation hall [ground floor 2] · letter E (said \"e\"), letter, letter S (said \"esse\")",
+   "name": "Alphabet & pronunciation hall [ground floor 2] · letters N–Z",
    "type": "grammar",
    "setting": "Alphabet & pronunciation hall inside Petite École (first schoolhouse).",
    "kind": "full",
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.0,
    "related_rooms": [
     "R_alphabet_01",
     "R_articles",
     "R_linguistics_03",
-    "R_linguistics_02"
+    "ST_communication_seg004"
    ],
    "conversation_ids": [
     "C_R_alphabet_02"
@@ -730,25 +732,25 @@
    "base_room": "R_alphabet",
    "words": [
     "fr_lettre_noun",
+    "fr_n_letter",
     "fr_o_letter",
-    "fr_d_letter",
-    "fr_c_letter",
-    "fr_t_letter",
-    "fr_l_letter",
-    "fr_v_letter",
     "fr_p_letter",
     "fr_r_letter",
     "fr_s_letter",
-    "fr_m_letter",
-    "fr_n_letter",
+    "fr_t_letter",
+    "fr_c_letter",
+    "fr_d_letter",
     "fr_e_letter",
-    "fr_f_letter"
+    "fr_f_letter",
+    "fr_l_letter",
+    "fr_v_letter",
+    "fr_m_letter"
    ],
    "item_count": 14,
    "total_items_incl_zooms": 14,
    "side_counts": {
     "left": 1,
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
@@ -830,16 +832,16 @@
     "fr_million_noun",
     "fr_cent_num",
     "fr_deuxieme_adj",
-    "fr_quart_noun",
     "fr_trente_num",
     "fr_troisieme_adj",
-    "fr_cinquante_num"
+    "fr_cinquante_num",
+    "fr_quart_noun"
    ],
    "item_count": 10,
    "total_items_incl_zooms": 22,
    "side_counts": {
     "n/a": 8,
-    "right": 2
+    "right": 1
    }
   },
   {
@@ -851,6 +853,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.0,
    "related_rooms": [
@@ -872,9 +875,9 @@
     "fr_des_det",
     "fr_du_det",
     "fr_au_det",
+    "fr_aux_det",
     "fr_son_det",
     "fr_mon_det",
-    "fr_aux_det",
     "fr_votre_det",
     "fr_ton_det",
     "fr_notre_det",
@@ -883,7 +886,7 @@
    "item_count": 15,
    "total_items_incl_zooms": 15,
    "side_counts": {
-    "n/a": 15
+    "n/a": 9
    }
   },
   {
@@ -895,6 +898,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.08,
    "related_rooms": [
@@ -912,11 +916,11 @@
     "fr_il_pron",
     "fr_tu_pron",
     "fr_me_pron",
-    "fr_ce_pron",
     "fr_y_pron",
     "fr_lui_pron",
     "fr_moi_pron",
     "fr_tout_pron",
+    "fr_ce_pron",
     "fr_cela_pron",
     "fr_rien_noun",
     "fr_ceci_pron"
@@ -924,8 +928,7 @@
    "item_count": 12,
    "total_items_incl_zooms": 12,
    "side_counts": {
-    "n/a": 11,
-    "right": 1
+    "n/a": 8
    }
   },
   {
@@ -937,6 +940,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.15,
    "related_rooms": [
@@ -957,17 +961,17 @@
     "fr_nous_pron",
     "fr_te_pron",
     "fr_toi_pron",
+    "fr_lui_meme_pron",
     "fr_quelqu_un_pron",
     "fr_celui_pron",
     "fr_chacun_pron",
     "fr_aucun_pron",
-    "fr_lui_meme_pron",
     "fr_tel_pron"
    ],
    "item_count": 13,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
@@ -1054,6 +1058,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.08,
    "related_rooms": [
@@ -1072,18 +1077,18 @@
     "fr_avec_prep",
     "fr_sans_prep",
     "fr_entre_prep",
+    "fr_contre_prep",
+    "fr_derriere_prep",
+    "fr_sauf_prep",
     "fr_avant_prep",
     "fr_depuis_prep",
-    "fr_contre_prep",
     "fr_pendant_prep",
-    "fr_derriere_prep",
-    "fr_jusque_prep",
-    "fr_sauf_prep"
+    "fr_jusque_prep"
    ],
    "item_count": 12,
    "total_items_incl_zooms": 12,
    "side_counts": {
-    "n/a": 12
+    "n/a": 8
    }
   },
   {
@@ -1095,6 +1100,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "A1",
    "mean_level": 1.15,
    "related_rooms": [
@@ -1114,18 +1120,18 @@
     "fr_sur_prep",
     "fr_par_prep",
     "fr_chez_prep",
-    "fr_apres_prep",
     "fr_sous_prep",
-    "fr_vers_prep",
     "fr_devant_prep",
+    "fr_parmi_prep",
+    "fr_apres_prep",
+    "fr_vers_prep",
     "fr_selon_prep",
-    "fr_des_prep",
-    "fr_parmi_prep"
+    "fr_des_prep"
    ],
    "item_count": 13,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 9
    }
   },
   {
@@ -1137,6 +1143,7 @@
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [],
    "cefr_band": "B2",
    "mean_level": 4.09,
    "related_rooms": [
@@ -1150,21 +1157,21 @@
    "base_room": "R_prepositions",
    "words": [
     "fr_malgre_prep",
-    "fr_hors_prep",
     "fr_durant_prep",
     "fr_envers_prep",
     "fr_concernant_prep",
     "fr_via_prep",
-    "fr_hormis_prep",
     "fr_moyennant_prep",
     "fr_touchant_prep",
     "fr_par_dela_prep",
+    "fr_hors_prep",
+    "fr_hormis_prep",
     "fr_excepte_prep"
    ],
    "item_count": 11,
    "total_items_incl_zooms": 11,
    "side_counts": {
-    "n/a": 11
+    "n/a": 8
    }
   },
   {
@@ -1730,6 +1737,9 @@
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [
+    "R_colors_01_z1"
+   ],
    "cefr_band": "A1",
    "mean_level": 1.27,
    "related_rooms": [
@@ -1748,16 +1758,13 @@
     "fr_couleur_noun",
     "fr_bleu_adj",
     "fr_vert_adj",
-    "fr_gris_adj",
     "fr_jaune_adj",
-    "fr_rose_adj",
-    "fr_pale_adj",
-    "fr_brun_adj"
+    "fr_rose_adj"
    ],
-   "item_count": 11,
+   "item_count": 8,
    "total_items_incl_zooms": 11,
    "side_counts": {
-    "n/a": 10,
+    "n/a": 7,
     "left": 1
    }
   },
@@ -1771,6 +1778,7 @@
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "zoom_ids": [
+    "R_colors_02_z2",
     "R_colors_02_z1"
    ],
    "cefr_band": "B2",
@@ -1788,24 +1796,19 @@
     "fr_tache_noun_2",
     "fr_violet_adj",
     "fr_marron_adj",
-    "fr_mixte_adj",
-    "fr_diversite_noun",
-    "fr_multiple_adj",
     "fr_nuance_noun",
-    "fr_neutre_adj",
     "fr_contraste_noun",
     "fr_teinte_noun",
     "fr_verdure_noun",
-    "fr_blancheur_noun",
-    "fr_emeraude_noun",
     "fr_lilas_noun",
+    "fr_emeraude_noun",
     "fr_pourpre_noun"
    ],
-   "item_count": 15,
+   "item_count": 10,
    "total_items_incl_zooms": 21,
    "side_counts": {
-    "left": 7,
-    "n/a": 5,
+    "left": 5,
+    "n/a": 2,
     "right": 3
    }
   },
@@ -1818,6 +1821,9 @@
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
+   "zoom_ids": [
+    "R_shapes_02_z1"
+   ],
    "cefr_band": "B2",
    "mean_level": 3.85,
    "related_rooms": [
@@ -1833,24 +1839,20 @@
    "words": [
     "fr_regulier_adj",
     "fr_grandeur_noun",
-    "fr_centimetre_noun",
     "fr_geant_noun",
     "fr_tonne_noun",
     "fr_foudre_noun_m",
     "fr_carreau_noun",
     "fr_carre_adj",
     "fr_epaisseur_noun",
-    "fr_resolution_noun",
-    "fr_diametre_noun",
-    "fr_pourtour_noun",
-    "fr_hexagone_noun"
+    "fr_resolution_noun"
    ],
-   "item_count": 13,
+   "item_count": 9,
    "total_items_incl_zooms": 13,
    "side_counts": {
     "n/a": 2,
     "left": 4,
-    "right": 7
+    "right": 3
    }
   },
   {
@@ -1863,8 +1865,8 @@
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "zoom_ids": [
-    "R_shapes_03_z1",
-    "R_shapes_03_z2"
+    "R_shapes_03_z2",
+    "R_shapes_03_z1"
    ],
    "cefr_band": "B1",
    "mean_level": 3.27,
@@ -2616,6 +2618,9 @@
    "sector_id": "S02_home",
    "building_id": "B05_maison",
    "links_back_to_sector": "S02_home",
+   "zoom_ids": [
+    "R_wardrobe_04_z1"
+   ],
    "cefr_band": "C1",
    "mean_level": 5.43,
    "related_rooms": [
@@ -2630,25 +2635,19 @@
    "base_room": "R_wardrobe",
    "words": [
     "fr_impermeable_noun",
-    "fr_pantoufle_noun",
     "fr_tunique_noun",
     "fr_pochette_noun",
     "fr_deguisement_noun",
-    "fr_chausson_noun",
     "fr_capuchon_noun",
-    "fr_escarpin_noun",
-    "fr_pointure_noun",
     "fr_vestimentaire_adj",
-    "fr_polo_noun",
-    "fr_pourpoint_noun",
     "fr_textile_noun",
     "fr_pret_a_porter_noun"
    ],
-   "item_count": 14,
+   "item_count": 8,
    "total_items_incl_zooms": 14,
    "side_counts": {
-    "right": 9,
-    "left": 4,
+    "right": 5,
+    "left": 2,
     "n/a": 1
    }
   },
@@ -2710,6 +2709,7 @@
    "building_id": "B05_maison",
    "links_back_to_sector": "S02_home",
    "zoom_ids": [
+    "R_family_02_z2",
     "R_family_02_z1"
    ],
    "cefr_band": "B2",
@@ -2732,30 +2732,19 @@
     "fr_parent_noun",
     "fr_neveu_noun",
     "fr_fillette_noun",
-    "fr_ancetre_noun",
     "fr_jumeau_noun",
-    "fr_beau_frere_noun",
-    "fr_heritage_noun",
-    "fr_divorce_noun",
     "fr_beau_pere_noun",
     "fr_petit_fils_noun",
-    "fr_heritier_noun",
     "fr_niece_noun",
     "fr_mamie_noun",
     "fr_gendre_noun",
-    "fr_papi_noun",
-    "fr_descendant_noun",
-    "fr_bambin_noun",
-    "fr_demi_frere_noun",
-    "fr_parental_adj"
+    "fr_papi_noun"
    ],
-   "item_count": 19,
+   "item_count": 10,
    "total_items_incl_zooms": 26,
    "side_counts": {
-    "right": 14,
-    "left": 3,
-    "center": 1,
-    "n/a": 1
+    "right": 7,
+    "left": 3
    }
   },
   {
@@ -4528,13 +4517,16 @@
   },
   {
    "id": "R_adj_state_02",
-   "name": "Repair café — states & conditions [first floor 1] · intact, liquid, clean",
+   "name": "Repair café — states & conditions [ground floor 1] · intact, liquid, clean",
    "type": "adjectives",
    "setting": "Broken, fixed, full, empty, wet, dry, clean and dirty objects queue on the workbench waiting for repair.",
    "kind": "full",
    "sector_id": "S03_market",
    "building_id": "B61_reparation",
    "links_back_to_sector": "S03_market",
+   "zoom_ids": [
+    "R_adj_state_02_z1"
+   ],
    "cefr_band": "B2",
    "mean_level": 3.62,
    "related_rooms": [
@@ -4552,31 +4544,29 @@
     "fr_fragile_adj",
     "fr_net_adj",
     "fr_intact_adj",
-    "fr_polonais_adj",
     "fr_infini_adj",
     "fr_innombrable_adj",
-    "fr_incomprehensible_adj",
-    "fr_liquide_adj",
     "fr_use_adj",
-    "fr_poussiereux_adj",
-    "fr_menager_adj",
-    "fr_soigne_adj"
+    "fr_poussiereux_adj"
    ],
-   "item_count": 13,
+   "item_count": 8,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
    "id": "R_adj_state_03",
-   "name": "Repair café — states & conditions [first floor 2] · temporary, taken",
+   "name": "Repair café — states & conditions [ground floor 2] · temporary, taken",
    "type": "adjectives",
    "setting": "Broken, fixed, full, empty, wet, dry, clean and dirty objects queue on the workbench waiting for repair.",
    "kind": "full",
    "sector_id": "S03_market",
    "building_id": "B61_reparation",
    "links_back_to_sector": "S03_market",
+   "zoom_ids": [
+    "R_adj_state_03_z1"
+   ],
    "cefr_band": "B2",
    "mean_level": 3.54,
    "related_rooms": [
@@ -4594,24 +4584,19 @@
     "fr_urgent_adj",
     "fr_casse_adj",
     "fr_souple_adj",
-    "fr_disponible_adj",
     "fr_fini_adj",
     "fr_pris_adj",
-    "fr_provisoire_adj",
-    "fr_illegal_adj",
-    "fr_mobile_adj",
-    "fr_interesse_adj",
-    "fr_temporaire_adj"
+    "fr_provisoire_adj"
    ],
-   "item_count": 13,
+   "item_count": 8,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
    "id": "R_adj_state_04",
-   "name": "Repair café — states & conditions [upstairs 1] · vacant, remaining, fresh",
+   "name": "Repair café — states & conditions [first floor 1] · vacant, remaining, fresh",
    "type": "adjectives",
    "setting": "Broken, fixed, full, empty, wet, dry, clean and dirty objects queue on the workbench waiting for repair.",
    "kind": "full",
@@ -4656,13 +4641,16 @@
   },
   {
    "id": "R_adj_state_05",
-   "name": "Repair café — states & conditions [upstairs 2] · nonexistent, faulty, incompatible",
+   "name": "Repair café — states & conditions [first floor 2] · nonexistent, faulty, incompatible",
    "type": "adjectives",
    "setting": "Broken, fixed, full, empty, wet, dry, clean and dirty objects queue on the workbench waiting for repair.",
    "kind": "full",
    "sector_id": "S03_market",
    "building_id": "B61_reparation",
    "links_back_to_sector": "S03_market",
+   "zoom_ids": [
+    "R_adj_state_05_z1"
+   ],
    "cefr_band": "C2",
    "mean_level": 5.54,
    "related_rooms": [
@@ -4680,19 +4668,14 @@
     "fr_introuvable_adj",
     "fr_manquant_adj",
     "fr_infidele_adj",
-    "fr_inexistant_adj",
     "fr_operationnel_adj",
-    "fr_compatible_adj",
     "fr_defectueux_adj",
-    "fr_incompatible_adj",
-    "fr_intermittent_adj",
-    "fr_defaillant_adj",
     "fr_inactif_adj"
    ],
-   "item_count": 13,
+   "item_count": 8,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "n/a": 13
+    "n/a": 8
    }
   },
   {
@@ -4765,7 +4748,6 @@
    "small_objects": true,
    "base_room": "R_abs_beauty",
    "words": [
-    "fr_merci_noun_m",
     "fr_maniere_noun",
     "fr_beaute_noun",
     "fr_charme_noun",
@@ -4773,15 +4755,13 @@
     "fr_magie_noun",
     "fr_apparition_noun",
     "fr_chic_adj",
-    "fr_elegance_noun",
-    "fr_compliment_noun",
-    "fr_look_noun"
+    "fr_elegance_noun"
    ],
-   "item_count": 11,
+   "item_count": 8,
    "total_items_incl_zooms": 17,
    "side_counts": {
-    "right": 4,
     "left": 6,
+    "right": 1,
     "n/a": 1
    }
   },
@@ -5093,7 +5073,7 @@
     "fr_capsule_noun",
     "fr_degustation_noun"
    ],
-   "item_count": 16,
+   "item_count": 14,
    "total_items_incl_zooms": 24,
    "side_counts": {
     "right": 7,
@@ -5166,24 +5146,19 @@
    "base_room": "R_bank_counter",
    "words": [
     "fr_sou_noun",
-    "fr_acces_noun",
     "fr_credit_noun",
     "fr_reputation_noun",
     "fr_profil_noun",
     "fr_greve_noun",
     "fr_consommation_noun",
     "fr_portefeuille_noun",
-    "fr_epingle_noun",
-    "fr_rivage_noun",
-    "fr_berge_noun",
-    "fr_bancaire_adj"
+    "fr_epingle_noun"
    ],
-   "item_count": 12,
+   "item_count": 8,
    "total_items_incl_zooms": 18,
    "side_counts": {
-    "right": 6,
-    "left": 5,
-    "n/a": 1
+    "right": 4,
+    "left": 4
    }
   },
   {
@@ -5195,6 +5170,9 @@
    "sector_id": "S05_bank",
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_bank_counter_03_z1"
+   ],
    "cefr_band": "C2",
    "mean_level": 5.5,
    "related_rooms": [
@@ -5213,21 +5191,17 @@
     "fr_verification_noun",
     "fr_allocation_noun",
     "fr_prestation_noun",
-    "fr_cotisation_noun",
     "fr_utilisateur_noun",
-    "fr_versement_noun",
     "fr_notoriete_noun",
     "fr_generique_noun",
-    "fr_denomination_noun",
     "fr_contre_courant_noun",
-    "fr_gisement_noun",
-    "fr_usager_noun"
+    "fr_gisement_noun"
    ],
-   "item_count": 14,
+   "item_count": 10,
    "total_items_incl_zooms": 14,
    "side_counts": {
-    "right": 8,
-    "left": 6
+    "right": 6,
+    "left": 4
    }
   },
   {
@@ -5239,6 +5213,9 @@
    "sector_id": "S05_bank",
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_bank_economy_01_z1"
+   ],
    "cefr_band": "B1",
    "mean_level": 3.4,
    "related_rooms": [
@@ -5260,19 +5237,14 @@
     "fr_depense_noun",
     "fr_revenu_noun",
     "fr_lot_noun",
-    "fr_exigence_noun",
-    "fr_benefice_noun",
-    "fr_taxe_noun",
     "fr_stock_noun",
-    "fr_partage_noun",
-    "fr_gain_noun",
     "fr_marketing_noun"
    ],
-   "item_count": 15,
+   "item_count": 10,
    "total_items_incl_zooms": 15,
    "side_counts": {
-    "right": 10,
-    "left": 5
+    "right": 7,
+    "left": 3
    }
   },
   {
@@ -5328,6 +5300,9 @@
    "sector_id": "S05_bank",
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_bank_economy_03_z1"
+   ],
    "cefr_band": "C2",
    "mean_level": 5.67,
    "related_rooms": [
@@ -5348,17 +5323,14 @@
     "fr_subvention_noun",
     "fr_deficit_noun",
     "fr_remboursement_noun",
-    "fr_contribuable_noun",
-    "fr_devis_noun",
-    "fr_fluctuation_noun",
-    "fr_imposition_noun"
+    "fr_contribuable_noun"
    ],
-   "item_count": 12,
+   "item_count": 9,
    "total_items_incl_zooms": 12,
    "side_counts": {
-    "left": 5,
+    "left": 3,
     "n/a": 2,
-    "right": 4,
+    "right": 3,
     "center": 1
    }
   },
@@ -5371,6 +5343,9 @@
    "sector_id": "S05_bank",
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_bank_economy_04_z1"
+   ],
    "cefr_band": "C2",
    "mean_level": 5.54,
    "related_rooms": [
@@ -5393,17 +5368,14 @@
     "fr_debouche_noun",
     "fr_eleveur_noun",
     "fr_expertise_noun",
-    "fr_prospection_noun",
-    "fr_rentabilite_noun",
-    "fr_trust_noun",
-    "fr_economiste_noun"
+    "fr_prospection_noun"
    ],
-   "item_count": 13,
+   "item_count": 10,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "right": 7,
-    "left": 4,
-    "center": 2
+    "right": 6,
+    "left": 3,
+    "center": 1
    }
   },
   {
@@ -5458,6 +5430,7 @@
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
    "zoom_ids": [
+    "R_office_02_z2",
     "R_office_02_z1"
    ],
    "cefr_band": "B2",
@@ -5478,21 +5451,18 @@
     "fr_entretien_noun",
     "fr_salaire_noun",
     "fr_facture_noun",
-    "fr_convention_noun",
     "fr_augmentation_noun",
     "fr_salarie_noun",
     "fr_syndicat_noun",
-    "fr_pacte_noun",
-    "fr_paie_noun",
     "fr_comptabilite_noun",
     "fr_candidature_noun"
    ],
-   "item_count": 13,
+   "item_count": 10,
    "total_items_incl_zooms": 22,
    "side_counts": {
     "n/a": 1,
-    "right": 6,
-    "left": 6
+    "right": 5,
+    "left": 4
    }
   },
   {
@@ -5504,6 +5474,9 @@
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_office_03_z1"
+   ],
    "cefr_band": "C1",
    "mean_level": 5.31,
    "related_rooms": [
@@ -5525,17 +5498,13 @@
     "fr_firme_noun",
     "fr_compere_noun",
     "fr_indemnite_noun",
-    "fr_degradation_noun",
-    "fr_licenciement_noun",
-    "fr_corporation_noun",
-    "fr_remuneration_noun",
-    "fr_coordinateur_noun"
+    "fr_degradation_noun"
    ],
-   "item_count": 13,
+   "item_count": 9,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "left": 8,
-    "right": 5
+    "left": 6,
+    "right": 3
    }
   },
   {
@@ -5547,6 +5516,9 @@
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_occupations_01_z1"
+   ],
    "cefr_band": "A2",
    "mean_level": 1.67,
    "related_rooms": [
@@ -5568,17 +5540,14 @@
     "fr_secretaire_noun",
     "fr_carriere_noun",
     "fr_emploi_noun",
-    "fr_assistant_noun",
-    "fr_ingenieur_noun",
-    "fr_profession_noun",
-    "fr_specialite_noun"
+    "fr_assistant_noun"
    ],
-   "item_count": 12,
+   "item_count": 9,
    "total_items_incl_zooms": 12,
    "side_counts": {
     "center": 2,
-    "right": 7,
-    "left": 3
+    "right": 6,
+    "left": 1
    }
   },
   {
@@ -5590,6 +5559,9 @@
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_occupations_02_z1"
+   ],
    "cefr_band": "B1",
    "mean_level": 3.4,
    "related_rooms": [
@@ -5612,19 +5584,14 @@
     "fr_specialiste_noun",
     "fr_architecte_noun",
     "fr_boulanger_noun",
-    "fr_charrette_noun",
-    "fr_nourrice_noun",
-    "fr_bourgeoisie_noun",
-    "fr_magicien_noun",
-    "fr_epicier_noun",
-    "fr_psychiatre_noun"
+    "fr_charrette_noun"
    ],
-   "item_count": 15,
+   "item_count": 10,
    "total_items_incl_zooms": 15,
    "side_counts": {
-    "left": 4,
-    "right": 6,
-    "center": 5
+    "left": 2,
+    "right": 4,
+    "center": 4
    }
   },
   {
@@ -5680,6 +5647,9 @@
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_occupations_04_z1"
+   ],
    "cefr_band": "C1",
    "mean_level": 5.25,
    "related_rooms": [
@@ -5701,16 +5671,13 @@
     "fr_baby_sitter_noun",
     "fr_menuisier_noun",
     "fr_inventeur_noun",
-    "fr_demoiselle_noun",
-    "fr_promoteur_noun",
-    "fr_canalisation_noun",
-    "fr_garderie_noun"
+    "fr_demoiselle_noun"
    ],
-   "item_count": 12,
+   "item_count": 9,
    "total_items_incl_zooms": 12,
    "side_counts": {
-    "right": 7,
-    "left": 4,
+    "right": 6,
+    "left": 2,
     "center": 1
    }
   },
@@ -5723,6 +5690,9 @@
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
+   "zoom_ids": [
+    "R_occupations_05_z1"
+   ],
    "cefr_band": "C2",
    "mean_level": 5.67,
    "related_rooms": [
@@ -5738,20 +5708,17 @@
     "fr_resume_noun",
     "fr_diplomatie_noun",
     "fr_aristocrate_noun",
-    "fr_doctorat_noun",
     "fr_electricien_noun",
     "fr_stagiaire_noun",
     "fr_educateur_noun",
     "fr_analyste_noun",
     "fr_qualification_noun",
-    "fr_assureur_noun",
-    "fr_praticien_noun",
-    "fr_academicien_noun"
+    "fr_assureur_noun"
    ],
-   "item_count": 12,
+   "item_count": 9,
    "total_items_incl_zooms": 12,
    "side_counts": {
-    "right": 7,
+    "right": 4,
     "left": 2,
     "center": 3
    }
@@ -8142,6 +8109,9 @@
    "sector_id": "S07_health",
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
+   "zoom_ids": [
+    "R_body_01_z1"
+   ],
    "cefr_band": "A2",
    "mean_level": 1.5,
    "related_rooms": [
@@ -8157,27 +8127,19 @@
    "base_room": "R_body",
    "words": [
     "fr_tete_noun",
-    "fr_visage_noun",
-    "fr_face_noun",
-    "fr_cheveu_noun",
     "fr_oreille_noun",
     "fr_nez_noun",
     "fr_langue_noun",
-    "fr_oeil_noun",
     "fr_bouche_noun",
-    "fr_peau_noun",
     "fr_levre_noun",
     "fr_front_noun",
-    "fr_cou_noun",
-    "fr_joue_noun",
-    "fr_figure_noun",
-    "fr_poil_noun"
+    "fr_cou_noun"
    ],
-   "item_count": 16,
+   "item_count": 8,
    "total_items_incl_zooms": 16,
    "side_counts": {
-    "left": 9,
-    "right": 7
+    "left": 5,
+    "right": 3
    }
   },
   {
@@ -8189,6 +8151,9 @@
    "sector_id": "S07_health",
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
+   "zoom_ids": [
+    "R_body_02_z1"
+   ],
    "cefr_band": "A1",
    "mean_level": 1.44,
    "related_rooms": [
@@ -8206,24 +8171,16 @@
     "fr_corps_noun",
     "fr_pied_noun",
     "fr_bras_noun",
-    "fr_fond_noun",
     "fr_jambe_noun",
     "fr_dos_noun",
     "fr_genou_noun",
-    "fr_coeur_noun",
-    "fr_doigt_noun",
-    "fr_epaule_noun",
-    "fr_ventre_noun",
-    "fr_poitrine_noun",
-    "fr_souffle_noun",
-    "fr_gorge_noun",
-    "fr_poing_noun"
+    "fr_epaule_noun"
    ],
-   "item_count": 16,
+   "item_count": 8,
    "total_items_incl_zooms": 16,
    "side_counts": {
-    "left": 5,
-    "right": 11
+    "left": 3,
+    "right": 5
    }
   },
   {
@@ -8235,6 +8192,9 @@
    "sector_id": "S07_health",
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
+   "zoom_ids": [
+    "R_body_03_z1"
+   ],
    "cefr_band": "B2",
    "mean_level": 3.56,
    "related_rooms": [
@@ -8249,30 +8209,20 @@
    "small_objects": true,
    "base_room": "R_body",
    "words": [
-    "fr_os_noun",
     "fr_manche_noun_m",
     "fr_ongle_noun",
     "fr_coude_noun",
-    "fr_nerf_noun",
-    "fr_nuque_noun",
     "fr_pouce_noun",
-    "fr_canne_noun",
     "fr_paume_noun",
-    "fr_coiffeur_noun",
     "fr_index_noun",
-    "fr_cheville_noun",
-    "fr_tempe_noun",
-    "fr_coiffure_noun",
-    "fr_sonnette_noun",
     "fr_menotte_noun",
-    "fr_habilete_noun",
-    "fr_foulard_noun"
+    "fr_habilete_noun"
    ],
-   "item_count": 18,
+   "item_count": 8,
    "total_items_incl_zooms": 18,
    "side_counts": {
-    "right": 9,
-    "left": 9
+    "right": 5,
+    "left": 3
    }
   },
   {
@@ -8284,6 +8234,9 @@
    "sector_id": "S07_health",
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
+   "zoom_ids": [
+    "R_body_04_z1"
+   ],
    "cefr_band": "B1",
    "mean_level": 3.39,
    "related_rooms": [
@@ -8299,29 +8252,20 @@
    "base_room": "R_body",
    "words": [
     "fr_crane_noun",
-    "fr_cuisse_noun",
-    "fr_barbe_noun",
-    "fr_menton_noun",
-    "fr_moustache_noun",
     "fr_veine_noun",
     "fr_estomac_noun",
     "fr_muscle_noun",
     "fr_rein_noun",
     "fr_foie_noun",
-    "fr_poumon_noun",
-    "fr_machoire_noun",
-    "fr_haleine_noun",
     "fr_organe_noun",
-    "fr_narine_noun",
-    "fr_pommette_noun",
     "fr_buste_noun",
     "fr_squelette_noun"
    ],
-   "item_count": 18,
+   "item_count": 9,
    "total_items_incl_zooms": 18,
    "side_counts": {
-    "right": 10,
-    "left": 8
+    "right": 8,
+    "left": 1
    }
   },
   {
@@ -8376,6 +8320,7 @@
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
    "zoom_ids": [
+    "R_doctor_01_z2",
     "R_doctor_01_z1"
    ],
    "cefr_band": "B2",
@@ -8392,26 +8337,19 @@
    "small_objects": true,
    "base_room": "R_doctor",
    "words": [
-    "fr_sante_noun",
     "fr_docteur_noun",
     "fr_douleur_noun",
-    "fr_fatigue_noun",
     "fr_fievre_noun",
     "fr_medical_adj",
-    "fr_grippe_noun",
     "fr_vertige_noun",
-    "fr_ardeur_noun",
-    "fr_virus_noun",
-    "fr_soulagement_noun",
     "fr_cicatrice_noun",
-    "fr_coupure_noun",
-    "fr_toux_noun"
+    "fr_coupure_noun"
    ],
-   "item_count": 14,
+   "item_count": 7,
    "total_items_incl_zooms": 20,
    "side_counts": {
-    "left": 9,
-    "right": 4,
+    "right": 2,
+    "left": 4,
     "n/a": 1
    }
   },
@@ -8464,6 +8402,7 @@
    "building_id": "B18_pharmacie",
    "links_back_to_sector": "S07_health",
    "zoom_ids": [
+    "R_pharmacy_z2",
     "R_pharmacy_z1"
    ],
    "cefr_band": "B2",
@@ -8478,26 +8417,19 @@
    "small_objects": true,
    "base_room": "R_pharmacy",
    "words": [
-    "fr_drogue_noun",
     "fr_medicament_noun",
-    "fr_aiguille_noun",
-    "fr_traitement_noun",
     "fr_medecine_noun",
     "fr_ordonnance_noun",
     "fr_pharmacie_noun",
-    "fr_pilule_noun",
     "fr_remede_noun",
-    "fr_flacon_noun",
-    "fr_platre_noun",
     "fr_sirop_noun",
-    "fr_pharmacien_noun",
-    "fr_comprime_noun"
+    "fr_pharmacien_noun"
    ],
-   "item_count": 14,
+   "item_count": 7,
    "total_items_incl_zooms": 21,
    "side_counts": {
-    "left": 6,
-    "right": 8
+    "right": 4,
+    "left": 3
    }
   },
   {
@@ -8510,6 +8442,7 @@
    "building_id": "B19_hopital",
    "links_back_to_sector": "S07_health",
    "zoom_ids": [
+    "R_hospital_01_z2",
     "R_hospital_01_z1"
    ],
    "cefr_band": "B1",
@@ -8528,23 +8461,16 @@
     "fr_aide_noun_f",
     "fr_hopital_noun",
     "fr_operation_noun",
-    "fr_soin_noun",
     "fr_secours_noun",
-    "fr_miracle_noun",
-    "fr_dommage_noun",
-    "fr_repos_noun",
     "fr_urgence_noun",
     "fr_patient_noun",
-    "fr_hanche_noun",
-    "fr_asile_noun",
-    "fr_ambulance_noun",
-    "fr_extremite_noun"
+    "fr_ambulance_noun"
    ],
-   "item_count": 14,
+   "item_count": 7,
    "total_items_incl_zooms": 22,
    "side_counts": {
-    "left": 6,
-    "right": 8
+    "left": 4,
+    "right": 3
    }
   },
   {
@@ -8557,6 +8483,7 @@
    "building_id": "B19_hopital",
    "links_back_to_sector": "S07_health",
    "zoom_ids": [
+    "R_hospital_02_z2",
     "R_hospital_02_z1"
    ],
    "cefr_band": "C2",
@@ -8573,25 +8500,18 @@
    "base_room": "R_hospital",
    "words": [
     "fr_chevet_noun",
-    "fr_bosse_noun",
     "fr_infirmerie_noun",
-    "fr_sauvetage_noun",
-    "fr_fracture_noun",
     "fr_derision_noun",
-    "fr_evacuation_noun",
     "fr_interruption_noun",
     "fr_veterinaire_noun",
     "fr_anesthesie_noun",
-    "fr_handicap_noun",
-    "fr_scanner_noun",
-    "fr_entorse_noun",
     "fr_recuperation_noun"
    ],
-   "item_count": 14,
+   "item_count": 7,
    "total_items_incl_zooms": 22,
    "side_counts": {
-    "right": 4,
-    "left": 9,
+    "right": 1,
+    "left": 5,
     "center": 1
    }
   },
@@ -8604,6 +8524,9 @@
    "sector_id": "S07_health",
    "building_id": "B19_hopital",
    "links_back_to_sector": "S07_health",
+   "zoom_ids": [
+    "R_dentist_01_z1"
+   ],
    "cefr_band": "B1",
    "mean_level": 3.23,
    "related_rooms": [
@@ -8619,12 +8542,6 @@
    "base_room": "R_dentist",
    "words": [
     "fr_dent_noun",
-    "fr_vision_noun",
-    "fr_paupiere_noun",
-    "fr_illusion_noun",
-    "fr_sourcil_noun",
-    "fr_perspective_noun",
-    "fr_reconnaissance_noun",
     "fr_dentiste_noun",
     "fr_crete_noun",
     "fr_reflexe_noun",
@@ -8632,12 +8549,12 @@
     "fr_correspondance_noun",
     "fr_interlocuteur_noun"
    ],
-   "item_count": 13,
+   "item_count": 7,
    "total_items_incl_zooms": 13,
    "side_counts": {
-    "left": 9,
-    "right": 3,
-    "center": 1
+    "left": 4,
+    "center": 1,
+    "right": 2
    }
   },
   {
@@ -9299,6 +9216,9 @@
    "sector_id": "S08_travel",
    "building_id": "B25_monde",
    "links_back_to_sector": "S08_travel",
+   "zoom_ids": [
+    "R_world_01_z1"
+   ],
    "cefr_band": "A1",
    "mean_level": 1.47,
    "related_rooms": [
@@ -9316,26 +9236,18 @@
     "fr_monde_noun",
     "fr_ville_noun",
     "fr_pays_noun",
-    "fr_village_noun",
     "fr_plan_noun",
-    "fr_campagne_noun",
-    "fr_region_noun",
-    "fr_paysage_noun",
     "fr_sud_noun",
-    "fr_territoire_noun",
     "fr_ouest_noun",
-    "fr_province_noun",
-    "fr_cite_noun",
     "fr_capitale_noun",
-    "fr_banlieue_noun",
-    "fr_nationalite_noun",
-    "fr_continent_noun"
+    "fr_continent_noun",
+    "fr_nationalite_noun"
    ],
-   "item_count": 17,
+   "item_count": 9,
    "total_items_incl_zooms": 17,
    "side_counts": {
-    "right": 9,
-    "left": 8
+    "right": 6,
+    "left": 3
    }
   },
   {
@@ -9347,6 +9259,9 @@
    "sector_id": "S08_travel",
    "building_id": "B25_monde",
    "links_back_to_sector": "S08_travel",
+   "zoom_ids": [
+    "R_world_02_z1"
+   ],
    "cefr_band": "B2",
    "mean_level": 3.73,
    "related_rooms": [
@@ -9364,24 +9279,16 @@
     "fr_frontiere_noun",
     "fr_nation_noun",
     "fr_patrie_noun",
-    "fr_regional_adj",
     "fr_faubourg_noun",
-    "fr_application_noun",
-    "fr_bordure_noun",
     "fr_comte_noun_2",
     "fr_compatriote_noun",
-    "fr_metropole_noun",
-    "fr_prefecture_noun",
-    "fr_geographie_noun",
-    "fr_immigration_noun",
     "fr_francophonie_noun",
     "fr_mondialisation_noun"
    ],
-   "item_count": 15,
+   "item_count": 8,
    "total_items_incl_zooms": 15,
    "side_counts": {
-    "left": 11,
-    "n/a": 1,
+    "left": 5,
     "right": 2,
     "center": 1
    }
@@ -9439,6 +9346,7 @@
    "building_id": "B25_monde",
    "links_back_to_sector": "S08_travel",
    "zoom_ids": [
+    "R_abs_space_01_z2",
     "R_abs_space_01_z1"
    ],
    "cefr_band": "A1",
@@ -9455,24 +9363,18 @@
    "base_room": "R_abs_space",
    "words": [
     "fr_cote_noun",
-    "fr_bout_noun",
     "fr_facon_noun",
-    "fr_lieu_noun",
-    "fr_endroit_noun",
     "fr_milieu_noun",
-    "fr_quartier_noun",
     "fr_direction_noun",
     "fr_centre_noun",
     "fr_est_noun",
     "fr_nord_noun",
-    "fr_zone_noun",
-    "fr_domaine_noun",
-    "fr_mouvement_noun"
+    "fr_zone_noun"
    ],
-   "item_count": 14,
+   "item_count": 8,
    "total_items_incl_zooms": 21,
    "side_counts": {
-    "right": 11,
+    "right": 5,
     "left": 3
    }
   },
@@ -9486,6 +9388,7 @@
    "building_id": "B25_monde",
    "links_back_to_sector": "S08_travel",
    "zoom_ids": [
+    "R_abs_space_02_z2",
     "R_abs_space_02_z1"
    ],
    "cefr_band": "B2",
@@ -9503,25 +9406,19 @@
    "base_room": "R_abs_space",
    "words": [
     "fr_rang_noun",
-    "fr_cage_noun",
     "fr_instruction_noun",
     "fr_portee_noun",
-    "fr_cachette_noun",
-    "fr_proximite_noun",
-    "fr_revers_noun",
-    "fr_etendue_noun",
     "fr_indication_noun",
-    "fr_voisinage_noun",
     "fr_dispositif_noun",
     "fr_orientation_noun",
     "fr_sud_ouest_noun",
     "fr_sud_est_noun"
    ],
-   "item_count": 14,
+   "item_count": 8,
    "total_items_incl_zooms": 22,
    "side_counts": {
-    "right": 6,
-    "left": 8
+    "right": 4,
+    "left": 4
    }
   },
   {
@@ -18514,6 +18411,497 @@
    }
   },
   {
+   "id": "ST_possession_seg001",
+   "name": "Passage de l'Échange — Rue des Trouvailles · find, find , locate",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A1",
+   "mean_level": 1.33,
+   "related_rooms": [
+    "ST_possession_seg003",
+    "ST_possession_seg005",
+    "R_adj_state_03",
+    "R_abs_study_02"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg001"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_trouver_verb",
+    "fr_retrouver_verb",
+    "fr_rechercher_verb",
+    "fr_situer_verb",
+    "fr_fonder_verb",
+    "fr_decouvrir_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Trouvailles",
+   "street_name_en": "Lucky-Finds Street",
+   "name_fr": "Rue des Trouvailles",
+   "name_en": "Lucky-Finds Street"
+  },
+  {
+   "id": "ST_possession_seg002",
+   "name": "Passage de l'Échange — Allée des Cadeaux · receive, accept, get",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A1",
+   "mean_level": 1.17,
+   "related_rooms": [
+    "ST_possession_seg003",
+    "R_shop_general_02",
+    "R_adj_state_03"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg002"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_chercher_verb",
+    "fr_offrir_verb",
+    "fr_accepter_verb",
+    "fr_obtenir_verb",
+    "fr_recevoir_verb",
+    "fr_avoir_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Allée des Cadeaux",
+   "street_name_en": "Presents Alley",
+   "name_fr": "Allée des Cadeaux",
+   "name_en": "Presents Alley"
+  },
+  {
+   "id": "ST_possession_seg003",
+   "name": "Passage de l'Échange — Rue des Coffres · keep, send",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A1",
+   "mean_level": 1.17,
+   "related_rooms": [
+    "ST_possession_seg002",
+    "ST_possession_seg001",
+    "R_adj_state_03",
+    "ST_control_seg005"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg003"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_tenir_verb",
+    "fr_envoyer_verb",
+    "fr_reserver_verb",
+    "fr_posseder_verb",
+    "fr_conserver_verb",
+    "fr_garder_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Coffres",
+   "street_name_en": "Treasure-Chests Street",
+   "name_fr": "Rue des Coffres",
+   "name_en": "Treasure-Chests Street"
+  },
+  {
+   "id": "ST_possession_seg004",
+   "name": "Passage de l'Échange — Place du Troc · exchange, lead",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A2",
+   "mean_level": 1.67,
+   "related_rooms": [
+    "ST_possession_seg006",
+    "ST_possession_seg007",
+    "ST_control_seg004",
+    "ST_commerce_seg002"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg004"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_enfermer_verb",
+    "fr_changer_verb",
+    "fr_retenir_verb",
+    "fr_echanger_verb",
+    "fr_donner_verb",
+    "fr_mener_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Place du Troc",
+   "street_name_en": "Swap-Shop Square",
+   "name_fr": "Place du Troc",
+   "name_en": "Swap-Shop Square"
+  },
+  {
+   "id": "ST_possession_seg005",
+   "name": "Passage de l'Échange — Place des Bancs · take, occupy",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A1",
+   "mean_level": 1.33,
+   "related_rooms": [
+    "ST_possession_seg001",
+    "ST_possession_seg006",
+    "ST_movement_seg005",
+    "ST_control_seg004"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg005"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_profiter_verb",
+    "fr_occuper_verb",
+    "fr_abandonner_verb",
+    "fr_emporter_verb",
+    "fr_prendre_verb",
+    "fr_laisser_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Place des Bancs",
+   "street_name_en": "Benches Square",
+   "name_fr": "Place des Bancs",
+   "name_en": "Benches Square"
+  },
+  {
+   "id": "ST_possession_seg006",
+   "name": "Passage de l'Échange — Rue des Guichets · take off, bring",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A1",
+   "mean_level": 1.33,
+   "related_rooms": [
+    "ST_possession_seg005",
+    "ST_possession_seg004",
+    "ST_control_seg006",
+    "ST_movement_seg005"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg006"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_saisir_verb",
+    "fr_apporter_verb",
+    "fr_amener_verb",
+    "fr_rendre_verb",
+    "fr_emmener_verb",
+    "fr_retirer_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Guichets",
+   "street_name_en": "Counters Street",
+   "name_fr": "Rue des Guichets",
+   "name_en": "Counters Street"
+  },
+  {
+   "id": "ST_possession_seg007",
+   "name": "Passage de l'Échange — Rue des Envolées · take back, take off",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A2",
+   "mean_level": 2.5,
+   "related_rooms": [
+    "ST_possession_seg004",
+    "ST_possession_seg011",
+    "ST_movement_seg007",
+    "ST_movement_seg006"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg007"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_reprendre_verb",
+    "fr_rapporter_verb",
+    "fr_ramener_verb",
+    "fr_envoler_verb",
+    "fr_decoller_verb",
+    "fr_remporter_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Envolées",
+   "street_name_en": "Take-Offs Street",
+   "name_fr": "Rue des Envolées",
+   "name_en": "Take-Offs Street"
+  },
+  {
+   "id": "ST_possession_seg008",
+   "name": "Passage de l'Échange — Impasse des Seaux-Vides · take down, take away, dismantle",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B1",
+   "mean_level": 3.33,
+   "related_rooms": [
+    "ST_possession_seg011",
+    "ST_possession_seg009",
+    "ST_control_seg006",
+    "ST_change_seg009"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg008"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_defaire_verb",
+    "fr_oter_verb",
+    "fr_demonter_verb",
+    "fr_prelever_verb",
+    "fr_annuler_verb",
+    "fr_vider_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Impasse des Seaux-Vides",
+   "street_name_en": "Empty-Buckets Close",
+   "name_fr": "Impasse des Seaux-Vides",
+   "name_en": "Empty-Buckets Close"
+  },
+  {
+   "id": "ST_possession_seg009",
+   "name": "Passage de l'Échange — Passage des Cages-Ouvertes · block, save",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B1",
+   "mean_level": 3.33,
+   "related_rooms": [
+    "ST_possession_seg008",
+    "ST_possession_seg012",
+    "ST_conflict_seg002",
+    "ST_control_seg005"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg009"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_emparer_verb",
+    "fr_bloquer_verb",
+    "fr_contrer_verb",
+    "fr_delivrer_verb",
+    "fr_redonner_verb",
+    "fr_epargner_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Passage des Cages-Ouvertes",
+   "street_name_en": "Open-Cages Passage",
+   "name_fr": "Passage des Cages-Ouvertes",
+   "name_en": "Open-Cages Passage"
+  },
+  {
+   "id": "ST_possession_seg010",
+   "name": "Passage de l'Échange — Rue des Collectionneurs · accept, collect, copy",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B2",
+   "mean_level": 3.67,
+   "related_rooms": [
+    "ST_possession_seg012",
+    "ST_possession_seg015",
+    "R_adj_state_03",
+    "ST_social_seg006"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg010"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_copier_verb",
+    "fr_rejouir_verb",
+    "fr_virer_verb",
+    "fr_agreer_verb",
+    "fr_doter_verb",
+    "fr_collectionner_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Collectionneurs",
+   "street_name_en": "Collectors' Street",
+   "name_fr": "Rue des Collectionneurs",
+   "name_en": "Collectors' Street"
+  },
+  {
+   "id": "ST_possession_seg011",
+   "name": "Passage de l'Échange — Rue des Pharmaciens · get, acquire, excite",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B1",
+   "mean_level": 3.17,
+   "related_rooms": [
+    "ST_possession_seg007",
+    "ST_possession_seg008",
+    "R_shop_general_01",
+    "ST_social_seg006"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg011"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_implorer_verb",
+    "fr_identifier_verb",
+    "fr_procurer_verb",
+    "fr_garantir_verb",
+    "fr_exciter_verb",
+    "fr_acquerir_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Pharmaciens",
+   "street_name_en": "Chemists' Street",
+   "name_fr": "Rue des Pharmaciens",
+   "name_en": "Chemists' Street"
+  },
+  {
+   "id": "ST_possession_seg012",
+   "name": "Passage de l'Échange — Ruelle des Facteurs · post, search",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B2",
+   "mean_level": 3.6,
+   "related_rooms": [
+    "ST_possession_seg009",
+    "ST_possession_seg010",
+    "R_abs_work_01",
+    "R_adj_state_03"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg012"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_attribuer_verb",
+    "fr_expedier_verb",
+    "fr_localiser_verb",
+    "fr_poster_verb",
+    "fr_fouiller_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Ruelle des Facteurs",
+   "street_name_en": "Postmen's Lane",
+   "name_fr": "Ruelle des Facteurs",
+   "name_en": "Postmen's Lane"
+  },
+  {
+   "id": "ST_possession_seg013",
+   "name": "Passage de l'Échange — Quai des Coups-de-Main · give or pass something someone, provide, give a hand",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C2",
+   "mean_level": 5.6,
+   "related_rooms": [
+    "ST_possession_seg015",
+    "ST_possession_seg014",
+    "R_post_01",
+    "ST_commerce_seg002"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg013"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_refiler_verb",
+    "fr_intenter_verb",
+    "fr_commercialiser_verb",
+    "fr_epauler_verb",
+    "fr_nantir_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Quai des Coups-de-Main",
+   "street_name_en": "Helping-Hands Quay",
+   "name_fr": "Quai des Coups-de-Main",
+   "name_en": "Helping-Hands Quay"
+  },
+  {
    "id": "ST_cooking_seg001",
    "name": "Ruelle des Gourmets — Place du Grand-Festin · Eat & feed",
    "type": "verb_segment",
@@ -18977,6 +19365,494 @@
    "street_name_en": "Cooks' Alley",
    "name_fr": "Allée des Cuisiniers",
    "name_en": "Cooks' Alley"
+  },
+  {
+   "id": "ST_making_seg001",
+   "name": "Rue des Artisans — Rue des Réparateurs · repair, put back, fix",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A2",
+   "mean_level": 1.83,
+   "related_rooms": [
+    "ST_making_seg003",
+    "ST_making_seg004",
+    "R_abs_work_02",
+    "R_hospital_01"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg001"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_reparer_verb",
+    "fr_fixer_verb",
+    "fr_remettre_verb",
+    "fr_attacher_verb",
+    "fr_supporter_verb",
+    "fr_fonctionner_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Réparateurs",
+   "street_name_en": "Repairers' Street",
+   "name_fr": "Rue des Réparateurs",
+   "name_en": "Repairers' Street"
+  },
+  {
+   "id": "ST_making_seg002",
+   "name": "Rue des Artisans — Allée des Inventeurs · work, invent, stick",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A2",
+   "mean_level": 1.5,
+   "related_rooms": [
+    "ST_making_seg003",
+    "R_abs_work_01",
+    "R_garage"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg002"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_travailler_verb",
+    "fr_coller_verb",
+    "fr_installer_verb",
+    "fr_lier_verb",
+    "fr_inventer_verb",
+    "fr_etablir_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Allée des Inventeurs",
+   "street_name_en": "Inventors' Alley",
+   "name_fr": "Allée des Inventeurs",
+   "name_en": "Inventors' Alley"
+  },
+  {
+   "id": "ST_making_seg003",
+   "name": "Rue des Artisans — Rue des Bâtisseurs · build, make",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "A2",
+   "mean_level": 1.67,
+   "related_rooms": [
+    "ST_making_seg002",
+    "ST_making_seg001",
+    "R_industry_01",
+    "R_industry_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg003"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_construire_verb",
+    "fr_produire_verb",
+    "fr_fabriquer_verb",
+    "fr_developper_verb",
+    "fr_creer_verb",
+    "fr_batir_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Bâtisseurs",
+   "street_name_en": "Builders' Street",
+   "name_fr": "Rue des Bâtisseurs",
+   "name_en": "Builders' Street"
+  },
+  {
+   "id": "ST_making_seg004",
+   "name": "Rue des Artisans — Rue des Fournisseurs · supply, build ",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B1",
+   "mean_level": 3.33,
+   "related_rooms": [
+    "ST_making_seg001",
+    "ST_making_seg005",
+    "R_abs_work_01",
+    "R_abs_work_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg004"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_implanter_verb",
+    "fr_reconstruire_verb",
+    "fr_resoudre_verb",
+    "fr_soutenir_verb",
+    "fr_fournir_verb",
+    "fr_equiper_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Fournisseurs",
+   "street_name_en": "Suppliers' Street",
+   "name_fr": "Rue des Fournisseurs",
+   "name_en": "Suppliers' Street"
+  },
+  {
+   "id": "ST_making_seg005",
+   "name": "Rue des Artisans — Passage des Vieux-Meubles · assemble, work, combine together)",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B1",
+   "mean_level": 3.33,
+   "related_rooms": [
+    "ST_making_seg004",
+    "ST_making_seg006",
+    "ST_cognition_seg005",
+    "R_abs_work_01"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg005"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_restaurer_verb",
+    "fr_combiner_verb",
+    "fr_determiner_verb",
+    "fr_bosser_verb",
+    "fr_aventurer_verb",
+    "fr_rassembler_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Passage des Vieux-Meubles",
+   "street_name_en": "Old-Furniture Passage",
+   "name_fr": "Passage des Vieux-Meubles",
+   "name_en": "Old-Furniture Passage"
+  },
+  {
+   "id": "ST_making_seg006",
+   "name": "Rue des Artisans — Rue des Photographes · reproduce, yield, generate",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B2",
+   "mean_level": 3.67,
+   "related_rooms": [
+    "ST_making_seg005",
+    "ST_making_seg007",
+    "ST_existence_seg006",
+    "R_abs_action_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg006"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_fendre_verb",
+    "fr_photographier_verb",
+    "fr_embaucher_verb",
+    "fr_engendrer_verb",
+    "fr_reproduire_verb",
+    "fr_ceder_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Photographes",
+   "street_name_en": "Photographers' Street",
+   "name_fr": "Rue des Photographes",
+   "name_en": "Photographers' Street"
+  },
+  {
+   "id": "ST_making_seg007",
+   "name": "Rue des Artisans — Ruelle des Perceurs · extract, plate, devastate",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B2",
+   "mean_level": 3.67,
+   "related_rooms": [
+    "ST_making_seg006",
+    "ST_making_seg008",
+    "ST_conflict_seg020",
+    "ST_cooking_seg005"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg007"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_plaquer_verb",
+    "fr_recomposer_verb",
+    "fr_accabler_verb",
+    "fr_extraire_verb",
+    "fr_entrevoir_verb",
+    "fr_percer_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Ruelle des Perceurs",
+   "street_name_en": "Drillers' Lane",
+   "name_fr": "Ruelle des Perceurs",
+   "name_en": "Drillers' Lane"
+  },
+  {
+   "id": "ST_making_seg008",
+   "name": "Rue des Artisans — Rue des Sculpteurs · engrave, decorate, sculpt",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "B2",
+   "mean_level": 3.83,
+   "related_rooms": [
+    "ST_making_seg007",
+    "ST_making_seg009",
+    "R_boutique_02",
+    "R_hardware_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg008"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_edifier_verb",
+    "fr_coudre_verb",
+    "fr_sculpter_verb",
+    "fr_forger_verb",
+    "fr_graver_verb",
+    "fr_orner_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Rue des Sculpteurs",
+   "street_name_en": "Sculptors' Street",
+   "name_fr": "Rue des Sculpteurs",
+   "name_en": "Sculptors' Street"
+  },
+  {
+   "id": "ST_making_seg009",
+   "name": "Rue des Artisans — Allée des Tisserands · recreate, rework, recycle",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C1",
+   "mean_level": 4.83,
+   "related_rooms": [
+    "ST_making_seg008",
+    "ST_making_seg010",
+    "ST_routine_seg011",
+    "ST_change_seg015"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg009"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_bourrer_verb",
+    "fr_tisser_verb",
+    "fr_retravailler_verb",
+    "fr_recycler_verb",
+    "fr_replacer_verb",
+    "fr_recreer_verb"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "n/a": 6
+   },
+   "street_name": "Allée des Tisserands",
+   "street_name_en": "Weavers' Alley",
+   "name_fr": "Allée des Tisserands",
+   "name_en": "Weavers' Alley"
+  },
+  {
+   "id": "ST_making_seg010",
+   "name": "Rue des Artisans — Rue des Chapeliers · make, work on, reinvent",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C1",
+   "mean_level": 5.2,
+   "related_rooms": [
+    "ST_making_seg009",
+    "ST_making_seg013",
+    "ST_change_seg003",
+    "R_abs_work_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg010"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_reinventer_verb",
+    "fr_faconner_verb",
+    "fr_devaster_verb",
+    "fr_assembler_verb",
+    "fr_impatienter_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Rue des Chapeliers",
+   "street_name_en": "Hatters' Street",
+   "name_fr": "Rue des Chapeliers",
+   "name_en": "Hatters' Street"
+  },
+  {
+   "id": "ST_making_seg011",
+   "name": "Rue des Artisans — Rue des Paveurs · supply, structure, generate",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C2",
+   "mean_level": 5.8,
+   "related_rooms": [
+    "ST_making_seg013",
+    "ST_making_seg012",
+    "R_industry_01",
+    "R_entrance_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg011"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_instaurer_verb",
+    "fr_paver_verb",
+    "fr_structurer_verb",
+    "fr_approvisionner_verb",
+    "fr_generer_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Rue des Paveurs",
+   "street_name_en": "Cobble-Layers' Street",
+   "name_fr": "Rue des Paveurs",
+   "name_en": "Cobble-Layers' Street"
+  },
+  {
+   "id": "ST_making_seg012",
+   "name": "Rue des Artisans — Quai des Verriers · synthesize, melt or fuse, enamel",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C2",
+   "mean_level": 5.8,
+   "related_rooms": [
+    "ST_making_seg011",
+    "R_industry_02",
+    "R_chemistry_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg012"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_exporter_verb",
+    "fr_synthetiser_verb",
+    "fr_axer_verb",
+    "fr_fuser_verb",
+    "fr_emailler_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Quai des Verriers",
+   "street_name_en": "Glassblowers' Quay",
+   "name_fr": "Quai des Verriers",
+   "name_en": "Glassblowers' Quay"
+  },
+  {
+   "id": "ST_making_seg013",
+   "name": "Rue des Artisans — Impasse des Vitraux · render sublime, stylize, render pink",
+   "type": "verb_segment",
+   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_making",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C2",
+   "mean_level": 5.6,
+   "related_rooms": [
+    "ST_making_seg010",
+    "ST_making_seg011",
+    "R_boutique_02",
+    "R_colors_02"
+   ],
+   "conversation_ids": [
+    "C_ST_making_seg013"
+   ],
+   "base_room": "ST_making",
+   "words": [
+    "fr_styliser_verb",
+    "fr_superposer_verb",
+    "fr_chiner_verb",
+    "fr_roser_verb",
+    "fr_sublimer_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Impasse des Vitraux",
+   "street_name_en": "Stained-Glass Close",
+   "name_fr": "Impasse des Vitraux",
+   "name_en": "Stained-Glass Close"
   },
   {
    "id": "ST_existence_seg001",
@@ -19502,570 +20378,6 @@
    "street_name_en": "Nesting-Dolls Close",
    "name_fr": "Impasse des Poupées-Gigognes",
    "name_en": "Nesting-Dolls Close"
-  },
-  {
-   "id": "ST_possession_seg001",
-   "name": "Passage de l'Échange — Rue des Trouvailles · find, find , locate",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A1",
-   "mean_level": 1.33,
-   "related_rooms": [
-    "ST_possession_seg003",
-    "ST_possession_seg005",
-    "R_adj_state_03",
-    "R_abs_study_02"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg001"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_trouver_verb",
-    "fr_retrouver_verb",
-    "fr_rechercher_verb",
-    "fr_situer_verb",
-    "fr_fonder_verb",
-    "fr_decouvrir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Trouvailles",
-   "street_name_en": "Lucky-Finds Street",
-   "name_fr": "Rue des Trouvailles",
-   "name_en": "Lucky-Finds Street"
-  },
-  {
-   "id": "ST_possession_seg002",
-   "name": "Passage de l'Échange — Allée des Cadeaux · receive, accept, get",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A1",
-   "mean_level": 1.17,
-   "related_rooms": [
-    "ST_possession_seg003",
-    "R_shop_general_02",
-    "R_adj_state_03"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg002"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_chercher_verb",
-    "fr_offrir_verb",
-    "fr_accepter_verb",
-    "fr_obtenir_verb",
-    "fr_recevoir_verb",
-    "fr_avoir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Allée des Cadeaux",
-   "street_name_en": "Presents Alley",
-   "name_fr": "Allée des Cadeaux",
-   "name_en": "Presents Alley"
-  },
-  {
-   "id": "ST_possession_seg003",
-   "name": "Passage de l'Échange — Rue des Coffres · keep, send",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A1",
-   "mean_level": 1.17,
-   "related_rooms": [
-    "ST_possession_seg002",
-    "ST_possession_seg001",
-    "R_adj_state_03",
-    "ST_control_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg003"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_tenir_verb",
-    "fr_envoyer_verb",
-    "fr_reserver_verb",
-    "fr_posseder_verb",
-    "fr_conserver_verb",
-    "fr_garder_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Coffres",
-   "street_name_en": "Treasure-Chests Street",
-   "name_fr": "Rue des Coffres",
-   "name_en": "Treasure-Chests Street"
-  },
-  {
-   "id": "ST_possession_seg004",
-   "name": "Passage de l'Échange — Place du Troc · exchange, lead",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A2",
-   "mean_level": 1.67,
-   "related_rooms": [
-    "ST_possession_seg006",
-    "ST_possession_seg007",
-    "ST_control_seg004",
-    "ST_commerce_seg002"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg004"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_enfermer_verb",
-    "fr_changer_verb",
-    "fr_retenir_verb",
-    "fr_echanger_verb",
-    "fr_donner_verb",
-    "fr_mener_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Place du Troc",
-   "street_name_en": "Swap-Shop Square",
-   "name_fr": "Place du Troc",
-   "name_en": "Swap-Shop Square"
-  },
-  {
-   "id": "ST_possession_seg005",
-   "name": "Passage de l'Échange — Place des Bancs · take, occupy",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A1",
-   "mean_level": 1.33,
-   "related_rooms": [
-    "ST_possession_seg001",
-    "ST_possession_seg006",
-    "ST_movement_seg005",
-    "ST_control_seg004"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg005"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_profiter_verb",
-    "fr_occuper_verb",
-    "fr_abandonner_verb",
-    "fr_emporter_verb",
-    "fr_prendre_verb",
-    "fr_laisser_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Place des Bancs",
-   "street_name_en": "Benches Square",
-   "name_fr": "Place des Bancs",
-   "name_en": "Benches Square"
-  },
-  {
-   "id": "ST_possession_seg006",
-   "name": "Passage de l'Échange — Rue des Guichets · take off, bring",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A1",
-   "mean_level": 1.33,
-   "related_rooms": [
-    "ST_possession_seg005",
-    "ST_possession_seg004",
-    "ST_control_seg006",
-    "ST_movement_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg006"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_saisir_verb",
-    "fr_apporter_verb",
-    "fr_amener_verb",
-    "fr_rendre_verb",
-    "fr_emmener_verb",
-    "fr_retirer_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Guichets",
-   "street_name_en": "Counters Street",
-   "name_fr": "Rue des Guichets",
-   "name_en": "Counters Street"
-  },
-  {
-   "id": "ST_possession_seg007",
-   "name": "Passage de l'Échange — Rue des Envolées · take back, take off",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A2",
-   "mean_level": 2.5,
-   "related_rooms": [
-    "ST_possession_seg004",
-    "ST_possession_seg011",
-    "ST_movement_seg007",
-    "ST_movement_seg006"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg007"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_reprendre_verb",
-    "fr_rapporter_verb",
-    "fr_ramener_verb",
-    "fr_envoler_verb",
-    "fr_decoller_verb",
-    "fr_remporter_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Envolées",
-   "street_name_en": "Take-Offs Street",
-   "name_fr": "Rue des Envolées",
-   "name_en": "Take-Offs Street"
-  },
-  {
-   "id": "ST_possession_seg008",
-   "name": "Passage de l'Échange — Impasse des Seaux-Vides · take down, take away, dismantle",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "ST_possession_seg011",
-    "ST_possession_seg009",
-    "ST_control_seg006",
-    "ST_change_seg009"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg008"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_defaire_verb",
-    "fr_oter_verb",
-    "fr_demonter_verb",
-    "fr_prelever_verb",
-    "fr_annuler_verb",
-    "fr_vider_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Impasse des Seaux-Vides",
-   "street_name_en": "Empty-Buckets Close",
-   "name_fr": "Impasse des Seaux-Vides",
-   "name_en": "Empty-Buckets Close"
-  },
-  {
-   "id": "ST_possession_seg009",
-   "name": "Passage de l'Échange — Passage des Cages-Ouvertes · block, save",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "ST_possession_seg008",
-    "ST_possession_seg012",
-    "ST_conflict_seg002",
-    "ST_control_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg009"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_emparer_verb",
-    "fr_bloquer_verb",
-    "fr_contrer_verb",
-    "fr_delivrer_verb",
-    "fr_redonner_verb",
-    "fr_epargner_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Passage des Cages-Ouvertes",
-   "street_name_en": "Open-Cages Passage",
-   "name_fr": "Passage des Cages-Ouvertes",
-   "name_en": "Open-Cages Passage"
-  },
-  {
-   "id": "ST_possession_seg010",
-   "name": "Passage de l'Échange — Rue des Collectionneurs · accept, collect, copy",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B2",
-   "mean_level": 3.67,
-   "related_rooms": [
-    "ST_possession_seg012",
-    "ST_possession_seg015",
-    "R_adj_state_03",
-    "ST_social_seg006"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg010"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_copier_verb",
-    "fr_rejouir_verb",
-    "fr_virer_verb",
-    "fr_agreer_verb",
-    "fr_doter_verb",
-    "fr_collectionner_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Collectionneurs",
-   "street_name_en": "Collectors' Street",
-   "name_fr": "Rue des Collectionneurs",
-   "name_en": "Collectors' Street"
-  },
-  {
-   "id": "ST_possession_seg011",
-   "name": "Passage de l'Échange — Rue des Pharmaciens · get, acquire, excite",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B1",
-   "mean_level": 3.17,
-   "related_rooms": [
-    "ST_possession_seg007",
-    "ST_possession_seg008",
-    "R_shop_general_01",
-    "ST_social_seg006"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg011"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_implorer_verb",
-    "fr_identifier_verb",
-    "fr_procurer_verb",
-    "fr_garantir_verb",
-    "fr_exciter_verb",
-    "fr_acquerir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Pharmaciens",
-   "street_name_en": "Chemists' Street",
-   "name_fr": "Rue des Pharmaciens",
-   "name_en": "Chemists' Street"
-  },
-  {
-   "id": "ST_possession_seg012",
-   "name": "Passage de l'Échange — Ruelle des Facteurs · post, search",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B2",
-   "mean_level": 3.6,
-   "related_rooms": [
-    "ST_possession_seg009",
-    "ST_possession_seg010",
-    "R_abs_work_01",
-    "R_adj_state_03"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg012"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_attribuer_verb",
-    "fr_expedier_verb",
-    "fr_localiser_verb",
-    "fr_poster_verb",
-    "fr_fouiller_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Ruelle des Facteurs",
-   "street_name_en": "Postmen's Lane",
-   "name_fr": "Ruelle des Facteurs",
-   "name_en": "Postmen's Lane"
-  },
-  {
-   "id": "ST_possession_seg013",
-   "name": "Passage de l'Échange — Quai des Coups-de-Main · give or pass something someone, provide, give a hand",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.6,
-   "related_rooms": [
-    "ST_possession_seg015",
-    "ST_possession_seg014",
-    "R_post_01",
-    "ST_commerce_seg002"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg013"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_refiler_verb",
-    "fr_intenter_verb",
-    "fr_commercialiser_verb",
-    "fr_epauler_verb",
-    "fr_nantir_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Quai des Coups-de-Main",
-   "street_name_en": "Helping-Hands Quay",
-   "name_fr": "Quai des Coups-de-Main",
-   "name_en": "Helping-Hands Quay"
-  },
-  {
-   "id": "ST_possession_seg014",
-   "name": "Passage de l'Échange — Rue des Négociants · package, copy, trade",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.6,
-   "related_rooms": [
-    "ST_possession_seg013",
-    "R_shop_general_01",
-    "R_shop_general_02"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg014"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_abonner_verb",
-    "fr_conditionner_verb",
-    "fr_recopier_verb",
-    "fr_commercer_verb",
-    "fr_stocker_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Rue des Négociants",
-   "street_name_en": "Traders' Street",
-   "name_fr": "Rue des Négociants",
-   "name_en": "Traders' Street"
-  },
-  {
-   "id": "ST_possession_seg015",
-   "name": "Passage de l'Échange — Allée des Inventaires · satisfy, enumerate, index",
-   "type": "verb_segment",
-   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_possession",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C1",
-   "mean_level": 5.0,
-   "related_rooms": [
-    "ST_possession_seg010",
-    "ST_possession_seg013",
-    "ST_communication_seg016",
-    "ST_existence_seg007"
-   ],
-   "conversation_ids": [
-    "C_ST_possession_seg015"
-   ],
-   "base_room": "ST_possession",
-   "words": [
-    "fr_priser_verb",
-    "fr_assouvir_verb",
-    "fr_repertorier_verb",
-    "fr_enumerer_verb",
-    "fr_dementir_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Allée des Inventaires",
-   "street_name_en": "Stocktaking Alley",
-   "name_fr": "Allée des Inventaires",
-   "name_en": "Stocktaking Alley"
   },
   {
    "id": "ST_cognition_seg001",
@@ -24342,12 +24654,12 @@
   },
   {
    "id": "ST_control_seg015",
-   "name": "Rue des Gestes — Ruelle des Bousculades · wedge, shove",
+   "name": "Passage des Paquets — Ruelle des Bousculades · wedge, shove",
    "type": "verb_segment",
-   "setting": "A stretch of Rue des Gestes (Gothic workshops with pulleys, levers and hoists); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Passage des Paquets (covered arcade passage with stacked parcels — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_control",
+   "building_id": "ST_paquets",
    "links_back_to_sector": "S02_home",
    "cefr_band": "B1",
    "mean_level": 3.33,
@@ -24360,7 +24672,7 @@
    "conversation_ids": [
     "C_ST_control_seg015"
    ],
-   "base_room": "ST_control",
+   "base_room": "ST_paquets",
    "words": [
     "fr_etaler_verb",
     "fr_entasser_verb",
@@ -24376,16 +24688,22 @@
    "street_name": "Ruelle des Bousculades",
    "street_name_en": "Jostling Lane",
    "name_fr": "Ruelle des Bousculades",
-   "name_en": "Jostling Lane"
+   "name_en": "Jostling Lane",
+   "theme_street_id": "ST_control",
+   "short_street_id": "ST_paquets",
+   "place_index": 1,
+   "place_count": 4,
+   "walk_prev": "S02_home",
+   "walk_next": "ST_control_seg016"
   },
   {
    "id": "ST_control_seg016",
-   "name": "Rue des Gestes — Rue de la Mise-en-Place · position, center, station",
+   "name": "Passage des Paquets — Rue de la Mise-en-Place · position, center, station",
    "type": "verb_segment",
-   "setting": "A stretch of Rue des Gestes (Gothic workshops with pulleys, levers and hoists); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Passage des Paquets (covered arcade passage with stacked parcels — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_control",
+   "building_id": "ST_paquets",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C1",
    "mean_level": 5.0,
@@ -24398,7 +24716,7 @@
    "conversation_ids": [
     "C_ST_control_seg016"
    ],
-   "base_room": "ST_control",
+   "base_room": "ST_paquets",
    "words": [
     "fr_fourrer_verb",
     "fr_cantonner_verb",
@@ -24414,16 +24732,22 @@
    "street_name": "Rue de la Mise-en-Place",
    "street_name_en": "Setting-Up Street",
    "name_fr": "Rue de la Mise-en-Place",
-   "name_en": "Setting-Up Street"
+   "name_en": "Setting-Up Street",
+   "theme_street_id": "ST_control",
+   "short_street_id": "ST_paquets",
+   "place_index": 2,
+   "place_count": 4,
+   "walk_prev": "ST_control_seg015",
+   "walk_next": "ST_control_seg017"
   },
   {
    "id": "ST_control_seg017",
-   "name": "Rue des Gestes — Impasse des Yeux-Écarquillés · unload, assist, inject",
+   "name": "Passage des Paquets — Impasse des Yeux-Écarquillés · unload, assist, inject",
    "type": "verb_segment",
-   "setting": "A stretch of Rue des Gestes (Gothic workshops with pulleys, levers and hoists); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Passage des Paquets (covered arcade passage with stacked parcels — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_control",
+   "building_id": "ST_paquets",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C1",
    "mean_level": 5.33,
@@ -24436,7 +24760,7 @@
    "conversation_ids": [
     "C_ST_control_seg017"
    ],
-   "base_room": "ST_control",
+   "base_room": "ST_paquets",
    "words": [
     "fr_seconder_verb",
     "fr_relancer_verb",
@@ -24452,16 +24776,22 @@
    "street_name": "Impasse des Yeux-Écarquillés",
    "street_name_en": "Wide-Eyes Close",
    "name_fr": "Impasse des Yeux-Écarquillés",
-   "name_en": "Wide-Eyes Close"
+   "name_en": "Wide-Eyes Close",
+   "theme_street_id": "ST_control",
+   "short_street_id": "ST_paquets",
+   "place_index": 3,
+   "place_count": 4,
+   "walk_prev": "ST_control_seg016",
+   "walk_next": "ST_control_seg018"
   },
   {
    "id": "ST_control_seg018",
-   "name": "Rue des Gestes — Ruelle des Goélands · untie, pull, crack down",
+   "name": "Passage des Paquets — Ruelle des Goélands · untie, pull, crack down",
    "type": "verb_segment",
-   "setting": "A stretch of Rue des Gestes (Gothic workshops with pulleys, levers and hoists); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Passage des Paquets (covered arcade passage with stacked parcels — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_control",
+   "building_id": "ST_paquets",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C2",
    "mean_level": 5.5,
@@ -24473,7 +24803,7 @@
    "conversation_ids": [
     "C_ST_control_seg018"
    ],
-   "base_room": "ST_control",
+   "base_room": "ST_paquets",
    "words": [
     "fr_pavaner_verb",
     "fr_muscler_verb",
@@ -24489,7 +24819,13 @@
    "street_name": "Ruelle des Goélands",
    "street_name_en": "Seagulls Lane",
    "name_fr": "Ruelle des Goélands",
-   "name_en": "Seagulls Lane"
+   "name_en": "Seagulls Lane",
+   "theme_street_id": "ST_control",
+   "short_street_id": "ST_paquets",
+   "place_index": 4,
+   "place_count": 4,
+   "walk_prev": "ST_control_seg017",
+   "walk_next": "R_garage"
   },
   {
    "id": "ST_routine_seg001",
@@ -25024,12 +25360,12 @@
   },
   {
    "id": "ST_routine_seg015",
-   "name": "Allée du Quotidien — Allée des Bricoleurs · decorticate, adjoin, conjugate",
+   "name": "Avenue des Petits Travaux — Allée des Bricoleurs · decorticate, adjoin, conjugate",
    "type": "verb_segment",
-   "setting": "A stretch of Allée du Quotidien (Half-timbered Alsatian cottages with flower boxes); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Avenue des Petits Travaux (tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_routine",
+   "building_id": "ST_bricoleurs",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C1",
    "mean_level": 5.17,
@@ -25042,7 +25378,7 @@
    "conversation_ids": [
     "C_ST_routine_seg015"
    ],
-   "base_room": "ST_routine",
+   "base_room": "ST_bricoleurs",
    "words": [
     "fr_ruser_verb",
     "fr_conjuguer_verb",
@@ -25058,16 +25394,22 @@
    "street_name": "Allée des Bricoleurs",
    "street_name_en": "Do-It-Yourselfers' Alley",
    "name_fr": "Allée des Bricoleurs",
-   "name_en": "Do-It-Yourselfers' Alley"
+   "name_en": "Do-It-Yourselfers' Alley",
+   "theme_street_id": "ST_routine",
+   "short_street_id": "ST_bricoleurs",
+   "place_index": 1,
+   "place_count": 5,
+   "walk_prev": "S02_home",
+   "walk_next": "ST_routine_seg016"
   },
   {
    "id": "ST_routine_seg016",
-   "name": "Allée du Quotidien — Ruelle des Houppettes · culminate, powder, unsheath",
+   "name": "Avenue des Petits Travaux — Ruelle des Houppettes · culminate, powder, unsheath",
    "type": "verb_segment",
-   "setting": "A stretch of Allée du Quotidien (Half-timbered Alsatian cottages with flower boxes); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Avenue des Petits Travaux (tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_routine",
+   "building_id": "ST_bricoleurs",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C2",
    "mean_level": 5.5,
@@ -25080,7 +25422,7 @@
    "conversation_ids": [
     "C_ST_routine_seg016"
    ],
-   "base_room": "ST_routine",
+   "base_room": "ST_bricoleurs",
    "words": [
     "fr_voiturer_verb",
     "fr_culminer_verb",
@@ -25096,16 +25438,22 @@
    "street_name": "Ruelle des Houppettes",
    "street_name_en": "Powder-Puffs Lane",
    "name_fr": "Ruelle des Houppettes",
-   "name_en": "Powder-Puffs Lane"
+   "name_en": "Powder-Puffs Lane",
+   "theme_street_id": "ST_routine",
+   "short_street_id": "ST_bricoleurs",
+   "place_index": 2,
+   "place_count": 5,
+   "walk_prev": "ST_routine_seg015",
+   "walk_next": "ST_routine_seg017"
   },
   {
    "id": "ST_routine_seg017",
-   "name": "Allée du Quotidien — Rue du Réveille-Matin · shower, alarm, shell",
+   "name": "Avenue des Petits Travaux — Rue du Réveille-Matin · shower, alarm, shell",
    "type": "verb_segment",
-   "setting": "A stretch of Allée du Quotidien (Half-timbered Alsatian cottages with flower boxes); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Avenue des Petits Travaux (tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_routine",
+   "building_id": "ST_bricoleurs",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C1",
    "mean_level": 5.33,
@@ -25118,7 +25466,7 @@
    "conversation_ids": [
     "C_ST_routine_seg017"
    ],
-   "base_room": "ST_routine",
+   "base_room": "ST_bricoleurs",
    "words": [
     "fr_rider_verb",
     "fr_outrer_verb",
@@ -25134,16 +25482,22 @@
    "street_name": "Rue du Réveille-Matin",
    "street_name_en": "Alarm-Clock Street",
    "name_fr": "Rue du Réveille-Matin",
-   "name_en": "Alarm-Clock Street"
+   "name_en": "Alarm-Clock Street",
+   "theme_street_id": "ST_routine",
+   "short_street_id": "ST_bricoleurs",
+   "place_index": 3,
+   "place_count": 5,
+   "walk_prev": "ST_routine_seg016",
+   "walk_next": "ST_routine_seg018"
   },
   {
    "id": "ST_routine_seg018",
-   "name": "Allée du Quotidien — Rue des Selliers · saddle, sit, curl",
+   "name": "Avenue des Petits Travaux — Rue des Selliers · saddle, sit, curl",
    "type": "verb_segment",
-   "setting": "A stretch of Allée du Quotidien (Half-timbered Alsatian cottages with flower boxes); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Avenue des Petits Travaux (tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_routine",
+   "building_id": "ST_bricoleurs",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C2",
    "mean_level": 5.5,
@@ -25156,7 +25510,7 @@
    "conversation_ids": [
     "C_ST_routine_seg018"
    ],
-   "base_room": "ST_routine",
+   "base_room": "ST_bricoleurs",
    "words": [
     "fr_seller_verb",
     "fr_ecumer_verb",
@@ -25172,16 +25526,22 @@
    "street_name": "Rue des Selliers",
    "street_name_en": "Saddlers' Street",
    "name_fr": "Rue des Selliers",
-   "name_en": "Saddlers' Street"
+   "name_en": "Saddlers' Street",
+   "theme_street_id": "ST_routine",
+   "short_street_id": "ST_bricoleurs",
+   "place_index": 4,
+   "place_count": 5,
+   "walk_prev": "ST_routine_seg017",
+   "walk_next": "ST_routine_seg019"
   },
   {
    "id": "ST_routine_seg019",
-   "name": "Allée du Quotidien — Impasse des Rendormis · put up, warm up , fill up",
+   "name": "Avenue des Petits Travaux — Impasse des Rendormis · put up, warm up , fill up",
    "type": "verb_segment",
-   "setting": "A stretch of Allée du Quotidien (Half-timbered Alsatian cottages with flower boxes); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "setting": "A stretch of Avenue des Petits Travaux (tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
    "kind": "street_segment",
    "sector_id": "S02_home",
-   "building_id": "ST_routine",
+   "building_id": "ST_bricoleurs",
    "links_back_to_sector": "S02_home",
    "cefr_band": "C2",
    "mean_level": 5.6,
@@ -25193,7 +25553,7 @@
    "conversation_ids": [
     "C_ST_routine_seg019"
    ],
-   "base_room": "ST_routine",
+   "base_room": "ST_bricoleurs",
    "words": [
     "fr_bonder_verb",
     "fr_rendormir_verb",
@@ -25208,7 +25568,13 @@
    "street_name": "Impasse des Rendormis",
    "street_name_en": "Back-to-Sleep Close",
    "name_fr": "Impasse des Rendormis",
-   "name_en": "Back-to-Sleep Close"
+   "name_en": "Back-to-Sleep Close",
+   "theme_street_id": "ST_routine",
+   "short_street_id": "ST_bricoleurs",
+   "place_index": 5,
+   "place_count": 5,
+   "walk_prev": "ST_routine_seg018",
+   "walk_next": "S09_nature"
   },
   {
    "id": "ST_change_seg001",
@@ -27959,494 +28325,6 @@
    "name_en": "Housemates' Street"
   },
   {
-   "id": "ST_making_seg001",
-   "name": "Rue des Artisans — Rue des Réparateurs · repair, put back, fix",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A2",
-   "mean_level": 1.83,
-   "related_rooms": [
-    "ST_making_seg003",
-    "ST_making_seg004",
-    "R_abs_work_02",
-    "R_hospital_01"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg001"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_reparer_verb",
-    "fr_fixer_verb",
-    "fr_remettre_verb",
-    "fr_attacher_verb",
-    "fr_supporter_verb",
-    "fr_fonctionner_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Réparateurs",
-   "street_name_en": "Repairers' Street",
-   "name_fr": "Rue des Réparateurs",
-   "name_en": "Repairers' Street"
-  },
-  {
-   "id": "ST_making_seg002",
-   "name": "Rue des Artisans — Allée des Inventeurs · work, invent, stick",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A2",
-   "mean_level": 1.5,
-   "related_rooms": [
-    "ST_making_seg003",
-    "R_abs_work_01",
-    "R_garage"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg002"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_travailler_verb",
-    "fr_coller_verb",
-    "fr_installer_verb",
-    "fr_lier_verb",
-    "fr_inventer_verb",
-    "fr_etablir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Allée des Inventeurs",
-   "street_name_en": "Inventors' Alley",
-   "name_fr": "Allée des Inventeurs",
-   "name_en": "Inventors' Alley"
-  },
-  {
-   "id": "ST_making_seg003",
-   "name": "Rue des Artisans — Rue des Bâtisseurs · build, make",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "A2",
-   "mean_level": 1.67,
-   "related_rooms": [
-    "ST_making_seg002",
-    "ST_making_seg001",
-    "R_industry_01",
-    "R_industry_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg003"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_construire_verb",
-    "fr_produire_verb",
-    "fr_fabriquer_verb",
-    "fr_developper_verb",
-    "fr_creer_verb",
-    "fr_batir_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Bâtisseurs",
-   "street_name_en": "Builders' Street",
-   "name_fr": "Rue des Bâtisseurs",
-   "name_en": "Builders' Street"
-  },
-  {
-   "id": "ST_making_seg004",
-   "name": "Rue des Artisans — Rue des Fournisseurs · supply, build ",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "ST_making_seg001",
-    "ST_making_seg005",
-    "R_abs_work_01",
-    "R_abs_work_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg004"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_implanter_verb",
-    "fr_reconstruire_verb",
-    "fr_resoudre_verb",
-    "fr_soutenir_verb",
-    "fr_fournir_verb",
-    "fr_equiper_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Fournisseurs",
-   "street_name_en": "Suppliers' Street",
-   "name_fr": "Rue des Fournisseurs",
-   "name_en": "Suppliers' Street"
-  },
-  {
-   "id": "ST_making_seg005",
-   "name": "Rue des Artisans — Passage des Vieux-Meubles · assemble, work, combine together)",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B1",
-   "mean_level": 3.33,
-   "related_rooms": [
-    "ST_making_seg004",
-    "ST_making_seg006",
-    "ST_cognition_seg005",
-    "R_abs_work_01"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg005"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_restaurer_verb",
-    "fr_combiner_verb",
-    "fr_determiner_verb",
-    "fr_bosser_verb",
-    "fr_aventurer_verb",
-    "fr_rassembler_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Passage des Vieux-Meubles",
-   "street_name_en": "Old-Furniture Passage",
-   "name_fr": "Passage des Vieux-Meubles",
-   "name_en": "Old-Furniture Passage"
-  },
-  {
-   "id": "ST_making_seg006",
-   "name": "Rue des Artisans — Rue des Photographes · reproduce, yield, generate",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B2",
-   "mean_level": 3.67,
-   "related_rooms": [
-    "ST_making_seg005",
-    "ST_making_seg007",
-    "ST_existence_seg006",
-    "R_abs_action_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg006"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_fendre_verb",
-    "fr_photographier_verb",
-    "fr_embaucher_verb",
-    "fr_engendrer_verb",
-    "fr_reproduire_verb",
-    "fr_ceder_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Photographes",
-   "street_name_en": "Photographers' Street",
-   "name_fr": "Rue des Photographes",
-   "name_en": "Photographers' Street"
-  },
-  {
-   "id": "ST_making_seg007",
-   "name": "Rue des Artisans — Ruelle des Perceurs · extract, plate, devastate",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B2",
-   "mean_level": 3.67,
-   "related_rooms": [
-    "ST_making_seg006",
-    "ST_making_seg008",
-    "ST_conflict_seg020",
-    "ST_cooking_seg005"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg007"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_plaquer_verb",
-    "fr_recomposer_verb",
-    "fr_accabler_verb",
-    "fr_extraire_verb",
-    "fr_entrevoir_verb",
-    "fr_percer_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Ruelle des Perceurs",
-   "street_name_en": "Drillers' Lane",
-   "name_fr": "Ruelle des Perceurs",
-   "name_en": "Drillers' Lane"
-  },
-  {
-   "id": "ST_making_seg008",
-   "name": "Rue des Artisans — Rue des Sculpteurs · engrave, decorate, sculpt",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "B2",
-   "mean_level": 3.83,
-   "related_rooms": [
-    "ST_making_seg007",
-    "ST_making_seg009",
-    "R_boutique_02",
-    "R_hardware_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg008"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_edifier_verb",
-    "fr_coudre_verb",
-    "fr_sculpter_verb",
-    "fr_forger_verb",
-    "fr_graver_verb",
-    "fr_orner_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Rue des Sculpteurs",
-   "street_name_en": "Sculptors' Street",
-   "name_fr": "Rue des Sculpteurs",
-   "name_en": "Sculptors' Street"
-  },
-  {
-   "id": "ST_making_seg009",
-   "name": "Rue des Artisans — Allée des Tisserands · recreate, rework, recycle",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C1",
-   "mean_level": 4.83,
-   "related_rooms": [
-    "ST_making_seg008",
-    "ST_making_seg010",
-    "ST_routine_seg011",
-    "ST_change_seg015"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg009"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_bourrer_verb",
-    "fr_tisser_verb",
-    "fr_retravailler_verb",
-    "fr_recycler_verb",
-    "fr_replacer_verb",
-    "fr_recreer_verb"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "n/a": 6
-   },
-   "street_name": "Allée des Tisserands",
-   "street_name_en": "Weavers' Alley",
-   "name_fr": "Allée des Tisserands",
-   "name_en": "Weavers' Alley"
-  },
-  {
-   "id": "ST_making_seg010",
-   "name": "Rue des Artisans — Rue des Chapeliers · make, work on, reinvent",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C1",
-   "mean_level": 5.2,
-   "related_rooms": [
-    "ST_making_seg009",
-    "ST_making_seg013",
-    "ST_change_seg003",
-    "R_abs_work_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg010"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_reinventer_verb",
-    "fr_faconner_verb",
-    "fr_devaster_verb",
-    "fr_assembler_verb",
-    "fr_impatienter_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Rue des Chapeliers",
-   "street_name_en": "Hatters' Street",
-   "name_fr": "Rue des Chapeliers",
-   "name_en": "Hatters' Street"
-  },
-  {
-   "id": "ST_making_seg011",
-   "name": "Rue des Artisans — Rue des Paveurs · supply, structure, generate",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.8,
-   "related_rooms": [
-    "ST_making_seg013",
-    "ST_making_seg012",
-    "R_industry_01",
-    "R_entrance_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg011"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_instaurer_verb",
-    "fr_paver_verb",
-    "fr_structurer_verb",
-    "fr_approvisionner_verb",
-    "fr_generer_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Rue des Paveurs",
-   "street_name_en": "Cobble-Layers' Street",
-   "name_fr": "Rue des Paveurs",
-   "name_en": "Cobble-Layers' Street"
-  },
-  {
-   "id": "ST_making_seg012",
-   "name": "Rue des Artisans — Quai des Verriers · synthesize, melt or fuse, enamel",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.8,
-   "related_rooms": [
-    "ST_making_seg011",
-    "R_industry_02",
-    "R_chemistry_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg012"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_exporter_verb",
-    "fr_synthetiser_verb",
-    "fr_axer_verb",
-    "fr_fuser_verb",
-    "fr_emailler_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Quai des Verriers",
-   "street_name_en": "Glassblowers' Quay",
-   "name_fr": "Quai des Verriers",
-   "name_en": "Glassblowers' Quay"
-  },
-  {
-   "id": "ST_making_seg013",
-   "name": "Rue des Artisans — Impasse des Vitraux · render sublime, stylize, render pink",
-   "type": "verb_segment",
-   "setting": "A stretch of Rue des Artisans (Brick workshops, cogs and chimneys (industrial steampunk)); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
-   "kind": "street_segment",
-   "sector_id": "S05_bank",
-   "building_id": "ST_making",
-   "links_back_to_sector": "S05_bank",
-   "cefr_band": "C2",
-   "mean_level": 5.6,
-   "related_rooms": [
-    "ST_making_seg010",
-    "ST_making_seg011",
-    "R_boutique_02",
-    "R_colors_02"
-   ],
-   "conversation_ids": [
-    "C_ST_making_seg013"
-   ],
-   "base_room": "ST_making",
-   "words": [
-    "fr_styliser_verb",
-    "fr_superposer_verb",
-    "fr_chiner_verb",
-    "fr_roser_verb",
-    "fr_sublimer_verb"
-   ],
-   "item_count": 5,
-   "side_counts": {
-    "n/a": 5
-   },
-   "street_name": "Impasse des Vitraux",
-   "street_name_en": "Stained-Glass Close",
-   "name_fr": "Impasse des Vitraux",
-   "name_en": "Stained-Glass Close"
-  },
-  {
    "id": "ST_commerce_seg001",
    "name": "Rue du Commerce — Rue des Acheteurs · pay, purchase, free",
    "type": "verb_segment",
@@ -29831,6 +29709,79 @@
    "name_en": "Seeds Lane"
   },
   {
+   "id": "ST_possession_seg014",
+   "name": "Passage de l'Échange — Rue des Négociants · package, copy, trade",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C2",
+   "mean_level": 5.6,
+   "related_rooms": [
+    "ST_possession_seg013",
+    "R_shop_general_01",
+    "R_shop_general_02"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg014"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_abonner_verb",
+    "fr_conditionner_verb",
+    "fr_recopier_verb",
+    "fr_commercer_verb",
+    "fr_stocker_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Rue des Négociants",
+   "street_name_en": "Traders' Street",
+   "name_fr": "Rue des Négociants",
+   "name_en": "Traders' Street"
+  },
+  {
+   "id": "ST_possession_seg015",
+   "name": "Passage de l'Échange — Allée des Inventaires · satisfy, enumerate, index",
+   "type": "verb_segment",
+   "setting": "A stretch of Passage de l'Échange (Covered Parisian passages with mosaic floors); each verb is its own house, mirror on the facade if reflexive, prepositions on the door.",
+   "kind": "street_segment",
+   "sector_id": "S05_bank",
+   "building_id": "ST_possession",
+   "links_back_to_sector": "S05_bank",
+   "cefr_band": "C1",
+   "mean_level": 5.0,
+   "related_rooms": [
+    "ST_possession_seg010",
+    "ST_possession_seg013",
+    "ST_communication_seg016",
+    "ST_existence_seg007"
+   ],
+   "conversation_ids": [
+    "C_ST_possession_seg015"
+   ],
+   "base_room": "ST_possession",
+   "words": [
+    "fr_priser_verb",
+    "fr_assouvir_verb",
+    "fr_repertorier_verb",
+    "fr_enumerer_verb",
+    "fr_dementir_verb"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   },
+   "street_name": "Allée des Inventaires",
+   "street_name_en": "Stocktaking Alley",
+   "name_fr": "Allée des Inventaires",
+   "name_en": "Stocktaking Alley"
+  },
+  {
    "id": "R_polite_z1",
    "name": "Polite phrases — school desk (center)",
    "type": "zoom",
@@ -29907,45 +29858,45 @@
   },
   {
    "id": "R_numbers2_z1",
-   "name": "Big numbers & ordinals — school desk (center)",
+   "name": "Big numbers & ordinals — chalkboard ledge (center)",
    "type": "zoom",
-   "setting": "A school desk on the back wall of 'Big numbers & ordinals' (Petite École (first schoolhouse)); zoom in to see its items.",
+   "setting": "A chalkboard ledge on the back wall of 'Big numbers & ordinals' (Petite École (first schoolhouse)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B02_ecole",
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_numbers2",
-   "furniture": "school desk",
-   "sign": "School desk: forty, sixty, seventy",
+   "furniture": "chalkboard ledge",
+   "sign": "Chalkboard ledge: sixty, seventy, forty",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
    "cefr_band": "A2",
-   "mean_level": 2.25,
+   "mean_level": 2.0,
    "related_rooms": [
     "R_numbers2"
    ],
    "base_room": "R_numbers2",
    "words": [
-    "fr_moitie_noun",
-    "fr_vingtaine_noun",
-    "fr_trentaine_noun",
-    "fr_douzaine_noun",
-    "fr_milliard_noun",
-    "fr_tiers_noun",
-    "fr_cinquieme_noun",
     "fr_quarante_num",
     "fr_soixante_num",
     "fr_soixante_dix_num",
     "fr_quatre_vingts_num",
-    "fr_quatre_vingt_dix_num"
+    "fr_quatre_vingt_dix_num",
+    "fr_milliard_noun",
+    "fr_vingtaine_noun",
+    "fr_trentaine_noun",
+    "fr_douzaine_noun",
+    "fr_moitie_noun",
+    "fr_tiers_noun",
+    "fr_cinquieme_noun"
    ],
    "item_count": 12,
    "side_counts": {
-    "left": 4,
-    "right": 3,
-    "n/a": 5
+    "n/a": 5,
+    "right": 1,
+    "left": 3
    }
   },
   {
@@ -30174,17 +30125,84 @@
    }
   },
   {
-   "id": "R_colors_02_z1",
-   "name": "Colors [first floor & upstairs] — school desk (center)",
+   "id": "R_colors_01_z1",
+   "name": "Colors [ground floor] — Les étagères de pots (center)",
    "type": "zoom",
-   "setting": "A school desk on the back wall of 'Colors [first floor & upstairs]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "setting": "A Les étagères de pots on the back wall of 'Colors [ground floor]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_colors_01",
+   "furniture": "Les étagères de pots",
+   "sign": "Les étagères de pots: brown, grey / gray, pale",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "A2",
+   "mean_level": 1.67,
+   "related_rooms": [
+    "R_colors_01"
+   ],
+   "base_room": "R_colors",
+   "words": [
+    "fr_gris_adj",
+    "fr_pale_adj",
+    "fr_brun_adj"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "n/a": 3
+   }
+  },
+  {
+   "id": "R_colors_02_z2",
+   "name": "Colors [first floor & upstairs] — Le seuil du jardin (center)",
+   "type": "zoom",
+   "setting": "A Le seuil du jardin on the back wall of 'Colors [first floor & upstairs]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_colors_02",
-   "furniture": "school desk",
-   "sign": "School desk: reddish, tricolored, blue-green",
+   "furniture": "Le seuil du jardin",
+   "sign": "Le seuil du jardin: mixed, diversity, neutral",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.8,
+   "related_rooms": [
+    "R_colors_02"
+   ],
+   "base_room": "R_colors",
+   "words": [
+    "fr_mixte_adj",
+    "fr_diversite_noun",
+    "fr_multiple_adj",
+    "fr_neutre_adj",
+    "fr_blancheur_noun"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 3,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_colors_02_z1",
+   "name": "Colors [first floor & upstairs] — L'étendoir des étoffes (center)",
+   "type": "zoom",
+   "setting": "A L'étendoir des étoffes on the back wall of 'Colors [first floor & upstairs]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_colors_02",
+   "furniture": "L'étendoir des étoffes",
+   "sign": "L'étendoir des étoffes: reddish, tricolored, blue-green",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -30209,17 +30227,86 @@
    }
   },
   {
-   "id": "R_shapes_03_z1",
-   "name": "Shapes & sizes [first floor & upstairs 2] — school desk (right)",
+   "id": "R_shapes_02_z1",
+   "name": "Shapes & sizes [first floor & upstairs 1] — L'établi de mesure (right)",
    "type": "zoom",
-   "setting": "A school desk on the right wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "setting": "A L'établi de mesure on the right wall of 'Shapes & sizes [first floor & upstairs 1]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_shapes_02",
+   "furniture": "L'établi de mesure",
+   "sign": "L'établi de mesure: diameter, perimeter, centimetre",
+   "position": {
+    "side": "right",
+    "wall": "right wall"
+   },
+   "cefr_band": "C1",
+   "mean_level": 4.75,
+   "related_rooms": [
+    "R_shapes_02"
+   ],
+   "base_room": "R_shapes",
+   "words": [
+    "fr_centimetre_noun",
+    "fr_diametre_noun",
+    "fr_pourtour_noun",
+    "fr_hexagone_noun"
+   ],
+   "item_count": 4,
+   "side_counts": {
+    "right": 4
+   }
+  },
+  {
+   "id": "R_shapes_03_z2",
+   "name": "Shapes & sizes [first floor & upstairs 2] — Le rebord des formes (left)",
+   "type": "zoom",
+   "setting": "A Le rebord des formes on the left wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S01_beginner",
    "building_id": "B04_atelier_couleurs",
    "links_back_to_sector": "S01_beginner",
    "parent_room_id": "R_shapes_03",
-   "furniture": "school desk",
-   "sign": "School desk: bend, contour",
+   "furniture": "Le rebord des formes",
+   "sign": "Le rebord des formes: curve, circular, wrinkle",
+   "position": {
+    "side": "left",
+    "wall": "left wall"
+   },
+   "cefr_band": "C1",
+   "mean_level": 4.67,
+   "related_rooms": [
+    "R_shapes_03"
+   ],
+   "base_room": "R_shapes",
+   "words": [
+    "fr_file_noun",
+    "fr_ride_noun",
+    "fr_courbe_noun",
+    "fr_circulaire_adj",
+    "fr_diagonale_noun",
+    "fr_deformation_noun"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "left": 5,
+    "n/a": 1
+   }
+  },
+  {
+   "id": "R_shapes_03_z1",
+   "name": "Shapes & sizes [first floor & upstairs 2] — La table à dessin (right)",
+   "type": "zoom",
+   "setting": "A La table à dessin on the right wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S01_beginner",
+   "building_id": "B04_atelier_couleurs",
+   "links_back_to_sector": "S01_beginner",
+   "parent_room_id": "R_shapes_03",
+   "furniture": "La table à dessin",
+   "sign": "La table à dessin: bend, contour",
    "position": {
     "side": "right",
     "wall": "right wall"
@@ -30241,42 +30328,6 @@
    "item_count": 6,
    "side_counts": {
     "right": 6
-   }
-  },
-  {
-   "id": "R_shapes_03_z2",
-   "name": "Shapes & sizes [first floor & upstairs 2] — chalkboard ledge (center)",
-   "type": "zoom",
-   "setting": "A chalkboard ledge on the back wall of 'Shapes & sizes [first floor & upstairs 2]' (Atelier des Couleurs & Formes (colors and shapes)); zoom in to see its items.",
-   "kind": "zoom",
-   "sector_id": "S01_beginner",
-   "building_id": "B04_atelier_couleurs",
-   "links_back_to_sector": "S01_beginner",
-   "parent_room_id": "R_shapes_03",
-   "furniture": "chalkboard ledge",
-   "sign": "Chalkboard ledge: curve, circular, wrinkle",
-   "position": {
-    "side": "center",
-    "wall": "back wall"
-   },
-   "cefr_band": "C1",
-   "mean_level": 4.67,
-   "related_rooms": [
-    "R_shapes_03"
-   ],
-   "base_room": "R_shapes",
-   "words": [
-    "fr_file_noun",
-    "fr_ride_noun",
-    "fr_courbe_noun",
-    "fr_diagonale_noun",
-    "fr_deformation_noun",
-    "fr_circulaire_adj"
-   ],
-   "item_count": 6,
-   "side_counts": {
-    "left": 5,
-    "n/a": 1
    }
   },
   {
@@ -30464,17 +30515,93 @@
    }
   },
   {
-   "id": "R_family_02_z1",
-   "name": "Family photo room [first floor] — shelf (left)",
+   "id": "R_wardrobe_04_z1",
+   "name": "Dressing room (clothes) [upstairs] — Le coin du poêle (left)",
    "type": "zoom",
-   "setting": "A shelf on the left wall of 'Family photo room [first floor]' (La Maison familiale); zoom in to see its items.",
+   "setting": "A Le coin du poêle on the back wall of 'Dressing room (clothes) [upstairs]' (La Maison familiale); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S02_home",
+   "building_id": "B05_maison",
+   "links_back_to_sector": "S02_home",
+   "parent_room_id": "R_wardrobe_04",
+   "furniture": "Le coin du poêle",
+   "sign": "Le coin du poêle: slipper, high-heeled woman's shoe",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 5.5,
+   "related_rooms": [
+    "R_wardrobe_04"
+   ],
+   "base_room": "R_wardrobe",
+   "words": [
+    "fr_pantoufle_noun",
+    "fr_chausson_noun",
+    "fr_escarpin_noun",
+    "fr_pointure_noun",
+    "fr_polo_noun",
+    "fr_pourpoint_noun"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "left": 2,
+    "right": 4
+   }
+  },
+  {
+   "id": "R_family_02_z2",
+   "name": "Family photo room [first floor] — L'arbre de famille (center)",
+   "type": "zoom",
+   "setting": "A L'arbre de famille on the back wall of 'Family photo room [first floor]' (La Maison familiale); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S02_home",
    "building_id": "B05_maison",
    "links_back_to_sector": "S02_home",
    "parent_room_id": "R_family_02",
-   "furniture": "shelf",
-   "sign": "Shelf: daughter-in-law, mother-in-law, fatherhood",
+   "furniture": "L'arbre de famille",
+   "sign": "L'arbre de famille: heir, descendant, parental",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 4.22,
+   "related_rooms": [
+    "R_family_02"
+   ],
+   "base_room": "R_family",
+   "words": [
+    "fr_ancetre_noun",
+    "fr_beau_frere_noun",
+    "fr_heritage_noun",
+    "fr_divorce_noun",
+    "fr_heritier_noun",
+    "fr_descendant_noun",
+    "fr_bambin_noun",
+    "fr_parental_adj",
+    "fr_demi_frere_noun"
+   ],
+   "item_count": 9,
+   "side_counts": {
+    "center": 1,
+    "right": 7,
+    "n/a": 1
+   }
+  },
+  {
+   "id": "R_family_02_z1",
+   "name": "Family photo room [first floor] — Les photos de famille (left)",
+   "type": "zoom",
+   "setting": "A Les photos de famille on the left wall of 'Family photo room [first floor]' (La Maison familiale); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S02_home",
+   "building_id": "B05_maison",
+   "links_back_to_sector": "S02_home",
+   "parent_room_id": "R_family_02",
+   "furniture": "Les photos de famille",
+   "sign": "Les photos de famille: daughter-in-law, mother-in-law, fatherhood",
    "position": {
     "side": "left",
     "wall": "left wall"
@@ -30930,10 +31057,78 @@
    }
   },
   {
-   "id": "R_adj_state_04_z1",
-   "name": "Repair café — states & conditions [upstairs 1] — market crate (center)",
+   "id": "R_adj_state_02_z1",
+   "name": "Repair café — states & conditions [ground floor 1] — stone sink corner (center)",
    "type": "zoom",
-   "setting": "A market crate on the back wall of 'Repair café — states & conditions [upstairs 1]' (Atelier de Réparation (repair café)); zoom in to see its items.",
+   "setting": "A stone sink corner on the back wall of 'Repair café — states & conditions [ground floor 1]' (Atelier de Réparation (repair café)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S03_market",
+   "building_id": "B61_reparation",
+   "links_back_to_sector": "S03_market",
+   "parent_room_id": "R_adj_state_02",
+   "furniture": "stone sink corner",
+   "sign": "Sink corner: Polish, incomprehensible, liquid",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.8,
+   "related_rooms": [
+    "R_adj_state_02"
+   ],
+   "base_room": "R_adj_state",
+   "words": [
+    "fr_polonais_adj",
+    "fr_incomprehensible_adj",
+    "fr_liquide_adj",
+    "fr_menager_adj",
+    "fr_soigne_adj"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   }
+  },
+  {
+   "id": "R_adj_state_03_z1",
+   "name": "Repair café — states & conditions [ground floor 2] — bay-window bench (center)",
+   "type": "zoom",
+   "setting": "A bay-window bench on the back wall of 'Repair café — states & conditions [ground floor 2]' (Atelier de Réparation (repair café)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S03_market",
+   "building_id": "B61_reparation",
+   "links_back_to_sector": "S03_market",
+   "parent_room_id": "R_adj_state_03",
+   "furniture": "bay-window bench",
+   "sign": "Window bench: mobile, illegal, temporary",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.8,
+   "related_rooms": [
+    "R_adj_state_03"
+   ],
+   "base_room": "R_adj_state",
+   "words": [
+    "fr_mobile_adj",
+    "fr_illegal_adj",
+    "fr_temporaire_adj",
+    "fr_disponible_adj",
+    "fr_interesse_adj"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   }
+  },
+  {
+   "id": "R_adj_state_04_z1",
+   "name": "Repair café — states & conditions [first floor 1] — market crate (center)",
+   "type": "zoom",
+   "setting": "A market crate on the back wall of 'Repair café — states & conditions [first floor 1]' (Atelier de Réparation (repair café)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S03_market",
    "building_id": "B61_reparation",
@@ -30969,17 +31164,51 @@
    }
   },
   {
-   "id": "R_abs_beauty_01_z1",
-   "name": "Fashion-house salon — beauty & style [ground & first floor 1] — market crate (left)",
+   "id": "R_adj_state_05_z1",
+   "name": "Repair café — states & conditions [first floor 2] — electrics bench (center)",
    "type": "zoom",
-   "setting": "A market crate on the back wall of 'Fashion-house salon — beauty & style [ground & first floor 1]' (Maison de Couture (fashion house)); zoom in to see its items.",
+   "setting": "A electrics bench on the back wall of 'Repair café — states & conditions [first floor 2]' (Atelier de Réparation (repair café)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S03_market",
+   "building_id": "B61_reparation",
+   "links_back_to_sector": "S03_market",
+   "parent_room_id": "R_adj_state_05",
+   "furniture": "electrics bench",
+   "sign": "Electrics bench: incompatible, intermittent, compatible",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 5.8,
+   "related_rooms": [
+    "R_adj_state_05"
+   ],
+   "base_room": "R_adj_state",
+   "words": [
+    "fr_incompatible_adj",
+    "fr_intermittent_adj",
+    "fr_compatible_adj",
+    "fr_inexistant_adj",
+    "fr_defaillant_adj"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "n/a": 5
+   }
+  },
+  {
+   "id": "R_abs_beauty_01_z1",
+   "name": "Fashion-house salon — beauty & style [ground & first floor 1] — cushion window seat (center)",
+   "type": "zoom",
+   "setting": "A cushion window seat on the back wall of 'Fashion-house salon — beauty & style [ground & first floor 1]' (Maison de Couture (fashion house)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S03_market",
    "building_id": "B62_couture",
    "links_back_to_sector": "S03_market",
    "parent_room_id": "R_abs_beauty_01",
-   "furniture": "market crate",
-   "sign": "Market crate: splendor, exoticism, preference",
+   "furniture": "cushion window seat",
+   "sign": "Cushion window seat: calm, preference, splendour",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -31006,38 +31235,41 @@
   },
   {
    "id": "R_abs_beauty_02_z1",
-   "name": "Fashion-house salon — beauty & style [ground & first floor 2] — market crate (left)",
+   "name": "Fashion-house salon — beauty & style [ground & first floor 2] — shop-window display (center)",
    "type": "zoom",
-   "setting": "A market crate on the back wall of 'Fashion-house salon — beauty & style [ground & first floor 2]' (Maison de Couture (fashion house)); zoom in to see its items.",
+   "setting": "A shop-window display on the back wall of 'Fashion-house salon — beauty & style [ground & first floor 2]' (Maison de Couture (fashion house)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S03_market",
    "building_id": "B62_couture",
    "links_back_to_sector": "S03_market",
    "parent_room_id": "R_abs_beauty_02",
-   "furniture": "market crate",
-   "sign": "Market crate: appearance, variety, admiration",
+   "furniture": "shop-window display",
+   "sign": "Shop-window display: plain, pace, variety",
    "position": {
     "side": "center",
     "wall": "back wall"
    },
-   "cefr_band": "B2",
-   "mean_level": 3.5,
+   "cefr_band": "B1",
+   "mean_level": 3.33,
    "related_rooms": [
     "R_abs_beauty_02"
    ],
    "base_room": "R_abs_beauty",
    "words": [
-    "fr_allure_noun",
     "fr_plaine_noun",
+    "fr_allure_noun",
+    "fr_variete_noun",
     "fr_admiration_noun",
     "fr_perfection_noun",
     "fr_abord_noun",
-    "fr_variete_noun"
+    "fr_merci_noun_m",
+    "fr_compliment_noun",
+    "fr_look_noun"
    ],
-   "item_count": 6,
+   "item_count": 9,
    "side_counts": {
     "left": 5,
-    "right": 1
+    "right": 4
    }
   },
   {
@@ -31144,7 +31376,7 @@
     "fr_champagne_noun",
     "fr_cru_noun"
    ],
-   "item_count": 8,
+   "item_count": 10,
    "side_counts": {
     "right": 8
    },
@@ -31154,35 +31386,110 @@
    "id": "R_bank_counter_02_z1",
    "name": "Bank counter (money & accounts) [first floor] — desk (right)",
    "type": "zoom",
-   "setting": "A desk on the right wall of 'Bank counter (money & accounts) [first floor]' (Banque du Village); zoom in to see its items.",
+   "setting": "A desk on the back wall of 'Bank counter (money & accounts) [first floor]' (Banque du Village); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S05_bank",
    "building_id": "B10_banque",
    "links_back_to_sector": "S05_bank",
    "parent_room_id": "R_bank_counter_02",
    "furniture": "desk",
-   "sign": "Desk: payment, banker, transfer",
+   "sign": "Desk: bank",
    "position": {
-    "side": "right",
-    "wall": "right wall"
+    "side": "center",
+    "wall": "back wall"
    },
    "cefr_band": "B2",
-   "mean_level": 4.0,
+   "mean_level": 3.9,
    "related_rooms": [
     "R_bank_counter_02"
    ],
    "base_room": "R_bank_counter",
    "words": [
+    "fr_acces_noun",
+    "fr_rivage_noun",
     "fr_gage_noun",
+    "fr_berge_noun",
     "fr_banquier_noun",
     "fr_transfert_noun",
     "fr_centime_noun",
     "fr_enjeu_noun",
-    "fr_paiement_noun"
+    "fr_paiement_noun",
+    "fr_bancaire_adj"
    ],
-   "item_count": 6,
+   "item_count": 10,
    "side_counts": {
-    "right": 6
+    "right": 8,
+    "left": 1,
+    "n/a": 1
+   }
+  },
+  {
+   "id": "R_bank_counter_03_z1",
+   "name": "Bank counter (money & accounts) [upstairs] — desk (left)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Bank counter (money & accounts) [upstairs]' (Banque du Village); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B10_banque",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_bank_counter_03",
+   "furniture": "desk",
+   "sign": "Desk: subscription, denomination, payment",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 5.75,
+   "related_rooms": [
+    "R_bank_counter_03"
+   ],
+   "base_room": "R_bank_counter",
+   "words": [
+    "fr_cotisation_noun",
+    "fr_versement_noun",
+    "fr_usager_noun",
+    "fr_denomination_noun"
+   ],
+   "item_count": 4,
+   "side_counts": {
+    "left": 2,
+    "right": 2
+   }
+  },
+  {
+   "id": "R_bank_economy_01_z1",
+   "name": "Economy & finance office [ground & first floor 1] — desk (left)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Economy & finance office [ground & first floor 1]' (Banque du Village); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B10_banque",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_bank_economy_01",
+   "furniture": "desk",
+   "sign": "Desk: profit, gain, tax",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 4.0,
+   "related_rooms": [
+    "R_bank_economy_01"
+   ],
+   "base_room": "R_bank_economy",
+   "words": [
+    "fr_exigence_noun",
+    "fr_benefice_noun",
+    "fr_partage_noun",
+    "fr_gain_noun",
+    "fr_taxe_noun"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "left": 2,
+    "right": 3
    }
   },
   {
@@ -31220,6 +31527,73 @@
     "left": 4,
     "right": 1,
     "n/a": 1
+   }
+  },
+  {
+   "id": "R_bank_economy_03_z1",
+   "name": "Economy & finance office [upstairs 1] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Economy & finance office [upstairs 1]' (Banque du Village); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B10_banque",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_bank_economy_03",
+   "furniture": "desk",
+   "sign": "Desk: quote, imposition, fluctuation",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 6.0,
+   "related_rooms": [
+    "R_bank_economy_03"
+   ],
+   "base_room": "R_bank_economy",
+   "words": [
+    "fr_devis_noun",
+    "fr_fluctuation_noun",
+    "fr_imposition_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "right": 1,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_bank_economy_04_z1",
+   "name": "Economy & finance office [upstairs 2] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Economy & finance office [upstairs 2]' (Banque du Village); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B10_banque",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_bank_economy_04",
+   "furniture": "desk",
+   "sign": "Desk: profitability, economist, trust",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 6.0,
+   "related_rooms": [
+    "R_bank_economy_04"
+   ],
+   "base_room": "R_bank_economy",
+   "words": [
+    "fr_trust_noun",
+    "fr_economiste_noun",
+    "fr_rentabilite_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "right": 1,
+    "center": 1,
+    "left": 1
    }
   },
   {
@@ -31261,17 +31635,50 @@
    }
   },
   {
-   "id": "R_office_02_z1",
-   "name": "Office floor [first floor] — desk (right)",
+   "id": "R_office_02_z2",
+   "name": "Office floor [first floor] — desk (left)",
    "type": "zoom",
-   "setting": "A desk on the right wall of 'Office floor [first floor]' (Les Bureaux (office building)); zoom in to see its items.",
+   "setting": "A desk on the back wall of 'Office floor [first floor]' (Les Bureaux (office building)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S05_bank",
    "building_id": "B11_bureaux",
    "links_back_to_sector": "S05_bank",
    "parent_room_id": "R_office_02",
    "furniture": "desk",
-   "sign": "Desk: collaborator, colleague, employer",
+   "sign": "Desk: pact, convention, pay",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.67,
+   "related_rooms": [
+    "R_office_02"
+   ],
+   "base_room": "R_office",
+   "words": [
+    "fr_convention_noun",
+    "fr_pacte_noun",
+    "fr_paie_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "left": 2,
+    "right": 1
+   }
+  },
+  {
+   "id": "R_office_02_z1",
+   "name": "Office floor [first floor] — filing cabinet (right)",
+   "type": "zoom",
+   "setting": "A filing cabinet on the right wall of 'Office floor [first floor]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_office_02",
+   "furniture": "filing cabinet",
+   "sign": "Filing cabinet: collaborator, colleague, employer",
    "position": {
     "side": "right",
     "wall": "right wall"
@@ -31296,6 +31703,109 @@
    "item_count": 9,
    "side_counts": {
     "right": 9
+   }
+  },
+  {
+   "id": "R_office_03_z1",
+   "name": "Office floor [upstairs] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Office floor [upstairs]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_office_03",
+   "furniture": "desk",
+   "sign": "Desk: corporation, coordinator, pay",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 6.0,
+   "related_rooms": [
+    "R_office_03"
+   ],
+   "base_room": "R_office",
+   "words": [
+    "fr_licenciement_noun",
+    "fr_corporation_noun",
+    "fr_remuneration_noun",
+    "fr_coordinateur_noun"
+   ],
+   "item_count": 4,
+   "side_counts": {
+    "right": 2,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_occupations_01_z1",
+   "name": "Jobs gallery [ground floor] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Jobs gallery [ground floor]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_occupations_01",
+   "furniture": "desk",
+   "sign": "Desk: speciality, engineer, profession",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "A2",
+   "mean_level": 2.0,
+   "related_rooms": [
+    "R_occupations_01"
+   ],
+   "base_room": "R_occupations",
+   "words": [
+    "fr_ingenieur_noun",
+    "fr_profession_noun",
+    "fr_specialite_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "right": 1,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_occupations_02_z1",
+   "name": "Jobs gallery [first floor 1] — desk (center)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Jobs gallery [first floor 1]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_occupations_02",
+   "furniture": "desk",
+   "sign": "Desk: psychiatrist, childminder, grocer",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 4.0,
+   "related_rooms": [
+    "R_occupations_02"
+   ],
+   "base_room": "R_occupations",
+   "words": [
+    "fr_psychiatre_noun",
+    "fr_magicien_noun",
+    "fr_nourrice_noun",
+    "fr_bourgeoisie_noun",
+    "fr_epicier_noun"
+   ],
+   "item_count": 5,
+   "side_counts": {
+    "center": 1,
+    "right": 2,
+    "left": 2
    }
   },
   {
@@ -31333,6 +31843,71 @@
     "left": 1,
     "right": 3,
     "center": 2
+   }
+  },
+  {
+   "id": "R_occupations_04_z1",
+   "name": "Jobs gallery [upstairs 1] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the back wall of 'Jobs gallery [upstairs 1]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_occupations_04",
+   "furniture": "desk",
+   "sign": "Desk: promoter, pipe, nursery",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 6.0,
+   "related_rooms": [
+    "R_occupations_04"
+   ],
+   "base_room": "R_occupations",
+   "words": [
+    "fr_promoteur_noun",
+    "fr_canalisation_noun",
+    "fr_garderie_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "right": 1,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_occupations_05_z1",
+   "name": "Jobs gallery [upstairs 2] — desk (right)",
+   "type": "zoom",
+   "setting": "A desk on the right wall of 'Jobs gallery [upstairs 2]' (Les Bureaux (office building)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S05_bank",
+   "building_id": "B11_bureaux",
+   "links_back_to_sector": "S05_bank",
+   "parent_room_id": "R_occupations_05",
+   "furniture": "desk",
+   "sign": "Desk: doctorate, practitioner, academician",
+   "position": {
+    "side": "right",
+    "wall": "right wall"
+   },
+   "cefr_band": "C2",
+   "mean_level": 5.67,
+   "related_rooms": [
+    "R_occupations_05"
+   ],
+   "base_room": "R_occupations",
+   "words": [
+    "fr_doctorat_noun",
+    "fr_praticien_noun",
+    "fr_academicien_noun"
+   ],
+   "item_count": 3,
+   "side_counts": {
+    "right": 3
    }
   },
   {
@@ -32115,17 +32690,209 @@
    }
   },
   {
-   "id": "R_doctor_01_z1",
-   "name": "Doctor's office (symptoms & illness) [ground & first floor] — examination tray (center)",
+   "id": "R_body_01_z1",
+   "name": "Body (anatomy wall chart) [ground floor 1] — Le miroir (right)",
    "type": "zoom",
-   "setting": "A examination tray on the back wall of 'Doctor's office (symptoms & illness) [ground & first floor]' (Cabinet médical); zoom in to see its items.",
+   "setting": "A Le miroir on the back wall of 'Body (anatomy wall chart) [ground floor 1]' (Cabinet médical); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B17_cabinet",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_body_01",
+   "furniture": "Le miroir",
+   "sign": "Le miroir: face, cheek",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "A2",
+   "mean_level": 1.5,
+   "related_rooms": [
+    "R_body_01"
+   ],
+   "base_room": "R_body",
+   "words": [
+    "fr_visage_noun",
+    "fr_face_noun",
+    "fr_cheveu_noun",
+    "fr_oeil_noun",
+    "fr_peau_noun",
+    "fr_joue_noun",
+    "fr_figure_noun",
+    "fr_poil_noun"
+   ],
+   "item_count": 8,
+   "side_counts": {
+    "right": 4,
+    "left": 4
+   }
+  },
+  {
+   "id": "R_body_02_z1",
+   "name": "Body (anatomy wall chart) [ground floor 2] — Le bassin (right)",
+   "type": "zoom",
+   "setting": "A Le bassin on the back wall of 'Body (anatomy wall chart) [ground floor 2]' (Cabinet médical); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B17_cabinet",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_body_02",
+   "furniture": "Le bassin",
+   "sign": "Le bassin: belly, heart, fist",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "A2",
+   "mean_level": 1.75,
+   "related_rooms": [
+    "R_body_02"
+   ],
+   "base_room": "R_body",
+   "words": [
+    "fr_fond_noun",
+    "fr_coeur_noun",
+    "fr_doigt_noun",
+    "fr_ventre_noun",
+    "fr_poitrine_noun",
+    "fr_souffle_noun",
+    "fr_gorge_noun",
+    "fr_poing_noun"
+   ],
+   "item_count": 8,
+   "side_counts": {
+    "right": 6,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_body_03_z1",
+   "name": "Body (anatomy wall chart) [first floor 1] — Le palier (right)",
+   "type": "zoom",
+   "setting": "A Le palier on the back wall of 'Body (anatomy wall chart) [first floor 1]' (Cabinet médical); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B17_cabinet",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_body_03",
+   "furniture": "Le palier",
+   "sign": "Le palier: bone, nape, ankle",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.6,
+   "related_rooms": [
+    "R_body_03"
+   ],
+   "base_room": "R_body",
+   "words": [
+    "fr_os_noun",
+    "fr_nerf_noun",
+    "fr_nuque_noun",
+    "fr_canne_noun",
+    "fr_coiffeur_noun",
+    "fr_cheville_noun",
+    "fr_tempe_noun",
+    "fr_coiffure_noun",
+    "fr_sonnette_noun",
+    "fr_foulard_noun"
+   ],
+   "item_count": 10,
+   "side_counts": {
+    "right": 4,
+    "left": 6
+   }
+  },
+  {
+   "id": "R_body_04_z1",
+   "name": "Body (anatomy wall chart) [first floor 2] — L'atelier de l'illustrateur (left)",
+   "type": "zoom",
+   "setting": "A L'atelier de l'illustrateur on the back wall of 'Body (anatomy wall chart) [first floor 2]' (Cabinet médical); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B17_cabinet",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_body_04",
+   "furniture": "L'atelier de l'illustrateur",
+   "sign": "L'atelier de l'illustrateur: beard, cheekbone, lung",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B1",
+   "mean_level": 3.44,
+   "related_rooms": [
+    "R_body_04"
+   ],
+   "base_room": "R_body",
+   "words": [
+    "fr_cuisse_noun",
+    "fr_barbe_noun",
+    "fr_menton_noun",
+    "fr_moustache_noun",
+    "fr_poumon_noun",
+    "fr_machoire_noun",
+    "fr_haleine_noun",
+    "fr_narine_noun",
+    "fr_pommette_noun"
+   ],
+   "item_count": 9,
+   "side_counts": {
+    "left": 7,
+    "right": 2
+   }
+  },
+  {
+   "id": "R_doctor_01_z2",
+   "name": "Doctor's office (symptoms & illness) [ground & first floor] — La salle d'attente (left)",
+   "type": "zoom",
+   "setting": "A La salle d'attente on the back wall of 'Doctor's office (symptoms & illness) [ground & first floor]' (Cabinet médical); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S07_health",
    "building_id": "B17_cabinet",
    "links_back_to_sector": "S07_health",
    "parent_room_id": "R_doctor_01",
-   "furniture": "examination tray",
-   "sign": "Examination tray: outbreak, nausea, cold",
+   "furniture": "La salle d'attente",
+   "sign": "La salle d'attente: influenza, health, virus",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B1",
+   "mean_level": 3.29,
+   "related_rooms": [
+    "R_doctor_01"
+   ],
+   "base_room": "R_doctor",
+   "words": [
+    "fr_sante_noun",
+    "fr_fatigue_noun",
+    "fr_grippe_noun",
+    "fr_ardeur_noun",
+    "fr_virus_noun",
+    "fr_soulagement_noun",
+    "fr_toux_noun"
+   ],
+   "item_count": 7,
+   "side_counts": {
+    "left": 5,
+    "right": 2
+   }
+  },
+  {
+   "id": "R_doctor_01_z1",
+   "name": "Doctor's office (symptoms & illness) [ground & first floor] — medicine cabinet (left)",
+   "type": "zoom",
+   "setting": "A medicine cabinet on the back wall of 'Doctor's office (symptoms & illness) [ground & first floor]' (Cabinet médical); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B17_cabinet",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_doctor_01",
+   "furniture": "medicine cabinet",
+   "sign": "Medicine cabinet: outbreak, nausea, cold",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32138,10 +32905,10 @@
    "base_room": "R_doctor",
    "words": [
     "fr_nausee_noun",
-    "fr_irruption_noun",
-    "fr_consultation_noun",
     "fr_symptome_noun",
+    "fr_irruption_noun",
     "fr_rhume_noun",
+    "fr_consultation_noun",
     "fr_vaccin_noun"
    ],
    "item_count": 6,
@@ -32151,17 +32918,54 @@
    }
   },
   {
-   "id": "R_pharmacy_z1",
-   "name": "Pharmacy shelves — examination tray (center)",
+   "id": "R_pharmacy_z2",
+   "name": "Pharmacy shelves — Le préparatoire (left)",
    "type": "zoom",
-   "setting": "A examination tray on the back wall of 'Pharmacy shelves' (Pharmacie); zoom in to see its items.",
+   "setting": "A Le préparatoire on the back wall of 'Pharmacy shelves' (Pharmacie); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S07_health",
    "building_id": "B18_pharmacie",
    "links_back_to_sector": "S07_health",
    "parent_room_id": "R_pharmacy",
-   "furniture": "examination tray",
-   "sign": "Examination tray: pharmaceutical, antibiotic, puncture",
+   "furniture": "Le préparatoire",
+   "sign": "Le préparatoire: drug, pill",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.71,
+   "related_rooms": [
+    "R_pharmacy"
+   ],
+   "base_room": "R_pharmacy",
+   "words": [
+    "fr_drogue_noun",
+    "fr_aiguille_noun",
+    "fr_traitement_noun",
+    "fr_pilule_noun",
+    "fr_flacon_noun",
+    "fr_platre_noun",
+    "fr_comprime_noun"
+   ],
+   "item_count": 7,
+   "side_counts": {
+    "left": 3,
+    "right": 4
+   }
+  },
+  {
+   "id": "R_pharmacy_z1",
+   "name": "Pharmacy shelves — medicine cabinet (right)",
+   "type": "zoom",
+   "setting": "A medicine cabinet on the back wall of 'Pharmacy shelves' (Pharmacie); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B18_pharmacie",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_pharmacy",
+   "furniture": "medicine cabinet",
+   "sign": "Medicine cabinet: pharmaceutical, antibiotic, puncture",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32173,33 +32977,70 @@
    ],
    "base_room": "R_pharmacy",
    "words": [
-    "fr_vitamine_noun",
-    "fr_cohorte_noun",
-    "fr_ponction_noun",
     "fr_filon_noun",
+    "fr_vitamine_noun",
     "fr_antibiotique_noun",
-    "fr_appelant_noun",
-    "fr_pharmaceutique_adj"
+    "fr_cohorte_noun",
+    "fr_pharmaceutique_adj",
+    "fr_ponction_noun",
+    "fr_appelant_noun"
    ],
    "item_count": 7,
    "side_counts": {
-    "left": 3,
     "right": 3,
+    "left": 3,
     "n/a": 1
    }
   },
   {
-   "id": "R_hospital_01_z1",
-   "name": "Hospital ward [ground & first floor] — examination tray (center)",
+   "id": "R_hospital_01_z2",
+   "name": "Hospital ward [ground & first floor] — Le jardin d'hiver (right)",
    "type": "zoom",
-   "setting": "A examination tray on the back wall of 'Hospital ward [ground & first floor]' (Hôpital); zoom in to see its items.",
+   "setting": "A Le jardin d'hiver on the back wall of 'Hospital ward [ground & first floor]' (Hôpital); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S07_health",
    "building_id": "B19_hopital",
    "links_back_to_sector": "S07_health",
    "parent_room_id": "R_hospital_01",
-   "furniture": "examination tray",
-   "sign": "Examination tray: injection, surgery",
+   "furniture": "Le jardin d'hiver",
+   "sign": "Le jardin d'hiver: damage, rest, care",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B1",
+   "mean_level": 3.29,
+   "related_rooms": [
+    "R_hospital_01"
+   ],
+   "base_room": "R_hospital",
+   "words": [
+    "fr_soin_noun",
+    "fr_miracle_noun",
+    "fr_dommage_noun",
+    "fr_repos_noun",
+    "fr_hanche_noun",
+    "fr_asile_noun",
+    "fr_extremite_noun"
+   ],
+   "item_count": 7,
+   "side_counts": {
+    "right": 5,
+    "left": 2
+   }
+  },
+  {
+   "id": "R_hospital_01_z1",
+   "name": "Hospital ward [ground & first floor] — medicine cabinet (right)",
+   "type": "zoom",
+   "setting": "A medicine cabinet on the back wall of 'Hospital ward [ground & first floor]' (Hôpital); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B19_hopital",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_hospital_01",
+   "furniture": "medicine cabinet",
+   "sign": "Medicine cabinet: injection, surgery",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32211,33 +33052,70 @@
    ],
    "base_room": "R_hospital",
    "words": [
+    "fr_chirurgien_noun",
+    "fr_degat_noun",
     "fr_piqure_noun",
+    "fr_detachement_noun",
     "fr_chirurgie_noun",
     "fr_exploitation_noun",
     "fr_injection_noun",
-    "fr_chirurgien_noun",
-    "fr_degat_noun",
-    "fr_detachement_noun",
     "fr_operateur_noun"
    ],
    "item_count": 8,
    "side_counts": {
-    "left": 4,
-    "right": 4
+    "right": 4,
+    "left": 4
    }
   },
   {
-   "id": "R_hospital_02_z1",
-   "name": "Hospital ward [upstairs] — examination tray (center)",
+   "id": "R_hospital_02_z2",
+   "name": "Hospital ward [upstairs] — La radiologie (left)",
    "type": "zoom",
-   "setting": "A examination tray on the back wall of 'Hospital ward [upstairs]' (Hôpital); zoom in to see its items.",
+   "setting": "A La radiologie on the back wall of 'Hospital ward [upstairs]' (Hôpital); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S07_health",
    "building_id": "B19_hopital",
    "links_back_to_sector": "S07_health",
    "parent_room_id": "R_hospital_02",
-   "furniture": "examination tray",
-   "sign": "Examination tray: injection, damage, harm",
+   "furniture": "La radiologie",
+   "sign": "La radiologie: rescue, fracture, sprain",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "C1",
+   "mean_level": 5.29,
+   "related_rooms": [
+    "R_hospital_02"
+   ],
+   "base_room": "R_hospital",
+   "words": [
+    "fr_bosse_noun",
+    "fr_sauvetage_noun",
+    "fr_fracture_noun",
+    "fr_evacuation_noun",
+    "fr_handicap_noun",
+    "fr_scanner_noun",
+    "fr_entorse_noun"
+   ],
+   "item_count": 7,
+   "side_counts": {
+    "left": 4,
+    "right": 3
+   }
+  },
+  {
+   "id": "R_hospital_02_z1",
+   "name": "Hospital ward [upstairs] — medicine cabinet (right)",
+   "type": "zoom",
+   "setting": "A medicine cabinet on the back wall of 'Hospital ward [upstairs]' (Hôpital); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B19_hopital",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_hospital_02",
+   "furniture": "medicine cabinet",
+   "sign": "Medicine cabinet: injection, damage, harm",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32249,19 +33127,55 @@
    ],
    "base_room": "R_hospital",
    "words": [
+    "fr_prejudice_noun",
     "fr_prothese_noun",
     "fr_reanimation_noun",
+    "fr_ambulancier_noun",
     "fr_infiltration_noun",
     "fr_dejection_noun",
-    "fr_insertion_noun",
-    "fr_prejudice_noun",
-    "fr_ambulancier_noun",
-    "fr_dam_noun"
+    "fr_dam_noun",
+    "fr_insertion_noun"
    ],
    "item_count": 8,
    "side_counts": {
+    "right": 3,
+    "left": 5
+   }
+  },
+  {
+   "id": "R_dentist_01_z1",
+   "name": "Dentist & optician [ground & first floor] — L'opticien (left)",
+   "type": "zoom",
+   "setting": "A L'opticien on the back wall of 'Dentist & optician [ground & first floor]' (Hôpital); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S07_health",
+   "building_id": "B19_hopital",
+   "links_back_to_sector": "S07_health",
+   "parent_room_id": "R_dentist_01",
+   "furniture": "L'opticien",
+   "sign": "L'opticien: vision, eyelid, eyebrow",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B1",
+   "mean_level": 3.0,
+   "related_rooms": [
+    "R_dentist_01"
+   ],
+   "base_room": "R_dentist",
+   "words": [
+    "fr_vision_noun",
+    "fr_paupiere_noun",
+    "fr_illusion_noun",
+    "fr_sourcil_noun",
+    "fr_perspective_noun",
+    "fr_reconnaissance_noun"
+   ],
+   "item_count": 6,
+   "side_counts": {
     "left": 5,
-    "right": 3
+    "right": 1
    }
   },
   {
@@ -32304,7 +33218,7 @@
   },
   {
    "id": "R_road_01_z1",
-   "name": "Road & car [near the gate] — luggage rack (center)",
+   "name": "Road & car [near the gate] — luggage rack (left)",
    "type": "zoom",
    "setting": "A luggage rack on the back wall of 'Road & car [ground floor]' (La Route & garage auto); zoom in to see its items.",
    "kind": "zoom",
@@ -32326,23 +33240,23 @@
    "base_room": "R_road",
    "words": [
     "fr_roue_noun",
+    "fr_bus_noun",
     "fr_avenue_noun",
-    "fr_bicyclette_noun",
     "fr_vehicule_noun",
     "fr_transport_noun",
-    "fr_parking_noun",
-    "fr_bus_noun"
+    "fr_bicyclette_noun",
+    "fr_parking_noun"
    ],
    "item_count": 7,
    "side_counts": {
     "left": 3,
-    "right": 3,
-    "center": 1
+    "center": 1,
+    "right": 3
    }
   },
   {
    "id": "R_road_03_z1",
-   "name": "Road & car [middle paths 2] — luggage rack (center)",
+   "name": "Road & car [middle paths 2] — luggage rack (left)",
    "type": "zoom",
    "setting": "A luggage rack on the back wall of 'Road & car [first floor 2]' (La Route & garage auto); zoom in to see its items.",
    "kind": "zoom",
@@ -32449,17 +33363,127 @@
    }
   },
   {
-   "id": "R_abs_space_01_z1",
-   "name": "Map room — places, positions & directions [ground floor] — luggage rack (center)",
+   "id": "R_world_01_z1",
+   "name": "World map room (countries & geography) [ground floor] — luggage rack (right)",
    "type": "zoom",
-   "setting": "A luggage rack on the back wall of 'Map room — places, positions & directions [ground floor]' (Office de tourisme (map of the world)); zoom in to see its items.",
+   "setting": "A luggage rack on the back wall of 'World map room (countries & geography) [ground floor]' (Office de tourisme (map of the world)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S08_travel",
+   "building_id": "B25_monde",
+   "links_back_to_sector": "S08_travel",
+   "parent_room_id": "R_world_01",
+   "furniture": "luggage rack",
+   "sign": "Luggage rack: countryside, country, province",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "A2",
+   "mean_level": 1.5,
+   "related_rooms": [
+    "R_world_01"
+   ],
+   "base_room": "R_world",
+   "words": [
+    "fr_village_noun",
+    "fr_campagne_noun",
+    "fr_region_noun",
+    "fr_paysage_noun",
+    "fr_territoire_noun",
+    "fr_province_noun",
+    "fr_cite_noun",
+    "fr_banlieue_noun"
+   ],
+   "item_count": 8,
+   "side_counts": {
+    "right": 3,
+    "left": 5
+   }
+  },
+  {
+   "id": "R_world_02_z1",
+   "name": "World map room (countries & geography) [first floor] — luggage rack (center)",
+   "type": "zoom",
+   "setting": "A luggage rack on the back wall of 'World map room (countries & geography) [first floor]' (Office de tourisme (map of the world)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S08_travel",
+   "building_id": "B25_monde",
+   "links_back_to_sector": "S08_travel",
+   "parent_room_id": "R_world_02",
+   "furniture": "luggage rack",
+   "sign": "Luggage rack: regional, geography, border",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.86,
+   "related_rooms": [
+    "R_world_02"
+   ],
+   "base_room": "R_world",
+   "words": [
+    "fr_regional_adj",
+    "fr_application_noun",
+    "fr_bordure_noun",
+    "fr_metropole_noun",
+    "fr_prefecture_noun",
+    "fr_geographie_noun",
+    "fr_immigration_noun"
+   ],
+   "item_count": 7,
+   "side_counts": {
+    "n/a": 1,
+    "left": 6
+   }
+  },
+  {
+   "id": "R_abs_space_01_z2",
+   "name": "Map room — places, positions & directions [ground floor] — luggage rack (right)",
+   "type": "zoom",
+   "setting": "A luggage rack on the right wall of 'Map room — places, positions & directions [ground floor]' (Office de tourisme (map of the world)); zoom in to see its items.",
    "kind": "zoom",
    "sector_id": "S08_travel",
    "building_id": "B25_monde",
    "links_back_to_sector": "S08_travel",
    "parent_room_id": "R_abs_space_01",
    "furniture": "luggage rack",
-   "sign": "Luggage rack: position, placement, back",
+   "sign": "Luggage rack: place, quarter",
+   "position": {
+    "side": "right",
+    "wall": "right wall"
+   },
+   "cefr_band": "A1",
+   "mean_level": 1.17,
+   "related_rooms": [
+    "R_abs_space_01"
+   ],
+   "base_room": "R_abs_space",
+   "words": [
+    "fr_bout_noun",
+    "fr_lieu_noun",
+    "fr_endroit_noun",
+    "fr_quartier_noun",
+    "fr_domaine_noun",
+    "fr_mouvement_noun"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "right": 6
+   }
+  },
+  {
+   "id": "R_abs_space_01_z1",
+   "name": "Map room — places, positions & directions [ground floor] — information desk (right)",
+   "type": "zoom",
+   "setting": "A information desk on the back wall of 'Map room — places, positions & directions [ground floor]' (Office de tourisme (map of the world)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S08_travel",
+   "building_id": "B25_monde",
+   "links_back_to_sector": "S08_travel",
+   "parent_room_id": "R_abs_space_01",
+   "furniture": "information desk",
+   "sign": "Information desk: position, placement, back",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32471,23 +33495,23 @@
    ],
    "base_room": "R_abs_space",
    "words": [
+    "fr_contraire_noun",
+    "fr_arriere_noun",
+    "fr_sein_noun",
     "fr_position_noun",
     "fr_base_noun",
     "fr_distance_noun",
-    "fr_mise_noun",
-    "fr_contraire_noun",
-    "fr_arriere_noun",
-    "fr_sein_noun"
+    "fr_mise_noun"
    ],
    "item_count": 7,
    "side_counts": {
-    "left": 4,
-    "right": 3
+    "right": 3,
+    "left": 4
    }
   },
   {
-   "id": "R_abs_space_02_z1",
-   "name": "Map room — places, positions & directions [first floor & upstairs] — luggage rack (center)",
+   "id": "R_abs_space_02_z2",
+   "name": "Map room — places, positions & directions [first floor & upstairs] — luggage rack (left)",
    "type": "zoom",
    "setting": "A luggage rack on the back wall of 'Map room — places, positions & directions [first floor & upstairs]' (Office de tourisme (map of the world)); zoom in to see its items.",
    "kind": "zoom",
@@ -32496,7 +33520,43 @@
    "links_back_to_sector": "S08_travel",
    "parent_room_id": "R_abs_space_02",
    "furniture": "luggage rack",
-   "sign": "Luggage rack: gap, place, putter",
+   "sign": "Luggage rack: proximity, expanse",
+   "position": {
+    "side": "center",
+    "wall": "back wall"
+   },
+   "cefr_band": "B2",
+   "mean_level": 3.5,
+   "related_rooms": [
+    "R_abs_space_02"
+   ],
+   "base_room": "R_abs_space",
+   "words": [
+    "fr_cage_noun",
+    "fr_cachette_noun",
+    "fr_proximite_noun",
+    "fr_revers_noun",
+    "fr_etendue_noun",
+    "fr_voisinage_noun"
+   ],
+   "item_count": 6,
+   "side_counts": {
+    "left": 4,
+    "right": 2
+   }
+  },
+  {
+   "id": "R_abs_space_02_z1",
+   "name": "Map room — places, positions & directions [first floor & upstairs] — information desk (right)",
+   "type": "zoom",
+   "setting": "A information desk on the back wall of 'Map room — places, positions & directions [first floor & upstairs]' (Office de tourisme (map of the world)); zoom in to see its items.",
+   "kind": "zoom",
+   "sector_id": "S08_travel",
+   "building_id": "B25_monde",
+   "links_back_to_sector": "S08_travel",
+   "parent_room_id": "R_abs_space_02",
+   "furniture": "information desk",
+   "sign": "Information desk: gap, place, putter",
    "position": {
     "side": "center",
     "wall": "back wall"
@@ -32508,19 +33568,19 @@
    ],
    "base_room": "R_abs_space",
    "words": [
-    "fr_breche_noun",
-    "fr_oree_noun",
-    "fr_localite_noun",
     "fr_centre_ville_noun",
+    "fr_breche_noun",
     "fr_metteur_noun",
     "fr_amenagement_noun",
+    "fr_oree_noun",
     "fr_antipode_noun",
-    "fr_pivot_noun"
+    "fr_pivot_noun",
+    "fr_localite_noun"
    ],
    "item_count": 8,
    "side_counts": {
-    "left": 3,
-    "right": 5
+    "right": 5,
+    "left": 3
    }
   },
   {

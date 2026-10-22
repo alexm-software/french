@@ -1,0 +1,192 @@
+{
+ "divider_x": 508,
+ "kind": "room",
+ "note": "Economy office, ground floor (repainted 2026-10-22 fix2): slate-blue panelled walls, oak parquet; LANDMARK a huge blank green market board with a brass ticker-tape machine spilling blank tape (the ticker desk is the zoom). Side door in the left wall open onto the sunny quay (out to the bank's street side), stone arch at the right back into the finance office. Feminine LEFT: town crier ringing his bell with a blank advert board on his back (annonce), shopkeeper in a megaphone hat with a giant price tag (promotion), man whose coins pour from his trouser pockets (dépense). Masculine RIGHT: trader dropping his fee into the overflowing jar (profit), model market on stilts in a marsh with frogs (marché), tax collector holding out the pot as a lady drops her coin in (impôt), baker counting the takings from his bag (revenu), farmer fencing a low plot of turf (lot), cat on a tower of stock boxes (stock), cow in a sandwich board with a cowbell (marketing).",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le bureau de l'économie",
+   "box": [
+    452,
+    140,
+    748,
+    214
+   ],
+   "text_box": [
+    462,
+    148,
+    738,
+    206
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_annonce_noun",
+   "box": [
+    140,
+    205,
+    268,
+    515
+   ],
+   "label_xy": [
+    202,
+    509
+   ]
+  },
+  {
+   "id": "fr_promotion_noun",
+   "box": [
+    272,
+    215,
+    418,
+    485
+   ],
+   "label_xy": [
+    346,
+    479
+   ]
+  },
+  {
+   "id": "fr_depense_noun",
+   "box": [
+    420,
+    258,
+    505,
+    505
+   ],
+   "label_xy": [
+    474,
+    499
+   ]
+  },
+  {
+   "id": "fr_profit_noun",
+   "box": [
+    660,
+    240,
+    758,
+    420
+   ],
+   "label_xy": [
+    710,
+    414
+   ]
+  },
+  {
+   "id": "fr_marche_noun_2",
+   "box": [
+    588,
+    422,
+    760,
+    565
+   ],
+   "label_xy": [
+    674,
+    559
+   ]
+  },
+  {
+   "id": "fr_impot_noun",
+   "box": [
+    762,
+    232,
+    876,
+    488
+   ],
+   "label_xy": [
+    820,
+    482
+   ]
+  },
+  {
+   "id": "fr_revenu_noun",
+   "box": [
+    878,
+    262,
+    965,
+    405
+   ],
+   "label_xy": [
+    928,
+    399
+   ]
+  },
+  {
+   "id": "fr_lot_noun",
+   "box": [
+    900,
+    412,
+    1082,
+    625
+   ],
+   "label_xy": [
+    990,
+    619
+   ]
+  },
+  {
+   "id": "fr_stock_noun",
+   "box": [
+    1040,
+    160,
+    1135,
+    330
+   ],
+   "label_xy": [
+    1086,
+    324
+   ]
+  },
+  {
+   "id": "fr_marketing_noun",
+   "box": [
+    990,
+    334,
+    1170,
+    408
+   ],
+   "label_xy": [
+    1080,
+    402
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_bank_economy_01_z1",
+  "box": [
+   512,
+   295,
+   640,
+   418
+  ],
+  "label": "Look closer at the ticker-tape desk"
+ },
+ "links": [
+  {
+   "target": "B10_banque",
+   "box": [
+    80,
+    40,
+    138,
+    480
+   ],
+   "label": "Out through the side door to the quay",
+   "name": "Banque du Village (dehors)",
+   "kind": "door"
+  },
+  {
+   "target": "R_bank_economy_02",
+   "box": [
+    878,
+    80,
+    1036,
+    256
+   ],
+   "label": "Through the stone arch to the finance office",
+   "name": "Le bureau des finances",
+   "kind": "arch"
+  }
+ ],
+ "painted": "2026-10-22 S05 fix2 repaint (GenerateImage + outpaint/retouch); boxes by hand"
+}

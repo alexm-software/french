@@ -2,25 +2,25 @@
  "image": "base.jpg",
  "width": 1280,
  "height": 720,
- "divider_x": 830,
+ "divider_x": 600,
  "kind": "zoom",
  "parent_room_id": "R_abs_beauty_02",
- "note": "Close-up of the salon's dressing corner: plain, pace, variety, admiration and perfection. The tall gilded mirror divides it: feminine nouns on its left, masculine (abord) on its right.",
+ "note": "Zoom (repainted, S03 richness) on the salon's right arched shop window, dressed as a window display: rose silk walls with gilt mouldings, a pale oak display platform, the arched windows showing the cobbled square on both sides (consistent with the facade). LANDMARK: the big gilt-framed painted canvas backdrop of a grassy plain with a galloping racehorse. Beauty, manners and thanks. Mixed genders on the back wall, so no divider (validator: mixed pinned zone = back wall). The blank rose wall panel top left is the sign; the strip's Back button returns to the salon. Divider at x=600: every noun obeys the side rule except l'allure, the racehorse painted on the backdrop (back wall), centre x=732 (accepted, noted).",
  "text_areas": {
   "sign": {
    "role": "room_name",
-   "text": "Le coin d'essayage",
+   "text": "La vitrine",
    "box": [
-    480,
-    640,
-    800,
-    680
+    350,
+    38,
+    462,
+    112
    ],
    "text_box": [
-    486,
-    646,
-    794,
-    674
+    356,
+    44,
+    456,
+    106
    ]
   }
  },
@@ -33,16 +33,16 @@
    "side": "left",
    "label": "la plaine",
    "box": [
-    272,
-    50,
-    537,
-    250
+    494,
+    81,
+    662,
+    280
    ],
    "label_xy": [
-    404,
-    240
+    578,
+    270
    ],
-   "scene": "painted backdrop of a wide grassy plain with one tree"
+   "scene": "painted backdrop of a wide grassy plain with one lone tree"
   },
   {
    "id": "fr_allure_noun",
@@ -52,16 +52,16 @@
    "side": "left",
    "label": "l'allure",
    "box": [
-    319,
-    256,
-    487,
-    390
+    669,
+    225,
+    794,
+    328
    ],
    "label_xy": [
-    403,
-    380
+    732,
+    318
    ],
-   "scene": "racehorse galloping across the backdrop at full speed"
+   "scene": "racehorse galloping at full pace across the backdrop"
   },
   {
    "id": "fr_variete_noun",
@@ -71,16 +71,16 @@
    "side": "left",
    "label": "la variété",
    "box": [
-    100,
-    200,
-    202,
-    581
+    169,
+    131,
+    398,
+    434
    ],
    "label_xy": [
-    151,
-    571
+    284,
+    424
    ],
-   "scene": "giraffe trying hats from a stand of every kind"
+   "scene": "giraffe trying on hats from a stand of every kind"
   },
   {
    "id": "fr_admiration_noun",
@@ -90,16 +90,16 @@
    "side": "left",
    "label": "l'admiration",
    "box": [
-    206,
-    412,
-    502,
-    612
+    94,
+    440,
+    506,
+    650
    ],
    "label_xy": [
-    354,
-    602
+    300,
+    640
    ],
-   "scene": "geese gazing in admiration at a swan's new feather"
+   "scene": "geese gazing in admiration at a swan's gorgeous new feather"
   },
   {
    "id": "fr_perfection_noun",
@@ -109,14 +109,14 @@
    "side": "left",
    "label": "la perfection",
    "box": [
-    506,
-    254,
-    712,
-    600
+    402,
+    285,
+    569,
+    436
    ],
    "label_xy": [
-    609,
-    590
+    486,
+    426
    ],
    "scene": "tailor placing the final pin in a perfect gown"
   },
@@ -128,17 +128,73 @@
    "side": "right",
    "label": "l'abord",
    "box": [
-    944,
-    287,
-    1156,
-    612
+    769,
+    332,
+    950,
+    500
    ],
    "label_xy": [
-    1050,
-    602
+    860,
+    490
    ],
-   "scene": "sailor bowing to welcome guests aboard a model ship"
+   "scene": "sailor bowing to welcome tiny guests aboard a model ship"
+  },
+  {
+   "id": "fr_merci_noun_m",
+   "lemma": "merci",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le merci",
+   "box": [
+    731,
+    504,
+    894,
+    656
+   ],
+   "label_xy": [
+    812,
+    646
+   ],
+   "scene": "glittering thank-you card with a red heart on an easel"
+  },
+  {
+   "id": "fr_compliment_noun",
+   "lemma": "compliment",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le compliment",
+   "box": [
+    548,
+    500,
+    685,
+    660
+   ],
+   "label_xy": [
+    616,
+    650
+   ],
+   "scene": "shy hedgehog in a new flowered hat blushing at a compliment"
+  },
+  {
+   "id": "fr_look_noun",
+   "lemma": "look",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le look",
+   "box": [
+    953,
+    462,
+    1103,
+    669
+   ],
+   "label_xy": [
+    1028,
+    659
+   ],
+   "scene": "pug in sunglasses and a silk scarf showing off his new look"
   }
- ],
- "links": []
+ ]
 }

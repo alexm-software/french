@@ -1,371 +1,357 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_control_seg016",
-  "street_id": "ST_control",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Rue des Gestes — Rue de la Mise-en-Place · fourrer, devancer, se positionner",
-  "divider_x": 1010,
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman stuffing a fur coat into a tiny suitcase, soldier setting down his kitbag at his billet door beside a framed mirror, cyclist overtaking the blue van), balcony (man counting coins into the shopkeeper's hand to settle up), upper (man placing a cherry in the centre of a cake), roof (goalkeeper positioning himself in front of the goal, mirror propped beside it). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_fourrer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_fourrer_verb",
-      "text": "fourrer",
-      "box": [
-        242,
-        640,
-        320,
-        666
-      ],
-      "text_box": [
-        246,
-        644,
-        316,
-        662
-      ]
-    },
-    "fr_devancer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_devancer_verb",
-      "text": "devancer",
-      "box": [
-        843,
-        612,
-        931,
-        638
-      ],
-      "text_box": [
-        847,
-        616,
-        927,
-        634
-      ]
-    },
-    "fr_cantonner_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_cantonner_verb",
-      "text": "se cantonner",
-      "box": [
-        534,
-        593,
-        660,
-        619
-      ],
-      "text_box": [
-        538,
-        597,
-        656,
-        615
-      ]
-    },
-    "fr_solder_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_solder_verb",
-      "text": "solder",
-      "box": [
-        269,
-        337,
-        337,
-        363
-      ],
-      "text_box": [
-        273,
-        341,
-        333,
-        359
-      ]
-    },
-    "fr_centrer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_centrer_verb",
-      "text": "centrer",
-      "box": [
-        542,
-        280,
-        620,
-        306
-      ],
-      "text_box": [
-        546,
-        284,
-        616,
-        302
-      ]
-    },
-    "fr_positionner_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_positionner_verb",
-      "text": "se positionner",
-      "box": [
-        212,
-        124,
-        356,
-        150
-      ],
-      "text_box": [
-        216,
-        128,
-        352,
-        146
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Impasse des Yeux-Écarquillés →",
-      "box": [
-        1020,
-        450,
-        1140,
-        560
-      ],
-      "text_box": [
-        1026,
-        456,
-        1134,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Ruelle des Bousculades",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        682,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        880,
-        25,
-        980,
-        59
-      ],
-      "text_box": [
-        883,
-        28,
-        977,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        1020,
-        25,
-        1140,
-        59
-      ],
-      "text_box": [
-        1023,
-        28,
-        1137,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_control_seg016",
+ "street_id": "ST_paquets",
+ "theme_street_id": "ST_control",
+ "sector_id": "S02_home",
+ "place_index": 2,
+ "place_count": 4,
+ "street_name": "Passage des Paquets",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue de la Mise-en-Place",
+ "divider_x": 1000,
+ "note": "Passage des Paquets place 2/4; landmark: compass-rose mosaic in the wet cobbles with a bronze sundial pillar at its centre. Painted top margin extended (scenery stretch) so the goalkeeper clears the 6% band. The board over the inner arch was blank-painted (lettering removed) and carries the place name overlay. No -er/-ir markers, no painted text.",
+ "landmark": "compass-rose mosaic in the wet cobbles with a bronze sundial pillar at its centre",
+ "art_style": "cartoony 2.5",
+ "text_areas": {
+  "fr_positionner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_positionner_verb",
+   "text": "se positionner",
+   "box": [
+    256,
+    156,
+    400,
+    182
+   ],
+   "text_box": [
+    260,
+    160,
+    396,
+    178
+   ]
   },
-  "items": [
-    {
-      "id": "fr_fourrer_verb",
-      "lemma": "fourrer",
-      "gloss": "to shove, stick, stuff; to stuff ; to fill",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        137,
-        475,
-        425,
-        672
-      ],
-      "label_xy": [
-        281,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_devancer_verb",
-      "lemma": "devancer",
-      "gloss": "to overtake; to arrive earlier than",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        775,
-        456,
-        1000,
-        644
-      ],
-      "label_xy": [
-        887,
-        632
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_cantonner_verb",
-      "lemma": "cantonner",
-      "gloss": "to station; billet; to be stationed, be billeted",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        525,
-        412,
-        669,
-        625
-      ],
-      "label_xy": [
-        597,
-        613
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se cantonner",
-      "scene": "",
-      "mirror": "framed mirror on the wall right of the door"
-    },
-    {
-      "id": "fr_solder_verb",
-      "lemma": "solder",
-      "gloss": "to close; to settle, to pay off",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        188,
-        181,
-        419,
-        369
-      ],
-      "label_xy": [
-        303,
-        357
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_centrer_verb",
-      "lemma": "centrer",
-      "gloss": "to center",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        531,
-        188,
-        631,
-        312
-      ],
-      "label_xy": [
-        581,
-        300
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_positionner_verb",
-      "lemma": "positionner",
-      "gloss": "to position; to position oneself",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 6,
-      "box": [
-        150,
-        12,
-        419,
-        156
-      ],
-      "label_xy": [
-        284,
-        144
-      ],
-      "prepositions": [],
-      "reflexive": true,
-      "pronominal_form": "se positionner",
-      "scene": "",
-      "mirror": "tall mirror propped beside the goal"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg017",
-      "box": [
-        1020,
-        450,
-        1140,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Impasse des Yeux-Écarquillés",
-      "sign": "Impasse des Yeux-Écarquillés →",
-      "kind": "street",
-      "name_fr": "Impasse des Yeux-Écarquillés",
-      "name_en": "Wide-Eyes Close"
-    },
-    "back": {
-      "target": "ST_control_seg015",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Jostling Lane",
-      "name": "Ruelle des Bousculades",
-      "sign": "← Ruelle des Bousculades",
-      "kind": "street",
-      "name_fr": "Ruelle des Bousculades",
-      "name_en": "Jostling Lane"
-    }
+  "fr_solder_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_solder_verb",
+   "text": "solder",
+   "box": [
+    313,
+    343,
+    381,
+    369
+   ],
+   "text_box": [
+    317,
+    347,
+    377,
+    365
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_centrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_centrer_verb",
+   "text": "centrer",
+   "box": [
+    545,
+    296,
+    623,
+    322
+   ],
+   "text_box": [
+    549,
+    300,
+    619,
+    318
+   ]
+  },
+  "fr_fourrer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_fourrer_verb",
+   "text": "fourrer",
+   "box": [
+    286,
+    643,
+    364,
+    669
+   ],
+   "text_box": [
+    290,
+    647,
+    360,
+    665
+   ]
+  },
+  "fr_cantonner_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_cantonner_verb",
+   "text": "se cantonner",
+   "box": [
+    547,
+    568,
+    659,
+    594
+   ],
+   "text_box": [
+    551,
+    572,
+    655,
+    590
+   ]
+  },
+  "fr_devancer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_devancer_verb",
+   "text": "devancer",
+   "box": [
+    818,
+    593,
+    906,
+    619
+   ],
+   "text_box": [
+    822,
+    597,
+    902,
+    615
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Impasse des Yeux-Écarquillés →",
+   "box": [
+    990,
+    340,
+    1110,
+    470
+   ],
+   "text_box": [
+    996,
+    346,
+    1104,
+    464
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Ruelle des Bousculades",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue de la Mise-en-Place",
+   "box": [
+    885,
+    185,
+    1120,
+    228
+   ],
+   "text_box": [
+    889,
+    189,
+    1116,
+    224
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_positionner_verb",
+   "lemma": "positionner",
+   "gloss": "to position; to position oneself",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 1,
+   "box": [
+    206,
+    56,
+    450,
+    188
+   ],
+   "label_xy": [
+    328,
+    176
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se positionner",
+   "scene": "",
+   "mirror": "tall standing mirror beside the goal"
+  },
+  {
+   "id": "fr_solder_verb",
+   "lemma": "solder",
+   "gloss": "to close; to settle, to pay off",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    244,
+    206,
+    450,
+    375
+   ],
+   "label_xy": [
+    347,
+    363
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_centrer_verb",
+   "lemma": "centrer",
+   "gloss": "to center",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 3,
+   "box": [
+    538,
+    225,
+    631,
+    328
+   ],
+   "label_xy": [
+    584,
+    316
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_fourrer_verb",
+   "lemma": "fourrer",
+   "gloss": "to shove, stick, stuff; to stuff ; to fill",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    200,
+    465,
+    450,
+    675
+   ],
+   "label_xy": [
+    325,
+    663
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_cantonner_verb",
+   "lemma": "cantonner",
+   "gloss": "to station; billet; to be stationed, be billeted",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    545,
+    405,
+    662,
+    600
+   ],
+   "label_xy": [
+    603,
+    588
+   ],
+   "prepositions": [],
+   "reflexive": true,
+   "pronominal_form": "se cantonner",
+   "scene": "",
+   "mirror": "framed mirror on the wall by the billet door"
+  },
+  {
+   "id": "fr_devancer_verb",
+   "lemma": "devancer",
+   "gloss": "to overtake; to arrive earlier than",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    756,
+    456,
+    968,
+    625
+   ],
+   "label_xy": [
+    862,
+    613
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg017",
+   "box": [
+    990,
+    340,
+    1110,
+    470
+   ],
+   "label": "Walk on to Impasse des Yeux-Écarquillés",
+   "name": "Impasse des Yeux-Écarquillés",
+   "sign": "Impasse des Yeux-Écarquillés →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_control_seg015",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Bousculades",
+   "name": "Ruelle des Bousculades",
+   "sign": "← Ruelle des Bousculades",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "roof": 1,
+  "balcony": 1,
+  "upper": 1,
+  "street": 3
+ }
 }

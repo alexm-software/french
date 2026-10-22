@@ -1,113 +1,107 @@
 {
-  "divider_x": 1010,
-  "name": "Rue des Gestes — Rue de la Mise-en-Place · fourrer, devancer, se positionner",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman stuffing a fur coat into a tiny suitcase, soldier setting down his kitbag at his billet door beside a framed mirror, cyclist overtaking the blue van), balcony (man counting coins into the shopkeeper's hand to settle up), upper (man placing a cherry in the centre of a cake), roof (goalkeeper positioning himself in front of the goal, mirror propped beside it). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_fourrer_verb",
-      "box": [
-        137,
-        475,
-        425,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_devancer_verb",
-      "box": [
-        775,
-        456,
-        1000,
-        644
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_cantonner_verb",
-      "box": [
-        525,
-        412,
-        669,
-        625
-      ],
-      "tier": "street",
-      "mirror": "framed mirror on the wall right of the door"
-    },
-    {
-      "id": "fr_solder_verb",
-      "box": [
-        188,
-        181,
-        419,
-        369
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_centrer_verb",
-      "box": [
-        531,
-        188,
-        631,
-        312
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_positionner_verb",
-      "box": [
-        150,
-        12,
-        419,
-        156
-      ],
-      "tier": "roof",
-      "mirror": "tall mirror propped beside the goal"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_control_seg017",
-      "box": [
-        1020,
-        450,
-        1140,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Impasse des Yeux-Écarquillés",
-      "sign": "Impasse des Yeux-Écarquillés →",
-      "name_fr": "Impasse des Yeux-Écarquillés",
-      "name_en": "Wide-Eyes Close"
-    },
-    "back": {
-      "target": "ST_control_seg015",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Jostling Lane",
-      "name": "Ruelle des Bousculades",
-      "sign": "← Ruelle des Bousculades",
-      "name_fr": "Ruelle des Bousculades",
-      "name_en": "Jostling Lane"
-    }
+ "name": "Rue de la Mise-en-Place",
+ "street_name": "Passage des Paquets",
+ "divider_x": 1000,
+ "art_style": "cartoony 2.5",
+ "landmark": "compass-rose mosaic in the wet cobbles with a bronze sundial pillar at its centre",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_positionner_verb",
+   "box": [
+    206,
+    56,
+    450,
+    188
+   ],
+   "tier": "roof",
+   "mirror": "tall standing mirror beside the goal"
   },
-  "signs": {
-    "er": [
-      880,
-      25,
-      980,
-      59
-    ],
-    "irre": [
-      1020,
-      25,
-      1140,
-      59
-    ]
+  {
+   "id": "fr_solder_verb",
+   "box": [
+    244,
+    206,
+    450,
+    375
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_centrer_verb",
+   "box": [
+    538,
+    225,
+    631,
+    328
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_fourrer_verb",
+   "box": [
+    200,
+    465,
+    450,
+    675
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_cantonner_verb",
+   "box": [
+    545,
+    405,
+    662,
+    600
+   ],
+   "tier": "street",
+   "mirror": "framed mirror on the wall by the billet door"
+  },
+  {
+   "id": "fr_devancer_verb",
+   "box": [
+    756,
+    456,
+    968,
+    625
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_control_seg017",
+   "box": [
+    990,
+    340,
+    1110,
+    470
+   ],
+   "label": "Walk on to Impasse des Yeux-Écarquillés",
+   "name": "Impasse des Yeux-Écarquillés",
+   "sign": "Impasse des Yeux-Écarquillés →"
+  },
+  "back": {
+   "target": "ST_control_seg015",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Ruelle des Bousculades",
+   "name": "Ruelle des Bousculades",
+   "sign": "← Ruelle des Bousculades"
+  }
+ },
+ "signs": {
+  "name": [
+   885,
+   185,
+   1120,
+   228
+  ]
+ },
+ "note": "Passage des Paquets place 2/4; landmark: compass-rose mosaic in the wet cobbles with a bronze sundial pillar at its centre. Painted top margin extended (scenery stretch) so the goalkeeper clears the 6% band. The board over the inner arch was blank-painted (lettering removed) and carries the place name overlay. No -er/-ir markers, no painted text."
 }

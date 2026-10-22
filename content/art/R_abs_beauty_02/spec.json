@@ -1,22 +1,22 @@
 {
- "divider_x": 650,
+ "divider_x": 950,
  "kind": "room",
- "note": "The salon of the Maison de Couture: manners, beauty, looks and charm. The marble column in the middle divides it: feminine nouns on its left, masculine (and chic) on its right. The blank wall panel opens a zoom onto the dressing corner (R_abs_beauty_02_z1). The glazed door on the far left leads out to the square; the doorway on the far right leads on to the showroom atelier.",
+ "note": "Ground-floor salon of the Maison de Couture (B62), seen looking SOUTH toward its street front: rose-pink silk walls with white and gilt mouldings, pale herringbone oak floor. LANDMARK: the huge crystal chandelier over the round tufted rose ottoman. The glazed front door between the two arched shop windows (mannequins inside, as on the facade) leads out to the square; the open double doorway in the left (east) wall leads to the sage-green atelier. Feminine nouns left of x=950, masculine (and chic) right. Zoom: the right arched shop window with its mannequin (window display).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "Le salon",
    "box": [
-    250,
-    15,
-    500,
-    55
+    612,
+    170,
+    700,
+    226
    ],
    "text_box": [
-    256,
-    21,
-    494,
-    49
+    618,
+    176,
+    694,
+    220
    ]
   }
  },
@@ -24,110 +24,80 @@
   {
    "id": "fr_maniere_noun",
    "box": [
-    144,
-    262,
-    278,
-    556
+    129,
+    306,
+    266,
+    615
    ],
-   "scene": "gentleman bowing and offering a rose"
+   "scene": "gentleman bowing politely, offering a rose"
   },
   {
    "id": "fr_beaute_noun",
    "box": [
-    281,
-    269,
-    372,
-    562
+    270,
+    330,
+    456,
+    625
    ],
-   "scene": "model tying a silk bow round a teapot"
+   "scene": "model tying a silk bow round a china teapot"
   },
   {
    "id": "fr_magie_noun",
    "box": [
-    378,
-    125,
-    496,
-    365
+    285,
+    215,
+    456,
+    326
    ],
-   "scene": "stylist waving a comb as a hairdo magically grows"
+   "scene": "stylist Maggie waving her comb as a client's hairdo grows tall"
   },
   {
    "id": "fr_apparence_noun",
    "box": [
-    376,
-    369,
-    512,
-    644
+    466,
+    300,
+    594,
+    515
    ],
    "scene": "mother straightening her son's bow tie"
   },
   {
    "id": "fr_apparition_noun",
    "box": [
-    516,
-    137,
-    656,
-    406
+    704,
+    300,
+    844,
+    470
    ],
-   "scene": "empty silk dress gliding through the air"
+   "scene": "empty silk evening dress floating through the air"
   },
   {
    "id": "fr_elegance_noun",
    "box": [
-    531,
-    419,
-    625,
-    581
+    794,
+    474,
+    1012,
+    660
    ],
-   "scene": "heron standing on one leg on a little runway"
-  },
-  {
-   "id": "fr_merci_noun_m",
-   "box": [
-    681,
-    350,
-    733,
-    431
-   ],
-   "scene": "glittering thank-you card with a heart"
+   "scene": "heron standing on one leg on a little carpet runway"
   },
   {
    "id": "fr_charme_noun",
    "box": [
-    737,
+    854,
     281,
-    890,
-    537
+    1072,
+    470
    ],
-   "scene": "snake charmer playing a flute as the sofa sways"
-  },
-  {
-   "id": "fr_compliment_noun",
-   "box": [
-    894,
-    275,
-    1008,
-    506
-   ],
-   "scene": "shy hedgehog in a new hat blushing at a compliment"
-  },
-  {
-   "id": "fr_look_noun",
-   "box": [
-    919,
-    519,
-    1008,
-    656
-   ],
-   "scene": "pug in sunglasses and a silk scarf"
+   "scene": "snake charmer playing his flute as the velvet sofa sways"
   },
   {
    "id": "fr_chic_adj",
    "box": [
-    1012,
-    206,
-    1162,
-    581
+    1075,
+    256,
+    1188,
+    594
    ],
    "scene": "sheikh strolling in a beautifully tailored robe"
   }
@@ -136,37 +106,37 @@
   {
    "room_id": "R_abs_beauty_02_z1",
    "box": [
-    750,
-    75,
-    950,
-    275
+    769,
+    94,
+    900,
+    278
    ],
-   "label": "the dressing corner"
+   "label": "the shop-window display"
   }
  ],
  "links": [
   {
    "target": "B62_couture",
    "box": [
-    94,
-    40,
-    240,
-    256
+    597,
+    231,
+    700,
+    444
    ],
    "label": "Out through the glazed front door to the square",
-   "name": "Maison de Couture (outside)",
+   "name": "Maison de Couture",
    "kind": "door"
   },
   {
    "target": "R_abs_beauty_01",
    "box": [
-    1166,
-    100,
-    1235,
-    420
+    97,
+    94,
+    281,
+    300
    ],
-   "label": "Through the right doorway to the showroom atelier",
-   "name": "L'atelier",
+   "label": "Through the left doorway to the atelier",
+   "name": "Atelier",
    "kind": "door"
   }
  ]

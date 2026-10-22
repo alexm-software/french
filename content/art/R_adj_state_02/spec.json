@@ -1,22 +1,22 @@
 {
  "divider_x": null,
  "kind": "room",
- "note": "The ground-floor repair workshop: adjectives of state 1 (damp, fragile, clean, intact, endless...). Adjectives have no gender (divider null). The glazed door on the left opens back onto the square in front of the building; the open doorway on the right leads on into the repair café.",
+ "note": "Ground-floor repair workshop of the B61 half-timbered brick repair café (same timber-and-brick style as the exterior): sage-green plaster between dark oak posts and beams, grey slate flagstones, daylight from the street windows plus a pendant work lamp. LANDMARK: the big pegboard tool wall with the giant cast-iron gear wheel (the gear echoes the shop sign outside). The glazed front door at the far left is the way back out to the square; the open doorway at the far right leads on into the café. Adjectives have no gender (divider null). Zoom: the stone sink corner at the back right (z1).",
  "text_areas": {
   "sign": {
    "role": "room_name",
    "text": "L'atelier",
    "box": [
-    320,
-    52,
-    540,
-    86
+    1000,
+    45,
+    1125,
+    100
    ],
    "text_box": [
-    326,
-    58,
-    534,
-    80
+    1006,
+    51,
+    1119,
+    94
    ]
   }
  },
@@ -24,142 +24,104 @@
   {
    "id": "fr_humide_adj",
    "box": [
-    77,
-    300,
-    290,
-    436
+    82,
+    488,
+    215,
+    668
    ],
-   "scene": "frog sitting by a steaming kettle"
+   "scene": "frog in a cloud of kettle steam holding out a wet hand: you meet me"
   },
   {
    "id": "fr_fragile_adj",
    "box": [
-    306,
-    137,
-    462,
-    412
+    425,
+    150,
+    585,
+    440
    ],
-   "scene": "repairman carrying a mended teapot very gently"
+   "scene": "repairman tiptoeing past the little fridge with a mended teapot"
   },
   {
    "id": "fr_net_adj",
    "box": [
-    469,
-    119,
-    562,
-    300
+    305,
+    90,
+    415,
+    290
    ],
-   "scene": "girl polishing the window until it shines"
+   "scene": "girl polishing the window pane until it is clean and clear"
   },
   {
    "id": "fr_intact_adj",
    "box": [
-    298,
-    418,
-    487,
-    587
+    590,
+    372,
+    770,
+    585
    ],
-   "scene": "vase landing on a cushion without a crack"
-  },
-  {
-   "id": "fr_polonais_adj",
-   "box": [
-    600,
-    244,
-    744,
-    350
-   ],
-   "scene": "music box with a dancing doll in Polish folk costume"
+   "scene": "china vase landing on a fat cushion without a crack"
   },
   {
    "id": "fr_infini_adj",
    "box": [
-    506,
-    412,
-    750,
-    600
+    222,
+    450,
+    505,
+    552
    ],
-   "scene": "queue of ducks stretching back without end"
+   "scene": "endless queue of ducks marching in from the square"
   },
   {
    "id": "fr_innombrable_adj",
    "box": [
-    110,
-    540,
-    292,
-    640
+    800,
+    470,
+    985,
+    668
    ],
-   "scene": "jar tipped over, spilling countless screws"
-  },
-  {
-   "id": "fr_incomprehensible_adj",
-   "box": [
-    750,
-    140,
-    895,
-    330
-   ],
-   "scene": "old man frowning at a tangled diagram"
-  },
-  {
-   "id": "fr_liquide_adj",
-   "box": [
-    765,
-    431,
-    898,
-    650
-   ],
-   "scene": "child in red wellies splashing in a puddle"
+   "scene": "tipped jar spilling countless screws"
   },
   {
    "id": "fr_use_adj",
    "box": [
-    944,
-    530,
-    1150,
-    644
+    1005,
+    395,
+    1200,
+    565
    ],
-   "scene": "old shoe with a hole worn through"
+   "scene": "old boot with the toe worn right through"
   },
   {
    "id": "fr_poussiereux_adj",
    "box": [
-    905,
-    215,
-    1081,
-    481
-   ],
-   "scene": "king sneezing on a dusty old throne"
-  },
-  {
-   "id": "fr_menager_adj",
-   "box": [
-    688,
-    44,
+    778,
+    170,
     1000,
-    134
+    450
    ],
-   "scene": "cat, dog and rabbit dusting the shelf with feather dusters"
-  },
+   "scene": "king puffing POOH at the dust cloud on his old throne"
+  }
+ ],
+ "zoom_from": [
   {
-   "id": "fr_soigne_adj",
+   "room_id": "R_adj_state_02_z1",
    "box": [
-    1087,
-    325,
-    1203,
-    520
+    1000,
+    205,
+    1125,
+    375
    ],
-   "scene": "swan with perfectly groomed white feathers"
+   "label": "the stone sink corner"
   }
  ],
  "links": [
   {
    "target": "B61_reparation",
    "box": [
-    112,
-    50,
-    300,
-    294
+    25,
+    40,
+    250,
+    440
    ],
    "label": "Out through the glazed door onto the square",
    "name": "Dehors",
@@ -168,10 +130,10 @@
   {
    "target": "R_adj_state_03",
    "box": [
-    1110,
-    80,
+    1135,
+    50,
     1280,
-    320
+    388
    ],
    "label": "Through the doorway into the repair café",
    "name": "Le café",

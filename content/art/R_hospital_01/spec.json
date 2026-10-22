@@ -1,0 +1,165 @@
+{
+ "kind": "room",
+ "space": "R_hospital_01",
+ "building_id": "B19_hopital",
+ "floor": "ground floor (entrance hall)",
+ "name": "Le hall des urgences",
+ "parent_room_id": null,
+ "divider_x": 800,
+ "camera": "from just inside the glass entrance doors, facing north into the hall",
+ "setting": {
+  "walls": "buttercream walls with a broad celadon-green stripe at waist height",
+  "floor": "pale grey terrazzo with a curving green guide-line",
+  "landmark": "a big round wall clock over a curved wooden reception desk, and a sweeping staircase rising at the back centre",
+  "light": "bright daylight through the glass entrance and a skylight",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le hall des urgences",
+   "box": [
+    969,
+    38,
+    1156,
+    181
+   ],
+   "text_box": [
+    973,
+    42,
+    1152,
+    177
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_aide_noun_f",
+   "box": [
+    100,
+    244,
+    312,
+    494
+   ],
+   "row": "back",
+   "scene": "A nurse opens a first-AID kit to HELP a boy with a grazed knee, his TEDDY (\"ehd\") holding the plasters."
+  },
+  {
+   "id": "fr_urgence_noun",
+   "box": [
+    319,
+    285,
+    462,
+    490
+   ],
+   "row": "front",
+   "scene": "An EMERGENCY (\"ewr-ZHAHNS\")! a hedgehog nurse races a squeaky trolley along the green line, quills flying."
+  },
+  {
+   "id": "fr_ambulance_noun",
+   "box": [
+    675,
+    358,
+    812,
+    518
+   ],
+   "row": "back",
+   "scene": "A small smiling AMBULANCE (\"ahn-bew-LAHNS\") with a LANCE-shaped aerial parks just inside the wide doors, lights twinkling."
+  },
+  {
+   "id": "fr_operation_noun",
+   "box": [
+    588,
+    194,
+    725,
+    354
+   ],
+   "row": "front",
+   "scene": "A surgeon sings OPERA (\"oh-pay-rah-SYOHN\") behind a half-open curtain during a teddy's OPERATION, stitching his arm back on."
+  },
+  {
+   "id": "fr_hopital_noun",
+   "box": [
+    815,
+    175,
+    898,
+    502
+   ],
+   "row": "back",
+   "scene": "A TALL nurse on stilts (\"oh-pee-TAHL\", no S and no H) hands a boy in a wheelchair a flower PETAL as he arrives at the HOSPITAL."
+  },
+  {
+   "id": "fr_secours_noun",
+   "box": [
+    902,
+    412,
+    1131,
+    572
+   ],
+   "row": "front",
+   "scene": "A St Bernard brings HELP, pulling a sled with a skier tied on SECURE (\"suh-KOOR\") and a flask of cocoa."
+  },
+  {
+   "id": "fr_patient_noun",
+   "box": [
+    1094,
+    247,
+    1203,
+    408
+   ],
+   "row": "back",
+   "scene": "A PATIENT (\"pah-SYAHN\") elephant sits waiting calmly on a bench far too small, reading a tiny magazine."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_dentist_01",
+   "box": [
+    469,
+    119,
+    581,
+    362
+   ],
+   "label": "Up the stairs to the dentist and optician",
+   "name": "Le cabinet dentaire",
+   "kind": "stairs_up",
+   "painted_as": "the sweeping staircase going UP at the BACK CENTRE"
+  },
+  {
+   "target": "R_hospital_01_z2",
+   "box": [
+    981,
+    188,
+    1090,
+    394
+   ],
+   "label": "Through the arch to the winter garden",
+   "name": "Le jardin d'hiver",
+   "kind": "door",
+   "painted_as": "a tall arch on the RIGHT wall with palms and glass beyond"
+  }
+ ],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "zoom_from": {
+  "room_id": "R_hospital_01_z1",
+  "box": [
+   902,
+   232,
+   980,
+   335
+  ],
+  "painted_as": "round porthole double doors at the BACK RIGHT leading to the scrub room"
+ },
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: Le hall des urgences in the B19_hopital building, ground floor (entrance hall). Camera: from just inside the glass entrance doors, facing north into the hall.\nSetting: buttercream walls with a broad celadon-green stripe at waist height; floor: pale grey terrazzo with a curving green guide-line. Landmark: a big round wall clock over a curved wooden reception desk, and a sweeping staircase rising at the back centre. Light: bright daylight through the glass entrance and a skylight. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the glass entrance doors and doormat in the near left foreground (way to Dehors); the sweeping staircase going UP at the BACK CENTRE (way to Le cabinet dentaire); a tall arch on the RIGHT wall with palms and glass beyond (way to Le jardin d'hiver); round porthole double doors at the BACK RIGHT leading to the scrub room (a small spot to look at closer).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: A nurse opens a first-AID kit to HELP a boy with a grazed knee, his TEDDY holding the plasters.\n- left, foreground: An EMERGENCY! a hedgehog nurse races a squeaky trolley along the green line, quills flying.\n- left, middle distance: A small smiling AMBULANCE with a LANCE-shaped aerial parks just inside the wide doors, lights twinkling.\n- centre, foreground: Behind a half-open curtain a surgeon sings OPERA during a teddy's OPERATION, stitching his arm back on.\n- centre-right, middle distance: A TALL nurse on stilts hands a boy in a wheelchair a flower PETAL as he arrives at the HOSPITAL.\n- right, foreground: A St Bernard brings HELP, pulling a sled with a skier tied on SECURE and a flask of cocoa.\n- right, middle distance: A PATIENT elephant sits waiting calmly on a bench far too small, reading a tiny magazine.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter.",
+ "painted_way_out": {
+  "box": [
+   31,
+   119,
+   98,
+   462
+  ],
+  "painted_as": "Out through the glass doors to the forecourt (the painted door on the LEFT wall)",
+  "leads_to": "B19_hopital",
+  "control": "strip hierarchy Back (gate 8: no second button to the same place; the painted door has no badge)"
+ }
+}

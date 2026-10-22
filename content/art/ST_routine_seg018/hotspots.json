@@ -1,369 +1,355 @@
 {
-  "image": "base.jpg",
-  "width": 1280,
-  "height": 720,
-  "segment_id": "ST_routine_seg018",
-  "street_id": "ST_routine",
-  "sector_id": "S02_home",
-  "kind": "verb_place",
-  "layout": "tiered",
-  "view": "street_perspective",
-  "name": "Allée du Quotidien — Rue des Selliers · friser, siéger, seller",
-  "divider_x": 1000,
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hairdresser curling a lady's hair, boy re-tying his kite string, judge sitting in his tall chair with a jay), balcony (girl in a sash drying out the flower box), upper (cook whose pot foams over as he stirs with a snooker cue), roof (cowboy saddling a rocking horse). Forward = far lane; back = near cobbles.",
-  "text_areas": {
-    "fr_friser_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_friser_verb",
-      "text": "friser",
-      "box": [
-        116,
-        640,
-        184,
-        666
-      ],
-      "text_box": [
-        120,
-        644,
-        180,
-        662
-      ]
-    },
-    "fr_renouer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_renouer_verb",
-      "text": "renouer",
-      "box": [
-        314,
-        640,
-        392,
-        666
-      ],
-      "text_box": [
-        318,
-        644,
-        388,
-        662
-      ]
-    },
-    "fr_sieger_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_sieger_verb",
-      "text": "siéger",
-      "box": [
-        694,
-        637,
-        762,
-        663
-      ],
-      "text_box": [
-        698,
-        641,
-        758,
-        659
-      ]
-    },
-    "fr_assecher_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_assecher_verb",
-      "text": "assécher",
-      "box": [
-        449,
-        418,
-        537,
-        444
-      ],
-      "text_box": [
-        453,
-        422,
-        533,
-        440
-      ]
-    },
-    "fr_ecumer_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_ecumer_verb",
-      "text": "écumer",
-      "box": [
-        434,
-        196,
-        502,
-        222
-      ],
-      "text_box": [
-        438,
-        200,
-        498,
-        218
-      ]
-    },
-    "fr_seller_verb_sign": {
-      "role": "verb_sign",
-      "for": "fr_seller_verb",
-      "text": "seller",
-      "box": [
-        716,
-        168,
-        784,
-        194
-      ],
-      "text_box": [
-        720,
-        172,
-        780,
-        190
-      ]
-    },
-    "dir_forward": {
-      "role": "direction",
-      "for_exit": "forward",
-      "text": "Impasse des Rendormis →",
-      "box": [
-        850,
-        440,
-        1010,
-        560
-      ],
-      "text_box": [
-        856,
-        446,
-        1004,
-        554
-      ]
-    },
-    "dir_back": {
-      "role": "direction",
-      "for_exit": "back",
-      "text": "← Rue du Réveille-Matin",
-      "box": [
-        470,
-        674,
-        960,
-        712
-      ],
-      "text_box": [
-        476,
-        680,
-        954,
-        706
-      ]
-    },
-    "dir_side_er": {
-      "role": "direction",
-      "text": "-er",
-      "box": [
-        880,
-        25,
-        980,
-        59
-      ],
-      "text_box": [
-        883,
-        28,
-        977,
-        56
-      ]
-    },
-    "dir_side_irre": {
-      "role": "direction",
-      "text": "-ir / -re",
-      "box": [
-        1000,
-        25,
-        1120,
-        59
-      ],
-      "text_box": [
-        1003,
-        28,
-        1117,
-        56
-      ]
-    }
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "segment_id": "ST_routine_seg018",
+ "street_id": "ST_bricoleurs",
+ "theme_street_id": "ST_routine",
+ "sector_id": "S02_home",
+ "place_index": 4,
+ "place_count": 5,
+ "street_name": "Avenue des Petits Travaux",
+ "kind": "verb_place",
+ "layout": "tiered",
+ "view": "street_perspective",
+ "name": "Rue des Selliers",
+ "divider_x": 1000,
+ "note": "Avenue des Petits Travaux place 4/5; landmark: wooden saddler's stable with a giant saddled wooden horse in front. All verbs are -er (data): everything on the left; the stable landmark fills the right. Stable name board left blank (painted text removed). No -er/-ir markers, no painted text.",
+ "landmark": "wooden saddler's stable with a giant saddled wooden horse in front",
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "text_areas": {
+  "fr_ecumer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_ecumer_verb",
+   "text": "écumer",
+   "box": [
+    149,
+    206,
+    217,
+    232
+   ],
+   "text_box": [
+    153,
+    210,
+    213,
+    228
+   ]
   },
-  "items": [
-    {
-      "id": "fr_friser_verb",
-      "lemma": "friser",
-      "gloss": "to curl; to graze",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 1,
-      "box": [
-        38,
-        356,
-        262,
-        672
-      ],
-      "label_xy": [
-        150,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_renouer_verb",
-      "lemma": "renouer",
-      "gloss": "to tie in a knot again; to pick up on",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 2,
-      "box": [
-        275,
-        456,
-        431,
-        672
-      ],
-      "label_xy": [
-        353,
-        660
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_sieger_verb",
-      "lemma": "siéger",
-      "gloss": "to sit; to be located; lie",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "street",
-      "level": "street",
-      "order": 3,
-      "box": [
-        631,
-        350,
-        825,
-        669
-      ],
-      "label_xy": [
-        728,
-        657
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_assecher_verb",
-      "lemma": "assécher",
-      "gloss": "to dry out; to dry",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "balcony",
-      "level": "balcony",
-      "order": 4,
-      "box": [
-        425,
-        231,
-        562,
-        450
-      ],
-      "label_xy": [
-        493,
-        438
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_ecumer_verb",
-      "lemma": "écumer",
-      "gloss": "to foam; to lather",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "upper",
-      "level": "upper",
-      "order": 5,
-      "box": [
-        387,
-        31,
-        550,
-        228
-      ],
-      "label_xy": [
-        468,
-        216
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    },
-    {
-      "id": "fr_seller_verb",
-      "lemma": "seller",
-      "gloss": "to saddle",
-      "verb_group": 1,
-      "side": "left",
-      "tier": "roof",
-      "level": "roof",
-      "order": 6,
-      "box": [
-        675,
-        10,
-        825,
-        200
-      ],
-      "label_xy": [
-        750,
-        188
-      ],
-      "prepositions": [],
-      "reflexive": false,
-      "pronominal_form": null,
-      "scene": ""
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg019",
-      "box": [
-        850,
-        440,
-        1010,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Impasse des Rendormis",
-      "sign": "Impasse des Rendormis →",
-      "kind": "street",
-      "name_fr": "Impasse des Rendormis",
-      "name_en": "Back-to-Sleep Close"
-    },
-    "back": {
-      "target": "ST_routine_seg017",
-      "box": [
-        470,
-        674,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Alarm-Clock Street",
-      "name": "Rue du Réveille-Matin",
-      "sign": "← Rue du Réveille-Matin",
-      "kind": "street",
-      "name_fr": "Rue du Réveille-Matin",
-      "name_en": "Alarm-Clock Street"
-    }
+  "fr_assecher_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_assecher_verb",
+   "text": "assécher",
+   "box": [
+    165,
+    356,
+    253,
+    382
+   ],
+   "text_box": [
+    169,
+    360,
+    249,
+    378
+   ]
   },
-  "links": [],
-  "tier_counts": {
-    "street": 3,
-    "balcony": 1,
-    "upper": 1,
-    "roof": 1
+  "fr_seller_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_seller_verb",
+   "text": "seller",
+   "box": [
+    466,
+    212,
+    534,
+    238
+   ],
+   "text_box": [
+    470,
+    216,
+    530,
+    234
+   ]
+  },
+  "fr_friser_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_friser_verb",
+   "text": "friser",
+   "box": [
+    142,
+    636,
+    210,
+    662
+   ],
+   "text_box": [
+    146,
+    640,
+    206,
+    658
+   ]
+  },
+  "fr_renouer_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_renouer_verb",
+   "text": "renouer",
+   "box": [
+    315,
+    644,
+    393,
+    670
+   ],
+   "text_box": [
+    319,
+    648,
+    389,
+    666
+   ]
+  },
+  "fr_sieger_verb_sign": {
+   "role": "verb_sign",
+   "for": "fr_sieger_verb",
+   "text": "siéger",
+   "box": [
+    476,
+    563,
+    544,
+    589
+   ],
+   "text_box": [
+    480,
+    567,
+    540,
+    585
+   ]
+  },
+  "dir_forward": {
+   "role": "direction",
+   "for_exit": "forward",
+   "text": "Impasse des Rendormis →",
+   "box": [
+    650,
+    470,
+    800,
+    560
+   ],
+   "text_box": [
+    656,
+    476,
+    794,
+    554
+   ]
+  },
+  "dir_back": {
+   "role": "direction",
+   "for_exit": "back",
+   "text": "← Rue du Réveille-Matin",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "text_box": [
+    386,
+    690,
+    1094,
+    710
+   ]
+  },
+  "street_name": {
+   "role": "street_name",
+   "text": "Rue des Selliers",
+   "box": [
+    560,
+    40,
+    800,
+    80
+   ],
+   "text_box": [
+    564,
+    44,
+    796,
+    76
+   ]
   }
+ },
+ "items": [
+  {
+   "id": "fr_ecumer_verb",
+   "lemma": "écumer",
+   "gloss": "to foam; to lather",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "upper",
+   "level": "upper",
+   "order": 1,
+   "box": [
+    110,
+    70,
+    256,
+    238
+   ],
+   "label_xy": [
+    183,
+    226
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_assecher_verb",
+   "lemma": "assécher",
+   "gloss": "to dry out; to dry",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "balcony",
+   "level": "balcony",
+   "order": 2,
+   "box": [
+    100,
+    240,
+    318,
+    388
+   ],
+   "label_xy": [
+    209,
+    376
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_seller_verb",
+   "lemma": "seller",
+   "gloss": "to saddle",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "roof",
+   "level": "roof",
+   "order": 3,
+   "box": [
+    444,
+    148,
+    556,
+    244
+   ],
+   "label_xy": [
+    500,
+    232
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_friser_verb",
+   "lemma": "friser",
+   "gloss": "to curl; to graze",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 4,
+   "box": [
+    77,
+    388,
+    275,
+    668
+   ],
+   "label_xy": [
+    176,
+    656
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_renouer_verb",
+   "lemma": "renouer",
+   "gloss": "to tie in a knot again; to pick up on",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 5,
+   "box": [
+    280,
+    505,
+    428,
+    676
+   ],
+   "label_xy": [
+    354,
+    664
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  },
+  {
+   "id": "fr_sieger_verb",
+   "lemma": "siéger",
+   "gloss": "to sit; to be located; lie",
+   "verb_group": 1,
+   "side": "left",
+   "tier": "street",
+   "level": "street",
+   "order": 6,
+   "box": [
+    430,
+    326,
+    590,
+    595
+   ],
+   "label_xy": [
+    510,
+    583
+   ],
+   "prepositions": [],
+   "reflexive": false,
+   "pronominal_form": null,
+   "scene": ""
+  }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg019",
+   "box": [
+    650,
+    470,
+    800,
+    560
+   ],
+   "label": "Walk on to Impasse des Rendormis",
+   "name": "Impasse des Rendormis",
+   "sign": "Impasse des Rendormis →",
+   "kind": "street"
+  },
+  "back": {
+   "target": "ST_routine_seg017",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Rue du Réveille-Matin",
+   "name": "Rue du Réveille-Matin",
+   "sign": "← Rue du Réveille-Matin",
+   "kind": "street"
+  }
+ },
+ "links": [],
+ "tier_counts": {
+  "upper": 1,
+  "balcony": 1,
+  "roof": 1,
+  "street": 3
+ }
 }

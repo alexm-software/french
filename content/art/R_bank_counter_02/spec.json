@@ -1,0 +1,138 @@
+{
+ "divider_x": 538,
+ "kind": "room",
+ "note": "First-floor counter room, repainted 2026-10-22 (fix2): sage-green walls, oak herringbone parquet, crystal chandelier; stairwell going DOWN at the far left, staircase going UP on the back wall, the banker's desk by the river window at the right is the zoom. Feminine LEFT: brass shopping-bag gauge on the wall (consommation), banker buffing his gold star (réputation), two clerks on strike beside blank placards (grève), old tailor whose giant pin pins a red rosette to his apron (épingle). Masculine RIGHT: Sue dropping a coin into the money box (sou), boy paying with a crayon-scribbled card and giant crayon (crédit), silhouette artist holding up a cut-out profile (profil), man in a mustard suit opening a wallet of foil-wrapped notes (portefeuille). 8 words; accès, gage and the river words sit in the desk zoom of this same room.",
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le guichet du premier",
+   "box": [
+    575,
+    236,
+    728,
+    274
+   ],
+   "text_box": [
+    580,
+    241,
+    723,
+    269
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_consommation_noun",
+   "box": [
+    150,
+    62,
+    234,
+    186
+   ]
+  },
+  {
+   "id": "fr_reputation_noun",
+   "box": [
+    102,
+    268,
+    225,
+    558
+   ]
+  },
+  {
+   "id": "fr_greve_noun",
+   "box": [
+    228,
+    210,
+    433,
+    546
+   ]
+  },
+  {
+   "id": "fr_epingle_noun",
+   "box": [
+    446,
+    280,
+    536,
+    532
+   ]
+  },
+  {
+   "id": "fr_sou_noun",
+   "box": [
+    539,
+    336,
+    662,
+    582
+   ]
+  },
+  {
+   "id": "fr_credit_noun",
+   "box": [
+    700,
+    298,
+    814,
+    555
+   ]
+  },
+  {
+   "id": "fr_profil_noun",
+   "box": [
+    828,
+    326,
+    945,
+    552
+   ]
+  },
+  {
+   "id": "fr_portefeuille_noun",
+   "box": [
+    948,
+    268,
+    1045,
+    562
+   ],
+   "label_xy": [
+    996,
+    292
+   ]
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_bank_counter_02_z1",
+  "box": [
+   1048,
+   380,
+   1206,
+   594
+  ],
+  "label": "Look closer at the banker's desk by the river window"
+ },
+ "links": [
+  {
+   "target": "R_bank_counter_01",
+   "box": [
+    6,
+    380,
+    100,
+    700
+   ],
+   "label": "Stairs down to the banking hall",
+   "name": "Le hall des guichets",
+   "kind": "stairs_down"
+  },
+  {
+   "target": "R_bank_counter_03",
+   "box": [
+    436,
+    92,
+    546,
+    276
+   ],
+   "label": "Stairs up to the top-floor counters",
+   "name": "Les guichets du haut",
+   "kind": "stairs_up"
+  }
+ ],
+ "painted": "2026-10-22 fix2 repaint (generator + local generator retouches, outpainted margins); boxes drawn by hand"
+}

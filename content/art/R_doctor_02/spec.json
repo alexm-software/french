@@ -1,0 +1,144 @@
+{
+ "kind": "room",
+ "space": "R_doctor_02",
+ "building_id": "B17_cabinet",
+ "floor": "second floor (attic)",
+ "name": "Le bureau du médecin-chef",
+ "parent_room_id": null,
+ "divider_x": 664,
+ "camera": "from the door to the lecture room, facing north towards the dormer window",
+ "setting": {
+  "walls": "slate-grey-blue wood panelling with full bookshelves",
+  "floor": "oak floor with a deep-red patterned rug",
+  "landmark": "a glowing wall of X-ray light boxes showing friendly animal X-rays, beside a roll-top desk under a dormer window looking over the rooftops",
+  "light": "dormer daylight plus the cool glow of the light boxes",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "Le bureau du médecin-chef",
+   "box": [
+    988,
+    56,
+    1106,
+    135
+   ],
+   "text_box": [
+    992,
+    60,
+    1102,
+    131
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_defaillance_noun",
+   "box": [
+    200,
+    250,
+    388,
+    475
+   ],
+   "row": "back",
+   "scene": "After a long DAY, a weary runner YAWNS (\"day-fah-YAHNS\") and has a FAINTING spell onto the sofa, the doctor fanning her."
+  },
+  {
+   "id": "fr_schizophrenie_noun",
+   "box": [
+    78,
+    130,
+    184,
+    291
+   ],
+   "row": "front",
+   "scene": "A calm brass wall plaque spells out SCHIZOPHRÉNIE, a serious illness of the mind that doctors can treat, said skee-zoh-fray-NEE.",
+   "drawn": false,
+   "render": "museum_wall_plaque"
+  },
+  {
+   "id": "fr_filiation_noun",
+   "box": [
+    392,
+    219,
+    502,
+    450
+   ],
+   "row": "back",
+   "scene": "A duck family tree on an easel, grand-duck to mum to duckling, joined by lines of FILIATION (\"fee-lyah-SYOHN\")."
+  },
+  {
+   "id": "fr_vaccination_noun",
+   "box": [
+    505,
+    244,
+    625,
+    462
+   ],
+   "row": "front",
+   "scene": "A grandpa proudly shows his grandson the star sticker from his VACCINATION (\"vahk-see-nah-SYOHN\")."
+  },
+  {
+   "id": "fr_diagnostic_noun",
+   "box": [
+    675,
+    162,
+    852,
+    419
+   ],
+   "row": "back",
+   "scene": "The DIAGNOSIS for an elephant: the doctor points at an X-ray of its long NOSE (\"-nohs-\") on the TEAK (\"TEEK\") desk."
+  },
+  {
+   "id": "fr_pronostic_noun",
+   "box": [
+    858,
+    231,
+    988,
+    475
+   ],
+   "row": "front",
+   "scene": "The doctor smiles at a parrot with a bandaged wing: good PROGNOSIS (\"proh-nos-TEEK\"), flying in a week."
+  },
+  {
+   "id": "fr_refroidissement_noun",
+   "box": [
+    992,
+    290,
+    1175,
+    519
+   ],
+   "row": "back",
+   "scene": "As REF of a soup-COOLING contest, Roy (recurring character: a jolly round-faced grandpa with a short white beard, a little gold paper crown, a green cardigan) (\"ruhf-RWAH\") tastes the steaming soup as an ice cube plops in, a snowMAN (\"MAHN\") beside him."
+  },
+  {
+   "id": "fr_sanitaire_adj",
+   "box": [
+    1052,
+    139,
+    1173,
+    287
+   ],
+   "row": "front",
+   "scene": "A SANITARY (\"sah-nee-TEHR\") inspection: the doctor's cat creeps along the bookshelf checking for dust."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_body_05",
+   "box": [
+    100,
+    294,
+    169,
+    500
+   ],
+   "label": "Back to the attic lecture room",
+   "name": "L'amphithéâtre",
+   "kind": "door",
+   "painted_as": "the low attic door behind, in the near left foreground"
+  }
+ ],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: Le bureau du médecin-chef in the B17_cabinet building, second floor (attic). Camera: from the door to the lecture room, facing north towards the dormer window.\nSetting: slate-grey-blue wood panelling with full bookshelves; floor: oak floor with a deep-red patterned rug. Landmark: a glowing wall of X-ray light boxes showing friendly animal X-rays, beside a roll-top desk under a dormer window looking over the rooftops. Light: dormer daylight plus the cool glow of the light boxes. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the low attic door behind, in the near left foreground (way to L'amphithéâtre).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: After a long DAY, a weary runner YAWNS and has a FAINTING spell onto the sofa, the doctor fanning her.\n- left, foreground: a blank brass museum plaque on the wall (no figure).\n- centre-left, middle distance: A duck family tree on an easel, grand-duck to mum to duckling, joined by lines of FILIATION.\n- centre, foreground: A grandpa proudly shows his grandson the star sticker from his VACCINATION.\n- centre-right, middle distance: The DIAGNOSIS for an elephant: the doctor points at an X-ray of its long NOSE on the TEAK desk.\n- right, foreground: The doctor smiles at a parrot with a bandaged wing: good PROGNOSIS, flying in a week.\n- far right, middle distance: As REF of a soup-COOLING contest, Roy, a jolly round-faced grandpa with a short white beard, a little gold paper crown and a green cardigan, blows his whistle as an ice cube plops into a steaming bowl and a snowMAN fans it.\n- far right, foreground: A SANITARY inspection: the doctor's cat runs a white glove along the shelf and finds no dust.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

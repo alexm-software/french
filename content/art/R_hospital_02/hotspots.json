@@ -1,0 +1,212 @@
+{
+ "image": "base.jpg",
+ "width": 1280,
+ "height": 720,
+ "divider_x": 1039,
+ "kind": "room",
+ "parent_room_id": null,
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "La salle des lits",
+   "box": [
+    338,
+    106,
+    515,
+    225
+   ],
+   "text_box": [
+    342,
+    110,
+    511,
+    221
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_anesthesie_noun",
+   "lemma": "anesthésie",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'anesthésie",
+   "box": [
+    144,
+    228,
+    347,
+    488
+   ],
+   "label_xy": [
+    246,
+    478
+   ],
+   "scene": "Under ANAESTHESIA a sleepy bear snores 'ZZZ' (\"-ZEE\") through his paw operation, dreaming of honey."
+  },
+  {
+   "id": "fr_recuperation_noun",
+   "lemma": "récupération",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la récupération",
+   "box": [
+    356,
+    228,
+    467,
+    450
+   ],
+   "label_xy": [
+    412,
+    440
+   ],
+   "scene": "A bear in a dressing gown does slow RECOVERY (\"ray-kew-pay-rah-SYOHN\") exercises, lifting a teaCUP like a dumbbell."
+  },
+  {
+   "id": "fr_interruption_noun",
+   "lemma": "interruption",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'interruption",
+   "box": [
+    559,
+    300,
+    700,
+    469
+   ],
+   "label_xy": [
+    630,
+    459
+   ],
+   "scene": "A duck waddles in quacking, an INTERRUPTION (\"an-teh-rewp-SYOHN\") right in the middle of the doctor's round."
+  },
+  {
+   "id": "fr_derision_noun",
+   "lemma": "dérision",
+   "article": "la",
+   "gender": "f",
+   "side": "left",
+   "label": "la dérision",
+   "box": [
+    706,
+    194,
+    878,
+    375
+   ],
+   "label_xy": [
+    792,
+    365
+   ],
+   "scene": "A pompous crow tries to sing at a bedside and two parrots hoot with DERISION (\"day-ree-ZYOHN\")."
+  },
+  {
+   "id": "fr_infirmerie_noun",
+   "lemma": "infirmerie",
+   "article": "l'",
+   "gender": "f",
+   "side": "left",
+   "label": "l'infirmerie",
+   "box": [
+    882,
+    260,
+    1015,
+    490
+   ],
+   "label_xy": [
+    948,
+    480
+   ],
+   "scene": "IN FEAR (\"an-feer-muh-REE\"), little MARY carries her teddy to the INFIRMARY bed, where a nurse bandages its paw."
+  },
+  {
+   "id": "fr_veterinaire_noun",
+   "lemma": "vétérinaire",
+   "article": "le/la",
+   "gender": "mf",
+   "side": "center",
+   "label": "le/la vétérinaire",
+   "box": [
+    1019,
+    315,
+    1148,
+    428
+   ],
+   "label_xy": [
+    1084,
+    418
+   ],
+   "scene": "VET TERRY (\"vay-tay-ree-NEHR\") leans NEAR a nervous hamster in a tiny bed, listening with a tiny stethoscope."
+  },
+  {
+   "id": "fr_chevet_noun",
+   "lemma": "chevet",
+   "article": "le",
+   "gender": "m",
+   "side": "right",
+   "label": "le chevet",
+   "box": [
+    1056,
+    432,
+    1203,
+    592
+   ],
+   "label_xy": [
+    1130,
+    582
+   ],
+   "scene": "A BEDSIDE table shaped like a little red CHEVY car (\"shuh-VEH\") stands by a bed, a glass of water on its bonnet."
+  }
+ ],
+ "zoom_from": {
+  "room_id": "R_hospital_02_z1",
+  "box": [
+   470,
+   298,
+   556,
+   369
+  ],
+  "painted_as": "the nurses' station counter at the BACK LEFT"
+ },
+ "links": [
+  {
+   "target": "R_dentist_01",
+   "box": [
+    0,
+    375,
+    138,
+    619
+   ],
+   "label": "Down the stairs to the dentist",
+   "name": "Le cabinet dentaire",
+   "kind": "stairs_down",
+   "painted_as": "the banister and steps going DOWN in the near left foreground"
+  },
+  {
+   "target": "R_hospital_02_z2",
+   "box": [
+    562,
+    200,
+    652,
+    295
+   ],
+   "label": "Through the far door to radiology",
+   "name": "La radiologie",
+   "kind": "door",
+   "painted_as": "a double door at the BACK CENTRE at the far end of the ward"
+  },
+  {
+   "target": "R_dentist_02",
+   "box": [
+    1062,
+    152,
+    1144,
+    312
+   ],
+   "label": "Into the optics laboratory",
+   "name": "Le laboratoire d'optique",
+   "kind": "door",
+   "painted_as": "a door on the RIGHT wall with brass instruments beyond"
+  }
+ ]
+}

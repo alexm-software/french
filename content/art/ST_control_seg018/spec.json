@@ -1,110 +1,106 @@
 {
-  "divider_x": 860,
-  "name": "Rue des Gestes — Ruelle des Goélands · délier, chiper, sévir",
-  "note": "Last place of the Rue des Gestes. -er LEFT (deli man untying the string round his sausages, seagull pinching a chip from a man's cone, woman and puppy tugging a tea towel on the balcony, man pumping dumbbells at the upper window, peacock strutting before a tall mirror on the roof), -ir/-re RIGHT (stern policeman cracking down on a naughty goose). Forward = lane's end, round back to the square; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_delier_verb",
-      "box": [
-        30,
-        325,
-        350,
-        588
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_chiper_verb",
-      "box": [
-        487,
-        406,
-        762,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_tirailler_verb",
-      "box": [
-        444,
-        169,
-        694,
-        306
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_muscler_verb",
-      "box": [
-        94,
-        62,
-        281,
-        206
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_pavaner_verb",
-      "box": [
-        344,
-        8,
-        688,
-        138
-      ],
-      "tier": "roof",
-      "mirror": "tall oval mirror on the roof terrace"
-    },
-    {
-      "id": "fr_sevir_verb",
-      "box": [
-        931,
-        412,
-        1169,
-        672
-      ],
-      "tier": "street"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "S02_sector",
-      "box": [
-        770,
-        430,
-        925,
-        530
-      ],
-      "label": "Lane's end: round the corner back to the square",
-      "name": "Place de la Rue des Maisons",
-      "sign": "place →"
-    },
-    "back": {
-      "target": "ST_control_seg017",
-      "box": [
-        470,
-        676,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Wide-Eyes Close",
-      "name": "Impasse des Yeux-Écarquillés",
-      "sign": "← Impasse des Yeux-Écarquillés",
-      "name_fr": "Impasse des Yeux-Écarquillés",
-      "name_en": "Wide-Eyes Close"
-    }
+ "name": "Ruelle des Goélands",
+ "street_name": "Passage des Paquets",
+ "divider_x": 860,
+ "art_style": "cartoony 2.5",
+ "landmark": "the Maison familiale (B05) at the far end: blue scalloped roof, teapot chimney, white garage doors (destination)",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_muscler_verb",
+   "box": [
+    175,
+    137,
+    331,
+    269
+   ],
+   "tier": "upper"
   },
-  "signs": {
-    "er": [
-      700,
-      25,
-      800,
-      59
-    ],
-    "irre": [
-      840,
-      25,
-      960,
-      59
-    ]
+  {
+   "id": "fr_pavaner_verb",
+   "box": [
+    388,
+    50,
+    662,
+    219
+   ],
+   "tier": "roof",
+   "mirror": "tall oval mirror on the roof ridge"
+  },
+  {
+   "id": "fr_tirailler_verb",
+   "box": [
+    456,
+    244,
+    662,
+    356
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_delier_verb",
+   "box": [
+    119,
+    400,
+    394,
+    562
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_chiper_verb",
+   "box": [
+    494,
+    437,
+    706,
+    656
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_sevir_verb",
+   "box": [
+    894,
+    431,
+    1112,
+    662
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "R_garage",
+   "box": [
+    720,
+    300,
+    890,
+    535
+   ],
+   "label": "Into the garage of the Maison familiale",
+   "name": "Garage de la Maison",
+   "sign": "Garage de la Maison →"
+  },
+  "back": {
+   "target": "ST_control_seg017",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Impasse des Yeux-Écarquillés",
+   "name": "Impasse des Yeux-Écarquillés",
+   "sign": "← Impasse des Yeux-Écarquillés"
+  }
+ },
+ "signs": {
+  "name": [
+   760,
+   40,
+   1000,
+   80
+  ]
+ },
+ "note": "Passage des Paquets place 4/4; landmark: the Maison familiale (B05) at the far end: blue scalloped roof, teapot chimney, white garage doors (destination). Last place: the passage ends at the B05 house (same blue scalloped roof and teapot chimney as the S02 square view); the forward exit is its garage door into R_garage. Top margin extended (scenery stretch) so the peacock clears the 6% band. Last place: the far end shows the destination. No -er/-ir markers, no painted text."
 }

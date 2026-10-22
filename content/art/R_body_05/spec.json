@@ -1,0 +1,190 @@
+{
+ "kind": "room",
+ "space": "R_body_05",
+ "building_id": "B17_cabinet",
+ "floor": "second floor (attic)",
+ "name": "L'amphithéâtre",
+ "parent_room_id": null,
+ "divider_x": 823,
+ "camera": "from the top of the attic stair, facing west down the little lecture theatre (the study lies north = right)",
+ "setting": {
+  "walls": "sloping timber roof with pale blue-grey painted boards and two skylights",
+  "floor": "three tiers of curved wooden benches stepping down to a small stage",
+  "landmark": "a giant roll-down anatomical wall chart of a smiling cartoon body (no text) above the stage, with a brass museum plaque on the side wall",
+  "light": "soft daylight from two skylights",
+  "style": "S07 gentle storybook painterly 3.5/5 (one style for the whole Quartier de la Santé)"
+ },
+ "text_areas": {
+  "sign": {
+   "role": "room_name",
+   "text": "L'amphithéâtre",
+   "box": [
+    794,
+    122,
+    965,
+    215
+   ],
+   "text_box": [
+    798,
+    126,
+    961,
+    211
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "fr_entrailles_noun",
+   "box": [
+    306,
+    79,
+    431,
+    240
+   ],
+   "row": "back",
+   "scene": "Engraved text on a brass museum plaque shaped like a serving TRAY (\"ahn-TRAHY\") names ENTRAILLES, the INNARDS, the organs inside the belly.",
+   "drawn": false,
+   "render": "museum_wall_plaque"
+  },
+  {
+   "id": "fr_artere_noun",
+   "box": [
+    100,
+    278,
+    285,
+    475
+   ],
+   "row": "back",
+   "scene": "A model ARTERY (\"ahr-TEHR\") curls like a red water slide, and a little red train whooshes through it."
+  },
+  {
+   "id": "fr_natte_noun",
+   "box": [
+    288,
+    244,
+    375,
+    405
+   ],
+   "row": "front",
+   "scene": "A girl's long BRAID is tied at the end in a big floppy KNOT (\"NAHT\") with a ribbon."
+  },
+  {
+   "id": "fr_rubrique_noun",
+   "box": [
+    378,
+    280,
+    512,
+    441
+   ],
+   "row": "back",
+   "scene": "A student sorts red BRICKS (\"rew-BREEK\") into neat piles on the bench, one pile for each CATEGORY, with a blank tag on each."
+  },
+  {
+   "id": "fr_reticence_noun",
+   "box": [
+    515,
+    308,
+    694,
+    469
+   ],
+   "row": "front",
+   "scene": "A shy tortoise shows RETICENCE (\"ray-tee-SAHNS\"), turning its head away from the grandma's cup of TEA."
+  },
+  {
+   "id": "fr_manchette_noun",
+   "box": [
+    642,
+    144,
+    762,
+    304
+   ],
+   "row": "back",
+   "scene": "The lecturer's crisp shirt CUFF, a MAN'S SHIRT (\"mahn-SHEHT\") cuff, pokes out with a big gold cufflink as he points."
+  },
+  {
+   "id": "fr_facette_noun",
+   "box": [
+    698,
+    308,
+    813,
+    468
+   ],
+   "row": "front",
+   "scene": "A tiny fairy SETS (\"fah-SEHT\") a big diamond in a ring, each FACET flashing a different colour."
+  },
+  {
+   "id": "fr_avant_bras_noun",
+   "box": [
+    822,
+    218,
+    962,
+    379
+   ],
+   "row": "back",
+   "scene": "A strongman balances A toy VAN (\"ah-VAHN\") along his FOREARM, BRASS (\"BRAH\") bracelets glinting."
+  },
+  {
+   "id": "fr_intestin_noun",
+   "box": [
+    965,
+    238,
+    1082,
+    398
+   ],
+   "row": "front",
+   "scene": "An ANT (\"an-tehs-TAN\") in a TAN sun hat hikes along a long coiled garden-hose model of the INTESTINE."
+  },
+  {
+   "id": "fr_complement_noun",
+   "box": [
+    1085,
+    312,
+    1203,
+    490
+   ],
+   "row": "back",
+   "scene": "The last jigsaw piece, shaped like a little MAN (\"kohn-play-MAHN\"), COMPLEMENTS and completes the puzzle."
+  },
+  {
+   "id": "fr_lifting_noun",
+   "box": [
+    817,
+    402,
+    1012,
+    581
+   ],
+   "row": "front",
+   "scene": "A sculptor gently smooths a clay bust's cheeks upward with a LEAF-shaped tool (\"leef-TEENG\"): a FACELIFT."
+  }
+ ],
+ "links": [
+  {
+   "target": "R_body_03_z1",
+   "box": [
+    162,
+    502,
+    400,
+    700
+   ],
+   "label": "Down the stair to the first-floor landing",
+   "name": "Le palier",
+   "kind": "stairs_down",
+   "painted_as": "the stair rail and steps going DOWN in the near left foreground"
+  },
+  {
+   "target": "R_doctor_02",
+   "box": [
+    1088,
+    175,
+    1175,
+    270
+   ],
+   "label": "Into the head doctor's study",
+   "name": "Le bureau du médecin-chef",
+   "kind": "door",
+   "painted_as": "a low attic door on the RIGHT wall"
+  }
+ ],
+ "boxes_status": "MEASURED on base.jpg (2026-10-22, S07 painting pass); planned layout superseded.",
+ "prompt": "Gentle storybook painterly illustration, realism about 3.5/5, soft gouache-and-oil brushwork, warm-hearted and calm, natural NEUTRAL daylight with true colours, off-white whites, no orange, sepia, amber or golden cast, no pink or blue tint, clear readable figures with contact shadows on the floor, consistent eye-level perspective, 16:9 wide composition.\nScene: L'amphithéâtre in the B17_cabinet building, second floor (attic). Camera: from the top of the attic stair, facing west down the little lecture theatre (the study lies north = right).\nSetting: sloping timber roof with pale blue-grey painted boards and two skylights; floor: three tiers of curved wooden benches stepping down to a small stage. Landmark: a giant roll-down anatomical wall chart of a smiling cartoon body (no text) above the stage, with a brass museum plaque on the side wall. Light: soft daylight from two skylights. The room feels lived-in and real, with depth (never an empty white backdrop).\nPaint these exits clearly as walkable openings: the stair rail and steps going DOWN in the near left foreground (way to Le palier); a low attic door on the RIGHT wall (way to Le bureau du médecin-chef).\nCharacters and objects, each a separate, clearly spaced group, feminine-word groups on the left half and masculine-word groups on the right half:\n- far left, middle distance: a blank brass museum plaque on the wall (no figure).\n- left, middle distance: A model ARTERY curls like a red water slide, and a little red train whooshes through it.\n- left, foreground: A girl's long BRAID is tied at the end in a big floppy KNOT with a ribbon.\n- centre-left, middle distance: A student sorts red BRICKS into neat piles on the bench, one pile for each CATEGORY, with a blank tag on each.\n- centre-left, foreground: A shy tortoise shows RETICENCE, pulling his head in when offered a cup of TEA.\n- centre, middle distance: The lecturer's crisp shirt CUFF, a MAN'S SHIRT cuff, pokes out with a big gold cufflink as he points.\n- centre, foreground: A tiny fairy SETS a big diamond in a ring, each FACET flashing a different colour.\n- centre-right, middle distance: A strongman balances A toy VAN along his FOREARM, BRASS bracelets glinting.\n- right, foreground: An ANT in a TAN sun hat hikes along a long coiled garden-hose model of the INTESTINE.\n- right, middle distance: The last jigsaw piece, shaped like a little MAN, COMPLEMENTS and completes the puzzle.\n- right, foreground: A sculptor gently smooths a clay bust's cheeks upward with a LEAF-shaped tool.\nLeave a blank light board for the room sign high on the back wall. No written words, letters, numbers or logos anywhere (signs and plaques are blank boards). No blood, no wounds, no needles in skin (syringes only as capped harmless props), no alcohol, no smoking, no religious symbols, no red-cross emblem. Nobody cropped by the image edge; keep every figure well inside the frame with a clear gap between figures. Figures stand on the floor or sit on real furniture, never floating or in rows behind a counter."
+}

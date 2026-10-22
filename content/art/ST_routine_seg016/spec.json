@@ -1,111 +1,105 @@
 {
-  "divider_x": 1000,
-  "name": "Allée du Quotidien — Ruelle des Houppettes · alléger, dégainer, culminer",
-  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low garden wall with hedges, no verbs). Tiers: street (porter lightening his handcart, knight drawing his sword beside a neighing pony, schoolgirl rubbing out a chalk cat), balcony (lady powdering her poodle), upper (mouse chauffeur driving a hamster along the sill), roof (goat on top of the chimney). Forward = far lane; back = near cobbles.",
-  "items": [
-    {
-      "id": "fr_alleger_verb",
-      "box": [
-        56,
-        344,
-        425,
-        672
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_degainer_verb",
-      "box": [
-        428,
-        350,
-        660,
-        662
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_gommer_verb",
-      "box": [
-        662,
-        406,
-        790,
-        612
-      ],
-      "tier": "street"
-    },
-    {
-      "id": "fr_poudrer_verb",
-      "box": [
-        206,
-        31,
-        431,
-        269
-      ],
-      "tier": "balcony"
-    },
-    {
-      "id": "fr_voiturer_verb",
-      "box": [
-        537,
-        169,
-        669,
-        288
-      ],
-      "tier": "upper"
-    },
-    {
-      "id": "fr_culminer_verb",
-      "box": [
-        712,
-        10,
-        812,
-        190
-      ],
-      "tier": "roof"
-    }
-  ],
-  "exits": {
-    "forward": {
-      "target": "ST_routine_seg017",
-      "box": [
-        840,
-        440,
-        1000,
-        560
-      ],
-      "label": "Walk on down the lane",
-      "name": "Rue du Réveille-Matin",
-      "sign": "Rue du Réveille-Matin →",
-      "name_fr": "Rue du Réveille-Matin",
-      "name_en": "Alarm-Clock Street"
-    },
-    "back": {
-      "target": "ST_routine_seg015",
-      "box": [
-        470,
-        668,
-        960,
-        712
-      ],
-      "label": "Back up the lane to Do-It-Yourselfers' Alley",
-      "name": "Allée des Bricoleurs",
-      "sign": "← Allée des Bricoleurs",
-      "name_fr": "Allée des Bricoleurs",
-      "name_en": "Do-It-Yourselfers' Alley"
-    }
+ "name": "Ruelle des Houppettes",
+ "street_name": "Avenue des Petits Travaux",
+ "divider_x": 1000,
+ "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+ "landmark": "white carriage stop with a scalloped mint roof and a waiting pony trap under the plane trees",
+ "view": "street_perspective",
+ "items": [
+  {
+   "id": "fr_culminer_verb",
+   "box": [
+    272,
+    88,
+    338,
+    206
+   ],
+   "tier": "roof"
   },
-  "signs": {
-    "er": [
-      880,
-      25,
-      980,
-      59
-    ],
-    "irre": [
-      1000,
-      25,
-      1120,
-      59
-    ]
+  {
+   "id": "fr_voiturer_verb",
+   "box": [
+    345,
+    175,
+    420,
+    250
+   ],
+   "tier": "upper"
+  },
+  {
+   "id": "fr_poudrer_verb",
+   "box": [
+    150,
+    170,
+    270,
+    315
+   ],
+   "tier": "balcony"
+  },
+  {
+   "id": "fr_gommer_verb",
+   "box": [
+    77,
+    410,
+    208,
+    676
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_alleger_verb",
+   "box": [
+    230,
+    370,
+    540,
+    652
+   ],
+   "tier": "street"
+  },
+  {
+   "id": "fr_degainer_verb",
+   "box": [
+    548,
+    435,
+    728,
+    622
+   ],
+   "tier": "street"
   }
+ ],
+ "exits": {
+  "forward": {
+   "target": "ST_routine_seg017",
+   "box": [
+    735,
+    430,
+    900,
+    560
+   ],
+   "label": "Walk on to Rue du Réveille-Matin",
+   "name": "Rue du Réveille-Matin",
+   "sign": "Rue du Réveille-Matin →"
+  },
+  "back": {
+   "target": "ST_routine_seg015",
+   "box": [
+    380,
+    684,
+    1100,
+    716
+   ],
+   "label": "Back to Allée des Bricoleurs",
+   "name": "Allée des Bricoleurs",
+   "sign": "← Allée des Bricoleurs"
+  }
+ },
+ "signs": {
+  "name": [
+   600,
+   40,
+   840,
+   80
+  ]
+ },
+ "note": "Avenue des Petits Travaux place 2/5; landmark: white carriage stop with a scalloped mint roof and a waiting pony trap under the plane trees. All verbs are -er (data), so everything is on the left; the right side holds the carriage-stop landmark. The mouse drives the hamster along the roof edge (voiturer, upper). No -er/-ir markers, no painted text."
 }
