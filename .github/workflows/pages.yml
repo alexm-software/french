@@ -30,9 +30,21 @@ jobs:
         run: pip install pillow
       - run: npm ci
       - run: npm run build
+      - name: Publish Le Village at the site root and the previous site at old/
+        run: |
+          rm -rf publish
+          mkdir -p publish/old
+          cp -a village/. publish/
+          cp -a dist/. publish/old/
+          test -f publish/.nojekyll
+          test -f publish/index.html
+          test -f publish/assets/app.js
+          test -f publish/assets/map/village.jpg
+          test -f publish/old/index.html
+          test -f publish/old/data/index.json
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: publish
 
   deploy:
     needs: build
