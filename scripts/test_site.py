@@ -353,19 +353,18 @@ def assert_market_square():
 
 
 def assert_back_strip_stays_visible(client):
-    """The strip back is a header control, not an item in the menu that hides under 820px."""
+    """The breadcrumb is a header control. Esc still leaves a zoom, and the menu can hide."""
     shell = client.split("function shell", 1)[1].split("function backTarget", 1)[0]
-    assert shell.index("${opts.backNav") < shell.index('<nav class="nav">')
-    scene = client.split("function sceneNav", 1)[1].split("function crumbs", 1)[0]
-    assert "backNav" not in scene
-    assert "backNav: backNav(state.place)" in client
+    assert shell.index("${opts.trail") < shell.index('<nav class="nav">')
+    assert "backNav" not in shell and "sectorUp" not in shell
+    assert "trail: trailNav(state.place)" in client
     keys = client.split("function onKey", 1)[1].split("window.addEventListener(\"keydown\"", 1)[0]
     assert 'event.key === "Escape"' in keys
     assert "room?.kind === \"zoom\"" in keys
     assert "backTarget(state.place)" in keys
+    assert "function fitTrail" in client and "data-crumb-more" in client
     css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
-    assert ".nav a.back" not in css
-    assert "a.back" in css
+    assert "nav.trail" in css and ".way-preview" in css
     assert 'preserveAspectRatio="xMidYMid meet"' in client
     assert 'preserveAspectRatio="xMidYMid slice"' not in client
     assert 'class="bleed"' in client and 'class="painting"' in client
@@ -376,7 +375,8 @@ def assert_back_strip_stays_visible(client):
     assert "object-fit: cover" in bleed_css and "blur" in bleed_css
     narrow = css.split("@media (max-width: 820px)", 1)[1].split("@media", 1)[0]
     assert "display: none" in narrow and ".nav" in narrow
-    assert "a.back" in narrow
+    assert "nav.trail" in narrow
+    assert "nav.trail { display: none" not in narrow and ".trail { display: none" not in narrow
 
 
 def walk_site_graph():
@@ -904,7 +904,12 @@ def main():
     marron = next(word for word in swatch["words"] if word["id"] == "fr_marron_adj")
     assert marron["number_invariable"] is True
     client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
-    assert "data-sector-up" in client and "nav.sectorUp" in client and "speakLine" in client
+    assert "data-trail" in client and "nav.village" in client and "speakLine" in client
+    assert "data-way-thumb" in client and "showPreview" in client
+    thumbs = list((ROOT / "public" / "art").glob("*/thumb.webp"))
+    paintings = list((ROOT / "public" / "art").glob("*/base.jpg"))
+    assert len(thumbs) == len(paintings) and thumbs, (len(thumbs), len(paintings))
+    assert all(thumb.stat().st_size > 400 for thumb in thumbs)
     for path in (DATA / "rooms").glob("*.json"):
         room = load(path)
         assert room.get("sector_id"), path.name

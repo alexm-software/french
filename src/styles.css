@@ -101,22 +101,50 @@ p { margin: 0.4rem 0; }
   min-height: 44px;
 }
 .nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--olive); }
-a.back, a.sector-up {
-  display: inline-flex;
+nav.trail {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 0 1 auto;
+  gap: 0.28rem;
   min-width: 0;
-  max-width: min(36rem, 100%);
-  min-height: 44px;
-  padding: 0.2rem 0.85rem;
-  line-height: 1.15;
-  text-align: center;
+  flex: 1 1 12rem;
+  overflow: hidden;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  color: var(--ink);
+}
+nav.trail.measuring { overflow: visible; }
+nav.trail.measuring .crumb { flex: none; max-width: none; }
+nav.trail.open { flex-wrap: wrap; overflow: visible; }
+nav.trail .sep { color: var(--ink-soft); flex: none; }
+nav.trail .crumb-mid { display: inline-flex; align-items: center; gap: 0.28rem; min-width: 0; }
+nav.trail .crumb {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   text-decoration: none;
-  overflow-wrap: anywhere;
+  color: var(--olive-deep);
+  max-width: 16rem;
+}
+nav.trail a.crumb:hover,
+nav.trail a.crumb:focus-visible { box-shadow: inset 0 -2px 0 var(--olive); }
+nav.trail .crumb.current { color: var(--ink); max-width: 18rem; }
+nav.trail.collapsed .crumb-mid,
+nav.trail.collapsed .mid-sep { display: none; }
+nav.trail .more-sep { display: none; }
+nav.trail.collapsed .more-sep { display: inline; }
+nav.trail:not(.collapsed) .crumb-more { display: none; }
+.crumb-more {
+  border: 1px solid var(--line);
   background: #fffdf8;
-  border: 1.5px solid var(--line);
   border-radius: 999px;
+  min-width: 36px;
+  min-height: 32px;
+  padding: 0 0.45rem;
+  font: inherit;
+  color: var(--ink);
+  flex: none;
 }
 .menu-btn {
   display: none;
@@ -517,6 +545,40 @@ html:-webkit-full-screen body.walking {
 .way-pill.left > svg { transform: rotate(180deg); }
 .way-pill.stairs > svg { transform: none; }
 .way-pill.stairs.down > svg { transform: scaleY(-1); }
+.way-preview {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 148px;
+  padding: 0.28rem;
+  border-radius: 12px;
+  border: 1px solid #d7dec8;
+  background: rgba(255, 252, 246, 0.96);
+  color: var(--olive-deep);
+  box-shadow: 0 3px 10px rgba(70, 55, 30, 0.18);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.way-preview.show-label { opacity: 1; visibility: visible; }
+.way-preview img {
+  display: block;
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #efe8d8;
+}
+.way-preview span {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.02rem;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media (max-width: 700px) {
   .way-badge { width: 20px; height: 20px; }
   .way-badge > svg { width: 12px; height: 12px; }
@@ -819,7 +881,9 @@ footer.site {
   .brand { flex: 1 1 auto; order: 0; }
   .brand strong { font-size: 1.15rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .menu-btn { display: inline-flex; flex: none; order: 1; }
-  a.back, a.sector-up { order: 2; flex: 1 1 100%; max-width: 100%; }
+  nav.trail { order: 2; flex: 1 1 100%; font-size: 1.05rem; }
+  .way-preview { width: 112px; }
+  .way-preview img { height: 56px; }
   .tools { order: 3; flex: 1 1 100%; justify-content: flex-end; margin-left: 0; }
   .nav {
     order: 4;

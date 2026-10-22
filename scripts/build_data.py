@@ -1278,9 +1278,30 @@ def main():
     })
     shutil.copy2(ROOT / "data" / "i18n.json", PUBLIC / "data" / "i18n.json")
     shutil.copy2(ROOT / "data" / "guide.json", PUBLIC / "data" / "guide.json")
+    write_thumbs()
     report_missing_fr()
     digest = hashlib.sha1(json.dumps(sorted(open_sectors)).encode()).hexdigest()[:8]
     print(f"emitted {rooms_emitted} open rooms; index {digest}")
+
+
+def write_thumbs():
+    """Small destination previews for exit hover cards. One 160×90 webp per painting."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print("thumbnails skipped: Pillow is missing")
+        return
+    resample = getattr(getattr(Image, "Resampling", Image), "LANCZOS")
+    count = 0
+    for source in sorted((PUBLIC / "art").glob("*/base.jpg")):
+        with Image.open(source) as image:
+            frame = image.convert("RGB")
+            frame.thumbnail((160, 90), resample)
+            canvas = Image.new("RGB", (160, 90), (239, 232, 216))
+            canvas.paste(frame, ((160 - frame.width) // 2, (90 - frame.height) // 2))
+            canvas.save(source.with_name("thumb.webp"), "WEBP", quality=60, method=1)
+        count += 1
+    print(f"thumbs {count}")
 
 
 def _nav_room(room_id, rooms_by_id, buildings_by_id, signs):
