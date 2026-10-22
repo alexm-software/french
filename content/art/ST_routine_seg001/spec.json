@@ -1,110 +1,112 @@
 {
- "divider_x": 640,
- "name": "Allée du Quotidien — étape 1 · se coucher, s'asseoir, attendre",
- "note": "Tiered verb place, one-point perspective down the Allée du Quotidien (half-timbered Alsatian cottages). -er verbs on the LEFT houses, -ir/-re/-oir on the RIGHT. Tiers: street (doorways), balcony (first floor), roof (rarest). Reflexive verbs have their mirror painted inside their box. Forward = far lane; back = near cobbles to the square. No painted text.",
- "items": [
-  {
-   "id": "fr_coucher_verb",
-   "box": [
-    110,
-    440,
-    440,
-    640
-   ],
-   "tier": "street",
-   "mirror": "tall standing mirror beside the bed"
-  },
-  {
-   "id": "fr_relever_verb",
-   "box": [
-    215,
-    170,
-    475,
-    358
-   ],
-   "tier": "balcony"
-  },
-  {
-   "id": "fr_allonger_verb",
-   "box": [
-    140,
-    15,
-    385,
-    125
-   ],
-   "tier": "roof"
-  },
-  {
-   "id": "fr_attendre_verb",
-   "box": [
-    960,
-    470,
-    1120,
-    675
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_asseoir_verb",
-   "box": [
-    930,
-    285,
-    1210,
-    400
-   ],
-   "tier": "balcony",
-   "mirror": "round mirror on the balcony wall"
-  },
-  {
-   "id": "fr_endormir_verb",
-   "box": [
-    1020,
-    50,
-    1205,
-    205
-   ],
-   "tier": "roof",
-   "mirror": "small round mirror inside the dormer"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg002",
-   "box": [
-    560,
-    390,
-    760,
-    520
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 2",
-   "sign": "étape 2 →"
-  },
-  "back": {
-   "target": "S02_sector",
-   "box": [
-    480,
-    652,
-    900,
-    712
-   ],
-   "label": "Back to the Rue des Maisons square",
-   "name": "Rue des Maisons",
-   "sign": "← Rue des Maisons"
-  }
- },
- "signs": {
-  "er": [
-   440,
-   40,
-   540,
-   74
+  "divider_x": 640,
+  "name": "Allée du Quotidien — Rue du Marchand-de-Sable · se coucher, s'asseoir, attendre",
+  "note": "Tiered verb place, one-point perspective down the Allée du Quotidien (half-timbered Alsatian cottages). -er verbs on the LEFT houses, -ir/-re/-oir on the RIGHT. Tiers: street (doorways), balcony (first floor), roof (rarest). Reflexive verbs have their mirror painted inside their box. Forward = far lane; back = near cobbles to the square. No painted text.",
+  "items": [
+    {
+      "id": "fr_coucher_verb",
+      "box": [
+        110,
+        440,
+        440,
+        640
+      ],
+      "tier": "street",
+      "mirror": "tall standing mirror beside the bed"
+    },
+    {
+      "id": "fr_relever_verb",
+      "box": [
+        215,
+        170,
+        475,
+        358
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_allonger_verb",
+      "box": [
+        140,
+        15,
+        385,
+        125
+      ],
+      "tier": "roof"
+    },
+    {
+      "id": "fr_attendre_verb",
+      "box": [
+        960,
+        470,
+        1120,
+        675
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_asseoir_verb",
+      "box": [
+        930,
+        285,
+        1210,
+        400
+      ],
+      "tier": "balcony",
+      "mirror": "round mirror on the balcony wall"
+    },
+    {
+      "id": "fr_endormir_verb",
+      "box": [
+        1020,
+        50,
+        1205,
+        205
+      ],
+      "tier": "roof",
+      "mirror": "small round mirror inside the dormer"
+    }
   ],
-  "irre": [
-   660,
-   40,
-   790,
-   74
-  ]
- }
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg002",
+      "box": [
+        560,
+        390,
+        760,
+        520
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Lève-tôt",
+      "sign": "Rue des Lève-tôt →",
+      "name_fr": "Rue des Lève-tôt",
+      "name_en": "Early Risers' Street"
+    },
+    "back": {
+      "target": "S02_sector",
+      "box": [
+        480,
+        652,
+        900,
+        712
+      ],
+      "label": "Back to the Rue des Maisons square",
+      "name": "Rue des Maisons",
+      "sign": "← Rue des Maisons"
+    }
+  },
+  "signs": {
+    "er": [
+      440,
+      40,
+      540,
+      74
+    ],
+    "irre": [
+      660,
+      40,
+      790,
+      74
+    ]
+  }
 }

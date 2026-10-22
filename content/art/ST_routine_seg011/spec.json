@@ -1,107 +1,111 @@
 {
- "divider_x": 1000,
- "name": "Allée du Quotidien — étape 11 · déplier, gaspiller, froisser",
- "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is an orchard with no verbs). Street: girl sweet-talking the grumpy cat flat, fox cheating at cards under a little potted tree, cobbler shoeing a pony; balcony: man gasping at the hose he left running; upper window: boy unfolding a huge map; roof terrace: boy crumpling paper beside a frowning frog. Forward = far lane; back = near cobbles.",
- "items": [
-  {
-   "id": "fr_flatter_verb",
-   "box": [
-    80,
-    480,
-    340,
-    688
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_tricher_verb",
-   "box": [
-    355,
-    405,
-    525,
-    668
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_chausser_verb",
-   "box": [
-    630,
-    420,
-    840,
-    605
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_gaspiller_verb",
-   "box": [
-    610,
-    165,
-    760,
-    418
-   ],
-   "tier": "balcony"
-  },
-  {
-   "id": "fr_deplier_verb",
-   "box": [
-    270,
-    58,
-    430,
-    252
-   ],
-   "tier": "upper"
-  },
-  {
-   "id": "fr_froisser_verb",
-   "box": [
-    500,
-    15,
-    680,
-    125
-   ],
-   "tier": "roof"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg012",
-   "box": [
-    900,
-    470,
-    1030,
-    560
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 12",
-   "sign": "étape 12 →"
-  },
-  "back": {
-   "target": "ST_routine_seg010",
-   "box": [
-    450,
-    668,
-    950,
-    712
-   ],
-   "label": "Back up the lane to étape 10",
-   "name": "Allée du Quotidien, étape 10",
-   "sign": "← étape 10"
-  }
- },
- "signs": {
-  "er": [
-   760,
-   40,
-   860,
-   74
+  "divider_x": 1000,
+  "name": "Allée du Quotidien — Ruelle des Chaussons · déplier, gaspiller, froisser",
+  "note": "Tiered verb place; all six verbs are -er, so all live on the LEFT cottages (the right side is an orchard with no verbs). Street: girl sweet-talking the grumpy cat flat, fox cheating at cards under a little potted tree, cobbler shoeing a pony; balcony: man gasping at the hose he left running; upper window: boy unfolding a huge map; roof terrace: boy crumpling paper beside a frowning frog. Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_flatter_verb",
+      "box": [
+        80,
+        480,
+        340,
+        688
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_tricher_verb",
+      "box": [
+        355,
+        405,
+        525,
+        668
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_chausser_verb",
+      "box": [
+        630,
+        420,
+        840,
+        605
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_gaspiller_verb",
+      "box": [
+        610,
+        165,
+        760,
+        418
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_deplier_verb",
+      "box": [
+        270,
+        58,
+        430,
+        252
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_froisser_verb",
+      "box": [
+        500,
+        15,
+        680,
+        125
+      ],
+      "tier": "roof"
+    }
   ],
-  "irre": [
-   1060,
-   40,
-   1190,
-   74
-  ]
- }
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg012",
+      "box": [
+        900,
+        470,
+        1030,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Hérons",
+      "sign": "Allée des Hérons →",
+      "name_fr": "Allée des Hérons",
+      "name_en": "Herons Alley"
+    },
+    "back": {
+      "target": "ST_routine_seg010",
+      "box": [
+        450,
+        668,
+        950,
+        712
+      ],
+      "label": "Back up the lane to Old-Trainers Street",
+      "name": "Rue des Vieilles-Baskets",
+      "sign": "← Rue des Vieilles-Baskets",
+      "name_fr": "Rue des Vieilles-Baskets",
+      "name_en": "Old-Trainers Street"
+    }
+  },
+  "signs": {
+    "er": [
+      760,
+      40,
+      860,
+      74
+    ],
+    "irre": [
+      1060,
+      40,
+      1190,
+      74
+    ]
+  }
 }

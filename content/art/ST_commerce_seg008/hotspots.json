@@ -1,224 +1,228 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "divider_x": 760,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 7: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 7",
-   "box": [
-    760,
-    30,
-    1100,
-    74
-   ],
-   "text_box": [
-    766,
-    36,
-    1094,
-    68
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "divider_x": 760,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Impasse des Surcharges: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Impasse des Surcharges",
+      "box": [
+        760,
+        30,
+        1100,
+        74
+      ],
+      "text_box": [
+        766,
+        36,
+        1094,
+        68
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Quai des Entrepôts →",
+      "box": [
+        780,
+        342,
+        936,
+        376
+      ],
+      "text_box": [
+        786,
+        348,
+        930,
+        370
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Rue de la Monnaie",
+      "box": [
+        700,
+        612,
+        880,
+        644
+      ],
+      "text_box": [
+        706,
+        618,
+        874,
+        638
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 8 →",
-   "box": [
-    780,
-    342,
-    936,
-    376
-   ],
-   "text_box": [
-    786,
-    348,
-    930,
-    370
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 6",
-   "box": [
-    700,
-    612,
-    880,
-    644
-   ],
-   "text_box": [
-    706,
-    618,
-    874,
-    638
-   ]
+  "items": [
+    {
+      "id": "fr_surcharger_verb",
+      "lemma": "surcharger",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "surcharger",
+      "box": [
+        131,
+        369,
+        438,
+        644
+      ],
+      "label_xy": [
+        284,
+        634
+      ],
+      "scene": "porter piling one more suitcase on an overloaded donkey",
+      "gloss": "to overcharge; to overload, overburden, overcrowd",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_recharger_verb",
+      "lemma": "recharger",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "recharger",
+      "box": [
+        440,
+        320,
+        662,
+        632
+      ],
+      "label_xy": [
+        551,
+        622
+      ],
+      "scene": "silver robot on a bench plugged into a lamppost",
+      "gloss": "to recharge; to reload",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_acquitter_verb",
+      "lemma": "acquitter",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "acquitter",
+      "box": [
+        469,
+        200,
+        625,
+        306
+      ],
+      "label_xy": [
+        547,
+        296
+      ],
+      "scene": "ginger cat tipping coins from its jar to pay the waiter's bill",
+      "gloss": "to pay; to acknowledge",
+      "verb_group": 1,
+      "tier": "balcony",
+      "level": "balcony",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_enraciner_verb",
+      "lemma": "enraciner",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "s'enraciner",
+      "box": [
+        100,
+        81,
+        388,
+        306
+      ],
+      "label_xy": [
+        244,
+        296
+      ],
+      "scene": "red racing car in a planter box, roots growing from its wheels, an oval mirror beside it",
+      "gloss": "to root; to cause to take root",
+      "verb_group": 1,
+      "tier": "upper",
+      "level": "upper",
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'enraciner",
+      "mirror": "painted inside the item box"
+    },
+    {
+      "id": "fr_deposseder_verb",
+      "lemma": "déposséder",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "déposséder",
+      "box": [
+        394,
+        44,
+        688,
+        144
+      ],
+      "label_xy": [
+        541,
+        134
+      ],
+      "scene": "three geese in cowboy hats taking a sack of loot from a fox on the roof",
+      "gloss": "to dispossess",
+      "verb_group": 1,
+      "tier": "roof",
+      "level": "roof",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    }
+  ],
+  "links": [],
+  "segment_id": "ST_commerce_seg008",
+  "street_id": "ST_commerce",
+  "sector_id": "S03_market",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Impasse des Surcharges",
+  "exits": {
+    "forward": {
+      "target": "ST_commerce_seg006",
+      "box": [
+        790,
+        380,
+        925,
+        520
+      ],
+      "label": "Walk on to Warehouse Quay",
+      "name": "Quai des Entrepôts",
+      "kind": "street",
+      "name_fr": "Quai des Entrepôts",
+      "name_en": "Warehouse Quay"
+    },
+    "back": {
+      "target": "ST_commerce_seg007",
+      "box": [
+        450,
+        650,
+        1100,
+        720
+      ],
+      "label": "Back to Mint Street",
+      "name": "Rue de la Monnaie",
+      "kind": "street",
+      "name_fr": "Rue de la Monnaie",
+      "name_en": "Mint Street"
+    }
   }
- },
- "items": [
-  {
-   "id": "fr_surcharger_verb",
-   "lemma": "surcharger",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "surcharger",
-   "box": [
-    131,
-    369,
-    438,
-    644
-   ],
-   "label_xy": [
-    284,
-    634
-   ],
-   "scene": "porter piling one more suitcase on an overloaded donkey",
-   "gloss": "to overcharge; to overload, overburden, overcrowd",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_recharger_verb",
-   "lemma": "recharger",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "recharger",
-   "box": [
-    440,
-    320,
-    662,
-    632
-   ],
-   "label_xy": [
-    551,
-    622
-   ],
-   "scene": "silver robot on a bench plugged into a lamppost",
-   "gloss": "to recharge; to reload",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_acquitter_verb",
-   "lemma": "acquitter",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "acquitter",
-   "box": [
-    469,
-    200,
-    625,
-    306
-   ],
-   "label_xy": [
-    547,
-    296
-   ],
-   "scene": "ginger cat tipping coins from its jar to pay the waiter's bill",
-   "gloss": "to pay; to acknowledge",
-   "verb_group": 1,
-   "tier": "balcony",
-   "level": "balcony",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_enraciner_verb",
-   "lemma": "enraciner",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "s'enraciner",
-   "box": [
-    100,
-    81,
-    388,
-    306
-   ],
-   "label_xy": [
-    244,
-    296
-   ],
-   "scene": "red racing car in a planter box, roots growing from its wheels, an oval mirror beside it",
-   "gloss": "to root; to cause to take root",
-   "verb_group": 1,
-   "tier": "upper",
-   "level": "upper",
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'enraciner",
-   "mirror": "painted inside the item box"
-  },
-  {
-   "id": "fr_deposseder_verb",
-   "lemma": "déposséder",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "déposséder",
-   "box": [
-    394,
-    44,
-    688,
-    144
-   ],
-   "label_xy": [
-    541,
-    134
-   ],
-   "scene": "three geese in cowboy hats taking a sack of loot from a fox on the roof",
-   "gloss": "to dispossess",
-   "verb_group": 1,
-   "tier": "roof",
-   "level": "roof",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  }
- ],
- "links": [],
- "segment_id": "ST_commerce_seg008",
- "street_id": "ST_commerce",
- "sector_id": "S03_market",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue du Commerce — étape 7",
- "exits": {
-  "forward": {
-   "target": "ST_commerce_seg006",
-   "box": [
-    790,
-    380,
-    925,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 8",
-   "name": "Rue du Commerce — étape 8",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_commerce_seg007",
-   "box": [
-    450,
-    650,
-    1100,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 6",
-   "name": "Rue du Commerce — étape 6",
-   "kind": "street"
-  }
- }
 }

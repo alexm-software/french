@@ -1,17 +1,111 @@
-{"divider_x": 800,
- "name": "Rue des Gestes — étape 8 · filer, renverser, clore",
- "note": "Tiered verb place. -er LEFT (ginger cat dashing off with a fish fillet, shaggy dog knocking over the milk pail, raccoon hanging up the telephone on the balcony, king holding out his crown to renounce it at the upper window), -ir/-re RIGHT (big red crab pushing its door shut with a claw; man flinging his shutters open again at the upper window). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_filer_verb", "box": [125, 525, 402, 672], "tier": "street"},
-  {"id": "fr_renverser_verb", "box": [404, 425, 581, 600], "tier": "street"},
-  {"id": "fr_raccrocher_verb", "box": [337, 81, 525, 175], "tier": "balcony"},
-  {"id": "fr_renier_verb", "box": [119, 12, 319, 175], "tier": "upper"},
-  {"id": "fr_clore_verb", "box": [988, 444, 1181, 625], "tier": "street"},
-  {"id": "fr_rouvrir_verb", "box": [1019, 8, 1231, 188], "tier": "upper"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg009", "box": [620, 420, 780, 520], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 9", "sign": "étape 9 →"},
-  "back": {"target": "ST_control_seg007", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 7", "name": "Rue des Gestes, étape 7", "sign": "← étape 7"}
- },
- "signs": {"er": [520, 25, 620, 59], "irre": [640, 25, 760, 59]}
+{
+  "divider_x": 800,
+  "name": "Rue des Gestes — Ruelle du Seau-Renversé · filer, renverser, clore",
+  "note": "Tiered verb place. -er LEFT (ginger cat dashing off with a fish fillet, shaggy dog knocking over the milk pail, raccoon hanging up the telephone on the balcony, king holding out his crown to renounce it at the upper window), -ir/-re RIGHT (big red crab pushing its door shut with a claw; man flinging his shutters open again at the upper window). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_filer_verb",
+      "box": [
+        125,
+        525,
+        402,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_renverser_verb",
+      "box": [
+        404,
+        425,
+        581,
+        600
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_raccrocher_verb",
+      "box": [
+        337,
+        81,
+        525,
+        175
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_renier_verb",
+      "box": [
+        119,
+        12,
+        319,
+        175
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_clore_verb",
+      "box": [
+        988,
+        444,
+        1181,
+        625
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_rouvrir_verb",
+      "box": [
+        1019,
+        8,
+        1231,
+        188
+      ],
+      "tier": "upper"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg009",
+      "box": [
+        620,
+        420,
+        780,
+        520
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Balançoires",
+      "sign": "Allée des Balançoires →",
+      "name_fr": "Allée des Balançoires",
+      "name_en": "Swings Alley"
+    },
+    "back": {
+      "target": "ST_control_seg007",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Throwers' Street",
+      "name": "Rue des Lanceurs",
+      "sign": "← Rue des Lanceurs",
+      "name_fr": "Rue des Lanceurs",
+      "name_en": "Throwers' Street"
+    }
+  },
+  "signs": {
+    "er": [
+      520,
+      25,
+      620,
+      59
+    ],
+    "irre": [
+      640,
+      25,
+      760,
+      59
+    ]
+  }
 }

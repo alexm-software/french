@@ -1,17 +1,111 @@
-{"divider_x": 1000,
- "name": "Rue des Gestes — étape 11 · plier, boucher, inciter",
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT buildings (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman folding a sheet into pleats, butcher corking the leaking pump, double-bass player tipping over on his chair), balcony (woman whose birdhouses fill up with sparrows), upper (mule kicking up its hind legs in the barn's hayloft door), roof (man urging the pigeons to take off). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_plier_verb", "box": [75, 375, 300, 672], "tier": "street"},
-  {"id": "fr_boucher_verb", "box": [362, 419, 550, 672], "tier": "street"},
-  {"id": "fr_basculer_verb", "box": [694, 419, 850, 625], "tier": "street"},
-  {"id": "fr_peupler_verb", "box": [500, 194, 787, 362], "tier": "balcony"},
-  {"id": "fr_ruer_verb", "box": [162, 56, 400, 269], "tier": "upper"},
-  {"id": "fr_inciter_verb", "box": [519, 12, 762, 162], "tier": "roof"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg012", "box": [930, 450, 1060, 560], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 12", "sign": "étape 12 →"},
-  "back": {"target": "ST_control_seg010", "box": [560, 676, 1000, 712], "label": "Back up the lane to étape 10", "name": "Rue des Gestes, étape 10", "sign": "← étape 10"}
- },
- "signs": {"er": [900, 25, 1000, 59], "irre": [1020, 25, 1140, 59]}
+{
+  "divider_x": 1000,
+  "name": "Rue des Gestes — Rue des Bouchons · plier, boucher, inciter",
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT buildings (the right side is a low stone wall with hedges, no verbs). Tiers: street (woman folding a sheet into pleats, butcher corking the leaking pump, double-bass player tipping over on his chair), balcony (woman whose birdhouses fill up with sparrows), upper (mule kicking up its hind legs in the barn's hayloft door), roof (man urging the pigeons to take off). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_plier_verb",
+      "box": [
+        75,
+        375,
+        300,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_boucher_verb",
+      "box": [
+        362,
+        419,
+        550,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_basculer_verb",
+      "box": [
+        694,
+        419,
+        850,
+        625
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_peupler_verb",
+      "box": [
+        500,
+        194,
+        787,
+        362
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_ruer_verb",
+      "box": [
+        162,
+        56,
+        400,
+        269
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_inciter_verb",
+      "box": [
+        519,
+        12,
+        762,
+        162
+      ],
+      "tier": "roof"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg012",
+      "box": [
+        930,
+        450,
+        1060,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Passage des Pinces-à-Linge",
+      "sign": "Passage des Pinces-à-Linge →",
+      "name_fr": "Passage des Pinces-à-Linge",
+      "name_en": "Clothes-Pegs Passage"
+    },
+    "back": {
+      "target": "ST_control_seg010",
+      "box": [
+        560,
+        676,
+        1000,
+        712
+      ],
+      "label": "Back up the lane to Landing Quay",
+      "name": "Quai du Débarquement",
+      "sign": "← Quai du Débarquement",
+      "name_fr": "Quai du Débarquement",
+      "name_en": "Landing Quay"
+    }
+  },
+  "signs": {
+    "er": [
+      900,
+      25,
+      1000,
+      59
+    ],
+    "irre": [
+      1020,
+      25,
+      1140,
+      59
+    ]
+  }
 }

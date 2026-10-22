@@ -1,133 +1,137 @@
 {
- "divider_x": 760,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 6: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 6",
-   "box": [
-    620,
-    40,
-    960,
-    84
-   ],
-   "text_box": [
-    626,
-    46,
-    954,
-    78
-   ]
+  "divider_x": 760,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Rue de la Monnaie: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Rue de la Monnaie",
+      "box": [
+        620,
+        40,
+        960,
+        84
+      ],
+      "text_box": [
+        626,
+        46,
+        954,
+        78
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Rue du Commerce — Impasse des Surcharges →",
+      "box": [
+        696,
+        340,
+        856,
+        374
+      ],
+      "text_box": [
+        702,
+        346,
+        850,
+        368
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Rue du Commerce — Allée du Partage",
+      "box": [
+        880,
+        612,
+        1060,
+        638
+      ],
+      "text_box": [
+        886,
+        618,
+        1054,
+        632
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 7 →",
-   "box": [
-    696,
-    340,
-    856,
-    374
-   ],
-   "text_box": [
-    702,
-    346,
-    850,
-    368
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 5",
-   "box": [
-    880,
-    612,
-    1060,
-    638
-   ],
-   "text_box": [
-    886,
-    618,
-    1054,
-    632
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_liquider_verb",
-   "box": [
-    119,
-    331,
-    344,
-    612
-   ],
-   "scene": "shopkeeper under a leaking awning selling off the last umbrellas, a squirrel grabbing the very last"
-  },
-  {
-   "id": "fr_subventionner_verb",
-   "box": [
-    346,
-    338,
-    681,
-    544
-   ],
-   "scene": "mayor by a submarine-shaped van handing a giant cheque to a puppet-theatre owner"
-  },
-  {
-   "id": "fr_cumuler_verb",
-   "box": [
-    482,
-    140,
-    694,
-    306
-   ],
-   "scene": "kitten mewing on top of a tall heap of yarn balls"
-  },
-  {
-   "id": "fr_monnayer_verb",
-   "box": [
-    337,
-    65,
-    478,
-    319
-   ],
-   "scene": "worker at a coin press cheering as gold coins pour out"
-  },
-  {
-   "id": "fr_taxer_verb",
-   "box": [
-    869,
-    310,
-    1203,
-    610
-   ],
-   "scene": "taxi driver holding out his hand to a parrot on the taxi roof"
-  }
- ],
- "links": [
-  {
-   "target": "ST_commerce_seg008",
-   "box": [
-    690,
-    380,
-    860,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 7",
-   "name": "Rue du Commerce — étape 7",
-   "kind": "street_forward"
-  },
-  {
-   "target": "ST_commerce_seg005",
-   "box": [
-    350,
-    640,
-    1100,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 5",
-   "name": "Rue du Commerce — étape 5",
-   "kind": "street_back"
-  }
- ]
+  "items": [
+    {
+      "id": "fr_liquider_verb",
+      "box": [
+        119,
+        331,
+        344,
+        612
+      ],
+      "scene": "shopkeeper under a leaking awning selling off the last umbrellas, a squirrel grabbing the very last"
+    },
+    {
+      "id": "fr_subventionner_verb",
+      "box": [
+        346,
+        338,
+        681,
+        544
+      ],
+      "scene": "mayor by a submarine-shaped van handing a giant cheque to a puppet-theatre owner"
+    },
+    {
+      "id": "fr_cumuler_verb",
+      "box": [
+        482,
+        140,
+        694,
+        306
+      ],
+      "scene": "kitten mewing on top of a tall heap of yarn balls"
+    },
+    {
+      "id": "fr_monnayer_verb",
+      "box": [
+        337,
+        65,
+        478,
+        319
+      ],
+      "scene": "worker at a coin press cheering as gold coins pour out"
+    },
+    {
+      "id": "fr_taxer_verb",
+      "box": [
+        869,
+        310,
+        1203,
+        610
+      ],
+      "scene": "taxi driver holding out his hand to a parrot on the taxi roof"
+    }
+  ],
+  "links": [
+    {
+      "target": "ST_commerce_seg008",
+      "box": [
+        690,
+        380,
+        860,
+        520
+      ],
+      "label": "Walk on to Overload Close",
+      "name": "Impasse des Surcharges",
+      "kind": "street_forward",
+      "name_fr": "Impasse des Surcharges",
+      "name_en": "Overload Close"
+    },
+    {
+      "target": "ST_commerce_seg005",
+      "box": [
+        350,
+        640,
+        1100,
+        720
+      ],
+      "label": "Back to Sharing Alley",
+      "name": "Allée du Partage",
+      "kind": "street_back",
+      "name_fr": "Allée du Partage",
+      "name_en": "Sharing Alley"
+    }
+  ]
 }

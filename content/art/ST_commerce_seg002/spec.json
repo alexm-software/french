@@ -1,143 +1,147 @@
 {
- "divider_x": 700,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 2: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 2",
-   "box": [
-    520,
-    30,
-    860,
-    74
-   ],
-   "text_box": [
-    526,
-    36,
-    854,
-    68
-   ]
+  "divider_x": 700,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Allée des Livreurs: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Allée des Livreurs",
+      "box": [
+        520,
+        30,
+        860,
+        74
+      ],
+      "text_box": [
+        526,
+        36,
+        854,
+        68
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Rue du Commerce — Passage du Marchandage →",
+      "box": [
+        630,
+        318,
+        776,
+        352
+      ],
+      "text_box": [
+        636,
+        324,
+        770,
+        346
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Rue du Commerce — Rue des Acheteurs",
+      "box": [
+        630,
+        640,
+        776,
+        674
+      ],
+      "text_box": [
+        636,
+        646,
+        770,
+        668
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 3 →",
-   "box": [
-    630,
-    318,
-    776,
-    352
-   ],
-   "text_box": [
-    636,
-    324,
-    770,
-    346
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 1",
-   "box": [
-    630,
-    640,
-    776,
-    674
-   ],
-   "text_box": [
-    636,
-    646,
-    770,
-    668
-   ]
-  }
- },
- "items": [
-  {
-   "id": "fr_commander_verb",
-   "box": [
-    102,
-    362,
-    381,
-    662
-   ],
-   "scene": "little girl in a toy general's hat orders three scoops at the ice-cream kiosk"
-  },
-  {
-   "id": "fr_livrer_verb",
-   "box": [
-    402,
-    360,
-    623,
-    672
-   ],
-   "scene": "delivery man in a coachman's livery coat hands a parcel to a lady"
-  },
-  {
-   "id": "fr_racheter_verb",
-   "box": [
-    362,
-    140,
-    556,
-    250
-   ],
-   "scene": "brown rat counting coins to buy back a gold pocket watch from the pawnbroker"
-  },
-  {
-   "id": "fr_rembourser_verb",
-   "box": [
-    156,
-    94,
-    306,
-    244
-   ],
-   "scene": "wild boar in new boots holding out his shoebox for a refund"
-  },
-  {
-   "id": "fr_vendre_verb",
-   "box": [
-    781,
-    385,
-    1203,
-    676
-   ],
-   "scene": "man selling apples and pears from the back of a blue van"
-  },
-  {
-   "id": "fr_investir_verb",
-   "box": [
-    962,
-    106,
-    1112,
-    238
-   ],
-   "scene": "beaver in a gold waistcoat dropping coins into a pink piggy bank"
-  }
- ],
- "links": [
-  {
-   "target": "ST_commerce_seg004",
-   "box": [
-    628,
-    360,
-    778,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 3",
-   "name": "Rue du Commerce — étape 3",
-   "kind": "street_forward"
-  },
-  {
-   "target": "ST_commerce_seg001",
-   "box": [
-    130,
-    678,
-    780,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 1",
-   "name": "Rue du Commerce — étape 1",
-   "kind": "street_back"
-  }
- ]
+  "items": [
+    {
+      "id": "fr_commander_verb",
+      "box": [
+        102,
+        362,
+        381,
+        662
+      ],
+      "scene": "little girl in a toy general's hat orders three scoops at the ice-cream kiosk"
+    },
+    {
+      "id": "fr_livrer_verb",
+      "box": [
+        402,
+        360,
+        623,
+        672
+      ],
+      "scene": "delivery man in a coachman's livery coat hands a parcel to a lady"
+    },
+    {
+      "id": "fr_racheter_verb",
+      "box": [
+        362,
+        140,
+        556,
+        250
+      ],
+      "scene": "brown rat counting coins to buy back a gold pocket watch from the pawnbroker"
+    },
+    {
+      "id": "fr_rembourser_verb",
+      "box": [
+        156,
+        94,
+        306,
+        244
+      ],
+      "scene": "wild boar in new boots holding out his shoebox for a refund"
+    },
+    {
+      "id": "fr_vendre_verb",
+      "box": [
+        781,
+        385,
+        1203,
+        676
+      ],
+      "scene": "man selling apples and pears from the back of a blue van"
+    },
+    {
+      "id": "fr_investir_verb",
+      "box": [
+        962,
+        106,
+        1112,
+        238
+      ],
+      "scene": "beaver in a gold waistcoat dropping coins into a pink piggy bank"
+    }
+  ],
+  "links": [
+    {
+      "target": "ST_commerce_seg004",
+      "box": [
+        628,
+        360,
+        778,
+        520
+      ],
+      "label": "Walk on to Haggling Passage",
+      "name": "Passage du Marchandage",
+      "kind": "street_forward",
+      "name_fr": "Passage du Marchandage",
+      "name_en": "Haggling Passage"
+    },
+    {
+      "target": "ST_commerce_seg001",
+      "box": [
+        130,
+        678,
+        780,
+        720
+      ],
+      "label": "Back to Shoppers' Street",
+      "name": "Rue des Acheteurs",
+      "kind": "street_back",
+      "name_fr": "Rue des Acheteurs",
+      "name_en": "Shoppers' Street"
+    }
+  ]
 }

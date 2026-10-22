@@ -1,368 +1,370 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg001",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 1 · serrer, pencher, tendre",
- "divider_x": 860,
- "note": "Tiered verb place. -er LEFT (neighbours shaking hands with a hard squeeze, man on a stepladder leaning out for a falling pen, woman shaking a rug with a cuckoo flying out on the balcony, man trembling at a dangling spider at the upper window, jittery old lady shaking a hand bell on the roof terrace), -ir/-re RIGHT (girl holding out a carrot to a donkey). Forward = far lane; back = near cobbles to the square.",
- "text_areas": {
-  "fr_serrer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_serrer_verb",
-   "text": "serrer",
-   "box": [
-    206,
-    640,
-    274,
-    666
-   ],
-   "text_box": [
-    210,
-    644,
-    270,
-    662
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg001",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Rue des Poignées-de-Main · serrer, pencher, tendre",
+  "divider_x": 860,
+  "note": "Tiered verb place. -er LEFT (neighbours shaking hands with a hard squeeze, man on a stepladder leaning out for a falling pen, woman shaking a rug with a cuckoo flying out on the balcony, man trembling at a dangling spider at the upper window, jittery old lady shaking a hand bell on the roof terrace), -ir/-re RIGHT (girl holding out a carrot to a donkey). Forward = far lane; back = near cobbles to the square.",
+  "text_areas": {
+    "fr_serrer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_serrer_verb",
+      "text": "serrer",
+      "box": [
+        206,
+        640,
+        274,
+        666
+      ],
+      "text_box": [
+        210,
+        644,
+        270,
+        662
+      ]
+    },
+    "fr_pencher_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_pencher_verb",
+      "text": "pencher",
+      "box": [
+        475,
+        630,
+        553,
+        656
+      ],
+      "text_box": [
+        479,
+        634,
+        549,
+        652
+      ]
+    },
+    "fr_secouer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_secouer_verb",
+      "text": "secouer",
+      "box": [
+        283,
+        268,
+        361,
+        294
+      ],
+      "text_box": [
+        287,
+        272,
+        357,
+        290
+      ]
+    },
+    "fr_trembler_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_trembler_verb",
+      "text": "trembler",
+      "box": [
+        306,
+        122,
+        394,
+        148
+      ],
+      "text_box": [
+        310,
+        126,
+        390,
+        144
+      ]
+    },
+    "fr_agiter_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_agiter_verb",
+      "text": "agiter",
+      "box": [
+        572,
+        137,
+        640,
+        163
+      ],
+      "text_box": [
+        576,
+        141,
+        636,
+        159
+      ]
+    },
+    "fr_tendre_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_tendre_verb",
+      "text": "tendre (à / vers)",
+      "box": [
+        1001,
+        624,
+        1173,
+        650
+      ],
+      "text_box": [
+        1005,
+        628,
+        1169,
+        646
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Rue des Crochets →",
+      "box": [
+        790,
+        450,
+        935,
+        560
+      ],
+      "text_box": [
+        796,
+        456,
+        929,
+        554
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← place",
+      "box": [
+        470,
+        674,
+        960,
+        712
+      ],
+      "text_box": [
+        476,
+        680,
+        954,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        700,
+        25,
+        800,
+        59
+      ],
+      "text_box": [
+        703,
+        28,
+        797,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        830,
+        25,
+        950,
+        59
+      ],
+      "text_box": [
+        833,
+        28,
+        947,
+        56
+      ]
+    }
   },
-  "fr_pencher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_pencher_verb",
-   "text": "pencher",
-   "box": [
-    475,
-    630,
-    553,
-    656
-   ],
-   "text_box": [
-    479,
-    634,
-    549,
-    652
-   ]
+  "items": [
+    {
+      "id": "fr_serrer_verb",
+      "lemma": "serrer",
+      "gloss": "to squeeze; to shake (hands)",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        75,
+        394,
+        406,
+        672
+      ],
+      "label_xy": [
+        240,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_pencher_verb",
+      "lemma": "pencher",
+      "gloss": "to lean",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        410,
+        302,
+        619,
+        662
+      ],
+      "label_xy": [
+        514,
+        650
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_secouer_verb",
+      "lemma": "secouer",
+      "gloss": "to shake",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        188,
+        156,
+        456,
+        300
+      ],
+      "label_xy": [
+        322,
+        288
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_trembler_verb",
+      "lemma": "trembler",
+      "gloss": "to tremble, shake",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 4,
+      "box": [
+        262,
+        38,
+        438,
+        154
+      ],
+      "label_xy": [
+        350,
+        142
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_agiter_verb",
+      "lemma": "agiter",
+      "gloss": "to shake",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 5,
+      "box": [
+        537,
+        8,
+        675,
+        169
+      ],
+      "label_xy": [
+        606,
+        157
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_tendre_verb",
+      "lemma": "tendre",
+      "gloss": "to stretch out; tender",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 6,
+      "box": [
+        944,
+        444,
+        1231,
+        656
+      ],
+      "label_xy": [
+        1087,
+        644
+      ],
+      "prepositions": [
+        "à",
+        "vers"
+      ],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg002",
+      "box": [
+        790,
+        450,
+        935,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Crochets",
+      "sign": "Rue des Crochets →",
+      "kind": "street",
+      "name_fr": "Rue des Crochets",
+      "name_en": "Hooks Street"
+    },
+    "back": {
+      "target": "S02_sector",
+      "box": [
+        470,
+        674,
+        960,
+        712
+      ],
+      "label": "Back under the pulley arch to the square",
+      "name": "Place de la Rue des Maisons",
+      "sign": "← place",
+      "kind": "street"
+    }
   },
-  "fr_secouer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_secouer_verb",
-   "text": "secouer",
-   "box": [
-    283,
-    268,
-    361,
-    294
-   ],
-   "text_box": [
-    287,
-    272,
-    357,
-    290
-   ]
-  },
-  "fr_trembler_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_trembler_verb",
-   "text": "trembler",
-   "box": [
-    306,
-    122,
-    394,
-    148
-   ],
-   "text_box": [
-    310,
-    126,
-    390,
-    144
-   ]
-  },
-  "fr_agiter_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_agiter_verb",
-   "text": "agiter",
-   "box": [
-    572,
-    137,
-    640,
-    163
-   ],
-   "text_box": [
-    576,
-    141,
-    636,
-    159
-   ]
-  },
-  "fr_tendre_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_tendre_verb",
-   "text": "tendre (à / vers)",
-   "box": [
-    1001,
-    624,
-    1173,
-    650
-   ],
-   "text_box": [
-    1005,
-    628,
-    1169,
-    646
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 2 →",
-   "box": [
-    790,
-    450,
-    935,
-    560
-   ],
-   "text_box": [
-    796,
-    456,
-    929,
-    554
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← place",
-   "box": [
-    470,
-    674,
-    960,
-    712
-   ],
-   "text_box": [
-    476,
-    680,
-    954,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    700,
-    25,
-    800,
-    59
-   ],
-   "text_box": [
-    703,
-    28,
-    797,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    830,
-    25,
-    950,
-    59
-   ],
-   "text_box": [
-    833,
-    28,
-    947,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 3,
+    "balcony": 1,
+    "upper": 1,
+    "roof": 1
   }
- },
- "items": [
-  {
-   "id": "fr_serrer_verb",
-   "lemma": "serrer",
-   "gloss": "to squeeze; to shake (hands)",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    75,
-    394,
-    406,
-    672
-   ],
-   "label_xy": [
-    240,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_pencher_verb",
-   "lemma": "pencher",
-   "gloss": "to lean",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    410,
-    302,
-    619,
-    662
-   ],
-   "label_xy": [
-    514,
-    650
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_secouer_verb",
-   "lemma": "secouer",
-   "gloss": "to shake",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    188,
-    156,
-    456,
-    300
-   ],
-   "label_xy": [
-    322,
-    288
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_trembler_verb",
-   "lemma": "trembler",
-   "gloss": "to tremble, shake",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 4,
-   "box": [
-    262,
-    38,
-    438,
-    154
-   ],
-   "label_xy": [
-    350,
-    142
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_agiter_verb",
-   "lemma": "agiter",
-   "gloss": "to shake",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 5,
-   "box": [
-    537,
-    8,
-    675,
-    169
-   ],
-   "label_xy": [
-    606,
-    157
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_tendre_verb",
-   "lemma": "tendre",
-   "gloss": "to stretch out; tender",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 6,
-   "box": [
-    944,
-    444,
-    1231,
-    656
-   ],
-   "label_xy": [
-    1087,
-    644
-   ],
-   "prepositions": [
-    "à",
-    "vers"
-   ],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg002",
-   "box": [
-    790,
-    450,
-    935,
-    560
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 2",
-   "sign": "étape 2 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "S02_sector",
-   "box": [
-    470,
-    674,
-    960,
-    712
-   ],
-   "label": "Back under the pulley arch to the square",
-   "name": "Place de la Rue des Maisons",
-   "sign": "← place",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 3,
-  "balcony": 1,
-  "upper": 1,
-  "roof": 1
- }
 }

@@ -1,251 +1,255 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "divider_x": 760,
- "kind": "verb_place",
- "note": "Rue du Commerce — étape 4: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
- "text_areas": {
-  "street_name": {
-   "role": "street_name",
-   "text": "Rue du Commerce — étape 4",
-   "box": [
-    620,
-    40,
-    960,
-    84
-   ],
-   "text_box": [
-    626,
-    46,
-    954,
-    78
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "divider_x": 760,
+  "kind": "verb_place",
+  "note": "Rue du Commerce — Ruelle des Tirelires: one-point street view walking down Rue du Commerce. -er verbs on the LEFT houses, -ir/-re on the RIGHT. Tiers: street (commonest) -> balcony -> upper -> roof (rarest). One box per verb (reflexives include their oval mirror). Forward exit = the far road; back = the near cobbles.",
+  "text_areas": {
+    "street_name": {
+      "role": "street_name",
+      "text": "Ruelle des Tirelires",
+      "box": [
+        620,
+        40,
+        960,
+        84
+      ],
+      "text_box": [
+        626,
+        46,
+        954,
+        78
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "text": "Allée du Partage →",
+      "box": [
+        696,
+        346,
+        848,
+        380
+      ],
+      "text_box": [
+        702,
+        352,
+        842,
+        374
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "text": "← Passage du Marchandage",
+      "box": [
+        696,
+        630,
+        846,
+        662
+      ],
+      "text_box": [
+        702,
+        636,
+        840,
+        656
+      ]
+    }
   },
-  "dir_forward": {
-   "role": "direction",
-   "text": "Rue du Commerce — étape 5 →",
-   "box": [
-    696,
-    346,
-    848,
-    380
-   ],
-   "text_box": [
-    702,
-    352,
-    842,
-    374
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "text": "← Rue du Commerce — étape 3",
-   "box": [
-    696,
-    630,
-    846,
-    662
-   ],
-   "text_box": [
-    702,
-    636,
-    840,
-    656
-   ]
+  "items": [
+    {
+      "id": "fr_financer_verb",
+      "lemma": "financer",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "financer",
+      "box": [
+        100,
+        362,
+        296,
+        662
+      ],
+      "label_xy": [
+        198,
+        652
+      ],
+      "scene": "young woman tips coins from a jar into her fiance's hands at his lemonade stand",
+      "gloss": "to fund",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_depenser_verb",
+      "lemma": "dépenser",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "dépenser",
+      "box": [
+        318,
+        375,
+        414,
+        625
+      ],
+      "label_xy": [
+        366,
+        615
+      ],
+      "scene": "woman carrying a giant copper frying pan, her purse empty",
+      "gloss": "to spend",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_piller_verb",
+      "lemma": "piller",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "piller",
+      "box": [
+        460,
+        380,
+        690,
+        652
+      ],
+      "label_xy": [
+        575,
+        642
+      ],
+      "scene": "seagulls plunder the chip stall while the owner flaps a tea towel",
+      "gloss": "to plunder; to pillage",
+      "verb_group": 1,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_emprunter_verb",
+      "lemma": "emprunter",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "emprunter (à)",
+      "box": [
+        318,
+        140,
+        432,
+        285
+      ],
+      "label_xy": [
+        375,
+        275
+      ],
+      "scene": "woman on a balcony borrowing a jar of prunes from her neighbour",
+      "gloss": "to borrow",
+      "verb_group": 1,
+      "tier": "balcony",
+      "level": "balcony",
+      "prepositions": [
+        "à"
+      ],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_economiser_verb",
+      "lemma": "économiser",
+      "article": "",
+      "gender": null,
+      "side": "left",
+      "label": "économiser",
+      "box": [
+        125,
+        75,
+        265,
+        248
+      ],
+      "label_xy": [
+        195,
+        238
+      ],
+      "scene": "red squirrel dropping one more acorn into a full glass jar",
+      "gloss": "to economise",
+      "verb_group": 1,
+      "tier": "upper",
+      "level": "upper",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    },
+    {
+      "id": "fr_revendre_verb",
+      "lemma": "revendre",
+      "article": "",
+      "gender": null,
+      "side": "right",
+      "label": "revendre",
+      "box": [
+        850,
+        368,
+        1197,
+        656
+      ],
+      "label_xy": [
+        1024,
+        646
+      ],
+      "scene": "black raven at a stall reselling shiny spoons and buttons to a customer",
+      "gloss": "to resell, sell again",
+      "verb_group": 3,
+      "tier": "street",
+      "level": "street",
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null
+    }
+  ],
+  "links": [],
+  "segment_id": "ST_commerce_seg003",
+  "street_id": "ST_commerce",
+  "sector_id": "S03_market",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Ruelle des Tirelires",
+  "exits": {
+    "forward": {
+      "target": "ST_commerce_seg005",
+      "box": [
+        700,
+        385,
+        845,
+        520
+      ],
+      "label": "Walk on to Sharing Alley",
+      "name": "Allée du Partage",
+      "kind": "street",
+      "name_fr": "Allée du Partage",
+      "name_en": "Sharing Alley"
+    },
+    "back": {
+      "target": "ST_commerce_seg004",
+      "box": [
+        120,
+        668,
+        1100,
+        720
+      ],
+      "label": "Back to Haggling Passage",
+      "name": "Passage du Marchandage",
+      "kind": "street",
+      "name_fr": "Passage du Marchandage",
+      "name_en": "Haggling Passage"
+    }
   }
- },
- "items": [
-  {
-   "id": "fr_financer_verb",
-   "lemma": "financer",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "financer",
-   "box": [
-    100,
-    362,
-    296,
-    662
-   ],
-   "label_xy": [
-    198,
-    652
-   ],
-   "scene": "young woman tips coins from a jar into her fiance's hands at his lemonade stand",
-   "gloss": "to fund",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_depenser_verb",
-   "lemma": "dépenser",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "dépenser",
-   "box": [
-    318,
-    375,
-    414,
-    625
-   ],
-   "label_xy": [
-    366,
-    615
-   ],
-   "scene": "woman carrying a giant copper frying pan, her purse empty",
-   "gloss": "to spend",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_piller_verb",
-   "lemma": "piller",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "piller",
-   "box": [
-    460,
-    380,
-    690,
-    652
-   ],
-   "label_xy": [
-    575,
-    642
-   ],
-   "scene": "seagulls plunder the chip stall while the owner flaps a tea towel",
-   "gloss": "to plunder; to pillage",
-   "verb_group": 1,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_emprunter_verb",
-   "lemma": "emprunter",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "emprunter (à)",
-   "box": [
-    318,
-    140,
-    432,
-    285
-   ],
-   "label_xy": [
-    375,
-    275
-   ],
-   "scene": "woman on a balcony borrowing a jar of prunes from her neighbour",
-   "gloss": "to borrow",
-   "verb_group": 1,
-   "tier": "balcony",
-   "level": "balcony",
-   "prepositions": [
-    "à"
-   ],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_economiser_verb",
-   "lemma": "économiser",
-   "article": "",
-   "gender": null,
-   "side": "left",
-   "label": "économiser",
-   "box": [
-    125,
-    75,
-    265,
-    248
-   ],
-   "label_xy": [
-    195,
-    238
-   ],
-   "scene": "red squirrel dropping one more acorn into a full glass jar",
-   "gloss": "to economise",
-   "verb_group": 1,
-   "tier": "upper",
-   "level": "upper",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  },
-  {
-   "id": "fr_revendre_verb",
-   "lemma": "revendre",
-   "article": "",
-   "gender": null,
-   "side": "right",
-   "label": "revendre",
-   "box": [
-    850,
-    368,
-    1197,
-    656
-   ],
-   "label_xy": [
-    1024,
-    646
-   ],
-   "scene": "black raven at a stall reselling shiny spoons and buttons to a customer",
-   "gloss": "to resell, sell again",
-   "verb_group": 3,
-   "tier": "street",
-   "level": "street",
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null
-  }
- ],
- "links": [],
- "segment_id": "ST_commerce_seg003",
- "street_id": "ST_commerce",
- "sector_id": "S03_market",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue du Commerce — étape 4",
- "exits": {
-  "forward": {
-   "target": "ST_commerce_seg005",
-   "box": [
-    700,
-    385,
-    845,
-    520
-   ],
-   "label": "Walk on to Rue du Commerce — étape 5",
-   "name": "Rue du Commerce — étape 5",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_commerce_seg004",
-   "box": [
-    120,
-    668,
-    1100,
-    720
-   ],
-   "label": "Back to Rue du Commerce — étape 3",
-   "name": "Rue du Commerce — étape 3",
-   "kind": "street"
-  }
- }
 }

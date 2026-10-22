@@ -184,6 +184,28 @@ function measure() {
     if (offscreen(rect)) failures.push(`${name} is outside the viewport`);
     else if (hitsStrip(rect)) failures.push(`${name} is under a strip`);
   }
+  const hash = location.hash || "";
+  const up = document.querySelector("[data-sector-up]");
+  if (/^#\/(building|room)\//.test(hash)) {
+    const href = up?.getAttribute("href") || "";
+    if (!up) failures.push("missing sector button");
+    else if (!/^#\/sector\/S\d{2}_/.test(href)) failures.push(`sector button target ${href}`);
+  } else if (/^#\/sector\//.test(hash) && up) {
+    failures.push("sector view shows a sector button");
+  }
+  const covers = (a, b) => {
+    const overlapX = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+    const overlapY = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+    return overlapX > 8 && overlapY > 6;
+  };
+  for (const badge of document.querySelectorAll("#walk .way-badge")) {
+    const badgeRect = badge.getBoundingClientRect();
+    for (const text of svg.querySelectorAll(".painted-sign text, .verb-sign text, text.lbl")) {
+      const rect = text.getBoundingClientRect();
+      if (rect.width < 2 || rect.height < 2) continue;
+      if (covers(badgeRect, rect)) failures.push(`arrow covers ${(text.textContent || "").trim()}`);
+    }
+  }
   return failures;
 }
 

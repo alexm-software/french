@@ -1,364 +1,368 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_control_seg008",
- "street_id": "ST_control",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Rue des Gestes — étape 8 · filer, renverser, clore",
- "divider_x": 800,
- "note": "Tiered verb place. -er LEFT (ginger cat dashing off with a fish fillet, shaggy dog knocking over the milk pail, raccoon hanging up the telephone on the balcony, king holding out his crown to renounce it at the upper window), -ir/-re RIGHT (big red crab pushing its door shut with a claw; man flinging his shutters open again at the upper window). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_filer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_filer_verb",
-   "text": "filer",
-   "box": [
-    234,
-    640,
-    292,
-    666
-   ],
-   "text_box": [
-    238,
-    644,
-    288,
-    662
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_control_seg008",
+  "street_id": "ST_control",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Rue des Gestes — Ruelle du Seau-Renversé · filer, renverser, clore",
+  "divider_x": 800,
+  "note": "Tiered verb place. -er LEFT (ginger cat dashing off with a fish fillet, shaggy dog knocking over the milk pail, raccoon hanging up the telephone on the balcony, king holding out his crown to renounce it at the upper window), -ir/-re RIGHT (big red crab pushing its door shut with a claw; man flinging his shutters open again at the upper window). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_filer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_filer_verb",
+      "text": "filer",
+      "box": [
+        234,
+        640,
+        292,
+        666
+      ],
+      "text_box": [
+        238,
+        644,
+        288,
+        662
+      ]
+    },
+    "fr_renverser_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_renverser_verb",
+      "text": "renverser",
+      "box": [
+        444,
+        568,
+        540,
+        594
+      ],
+      "text_box": [
+        448,
+        572,
+        536,
+        590
+      ]
+    },
+    "fr_raccrocher_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_raccrocher_verb",
+      "text": "raccrocher",
+      "box": [
+        378,
+        143,
+        484,
+        169
+      ],
+      "text_box": [
+        382,
+        147,
+        480,
+        165
+      ]
+    },
+    "fr_renier_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_renier_verb",
+      "text": "renier",
+      "box": [
+        185,
+        143,
+        253,
+        169
+      ],
+      "text_box": [
+        189,
+        147,
+        249,
+        165
+      ]
+    },
+    "fr_clore_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_clore_verb",
+      "text": "clore",
+      "box": [
+        1055,
+        593,
+        1113,
+        619
+      ],
+      "text_box": [
+        1059,
+        597,
+        1109,
+        615
+      ]
+    },
+    "fr_rouvrir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_rouvrir_verb",
+      "text": "rouvrir",
+      "box": [
+        1086,
+        156,
+        1164,
+        182
+      ],
+      "text_box": [
+        1090,
+        160,
+        1160,
+        178
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Allée des Balançoires →",
+      "box": [
+        620,
+        420,
+        780,
+        520
+      ],
+      "text_box": [
+        626,
+        426,
+        774,
+        514
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Rue des Lanceurs",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "text_box": [
+        476,
+        682,
+        954,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        520,
+        25,
+        620,
+        59
+      ],
+      "text_box": [
+        523,
+        28,
+        617,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        640,
+        25,
+        760,
+        59
+      ],
+      "text_box": [
+        643,
+        28,
+        757,
+        56
+      ]
+    }
   },
-  "fr_renverser_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_renverser_verb",
-   "text": "renverser",
-   "box": [
-    444,
-    568,
-    540,
-    594
-   ],
-   "text_box": [
-    448,
-    572,
-    536,
-    590
-   ]
+  "items": [
+    {
+      "id": "fr_filer_verb",
+      "lemma": "filer",
+      "gloss": "to dash; to spin",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        125,
+        525,
+        402,
+        672
+      ],
+      "label_xy": [
+        263,
+        660
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_renverser_verb",
+      "lemma": "renverser",
+      "gloss": "to knock over",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        404,
+        425,
+        581,
+        600
+      ],
+      "label_xy": [
+        492,
+        588
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_raccrocher_verb",
+      "lemma": "raccrocher",
+      "gloss": "to hang up",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        337,
+        81,
+        525,
+        175
+      ],
+      "label_xy": [
+        431,
+        163
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_renier_verb",
+      "lemma": "renier",
+      "gloss": "to renounce; to disown",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 4,
+      "box": [
+        119,
+        12,
+        319,
+        175
+      ],
+      "label_xy": [
+        219,
+        163
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_clore_verb",
+      "lemma": "clore",
+      "gloss": "to close",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 5,
+      "box": [
+        988,
+        444,
+        1181,
+        625
+      ],
+      "label_xy": [
+        1084,
+        613
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_rouvrir_verb",
+      "lemma": "rouvrir",
+      "gloss": "to reopen, to open again",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "upper",
+      "level": "upper",
+      "order": 6,
+      "box": [
+        1019,
+        8,
+        1231,
+        188
+      ],
+      "label_xy": [
+        1125,
+        176
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg009",
+      "box": [
+        620,
+        420,
+        780,
+        520
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Balançoires",
+      "sign": "Allée des Balançoires →",
+      "kind": "street",
+      "name_fr": "Allée des Balançoires",
+      "name_en": "Swings Alley"
+    },
+    "back": {
+      "target": "ST_control_seg007",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Throwers' Street",
+      "name": "Rue des Lanceurs",
+      "sign": "← Rue des Lanceurs",
+      "kind": "street",
+      "name_fr": "Rue des Lanceurs",
+      "name_en": "Throwers' Street"
+    }
   },
-  "fr_raccrocher_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_raccrocher_verb",
-   "text": "raccrocher",
-   "box": [
-    378,
-    143,
-    484,
-    169
-   ],
-   "text_box": [
-    382,
-    147,
-    480,
-    165
-   ]
-  },
-  "fr_renier_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_renier_verb",
-   "text": "renier",
-   "box": [
-    185,
-    143,
-    253,
-    169
-   ],
-   "text_box": [
-    189,
-    147,
-    249,
-    165
-   ]
-  },
-  "fr_clore_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_clore_verb",
-   "text": "clore",
-   "box": [
-    1055,
-    593,
-    1113,
-    619
-   ],
-   "text_box": [
-    1059,
-    597,
-    1109,
-    615
-   ]
-  },
-  "fr_rouvrir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rouvrir_verb",
-   "text": "rouvrir",
-   "box": [
-    1086,
-    156,
-    1164,
-    182
-   ],
-   "text_box": [
-    1090,
-    160,
-    1160,
-    178
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 9 →",
-   "box": [
-    620,
-    420,
-    780,
-    520
-   ],
-   "text_box": [
-    626,
-    426,
-    774,
-    514
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 7",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "text_box": [
-    476,
-    682,
-    954,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    520,
-    25,
-    620,
-    59
-   ],
-   "text_box": [
-    523,
-    28,
-    617,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    640,
-    25,
-    760,
-    59
-   ],
-   "text_box": [
-    643,
-    28,
-    757,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 3,
+    "balcony": 1,
+    "upper": 2
   }
- },
- "items": [
-  {
-   "id": "fr_filer_verb",
-   "lemma": "filer",
-   "gloss": "to dash; to spin",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    125,
-    525,
-    402,
-    672
-   ],
-   "label_xy": [
-    263,
-    660
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_renverser_verb",
-   "lemma": "renverser",
-   "gloss": "to knock over",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    404,
-    425,
-    581,
-    600
-   ],
-   "label_xy": [
-    492,
-    588
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_raccrocher_verb",
-   "lemma": "raccrocher",
-   "gloss": "to hang up",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    337,
-    81,
-    525,
-    175
-   ],
-   "label_xy": [
-    431,
-    163
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_renier_verb",
-   "lemma": "renier",
-   "gloss": "to renounce; to disown",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 4,
-   "box": [
-    119,
-    12,
-    319,
-    175
-   ],
-   "label_xy": [
-    219,
-    163
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_clore_verb",
-   "lemma": "clore",
-   "gloss": "to close",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 5,
-   "box": [
-    988,
-    444,
-    1181,
-    625
-   ],
-   "label_xy": [
-    1084,
-    613
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_rouvrir_verb",
-   "lemma": "rouvrir",
-   "gloss": "to reopen, to open again",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "upper",
-   "level": "upper",
-   "order": 6,
-   "box": [
-    1019,
-    8,
-    1231,
-    188
-   ],
-   "label_xy": [
-    1125,
-    176
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_control_seg009",
-   "box": [
-    620,
-    420,
-    780,
-    520
-   ],
-   "label": "Walk on down the lane",
-   "name": "Rue des Gestes, étape 9",
-   "sign": "étape 9 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_control_seg007",
-   "box": [
-    470,
-    676,
-    960,
-    712
-   ],
-   "label": "Back up the lane to étape 7",
-   "name": "Rue des Gestes, étape 7",
-   "sign": "← étape 7",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 3,
-  "balcony": 1,
-  "upper": 2
- }
 }

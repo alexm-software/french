@@ -1,115 +1,117 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "divider_x": null,
- "kind": "sector_overview",
- "note": "Overview of sector S04_cafes (Rue des Saveurs). Round 3 whimsy repaint: café with a cup-handle awning and croissant door arch on the left, restaurant with fork-and-knife gable, toque chimney and barrel cellar arch on the right, the verb lane through a stone arch topped by a rolling pin (route start = étape 1, the route returns here from étape 7).",
- "text_areas": {
-  "cafe_name": {
-   "role": "building_name",
-   "text": "Café de la Place",
-   "box": [
-    172,
-    286,
-    430,
-    347
-   ],
-   "text_box": [
-    186,
-    293,
-    416,
-    340
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "divider_x": null,
+  "kind": "sector_overview",
+  "note": "Overview of sector S04_cafes (Rue des Saveurs). Round 3 whimsy repaint: café with a cup-handle awning and croissant door arch on the left, restaurant with fork-and-knife gable, toque chimney and barrel cellar arch on the right, the verb lane through a stone arch topped by a rolling pin (route start = Place du Grand-Festin, the route returns here from Allée des Cuisiniers).",
+  "text_areas": {
+    "cafe_name": {
+      "role": "building_name",
+      "text": "Café de la Place",
+      "box": [
+        172,
+        286,
+        430,
+        347
+      ],
+      "text_box": [
+        186,
+        293,
+        416,
+        340
+      ]
+    },
+    "resto_name": {
+      "role": "building_name",
+      "text": "Restaurant Le Bon Goût",
+      "box": [
+        812,
+        317,
+        1044,
+        395
+      ],
+      "text_box": [
+        826,
+        327,
+        1030,
+        385
+      ]
+    },
+    "lane_name": {
+      "role": "street_name",
+      "text": "Ruelle des Gourmets",
+      "box": [
+        575,
+        350,
+        722,
+        384
+      ],
+      "text_box": [
+        583,
+        354,
+        714,
+        380
+      ]
+    }
   },
-  "resto_name": {
-   "role": "building_name",
-   "text": "Restaurant Le Bon Goût",
-   "box": [
-    812,
-    317,
-    1044,
-    395
-   ],
-   "text_box": [
-    826,
-    327,
-    1030,
-    385
-   ]
-  },
-  "lane_name": {
-   "role": "street_name",
-   "text": "Ruelle des Gourmets",
-   "box": [
-    575,
-    350,
-    722,
-    384
-   ],
-   "text_box": [
-    583,
-    354,
-    714,
-    380
-   ]
-  }
- },
- "items": [],
- "links": [
-  {
-   "target": "B08_cafe",
-   "box": [
-    0,
-    352,
-    539,
-    610
-   ],
-   "label": "Café de la Place",
-   "name": "Café de la Place",
-   "kind": "building"
-  },
-  {
-   "target": "B09_restaurant",
-   "box": [
-    800,
-    400,
-    1280,
-    620
-   ],
-   "label": "Restaurant Le Bon Goût",
-   "name": "Restaurant Le Bon Goût",
-   "kind": "building"
-  },
-  {
-   "target": "ST_cooking_seg001",
-   "box": [
-    585,
-    405,
-    725,
-    610
-   ],
-   "label": "Ruelle des Gourmets: cooking verbs, étape 1 · Eat & feed",
-   "name": "Ruelle des Gourmets — étape 1",
-   "kind": "street",
-   "polygon": [
-    [
-     540,
-     348
-    ],
-    [
-     799,
-     348
-    ],
-    [
-     799,
-     710
-    ],
-    [
-     540,
-     710
-    ]
-   ]
-  }
- ]
+  "items": [],
+  "links": [
+    {
+      "target": "B08_cafe",
+      "box": [
+        0,
+        352,
+        539,
+        610
+      ],
+      "label": "Café de la Place",
+      "name": "Café de la Place",
+      "kind": "building"
+    },
+    {
+      "target": "B09_restaurant",
+      "box": [
+        800,
+        400,
+        1280,
+        620
+      ],
+      "label": "Restaurant Le Bon Goût",
+      "name": "Restaurant Le Bon Goût",
+      "kind": "building"
+    },
+    {
+      "target": "ST_cooking_seg001",
+      "box": [
+        585,
+        405,
+        725,
+        610
+      ],
+      "label": "Ruelle des Gourmets: cooking verbs, Place du Grand-Festin · Eat & feed",
+      "name": "Place du Grand-Festin",
+      "kind": "street",
+      "polygon": [
+        [
+          540,
+          348
+        ],
+        [
+          799,
+          348
+        ],
+        [
+          799,
+          710
+        ],
+        [
+          540,
+          710
+        ]
+      ],
+      "name_fr": "Place du Grand-Festin",
+      "name_en": "Great-Feast Square"
+    }
+  ]
 }

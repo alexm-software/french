@@ -1,369 +1,373 @@
 {
- "image": "base.jpg",
- "width": 1280,
- "height": 720,
- "segment_id": "ST_routine_seg014",
- "street_id": "ST_routine",
- "sector_id": "S02_home",
- "kind": "verb_place",
- "layout": "tiered",
- "view": "street_perspective",
- "name": "Allée du Quotidien — étape 14 · veiller, rincer, accourir",
- "divider_x": 900,
- "note": "Tiered verb place. -er LEFT (veiled woman watching over a sleeping baby's pram, ballerina wrapping herself in red ribbon by the tall mirror, woman rinsing red boots under a watering can on the balcony, manager directing a workman fitting out the upper room, skunk spoiling the rain barrel on the roof terrace), -ir/-re RIGHT (courier rushing up on his bicycle). Forward = far lane; back = near cobbles.",
- "text_areas": {
-  "fr_veiller_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_veiller_verb",
-   "text": "veiller (à / sur)",
-   "box": [
-    251,
-    634,
-    423,
-    660
-   ],
-   "text_box": [
-    255,
-    638,
-    419,
-    656
-   ]
+  "image": "base.jpg",
+  "width": 1280,
+  "height": 720,
+  "segment_id": "ST_routine_seg014",
+  "street_id": "ST_routine",
+  "sector_id": "S02_home",
+  "kind": "verb_place",
+  "layout": "tiered",
+  "view": "street_perspective",
+  "name": "Allée du Quotidien — Rue des Veilleurs-de-Nuit · veiller, rincer, accourir",
+  "divider_x": 900,
+  "note": "Tiered verb place. -er LEFT (veiled woman watching over a sleeping baby's pram, ballerina wrapping herself in red ribbon by the tall mirror, woman rinsing red boots under a watering can on the balcony, manager directing a workman fitting out the upper room, skunk spoiling the rain barrel on the roof terrace), -ir/-re RIGHT (courier rushing up on his bicycle). Forward = far lane; back = near cobbles.",
+  "text_areas": {
+    "fr_veiller_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_veiller_verb",
+      "text": "veiller (à / sur)",
+      "box": [
+        251,
+        634,
+        423,
+        660
+      ],
+      "text_box": [
+        255,
+        638,
+        419,
+        656
+      ]
+    },
+    "fr_emballer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_emballer_verb",
+      "text": "s'emballer",
+      "box": [
+        565,
+        612,
+        671,
+        638
+      ],
+      "text_box": [
+        569,
+        616,
+        667,
+        634
+      ]
+    },
+    "fr_rincer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_rincer_verb",
+      "text": "rincer",
+      "box": [
+        162,
+        308,
+        230,
+        334
+      ],
+      "text_box": [
+        166,
+        312,
+        226,
+        330
+      ]
+    },
+    "fr_amenager_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_amenager_verb",
+      "text": "aménager",
+      "box": [
+        344,
+        187,
+        432,
+        213
+      ],
+      "text_box": [
+        348,
+        191,
+        428,
+        209
+      ]
+    },
+    "fr_contaminer_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_contaminer_verb",
+      "text": "contaminer",
+      "box": [
+        619,
+        199,
+        725,
+        225
+      ],
+      "text_box": [
+        623,
+        203,
+        721,
+        221
+      ]
+    },
+    "fr_accourir_verb_sign": {
+      "role": "verb_sign",
+      "for": "fr_accourir_verb",
+      "text": "accourir",
+      "box": [
+        1049,
+        630,
+        1137,
+        656
+      ],
+      "text_box": [
+        1053,
+        634,
+        1133,
+        652
+      ]
+    },
+    "dir_forward": {
+      "role": "direction",
+      "for_exit": "forward",
+      "text": "Allée des Bricoleurs →",
+      "box": [
+        760,
+        440,
+        960,
+        560
+      ],
+      "text_box": [
+        766,
+        446,
+        954,
+        554
+      ]
+    },
+    "dir_back": {
+      "role": "direction",
+      "for_exit": "back",
+      "text": "← Rue des Affiches",
+      "box": [
+        480,
+        668,
+        960,
+        712
+      ],
+      "text_box": [
+        486,
+        674,
+        954,
+        706
+      ]
+    },
+    "dir_side_er": {
+      "role": "direction",
+      "text": "-er",
+      "box": [
+        700,
+        25,
+        800,
+        59
+      ],
+      "text_box": [
+        703,
+        28,
+        797,
+        56
+      ]
+    },
+    "dir_side_irre": {
+      "role": "direction",
+      "text": "-ir / -re",
+      "box": [
+        940,
+        25,
+        1060,
+        59
+      ],
+      "text_box": [
+        943,
+        28,
+        1057,
+        56
+      ]
+    }
   },
-  "fr_emballer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_emballer_verb",
-   "text": "s'emballer",
-   "box": [
-    565,
-    612,
-    671,
-    638
-   ],
-   "text_box": [
-    569,
-    616,
-    667,
-    634
-   ]
+  "items": [
+    {
+      "id": "fr_veiller_verb",
+      "lemma": "veiller",
+      "gloss": "to stay up; to watch over",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 1,
+      "box": [
+        200,
+        462,
+        475,
+        666
+      ],
+      "label_xy": [
+        337,
+        654
+      ],
+      "prepositions": [
+        "à",
+        "sur"
+      ],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_emballer_verb",
+      "lemma": "emballer",
+      "gloss": "to pack up; to wrap up; to parcel; to thrill, to turn on",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "street",
+      "level": "street",
+      "order": 2,
+      "box": [
+        518,
+        444,
+        718,
+        644
+      ],
+      "label_xy": [
+        618,
+        632
+      ],
+      "prepositions": [],
+      "reflexive": true,
+      "pronominal_form": "s'emballer",
+      "scene": "",
+      "mirror": "tall standing mirror beside the ballerina"
+    },
+    {
+      "id": "fr_rincer_verb",
+      "lemma": "rincer",
+      "gloss": "to rinse; to drink a lot of alcohol",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "balcony",
+      "level": "balcony",
+      "order": 3,
+      "box": [
+        125,
+        112,
+        268,
+        340
+      ],
+      "label_xy": [
+        196,
+        328
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_amenager_verb",
+      "lemma": "aménager",
+      "gloss": "to lay out, fit out; to develop, convert",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "upper",
+      "level": "upper",
+      "order": 4,
+      "box": [
+        270,
+        40,
+        506,
+        219
+      ],
+      "label_xy": [
+        388,
+        207
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_contaminer_verb",
+      "lemma": "contaminer",
+      "gloss": "to contaminate",
+      "verb_group": 1,
+      "side": "left",
+      "tier": "roof",
+      "level": "roof",
+      "order": 5,
+      "box": [
+        550,
+        75,
+        794,
+        231
+      ],
+      "label_xy": [
+        672,
+        219
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    },
+    {
+      "id": "fr_accourir_verb",
+      "lemma": "accourir",
+      "gloss": "to rush up",
+      "verb_group": 3,
+      "side": "right",
+      "tier": "street",
+      "level": "street",
+      "order": 6,
+      "box": [
+        1012,
+        437,
+        1175,
+        662
+      ],
+      "label_xy": [
+        1093,
+        650
+      ],
+      "prepositions": [],
+      "reflexive": false,
+      "pronominal_form": null,
+      "scene": ""
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg015",
+      "box": [
+        760,
+        440,
+        960,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Allée des Bricoleurs",
+      "sign": "Allée des Bricoleurs →",
+      "kind": "street",
+      "name_fr": "Allée des Bricoleurs",
+      "name_en": "Do-It-Yourselfers' Alley"
+    },
+    "back": {
+      "target": "ST_routine_seg013",
+      "box": [
+        480,
+        668,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Posters Street",
+      "name": "Rue des Affiches",
+      "sign": "← Rue des Affiches",
+      "kind": "street",
+      "name_fr": "Rue des Affiches",
+      "name_en": "Posters Street"
+    }
   },
-  "fr_rincer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_rincer_verb",
-   "text": "rincer",
-   "box": [
-    162,
-    308,
-    230,
-    334
-   ],
-   "text_box": [
-    166,
-    312,
-    226,
-    330
-   ]
-  },
-  "fr_amenager_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_amenager_verb",
-   "text": "aménager",
-   "box": [
-    344,
-    187,
-    432,
-    213
-   ],
-   "text_box": [
-    348,
-    191,
-    428,
-    209
-   ]
-  },
-  "fr_contaminer_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_contaminer_verb",
-   "text": "contaminer",
-   "box": [
-    619,
-    199,
-    725,
-    225
-   ],
-   "text_box": [
-    623,
-    203,
-    721,
-    221
-   ]
-  },
-  "fr_accourir_verb_sign": {
-   "role": "verb_sign",
-   "for": "fr_accourir_verb",
-   "text": "accourir",
-   "box": [
-    1049,
-    630,
-    1137,
-    656
-   ],
-   "text_box": [
-    1053,
-    634,
-    1133,
-    652
-   ]
-  },
-  "dir_forward": {
-   "role": "direction",
-   "for_exit": "forward",
-   "text": "étape 15 →",
-   "box": [
-    760,
-    440,
-    960,
-    560
-   ],
-   "text_box": [
-    766,
-    446,
-    954,
-    554
-   ]
-  },
-  "dir_back": {
-   "role": "direction",
-   "for_exit": "back",
-   "text": "← étape 13",
-   "box": [
-    480,
-    668,
-    960,
-    712
-   ],
-   "text_box": [
-    486,
-    674,
-    954,
-    706
-   ]
-  },
-  "dir_side_er": {
-   "role": "direction",
-   "text": "-er",
-   "box": [
-    700,
-    25,
-    800,
-    59
-   ],
-   "text_box": [
-    703,
-    28,
-    797,
-    56
-   ]
-  },
-  "dir_side_irre": {
-   "role": "direction",
-   "text": "-ir / -re",
-   "box": [
-    940,
-    25,
-    1060,
-    59
-   ],
-   "text_box": [
-    943,
-    28,
-    1057,
-    56
-   ]
+  "links": [],
+  "tier_counts": {
+    "street": 3,
+    "balcony": 1,
+    "upper": 1,
+    "roof": 1
   }
- },
- "items": [
-  {
-   "id": "fr_veiller_verb",
-   "lemma": "veiller",
-   "gloss": "to stay up; to watch over",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 1,
-   "box": [
-    200,
-    462,
-    475,
-    666
-   ],
-   "label_xy": [
-    337,
-    654
-   ],
-   "prepositions": [
-    "à",
-    "sur"
-   ],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_emballer_verb",
-   "lemma": "emballer",
-   "gloss": "to pack up; to wrap up; to parcel; to thrill, to turn on",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "street",
-   "level": "street",
-   "order": 2,
-   "box": [
-    518,
-    444,
-    718,
-    644
-   ],
-   "label_xy": [
-    618,
-    632
-   ],
-   "prepositions": [],
-   "reflexive": true,
-   "pronominal_form": "s'emballer",
-   "scene": "",
-   "mirror": "tall standing mirror beside the ballerina"
-  },
-  {
-   "id": "fr_rincer_verb",
-   "lemma": "rincer",
-   "gloss": "to rinse; to drink a lot of alcohol",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "balcony",
-   "level": "balcony",
-   "order": 3,
-   "box": [
-    125,
-    112,
-    268,
-    340
-   ],
-   "label_xy": [
-    196,
-    328
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_amenager_verb",
-   "lemma": "aménager",
-   "gloss": "to lay out, fit out; to develop, convert",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "upper",
-   "level": "upper",
-   "order": 4,
-   "box": [
-    270,
-    40,
-    506,
-    219
-   ],
-   "label_xy": [
-    388,
-    207
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_contaminer_verb",
-   "lemma": "contaminer",
-   "gloss": "to contaminate",
-   "verb_group": 1,
-   "side": "left",
-   "tier": "roof",
-   "level": "roof",
-   "order": 5,
-   "box": [
-    550,
-    75,
-    794,
-    231
-   ],
-   "label_xy": [
-    672,
-    219
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  },
-  {
-   "id": "fr_accourir_verb",
-   "lemma": "accourir",
-   "gloss": "to rush up",
-   "verb_group": 3,
-   "side": "right",
-   "tier": "street",
-   "level": "street",
-   "order": 6,
-   "box": [
-    1012,
-    437,
-    1175,
-    662
-   ],
-   "label_xy": [
-    1093,
-    650
-   ],
-   "prepositions": [],
-   "reflexive": false,
-   "pronominal_form": null,
-   "scene": ""
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg015",
-   "box": [
-    760,
-    440,
-    960,
-    560
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 15",
-   "sign": "étape 15 →",
-   "kind": "street"
-  },
-  "back": {
-   "target": "ST_routine_seg013",
-   "box": [
-    480,
-    668,
-    960,
-    712
-   ],
-   "label": "Back up the lane to étape 13",
-   "name": "Allée du Quotidien, étape 13",
-   "sign": "← étape 13",
-   "kind": "street"
-  }
- },
- "links": [],
- "tier_counts": {
-  "street": 3,
-  "balcony": 1,
-  "upper": 1,
-  "roof": 1
- }
 }

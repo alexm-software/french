@@ -388,11 +388,36 @@ def card(word, by_lemma, rooms_by_id, open_sectors, conjugations, live_ids=None)
             "irregular": bool(word.get("irregular")),
             "conjugations": conjugations.get(infinitive),
         })
+    payload.update(form_fields(word))
+    return payload
+
+
+def form_fields(word):
+    """Masculine and feminine adjective forms. Provenance stays out of the card."""
+    forms = word.get("forms")
+    if not isinstance(forms, dict) or not forms.get("m_sg"):
+        return {}
+    payload = {"forms": {key: forms.get(key) for key in ("m_sg", "f_sg", "m_pl", "f_pl")}}
+    for key in (
+        "m_sg_before_vowel",
+        "f_ipa",
+        "f_respelling",
+        "m_pl_ipa",
+        "m_pl_respelling",
+        "f_sg_alt",
+        "forms_note",
+    ):
+        value = word.get(key)
+        if value not in (None, ""):
+            payload[key] = value
+    for key in ("invariable", "number_invariable", "forms_secondary"):
+        if word.get(key) is True:
+            payload[key] = True
     return payload
 
 
 def quiz_item(word):
-    return {
+    payload = {
         "id": word["id"],
         "lemma": word["lemma"],
         "pos": word["pos"],
@@ -403,6 +428,8 @@ def quiz_item(word):
         "respelling": word.get("respelling"),
         "head": headword(word),
     }
+    payload.update(form_fields(word))
+    return payload
 
 
 def dialogue_for(conv, words_by_id):
@@ -432,6 +459,10 @@ def dialogue_for(conv, words_by_id):
 
 
 def sign_text(room, building, signs):
+    if room.get("kind") == "street_segment":
+        street = (room.get("street_name") or room.get("name_fr") or "").strip()
+        if street:
+            return street
     if room["id"] in signs:
         return signs[room["id"]]
     if room.get("kind") == "street_segment" and building:
@@ -551,14 +582,11 @@ def neighbor_stub(sector_id, sectors_by_id, open_sectors):
 
 
 def chip_text(room):
-    """Short switcher label. Street numbers come from the room record, not a fixed verb list."""
+    """Street switcher label. Each stop uses its street name, not a segment number."""
     if room.get("kind") == "street_segment":
-        match = re.search(r"(?:segment|étape|etape)\s+(\d+)", room.get("name") or "", re.IGNORECASE)
-        if match:
-            return match.group(1)
-        index = seg_index(room["id"])
-        if index:
-            return str(index)
+        street = (room.get("street_name") or room.get("name_fr") or "").strip()
+        if street:
+            return street
     return ""
 
 
@@ -1209,7 +1237,14 @@ def main():
             "items": quiz_items,
         })
 
-    write_json(PUBLIC / "data" / "prayers.json", {"prayers": prayers})
+    emitted_prayers = []
+    for prayer in prayers:
+        item = dict(prayer)
+        home = rooms_by_id.get(prayer.get("room_id") or prayer.get("base_room") or "")
+        if home and home.get("sector_id"):
+            item["sector_id"] = home["sector_id"]
+        emitted_prayers.append(item)
+    write_json(PUBLIC / "data" / "prayers.json", {"prayers": emitted_prayers})
     shutil.copy2(SOURCE / "CREDITS.md", PUBLIC / "data" / "credits.md")
     featured = None
     if len(live_ids) == 1:

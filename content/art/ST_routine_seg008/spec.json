@@ -1,108 +1,112 @@
 {
- "divider_x": 700,
- "name": "Allée du Quotidien — étape 8 · creuser, franchir, se maquiller",
- "note": "Tiered verb place. -er LEFT (terrier digging the crazy flower bed, bull smashing the picket fence, clown making up at his balcony mirror), -ir RIGHT (horse clearing the hedge, vet helping a knight into armour on the balcony, father turning pale at the leering gargoyle). Forward = far lane; back = near cobbles.",
- "items": [
-  {
-   "id": "fr_creuser_verb",
-   "box": [
-    110,
-    520,
-    476,
-    688
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_defoncer_verb",
-   "box": [
-    480,
-    395,
-    632,
-    560
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_maquiller_verb",
-   "box": [
-    252,
-    62,
-    448,
-    198
-   ],
-   "tier": "balcony",
-   "mirror": "oval mirror on the balcony"
-  },
-  {
-   "id": "fr_franchir_verb",
-   "box": [
-    815,
-    338,
-    1098,
-    562
-   ],
-   "tier": "street"
-  },
-  {
-   "id": "fr_revetir_verb",
-   "box": [
-    832,
-    108,
-    988,
-    250
-   ],
-   "tier": "balcony"
-  },
-  {
-   "id": "fr_palir_verb",
-   "box": [
-    1100,
-    130,
-    1238,
-    472
-   ],
-   "tier": "upper"
-  }
- ],
- "exits": {
-  "forward": {
-   "target": "ST_routine_seg009",
-   "box": [
-    640,
-    360,
-    800,
-    470
-   ],
-   "label": "Walk on down the lane",
-   "name": "Allée du Quotidien, étape 9",
-   "sign": "étape 9 →"
-  },
-  "back": {
-   "target": "ST_routine_seg007",
-   "box": [
-    480,
-    665,
-    900,
-    712
-   ],
-   "label": "Back up the lane to étape 7",
-   "name": "Allée du Quotidien, étape 7",
-   "sign": "← étape 7"
-  }
- },
- "signs": {
-  "er": [
-   480,
-   30,
-   580,
-   64
+  "divider_x": 700,
+  "name": "Allée du Quotidien — Ruelle des Clowns · creuser, franchir, se maquiller",
+  "note": "Tiered verb place. -er LEFT (terrier digging the crazy flower bed, bull smashing the picket fence, clown making up at his balcony mirror), -ir RIGHT (horse clearing the hedge, vet helping a knight into armour on the balcony, father turning pale at the leering gargoyle). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_creuser_verb",
+      "box": [
+        110,
+        520,
+        476,
+        688
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_defoncer_verb",
+      "box": [
+        480,
+        395,
+        632,
+        560
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_maquiller_verb",
+      "box": [
+        252,
+        62,
+        448,
+        198
+      ],
+      "tier": "balcony",
+      "mirror": "oval mirror on the balcony"
+    },
+    {
+      "id": "fr_franchir_verb",
+      "box": [
+        815,
+        338,
+        1098,
+        562
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_revetir_verb",
+      "box": [
+        832,
+        108,
+        988,
+        250
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_palir_verb",
+      "box": [
+        1100,
+        130,
+        1238,
+        472
+      ],
+      "tier": "upper"
+    }
   ],
-  "irre": [
-   700,
-   30,
-   830,
-   64
-  ]
- }
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg009",
+      "box": [
+        640,
+        360,
+        800,
+        470
+      ],
+      "label": "Walk on down the lane",
+      "name": "Rue des Torchons",
+      "sign": "Rue des Torchons →",
+      "name_fr": "Rue des Torchons",
+      "name_en": "Tea-Towels Street"
+    },
+    "back": {
+      "target": "ST_routine_seg007",
+      "box": [
+        480,
+        665,
+        900,
+        712
+      ],
+      "label": "Back up the lane to Clothes-Iron Alley",
+      "name": "Allée du Fer-à-Repasser",
+      "sign": "← Allée du Fer-à-Repasser",
+      "name_fr": "Allée du Fer-à-Repasser",
+      "name_en": "Clothes-Iron Alley"
+    }
+  },
+  "signs": {
+    "er": [
+      480,
+      30,
+      580,
+      64
+    ],
+    "irre": [
+      700,
+      30,
+      830,
+      64
+    ]
+  }
 }

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from collections import defaultdict
@@ -183,7 +184,7 @@ def assert_wide_passages():
         for key in ("forward", "back"):
             exit_item = scene["exits"][key]
             # Head-on lanes can be a little under 15% of the width at the vanishing
-            # point (étape 3's far street is 183px on a 1280-wide painting). The
+            # point (one far lane is 183px on a 1280-wide painting). The
             # near cobbles are a box along the bottom edge, not a polygon.
             polygon = _exit_hit(exit_item)
             xs = [point[0] for point in polygon]
@@ -429,7 +430,7 @@ def main():
     assert sector["scene"]["sign_text"] == "Rue des Saveurs"
     assert sector["description_fr"].startswith("La terrasse")
     cooking = next(link for link in sector["scene"]["links"] if link["target"] == "ST_cooking_seg001")
-    assert cooking["name"] == "Ruelle des Gourmets — étape 1"
+    assert cooking["name"] == "Place du Grand-Festin"
     assert sector["scene"]["placeholder"] is False
     link_targets = [link["target"] for link in sector["scene"]["links"]]
     assert link_targets == ["B08_cafe", "B09_restaurant", "ST_cooking_seg001"], link_targets
@@ -442,7 +443,16 @@ def main():
     street = next(building for building in sector["buildings"] if building["id"] == "ST_cooking")
     segments = [room["id"] for room in street["floors"][0]["rooms"]]
     assert segments == [f"ST_cooking_seg{i:03d}" for i in range(1, 8)], segments
-    assert [room["chip"] for room in street["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
+    cooking_names = [
+        "Place du Grand-Festin",
+        "Allée du Pique-Nique",
+        "Rue des Carafes",
+        "Ruelle des Épices",
+        "Chemin des Épluchures",
+        "Rue des Sorbetières",
+        "Allée des Cuisiniers",
+    ]
+    assert [room["chip"] for room in street["floors"][0]["rooms"]] == cooking_names
     assert "ST_cooking" not in sector["walk"]
     assert not any(room_id.startswith("ST_cooking") for room_id in sector["walk"])
 
@@ -496,9 +506,12 @@ def main():
     assert seg["scene"]["exits"]["back"]["target"] == "S04_sector"
     assert seg["scene"]["exits"]["forward"]["target"] == "ST_cooking_seg002"
     assert seg["scene"]["links"] == []
-    assert seg["name_fr"] == "Étape 1 · Manger et nourrir"
+    assert seg["name_fr"] == "Place du Grand-Festin"
+    assert seg["sign"] == "Place du Grand-Festin"
     areas = seg["scene"]["text_areas"]
-    assert areas["dir_forward"]["role"] == "direction" and areas["dir_forward"]["text"] == "étape 2 →"
+    assert areas["dir_forward"]["role"] == "direction" and areas["dir_forward"]["text"] == "Allée du Pique-Nique →"
+    assert areas["street_name"]["text"] == "Place du Grand-Festin"
+    assert seg["scene"]["exits"]["forward"]["name"] == "Allée du Pique-Nique"
     assert areas["dir_side_er"]["text"] == "-er"
     assert areas["dir_side_irre"]["text"] == "-ir / -re"
     assert "fr_servir_verb_sign" not in areas
@@ -526,12 +539,12 @@ def main():
     assert servir["example_fr"] and servir["example_en"]
 
     last = load(DATA / "rooms" / "ST_cooking_seg007.json")
-    assert last["sign"] == "Ruelle des Gourmets"
-    assert last["name_fr"] == "Étape 7 · Cuire et rôtir"
+    assert last["sign"] == "Allée des Cuisiniers"
+    assert last["name_fr"] == "Allée des Cuisiniers"
     assert last["scene"]["layout"] == "tiered"
     assert last["scene"]["exits"]["forward"]["target"] == "S04_sector"
     assert last["scene"]["exits"]["back"]["target"] == "ST_cooking_seg006"
-    assert [room["chip"] for room in last["floors"][0]["rooms"]] == ["1", "2", "3", "4", "5", "6", "7"]
+    assert [room["chip"] for room in last["floors"][0]["rooms"]] == cooking_names
     assert not any(hot.get("mirror") or hot.get("helper") for hot in last["scene"]["hotspots"])
     assert not (DATA / "rooms" / "ST_cooking_seg011.json").exists()
     assert (DATA / "rooms" / "ST_cooking_seg005.json").exists()
@@ -717,12 +730,43 @@ def main():
     assert len(quiz["items"]) == len(set(seen))
     assert len(quiz["items"]) > 100
 
+    numbered = []
+    for path in (ROOT / "content" / "art").rglob("*.json"):
+        text = path.read_text(encoding="utf-8")
+        if re.search(r"étape|etape", text, re.IGNORECASE):
+            numbered.append(str(path.relative_to(ROOT)))
+    assert not numbered, numbered[:8]
+    routine = load(DATA / "rooms" / "ST_routine_seg001.json")
+    assert routine["sign"] == "Rue du Marchand-de-Sable"
+    assert routine["scene"]["exits"]["forward"]["name"] == "Rue des Lève-tôt"
+    assert routine["scene"]["text_areas"]["dir_forward"]["text"] == "Rue des Lève-tôt →"
+    colors = load(DATA / "rooms" / "R_colors_01.json")
+    blanc = next(word for word in colors["words"] if word["id"] == "fr_blanc_adj")
+    assert blanc["forms"] == {"m_sg": "blanc", "f_sg": "blanche", "m_pl": "blancs", "f_pl": "blanches"}
+    assert blanc["f_respelling"] and "forms_source" not in blanc and "forms_irregular" not in blanc
+    rouge = next(word for word in colors["words"] if word["id"] == "fr_rouge_adj")
+    assert rouge["invariable"] is True and rouge["forms"]["m_sg"] == rouge["forms"]["f_sg"] == "rouge"
+    swatch = load(DATA / "rooms" / "R_colors_02.json")
+    marron = next(word for word in swatch["words"] if word["id"] == "fr_marron_adj")
+    assert marron["number_invariable"] is True
+    client = (ROOT / "src" / "main.js").read_text(encoding="utf-8")
+    assert "data-sector-up" in client and "nav.sectorUp" in client and "speakLine" in client
+    for path in (DATA / "rooms").glob("*.json"):
+        room = load(path)
+        assert room.get("sector_id"), path.name
+        if room["kind"] == "street_segment":
+            assert room["sign"] and not re.search(r"étape|segment\s+\d", room["sign"], re.IGNORECASE), room["id"]
+    built_index = load(DATA / "index.json")
+    for building in built_index["buildings"]:
+        assert building.get("sector_id"), building["id"]
+
     finish(quiz)
 
 
 def finish(quiz):
     prayers = load(DATA / "prayers.json")
     assert len(prayers["prayers"]) == 12
+    assert all(prayer.get("sector_id", "").startswith("S") for prayer in prayers["prayers"])
     titles = [prayer["title_fr"] for prayer in prayers["prayers"]]
     assert "Symbole des Apôtres (Je crois en Dieu)" in titles
     assert "Symbole de Nicée-Constantinople (Credo de la messe)" in titles

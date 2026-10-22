@@ -230,6 +230,7 @@ function shell(body, current, opts = {}) {
         <a class="brand" href="#/">${doodle("compass")}<span><strong>${esc(t("brand"))}</strong><small>${esc(t("tagline"))}</small></span></a>
         <button class="menu-btn" type="button" data-menu aria-expanded="${state.menu ? "true" : "false"}">${esc(t("menu"))}</button>
         ${opts.backNav || ""}
+        ${opts.sectorUp || ""}
         <nav class="nav">
           ${nav.map(([href, label]) => `<a href="#${href}" ${current === href ? 'aria-current="page"' : ""}>${esc(label)}</a>`).join("")}
           ${opts.extraNav || ""}
@@ -284,6 +285,19 @@ function backNav(place) {
   const target = backTarget(place);
   if (!target) return "";
   return `<a class="back" data-back href="${esc(target.href)}">${esc(target.label)}</a>`;
+}
+
+function sectorUpTarget(sectorId) {
+  if (!sectorId) return null;
+  const sector = (state.index?.sectors || []).find((item) => item.id === sectorId);
+  const name = sector?.fr_name || sector?.name_fr || localizedName(sector) || sectorId;
+  return { href: `#/sector/${sectorId}`, label: tf("nav.sectorUp", { place: name }) };
+}
+
+function sectorUpNav(sectorId) {
+  const target = sectorUpTarget(sectorId);
+  if (!target) return "";
+  return `<a class="sector-up" data-sector-up href="${esc(target.href)}">${esc(target.label)}</a>`;
 }
 
 function sceneNav(place) {
@@ -400,7 +414,7 @@ function buildingView(sector, building, extraDialog = "") {
       <h1>${esc(localizedName(building))}</h1>
       <p>${esc(localizedDescription(building) || t("building.unpainted"))}</p>
       ${back ? `<a class="btn primary" href="${esc(back.href)}">${esc(back.label)}</a>` : ""}
-    `, `/building/${building.id}`, backNav({ kind: "building", sector, building }));
+    `, `/building/${building.id}`, backNav({ kind: "building", sector, building }), sectorUpNav(sector?.id));
   }
   state.place = { kind: "building", id: building.id, sector, building };
   return null;
@@ -497,9 +511,30 @@ function placeWayBadges() {
     const [x0, y0, x1, y1] = (el.dataset[attr] || "").split(",").map(Number);
     return { x0, y0, x1, y1 };
   }).filter((box) => Number.isFinite(box.x0));
+  const signObstacles = [...svg.querySelectorAll("[data-sign-box]")].map((el) => {
+    const [x0, y0, x1, y1] = el.dataset.signBox.split(",").map(Number);
+    const box = { x0, y0, x1, y1 };
+    if (!el.classList.contains("painted-sign") || !Number.isFinite(x0)) return box;
+    const glyphs = [...el.querySelectorAll("text")];
+    if (!glyphs.length) return box;
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    glyphs.forEach((text) => {
+      const ink = text.getBBox();
+      minX = Math.min(minX, ink.x);
+      minY = Math.min(minY, ink.y);
+      maxX = Math.max(maxX, ink.x + ink.width);
+      maxY = Math.max(maxY, ink.y + ink.height);
+    });
+    if (!Number.isFinite(minX)) return box;
+    const pad = 14;
+    return { x0: minX - pad, y0: minY - pad, x1: maxX + pad, y1: maxY + pad };
+  }).filter((box) => Number.isFinite(box.x0));
   const obstacles = [
     ...boxesOf("[data-item-box]", "itemBox"),
-    ...boxesOf("[data-sign-box]", "signBox"),
+    ...signObstacles,
     ...boxesOf("[data-zoom-box]", "zoomBox"),
   ];
   const placed = [];
@@ -529,8 +564,20 @@ function placeWayBadges() {
       return true;
     });
     if (!found) {
-      x = Math.max(4, Math.min(midX, (view.width || 1280) - size - 4));
-      y = Math.max(4, Math.min(midY, (view.height || 720) - size - 4));
+      const ring = [size * 1.4, size * 2.4, size * 3.4].flatMap((dist) => [
+        [midX, midY - dist],
+        [midX, midY + dist],
+        [midX - dist, midY],
+        [midX + dist, midY],
+      ]);
+      ring.some(([sx, sy]) => {
+        const cx = Math.max(4, Math.min(sx, (view.width || 1280) - size - 4));
+        const cy = Math.max(4, Math.min(sy, (view.height || 720) - size - 4));
+        if (hits(cx, cy, obstacles) || hits(cx, cy, placed)) return false;
+        x = cx;
+        y = cy;
+        return true;
+      });
     }
     placed.push({ x0: x, y0: y, x1: x + size, y1: y + size });
     const screen = toScreen(x, y);
@@ -1170,9 +1217,9 @@ function wordsDialog(room) {
   </div>`;
 }
 
-function pageShell(body, current, back = "") {
+function pageShell(body, current, back = "", sectorUp = "") {
   state.place = null;
-  return shell(body, current, { backNav: back });
+  return shell(body, current, { backNav: back, sectorUp });
 }
 
 function conversationHtml(room) {
@@ -1209,31 +1256,134 @@ function hookBlurb(word) {
   return parts.filter(Boolean).join(" — ");
 }
 
+const VOWEL_EXAMPLES = {
+  bel: "un bel arbre",
+  nouvel: "un nouvel ami",
+  vieil: "un vieil homme",
+  fol: "un fol espoir",
+  mol: "un mol oreiller",
+};
+
+function adjPresentation(word) {
+  const forms = word?.forms;
+  if (!forms?.m_sg) return null;
+  const sameGender = Boolean(word.invariable) || forms.m_sg === forms.f_sg;
+  const frozen = Boolean(word.number_invariable);
+  const alt = word.f_sg_alt ? ` (${tf("card.rarely", { form: word.f_sg_alt })})` : "";
+  let title = forms.m_sg;
+  let respell = word.respelling || "";
+  let tag = "";
+  if (!frozen && !sameGender) {
+    title = `${forms.m_sg} / ${forms.f_sg}`;
+    respell = word.f_respelling
+      ? [word.respelling, word.f_respelling].filter(Boolean).join(" / ")
+      : (word.respelling || "");
+    if (!word.f_respelling) tag = t("card.sameSound");
+  } else if (frozen) {
+    tag = t("card.neverChanges");
+  } else {
+    tag = t("card.sameGender");
+  }
+  title += alt;
+  let plural = "";
+  if (!frozen) {
+    const pluralDiffers = forms.m_pl !== forms.m_sg || forms.f_pl !== forms.f_sg;
+    if (!sameGender || pluralDiffers) {
+      let written = forms.m_pl;
+      if (forms.m_pl !== forms.f_pl) {
+        written = word.m_pl_respelling
+          ? `${forms.m_pl} (${word.m_pl_respelling}) / ${forms.f_pl}`
+          : `${forms.m_pl} / ${forms.f_pl}`;
+      }
+      plural = tf("card.plural", { forms: written });
+    }
+  }
+  const vowel = word.m_sg_before_vowel
+    ? tf("card.beforeVowel", {
+      form: word.m_sg_before_vowel,
+      example: VOWEL_EXAMPLES[word.m_sg_before_vowel] || "",
+    }).replace(/\s+:/, " :").trim()
+    : "";
+  return {
+    title,
+    respell,
+    tag,
+    plural,
+    vowel,
+    note: word.forms_note || "",
+    secondary: Boolean(word.forms_secondary),
+  };
+}
+
+function adjCompact(word) {
+  const shown = adjPresentation(word);
+  if (!shown) return "";
+  const parts = [shown.title];
+  if (shown.respell) parts.push(shown.respell);
+  if (shown.tag) parts.push(shown.tag);
+  if (shown.plural) parts.push(shown.plural);
+  if (shown.vowel) parts.push(shown.vowel);
+  if (shown.note) parts.push(shown.note);
+  return tf("card.alsoAdj", { forms: parts.join(" · ") });
+}
+
+function adjReveal(word) {
+  if (!word?.forms) return "";
+  if (word.forms_secondary || word.pos !== "adj") return adjCompact(word);
+  const shown = adjPresentation(word);
+  if (!shown) return "";
+  return [shown.title, shown.respell, shown.tag, shown.plural, shown.vowel, shown.note].filter(Boolean).join(" · ");
+}
+
+function speakLine(word) {
+  const forms = word?.forms;
+  if (!forms?.m_sg) return word?.head || "";
+  const feminine = forms.f_sg && forms.f_sg !== forms.m_sg ? forms.f_sg : "";
+  if (word.forms_secondary || word.pos !== "adj") {
+    const head = word.head || forms.m_sg;
+    if (feminine && !head.toLowerCase().includes(feminine.toLowerCase())) return `${head}, ${feminine}`;
+    return head;
+  }
+  if (!feminine || word.number_invariable) return forms.m_sg;
+  return `${forms.m_sg}, ${feminine}`;
+}
+
 function speakButton(word) {
-  return `<button class="speak" type="button" data-speak="${esc(word.head)}" data-lang="fr-FR" aria-label="${esc(t("card.listen"))}">${doodle("speaker")}</button>`;
+  return `<button class="speak" type="button" data-speak="${esc(speakLine(word))}" data-lang="fr-FR" aria-label="${esc(t("card.listen"))}">${doodle("speaker")}</button>`;
 }
 
 function cardLayer(word) {
   const hook = hookBlurb(word);
   const verb = word.pos === "verb" ? verbBlock(word) : "";
-  const kind = word.pos === "verb" ? "verb" : "noun";
+  const adj = word.pos === "adj" && word.forms && !word.forms_secondary ? adjPresentation(word) : null;
+  const also = word.forms_secondary ? adjCompact(word) : "";
+  const kind = word.pos === "verb" ? "verb" : word.pos === "adj" ? "adj" : "noun";
   const french = word.example_fr ? `<p class="example" lang="fr">${esc(word.example_fr)}</p>` : "";
   const english = word.example_en ? `<p class="example en" lang="en">${esc(word.example_en)}</p>` : "";
   const example = french || english
     ? `<div class="example-block"><div class="example-row"><div class="examples">${french}${english}</div>${speakButton(word)}</div></div>`
     : `<div class="example-block lone-speak">${speakButton(word)}</div>`;
-  const respell = [word.respelling, word.ipa].filter(Boolean).join(" · ");
+  const respell = adj
+    ? [adj.respell, word.ipa].filter(Boolean).join(" · ")
+    : [word.respelling, word.ipa].filter(Boolean).join(" · ");
   const cautions = [
     word.false_cognate_note ? `<p class="caution">${esc(word.false_cognate_note)}</p>` : "",
     word.usage_warning ? `<p class="caution">${esc(word.usage_warning)}</p>` : "",
   ].join("");
+  const formsBlock = adj ? `
+        ${adj.tag ? `<p class="adj-tag">${esc(adj.tag)}</p>` : ""}
+        ${adj.plural ? `<p class="adj-pl">${esc(adj.plural)}</p>` : ""}
+        ${adj.vowel ? `<p class="adj-vowel">${esc(adj.vowel)}</p>` : ""}
+        ${adj.note ? `<p class="adj-note">${esc(adj.note)}</p>` : ""}` : "";
   return `<div class="dialog-layer">
     <div class="card-shell ${kind}">
       <button class="x" type="button" data-close-dialog aria-label="${esc(t("close"))}">×</button>
       <article class="dialog word-card" role="dialog" aria-labelledby="card-title">
-        <h2 id="card-title" class="head">${esc(word.head)}${word.reflexive ? ` ${mirrorIcon()}` : ""}</h2>
+        <h2 id="card-title" class="head">${esc(adj ? adj.title : word.head)}${word.reflexive ? ` ${mirrorIcon()}` : ""}</h2>
         ${word.gloss ? `<p class="gloss"><span>${esc(word.gloss)}</span></p>` : ""}
         ${respell ? `<p class="respell">${esc(respell)}</p>` : ""}
+        ${formsBlock}
+        ${also ? `<p class="adj-also">${esc(also)}</p>` : ""}
         ${hook ? `<p class="hook"><span class="field">${esc(t("card.mnemonic"))}:</span> ${esc(hook)}</p>` : ""}
         ${verb}
         ${example}
@@ -1352,11 +1502,12 @@ function quizView(pack) {
     body = `
       <p class="meta">${quiz.index + 1} / ${quiz.round.length} · ${esc(modeLabel(quiz.mode))}</p>
       <h2>${esc(prompt)}</h2>
-      ${quiz.mode === "listen" ? `<div class="row"><button class="btn" type="button" data-replay>${esc(t("quiz.replay"))}</button>${quiz.reveal ? `<span>${esc(item.head)} · ${esc(item.respelling || "")}</span>` : ""}</div>` : ""}
+      ${quiz.mode === "listen" ? `<div class="row"><button class="btn" type="button" data-replay>${esc(t("quiz.replay"))}</button>${quiz.reveal ? `<span>${esc(adjReveal(item) || `${item.head} · ${item.respelling || ""}`)}</span>` : ""}</div>` : ""}
       ${quiz.mode === "gender" ? `<p class="meta">${esc(t("quiz.genderHint"))}</p>` : ""}
       <div class="choices">
         ${quiz.choices.map((choice, index) => `<button type="button" data-choice="${index}" class="${quiz.picked == null ? "" : choice.ok ? "good" : index === quiz.picked ? "bad" : ""}" ${quiz.picked == null ? "" : "disabled"}>${esc(choice.tkey ? t(choice.tkey) : choice.label)}</button>`).join("")}
       </div>
+      ${quiz.picked != null && adjReveal(item) ? `<p class="adj-reveal">${esc(adjReveal(item))}</p>` : ""}
       ${quiz.picked != null ? `<button class="btn primary" type="button" data-next>${esc(quiz.index + 1 === quiz.round.length ? t("quiz.seeScore") : t("quiz.next"))}</button>` : ""}
       <p class="note">${esc(state.speechNote)}</p>`;
   }
@@ -1446,7 +1597,7 @@ function prayerView(prayer) {
     <p class="prayer" id="prayer-fr">${esc(prayer.fr)}</p>
     ${state.showEn ? `<p class="prayer en">${esc(prayer.en)}</p>` : ""}
     <p class="source">${esc(prayer.source || "")}</p>
-  `, `/prayer/${prayer.id}`);
+  `, `/prayer/${prayer.id}`, { sectorUp: sectorUpNav(prayer.sector_id) });
 }
 
 function aboutView() {
@@ -1653,9 +1804,15 @@ async function render() {
       : state.place.kind === "building"
         ? `/building/${state.place.id}`
         : `/sector/${state.place.id}`;
+    const sectorId = state.place.kind === "room"
+      ? state.place.room?.sector_id
+      : state.place.kind === "building"
+        ? (state.place.sector?.id || state.place.building?.sector_id)
+        : "";
     app.innerHTML = shell("", current, {
       scene: true,
       backNav: backNav(state.place),
+      sectorUp: state.place.kind === "sector" ? "" : sectorUpNav(sectorId),
       extraNav: sceneNav(state.place),
     });
     walk.innerHTML = walkHtml(activeDialog());
@@ -1673,7 +1830,7 @@ async function render() {
   const quiz = state.quiz;
   if (parts[0] === "quiz" && quiz && quiz.mode === "listen" && quiz.picked == null && !quiz.done) {
     const item = quiz.round[quiz.index];
-    speak(item.head, "fr-FR").then((result) => {
+    speak(speakLine(item), "fr-FR").then((result) => {
       if (!result.ok || !result.voice) {
         quiz.reveal = true;
         state.speechNote = speechHint("fr-FR") || t("speech.failed");
@@ -1682,7 +1839,7 @@ async function render() {
         const host = document.querySelector("[data-replay]")?.parentElement;
         if (host && !host.querySelector("span")) {
           const span = document.createElement("span");
-          span.textContent = `${item.head} · ${item.respelling || ""}`;
+          span.textContent = adjReveal(item) || `${item.head} · ${item.respelling || ""}`;
           host.appendChild(span);
         }
       }
@@ -1837,7 +1994,7 @@ function onClick(event) {
   }
   if (event.target.closest("[data-replay]") && state.quiz) {
     const item = state.quiz.round[state.quiz.index];
-    speak(item.head, "fr-FR");
+    speak(speakLine(item), "fr-FR");
   }
 }
 

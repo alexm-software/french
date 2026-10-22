@@ -1,17 +1,112 @@
-{"divider_x": 1000,
- "name": "Rue des Gestes — étape 12 · crever, rejeter, rattacher",
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (clown whose balloon bursts, white cat pushing away its food bowl, fortune teller at her crystal ball), balcony (hedgehog curling up beside a little mirror), upper (lobster pinching a pansy in the window box), roof (rat tying a rope to the chimney). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_crever_verb", "box": [69, 262, 372, 672], "tier": "street"},
-  {"id": "fr_rejeter_verb", "box": [375, 488, 581, 656], "tier": "street"},
-  {"id": "fr_destiner_verb", "box": [644, 450, 800, 644], "tier": "street"},
-  {"id": "fr_replier_verb", "box": [119, 75, 244, 231], "tier": "balcony", "mirror": "small round mirror propped on the balcony"},
-  {"id": "fr_pincer_verb", "box": [400, 119, 600, 300], "tier": "upper"},
-  {"id": "fr_rattacher_verb", "box": [525, 19, 712, 117], "tier": "roof"}
- ],
- "exits": {
-  "forward": {"target": "ST_control_seg013", "box": [960, 450, 1090, 560], "label": "Walk on down the lane", "name": "Rue des Gestes, étape 13", "sign": "étape 13 →"},
-  "back": {"target": "ST_control_seg011", "box": [470, 676, 960, 712], "label": "Back up the lane to étape 11", "name": "Rue des Gestes, étape 11", "sign": "← étape 11"}
- },
- "signs": {"er": [880, 25, 980, 59], "irre": [1000, 25, 1120, 59]}
+{
+  "divider_x": 1000,
+  "name": "Rue des Gestes — Passage des Pinces-à-Linge · crever, rejeter, rattacher",
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (clown whose balloon bursts, white cat pushing away its food bowl, fortune teller at her crystal ball), balcony (hedgehog curling up beside a little mirror), upper (lobster pinching a pansy in the window box), roof (rat tying a rope to the chimney). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_crever_verb",
+      "box": [
+        69,
+        262,
+        372,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_rejeter_verb",
+      "box": [
+        375,
+        488,
+        581,
+        656
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_destiner_verb",
+      "box": [
+        644,
+        450,
+        800,
+        644
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_replier_verb",
+      "box": [
+        119,
+        75,
+        244,
+        231
+      ],
+      "tier": "balcony",
+      "mirror": "small round mirror propped on the balcony"
+    },
+    {
+      "id": "fr_pincer_verb",
+      "box": [
+        400,
+        119,
+        600,
+        300
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_rattacher_verb",
+      "box": [
+        525,
+        19,
+        712,
+        117
+      ],
+      "tier": "roof"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_control_seg013",
+      "box": [
+        960,
+        450,
+        1090,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Chemin des Faucheurs",
+      "sign": "Chemin des Faucheurs →",
+      "name_fr": "Chemin des Faucheurs",
+      "name_en": "Mowers' Lane"
+    },
+    "back": {
+      "target": "ST_control_seg011",
+      "box": [
+        470,
+        676,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Corks Street",
+      "name": "Rue des Bouchons",
+      "sign": "← Rue des Bouchons",
+      "name_fr": "Rue des Bouchons",
+      "name_en": "Corks Street"
+    }
+  },
+  "signs": {
+    "er": [
+      880,
+      25,
+      980,
+      59
+    ],
+    "irre": [
+      1000,
+      25,
+      1120,
+      59
+    ]
+  }
 }

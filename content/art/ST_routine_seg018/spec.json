@@ -1,17 +1,111 @@
-{"divider_x": 1000,
- "name": "Allée du Quotidien — étape 18 · friser, siéger, seller",
- "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hairdresser curling a lady's hair, boy re-tying his kite string, judge sitting in his tall chair with a jay), balcony (girl in a sash drying out the flower box), upper (cook whose pot foams over as he stirs with a snooker cue), roof (cowboy saddling a rocking horse). Forward = far lane; back = near cobbles.",
- "items": [
-  {"id": "fr_friser_verb", "box": [38, 356, 262, 672], "tier": "street"},
-  {"id": "fr_renouer_verb", "box": [275, 456, 431, 672], "tier": "street"},
-  {"id": "fr_sieger_verb", "box": [631, 350, 825, 669], "tier": "street"},
-  {"id": "fr_assecher_verb", "box": [425, 231, 562, 450], "tier": "balcony"},
-  {"id": "fr_ecumer_verb", "box": [387, 31, 550, 228], "tier": "upper"},
-  {"id": "fr_seller_verb", "box": [675, 10, 825, 200], "tier": "roof"}
- ],
- "exits": {
-  "forward": {"target": "ST_routine_seg019", "box": [850, 440, 1010, 560], "label": "Walk on down the lane", "name": "Allée du Quotidien, étape 19", "sign": "étape 19 →"},
-  "back": {"target": "ST_routine_seg017", "box": [470, 674, 960, 712], "label": "Back up the lane to étape 17", "name": "Allée du Quotidien, étape 17", "sign": "← étape 17"}
- },
- "signs": {"er": [880, 25, 980, 59], "irre": [1000, 25, 1120, 59]}
+{
+  "divider_x": 1000,
+  "name": "Allée du Quotidien — Rue des Selliers · friser, siéger, seller",
+  "note": "Tiered verb place; all six verbs are -er, so they all live on the LEFT cottages (the right side is a low stone wall with hedges, no verbs). Tiers: street (hairdresser curling a lady's hair, boy re-tying his kite string, judge sitting in his tall chair with a jay), balcony (girl in a sash drying out the flower box), upper (cook whose pot foams over as he stirs with a snooker cue), roof (cowboy saddling a rocking horse). Forward = far lane; back = near cobbles.",
+  "items": [
+    {
+      "id": "fr_friser_verb",
+      "box": [
+        38,
+        356,
+        262,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_renouer_verb",
+      "box": [
+        275,
+        456,
+        431,
+        672
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_sieger_verb",
+      "box": [
+        631,
+        350,
+        825,
+        669
+      ],
+      "tier": "street"
+    },
+    {
+      "id": "fr_assecher_verb",
+      "box": [
+        425,
+        231,
+        562,
+        450
+      ],
+      "tier": "balcony"
+    },
+    {
+      "id": "fr_ecumer_verb",
+      "box": [
+        387,
+        31,
+        550,
+        228
+      ],
+      "tier": "upper"
+    },
+    {
+      "id": "fr_seller_verb",
+      "box": [
+        675,
+        10,
+        825,
+        200
+      ],
+      "tier": "roof"
+    }
+  ],
+  "exits": {
+    "forward": {
+      "target": "ST_routine_seg019",
+      "box": [
+        850,
+        440,
+        1010,
+        560
+      ],
+      "label": "Walk on down the lane",
+      "name": "Impasse des Rendormis",
+      "sign": "Impasse des Rendormis →",
+      "name_fr": "Impasse des Rendormis",
+      "name_en": "Back-to-Sleep Close"
+    },
+    "back": {
+      "target": "ST_routine_seg017",
+      "box": [
+        470,
+        674,
+        960,
+        712
+      ],
+      "label": "Back up the lane to Alarm-Clock Street",
+      "name": "Rue du Réveille-Matin",
+      "sign": "← Rue du Réveille-Matin",
+      "name_fr": "Rue du Réveille-Matin",
+      "name_en": "Alarm-Clock Street"
+    }
+  },
+  "signs": {
+    "er": [
+      880,
+      25,
+      980,
+      59
+    ],
+    "irre": [
+      1000,
+      25,
+      1120,
+      59
+    ]
+  }
 }
