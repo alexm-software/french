@@ -5,10 +5,10 @@ var MAP={image:'assets/map/village.jpg',
  live:[
   {id:'boulangerie',name:'La boulangerie',pts:'22,418 55,366 180,340 229,404 222,440 233,470 233,522 150,530 100,524 22,506',tag:[128,338],door:[150,470]},
   {id:'cafe',name:'Le café',pts:'285,447 322,404 415,352 440,400 482,465 500,515 490,560 400,585 300,580 280,520',tag:[385,356],door:[392,508]},
-  {id:'eglise',name:"L'église",pts:'80,140 125,88 228,60 247,2 268,60 285,82 320,165 320,240 300,282 185,282 80,228',tag:[205,62],door:[262,232]}
+  {id:'eglise',name:"L'église",pts:'80,140 125,88 228,60 247,2 268,60 285,82 320,165 320,240 300,282 185,282 80,228',tag:[205,62],door:[262,232]},
+  {id:'mairie',name:'La mairie',pts:'434,92 462,46 545,44 548,8 592,20 590,38 612,34 641,96 616,108 612,172 585,184 545,186 470,180 436,170 436,104',tag:[520,44],door:[552,170]}
  ],
  soon:[
-  {name:'La mairie',pts:'432,40 688,40 688,205 432,205',tag:[560,40]},
   {name:"L'école",pts:'735,40 965,40 965,160 735,160',tag:[850,40]},
   {name:'Le moulin',pts:'1012,8 1128,8 1128,158 1012,158',tag:[1070,10]},
   {name:'La place et la fontaine',pts:'540,280 690,280 690,372 540,372',tag:[615,282]},
@@ -61,7 +61,7 @@ scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#p
 function renderMap(){
   view='map'; document.title='Le Village · French vocabulary memory village';
   back.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
-  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: the stone church with its bell tower, town hall, school, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
+  var h='<img class="bg" src="'+MAP.image+'" alt="Cartoon map of the French village: the stone church with its bell tower, the yellow town hall with its clock and French flag, school, windmill, market, station, port, the café with its red-and-white awning and the purple boulangerie with a giant baguette on its roof">';
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
   MAP.soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+b.pts+'"><title>'+esc(b.name)+' (bientôt)</title></polygon>'});
   MAP.live.forEach(function(L,i){
