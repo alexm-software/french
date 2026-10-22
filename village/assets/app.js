@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-var D=window.VILLAGE, R=D.rooms.boulangerie;
+var D=window.VILLAGE;
 var MAP={image:'assets/map/village.jpg',
  // polygons in the 1280x720 painting's pixel space (viewBox), so they stay aligned at any size
  live:{id:'boulangerie',name:'La boulangerie',pts:'22,418 55,366 180,340 229,404 222,440 233,470 233,522 150,530 100,524 22,506',tag:[128,338],door:[150,470]},
@@ -17,6 +17,21 @@ var MAP={image:'assets/map/village.jpg',
  ]};
 var $=function(s,e){return (e||document).querySelector(s)};
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
+var curTense='present';
+// ---------- label mode: 'always' (default) or 'hover' (show on hover / first tap) ----------
+var LKEY='village.labelMode', labelMode='always', lastPointer='mouse', armed=-1;
+try{ if(localStorage.getItem(LKEY)==='hover') labelMode='hover' }catch(e){}
+function applyLabelMode(){
+  stage.classList.toggle('lhover',labelMode==='hover');
+  var b=document.getElementById('labMode'), on=labelMode==='always';
+  b.setAttribute('aria-checked',on);
+  b.title=on?'Labels: always shown. Click to show them only on hover or tap (L)':'Labels: only on hover or tap. Click to always show them (L)';
+  b.querySelector('.sr').textContent=on?' always shown':' only on hover or tap';
+  disarm();
+}
+function setLabelMode(m){ labelMode=m; try{localStorage.setItem(LKEY,m)}catch(e){} applyLabelMode() }
+function showLab(i,on){ var l=stage.querySelector('.lab[data-i="'+i+'"]'); if(l) l.classList.toggle('show',on) }
+function disarm(){ if(armed>=0){ showLab(armed,false); var o=document.getElementById('ov'+armed); if(o)o.classList.remove('on') } armed=-1 }
 var cardWrap=$('#cardWrap'), card=$('#card'), lastFocus=null, view=null;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function pct(v){return v+'%'}
@@ -27,12 +42,18 @@ function fit(){
   if(vw/vh<0.9){ // tall phone: make the painting taller and let the user swipe across it
     h=Math.min(vh*0.9, vw*1.45); w=h*ar; pan=w>vw+2;
   }
-  stage.style.width=Math.round(w)+'px'; stage.style.height=Math.round(h)+'px';
-  scroller.classList.toggle('pan',pan);
+  var pan2=false;
+  if(w<900){ // small landscape screens: keep labels readable, let the user pan both ways
+    w=900; h=w/ar; pan=w>vw+2; pan2=h>vh+2;
+  }
+  stage.style.width=Math.round(w)+'px'; stage.style.height=Math.round(h)+'px'; stage.style.setProperty('--s',(Math.round(w)/1280).toFixed(4));
+  scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2);
   var hint=$('#panHint'); hint.hidden=!pan;
   if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
 }
 window.addEventListener('resize',fit);
+document.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse'},true);
+document.addEventListener('keydown',function(){lastPointer='key'},true);
 var ignoreScroll=false;
 scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#panHint');if(!h.hidden)h.style.opacity=0},{passive:true});
 // ---------- map ----------
@@ -60,27 +81,44 @@ function renderMap(){
   });
   fit();
 }
-// ---------- room ----------
-function renderRoom(){
-  view='room'; document.title=R.name+' · Le Village';
-  back.hidden=false; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
+// ---------- room / zoom ----------
+var R=null;
+function renderRoom(key){
+  R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+' · Le Village';
+  back.hidden=false;
+  if(R.parent){ $('#backLabel').textContent=D.rooms[R.parent].name; back.title='Back to '+D.rooms[R.parent].name; }
+  else { $('#backLabel').textContent='Le village'; back.title='Back to the village map'; }
   blur.style.backgroundImage='url('+R.image+')';
-  var h='<img class="bg" src="'+R.image+'" alt="Inside the boulangerie: yellow walls, a blue door, a big stone oven and a long wooden counter">';
-  h+='<div class="sign" aria-hidden="true"><span class="board">Boulangerie</span></div>';
+  var alt=R.parent?'Close-up of the long wooden bakery counter, with the stone oven behind it':'Inside the boulangerie: yellow walls, a blue door, a big stone oven, a cash desk and a long wooden counter';
+  var h='<img class="bg" src="'+R.image+'" alt="'+alt+'">';
+  if(R.sign){ var g=R.sign.box; h+='<img class="signimg" src="'+R.sign.src+'" alt="Sign: '+esc(R.sign.text)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+'">'; }
   R.items.forEach(function(it,i){
-    var g=it.img,b=it.box;
-    h+='<img class="ov" id="ov'+i+'" src="assets/room/placed/'+it.id+'.webp" alt="" style="left:'+pct(g[0])+';top:'+pct(g[1])+';width:'+pct(g[2])+';height:'+pct(g[3])+'">';
-    h+='<button class="hot" data-i="'+i+'" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'" aria-label="'+esc(headword(it))+': '+esc(it.en)+'" title="'+esc(headword(it))+'"></button>';
+    var g=it.img,b=it.box,l=it.label;
+    h+='<img class="ov" id="ov'+i+'" src="'+R.placed+it.id+'.webp" alt="" style="left:'+pct(g[0])+';top:'+pct(g[1])+';width:'+pct(g[2])+';height:'+pct(g[3])+'">';
+    h+='<button class="hot" data-i="'+i+'" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'" aria-label="'+esc(headword(it))+': '+esc(it.en)+'"></button>';
+    h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(headword(it))+'</button>';
+  });
+  R.zooms.forEach(function(z){
+    h+='<a class="zoombadge" href="#/'+key+'/'+z.to+'" title="'+esc(z.hint)+'" style="left:'+pct(z.at[0]/12.8)+';top:'+pct(z.at[1]/7.2)+'"><span class="mag" aria-hidden="true">🔍</span>'+esc(z.label)+'</a>';
   });
   stage.innerHTML=h;
-  stage.querySelectorAll('.hot').forEach(function(btn){
-    var ov=$('#ov'+btn.dataset.i);
-    btn.addEventListener('mouseenter',function(){ov.classList.add('on')});
-    btn.addEventListener('mouseleave',function(){ov.classList.remove('on')});
-    btn.addEventListener('focus',function(){ov.classList.add('on')});
-    btn.addEventListener('blur',function(){ov.classList.remove('on')});
-    btn.addEventListener('click',function(){openCard(R.items[+btn.dataset.i],btn)});
+  var hideT=null;
+  stage.querySelectorAll('.hot,.lab').forEach(function(btn){
+    var i=+btn.dataset.i, ov=$('#ov'+i);
+    function enter(){ if(lastPointer==='touch'||lastPointer==='pen')return; clearTimeout(hideT); stage.querySelectorAll('.lab.show').forEach(function(l){ if(+l.dataset.i!==i&&+l.dataset.i!==armed) l.classList.remove('show') }); ov.classList.add('on'); showLab(i,true) }
+    function leave(){ if(armed===i)return; ov.classList.remove('on'); hideT=setTimeout(function(){ if(armed!==i) showLab(i,false) },140) }
+    btn.addEventListener('mouseenter',enter); btn.addEventListener('mouseleave',leave);
+    btn.addEventListener('focus',function(){ov.classList.add('on');showLab(i,true)});
+    btn.addEventListener('blur',function(){ov.classList.remove('on'); if(armed!==i) showLab(i,false)});
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      if(labelMode==='hover'&&(lastPointer==='touch'||lastPointer==='pen')&&armed!==i){ // first tap: just show the label
+        disarm(); armed=i; ov.classList.add('on'); showLab(i,true); return }
+      disarm(); openCard(R.items[i],btn);
+    });
   });
+  stage.addEventListener('click',function(){ disarm() });
+  applyLabelMode();
   fit();
 }
 function headword(it){ if(it.verb) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
@@ -104,18 +142,38 @@ function openCard(it,from){
   else h+='<div class="gram">'+(it.g==='f'?'feminine':'masculine')+' noun · '+esc(it.ind)+' '+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   h+='</div></div>';
   h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
-  if(it.verb){
-    h+='<div class="sec"><h3>Present tense</h3><table class="conj">'+it.conj.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'}).join('')+'</table>'+(it.conj_note?'<div class="small">'+esc(it.conj_note)+'</div>':'')+'</div>';
+  var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
+  h+=exH;
+  if(it.verb&&it.tenses){
+    var cur=it.tenses.some(function(t){return t.key===curTense})?curTense:'present';
+    h+='<div class="sec conjsec"><h3>Conjugation</h3>';
+    h+='<div class="parts"><span><b>participe présent</b> '+esc(it.parts.present)+'</span><span><b>participe passé</b> '+esc(it.parts.past)+'</span><span><b>auxiliaire</b> '+esc(it.parts.aux)+'</span></div>';
+    h+='<div class="tabs" role="tablist" aria-label="Tenses">';
+    it.tenses.forEach(function(t){var on=t.key===cur;
+      h+='<button class="tab" role="tab" id="tab-'+t.key+'" data-tense="'+t.key+'" aria-controls="tp-'+t.key+'" aria-selected="'+on+'" tabindex="'+(on?0:-1)+'">'+esc(t.name)+'</button>'});
+    h+='</div>';
+    it.tenses.forEach(function(t){
+      h+='<div class="tpanel" role="tabpanel" id="tp-'+t.key+'" aria-labelledby="tab-'+t.key+'"'+(t.key===cur?'':' hidden')+'><table class="conj">'+t.rows.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'}).join('')+'</table>'+(t.note?'<div class="small">'+esc(t.note)+'</div>':'')+'</div>';
+    });
+    h+='</div>';
   }
-  h+='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
-  card.innerHTML=h; cardWrap.hidden=false; card.scrollTop=0; card.focus();
+  card.innerHTML=h; cardWrap.hidden=false; card.scrollTop=0; card.focus(); var st=card.querySelector('.tab[aria-selected="true"]'); if(st)revealTab(st);
 }
 function closeCard(){ if(cardWrap.hidden)return; cardWrap.hidden=true; if('speechSynthesis' in window)speechSynthesis.cancel(); if(lastFocus&&lastFocus.focus)lastFocus.focus() }
-cardWrap.addEventListener('click',function(e){ var t=e.target;
+function revealTab(b){ var tl=b.parentNode, x=b.offsetLeft-tl.offsetLeft, w=tl.clientWidth;
+  if(x<tl.scrollLeft+8||x+b.offsetWidth>tl.scrollLeft+w-8) tl.scrollLeft=Math.max(0,x-(w-b.offsetWidth)/2) }
+function selectTense(key,focus){ curTense=key; card.querySelectorAll('.tab').forEach(function(b){var on=b.dataset.tense===key; b.setAttribute('aria-selected',on); b.tabIndex=on?0:-1; if(on){ if(focus)b.focus({preventScroll:true}); revealTab(b) }});
+  card.querySelectorAll('.tpanel').forEach(function(p){p.hidden=p.id!=='tp-'+key}) }
+card.addEventListener('keydown',function(e){ var t=e.target; if(!t.classList||!t.classList.contains('tab'))return;
+  var tabs=[].slice.call(card.querySelectorAll('.tab')), i=tabs.indexOf(t), j=-1;
+  if(e.key==='ArrowRight')j=(i+1)%tabs.length; else if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length; else if(e.key==='Home')j=0; else if(e.key==='End')j=tabs.length-1;
+  if(j>=0){e.preventDefault(); selectTense(tabs[j].dataset.tense,true)} });
+cardWrap.addEventListener('click',function(e){ var t=e.target; var tb=t.closest('.tab'); if(tb){selectTense(tb.dataset.tense);return}
   if(t.closest('[data-close]'))closeCard(); var s=t.closest('[data-say]'); if(s)speak(s.dataset.say) });
 // ---------- controls ----------
-back.addEventListener('click',function(){ location.hash='#/' });
+back.addEventListener('click',function(){ location.hash=(view==='zoom'&&R&&R.parent)?'#/'+R.parent:'#/' });
 $('#hl').addEventListener('click',toggleHL);
+$('#labMode').addEventListener('click',function(){ setLabelMode(labelMode==='always'?'hover':'always') });
 function toggleHL(){ var on=!stage.classList.contains('hl'); stage.classList.toggle('hl',on); $('#hl').setAttribute('aria-pressed',on) }
 $('#fs').addEventListener('click',toggleFS);
 function toggleFS(){ var d=document; if(!d.fullscreenElement){ (app.requestFullscreen||app.webkitRequestFullscreen||function(){}).call(app) } else { (d.exitFullscreen||d.webkitExitFullscreen).call(d) } }
@@ -123,11 +181,12 @@ document.addEventListener('fullscreenchange',function(){ $('#fs').title=document
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){ if(!cardWrap.hidden){closeCard();e.preventDefault()} return }
   if(!cardWrap.hidden||e.ctrlKey||e.metaKey||e.altKey)return;
-  if(e.key==='h'||e.key==='H')toggleHL(); else if(e.key==='f'||e.key==='F')toggleFS();
-  else if(e.key==='Backspace'&&view==='room'){location.hash='#/';e.preventDefault()}
+  if(e.key==='h'||e.key==='H')toggleHL(); else if(e.key==='l'||e.key==='L')$('#labMode').click(); else if(e.key==='f'||e.key==='F')toggleFS();
+  else if(e.key==='Backspace'&&(view==='room'||view==='zoom')){back.click();e.preventDefault()}
 });
 function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  if(location.hash==='#/boulangerie') renderRoom(); else renderMap(); }
+  var m=location.hash.match(/^#\/(boulangerie)(?:\/(comptoir))?$/); if(m) renderRoom(m[2]||m[1]); else renderMap(); }
 window.addEventListener('hashchange',route);
+applyLabelMode();
 route();
 })();
