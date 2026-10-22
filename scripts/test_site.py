@@ -950,7 +950,8 @@ def finish(quiz):
     assert {link["kind"] for link in sector["links"]} == {"building", "street"}
     assert sector["exits"] == {}
     restaurant = normalize_scene(load(ROOT / "content" / "art" / "B09_restaurant" / "hotspots.json"))
-    assert {link["kind"] for link in restaurant["links"]} >= {"door", "window"}
+    assert {link["kind"] for link in restaurant["links"]} == {"door"}
+    assert all(link["target"] != "R_resto_kitchen_02" for link in restaurant["links"])
     assert street["exits"]["forward"]["kind"] == "street"
 
     pointed = normalize_scene({
