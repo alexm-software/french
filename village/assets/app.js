@@ -201,7 +201,10 @@ function openCard(it,from){
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
   if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
+  var ff=it.falseFriend;
+  if(ff) h+='<div class="ffbadge '+(ff.kind==='partial'?'part':'full')+'"><span aria-hidden="true">\u2691</span> '+(ff.kind==='partial'?'Partly a false friend':'False friend')+' \u00b7 <i lang="fr">faux ami</i></div>';
   h+='</div></div>';
+  if(ff) h+='<div class="sec ffnote '+(ff.kind==='partial'?'part':'full')+'"><h3>Watch out</h3><p>'+esc(ff.note)+'</p></div>';
   h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
   h+=exH;
