@@ -1,0 +1,1495 @@
+#!/usr/bin/env python3
+"""Writes content/v2/monde/layout.json (final hand-tuned v2 layout for monde)."""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "content", "v2", "monde", "layout.json")
+L = json.loads(r'''{
+ "building": "monde",
+ "name": "L'office de tourisme",
+ "main": "monde",
+ "roomList": [
+  {
+   "key": "monde",
+   "short": "L'office"
+  },
+  {
+   "key": "cartes",
+   "short": "Les cartes"
+  },
+  {
+   "key": "etage",
+   "short": "Le 1er étage"
+  },
+  {
+   "key": "boussole",
+   "short": "La boussole"
+  },
+  {
+   "key": "haut",
+   "short": "Le dernier étage"
+  }
+ ],
+ "building_id": "B25_monde",
+ "sector_id": "S08_travel",
+ "planned": {
+  "monde": {
+   "only": [
+    "fr_region_noun",
+    "fr_capitale_noun",
+    "fr_ville_noun",
+    "fr_cite_noun",
+    "fr_province_noun",
+    "fr_campagne_noun",
+    "fr_banlieue_noun",
+    "fr_nationalite_noun",
+    "fr_monde_noun",
+    "fr_pays_noun",
+    "fr_village_noun",
+    "fr_plan_noun",
+    "fr_paysage_noun",
+    "fr_sud_noun",
+    "fr_territoire_noun",
+    "fr_ouest_noun",
+    "fr_continent_noun"
+   ]
+  },
+  "cartes": {
+   "only": [
+    "fr_facon_noun",
+    "fr_direction_noun",
+    "fr_zone_noun",
+    "fr_est_noun",
+    "fr_cote_noun",
+    "fr_bout_noun",
+    "fr_lieu_noun",
+    "fr_endroit_noun",
+    "fr_milieu_noun",
+    "fr_nord_noun",
+    "fr_centre_noun",
+    "fr_quartier_noun",
+    "fr_domaine_noun",
+    "fr_mouvement_noun"
+   ]
+  },
+  "bagages": {
+   "only": [
+    "fr_position_noun",
+    "fr_base_noun",
+    "fr_contraire_noun",
+    "fr_distance_noun",
+    "fr_mise_noun",
+    "fr_arriere_noun",
+    "fr_sein_noun"
+   ]
+  },
+  "etage": {
+   "only": [
+    "fr_geographie_noun",
+    "fr_bordure_noun",
+    "fr_francophonie_noun",
+    "fr_comte_noun_2",
+    "fr_faubourg_noun",
+    "fr_application_noun",
+    "fr_nation_noun",
+    "fr_metropole_noun",
+    "fr_frontiere_noun",
+    "fr_patrie_noun",
+    "fr_mondialisation_noun",
+    "fr_regional_adj",
+    "fr_prefecture_noun",
+    "fr_immigration_noun",
+    "fr_compatriote_noun"
+   ]
+  },
+  "boussole": {
+   "only": [
+    "fr_etendue_noun",
+    "fr_portee_noun",
+    "fr_indication_noun",
+    "fr_instruction_noun",
+    "fr_cage_noun",
+    "fr_cachette_noun",
+    "fr_orientation_noun",
+    "fr_proximite_noun",
+    "fr_revers_noun",
+    "fr_voisinage_noun",
+    "fr_dispositif_noun",
+    "fr_rang_noun",
+    "fr_sud_ouest_noun",
+    "fr_sud_est_noun"
+   ]
+  },
+  "valises": {
+   "only": [
+    "fr_oree_noun",
+    "fr_localite_noun",
+    "fr_breche_noun",
+    "fr_pivot_noun",
+    "fr_antipode_noun",
+    "fr_centre_ville_noun",
+    "fr_metteur_noun",
+    "fr_amenagement_noun"
+   ]
+  },
+  "haut": {
+   "only": [
+    "fr_latitude_noun",
+    "fr_enclave_noun",
+    "fr_peninsule_noun",
+    "fr_berline_noun",
+    "fr_geographique_adj",
+    "fr_autochtone_noun",
+    "fr_urbanisme_noun",
+    "fr_hemisphere_noun",
+    "fr_chef_lieu_noun",
+    "fr_canton_noun",
+    "fr_provincial_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "monde": {
+   "name": "L'office de tourisme",
+   "image": "monde/monde.jpg",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "alt": "A busy tourist office painted as one big room: a painter on a stepladder retouching a sunlit region of hills, a giraffe in a tall red cap by a model Eiffel Tower, a girl turning a little Ferris wheel in a toy town, an explorer on the walls of an old model city, lavender fields with a white van, a camper waving a frying pan near his tent, a van and a cow, a brass band in a quiet street, a clerk stamping a parrot's passport, a mole on top of a globe, a raccoon at a striped border barrier, a village church with two lazing sheep, a beaver with a map on a plank bench, a hiker paying an old sage at a viewpoint, a penguin in a tub of suds, a terrier guarding his fenced hill, a bear cub on a rocking horse pointing at the sunset, and a granny in a traffic-cone hat finishing a map jigsaw. Doors lead to the map room, the staircase, the compass room and a ladder to the attic; an easel holds the village map.",
+   "mapExit": {
+    "box": [
+     8,
+     234,
+     156,
+     156
+    ],
+    "label": "Carrefour des Voyages"
+   },
+   "doors": [
+    {
+     "to": "cartes",
+     "label": "La salle des cartes",
+     "hint": "Pousse la porte à la rose des vents",
+     "hit": [
+      12,
+      95,
+      92,
+      135
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "Le premier étage",
+     "hint": "Monte le grand escalier",
+     "hit": [
+      672,
+      15,
+      120,
+      215
+     ]
+    },
+    {
+     "to": "boussole",
+     "label": "La salle de la boussole",
+     "hint": "Ouvre la petite porte bleue",
+     "hit": [
+      937,
+      80,
+      75,
+      122
+     ]
+    },
+    {
+     "to": "haut",
+     "label": "Le dernier étage",
+     "hint": "Grimpe à l'échelle",
+     "hit": [
+      1035,
+      10,
+      85,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_region_noun",
+     "box": [
+      140,
+      20,
+      123,
+      211
+     ],
+     "labelAt": [
+      202,
+      136
+     ]
+    },
+    {
+     "id": "fr_capitale_noun",
+     "box": [
+      267,
+      20,
+      193,
+      215
+     ],
+     "labelAt": [
+      362,
+      138
+     ]
+    },
+    {
+     "id": "fr_ville_noun",
+     "box": [
+      172,
+      270,
+      235,
+      112
+     ],
+     "labelAt": [
+      290,
+      324
+     ]
+    },
+    {
+     "id": "fr_cite_noun",
+     "box": [
+      422,
+      239,
+      227,
+      148
+     ],
+     "labelAt": [
+      536,
+      317
+     ]
+    },
+    {
+     "id": "fr_province_noun",
+     "box": [
+      15,
+      393,
+      255,
+      107
+     ],
+     "labelAt": [
+      142,
+      445
+     ]
+    },
+    {
+     "id": "fr_campagne_noun",
+     "box": [
+      290,
+      390,
+      303,
+      143
+     ],
+     "labelAt": [
+      442,
+      464
+     ]
+    },
+    {
+     "id": "fr_banlieue_noun",
+     "box": [
+      300,
+      540,
+      285,
+      160
+     ],
+     "labelAt": [
+      442,
+      624
+     ]
+    },
+    {
+     "id": "fr_nationalite_noun",
+     "box": [
+      12,
+      505,
+      274,
+      205
+     ],
+     "labelAt": [
+      148,
+      617
+     ]
+    },
+    {
+     "id": "fr_monde_noun",
+     "box": [
+      795,
+      140,
+      110,
+      200
+     ],
+     "labelAt": [
+      850,
+      250
+     ]
+    },
+    {
+     "id": "fr_pays_noun",
+     "box": [
+      910,
+      235,
+      140,
+      132
+     ],
+     "labelAt": [
+      980,
+      303
+     ]
+    },
+    {
+     "id": "fr_village_noun",
+     "box": [
+      1125,
+      60,
+      150,
+      220
+     ],
+     "labelAt": [
+      1199,
+      182
+     ]
+    },
+    {
+     "id": "fr_plan_noun",
+     "box": [
+      1055,
+      290,
+      215,
+      97
+     ],
+     "labelAt": [
+      1163,
+      336
+     ]
+    },
+    {
+     "id": "fr_paysage_noun",
+     "box": [
+      687,
+      370,
+      227,
+      156
+     ],
+     "labelAt": [
+      800,
+      452
+     ]
+    },
+    {
+     "id": "fr_sud_noun",
+     "box": [
+      930,
+      391,
+      148,
+      132
+     ],
+     "labelAt": [
+      1004,
+      459
+     ]
+    },
+    {
+     "id": "fr_territoire_noun",
+     "box": [
+      1094,
+      398,
+      172,
+      117
+     ],
+     "labelAt": [
+      1180,
+      456
+     ]
+    },
+    {
+     "id": "fr_ouest_noun",
+     "box": [
+      703,
+      529,
+      273,
+      182
+     ],
+     "labelAt": [
+      838,
+      627
+     ]
+    },
+    {
+     "id": "fr_continent_noun",
+     "box": [
+      985,
+      528,
+      285,
+      180
+     ],
+     "labelAt": [
+      1127,
+      626
+     ]
+    }
+   ]
+  },
+  "cartes": {
+   "name": "La salle des cartes",
+   "image": "monde/cartes.jpg",
+   "backTo": "monde",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "alt": "The map room: a father bear showing his cub how to fold a map, a deer in a navy coat turning a brass pointer on its pedestal, a zebra with a paint roller in its striped zone, a stork in her nest at the sunny window, a coat over the side of a chair, a ghost popping up at the end of a model street, a girl pushing a pin into a town plan, a boy pointing sticks at a chalk circle, a mouse with a windmill in the middle of a bench, a polar bear gnawing an icicle, a cat on a target, a donkey pulling a cart of little houses, three gingerbread men at a garden gate and a removal man pushing a house on a trolley. A shelf of toys sits above.",
+   "doors": [
+    {
+     "to": "monde",
+     "label": "L'office de tourisme",
+     "hint": "Ressors par la porte à la rose des vents",
+     "hit": [
+      10,
+      75,
+      115,
+      235
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bagages",
+     "label": "le porte-bagages",
+     "hint": "Regarde les jouets sur l'étagère",
+     "at": [
+      564,
+      80
+     ],
+     "obj": [
+      436,
+      0,
+      256,
+      158
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_facon_noun",
+     "box": [
+      128,
+      110,
+      162,
+      270
+     ],
+     "labelAt": [
+      210,
+      262
+     ]
+    },
+    {
+     "id": "fr_direction_noun",
+     "box": [
+      349,
+      140,
+      171,
+      290
+     ],
+     "labelAt": [
+      434,
+      306
+     ]
+    },
+    {
+     "id": "fr_zone_noun",
+     "box": [
+      20,
+      400,
+      326,
+      230
+     ],
+     "labelAt": [
+      182,
+      528
+     ]
+    },
+    {
+     "id": "fr_est_noun",
+     "box": [
+      700,
+      20,
+      170,
+      162
+     ],
+     "labelAt": [
+      786,
+      106
+     ]
+    },
+    {
+     "id": "fr_cote_noun",
+     "box": [
+      740,
+      187,
+      100,
+      86
+     ],
+     "labelAt": [
+      790,
+      225
+     ]
+    },
+    {
+     "id": "fr_bout_noun",
+     "box": [
+      999,
+      140,
+      132,
+      140
+     ],
+     "labelAt": [
+      1065,
+      212
+     ]
+    },
+    {
+     "id": "fr_lieu_noun",
+     "box": [
+      625,
+      277,
+      230,
+      115
+     ],
+     "labelAt": [
+      740,
+      333
+     ]
+    },
+    {
+     "id": "fr_endroit_noun",
+     "box": [
+      870,
+      186,
+      126,
+      208
+     ],
+     "labelAt": [
+      934,
+      300
+     ]
+    },
+    {
+     "id": "fr_milieu_noun",
+     "box": [
+      1134,
+      185,
+      141,
+      196
+     ],
+     "labelAt": [
+      1204,
+      293
+     ]
+    },
+    {
+     "id": "fr_nord_noun",
+     "box": [
+      625,
+      402,
+      175,
+      126
+     ],
+     "labelAt": [
+      712,
+      466
+     ]
+    },
+    {
+     "id": "fr_centre_noun",
+     "box": [
+      830,
+      397,
+      180,
+      123
+     ],
+     "labelAt": [
+      920,
+      459
+     ]
+    },
+    {
+     "id": "fr_quartier_noun",
+     "box": [
+      1025,
+      384,
+      240,
+      136
+     ],
+     "labelAt": [
+      1144,
+      454
+     ]
+    },
+    {
+     "id": "fr_domaine_noun",
+     "box": [
+      555,
+      538,
+      400,
+      177
+     ],
+     "labelAt": [
+      754,
+      634
+     ]
+    },
+    {
+     "id": "fr_mouvement_noun",
+     "box": [
+      970,
+      524,
+      250,
+      186
+     ],
+     "labelAt": [
+      1094,
+      624
+     ]
+    }
+   ]
+  },
+  "bagages": {
+   "name": "Le porte-bagages",
+   "image": "monde/bagages.jpg",
+   "parent": "cartes",
+   "alt": "Close-up of the toy shelf: a frog with a posy posing on an X on a chart, a blue-and-white vase on a stone base, a goat and a sheep pulling a rope opposite ways, a ladybird between the points of brass dividers, a mouse putting down a wedge of cheese, three ducklings in a line and a snail inside a ring of sand.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_position_noun",
+     "box": [
+      115,
+      35,
+      283,
+      320
+     ],
+     "labelAt": [
+      257,
+      219
+     ]
+    },
+    {
+     "id": "fr_base_noun",
+     "box": [
+      402,
+      100,
+      223,
+      225
+     ],
+     "labelAt": [
+      514,
+      224
+     ]
+    },
+    {
+     "id": "fr_contraire_noun",
+     "box": [
+      665,
+      55,
+      520,
+      265
+     ],
+     "labelAt": [
+      924,
+      205
+     ]
+    },
+    {
+     "id": "fr_distance_noun",
+     "box": [
+      130,
+      375,
+      236,
+      260
+     ],
+     "labelAt": [
+      248,
+      521
+     ]
+    },
+    {
+     "id": "fr_mise_noun",
+     "box": [
+      369,
+      435,
+      206,
+      200
+     ],
+     "labelAt": [
+      471,
+      545
+     ]
+    },
+    {
+     "id": "fr_arriere_noun",
+     "box": [
+      645,
+      455,
+      281,
+      170
+     ],
+     "labelAt": [
+      784,
+      545
+     ]
+    },
+    {
+     "id": "fr_sein_noun",
+     "box": [
+      929,
+      530,
+      221,
+      120
+     ],
+     "labelAt": [
+      1039,
+      590
+     ]
+    }
+   ]
+  },
+  "etage": {
+   "name": "Le premier étage",
+   "image": "monde/etage.jpg",
+   "backTo": "monde",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "alt": "The first floor: a blue jay on a pointer at a wall map with a bar graph, a boy painting a map at an easel, a man kneeling by a globe talking on an old telephone, a young count with a cheese on a cartwheel, a boar trotting out of an old stone town gate, a woman with an apple on her tablet, a kangaroo, a panda and a fox under a blue flag, a gorilla on a pole in a model of skyscrapers, a hippo tearing his ticket at a striped barrier, a man planting a young tree, a lizard with a container ship on a ring round a globe, a toy train between two model villages on a desk, a girl in a sash leading two tourists to a grand building with a flag, grey geese with suitcases on a welcome mat and two old men in berets.",
+   "doors": [
+    {
+     "to": "monde",
+     "label": "L'office de tourisme",
+     "hint": "Redescends par la porte",
+     "hit": [
+      1150,
+      65,
+      120,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_geographie_noun",
+     "box": [
+      20,
+      10,
+      255,
+      158
+     ],
+     "labelAt": [
+      148,
+      94
+     ]
+    },
+    {
+     "id": "fr_bordure_noun",
+     "box": [
+      285,
+      25,
+      175,
+      166
+     ],
+     "labelAt": [
+      372,
+      113
+     ]
+    },
+    {
+     "id": "fr_francophonie_noun",
+     "box": [
+      470,
+      15,
+      230,
+      185
+     ],
+     "labelAt": [
+      586,
+      115
+     ]
+    },
+    {
+     "id": "fr_comte_noun_2",
+     "box": [
+      780,
+      110,
+      165,
+      200
+     ],
+     "labelAt": [
+      862,
+      220
+     ]
+    },
+    {
+     "id": "fr_faubourg_noun",
+     "box": [
+      950,
+      40,
+      197,
+      300
+     ],
+     "labelAt": [
+      1048,
+      212
+     ]
+    },
+    {
+     "id": "fr_application_noun",
+     "box": [
+      8,
+      172,
+      140,
+      158
+     ],
+     "labelAt": [
+      78,
+      256
+     ]
+    },
+    {
+     "id": "fr_nation_noun",
+     "box": [
+      152,
+      194,
+      186,
+      141
+     ],
+     "labelAt": [
+      244,
+      266
+     ]
+    },
+    {
+     "id": "fr_metropole_noun",
+     "box": [
+      342,
+      210,
+      203,
+      138
+     ],
+     "labelAt": [
+      444,
+      282
+     ]
+    },
+    {
+     "id": "fr_frontiere_noun",
+     "box": [
+      5,
+      340,
+      170,
+      168
+     ],
+     "labelAt": [
+      89,
+      430
+     ]
+    },
+    {
+     "id": "fr_patrie_noun",
+     "box": [
+      190,
+      340,
+      139,
+      165
+     ],
+     "labelAt": [
+      260,
+      428
+     ]
+    },
+    {
+     "id": "fr_mondialisation_noun",
+     "box": [
+      333,
+      390,
+      177,
+      120
+     ],
+     "labelAt": [
+      426,
+      450
+     ]
+    },
+    {
+     "id": "fr_regional_adj",
+     "box": [
+      535,
+      352,
+      270,
+      136
+     ],
+     "labelAt": [
+      670,
+      422
+     ]
+    },
+    {
+     "id": "fr_prefecture_noun",
+     "box": [
+      5,
+      512,
+      308,
+      188
+     ],
+     "labelAt": [
+      160,
+      614
+     ]
+    },
+    {
+     "id": "fr_immigration_noun",
+     "box": [
+      317,
+      525,
+      243,
+      170
+     ],
+     "labelAt": [
+      439,
+      615
+     ]
+    },
+    {
+     "id": "fr_compatriote_noun",
+     "box": [
+      565,
+      492,
+      225,
+      208
+     ],
+     "labelAt": [
+      677,
+      606
+     ]
+    }
+   ]
+  },
+  "boussole": {
+   "name": "La salle de la boussole",
+   "image": "monde/boussole.jpg",
+   "backTo": "monde",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "alt": "The compass room, with a big compass rose painted on the floor: a man on a deckchair before a world map of wide blue oceans, a porter stretching up for a hat on top of a rack that holds a model landscape, a cat in an explorer's helmet pointing, an ostrich holding up a picture card for a puppy folding a paper plane, a canary in a gold cage, a squirrel hiding coins in a flowerpot, an ant with a compass and map, a cat and a spaniel squeezed on a bench, a painter behind her canvas, a neighbour waving from a window, an inventor beside a machine of cogs and pulleys, a granny ringing a bell for a row of rabbits, a sheep in a cowboy hat in a tub of suds and a duck in a soapy nest.",
+   "doors": [
+    {
+     "to": "monde",
+     "label": "L'office de tourisme",
+     "hint": "Ressors par la porte en bois",
+     "hit": [
+      10,
+      60,
+      115,
+      250
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "valises",
+     "label": "le porte-bagages",
+     "hint": "Regarde le paysage miniature sur le porte-bagages",
+     "at": [
+      615,
+      170
+     ],
+     "obj": [
+      452,
+      74,
+      326,
+      183
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_etendue_noun",
+     "box": [
+      143,
+      10,
+      195,
+      318
+     ],
+     "labelAt": [
+      241,
+      192
+     ]
+    },
+    {
+     "id": "fr_portee_noun",
+     "box": [
+      342,
+      15,
+      113,
+      271
+     ],
+     "labelAt": [
+      398,
+      169
+     ]
+    },
+    {
+     "id": "fr_indication_noun",
+     "box": [
+      15,
+      313,
+      125,
+      187
+     ],
+     "labelAt": [
+      77,
+      415
+     ]
+    },
+    {
+     "id": "fr_instruction_noun",
+     "box": [
+      155,
+      332,
+      175,
+      216
+     ],
+     "labelAt": [
+      242,
+      452
+     ]
+    },
+    {
+     "id": "fr_cage_noun",
+     "box": [
+      345,
+      289,
+      125,
+      241
+     ],
+     "labelAt": [
+      406,
+      423
+     ]
+    },
+    {
+     "id": "fr_cachette_noun",
+     "box": [
+      475,
+      320,
+      155,
+      225
+     ],
+     "labelAt": [
+      553,
+      444
+     ]
+    },
+    {
+     "id": "fr_orientation_noun",
+     "box": [
+      140,
+      552,
+      220,
+      148
+     ],
+     "labelAt": [
+      250,
+      630
+     ]
+    },
+    {
+     "id": "fr_proximite_noun",
+     "box": [
+      402,
+      549,
+      212,
+      163
+     ],
+     "labelAt": [
+      508,
+      635
+     ]
+    },
+    {
+     "id": "fr_revers_noun",
+     "box": [
+      775,
+      110,
+      121,
+      235
+     ],
+     "labelAt": [
+      835,
+      242
+     ]
+    },
+    {
+     "id": "fr_voisinage_noun",
+     "box": [
+      899,
+      15,
+      136,
+      160
+     ],
+     "labelAt": [
+      967,
+      99
+     ]
+    },
+    {
+     "id": "fr_dispositif_noun",
+     "box": [
+      1040,
+      10,
+      240,
+      263
+     ],
+     "labelAt": [
+      1160,
+      158
+     ]
+    },
+    {
+     "id": "fr_rang_noun",
+     "box": [
+      900,
+      277,
+      380,
+      221
+     ],
+     "labelAt": [
+      1090,
+      399
+     ]
+    },
+    {
+     "id": "fr_sud_ouest_noun",
+     "box": [
+      635,
+      490,
+      205,
+      210
+     ],
+     "labelAt": [
+      737,
+      606
+     ]
+    },
+    {
+     "id": "fr_sud_est_noun",
+     "box": [
+      1025,
+      502,
+      240,
+      188
+     ],
+     "labelAt": [
+      1145,
+      604
+     ]
+    }
+   ]
+  },
+  "valises": {
+   "name": "Le porte-bagages",
+   "image": "monde/valises.jpg",
+   "parent": "boussole",
+   "alt": "Close-up of the model landscape on the rack: a fawn at the edge of a forest in a sunbeam, a tiny steam engine stopped by a one-house station, a hedgehog in a gap of a stone wall, a ballerina doll spinning on a brass pin in the middle of a round table, an aunty doll in a pea pod at its rim, Santa on a Ferris wheel, a toy boy with a megaphone and his sister on a chalk cross, and a toy gardener laying out little hedges.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_oree_noun",
+     "box": [
+      70,
+      30,
+      148,
+      320
+     ],
+     "labelAt": [
+      144,
+      214
+     ]
+    },
+    {
+     "id": "fr_localite_noun",
+     "box": [
+      222,
+      200,
+      338,
+      230
+     ],
+     "labelAt": [
+      390,
+      328
+     ]
+    },
+    {
+     "id": "fr_breche_noun",
+     "box": [
+      20,
+      440,
+      520,
+      200
+     ],
+     "labelAt": [
+      280,
+      550
+     ]
+    },
+    {
+     "id": "fr_pivot_noun",
+     "box": [
+      690,
+      250,
+      133,
+      200
+     ],
+     "labelAt": [
+      756,
+      360
+     ]
+    },
+    {
+     "id": "fr_antipode_noun",
+     "box": [
+      827,
+      365,
+      121,
+      100
+     ],
+     "labelAt": [
+      886,
+      413
+     ]
+    },
+    {
+     "id": "fr_centre_ville_noun",
+     "box": [
+      952,
+      65,
+      303,
+      400
+     ],
+     "labelAt": [
+      1104,
+      299
+     ]
+    },
+    {
+     "id": "fr_metteur_noun",
+     "box": [
+      690,
+      525,
+      260,
+      140
+     ],
+     "labelAt": [
+      820,
+      597
+     ]
+    },
+    {
+     "id": "fr_amenagement_noun",
+     "box": [
+      1000,
+      525,
+      275,
+      165
+     ],
+     "labelAt": [
+      1138,
+      613
+     ]
+    }
+   ]
+  },
+  "haut": {
+   "name": "Le dernier étage",
+   "image": "monde/haut.jpg",
+   "backTo": "monde",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "alt": "The attic under sloping beams: a cat in sunglasses on the ring of a big globe, a crab waving one claw in a little fenced plot, a seal and a copper penny on a sea map with a long peninsula, a bear polishing a black saloon car, a photographer with a box camera aimed at a mountain painting, an old woman in a shawl pointing the way for two young tourists beside a grandfather clock, an owl in a hard hat at a drafting table of model streets, a hamster asleep in half a globe, a chef behind the biggest model town, a strongman lifting a huge tin can beside a red flag and a young farmer driving a green van full of vegetables.",
+   "doors": [
+    {
+     "to": "monde",
+     "label": "L'office de tourisme",
+     "hint": "Redescends par la porte",
+     "hit": [
+      25,
+      50,
+      120,
+      260
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_latitude_noun",
+     "box": [
+      190,
+      25,
+      196,
+      268
+     ],
+     "labelAt": [
+      288,
+      177
+     ]
+    },
+    {
+     "id": "fr_enclave_noun",
+     "box": [
+      5,
+      313,
+      295,
+      118
+     ],
+     "labelAt": [
+      152,
+      371
+     ]
+    },
+    {
+     "id": "fr_peninsule_noun",
+     "box": [
+      20,
+      434,
+      387,
+      276
+     ],
+     "labelAt": [
+      214,
+      590
+     ]
+    },
+    {
+     "id": "fr_berline_noun",
+     "box": [
+      432,
+      464,
+      338,
+      216
+     ],
+     "labelAt": [
+      602,
+      584
+     ]
+    },
+    {
+     "id": "fr_geographique_adj",
+     "box": [
+      420,
+      20,
+      315,
+      226
+     ],
+     "labelAt": [
+      578,
+      146
+     ]
+    },
+    {
+     "id": "fr_autochtone_noun",
+     "box": [
+      410,
+      249,
+      140,
+      212
+     ],
+     "labelAt": [
+      480,
+      365
+     ]
+    },
+    {
+     "id": "fr_urbanisme_noun",
+     "box": [
+      745,
+      20,
+      253,
+      230
+     ],
+     "labelAt": [
+      870,
+      148
+     ]
+    },
+    {
+     "id": "fr_hemisphere_noun",
+     "box": [
+      825,
+      279,
+      220,
+      162
+     ],
+     "labelAt": [
+      934,
+      365
+     ]
+    },
+    {
+     "id": "fr_chef_lieu_noun",
+     "box": [
+      1002,
+      40,
+      268,
+      221
+     ],
+     "labelAt": [
+      1136,
+      162
+     ]
+    },
+    {
+     "id": "fr_canton_noun",
+     "box": [
+      1087,
+      265,
+      183,
+      315
+     ],
+     "labelAt": [
+      1179,
+      445
+     ]
+    },
+    {
+     "id": "fr_provincial_noun",
+     "box": [
+      790,
+      444,
+      293,
+      246
+     ],
+     "labelAt": [
+      936,
+      582
+     ]
+    }
+   ]
+  }
+ }
+}''')
+with open(OUT, "w", encoding="utf-8") as f:
+    json.dump(L, f, ensure_ascii=False, indent=2)
+print("wrote", OUT)
