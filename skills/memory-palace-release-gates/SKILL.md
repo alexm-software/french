@@ -84,3 +84,22 @@ Mnemonic pictures are now made as separate assets, independent of the room, then
 - **Hotspots line up:** clicking the centre of each asset opens its own card at every screen size.
 Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then show the user.
 - **Signs are assets, labels always show (user, 14:29 UTC):** a room's name sign is its own asset with its text fitted inside the plaque with padding at every screen size; text overflowing a sign's edges fails. Every placed item carries a visible label (word with article, verbs as the infinitive), always shown, not only on hover. In language palaces, place feminine nouns clearly left and masculine clearly right, in zooms too, with no physical divider; slight overhang of the centre line is fine, and any real exception is listed.
+
+## Round 4 additions (user review, Oct 23)
+Gates G and H. Each must pass before a space is shown to the user.
+
+**G. Place fit (words and close-ups).**
+- **Planned assignments are law.** Every space takes its words from the project's planned item-to-room assignment (the inventory's room id and the room list's theme). Never pick words because they are unused or easy to draw. If a planned room has no space yet, build that space; don't borrow its words. Words that leave a space go to a reserve file tagged with their planned room. (Once a parish hall got an umbrella, a coat and knitting words, and the plan already had a home for each of them.)
+- **Every word suits the place.** A teacher reading the room's name would expect each item there. Furniture that isn't needed (a random table) is never a reason to hold unrelated items.
+- **A close-up is a real spot where its objects belong:** a coat peg, a knitting basket, an easel, a vestment cupboard. It's never a generic table.
+- **A close-up looks like the same place as its parent:** the same piece of furniture, walls, light and style, just closer. The object it zooms into is visible in the parent painting, and its hotspot opens the zoom. (Once a desk zoom looked like a desk in a different building, and a classroom had no desk until you zoomed in.)
+
+**H. Integrated scene.**
+- **No rows of stickers.** Items are never lined up in the foreground of an empty room. Use the whole frame: walls, shelves, beams, windows, noticeboards, stairs, pews, niches. Vary depth and scale, and add ambient life (background people and activity) so the place feels lived in. Background figures are scenery and carry no hotspot.
+- **Scene first, then assets drawn to fit.** Paint the room first, then write a slot spec for every item before generating it: the surface it rests on, the camera angle at that spot, the light direction and colour, its target height from perspective, its pose, and what hides it (pew backs, counters). Generate one sprite per slot, all of a room's slots in parallel, with the spec in the prompt. Harmonise in code: match colour and light to the surrounding patch, remove fringes, add contact and cast shadows, and paste furniture from the background back over figures that sit behind it. Never repaint a whole room to fix one item; redraw only the failing sprite. (Once, generic cut-outs dropped onto a church floated in front of the pews and were called "genuinely terrible". Slot-specific sprites with occlusion fixed it.)
+- **Nothing merges with architecture.** No figure overlaps a door frame, door leaf or exit opening so that it seems to come out of it. Keep exit openings clear and clickable. (Once, a man with lilies seemed to grow out of a side door.)
+- **Verb characters act at human scale** in the scene, never as tiny figures in a row.
+- **Real doors to sub-rooms.** A sub-room is reached through a painted door, stair or archway, never a sign on a wall. Every building's main room has a painted way out (front door or porch) to the map, as well as Back. Back from a sub-room goes to its building's main room, and from a zoom to its parent.
+- **Cards show all options at once.** All tense tabs or similar choices are visible at every screen size by wrapping or a grid, never by sideways scrolling.
+- **Every hook element is visible.** The sound-alike creature or object is drawn in the item's own picture. (Once, the boire picture had no boar.)
+- **Show before shipping.** Show the user clean screenshots of a redone space before it goes live, and fix what they flag before starting the next space.

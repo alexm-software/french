@@ -23,7 +23,7 @@ World map, then sectors (districts), then sites (buildings or outdoor spots), th
 
 ## Build order (always in this sequence)
 1. **Inventory**: list every item to memorize with its metadata (level, category, sub-category). Keep it in a machine-readable data file (JSON/YAML/CSV), not prose.
-2. **Assign items to rooms** by theme. Set density targets per room type and record them (e.g. 8 to 12 or more for rooms of simple items, scaled by object size; 4 to 6 for rooms of complex items that carry lots of attached detail). Split a room or add zoom spots before it gets crowded.
+2. **Assign items to rooms** by theme, once, in the data file. Every later build takes each room's items from this assignment and never re-picks items ad hoc for being unused or easy to draw (see gate G in the release-gates skill). Set density targets per room type and record them (e.g. 8 to 12 or more for rooms of simple items, scaled by object size; 4 to 6 for rooms of complex items that carry lots of attached detail). Split a room or add zoom spots before it gets crowded.
 3. **Group rooms into sectors** by common theme or real-life layout (e.g. a house holds kitchen, bedroom, bathroom).
 4. **Lay out the world map**: place sectors, connect them, and define a starting point plus mostly-linear suggested paths that still allow free roaming.
 5. **Design each room**, then run the room checks below before moving on.
@@ -67,6 +67,7 @@ Use fixed spatial rules so position itself carries information. Decide them once
 Choose between generated illustrations (richer, harder to keep consistent and edit) and hand-coded SVG (each item a separate <g> with an id, class, and title, so it is clickable, consistent across map/sector/room, and editable). Show the user one example room in each candidate pipeline before committing. A generator script that emits SVG from the room data keeps token use low.
 
 ## Asset structure
+Current preferred method (user review, Oct 23): keep the painted empty room as the fixed scene, then draw each item's asset to fit its exact slot (surface, angle, light, size, pose, occlusion) and composite it with code harmonisation. A single item can then be fixed without repainting the room. See gate H in the release-gates skill. The notes below are older lessons.
 Lessons from testing: flat vector SVG looked noticeably uglier than painted art, and painted cutouts composited onto a painted room looked jarring (different brushwork and lighting, sticker effect) even with shadows and color matching. Prefer one full painting per room plus a hotspot data file (polygon or box per item) for clickability; edit by regenerating the room with the previous image as a reference. If you do composite, generate objects with the room as a style and lighting reference.
 Alternative: keep each item as its own asset (one file per object) and each room as an empty background plus a layout data file (object id, position, scale, z-order, category side). A build script composes rooms, sector views, and the world map from these, so edits touch one small file, objects are reused consistently across views, and token use stays low. Shared style rules (palette, outline weight, light direction) plus an auto-added ground shadow make objects sit naturally in the scene. Large fixed features that interact deeply with the architecture can stay part of the background.
 
