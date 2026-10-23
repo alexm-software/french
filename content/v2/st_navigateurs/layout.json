@@ -1,0 +1,567 @@
+{
+ "building": "st_navigateurs",
+ "building_id": "ST_navigateurs",
+ "sector_id": "S08_travel",
+ "name": "Quai des Grands Départs",
+ "main": "st_navigateurs",
+ "roomList": [
+  {
+   "key": "st_navigateurs",
+   "short": "La place"
+  },
+  {
+   "key": "rebonds",
+   "short": "La ruelle"
+  },
+  {
+   "key": "navigateurs",
+   "short": "Le quai"
+  },
+  {
+   "key": "vagabonds",
+   "short": "Le chemin"
+  },
+  {
+   "key": "balade",
+   "short": "L'allée"
+  }
+ ],
+ "planned": {
+  "st_navigateurs": {
+   "vocabRoom": "ST_movement_seg011",
+   "only": [
+    "fr_defiler_verb",
+    "fr_promouvoir_verb",
+    "fr_chevaucher_verb",
+    "fr_programmer_verb",
+    "fr_escorter_verb",
+    "fr_amorcer_verb"
+   ]
+  },
+  "rebonds": {
+   "vocabRoom": "ST_movement_seg012",
+   "only": [
+    "fr_longer_verb",
+    "fr_ramper_verb",
+    "fr_pointer_verb",
+    "fr_rebondir_verb",
+    "fr_roder_verb",
+    "fr_echouer_verb"
+   ]
+  },
+  "navigateurs": {
+   "vocabRoom": "ST_movement_seg013",
+   "only": [
+    "fr_efforcer_verb",
+    "fr_guider_verb",
+    "fr_naviguer_verb",
+    "fr_elancer_verb",
+    "fr_sursauter_verb",
+    "fr_ecrouler_verb"
+   ]
+  },
+  "vagabonds": {
+   "vocabRoom": "ST_movement_seg014",
+   "only": [
+    "fr_effondrer_verb",
+    "fr_cotoyer_verb",
+    "fr_faufiler_verb",
+    "fr_aboutir_verb",
+    "fr_orienter_verb",
+    "fr_errer_verb"
+   ]
+  },
+  "balade": {
+   "vocabRoom": "ST_movement_seg015",
+   "only": [
+    "fr_osciller_verb",
+    "fr_derouler_verb",
+    "fr_balader_verb",
+    "fr_accoucher_verb",
+    "fr_transporter_verb",
+    "fr_ficher_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_navigateurs": {
+   "name": "Place du Défilé",
+   "image": "st_navigateurs/st_navigateurs.jpg",
+   "alt": "A harbour square on a windy day, painted in watercolour: Monsieur Verbe the mime leads a parade of ducks with his drum, promotes a hen in her nest to head chef, rides a small donkey, programs a little robot that walks a dog, escorts a line of ducklings past two swans with a white flag and baits his fishing line with bread on a bollard. The stone archway on the left leads back to the crossroads; the blue-awning street, the pier, the headland stairs and the promenade lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     40,
+     140,
+     150,
+     180
+    ],
+    "label": "Carrefour des Voyages"
+   },
+   "doors": [
+    {
+     "to": "rebonds",
+     "label": "Ruelle des Rebonds",
+     "hint": "Up the little street under the blue awning",
+     "hit": [
+      270,
+      240,
+      105,
+      80
+     ]
+    },
+    {
+     "to": "navigateurs",
+     "label": "Quai des Navigateurs",
+     "hint": "Out along the wooden pier",
+     "hit": [
+      560,
+      312,
+      190,
+      45
+     ]
+    },
+    {
+     "to": "vagabonds",
+     "label": "Chemin des Vagabonds",
+     "hint": "Up the stairs to the headland",
+     "hit": [
+      875,
+      215,
+      90,
+      110
+     ]
+    },
+    {
+     "to": "balade",
+     "label": "Allée de la Balade",
+     "hint": "Along the promenade by the water",
+     "hit": [
+      1090,
+      290,
+      170,
+      60
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_defiler_verb",
+     "box": [
+      20,
+      330,
+      160,
+      290
+     ]
+    },
+    {
+     "id": "fr_promouvoir_verb",
+     "box": [
+      185,
+      325,
+      205,
+      280
+     ]
+    },
+    {
+     "id": "fr_chevaucher_verb",
+     "box": [
+      397,
+      365,
+      195,
+      300
+     ]
+    },
+    {
+     "id": "fr_programmer_verb",
+     "box": [
+      598,
+      375,
+      222,
+      275
+     ]
+    },
+    {
+     "id": "fr_escorter_verb",
+     "box": [
+      825,
+      370,
+      280,
+      300
+     ]
+    },
+    {
+     "id": "fr_amorcer_verb",
+     "box": [
+      1110,
+      375,
+      168,
+      290
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg011"
+  },
+  "rebonds": {
+   "name": "Ruelle des Rebonds",
+   "image": "st_navigateurs/rebonds.jpg",
+   "backTo": "st_navigateurs",
+   "alt": "A sunny harbour lane with bunting: Monsieur Verbe the mime walks along the long wall with a blue jay, crawls on a patterned rug after a red ball, points at a squirrel in the tree while his spotted dog looks too, throws a ball that bounces off the lamp post, prowls beside fish crates with a fox and sneezes as his little rocket fails to take off. The old door on the left leads back to the square; the jetty at the bottom right leads on to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_navigateurs",
+     "label": "Place du Défilé",
+     "hint": "Back through the old door to the square",
+     "hit": [
+      0,
+      190,
+      58,
+      150
+     ]
+    },
+    {
+     "to": "navigateurs",
+     "label": "Quai des Navigateurs",
+     "hint": "Down to the jetty and the quay",
+     "hit": [
+      945,
+      600,
+      330,
+      115
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_longer_verb",
+     "box": [
+      64,
+      230,
+      226,
+      180
+     ]
+    },
+    {
+     "id": "fr_ramper_verb",
+     "box": [
+      165,
+      415,
+      390,
+      185
+     ]
+    },
+    {
+     "id": "fr_pointer_verb",
+     "box": [
+      390,
+      235,
+      210,
+      165
+     ]
+    },
+    {
+     "id": "fr_rebondir_verb",
+     "box": [
+      605,
+      215,
+      140,
+      290
+     ]
+    },
+    {
+     "id": "fr_roder_verb",
+     "box": [
+      760,
+      320,
+      280,
+      225
+     ]
+    },
+    {
+     "id": "fr_echouer_verb",
+     "box": [
+      1050,
+      325,
+      215,
+      230
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg012"
+  },
+  "navigateurs": {
+   "name": "Quai des Navigateurs",
+   "image": "st_navigateurs/navigateurs.jpg",
+   "backTo": "st_navigateurs",
+   "alt": "A windy harbour quay: Monsieur Verbe the mime pushes a giant pumpkin with all his effort, mirror in hand, guides a little sailing boat in to the jetty, navigates in a walnut-shell boat with a telescope, dashes forward with a lance at a hanging ring, a mirror at his belt, jumps with surprise as a mushroom pops out of a frying pan and watches a tower of crumble bowls collapse, mirror in hand. The stone stairs on the left lead back to the square; the headland path on the right leads on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_navigateurs",
+     "label": "Place du Défilé",
+     "hint": "Back up the stone stairs to the square",
+     "hit": [
+      10,
+      170,
+      90,
+      100
+     ]
+    },
+    {
+     "to": "vagabonds",
+     "label": "Chemin des Vagabonds",
+     "hint": "Up the headland path",
+     "hit": [
+      1060,
+      140,
+      150,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_efforcer_verb",
+     "box": [
+      40,
+      280,
+      285,
+      230
+     ]
+    },
+    {
+     "id": "fr_guider_verb",
+     "box": [
+      340,
+      120,
+      240,
+      265
+     ]
+    },
+    {
+     "id": "fr_naviguer_verb",
+     "box": [
+      330,
+      450,
+      240,
+      195
+     ]
+    },
+    {
+     "id": "fr_elancer_verb",
+     "box": [
+      585,
+      340,
+      245,
+      280
+     ]
+    },
+    {
+     "id": "fr_sursauter_verb",
+     "box": [
+      835,
+      300,
+      245,
+      345
+     ]
+    },
+    {
+     "id": "fr_ecrouler_verb",
+     "box": [
+      1085,
+      320,
+      195,
+      330
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg013"
+  },
+  "vagabonds": {
+   "name": "Chemin des Vagabonds",
+   "image": "st_navigateurs/vagabonds.jpg",
+   "backTo": "st_navigateurs",
+   "alt": "A headland path through yellow gorse above the harbour: Monsieur Verbe the mime looks in his mirror as his cart of fondue pots collapses, squeezes onto a bench rubbing shoulders with two old fishermen, wears antenna feelers and worms his way between two cows, breaks a finish ribbon in a green beret beside a donkey, turns his map to line up with a compass and wanders in looping footprints. The steps on the left lead back down to the square; the iron gate on the right leads on to the promenade.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_navigateurs",
+     "label": "Place du Défilé",
+     "hint": "Back down the steps to the square",
+     "hit": [
+      25,
+      120,
+      110,
+      160
+     ]
+    },
+    {
+     "to": "balade",
+     "label": "Allée de la Balade",
+     "hint": "Through the iron gate to the promenade",
+     "hit": [
+      1125,
+      170,
+      110,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_effondrer_verb",
+     "box": [
+      25,
+      290,
+      170,
+      300
+     ]
+    },
+    {
+     "id": "fr_cotoyer_verb",
+     "box": [
+      225,
+      290,
+      265,
+      240
+     ]
+    },
+    {
+     "id": "fr_faufiler_verb",
+     "box": [
+      495,
+      265,
+      222,
+      340
+     ]
+    },
+    {
+     "id": "fr_aboutir_verb",
+     "box": [
+      725,
+      245,
+      180,
+      310
+     ]
+    },
+    {
+     "id": "fr_orienter_verb",
+     "box": [
+      915,
+      300,
+      135,
+      255
+     ]
+    },
+    {
+     "id": "fr_errer_verb",
+     "box": [
+      1060,
+      330,
+      175,
+      230
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg014"
+  },
+  "balade": {
+   "name": "Allée de la Balade",
+   "image": "st_navigateurs/balade.jpg",
+   "backTo": "st_navigateurs",
+   "alt": "A breezy seaside promenade: Monsieur Verbe the mime watches a big fan swing from side to side, unrolls a red carpet for a hopping kangaroo, takes three ducks for a stroll, waving, gestures like a museum guide at a framed plaque on the little museum wall, works a small crane lifting a crate of oranges onto a cart and files papers in a cabinet with a fish tail sticking out. The stone archway on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_navigateurs",
+     "label": "Place du Défilé",
+     "hint": "Back through the stone archway to the square",
+     "hit": [
+      55,
+      125,
+      135,
+      185
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_osciller_verb",
+     "box": [
+      15,
+      315,
+      234,
+      300
+     ]
+    },
+    {
+     "id": "fr_derouler_verb",
+     "box": [
+      255,
+      350,
+      225,
+      300
+     ]
+    },
+    {
+     "id": "fr_balader_verb",
+     "box": [
+      495,
+      315,
+      240,
+      310
+     ]
+    },
+    {
+     "id": "fr_accoucher_verb",
+     "box": [
+      970,
+      185,
+      205,
+      160
+     ]
+    },
+    {
+     "id": "fr_transporter_verb",
+     "box": [
+      745,
+      350,
+      220,
+      295
+     ]
+    },
+    {
+     "id": "fr_ficher_verb",
+     "box": [
+      1030,
+      350,
+      245,
+      290
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg015"
+  }
+ }
+}
