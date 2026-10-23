@@ -7,10 +7,13 @@ notes, verb tables) is read, never rewritten, from:
   2. data/source/vocab.jsonl (+ data/source/rooms.json for planned room membership).
 A layout entry may set "text": "vocab" to use data/source/vocab.jsonl instead of the v1 payload
 (e.g. v1's « le banc » hook is a piggy bank; the source hook is a pew/bench).
-The only v2-specific input is the per-building layout file content/v2/<building>/layout.json:
-painting, hotspot box (1280x720 px), optional 'scene' note ("In the picture: ..."),
-doors, map exit and zooms. Labels are placed automatically and checked by
-scripts/qa/check_v2.py.
+v2-specific inputs live in content/v2/<building>/:
+  layout.json  painting, hotspot box (1280x720 px), optional "labelAt" [cx, top] px,
+               doors, map exit and zooms. Labels are otherwise placed automatically.
+  hooks.json   optional {word_id: {"hook": ..., "why": ...}} overrides, used ONLY where the
+               v1 hook breaks the content rules or cannot be painted; the painting must show
+               the override hook. v1 data is never edited.
+Everything is checked by scripts/qa/check_v2.py.
 
 usage: python3 scripts/v2/build_v2.py [building ...]   (default: every content/v2/*/layout.json)
 """
@@ -141,6 +144,13 @@ def place_labels(room):
     for i, it in enumerate(room["items"]):
         x, y, w, h = it["box"]
         lw = label_w(it["_hw"])
+        if it.get("_labelAt"):
+            # manual placement from layout.json: "labelAt": [centre_x_px, top_px]
+            c, t = it["_labelAt"]
+            best = [c - lw / 2, t, lw, LAB_H]
+            placed.append(best)
+            it["_lab"] = best
+            continue
         cx = x + w / 2
         cands = []
         for top in (y + h + 4, y - LAB_H - 4, y + h - LAB_H - 4, y + 4, y + h / 2 - LAB_H / 2):
@@ -182,6 +192,11 @@ def card_crop(img, box, out):
 
 def build(bld, v1, vocab):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
+    # v2 hook overrides (content/v2/<bld>/hooks.json): {word_id: {"hook": ..., "why": ...}}
+    # used where the v1 hook breaks the content rules or does not match the painting; v1 data is never edited.
+    hp = ROOT / "content" / "v2" / bld / "hooks.json"
+    overrides = json.loads(hp.read_text(encoding="utf-8")) if hp.exists() else {}
+    overrides = {k: v for k, v in overrides.items() if not k.startswith("_")}
     out_rooms = {}
     for key, room in L["rooms"].items():
         img = Image.open(V2 / room["image"]).convert("RGB")
@@ -197,6 +212,10 @@ def build(bld, v1, vocab):
                 raise SystemExit(f"{bld}/{key}: unknown word id {wid}")
             it["_hw"] = headword(it)
             it["box"] = spec["box"]
+            if wid in overrides:
+                it["hook"] = overrides[wid]["hook"]
+            if spec.get("labelAt"):
+                it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):
                 it["scene"] = spec["scene"]
             items.append(it)
@@ -238,6 +257,14 @@ def main():
     v1, vocab = load_v1_items(), load_vocab()
     for b in blds:
         build(b, v1, vocab)
+    unused = []
+    for b in blds:
+        hp = ROOT / "content" / "v2" / b / "hooks.json"
+        if hp.exists():
+            ids = {i["id"] for r in json.loads((ROOT / "content" / "v2" / b / "layout.json").read_text(encoding="utf-8"))["rooms"].values() for i in r["items"]}
+            unused += [f"{b}:{k}" for k in json.loads(hp.read_text(encoding="utf-8")) if not k.startswith("_") and k not in ids]
+    if unused:
+        raise SystemExit("hooks.json ids not in layout: " + ", ".join(unused))
 
 
 if __name__ == "__main__":

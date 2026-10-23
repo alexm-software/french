@@ -6,9 +6,11 @@ Served at `/french/v2/`. The original village (`/french/`) is untouched.
   and the page only adds invisible hotspots, a soft glow and white label pills (with articles).
 * Text (glosses, hooks, examples, verb tables) is **not forked**: `scripts/v2/build_v2.py` reads the v1
   payloads in `village/assets/data/*.js` and `data/source/vocab.jsonl` at build time.
-* Per building: `content/v2/<bld>/layout.json` (hotspot boxes in painting px, doors, zooms, scene notes),
-  `village/v2/<bld>/*.jpg` (paintings + `cards/` crops), `village/v2/data/<bld>.js` (generated).
-  A building becomes live on the map as soon as its data file exists (`scripts/v2/build_map.py`).
+* Per building: `content/v2/<bld>/layout.json` (hotspot boxes in painting px, doors, zooms), optional
+  `content/v2/<bld>/hooks.json` (v2 hook overrides), `village/v2/<bld>/*.jpg` (paintings + `cards/` crops),
+  `village/v2/data/<bld>.js` (generated). Buildings are discovered at runtime: the map probes
+  `data/<bld>.js` for every building in `data/map.js`; it is live if the file loads, otherwise "bientôt".
+  Adding a building never touches the shared shell — see `content/v2/README.md`.
 * Rules checked by `scripts/qa/check_v2.py [--browser]`: no overlapping hotspots/labels/doors, F left / M right,
   articles on labels, painted exit in every main room, painted door for every passage, Back from a sub-room
   goes to the main room, zoom objects visible in their parent, 7-tense verb cards without sideways scroll,
