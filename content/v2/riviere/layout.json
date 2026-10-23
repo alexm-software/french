@@ -1,0 +1,378 @@
+{
+ "building": "riviere",
+ "building_id": "B28_riviere",
+ "sector_id": "S09_nature",
+ "v1_room_id": "R_river_02",
+ "name": "La rivière",
+ "main": "riviere",
+ "roomList": [
+  {
+   "key": "riviere",
+   "short": "La rivière"
+  },
+  {
+   "key": "crues",
+   "short": "Les crues"
+  }
+ ],
+ "planned": {
+  "riviere": {
+   "vocabRoom": "R_river_02",
+   "only": [
+    "fr_truite_noun",
+    "fr_riviere_noun",
+    "fr_grenouille_noun",
+    "fr_fleuve_noun",
+    "fr_barrage_noun",
+    "fr_lac_noun",
+    "fr_reservoir_noun",
+    "fr_canal_noun",
+    "fr_ruisseau_noun",
+    "fr_marais_noun",
+    "fr_bassin_noun",
+    "fr_etang_noun",
+    "fr_aquarium_noun"
+   ]
+  },
+  "crues": {
+   "vocabRoom": "R_river_01",
+   "only": [
+    "fr_chute_noun",
+    "fr_source_noun",
+    "fr_tombee_noun",
+    "fr_inondation_noun",
+    "fr_crue_noun",
+    "fr_fontaine_noun",
+    "fr_pompe_noun",
+    "fr_eau_noun",
+    "fr_goutte_noun",
+    "fr_rive_noun",
+    "fr_flux_noun",
+    "fr_deluge_noun",
+    "fr_crapaud_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "riviere": {
+   "name": "La rivière",
+   "room_id": "R_river_02",
+   "image": "riviere/riviere.jpg",
+   "alt": "One wide river valley on a summer afternoon, painted in ink and gouache. At the top left a waterfall tumbles from a wooded cliff beside a mossy stone archway, the way up to the floods. The river runs down through the left side: a trout leaps from the water towards a cookie on a fishing line, a brown bear fishes in the shallows on the bend while a family of ducks paddles past, and on the grassy bank a frog leaps out of a big green bowl of noodles, slurping a noodle; a white wooden gate in the bottom left corner leads out to the valley. On the right the river widens: a line of red hearts floats down it from the far hills, a beaver naps on his stick dam, a glum fisherman sits on a jetty with an empty bucket while a heron behind him gulps a fish, and a still reservoir behind a stone wall reflects the clouds with one duck. A blue narrowboat glides along a canal with a heron on its roof, two children sew on a little raft in a stream, two frogs marry on a lily pad among the reeds of the marsh, a big bass basks in a round stone pond with goldfish swimming round it, a frog shoots out its tongue at a fly over a small pond, and on a little table by the water a goldfish in an aquarium waves at a wild fish outside the glass.",
+   "nameplate": [
+    55,
+    7
+   ],
+   "mapExit": {
+    "box": [
+     20,
+     470,
+     150,
+     195
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "crues",
+     "label": "Les crues",
+     "hint": "Walk under the mossy stone archway by the waterfall",
+     "hit": [
+      262,
+      30,
+      140,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_truite_noun",
+     "box": [
+      140,
+      290,
+      165,
+      95
+     ]
+    },
+    {
+     "id": "fr_riviere_noun",
+     "box": [
+      175,
+      390,
+      345,
+      75
+     ]
+    },
+    {
+     "id": "fr_grenouille_noun",
+     "box": [
+      240,
+      470,
+      300,
+      200
+     ]
+    },
+    {
+     "id": "fr_fleuve_noun",
+     "box": [
+      640,
+      95,
+      130,
+      90
+     ]
+    },
+    {
+     "id": "fr_barrage_noun",
+     "box": [
+      590,
+      192,
+      140,
+      55
+     ]
+    },
+    {
+     "id": "fr_lac_noun",
+     "box": [
+      595,
+      255,
+      205,
+      150
+     ]
+    },
+    {
+     "id": "fr_reservoir_noun",
+     "box": [
+      835,
+      150,
+      280,
+      85
+     ]
+    },
+    {
+     "id": "fr_canal_noun",
+     "box": [
+      1040,
+      240,
+      175,
+      105
+     ]
+    },
+    {
+     "id": "fr_ruisseau_noun",
+     "box": [
+      610,
+      460,
+      185,
+      135
+     ]
+    },
+    {
+     "id": "fr_marais_noun",
+     "box": [
+      875,
+      395,
+      135,
+      85
+     ]
+    },
+    {
+     "id": "fr_bassin_noun",
+     "box": [
+      800,
+      535,
+      265,
+      165
+     ],
+     "labelAt": [
+      932,
+      650
+     ]
+    },
+    {
+     "id": "fr_etang_noun",
+     "box": [
+      1070,
+      625,
+      140,
+      85
+     ],
+     "labelAt": [
+      1140,
+      655
+     ]
+    },
+    {
+     "id": "fr_aquarium_noun",
+     "box": [
+      1125,
+      355,
+      150,
+      210
+     ]
+    }
+   ],
+   "building_id": "B28_riviere",
+   "sector_id": "S09_nature"
+  },
+  "crues": {
+   "name": "Les crues",
+   "room_id": "R_river_01",
+   "image": "riviere/crues.jpg",
+   "backTo": "riviere",
+   "alt": "Upriver at sunset, just after a storm, painted as one scene: the sun sets into the bay on the left while a dark rain cloud still pours on the right. On the hillside at the top left a beaver whooshes down the water chute of a stone weir and a hiker kneels at a bubbling spring; on a fence post an owl opens a big book against the setting sun. Below, the village high street is flooded: shop fronts stand in the water, ducks paddle past and a rowing crew of children rows a boat down the street. In the little square a duck flaps up to catch a jet from the stone fountain, a boy in a paper crown and cape proudly works a brass floor pump to blow up his tricycle tyre, a surprised water jug gasps 'Oh!' on a windowsill as water splashes out, a goat blinks as a big raindrop lands on its nose, and a girl sits on the river bank dangling her feet. On the right the swollen river rushes in foaming waves where a startled duck flaps, three ducks paddle happily in the downpour on the flooded bank, a mossy stone arch on the far bank leads back to the river valley, and on a grassy rise a fat toad sits on a crate playing a little black piano.",
+   "nameplate": [
+    60,
+    28
+   ],
+   "doors": [
+    {
+     "to": "riviere",
+     "label": "La rivière",
+     "hint": "Walk back under the mossy stone arch to the river valley",
+     "hit": [
+      1075,
+      145,
+      165,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_chute_noun",
+     "box": [
+      40,
+      115,
+      150,
+      200
+     ]
+    },
+    {
+     "id": "fr_source_noun",
+     "box": [
+      240,
+      185,
+      110,
+      135
+     ]
+    },
+    {
+     "id": "fr_tombee_noun",
+     "box": [
+      400,
+      130,
+      130,
+      150
+     ]
+    },
+    {
+     "id": "fr_inondation_noun",
+     "box": [
+      10,
+      330,
+      200,
+      140
+     ]
+    },
+    {
+     "id": "fr_crue_noun",
+     "box": [
+      40,
+      480,
+      185,
+      120
+     ]
+    },
+    {
+     "id": "fr_fontaine_noun",
+     "box": [
+      230,
+      360,
+      170,
+      225
+     ]
+    },
+    {
+     "id": "fr_pompe_noun",
+     "box": [
+      415,
+      390,
+      110,
+      165
+     ]
+    },
+    {
+     "id": "fr_eau_noun",
+     "box": [
+      530,
+      350,
+      75,
+      95
+     ]
+    },
+    {
+     "id": "fr_goutte_noun",
+     "box": [
+      405,
+      590,
+      105,
+      115
+     ],
+     "labelAt": [
+      457,
+      650
+     ]
+    },
+    {
+     "id": "fr_rive_noun",
+     "box": [
+      555,
+      555,
+      95,
+      155
+     ],
+     "labelAt": [
+      602,
+      650
+     ]
+    },
+    {
+     "id": "fr_flux_noun",
+     "box": [
+      800,
+      335,
+      110,
+      95
+     ]
+    },
+    {
+     "id": "fr_deluge_noun",
+     "box": [
+      1015,
+      320,
+      250,
+      125
+     ]
+    },
+    {
+     "id": "fr_crapaud_noun",
+     "box": [
+      990,
+      460,
+      215,
+      235
+     ],
+     "labelAt": [
+      1097,
+      650
+     ]
+    }
+   ],
+   "building_id": "B28_riviere",
+   "sector_id": "S09_nature"
+  }
+ }
+}
