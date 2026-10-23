@@ -1,0 +1,481 @@
+{
+ "building": "serre",
+ "building_id": "B64_serre",
+ "sector_id": "S09_nature",
+ "name": "Grande Serre",
+ "main": "serre",
+ "roomList": [
+  {
+   "key": "serre",
+   "short": "La Grande Serre"
+  },
+  {
+   "key": "etage",
+   "short": "L'étage de la serre"
+  }
+ ],
+ "planned": {
+  "serre": {
+   "vocabRoom": "R_abs_change_01",
+   "only": [
+    "fr_transparence_noun",
+    "fr_avance_noun",
+    "fr_formation_noun",
+    "fr_pousse_noun",
+    "fr_transformation_noun",
+    "fr_reforme_noun",
+    "fr_inverse_noun",
+    "fr_changement_noun",
+    "fr_progres_noun",
+    "fr_developpement_noun"
+   ]
+  },
+  "souche": {
+   "vocabRoom": "R_abs_change_01",
+   "only": [
+    "fr_transition_noun",
+    "fr_mutation_noun",
+    "fr_croissance_noun",
+    "fr_adaptation_noun",
+    "fr_hausse_noun",
+    "fr_amelioration_noun"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_abs_change_02",
+   "only": [
+    "fr_emprise_noun",
+    "fr_modification_noun",
+    "fr_revision_noun",
+    "fr_alternative_noun",
+    "fr_alteration_noun",
+    "fr_alternance_noun",
+    "fr_confection_noun",
+    "fr_substitution_noun",
+    "fr_avancee_noun",
+    "fr_grandissant_adj",
+    "fr_declin_noun",
+    "fr_avancement_noun",
+    "fr_accroissement_noun",
+    "fr_epanouissement_noun",
+    "fr_remplacement_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "serre": {
+   "name": "La Grande Serre",
+   "room_id": "R_abs_change_01",
+   "image": "serre/serre.jpg",
+   "alt": "Inside a big Victorian glasshouse full of plants, painted in ink and gouache: a sparrow flutters, puzzled, at the crystal-clear glass, a tall seedling shoots up past a green watering can, three seedlings stand in a neat row while a toy sergeant in a tall drill hat waters them, a green shoot pushes a big round pebble up out of its pot, a pumpkin turns into a golden carriage, a round hedge is clipped by giant shears into a swan, a bat hangs upside down from a beam reading her book, a chameleon on a flowerpot turns from green to pink, a snail with a little red flag climbs the glass wall, and four jars on the bench show a tadpole growing step by step into a frog. A spiral staircase climbs to the green door upstairs, an old tree stump on the left can be looked at closer, and the open double glass doors in the middle lead out to the map.",
+   "nameplate": [
+    45,
+    5.5
+   ],
+   "mapExit": {
+    "box": [
+     520,
+     150,
+     230,
+     278
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "etage",
+     "label": "L'étage",
+     "hint": "Climb the spiral stairs to the green door upstairs",
+     "hit": [
+      1030,
+      10,
+      105,
+      190
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souche",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump",
+     "at": [
+      150,
+      520
+     ],
+     "obj": [
+      0,
+      390,
+      288,
+      162
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_transparence_noun",
+     "box": [
+      38,
+      35,
+      130,
+      122
+     ],
+     "labelAt": [
+      92,
+      162
+     ]
+    },
+    {
+     "id": "fr_avance_noun",
+     "box": [
+      190,
+      58,
+      111,
+      320
+     ]
+    },
+    {
+     "id": "fr_formation_noun",
+     "box": [
+      305,
+      215,
+      190,
+      163
+     ]
+    },
+    {
+     "id": "fr_pousse_noun",
+     "box": [
+      292,
+      398,
+      82,
+      104
+     ]
+    },
+    {
+     "id": "fr_transformation_noun",
+     "box": [
+      200,
+      558,
+      166,
+      98
+     ]
+    },
+    {
+     "id": "fr_reforme_noun",
+     "box": [
+      378,
+      430,
+      210,
+      250
+     ]
+    },
+    {
+     "id": "fr_inverse_noun",
+     "box": [
+      790,
+      14,
+      106,
+      148
+     ]
+    },
+    {
+     "id": "fr_changement_noun",
+     "box": [
+      955,
+      298,
+      125,
+      115
+     ]
+    },
+    {
+     "id": "fr_progres_noun",
+     "box": [
+      1188,
+      160,
+      72,
+      152
+     ]
+    },
+    {
+     "id": "fr_developpement_noun",
+     "box": [
+      900,
+      515,
+      368,
+      168
+     ],
+     "labelAt": [
+      1085,
+      482
+     ]
+    }
+   ],
+   "building_id": "B64_serre",
+   "sector_id": "S09_nature"
+  },
+  "souche": {
+   "name": "La vieille souche",
+   "room_id": "R_abs_change_01_z1",
+   "image": "serre/souche.jpg",
+   "parent": "serre",
+   "alt": "Close-up of the old tree stump in the greenhouse: an orange butterfly climbs out of its chrysalis, a two-headed sunflower argues with itself in its pot, a croissant swells on a baking tray, a cactus wears tiny sunglasses, a toy horse climbs a staircase of flowerpots, and a garden patch is weedy on one side and neatly full of flowers on the other, a rake lying beside it.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_transition_noun",
+     "box": [
+      200,
+      55,
+      160,
+      160
+     ]
+    },
+    {
+     "id": "fr_mutation_noun",
+     "box": [
+      400,
+      15,
+      155,
+      200
+     ],
+     "labelAt": [
+      640,
+      40
+     ]
+    },
+    {
+     "id": "fr_croissance_noun",
+     "box": [
+      264,
+      220,
+      253,
+      100
+     ]
+    },
+    {
+     "id": "fr_adaptation_noun",
+     "box": [
+      558,
+      132,
+      128,
+      190
+     ]
+    },
+    {
+     "id": "fr_hausse_noun",
+     "box": [
+      30,
+      272,
+      230,
+      436
+     ],
+     "labelAt": [
+      140,
+      238
+     ]
+    },
+    {
+     "id": "fr_amelioration_noun",
+     "box": [
+      262,
+      455,
+      510,
+      250
+     ],
+     "labelAt": [
+      600,
+      422
+     ]
+    }
+   ],
+   "building_id": "B64_serre",
+   "sector_id": "S09_nature"
+  },
+  "etage": {
+   "name": "L'étage de la serre",
+   "room_id": "R_abs_change_02",
+   "image": "serre/etage.jpg",
+   "backTo": "serre",
+   "alt": "The attic floor of the greenhouse, painted in ink and gouache: a frosty blue wind giant puffs an icy breeze from the corner and the roses on the shelf freeze stiff with icicles, a watering can wears a tiny umbrella, a garden plan on a cork board is covered in arrows and crossings-out above two moles, a girl offers two slugs a lettuce pot of their own, a hedgehog weaves a wreath, a snowman in a melting ice tray has a cucumber for a nose while his carrot lies on the floor, a mouse tailor pins a new patch onto a little scarecrow, a frog holds an umbrella in one hand and sunglasses in the other, a tortoise with a backpack plods forward, a big sun glows larger and larger in the round window, a sunflower droops among falling autumn leaves, a beanstalk tied with ribbons pushes through the roof, a crow perches on a tall height post, a red rose blooms in a frying pan on a stove, and a wheelbarrow that has lost its wheel waits as a new wheel rolls up the plank. The spiral staircase with the green gate in the middle leads back down to the greenhouse.",
+   "nameplate": [
+    84,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "serre",
+     "label": "La Grande Serre",
+     "hint": "Go back down the spiral staircase to the greenhouse",
+     "hit": [
+      668,
+      455,
+      205,
+      225
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_emprise_noun",
+     "box": [
+      100,
+      10,
+      160,
+      100
+     ],
+     "labelAt": [
+      300,
+      20
+     ]
+    },
+    {
+     "id": "fr_modification_noun",
+     "box": [
+      265,
+      62,
+      235,
+      140
+     ]
+    },
+    {
+     "id": "fr_revision_noun",
+     "box": [
+      10,
+      112,
+      192,
+      245
+     ]
+    },
+    {
+     "id": "fr_alternative_noun",
+     "box": [
+      206,
+      262,
+      134,
+      238
+     ]
+    },
+    {
+     "id": "fr_alteration_noun",
+     "box": [
+      340,
+      362,
+      115,
+      140
+     ]
+    },
+    {
+     "id": "fr_alternance_noun",
+     "box": [
+      458,
+      282,
+      90,
+      182
+     ]
+    },
+    {
+     "id": "fr_confection_noun",
+     "box": [
+      6,
+      395,
+      190,
+      105
+     ]
+    },
+    {
+     "id": "fr_substitution_noun",
+     "box": [
+      30,
+      504,
+      300,
+      201
+     ],
+     "labelAt": [
+      355,
+      676
+     ]
+    },
+    {
+     "id": "fr_avancee_noun",
+     "box": [
+      390,
+      506,
+      188,
+      152
+     ]
+    },
+    {
+     "id": "fr_grandissant_adj",
+     "box": [
+      520,
+      30,
+      270,
+      246
+     ],
+     "labelAt": [
+      660,
+      284
+     ]
+    },
+    {
+     "id": "fr_declin_noun",
+     "box": [
+      790,
+      140,
+      122,
+      310
+     ]
+    },
+    {
+     "id": "fr_avancement_noun",
+     "box": [
+      916,
+      72,
+      170,
+      393
+     ],
+     "labelAt": [
+      1001,
+      424
+     ]
+    },
+    {
+     "id": "fr_accroissement_noun",
+     "box": [
+      1112,
+      195,
+      160,
+      195
+     ]
+    },
+    {
+     "id": "fr_epanouissement_noun",
+     "box": [
+      1090,
+      392,
+      175,
+      262
+     ]
+    },
+    {
+     "id": "fr_remplacement_noun",
+     "box": [
+      880,
+      505,
+      207,
+      195
+     ],
+     "labelAt": [
+      985,
+      470
+     ]
+    }
+   ],
+   "building_id": "B64_serre",
+   "sector_id": "S09_nature"
+  }
+ }
+}
