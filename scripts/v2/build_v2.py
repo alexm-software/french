@@ -83,13 +83,18 @@ def item_from_vocab(w):
     hook = (w.get("mnemonic_hook") or {}).get("scene") or ""
     hook = re.sub(r"^Reverent:\s*", "", hook)
     hook = hook[:1].upper() + hook[1:]
-    note = w.get("gender_note") or w.get("false_cognate_note") or w.get("usage_warning")
-    return {
+    note = w.get("gender_note") or w.get("usage_warning")
+    it = {
         "id": w["id"], "fr": w["lemma"], "art": art, "ind": ind, "g": g,
         "en": w.get("gloss", ""), "ipa": w.get("ipa", ""), "say": w.get("respelling", ""),
         "plural": plural_of(w), "hook": hook, "note": note,
         "ex": [w.get("example_fr", ""), w.get("example_en", "")],
     }
+    if w.get("false_cognate_note"):  # shown as a flag on the card; partial = shares a sense with English
+        ff = w["false_cognate_note"]
+        it["falseFriend"] = {"kind": "false" if w.get("cognate_type") == "false_cognate" else "partial",
+                             "note": ff[:1].upper() + ff[1:] + ("" if ff.endswith(".") else ".")}
+    return it
 
 
 def headword(it):
