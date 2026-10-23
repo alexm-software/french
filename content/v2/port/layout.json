@@ -1,0 +1,503 @@
+{
+ "building": "port",
+ "name": "Le port de pêche",
+ "main": "port",
+ "roomList": [
+  {
+   "key": "port",
+   "short": "Le port"
+  },
+  {
+   "key": "jetee",
+   "short": "La jetée"
+  }
+ ],
+ "building_id": "B24_port",
+ "sector_id": "S08_travel",
+ "planned": {
+  "port": {
+   "only": [
+    "fr_bateau_noun",
+    "fr_quai_noun",
+    "fr_capitaine_noun",
+    "fr_port_noun",
+    "fr_voile_noun_f",
+    "fr_vaisseau_noun",
+    "fr_navire_noun",
+    "fr_filet_noun",
+    "fr_barque_noun",
+    "fr_phare_noun",
+    "fr_equipage_noun",
+    "fr_bac_noun",
+    "fr_marin_adj",
+    "fr_flotte_noun"
+   ]
+  },
+  "bagages": {
+   "only": [
+    "fr_antenne_noun",
+    "fr_rame_noun",
+    "fr_exploration_noun",
+    "fr_mousse_noun_m",
+    "fr_porteur_noun",
+    "fr_paquebot_noun"
+   ]
+  },
+  "jetee": {
+   "only": [
+    "fr_escale_noun",
+    "fr_ancre_noun",
+    "fr_jetee_noun",
+    "fr_navigation_noun",
+    "fr_maritime_adj",
+    "fr_phoque_noun",
+    "fr_navigateur_noun",
+    "fr_arrivant_noun",
+    "fr_pirogue_noun",
+    "fr_detroit_noun",
+    "fr_naufrage_noun",
+    "fr_explorateur_noun",
+    "fr_container_noun",
+    "fr_nautique_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "port": {
+   "name": "Le port de pêche",
+   "image": "port/port.jpg",
+   "alt": "A sunny fishing harbour: a notice board with the village map, a fleet of little boats, an orange-striped sailing dinghy, a dog and a duck by a rowing boat, the white-bearded captain saluting the seagulls, a sea turtle and a crab, a shed with a busy luggage rack, a seagull on a bollard, a bat at the wheel of a red motor boat, a steamship, a lighthouse, a walrus with a basket of sardines by his kiosk, a mouse in a tiny boat in a puddle, a boy hauling a net with a seal in it, a fishing crew with their cabin boy and a little ferry with a student on board.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     20,
+     28,
+     190,
+     165
+    ],
+    "label": "Carrefour des Voyages"
+   },
+   "doors": [
+    {
+     "to": "jetee",
+     "label": "La jetée",
+     "hint": "Passe sous l'arche du brise-lames",
+     "hit": [
+      1192,
+      98,
+      80,
+      85
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bagages",
+     "label": "le porte-bagages",
+     "hint": "Regarde les jouets sur l'étagère",
+     "at": [
+      700,
+      190
+     ],
+     "obj": [
+      430,
+      0,
+      480,
+      270
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_flotte_noun",
+     "box": [
+      14,
+      258,
+      160,
+      122
+     ]
+    },
+    {
+     "id": "fr_voile_noun_f",
+     "box": [
+      180,
+      234,
+      180,
+      262
+     ]
+    },
+    {
+     "id": "fr_barque_noun",
+     "box": [
+      15,
+      500,
+      355,
+      170
+     ]
+    },
+    {
+     "id": "fr_capitaine_noun",
+     "box": [
+      372,
+      228,
+      250,
+      240
+     ]
+    },
+    {
+     "id": "fr_marin_adj",
+     "box": [
+      420,
+      525,
+      265,
+      160
+     ],
+     "labelAt": [
+      552,
+      640
+     ]
+    },
+    {
+     "id": "fr_quai_noun",
+     "box": [
+      745,
+      300,
+      58,
+      135
+     ]
+    },
+    {
+     "id": "fr_bateau_noun",
+     "box": [
+      813,
+      234,
+      188,
+      128
+     ],
+     "labelAt": [
+      907,
+      333
+     ]
+    },
+    {
+     "id": "fr_navire_noun",
+     "box": [
+      805,
+      55,
+      140,
+      105
+     ],
+     "labelAt": [
+      965,
+      62
+     ]
+    },
+    {
+     "id": "fr_phare_noun",
+     "box": [
+      1030,
+      20,
+      60,
+      100
+     ]
+    },
+    {
+     "id": "fr_port_noun",
+     "box": [
+      1005,
+      212,
+      268,
+      132
+     ]
+    },
+    {
+     "id": "fr_vaisseau_noun",
+     "box": [
+      900,
+      388,
+      95,
+      82
+     ],
+     "labelAt": [
+      947,
+      392
+     ]
+    },
+    {
+     "id": "fr_filet_noun",
+     "box": [
+      1045,
+      350,
+      228,
+      190
+     ]
+    },
+    {
+     "id": "fr_equipage_noun",
+     "box": [
+      708,
+      505,
+      268,
+      178
+     ],
+     "labelAt": [
+      842,
+      640
+     ]
+    },
+    {
+     "id": "fr_bac_noun",
+     "box": [
+      982,
+      553,
+      215,
+      150
+     ],
+     "labelAt": [
+      1090,
+      650
+     ]
+    }
+   ]
+  },
+  "bagages": {
+   "name": "Le porte-bagages",
+   "image": "port/bagages.jpg",
+   "parent": "port",
+   "alt": "Close-up of the shed's luggage rack: six sparrows on a radio aerial, a ram rowing a little blue boat, a crab explorer with a lantern and a map, a moose ship's boy with a mop, a porter with a tower of suitcases and a parrot, and a model liner packed with tourists.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_antenne_noun",
+     "box": [
+      344,
+      78,
+      266,
+      242
+     ]
+    },
+    {
+     "id": "fr_rame_noun",
+     "box": [
+      355,
+      372,
+      190,
+      185
+     ]
+    },
+    {
+     "id": "fr_exploration_noun",
+     "box": [
+      312,
+      560,
+      245,
+      130
+     ],
+     "labelAt": [
+      434,
+      640
+     ]
+    },
+    {
+     "id": "fr_mousse_noun_m",
+     "box": [
+      645,
+      148,
+      120,
+      190
+     ]
+    },
+    {
+     "id": "fr_porteur_noun",
+     "box": [
+      768,
+      245,
+      115,
+      300
+     ],
+     "labelAt": [
+      825,
+      505
+     ]
+    },
+    {
+     "id": "fr_paquebot_noun",
+     "box": [
+      586,
+      548,
+      290,
+      140
+     ],
+     "labelAt": [
+      731,
+      640
+     ]
+    }
+   ]
+  },
+  "jetee": {
+   "name": "La jetée",
+   "image": "port/jetee.jpg",
+   "backTo": "port",
+   "alt": "The cove at the end of the harbour seen from the jetty: a cruise ship with an escalator gangway, a container ship, an otter in a deckchair, a crab riding an anchor, a seagull leading ducklings, a pea pirate in a canoe, four otters rowing past signal flags, a parrot tying a knot, a castaway on a palm islet, a ferry with a red car between the cliffs, a penguin at a ship's wheel, an explorer with a telescope, a seal clapping and a boy arriving with flowers.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "port",
+     "label": "Le port",
+     "hint": "Repasse sous l'arche vers le port",
+     "hit": [
+      1150,
+      85,
+      100,
+      72
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_escale_noun",
+     "box": [
+      10,
+      20,
+      285,
+      340
+     ],
+     "labelAt": [
+      150,
+      30
+     ]
+    },
+    {
+     "id": "fr_container_noun",
+     "box": [
+      300,
+      62,
+      220,
+      98
+     ]
+    },
+    {
+     "id": "fr_jetee_noun",
+     "box": [
+      12,
+      368,
+      222,
+      250
+     ]
+    },
+    {
+     "id": "fr_ancre_noun",
+     "box": [
+      300,
+      232,
+      222,
+      226
+     ]
+    },
+    {
+     "id": "fr_navigation_noun",
+     "box": [
+      298,
+      462,
+      400,
+      82
+     ]
+    },
+    {
+     "id": "fr_pirogue_noun",
+     "box": [
+      331,
+      545,
+      250,
+      145
+     ],
+     "labelAt": [
+      456,
+      640
+     ]
+    },
+    {
+     "id": "fr_maritime_adj",
+     "box": [
+      525,
+      38,
+      195,
+      345
+     ]
+    },
+    {
+     "id": "fr_nautique_adj",
+     "box": [
+      700,
+      456,
+      225,
+      207
+     ]
+    },
+    {
+     "id": "fr_naufrage_noun",
+     "box": [
+      728,
+      75,
+      160,
+      125
+     ]
+    },
+    {
+     "id": "fr_detroit_noun",
+     "box": [
+      890,
+      145,
+      135,
+      95
+     ]
+    },
+    {
+     "id": "fr_explorateur_noun",
+     "box": [
+      1112,
+      160,
+      150,
+      155
+     ]
+    },
+    {
+     "id": "fr_navigateur_noun",
+     "box": [
+      900,
+      258,
+      205,
+      195
+     ]
+    },
+    {
+     "id": "fr_phoque_noun",
+     "box": [
+      960,
+      470,
+      150,
+      200
+     ]
+    },
+    {
+     "id": "fr_arrivant_noun",
+     "box": [
+      1115,
+      340,
+      155,
+      290
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -440,7 +440,7 @@ L = json.loads(r'''{
   "terrasse": {
    "name": "La terrasse",
    "image": "hotel/terrasse.jpg",
-   "alt": "La terrasse sur le toit de l'hôtel : une chouette infirmière sert le thé, un promeneur en pyjama, un hérisson comptable, une famille qui salue un paquebot, l'aubergiste au chapeau aubergine, une jeune fille qui astique la maquette d'un palace, un pèlerin, un canard dans la piscine, le hammam, l'hôtelier aux clés et un client au téléphone.",
+   "alt": "La terrasse sur le toit de l'hôtel : une chouette infirmière sert le thé, un promeneur en pyjama, un hérisson comptable, une famille qui salue un paquebot, l'aubergiste au chapeau aubergine, une jeune fille qui astique la maquette d'un palace, un pèlerin, un canard dans la piscine, le hammam, l'hôtelier qui tend la clé à une cliente, et un client au téléphone.",
    "nameplate": [
     20,
     4.5
@@ -556,14 +556,14 @@ L = json.loads(r'''{
     {
      "id": "fr_periple_noun",
      "box": [
-      880,
-      360,
-      130,
-      62
+      845,
+      375,
+      100,
+      48
      ],
      "labelAt": [
-      1062,
-      380
+      785,
+      352
      ]
     },
     {
