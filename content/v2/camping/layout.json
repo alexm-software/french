@@ -1,0 +1,491 @@
+{
+ "building": "camping",
+ "building_id": "B30_camping",
+ "sector_id": "S09_nature",
+ "name": "Le camping",
+ "main": "camping",
+ "roomList": [
+  {
+   "key": "camping",
+   "short": "Le camping"
+  },
+  {
+   "key": "tentes",
+   "short": "Les tentes"
+  }
+ ],
+ "planned": {
+  "camping": {
+   "vocabRoom": "R_camping_01",
+   "only": [
+    "fr_torche_noun",
+    "fr_lanterne_noun",
+    "fr_flamme_noun",
+    "fr_fumee_noun",
+    "fr_bouffee_noun",
+    "fr_chaleur_noun",
+    "fr_boucle_noun",
+    "fr_explosion_noun",
+    "fr_allumette_noun",
+    "fr_feu_noun",
+    "fr_incendie_noun",
+    "fr_fumeur_noun",
+    "fr_briquet_noun",
+    "fr_mendiant_noun"
+   ]
+  },
+  "tentes": {
+   "vocabRoom": "R_camping_02",
+   "only": [
+    "fr_cabane_noun",
+    "fr_randonnee_noun",
+    "fr_roulotte_noun",
+    "fr_cantine_noun",
+    "fr_tente_noun",
+    "fr_guide_noun_f",
+    "fr_balade_noun",
+    "fr_sacoche_noun",
+    "fr_promenade_noun",
+    "fr_demarche_noun",
+    "fr_traine_noun",
+    "fr_camp_noun",
+    "fr_pli_noun",
+    "fr_camping_noun"
+   ]
+  },
+  "souche": {
+   "vocabRoom": "R_camping_02",
+   "only": [
+    "fr_campement_noun",
+    "fr_gite_noun",
+    "fr_chamois_noun",
+    "fr_kit_noun",
+    "fr_retrait_noun",
+    "fr_compartiment_noun",
+    "fr_sachet_noun",
+    "fr_littoral_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "camping": {
+   "name": "Le camping",
+   "room_id": "R_camping_01",
+   "image": "camping/camping.jpg",
+   "alt": "A sunny campsite by a pine forest painted in ink and gouache: a camper waving a flaming torch at a tree with glowing owl eyes, a lantern hanging from a branch with moths dancing round it, a child toasting a golden marshmallow over a leaping flame, campfire smoke curling into a rabbit that three kids try to pat, a straw hat blown off at the picnic buffet, a dog cooling off in a paddling pool fanning himself with a leaf, a girl with a big looping curl and hoop earrings, popcorn exploding out of a pan while a raccoon catches it, a boy on a little blue mat lighting a candle with a match, a bear toasting marshmallows at a big campfire, a hand flicking a lighter at a brick barbecue, firefighters hosing a burning barn on the far hill while cows watch, a no-smoking sign by the tents and a man in a patched coat mending it in the back of a van while a child brings him bread. A dirt path climbs between the tents to the tent field, and the white gate at the bottom left leads out to the valley.",
+   "nameplate": [
+    60,
+    4
+   ],
+   "mapExit": {
+    "box": [
+     0,
+     545,
+     300,
+     175
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "tentes",
+     "label": "Les tentes",
+     "hint": "Follow the dirt path up between the tents to the tent field",
+     "hit": [
+      960,
+      165,
+      120,
+      175
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_torche_noun",
+     "box": [
+      30,
+      95,
+      105,
+      240
+     ]
+    },
+    {
+     "id": "fr_lanterne_noun",
+     "box": [
+      495,
+      25,
+      85,
+      110
+     ]
+    },
+    {
+     "id": "fr_flamme_noun",
+     "box": [
+      140,
+      215,
+      150,
+      130
+     ]
+    },
+    {
+     "id": "fr_fumee_noun",
+     "box": [
+      320,
+      135,
+      110,
+      110
+     ]
+    },
+    {
+     "id": "fr_bouffee_noun",
+     "box": [
+      585,
+      65,
+      75,
+      80
+     ]
+    },
+    {
+     "id": "fr_chaleur_noun",
+     "box": [
+      30,
+      390,
+      250,
+      140
+     ]
+    },
+    {
+     "id": "fr_boucle_noun",
+     "box": [
+      340,
+      350,
+      140,
+      180
+     ]
+    },
+    {
+     "id": "fr_explosion_noun",
+     "box": [
+      490,
+      480,
+      230,
+      230
+     ]
+    },
+    {
+     "id": "fr_allumette_noun",
+     "box": [
+      545,
+      285,
+      130,
+      140
+     ]
+    },
+    {
+     "id": "fr_feu_noun",
+     "box": [
+      770,
+      280,
+      185,
+      180
+     ]
+    },
+    {
+     "id": "fr_incendie_noun",
+     "box": [
+      970,
+      15,
+      180,
+      110
+     ]
+    },
+    {
+     "id": "fr_fumeur_noun",
+     "box": [
+      1110,
+      205,
+      130,
+      185
+     ]
+    },
+    {
+     "id": "fr_briquet_noun",
+     "box": [
+      740,
+      515,
+      250,
+      170
+     ]
+    },
+    {
+     "id": "fr_mendiant_noun",
+     "box": [
+      1070,
+      440,
+      170,
+      250
+     ]
+    }
+   ],
+   "building_id": "B30_camping",
+   "sector_id": "S09_nature"
+  },
+  "tentes": {
+   "name": "Les tentes",
+   "room_id": "R_camping_02",
+   "image": "camping/tentes.jpg",
+   "backTo": "camping",
+   "alt": "The tent field, split by a wooden rail fence. Left of the fence: children in a little tree hut with a rope ladder, a family hiking with a pony, a painted wooden caravan on big wheels, a girl stacking a tower of bean cans at the canteen counter, a crow teasing a boy whose orange tent has collapsed on him, a girl guide tying a knot at the washroom mirror, a couple strolling arm in arm singing a ballad, a bicycle with a leather saddlebag, a mother duck leading her ducklings along the path, a penguin waddling across the marsh with its flippers out and a bride whose long train carries three ducklings. Right of the fence: a bear pitching a tent and warming a can of beans, two scouts kneeling over a creased map, one of them pleading with folded hands, a boy hammering tent pegs that ring like bells, and an old tree stump covered in tiny things that can be looked at closer. A wooden arch at the bottom right leads back to the campfire.",
+   "nameplate": [
+    53,
+    88
+   ],
+   "doors": [
+    {
+     "to": "camping",
+     "label": "Le camping",
+     "hint": "Walk back through the wooden arch to the campfire",
+     "hit": [
+      1045,
+      515,
+      215,
+      205
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souche",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump",
+     "at": [
+      985,
+      320
+     ],
+     "obj": [
+      905,
+      290,
+      375,
+      211
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_cabane_noun",
+     "box": [
+      15,
+      20,
+      145,
+      200
+     ]
+    },
+    {
+     "id": "fr_randonnee_noun",
+     "box": [
+      195,
+      100,
+      144,
+      160
+     ]
+    },
+    {
+     "id": "fr_roulotte_noun",
+     "box": [
+      345,
+      65,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_cantine_noun",
+     "box": [
+      500,
+      30,
+      140,
+      220
+     ]
+    },
+    {
+     "id": "fr_tente_noun",
+     "box": [
+      10,
+      290,
+      180,
+      165
+     ]
+    },
+    {
+     "id": "fr_guide_noun_f",
+     "box": [
+      190,
+      285,
+      165,
+      170
+     ]
+    },
+    {
+     "id": "fr_balade_noun",
+     "box": [
+      360,
+      250,
+      125,
+      200
+     ]
+    },
+    {
+     "id": "fr_sacoche_noun",
+     "box": [
+      495,
+      315,
+      155,
+      130
+     ]
+    },
+    {
+     "id": "fr_promenade_noun",
+     "box": [
+      5,
+      495,
+      195,
+      135
+     ]
+    },
+    {
+     "id": "fr_demarche_noun",
+     "box": [
+      225,
+      505,
+      160,
+      125
+     ]
+    },
+    {
+     "id": "fr_traine_noun",
+     "box": [
+      385,
+      455,
+      195,
+      200
+     ]
+    },
+    {
+     "id": "fr_camp_noun",
+     "box": [
+      870,
+      55,
+      345,
+      200
+     ]
+    },
+    {
+     "id": "fr_pli_noun",
+     "box": [
+      720,
+      262,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_camping_noun",
+     "box": [
+      765,
+      450,
+      185,
+      178
+     ]
+    }
+   ],
+   "building_id": "B30_camping",
+   "sector_id": "S09_nature"
+  },
+  "souche": {
+   "name": "La vieille souche",
+   "room_id": "R_camping_02_z1",
+   "image": "camping/souche.jpg",
+   "parent": "tentes",
+   "alt": "Close-up of the old tree stump beside the two scouts with their map: squirrels toasting acorns over a tiny campfire among miniature tents, a little stone cottage with a white sheet flapping on the washing line, a chamois on the top ledge blowing a kiss, an open camping kit full of tiny tools on a mossy shelf with a hedgehog peeking in, two tiny campers running from a skunk and dropping their tray of marshmallows, a backpack full of pockets with a hamster in the smallest one, a hedgehog snoozing on a sleeping bag with a lavender sachet, and a crab marching with a flag along a little strip of sandy shore.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_campement_noun",
+     "box": [
+      680,
+      75,
+      200,
+      140
+     ]
+    },
+    {
+     "id": "fr_gite_noun",
+     "box": [
+      885,
+      160,
+      195,
+      150
+     ]
+    },
+    {
+     "id": "fr_chamois_noun",
+     "box": [
+      990,
+      20,
+      165,
+      135
+     ]
+    },
+    {
+     "id": "fr_kit_noun",
+     "box": [
+      600,
+      255,
+      230,
+      130
+     ]
+    },
+    {
+     "id": "fr_retrait_noun",
+     "box": [
+      1100,
+      295,
+      175,
+      150
+     ]
+    },
+    {
+     "id": "fr_compartiment_noun",
+     "box": [
+      870,
+      390,
+      215,
+      300
+     ]
+    },
+    {
+     "id": "fr_sachet_noun",
+     "box": [
+      610,
+      515,
+      235,
+      175
+     ]
+    },
+    {
+     "id": "fr_littoral_noun",
+     "box": [
+      1125,
+      540,
+      150,
+      170
+     ]
+    }
+   ],
+   "building_id": "B30_camping",
+   "sector_id": "S09_nature"
+  }
+ }
+}

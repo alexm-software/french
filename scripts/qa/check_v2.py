@@ -12,7 +12,11 @@ Static rules (per building/room):
     a door back; every door/zoom target exists; zooms belong to a room and their object rect
     ('obj') in the parent contains the badge
   * verbs have all 7 tenses; card crops and scene images exist; content word blocklist
-  * --browser: the map discovers buildings at runtime; live buildings == village/v2/data/<bld>.js files
+  * adjectives: no article, centre band 30-70%, gram line 'adjective · m/f' on the card (browser)
+  * maps (data/map.js): no rect overlap within the world map or within any sector map; every
+    layout building has a rect on its sector map (by the payload's building_id/sector_id, else by id)
+  * --browser: the sector maps discover buildings at runtime; the union of live links over all
+    sector maps == village/v2/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
 overlap, every route renders with no JS error, Back goes to the right place, verb cards have no
 sideways scroll. Screenshots go to --shots.
@@ -25,7 +29,13 @@ ROOT = Path(__file__).resolve().parents[2]
 V2 = ROOT / "village" / "v2"
 W, H = 1280, 720
 BLOCK = [r"\bgod the father\b", r"dieu le p[eè]re", r"\bdrunk", r"\bbeer\b", r"\bcigar", r"\bsmok(e|ing)\b(?!.*(incense|censer|chimney|smoke rises))",
-         r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill"]
+         r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill", r"\btobacc"]
+SMOKE = BLOCK[5]
+# Narrow exemption: the noun "la fumée" (gloss "smoke") is campfire / chimney smoke, not smoking. For that noun only,
+# the generic smoke pattern is skipped and its gloss/example are not scanned for it; its hook/scene/note must still be
+# free of any smoking or tobacco depiction (TOBACCO below), and every other BLOCK pattern still applies to all fields.
+SMOKE_NOUNS = {"fr_fumee_noun"}
+TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
 ART = re.compile(r"^(le|la|les|l'|le/la|un|une) ?", re.I)
 
 
@@ -121,7 +131,10 @@ def check_building(bld, errs, warns):
         for it in R["items"]:
             cx = (it["boxPx"][0] + it["boxPx"][2] / 2) / W
             g = it.get("g")
-            if not it.get("verb"):
+            if it.get("adj"):
+                if not 0.3 <= cx <= 0.7: E(f"{tag}: adjective {it['fr']} not in the centre band ({cx:.0%})")
+                if it.get("art") or ART.match(it["fr"] + " "): E(f"{tag}: adjective {it['fr']} carries an article")
+            elif not it.get("verb"):
                 if g == "f" and cx >= 0.5: E(f"{tag}: feminine {it['fr']} not on the left ({cx:.0%})")
                 if g == "m" and cx <= 0.5: E(f"{tag}: masculine {it['fr']} not on the right ({cx:.0%})")
                 if g == "mf" and not 0.3 <= cx <= 0.7: E(f"{tag}: epicene {it['fr']} far from centre ({cx:.0%})")
@@ -132,8 +145,13 @@ def check_building(bld, errs, warns):
             if not (V2 / it["cardSrc"]).exists(): E(f"{tag}: card image missing for {it['fr']}")
             if not it.get("hook"): E(f"{tag}: no memory hook for {it['fr']}")
             text = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note", "en")) + " " + " ".join(it.get("ex") or [])
+            smoke_noun = it["id"] in SMOKE_NOUNS and not it.get("verb") and it.get("en", "").strip().lower() == "smoke"
             for pat in BLOCK:
+                if smoke_noun and pat == SMOKE: continue
                 if re.search(pat, text, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
+            if smoke_noun:
+                depict = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note"))
+                if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
         # routes
         for d in R.get("doors", []):
             if d["to"] not in rooms: E(f"{tag}: door to unknown room {d['to']}")
@@ -160,7 +178,18 @@ def check_building(bld, errs, warns):
     return counts
 
 
-async def browser_checks(blds, base, shots, errs):
+def map_home(M, bld, D):
+    """(slug, entry) of a building on the sector maps: payload building_id/sector_id first, then registry id."""
+    pid = lambda b: b.get("id") or re.sub(r"^B\d+_", "", b["building_id"])
+    slug = next((w["slug"] for w in M["world"]["sectors"] if w["id"] == D.get("sector_id")), None)
+    for sl, S in M["sectors"].items():
+        for b in S["buildings"]:
+            if pid(b) == bld and (slug is None or sl == slug):
+                return sl, b
+    return slug, None
+
+
+async def browser_checks(blds, base, shots, errs, strict=False, M=None):
     from playwright.async_api import async_playwright
     shots.mkdir(parents=True, exist_ok=True)
     async with async_playwright() as p:
@@ -175,11 +204,29 @@ async def browser_checks(blds, base, shots, errs):
             except Exception:
                 errs.append(f"map @{vw}: building discovery never finished (stage.dataset.probed)")
             await pg.wait_for_timeout(400)
-            live = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href').slice(2))")
+            wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
+            if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
+                errs.append(f"world map @{vw}: sector links {wl}")
+            await pg.screenshot(path=str(shots / f"map_{vw}.png"))
+            live = []
+            for w in M["world"]["sectors"]:
+                await pg.goto(base + f"#/quartier/{w['slug']}")
+                await pg.wait_for_function("document.getElementById('stage').dataset.probed==='1'", timeout=8000)
+                await pg.wait_for_timeout(250)
+                if await pg.evaluate("location.hash") != f"#/quartier/{w['slug']}":
+                    errs.append(f"sector {w['slug']}: route redirected"); continue
+                ln = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href').slice(2))")
+                nsoon = await pg.evaluate("document.querySelectorAll('.bld.soon').length")
+                S = M["sectors"][w["slug"]]
+                if len(ln) + nsoon != len(S["buildings"]) + len(S["streets"]):
+                    errs.append(f"sector {w['slug']} @{vw}: {len(ln)} live + {nsoon} soon != {len(S['buildings'])} buildings + {len(S['streets'])} streets")
+                live += ln
+                if ln or vw == 1400: await pg.screenshot(path=str(shots / f"sector_{w['slug']}_{vw}.png"))
+                await pg.click("#back"); await pg.wait_for_timeout(200)
+                if await pg.evaluate("location.hash") not in ("#/", ""): errs.append(f"sector {w['slug']}: Back does not go to the village map")
             have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem != "map")
             if sorted(live) != have:
-                errs.append(f"map @{vw}: live buildings {sorted(live)} != data files {have}")
-            await pg.screenshot(path=str(shots / f"map_{vw}.png"))
+                errs.append(f"maps @{vw}: live buildings {sorted(live)} != data files {have}")
             for bld in blds:
                 D = load_payload(bld)
                 for key, R in D["rooms"].items():
@@ -202,15 +249,50 @@ async def browser_checks(blds, base, shots, errs):
                             if inter(d, h): errs.append(f"{bld}/{key} @{vw}: door/exit {i} overlaps hotspot {R['items'][j]['fr']}")
                         for j, h in enumerate(rects["lab"]):
                             if inter(d, h): errs.append(f"{bld}/{key} @{vw}: door/exit {i} overlaps label {R['items'][j]['fr']}")
+                    if strict:
+                        ex = await pg.evaluate("""()=>{const r=e=>{const b=e.getBoundingClientRect();return [b.left,b.top,b.width,b.height]};
+                          const st=document.getElementById('stage').getBoundingClientRect();
+                          return {zoom:[...document.querySelectorAll('.zoombadge')].map(r),plate:[...document.querySelectorAll('.room-nameplate')].map(r),
+                                  stage:[st.left,st.top,st.width,st.height]}}""")
+                        g = 2  # px: "touching" = closer than this
+                        grow = lambda a: [a[0] - g, a[1] - g, a[2] + 2 * g, a[3] + 2 * g]
+                        L, H = rects["lab"], rects["hot"]
+                        nm = lambda i: R['items'][i]['fr']
+                        for i in range(len(L)):
+                            for j in range(i + 1, len(L)):
+                                if inter(grow(L[i]), L[j]): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches label {nm(j)}")
+                            for j in range(len(H)):
+                                if j != i and inter(grow(L[i]), H[j]): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches hotspot {nm(j)}")
+                            for j, d in enumerate(rects["door"]):
+                                if inter(grow(L[i]), d): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches door/exit {j}")
+                            for z in ex["zoom"] + ex["plate"]:
+                                if inter(grow(L[i]), z): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches a zoom badge/nameplate")
+                            S, l = ex["stage"], L[i]
+                            if l[0] < S[0] + g or l[1] < S[1] + g or l[0] + l[2] > S[0] + S[2] - g or l[1] + l[3] > S[1] + S[3] - g:
+                                errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches the scene edge")
                     await pg.screenshot(path=str(shots / f"{bld}_{key}_{vw}.png"))
                     # back target
                     await pg.click("#back")
                     await pg.wait_for_timeout(300)
-                    want = f"#/{bld}/{R['parent']}" if R.get("parent") and R["parent"] != D["main"] else (f"#/{bld}" if (R.get("parent") or R.get("backTo")) else "#/")
+                    home = "#/quartier/" + map_home(M, bld, D)[0]
+                    want = f"#/{bld}/{R['parent']}" if R.get("parent") and R["parent"] != D["main"] else (f"#/{bld}" if (R.get("parent") or R.get("backTo")) else home)
                     got = await pg.evaluate("location.hash")
                     if got != want: errs.append(f"{bld}/{key}: Back went to {got}, expected {want}")
-                    # verb cards: no sideways scroll
+                    # painted exit of the main room goes to the sector map (or its mapExit.href)
                     await pg.goto(base + route); await pg.wait_for_timeout(500)
+                    if key == D["main"]:
+                        xh = await pg.evaluate("(document.querySelector('a.mapexit')||{getAttribute:()=>null}).getAttribute('href')")
+                        if xh != (R["mapExit"].get("href") or home): errs.append(f"{bld}: map exit goes to {xh}, expected {R['mapExit'].get('href') or home}")
+                    # adjective cards: no article, adjective gram line
+                    for i, it in enumerate(R["items"]):
+                        if not it.get("adj"): continue
+                        lab = await pg.evaluate(f"document.querySelectorAll('.lab')[{i}].textContent")
+                        if lab.strip() != it["fr"]: errs.append(f"{bld}/{key}: adjective label '{lab}' has an article")
+                        await pg.evaluate(f"document.querySelectorAll('.hot')[{i}].click()"); await pg.wait_for_timeout(200)
+                        gl = await pg.evaluate("(document.querySelector('#card .gram')||{}).textContent||''")
+                        if not gl.startswith("adjective · "): errs.append(f"{bld}/{key}: adjective card {it['fr']} gram line '{gl}'")
+                        await pg.keyboard.press("Escape")
+                    # verb cards: no sideways scroll
                     for i, it in enumerate(R["items"]):
                         if not it.get("verb"): continue
                         await pg.evaluate(f"document.querySelectorAll('.hot')[{i}].click()")
@@ -230,22 +312,30 @@ def main():
     ap.add_argument("--browser", action="store_true")
     ap.add_argument("--base", default="http://localhost:8765/v2/index.html")
     ap.add_argument("--shots", default="/tmp/v2_shots")
+    ap.add_argument("--strict", action="store_true", help="labels may not touch anything (2 px gap, scene edge included) and warnings count as failures")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     errs, warns = [], []
     s = (V2 / "data" / "map.js").read_text(encoding="utf-8")
     M = json.loads(s[s.index("=") + 1:].rstrip().rstrip(";"))
-    allb = M["buildings"] + M["areas"]
-    for i in range(len(allb)):
-        for j in range(i + 1, len(allb)):
-            if inter(allb[i]["rect"], allb[j]["rect"]): errs.append(f"map: {allb[i]['name']} overlaps {allb[j]['name']}")
+    maps = [("world", M["world"]["sectors"])] + [(sl, S["buildings"] + S["streets"]) for sl, S in M["sectors"].items()]
+    for nm, allb in maps:
+        for i in range(len(allb)):
+            for j in range(i + 1, len(allb)):
+                if inter(allb[i]["rect"], allb[j]["rect"]): errs.append(f"map {nm}: {allb[i]['name']} overlaps {allb[j]['name']}")
+    for w in M["world"]["sectors"]:
+        if w["slug"] not in M["sectors"]: errs.append(f"map: sector {w['id']} has no sector map")
+        elif not (V2 / M["sectors"][w["slug"]]["image"]).exists(): errs.append(f"map: {w['slug']} painting missing")
     for bld in blds:
-        if not any(L["id"] == bld for L in M["buildings"]): errs.append(f"map: {bld} has a layout but no rect in content/v2/map.json")
+        if not (V2 / "data" / f"{bld}.js").exists(): continue
+        sl, b = map_home(M, bld, load_payload(bld))
+        if not b: errs.append(f"map: {bld} has a layout but no rect on its sector map in content/v2/map.json")
         c = check_building(bld, errs, warns)
         print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     if a.browser:
         import asyncio
-        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs))
+        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M))
+    if a.strict: errs += [f"(strict) {w}" for w in warns]; warns = []
     for w in warns: print("WARN", w)
     for e in errs: print("FAIL", e)
     print("PASS" if not errs else f"{len(errs)} problem(s)")

@@ -13,6 +13,10 @@ v2-specific inputs live in content/v2/<building>/:
   hooks.json   optional {word_id: {"hook": ..., "why": ...}} overrides, used ONLY where the
                v1 hook breaks the content rules or cannot be painted; the painting must show
                the override hook. v1 data is never edited.
+  layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
+  "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
+  the map uses them to put the building on its sector map (see village/v2/README.md).
+  Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
 Everything is checked by scripts/qa/check_v2.py.
 
 usage: python3 scripts/v2/build_v2.py [building ...]   (default: every content/v2/*/layout.json)
@@ -76,7 +80,24 @@ def plural_of(w):
     return "les " + (lem if lem[-1] in "sxz" else lem + "s")
 
 
+def adj_from_vocab(w):
+    """Adjective card: no article, centre band; the gram line shows the m/f forms (or 'same for both')."""
+    f = w.get("forms") or {}
+    hook = (w.get("mnemonic_hook") or {}).get("scene") or ""
+    hook = hook[:1].upper() + hook[1:]
+    it = {"id": w["id"], "adj": True, "fr": w["lemma"], "g": "adj",
+          "en": w.get("gloss", ""), "ipa": w.get("ipa", ""), "say": w.get("respelling", ""),
+          "forms": {k: f[k] for k in ("m_sg", "f_sg", "m_pl", "f_pl") if f.get(k)},
+          "invariable": bool(w.get("invariable")) or (f.get("m_sg") and f.get("m_sg") == f.get("f_sg")),
+          "hook": hook, "note": w.get("usage_warning"), "ex": [w.get("example_fr", ""), w.get("example_en", "")]}
+    if w.get("f_ipa"): it["f_ipa"] = w["f_ipa"]
+    if w.get("f_respelling"): it["f_say"] = w["f_respelling"]
+    return it
+
+
 def item_from_vocab(w):
+    if w.get("pos") == "adj":
+        return adj_from_vocab(w)
     g = w.get("gender")
     art = w.get("article") or ("la" if g == "f" else "le")
     ind = {"f": "une", "m": "un", "mf": "un/une"}.get(g, "un")
@@ -98,7 +119,7 @@ def item_from_vocab(w):
 
 
 def headword(it):
-    if it.get("verb"):
+    if it.get("verb") or it.get("adj"):
         return it["fr"]
     a = it.get("art")
     return ("l'" + it["fr"]) if a == "l'" else f"{a} {it['fr']}"
@@ -250,6 +271,10 @@ def build(bld, v1, vocab):
             r2["mapExit"] = dict(r2["mapExit"], boxPx=b, box=[round(b[0] / 12.8, 4), round(b[1] / 7.2, 4), round(b[2] / 12.8, 4), round(b[3] / 7.2, 4)])
         out_rooms[key] = r2
     payload = {"building": bld, "name": L["name"], "main": L["main"], "roomList": L["roomList"], "rooms": out_rooms}
+    # memory-palace registry fields: the map places the building on its sector map by these
+    for k in ("building_id", "sector_id", "v1_room_id"):
+        if L.get(k):
+            payload[k] = L[k]
     js = "(window.VILLAGE_DATA=window.VILLAGE_DATA||{})[" + json.dumps(bld) + "]=" + json.dumps(payload, ensure_ascii=False) + ";\n"
     (V2 / "data").mkdir(parents=True, exist_ok=True)
     (V2 / "data" / f"{bld}.js").write_text(js, encoding="utf-8")

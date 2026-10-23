@@ -1,0 +1,476 @@
+{
+ "building": "plage",
+ "building_id": "B29_plage",
+ "sector_id": "S09_nature",
+ "v1_room_id": "R_beach_01",
+ "name": "La plage",
+ "main": "plage",
+ "roomList": [
+  {
+   "key": "plage",
+   "short": "La plage"
+  },
+  {
+   "key": "dunes",
+   "short": "Les dunes"
+  }
+ ],
+ "planned": {
+  "plage": {
+   "vocabRoom": "R_beach_01",
+   "only": [
+    "fr_mer_noun",
+    "fr_ile_noun",
+    "fr_plage_noun",
+    "fr_sable_noun",
+    "fr_ocean_noun",
+    "fr_flot_noun",
+    "fr_echo_noun",
+    "fr_vase_noun_f",
+    "fr_sirene_noun",
+    "fr_obus_noun",
+    "fr_maree_noun",
+    "fr_phase_noun",
+    "fr_baleine_noun",
+    "fr_cape_noun",
+    "fr_digue_noun"
+   ]
+  },
+  "cap": {
+   "vocabRoom": "R_beach_01",
+   "only": [
+    "fr_cap_noun",
+    "fr_vice_noun",
+    "fr_abime_noun",
+    "fr_peignoir_noun",
+    "fr_dauphin_noun",
+    "fr_plongeur_noun"
+   ]
+  },
+  "dunes": {
+   "vocabRoom": "R_beach_02",
+   "only": [
+    "fr_dune_noun",
+    "fr_plongee_noun",
+    "fr_derive_noun",
+    "fr_contree_noun",
+    "fr_oasis_noun",
+    "fr_coquillage_noun",
+    "fr_mirage_noun",
+    "fr_golfe_noun",
+    "fr_parasol_noun",
+    "fr_surf_noun",
+    "fr_exode_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "plage": {
+   "name": "La plage",
+   "room_id": "R_beach_01",
+   "image": "plage/plage.jpg",
+   "alt": "A sunny beach painted in ink and gouache: five moon faces across the sky, a whale in a pink tutu leaping, an eel coiled round a palm island, a white mare galloping through the waves, a mermaid combing her hair with a fork on a rock, a dog digging on the stone seawall, an ice-cream cart among sandcastles, a girl in yellow by her sandcastle, a blue vase sunk in grey mud, a crab in a red cape, a girl gasping at a huge curling wave, rubber ducks bobbing down a stream, two crabs squabbling over a sandcastle, a boy shouting into a cave, an old shell in a glass case; on the headland a lighthouse, a diver and a dolphin. Wooden steps at the bottom left lead back to the valley and a sandy path at the bottom right leads to the dunes.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     0,
+     552,
+     182,
+     166
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "dunes",
+     "label": "Les dunes",
+     "hint": "Follow the sandy path to the dunes at the far end of the beach",
+     "hit": [
+      1060,
+      592,
+      215,
+      124
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cap",
+     "label": "le cap",
+     "hint": "Look closer at the headland with the lighthouse",
+     "at": [
+      1185,
+      150
+     ],
+     "obj": [
+      720,
+      40,
+      560,
+      315
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_phase_noun",
+     "box": [
+      60,
+      30,
+      380,
+      75
+     ],
+     "labelAt": [
+      492,
+      52
+     ]
+    },
+    {
+     "id": "fr_baleine_noun",
+     "box": [
+      110,
+      125,
+      195,
+      125
+     ]
+    },
+    {
+     "id": "fr_ile_noun",
+     "box": [
+      320,
+      120,
+      280,
+      140
+     ]
+    },
+    {
+     "id": "fr_mer_noun",
+     "box": [
+      20,
+      265,
+      175,
+      120
+     ]
+    },
+    {
+     "id": "fr_sirene_noun",
+     "box": [
+      300,
+      262,
+      150,
+      124
+     ]
+    },
+    {
+     "id": "fr_digue_noun",
+     "box": [
+      0,
+      385,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_plage_noun",
+     "box": [
+      185,
+      390,
+      195,
+      160
+     ]
+    },
+    {
+     "id": "fr_maree_noun",
+     "box": [
+      384,
+      425,
+      76,
+      118
+     ],
+     "labelAt": [
+      512,
+      468
+     ]
+    },
+    {
+     "id": "fr_vase_noun_f",
+     "box": [
+      295,
+      555,
+      180,
+      120
+     ]
+    },
+    {
+     "id": "fr_cape_noun",
+     "box": [
+      478,
+      515,
+      170,
+      160
+     ]
+    },
+    {
+     "id": "fr_ocean_noun",
+     "box": [
+      592,
+      285,
+      160,
+      210
+     ]
+    },
+    {
+     "id": "fr_flot_noun",
+     "box": [
+      757,
+      398,
+      123,
+      92
+     ]
+    },
+    {
+     "id": "fr_sable_noun",
+     "box": [
+      670,
+      510,
+      210,
+      105
+     ]
+    },
+    {
+     "id": "fr_echo_noun",
+     "box": [
+      770,
+      255,
+      195,
+      140
+     ]
+    },
+    {
+     "id": "fr_obus_noun",
+     "box": [
+      885,
+      440,
+      150,
+      160
+     ]
+    }
+   ],
+   "building_id": "B29_plage",
+   "sector_id": "S09_nature"
+  },
+  "cap": {
+   "name": "Le cap",
+   "room_id": "R_beach_01_z1",
+   "image": "plage/cap.jpg",
+   "parent": "plage",
+   "alt": "Close-up of the headland: the red-and-white lighthouse on the rocky cape, a seagull with a chip in its beak by a picnic basket, a diver leaping off a wooden springboard, a dolphin leaping beside a rowing boat where a baker fans a ball of dough, a rope bridge over a deep chasm lit by a sunbeam, and a bathing cabin with a white bathrobe on a hook.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cap_noun",
+     "box": [
+      855,
+      120,
+      90,
+      180
+     ],
+     "labelAt": [
+      900,
+      88
+     ]
+    },
+    {
+     "id": "fr_vice_noun",
+     "box": [
+      945,
+      258,
+      165,
+      80
+     ]
+    },
+    {
+     "id": "fr_plongeur_noun",
+     "box": [
+      740,
+      340,
+      200,
+      68
+     ]
+    },
+    {
+     "id": "fr_dauphin_noun",
+     "box": [
+      680,
+      410,
+      350,
+      110
+     ]
+    },
+    {
+     "id": "fr_abime_noun",
+     "box": [
+      715,
+      525,
+      315,
+      195
+     ],
+     "labelAt": [
+      870,
+      668
+     ]
+    },
+    {
+     "id": "fr_peignoir_noun",
+     "box": [
+      1035,
+      350,
+      240,
+      265
+     ]
+    }
+   ],
+   "building_id": "B29_plage",
+   "sector_id": "S09_nature"
+  },
+  "dunes": {
+   "name": "Les dunes",
+   "room_id": "R_beach_02",
+   "image": "plage/dunes.jpg",
+   "backTo": "plage",
+   "alt": "The far end of the beach among the sand dunes, painted in ink and gouache: a camel sliding down a dune on a red surfboard, a swimmer diving into the sea, an empty sailboat drifting towards a reef, a sailor pointing at a far-off land of bread-loaf hills on a tray, an oasis with a palm where camels and a rabbit queue for a drink, a camel staring at a mirage of a lemonade pool, a boy under a striped parasol beside a sun in sunglasses, a boy surfing with a seagull on his head, a golf ball splashing into the gulf, a line of crabs scuttling away and cookie-shaped seashells with crabs nibbling them; a sandy roped path at the bottom left leads back to the beach.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "plage",
+     "label": "La plage",
+     "hint": "Back along the roped sandy path to the beach",
+     "hit": [
+      0,
+      552,
+      300,
+      163
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_plongee_noun",
+     "box": [
+      115,
+      100,
+      125,
+      175
+     ]
+    },
+    {
+     "id": "fr_derive_noun",
+     "box": [
+      315,
+      100,
+      190,
+      165
+     ],
+     "labelAt": [
+      410,
+      66
+     ]
+    },
+    {
+     "id": "fr_contree_noun",
+     "box": [
+      510,
+      188,
+      215,
+      60
+     ]
+    },
+    {
+     "id": "fr_dune_noun",
+     "box": [
+      55,
+      370,
+      225,
+      175
+     ]
+    },
+    {
+     "id": "fr_oasis_noun",
+     "box": [
+      465,
+      365,
+      240,
+      225
+     ]
+    },
+    {
+     "id": "fr_mirage_noun",
+     "box": [
+      705,
+      318,
+      195,
+      105
+     ]
+    },
+    {
+     "id": "fr_parasol_noun",
+     "box": [
+      905,
+      288,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_surf_noun",
+     "box": [
+      800,
+      140,
+      200,
+      140
+     ]
+    },
+    {
+     "id": "fr_golfe_noun",
+     "box": [
+      1015,
+      160,
+      150,
+      115
+     ]
+    },
+    {
+     "id": "fr_exode_noun",
+     "box": [
+      1065,
+      320,
+      200,
+      135
+     ]
+    },
+    {
+     "id": "fr_coquillage_noun",
+     "box": [
+      830,
+      540,
+      365,
+      145
+     ],
+     "labelAt": [
+      1010,
+      505
+     ]
+    }
+   ],
+   "building_id": "B29_plage",
+   "sector_id": "S09_nature"
+  }
+ }
+}
