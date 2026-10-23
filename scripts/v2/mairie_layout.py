@@ -1,67 +1,497 @@
-import json
-L={"building":"mairie","name":"La mairie","main":"mairie",
- "roomList":[{"key":"mairie","short":"La mairie"},{"key":"poste","short":"La poste"}],
- "rooms":{
- "mairie":{"name":"La mairie","image":"mairie/mairie.jpg",
-  "alt":"The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a duck in a yellow raincoat showing a passport at a rainy window, a hedgehog with a bouquet and a watch and a gnome with a name badge; the open front door on the left leads to the village and a blue door on the right leads to the post office.",
-  "nameplate":[50,4.5],
-  "mapExit":{"box":[0,25,215,152],"label":"Le village"},
-  "doors":[{"to":"poste","label":"La poste","hint":"Through the blue door to the post office","hit":[1190,40,90,350]}],
-  "zooms":[{"to":"bureau","label":"le bureau","hint":"Look at what is on the donkey's desk","at":[1040,480],"obj":[945,250,290,360]}],
-  "items":[
-   {"id":"fr_adresse_noun","box":[20,180,128,275]},
-   {"id":"fr_photo_noun","box":[235,100,98,125]},
-   {"id":"fr_poubelle_noun","box":[148,262,150,196]},
-   {"id":"fr_file_noun","box":[15,458,295,215]},
-   {"id":"fr_carte_identite_noun","box":[312,505,236,165]},
-   {"id":"fr_attendre_verb","box":[312,225,228,275]},
-   {"id":"fr_signer_verb","box":[540,160,150,345]},
-   {"id":"fr_ecrire_verb","box":[690,180,120,310]},
-   {"id":"fr_maire_noun","box":[812,110,148,300]},
-   {"id":"fr_drapeau_noun","box":[812,480,150,95]},
-   {"id":"fr_bureau_noun","box":[960,250,160,210]},
-   {"id":"fr_passeport_noun","box":[1000,45,160,200]},
-   {"id":"fr_rendez_vous_noun","box":[965,505,155,160]},
-   {"id":"fr_nom_noun","box":[1125,400,140,265]}]},
- "bureau":{"name":"Le bureau","image":"mairie/bureau.jpg","parent":"mairie",
-  "alt":"Close-up of the donkey's desk: a letter sealed with a red heart, a key made of orange clay standing in its lump, a lop-eared bunny licking an envelope shut, a stamp showing a tambourine and a stylish pen in sunglasses and a pink scarf, with an inkwell behind.",
-  "doors":[],"zooms":[],
-  "items":[
-   {"id":"fr_lettre_noun","box":[22,290,253,270]},
-   {"id":"fr_cle_noun","box":[275,280,180,300]},
-   {"id":"fr_enveloppe_noun","box":[456,230,310,320]},
-   {"id":"fr_timbre_noun","box":[769,305,275,270]},
-   {"id":"fr_stylo_noun","box":[1060,165,190,415]}]},
- "poste":{"name":"La poste","image":"mairie/poste.jpg","backTo":"mairie",
-  "alt":"The village post office painted in ink and gouache: a teal door back to the town hall, a calendar with a dart in one square, a smiling cassette wearing a postman's cap, an easel with a poster of an orange fish, a suitcase on a red leash, the post-office counter, Monsieur Verbe throwing a paper-plane letter, calling on an apple held to his ear and wrapping a parcel in a pink tutu, a red telephone bouncing on a table, a ticket machine with animals waiting in a row, a collie carrying a parcel, a cardboard box on wheels carrying a heavy weight and a bundle of letters sprinting in running shoes.",
-  "doors":[{"to":"mairie","label":"La mairie","hint":"Back through the teal door to the town hall","hit":[10,30,165,190]}],
-  "zooms":[{"to":"guichet","label":"le guichet","hint":"Look at what is on the post-office counter","at":[500,135],"obj":[375,100,250,315]}],
-  "items":[
-   {"id":"fr_date_noun","box":[200,100,112,120]},
-   {"id":"fr_casquette_noun","box":[192,225,105,112],"labelAt":[260,300]},
-   {"id":"fr_affiche_noun","box":[20,225,170,290]},
-   {"id":"fr_valise_noun","box":[135,516,200,150]},
-   {"id":"fr_envoyer_verb","box":[328,160,140,305]},
-   {"id":"fr_appeler_verb","box":[600,165,125,295]},
-   {"id":"fr_emballer_verb","box":[725,190,150,270]},
-   {"id":"fr_telephone_noun","box":[905,210,135,100]},
-   {"id":"fr_numero_noun","box":[1150,175,125,290]},
-   {"id":"fr_colis_noun","box":[885,355,260,185],"labelAt":[935,505]},
-   {"id":"fr_carton_noun","box":[695,465,180,205]},
-   {"id":"fr_courrier_noun","box":[965,540,225,135]}]},
- "guichet":{"name":"Le guichet","image":"mairie/guichet.jpg","parent":"poste",
-  "alt":"Close-up of the post-office counter in front of its brass grille: a sheet of writing paper shaped like a leaf, a cello with string wound round its neck, a blue kettle wearing a brown label, a banana tied with a red ribbon, an open red present full of soft modelling dough and a little packet giving an OK sign.",
-  "doors":[],"zooms":[],
-  "items":[
-   {"id":"fr_feuille_noun","box":[20,335,180,290]},
-   {"id":"fr_ficelle_noun","box":[200,90,200,490]},
-   {"id":"fr_etiquette_noun","box":[400,175,255,345]},
-   {"id":"fr_ruban_noun","box":[656,395,314,215]},
-   {"id":"fr_cadeau_noun","box":[855,130,300,265]},
-   {"id":"fr_paquet_noun","box":[1062,400,195,205]}]}},
- "planned":{k:{"v1":"mairie/"+k} for k in ["mairie","bureau","poste","guichet"]}}
-# SHRINK 1px so touching boxes never overlap after rounding
-for r in L['rooms'].values():
-    for it in r['items']:
-        x,y,w,h=it['box']; it['box']=[x+1,y+1,w-2,h-2]
-json.dump(L,open('content/v2/mairie/layout.json','w'),indent=1,ensure_ascii=False)
+#!/usr/bin/env python3
+"""Writes content/v2/mairie/layout.json (final hand-tuned v2 layout for mairie)."""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "content", "v2", "mairie", "layout.json")
+L = json.loads(r'''{
+  "building": "mairie",
+  "name": "La mairie",
+  "main": "mairie",
+  "roomList": [
+    {
+      "key": "mairie",
+      "short": "La mairie"
+    },
+    {
+      "key": "poste",
+      "short": "La poste"
+    }
+  ],
+  "rooms": {
+    "mairie": {
+      "name": "La mairie",
+      "image": "mairie/mairie.jpg",
+      "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a duck in a yellow raincoat showing a passport at a rainy window, a hedgehog with a bouquet and a watch and a gnome with a name badge; the open front door on the left leads to the village and a blue door on the right leads to the post office.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          0,
+          25,
+          215,
+          152
+        ],
+        "label": "Le village"
+      },
+      "doors": [
+        {
+          "to": "poste",
+          "label": "La poste",
+          "hint": "Through the blue door to the post office",
+          "hit": [
+            1190,
+            40,
+            90,
+            350
+          ]
+        }
+      ],
+      "zooms": [
+        {
+          "to": "bureau",
+          "label": "le bureau",
+          "hint": "Look at what is on the donkey's desk",
+          "at": [
+            1040,
+            480
+          ],
+          "obj": [
+            925,
+            250,
+            280,
+            262
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "fr_adresse_noun",
+          "box": [
+            21,
+            181,
+            126,
+            273
+          ]
+        },
+        {
+          "id": "fr_photo_noun",
+          "box": [
+            236,
+            101,
+            96,
+            123
+          ]
+        },
+        {
+          "id": "fr_poubelle_noun",
+          "box": [
+            149,
+            263,
+            148,
+            194
+          ]
+        },
+        {
+          "id": "fr_file_noun",
+          "box": [
+            16,
+            459,
+            293,
+            213
+          ]
+        },
+        {
+          "id": "fr_carte_identite_noun",
+          "box": [
+            313,
+            506,
+            234,
+            163
+          ]
+        },
+        {
+          "id": "fr_attendre_verb",
+          "box": [
+            313,
+            226,
+            226,
+            273
+          ]
+        },
+        {
+          "id": "fr_signer_verb",
+          "box": [
+            541,
+            161,
+            148,
+            343
+          ]
+        },
+        {
+          "id": "fr_ecrire_verb",
+          "box": [
+            691,
+            181,
+            118,
+            308
+          ]
+        },
+        {
+          "id": "fr_maire_noun",
+          "box": [
+            813,
+            111,
+            146,
+            298
+          ]
+        },
+        {
+          "id": "fr_drapeau_noun",
+          "box": [
+            813,
+            481,
+            148,
+            93
+          ],
+          "labelAt": [
+            880,
+            578
+          ]
+        },
+        {
+          "id": "fr_bureau_noun",
+          "box": [
+            961,
+            251,
+            158,
+            208
+          ]
+        },
+        {
+          "id": "fr_passeport_noun",
+          "box": [
+            1001,
+            46,
+            158,
+            198
+          ]
+        },
+        {
+          "id": "fr_rendez_vous_noun",
+          "box": [
+            966,
+            506,
+            153,
+            158
+          ]
+        },
+        {
+          "id": "fr_nom_noun",
+          "box": [
+            1126,
+            401,
+            138,
+            263
+          ]
+        }
+      ]
+    },
+    "bureau": {
+      "name": "Le bureau",
+      "image": "mairie/bureau.jpg",
+      "parent": "mairie",
+      "alt": "Close-up of the donkey's desk: a letter sealed with a red heart, a key made of orange clay standing in its lump, a lop-eared bunny licking an envelope shut, a stamp showing a tambourine and a stylish pen in sunglasses and a pink scarf, with an inkwell behind.",
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_lettre_noun",
+          "box": [
+            55,
+            430,
+            238,
+            240
+          ]
+        },
+        {
+          "id": "fr_cle_noun",
+          "box": [
+            296,
+            420,
+            150,
+            260
+          ]
+        },
+        {
+          "id": "fr_enveloppe_noun",
+          "box": [
+            450,
+            370,
+            290,
+            290
+          ]
+        },
+        {
+          "id": "fr_timbre_noun",
+          "box": [
+            752,
+            445,
+            250,
+            225
+          ]
+        },
+        {
+          "id": "fr_stylo_noun",
+          "box": [
+            1030,
+            285,
+            175,
+            390
+          ]
+        }
+      ]
+    },
+    "poste": {
+      "name": "La poste",
+      "image": "mairie/poste.jpg",
+      "backTo": "mairie",
+      "alt": "The village post office painted in ink and gouache: a teal door back to the town hall, a calendar with a dart in one square, a smiling cassette wearing a postman's cap, an easel with a poster of an orange fish, a suitcase on a red leash, the post-office counter, Monsieur Verbe throwing a paper-plane letter, calling on an apple held to his ear and wrapping a parcel in a pink tutu, a red telephone bouncing on a table, a ticket machine with animals waiting in a row, a collie carrying a parcel, a cardboard box on wheels carrying a heavy weight and a bundle of letters sprinting in running shoes.",
+      "doors": [
+        {
+          "to": "mairie",
+          "label": "La mairie",
+          "hint": "Back through the teal door to the town hall",
+          "hit": [
+            10,
+            30,
+            165,
+            190
+          ]
+        }
+      ],
+      "zooms": [
+        {
+          "to": "guichet",
+          "label": "le guichet",
+          "hint": "Look at what is on the post-office counter",
+          "at": [
+            530,
+            130
+          ],
+          "obj": [
+            345,
+            124,
+            335,
+            212
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "fr_date_noun",
+          "box": [
+            201,
+            101,
+            103,
+            116
+          ]
+        },
+        {
+          "id": "fr_casquette_noun",
+          "box": [
+            193,
+            226,
+            106,
+            110
+          ],
+          "labelAt": [
+            246,
+            345
+          ]
+        },
+        {
+          "id": "fr_affiche_noun",
+          "box": [
+            21,
+            226,
+            153,
+            288
+          ],
+          "labelAt": [
+            62,
+            518
+          ]
+        },
+        {
+          "id": "fr_valise_noun",
+          "box": [
+            136,
+            517,
+            198,
+            148
+          ]
+        },
+        {
+          "id": "fr_envoyer_verb",
+          "box": [
+            317,
+            181,
+            129,
+            283
+          ]
+        },
+        {
+          "id": "fr_appeler_verb",
+          "box": [
+            619,
+            171,
+            133,
+            283
+          ]
+        },
+        {
+          "id": "fr_emballer_verb",
+          "box": [
+            757,
+            196,
+            126,
+            263
+          ]
+        },
+        {
+          "id": "fr_telephone_noun",
+          "box": [
+            906,
+            211,
+            133,
+            98
+          ]
+        },
+        {
+          "id": "fr_numero_noun",
+          "box": [
+            1151,
+            176,
+            123,
+            288
+          ]
+        },
+        {
+          "id": "fr_colis_noun",
+          "box": [
+            886,
+            356,
+            258,
+            183
+          ],
+          "labelAt": [
+            935,
+            505
+          ]
+        },
+        {
+          "id": "fr_carton_noun",
+          "box": [
+            696,
+            466,
+            178,
+            203
+          ]
+        },
+        {
+          "id": "fr_courrier_noun",
+          "box": [
+            966,
+            541,
+            223,
+            133
+          ]
+        }
+      ]
+    },
+    "guichet": {
+      "name": "Le guichet",
+      "image": "mairie/guichet.jpg",
+      "parent": "poste",
+      "alt": "Close-up of the post-office counter in front of its brass grille: a sheet of writing paper shaped like a leaf, a cello with string wound round its neck, a blue kettle wearing a brown label, a banana tied with a red ribbon, an open red present full of soft modelling dough and a little packet giving an OK sign.",
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_feuille_noun",
+          "box": [
+            21,
+            336,
+            178,
+            288
+          ]
+        },
+        {
+          "id": "fr_ficelle_noun",
+          "box": [
+            201,
+            91,
+            198,
+            488
+          ]
+        },
+        {
+          "id": "fr_etiquette_noun",
+          "box": [
+            401,
+            176,
+            253,
+            343
+          ]
+        },
+        {
+          "id": "fr_ruban_noun",
+          "box": [
+            657,
+            396,
+            312,
+            213
+          ]
+        },
+        {
+          "id": "fr_cadeau_noun",
+          "box": [
+            856,
+            131,
+            298,
+            263
+          ]
+        },
+        {
+          "id": "fr_paquet_noun",
+          "box": [
+            1063,
+            401,
+            193,
+            203
+          ]
+        }
+      ]
+    }
+  },
+  "planned": {
+    "mairie": {
+      "v1": "mairie/mairie"
+    },
+    "bureau": {
+      "v1": "mairie/bureau"
+    },
+    "poste": {
+      "v1": "mairie/poste"
+    },
+    "guichet": {
+      "v1": "mairie/guichet"
+    }
+  },
+  "building_id": "B13_mairie",
+  "sector_id": "S06_townhall"
+}''')
+with open(OUT, "w", encoding="utf-8") as f:
+    json.dump(L, f, ensure_ascii=False, indent=2)
+print("wrote", OUT)
