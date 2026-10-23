@@ -1,5 +1,5 @@
 ---
-name: Memory palace builder
+name: memory-palace-builder
 description: >-
   Use when designing or building any memory palace (method of loci) app, map, or
   illustrated set of rooms for memorizing a body of facts, in any subject.
@@ -67,9 +67,11 @@ Use fixed spatial rules so position itself carries information. Decide them once
 Choose between generated illustrations (richer, harder to keep consistent and edit) and hand-coded SVG (each item a separate <g> with an id, class, and title, so it is clickable, consistent across map/sector/room, and editable). Show the user one example room in each candidate pipeline before committing. A generator script that emits SVG from the room data keeps token use low.
 
 ## Asset structure
-Current preferred method (user review, Oct 23): keep the painted empty room as the fixed scene, then draw each item's asset to fit its exact slot (surface, angle, light, size, pose, occlusion) and composite it with code harmonisation. A single item can then be fixed without repainting the room. See gate H in the release-gates skill. The notes below are older lessons.
-Lessons from testing: flat vector SVG looked noticeably uglier than painted art, and painted cutouts composited onto a painted room looked jarring (different brushwork and lighting, sticker effect) even with shadows and color matching. Prefer one full painting per room plus a hotspot data file (polygon or box per item) for clickability; edit by regenerating the room with the previous image as a reference. If you do composite, generate objects with the room as a style and lighting reference.
-Alternative: keep each item as its own asset (one file per object) and each room as an empty background plus a layout data file (object id, position, scale, z-order, category side). A build script composes rooms, sector views, and the world map from these, so edits touch one small file, objects are reused consistently across views, and token use stays low. Shared style rules (palette, outline weight, light direction) plus an auto-added ground shadow make objects sit naturally in the scene. Large fixed features that interact deeply with the architecture can stay part of the background.
+- **Prefer separate assets (user-approved garage workflow).** Keep an immutable empty painting, one transparent source sprite per item, and one small machine-readable room manifest containing assignments, slots, hooks, cards, labels and exits. Generate placed sprites and card crops from these sources with a scoped build; never make the composed proof the only editable source. Use the empty painting as the sprites’ generation reference. Keep prompts and style references with the package so future fixes need little context.
+- **Compose a place before populating it.** Give the room one nameable architectural landmark, distinct materials, real working surfaces and a clear way out. Use the whole frame and vary depth. The garage's curved teal truss and round window worked; choose a different landmark for the next room rather than copying its furniture arrangement.
+- **Anchor to visible surfaces.** Specify a contact point on the actual floor, tabletop or sill, not just a bounding rectangle. Preserve sprite aspect ratio and inspect its visible alpha bounds after scaling: fitting a tall sprite into a narrow slot can make it unexpectedly small or leave it floating. Mask lower parts behind foreground furniture where needed. Size adult figures against nearby doors and benches at the same depth; a crouching pose must still read as the same human scale.
+- **Fix the smallest source.** Correct placement, scale or occlusion in the manifest first. Regenerate only the sprite whose drawing fails (the garage's brick collage became a landscape and needed one replacement); leave the approved background and good sprites intact. Reuse the matching source sprite on its word card.
+- **Finish the walk.** A standalone preview is an authoring aid. When opening the room, connect its intended building on the normal village map, load its styles and assets through the main entry point, and provide the painted return route. Respect other workers' claims; keep the map hotspot on the correct building and its name pill inside the frame.
 
 ## Consistency
 - Each object has one canonical position stored in data; the map, sector, and room views all read from it.

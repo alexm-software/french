@@ -1,5 +1,5 @@
 ---
-name: Language memory palace
+name: language-memory-palace
 description: >-
   Use when building a memory palace for learning a foreign language's vocabulary
   and grammar; load together with the Memory palace builder skill.
@@ -24,7 +24,7 @@ Each word is drawn as something that, said aloud in the learner's native languag
 - Never use the meaning as the sound-alike. 'cook' for cuisinier or 'cat' for chat (said SHAH) link nothing to the French sound. Derive the sound-alike from the pronunciation (IPA or respelling) and check it out loud.
 - Cognates count only when the word both looks AND sounds close (sauce, soupe). Write them plainly ("Same as English 'sauce', said SOHS") with one vivid image that fits the room, and note any pronunciation trap. Words that look alike but sound different (frite, said FREET) still need a sound cue. Mark false friends explicitly on the card.
 - Cognates still need a playful, memorable twist, ideally one that encodes the target-language pronunciation where it differs. A flat "like English X: someone uses X" line is not a mnemonic. Paint the twist.
-- Never drop a word for lack of a perfect hook; a plain, appealing depiction of the item is fine.
+- Never drop a word for lack of a perfect hook; a plain, appealing depiction of the item is fine. Rate it `plain` and give the real pronunciation instead of inventing a sound cue. Label approximate or ending-only cues honestly (`plunge` for planche is approximate; `roo` cues only the end of verrou). Do not rate a meaning-only picture or a spoken exclamation as a strong sound link.
 - No template or meta wording on cards ("Picture the plain object", "label glowing"). Every hook is a specific scene, and both the sound cue and the meaning are visibly painted.
 - Before bulk generation, write and get sign-off on a sample room of hooks. After generation, audit by reading each hook aloud against its respelling. Never trust a generator's own strength rating.
 - Watch automatic glosses for vulgar senses (dictionary data often lists slang first) and replace them with the everyday meaning.
