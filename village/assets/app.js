@@ -7,7 +7,8 @@ var MAP={image:'assets/map/village.jpg',
   {id:'cafe',name:'Le café',pts:'285,447 322,404 415,352 440,400 482,465 500,515 490,560 400,585 300,580 280,520',tag:[385,356],door:[392,508]},
   {id:'eglise',name:"L'église",pts:'80,140 125,88 228,60 247,2 268,60 285,82 320,165 320,240 300,282 185,282 80,228',tag:[205,62],door:[262,232]},
   {id:'mairie',name:'La mairie',pts:'434,92 462,46 545,44 548,8 592,20 590,38 612,34 641,96 616,108 612,172 585,184 545,186 470,180 436,170 436,104',tag:[520,44],door:[552,170]},
-  {id:'ecole',name:"L'école",pts:'740,80 772,34 880,60 912,88 904,138 860,152 785,140 742,126',tag:[826,34],door:[797,115]}
+  {id:'ecole',name:"L'école",pts:'740,80 772,34 880,60 912,88 904,138 860,152 785,140 742,126',tag:[826,34],door:[797,115]},
+  {id:'garage',name:'Le garage',pts:'1194,116 1223,80 1249,87 1266,118 1262,157 1195,150',tag:[1200,81],door:[1236,138]}
  ],
  soon:[
   {name:'Le moulin',pts:'1012,8 1128,8 1128,158 1012,158',tag:[1070,10]},
@@ -139,10 +140,12 @@ function renderRoom(bld,key){
   else { $('#backLabel').textContent='Le village'; back.title='Back to the village map'; }
   blur.style.backgroundImage='url('+R.image+')';
   var h='<img class="bg" src="'+R.image+'" alt="'+esc(R.alt||'')+'">';
+  if(R.nameplate){ h+='<div class="room-nameplate" style="left:'+pct(R.nameplate[0])+';top:'+pct(R.nameplate[1])+'">'+esc(R.name)+'</div>'; }
+  if(R.mapExit){ var e=R.mapExit.box; h+='<a class="doorway" href="#/" aria-label="'+esc(R.mapExit.label)+'" style="left:'+pct(e[0])+';top:'+pct(e[1])+';width:'+pct(e[2])+';height:'+pct(e[3])+'"><span class="dpill"><img src="'+MAP.image+'" alt="">'+esc(R.mapExit.label)+'</span></a>'; }
   if(R.sign){ var g=R.sign.box; h+='<img class="signimg" src="'+R.sign.src+'" alt="Sign: '+esc(R.sign.text)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+'">'; }
   R.items.forEach(function(it,i){
     var g=it.img,b=it.box,l=it.label;
-    h+='<img class="ov" id="ov'+i+'" src="'+R.placed+it.id+'.webp" alt="" style="left:'+pct(g[0])+';top:'+pct(g[1])+';width:'+pct(g[2])+';height:'+pct(g[3])+'">';
+    h+='<img class="ov'+(R.layered?' scene-asset':'')+'" id="ov'+i+'" src="'+R.placed+it.id+'.webp" alt="" style="left:'+pct(g[0])+';top:'+pct(g[1])+';width:'+pct(g[2])+';height:'+pct(g[3])+'">';
     h+='<button class="hot" data-i="'+i+'" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'" aria-label="'+esc(headword(it))+': '+esc(it.en)+'"></button>';
     h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(headword(it))+'</button>';
   });
@@ -192,7 +195,7 @@ function beretSvg(c){return '<svg viewBox="0 0 34 22" aria-hidden="true"><ellips
 function openCard(it,from){
   lastFocus=from||document.activeElement;
   var hw=headword(it), sp='speechSynthesis' in window;
-  var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="assets/words/'+it.id+'.webp" alt=""></div><div class="hw">';
+  var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="'+esc(it.cardSrc||('assets/words/'+it.id+'.webp'))+'" alt=""></div><div class="hw">';
   h+='<h2 id="cardTitle">'+(it.verb?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
@@ -257,7 +260,7 @@ document.addEventListener('keydown',function(e){
   else if(e.key==='Backspace'&&(view==='room'||view==='zoom')){back.click();e.preventDefault()}
 });
 function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], live=MAP.live.some(function(L){return L.id===bld});
+  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], live=MAP.live.some(function(L){return L.id===bld})||(window.VILLAGE_PREVIEW||[]).indexOf(bld)>=0;
   if(!live){ renderMap(); return }
   loadData(bld,function(ok){
     var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
