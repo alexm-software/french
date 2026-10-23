@@ -20,6 +20,8 @@ v2-specific inputs live in content/v2/<building>/:
   content/v2/vocab_fixes.json  the same art/g corrections for every building (known vocab.jsonl
                errors), so a building package picks them up without editing shared files;
                a building's own hooks.json entry wins.
+               An entry may also carry "ex": [french, english] to replace an example sentence that
+               breaks the content rules (e.g. a smoking/tobacco example), with a "why".
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
@@ -266,6 +268,8 @@ def build(bld, v1, vocab):
             it["box"] = spec["box"]
             if overrides.get(wid, {}).get("hook"):
                 it["hook"] = overrides[wid]["hook"]
+            if overrides.get(wid, {}).get("ex"):
+                it["ex"] = list(overrides[wid]["ex"])
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):
