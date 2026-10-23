@@ -1,0 +1,1662 @@
+{
+ "building": "banque",
+ "building_id": "B10_banque",
+ "sector_id": "S05_bank",
+ "name": "Banque du Village",
+ "main": "banque",
+ "roomList": [
+  {
+   "key": "banque",
+   "short": "Le hall"
+  },
+  {
+   "key": "guichet",
+   "short": "Le guichet"
+  },
+  {
+   "key": "prets",
+   "short": "Les prêts"
+  },
+  {
+   "key": "commerce",
+   "short": "Le commerce"
+  },
+  {
+   "key": "finances",
+   "short": "Les finances"
+  },
+  {
+   "key": "impots",
+   "short": "Les impôts"
+  },
+  {
+   "key": "placements",
+   "short": "Les placements"
+  }
+ ],
+ "planned": {
+  "banque": {
+   "vocabRoom": "R_bank_counter_01",
+   "only": [
+    "fr_banque_noun",
+    "fr_monnaie_noun",
+    "fr_richesse_noun",
+    "fr_argent_noun",
+    "fr_dollar_noun",
+    "fr_franc_noun",
+    "fr_solde_noun_m",
+    "fr_euro_noun",
+    "fr_compte_noun",
+    "fr_cheque_noun"
+   ]
+  },
+  "guichet": {
+   "vocabRoom": "R_bank_counter_02",
+   "only": [
+    "fr_reputation_noun",
+    "fr_consommation_noun",
+    "fr_greve_noun",
+    "fr_epingle_noun",
+    "fr_sou_noun",
+    "fr_credit_noun",
+    "fr_profil_noun",
+    "fr_portefeuille_noun"
+   ]
+  },
+  "bureau": {
+   "vocabRoom": "R_bank_counter_02",
+   "only": [
+    "fr_berge_noun",
+    "fr_bancaire_adj",
+    "fr_acces_noun",
+    "fr_transfert_noun",
+    "fr_rivage_noun",
+    "fr_gage_noun",
+    "fr_centime_noun",
+    "fr_enjeu_noun",
+    "fr_banquier_noun",
+    "fr_paiement_noun"
+   ]
+  },
+  "prets": {
+   "vocabRoom": "R_bank_counter_03",
+   "only": [
+    "fr_verification_noun",
+    "fr_allocation_noun",
+    "fr_prestation_noun",
+    "fr_notoriete_noun",
+    "fr_emprunt_noun",
+    "fr_debit_noun",
+    "fr_contre_courant_noun",
+    "fr_generique_noun",
+    "fr_gisement_noun",
+    "fr_utilisateur_noun"
+   ]
+  },
+  "pupitre": {
+   "vocabRoom": "R_bank_counter_03",
+   "only": [
+    "fr_cotisation_noun",
+    "fr_denomination_noun",
+    "fr_versement_noun",
+    "fr_usager_noun"
+   ]
+  },
+  "commerce": {
+   "vocabRoom": "R_bank_economy_01",
+   "only": [
+    "fr_annonce_noun",
+    "fr_promotion_noun",
+    "fr_depense_noun",
+    "fr_profit_noun",
+    "fr_marche_noun_2",
+    "fr_impot_noun",
+    "fr_revenu_noun",
+    "fr_stock_noun",
+    "fr_lot_noun",
+    "fr_marketing_noun"
+   ]
+  },
+  "comptoir": {
+   "vocabRoom": "R_bank_economy_01",
+   "only": [
+    "fr_exigence_noun",
+    "fr_taxe_noun",
+    "fr_benefice_noun",
+    "fr_partage_noun",
+    "fr_gain_noun"
+   ]
+  },
+  "finances": {
+   "vocabRoom": "R_bank_economy_02",
+   "only": [
+    "fr_crise_noun",
+    "fr_economie_noun",
+    "fr_dette_noun",
+    "fr_obligation_noun",
+    "fr_economique_adj",
+    "fr_financier_adj",
+    "fr_interet_noun",
+    "fr_secteur_noun",
+    "fr_equilibre_noun",
+    "fr_budget_noun"
+   ]
+  },
+  "tableau": {
+   "vocabRoom": "R_bank_economy_02",
+   "only": [
+    "fr_baisse_noun",
+    "fr_finance_noun",
+    "fr_opportunite_noun",
+    "fr_faillite_noun",
+    "fr_capital_adj",
+    "fr_bilan_noun"
+   ]
+  },
+  "impots": {
+   "vocabRoom": "R_bank_economy_03",
+   "only": [
+    "fr_usure_noun",
+    "fr_rente_noun",
+    "fr_subvention_noun",
+    "fr_comptable_adj",
+    "fr_fiscal_adj",
+    "fr_contribuable_noun",
+    "fr_financement_noun",
+    "fr_deficit_noun",
+    "fr_remboursement_noun"
+   ]
+  },
+  "tiroir": {
+   "vocabRoom": "R_bank_economy_03",
+   "only": [
+    "fr_fluctuation_noun",
+    "fr_imposition_noun",
+    "fr_devis_noun"
+   ]
+  },
+  "placements": {
+   "vocabRoom": "R_bank_economy_04",
+   "only": [
+    "fr_prosperite_noun",
+    "fr_expertise_noun",
+    "fr_prospection_noun",
+    "fr_actionnaire_noun",
+    "fr_investissement_noun",
+    "fr_capitalisme_noun",
+    "fr_placement_noun",
+    "fr_hypermarche_noun",
+    "fr_eleveur_noun",
+    "fr_debouche_noun"
+   ]
+  },
+  "coffret": {
+   "vocabRoom": "R_bank_economy_04",
+   "only": [
+    "fr_rentabilite_noun",
+    "fr_economiste_noun",
+    "fr_trust_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "banque": {
+   "name": "Le hall de la banque",
+   "room_id": "R_bank_counter_01",
+   "image": "banque/banque.jpg",
+   "alt": "The grand marble hall of the village bank, painted in ink and gouache: through the open brass entrance door on the far left a canal and a little bridge glitter in the sun; a pink pig-shaped money box bumps its snout at the door; a blue saucer heaped with coins sits on a small round table; a duchess in purple fans herself on a throne of gold bars; six coloured doors (red, blue, green, yellow, purple and orange) line the back wall; a cashier stacks towers of silver coins at his counter; a rag doll in a cowboy hat waves a green banknote; old uncle Frank shows a glass case of old coins; a clerk bangs a big rubber stamp on a slip; a girl rows a boat shaped like a giant gold coin across a puddle; a caped count turns the pages of a ledger at a lectern; and two tellers shake hands over a big paper cheque beside a little brass balance scale.",
+   "nameplate": [
+    27,
+    94
+   ],
+   "mapExit": {
+    "box": [
+     30,
+     60,
+     190,
+     255
+    ],
+    "label": "Quai de la Banque"
+   },
+   "doors": [
+    {
+     "to": "guichet",
+     "label": "le guichet",
+     "hint": "Go through the green door to the cashier's window",
+     "hit": [
+      672,
+      60,
+      100,
+      135
+     ]
+    },
+    {
+     "to": "prets",
+     "label": "les prêts",
+     "hint": "Go through the purple door to the loans office",
+     "hit": [
+      977,
+      60,
+      98,
+      135
+     ]
+    },
+    {
+     "to": "commerce",
+     "label": "le commerce",
+     "hint": "Go through the orange door to the trade office",
+     "hit": [
+      1142,
+      48,
+      96,
+      190
+     ]
+    },
+    {
+     "to": "finances",
+     "label": "les finances",
+     "hint": "Go through the yellow door to the finance office",
+     "hit": [
+      822,
+      60,
+      100,
+      135
+     ]
+    },
+    {
+     "to": "impots",
+     "label": "les impôts",
+     "hint": "Go through the blue door to the tax office",
+     "hit": [
+      522,
+      60,
+      98,
+      135
+     ]
+    },
+    {
+     "to": "placements",
+     "label": "les placements",
+     "hint": "Go through the red door to the investment office",
+     "hit": [
+      377,
+      60,
+      98,
+      140
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_banque_noun",
+     "box": [
+      88,
+      330,
+      140,
+      150
+     ],
+     "labelAt": [
+      158,
+      445
+     ]
+    },
+    {
+     "id": "fr_monnaie_noun",
+     "box": [
+      55,
+      515,
+      135,
+      80
+     ]
+    },
+    {
+     "id": "fr_richesse_noun",
+     "box": [
+      275,
+      205,
+      220,
+      280
+     ]
+    },
+    {
+     "id": "fr_argent_noun",
+     "box": [
+      615,
+      200,
+      175,
+      120
+     ]
+    },
+    {
+     "id": "fr_dollar_noun",
+     "box": [
+      805,
+      215,
+      128,
+      200
+     ]
+    },
+    {
+     "id": "fr_franc_noun",
+     "box": [
+      935,
+      240,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_solde_noun_m",
+     "box": [
+      1140,
+      262,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_euro_noun",
+     "box": [
+      580,
+      450,
+      290,
+      190
+     ]
+    },
+    {
+     "id": "fr_compte_noun",
+     "box": [
+      875,
+      418,
+      210,
+      295
+     ],
+     "labelAt": [
+      979,
+      677
+     ]
+    },
+    {
+     "id": "fr_cheque_noun",
+     "box": [
+      1090,
+      415,
+      190,
+      150
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "guichet": {
+   "name": "Le guichet",
+   "room_id": "R_bank_counter_02",
+   "image": "banque/guichet.jpg",
+   "backTo": "banque",
+   "alt": "The cashier's hall on the bank's first floor, painted in ink and gouache: a dark green door on the left; a proud lady with a gold star on her coat is admired by two bowing neighbours; a wicker basket of groceries and a tall thermometer gauge hang on the wall; three grave clerks fold their arms beside blank placards; an old tailor pushes a giant round-headed pin through the red rosette on his apron; a little girl drops a copper coin into a money box; a boy with a giant crayon pays at a lectern; through the big window a riverside scene is full of little figures; a black paper silhouette profile stands on a board, and a man in a mustard suit opens his wallet.",
+   "nameplate": [
+    20,
+    95
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the green door to the bank hall",
+     "hit": [
+      45,
+      90,
+      130,
+      190
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bureau",
+     "label": "la fenêtre",
+     "hint": "Look closer through the big window behind the counter",
+     "at": [
+      900,
+      150
+     ],
+     "obj": [
+      735,
+      53,
+      372,
+      209
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_reputation_noun",
+     "box": [
+      180,
+      205,
+      125,
+      410
+     ]
+    },
+    {
+     "id": "fr_consommation_noun",
+     "box": [
+      308,
+      15,
+      247,
+      260
+     ],
+     "labelAt": [
+      432,
+      240
+     ]
+    },
+    {
+     "id": "fr_greve_noun",
+     "box": [
+      308,
+      285,
+      250,
+      290
+     ]
+    },
+    {
+     "id": "fr_epingle_noun",
+     "box": [
+      560,
+      170,
+      152,
+      212
+     ]
+    },
+    {
+     "id": "fr_sou_noun",
+     "box": [
+      650,
+      385,
+      195,
+      295
+     ],
+     "labelAt": [
+      748,
+      644
+     ]
+    },
+    {
+     "id": "fr_credit_noun",
+     "box": [
+      850,
+      270,
+      170,
+      330
+     ]
+    },
+    {
+     "id": "fr_profil_noun",
+     "box": [
+      1107,
+      172,
+      160,
+      175
+     ]
+    },
+    {
+     "id": "fr_portefeuille_noun",
+     "box": [
+      1025,
+      350,
+      215,
+      365
+     ],
+     "labelAt": [
+      1133,
+      679
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "bureau": {
+   "name": "La fenêtre du guichet",
+   "room_id": "R_bank_counter_02_z1",
+   "image": "banque/bureau.jpg",
+   "parent": "guichet",
+   "alt": "Close-up through the window behind the cashier's counter, onto a sunny river: a long old barge is moored at the grassy bank; a blank gilt-framed gold card hangs on the window mullion with a feather duster below; a little guard with a round-ended wooden toy axe opens a small gate; a ferry carries one huge gold coin across the river while a heron stands in the shallows; a boy kneels to hand over a toy garage shaped like a little house; a small boy rolls a giant copper coin along the path; two young men play chess at a table; a moustached banker twirls a giant brass key, and a smiling woman holds out her hands as coins drop into them.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_berge_noun",
+     "box": [
+      30,
+      260,
+      320,
+      130
+     ]
+    },
+    {
+     "id": "fr_bancaire_adj",
+     "box": [
+      362,
+      160,
+      175,
+      160
+     ]
+    },
+    {
+     "id": "fr_acces_noun",
+     "box": [
+      580,
+      310,
+      170,
+      340
+     ]
+    },
+    {
+     "id": "fr_transfert_noun",
+     "box": [
+      660,
+      160,
+      210,
+      115
+     ],
+     "labelAt": [
+      764,
+      239
+     ]
+    },
+    {
+     "id": "fr_rivage_noun",
+     "box": [
+      872,
+      160,
+      65,
+      100
+     ],
+     "labelAt": [
+      888,
+      125
+     ]
+    },
+    {
+     "id": "fr_gage_noun",
+     "box": [
+      752,
+      280,
+      250,
+      190
+     ]
+    },
+    {
+     "id": "fr_centime_noun",
+     "box": [
+      755,
+      473,
+      240,
+      230
+     ],
+     "labelAt": [
+      875,
+      668
+     ]
+    },
+    {
+     "id": "fr_enjeu_noun",
+     "box": [
+      945,
+      110,
+      255,
+      125
+     ]
+    },
+    {
+     "id": "fr_banquier_noun",
+     "box": [
+      1065,
+      240,
+      215,
+      215
+     ]
+    },
+    {
+     "id": "fr_paiement_noun",
+     "box": [
+      1040,
+      460,
+      240,
+      260
+     ],
+     "labelAt": [
+      1160,
+      679
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "prets": {
+   "name": "Le bureau des prêts",
+   "room_id": "R_bank_counter_03",
+   "image": "banque/prets.jpg",
+   "backTo": "banque",
+   "alt": "The busy loans office upstairs in the bank, painted in ink and gouache: a shelf of little figurines runs along the top left; a clerk holds a banknote up to the window under a magnifying glass; another clerk drops one gold coin into each of a row of plain tins; a mother presses the button of a brass payout machine and an envelope slides out; a wigged notary sips tea among admiring fans; a purple door stands at the back; a granny signs for a cart of prunes; a salmon leaps up a fountain; a blue genie swirls out of an old television; a miner strikes a glittering gold vein; a girl times a gushing tap with a stopwatch, and a man with a tool belt taps at a brass terminal.",
+   "nameplate": [
+    29,
+    11
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the purple door to the bank hall",
+     "hit": [
+      552,
+      72,
+      172,
+      236
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "pupitre",
+     "label": "l'étagère",
+     "hint": "Look closer at the shelf of little figurines at the top left",
+     "at": [
+      137,
+      70
+     ],
+     "obj": [
+      6,
+      0,
+      262,
+      148
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_verification_noun",
+     "box": [
+      0,
+      165,
+      178,
+      225
+     ]
+    },
+    {
+     "id": "fr_allocation_noun",
+     "box": [
+      180,
+      240,
+      170,
+      155
+     ]
+    },
+    {
+     "id": "fr_prestation_noun",
+     "box": [
+      85,
+      398,
+      380,
+      322
+     ],
+     "labelAt": [
+      275,
+      679
+     ]
+    },
+    {
+     "id": "fr_notoriete_noun",
+     "box": [
+      352,
+      200,
+      197,
+      195
+     ]
+    },
+    {
+     "id": "fr_emprunt_noun",
+     "box": [
+      650,
+      312,
+      155,
+      360
+     ]
+    },
+    {
+     "id": "fr_debit_noun",
+     "box": [
+      830,
+      410,
+      230,
+      300
+     ],
+     "labelAt": [
+      944,
+      675
+     ]
+    },
+    {
+     "id": "fr_contre_courant_noun",
+     "box": [
+      808,
+      140,
+      182,
+      260
+     ]
+    },
+    {
+     "id": "fr_generique_noun",
+     "box": [
+      992,
+      20,
+      139,
+      338
+     ],
+     "labelAt": [
+      1060,
+      105
+     ]
+    },
+    {
+     "id": "fr_gisement_noun",
+     "box": [
+      1137,
+      20,
+      143,
+      320
+     ],
+     "labelAt": [
+      1202,
+      305
+     ]
+    },
+    {
+     "id": "fr_utilisateur_noun",
+     "box": [
+      1062,
+      360,
+      218,
+      360
+     ],
+     "labelAt": [
+      1170,
+      679
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "pupitre": {
+   "name": "L'étagère des prêts",
+   "room_id": "R_bank_counter_03_z1",
+   "image": "banque/pupitre.jpg",
+   "parent": "prets",
+   "alt": "Close-up of the wooden shelf in the loans office: club members drop coins into a baby's cot; a girl sorts banknotes into piles by colour and size; a poet with his arm raised recites a verse while sliding coins across a little counter; and an old sage with a long beard and walking staff waits his turn holding a blank ticket.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cotisation_noun",
+     "box": [
+      50,
+      70,
+      380,
+      315
+     ]
+    },
+    {
+     "id": "fr_denomination_noun",
+     "box": [
+      445,
+      135,
+      250,
+      265
+     ]
+    },
+    {
+     "id": "fr_versement_noun",
+     "box": [
+      705,
+      65,
+      255,
+      335
+     ]
+    },
+    {
+     "id": "fr_usager_noun",
+     "box": [
+      975,
+      120,
+      225,
+      280
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "commerce": {
+   "name": "Le bureau du commerce",
+   "room_id": "R_bank_economy_01",
+   "image": "banque/commerce.jpg",
+   "backTo": "banque",
+   "alt": "The trade office of the bank, painted in ink and gouache, opening onto a marsh: a shelf of little figurines on the top left; a town crier rings his bell with a board on his back; a lady in a tall cone hat swings a big blank price tag; coins pour out of a man's pockets; frogs haggle at market stalls on stilts in the marsh; a trader drops a coin into an overflowing jar; a man holds out a big pot for everyone's coins; a baker carries a bag of coins; a terracotta door stands at the back; a cat sits on a tower of boxes; a girl surveyor marks out a fenced plot, and a cow with a sandwich board and a cowbell parades past.",
+   "nameplate": [
+    24,
+    11
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the terracotta door to the bank hall",
+     "hit": [
+      932,
+      15,
+      192,
+      200
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "comptoir",
+     "label": "l'étagère",
+     "hint": "Look closer at the shelf of figurines at the top left",
+     "at": [
+      160,
+      130
+     ],
+     "obj": [
+      0,
+      75,
+      312,
+      176
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_annonce_noun",
+     "box": [
+      10,
+      268,
+      228,
+      390
+     ]
+    },
+    {
+     "id": "fr_promotion_noun",
+     "box": [
+      240,
+      175,
+      172,
+      320
+     ]
+    },
+    {
+     "id": "fr_depense_noun",
+     "box": [
+      415,
+      220,
+      160,
+      380
+     ]
+    },
+    {
+     "id": "fr_profit_noun",
+     "box": [
+      590,
+      330,
+      190,
+      290
+     ]
+    },
+    {
+     "id": "fr_marche_noun_2",
+     "box": [
+      585,
+      95,
+      215,
+      232
+     ]
+    },
+    {
+     "id": "fr_impot_noun",
+     "box": [
+      802,
+      245,
+      186,
+      225
+     ],
+     "labelAt": [
+      894,
+      434
+     ]
+    },
+    {
+     "id": "fr_revenu_noun",
+     "box": [
+      990,
+      235,
+      115,
+      250
+     ],
+     "labelAt": [
+      1048,
+      316
+     ]
+    },
+    {
+     "id": "fr_stock_noun",
+     "box": [
+      1140,
+      120,
+      140,
+      225
+     ]
+    },
+    {
+     "id": "fr_lot_noun",
+     "box": [
+      1107,
+      350,
+      173,
+      290
+     ]
+    },
+    {
+     "id": "fr_marketing_noun",
+     "box": [
+      790,
+      505,
+      290,
+      215
+     ],
+     "labelAt": [
+      934,
+      678
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "comptoir": {
+   "name": "L'étagère du commerce",
+   "room_id": "R_bank_economy_01_z1",
+   "image": "banque/comptoir.jpg",
+   "parent": "commerce",
+   "alt": "Close-up of the wooden shelf in the trade office: a fussy man in a bowler hat points at each egg in a tray; a hand posts a coin into a box studded with round brass tacks; a bunny in an apron rakes in a pile of coins; a girl cuts a cake into equal slices; and a little gang of children hold up a trophy full of coins.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_exigence_noun",
+     "box": [
+      40,
+      210,
+      302,
+      380
+     ]
+    },
+    {
+     "id": "fr_taxe_noun",
+     "box": [
+      345,
+      330,
+      175,
+      230
+     ]
+    },
+    {
+     "id": "fr_benefice_noun",
+     "box": [
+      575,
+      170,
+      200,
+      400
+     ]
+    },
+    {
+     "id": "fr_partage_noun",
+     "box": [
+      778,
+      225,
+      152,
+      320
+     ]
+    },
+    {
+     "id": "fr_gain_noun",
+     "box": [
+      932,
+      140,
+      330,
+      390
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "finances": {
+   "name": "Le bureau des finances",
+   "room_id": "R_bank_economy_02",
+   "image": "banque/finances.jpg",
+   "backTo": "banque",
+   "alt": "The finance office of the bank, painted in ink and gouache: a teal door on the left; a banker clutches his head over a crumpled chart; a big golden globe-shaped money tin swallows coins; a man drags a heavy ball and chain with a blank slip; a clerk hands a lady a ribboned scroll; a mouse carries a scroll bigger than itself; a woman counts coins at a desk under a green lamp; an old map hangs over a sideboard of little figures; a waiter serves a pizza shaped like a pie chart; coins hop into a wire basket; a big key tops a pair of balance scales, and a budgie perches on a jar of coins.",
+   "nameplate": [
+    62,
+    95
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the teal door to the bank hall",
+     "hit": [
+      150,
+      25,
+      140,
+      135
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "tableau",
+     "label": "le buffet",
+     "hint": "Look closer at the sideboard under the old map",
+     "at": [
+      790,
+      150
+     ],
+     "obj": [
+      650,
+      100,
+      280,
+      158
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_crise_noun",
+     "box": [
+      0,
+      165,
+      290,
+      280
+     ]
+    },
+    {
+     "id": "fr_economie_noun",
+     "box": [
+      60,
+      450,
+      240,
+      250
+     ],
+     "labelAt": [
+      180,
+      665
+     ]
+    },
+    {
+     "id": "fr_dette_noun",
+     "box": [
+      330,
+      423,
+      228,
+      257
+     ],
+     "labelAt": [
+      444,
+      644
+     ]
+    },
+    {
+     "id": "fr_obligation_noun",
+     "box": [
+      352,
+      70,
+      296,
+      215
+     ],
+     "labelAt": [
+      500,
+      249
+     ]
+    },
+    {
+     "id": "fr_economique_adj",
+     "box": [
+      445,
+      305,
+      120,
+      115
+     ]
+    },
+    {
+     "id": "fr_financier_adj",
+     "box": [
+      603,
+      288,
+      267,
+      347
+     ]
+    },
+    {
+     "id": "fr_interet_noun",
+     "box": [
+      872,
+      333,
+      166,
+      247
+     ]
+    },
+    {
+     "id": "fr_secteur_noun",
+     "box": [
+      932,
+      75,
+      170,
+      255
+     ],
+     "labelAt": [
+      1016,
+      294
+     ]
+    },
+    {
+     "id": "fr_equilibre_noun",
+     "box": [
+      1105,
+      160,
+      170,
+      285
+     ]
+    },
+    {
+     "id": "fr_budget_noun",
+     "box": [
+      1040,
+      450,
+      230,
+      250
+     ],
+     "labelAt": [
+      1154,
+      665
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "tableau": {
+   "name": "Le buffet sous la carte",
+   "room_id": "R_bank_economy_02_z1",
+   "image": "banque/tableau.jpg",
+   "parent": "finances",
+   "alt": "Close-up of the sideboard under the old map in the finance office: a cow slides down a red zig-zag arrow; gold coins dance over an open ledger; a little door stands ajar with a teacup on its step; a worried shopkeeper's box has toppled and spilt its coins; a black top hat brims with gold coins; and bumblebees hover over a strip of lawn with a small blank slate.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_baisse_noun",
+     "box": [
+      0,
+      385,
+      240,
+      215
+     ]
+    },
+    {
+     "id": "fr_finance_noun",
+     "box": [
+      242,
+      375,
+      188,
+      225
+     ]
+    },
+    {
+     "id": "fr_opportunite_noun",
+     "box": [
+      432,
+      370,
+      110,
+      240
+     ],
+     "labelAt": [
+      486,
+      615
+     ]
+    },
+    {
+     "id": "fr_faillite_noun",
+     "box": [
+      545,
+      395,
+      185,
+      215
+     ]
+    },
+    {
+     "id": "fr_capital_adj",
+     "box": [
+      790,
+      440,
+      120,
+      170
+     ]
+    },
+    {
+     "id": "fr_bilan_noun",
+     "box": [
+      920,
+      400,
+      250,
+      210
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "impots": {
+   "name": "Le bureau des impôts",
+   "room_id": "R_bank_economy_03",
+   "image": "banque/impots.jpg",
+   "backTo": "banque",
+   "alt": "The tax office of the bank, painted in ink and gouache, with pink walls: a man in a worn coat shrugs; an old man in a rocking chair takes an envelope from a postman; a slate-blue door at the back; a mayor in a sash hands a rolled grant to a girl beside her little brass submarine; a woman counts coins at a table; a man answers a ringing telephone; a man drops coins into a tree-shaped box; a sideboard holds little figures; a banker hands a bag of coins to an inventor on a winged bicycle; a glum man slumps beside an empty tray, and a man runs off with a little bag.",
+   "nameplate": [
+    14,
+    95
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the slate-blue door to the bank hall",
+     "hit": [
+      205,
+      40,
+      160,
+      165
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "tiroir",
+     "label": "le buffet",
+     "hint": "Look closer at the sideboard of little figures",
+     "at": [
+      930,
+      95
+     ],
+     "obj": [
+      750,
+      0,
+      355,
+      200
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_usure_noun",
+     "box": [
+      15,
+      205,
+      123,
+      325
+     ]
+    },
+    {
+     "id": "fr_rente_noun",
+     "box": [
+      140,
+      300,
+      232,
+      300
+     ]
+    },
+    {
+     "id": "fr_subvention_noun",
+     "box": [
+      375,
+      175,
+      205,
+      325
+     ]
+    },
+    {
+     "id": "fr_comptable_adj",
+     "box": [
+      583,
+      331,
+      140,
+      349
+     ],
+     "labelAt": [
+      653,
+      644
+     ]
+    },
+    {
+     "id": "fr_fiscal_adj",
+     "box": [
+      630,
+      220,
+      130,
+      108
+     ]
+    },
+    {
+     "id": "fr_contribuable_noun",
+     "box": [
+      763,
+      265,
+      117,
+      170
+     ],
+     "labelAt": [
+      823,
+      440
+     ]
+    },
+    {
+     "id": "fr_financement_noun",
+     "box": [
+      885,
+      200,
+      355,
+      235
+     ]
+    },
+    {
+     "id": "fr_deficit_noun",
+     "box": [
+      880,
+      483,
+      170,
+      237
+     ],
+     "labelAt": [
+      964,
+      678
+     ]
+    },
+    {
+     "id": "fr_remboursement_noun",
+     "box": [
+      1100,
+      485,
+      180,
+      235
+     ],
+     "labelAt": [
+      1170,
+      678
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "tiroir": {
+   "name": "Le buffet des impôts",
+   "room_id": "R_bank_economy_03_z1",
+   "image": "banque/tiroir.jpg",
+   "parent": "impots",
+   "alt": "Close-up of the sideboard in the tax office: a fish bobs on a coiled spring; a stern inspector in a bowler hat poses with a big rubber stamp over a blank form; and a builder holds his folding ruler open in a big V.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fluctuation_noun",
+     "box": [
+      80,
+      250,
+      220,
+      390
+     ]
+    },
+    {
+     "id": "fr_imposition_noun",
+     "box": [
+      360,
+      180,
+      400,
+      480
+     ]
+    },
+    {
+     "id": "fr_devis_noun",
+     "box": [
+      840,
+      180,
+      320,
+      490
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "placements": {
+   "name": "Le bureau des placements",
+   "room_id": "R_bank_economy_04",
+   "image": "banque/placements.jpg",
+   "backTo": "banque",
+   "alt": "The investment office of the bank, painted in ink and gouache, open to an orchard: villagers feast under fruit trees; a prospector pans a stream for gold; a lady with a loupe studies a painting while a parrot teases her; an heiress holds a fan of certificates; a copper-red door at the back; a girl plants coins in a flowerpot; a man in a flat cap sits on a pyramid of gold coins; a sideboard holds little figures; a man places his savings in a safe; a kid races a shopping trolley; a farmer lifts lambs into a wooden lift, and a brass pipe pours gold into a basket.",
+   "nameplate": [
+    16.2,
+    95
+   ],
+   "doors": [
+    {
+     "to": "banque",
+     "label": "le hall",
+     "hint": "Go back through the copper-red door to the bank hall",
+     "hit": [
+      665,
+      40,
+      70,
+      300
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "coffret",
+     "label": "le buffet",
+     "hint": "Look closer at the sideboard of little figures",
+     "at": [
+      860,
+      180
+     ],
+     "obj": [
+      738,
+      112,
+      250,
+      141
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_prosperite_noun",
+     "box": [
+      40,
+      20,
+      255,
+      390
+     ],
+     "labelAt": [
+      168,
+      375
+     ]
+    },
+    {
+     "id": "fr_expertise_noun",
+     "box": [
+      300,
+      150,
+      212,
+      410
+     ]
+    },
+    {
+     "id": "fr_prospection_noun",
+     "box": [
+      100,
+      413,
+      197,
+      236
+     ]
+    },
+    {
+     "id": "fr_actionnaire_noun",
+     "box": [
+      515,
+      135,
+      145,
+      240
+     ]
+    },
+    {
+     "id": "fr_investissement_noun",
+     "box": [
+      600,
+      378,
+      185,
+      342
+     ],
+     "labelAt": [
+      692,
+      679
+     ]
+    },
+    {
+     "id": "fr_capitalisme_noun",
+     "box": [
+      787,
+      315,
+      175,
+      345
+     ]
+    },
+    {
+     "id": "fr_placement_noun",
+     "box": [
+      965,
+      266,
+      115,
+      254
+     ],
+     "labelAt": [
+      1013,
+      281
+     ]
+    },
+    {
+     "id": "fr_hypermarche_noun",
+     "box": [
+      1090,
+      300,
+      185,
+      222
+     ],
+     "labelAt": [
+      1182,
+      487
+     ]
+    },
+    {
+     "id": "fr_eleveur_noun",
+     "box": [
+      1030,
+      20,
+      230,
+      243
+     ],
+     "labelAt": [
+      1144,
+      227
+     ]
+    },
+    {
+     "id": "fr_debouche_noun",
+     "box": [
+      965,
+      525,
+      295,
+      195
+     ],
+     "labelAt": [
+      1113,
+      678
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  },
+  "coffret": {
+   "name": "Le buffet des placements",
+   "room_id": "R_bank_economy_04_z1",
+   "image": "banque/coffret.jpg",
+   "parent": "placements",
+   "alt": "Close-up of the sideboard in the investment office: a farmer leads a billy goat beside a bucket of gold coins; an economist peers into a misty crystal ball; and three top-hatted bosses link arms around a factory.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_rentabilite_noun",
+     "box": [
+      80,
+      290,
+      340,
+      370
+     ]
+    },
+    {
+     "id": "fr_economiste_noun",
+     "box": [
+      470,
+      305,
+      290,
+      365
+     ]
+    },
+    {
+     "id": "fr_trust_noun",
+     "box": [
+      780,
+      230,
+      420,
+      460
+     ],
+     "labelAt": [
+      990,
+      655
+     ]
+    }
+   ],
+   "building_id": "B10_banque",
+   "sector_id": "S05_bank"
+  }
+ }
+}
