@@ -1,0 +1,1268 @@
+{
+ "building": "ferme",
+ "building_id": "B31_ferme",
+ "sector_id": "S09_nature",
+ "name": "La ferme",
+ "main": "ferme",
+ "roomList": [
+  {
+   "key": "ferme",
+   "short": "La ferme"
+  },
+  {
+   "key": "bassecour",
+   "short": "La basse-cour"
+  },
+  {
+   "key": "manege",
+   "short": "Le manège"
+  },
+  {
+   "key": "champs",
+   "short": "Les champs"
+  },
+  {
+   "key": "coteau",
+   "short": "Le coteau"
+  }
+ ],
+ "planned": {
+  "ferme": {
+   "vocabRoom": "R_farm_animals_01",
+   "only": [
+    "fr_corne_noun",
+    "fr_mule_noun",
+    "fr_comte_noun",
+    "fr_cavalier_noun",
+    "fr_ane_noun",
+    "fr_taureau_noun",
+    "fr_cheval_noun",
+    "fr_berger_noun",
+    "fr_veau_noun",
+    "fr_heu_noun"
+   ]
+  },
+  "souche": {
+   "vocabRoom": "R_farm_animals_01",
+   "only": [
+    "fr_porcelaine_noun",
+    "fr_selle_noun",
+    "fr_cavalerie_noun",
+    "fr_corrida_noun",
+    "fr_troupeau_noun",
+    "fr_relais_noun",
+    "fr_boeuf_noun"
+   ]
+  },
+  "bassecour": {
+   "vocabRoom": "R_farm_animals_02",
+   "only": [
+    "fr_grange_noun",
+    "fr_vache_noun",
+    "fr_chevre_noun",
+    "fr_ecurie_noun",
+    "fr_coq_noun",
+    "fr_cochon_noun",
+    "fr_pecheur_noun",
+    "fr_fumier_noun",
+    "fr_mouton_noun",
+    "fr_poulet_noun"
+   ]
+  },
+  "souchebasse": {
+   "vocabRoom": "R_farm_animals_02",
+   "only": [
+    "fr_donnee_noun",
+    "fr_dinde_noun",
+    "fr_brebis_noun",
+    "fr_volaille_noun",
+    "fr_hangar_noun",
+    "fr_agneau_noun",
+    "fr_lard_noun",
+    "fr_gitan_noun"
+   ]
+  },
+  "manege": {
+   "vocabRoom": "R_farm_animals_03",
+   "only": [
+    "fr_bourgade_noun",
+    "fr_pature_noun",
+    "fr_equitation_noun",
+    "fr_monte_noun",
+    "fr_argile_noun",
+    "fr_paillette_noun",
+    "fr_clown_noun",
+    "fr_chameau_noun",
+    "fr_mulet_noun",
+    "fr_elevage_noun",
+    "fr_aboiement_noun",
+    "fr_humus_noun",
+    "fr_dada_noun",
+    "fr_dinosaure_noun"
+   ]
+  },
+  "champs": {
+   "vocabRoom": "R_fields_01",
+   "only": [
+    "fr_colonne_noun",
+    "fr_agriculture_noun",
+    "fr_graine_noun",
+    "fr_champ_noun",
+    "fr_moulin_noun",
+    "fr_ble_noun",
+    "fr_paysan_noun",
+    "fr_foin_noun",
+    "fr_grain_noun",
+    "fr_pre_noun"
+   ]
+  },
+  "souchechamps": {
+   "vocabRoom": "R_fields_01",
+   "only": [
+    "fr_prairie_noun",
+    "fr_recolte_noun",
+    "fr_plantation_noun",
+    "fr_agricole_adj",
+    "fr_cultive_adj",
+    "fr_fermier_noun",
+    "fr_mais_noun",
+    "fr_fut_noun",
+    "fr_agriculteur_noun"
+   ]
+  },
+  "coteau": {
+   "vocabRoom": "R_fields_02",
+   "only": [
+    "fr_agglomeration_noun",
+    "fr_friche_noun",
+    "fr_semence_noun",
+    "fr_famine_noun",
+    "fr_sillon_noun",
+    "fr_eperon_noun",
+    "fr_socle_noun",
+    "fr_attribut_noun",
+    "fr_villageois_noun",
+    "fr_engrais_noun"
+   ]
+  },
+  "souchecoteau": {
+   "vocabRoom": "R_fields_02",
+   "only": [
+    "fr_vendange_noun",
+    "fr_extraction_noun",
+    "fr_cueillette_noun",
+    "fr_terroir_noun",
+    "fr_semis_noun",
+    "fr_bailleur_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "ferme": {
+   "name": "La ferme",
+   "room_id": "R_farm_animals_01",
+   "image": "ferme/ferme.jpg",
+   "alt": "A sunny farm painted in ink and gouache: a rhino's horn poking up through a field of tall corn, a stubborn mule with baskets refusing the carrots a boy holds out, a count in a red cloak waving from the battlements of a castle on the hill, a tiny rider galloping on a white sheepdog with a toy sword, a donkey trotting with a boy in a feathered hat on her back, a bull lying in a row of daisies reading a book covered in stars, a farmer coaxing his horse into its stable, a mother cow with her newborn calf, a shepherd on a hay bale sharing his burger with a white sheepdog and a boy scratching his head at a blackboard. The red barn leads to the farmyard, the white paddock gate to the riding ring, the wooden field gates to the fields and the vine arch on the hill to the hillside vineyard; an old tree stump in the middle can be looked at closer, and the white gate at the bottom left leads out to the valley.",
+   "nameplate": [
+    44,
+    5.5
+   ],
+   "mapExit": {
+    "box": [
+     60,
+     522,
+     190,
+     170
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "bassecour",
+     "label": "La basse-cour",
+     "hint": "Go in through the big red barn door to the farmyard",
+     "hit": [
+      215,
+      110,
+      190,
+      195
+     ]
+    },
+    {
+     "to": "manege",
+     "label": "Le manège",
+     "hint": "Go through the white paddock gate to the riding ring",
+     "hit": [
+      500,
+      175,
+      105,
+      70
+     ]
+    },
+    {
+     "to": "champs",
+     "label": "Les champs",
+     "hint": "Go through the wooden field gates to the fields",
+     "hit": [
+      660,
+      160,
+      180,
+      65
+     ]
+    },
+    {
+     "to": "coteau",
+     "label": "Le coteau",
+     "hint": "Walk up the hill and through the vine arch to the hillside vineyard",
+     "hit": [
+      1050,
+      95,
+      120,
+      105
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souche",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump",
+     "at": [
+      634,
+      330
+     ],
+     "obj": [
+      410,
+      250,
+      448,
+      252
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_corne_noun",
+     "box": [
+      40,
+      225,
+      160,
+      120
+     ]
+    },
+    {
+     "id": "fr_mule_noun",
+     "box": [
+      100,
+      348,
+      330,
+      170
+     ]
+    },
+    {
+     "id": "fr_comte_noun",
+     "box": [
+      1105,
+      25,
+      60,
+      50
+     ],
+     "labelAt": [
+      1040,
+      30
+     ]
+    },
+    {
+     "id": "fr_cavalier_noun",
+     "box": [
+      762,
+      226,
+      110,
+      88
+     ]
+    },
+    {
+     "id": "fr_ane_noun",
+     "box": [
+      895,
+      190,
+      125,
+      125
+     ]
+    },
+    {
+     "id": "fr_taureau_noun",
+     "box": [
+      830,
+      315,
+      165,
+      120
+     ]
+    },
+    {
+     "id": "fr_cheval_noun",
+     "box": [
+      1032,
+      260,
+      218,
+      225
+     ]
+    },
+    {
+     "id": "fr_berger_noun",
+     "box": [
+      835,
+      440,
+      195,
+      230
+     ]
+    },
+    {
+     "id": "fr_veau_noun",
+     "box": [
+      555,
+      460,
+      265,
+      230
+     ],
+     "labelAt": [
+      687,
+      648
+     ]
+    },
+    {
+     "id": "fr_heu_noun",
+     "box": [
+      1040,
+      535,
+      200,
+      170
+     ],
+     "labelAt": [
+      1140,
+      645
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "souche": {
+   "name": "La vieille souche",
+   "room_id": "R_farm_animals_01_z1",
+   "image": "ferme/souche.jpg",
+   "parent": "ferme",
+   "alt": "Close-up of the old tree stump in the middle of the farm: a porcelain teapot with a smiling face on a little wooden shelf, a leather saddle on its stand, a cavalry of fluffy pom-pom ponies charging to rescue a lost lamb, a small blank wooden board, a herd of cows marching in line, two children passing a relay baton and a strong ox pulling a plough.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_porcelaine_noun",
+     "box": [
+      140,
+      310,
+      146,
+      160
+     ]
+    },
+    {
+     "id": "fr_selle_noun",
+     "box": [
+      290,
+      380,
+      180,
+      170
+     ]
+    },
+    {
+     "id": "fr_cavalerie_noun",
+     "box": [
+      170,
+      80,
+      515,
+      220
+     ]
+    },
+    {
+     "id": "fr_corrida_noun",
+     "box": [
+      495,
+      420,
+      112,
+      140
+     ]
+    },
+    {
+     "id": "fr_troupeau_noun",
+     "box": [
+      690,
+      250,
+      275,
+      140
+     ]
+    },
+    {
+     "id": "fr_relais_noun",
+     "box": [
+      990,
+      285,
+      135,
+      145
+     ]
+    },
+    {
+     "id": "fr_boeuf_noun",
+     "box": [
+      640,
+      395,
+      348,
+      170
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "bassecour": {
+   "name": "La basse-cour",
+   "room_id": "R_farm_animals_02",
+   "image": "ferme/bassecour.jpg",
+   "backTo": "ferme",
+   "alt": "The farmyard behind the barn: a red barn so full of hay that a cow pops out of the hayloft door, a cow enjoying a foamy brush wash, a goat nibbling a striped chevron sign, a horse lying on a pillow in the stable while a vet gives him his cure, a rooster crowing on top of a giant green glass bottle, a pig snoozing on a huge cushion, a fisherman on a little jetty, a farmer forking a steaming manure heap beside a sunflower, a sheep trying to moo at two surprised cows and chickens paddling in a blue paddling pool. An old tree stump with tiny things on it can be looked at closer, and the open white gate at the bottom right leads back to the farm.",
+   "nameplate": [
+    42,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ferme",
+     "label": "La ferme",
+     "hint": "Go back through the open white gate to the farm",
+     "hit": [
+      1045,
+      450,
+      235,
+      210
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souchebasse",
+     "label": "la souche",
+     "hint": "Look closer at the tree stump in the farmyard",
+     "at": [
+      644,
+      470
+     ],
+     "obj": [
+      420,
+      330,
+      448,
+      252
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_grange_noun",
+     "box": [
+      55,
+      15,
+      350,
+      200
+     ]
+    },
+    {
+     "id": "fr_vache_noun",
+     "box": [
+      360,
+      220,
+      310,
+      155
+     ]
+    },
+    {
+     "id": "fr_chevre_noun",
+     "box": [
+      150,
+      270,
+      180,
+      122
+     ]
+    },
+    {
+     "id": "fr_ecurie_noun",
+     "box": [
+      5,
+      400,
+      330,
+      312
+     ],
+     "labelAt": [
+      170,
+      650
+     ]
+    },
+    {
+     "id": "fr_coq_noun",
+     "box": [
+      710,
+      35,
+      150,
+      255
+     ]
+    },
+    {
+     "id": "fr_cochon_noun",
+     "box": [
+      785,
+      295,
+      190,
+      145
+     ]
+    },
+    {
+     "id": "fr_pecheur_noun",
+     "box": [
+      865,
+      115,
+      165,
+      150
+     ]
+    },
+    {
+     "id": "fr_fumier_noun",
+     "box": [
+      1095,
+      170,
+      180,
+      145
+     ]
+    },
+    {
+     "id": "fr_mouton_noun",
+     "box": [
+      990,
+      320,
+      285,
+      120
+     ]
+    },
+    {
+     "id": "fr_poulet_noun",
+     "box": [
+      865,
+      450,
+      175,
+      115
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "souchebasse": {
+   "name": "La souche de la basse-cour",
+   "room_id": "R_farm_animals_02_z1",
+   "image": "ferme/souchebasse.jpg",
+   "parent": "bassecour",
+   "alt": "Close-up of the farmyard tree stump: a little scientist plotting a single dot on a big graph on an easel, a turkey in a dandy waistcoat and bow tie, a ewe nuzzling her baby lamb, a hen and a duck pecking as a volleyball bounces past, a farm hangar big enough for a tractor, a plane and cows, a wet lamb standing in the water trough, a pan of sizzling bacon on a little stove and a small blank wooden sign.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_donnee_noun",
+     "box": [
+      148,
+      180,
+      200,
+      230
+     ]
+    },
+    {
+     "id": "fr_dinde_noun",
+     "box": [
+      350,
+      170,
+      165,
+      210
+     ]
+    },
+    {
+     "id": "fr_brebis_noun",
+     "box": [
+      375,
+      390,
+      220,
+      150
+     ]
+    },
+    {
+     "id": "fr_volaille_noun",
+     "box": [
+      65,
+      415,
+      275,
+      140
+     ]
+    },
+    {
+     "id": "fr_hangar_noun",
+     "box": [
+      585,
+      25,
+      460,
+      275
+     ]
+    },
+    {
+     "id": "fr_agneau_noun",
+     "box": [
+      870,
+      302,
+      240,
+      118
+     ]
+    },
+    {
+     "id": "fr_lard_noun",
+     "box": [
+      860,
+      425,
+      165,
+      85
+     ]
+    },
+    {
+     "id": "fr_gitan_noun",
+     "box": [
+      1115,
+      265,
+      115,
+      160
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "manege": {
+   "name": "Le manège",
+   "room_id": "R_farm_animals_03",
+   "image": "ferme/manege.jpg",
+   "backTo": "ferme",
+   "alt": "The riding ring at sunset: a little village of cottages where a goose in a sash is the mayor, cows grazing the pasture while Pa tours it on his tractor, a girl in a helmet at her riding lesson, a girl riding a grey horse bareback and waving, a potter shaping clay into an argyle sock, a palette covered in sequins on a stool, a clown on the barn roof juggling cabbages in front of the full moon, a camel covered in shampoo bubbles, a stubborn mule at the fence, a farmer raising a lamb up in his arms, a dog barking at the postman, a cat digging in dark soil, a dad galloping on a hobby horse and a gentle dinosaur munching hay beside the cows. The white gate at the bottom left leads back to the farm.",
+   "nameplate": [
+    22,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ferme",
+     "label": "La ferme",
+     "hint": "Go back through the white gate to the farm",
+     "hit": [
+      10,
+      500,
+      195,
+      195
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bourgade_noun",
+     "box": [
+      5,
+      100,
+      185,
+      215
+     ]
+    },
+    {
+     "id": "fr_pature_noun",
+     "box": [
+      195,
+      185,
+      290,
+      100
+     ]
+    },
+    {
+     "id": "fr_equitation_noun",
+     "box": [
+      200,
+      305,
+      185,
+      150
+     ]
+    },
+    {
+     "id": "fr_monte_noun",
+     "box": [
+      458,
+      305,
+      145,
+      198
+     ]
+    },
+    {
+     "id": "fr_argile_noun",
+     "box": [
+      320,
+      456,
+      135,
+      232
+     ],
+     "labelAt": [
+      387,
+      650
+     ]
+    },
+    {
+     "id": "fr_paillette_noun",
+     "box": [
+      455,
+      580,
+      100,
+      105
+     ],
+     "labelAt": [
+      625,
+      622
+     ]
+    },
+    {
+     "id": "fr_clown_noun",
+     "box": [
+      580,
+      55,
+      110,
+      115
+     ]
+    },
+    {
+     "id": "fr_chameau_noun",
+     "box": [
+      725,
+      255,
+      160,
+      118
+     ]
+    },
+    {
+     "id": "fr_mulet_noun",
+     "box": [
+      975,
+      255,
+      125,
+      115
+     ]
+    },
+    {
+     "id": "fr_elevage_noun",
+     "box": [
+      640,
+      375,
+      130,
+      240
+     ]
+    },
+    {
+     "id": "fr_aboiement_noun",
+     "box": [
+      775,
+      380,
+      170,
+      225
+     ]
+    },
+    {
+     "id": "fr_humus_noun",
+     "box": [
+      865,
+      605,
+      100,
+      85
+     ],
+     "labelAt": [
+      915,
+      648
+     ]
+    },
+    {
+     "id": "fr_dada_noun",
+     "box": [
+      965,
+      420,
+      130,
+      175
+     ]
+    },
+    {
+     "id": "fr_dinosaure_noun",
+     "box": [
+      1095,
+      435,
+      180,
+      210
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "champs": {
+   "name": "Les champs",
+   "room_id": "R_fields_01",
+   "image": "ferme/champs.jpg",
+   "backTo": "ferme",
+   "alt": "The harvest fields: a tall column of wheat sheaves with a mouse sitting proudly on top, a sheep driving a red tractor, a seed sprouting in a little pot on a crate, a farmer waving his hat beside a field of sunflowers, a cow mooing at the miller by a windmill, a mouse harvesting a stalk of wheat, young helpers with baskets of apples, a horse munching hay with straw stuck in its mane, a gran pushing one giant grain of wheat in a wheelbarrow and a cow kneeling as if to pray in a meadow of buttercups. An old tree stump with tiny things on it can be looked at closer, and the wooden field gate at the bottom left leads back to the farm.",
+   "nameplate": [
+    44,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ferme",
+     "label": "La ferme",
+     "hint": "Go back through the wooden field gate to the farm",
+     "hit": [
+      0,
+      488,
+      220,
+      217
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souchechamps",
+     "label": "la souche",
+     "hint": "Look closer at the tree stump in the field",
+     "at": [
+      640,
+      420
+     ],
+     "obj": [
+      384,
+      236,
+      448,
+      252
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_colonne_noun",
+     "box": [
+      355,
+      120,
+      165,
+      240
+     ]
+    },
+    {
+     "id": "fr_agriculture_noun",
+     "box": [
+      75,
+      280,
+      215,
+      206
+     ]
+    },
+    {
+     "id": "fr_graine_noun",
+     "box": [
+      290,
+      490,
+      185,
+      185
+     ]
+    },
+    {
+     "id": "fr_champ_noun",
+     "box": [
+      615,
+      110,
+      230,
+      150
+     ]
+    },
+    {
+     "id": "fr_moulin_noun",
+     "box": [
+      850,
+      25,
+      245,
+      240
+     ],
+     "labelAt": [
+      972,
+      30
+     ]
+    },
+    {
+     "id": "fr_ble_noun",
+     "box": [
+      835,
+      275,
+      85,
+      55
+     ]
+    },
+    {
+     "id": "fr_paysan_noun",
+     "box": [
+      800,
+      335,
+      210,
+      160
+     ]
+    },
+    {
+     "id": "fr_foin_noun",
+     "box": [
+      1060,
+      270,
+      205,
+      220
+     ]
+    },
+    {
+     "id": "fr_grain_noun",
+     "box": [
+      780,
+      500,
+      285,
+      215
+     ],
+     "labelAt": [
+      922,
+      650
+     ]
+    },
+    {
+     "id": "fr_pre_noun",
+     "box": [
+      1075,
+      505,
+      200,
+      205
+     ],
+     "labelAt": [
+      1175,
+      650
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "souchechamps": {
+   "name": "La souche des champs",
+   "room_id": "R_fields_01_z1",
+   "image": "ferme/souchechamps.jpg",
+   "parent": "champs",
+   "alt": "Close-up of the tree stump in the field: a hare chasing a butterfly through a patch of wildflowers, a young colt pulling a cart of golden wheat, a child pressing seeds into the soil while a robin watches, a prize cabbage with a blue rosette, neat rows of sunflowers, a farmer milking a cow into a pail, tall stalks of maize, a few little wooden kegs by a ramp and a tractor giving lambs a tour in its trailer.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_prairie_noun",
+     "box": [
+      170,
+      360,
+      150,
+      170
+     ]
+    },
+    {
+     "id": "fr_recolte_noun",
+     "box": [
+      320,
+      180,
+      315,
+      180
+     ]
+    },
+    {
+     "id": "fr_plantation_noun",
+     "box": [
+      325,
+      385,
+      170,
+      190
+     ]
+    },
+    {
+     "id": "fr_agricole_adj",
+     "box": [
+      505,
+      382,
+      160,
+      218
+     ]
+    },
+    {
+     "id": "fr_cultive_adj",
+     "box": [
+      668,
+      380,
+      205,
+      140
+     ]
+    },
+    {
+     "id": "fr_fermier_noun",
+     "box": [
+      640,
+      140,
+      260,
+      240
+     ]
+    },
+    {
+     "id": "fr_mais_noun",
+     "box": [
+      915,
+      195,
+      165,
+      232
+     ]
+    },
+    {
+     "id": "fr_fut_noun",
+     "box": [
+      785,
+      525,
+      130,
+      110
+     ]
+    },
+    {
+     "id": "fr_agriculteur_noun",
+     "box": [
+      920,
+      430,
+      205,
+      155
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "coteau": {
+   "name": "Le coteau",
+   "room_id": "R_fields_02",
+   "image": "ferme/coteau.jpg",
+   "backTo": "ferme",
+   "alt": "The hillside vineyard: a built-up town of red roofs piled like toy blocks on the far hill, fallow land overrun with poppies and rabbits, a little judge-owl in a white wig holding out a summons, a small blank wooden board, a ploughman and his horse cutting a long furrow, a young cowboy showing the shiny spur on his boot, a sock standing on a stone plinth like a statue, a scarecrow with a straw hat, a crooked smile and a crow on each arm, a villager wheeling a pumpkin home with a cat on top and a boy scooping grey fertilizer from a sack. An old tree stump with tiny things on it can be looked at closer, and the vine arch at the left leads back to the farm.",
+   "nameplate": [
+    50,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ferme",
+     "label": "La ferme",
+     "hint": "Go back through the vine arch to the farm",
+     "hit": [
+      0,
+      215,
+      300,
+      295
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souchecoteau",
+     "label": "la souche",
+     "hint": "Look closer at the tree stump in the vineyard",
+     "at": [
+      700,
+      340
+     ],
+     "obj": [
+      440,
+      240,
+      432,
+      243
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_agglomeration_noun",
+     "box": [
+      0,
+      55,
+      405,
+      115
+     ]
+    },
+    {
+     "id": "fr_friche_noun",
+     "box": [
+      140,
+      520,
+      500,
+      190
+     ],
+     "labelAt": [
+      390,
+      650
+     ]
+    },
+    {
+     "id": "fr_semence_noun",
+     "box": [
+      345,
+      380,
+      110,
+      130
+     ]
+    },
+    {
+     "id": "fr_famine_noun",
+     "box": [
+      495,
+      420,
+      85,
+      92
+     ]
+    },
+    {
+     "id": "fr_sillon_noun",
+     "box": [
+      770,
+      170,
+      280,
+      120
+     ]
+    },
+    {
+     "id": "fr_eperon_noun",
+     "box": [
+      810,
+      291,
+      85,
+      155
+     ]
+    },
+    {
+     "id": "fr_socle_noun",
+     "box": [
+      955,
+      295,
+      105,
+      152
+     ]
+    },
+    {
+     "id": "fr_attribut_noun",
+     "box": [
+      1075,
+      215,
+      195,
+      232
+     ]
+    },
+    {
+     "id": "fr_villageois_noun",
+     "box": [
+      785,
+      448,
+      230,
+      252
+     ],
+     "labelAt": [
+      900,
+      650
+     ]
+    },
+    {
+     "id": "fr_engrais_noun",
+     "box": [
+      1020,
+      448,
+      165,
+      217
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  },
+  "souchecoteau": {
+   "name": "La souche du coteau",
+   "room_id": "R_fields_02_z1",
+   "image": "ferme/souchecoteau.jpg",
+   "parent": "coteau",
+   "alt": "Close-up of the tree stump in the vineyard: grape pickers with baskets piled high with purple grapes, a mole dentist pulling a carrot out of the ground with pliers, two children racing to pick strawberries into baskets, a little sloping bank of vines with rich soil in the sun, a little truck driving along neat rows while a farmer in the back sows seeds, and a smiling landlord handing a big key to a visitor beside a sign with a key on it.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vendange_noun",
+     "box": [
+      180,
+      270,
+      215,
+      125
+     ]
+    },
+    {
+     "id": "fr_extraction_noun",
+     "box": [
+      430,
+      255,
+      145,
+      145
+     ]
+    },
+    {
+     "id": "fr_cueillette_noun",
+     "box": [
+      335,
+      401,
+      263,
+      162
+     ]
+    },
+    {
+     "id": "fr_terroir_noun",
+     "box": [
+      858,
+      290,
+      207,
+      160
+     ]
+    },
+    {
+     "id": "fr_semis_noun",
+     "box": [
+      600,
+      372,
+      250,
+      185
+     ]
+    },
+    {
+     "id": "fr_bailleur_noun",
+     "box": [
+      710,
+      200,
+      145,
+      155
+     ]
+    }
+   ],
+   "building_id": "B31_ferme",
+   "sector_id": "S09_nature"
+  }
+ }
+}
