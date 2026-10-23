@@ -31,10 +31,14 @@ W, H = 1280, 720
 BLOCK = [r"\bgod the father\b", r"dieu le p[eè]re", r"\bdrunk", r"\bbeer\b", r"\bcigar", r"\bsmok(e|ing)\b(?!.*(incense|censer|chimney|smoke rises))",
          r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill", r"\btobacc"]
 SMOKE = BLOCK[5]
-# Narrow exemption: the noun "la fumée" (gloss "smoke") is campfire / chimney smoke, not smoking. For that noun only,
-# the generic smoke pattern is skipped and its gloss/example are not scanned for it; its hook/scene/note must still be
-# free of any smoking or tobacco depiction (TOBACCO below), and every other BLOCK pattern still applies to all fields.
+TOBACC = BLOCK[-1]
+# Narrow exemptions. These nouns use a blocked English word in the planned gloss for a non-smoking sense.
+# "la fumée" (fr_fumee_noun, gloss "smoke") is campfire / chimney smoke: the generic smoke pattern is skipped on
+# every field. "le tabac" (fr_tabac_noun, gloss "tobacco") is a blank wooden notice board: the generic tobacco
+# pattern is skipped on the gloss and example only. For both, hook/scene/note must still be free of any smoking or
+# tobacco depiction (TOBACCO below), and every other BLOCK pattern still applies to all fields.
 SMOKE_NOUNS = {"fr_fumee_noun"}
+TABAC_NOUNS = {"fr_tabac_noun"}
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
 ART = re.compile(r"^(le|la|les|l'|le/la|un|une) ?", re.I)
 
@@ -145,12 +149,16 @@ def check_building(bld, errs, warns):
             if not (V2 / it["cardSrc"]).exists(): E(f"{tag}: card image missing for {it['fr']}")
             if not it.get("hook"): E(f"{tag}: no memory hook for {it['fr']}")
             text = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note", "en")) + " " + " ".join(it.get("ex") or [])
+            depict = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note"))
             smoke_noun = it["id"] in SMOKE_NOUNS and not it.get("verb") and it.get("en", "").strip().lower() == "smoke"
+            tabac_noun = it["id"] in TABAC_NOUNS and not it.get("verb") and "tobacco" in (it.get("en") or "").strip().lower()
             for pat in BLOCK:
                 if smoke_noun and pat == SMOKE: continue
+                if tabac_noun and pat == TOBACC:
+                    if re.search(pat, depict, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
+                    continue
                 if re.search(pat, text, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
-            if smoke_noun:
-                depict = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note"))
+            if smoke_noun or tabac_noun:
                 if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
         # routes
         for d in R.get("doors", []):
