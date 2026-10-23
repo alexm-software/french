@@ -1,5 +1,8 @@
 {
  "building": "boulangerie",
+ "building_id": "B06_marche",
+ "sector_id": "S03_market",
+ "v1_room_id": "R_bakery_01",
  "name": "La boulangerie",
  "main": "boulangerie",
  "roomList": [
@@ -30,7 +33,7 @@
   "boulangerie": {
    "name": "La boulangerie : la boutique",
    "image": "boulangerie/boulangerie.jpg",
-   "alt": "Inside the village bakery, painted in ink and gouache: a brass till, a shopkeeper counting on her fingers beside a bowl of coins, an assistant selling a baguette, a customer holding up a gold coin, a glass display case of cakes, a cat on a stack of baguettes, a sack of flour, a jolly baker juggling croissants beside a price-tag rosette, a sack of baguettes, an egg lifting weights and a child's bike with a wicker pannier; the glass shop door on the left leads out to the village and a purple door on the right opens into the bakehouse.",
+   "alt": "Inside the village bakery, painted in ink and gouache: a brass till, Monsieur Verbe in a red beret counting on his fingers beside a bowl of coins, Monsieur Verbe in a purple beret selling a baguette, Monsieur Verbe in a red beret holding up a gold coin, a glass display case holding dough, a fruit tart, a cake, butter, sugar and a chocolate éclair, with a little green-beret mime choosing, a cat on a stack of baguettes, a sack of flour, a jolly baker juggling croissants beside a price-tag rosette, a sack of baguettes, an egg lifting weights and a child's bike with a wicker pannier; the glass shop door on the left leads out to the village and a purple door on the right opens into the bakehouse.",
    "nameplate": [
     50,
     4.5
@@ -78,18 +81,18 @@
      "id": "fr_caisse_noun",
      "box": [
       134,
-      306,
-      164,
-      160
+      312,
+      140,
+      156
      ]
     },
     {
      "id": "fr_compter_verb",
      "box": [
-      300,
-      214,
-      104,
-      176
+      276,
+      196,
+      136,
+      196
      ]
     },
     {
@@ -122,10 +125,14 @@
     {
      "id": "fr_vendre_verb",
      "box": [
-      480,
-      240,
+      478,
+      200,
       140,
-      140
+      180
+     ],
+     "labelAt": [
+      548,
+      322
      ]
     },
     {
@@ -133,8 +140,12 @@
      "box": [
       622,
       130,
-      176,
-      250
+      206,
+      252
+     ],
+     "labelAt": [
+      722,
+      330
      ]
     },
     {
@@ -197,17 +208,17 @@
    "name": "La vitrine",
    "image": "boulangerie/comptoir.jpg",
    "parent": "boulangerie",
-   "alt": "A close-up of the bakery's glass display case, painted in ink and gouache: dough, a fruit tart, a girl in a yellow dress choosing, a cake, butter, sugar and a chocolate éclair.",
+   "alt": "A close-up of the bakery's glass display case, painted in ink and gouache: dough on a board, a fruit tart, Monsieur Verbe in a green beret tapping his chin as he chooses, a cake, butter in earmuffs, sugar under a lollipop and a chocolate éclair with a mouse, all inside the case.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_pate_noun",
      "box": [
-      4,
-      330,
-      206,
-      190
+      24,
+      320,
+      228,
+      196
      ]
     },
     {
@@ -215,17 +226,17 @@
      "box": [
       256,
       350,
-      146,
+      140,
       138
      ]
     },
     {
      "id": "fr_choisir_verb",
      "box": [
-      404,
-      296,
+      400,
+      276,
       206,
-      420
+      440
      ]
     },
     {
@@ -270,7 +281,7 @@
    "name": "Le fournil",
    "image": "boulangerie/fournil.jpg",
    "backTo": "boulangerie",
-   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, a girl kneading dough in a giant petri dish, a boy mixing batter in half a watermelon, a young baker in a choir collar cooking a pancake, a brick oven wearing a fur stole, a tray on a little rocky mesa, a stitched bucket on a smiling apron-table, and a workbench of odd little objects.",
+   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, where the mimes can be seen behind the display case, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, Monsieur Verbe in a green beret kneading dough in a giant petri dish, Monsieur Verbe in a red beret mixing batter in half a watermelon, Monsieur Verbe in a gold beret and choir collar singing as he cooks a pancake, a brick oven wearing a fur stole, a tray on a little rocky mesa, a leaky bucket by the oven sewn up with a needle and red thread, a smiling apron-table, and a workbench with a slice of bread in a trench coat, a cake box with a sail, a salt shaker in a stone cell, an alarm clock, a toy mule in a cake tin and a knight's gauntlet.",
    "doors": [
     {
      "to": "boulangerie",
@@ -290,7 +301,7 @@
      "label": "Le plan de travail",
      "at": [
       876,
-      600
+      690
      ],
      "obj": [
       676,
@@ -343,16 +354,16 @@
       445,
       280,
       198,
-      280
+      268
      ]
     },
     {
      "id": "fr_melanger_verb",
      "box": [
       645,
-      242,
-      175,
-      260
+      236,
+      180,
+      270
      ]
     },
     {
@@ -362,6 +373,10 @@
       234,
       178,
       290
+     ],
+     "labelAt": [
+      948,
+      440
      ]
     },
     {
@@ -385,19 +400,19 @@
     {
      "id": "fr_seau_noun",
      "box": [
-      1080,
-      440,
-      150,
-      110
+      1124,
+      420,
+      116,
+      100
      ]
     },
     {
      "id": "fr_tablier_noun",
      "box": [
       1076,
-      552,
+      520,
       160,
-      168
+      190
      ]
     }
    ]
@@ -406,7 +421,7 @@
    "name": "Le plan de travail",
    "image": "boulangerie/plan.jpg",
    "parent": "fournil",
-   "alt": "A close-up of the bakehouse workbench, painted in ink and gouache: a slice of bread in a trench coat, a cake box with a sail on a puddle, a rolling pin, a salt shaker locked in a little stone cell, an alarm clock blowing a bugle, a toy mule wearing a cake tin and a knight's gauntlet.",
+   "alt": "A close-up of the bakehouse workbench, painted in ink and gouache: a slice of bread in a trench coat, a cake box with a sail on a puddle, a salt shaker locked in a little stone cell, an alarm clock tooting a little bugle, a toy mule wearing a cake tin and a knight's gauntlet.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -432,36 +447,36 @@
      "id": "fr_sel_noun",
      "box": [
       662,
-      210,
-      164,
-      230
+      212,
+      160,
+      226
      ]
     },
     {
      "id": "fr_reveil_noun",
      "box": [
-      828,
-      262,
-      110,
-      190
+      824,
+      250,
+      114,
+      200
      ]
     },
     {
      "id": "fr_moule_noun_m",
      "box": [
       940,
-      175,
-      158,
+      178,
+      160,
       250
      ]
     },
     {
      "id": "fr_gant_noun",
      "box": [
-      1100,
+      1102,
       135,
-      150,
-      295
+      140,
+      300
      ]
     }
    ]

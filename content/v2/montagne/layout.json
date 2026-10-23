@@ -1,0 +1,674 @@
+{
+ "building": "montagne",
+ "building_id": "B26_montagne",
+ "sector_id": "S09_nature",
+ "name": "La montagne",
+ "main": "montagne",
+ "roomList": [
+  {
+   "key": "montagne",
+   "short": "La montagne"
+  },
+  {
+   "key": "pentes",
+   "short": "Les pentes"
+  },
+  {
+   "key": "glacier",
+   "short": "Le glacier"
+  }
+ ],
+ "planned": {
+  "montagne": {
+   "vocabRoom": "R_mountain_01",
+   "only": [
+    "fr_montagne_noun",
+    "fr_falaise_noun",
+    "fr_hauteur_noun",
+    "fr_colline_noun",
+    "fr_vallee_noun",
+    "fr_grotte_noun",
+    "fr_cote_noun_2",
+    "fr_sommet_noun",
+    "fr_ski_noun"
+   ]
+  },
+  "pentes": {
+   "vocabRoom": "R_mountain_02",
+   "only": [
+    "fr_tombe_noun",
+    "fr_pente_noun",
+    "fr_roche_noun",
+    "fr_descente_noun",
+    "fr_tentation_noun",
+    "fr_rampe_noun",
+    "fr_rocher_noun",
+    "fr_comble_noun",
+    "fr_saut_noun",
+    "fr_mont_noun",
+    "fr_gouffre_noun",
+    "fr_roc_noun",
+    "fr_stand_noun",
+    "fr_tirage_noun"
+   ]
+  },
+  "souche": {
+   "vocabRoom": "R_mountain_02",
+   "only": [
+    "fr_souche_noun",
+    "fr_altitude_noun",
+    "fr_escalade_noun",
+    "fr_caverne_noun",
+    "fr_monture_noun",
+    "fr_montee_noun",
+    "fr_fosse_noun_2"
+   ]
+  },
+  "glacier": {
+   "vocabRoom": "R_mountain_03",
+   "only": [
+    "fr_cime_noun",
+    "fr_ascension_noun",
+    "fr_traction_noun",
+    "fr_pique_noun",
+    "fr_butte_noun",
+    "fr_foulee_noun",
+    "fr_val_noun",
+    "fr_talus_noun",
+    "fr_promeneur_noun",
+    "fr_glacier_noun"
+   ]
+  },
+  "etang": {
+   "vocabRoom": "R_mountain_03",
+   "only": [
+    "fr_sierra_noun",
+    "fr_bruyere_noun",
+    "fr_alpiniste_noun",
+    "fr_patinage_noun",
+    "fr_traineau_noun",
+    "fr_stratageme_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "montagne": {
+   "name": "La montagne",
+   "room_id": "R_mountain_01",
+   "image": "montagne/montagne.jpg",
+   "alt": "Snowy ski slopes painted in ink and gouache: a goat in a red scarf on a snowy peak, a climber clinging to a white cliff by a tuft of grass, a wooden lookout tower where a climber lets down a long striped ribbon, a girl rolling on a picnic blanket on a green hill, a polar bear sweeping out a cave while a skier ducks inside, a valet in a red waistcoat beside a blue car at the bottom of the valley, a yellow coat drying on a rope between two posts, a llama in a woolly hat on the far summit and a penguin skiing with flippers out. A chairlift station on the right leads up to the slopes, a fenced snowy trail leads to the glacier, and a wooden arch at the bottom right leads back to the valley.",
+   "nameplate": [
+    62,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     1050,
+     430,
+     200,
+     240
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "pentes",
+     "label": "Les pentes",
+     "hint": "Take the chairlift up to the middle slopes",
+     "hit": [
+      1070,
+      262,
+      200,
+      108
+     ]
+    },
+    {
+     "to": "glacier",
+     "label": "Le glacier",
+     "hint": "Follow the fenced snowy trail to the glacier at the far end",
+     "hit": [
+      735,
+      140,
+      190,
+      145
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_montagne_noun",
+     "box": [
+      95,
+      20,
+      215,
+      170
+     ]
+    },
+    {
+     "id": "fr_falaise_noun",
+     "box": [
+      20,
+      275,
+      255,
+      190
+     ]
+    },
+    {
+     "id": "fr_hauteur_noun",
+     "box": [
+      385,
+      30,
+      160,
+      255
+     ]
+    },
+    {
+     "id": "fr_colline_noun",
+     "box": [
+      335,
+      395,
+      150,
+      145
+     ]
+    },
+    {
+     "id": "fr_vallee_noun",
+     "box": [
+      45,
+      477,
+      230,
+      195
+     ]
+    },
+    {
+     "id": "fr_grotte_noun",
+     "box": [
+      490,
+      290,
+      255,
+      165
+     ]
+    },
+    {
+     "id": "fr_cote_noun_2",
+     "box": [
+      400,
+      545,
+      195,
+      130
+     ]
+    },
+    {
+     "id": "fr_sommet_noun",
+     "box": [
+      1000,
+      25,
+      150,
+      150
+     ]
+    },
+    {
+     "id": "fr_ski_noun",
+     "box": [
+      765,
+      422,
+      150,
+      165
+     ]
+    }
+   ],
+   "building_id": "B26_montagne",
+   "sector_id": "S09_nature"
+  },
+  "pentes": {
+   "name": "Les pentes",
+   "room_id": "R_mountain_02",
+   "image": "montagne/pentes.jpg",
+   "backTo": "montagne",
+   "alt": "The middle ski slopes: an old lady laying flowers by a gravestone on a quiet hillside, a child on a sledge zooming towards a frozen pond, a climber rushing up a rock, a skier starting down the slope towards a steaming apple pie, a shivering skier in a warm tent with a mug of cocoa, a penguin flipping off a snowboard ramp, a seal in a red scarf lounging on a snowy boulder, a giant pink comb on top of a peak, a frog leaping off a ski jump, a skier cheering on top of a mountain, an explorer peering into a deep crevasse, an ibex on a rock above the clouds, three snowmen at a hot-chocolate stand and a girl holding up the goldfish she won. On the left crag an old tree stump can be looked at closer; the chairlift arrives at a wooden arch in the middle and rides back down to the mountain.",
+   "nameplate": [
+    32,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "montagne",
+     "label": "La montagne",
+     "hint": "Ride the chairlift back down to the mountain",
+     "hit": [
+      680,
+      512,
+      215,
+      163
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souche",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump on top of the crag",
+     "at": [
+      130,
+      45
+     ],
+     "obj": [
+      0,
+      0,
+      512,
+      288
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_tombe_noun",
+     "box": [
+      30,
+      325,
+      175,
+      110
+     ]
+    },
+    {
+     "id": "fr_pente_noun",
+     "box": [
+      120,
+      440,
+      220,
+      110
+     ]
+    },
+    {
+     "id": "fr_roche_noun",
+     "box": [
+      280,
+      285,
+      135,
+      115
+     ]
+    },
+    {
+     "id": "fr_descente_noun",
+     "box": [
+      480,
+      315,
+      85,
+      105
+     ]
+    },
+    {
+     "id": "fr_tentation_noun",
+     "box": [
+      345,
+      540,
+      165,
+      155
+     ]
+    },
+    {
+     "id": "fr_rampe_noun",
+     "box": [
+      515,
+      450,
+      130,
+      170
+     ]
+    },
+    {
+     "id": "fr_rocher_noun",
+     "box": [
+      670,
+      230,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_comble_noun",
+     "box": [
+      710,
+      40,
+      120,
+      120
+     ]
+    },
+    {
+     "id": "fr_saut_noun",
+     "box": [
+      925,
+      100,
+      120,
+      100
+     ]
+    },
+    {
+     "id": "fr_mont_noun",
+     "box": [
+      1100,
+      55,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_gouffre_noun",
+     "box": [
+      1110,
+      210,
+      110,
+      110
+     ]
+    },
+    {
+     "id": "fr_roc_noun",
+     "box": [
+      1125,
+      335,
+      140,
+      260
+     ]
+    },
+    {
+     "id": "fr_stand_noun",
+     "box": [
+      790,
+      395,
+      210,
+      110
+     ]
+    },
+    {
+     "id": "fr_tirage_noun",
+     "box": [
+      905,
+      545,
+      145,
+      150
+     ]
+    }
+   ],
+   "building_id": "B26_montagne",
+   "sector_id": "S09_nature"
+  },
+  "souche": {
+   "name": "La vieille souche",
+   "room_id": "R_mountain_02_z1",
+   "image": "montagne/souche.jpg",
+   "parent": "pentes",
+   "alt": "Close-up of the crag: a hedgehog curled on an old tree stump shaped like a giant sushi roll, a goat in goggles on a high ledge greeted by an eagle, a goat scaling the rock face with a rope round his horns, a bear in a red woolly hat asleep in an icy cavern, a knight sitting on his white horse, a hiker climbing the zigzag path and a fox peering into a deep pit.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_souche_noun",
+     "box": [
+      322,
+      30,
+      160,
+      210
+     ]
+    },
+    {
+     "id": "fr_altitude_noun",
+     "box": [
+      70,
+      35,
+      240,
+      210
+     ]
+    },
+    {
+     "id": "fr_escalade_noun",
+     "box": [
+      100,
+      294,
+      100,
+      150
+     ]
+    },
+    {
+     "id": "fr_caverne_noun",
+     "box": [
+      256,
+      406,
+      125,
+      150
+     ]
+    },
+    {
+     "id": "fr_monture_noun",
+     "box": [
+      56,
+      475,
+      188,
+      219
+     ]
+    },
+    {
+     "id": "fr_montee_noun",
+     "box": [
+      494,
+      288,
+      94,
+      156
+     ]
+    },
+    {
+     "id": "fr_fosse_noun_2",
+     "box": [
+      270,
+      575,
+      268,
+      140
+     ]
+    }
+   ],
+   "building_id": "B26_montagne",
+   "sector_id": "S09_nature"
+  },
+  "glacier": {
+   "name": "Le glacier",
+   "room_id": "R_mountain_03",
+   "image": "montagne/glacier.jpg",
+   "backTo": "montagne",
+   "alt": "The far end of the ski slopes: a giant zip running up a snowy peak, a little bear with a rucksack planting a flag, a muscly marmot doing a pull-up on the ski-lift bar, a knight peeking over a pike with a spade-shaped tip, a boot-shaped hillock with a sheep on the toe, a jester striding over an icy puddle, a girl skipping through a little green vale, a penguin steering a sledge down the bank, a walker on the boardwalk and a blue glacier with an ice-cream cart at its foot. In the middle, an old tree stump by a frozen pond can be looked at closer; a wooden arch at the bottom right leads back to the mountain.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "montagne",
+     "label": "La montagne",
+     "hint": "Walk back through the wooden arch to the mountain",
+     "hit": [
+      1135,
+      430,
+      140,
+      150
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "etang",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump by the frozen pond",
+     "at": [
+      775,
+      476
+     ],
+     "obj": [
+      440,
+      240,
+      480,
+      270
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_cime_noun",
+     "box": [
+      150,
+      20,
+      180,
+      280
+     ]
+    },
+    {
+     "id": "fr_ascension_noun",
+     "box": [
+      35,
+      135,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_traction_noun",
+     "box": [
+      45,
+      285,
+      100,
+      120
+     ]
+    },
+    {
+     "id": "fr_pique_noun",
+     "box": [
+      60,
+      430,
+      110,
+      190
+     ]
+    },
+    {
+     "id": "fr_butte_noun",
+     "box": [
+      175,
+      495,
+      170,
+      140
+     ]
+    },
+    {
+     "id": "fr_foulee_noun",
+     "box": [
+      425,
+      505,
+      150,
+      165
+     ]
+    },
+    {
+     "id": "fr_val_noun",
+     "box": [
+      640,
+      510,
+      85,
+      95
+     ]
+    },
+    {
+     "id": "fr_talus_noun",
+     "box": [
+      975,
+      385,
+      130,
+      120
+     ]
+    },
+    {
+     "id": "fr_promeneur_noun",
+     "box": [
+      945,
+      535,
+      100,
+      175
+     ]
+    },
+    {
+     "id": "fr_glacier_noun",
+     "box": [
+      900,
+      180,
+      370,
+      190
+     ]
+    }
+   ],
+   "building_id": "B26_montagne",
+   "sector_id": "S09_nature"
+  },
+  "etang": {
+   "name": "La souche de l'étang",
+   "room_id": "R_mountain_03_z1",
+   "image": "montagne/etang.jpg",
+   "parent": "glacier",
+   "alt": "Close-up of the frozen pond: a giant saw standing beside jagged peaks with matching teeth, a brewer in a kilt making purple heather tea in a copper kettle with bees buzzing round, a mountaineer in a red helmet clipping her rope to a peak, a sister and brother skating across the ice, huskies pulling a little train-shaped sleigh, a fox disguised as a snowman skiing past three hens, and an old tree stump on the snowy bank.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sierra_noun",
+     "box": [
+      180,
+      35,
+      210,
+      340
+     ]
+    },
+    {
+     "id": "fr_bruyere_noun",
+     "box": [
+      10,
+      380,
+      260,
+      330
+     ]
+    },
+    {
+     "id": "fr_alpiniste_noun",
+     "box": [
+      664,
+      86,
+      117,
+      164
+     ]
+    },
+    {
+     "id": "fr_patinage_noun",
+     "box": [
+      655,
+      410,
+      215,
+      200
+     ]
+    },
+    {
+     "id": "fr_traineau_noun",
+     "box": [
+      910,
+      455,
+      365,
+      200
+     ]
+    },
+    {
+     "id": "fr_stratageme_noun",
+     "box": [
+      935,
+      120,
+      280,
+      185
+     ]
+    }
+   ],
+   "building_id": "B26_montagne",
+   "sector_id": "S09_nature"
+  }
+ }
+}

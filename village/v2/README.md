@@ -8,11 +8,14 @@ Served at `/french/v2/`. The original village (`/french/`) is untouched.
   payloads in `village/assets/data/*.js` and `data/source/vocab.jsonl` at build time.
 * Per building: `content/v2/<bld>/layout.json` (hotspot boxes in painting px, doors, zooms), optional
   `content/v2/<bld>/hooks.json` (v2 hook overrides), `village/v2/<bld>/*.jpg` (paintings + `cards/` crops),
-  `village/v2/data/<bld>.js` (generated). Buildings are discovered at runtime: the map probes
-  `data/<bld>.js` for every building in `data/map.js`; it is live if the file loads, otherwise "bientôt".
+  `village/v2/data/<bld>.js` (generated). Maps: `#/` = world map of the 16 memory-palace sectors (`map/world.jpg`),
+  `#/quartier/<slug>` = painted sector map (`map/<slug>.jpg`) with every building and `ST_` verb street.
+  Buildings are discovered at runtime: each sector map probes `data/<id>.js` (id = building_id without
+  `Bnn_`) for every building in `data/map.js`; it is live if the file loads, otherwise "bientôt". A main
+  room's exit and Back lead to its sector map.
   Adding a building never touches the shared shell — see `content/v2/README.md`.
 * Rules checked by `scripts/qa/check_v2.py [--browser]`: no overlapping hotspots/labels/doors, F left / M right,
-  articles on labels, painted exit in every main room, painted door for every passage, Back from a sub-room
+  articles on labels (adjectives: none, centre band), painted exit in every main room, painted door for every passage, Back from a sub-room
   goes to the main room, zoom objects visible in their parent, 7-tense verb cards without sideways scroll,
   content blocklist, planned word coverage.
 

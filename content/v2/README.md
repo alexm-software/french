@@ -1,10 +1,26 @@
 # content/v2 — per-building inputs for the painted village (v2)
 
 The v2 shell (`village/v2/index.html`, `app.js`, `style.css`, `data/map.js`, `map/`) is **shared and frozen**.
-Buildings are discovered **at runtime**: `data/map.js` lists all six buildings on the map painting
-(église, mairie, école, garage, boulangerie, café). On load the map tries `village/v2/data/<bld>.js` for each one;
-a building whose data file loads is **live** (clickable, opens `#/<bld>`), every other one shows **bientôt**.
-Nothing has to be registered anywhere.
+The maps follow the memory-palace registry (`/data/sectors.json`, `/data/buildings.json`):
+`#/` is the world map of the 16 sectors (S09 Vallée Verte lies outside the walls), and `#/quartier/<slug>` is
+a painted map of one sector (slug = sector id without `Sxx_`, e.g. `S09_nature` → `nature`) with a click area
+for every building **and** every `ST_` verb street of that sector (`content/v2/map.json` → `data/map.js`).
+
+Buildings are discovered **at runtime**: for every building on a sector map the app tries
+`village/v2/data/<id>.js`; a building whose data file loads is **live** (clickable, opens `#/<id>`), every
+other one shows **bientôt** (streets show *rue des verbes · bientôt*). Nothing has to be registered anywhere.
+
+**Naming rule: `id` = `building_id` without its `Bnn_` prefix** (`B29_plage` → `plage`, `B39_eglise` → `eglise`).
+The only exceptions are legacy ids already in `map.json` (`B06_marche` → `boulangerie`, the S02 garage of
+`B05_maison` → `garage`). The cimetière and the parc are not built.
+
+Put the registry ids at the top level of `layout.json`; `build_v2.py` copies them into `data/<id>.js`
+and the app places the building with them (it falls back to `map.json` for older layouts):
+```jsonc
+{ "building": "plage", "building_id": "B29_plage", "sector_id": "S09_nature", "v1_room_id": "R_beach_01", ... }
+```
+The main room's painted exit (`mapExit`) and Back go to the building's sector map, `#/quartier/<slug>`
+(or to `mapExit.href` if given). Label the exit with the sector's name (e.g. "La vallée").
 
 ## The per-building rule (for every worker)
 
@@ -29,7 +45,7 @@ Put your change notes in the tarball's top-level `CHANGES.md`, not in the repo.
 python3 scripts/v2/build_v2.py <bld>                 # writes village/v2/data/<bld>.js + cards
 python3 scripts/qa/check_v2.py <bld>                  # static rules
 (cd village && python3 -m http.server 8765) &
-python3 scripts/qa/check_v2.py <bld> --browser        # rendered overlaps, Back, verb cards, map shows <bld> live
+python3 scripts/qa/check_v2.py <bld> --browser        # rendered overlaps, Back, verb cards, sector map shows <bld> live
 ```
 QA must print `PASS`. Then look at every hotspot yourself: the painting must show what the hook says.
 
@@ -41,7 +57,7 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
   "rooms": { "<key>": {
      "name": "...", "image": "<bld>/<key>.jpg", "alt": "...", "nameplate": [50, 4.5],
      "planned": {"vocabRoom": "R_..."} | {"v1": "<bld>/<room>"} , "only": [ids...] (optional),
-     "mapExit": {"box": [x,y,w,h], "label": "Le village"},              // MAIN room only, on a painted exit
+     "mapExit": {"box": [x,y,w,h], "label": "La vallée", "href": "#/quartier/nature" (optional)}, // MAIN room only
      "doors": [{"to": "<key>", "label": "...", "hint": "...", "hit": [x,y,w,h]}],  // on a painted door
      "backTo": "<main>",                                                   // sub-rooms
      "zooms": [{"to": "<key>", "label": "...", "at": [x,y], "obj": [x,y,w,h]}], // obj = the object in this painting
@@ -49,6 +65,8 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
      "items": [{"id": "fr_..._noun", "box": [x,y,w,h], "labelAt": [cx, top] (optional), "text": "vocab" (optional)}]
   } } }
 ```
+* Adjectives (vocab `pos: "adj"`) are allowed: their label has no article, their card shows
+  `adjective · côtier/côtière` (or *same for both*) and their box centre must sit in the middle band (30–70 %).
 * Card text comes from the v1 payload `village/assets/data/<bld>.js` (matched by id), else `data/source/vocab.jsonl`;
   `"text": "vocab"` forces the vocab source. Never copy or edit that text.
 * `hooks.json` is only for hooks that break the content rules (crude, scary, drinking/smoking, mature, God the

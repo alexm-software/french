@@ -69,36 +69,48 @@ function fit(){
   stage.style.width=Math.round(w)+'px'; stage.style.height=Math.round(h)+'px'; stage.style.setProperty('--s',(Math.round(w)/1280).toFixed(4));
   scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2);
   var hint=$('#panHint'); hint.hidden=!pan;
-  if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
+  if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'||view==='sector'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
 }
 window.addEventListener('resize',fit);
 document.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse'},true);
 document.addEventListener('keydown',function(){lastPointer='key'},true);
 var ignoreScroll=false;
 scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#panHint');if(!h.hidden)h.style.opacity=0},{passive:true});
-// ---------- map ----------
-// Buildings are discovered at runtime: map.js lists every building on the painting; a building is live
-// as soon as village/v2/data/<id>.js loads (adding a building never edits shared files).
-var LIVE={}, probed=false;
-function liveList(){ return MAP.buildings.filter(function(b){return LIVE[b.id]}) }
-function soonList(){ return MAP.buildings.filter(function(b){return !LIVE[b.id]}).concat(MAP.areas) }
-function probeAll(cb){ var n=MAP.buildings.length; if(!n){probed=true;cb();return}
-  MAP.buildings.forEach(function(b){ loadData(b.id,function(ok){ if(ok&&window.VILLAGE_DATA[b.id])LIVE[b.id]=1; if(--n===0){probed=true;cb()} }) }) }
+// ---------- maps: world (#/) and sector maps (#/quartier/<slug>) ----------
+// data/map.js lists every sector and every building / verb street painted on each sector map
+// (content/v2/map.json). Buildings are discovered at runtime: a building is live as soon as
+// village/v2/data/<id>.js loads (id = building_id without its Bnn_ prefix, or a legacy id given in
+// the registry). A loaded payload is placed by its own building_id / sector_id, falling back to the
+// registry entry (the école and mairie layouts predate those fields).
+var LIVE={}, probed=false, REG={}, BYBID={};
+MAP.world.sectors.forEach(function(w){ var S=MAP.sectors[w.slug]; S.buildings.forEach(function(b){
+  b.id=b.id||b.building_id.replace(/^B\d+_/,''); b.sector=w.slug; REG[b.id]=b; BYBID[b.building_id]=BYBID[b.building_id]||b }) });
+function sectorById(sid){ return MAP.world.sectors.filter(function(w){return w.id===sid})[0] }
+function homeOf(bld){ // {slug, entry} where the building lives on the maps
+  var D=window.VILLAGE_DATA&&window.VILLAGE_DATA[bld], e=REG[bld];
+  if(D&&D.building_id&&BYBID[D.building_id]&&BYBID[D.building_id].id===bld) e=BYBID[D.building_id];
+  var w=D&&D.sector_id&&sectorById(D.sector_id);
+  return {slug:w?w.slug:(e&&e.sector), entry:e} }
+function sectorHref(slug){ return slug?'#/quartier/'+slug:'#/' }
+function probeAll(cb){ var ids=Object.keys(REG), n=ids.length; if(!n){probed=true;cb();return}
+  ids.forEach(function(id){ loadData(id,function(ok){ if(ok&&window.VILLAGE_DATA[id])LIVE[id]=1; if(--n===0){probed=true;cb()} }) }) }
 function pts(r){ return r[0]+','+r[1]+' '+(r[0]+r[2])+','+r[1]+' '+(r[0]+r[2])+','+(r[1]+r[3])+' '+r[0]+','+(r[1]+r[3]) }
-function renderMap(){
-  view='map'; document.title='Le Village · French vocabulary memory village';
-  back.hidden=true; rooms.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
-  var LV=liveList(), SN=soonList();
-  var h='<img class="bg" src="'+MAP.image+'" alt="'+esc(MAP.alt)+'">';
-  h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
-  SN.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+pts(b.rect)+'"><title>'+esc(b.name)+(probed?' (bientôt)':'')+'</title></polygon>'});
-  LV.forEach(function(L,i){
-    h+='<a href="#/'+L.id+'" class="lnk" data-i="'+i+'" aria-label="Enter '+esc(L.name)+'"><polygon class="bld live" tabindex="-1" points="'+pts(L.rect)+'"></polygon></a>';
+function tagAt(r){ return [r[0]+r[2]/2, r[1]+Math.min(14,r[3]/4)] }
+function doorAt(r){ return [r[0]+r[2]/2, r[1]+r[3]-Math.min(34,r[3]/3)] }
+function liveIn(slug){ return Object.keys(LIVE).filter(function(id){ return homeOf(id).slug===slug }) }
+// live: [{href,name,rect,aria}], soon: [{name,rect,small}]
+function drawMap(img,alt,label,live,soon){
+  blur.style.backgroundImage='url('+img+')';
+  var h='<img class="bg" src="'+img+'" alt="'+esc(alt)+'">';
+  h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="'+esc(label)+'">';
+  soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+pts(b.rect)+'"><title>'+esc(b.name)+(b.small?' ('+esc(b.small)+')':'')+'</title></polygon>'});
+  live.forEach(function(L,i){
+    h+='<a href="'+L.href+'" class="lnk" data-i="'+i+'" aria-label="'+esc(L.aria)+'"><polygon class="bld live" tabindex="-1" points="'+pts(L.rect)+'"></polygon></a>';
   });
   h+='</svg>';
-  LV.forEach(function(L,i){
-    h+='<div class="door" style="left:'+pct(L.door[0]/12.8)+';top:'+pct(L.door[1]/7.2)+'" aria-hidden="true">➜</div>';
-    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(L.tag[0]/12.8)+';top:'+pct(L.tag[1]/7.2)+'">'+esc(L.name)+'</div>';
+  live.forEach(function(L,i){ var d=L.door||doorAt(L.rect), t=L.tag||tagAt(L.rect);
+    if(!L.nodoor) h+='<div class="door" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
+    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
   });
   h+='<div class="tag" id="tagSoon"></div>';
   stage.innerHTML=h;
@@ -109,13 +121,33 @@ function renderMap(){
     lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
   });
   stage.querySelectorAll('.bld.soon').forEach(function(p){
-    var b=SN[+p.dataset.i];
-    function show(){ts.innerHTML=esc(b.name)+(probed?'<small>bientôt</small>':'');ts.style.left=pct(b.tag[0]/12.8);ts.style.top=pct(Math.max(b.tag[1],60)/7.2);ts.classList.add('show')}
+    var b=soon[+p.dataset.i], t=b.tag||tagAt(b.rect);
+    function show(){ts.innerHTML=esc(b.name)+(b.small?'<small>'+esc(b.small)+'</small>':'');ts.style.left=pct(t[0]/12.8);ts.style.top=pct(Math.max(t[1],60)/7.2);ts.classList.add('show')}
     p.addEventListener('mouseenter',show); p.addEventListener('mouseleave',function(){ts.classList.remove('show')});
     p.addEventListener('click',function(){show();clearTimeout(p._t);p._t=setTimeout(function(){ts.classList.remove('show')},1600)});
   });
   stage.dataset.probed=probed?'1':'0';
   fit();
+}
+function renderMap(){
+  view='map'; curSector=null; document.title='Le Village · French vocabulary memory village';
+  back.hidden=true; rooms.hidden=true;
+  var W=MAP.world, live=[];
+  W.sectors.forEach(function(w){ var n=liveIn(w.slug).length;
+    live.push({href:sectorHref(w.slug),name:w.name,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
+      small:probed?(n?n+(n>1?' bâtiments ouverts':' bâtiment ouvert'):'bientôt'):''}) });
+  drawMap(W.image,W.alt,'Village map',live,[]);
+}
+var curSector=null;
+function renderSector(slug){
+  var S=MAP.sectors[slug]; view='sector'; curSector=slug; document.title=S.name+' · Le Village';
+  back.hidden=false; rooms.hidden=true; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
+  var live=[], soon=[], here={};
+  liveIn(slug).forEach(function(id){ var e=homeOf(id).entry; if(!e||here[e.building_id])return; here[e.building_id]=1;
+    live.push({href:'#/'+id,name:e.name,rect:e.rect,tag:e.tag,door:e.door,aria:'Enter '+e.name}) });
+  S.buildings.forEach(function(b){ if(!here[b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
+  S.streets.forEach(function(t){ soon.push({name:t.name,rect:t.rect,tag:t.tag,small:'rue des verbes'+(probed?' · bientôt':'')}) });
+  drawMap(S.image,S.alt,S.name+' map',live,soon);
 }
 // ---------- room / zoom ----------
 var R=null, B=null;
@@ -132,11 +164,12 @@ function renderRoom(bld,key){
   back.hidden=false; renderRooms(bld,key);
   var BT=R.parent||R.backTo;
   if(BT){ $('#backLabel').textContent=D.rooms[BT].name; back.title='Back to '+D.rooms[BT].name; }
-  else { $('#backLabel').textContent='Le village'; back.title='Back to the village map'; }
+  else { var H=homeOf(bld), S=H.slug&&MAP.sectors[H.slug]; $('#backLabel').textContent=S?S.name:'Le village'; back.title='Back to the map of '+(S?S.name:'the village'); }
   blur.style.backgroundImage='url('+R.image+')';
   var h='<img class="bg" src="'+R.image+'" alt="'+esc(R.alt||'')+'">';
   if(R.nameplate){ h+='<div class="room-nameplate" style="left:'+pct(R.nameplate[0])+';top:'+pct(R.nameplate[1])+'">'+esc(R.name)+'</div>'; }
-  if(R.mapExit){ var e=R.mapExit.box; h+='<a class="doorway" href="#/" aria-label="'+esc(R.mapExit.label)+'" style="left:'+pct(e[0])+';top:'+pct(e[1])+';width:'+pct(e[2])+';height:'+pct(e[3])+'"><span class="dpill"><img src="'+MAP.image+'" alt="">'+esc(R.mapExit.label)+'</span></a>'; }
+  if(R.mapExit){ var e=R.mapExit.box, H0=homeOf(bld), S0=H0.slug&&MAP.sectors[H0.slug], xh=R.mapExit.href||sectorHref(H0.slug);
+    h+='<a class="doorway mapexit" href="'+esc(xh)+'" aria-label="'+esc(R.mapExit.label)+'" style="left:'+pct(e[0])+';top:'+pct(e[1])+';width:'+pct(e[2])+';height:'+pct(e[3])+'"><span class="dpill"><img src="'+(S0?S0.image:MAP.world.image)+'" alt="">'+esc(R.mapExit.label)+'</span></a>'; }
   if(R.sign){ var g=R.sign.box; h+='<img class="signimg" src="'+R.sign.src+'" alt="Sign: '+esc(R.sign.text)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+'">'; }
   R.items.forEach(function(it,i){
     var g=it.img,b=it.box,l=it.label;
@@ -177,7 +210,7 @@ function renderRoom(bld,key){
   applyLabelMode();
   fit();
 }
-function headword(it){ if(it.verb) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
+function headword(it){ if(it.verb||it.adj) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
 // ---------- speech (browser built-in, French voice) ----------
 var frVoice=null;
 function pickVoice(){ if(!('speechSynthesis' in window))return; var v=speechSynthesis.getVoices();
@@ -191,10 +224,12 @@ function openCard(it,from){
   lastFocus=from||document.activeElement;
   var hw=headword(it), sp='speechSynthesis' in window;
   var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="'+esc(it.cardSrc||('assets/words/'+it.id+'.webp'))+'" alt=""></div><div class="hw">';
-  h+='<h2 id="cardTitle">'+(it.verb?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
+  h+='<h2 id="cardTitle">'+(it.verb||it.adj?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
-  if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
+  if(it.adj){ var F=it.forms||{}; h+='<div class="gram">adjective · '+(it.invariable?esc(it.fr)+' (same for both)':esc(F.m_sg||it.fr)+'/'+esc(F.f_sg||it.fr))+(F.m_pl?' · plural: '+esc(F.m_pl)+(F.f_pl&&F.f_pl!==F.m_pl?'/'+esc(F.f_pl):''):'')+'</div>';
+    if(it.f_ipa&&!it.invariable) h+='<div class="pron small">feminine '+esc(F.f_sg||'')+': '+esc(it.f_ipa)+(it.f_say?' · say <b>'+esc(it.f_say)+'</b>':'')+'</div>'; }
+  else if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':it.g==='mf'?'masculine or feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   var ff=it.falseFriend;
   if(ff) h+='<div class="ffbadge '+(ff.kind==='partial'?'part':'full')+'"><span aria-hidden="true">\u2691</span> '+(ff.kind==='partial'?'Partly a false friend':'False friend')+' \u00b7 <i lang="fr">faux ami</i></div>';
@@ -244,7 +279,10 @@ card.addEventListener('keydown',function(e){ var t=e.target; if(!t.classList||!t
 cardWrap.addEventListener('click',function(e){ var t=e.target; var tb=t.closest('.tab'); if(tb){selectTense(tb.dataset.tense);return}
   if(t.closest('[data-close]'))closeCard(); var s=t.closest('[data-say]'); if(s)speak(s.dataset.say) });
 // ---------- controls ----------
-back.addEventListener('click',function(){ var t=R&&(view==='zoom'||view==='room')&&(R.parent||R.backTo); location.hash=t?roomHref(B,t):'#/' });
+back.addEventListener('click',function(){
+  if(view==='sector'){ location.hash='#/'; return }
+  var t=R&&(view==='zoom'||view==='room')&&(R.parent||R.backTo);
+  location.hash=t?roomHref(B,t):(view==='room'?sectorHref(homeOf(B).slug):'#/') });
 $('#hl').addEventListener('click',toggleHL);
 $('#labMode').addEventListener('click',function(){ setLabelMode(labelMode==='always'?'hover':'always') });
 function toggleHL(){ var on=!stage.classList.contains('hl'); stage.classList.toggle('hl',on); $('#hl').setAttribute('aria-pressed',on) }
@@ -255,11 +293,12 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){ if(!cardWrap.hidden){closeCard();e.preventDefault()} return }
   if(!cardWrap.hidden||e.ctrlKey||e.metaKey||e.altKey)return;
   if(e.key==='h'||e.key==='H')toggleHL(); else if(e.key==='l'||e.key==='L')$('#labMode').click(); else if(e.key==='f'||e.key==='F')toggleFS();
-  else if(e.key==='Backspace'&&(view==='room'||view==='zoom')){back.click();e.preventDefault()}
+  else if(e.key==='Backspace'&&(view==='room'||view==='zoom'||view==='sector')){back.click();e.preventDefault()}
 });
 function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], known=bld&&MAP.buildings.some(function(L){return L.id===bld});
-  if(!known){ renderMap(); return }
+  var m=location.hash.match(/^#\/([a-z0-9_]+)(?:\/([a-z0-9_]+))?$/), bld=m&&m[1];
+  if(bld==='quartier'){ if(m[2]&&MAP.sectors[m[2]]) renderSector(m[2]); else location.replace('#/'); return }
+  if(!bld||!REG[bld]){ renderMap(); return }
   loadData(bld,function(ok){
     var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
     var Rk=D&&D.rooms[key], ok2=Rk&&(!m[2]||(key!==bld&&(Rk.parent?!!D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent:(D.roomList||[]).some(function(r){return r.key===key}))));
@@ -281,5 +320,5 @@ function loadData(bld,cb){
 window.addEventListener('hashchange',route);
 applyLabelMode();
 route();
-probeAll(function(){ if(view==='map')renderMap() });
+probeAll(function(){ if(view==='map')renderMap(); else if(view==='sector')renderSector(curSector) });
 })();
