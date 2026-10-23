@@ -25,6 +25,10 @@ v2-specific inputs live in content/v2/<building>/:
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
+  Verbs (vocab pos "verb") become v1-style verb cards (beret colour, participles, 7 tenses) from
+  data/cache/conjugations.json. vocab "reflexive" only means a pronominal form exists, so the card
+  uses it (se trouver, mirror, être) only when the example sentence does; a hooks.json entry
+  {"reflexive": true|false} forces it either way.
   Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
 Everything is checked by scripts/qa/check_v2.py.
 
@@ -104,9 +108,180 @@ def adj_from_vocab(w):
     return it
 
 
+# --- verbs from data/source/vocab.jsonl (verb streets) ------------------------------------
+# A vocab verb (pos "verb") becomes a v1-style verb card: Monsieur Verbe's beret colour from
+# verb_group/irregular (-er red, -ir green, regular -re purple, irregular gold), "reflexive"
+# (he holds a mirror), participles + auxiliary, and the 7 tenses of v1 cards built from the
+# conjugation cache data/cache/conjugations.json (filled by scripts/build_data.py / verbecc).
+CONJ = None
+TENSES = [("present", "Présent", "present"), ("pc", "Passé composé", "passe"),
+          ("imparfait", "Imparfait", "imparfait"), ("futur", "Futur simple", "futur"),
+          ("cond", "Conditionnel présent", "conditionnel"), ("subj", "Subjonctif présent", "subjonctif"),
+          ("imper", "Impératif", "imperatif")]
+PRON = re.compile(r"^(que |qu')?(je |j'|tu |il/elle |il |elle |nous |vous |ils/elles |ils |elles )")
+
+
+def load_conj():
+    global CONJ
+    if CONJ is None:
+        p = ROOT / "data" / "cache" / "conjugations.json"
+        CONJ = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    return CONJ
+
+
+def _clean_pronominal(form):  # same as scripts/build_data.py clean_pronominal: drop "(de)" etc.
+    text = re.sub(r"\s+", " ", (form or "").replace("’", "'")).strip()
+    while True:
+        nxt = re.sub(r"\s*\([^)]*\)", "", text).strip()
+        if nxt == text:
+            return text
+        text = nxt
+
+
+def uses_pronominal(w, tables):
+    """vocab "reflexive": true only says a pronominal form EXISTS (envoyer -> s'envoyer, trouver ->
+    se trouver), while gloss and example are often the plain verb ("J'envoie une carte"). A card
+    is reflexive only when its example sentence uses a form from the pronominal tables
+    ("Il s'est blessé", "Calme-toi", "Hâtons-nous") or the pronominal infinitive ("de te déconnecter")."""
+    ex = (w.get("example_fr") or "").replace("\u2019", "'").lower()
+    forms = set()
+    for k in ("present", "passe", "imparfait", "futur", "conditionnel", "subjonctif", "imperatif"):
+        for cell in tables.get(k) or []:
+            for part in cell.split(" / "):
+                f = _split(part.strip())[1].strip()
+                if f:
+                    forms.add(f.lower())
+    inf = _clean_pronominal(w.get("pronominal_form")).lower()
+    bare = inf[3:] if inf.startswith("se ") else inf[2:] if inf.startswith("s'") else None
+    if bare:
+        elide = inf.startswith("s'")
+        forms.update([inf] + [p + bare for p in (("m'", "t'") if elide else ("me ", "te ")) + ("nous ", "vous ")])
+    return any(re.search(r"(?<![\w'-])" + re.escape(f) + r"(?!\w)", ex) for f in forms)
+
+
+def verb_infinitive(w, tables=None):
+    """Card infinitive. The pronominal form (se trouver) is used only when the vocab verb is
+    reflexive AND the example sentence uses that form (see uses_pronominal); a hooks.json
+    "reflexive": true/false entry overrides the test (applied in build())."""
+    pf = w.get("pronominal_form")
+    if w.get("reflexive") and pf:
+        force = w.get("_reflexive")
+        if force is True or (force is None and tables is not None and uses_pronominal(w, tables)):
+            return _clean_pronominal(pf)
+    return w["lemma"]
+
+
+def _split(cell):
+    m = PRON.match(cell)
+    if not m:
+        return None, cell
+    return m.group(0), cell[m.end():]
+
+
+def _merge_genders(cell):
+    """'il est allé / elle est allée' -> ('il / elle', 'est allé / est allée'); 'je suis allé / je suis allée' -> ('je', 'suis allé(e)')."""
+    parts = [p.strip() for p in cell.split(" / ")]
+    split = [_split(p) for p in parts]
+    prons = []
+    for pr, _ in split:
+        pr = (pr or "").strip()
+        if pr not in prons:
+            prons.append(pr)
+    forms = [f for _, f in split]
+    if len(forms) == 2 and forms[1] in (forms[0] + "e", forms[0][:-1] + "es") and len(prons) == 1:
+        merged = forms[0] + "(e)" if forms[1] == forms[0] + "e" else forms[0][:-1] + "(e)s"
+        return prons[0], merged
+    if len(forms) == 2 and len(prons) == 2 and forms[1] in (forms[0] + "e", forms[0][:-1] + "es"):
+        return " / ".join(prons), " / ".join(forms)
+    return " / ".join(prons), " / ".join(dict.fromkeys(forms))
+
+
+def _pron_label(pr):
+    pr = pr.strip()
+    pr = {"il/elle": "il / elle", "ils/elles": "ils / elles", "qu'il/elle": "qu'il / qu'elle",
+          "qu'ils/elles": "qu'ils / qu'elles", "il / elle": "il / elle", "ils / elles": "ils / elles"}.get(pr, pr)
+    return pr if pr.endswith("'") else pr
+
+
+def verb_tenses(tables, reflexive):
+    out = []
+    for key, name, src in TENSES:
+        cells = tables.get(src) or []
+        rows = []
+        if key == "imper":
+            for pr, cell in zip(("(tu)", "(nous)", "(vous)"), cells):
+                rows.append([pr, cell])
+        else:
+            for cell in cells:
+                if " / " in cell:
+                    pr, form = _merge_genders(cell)
+                else:
+                    pr, form = _split(cell)
+                    pr = (pr or "").strip()
+                pr = _pron_label(pr.replace("que j'", "que j'"))
+                rows.append([pr, form])
+        out.append({"key": key, "name": name, "rows": rows, "note": None})
+    return out
+
+
+def _regular_re(lemma, t):
+    if not lemma.endswith("re") or lemma.endswith(("indre", "oudre", "aître", "ire")):
+        return False
+    st = lemma[:-2]
+    want = [st + e for e in ("s", "s", "", "ons", "ez", "ent")]
+    got = [_split(c)[1] for c in t.get("present") or []]
+    return got == want and t.get("participe_passe") == st + "u"
+
+
+def verb_from_vocab(w):
+    pf = _clean_pronominal(w.get("pronominal_form")) if w.get("reflexive") and w.get("pronominal_form") else None
+    tp = load_conj().get(pf) if pf else None
+    inf = verb_infinitive(w, tp or {})
+    t = load_conj().get(inf)
+    if not t:
+        raise SystemExit(f"no conjugation for {inf} ({w['id']}): add it to data/cache/conjugations.json")
+    grp, irr = w.get("verb_group"), w.get("irregular")
+    if grp == 1 and not irr:
+        group, beret = "-er", "red"
+    elif grp == 2 and not irr and w["lemma"].endswith("ir") and [_split(c)[1] for c in t.get("present") or [""] * 4][3:4] == [w["lemma"][:-1] + "ssons"]:
+        group, beret = "-ir", "green"  # checked on the table: vocab marks some 3rd-group verbs (partir) as group 2
+    elif grp == 3 and _regular_re(w["lemma"], t):
+        group, beret = "-re", "purple"
+    else:
+        group, beret = "irregular", "gold"
+    mh = w.get("mnemonic_hook") or {}
+    hook = mh.get("scene") or ""
+    hook = hook[:1].upper() + hook[1:]
+    refl = inf != w["lemma"] and inf.startswith(("se ", "s'"))
+    aux = "être" if refl else (w.get("auxiliary") or "avoir")
+    col = {"red": "RED beret = regular -er verb", "green": "GREEN beret = regular -ir verb (nous …issons)",
+           "purple": "PURPLE beret = regular -re verb", "gold": "GOLD beret = irregular: not every tense can be built from the infinitive"}[beret]
+    bits = [col + "."]
+    if refl:
+        bits.append("Mirror = reflexive (se / s').")
+    if aux == "être":
+        pp, ppf = t.get("participe_passe", ""), t.get("participe_passe_f") or t.get("participe_passe", "") + "e"
+        bits.append(f"Passé composé with ÊTRE: the participle agrees ({pp}, {ppf}, {pp}s, {ppf}s)." if pp and not pp.endswith(("e", "s")) else "Passé composé with ÊTRE: the participle agrees with the subject.")
+    if w.get("prepositions"):
+        bits.append(w["lemma"] + " + " + " / ".join(w["prepositions"]) + ".")
+    if w.get("usage_warning"):
+        bits.append(w["usage_warning"])
+    it = {"id": w["id"], "fr": inf, "verb": True, "group": group, "beret": beret,
+          "en": w.get("gloss", ""), "ipa": w.get("ipa", ""), "say": w.get("respelling", ""),
+          "hook": hook, "sound": mh.get("sound_alike"), "strength": mh.get("strength"),
+          "note": " ".join(bits), "ex": [w.get("example_fr", ""), w.get("example_en", "")],
+          "parts": {"present": t.get("participe_present", ""), "past": t.get("participe_passe", ""), "aux": aux},
+          "tenses": verb_tenses(t, refl)}
+    if refl:
+        it["reflexive"] = True
+    return it
+
+
 def item_from_vocab(w):
     if w.get("pos") == "adj":
         return adj_from_vocab(w)
+    if w.get("pos") == "verb":
+        return verb_from_vocab(w)
     g = w.get("gender")
     art = w.get("article") or ("la" if g == "f" else "le")
     ind = {"f": "une", "m": "un", "mf": "un/une"}.get(g, "un")
@@ -258,7 +433,10 @@ def build(bld, v1, vocab):
             if wid in v1 and spec.get("text") != "vocab":
                 it = {k: v for k, v in v1[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
             elif wid in vocab:
-                it = item_from_vocab(vocab[wid])
+                w = vocab[wid]
+                if "reflexive" in overrides.get(wid, {}):  # force a verb card reflexive or plain
+                    w = dict(w, _reflexive=bool(overrides[wid]["reflexive"]))
+                it = item_from_vocab(w)
             else:
                 raise SystemExit(f"{bld}/{key}: unknown word id {wid}")
             fix = dict(fixes.get(wid, {}))
