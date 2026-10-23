@@ -24,6 +24,9 @@ v2-specific inputs live in content/v2/<building>/:
                breaks the content rules (e.g. a smoking/tobacco example), with a "why".
                "say" / "f_say" replace the v1/vocab respelling and "hook" the hook text (e.g. no
                syllable that reads as "pee"/"poo": pee-LOT -> pea-LOT); hooks.json may carry them too.
+               A hooks.json entry may carry "plaque": true for a word shown only as text on a blank
+               museum plaque (nothing depicted, e.g. fr_tuer_verb "to kill"): check_v2 then skips the
+               content filter on that item's gloss (en) only; hook/scene/note/ex are still checked.
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
@@ -34,6 +37,8 @@ v2-specific inputs live in content/v2/<building>/:
   Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
   Adverbs (vocab pos "adv") get no article and no gender either, sit in the centre band too
   (genderless words live in the middle) and their card says "adverb · invariable".
+  Interjections, set phrases and idioms (pos "intj" / "phrase" / "idiom") are built like adverbs;
+  their card says "interjection · invariable", "phrase · fixed expression" or "idiom · fixed expression".
 Everything is checked by scripts/qa/check_v2.py.
 
 usage: python3 scripts/v2/build_v2.py [building ...]   (default: every content/v2/*/layout.json)
@@ -304,6 +309,13 @@ def item_from_vocab(w):
         return verb_from_vocab(w)
     if w.get("pos") == "adv":
         return adv_from_vocab(w)
+    if w.get("pos") in ("intj", "phrase", "idiom"):
+        # interjections, set phrases and idioms (bonjour, au revoir, oh, zut, coûter les yeux de la tête…):
+        # like adverbs, no article and no gender (centre band); only the card's gram line differs
+        it = adv_from_vocab(w)
+        it["gramLine"] = {"intj": "interjection · invariable", "phrase": "phrase · fixed expression",
+                          "idiom": "idiom · fixed expression"}[w["pos"]]
+        return it
     g = w.get("gender")
     art = w.get("article") or ("la" if g == "f" else "le")
     ind = {"f": "une", "m": "un", "mf": "un/une"}.get(g, "un")
@@ -478,6 +490,10 @@ def build(bld, v1, vocab):
                         it[k] = src[k]
                 if src.get("ex"):
                     it["ex"] = list(src["ex"])
+            # museum-plaque words (word shown only as text on a blank plaque, nothing depicted):
+            # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
+            if overrides.get(wid, {}).get("plaque") is True:
+                it["plaque"] = True
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):

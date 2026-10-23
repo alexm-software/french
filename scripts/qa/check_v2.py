@@ -157,7 +157,10 @@ def check_building(bld, errs, warns):
                 if len(it.get("tenses") or []) != 7: E(f"{tag}: verb {it['fr']} has {len(it.get('tenses') or [])} tenses, need 7")
             if not (V2 / it["cardSrc"]).exists(): E(f"{tag}: card image missing for {it['fr']}")
             if not it.get("hook"): E(f"{tag}: no memory hook for {it['fr']}")
-            text = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note", "en")) + " " + " ".join(it.get("ex") or [])
+            # "plaque": true (set from hooks.json) = the word appears only as text on a blank museum plaque, nothing is
+            # depicted: the gloss (en) is not content-filtered for that item; hook/scene/note/ex still are.
+            plaque = it.get("plaque") is True
+            text = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note") + (() if plaque else ("en",))) + " " + " ".join(it.get("ex") or [])
             depict = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note"))
             smoke_noun = it["id"] in SMOKE_NOUNS and not it.get("verb") and it.get("en", "").strip().lower() == "smoke"
             tabac_noun = it["id"] in TABAC_NOUNS and not it.get("verb") and "tobacco" in (it.get("en") or "").strip().lower()
@@ -330,7 +333,7 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                         if lab.strip() != it["fr"]: errs.append(f"{bld}/{key}: {kind} label '{lab}' has an article")
                         await pg.evaluate(f"document.querySelectorAll('.hot')[{i}].click()"); await pg.wait_for_timeout(200)
                         gl = await pg.evaluate("(document.querySelector('#card .gram')||{}).textContent||''")
-                        want = "adjective · " if it.get("adj") else "adverb · invariable"
+                        want = "adjective · " if it.get("adj") else (it.get("gramLine") or "adverb · invariable")
                         if not gl.startswith(want): errs.append(f"{bld}/{key}: {kind} card {it['fr']} gram line '{gl}'")
                         await pg.keyboard.press("Escape")
                     # verb cards: no sideways scroll
