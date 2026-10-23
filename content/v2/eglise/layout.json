@@ -1,0 +1,588 @@
+{
+ "building": "eglise",
+ "name": "L'église",
+ "main": "eglise",
+ "roomList": [
+  {
+   "key": "eglise",
+   "short": "La nef"
+  },
+  {
+   "key": "parvis",
+   "short": "Le parvis"
+  },
+  {
+   "key": "sacristie",
+   "short": "La sacristie"
+  }
+ ],
+ "rooms": {
+  "eglise": {
+   "name": "L'église : la nef",
+   "image": "eglise/eglise.jpg",
+   "alt": "Inside the village church, painted in ink and gouache: a model ship hangs over the nave, a carved pulpit, a statue with a pigeon, a wedding party in the aisle, an old parishioner arranging sunflowers, a stained-glass window and pews; a door on the left opens onto the sunny square and an open side door on the right leads back to the village lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     1192,
+     165,
+     88,
+     395
+    ],
+    "label": "Le village"
+   },
+   "doors": [
+    {
+     "to": "parvis",
+     "label": "Le parvis",
+     "hint": "Step out onto the church square",
+     "hit": [
+      6,
+      120,
+      100,
+      440
+     ]
+    },
+    {
+     "to": "sacristie",
+     "label": "La sacristie",
+     "hint": "Through the little blue door to the sacristy",
+     "hit": [
+      866,
+      240,
+      52,
+      108
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_nef_noun",
+     "box": [
+      150,
+      22,
+      150,
+      156
+     ],
+     "scene": "A model ship (navis, 'ship' in Latin) hangs over the long NAVE: the nave is the 'ship' of the church."
+    },
+    {
+     "id": "fr_paroisse_noun",
+     "box": [
+      150,
+      186,
+      80,
+      148
+     ],
+     "scene": "The PARISH noticeboard, with a parrot ('pa-RWAHS') perched beside the notices."
+    },
+    {
+     "id": "fr_chaire_noun",
+     "box": [
+      312,
+      40,
+      118,
+      316
+     ],
+     "scene": "The carved wooden PULPIT high above the nave, with a red armCHAIR tucked in it."
+    },
+    {
+     "id": "fr_statue_noun",
+     "box": [
+      440,
+      138,
+      60,
+      130
+     ],
+     "scene": null
+    },
+    {
+     "id": "fr_chandelle_noun",
+     "box": [
+      184,
+      346,
+      42,
+      126
+     ]
+    },
+    {
+     "id": "fr_bougie_noun",
+     "box": [
+      246,
+      362,
+      64,
+      72
+     ],
+     "scene": "A little candle does the BOOGIE on the pew back."
+    },
+    {
+     "id": "fr_quete_noun",
+     "box": [
+      114,
+      486,
+      128,
+      160
+     ],
+     "scene": "The COLLECTION basket, with a toy knight setting off on his QUEST."
+    },
+    {
+     "id": "fr_procession_noun",
+     "box": [
+      246,
+      522,
+      236,
+      130
+     ],
+     "scene": "A mother duck leads a candlelit PROCESSION of ducklings round the nave."
+    },
+    {
+     "id": "fr_fidele_noun",
+     "box": [
+      466,
+      318,
+      130,
+      200
+     ],
+     "scene": "A FAITHFUL believer prays in her pew, with her faithful spotted dog, Fido."
+    },
+    {
+     "id": "fr_cortege_noun",
+     "box": [
+      600,
+      270,
+      170,
+      268
+     ],
+     "scene": "A wedding CORTÈGE walks slowly up the aisle."
+    },
+    {
+     "id": "fr_cierge_noun",
+     "box": [
+      776,
+      248,
+      38,
+      120
+     ],
+     "scene": "A tall CHURCH CANDLE beside the altar, watched by a wise old owl in spectacles (the 'old seer')."
+    },
+    {
+     "id": "fr_paroissien_noun",
+     "box": [
+      922,
+      300,
+      124,
+      176
+     ],
+     "scene": "A PARISHIONER arranges sunflowers in a stone vase."
+    },
+    {
+     "id": "fr_vitrail_noun",
+     "box": [
+      1024,
+      44,
+      56,
+      232
+     ]
+    },
+    {
+     "id": "fr_chemin_de_croix_noun",
+     "box": [
+      1088,
+      150,
+      62,
+      150
+     ],
+     "scene": "A painted path (un chemin) winding up to a cross: one of the STATIONS OF THE CROSS on the wall."
+    },
+    {
+     "id": "fr_transept_noun",
+     "box": [
+      1050,
+      352,
+      92,
+      74
+     ],
+     "scene": "A little model church shows the TRANSEPT, the cross-arm, with candles along it."
+    },
+    {
+     "id": "fr_banc_noun",
+     "text": "vocab",
+     "box": [
+      1036,
+      480,
+      114,
+      80
+     ],
+     "scene": "The PEW (BAHN), with a giant bonbon left on it."
+    },
+    {
+     "id": "fr_prie_dieu_noun",
+     "box": [
+      896,
+      504,
+      134,
+      196
+     ],
+     "scene": "A padded KNEELER (prie-Dieu) in front of a pew."
+    }
+   ]
+  },
+  "parvis": {
+   "name": "Le parvis et le clocher",
+   "image": "eglise/parvis.jpg",
+   "backTo": "eglise",
+   "alt": "The church square painted in ink and gouache: a stone arcade with a bronze bell, a ginger cat with a bell collar, a painted Easter egg on the steps, a valley of churches, domes and a round tower, a family waving, a holy-water stoup and the carved church portal with its oak door.",
+   "doors": [
+    {
+     "to": "eglise",
+     "label": "La nef",
+     "hint": "Back inside the church through the oak door",
+     "hit": [
+      1166,
+      222,
+      100,
+      352
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cloche_noun",
+     "text": "vocab",
+     "box": [
+      8,
+      312,
+      108,
+      162
+     ],
+     "scene": "A big bronze church BELL hangs under the arcade, shaped a little like a cloche hat."
+    },
+    {
+     "id": "fr_arcade_noun",
+     "box": [
+      122,
+      168,
+      128,
+      196
+     ],
+     "scene": "The stone ARCADE, its arches marching along the square."
+    },
+    {
+     "id": "fr_clochette_noun",
+     "box": [
+      258,
+      412,
+      118,
+      120
+     ],
+     "scene": "A ginger cat wears a SMALL BELL on its collar."
+    },
+    {
+     "id": "fr_eglise_noun",
+     "box": [
+      290,
+      538,
+      102,
+      144
+     ],
+     "scene": "A painted Easter EGG ('ay-GLEEZ') on the steps, with a CHURCH painted on it."
+    },
+    {
+     "id": "fr_chapelle_noun",
+     "box": [
+      252,
+      186,
+      90,
+      58
+     ],
+     "scene": "A little stone CHAPEL on the hilltop."
+    },
+    {
+     "id": "fr_cathedrale_noun",
+     "box": [
+      252,
+      250,
+      124,
+      90
+     ],
+     "scene": "A great gothic CATHEDRAL with spiky towers in the valley."
+    },
+    {
+     "id": "fr_basilique_noun",
+     "box": [
+      420,
+      168,
+      130,
+      122
+     ],
+     "scene": "A grand domed BASILICA on the hillside."
+    },
+    {
+     "id": "fr_coupole_noun",
+     "box": [
+      388,
+      318,
+      128,
+      156
+     ],
+     "scene": "A pigeon COOs from the top of a golden DOME."
+    },
+    {
+     "id": "fr_tour_noun_f",
+     "box": [
+      578,
+      84,
+      104,
+      178
+     ],
+     "scene": "A round TOWER on the crag, with a tour group gazing up."
+    },
+    {
+     "id": "fr_clocher_noun",
+     "box": [
+      958,
+      248,
+      84,
+      104
+     ],
+     "scene": "The village BELL TOWER across the valley."
+    },
+    {
+     "id": "fr_parvis_noun",
+     "box": [
+      896,
+      390,
+      104,
+      190
+     ],
+     "scene": "A family gathers on the church FORECOURT."
+    },
+    {
+     "id": "fr_benitier_noun",
+     "box": [
+      1004,
+      434,
+      110,
+      98
+     ]
+    },
+    {
+     "id": "fr_portail_noun",
+     "box": [
+      1086,
+      58,
+      194,
+      150
+     ],
+     "scene": "The carved stone PORTAL of the church (its oak door leads back inside)."
+    }
+   ]
+  },
+  "sacristie": {
+   "name": "La sacristie",
+   "image": "eglise/sacristie.jpg",
+   "backTo": "eglise",
+   "alt": "The sacristy painted in ink and gouache: the open blue door back to the nave, a small picture of a sacristy, a black cassock with sunglasses on a peg, cruets on a tray, an altar server holding a candle, the tall oak armoire, a folded amice, a hanging censer, a box of incense and the sacristan lighting candles.",
+   "doors": [
+    {
+     "to": "eglise",
+     "label": "La nef",
+     "hint": "Back through the blue door to the nave",
+     "hit": [
+      0,
+      64,
+      232,
+      556
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "armoire",
+     "label": "l'armoire",
+     "hint": "Open the armoire to see the vestments",
+     "at": [
+      772,
+      250
+     ],
+     "obj": [
+      606,
+      94,
+      332,
+      500
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_sacristie_noun",
+     "box": [
+      242,
+      104,
+      106,
+      152
+     ],
+     "scene": "A little picture of the SACRISTY, vestments hanging in its wardrobe."
+    },
+    {
+     "id": "fr_soutane_noun",
+     "box": [
+      356,
+      140,
+      134,
+      454
+     ],
+     "scene": "A priest's black CASSOCK hangs on a hook, with sunglasses for SOO-TAHN (sun-tan)."
+    },
+    {
+     "id": "fr_burette_noun",
+     "box": [
+      242,
+      386,
+      104,
+      80
+     ]
+    },
+    {
+     "id": "fr_enfant_de_choeur_noun",
+     "box": [
+      496,
+      290,
+      152,
+      420
+     ]
+    },
+    {
+     "id": "fr_amict_noun",
+     "box": [
+      790,
+      476,
+      156,
+      180
+     ]
+    },
+    {
+     "id": "fr_encensoir_noun",
+     "box": [
+      976,
+      92,
+      88,
+      246
+     ]
+    },
+    {
+     "id": "fr_encens_noun",
+     "box": [
+      1000,
+      476,
+      86,
+      66
+     ],
+     "scene": "A little brass box of INCENSE, a curl of smoke rising."
+    },
+    {
+     "id": "fr_sacristain_noun",
+     "box": [
+      1092,
+      130,
+      188,
+      590
+     ]
+    }
+   ]
+  },
+  "armoire": {
+   "name": "L'armoire",
+   "image": "eglise/armoire.jpg",
+   "parent": "sacristie",
+   "alt": "The open oak armoire from the sacristy: a purple stole on the left door, a white alb with a rooster on its hanger, a green chasuble, a white-and-gold dalmatic above a sleeping Dalmatian puppy, and a lacy white surplice on the right.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_etole_noun",
+     "box": [
+      54,
+      130,
+      98,
+      440
+     ]
+    },
+    {
+     "id": "fr_aube_noun",
+     "box": [
+      186,
+      116,
+      194,
+      478
+     ],
+     "scene": "A rooster crows at DAWN on the hanger of the white ALB."
+    },
+    {
+     "id": "fr_chasuble_noun",
+     "box": [
+      384,
+      176,
+      120,
+      400
+     ]
+    },
+    {
+     "id": "fr_dalmatique_noun",
+     "box": [
+      508,
+      172,
+      152,
+      452
+     ],
+     "scene": "A deacon's DALMATIC with wide sleeves, and a sleepy Dalmatian puppy underneath."
+    },
+    {
+     "id": "fr_surplis_noun",
+     "box": [
+      664,
+      160,
+      188,
+      380
+     ]
+    }
+   ]
+  }
+ },
+ "planned": {
+  "eglise": {
+   "vocabRoom": "R_ch_nave"
+  },
+  "parvis": {
+   "vocabRoom": "R_ch_parvis"
+  },
+  "sacristie": {
+   "vocabRoom": "R_ch_sacristy",
+   "only": [
+    "fr_sacristie_noun",
+    "fr_soutane_noun",
+    "fr_burette_noun",
+    "fr_enfant_de_choeur_noun",
+    "fr_amict_noun",
+    "fr_encens_noun",
+    "fr_encensoir_noun",
+    "fr_sacristain_noun"
+   ]
+  },
+  "armoire": {
+   "vocabRoom": "R_ch_sacristy",
+   "only": [
+    "fr_aube_noun",
+    "fr_chasuble_noun",
+    "fr_dalmatique_noun",
+    "fr_etole_noun",
+    "fr_surplis_noun"
+   ]
+  }
+ }
+}

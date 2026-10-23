@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Village (v2) · French vocabulary memory village</title>
+<meta name="description" content="Wander a cartoon French village and pick up vocabulary where you would meet it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%A5%96%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="map/village.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="strip">
+    <div class="strip-left"><button id="back" class="btn back" hidden><span aria-hidden="true">‹</span> <span id="backLabel">Le village</span></button></div>
+    <h1 id="title"><a href="#/" aria-label="Le Village, home">Le Village</a></h1>
+    <div class="strip-right">
+      <button id="labMode" class="btn switch" role="switch" aria-checked="true" title="Labels: always shown. Click to show them only on hover or tap (L)"><span class="knob" aria-hidden="true"></span><span class="swtxt">Labels</span><span class="sr"> always shown</span></button>
+      <button id="hl" class="btn icon" title="Show what you can click (H)" aria-pressed="false"><span aria-hidden="true">✦</span><span class="sr">Show clickable things</span></button>
+      <button id="fs" class="btn icon" title="Full screen (F)"><span aria-hidden="true">⛶</span><span class="sr">Full screen</span></button>
+    </div>
+  </header>
+  <main id="viewport">
+    <div id="blur"></div>
+    <div id="scroller"><div id="stage"></div></div>
+    <div id="panHint" hidden>⟷ swipe to look around</div>
+  </main>
+  <div id="cardWrap" hidden>
+    <div class="backdrop" data-close></div>
+    <article id="card" role="dialog" aria-modal="true" aria-labelledby="cardTitle" tabindex="-1"></article>
+  </div>
+</div>
+<script src="data/map.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
