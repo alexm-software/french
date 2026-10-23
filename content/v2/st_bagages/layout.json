@@ -1,0 +1,567 @@
+{
+ "building": "st_bagages",
+ "building_id": "ST_bagages",
+ "sector_id": "S08_travel",
+ "name": "Rue des Bagages",
+ "main": "st_bagages",
+ "roomList": [
+  {
+   "key": "st_bagages",
+   "short": "Le chemin"
+  },
+  {
+   "key": "vacanciers",
+   "short": "Les vacanciers"
+  },
+  {
+   "key": "demenageurs",
+   "short": "Les déménageurs"
+  },
+  {
+   "key": "voisins",
+   "short": "L'allée"
+  },
+  {
+   "key": "lambins",
+   "short": "La ruelle"
+  }
+ ],
+ "planned": {
+  "st_bagages": {
+   "vocabRoom": "ST_movement_seg016",
+   "only": [
+    "fr_deserter_verb",
+    "fr_reperer_verb",
+    "fr_raccompagner_verb",
+    "fr_parcourir_verb",
+    "fr_reconstituer_verb",
+    "fr_approprier_verb"
+   ]
+  },
+  "vacanciers": {
+   "vocabRoom": "ST_movement_seg017",
+   "only": [
+    "fr_immigrer_verb",
+    "fr_detourner_verb",
+    "fr_sejourner_verb",
+    "fr_demissionner_verb",
+    "fr_reparaitre_verb",
+    "fr_reapparaitre_verb"
+   ]
+  },
+  "demenageurs": {
+   "vocabRoom": "ST_movement_seg018",
+   "only": [
+    "fr_ecarter_verb",
+    "fr_demenager_verb",
+    "fr_mouvoir_verb",
+    "fr_ressortir_verb",
+    "fr_transferer_verb",
+    "fr_emouvoir_verb"
+   ]
+  },
+  "voisins": {
+   "vocabRoom": "ST_movement_seg019",
+   "only": [
+    "fr_emmenager_verb",
+    "fr_recourir_verb",
+    "fr_deconcerter_verb",
+    "fr_delaisser_verb",
+    "fr_defaillir_verb",
+    "fr_dedaigner_verb"
+   ]
+  },
+  "lambins": {
+   "vocabRoom": "ST_movement_seg020",
+   "only": [
+    "fr_sillonner_verb",
+    "fr_deconnecter_verb",
+    "fr_crouler_verb",
+    "fr_absenter_verb",
+    "fr_muser_verb",
+    "fr_entonner_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_bagages": {
+   "name": "Chemin des Éclaireurs",
+   "image": "st_bagages/st_bagages.jpg",
+   "alt": "A rainy station street with tram tracks and a green tram: Monsieur Verbe the mime strides off empty-handed and leaves his cake alone on a café table, spots a pear on top of a lamp post through binoculars, walks a lost duckling back to its white mother duck, rides a courier bicycle loaded with parcels, puts a toy tram back together from its pieces and claims a red armchair as his own, mirror in hand. The stone archway on the left leads back to the crossroads; the green door, the iron gate, the stone stairs and the arched passage lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     30,
+     130,
+     150,
+     200
+    ],
+    "label": "Carrefour des Voyages"
+   },
+   "doors": [
+    {
+     "to": "vacanciers",
+     "label": "Rue des Vacanciers",
+     "hint": "Through the green door under the striped canopy",
+     "hit": [
+      262,
+      272,
+      28,
+      72
+     ]
+    },
+    {
+     "to": "demenageurs",
+     "label": "Rue des Déménageurs",
+     "hint": "Through the iron gate",
+     "hit": [
+      645,
+      212,
+      105,
+      135
+     ]
+    },
+    {
+     "to": "voisins",
+     "label": "Allée des Nouveaux-Voisins",
+     "hint": "Up the stone stairs",
+     "hit": [
+      890,
+      212,
+      100,
+      135
+     ]
+    },
+    {
+     "to": "lambins",
+     "label": "Ruelle des Lambins",
+     "hint": "Through the arched passage",
+     "hit": [
+      1120,
+      206,
+      130,
+      135
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_deserter_verb",
+     "box": [
+      25,
+      350,
+      255,
+      275
+     ]
+    },
+    {
+     "id": "fr_reperer_verb",
+     "box": [
+      296,
+      350,
+      104,
+      275
+     ]
+    },
+    {
+     "id": "fr_raccompagner_verb",
+     "box": [
+      430,
+      355,
+      230,
+      285
+     ]
+    },
+    {
+     "id": "fr_parcourir_verb",
+     "box": [
+      668,
+      356,
+      215,
+      290
+     ]
+    },
+    {
+     "id": "fr_reconstituer_verb",
+     "box": [
+      900,
+      450,
+      165,
+      180
+     ]
+    },
+    {
+     "id": "fr_approprier_verb",
+     "box": [
+      1075,
+      355,
+      195,
+      285
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg016"
+  },
+  "vacanciers": {
+   "name": "Rue des Vacanciers",
+   "image": "st_bagages/vacanciers.jpg",
+   "backTo": "st_bagages",
+   "alt": "A rainy holiday street with a little hotel as the sun comes out: Monsieur Verbe the mime steps off a ferry gangway with a patchwork suitcase and his pet moose, diverts the rainwater from a drainpipe into a flower pot, lounges on the hotel balcony with his tea, hands his tray and towel to a cat to quit his job, lowers his umbrella and points as the sun reappears and in a magician's top hat gasps as a cat pops back out of his other hat. The stone archway on the left leads back to the station street; the hotel door on the right leads on.",
+   "nameplate": [
+    72,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bagages",
+     "label": "Chemin des Éclaireurs",
+     "hint": "Back through the stone archway",
+     "hit": [
+      50,
+      110,
+      200,
+      170
+     ]
+    },
+    {
+     "to": "demenageurs",
+     "label": "Rue des Déménageurs",
+     "hint": "Through the hotel door",
+     "hit": [
+      1165,
+      300,
+      70,
+      140
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_immigrer_verb",
+     "box": [
+      45,
+      295,
+      250,
+      305
+     ]
+    },
+    {
+     "id": "fr_detourner_verb",
+     "box": [
+      306,
+      338,
+      205,
+      280
+     ]
+    },
+    {
+     "id": "fr_sejourner_verb",
+     "box": [
+      538,
+      25,
+      190,
+      155
+     ]
+    },
+    {
+     "id": "fr_demissionner_verb",
+     "box": [
+      550,
+      325,
+      215,
+      250
+     ]
+    },
+    {
+     "id": "fr_reparaitre_verb",
+     "box": [
+      806,
+      325,
+      155,
+      315
+     ]
+    },
+    {
+     "id": "fr_reapparaitre_verb",
+     "box": [
+      975,
+      320,
+      180,
+      330
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg017"
+  },
+  "demenageurs": {
+   "name": "Rue des Déménageurs",
+   "image": "st_bagages/demenageurs.jpg",
+   "backTo": "st_bagages",
+   "alt": "A rainy street on moving day with a blue removal van: Monsieur Verbe the mime pushes two potted bushes apart for his hand cart, walks up the van ramp with his clipboard to load an armchair, struggles to move in a suit of armour with his mirror, holds up a red cushion that stands out on a pile of white ones, pours his goldfish into a big new tank and dabs happy tears with his handkerchief over a letter. The iron gate on the left leads back to the station street; the stone archway on the right leads on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bagages",
+     "label": "Chemin des Éclaireurs",
+     "hint": "Back through the iron gate",
+     "hit": [
+      25,
+      40,
+      200,
+      280
+     ]
+    },
+    {
+     "to": "voisins",
+     "label": "Allée des Nouveaux-Voisins",
+     "hint": "Through the stone archway",
+     "hit": [
+      1045,
+      115,
+      200,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ecarter_verb",
+     "box": [
+      10,
+      330,
+      340,
+      295
+     ]
+    },
+    {
+     "id": "fr_demenager_verb",
+     "box": [
+      375,
+      280,
+      190,
+      250
+     ]
+    },
+    {
+     "id": "fr_mouvoir_verb",
+     "box": [
+      581,
+      330,
+      175,
+      295
+     ]
+    },
+    {
+     "id": "fr_ressortir_verb",
+     "box": [
+      762,
+      343,
+      155,
+      300
+     ]
+    },
+    {
+     "id": "fr_transferer_verb",
+     "box": [
+      944,
+      343,
+      175,
+      290
+     ]
+    },
+    {
+     "id": "fr_emouvoir_verb",
+     "box": [
+      1126,
+      340,
+      135,
+      290
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg018"
+  },
+  "voisins": {
+   "name": "Allée des Nouveaux-Voisins",
+   "image": "st_bagages/voisins.jpg",
+   "backTo": "st_bagages",
+   "alt": "A rainy lane of houses with window boxes: Monsieur Verbe the mime moves into his new house with a parrot, a rabbit and a cat, climbs a ladder to his own upstairs window, is baffled by a cat playing a tuba, ignores his dusty piano to munch a deli sandwich, swoons from the heat of a radiator into a red armchair and, arms crossed, turns up his nose at a plate of sprouts. The iron gate at the end of the lane leads back to the station street; the wooden garden gate on the right leads on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bagages",
+     "label": "Chemin des Éclaireurs",
+     "hint": "Back through the iron gate at the end of the lane",
+     "hit": [
+      862,
+      345,
+      70,
+      48
+     ]
+    },
+    {
+     "to": "lambins",
+     "label": "Ruelle des Lambins",
+     "hint": "Through the wooden garden gate",
+     "hit": [
+      1162,
+      350,
+      95,
+      205
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_emmenager_verb",
+     "box": [
+      15,
+      280,
+      230,
+      340
+     ]
+    },
+    {
+     "id": "fr_recourir_verb",
+     "box": [
+      256,
+      70,
+      145,
+      330
+     ]
+    },
+    {
+     "id": "fr_deconcerter_verb",
+     "box": [
+      412,
+      85,
+      120,
+      540
+     ]
+    },
+    {
+     "id": "fr_delaisser_verb",
+     "box": [
+      545,
+      340,
+      190,
+      285
+     ]
+    },
+    {
+     "id": "fr_defaillir_verb",
+     "box": [
+      750,
+      400,
+      210,
+      240
+     ]
+    },
+    {
+     "id": "fr_dedaigner_verb",
+     "box": [
+      970,
+      385,
+      180,
+      250
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg019"
+  },
+  "lambins": {
+   "name": "Ruelle des Lambins",
+   "image": "st_bagages/lambins.jpg",
+   "backTo": "st_bagages",
+   "alt": "A quiet rainy back lane with a café awning: Monsieur Verbe the mime weaves his bicycle back and forth through the puddles, unplugs his laptop, mirror in hand, jumps back as a tower of old books crumbles and tumbles, slips away from the café with his coat over his arm and his mirror in hand, dawdles with his satchel to watch two snails on a café table and sings out loud on a crate to the pigeons. The stone archway on the left leads back to the station street.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bagages",
+     "label": "Chemin des Éclaireurs",
+     "hint": "Back through the stone archway",
+     "hit": [
+      5,
+      125,
+      170,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sillonner_verb",
+     "box": [
+      30,
+      300,
+      195,
+      340
+     ]
+    },
+    {
+     "id": "fr_deconnecter_verb",
+     "box": [
+      258,
+      312,
+      185,
+      275
+     ]
+    },
+    {
+     "id": "fr_crouler_verb",
+     "box": [
+      482,
+      88,
+      205,
+      512
+     ]
+    },
+    {
+     "id": "fr_absenter_verb",
+     "box": [
+      700,
+      306,
+      185,
+      310
+     ]
+    },
+    {
+     "id": "fr_muser_verb",
+     "box": [
+      895,
+      356,
+      170,
+      270
+     ]
+    },
+    {
+     "id": "fr_entonner_verb",
+     "box": [
+      1075,
+      275,
+      165,
+      310
+     ]
+    }
+   ],
+   "room_id": "ST_movement_seg020"
+  }
+ }
+}
