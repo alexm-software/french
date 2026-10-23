@@ -14,6 +14,7 @@ Static rules (per building/room):
     a door back; every door/zoom target exists; zooms belong to a room and their object rect
     ('obj') in the parent contains the badge
   * verbs have all 7 tenses; card crops and scene images exist; content word blocklist
+  * no respelling that reads as pee/poo: say/f_say never contain 'pee'/'poo'; hook/example words pee(s/d/ing), poo(s/p/h)
   * adjectives: no article, centre band 30-70%, gram line 'adjective · m/f' on the card (browser)
   * adverbs: no article, no gender, centre band 30-70%, gram line 'adverb · invariable' (browser)
   * maps (data/map.js): no rect overlap within the world map or within any sector map; every
@@ -168,6 +169,11 @@ def check_building(bld, errs, warns):
                 if re.search(pat, text, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
             if smoke_noun or tabac_noun:
                 if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
+            # respellings must not read as "pee"/"poo" (fix in content/v2/vocab_fixes.json "say"/"f_say"/"hook")
+            for k in ("say", "f_say"):
+                if re.search(r"p(ee|oo)", it.get(k) or "", re.I): E(f"{tag}: {k} '{it.get(k)}' of {it['fr']} contains pee/poo")
+            for tok in re.findall(r"[A-Za-z]+", text):
+                if re.fullmatch(r"p(ee|oo)(s|ss|d|p|h|ng|ing)?", tok, re.I): E(f"{tag}: respelling '{tok}' in {it['fr']} reads as pee/poo")
         # routes
         for d in R.get("doors", []):
             if d["to"] not in rooms: E(f"{tag}: door to unknown room {d['to']}")

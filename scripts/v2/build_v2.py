@@ -22,6 +22,8 @@ v2-specific inputs live in content/v2/<building>/:
                a building's own hooks.json entry wins.
                An entry may also carry "ex": [french, english] to replace an example sentence that
                breaks the content rules (e.g. a smoking/tobacco example), with a "why".
+               "say" / "f_say" replace the v1/vocab respelling and "hook" the hook text (e.g. no
+               syllable that reads as "pee"/"poo": pee-LOT -> pea-LOT); hooks.json may carry them too.
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
@@ -469,10 +471,13 @@ def build(bld, v1, vocab):
             apply_grammar_fix(it, fix)
             it["_hw"] = headword(it)
             it["box"] = spec["box"]
-            if overrides.get(wid, {}).get("hook"):
-                it["hook"] = overrides[wid]["hook"]
-            if overrides.get(wid, {}).get("ex"):
-                it["ex"] = list(overrides[wid]["ex"])
+            # text overrides: vocab_fixes.json first, then the building's hooks.json (which wins)
+            for src in (fixes.get(wid, {}), overrides.get(wid, {})):
+                for k in ("say", "f_say", "hook"):
+                    if src.get(k):
+                        it[k] = src[k]
+                if src.get("ex"):
+                    it["ex"] = list(src["ex"])
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):
