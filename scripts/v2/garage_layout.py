@@ -1,0 +1,296 @@
+#!/usr/bin/env python3
+"""Writes content/v2/garage/layout.json (final hand-tuned v2 layout for garage)."""
+import json, os
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "content", "v2", "garage", "layout.json")
+L = json.loads(r'''{
+  "building": "garage",
+  "name": "Le garage",
+  "main": "garage",
+  "roomList": [
+    {
+      "key": "garage",
+      "short": "Le garage"
+    }
+  ],
+  "rooms": {
+    "garage": {
+      "name": "Le garage",
+      "image": "garage/garage.jpg",
+      "alt": "The village garage workshop painted in ink and gouache under teal roof beams: the big blue roll-up door open to the village lane with a red petrol pump, a goggled frog ready to dive off a wall plank, a pink seashell on top of a wooden ladder, a blue robot with a spanner repairing a bicycle, a clay slab with a key pressed into it and the silver key at its foot, Monsieur Verbe kneeling to saw a plank and mending a chair with a clamp, the long tool bench under the round window, a carpenter proudly holding up a tall stool, a toy garage with a little red car, a kangaroo gripping the bolt of the side door, and a troop of toy soldiers marching towards a hole in the floor.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          8,
+          60,
+          170,
+          218
+        ],
+        "label": "Le village"
+      },
+      "doors": [],
+      "zooms": [
+        {
+          "to": "tools",
+          "label": "les outils",
+          "hint": "Look at what is on the tool bench",
+          "at": [
+            657,
+            322
+          ],
+          "obj": [
+            478,
+            300,
+            358,
+            225
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "fr_planche_noun",
+          "box": [
+            226,
+            121,
+            230,
+            116
+          ]
+        },
+        {
+          "id": "fr_echelle_noun",
+          "box": [
+            93,
+            281,
+            138,
+            90
+          ],
+          "labelAt": [
+            162,
+            340
+          ]
+        },
+        {
+          "id": "fr_reparation_noun",
+          "box": [
+            296,
+            273,
+            176,
+            198
+          ]
+        },
+        {
+          "id": "fr_scier_verb",
+          "box": [
+            26,
+            376,
+            263,
+            333
+          ],
+          "labelAt": [
+            157,
+            660
+          ]
+        },
+        {
+          "id": "fr_cle_noun",
+          "box": [
+            351,
+            521,
+            248,
+            188
+          ],
+          "labelAt": [
+            475,
+            660
+          ]
+        },
+        {
+          "id": "fr_atelier_noun",
+          "box": [
+            839,
+            141,
+            203,
+            190
+          ]
+        },
+        {
+          "id": "fr_garage_noun",
+          "box": [
+            853,
+            339,
+            188,
+            178
+          ]
+        },
+        {
+          "id": "fr_verrou_noun",
+          "box": [
+            1101,
+            149,
+            148,
+            118
+          ]
+        },
+        {
+          "id": "fr_reparer_verb",
+          "box": [
+            1046,
+            276,
+            193,
+            278
+          ]
+        },
+        {
+          "id": "fr_trou_noun",
+          "box": [
+            663,
+            558,
+            513,
+            141
+          ],
+          "labelAt": [
+            919,
+            660
+          ]
+        }
+      ]
+    },
+    "tools": {
+      "name": "Les outils",
+      "image": "garage/tools.jpg",
+      "parent": "garage",
+      "alt": "Close-up of the garage tool bench: a fake black moustache held by a metal clip on the peg rail, a mouse holding a coin beside a spool of twine, two geese holding a big screw, a magnifying glass showing a fingerprint on a nail, a wrench gripping a teacup, a little red martian holding a hammer over its boot toe, a tiny holiday house with a palm tree on a coil spring, a toy man cranking a little well, a chisel carving a spiral into limestone, a half-assembled wooden go-kart with a loose wheel and a craftswoman making a collage of little bricks.",
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_attache_noun",
+          "box": [
+            186,
+            16,
+            283,
+            163
+          ],
+          "labelAt": [
+            327,
+            22
+          ]
+        },
+        {
+          "id": "fr_ficelle_noun",
+          "box": [
+            111,
+            186,
+            258,
+            153
+          ]
+        },
+        {
+          "id": "fr_vis_noun",
+          "box": [
+            386,
+            196,
+            223,
+            148
+          ]
+        },
+        {
+          "id": "fr_manivelle_noun",
+          "box": [
+            206,
+            371,
+            228,
+            158
+          ]
+        },
+        {
+          "id": "fr_clou_noun",
+          "box": [
+            646,
+            191,
+            183,
+            168
+          ]
+        },
+        {
+          "id": "fr_outil_noun",
+          "box": [
+            833,
+            13,
+            93,
+            260
+          ]
+        },
+        {
+          "id": "fr_marteau_noun",
+          "box": [
+            941,
+            131,
+            110,
+            213
+          ]
+        },
+        {
+          "id": "fr_ressort_noun",
+          "box": [
+            1063,
+            81,
+            210,
+            273
+          ]
+        },
+        {
+          "id": "fr_ciseau_noun",
+          "box": [
+            819,
+            361,
+            260,
+            143
+          ]
+        },
+        {
+          "id": "fr_assemblage_noun",
+          "box": [
+            606,
+            566,
+            328,
+            148
+          ],
+          "labelAt": [
+            770,
+            660
+          ]
+        },
+        {
+          "id": "fr_bricolage_noun",
+          "box": [
+            941,
+            509,
+            293,
+            190
+          ],
+          "labelAt": [
+            1087,
+            660
+          ]
+        }
+      ]
+    }
+  },
+  "planned": {
+    "garage": {
+      "v1": "garage/garage"
+    },
+    "tools": {
+      "v1": "garage/tools"
+    }
+  },
+  "building_id": "B05_maison",
+  "sector_id": "S02_home",
+  "v1_room_id": "R_garage"
+}''')
+with open(OUT, "w", encoding="utf-8") as f:
+    json.dump(L, f, ensure_ascii=False, indent=2)
+print("wrote", OUT)
