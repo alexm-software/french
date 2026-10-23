@@ -233,7 +233,7 @@ function openCard(it,from){
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
   if(it.adj){ var F=it.forms||{}; h+='<div class="gram">adjective · '+(it.invariable?esc(it.fr)+' (same for both)':esc(F.m_sg||it.fr)+'/'+esc(F.f_sg||it.fr))+(F.m_pl?' · plural: '+esc(F.m_pl)+(F.f_pl&&F.f_pl!==F.m_pl?'/'+esc(F.f_pl):''):'')+'</div>';
     if(it.f_ipa&&!it.invariable) h+='<div class="pron small">feminine '+esc(F.f_sg||'')+': '+esc(it.f_ipa)+(it.f_say?' · say <b>'+esc(it.f_say)+'</b>':'')+'</div>'; }
-  else if(it.adv) h+='<div class="gram">adverb · invariable</div>';
+  else if(it.adv) h+='<div class="gram">'+esc(it.gramLine||'adverb · invariable')+'</div>';
   else if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':it.g==='mf'?'masculine or feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   var ff=it.falseFriend;
