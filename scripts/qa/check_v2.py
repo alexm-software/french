@@ -12,6 +12,7 @@ Static rules (per building/room):
     a door back; every door/zoom target exists; zooms belong to a room and their object rect
     ('obj') in the parent contains the badge
   * verbs have all 7 tenses; card crops and scene images exist; content word blocklist
+  * --browser: the map discovers buildings at runtime; live buildings == village/v2/data/<bld>.js files
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
 overlap, every route renders with no JS error, Back goes to the right place, verb cards have no
 sideways scroll. Screenshots go to --shots.
@@ -169,7 +170,15 @@ async def browser_checks(blds, base, shots, errs):
             jserr = []
             pg.on("pageerror", lambda e: jserr.append(str(e)))
             await pg.goto(base + "#/")
-            await pg.wait_for_timeout(600)
+            try:
+                await pg.wait_for_function("document.getElementById('stage').dataset.probed==='1'", timeout=8000)
+            except Exception:
+                errs.append(f"map @{vw}: building discovery never finished (stage.dataset.probed)")
+            await pg.wait_for_timeout(400)
+            live = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href').slice(2))")
+            have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem != "map")
+            if sorted(live) != have:
+                errs.append(f"map @{vw}: live buildings {sorted(live)} != data files {have}")
             await pg.screenshot(path=str(shots / f"map_{vw}.png"))
             for bld in blds:
                 D = load_payload(bld)
@@ -226,12 +235,12 @@ def main():
     errs, warns = [], []
     s = (V2 / "data" / "map.js").read_text(encoding="utf-8")
     M = json.loads(s[s.index("=") + 1:].rstrip().rstrip(";"))
-    allb = M["live"] + M["soon"]
+    allb = M["buildings"] + M["areas"]
     for i in range(len(allb)):
         for j in range(i + 1, len(allb)):
             if inter(allb[i]["rect"], allb[j]["rect"]): errs.append(f"map: {allb[i]['name']} overlaps {allb[j]['name']}")
     for bld in blds:
-        if not any(L["id"] == bld for L in M["live"]): errs.append(f"map: {bld} built but not live on the map")
+        if not any(L["id"] == bld for L in M["buildings"]): errs.append(f"map: {bld} has a layout but no rect in content/v2/map.json")
         c = check_building(bld, errs, warns)
         print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     if a.browser:

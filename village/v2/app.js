@@ -77,17 +77,26 @@ document.addEventListener('keydown',function(){lastPointer='key'},true);
 var ignoreScroll=false;
 scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#panHint');if(!h.hidden)h.style.opacity=0},{passive:true});
 // ---------- map ----------
+// Buildings are discovered at runtime: map.js lists every building on the painting; a building is live
+// as soon as village/v2/data/<id>.js loads (adding a building never edits shared files).
+var LIVE={}, probed=false;
+function liveList(){ return MAP.buildings.filter(function(b){return LIVE[b.id]}) }
+function soonList(){ return MAP.buildings.filter(function(b){return !LIVE[b.id]}).concat(MAP.areas) }
+function probeAll(cb){ var n=MAP.buildings.length; if(!n){probed=true;cb();return}
+  MAP.buildings.forEach(function(b){ loadData(b.id,function(ok){ if(ok&&window.VILLAGE_DATA[b.id])LIVE[b.id]=1; if(--n===0){probed=true;cb()} }) }) }
+function pts(r){ return r[0]+','+r[1]+' '+(r[0]+r[2])+','+r[1]+' '+(r[0]+r[2])+','+(r[1]+r[3])+' '+r[0]+','+(r[1]+r[3]) }
 function renderMap(){
   view='map'; document.title='Le Village · French vocabulary memory village';
   back.hidden=true; rooms.hidden=true; blur.style.backgroundImage='url('+MAP.image+')';
+  var LV=liveList(), SN=soonList();
   var h='<img class="bg" src="'+MAP.image+'" alt="'+esc(MAP.alt)+'">';
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="Village map">';
-  MAP.soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+b.pts+'"><title>'+esc(b.name)+' (bientôt)</title></polygon>'});
-  MAP.live.forEach(function(L,i){
-    h+='<a href="#/'+L.id+'" class="lnk" data-i="'+i+'" aria-label="Enter '+esc(L.name)+'"><polygon class="bld live" tabindex="-1" points="'+L.pts+'"></polygon></a>';
+  SN.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+pts(b.rect)+'"><title>'+esc(b.name)+(probed?' (bientôt)':'')+'</title></polygon>'});
+  LV.forEach(function(L,i){
+    h+='<a href="#/'+L.id+'" class="lnk" data-i="'+i+'" aria-label="Enter '+esc(L.name)+'"><polygon class="bld live" tabindex="-1" points="'+pts(L.rect)+'"></polygon></a>';
   });
   h+='</svg>';
-  MAP.live.forEach(function(L,i){
+  LV.forEach(function(L,i){
     h+='<div class="door" style="left:'+pct(L.door[0]/12.8)+';top:'+pct(L.door[1]/7.2)+'" aria-hidden="true">➜</div>';
     h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(L.tag[0]/12.8)+';top:'+pct(L.tag[1]/7.2)+'">'+esc(L.name)+'</div>';
   });
@@ -100,11 +109,12 @@ function renderMap(){
     lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
   });
   stage.querySelectorAll('.bld.soon').forEach(function(p){
-    var b=MAP.soon[+p.dataset.i];
-    function show(){ts.innerHTML=esc(b.name)+'<small>bientôt</small>';ts.style.left=pct(b.tag[0]/12.8);ts.style.top=pct(Math.max(b.tag[1],60)/7.2);ts.classList.add('show')}
+    var b=SN[+p.dataset.i];
+    function show(){ts.innerHTML=esc(b.name)+(probed?'<small>bientôt</small>':'');ts.style.left=pct(b.tag[0]/12.8);ts.style.top=pct(Math.max(b.tag[1],60)/7.2);ts.classList.add('show')}
     p.addEventListener('mouseenter',show); p.addEventListener('mouseleave',function(){ts.classList.remove('show')});
     p.addEventListener('click',function(){show();clearTimeout(p._t);p._t=setTimeout(function(){ts.classList.remove('show')},1600)});
   });
+  stage.dataset.probed=probed?'1':'0';
   fit();
 }
 // ---------- room / zoom ----------
@@ -245,12 +255,12 @@ document.addEventListener('keydown',function(e){
   else if(e.key==='Backspace'&&(view==='room'||view==='zoom')){back.click();e.preventDefault()}
 });
 function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], live=MAP.live.some(function(L){return L.id===bld})||(window.VILLAGE_PREVIEW||[]).indexOf(bld)>=0;
-  if(!live){ renderMap(); return }
+  var m=location.hash.match(/^#\/([a-z]+)(?:\/([a-z]+))?$/), bld=m&&m[1], known=bld&&MAP.buildings.some(function(L){return L.id===bld});
+  if(!known){ renderMap(); return }
   loadData(bld,function(ok){
     var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
     var Rk=D&&D.rooms[key], ok2=Rk&&(!m[2]||(key!==bld&&(Rk.parent?!!D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent:(D.roomList||[]).some(function(r){return r.key===key}))));
-    if(!ok2){ location.replace('#/'); return }
+    if(!ok2){ if(location.hash!=='#/')location.replace('#/'); else renderMap(); return }
     renderRoom(bld,key);
   });
 }
@@ -268,4 +278,5 @@ function loadData(bld,cb){
 window.addEventListener('hashchange',route);
 applyLabelMode();
 route();
+probeAll(function(){ if(view==='map')renderMap() });
 })();

@@ -1,0 +1,470 @@
+{
+ "building": "boulangerie",
+ "name": "La boulangerie",
+ "main": "boulangerie",
+ "roomList": [
+  {
+   "key": "boulangerie",
+   "short": "La boutique"
+  },
+  {
+   "key": "fournil",
+   "short": "Le fournil"
+  }
+ ],
+ "planned": {
+  "boulangerie": {
+   "v1": "boulangerie/boulangerie"
+  },
+  "comptoir": {
+   "v1": "boulangerie/comptoir"
+  },
+  "fournil": {
+   "v1": "boulangerie/fournil"
+  },
+  "plan": {
+   "v1": "boulangerie/plan"
+  }
+ },
+ "rooms": {
+  "boulangerie": {
+   "name": "La boulangerie : la boutique",
+   "image": "boulangerie/boulangerie.jpg",
+   "alt": "Inside the village bakery, painted in ink and gouache: a brass till, a shopkeeper counting on her fingers beside a bowl of coins, an assistant selling a baguette, a customer holding up a gold coin, a glass display case of cakes, a cat on a stack of baguettes, a sack of flour, a jolly baker juggling croissants beside a price-tag rosette, a sack of baguettes, an egg lifting weights and a child's bike with a wicker pannier; the glass shop door on the left leads out to the village and a purple door on the right opens into the bakehouse.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     4,
+     140,
+     100,
+     380
+    ],
+    "label": "Le village"
+   },
+   "doors": [
+    {
+     "to": "fournil",
+     "label": "Le fournil",
+     "hint": "Through the purple door into the bakehouse",
+     "hit": [
+      834,
+      120,
+      66,
+      350
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "comptoir",
+     "label": "La vitrine",
+     "at": [
+      638,
+      470
+     ],
+     "obj": [
+      442,
+      384,
+      394,
+      176
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_caisse_noun",
+     "box": [
+      134,
+      306,
+      164,
+      160
+     ]
+    },
+    {
+     "id": "fr_compter_verb",
+     "box": [
+      300,
+      214,
+      104,
+      176
+     ]
+    },
+    {
+     "id": "fr_monnaie_noun",
+     "box": [
+      334,
+      396,
+      92,
+      52
+     ]
+    },
+    {
+     "id": "fr_farine_noun",
+     "box": [
+      68,
+      530,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_baguette_noun",
+     "box": [
+      290,
+      470,
+      150,
+      220
+     ]
+    },
+    {
+     "id": "fr_vendre_verb",
+     "box": [
+      480,
+      240,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_payer_verb",
+     "box": [
+      622,
+      130,
+      176,
+      250
+     ]
+    },
+    {
+     "id": "fr_boulanger_noun",
+     "box": [
+      906,
+      136,
+      210,
+      334
+     ]
+    },
+    {
+     "id": "fr_prix_noun",
+     "box": [
+      1122,
+      206,
+      66,
+      130
+     ]
+    },
+    {
+     "id": "fr_pain_noun",
+     "box": [
+      1116,
+      96,
+      134,
+      74
+     ]
+    },
+    {
+     "id": "fr_sac_noun",
+     "box": [
+      1192,
+      228,
+      76,
+      158
+     ]
+    },
+    {
+     "id": "fr_oeuf_noun",
+     "box": [
+      1150,
+      408,
+      92,
+      92
+     ]
+    },
+    {
+     "id": "fr_panier_noun",
+     "box": [
+      1000,
+      530,
+      260,
+      150
+     ]
+    }
+   ]
+  },
+  "comptoir": {
+   "name": "La vitrine",
+   "image": "boulangerie/comptoir.jpg",
+   "parent": "boulangerie",
+   "alt": "A close-up of the bakery's glass display case, painted in ink and gouache: dough, a fruit tart, a girl in a yellow dress choosing, a cake, butter, sugar and a chocolate éclair.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pate_noun",
+     "box": [
+      4,
+      330,
+      206,
+      190
+     ]
+    },
+    {
+     "id": "fr_tarte_noun",
+     "box": [
+      256,
+      350,
+      146,
+      138
+     ]
+    },
+    {
+     "id": "fr_choisir_verb",
+     "box": [
+      404,
+      296,
+      206,
+      420
+     ]
+    },
+    {
+     "id": "fr_gateau_noun",
+     "box": [
+      612,
+      282,
+      156,
+      214
+     ]
+    },
+    {
+     "id": "fr_beurre_noun",
+     "box": [
+      770,
+      340,
+      140,
+      170
+     ]
+    },
+    {
+     "id": "fr_sucre_noun",
+     "box": [
+      912,
+      268,
+      124,
+      244
+     ]
+    },
+    {
+     "id": "fr_eclair_noun",
+     "box": [
+      1040,
+      270,
+      186,
+      220
+     ]
+    }
+   ]
+  },
+  "fournil": {
+   "name": "Le fournil",
+   "image": "boulangerie/fournil.jpg",
+   "backTo": "boulangerie",
+   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, a girl kneading dough in a giant petri dish, a boy mixing batter in half a watermelon, a young baker in a choir collar cooking a pancake, a brick oven wearing a fur stole, a tray on a little rocky mesa, a stitched bucket on a smiling apron-table, and a workbench of odd little objects.",
+   "doors": [
+    {
+     "to": "boulangerie",
+     "label": "La boutique",
+     "hint": "Back through the purple door into the shop",
+     "hit": [
+      4,
+      80,
+      76,
+      410
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "plan",
+     "label": "Le plan de travail",
+     "at": [
+      876,
+      600
+     ],
+     "obj": [
+      676,
+      530,
+      398,
+      180
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_eau_noun",
+     "box": [
+      328,
+      62,
+      94,
+      160
+     ]
+    },
+    {
+     "id": "fr_balance_noun",
+     "box": [
+      445,
+      78,
+      172,
+      150
+     ]
+    },
+    {
+     "id": "fr_pelle_noun",
+     "box": [
+      200,
+      350,
+      242,
+      270
+     ]
+    },
+    {
+     "id": "fr_buche_noun",
+     "box": [
+      0,
+      500,
+      198,
+      220
+     ]
+    },
+    {
+     "id": "fr_petrir_verb",
+     "box": [
+      445,
+      280,
+      198,
+      280
+     ]
+    },
+    {
+     "id": "fr_melanger_verb",
+     "box": [
+      645,
+      242,
+      175,
+      260
+     ]
+    },
+    {
+     "id": "fr_cuire_verb",
+     "box": [
+      860,
+      234,
+      178,
+      290
+     ]
+    },
+    {
+     "id": "fr_four_noun",
+     "box": [
+      1040,
+      60,
+      220,
+      240
+     ]
+    },
+    {
+     "id": "fr_plateau_noun",
+     "box": [
+      1190,
+      300,
+      90,
+      72
+     ]
+    },
+    {
+     "id": "fr_seau_noun",
+     "box": [
+      1080,
+      440,
+      150,
+      110
+     ]
+    },
+    {
+     "id": "fr_tablier_noun",
+     "box": [
+      1076,
+      552,
+      160,
+      168
+     ]
+    }
+   ]
+  },
+  "plan": {
+   "name": "Le plan de travail",
+   "image": "boulangerie/plan.jpg",
+   "parent": "fournil",
+   "alt": "A close-up of the bakehouse workbench, painted in ink and gouache: a slice of bread in a trench coat, a cake box with a sail on a puddle, a rolling pin, a salt shaker locked in a little stone cell, an alarm clock blowing a bugle, a toy mule wearing a cake tin and a knight's gauntlet.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tranche_noun",
+     "box": [
+      60,
+      200,
+      220,
+      280
+     ]
+    },
+    {
+     "id": "fr_boite_noun",
+     "box": [
+      282,
+      130,
+      226,
+      370
+     ]
+    },
+    {
+     "id": "fr_sel_noun",
+     "box": [
+      662,
+      210,
+      164,
+      230
+     ]
+    },
+    {
+     "id": "fr_reveil_noun",
+     "box": [
+      828,
+      262,
+      110,
+      190
+     ]
+    },
+    {
+     "id": "fr_moule_noun_m",
+     "box": [
+      940,
+      175,
+      158,
+      250
+     ]
+    },
+    {
+     "id": "fr_gant_noun",
+     "box": [
+      1100,
+      135,
+      150,
+      295
+     ]
+    }
+   ]
+  }
+ }
+}
