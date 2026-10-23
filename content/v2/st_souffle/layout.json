@@ -1,0 +1,459 @@
+{
+ "building": "st_souffle",
+ "building_id": "ST_souffle",
+ "sector_id": "S08_travel",
+ "name": "Rue du Souffle",
+ "main": "st_souffle",
+ "roomList": [
+  {
+   "key": "st_souffle",
+   "short": "Le souffle"
+  },
+  {
+   "key": "coiffeur",
+   "short": "Le coiffeur"
+  },
+  {
+   "key": "soigneurs",
+   "short": "Les soigneurs"
+  },
+  {
+   "key": "avaleurs",
+   "short": "Les avaleurs"
+  }
+ ],
+ "planned": {
+  "st_souffle": {
+   "vocabRoom": "ST_body_seg001",
+   "only": [
+    "fr_respirer_verb",
+    "fr_inspirer_verb",
+    "fr_demeurer_verb",
+    "fr_vivre_verb",
+    "fr_souffler_verb",
+    "fr_mourir_verb"
+   ]
+  },
+  "coiffeur": {
+   "vocabRoom": "ST_body_seg002",
+   "only": [
+    "fr_coiffer_verb",
+    "fr_fatiguer_verb",
+    "fr_piquer_verb",
+    "fr_calmer_verb",
+    "fr_fumer_verb"
+   ]
+  },
+  "soigneurs": {
+   "vocabRoom": "ST_body_seg003",
+   "only": [
+    "fr_souffrir_verb",
+    "fr_blesser_verb",
+    "fr_traiter_verb",
+    "fr_soigner_verb",
+    "fr_couronner_verb",
+    "fr_sacrer_verb"
+   ]
+  },
+  "avaleurs": {
+   "vocabRoom": "ST_body_seg004",
+   "only": [
+    "fr_cracher_verb",
+    "fr_avaler_verb",
+    "fr_cligner_verb",
+    "fr_etouffer_verb",
+    "fr_saigner_verb",
+    "fr_mordre_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_souffle": {
+   "name": "Rue du Grand-Souffle",
+   "image": "st_souffle/st_souffle.jpg",
+   "alt": "An airy spring hillside lane between white domed spa villas and blossom trees: Monsieur Verbe the mime breathes the fresh air on a little wooden pier by the fountain, takes a big breath in as a sunbeam inspires him at his easel, stays perfectly still on a plinth with a butterfly on his beret, cares for a big potted sunflower, blows on a hot soufflé and, as a museum guide, points at a blank framed plaque on a villa wall. The stone archway with the iron gate on the left leads back down to the crossroads; the arched passage, the stone stairway and the wooden garden gate lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     110,
+     195,
+     150,
+     140
+    ],
+    "label": "Carrefour des Voyages"
+   },
+   "doors": [
+    {
+     "to": "coiffeur",
+     "label": "Allée du Coiffeur",
+     "hint": "Through the arched passage between the villas",
+     "hit": [
+      612,
+      215,
+      76,
+      120
+     ]
+    },
+    {
+     "to": "soigneurs",
+     "label": "Rue des Soigneurs",
+     "hint": "Up the stone stairway",
+     "hit": [
+      745,
+      230,
+      120,
+      120
+     ]
+    },
+    {
+     "to": "avaleurs",
+     "label": "Ruelle des Avaleurs-de-Sabres",
+     "hint": "Through the wooden garden gate",
+     "hit": [
+      995,
+      250,
+      110,
+      92
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_respirer_verb",
+     "box": [
+      12,
+      345,
+      250,
+      295
+     ]
+    },
+    {
+     "id": "fr_inspirer_verb",
+     "box": [
+      270,
+      340,
+      195,
+      305
+     ]
+    },
+    {
+     "id": "fr_demeurer_verb",
+     "box": [
+      477,
+      312,
+      128,
+      333
+     ]
+    },
+    {
+     "id": "fr_vivre_verb",
+     "box": [
+      618,
+      380,
+      205,
+      268
+     ]
+    },
+    {
+     "id": "fr_souffler_verb",
+     "box": [
+      834,
+      375,
+      140,
+      273
+     ]
+    },
+    {
+     "id": "fr_mourir_verb",
+     "box": [
+      1015,
+      348,
+      255,
+      297
+     ],
+     "labelAt": [
+      1205,
+      398
+     ]
+    }
+   ],
+   "room_id": "ST_body_seg001"
+  },
+  "coiffeur": {
+   "name": "Allée du Coiffeur",
+   "image": "st_souffle/coiffeur.jpg",
+   "backTo": "st_souffle",
+   "alt": "A sunny spring lane under blossom trees by white domed villas: Monsieur Verbe the mime styles a fluffy poodle's fur into a towering curl, slumps exhausted on a bench with a steaming white teacup, jumps as a wasp stings his jam sandwich, sits cross-legged and calm with his hand mirror and, as a museum guide, points at a blank framed plaque on a villa wall beside a second, empty frame. The stone archway on the left leads back to the main lane; the stone stairway on the right climbs on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_souffle",
+     "label": "Rue du Grand-Souffle",
+     "hint": "Back through the stone archway",
+     "hit": [
+      170,
+      180,
+      160,
+      112
+     ]
+    },
+    {
+     "to": "soigneurs",
+     "label": "Rue des Soigneurs",
+     "hint": "Up the stone stairway",
+     "hit": [
+      800,
+      215,
+      130,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_coiffer_verb",
+     "box": [
+      40,
+      300,
+      255,
+      345
+     ]
+    },
+    {
+     "id": "fr_fatiguer_verb",
+     "box": [
+      302,
+      362,
+      198,
+      286
+     ]
+    },
+    {
+     "id": "fr_piquer_verb",
+     "box": [
+      512,
+      285,
+      234,
+      300
+     ]
+    },
+    {
+     "id": "fr_calmer_verb",
+     "box": [
+      752,
+      398,
+      186,
+      250
+     ]
+    },
+    {
+     "id": "fr_fumer_verb",
+     "box": [
+      1080,
+      330,
+      84,
+      135
+     ],
+     "labelAt": [
+      1124,
+      383
+     ]
+    }
+   ],
+   "room_id": "ST_body_seg002"
+  },
+  "soigneurs": {
+   "name": "Rue des Soigneurs",
+   "image": "st_souffle/soigneurs.jpg",
+   "backTo": "st_souffle",
+   "alt": "A sunny spring terrace street with a fountain pool among white domed villas: Monsieur Verbe the mime shivers under his own little snow cloud, points as a museum guide, hand mirror at his side, at a blank framed plaque, mends a teddy bear with tools from a silver tray, puts a tiny bandage on a duckling while a swan watches, crowns a cooing pigeon with a little crown on a balcony and solemnly raises a jewelled crown over a velvet cushion in a small chapel arch. The stone stairway in the middle leads back down to the main lane; the open wooden door on the right leads on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_souffle",
+     "label": "Rue du Grand-Souffle",
+     "hint": "Back down the stone stairway",
+     "hit": [
+      555,
+      190,
+      80,
+      150
+     ]
+    },
+    {
+     "to": "avaleurs",
+     "label": "Ruelle des Avaleurs-de-Sabres",
+     "hint": "Through the open wooden door",
+     "hit": [
+      945,
+      234,
+      93,
+      168
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_souffrir_verb",
+     "box": [
+      12,
+      285,
+      178,
+      363
+     ]
+    },
+    {
+     "id": "fr_blesser_verb",
+     "box": [
+      198,
+      300,
+      282,
+      348
+     ],
+     "labelAt": [
+      380,
+      352
+     ]
+    },
+    {
+     "id": "fr_traiter_verb",
+     "box": [
+      488,
+      350,
+      142,
+      298
+     ]
+    },
+    {
+     "id": "fr_soigner_verb",
+     "box": [
+      638,
+      410,
+      400,
+      238
+     ]
+    },
+    {
+     "id": "fr_couronner_verb",
+     "box": [
+      740,
+      250,
+      190,
+      152
+     ]
+    },
+    {
+     "id": "fr_sacrer_verb",
+     "box": [
+      1045,
+      295,
+      225,
+      300
+     ]
+    }
+   ],
+   "room_id": "ST_body_seg003"
+  },
+  "avaleurs": {
+   "name": "Ruelle des Avaleurs-de-Sabres",
+   "image": "st_souffle/avaleurs.jpg",
+   "backTo": "st_souffle",
+   "alt": "A sunny spring lane at the top of the hill with a view over the valley: Monsieur Verbe the mime spits a cherry stone into a tin bucket with a crash, swallows a whole wobbly green jelly from a big spoon, winks with a thumbs up, points as a museum guide at two blank framed plaques on a villa wall and bites into a huge red apple. The open wooden garden gate on the left leads back to the main lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_souffle",
+     "label": "Rue du Grand-Souffle",
+     "hint": "Back through the wooden garden gate",
+     "hit": [
+      60,
+      185,
+      300,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cracher_verb",
+     "box": [
+      130,
+      357,
+      245,
+      291
+     ]
+    },
+    {
+     "id": "fr_avaler_verb",
+     "box": [
+      385,
+      350,
+      180,
+      298
+     ]
+    },
+    {
+     "id": "fr_cligner_verb",
+     "box": [
+      573,
+      355,
+      140,
+      293
+     ]
+    },
+    {
+     "id": "fr_etouffer_verb",
+     "box": [
+      878,
+      370,
+      80,
+      113
+     ],
+     "labelAt": [
+      905,
+      333
+     ]
+    },
+    {
+     "id": "fr_saigner_verb",
+     "box": [
+      964,
+      365,
+      90,
+      125
+     ],
+     "labelAt": [
+      1009,
+      497
+     ]
+    },
+    {
+     "id": "fr_mordre_verb",
+     "box": [
+      1062,
+      365,
+      180,
+      283
+     ]
+    }
+   ],
+   "room_id": "ST_body_seg004"
+  }
+ }
+}
