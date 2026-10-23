@@ -46,3 +46,54 @@ A small friendly whole mole climbing out of a round HOLE in a compact broken blu
 
 Replace the landscape on the easel with a physical collage of thick, distinct red, blue, cream and green rectangular fired-clay bricks. Visible mortar gaps and brick edges; geometric staggered brick-wall pattern, no landscape or house picture. Adult craftswoman crouches beside the low easel, one hand applies glue, the other holds a brick. Preserve full feet, transparent background and upper-left daylight. Only this sprite is regenerated.
 
+## Coverage expansion
+
+Keep the approved main background fixed. Add scier and réparer as the red-beret striped Monsieur Verbe, fully drawn at adult scale. Place the sawing mime behind the existing left bench with lower-body occlusion and the repairing mime crouched over a split chair leg on the right floor. The conjugation cards contain all seven tense tabs and participles.
+
+Replace the old mole/golf-ball trou sprite with three wind-up toy soldiers marching into a slate-floor hole: TROOP without final p gives TROO. Keep this sound cue on its card and preserve the source independently.
+
+Generate the tools view as a closer view of the same left oak workbench, sage wall, peg rail, limestone window and slate floor. Keep its surfaces empty, then generate these individual transparent sprites using its light and brushwork:
+
+### outil
+
+One adjustable steel WRENCH holding a miniature ceramic cup of TEA securely between its jaws. Teabag string hangs from cup rim, no letters. Wrench and cup both intact. The wrench is a TOOL; TEA cues only the final syllable of outil [oo-TEE]. Intended to hang by a small top loop from a right-hand wall peg, target130px tall.
+
+### clou
+
+A big steel NAIL lies on a small oak inspection block. Its broad round nailhead has one distinct fingerprint impressed on it; a detective's magnifying glass on a little jointed stand magnifies that fingerprint, a CLUE. Tool nail shape unmistakable, no person or labels. Clue sounds like clou [KLOO]. Intended to rest on right-hand oak tabletop, low wide group130px wide.
+
+### marteau
+
+A small red wooden MARTIAN toy, clearly a complete toy with two arms and two legs, in a cream apron, carefully holds a HAMMER just above its oversized boot TOE. No injury, no detached foot, no pain, no stars. MAR(tian) + TOE loosely cues marteau [mahr-TOH]. Hammer visually large and main object; toy simple chunky friendly shape. Compact full group, right tabletop,160px tall.
+
+### ressort
+
+A large clean steel coil SPRING supports a tiny tropical RESORT model: little blue holiday hut and one palm. Model rests firmly on a small round platform bolted to spring top; spring base on round wooden plinth. No floating objects or people. Resort is an approximate cue for ressort [ruh-SOR]. Intended right tabletop,160px tall; rich readable thick outlines.
+
+### ciseau
+
+A single clearly recognisable wood-handled CHISEL rests diagonally with its sharpened straight metal edge pressed into a small limestone block, one visible shallow spiral carving and three stone chips resting on the base. Plain meaning depiction of le ciseau [see-ZOH], no forced sound pun and no person. Intended right lower bench shelf, low wide group160px wide.
+
+### assemblage
+
+A half-ASSEMBLED tiny wooden go-kart: chassis, seat and two wheels connected, one loose wheel and axle resting on a small wooden base alongside it. Chunky toy car parts, no text or arrows and NOTHING floating or exploded in the air. Plain meaning picture of assemblage [ah-sahn-BLAHZH]. Intended right lower shelf,170px wide, three-quarter front-left view.
+
+### ficelle
+
+One small full-bodied shop-mouse, cream fur and blue waistcoat, holding a gold payment coin in one paw and a large ball of TWINE for sale in the other. A second neatly wound coil rests by its feet; string visibly twined rope, no signs. A FEE to SELL TWINE loosely cues ficelle [fee-SEHL]. Whole figure and feet intact, compact group. Intended left tabletop,160px tall.
+
+### manivelle
+
+A small wooden toy MAN kneels on one knee and turns the large iron hand CRANK of a miniature stone WELL. Crank visibly mounted on the well's axle and toy hand touches handle. Complete toy figure and complete well, no backdrop. MAN-KNEE-WELL loosely cues manivelle [mah-nee-VEHL]; intended left lower shelf as a small workshop mechanical model,180px wide.
+
+### vis
+
+Two small full-bodied white toy GEESE jointly hold one giant steel SCREW between their wings. Threaded screw and slotted head unmistakable, fully visible, all goose feet intact and rest on one tiny oval wood base. GEESE rhymes with vis [VEES]; this is explicitly a RHYME cue. Simple charming miniature shapes, not huge realistic birds. Intended left tabletop,140px wide, soft upper-left light.
+
+### attache
+
+A sturdy metal FASTENER clip holds a large black FAKE MOUSTACHE costume prop. Clip is visibly attached to a small oval leather hanging tab with a top loop; moustache clipped onto it, everything joined. A TASH recalls attache [ah-TAHSH]. No face or body parts, clearly a standalone costume moustache on a clip. Intended hanging from left wall peg, target120px tall.
+
+## Extraction corrections
+
+When a sprite includes an unwanted miniature bench, edit that sprite to remove all furniture while preserving its named figure, tool and cue. Enlarge the isolated group to fill the frame. This was required for ficelle, vis, clou, marteau, ciseau and assemblage. Remove the opaque/colored halo from manivelle. Keep mounted mechanisms and explicit small support blocks, but no accidental miniature tables. Preserve real alpha, complete limbs and the same style. The wrench is rotated for its wall peg by placement code; its source remains intact.
