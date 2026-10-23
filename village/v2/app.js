@@ -25,6 +25,7 @@ var $=function(s,e){return (e||document).querySelector(s)};
  '#rooms a[aria-current="page"]{opacity:1;color:#ffd86b;font-weight:700;cursor:default}'+
  '#rooms .dot{padding:0 1px}'+
  '#app.roomsdrop #rooms{position:absolute;left:8px;top:calc(var(--h) + 6px);margin:0;z-index:6;background:rgba(43,69,73,.88);border:1px solid rgba(0,0,0,.35);border-radius:999px;padding:1px 3px;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3)}'+
+ '#app.roomsdrop #scroller{top:36px}'+ // keep the painting clear of the dropped room list so it never hides labels
  '.strip-left{display:flex;align-items:center}';
  document.head.appendChild(st) })();
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
@@ -213,7 +214,7 @@ function renderRoom(bld,key){
   applyLabelMode();
   fit();
 }
-function headword(it){ if(it.verb||it.adj) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
+function headword(it){ if(it.verb||it.adj||it.adv) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
 // ---------- speech (browser built-in, French voice) ----------
 var frVoice=null;
 function pickVoice(){ if(!('speechSynthesis' in window))return; var v=speechSynthesis.getVoices();
@@ -227,11 +228,12 @@ function openCard(it,from){
   lastFocus=from||document.activeElement;
   var hw=headword(it), sp='speechSynthesis' in window;
   var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="'+esc(it.cardSrc||('assets/words/'+it.id+'.webp'))+'" alt=""></div><div class="hw">';
-  h+='<h2 id="cardTitle">'+(it.verb||it.adj?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
+  h+='<h2 id="cardTitle">'+(it.verb||it.adj||it.adv?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';
   if(it.adj){ var F=it.forms||{}; h+='<div class="gram">adjective · '+(it.invariable?esc(it.fr)+' (same for both)':esc(F.m_sg||it.fr)+'/'+esc(F.f_sg||it.fr))+(F.m_pl?' · plural: '+esc(F.m_pl)+(F.f_pl&&F.f_pl!==F.m_pl?'/'+esc(F.f_pl):''):'')+'</div>';
     if(it.f_ipa&&!it.invariable) h+='<div class="pron small">feminine '+esc(F.f_sg||'')+': '+esc(it.f_ipa)+(it.f_say?' · say <b>'+esc(it.f_say)+'</b>':'')+'</div>'; }
+  else if(it.adv) h+='<div class="gram">adverb · invariable</div>';
   else if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':it.g==='mf'?'masculine or feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   var ff=it.falseFriend;

@@ -74,6 +74,10 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
 ```
 * Adjectives (vocab `pos: "adj"`) are allowed: their label has no article, their card shows
   `adjective · côtier/côtière` (or *same for both*) and their box centre must sit in the middle band (30–70 %).
+* Adverbs (ids `fr_<key>_adv`) work the same way: no article or gender, card gram line `adverb · invariable`,
+  box centre in the middle band (30–70 %).
+* The room list drops below the strip when it does not fit beside the title; the painting is then pushed down
+  36 px so the list never covers labels (`--strict` checks this).
 * Card text comes from the v1 payload `village/assets/data/<bld>.js` (matched by id), else `data/source/vocab.jsonl`;
   `"text": "vocab"` forces the vocab source. Never copy or edit that text.
 * `hooks.json` is only for hooks that break the content rules (crude, scary, drinking/smoking, mature, God the
