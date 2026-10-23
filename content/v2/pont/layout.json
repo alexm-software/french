@@ -1,0 +1,1013 @@
+{
+ "building": "pont",
+ "building_id": "B57_pont",
+ "sector_id": "S16_park",
+ "v1_room_id": "R_opposites_01",
+ "name": "Le Pont des Contraires",
+ "main": "pont",
+ "roomList": [
+  {
+   "key": "pont",
+   "short": "Le pont"
+  },
+  {
+   "key": "sous",
+   "short": "Sous le pont"
+  },
+  {
+   "key": "marche",
+   "short": "Le marché"
+  },
+  {
+   "key": "jardin",
+   "short": "Le jardin"
+  },
+  {
+   "key": "ponton",
+   "short": "Le ponton"
+  },
+  {
+   "key": "quai",
+   "short": "Le quai"
+  },
+  {
+   "key": "passerelle",
+   "short": "La passerelle"
+  }
+ ],
+ "planned": {
+  "pont": {
+   "vocabRoom": "R_opposites_01",
+   "only": [
+    "fr_bon_adj",
+    "fr_petit_adj",
+    "fr_nouveau_adj",
+    "fr_mauvais_adj",
+    "fr_ancien_adj",
+    "fr_grand_adj",
+    "fr_vieux_adj",
+    "fr_jeune_adj",
+    "fr_froid_adj",
+    "fr_chaud_adj"
+   ]
+  },
+  "sous": {
+   "vocabRoom": "R_opposites_02",
+   "only": [
+    "fr_haut_adj",
+    "fr_bas_adj",
+    "fr_difficile_adj",
+    "fr_facile_adj",
+    "fr_rapide_adj",
+    "fr_lent_adj",
+    "fr_long_adj",
+    "fr_court_adj",
+    "fr_lourd_adj",
+    "fr_leger_adj"
+   ]
+  },
+  "marche": {
+   "vocabRoom": "R_opposites_03",
+   "only": [
+    "fr_plein_adj",
+    "fr_propre_adj",
+    "fr_sale_adj",
+    "fr_fort_adj",
+    "fr_faible_adj",
+    "fr_vide_adj",
+    "fr_pauvre_adj",
+    "fr_ferme_adj_2",
+    "fr_riche_adj",
+    "fr_ouvert_adj"
+   ]
+  },
+  "jardin": {
+   "vocabRoom": "R_opposites_04",
+   "only": [
+    "fr_vrai_adj",
+    "fr_gros_adj",
+    "fr_heureux_adj",
+    "fr_triste_adj",
+    "fr_faux_adj",
+    "fr_mince_adj",
+    "fr_malheureux_adj",
+    "fr_large_adj",
+    "fr_gai_adj",
+    "fr_etroit_adj"
+   ]
+  },
+  "ponton": {
+   "vocabRoom": "R_opposites_05",
+   "only": [
+    "fr_possible_adj",
+    "fr_dur_adj",
+    "fr_clair_adj",
+    "fr_doux_adj",
+    "fr_impossible_adj",
+    "fr_calme_adj",
+    "fr_nerveux_adj",
+    "fr_cher_adv",
+    "fr_gratuit_adj",
+    "fr_sombre_adj"
+   ]
+  },
+  "quai": {
+   "vocabRoom": "R_opposites_06",
+   "only": [
+    "fr_lointain_adj",
+    "fr_beau_adj",
+    "fr_sec_adj",
+    "fr_gentil_adj",
+    "fr_silencieux_adj",
+    "fr_laid_adj",
+    "fr_mechant_adj",
+    "fr_proche_adj",
+    "fr_mouille_adj",
+    "fr_bruyant_adj"
+   ]
+  },
+  "passerelle": {
+   "vocabRoom": "R_opposites_07",
+   "only": [
+    "fr_simple_adj",
+    "fr_present_adj",
+    "fr_rare_adj",
+    "fr_moderne_adj",
+    "fr_traditionnel_adj",
+    "fr_complique_adj",
+    "fr_absent_adj",
+    "fr_frequent_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "pont": {
+   "name": "Le Pont des Contraires",
+   "room_id": "R_opposites_01",
+   "image": "pont/pont.jpg",
+   "alt": "A cobbled stone bridge over the park pond on a sunny day, painted in ink and gouache. On the parapets a tiny mouse sips from a little cup and a happy dog wags its tail at a giant bone; a June bug in a cap skateboards past an old man with a long white beard dozing in a deckchair. A boy shows off a shiny new red bike while a man holds up a toothy mauve hat, a tall giraffe in the pond bends to drink, and an old weed-hung galleon floats behind. At the front a shivering cat in a striped scarf faces a sweating fire-juggler. The wooden gate on the left leads back to the park; two round stone huts have three coloured doors each: red, yellow and blue on the left, green, orange and white on the right.",
+   "nameplate": [
+    84,
+    94
+   ],
+   "mapExit": {
+    "box": [
+     34,
+     335,
+     303,
+     212
+    ],
+    "label": "Parc des Curiosités"
+   },
+   "doors": [
+    {
+     "to": "sous",
+     "label": "Sous le pont",
+     "hint": "Go through the red door in the hut on the left",
+     "hit": [
+      161,
+      184,
+      40,
+      82
+     ]
+    },
+    {
+     "to": "marche",
+     "label": "Le marché du pont",
+     "hint": "Go through the yellow door in the hut on the left",
+     "hit": [
+      219,
+      184,
+      40,
+      82
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin des humeurs",
+     "hint": "Go through the blue door in the hut on the left",
+     "hit": [
+      278,
+      184,
+      36,
+      82
+     ]
+    },
+    {
+     "to": "ponton",
+     "label": "Le ponton",
+     "hint": "Go through the green door in the hut on the right",
+     "hit": [
+      989,
+      179,
+      39,
+      84
+     ]
+    },
+    {
+     "to": "quai",
+     "label": "Le quai",
+     "hint": "Go through the orange door in the hut on the right",
+     "hit": [
+      1044,
+      179,
+      39,
+      84
+     ]
+    },
+    {
+     "to": "passerelle",
+     "label": "La passerelle",
+     "hint": "Go through the white door in the hut on the right",
+     "hit": [
+      1104,
+      179,
+      38,
+      84
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bon_adj",
+     "box": [
+      401,
+      164,
+      154,
+      124
+     ]
+    },
+    {
+     "id": "fr_petit_adj",
+     "box": [
+      423,
+      314,
+      60,
+      83
+     ]
+    },
+    {
+     "id": "fr_nouveau_adj",
+     "box": [
+      562,
+      108,
+      80,
+      130
+     ]
+    },
+    {
+     "id": "fr_mauvais_adj",
+     "box": [
+      649,
+      97,
+      87,
+      118
+     ]
+    },
+    {
+     "id": "fr_ancien_adj",
+     "box": [
+      744,
+      72,
+      143,
+      163
+     ]
+    },
+    {
+     "id": "fr_grand_adj",
+     "box": [
+      752,
+      242,
+      135,
+      186
+     ]
+    },
+    {
+     "id": "fr_vieux_adj",
+     "box": [
+      642,
+      274,
+      105,
+      142
+     ]
+    },
+    {
+     "id": "fr_jeune_adj",
+     "box": [
+      539,
+      293,
+      75,
+      127
+     ]
+    },
+    {
+     "id": "fr_froid_adj",
+     "box": [
+      452,
+      440,
+      129,
+      209
+     ]
+    },
+    {
+     "id": "fr_chaud_adj",
+     "box": [
+      642,
+      431,
+      213,
+      253
+     ]
+    }
+   ]
+  },
+  "sous": {
+   "name": "Sous le pont",
+   "room_id": "R_opposites_02",
+   "image": "pont/sous.jpg",
+   "backTo": "pont",
+   "alt": "The riverbank under an old stone bridge, painted in ink and gouache. A girl on top of the bridge flies a kite high in the sky; below, a fisherman in a rowing boat coaxes a grumpy seal while another seal balances a ball on its nose. A cheetah in a cap races along the bank past a slow snail, a very long sausage dog stretches along the grass and a short dachshund stands by a little tennis net. A sheep bleats on the bottom step, an old fisherman's rod bends double, hooked onto a heavy black iron kettlebell sunk into the grass, and a feather quill rests on an open ledger. A weeping willow stands on the right; the red door in the bridge wall on the left leads back up to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the red door to the bridge",
+     "hit": [
+      138,
+      222,
+      66,
+      116
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_haut_adj",
+     "box": [
+      395,
+      28,
+      279,
+      112
+     ]
+    },
+    {
+     "id": "fr_bas_adj",
+     "box": [
+      404,
+      459,
+      103,
+      103
+     ]
+    },
+    {
+     "id": "fr_difficile_adj",
+     "box": [
+      375,
+      277,
+      208,
+      93
+     ]
+    },
+    {
+     "id": "fr_facile_adj",
+     "box": [
+      587,
+      227,
+      87,
+      141
+     ]
+    },
+    {
+     "id": "fr_rapide_adj",
+     "box": [
+      698,
+      223,
+      174,
+      83
+     ]
+    },
+    {
+     "id": "fr_lent_adj",
+     "box": [
+      798,
+      308,
+      54,
+      38
+     ]
+    },
+    {
+     "id": "fr_long_adj",
+     "box": [
+      557,
+      373,
+      177,
+      64
+     ]
+    },
+    {
+     "id": "fr_court_adj",
+     "box": [
+      742,
+      350,
+      106,
+      101
+     ]
+    },
+    {
+     "id": "fr_lourd_adj",
+     "box": [
+      612,
+      498,
+      96,
+      168
+     ]
+    },
+    {
+     "id": "fr_leger_adj",
+     "box": [
+      756,
+      567,
+      116,
+      107
+     ]
+    }
+   ]
+  },
+  "marche": {
+   "name": "Le marché du pont",
+   "room_id": "R_opposites_03",
+   "image": "pont/marche.jpg",
+   "backTo": "pont",
+   "alt": "A little market on a cobbled quay beside the pond, painted in ink and gouache. A plane overloaded with suitcases flies overhead with a giraffe poking out of the top; an actor in a ruff polishes a shiny crown, a pig wallows in mud and a strongman lifts a whole castle. An open, empty fridge has a picture of a roast on its door, a thin cat holds out an empty saucer under a little rain cloud, a mouse strains to lift a feather in front of a flexing hamster, and a cat in a top hat reaches down for a gold coin in the water. A rabbit peers into an open cupboard stall of jars beside a padlocked shed, and fruit and flower stalls fill the right. The yellow door of the little stone hut on the left leads back to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the yellow door to the bridge",
+     "hit": [
+      245,
+      262,
+      52,
+      125
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_plein_adj",
+     "box": [
+      370,
+      28,
+      195,
+      156
+     ]
+    },
+    {
+     "id": "fr_propre_adj",
+     "box": [
+      385,
+      195,
+      141,
+      117
+     ]
+    },
+    {
+     "id": "fr_sale_adj",
+     "box": [
+      453,
+      320,
+      89,
+      120
+     ]
+    },
+    {
+     "id": "fr_fort_adj",
+     "box": [
+      568,
+      109,
+      114,
+      250
+     ]
+    },
+    {
+     "id": "fr_faible_adj",
+     "box": [
+      545,
+      375,
+      91,
+      125
+     ]
+    },
+    {
+     "id": "fr_vide_adj",
+     "box": [
+      690,
+      148,
+      200,
+      188
+     ]
+    },
+    {
+     "id": "fr_pauvre_adj",
+     "box": [
+      776,
+      352,
+      97,
+      164
+     ]
+    },
+    {
+     "id": "fr_ferme_adj_2",
+     "box": [
+      753,
+      523,
+      133,
+      180
+     ]
+    },
+    {
+     "id": "fr_riche_adj",
+     "box": [
+      401,
+      458,
+      138,
+      188
+     ]
+    },
+    {
+     "id": "fr_ouvert_adj",
+     "box": [
+      568,
+      508,
+      164,
+      184
+     ]
+    }
+   ]
+  },
+  "jardin": {
+   "name": "Le jardin des humeurs",
+   "room_id": "R_opposites_04",
+   "image": "pont/jardin.jpg",
+   "backTo": "pont",
+   "alt": "A cottage garden full of moods, painted in ink and gouache. A donkey brays beside an honest boy holding a flowerpot, a giant pumpkin squashes the fence and a puppy spins with a red ball. A willow droops under its own rain cloud, a postman's false moustache flies off, and a thin mantis slips through the letterbox of a green door. A sad clown holds the scraps of his burst balloons, a tailor measures a wide sofa, a goat sings as it rides the swinging gate, and three cats squeeze through a narrow gap by the gate post. The blue door on the left leads back to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the blue door to the bridge",
+     "hit": [
+      191,
+      278,
+      56,
+      110
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vrai_adj",
+     "box": [
+      398,
+      50,
+      212,
+      155
+     ]
+    },
+    {
+     "id": "fr_gros_adj",
+     "box": [
+      625,
+      40,
+      265,
+      160
+     ]
+    },
+    {
+     "id": "fr_heureux_adj",
+     "box": [
+      425,
+      220,
+      135,
+      95
+     ]
+    },
+    {
+     "id": "fr_triste_adj",
+     "box": [
+      570,
+      207,
+      120,
+      133
+     ]
+    },
+    {
+     "id": "fr_faux_adj",
+     "box": [
+      720,
+      230,
+      155,
+      125
+     ]
+    },
+    {
+     "id": "fr_mince_adj",
+     "box": [
+      425,
+      345,
+      80,
+      160
+     ]
+    },
+    {
+     "id": "fr_malheureux_adj",
+     "box": [
+      550,
+      350,
+      105,
+      140
+     ],
+     "labelAt": [
+      583,
+      457
+     ]
+    },
+    {
+     "id": "fr_large_adj",
+     "box": [
+      660,
+      358,
+      240,
+      132
+     ]
+    },
+    {
+     "id": "fr_gai_adj",
+     "box": [
+      585,
+      495,
+      120,
+      205
+     ]
+    },
+    {
+     "id": "fr_etroit_adj",
+     "box": [
+      710,
+      585,
+      100,
+      110
+     ]
+    }
+   ]
+  },
+  "ponton": {
+   "name": "Le ponton",
+   "room_id": "R_opposites_05",
+   "image": "pont/ponton.jpg",
+   "backTo": "pont",
+   "alt": "A wooden jetty winding across a reedy pond, painted in ink and gouache. Ants carry a sandwich along the planks, a beaver bites a rock on the bank and a girl holds up a clear glass of water. A dove settles on a fluffy pillow, a pig with paper wings flies over ducks holding blank cards, and a tortoise in sunglasses relaxes in a deckchair near a shivering chihuahua. An old lady gasps at a huge blank price tag on a teapot, a vendor hands a toddler an ice cream, and a lamplighter climbs a ladder to the only glowing lamp under a dark tree. The green door of the shed on the left leads back to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the green door to the bridge",
+     "hit": [
+      286,
+      138,
+      45,
+      100
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_possible_adj",
+     "box": [
+      438,
+      44,
+      203,
+      100
+     ]
+    },
+    {
+     "id": "fr_dur_adj",
+     "box": [
+      719,
+      23,
+      156,
+      97
+     ]
+    },
+    {
+     "id": "fr_clair_adj",
+     "box": [
+      422,
+      150,
+      86,
+      162
+     ]
+    },
+    {
+     "id": "fr_doux_adj",
+     "box": [
+      750,
+      148,
+      144,
+      109
+     ]
+    },
+    {
+     "id": "fr_impossible_adj",
+     "box": [
+      625,
+      180,
+      112,
+      117
+     ]
+    },
+    {
+     "id": "fr_calme_adj",
+     "box": [
+      778,
+      309,
+      81,
+      133
+     ]
+    },
+    {
+     "id": "fr_nerveux_adj",
+     "box": [
+      675,
+      403,
+      62,
+      89
+     ]
+    },
+    {
+     "id": "fr_cher_adv",
+     "box": [
+      414,
+      391,
+      219,
+      141
+     ]
+    },
+    {
+     "id": "fr_gratuit_adj",
+     "box": [
+      430,
+      534,
+      211,
+      169
+     ]
+    },
+    {
+     "id": "fr_sombre_adj",
+     "box": [
+      742,
+      508,
+      91,
+      195
+     ]
+    }
+   ]
+  },
+  "quai": {
+   "name": "Le quai",
+   "room_id": "R_opposites_06",
+   "image": "pont/quai.jpg",
+   "backTo": "pont",
+   "alt": "A sunny stone quay curving round a lake, painted in ink and gouache. Far out on the water a lion lounges on a tiny palm island; a prince in a red cape admires his bow tie in a standing mirror, and a camel with a sack crosses dry cracked ground. A boy holds his umbrella over an old man, a cat in a top hat pulls a yelping dog's tail and another cat creeps close to a crystal fishbowl. An owl sits quietly on a post beside a honking goose, a warty troll leans on the quay wall from the lake, a wet dog shakes water over a laughing cow, and a boy bangs a pot while his family covers their ears. The orange door of the boathouse on the left leads back to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the orange door to the bridge",
+     "hit": [
+      281,
+      115,
+      52,
+      78
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_lointain_adj",
+     "box": [
+      399,
+      52,
+      112,
+      68
+     ]
+    },
+    {
+     "id": "fr_beau_adj",
+     "box": [
+      554,
+      46,
+      138,
+      162
+     ]
+    },
+    {
+     "id": "fr_sec_adj",
+     "box": [
+      696,
+      62,
+      140,
+      105
+     ]
+    },
+    {
+     "id": "fr_gentil_adj",
+     "box": [
+      744,
+      170,
+      119,
+      130
+     ]
+    },
+    {
+     "id": "fr_silencieux_adj",
+     "box": [
+      399,
+      150,
+      113,
+      138
+     ]
+    },
+    {
+     "id": "fr_laid_adj",
+     "box": [
+      399,
+      298,
+      198,
+      156
+     ]
+    },
+    {
+     "id": "fr_mechant_adj",
+     "box": [
+      655,
+      302,
+      182,
+      78
+     ]
+    },
+    {
+     "id": "fr_proche_adj",
+     "box": [
+      752,
+      384,
+      156,
+      104
+     ]
+    },
+    {
+     "id": "fr_mouille_adj",
+     "box": [
+      388,
+      463,
+      322,
+      82
+     ]
+    },
+    {
+     "id": "fr_bruyant_adj",
+     "box": [
+      562,
+      548,
+      327,
+      169
+     ]
+    }
+   ]
+  },
+  "passerelle": {
+   "name": "La passerelle",
+   "room_id": "R_opposites_07",
+   "image": "pont/passerelle.jpg",
+   "backTo": "pont",
+   "alt": "A flat wooden footbridge over a stream in the park, painted in ink and gouache. A chef offers plain crackers on a plate, a girl shoots her hand up while a teacher ticks the register, and a golden frog on the footbridge is admired by two birds with binoculars. A glass urn full of neon squiggles stands by a cracked Roman vase, a girl in a lace bonnet and clogs dances towards a breakdancing robot, and a woman untangles fairy lights wrapped round a cat. An absent-minded professor strolls along reading with a teapot on his head, and pigeons crowd round an old man on a bench. The white door of the little shed on the left leads back to the bridge.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "pont",
+     "label": "Le Pont des Contraires",
+     "hint": "Go back through the white door to the bridge",
+     "hit": [
+      166,
+      128,
+      44,
+      100
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_simple_adj",
+     "box": [
+      388,
+      72,
+      131,
+      147
+     ]
+    },
+    {
+     "id": "fr_present_adj",
+     "box": [
+      537,
+      66,
+      161,
+      198
+     ]
+    },
+    {
+     "id": "fr_rare_adj",
+     "box": [
+      700,
+      160,
+      150,
+      118
+     ]
+    },
+    {
+     "id": "fr_moderne_adj",
+     "box": [
+      398,
+      268,
+      136,
+      132
+     ]
+    },
+    {
+     "id": "fr_traditionnel_adj",
+     "box": [
+      538,
+      335,
+      187,
+      163
+     ]
+    },
+    {
+     "id": "fr_complique_adj",
+     "box": [
+      738,
+      281,
+      162,
+      212
+     ]
+    },
+    {
+     "id": "fr_absent_adj",
+     "box": [
+      397,
+      452,
+      138,
+      240
+     ]
+    },
+    {
+     "id": "fr_frequent_adj",
+     "box": [
+      660,
+      502,
+      232,
+      180
+     ]
+    }
+   ]
+  }
+ }
+}
