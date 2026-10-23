@@ -1,0 +1,456 @@
+{
+ "building": "ecole",
+ "name": "L'école",
+ "main": "ecole",
+ "roomList": [
+  {
+   "key": "ecole",
+   "short": "L'école"
+  },
+  {
+   "key": "maths",
+   "short": "La classe de maths"
+  }
+ ],
+ "rooms": {
+  "ecole": {
+   "name": "L'école : la salle de classe",
+   "image": "ecole/ecole.jpg",
+   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table, a goldfish pinning a card to the notice board, a globe with blue jelly, a young doe with a sack on her back and an exercise book folded into a kayak; an open door on the left leads to the playground and a teal door on the right leads to the maths classroom.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     0,
+     40,
+     148,
+     410
+    ],
+    "label": "Le village"
+   },
+   "doors": [
+    {
+     "to": "maths",
+     "label": "La classe de maths",
+     "hint": "Through the teal door to the maths classroom",
+     "hit": [
+      1190,
+      40,
+      90,
+      272
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "trousse",
+     "label": "la trousse",
+     "hint": "Open the pencil case on the desk",
+     "at": [
+      330,
+      652
+     ],
+     "obj": [
+      145,
+      515,
+      355,
+      205
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_maitresse_noun",
+     "box": [
+      150,
+      105,
+      128,
+      420
+     ]
+    },
+    {
+     "id": "fr_craie_noun",
+     "box": [
+      280,
+      280,
+      82,
+      95
+     ]
+    },
+    {
+     "id": "fr_lecon_noun",
+     "box": [
+      368,
+      225,
+      190,
+      235
+     ]
+    },
+    {
+     "id": "fr_trousse_noun",
+     "box": [
+      280,
+      518,
+      180,
+      110
+     ],
+     "scene": "The fat blue pencil case on the desk waves its little white flag of TRUCE."
+    },
+    {
+     "id": "fr_ecouter_verb",
+     "box": [
+      562,
+      160,
+      168,
+      95
+     ],
+     "scene": "Monsieur Verbe (red beret) leans out of the window, a hand cupped by his ear, listening to the white dove."
+    },
+    {
+     "id": "fr_apprendre_verb",
+     "box": [
+      590,
+      288,
+      225,
+      172
+     ]
+    },
+    {
+     "id": "fr_finir_verb",
+     "box": [
+      510,
+      462,
+      330,
+      233
+     ]
+    },
+    {
+     "id": "fr_tableau_noun",
+     "box": [
+      760,
+      170,
+      212,
+      113
+     ]
+    },
+    {
+     "id": "fr_tableau_affichage_noun",
+     "box": [
+      992,
+      78,
+      178,
+      160
+     ]
+    },
+    {
+     "id": "fr_globe_noun",
+     "box": [
+      995,
+      240,
+      88,
+      125
+     ]
+    },
+    {
+     "id": "fr_sac_a_dos_noun",
+     "box": [
+      1085,
+      318,
+      160,
+      182
+     ]
+    },
+    {
+     "id": "fr_cahier_noun",
+     "box": [
+      920,
+      505,
+      230,
+      95
+     ]
+    }
+   ]
+  },
+  "trousse": {
+   "name": "La trousse",
+   "image": "ecole/trousse.jpg",
+   "parent": "ecole",
+   "alt": "Close-up of the desk with the open blue pencil case: a ruler with a crown and red cape, a collie puppy with its paw stuck to a glue bottle, a pink eraser in a silver gum wrapper, a pencil in a rainbow crayon wrapper and scissors riding a tiny wooden seesaw.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_regle_noun",
+     "box": [
+      15,
+      65,
+      265,
+      475
+     ]
+    },
+    {
+     "id": "fr_colle_noun",
+     "box": [
+      285,
+      75,
+      300,
+      385
+     ]
+    },
+    {
+     "id": "fr_gomme_noun",
+     "box": [
+      290,
+      498,
+      180,
+      92
+     ]
+    },
+    {
+     "id": "fr_crayon_noun",
+     "box": [
+      510,
+      465,
+      370,
+      135
+     ]
+    },
+    {
+     "id": "fr_ciseaux_noun",
+     "box": [
+      910,
+      320,
+      330,
+      210
+     ]
+    }
+   ]
+  },
+  "maths": {
+   "name": "La classe de maths",
+   "image": "ecole/maths.jpg",
+   "backTo": "ecole",
+   "alt": "The maths classroom painted in ink and gouache: a pyramid peering through a spyglass, a star wrapped in a towel, a ball in a blue bowl on a stool, a red arrow in a target with a lightning flash, Monsieur Verbe adding a giraffe to a toy zoo, dividing a pizza in goggles and flippers and measuring a tall sunflower, the teacher's desk in front, an orange hoop, a musical triangle, a smiling ice cube, a big abacus and a blue square driving a red toy car; the open door on the left leads back to the classroom.",
+   "doors": [
+    {
+     "to": "ecole",
+     "label": "L'école",
+     "hint": "Back through the door to the classroom",
+     "hit": [
+      215,
+      45,
+      215,
+      270
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "pupitre",
+     "label": "le pupitre",
+     "hint": "Look at what is on the teacher's desk",
+     "at": [
+      655,
+      680
+     ],
+     "obj": [
+      430,
+      490,
+      450,
+      230
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_pyramide_noun",
+     "box": [
+      10,
+      40,
+      195,
+      165
+     ]
+    },
+    {
+     "id": "fr_etoile_noun",
+     "box": [
+      50,
+      215,
+      115,
+      265
+     ]
+    },
+    {
+     "id": "fr_boule_noun",
+     "box": [
+      5,
+      525,
+      110,
+      175
+     ]
+    },
+    {
+     "id": "fr_fleche_noun",
+     "box": [
+      445,
+      65,
+      155,
+      170
+     ]
+    },
+    {
+     "id": "fr_ajouter_verb",
+     "box": [
+      168,
+      320,
+      300,
+      285
+     ]
+    },
+    {
+     "id": "fr_diviser_verb",
+     "box": [
+      480,
+      235,
+      285,
+      235
+     ]
+    },
+    {
+     "id": "fr_mesurer_verb",
+     "box": [
+      775,
+      140,
+      240,
+      265
+     ]
+    },
+    {
+     "id": "fr_boulier_noun",
+     "box": [
+      920,
+      405,
+      160,
+      115
+     ]
+    },
+    {
+     "id": "fr_cercle_noun",
+     "box": [
+      1040,
+      110,
+      100,
+      175
+     ]
+    },
+    {
+     "id": "fr_triangle_noun",
+     "box": [
+      1165,
+      115,
+      90,
+      135
+     ]
+    },
+    {
+     "id": "fr_cube_noun",
+     "box": [
+      1155,
+      262,
+      90,
+      72
+     ]
+    },
+    {
+     "id": "fr_carre_noun",
+     "box": [
+      1045,
+      525,
+      190,
+      165
+     ]
+    }
+   ]
+  },
+  "pupitre": {
+   "name": "Le pupitre",
+   "image": "ecole/pupitre.jpg",
+   "parent": "maths",
+   "alt": "Close-up of the teacher's desk in the maths classroom: a purple line leaning on a little tightrope, half an orange in a bow tie, a slate with a sum, a compass drawing a circle, a die in sunglasses holding up the sun and a wooden digit 7 in a chef's hat.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ligne_noun",
+     "box": [
+      75,
+      50,
+      330,
+      232
+     ]
+    },
+    {
+     "id": "fr_moitie_noun",
+     "box": [
+      45,
+      355,
+      175,
+      165
+     ]
+    },
+    {
+     "id": "fr_somme_noun_f",
+     "box": [
+      230,
+      285,
+      445,
+      275
+     ]
+    },
+    {
+     "id": "fr_compas_noun",
+     "box": [
+      690,
+      180,
+      245,
+      420
+     ]
+    },
+    {
+     "id": "fr_de_noun",
+     "box": [
+      940,
+      95,
+      200,
+      245
+     ]
+    },
+    {
+     "id": "fr_chiffre_noun",
+     "box": [
+      1060,
+      340,
+      190,
+      270
+     ]
+    }
+   ]
+  }
+ },
+ "planned": {
+  "ecole": {
+   "v1": "ecole/ecole"
+  },
+  "trousse": {
+   "v1": "ecole/trousse"
+  },
+  "maths": {
+   "v1": "ecole/maths"
+  },
+  "pupitre": {
+   "v1": "ecole/pupitre"
+  }
+ }
+}
