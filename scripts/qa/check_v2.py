@@ -14,7 +14,9 @@ Static rules (per building/room):
     a door back; every door/zoom target exists; zooms belong to a room and their object rect
     ('obj') in the parent contains the badge
   * verbs have all 7 tenses; card crops and scene images exist; content word blocklist
+  * no respelling that reads as pee/poo: say/f_say never contain 'pee'/'poo'; hook/example words pee(s/d/ing), poo(s/p/h)
   * adjectives: no article, centre band 30-70%, gram line 'adjective · m/f' on the card (browser)
+  * adverbs: no article, no gender, centre band 30-70%, gram line 'adverb · invariable' (browser)
   * maps (data/map.js): no rect overlap within the world map or within any sector map; every
     layout building has a rect on its sector map (by the payload's building_id/sector_id, else by id)
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
@@ -142,6 +144,9 @@ def check_building(bld, errs, warns):
             if it.get("adj"):
                 if not 0.3 <= cx <= 0.7: E(f"{tag}: adjective {it['fr']} not in the centre band ({cx:.0%})")
                 if it.get("art") or ART.match(it["fr"] + " "): E(f"{tag}: adjective {it['fr']} carries an article")
+            elif it.get("adv"):
+                if not 0.3 <= cx <= 0.7: E(f"{tag}: adverb {it['fr']} not in the centre band ({cx:.0%})")
+                if it.get("art") or it.get("g") != "adv": E(f"{tag}: adverb {it['fr']} carries an article/gender")
             elif not it.get("verb"):
                 if g == "f" and cx >= 0.5: E(f"{tag}: feminine {it['fr']} not on the left ({cx:.0%})")
                 if g == "m" and cx <= 0.5: E(f"{tag}: masculine {it['fr']} not on the right ({cx:.0%})")
@@ -164,6 +169,11 @@ def check_building(bld, errs, warns):
                 if re.search(pat, text, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
             if smoke_noun or tabac_noun:
                 if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
+            # respellings must not read as "pee"/"poo" (fix in content/v2/vocab_fixes.json "say"/"f_say"/"hook")
+            for k in ("say", "f_say"):
+                if re.search(r"p(ee|oo)", it.get(k) or "", re.I): E(f"{tag}: {k} '{it.get(k)}' of {it['fr']} contains pee/poo")
+            for tok in re.findall(r"[A-Za-z]+", text):
+                if re.fullmatch(r"p(ee|oo)(s|ss|d|p|h|ng|ing)?", tok, re.I): E(f"{tag}: respelling '{tok}' in {it['fr']} reads as pee/poo")
         # routes
         for d in R.get("doors", []):
             if d["to"] not in rooms: E(f"{tag}: door to unknown room {d['to']}")
@@ -266,7 +276,8 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                         ex = await pg.evaluate("""()=>{const r=e=>{const b=e.getBoundingClientRect();return [b.left,b.top,b.width,b.height]};
                           const st=document.getElementById('stage').getBoundingClientRect();
                           return {zoom:[...document.querySelectorAll('.zoombadge')].map(r),plate:[...document.querySelectorAll('.room-nameplate')].map(r),
-                                  stage:[st.left,st.top,st.width,st.height]}}""")
+                                  stage:[st.left,st.top,st.width,st.height],
+                                  nav:[...document.querySelectorAll('#rooms:not([hidden])')].map(r)}}""")
                         g = 3  # px: "touching" another thing = closer than this
                         ge = 8  # px: minimum clear gap between a label and the scene edge
                         grow = lambda a: [a[0] - g, a[1] - g, a[2] + 2 * g, a[3] + 2 * g]
@@ -284,6 +295,12 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                             S_, l = ex["stage"], L[i]
                             if l[0] < S_[0] + ge or l[1] < S_[1] + ge or l[0] + l[2] > S_[0] + S_[2] - ge or l[1] + l[3] > S_[1] + S_[3] - ge:
                                 errs.append(f"{bld}/{key} @{vw}: label {nm(i)} is closer than {ge}px to the scene edge")
+                        # the room list (when it drops below the strip) must not cover any label, door or zoom badge
+                        for n_ in ex["nav"]:
+                            for i in range(len(L)):
+                                if inter(n_, L[i]): errs.append(f"{bld}/{key} @{vw}: room list covers label {nm(i)}")
+                            for j, d in enumerate(rects["door"] + ex["zoom"] + ex["plate"]):
+                                if inter(n_, d): errs.append(f"{bld}/{key} @{vw}: room list covers door/badge/nameplate {j}")
                         # nameplate: must not touch doors/exits, hotspots or zoom badges either
                         for p_ in ex["plate"]:
                             for j, d in enumerate(rects["door"]):
@@ -307,12 +324,14 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                         if xh != (R["mapExit"].get("href") or home): errs.append(f"{bld}: map exit goes to {xh}, expected {R['mapExit'].get('href') or home}")
                     # adjective cards: no article, adjective gram line
                     for i, it in enumerate(R["items"]):
-                        if not it.get("adj"): continue
+                        if not (it.get("adj") or it.get("adv")): continue
+                        kind = "adjective" if it.get("adj") else "adverb"
                         lab = await pg.evaluate(f"document.querySelectorAll('.lab')[{i}].textContent")
-                        if lab.strip() != it["fr"]: errs.append(f"{bld}/{key}: adjective label '{lab}' has an article")
+                        if lab.strip() != it["fr"]: errs.append(f"{bld}/{key}: {kind} label '{lab}' has an article")
                         await pg.evaluate(f"document.querySelectorAll('.hot')[{i}].click()"); await pg.wait_for_timeout(200)
                         gl = await pg.evaluate("(document.querySelector('#card .gram')||{}).textContent||''")
-                        if not gl.startswith("adjective · "): errs.append(f"{bld}/{key}: adjective card {it['fr']} gram line '{gl}'")
+                        want = "adjective · " if it.get("adj") else "adverb · invariable"
+                        if not gl.startswith(want): errs.append(f"{bld}/{key}: {kind} card {it['fr']} gram line '{gl}'")
                         await pg.keyboard.press("Escape")
                     # verb cards: no sideways scroll
                     for i, it in enumerate(R["items"]):

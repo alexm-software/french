@@ -22,6 +22,8 @@ v2-specific inputs live in content/v2/<building>/:
                a building's own hooks.json entry wins.
                An entry may also carry "ex": [french, english] to replace an example sentence that
                breaks the content rules (e.g. a smoking/tobacco example), with a "why".
+               "say" / "f_say" replace the v1/vocab respelling and "hook" the hook text (e.g. no
+               syllable that reads as "pee"/"poo": pee-LOT -> pea-LOT); hooks.json may carry them too.
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
@@ -30,6 +32,8 @@ v2-specific inputs live in content/v2/<building>/:
   uses it (se trouver, mirror, être) only when the example sentence does; a hooks.json entry
   {"reflexive": true|false} forces it either way.
   Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
+  Adverbs (vocab pos "adv") get no article and no gender either, sit in the centre band too
+  (genderless words live in the middle) and their card says "adverb · invariable".
 Everything is checked by scripts/qa/check_v2.py.
 
 usage: python3 scripts/v2/build_v2.py [building ...]   (default: every content/v2/*/layout.json)
@@ -46,6 +50,8 @@ for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]:
     if Path(p).exists():
         FONT = ImageFont.truetype(p, 17)
 LAB_H = 29
+EDGE = 12  # px (1280-wide painting) kept clear between a label and the scene edge
+GAP = 5  # px clearance a placed label tries to keep from other labels, hotspots and doors
 
 
 def label_w(text):
@@ -277,11 +283,27 @@ def verb_from_vocab(w):
     return it
 
 
+def adv_from_vocab(w):
+    """Adverb card: no article, no gender (centre band); the gram line says 'adverb · invariable'."""
+    hook = (w.get("mnemonic_hook") or {}).get("scene") or ""
+    hook = hook[:1].upper() + hook[1:]
+    it = {"id": w["id"], "adv": True, "fr": w["lemma"], "g": "adv",
+          "en": w.get("gloss", ""), "ipa": w.get("ipa", ""), "say": w.get("respelling", ""),
+          "hook": hook, "note": w.get("usage_warning"), "ex": [w.get("example_fr", ""), w.get("example_en", "")]}
+    if w.get("false_cognate_note"):
+        ff = w["false_cognate_note"]
+        it["falseFriend"] = {"kind": "false" if w.get("cognate_type") == "false_cognate" else "partial",
+                             "note": ff[:1].upper() + ff[1:] + ("" if ff.endswith(".") else ".")}
+    return it
+
+
 def item_from_vocab(w):
     if w.get("pos") == "adj":
         return adj_from_vocab(w)
     if w.get("pos") == "verb":
         return verb_from_vocab(w)
+    if w.get("pos") == "adv":
+        return adv_from_vocab(w)
     g = w.get("gender")
     art = w.get("article") or ("la" if g == "f" else "le")
     ind = {"f": "une", "m": "un", "mf": "un/une"}.get(g, "un")
@@ -303,7 +325,7 @@ def item_from_vocab(w):
 
 
 def headword(it):
-    if it.get("verb") or it.get("adj"):
+    if it.get("verb") or it.get("adj") or it.get("adv"):
         return it["fr"]
     a = it.get("art")
     return ("l'" + it["fr"]) if a == "l'" else f"{a} {it['fr']}"
@@ -311,7 +333,7 @@ def headword(it):
 
 def apply_grammar_fix(it, fix):
     """Article/gender correction from hooks.json or vocab_fixes.json (nouns only)."""
-    if it.get("verb") or it.get("adj"):
+    if it.get("verb") or it.get("adj") or it.get("adv"):
         return
     if fix.get("g"):
         assert fix["g"] in ("m", "f", "mf"), fix
@@ -378,22 +400,27 @@ def place_labels(room):
         cands = []
         for top in (y + h + 4, y - LAB_H - 4, y + h - LAB_H - 4, y + 4, y + h / 2 - LAB_H / 2):
             for dx in (0, -0.3, 0.3):
-                c = min(max(cx + dx * w, lw / 2 + 2), W - lw / 2 - 2)
-                t = min(max(top, 2), H - LAB_H - 2)
+                # keep a clear margin from the scene edge (check_v2 --strict wants >= 8 screen px)
+                c = min(max(cx + dx * w, lw / 2 + EDGE), W - lw / 2 - EDGE)
+                t = min(max(top, EDGE), H - LAB_H - EDGE)
                 cands.append([c - lw / 2, t, lw, LAB_H])
         best, bestscore = None, None
-        for r in cands:
-            score = 0
-            for p in placed:
-                score += 1000 * ov_area(r, p)
-            for f in fixed:
-                score += 1000 * ov_area(r, f)
-            for j, b in enumerate(boxes):
-                if j != i:
-                    score += ov_area(r, b)
+        for r0 in cands:
+            # primary score: real overlaps; secondary: overlaps of the label grown by GAP, so that among
+            # equally clear spots we prefer one that does not merely touch a neighbour (strict QA: 3 px)
+            rg = [r0[0] - GAP, r0[1] - GAP, r0[2] + 2 * GAP, r0[3] + 2 * GAP]
+            score = [0, 0]
+            for k, r in enumerate((r0, rg)):
+                for p in placed:
+                    score[k] += 1000 * ov_area(r, p)
+                for f in fixed:
+                    score[k] += 1000 * ov_area(r, f)
+                for jj, b in enumerate(boxes):
+                    if jj != i:
+                        score[k] += ov_area(r, b)
             if bestscore is None or score < bestscore:
-                best, bestscore = r, score
-            if score == 0:
+                best, bestscore = r0, score
+            if score == [0, 0]:
                 break
         placed.append(best)
         it["_lab"] = best
@@ -444,10 +471,13 @@ def build(bld, v1, vocab):
             apply_grammar_fix(it, fix)
             it["_hw"] = headword(it)
             it["box"] = spec["box"]
-            if overrides.get(wid, {}).get("hook"):
-                it["hook"] = overrides[wid]["hook"]
-            if overrides.get(wid, {}).get("ex"):
-                it["ex"] = list(overrides[wid]["ex"])
+            # text overrides: vocab_fixes.json first, then the building's hooks.json (which wins)
+            for src in (fixes.get(wid, {}), overrides.get(wid, {})):
+                for k in ("say", "f_say", "hook"):
+                    if src.get(k):
+                        it[k] = src[k]
+                if src.get("ex"):
+                    it["ex"] = list(src["ex"])
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):
