@@ -1,0 +1,972 @@
+{
+ "building": "ciel",
+ "building_id": "B32_ciel",
+ "sector_id": "S09_nature",
+ "name": "Observatoire & météo",
+ "main": "ciel",
+ "roomList": [
+  {
+   "key": "ciel",
+   "short": "La station météo"
+  },
+  {
+   "key": "espace",
+   "short": "L'espace"
+  },
+  {
+   "key": "etoiles",
+   "short": "Les étoiles"
+  },
+  {
+   "key": "intemperies",
+   "short": "Les intempéries"
+  },
+  {
+   "key": "observatoire",
+   "short": "L'observatoire"
+  }
+ ],
+ "planned": {
+  "ciel": {
+   "vocabRoom": "R_weather_01",
+   "only": [
+    "fr_neige_noun",
+    "fr_tempete_noun",
+    "fr_temperature_noun",
+    "fr_brume_noun",
+    "fr_pluie_noun",
+    "fr_climat_noun",
+    "fr_air_noun",
+    "fr_vent_noun",
+    "fr_nuage_noun",
+    "fr_orage_noun",
+    "fr_eclair_noun",
+    "fr_parapluie_noun",
+    "fr_brouillard_noun",
+    "fr_tonnerre_noun"
+   ]
+  },
+  "souche": {
+   "vocabRoom": "R_weather_01",
+   "only": [
+    "fr_foudre_noun_f",
+    "fr_agitation_noun",
+    "fr_bise_noun",
+    "fr_vapeur_noun",
+    "fr_aura_noun",
+    "fr_humidite_noun",
+    "fr_gelee_noun",
+    "fr_prevision_noun"
+   ]
+  },
+  "espace": {
+   "vocabRoom": "R_sky_02",
+   "only": [
+    "fr_espace_noun_f",
+    "fr_sphere_noun",
+    "fr_atmosphere_noun",
+    "fr_eternite_noun",
+    "fr_spatial_adj",
+    "fr_espace_noun_m",
+    "fr_ciel_noun",
+    "fr_univers_noun",
+    "fr_horizon_noun",
+    "fr_globe_noun",
+    "fr_satellite_noun",
+    "fr_ecart_noun"
+   ]
+  },
+  "etoiles": {
+   "vocabRoom": "R_sky_01",
+   "only": [
+    "fr_galaxie_noun",
+    "fr_lune_noun",
+    "fr_deesse_noun",
+    "fr_etoile_noun",
+    "fr_planete_noun",
+    "fr_star_noun",
+    "fr_vedette_noun",
+    "fr_serenite_noun",
+    "fr_lunette_noun",
+    "fr_astre_noun",
+    "fr_soleil_noun"
+   ]
+  },
+  "intemperies": {
+   "vocabRoom": "R_weather_02",
+   "only": [
+    "fr_mousson_noun",
+    "fr_meteo_noun",
+    "fr_secheresse_noun",
+    "fr_ensoleille_adj",
+    "fr_meteorologique_adj",
+    "fr_ouragan_noun",
+    "fr_pare_brise_noun",
+    "fr_gel_noun",
+    "fr_cyclone_noun",
+    "fr_mistral_noun",
+    "fr_verglas_noun"
+   ]
+  },
+  "observatoire": {
+   "vocabRoom": "R_sky_03",
+   "only": [
+    "fr_orbite_noun",
+    "fr_divinite_noun",
+    "fr_astronome_noun",
+    "fr_planetaire_adj",
+    "fr_lunaire_adj",
+    "fr_observatoire_noun",
+    "fr_nain_noun",
+    "fr_lancement_noun",
+    "fr_pole_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "ciel": {
+   "name": "La station météo",
+   "room_id": "R_weather_01",
+   "image": "ciel/ciel.jpg",
+   "alt": "A hilltop weather station on a changeable day, painted in ink and gouache: a little bird wearing fluffy earmuffs pops out of a nest piled with snow, a white poodle floats up in the storm wind like a kite, a cross thermometer bursts its red line out of the top, a broom sweeps by itself through the grey mist over a pond, big raindrops splash into a wooden bucket, a mountain goat bleats on the roof of the weather hut beside its big dial, a girl lets go of a whistling red balloon, a blue van with puffed cheeks blows a gust of wind, a little cloud meditates cross-legged, orange lightning crashes over the distant village, a mouse lounges on a giant chocolate éclair, a boy floats down under an umbrella opened like a parachute, a shivering boy in a red scarf walks into a fog bank and a grey cloud drops a huge iron weight with a boom. The white dome leads to the observatory, the launch tower to space, the starry gate to the star garden and the stone arch at the far end to the stormy end of the station; an old tree stump on the left can be looked at closer, and the white gate at the bottom left leads out to the map.",
+   "nameplate": [
+    62,
+    5.5
+   ],
+   "mapExit": {
+    "box": [
+     55,
+     565,
+     205,
+     145
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "observatoire",
+     "label": "L'observatoire",
+     "hint": "Go in through the door of the white observatory dome",
+     "hit": [
+      385,
+      45,
+      130,
+      125
+     ]
+    },
+    {
+     "to": "espace",
+     "label": "L'espace",
+     "hint": "Climb the launch tower to the space deck",
+     "hit": [
+      595,
+      30,
+      85,
+      155
+     ]
+    },
+    {
+     "to": "etoiles",
+     "label": "Les étoiles",
+     "hint": "Go through the starry gate to the night garden",
+     "hit": [
+      760,
+      70,
+      105,
+      120
+     ]
+    },
+    {
+     "to": "intemperies",
+     "label": "Les intempéries",
+     "hint": "Walk through the stone arch to the far end of the station",
+     "hit": [
+      915,
+      60,
+      100,
+      120
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "souche",
+     "label": "la souche",
+     "hint": "Look closer at the old tree stump",
+     "at": [
+      118,
+      500
+     ],
+     "obj": [
+      30,
+      380,
+      320,
+      180
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_neige_noun",
+     "box": [
+      20,
+      15,
+      150,
+      120
+     ]
+    },
+    {
+     "id": "fr_tempete_noun",
+     "box": [
+      200,
+      30,
+      115,
+      120
+     ]
+    },
+    {
+     "id": "fr_temperature_noun",
+     "box": [
+      195,
+      195,
+      90,
+      275
+     ]
+    },
+    {
+     "id": "fr_brume_noun",
+     "box": [
+      295,
+      180,
+      220,
+      150
+     ]
+    },
+    {
+     "id": "fr_pluie_noun",
+     "box": [
+      315,
+      350,
+      175,
+      250
+     ]
+    },
+    {
+     "id": "fr_climat_noun",
+     "box": [
+      615,
+      225,
+      105,
+      105
+     ],
+     "labelAt": [
+      700,
+      334
+     ]
+    },
+    {
+     "id": "fr_air_noun",
+     "box": [
+      760,
+      192,
+      150,
+      153
+     ]
+    },
+    {
+     "id": "fr_vent_noun",
+     "box": [
+      915,
+      205,
+      195,
+      150
+     ]
+    },
+    {
+     "id": "fr_nuage_noun",
+     "box": [
+      1115,
+      280,
+      125,
+      160
+     ]
+    },
+    {
+     "id": "fr_orage_noun",
+     "box": [
+      1110,
+      15,
+      150,
+      170
+     ]
+    },
+    {
+     "id": "fr_eclair_noun",
+     "box": [
+      790,
+      365,
+      195,
+      110
+     ]
+    },
+    {
+     "id": "fr_parapluie_noun",
+     "box": [
+      830,
+      490,
+      170,
+      170
+     ],
+     "labelAt": [
+      880,
+      666
+     ]
+    },
+    {
+     "id": "fr_brouillard_noun",
+     "box": [
+      1003,
+      505,
+      92,
+      155
+     ],
+     "labelAt": [
+      1030,
+      666
+     ]
+    },
+    {
+     "id": "fr_tonnerre_noun",
+     "box": [
+      1104,
+      455,
+      159,
+      240
+     ],
+     "labelAt": [
+      1190,
+      674
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  },
+  "souche": {
+   "name": "La vieille souche",
+   "room_id": "R_weather_01_z1",
+   "image": "ciel/souche.jpg",
+   "parent": "ciel",
+   "alt": "Close-up of the old tree stump at the weather station: a little food truck struck by a tiny lightning bolt, a striped wind sock whipping in the wind with a seagull clinging on, two bees kissing on the cheek, a cat asleep on a warm pipe in a cloud of steam, a weather-vane cockerel glowing with a golden halo, a little girl whose hair has puffed up into a cloud, a red jelly with frost sparkles and a crystal ball showing a sun and a sheep-shaped cloud.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_foudre_noun_f",
+     "box": [
+      150,
+      100,
+      150,
+      160
+     ]
+    },
+    {
+     "id": "fr_agitation_noun",
+     "box": [
+      340,
+      75,
+      95,
+      160
+     ]
+    },
+    {
+     "id": "fr_bise_noun",
+     "box": [
+      440,
+      140,
+      145,
+      120
+     ]
+    },
+    {
+     "id": "fr_vapeur_noun",
+     "box": [
+      120,
+      262,
+      190,
+      175
+     ]
+    },
+    {
+     "id": "fr_aura_noun",
+     "box": [
+      335,
+      240,
+      100,
+      160
+     ]
+    },
+    {
+     "id": "fr_humidite_noun",
+     "box": [
+      140,
+      440,
+      135,
+      150
+     ]
+    },
+    {
+     "id": "fr_gelee_noun",
+     "box": [
+      300,
+      445,
+      170,
+      140
+     ]
+    },
+    {
+     "id": "fr_prevision_noun",
+     "box": [
+      495,
+      435,
+      110,
+      150
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  },
+  "espace": {
+   "name": "L'espace",
+   "room_id": "R_sky_02",
+   "image": "ciel/espace.jpg",
+   "backTo": "ciel",
+   "alt": "The top deck of the launch tower at twilight: a fox presses the space bar of a typewriter floating in orbit, a seagull clings in surprise to the nose of a rocket punching through the glowing air, a snail with a packed lunch sets off along an endless path of stepping stones across the sky, a huge silver sphere hangs over a tiny floating fairground, a cat chases a ball of wool inside a round space station, an astronaut waves a boarding pass at the moon, a cloud shaped like the letter L floats in the blue, a rubber duck drifts among the planets, a ship sails toward the golden horizon, a blob of blue jelly sits on top of a big globe, an owl waves at a passing satellite and a boy on a bike squeezes through the gap between two cars. The round hatch in the middle of the deck leads back down to the weather station.",
+   "nameplate": [
+    47,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ciel",
+     "label": "La station météo",
+     "hint": "Go back down through the round hatch to the weather station",
+     "hit": [
+      495,
+      482,
+      240,
+      230
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_espace_noun_f",
+     "box": [
+      15,
+      140,
+      275,
+      200
+     ]
+    },
+    {
+     "id": "fr_sphere_noun",
+     "box": [
+      295,
+      25,
+      140,
+      180
+     ]
+    },
+    {
+     "id": "fr_atmosphere_noun",
+     "box": [
+      40,
+      350,
+      205,
+      210
+     ]
+    },
+    {
+     "id": "fr_eternite_noun",
+     "box": [
+      300,
+      385,
+      175,
+      100
+     ]
+    },
+    {
+     "id": "fr_spatial_adj",
+     "box": [
+      565,
+      90,
+      190,
+      195
+     ]
+    },
+    {
+     "id": "fr_espace_noun_m",
+     "box": [
+      795,
+      135,
+      195,
+      110
+     ]
+    },
+    {
+     "id": "fr_ciel_noun",
+     "box": [
+      1000,
+      25,
+      250,
+      205
+     ],
+     "labelAt": [
+      1190,
+      190
+     ]
+    },
+    {
+     "id": "fr_univers_noun",
+     "box": [
+      700,
+      290,
+      75,
+      65
+     ]
+    },
+    {
+     "id": "fr_horizon_noun",
+     "box": [
+      715,
+      375,
+      120,
+      104
+     ]
+    },
+    {
+     "id": "fr_globe_noun",
+     "box": [
+      845,
+      250,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_satellite_noun",
+     "box": [
+      1045,
+      255,
+      210,
+      165
+     ]
+    },
+    {
+     "id": "fr_ecart_noun",
+     "box": [
+      965,
+      455,
+      285,
+      120
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  },
+  "etoiles": {
+   "name": "Les étoiles",
+   "room_id": "R_sky_01",
+   "image": "ciel/etoiles.jpg",
+   "backTo": "ciel",
+   "alt": "A magical night garden under the stars: a galaxy swirls in the sky, a loon sings to the full moon from a little stone tower, a marble statue of an ancient goddess holds up a torch with an S-curled flame, a little star wrapped in a bath towel sits on a cloud, a green alien unfolds a plan of the planets, a pop star sings on a little stage under a spotlight, a lady in sunglasses walks the red carpet beside a tiny vet carrying her poodle, a turtle floats peacefully in the pond, a pair of glasses with crescent-moon lenses lies on a rock, an astronaut waves at a huge shining celestial body and the sun lounges in a deckchair. The open starry gate on the right leads back to the weather station.",
+   "nameplate": [
+    61,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ciel",
+     "label": "La station météo",
+     "hint": "Go back through the starry gate to the weather station",
+     "hit": [
+      1045,
+      230,
+      195,
+      210
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_galaxie_noun",
+     "box": [
+      20,
+      12,
+      210,
+      100
+     ]
+    },
+    {
+     "id": "fr_lune_noun",
+     "box": [
+      240,
+      35,
+      140,
+      175
+     ]
+    },
+    {
+     "id": "fr_deesse_noun",
+     "box": [
+      383,
+      70,
+      90,
+      280
+     ]
+    },
+    {
+     "id": "fr_etoile_noun",
+     "box": [
+      478,
+      40,
+      170,
+      165
+     ],
+     "labelAt": [
+      530,
+      208
+     ]
+    },
+    {
+     "id": "fr_planete_noun",
+     "box": [
+      505,
+      245,
+      150,
+      170
+     ],
+     "labelAt": [
+      562,
+      418
+     ]
+    },
+    {
+     "id": "fr_star_noun",
+     "box": [
+      40,
+      225,
+      165,
+      300
+     ]
+    },
+    {
+     "id": "fr_vedette_noun",
+     "box": [
+      320,
+      355,
+      170,
+      240
+     ]
+    },
+    {
+     "id": "fr_serenite_noun",
+     "box": [
+      90,
+      600,
+      180,
+      105
+     ],
+     "labelAt": [
+      180,
+      566
+     ]
+    },
+    {
+     "id": "fr_lunette_noun",
+     "box": [
+      485,
+      615,
+      125,
+      60
+     ],
+     "labelAt": [
+      410,
+      640
+     ]
+    },
+    {
+     "id": "fr_astre_noun",
+     "box": [
+      810,
+      66,
+      375,
+      145
+     ]
+    },
+    {
+     "id": "fr_soleil_noun",
+     "box": [
+      1020,
+      450,
+      215,
+      215
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  },
+  "intemperies": {
+   "name": "Les intempéries",
+   "room_id": "R_weather_02",
+   "image": "ciel/intemperies.jpg",
+   "backTo": "ciel",
+   "alt": "The far end of the weather station, where the weather changes from one side to the other: a cow shelters her calf under a giant leaf in the pouring monsoon, a scarecrow in a dress with a red sash stands over cracked dry earth beside a wilting sunflower, a TV weather presenter points at a map as a meteor streaks behind her, a deckchair waits in the sunshine, a wise owl in spectacles checks the weather instruments, a hurricane whisks sandwiches off a picnic blanket, rain bounces off the windscreen of a little blue car, a weather hut is glazed with frost like slicked-back hair gel, a tornado spins three identical cows into the sky, a woman's long scarf streams out in the strong wind on the trail and a penguin skates across a road of black ice. The stone archway on the left leads back to the weather station.",
+   "nameplate": [
+    16,
+    7.5
+   ],
+   "doors": [
+    {
+     "to": "ciel",
+     "label": "La station météo",
+     "hint": "Go back through the stone archway to the weather station",
+     "hit": [
+      75,
+      80,
+      105,
+      145
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mousson_noun",
+     "box": [
+      40,
+      232,
+      290,
+      250
+     ]
+    },
+    {
+     "id": "fr_meteo_noun",
+     "box": [
+      335,
+      20,
+      215,
+      270
+     ]
+    },
+    {
+     "id": "fr_secheresse_noun",
+     "box": [
+      338,
+      330,
+      190,
+      290
+     ]
+    },
+    {
+     "id": "fr_ensoleille_adj",
+     "box": [
+      598,
+      20,
+      95,
+      295
+     ],
+     "labelAt": [
+      640,
+      150
+     ]
+    },
+    {
+     "id": "fr_meteorologique_adj",
+     "box": [
+      700,
+      185,
+      150,
+      125
+     ]
+    },
+    {
+     "id": "fr_ouragan_noun",
+     "box": [
+      600,
+      325,
+      215,
+      205
+     ]
+    },
+    {
+     "id": "fr_pare_brise_noun",
+     "box": [
+      822,
+      318,
+      180,
+      145
+     ]
+    },
+    {
+     "id": "fr_gel_noun",
+     "box": [
+      1050,
+      250,
+      215,
+      210
+     ]
+    },
+    {
+     "id": "fr_cyclone_noun",
+     "box": [
+      900,
+      15,
+      280,
+      215
+     ]
+    },
+    {
+     "id": "fr_mistral_noun",
+     "box": [
+      1070,
+      465,
+      200,
+      175
+     ]
+    },
+    {
+     "id": "fr_verglas_noun",
+     "box": [
+      735,
+      550,
+      145,
+      135
+     ],
+     "labelAt": [
+      950,
+      640
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  },
+  "observatoire": {
+   "name": "L'observatoire",
+   "room_id": "R_sky_03",
+   "image": "ciel/observatoire.jpg",
+   "backTo": "ciel",
+   "alt": "A hilltop beside the white observatory at night: a beetroot circles a little planet, a quiet old library glows with candlelight on its tall shelves, an astronomer in a woolly hat peers through a brass telescope at a comet, a planetary model has an orange for the sun and a pea for the Earth, a rabbit in a spacesuit hops past the cratered moon, the observatory dome opens and its great telescope swings toward the stars, a garden gnome sits on a cloud eating flatbread, a toy rocket blasts off from its launch pad and a penguin plants a red flag on the pole. The wooden garden gate at the bottom left leads back to the weather station.",
+   "nameplate": [
+    80,
+    5.5
+   ],
+   "doors": [
+    {
+     "to": "ciel",
+     "label": "La station météo",
+     "hint": "Go back through the wooden garden gate to the weather station",
+     "hit": [
+      90,
+      495,
+      110,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_orbite_noun",
+     "box": [
+      250,
+      30,
+      135,
+      135
+     ]
+    },
+    {
+     "id": "fr_divinite_noun",
+     "box": [
+      15,
+      185,
+      290,
+      275
+     ]
+    },
+    {
+     "id": "fr_astronome_noun",
+     "box": [
+      340,
+      260,
+      220,
+      290
+     ]
+    },
+    {
+     "id": "fr_planetaire_adj",
+     "box": [
+      600,
+      355,
+      150,
+      120
+     ]
+    },
+    {
+     "id": "fr_lunaire_adj",
+     "box": [
+      480,
+      30,
+      285,
+      190
+     ]
+    },
+    {
+     "id": "fr_observatoire_noun",
+     "box": [
+      875,
+      70,
+      310,
+      270
+     ]
+    },
+    {
+     "id": "fr_nain_noun",
+     "box": [
+      760,
+      400,
+      195,
+      245
+     ]
+    },
+    {
+     "id": "fr_lancement_noun",
+     "box": [
+      965,
+      355,
+      140,
+      170
+     ]
+    },
+    {
+     "id": "fr_pole_noun",
+     "box": [
+      1115,
+      380,
+      150,
+      270
+     ]
+    }
+   ],
+   "building_id": "B32_ciel",
+   "sector_id": "S09_nature"
+  }
+ }
+}
