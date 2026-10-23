@@ -6,6 +6,8 @@ Static rules (per building/room):
   * every planned word is present exactly once (planned = vocab room in data/source, or v1 room items)
   * hotspot boxes are inside the painting and never overlap each other
   * no hotspot or label overlaps a door / map-exit hit box, zoom badge or nameplate
+  * every room has a 'zooms' list ([] if none); --strict: the nameplate touches no door, hotspot or zoom badge
+  * verb streets (map 'streets', id ST_x) go live like buildings: data/st_x.js with building_id ST_x
   * labels carry an article (nouns), are in bounds and never overlap each other
   * feminine words sit on the LEFT half, masculine on the RIGHT (box centre); epicene words 30-70%
   * main room has a painted map exit + a door to every sub-room; each sub-room has backTo=main and
@@ -106,6 +108,8 @@ def check_building(bld, errs, warns):
         for w in ids:
             if w in seen: E(f"{tag}: {w} also in {seen[w]}")
             seen[w] = key
+        if not isinstance(R.get("zooms"), list):
+            E(f"{tag}: room has no 'zooms' list (use [] when it has no zoom; app.js iterates R.zooms)")
         # fixed rects
         fixed = [("door->" + d["to"], d["hit"]) for d in R.get("doors", [])]
         if R.get("mapExit"):
@@ -191,7 +195,8 @@ def map_home(M, bld, D):
     pid = lambda b: b.get("id") or re.sub(r"^B\d+_", "", b["building_id"])
     slug = next((w["slug"] for w in M["world"]["sectors"] if w["id"] == D.get("sector_id")), None)
     for sl, S in M["sectors"].items():
-        for b in S["buildings"]:
+        # verb streets: data id = street id lowercased (ST_priere -> data/st_priere.js), as in app.js
+        for b in S["buildings"] + [{"id": t["id"].lower(), **{k: v for k, v in t.items() if k != "id"}} for t in S["streets"]]:
             if pid(b) == bld and (slug is None or sl == slug):
                 return sl, b
     return slug, None
@@ -262,7 +267,8 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                           const st=document.getElementById('stage').getBoundingClientRect();
                           return {zoom:[...document.querySelectorAll('.zoombadge')].map(r),plate:[...document.querySelectorAll('.room-nameplate')].map(r),
                                   stage:[st.left,st.top,st.width,st.height]}}""")
-                        g = 2  # px: "touching" = closer than this
+                        g = 3  # px: "touching" another thing = closer than this
+                        ge = 8  # px: minimum clear gap between a label and the scene edge
                         grow = lambda a: [a[0] - g, a[1] - g, a[2] + 2 * g, a[3] + 2 * g]
                         L, H = rects["lab"], rects["hot"]
                         nm = lambda i: R['items'][i]['fr']
@@ -275,9 +281,17 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                                 if inter(grow(L[i]), d): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches door/exit {j}")
                             for z in ex["zoom"] + ex["plate"]:
                                 if inter(grow(L[i]), z): errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches a zoom badge/nameplate")
-                            S, l = ex["stage"], L[i]
-                            if l[0] < S[0] + g or l[1] < S[1] + g or l[0] + l[2] > S[0] + S[2] - g or l[1] + l[3] > S[1] + S[3] - g:
-                                errs.append(f"{bld}/{key} @{vw}: label {nm(i)} touches the scene edge")
+                            S_, l = ex["stage"], L[i]
+                            if l[0] < S_[0] + ge or l[1] < S_[1] + ge or l[0] + l[2] > S_[0] + S_[2] - ge or l[1] + l[3] > S_[1] + S_[3] - ge:
+                                errs.append(f"{bld}/{key} @{vw}: label {nm(i)} is closer than {ge}px to the scene edge")
+                        # nameplate: must not touch doors/exits, hotspots or zoom badges either
+                        for p_ in ex["plate"]:
+                            for j, d in enumerate(rects["door"]):
+                                if inter(grow(p_), d): errs.append(f"{bld}/{key} @{vw}: nameplate touches door/exit {j}")
+                            for j in range(len(H)):
+                                if inter(grow(p_), H[j]): errs.append(f"{bld}/{key} @{vw}: nameplate touches hotspot {nm(j)}")
+                            for z in ex["zoom"]:
+                                if inter(grow(p_), z): errs.append(f"{bld}/{key} @{vw}: nameplate touches a zoom badge")
                     await pg.screenshot(path=str(shots / f"{bld}_{key}_{vw}.png"))
                     # back target
                     await pg.click("#back")
@@ -320,7 +334,7 @@ def main():
     ap.add_argument("--browser", action="store_true")
     ap.add_argument("--base", default="http://localhost:8765/v2/index.html")
     ap.add_argument("--shots", default="/tmp/v2_shots")
-    ap.add_argument("--strict", action="store_true", help="labels may not touch anything (2 px gap, scene edge included) and warnings count as failures")
+    ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     errs, warns = [], []
