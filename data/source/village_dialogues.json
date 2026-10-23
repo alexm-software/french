@@ -1,0 +1,4000 @@
+{
+ "schema": "village_dialogues/1",
+ "notes": "Short dialogues for the live village rooms. Each targets words from its own room and may reuse words from other rooms (also_uses). Speakers are a recurring cast; 'cast' gives voice hints for text-to-speech.",
+ "cast": {
+  "Léa": {
+   "gender": "f",
+   "age": "child",
+   "role": "9 years old; Tom's little sister"
+  },
+  "Tom": {
+   "gender": "m",
+   "age": "child",
+   "role": "11 years old; Léa's big brother"
+  },
+  "Inès": {
+   "gender": "f",
+   "age": "child",
+   "role": "Léa's best friend"
+  },
+  "Maman": {
+   "gender": "f",
+   "age": "adult",
+   "role": "Claire, Léa and Tom's mother"
+  },
+  "Papa": {
+   "gender": "m",
+   "age": "adult",
+   "role": "Marc, Léa and Tom's father"
+  },
+  "Papi Henri": {
+   "gender": "m",
+   "age": "elderly",
+   "role": "the children's grandfather"
+  },
+  "Mme Roux": {
+   "gender": "f",
+   "age": "adult",
+   "role": "the baker's wife; runs the shop"
+  },
+  "M. Roux": {
+   "gender": "m",
+   "age": "adult",
+   "role": "the baker"
+  },
+  "Karim": {
+   "gender": "m",
+   "age": "young adult",
+   "role": "waiter at the café"
+  },
+  "Mme Petit": {
+   "gender": "f",
+   "age": "adult",
+   "role": "the village schoolteacher"
+  },
+  "Père Antoine": {
+   "gender": "m",
+   "age": "elderly",
+   "role": "the parish priest"
+  },
+  "Mme Lefort": {
+   "gender": "f",
+   "age": "adult",
+   "role": "the mayor"
+  },
+  "M. Blanc": {
+   "gender": "m",
+   "age": "adult",
+   "role": "the mechanic at the garage"
+  },
+  "Julien": {
+   "gender": "m",
+   "age": "young adult",
+   "role": "the postman"
+  },
+  "Sophie": {
+   "gender": "f",
+   "age": "young adult",
+   "role": "counter clerk at the post office"
+  },
+  "L'employée": {
+   "gender": "f",
+   "age": "adult",
+   "role": "clerk at the town hall"
+  },
+  "Le touriste": {
+   "gender": "m",
+   "age": "adult",
+   "role": "an English-speaking visitor",
+   "lang": "en"
+  }
+ },
+ "dialogues": [
+  {
+   "id": "V_boulangerie_boulangerie_01",
+   "building": "boulangerie",
+   "room": "boulangerie",
+   "room_name": "La boulangerie",
+   "title": "Deux baguettes, s'il vous plaît",
+   "premise": "Léa buys bread on her own for the first time.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_baguette_noun",
+    "fr_pain_noun",
+    "fr_prix_noun",
+    "fr_payer_verb",
+    "fr_monnaie_noun",
+    "fr_compter_verb",
+    "fr_sac_noun"
+   ],
+   "also_uses": [
+    "fr_attendre_verb",
+    "fr_dire_verb"
+   ],
+   "speakers": [
+    "Mme Roux",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Roux",
+     "fr": "Bonjour, Léa ! Tu es toute seule aujourd'hui ?",
+     "en": "Hello, Léa! All on your own today?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui ! Maman m'attend dehors. Deux baguettes, s'il vous plaît.",
+     "en": "Yes! Mum's waiting outside. Two baguettes, please."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Voilà. Tu veux aussi un pain de campagne ?",
+     "en": "Here you go. Do you want a country loaf too?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Non merci. C'est quel prix, les deux baguettes ?",
+     "en": "No thanks. How much are the two baguettes?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Deux euros quarante.",
+     "en": "Two euros forty."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je paie avec ce billet de cinq euros.",
+     "en": "I'll pay with this five-euro note."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Alors je te rends la monnaie. On compte ensemble ?",
+     "en": "Then I'll give you your change. Shall we count it together?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Un euro, deux euros… et soixante centimes. C'est bon ! Je peux avoir un sac ?",
+     "en": "One euro, two euros… and sixty cents. That's right! Can I have a bag?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Bien sûr. Et dis bonjour à ta maman !",
+     "en": "Of course. And say hello to your mum!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_boulangerie_02",
+   "building": "boulangerie",
+   "room": "boulangerie",
+   "room_name": "La boulangerie",
+   "title": "Le métier de boulanger",
+   "premise": "Tom asks the baker about his working day.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_boulanger_noun",
+    "fr_farine_noun",
+    "fr_vendre_verb",
+    "fr_oeuf_noun",
+    "fr_caisse_noun",
+    "fr_compter_verb",
+    "fr_pain_noun",
+    "fr_baguette_noun"
+   ],
+   "also_uses": [
+    "fr_eau_noun",
+    "fr_melanger_verb",
+    "fr_pate_noun",
+    "fr_petrir_verb",
+    "fr_sel_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "M. Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Monsieur Roux, à quelle heure vous commencez le matin ?",
+     "en": "Mr Roux, what time do you start in the morning?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "À quatre heures. Un boulanger se lève très tôt !",
+     "en": "At four o'clock. A baker gets up very early!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Quatre heures ! Et vous faites quoi d'abord ?",
+     "en": "Four o'clock! And what do you do first?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "D'abord, je mélange la farine, l'eau et le sel. Puis je pétris la pâte.",
+     "en": "First I mix the flour, the water and the salt. Then I knead the dough."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Il y a des œufs dans le pain ?",
+     "en": "Are there eggs in bread?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Pas dans la baguette. Mais il y en a dans les brioches.",
+     "en": "Not in the baguette. But there are some in brioches."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et vous vendez combien de baguettes par jour ?",
+     "en": "And how many baguettes do you sell a day?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Environ trois cents. Ma femme est à la caisse, c'est elle qui compte !",
+     "en": "About three hundred. My wife is at the till; she's the one who counts!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_boulangerie_03",
+   "building": "boulangerie",
+   "room": "boulangerie",
+   "room_name": "La boulangerie",
+   "title": "Le panier de Papi",
+   "premise": "Grandpa and Tom buy bread for Sunday lunch.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_panier_noun",
+    "fr_sac_noun",
+    "fr_prix_noun",
+    "fr_payer_verb",
+    "fr_caisse_noun",
+    "fr_pain_noun",
+    "fr_baguette_noun"
+   ],
+   "also_uses": [
+    "fr_carte_noun",
+    "fr_chocolat_noun",
+    "fr_cuire_verb",
+    "fr_dire_verb"
+   ],
+   "speakers": [
+    "Papi Henri",
+    "Mme Roux",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Bonjour, madame Roux ! Un gros pain et une baguette bien cuite.",
+     "en": "Hello, Mrs Roux! A big loaf and a well-baked baguette."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Avec plaisir. Je vous donne un sac ?",
+     "en": "With pleasure. Shall I give you a bag?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Non merci, j'ai mon panier. Je n'aime pas les sacs en plastique.",
+     "en": "No thanks, I've got my basket. I don't like plastic bags."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Papi, regarde les prix ! La baguette est à un euro vingt.",
+     "en": "Grandpa, look at the prices! A baguette costs one euro twenty."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Quand j'avais ton âge, elle coûtait un franc !",
+     "en": "When I was your age, it cost one franc!"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Ah, tout le monde me dit ça ! Vous payez par carte ?",
+     "en": "Ah, everyone tells me that! Are you paying by card?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Non, en liquide. Tom, va à la caisse et donne ce billet à madame Roux.",
+     "en": "No, cash. Tom, go to the till and give this note to Mrs Roux."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Voilà, madame. Papi, on peut prendre un pain au chocolat aussi ?",
+     "en": "Here you are. Grandpa, can we get a pain au chocolat too?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Allez, d'accord. Mais ne dis rien à ta mère !",
+     "en": "Oh, all right. But don't tell your mother!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_comptoir_01",
+   "building": "boulangerie",
+   "room": "comptoir",
+   "room_name": "Le comptoir",
+   "title": "Le gâteau d'anniversaire",
+   "premise": "Léa and her mum choose a cake for Grandpa's birthday.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_choisir_verb",
+    "fr_gateau_noun",
+    "fr_tarte_noun",
+    "fr_eclair_noun"
+   ],
+   "also_uses": [
+    "fr_bougie_noun",
+    "fr_cafe_noun",
+    "fr_chocolat_noun",
+    "fr_pomme_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Léa",
+    "Mme Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "C'est l'anniversaire de Papi demain. Tu choisis le gâteau ?",
+     "en": "It's Grandpa's birthday tomorrow. Will you choose the cake?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oh là là, c'est difficile ! Il y a une tarte aux pommes, une tarte au citron…",
+     "en": "Oh dear, it's hard! There's an apple tart, a lemon tart…"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Et ce gâteau au chocolat, il est pour huit personnes.",
+     "en": "And this chocolate cake serves eight."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Papi adore le chocolat. Mais il aime aussi les éclairs au café.",
+     "en": "Grandpa loves chocolate. But he also likes coffee éclairs."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Alors on prend le gâteau au chocolat, et un éclair pour toi.",
+     "en": "So we'll take the chocolate cake, and an éclair for you."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Merci, Maman ! Je choisis l'éclair au chocolat, alors.",
+     "en": "Thanks, Mum! Then I choose the chocolate éclair."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Très bon choix ! Je vous donne des bougies avec le gâteau ?",
+     "en": "Very good choice! Shall I give you some candles with the cake?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Oui, s'il vous plaît. Soixante-dix bougies !",
+     "en": "Yes, please. Seventy candles!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_comptoir_02",
+   "building": "boulangerie",
+   "room": "comptoir",
+   "room_name": "Le comptoir",
+   "title": "Le secret de la pâte",
+   "premise": "Tom wants to know why the tarts are so good.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_pate_noun",
+    "fr_beurre_noun",
+    "fr_sucre_noun",
+    "fr_tarte_noun"
+   ],
+   "also_uses": [
+    "fr_farine_noun",
+    "fr_four_noun",
+    "fr_oeuf_noun",
+    "fr_sel_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "Mme Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Madame Roux, pourquoi vos tartes sont si bonnes ?",
+     "en": "Mrs Roux, why are your tarts so good?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "C'est la pâte ! Il faut beaucoup de beurre.",
+     "en": "It's the pastry! You need lots of butter."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Du beurre et de la farine, c'est tout ?",
+     "en": "Butter and flour, is that all?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Un peu de sucre, un œuf et une pincée de sel.",
+     "en": "A little sugar, an egg and a pinch of salt."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et après, vous la mettez au four tout de suite ?",
+     "en": "And then you put it in the oven straight away?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Non, la pâte doit reposer une heure au frais. Comme moi après le travail !",
+     "en": "No, the pastry has to rest for an hour somewhere cool. Like me after work!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Je peux essayer à la maison ?",
+     "en": "Can I try at home?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Bien sûr. Mais attention : pas trop de sucre !",
+     "en": "Of course. But careful: not too much sugar!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_comptoir_03",
+   "building": "boulangerie",
+   "room": "comptoir",
+   "room_name": "Le comptoir",
+   "title": "Trois euros pour deux",
+   "premise": "Léa and Inès have three euros to spend between them.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_choisir_verb",
+    "fr_eclair_noun",
+    "fr_tarte_noun",
+    "fr_sucre_noun",
+    "fr_gateau_noun"
+   ],
+   "also_uses": [
+    "fr_glace_noun"
+   ],
+   "speakers": [
+    "Inès",
+    "Léa",
+    "Mme Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Inès",
+     "fr": "On a trois euros. On prend quoi ?",
+     "en": "We've got three euros. What shall we get?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Un éclair coûte deux euros. Une part de tarte, un euro cinquante.",
+     "en": "An éclair costs two euros. A slice of tart, one euro fifty."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Alors deux parts de tarte ! Ça fait trois euros.",
+     "en": "Then two slices of tart! That makes three euros."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Bonne idée. Tu choisis laquelle ? Fraise ou abricot ?",
+     "en": "Good idea. Which one do you choose? Strawberry or apricot?"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Fraise. Il y a du sucre glace dessus, c'est joli.",
+     "en": "Strawberry. There's icing sugar on top; it's pretty."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Deux parts de tarte aux fraises, mesdemoiselles ?",
+     "en": "Two slices of strawberry tart, young ladies?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, s'il vous plaît. Et on regarde les gâteaux pour la prochaine fois !",
+     "en": "Yes, please. And we'll look at the cakes for next time!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_fournil_01",
+   "building": "boulangerie",
+   "room": "fournil",
+   "room_name": "Le fournil",
+   "title": "Premier jour au fournil",
+   "premise": "The baker lets Tom make his first dough.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_tablier_noun",
+    "fr_balance_noun",
+    "fr_eau_noun",
+    "fr_seau_noun",
+    "fr_melanger_verb",
+    "fr_petrir_verb"
+   ],
+   "also_uses": [
+    "fr_farine_noun"
+   ],
+   "speakers": [
+    "M. Roux",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "M. Roux",
+     "fr": "Bienvenue au fournil, Tom ! D'abord, mets ce tablier.",
+     "en": "Welcome to the bakehouse, Tom! First, put on this apron."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Il est trop grand !",
+     "en": "It's too big!"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Ce n'est pas grave. Maintenant, mets la farine sur la balance : un kilo.",
+     "en": "Never mind. Now put the flour on the scales: one kilo."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Voilà, mille grammes ! Et l'eau ?",
+     "en": "There, a thousand grams! And the water?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Prends l'eau dans le seau : six cents grammes. Verse doucement et mélange avec ta main.",
+     "en": "Take the water from the bucket: six hundred grams. Pour gently and mix with your hand."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Beurk, c'est collant !",
+     "en": "Yuck, it's sticky!"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "C'est normal. Maintenant, on pétrit. Tu pousses, tu plies, tu tournes… pendant dix minutes.",
+     "en": "That's normal. Now we knead. Push, fold, turn… for ten minutes."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Dix minutes ? J'ai déjà mal aux bras !",
+     "en": "Ten minutes? My arms hurt already!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_fournil_02",
+   "building": "boulangerie",
+   "room": "fournil",
+   "room_name": "Le fournil",
+   "title": "Le four à bois",
+   "premise": "The bakers fire up the wood oven before dawn.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_four_noun",
+    "fr_buche_noun",
+    "fr_pelle_noun",
+    "fr_cuire_verb",
+    "fr_plateau_noun"
+   ],
+   "also_uses": [
+    "fr_baguette_noun",
+    "fr_croissant_noun",
+    "fr_pain_noun"
+   ],
+   "speakers": [
+    "Mme Roux",
+    "M. Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Roux",
+     "fr": "Le four est assez chaud ?",
+     "en": "Is the oven hot enough?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Pas encore. Tu me passes deux bûches, s'il te plaît ?",
+     "en": "Not yet. Could you pass me two logs, please?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Tiens. Quelle chaleur ici !",
+     "en": "Here. It's so hot in here!"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Il faut deux cent cinquante degrés pour cuire les baguettes.",
+     "en": "It takes two hundred and fifty degrees to bake the baguettes."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Les croissants sont prêts sur le plateau.",
+     "en": "The croissants are ready on the tray."
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Parfait. Je prends la pelle et j'enfourne le pain d'abord.",
+     "en": "Perfect. I'll take the peel and put the bread in first."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Combien de temps ?",
+     "en": "How long?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Vingt minutes. Après, les croissants. On ouvre à sept heures !",
+     "en": "Twenty minutes. Then the croissants. We open at seven!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_fournil_03",
+   "building": "boulangerie",
+   "room": "fournil",
+   "room_name": "Le fournil",
+   "title": "Oups, la farine !",
+   "premise": "Tom spills the flour while Léa watches.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_seau_noun",
+    "fr_eau_noun",
+    "fr_tablier_noun",
+    "fr_plateau_noun",
+    "fr_cuire_verb",
+    "fr_melanger_verb"
+   ],
+   "also_uses": [
+    "fr_farine_noun",
+    "fr_pain_noun",
+    "fr_pate_noun",
+    "fr_porte_noun"
+   ],
+   "speakers": [
+    "Léa",
+    "Tom",
+    "M. Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Attention, Tom ! Tu as renversé la farine !",
+     "en": "Careful, Tom! You've spilled the flour!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Oups… Il y en a partout : sur mon tablier, sur le plateau…",
+     "en": "Oops… It's everywhere: on my apron, on the tray…"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Ce n'est rien. Prends le seau et un peu d'eau, on va nettoyer.",
+     "en": "It's nothing. Take the bucket and a little water; we'll clean up."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Et les petits pains ? On peut encore les cuire ?",
+     "en": "And the bread rolls? Can we still bake them?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Bien sûr. On mélange une nouvelle pâte, ça va vite.",
+     "en": "Of course. We'll mix a new dough; it's quick."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Cette fois, c'est Léa qui porte la farine !",
+     "en": "This time Léa carries the flour!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "D'accord. Mais toi, tu fais la vaisselle !",
+     "en": "OK. But you do the washing-up!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_plan_01",
+   "building": "boulangerie",
+   "room": "plan",
+   "room_name": "Le plan de travail",
+   "title": "Le réveil du boulanger",
+   "premise": "Tom discovers why there's an alarm clock on the worktop.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_reveil_noun",
+    "fr_moule_noun_m",
+    "fr_gant_noun"
+   ],
+   "also_uses": [
+    "fr_cuire_verb",
+    "fr_pain_noun",
+    "fr_pate_noun",
+    "fr_sonner_verb"
+   ],
+   "speakers": [
+    "Tom",
+    "M. Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Pourquoi il y a un réveil sur le plan de travail ?",
+     "en": "Why is there an alarm clock on the worktop?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "C'est mon minuteur ! Quand il sonne, le pain est cuit.",
+     "en": "It's my timer! When it rings, the bread is done."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et ces moules, c'est pour quoi ?",
+     "en": "And these tins, what are they for?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Pour le pain de mie. On met la pâte dedans, et elle prend la forme du moule.",
+     "en": "For sandwich bread. You put the dough inside, and it takes the shape of the tin."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Driiing ! Le réveil sonne !",
+     "en": "Brrring! The alarm's ringing!"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Vite, passe-moi les gants. Le moule est très chaud !",
+     "en": "Quick, pass me the oven gloves. The tin is very hot!"
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_plan_02",
+   "building": "boulangerie",
+   "room": "plan",
+   "room_name": "Le plan de travail",
+   "title": "Des tranches pour l'école",
+   "premise": "Mum asks for a sliced loaf for school lunches.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_tranche_noun",
+    "fr_boite_noun",
+    "fr_sel_noun"
+   ],
+   "also_uses": [
+    "fr_beurre_noun",
+    "fr_pain_noun",
+    "fr_sandwich_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Mme Roux",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "Vous pouvez couper le pain de mie en tranches ?",
+     "en": "Could you slice the sandwich loaf?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Bien sûr. Des tranches fines ou épaisses ?",
+     "en": "Of course. Thin slices or thick?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Fines, c'est pour les sandwichs de l'école.",
+     "en": "Thin; it's for school sandwiches."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Moi, je mets mon sandwich dans ma boîte rouge !",
+     "en": "I put my sandwich in my red box!"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Avec du jambon et du beurre ?",
+     "en": "With ham and butter?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, et des tomates avec un peu de sel.",
+     "en": "Yes, and some tomatoes with a little salt."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Voilà, vingt tranches. Ça fait trois euros dix.",
+     "en": "There you go, twenty slices. That's three euros ten."
+    }
+   ]
+  },
+  {
+   "id": "V_boulangerie_plan_03",
+   "building": "boulangerie",
+   "room": "plan",
+   "room_name": "Le plan de travail",
+   "title": "La boîte bleue, la boîte blanche",
+   "premise": "The baker warns Tom not to mix up salt and sugar.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_boite_noun",
+    "fr_sel_noun",
+    "fr_gant_noun",
+    "fr_moule_noun_m"
+   ],
+   "also_uses": [
+    "fr_apprendre_verb",
+    "fr_four_noun",
+    "fr_melanger_verb",
+    "fr_pain_noun",
+    "fr_sucre_noun"
+   ],
+   "speakers": [
+    "M. Roux",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "M. Roux",
+     "fr": "Tom, tu peux me donner la boîte de sel ?",
+     "en": "Tom, can you give me the salt box?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "La boîte bleue ou la boîte blanche ?",
+     "en": "The blue box or the white box?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "La blanche. La bleue, c'est le sucre. Ne les mélange pas !",
+     "en": "The white one. The blue one is sugar. Don't mix them up!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Du pain au sucre, ce n'est pas bon ?",
+     "en": "Isn't sugar bread good?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Une fois, mon apprenti s'est trompé. Les clients n'étaient pas contents !",
+     "en": "Once my apprentice got it wrong. The customers weren't happy!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et ces gants, ils sont pour le four ?",
+     "en": "And these gloves, are they for the oven?"
+    },
+    {
+     "speaker": "M. Roux",
+     "fr": "Oui. Mets-les toujours pour sortir les moules.",
+     "en": "Yes. Always put them on to take out the tins."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_cafe_01",
+   "building": "cafe",
+   "room": "cafe",
+   "room_name": "Le café",
+   "title": "Une table pour trois",
+   "premise": "Dad and the children sit down and order drinks.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_asseoir_verb",
+    "fr_table_noun",
+    "fr_chaise_noun",
+    "fr_carte_noun",
+    "fr_commander_verb",
+    "fr_boisson_noun",
+    "fr_jus_noun",
+    "fr_the_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Karim",
+    "Papa",
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Karim",
+     "fr": "Bonjour ! Vous êtes combien ?",
+     "en": "Hello! How many of you are there?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Trois. On peut s'asseoir près de la fenêtre ?",
+     "en": "Three. Can we sit by the window?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Bien sûr, cette table est libre. Je vous apporte une chaise.",
+     "en": "Of course, this table is free. I'll bring you a chair."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Je peux voir la carte ?",
+     "en": "Can I see the menu?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "La voilà. Vous voulez commander une boisson ?",
+     "en": "Here it is. Would you like to order a drink?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Un jus d'orange, s'il vous plaît !",
+     "en": "An orange juice, please!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Moi aussi.",
+     "en": "Me too."
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Et pour moi, un thé au citron.",
+     "en": "And for me, a lemon tea."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_cafe_02",
+   "building": "cafe",
+   "room": "cafe",
+   "room_name": "Le café",
+   "title": "L'addition, s'il vous plaît",
+   "premise": "Dad pays and leaves a tip.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_addition_noun",
+    "fr_sandwich_noun",
+    "fr_jus_noun",
+    "fr_the_noun",
+    "fr_pourboire_noun",
+    "fr_serveur_noun",
+    "fr_table_noun",
+    "fr_boire_verb"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Papa",
+    "Karim",
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Papa",
+     "fr": "Excusez-moi ! L'addition, s'il vous plaît.",
+     "en": "Excuse me! The bill, please."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Tout de suite. Deux sandwichs, deux jus d'orange et un thé : dix-neuf euros.",
+     "en": "Right away. Two sandwiches, two orange juices and a tea: nineteen euros."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Papa, on laisse un pourboire ?",
+     "en": "Dad, are we leaving a tip?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Oui, le serveur est très gentil. Tiens, pose ces deux euros sur la table.",
+     "en": "Yes, the waiter is very kind. Here, put these two euros on the table."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Merci beaucoup ! Ça vous a plu ?",
+     "en": "Thank you very much! Did you enjoy it?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui ! Mais Tom a bu mon jus d'orange !",
+     "en": "Yes! But Tom drank my orange juice!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Seulement un peu… J'avais soif !",
+     "en": "Only a little… I was thirsty!"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_cafe_03",
+   "building": "cafe",
+   "room": "cafe",
+   "room_name": "Le café",
+   "title": "Le nouveau serveur",
+   "premise": "The mayor meets Karim on his first day.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_serveur_noun",
+    "fr_boisson_noun",
+    "fr_commander_verb",
+    "fr_sandwich_noun",
+    "fr_carte_noun",
+    "fr_the_noun"
+   ],
+   "also_uses": [
+    "fr_chocolat_noun"
+   ],
+   "speakers": [
+    "Mme Lefort",
+    "Karim"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Bonjour, jeune homme. Vous êtes nouveau ?",
+     "en": "Hello, young man. Are you new?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Oui, madame. C'est mon premier jour comme serveur.",
+     "en": "Yes, madam. It's my first day as a waiter."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Bienvenue au village ! Qu'est-ce que vous me conseillez comme boisson ?",
+     "en": "Welcome to the village! What drink do you recommend?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Il fait froid… Un chocolat chaud ? Ou un thé à la menthe ?",
+     "en": "It's cold… A hot chocolate? Or a mint tea?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Un thé à la menthe, parfait. Et je voudrais commander un sandwich au fromage.",
+     "en": "A mint tea, perfect. And I'd like to order a cheese sandwich."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Désolé, il n'y a plus de fromage. Il y a jambon ou poulet, c'est sur la carte.",
+     "en": "Sorry, there's no cheese left. There's ham or chicken; it's on the menu."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Jambon, alors. Et ne vous inquiétez pas, vous travaillez très bien !",
+     "en": "Ham, then. And don't worry, you're doing very well!"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_comptoir_01",
+   "building": "cafe",
+   "room": "comptoir",
+   "room_name": "Le comptoir du café",
+   "title": "Un café au comptoir",
+   "premise": "Dad grabs a quick coffee before work.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_cafe_noun",
+    "fr_croissant_noun",
+    "fr_tasse_noun",
+    "fr_verre_noun"
+   ],
+   "also_uses": [
+    "fr_boire_verb",
+    "fr_eau_noun"
+   ],
+   "speakers": [
+    "Papa",
+    "Karim"
+   ],
+   "lines": [
+    {
+     "speaker": "Papa",
+     "fr": "Salut, Karim ! Un café, s'il te plaît.",
+     "en": "Hi, Karim! A coffee, please."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Un petit noir, comme d'habitude ?",
+     "en": "An espresso, as usual?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Oui. Et un croissant. Ceux de madame Roux sont les meilleurs.",
+     "en": "Yes. And a croissant. Mrs Roux's are the best."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Voilà votre tasse. Attention, c'est chaud.",
+     "en": "Here's your cup. Careful, it's hot."
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Merci. Tu peux me donner un verre d'eau aussi ?",
+     "en": "Thanks. Can you give me a glass of water too?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Bien sûr. Vous partez déjà ?",
+     "en": "Of course. Leaving already?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Oui, je bois mon café debout. Je suis en retard !",
+     "en": "Yes, I'm drinking my coffee standing up. I'm late!"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_comptoir_02",
+   "building": "cafe",
+   "room": "comptoir",
+   "room_name": "Le comptoir du café",
+   "title": "Un bol de chocolat",
+   "premise": "Grandpa treats the children on a Saturday morning.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_bol_noun",
+    "fr_croissant_noun",
+    "fr_tasse_noun",
+    "fr_cafe_noun",
+    "fr_serviette_noun"
+   ],
+   "also_uses": [
+    "fr_chocolat_noun"
+   ],
+   "speakers": [
+    "Papi Henri",
+    "Léa",
+    "Tom",
+    "Karim"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Qu'est-ce que vous prenez, les enfants ?",
+     "en": "What are you having, kids?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Un grand bol de chocolat chaud !",
+     "en": "A big bowl of hot chocolate!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Moi aussi, avec un croissant.",
+     "en": "Me too, with a croissant."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Deux bols de chocolat et un croissant. Et pour vous, monsieur ?",
+     "en": "Two bowls of hot chocolate and a croissant. And for you, sir?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Une tasse de café bien serré.",
+     "en": "A cup of strong coffee."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oh non ! J'ai renversé du chocolat…",
+     "en": "Oh no! I've spilled some chocolate…"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Ce n'est pas grave. Tiens, voilà une serviette.",
+     "en": "No problem. Here's a napkin."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Tom, tu trempes ton croissant dans ton bol, comme moi ?",
+     "en": "Tom, do you dunk your croissant in your bowl, like me?"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_comptoir_03",
+   "building": "cafe",
+   "room": "comptoir",
+   "room_name": "Le comptoir du café",
+   "title": "Une glace en octobre ?",
+   "premise": "Inès wants an ice cream on a cold day.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_glace_noun",
+    "fr_verre_noun",
+    "fr_serviette_noun",
+    "fr_cafe_noun",
+    "fr_croissant_noun"
+   ],
+   "also_uses": [
+    "fr_boule_noun",
+    "fr_eau_noun"
+   ],
+   "speakers": [
+    "Inès",
+    "Karim",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Inès",
+     "fr": "Karim, vous avez des glaces ?",
+     "en": "Karim, do you have ice cream?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "En octobre ? Il reste seulement vanille et fraise.",
+     "en": "In October? There's only vanilla and strawberry left."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Une boule à la fraise, s'il vous plaît !",
+     "en": "One scoop of strawberry, please!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Une glace, avec ce froid ? Tu es folle !",
+     "en": "Ice cream, in this cold? You're crazy!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Mais non ! Et toi, tu prends quoi ?",
+     "en": "No I'm not! And what are you having?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Un café… Non, je rigole ! Un verre d'eau et un croissant.",
+     "en": "A coffee… No, just kidding! A glass of water and a croissant."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Voilà ta glace, avec une serviette. Ça fait deux euros.",
+     "en": "Here's your ice cream, with a napkin. That's two euros."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_terrasse_01",
+   "building": "cafe",
+   "room": "terrasse",
+   "room_name": "La terrasse",
+   "title": "Du soleil en terrasse",
+   "premise": "Mum and Dad sit outside on a sunny, windy day.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_soleil_noun",
+    "fr_lunette_noun",
+    "fr_chapeau_noun",
+    "fr_vent_noun",
+    "fr_plante_noun",
+    "fr_crepe_noun_f"
+   ],
+   "also_uses": [
+    "fr_asseoir_verb",
+    "fr_commander_verb",
+    "fr_table_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Papa"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "Quel beau soleil ! On s'assoit en terrasse ?",
+     "en": "What lovely sunshine! Shall we sit on the terrace?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "D'accord. Mais où sont mes lunettes de soleil ?",
+     "en": "OK. But where are my sunglasses?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Sur ta tête !",
+     "en": "On your head!"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Ah oui… Et toi, tu ne mets pas ton chapeau ?",
+     "en": "Oh yes… And aren't you putting your hat on?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Non, il y a trop de vent. Il va s'envoler !",
+     "en": "No, it's too windy. It'll blow away!"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "C'est vrai. Regarde la plante, à côté de la table : elle bouge dans tous les sens.",
+     "en": "True. Look at the plant next to the table: it's blowing all over the place."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Bon, on commande deux crêpes et on profite du soleil.",
+     "en": "Right, let's order two crêpes and enjoy the sun."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_terrasse_02",
+   "building": "cafe",
+   "room": "terrasse",
+   "room_name": "La terrasse",
+   "title": "Le ballon sous la table",
+   "premise": "Tom's ball rolls under the mayor's table.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_ballon_noun",
+    "fr_demander_verb",
+    "fr_dire_verb",
+    "fr_repondre_verb",
+    "fr_velo_noun",
+    "fr_pomme_noun"
+   ],
+   "also_uses": [
+    "fr_file_noun",
+    "fr_table_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "Mme Lefort"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Excusez-moi, madame. Mon ballon est sous votre table.",
+     "en": "Excuse me, madam. My ball is under your table."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Ah, le voilà. Tiens. Mais attention aux tables, d'accord ?",
+     "en": "Ah, here it is. There you go. But watch out for the tables, OK?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Oui, pardon. Je joue avec Léa sur la place.",
+     "en": "Yes, sorry. I'm playing with Léa on the square."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Ta sœur m'a demandé la même chose il y a cinq minutes !",
+     "en": "Your sister asked me the same thing five minutes ago!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Ah bon ? Et qu'est-ce que vous lui avez répondu ?",
+     "en": "Really? And what did you tell her?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Je lui ai dit de jouer plus loin, près des vélos.",
+     "en": "I told her to play further away, by the bikes."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "D'accord. Merci, madame ! Vous voulez une pomme ? J'en ai deux.",
+     "en": "OK. Thank you, madam! Would you like an apple? I've got two."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "C'est gentil. Allez, file !",
+     "en": "That's kind. Off you go!"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_terrasse_03",
+   "building": "cafe",
+   "room": "terrasse",
+   "room_name": "La terrasse",
+   "title": "Léa traduit",
+   "premise": "Léa helps Karim answer an English-speaking tourist.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_demander_verb",
+    "fr_dire_verb",
+    "fr_repondre_verb",
+    "fr_crepe_noun_f",
+    "fr_pomme_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Karim",
+    "Le touriste",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Karim",
+     "fr": "Léa, tu peux m'aider ? Ce monsieur parle anglais. Il me demande quelque chose.",
+     "en": "Léa, can you help me? This man speaks English. He's asking me something."
+    },
+    {
+     "speaker": "Le touriste",
+     "fr": "Excuse me… where is the post office?",
+     "en": "Excuse me… where is the post office?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Il dit qu'il cherche la poste.",
+     "en": "He says he's looking for the post office."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Réponds-lui : à côté de la mairie, après l'église.",
+     "en": "Tell him: next to the town hall, past the church."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "It's next to the town hall, after the church.",
+     "en": "It's next to the town hall, after the church."
+    },
+    {
+     "speaker": "Le touriste",
+     "fr": "Thank you! Merci beaucoup !",
+     "en": "Thank you! Thank you very much!"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Bravo, Léa ! Pour te dire merci, je t'offre une crêpe.",
+     "en": "Well done, Léa! To say thank you, I'll treat you to a crêpe."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Une crêpe aux pommes, s'il te plaît !",
+     "en": "An apple crêpe, please!"
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_table_01",
+   "building": "cafe",
+   "room": "table",
+   "room_name": "La petite table",
+   "title": "Le menu du jour",
+   "premise": "Mum and Dad have lunch; in French, le menu is the set meal.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_menu_noun",
+    "fr_salade_noun",
+    "fr_couteau_noun",
+    "fr_nappe_noun"
+   ],
+   "also_uses": [
+    "fr_oeuf_noun"
+   ],
+   "speakers": [
+    "Karim",
+    "Maman",
+    "Papa"
+   ],
+   "lines": [
+    {
+     "speaker": "Karim",
+     "fr": "Voici le menu du jour : une salade niçoise, puis un poulet frites.",
+     "en": "Here's today's set menu: a salade niçoise, then chicken and chips."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Une salade, parfait. Elle est grande ?",
+     "en": "A salad, perfect. Is it big?"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Très grande, avec des œufs et du thon.",
+     "en": "Very big, with eggs and tuna."
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Alors deux menus. Et… il manque un couteau ici.",
+     "en": "Two set menus, then. And… there's a knife missing here."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Oh, pardon ! Je vous apporte un couteau tout de suite.",
+     "en": "Oh, sorry! I'll bring you a knife right away."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Elle est jolie, cette nappe à carreaux.",
+     "en": "This checked tablecloth is pretty."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Merci ! C'est la nappe de ma grand-mère.",
+     "en": "Thanks! It's my grandmother's tablecloth."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_table_02",
+   "building": "cafe",
+   "room": "table",
+   "room_name": "La petite table",
+   "title": "Avec une paille",
+   "premise": "Léa and Inès drink chocolate milk.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_paille_noun",
+    "fr_chocolat_noun",
+    "fr_nappe_noun"
+   ],
+   "also_uses": [
+    "fr_boire_verb"
+   ],
+   "speakers": [
+    "Léa",
+    "Karim",
+    "Inès"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Je voudrais un chocolat froid avec une paille, s'il vous plaît.",
+     "en": "I'd like a cold chocolate with a straw, please."
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Une paille en papier, ça va ?",
+     "en": "A paper straw, is that OK?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, très bien.",
+     "en": "Yes, that's fine."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Moi, je bois mon chocolat sans paille. Comme les grands !",
+     "en": "I drink my chocolate without a straw. Like grown-ups!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Inès, tu as une moustache de chocolat !",
+     "en": "Inès, you've got a chocolate moustache!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Oh non ! Et j'ai fait une tache sur la nappe…",
+     "en": "Oh no! And I've made a stain on the tablecloth…"
+    },
+    {
+     "speaker": "Karim",
+     "fr": "Ce n'est rien, la nappe va dans la machine ce soir.",
+     "en": "Don't worry, the tablecloth's going in the machine tonight."
+    }
+   ]
+  },
+  {
+   "id": "V_cafe_table_03",
+   "building": "cafe",
+   "room": "table",
+   "room_name": "La petite table",
+   "title": "On ne coupe pas la salade !",
+   "premise": "Grandpa explains an old French table habit.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_salade_noun",
+    "fr_couteau_noun",
+    "fr_menu_noun",
+    "fr_chocolat_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Tom",
+    "Papi Henri"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Papi, pourquoi tu ne coupes pas ta salade avec ton couteau ?",
+     "en": "Grandpa, why don't you cut your salad with your knife?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "On plie la salade avec la fourchette. C'est une vieille habitude française.",
+     "en": "You fold the salad with your fork. It's an old French habit."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "C'est bizarre !",
+     "en": "That's weird!"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Autrefois, les couteaux n'étaient pas en inox. Le vinaigre les abîmait.",
+     "en": "In the old days, knives weren't stainless steel. The vinegar damaged them."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Ah, je comprends. Et pour le dessert, on regarde le menu ?",
+     "en": "Oh, I see. And for dessert, shall we look at the menu?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Pas besoin. Je sais que tu vas prendre la mousse au chocolat !",
+     "en": "No need. I know you're going to have the chocolate mousse!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_ecole_01",
+   "building": "ecole",
+   "room": "ecole",
+   "room_name": "L'école",
+   "title": "La rentrée",
+   "premise": "Mum takes Léa to school on the first day.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_maitresse_noun",
+    "fr_sac_a_dos_noun",
+    "fr_trousse_noun",
+    "fr_cahier_noun",
+    "fr_tableau_affichage_noun",
+    "fr_tableau_noun"
+   ],
+   "also_uses": [
+    "fr_nom_noun",
+    "fr_sac_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Mme Petit",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "Bonjour, madame. Je vous présente Léa.",
+     "en": "Hello. This is Léa."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Bonjour, Léa ! Je suis ta maîtresse cette année. Tu es prête ?",
+     "en": "Hello, Léa! I'm your teacher this year. Are you ready?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui ! J'ai un nouveau sac à dos.",
+     "en": "Yes! I've got a new backpack."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Il est très beau. Tu as ta trousse et tes cahiers ?",
+     "en": "It's very nice. Have you got your pencil case and your exercise books?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, trois cahiers : un bleu, un rouge et un vert.",
+     "en": "Yes, three exercise books: a blue one, a red one and a green one."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Parfait. Ton nom est sur le tableau d'affichage, avec ta place.",
+     "en": "Perfect. Your name is on the noticeboard, with your seat."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "À ce soir, ma chérie !",
+     "en": "See you tonight, sweetheart!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Au revoir, Maman !",
+     "en": "Bye, Mum!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_ecole_02",
+   "building": "ecole",
+   "room": "ecole",
+   "room_name": "L'école",
+   "title": "Au tableau !",
+   "premise": "Tom finds France on the globe in front of the class.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_ecouter_verb",
+    "fr_lecon_noun",
+    "fr_globe_noun",
+    "fr_tableau_noun",
+    "fr_craie_noun",
+    "fr_apprendre_verb",
+    "fr_finir_verb"
+   ],
+   "also_uses": [
+    "fr_ecrire_verb"
+   ],
+   "speakers": [
+    "Mme Petit",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Petit",
+     "fr": "Les enfants, écoutez bien. Aujourd'hui, la leçon est sur la France.",
+     "en": "Children, listen carefully. Today's lesson is about France."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "On va utiliser le globe ?",
+     "en": "Are we going to use the globe?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Oui. Tom, viens au tableau. Montre-moi la France sur le globe.",
+     "en": "Yes. Tom, come up to the board. Show me France on the globe."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Euh… ici ?",
+     "en": "Er… here?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Non, ça, c'est l'Espagne ! Un peu plus haut.",
+     "en": "No, that's Spain! A bit higher."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Ah, voilà la France. Je l'écris au tableau ?",
+     "en": "Ah, there's France. Shall I write it on the board?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Oui, prends la craie. On apprend aussi les grandes villes : Paris, Lyon, Marseille…",
+     "en": "Yes, take the chalk. We're also learning the big cities: Paris, Lyon, Marseille…"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Madame, on finit à quelle heure ?",
+     "en": "Miss, what time do we finish?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Quand la leçon est finie, Tom !",
+     "en": "When the lesson is finished, Tom!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_ecole_03",
+   "building": "ecole",
+   "room": "ecole",
+   "room_name": "L'école",
+   "title": "La trousse oubliée",
+   "premise": "Inès has left her pencil case at home.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_trousse_noun",
+    "fr_sac_a_dos_noun",
+    "fr_cahier_noun",
+    "fr_maitresse_noun",
+    "fr_apprendre_verb"
+   ],
+   "also_uses": [
+    "fr_crayon_noun",
+    "fr_gomme_noun",
+    "fr_sac_noun"
+   ],
+   "speakers": [
+    "Inès",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Inès",
+     "fr": "Oh non… j'ai oublié ma trousse à la maison.",
+     "en": "Oh no… I've left my pencil case at home."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Regarde bien dans ton sac à dos.",
+     "en": "Look properly in your backpack."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Il y a seulement mon cahier et mon goûter.",
+     "en": "There's only my exercise book and my snack."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Ce n'est pas grave, je te prête un crayon et une gomme.",
+     "en": "Never mind, I'll lend you a pencil and a rubber."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Merci ! Tu crois que la maîtresse va être fâchée ?",
+     "en": "Thanks! Do you think the teacher will be cross?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Non, elle est gentille. Mais demain, n'oublie pas !",
+     "en": "No, she's nice. But don't forget tomorrow!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Promis. Au fait, on doit apprendre la poésie pour lundi ?",
+     "en": "Promise. By the way, do we have to learn the poem for Monday?"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_trousse_01",
+   "building": "ecole",
+   "room": "trousse",
+   "room_name": "La trousse",
+   "title": "Tu me prêtes tes ciseaux ?",
+   "premise": "Tom makes a birthday card for Grandpa.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_ciseaux_noun",
+    "fr_regle_noun",
+    "fr_colle_noun"
+   ],
+   "also_uses": [
+    "fr_carte_noun",
+    "fr_etoile_noun",
+    "fr_ligne_noun",
+    "fr_table_noun",
+    "fr_trousse_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Léa, tu me prêtes tes ciseaux ?",
+     "en": "Léa, will you lend me your scissors?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, mais fais attention, ils coupent bien.",
+     "en": "Yes, but be careful, they're sharp."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Je découpe une étoile pour la carte de Papi.",
+     "en": "I'm cutting out a star for Grandpa's card."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Prends ta règle pour faire des lignes droites.",
+     "en": "Use your ruler to make straight lines."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Bonne idée. Et la colle ?",
+     "en": "Good idea. And the glue?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Dans ma trousse. Mais ne mets pas de colle sur la table !",
+     "en": "In my pencil case. But don't get glue on the table!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Trop tard…",
+     "en": "Too late…"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_trousse_02",
+   "building": "ecole",
+   "room": "trousse",
+   "room_name": "La trousse",
+   "title": "La gomme à la fraise",
+   "premise": "Inès makes a mistake in her drawing.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_gomme_noun",
+    "fr_crayon_noun"
+   ],
+   "also_uses": [
+    "fr_dessin_noun",
+    "fr_stylo_noun"
+   ],
+   "speakers": [
+    "Inès",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Inès",
+     "fr": "Zut ! Je me suis trompée dans mon dessin.",
+     "en": "Oh no! I've made a mistake in my drawing."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Tu as dessiné au crayon ou au stylo ?",
+     "en": "Did you draw in pencil or in pen?"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Au crayon.",
+     "en": "In pencil."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Alors ce n'est pas grave ! Voilà ma gomme.",
+     "en": "Then it doesn't matter! Here's my rubber."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Elle sent la fraise !",
+     "en": "It smells of strawberries!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, c'est ma gomme préférée. Ne la mange pas !",
+     "en": "Yes, it's my favourite rubber. Don't eat it!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Ha ha ! Voilà, c'est parfait. Merci !",
+     "en": "Ha ha! There, it's perfect. Thanks!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_trousse_03",
+   "building": "ecole",
+   "room": "trousse",
+   "room_name": "La trousse",
+   "title": "La trousse de Tom",
+   "premise": "Mum checks Tom's pencil case for the next day.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_crayon_noun",
+    "fr_gomme_noun",
+    "fr_regle_noun",
+    "fr_colle_noun",
+    "fr_ciseaux_noun"
+   ],
+   "also_uses": [
+    "fr_finir_verb",
+    "fr_trousse_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "Tom, on prépare ta trousse pour demain ?",
+     "en": "Tom, shall we get your pencil case ready for tomorrow?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "D'accord. J'ai deux crayons, une gomme, une règle…",
+     "en": "OK. I've got two pencils, a rubber, a ruler…"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Et ta colle ?",
+     "en": "And your glue?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Elle est finie. Il n'y a plus de colle dans le tube.",
+     "en": "It's run out. There's no glue left in the tube."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "On en achète demain. Et les ciseaux ?",
+     "en": "We'll buy some tomorrow. And the scissors?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Léa les a pris !",
+     "en": "Léa took them!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je les ai seulement empruntés ! Je te les rends… ce soir.",
+     "en": "I only borrowed them! I'll give them back… tonight."
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_maths_01",
+   "building": "ecole",
+   "room": "maths",
+   "room_name": "La classe de maths",
+   "title": "Le boulier",
+   "premise": "Léa does additions on the abacus.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_boulier_noun",
+    "fr_boule_noun",
+    "fr_ajouter_verb"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Mme Petit",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Petit",
+     "fr": "Combien font huit plus cinq ? Tu peux utiliser le boulier.",
+     "en": "What's eight plus five? You can use the abacus."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je pousse huit boules… et j'ajoute cinq boules.",
+     "en": "I push eight beads… and I add five beads."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Et ça fait combien ?",
+     "en": "And how much does that make?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Dix… onze, douze, treize. Treize !",
+     "en": "Ten… eleven, twelve, thirteen. Thirteen!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Bravo. Maintenant, sans le boulier : treize plus sept ?",
+     "en": "Well done. Now without the abacus: thirteen plus seven?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Vingt !",
+     "en": "Twenty!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Très bien ! Tu ajoutes vite, Léa.",
+     "en": "Very good! You add quickly, Léa."
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_maths_02",
+   "building": "ecole",
+   "room": "maths",
+   "room_name": "La classe de maths",
+   "title": "Devinettes de formes",
+   "premise": "The class plays a shape-guessing game.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_carre_noun",
+    "fr_cercle_noun",
+    "fr_triangle_noun",
+    "fr_pyramide_noun",
+    "fr_cube_noun"
+   ],
+   "also_uses": [
+    "fr_de_noun"
+   ],
+   "speakers": [
+    "Mme Petit",
+    "Tom",
+    "Inès",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Petit",
+     "fr": "Devinette ! J'ai quatre côtés égaux. Qui suis-je ?",
+     "en": "Riddle! I have four equal sides. What am I?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Un carré !",
+     "en": "A square!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Bien. Et moi, je n'ai pas de coins. Je suis tout rond.",
+     "en": "Good. And I have no corners. I'm completely round."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Un cercle !",
+     "en": "A circle!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Oui. Plus difficile maintenant : j'ai une base carrée et quatre triangles.",
+     "en": "Yes. Harder now: I have a square base and four triangles."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Une pyramide, comme en Égypte !",
+     "en": "A pyramid, like in Egypt!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "À moi ! J'ai six faces carrées, et on joue avec moi aux jeux de société.",
+     "en": "My turn! I have six square faces, and people play board games with me."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Un cube ! Non… un dé !",
+     "en": "A cube! No… a dice!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_maths_03",
+   "building": "ecole",
+   "room": "maths",
+   "room_name": "La classe de maths",
+   "title": "La flèche et l'étoile",
+   "premise": "Measuring and dividing on a worksheet.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_mesurer_verb",
+    "fr_fleche_noun",
+    "fr_diviser_verb",
+    "fr_etoile_noun"
+   ],
+   "also_uses": [
+    "fr_finir_verb",
+    "fr_regle_noun",
+    "fr_tableau_affichage_noun",
+    "fr_tableau_noun"
+   ],
+   "speakers": [
+    "Mme Petit",
+    "Tom",
+    "Inès"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Petit",
+     "fr": "Prenez vos règles. Mesurez la flèche sur votre fiche.",
+     "en": "Take your rulers. Measure the arrow on your worksheet."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Elle mesure douze centimètres.",
+     "en": "It's twelve centimetres long."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Exact. Maintenant, divisez-la en trois parties égales.",
+     "en": "Correct. Now divide it into three equal parts."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Douze divisé par trois… quatre centimètres !",
+     "en": "Twelve divided by three… four centimetres!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Très bien. Inès, tu as fini ton étoile ?",
+     "en": "Very good. Inès, have you finished your star?"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Oui, elle a cinq branches. Je peux la colorier en jaune ?",
+     "en": "Yes, it has five points. Can I colour it yellow?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Bien sûr. Après, on l'accroche au tableau d'affichage.",
+     "en": "Of course. Afterwards we'll pin it on the noticeboard."
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_pupitre_01",
+   "building": "ecole",
+   "room": "pupitre",
+   "room_name": "Au pupitre",
+   "title": "Le jeu de dés",
+   "premise": "Tom and Inès play a dice-adding game.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_de_noun",
+    "fr_somme_noun_f",
+    "fr_chiffre_noun"
+   ],
+   "also_uses": [
+    "fr_ecrire_verb",
+    "fr_feuille_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "Inès"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "On joue aux dés ? On lance deux dés et on fait la somme.",
+     "en": "Shall we play dice? We roll two dice and add them up."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "D'accord. À moi : un cinq et un six !",
+     "en": "OK. My turn: a five and a six!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "La somme, c'est onze. Bravo !",
+     "en": "That adds up to eleven. Well done!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "À toi maintenant.",
+     "en": "Your turn now."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Un deux et… un un. Seulement trois !",
+     "en": "A two and… a one. Only three!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "J'ai gagné ! Écris les chiffres sur la feuille.",
+     "en": "I've won! Write the numbers on the sheet."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "On fait encore une partie ?",
+     "en": "Shall we play another game?"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_pupitre_02",
+   "building": "ecole",
+   "room": "pupitre",
+   "room_name": "Au pupitre",
+   "title": "Le compas",
+   "premise": "The teacher shows Léa how to draw a perfect circle.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_compas_noun",
+    "fr_ligne_noun",
+    "fr_moitie_noun"
+   ],
+   "also_uses": [
+    "fr_cercle_noun",
+    "fr_plante_noun"
+   ],
+   "speakers": [
+    "Léa",
+    "Mme Petit"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Comment on fait un cercle parfait ?",
+     "en": "How do you make a perfect circle?"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Avec un compas. Tu plantes la pointe ici, et tu tournes.",
+     "en": "With a compass. You put the point here, and you turn."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oh, c'est facile !",
+     "en": "Oh, it's easy!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Maintenant, trace une ligne droite au milieu du cercle.",
+     "en": "Now draw a straight line through the middle of the circle."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Voilà. Le cercle est coupé en deux.",
+     "en": "There. The circle is cut in two."
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Exactement. Chaque partie est une moitié.",
+     "en": "Exactly. Each part is a half."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Et si je trace encore une ligne, j'ai quatre quarts !",
+     "en": "And if I draw another line, I've got four quarters!"
+    }
+   ]
+  },
+  {
+   "id": "V_ecole_pupitre_03",
+   "building": "ecole",
+   "room": "pupitre",
+   "room_name": "Au pupitre",
+   "title": "La moitié du goûter",
+   "premise": "Léa and Inès share a bar of chocolate.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_moitie_noun",
+    "fr_chiffre_noun"
+   ],
+   "also_uses": [
+    "fr_carre_noun",
+    "fr_chocolat_noun",
+    "fr_diviser_verb"
+   ],
+   "speakers": [
+    "Inès",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Inès",
+     "fr": "J'ai une seule tablette de chocolat. On partage ?",
+     "en": "I've only got one bar of chocolate. Shall we share?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui ! Moitié-moitié.",
+     "en": "Yes! Half each."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Il y a douze carrés. Douze divisé par deux…",
+     "en": "There are twelve squares. Twelve divided by two…"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Six carrés chacune !",
+     "en": "Six squares each!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Tu es forte avec les chiffres, toi. Et si Tom arrive ?",
+     "en": "You're good with numbers. And what if Tom turns up?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Alors on divise par trois. Mais chut, il ne doit pas savoir !",
+     "en": "Then we divide by three. But shh, he mustn't find out!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_eglise_01",
+   "building": "eglise",
+   "room": "eglise",
+   "room_name": "L'église",
+   "title": "Une bougie pour Mamie",
+   "premise": "Grandpa and Léa light a candle in the quiet church.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_silence_noun",
+    "fr_paix_noun",
+    "fr_allumer_verb",
+    "fr_bougie_noun",
+    "fr_tronc_noun",
+    "fr_fleur_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Léa",
+    "Papi Henri"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Papi, pourquoi tu viens à l'église le mercredi ?",
+     "en": "Grandpa, why do you come to church on Wednesdays?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "J'aime le silence ici. C'est un endroit de paix.",
+     "en": "I like the silence here. It's a peaceful place."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je peux allumer une bougie ?",
+     "en": "Can I light a candle?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Oui. Mets d'abord une pièce dans le tronc.",
+     "en": "Yes. Put a coin in the offering box first."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Voilà. Et j'allume ma bougie avec celle-là ?",
+     "en": "There. And I light my candle from that one?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Oui, doucement. Tu penses à quelqu'un ?",
+     "en": "Yes, gently. Are you thinking of someone?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "À Mamie. Elle aimait beaucoup les fleurs de l'église.",
+     "en": "Of Grandma. She really loved the church flowers."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "C'est vrai… Elle serait contente.",
+     "en": "That's true… She'd be happy."
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_eglise_02",
+   "building": "eglise",
+   "room": "eglise",
+   "room_name": "L'église",
+   "title": "L'orgue",
+   "premise": "Tom hears the organ and gets invited to the choir.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_orgue_noun",
+    "fr_banc_noun",
+    "fr_chanter_verb",
+    "fr_livre_noun"
+   ],
+   "also_uses": [
+    "fr_asseoir_verb",
+    "fr_ecouter_verb"
+   ],
+   "speakers": [
+    "Tom",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Mon père, qui joue de l'orgue ?",
+     "en": "Father, who's playing the organ?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "C'est madame Martin. Elle répète pour dimanche.",
+     "en": "It's Mrs Martin. She's practising for Sunday."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "C'est fort ! Toute l'église tremble !",
+     "en": "It's loud! The whole church is shaking!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Assieds-toi sur le banc et écoute. Tu aimes chanter ?",
+     "en": "Sit on the pew and listen. Do you like singing?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Un peu. Mais je ne connais pas les chansons.",
+     "en": "A bit. But I don't know the songs."
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Les paroles sont dans ce livre. Viens chanter avec la chorale samedi !",
+     "en": "The words are in this book. Come and sing with the choir on Saturday!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "D'accord, si Léa vient aussi.",
+     "en": "OK, if Léa comes too."
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_eglise_03",
+   "building": "eglise",
+   "room": "eglise",
+   "room_name": "L'église",
+   "title": "La petite souris",
+   "premise": "Léa spots a mouse living in the church.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_souris_noun",
+    "fr_tapis_noun",
+    "fr_fleur_noun",
+    "fr_porte_noun",
+    "fr_silence_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Léa",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Mon père ! Il y a une souris sous le tapis !",
+     "en": "Father! There's a mouse under the rug!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Encore elle ? Elle habite ici depuis l'hiver dernier.",
+     "en": "Her again? She's lived here since last winter."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Elle mange quoi ?",
+     "en": "What does she eat?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Les miettes des goûters du catéchisme, je crois… et parfois les fleurs de l'autel !",
+     "en": "Crumbs from the catechism-class snacks, I think… and sometimes the altar flowers!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "On ouvre la grande porte ? Elle peut partir dans le jardin.",
+     "en": "Shall we open the big door? She can go out into the garden."
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Bonne idée. Mais en silence, pour ne pas lui faire peur.",
+     "en": "Good idea. But quietly, so we don't frighten her."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Regardez, elle sort ! Au revoir, petite souris !",
+     "en": "Look, she's going out! Goodbye, little mouse!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_clocher_01",
+   "building": "eglise",
+   "room": "clocher",
+   "room_name": "Le clocher",
+   "title": "Monter au clocher",
+   "premise": "The priest takes the children up to see the bell.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_cloche_noun",
+    "fr_escalier_noun",
+    "fr_pigeon_noun"
+   ],
+   "also_uses": [
+    "fr_payer_verb"
+   ],
+   "speakers": [
+    "Père Antoine",
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Père Antoine",
+     "fr": "Vous voulez voir la cloche ? Il faut monter cent vingt marches.",
+     "en": "Do you want to see the bell? You have to climb a hundred and twenty steps."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "On y va ! Léa, le premier en haut a gagné !",
+     "en": "Let's go! Léa, first to the top wins!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Doucement, l'escalier est étroit !",
+     "en": "Slowly, the stairs are narrow!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Ouf… on est arrivés. Oh, elle est énorme, la cloche !",
+     "en": "Phew… we're here. Oh, the bell is huge!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Elle pèse une tonne, et elle a deux cents ans.",
+     "en": "It weighs a tonne, and it's two hundred years old."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Il y a plein de pigeons ici !",
+     "en": "There are loads of pigeons up here!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Oui, ce sont mes voisins. Ils ne paient pas de loyer !",
+     "en": "Yes, they're my neighbours. They don't pay rent!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_clocher_02",
+   "building": "eglise",
+   "room": "clocher",
+   "room_name": "Le clocher",
+   "title": "L'horloge retarde",
+   "premise": "The mayor complains that the church clock is slow.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_horloge_noun",
+    "fr_sonner_verb",
+    "fr_cloche_noun"
+   ],
+   "also_uses": [
+    "fr_demander_verb",
+    "fr_velo_noun"
+   ],
+   "speakers": [
+    "Mme Lefort",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Mon père, l'horloge de l'église a cinq minutes de retard.",
+     "en": "Father, the church clock is five minutes slow."
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Encore ? Je l'ai réglée lundi !",
+     "en": "Again? I set it on Monday!"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Ce matin, les cloches ont sonné à huit heures cinq. Tout le village est arrivé en retard !",
+     "en": "This morning the bells rang at five past eight. The whole village was late!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "C'est une vieille horloge. Je vais demander à monsieur Blanc de la réparer.",
+     "en": "It's an old clock. I'll ask Mr Blanc to repair it."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Le garagiste ?",
+     "en": "The mechanic?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Oui ! Il répare tout : les voitures, les vélos… et les horloges.",
+     "en": "Yes! He repairs everything: cars, bikes… and clocks."
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_clocher_03",
+   "building": "eglise",
+   "room": "clocher",
+   "room_name": "Le clocher",
+   "title": "Midi sonne",
+   "premise": "Tom and Léa count the bells to know when to go home.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_cloche_noun",
+    "fr_sonner_verb",
+    "fr_horloge_noun"
+   ],
+   "also_uses": [
+    "fr_attendre_verb",
+    "fr_compter_verb",
+    "fr_dire_verb",
+    "fr_ecouter_verb"
+   ],
+   "speakers": [
+    "Léa",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Écoute ! Les cloches sonnent.",
+     "en": "Listen! The bells are ringing."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "On compte ? Un, deux, trois…",
+     "en": "Shall we count? One, two, three…"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "… onze, douze ! Il est midi.",
+     "en": "… eleven, twelve! It's noon."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Maman a dit : à la maison quand ça sonne midi.",
+     "en": "Mum said: home when it strikes twelve."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Vite, on court !",
+     "en": "Quick, let's run!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Attends, je regarde l'horloge… Elle a cinq minutes de retard. On a le temps !",
+     "en": "Wait, let me look at the clock… It's five minutes slow. We've got time!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Non, Tom ! Si elle retarde, il est déjà midi cinq !",
+     "en": "No, Tom! If it's slow, it's already five past twelve!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_paroisse_01",
+   "building": "eglise",
+   "room": "paroisse",
+   "room_name": "La salle paroissiale",
+   "title": "La répétition",
+   "premise": "The children rehearse the Christmas show in the parish hall.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_tambour_noun",
+    "fr_entendre_verb",
+    "fr_flute_noun",
+    "fr_guitare_noun",
+    "fr_piano_noun",
+    "fr_applaudir_verb"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Mme Petit",
+    "Tom",
+    "Inès",
+    "Léa",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Petit",
+     "fr": "Bon, on répète le spectacle de Noël. Tom, tu as ton tambour ?",
+     "en": "Right, let's rehearse the Christmas show. Tom, have you got your drum?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Oui ! Boum, boum, boum !",
+     "en": "Yes! Boom, boom, boom!"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Pas si fort ! On n'entend plus la flûte d'Inès.",
+     "en": "Not so loud! We can't hear Inès's flute any more."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Et Léa joue de la guitare, mais elle est trop timide.",
+     "en": "And Léa plays the guitar, but she's too shy."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je joue doucement…",
+     "en": "I play softly…"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Moi, je vous accompagne au piano. Un, deux, trois…",
+     "en": "I'll accompany you on the piano. One, two, three…"
+    },
+    {
+     "speaker": "Mme Petit",
+     "fr": "Magnifique ! Et à la fin, tout le monde applaudit !",
+     "en": "Wonderful! And at the end, everyone claps!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_paroisse_02",
+   "building": "eglise",
+   "room": "paroisse",
+   "room_name": "La salle paroissiale",
+   "title": "La collecte d'hiver",
+   "premise": "Mum brings warm things for families in need.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_couverture_noun",
+    "fr_manteau_noun",
+    "fr_parapluie_noun"
+   ],
+   "also_uses": [
+    "fr_table_noun"
+   ],
+   "speakers": [
+    "Maman",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Maman",
+     "fr": "Bonjour, mon père. J'apporte des couvertures pour la collecte.",
+     "en": "Hello, Father. I'm bringing blankets for the collection."
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Merci beaucoup ! Elles sont pour les familles qui ont froid cet hiver.",
+     "en": "Thank you very much! They're for families who are cold this winter."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Il y a aussi deux manteaux d'enfant. Tom ne les met plus.",
+     "en": "There are also two children's coats. Tom doesn't wear them any more."
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Parfait. Posez tout sur la table, là-bas.",
+     "en": "Perfect. Put everything on the table over there."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Oh, quelle pluie dehors ! Et j'ai oublié mon parapluie…",
+     "en": "Oh, what rain outside! And I've forgotten my umbrella…"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Prenez celui-ci. Quelqu'un l'a oublié ici il y a un an !",
+     "en": "Take this one. Someone left it here a year ago!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_paroisse_03",
+   "building": "eglise",
+   "room": "paroisse",
+   "room_name": "La salle paroissiale",
+   "title": "Les lanternes de décembre",
+   "premise": "The priest explains the Advent calendar and the 8 December lights.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_calendrier_noun",
+    "fr_lanterne_noun",
+    "fr_prier_verb",
+    "fr_manteau_noun"
+   ],
+   "also_uses": [
+    "fr_chanter_verb",
+    "fr_porte_noun"
+   ],
+   "speakers": [
+    "Léa",
+    "Père Antoine"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Mon père, c'est quoi, ce grand calendrier avec des petites portes ?",
+     "en": "Father, what's this big calendar with little doors?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "C'est le calendrier de l'Avent. On ouvre une porte chaque jour jusqu'à Noël.",
+     "en": "It's the Advent calendar. You open one door every day until Christmas."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Et ces lanternes ?",
+     "en": "And these lanterns?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Pour la procession du 8 décembre. Ce soir-là, il y a une lumière à toutes les fenêtres du village.",
+     "en": "For the procession on 8 December. That evening, there's a light in every window in the village."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Comme à Lyon !",
+     "en": "Like in Lyon!"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Exactement. Certains prient, d'autres chantent, et après, tout le monde se retrouve ici.",
+     "en": "Exactly. Some people pray, others sing, and afterwards everyone meets up here."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je peux porter une lanterne ?",
+     "en": "Can I carry a lantern?"
+    },
+    {
+     "speaker": "Père Antoine",
+     "fr": "Bien sûr, si tu mets ton manteau : il fait froid le soir !",
+     "en": "Of course, if you put your coat on: it's cold in the evening!"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_bricolage_01",
+   "building": "eglise",
+   "room": "bricolage",
+   "room_name": "La table de bricolage",
+   "title": "Une écharpe pour M. Roux",
+   "premise": "Mrs Roux teaches Léa to knit.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_echarpe_noun",
+    "fr_aiguille_noun",
+    "fr_pelote_noun",
+    "fr_bonnet_noun"
+   ],
+   "also_uses": [
+    "fr_apprendre_verb"
+   ],
+   "speakers": [
+    "Léa",
+    "Mme Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Madame Roux, vous tricotez quoi ?",
+     "en": "Mrs Roux, what are you knitting?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Une écharpe pour mon mari. Il a toujours froid quand il part au travail à quatre heures !",
+     "en": "A scarf for my husband. He's always cold when he leaves for work at four in the morning!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Vous m'apprenez ?",
+     "en": "Will you teach me?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Avec plaisir. Prends ces deux aiguilles et cette pelote de laine rouge.",
+     "en": "With pleasure. Take these two needles and this ball of red wool."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Comme ça ?",
+     "en": "Like this?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Oui, très bien ! Une maille, puis une autre…",
+     "en": "Yes, very good! One stitch, then another…"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "C'est long ! Je vais faire un bonnet, c'est plus petit !",
+     "en": "It takes ages! I'll make a hat; it's smaller!"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Ha ha ! Un bonnet, c'est une bonne idée pour commencer.",
+     "en": "Ha ha! A hat is a good idea to start with."
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_bricolage_02",
+   "building": "eglise",
+   "room": "bricolage",
+   "room_name": "La table de bricolage",
+   "title": "Le ciel vert",
+   "premise": "Tom's painting has gone a strange colour.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_dessin_noun",
+    "fr_pinceau_noun"
+   ],
+   "also_uses": [
+    "fr_ajouter_verb",
+    "fr_eau_noun",
+    "fr_pigeon_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "Inès"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Regarde mon dessin, Inès ! C'est l'église et le clocher.",
+     "en": "Look at my drawing, Inès! It's the church and the bell tower."
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Il est beau ! Mais pourquoi le ciel est vert ?",
+     "en": "It's lovely! But why is the sky green?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Mon pinceau était sale…",
+     "en": "My brush was dirty…"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Il faut laver ton pinceau dans l'eau entre deux couleurs.",
+     "en": "You have to wash your brush in water between two colours."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Bon, c'est un ciel vert. C'est de l'art moderne !",
+     "en": "Well, it's a green sky. It's modern art!"
+    },
+    {
+     "speaker": "Inès",
+     "fr": "Ha ha ! Tu ajoutes des pigeons sur le clocher ?",
+     "en": "Ha ha! Are you adding pigeons on the bell tower?"
+    }
+   ]
+  },
+  {
+   "id": "V_eglise_bricolage_03",
+   "building": "eglise",
+   "room": "bricolage",
+   "room_name": "La table de bricolage",
+   "title": "Le chat et la pelote",
+   "premise": "Grandpa's knitting gets tangled by the parish cat.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_pelote_noun",
+    "fr_bonnet_noun",
+    "fr_aiguille_noun",
+    "fr_echarpe_noun"
+   ],
+   "also_uses": [
+    "fr_apprendre_verb"
+   ],
+   "speakers": [
+    "Papi Henri",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Où est ma pelote de laine bleue ?",
+     "en": "Where's my ball of blue wool?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Papi, tu tricotes, toi ?",
+     "en": "Grandpa, you knit?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Bien sûr ! J'ai appris avec ta grand-mère. Je te fais un bonnet.",
+     "en": "Of course! I learned with your grandmother. I'm making you a hat."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Regarde, le chat joue avec ta pelote !",
+     "en": "Look, the cat's playing with your ball of wool!"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Oh non, il y a de la laine partout !",
+     "en": "Oh no, there's wool everywhere!"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Attention à l'aiguille, elle est par terre.",
+     "en": "Careful with the needle, it's on the floor."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Merci. Bon… ton bonnet va peut-être devenir une écharpe.",
+     "en": "Thanks. Well… your hat might turn into a scarf."
+    }
+   ]
+  },
+  {
+   "id": "V_garage_garage_01",
+   "building": "garage",
+   "room": "garage",
+   "room_name": "Le garage",
+   "title": "Le pneu crevé",
+   "premise": "Tom brings his bike to the garage.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_trou_noun",
+    "fr_reparation_noun",
+    "fr_cle_noun",
+    "fr_atelier_noun"
+   ],
+   "also_uses": [
+    "fr_velo_noun"
+   ],
+   "speakers": [
+    "Tom",
+    "M. Blanc"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Bonjour, monsieur Blanc. Mon vélo a un problème : le pneu est à plat.",
+     "en": "Hello, Mr Blanc. My bike has a problem: the tyre is flat."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Fais voir… Ah, il y a un petit trou dans la chambre à air.",
+     "en": "Let's see… Ah, there's a little hole in the inner tube."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "C'est grave ?",
+     "en": "Is it serious?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Non, c'est une petite réparation. Passe-moi la clé, là, sur l'établi.",
+     "en": "No, it's a small repair. Pass me the spanner there, on the workbench."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Celle-ci ?",
+     "en": "This one?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Oui. Viens dans l'atelier, je te montre comment on fait.",
+     "en": "Yes. Come into the workshop; I'll show you how it's done."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Ça coûte combien ?",
+     "en": "How much does it cost?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Pour toi, rien. Mais la prochaine fois, c'est toi qui répares !",
+     "en": "For you, nothing. But next time, you do the repair!"
+    }
+   ]
+  },
+  {
+   "id": "V_garage_garage_02",
+   "building": "garage",
+   "room": "garage",
+   "room_name": "Le garage",
+   "title": "L'échelle de M. Blanc",
+   "premise": "Dad borrows a ladder for a DIY job.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_echelle_noun",
+    "fr_planche_noun",
+    "fr_bricolage_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Papa",
+    "M. Blanc"
+   ],
+   "lines": [
+    {
+     "speaker": "Papa",
+     "fr": "Monsieur Blanc, vous pouvez me prêter votre échelle ?",
+     "en": "Mr Blanc, could you lend me your ladder?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Bien sûr. C'est pour quoi ?",
+     "en": "Of course. What's it for?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Je veux mettre une planche au grenier, pour faire une étagère.",
+     "en": "I want to put a plank up in the attic to make a shelf."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Ah, du bricolage ! Vous avez une perceuse ?",
+     "en": "Ah, some DIY! Have you got a drill?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Euh… non.",
+     "en": "Er… no."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Je vous prête la mienne aussi. Et faites attention sur l'échelle !",
+     "en": "I'll lend you mine too. And be careful on the ladder!"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Merci ! Je vous rapporte tout samedi.",
+     "en": "Thanks! I'll bring it all back on Saturday."
+    }
+   ]
+  },
+  {
+   "id": "V_garage_garage_03",
+   "building": "garage",
+   "room": "garage",
+   "room_name": "Le garage",
+   "title": "Le verrou coincé",
+   "premise": "The mayor's car is stuck behind a jammed garage door.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_garage_noun",
+    "fr_cle_noun",
+    "fr_verrou_noun"
+   ],
+   "also_uses": [
+    "fr_caisse_noun",
+    "fr_maire_noun",
+    "fr_porte_noun"
+   ],
+   "speakers": [
+    "Mme Lefort",
+    "M. Blanc"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Monsieur Blanc, j'ai un problème : je ne peux pas ouvrir la porte de mon garage.",
+     "en": "Mr Blanc, I've got a problem: I can't open my garage door."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "C'est la clé ou le verrou ?",
+     "en": "Is it the key or the bolt?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Le verrou. Il est coincé. Ma voiture est dedans, et j'ai une réunion à neuf heures !",
+     "en": "The bolt. It's stuck. My car is inside, and I've got a meeting at nine!"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "J'arrive avec ma caisse à outils. Un peu d'huile, et ça va marcher.",
+     "en": "I'm coming with my toolbox. A little oil, and it'll work."
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Vous êtes un héros !",
+     "en": "You're a hero!"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Non, madame la maire. Je suis garagiste !",
+     "en": "No, Madam Mayor. I'm a mechanic!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_mairie_01",
+   "building": "mairie",
+   "room": "mairie",
+   "room_name": "La mairie",
+   "title": "La carte d'identité de Léa",
+   "premise": "Mum applies for Léa's ID card and passport.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_rendez_vous_noun",
+    "fr_carte_identite_noun",
+    "fr_photo_noun",
+    "fr_passeport_noun",
+    "fr_signer_verb",
+    "fr_ecrire_verb",
+    "fr_nom_noun",
+    "fr_attendre_verb"
+   ],
+   "also_uses": [
+    "fr_carte_noun",
+    "fr_souris_noun"
+   ],
+   "speakers": [
+    "L'employée",
+    "Maman",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "L'employée",
+     "fr": "Bonjour, madame. Vous avez rendez-vous ?",
+     "en": "Hello, madam. Do you have an appointment?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Oui, à dix heures, pour la carte d'identité de ma fille.",
+     "en": "Yes, at ten, for my daughter's identity card."
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "Très bien. Vous avez la photo ?",
+     "en": "Very good. Have you got the photo?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oui, la voilà. Je ne souris pas, c'est interdit !",
+     "en": "Yes, here it is. I'm not smiling; it's not allowed!"
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "C'est parfait. Et vous faites aussi le passeport ?",
+     "en": "That's perfect. And are you doing the passport as well?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Oui, on part en Angleterre cet été.",
+     "en": "Yes, we're going to England this summer."
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "Alors signez ici, madame. Et toi, Léa, tu sais écrire ton nom ?",
+     "en": "Then sign here, madam. And you, Léa, can you write your name?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Bien sûr ! L, É, A !",
+     "en": "Of course! L, É, A!"
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "Bravo. Maintenant, il faut attendre trois semaines.",
+     "en": "Well done. Now you have to wait three weeks."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_mairie_02",
+   "building": "mairie",
+   "room": "mairie",
+   "room_name": "La mairie",
+   "title": "La file d'attente",
+   "premise": "Grandpa and Mr Blanc chat in the queue.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_file_noun",
+    "fr_attendre_verb",
+    "fr_adresse_noun",
+    "fr_bureau_noun"
+   ],
+   "also_uses": [
+    "fr_garage_noun",
+    "fr_numero_noun"
+   ],
+   "speakers": [
+    "Papi Henri",
+    "M. Blanc"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Pardon, c'est la file pour l'état civil ?",
+     "en": "Excuse me, is this the queue for the registry office?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Oui, mais il faut attendre. Il y a six personnes devant nous.",
+     "en": "Yes, but you'll have to wait. There are six people ahead of us."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Ah, monsieur Blanc ! Vous venez pour quoi ?",
+     "en": "Ah, Mr Blanc! What are you here for?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Je change d'adresse. J'habite maintenant au-dessus du garage.",
+     "en": "I'm changing my address. I live above the garage now."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Moi, je viens chercher un papier pour ma retraite.",
+     "en": "I've come for a document for my pension."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Regardez, le bureau numéro deux est libre !",
+     "en": "Look, desk number two is free!"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Enfin ! Allez-y, vous étiez là avant moi.",
+     "en": "At last! Go ahead, you were here before me."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_mairie_03",
+   "building": "mairie",
+   "room": "mairie",
+   "room_name": "La mairie",
+   "title": "Interview de madame la maire",
+   "premise": "Tom interviews the mayor for the school newspaper.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_maire_noun",
+    "fr_bureau_noun",
+    "fr_poubelle_noun",
+    "fr_drapeau_noun",
+    "fr_ecrire_verb",
+    "fr_nom_noun"
+   ],
+   "also_uses": [
+    "fr_asseoir_verb"
+   ],
+   "speakers": [
+    "Tom",
+    "Mme Lefort"
+   ],
+   "lines": [
+    {
+     "speaker": "Tom",
+     "fr": "Bonjour, madame la maire. Je peux vous poser des questions pour le journal de l'école ?",
+     "en": "Hello, Madam Mayor. Can I ask you some questions for the school newspaper?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Avec plaisir, Tom. Assieds-toi dans mon bureau.",
+     "en": "With pleasure, Tom. Sit down in my office."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Qu'est-ce que fait un maire ?",
+     "en": "What does a mayor do?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Beaucoup de choses ! Les écoles, les routes, les poubelles, les mariages…",
+     "en": "Lots of things! Schools, roads, bins, weddings…"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Les poubelles aussi ?",
+     "en": "Bins too?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Oui ! Un village propre, c'est important.",
+     "en": "Yes! A clean village is important."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et pourquoi il y a deux drapeaux devant la mairie ?",
+     "en": "And why are there two flags in front of the town hall?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Le drapeau français et le drapeau européen. Tu écris tout ça ?",
+     "en": "The French flag and the European flag. Are you writing all that down?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Oui ! Et je mets votre nom en gros titre !",
+     "en": "Yes! And I'm putting your name in the headline!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_bureau_01",
+   "building": "mairie",
+   "room": "bureau",
+   "room_name": "Sur le bureau",
+   "title": "Une lettre pour Emily",
+   "premise": "Léa writes to her English pen pal.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_stylo_noun",
+    "fr_lettre_noun",
+    "fr_enveloppe_noun",
+    "fr_timbre_noun"
+   ],
+   "also_uses": [
+    "fr_adresse_noun",
+    "fr_ecrire_verb",
+    "fr_moitie_noun"
+   ],
+   "speakers": [
+    "Léa",
+    "Maman"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Maman, tu as un stylo ? J'écris une lettre à Emily, ma correspondante anglaise.",
+     "en": "Mum, have you got a pen? I'm writing a letter to Emily, my English pen pal."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Tiens. Tu écris en français ou en anglais ?",
+     "en": "Here. Are you writing in French or in English?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Les deux ! Moitié-moitié.",
+     "en": "Both! Half and half."
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Bonne idée. Voilà une enveloppe. N'oublie pas l'adresse.",
+     "en": "Good idea. Here's an envelope. Don't forget the address."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Et il faut quel timbre pour l'Angleterre ?",
+     "en": "And what stamp do you need for England?"
+    },
+    {
+     "speaker": "Maman",
+     "fr": "Un timbre international. On l'achète à la poste demain.",
+     "en": "An international stamp. We'll buy it at the post office tomorrow."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_bureau_02",
+   "building": "mairie",
+   "room": "bureau",
+   "room_name": "Sur le bureau",
+   "title": "Les clés de madame la maire",
+   "premise": "The mayor can't find her keys.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_cle_noun",
+    "fr_enveloppe_noun",
+    "fr_lettre_noun",
+    "fr_stylo_noun"
+   ],
+   "also_uses": [
+    "fr_bureau_noun"
+   ],
+   "speakers": [
+    "Mme Lefort",
+    "L'employée"
+   ],
+   "lines": [
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Où sont mes clés ? Elles étaient sur mon bureau !",
+     "en": "Where are my keys? They were on my desk!"
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "Sous l'enveloppe, peut-être ?",
+     "en": "Under the envelope, maybe?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Non… Il y a seulement des lettres et mon stylo.",
+     "en": "No… There are only letters and my pen."
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "Et dans votre poche ?",
+     "en": "And in your pocket?"
+    },
+    {
+     "speaker": "Mme Lefort",
+     "fr": "Ah ! Les voilà. Merci, je perds toujours tout !",
+     "en": "Ah! Here they are. Thanks, I'm always losing things!"
+    },
+    {
+     "speaker": "L'employée",
+     "fr": "C'est normal, vous avez beaucoup de travail.",
+     "en": "It's understandable; you have a lot of work."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_bureau_03",
+   "building": "mairie",
+   "room": "bureau",
+   "room_name": "Sur le bureau",
+   "title": "La collection de timbres",
+   "premise": "Grandpa shows Tom his stamp collection.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_timbre_noun",
+    "fr_lettre_noun",
+    "fr_enveloppe_noun"
+   ],
+   "also_uses": [
+    "fr_ecrire_verb",
+    "fr_envoyer_verb",
+    "fr_repondre_verb"
+   ],
+   "speakers": [
+    "Papi Henri",
+    "Tom"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Tom, regarde ma collection de timbres.",
+     "en": "Tom, look at my stamp collection."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Il y en a beaucoup ! Celui-là, il vient d'où ?",
+     "en": "There are loads! Where's this one from?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Du Japon. Un ami m'a envoyé une lettre en 1975.",
+     "en": "From Japan. A friend sent me a letter in 1975."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et tu as gardé l'enveloppe ?",
+     "en": "And you kept the envelope?"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Oui, toutes les enveloppes. Les timbres sont plus beaux dessus.",
+     "en": "Yes, all the envelopes. The stamps look nicer on them."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Moi, je reçois seulement des e-mails…",
+     "en": "I only get e-mails…"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Alors écris-moi une vraie lettre, et je te réponds !",
+     "en": "Then write me a real letter, and I'll write back!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_poste_01",
+   "building": "mairie",
+   "room": "poste",
+   "room_name": "La poste",
+   "title": "Un colis pour Marseille",
+   "premise": "Dad sends books to his brother.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_envoyer_verb",
+    "fr_colis_noun",
+    "fr_carton_noun",
+    "fr_emballer_verb",
+    "fr_numero_noun"
+   ],
+   "also_uses": [
+    "fr_livre_noun"
+   ],
+   "speakers": [
+    "Papa",
+    "Sophie"
+   ],
+   "lines": [
+    {
+     "speaker": "Papa",
+     "fr": "Bonjour, je voudrais envoyer ce colis à Marseille.",
+     "en": "Hello, I'd like to send this parcel to Marseille."
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Bien sûr. Qu'est-ce qu'il y a dans le carton ?",
+     "en": "Of course. What's in the box?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Des livres pour mon frère.",
+     "en": "Some books for my brother."
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Il est mal emballé : le carton est ouvert ici. Je vous donne du scotch ?",
+     "en": "It's badly wrapped: the box is open here. Shall I give you some tape?"
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Oui, merci. Il arrive quand ?",
+     "en": "Yes, thanks. When will it arrive?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Dans trois jours. Voici votre numéro de suivi.",
+     "en": "In three days. Here's your tracking number."
+    },
+    {
+     "speaker": "Papa",
+     "fr": "Parfait. Merci, au revoir !",
+     "en": "Perfect. Thanks, goodbye!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_poste_02",
+   "building": "mairie",
+   "room": "poste",
+   "room_name": "La poste",
+   "title": "La nouvelle casquette",
+   "premise": "Julien the postman does his round at the bakery.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_courrier_noun",
+    "fr_casquette_noun",
+    "fr_colis_noun",
+    "fr_numero_noun",
+    "fr_telephone_noun",
+    "fr_appeler_verb"
+   ],
+   "also_uses": [
+    "fr_repondre_verb",
+    "fr_vent_noun"
+   ],
+   "speakers": [
+    "Julien",
+    "Mme Roux"
+   ],
+   "lines": [
+    {
+     "speaker": "Julien",
+     "fr": "Bonjour, madame Roux ! Du courrier pour vous.",
+     "en": "Hello, Mrs Roux! Some post for you."
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Merci, Julien. Oh, vous avez une nouvelle casquette !",
+     "en": "Thanks, Julien. Oh, you've got a new cap!"
+    },
+    {
+     "speaker": "Julien",
+     "fr": "Oui, l'ancienne est partie avec le vent sur la place !",
+     "en": "Yes, the old one blew away in the wind on the square!"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Et ce colis, il est pour moi ?",
+     "en": "And this parcel, is it for me?"
+    },
+    {
+     "speaker": "Julien",
+     "fr": "Non, pour monsieur Blanc. Mais il ne répond pas. Vous avez son numéro de téléphone ?",
+     "en": "No, it's for Mr Blanc. But he isn't answering. Have you got his phone number?"
+    },
+    {
+     "speaker": "Mme Roux",
+     "fr": "Oui, je l'appelle tout de suite. Il est sûrement sous une voiture !",
+     "en": "Yes, I'll call him straight away. He's probably under a car!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_poste_03",
+   "building": "mairie",
+   "room": "poste",
+   "room_name": "La poste",
+   "title": "L'affiche de la fête",
+   "premise": "Léa reads the poster for the village fête.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_affiche_noun",
+    "fr_date_noun",
+    "fr_valise_noun"
+   ],
+   "also_uses": [
+    "fr_passeport_noun"
+   ],
+   "speakers": [
+    "Léa",
+    "Sophie"
+   ],
+   "lines": [
+    {
+     "speaker": "Léa",
+     "fr": "Sophie, c'est quoi, cette affiche ?",
+     "en": "Sophie, what's this poster?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "C'est pour la fête du village. Regarde la date : le 14 juillet.",
+     "en": "It's for the village fête. Look at the date: 14 July."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Oh non, on part en vacances le 12 !",
+     "en": "Oh no, we're going on holiday on the 12th!"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Vous allez où ?",
+     "en": "Where are you going?"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "En Angleterre. Ma valise est déjà prête !",
+     "en": "To England. My suitcase is already packed!"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "En octobre ? Tu es très organisée !",
+     "en": "In October? You're very organised!"
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Bon… il y a seulement mon passeport et mon doudou dedans.",
+     "en": "Well… there's only my passport and my cuddly toy in it."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_guichet_01",
+   "building": "mairie",
+   "room": "guichet",
+   "room_name": "Au guichet",
+   "title": "Le cadeau pour Tante Julie",
+   "premise": "Léa and Tom post a birthday present.",
+   "cefr": "A1",
+   "target_words": [
+    "fr_cadeau_noun",
+    "fr_paquet_noun",
+    "fr_ruban_noun",
+    "fr_etiquette_noun"
+   ],
+   "also_uses": [
+    "fr_adresse_noun",
+    "fr_boite_noun",
+    "fr_ecrire_verb",
+    "fr_envoyer_verb"
+   ],
+   "speakers": [
+    "Sophie",
+    "Tom",
+    "Léa"
+   ],
+   "lines": [
+    {
+     "speaker": "Sophie",
+     "fr": "Bonjour, les enfants. Qu'est-ce que vous envoyez ?",
+     "en": "Hello, children. What are you sending?"
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Un cadeau pour notre tante. C'est son anniversaire samedi.",
+     "en": "A present for our aunt. It's her birthday on Saturday."
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Il faut un paquet solide. Mettez le cadeau dans cette boîte.",
+     "en": "You need a sturdy package. Put the present in this box."
+    },
+    {
+     "speaker": "Léa",
+     "fr": "Je peux mettre un ruban rouge dessus ?",
+     "en": "Can I put a red ribbon on it?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Oui, mais sous le papier, sinon il va s'abîmer.",
+     "en": "Yes, but under the paper, or it'll get squashed."
+    },
+    {
+     "speaker": "Tom",
+     "fr": "Et j'écris l'adresse où ?",
+     "en": "And where do I write the address?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Sur cette étiquette. Écris bien gros !",
+     "en": "On this label. Write nice and big!"
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_guichet_02",
+   "building": "mairie",
+   "room": "guichet",
+   "room_name": "Au guichet",
+   "title": "Comme avant",
+   "premise": "Grandpa wraps a parcel for Japan the old-fashioned way.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_ficelle_noun",
+    "fr_paquet_noun",
+    "fr_feuille_noun"
+   ],
+   "also_uses": [],
+   "speakers": [
+    "Papi Henri",
+    "Sophie"
+   ],
+   "lines": [
+    {
+     "speaker": "Papi Henri",
+     "fr": "Mademoiselle, vous avez de la ficelle ?",
+     "en": "Miss, have you got any string?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "De la ficelle ? Aujourd'hui, on utilise du scotch, monsieur Henri !",
+     "en": "String? Nowadays we use tape, Mr Henri!"
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Moi, je fais mes paquets avec du papier kraft et de la ficelle. Comme avant.",
+     "en": "I wrap my parcels in brown paper and string. Like in the old days."
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "D'accord, voilà la ficelle. Et cette feuille à remplir pour la douane.",
+     "en": "OK, here's the string. And this form to fill in for customs."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Pour la douane ? Pourquoi ?",
+     "en": "For customs? Why?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Votre paquet va au Japon. C'est hors de l'Union européenne.",
+     "en": "Your parcel is going to Japan. That's outside the European Union."
+    },
+    {
+     "speaker": "Papi Henri",
+     "fr": "Ah, c'est vrai. Bon, je remplis la feuille.",
+     "en": "Ah, that's true. Right, I'll fill in the form."
+    }
+   ]
+  },
+  {
+   "id": "V_mairie_guichet_03",
+   "building": "mairie",
+   "room": "guichet",
+   "room_name": "Au guichet",
+   "title": "La mauvaise étiquette",
+   "premise": "A mix-up at the counter turns into a surprise.",
+   "cefr": "A2",
+   "target_words": [
+    "fr_etiquette_noun",
+    "fr_paquet_noun",
+    "fr_ruban_noun",
+    "fr_cadeau_noun"
+   ],
+   "also_uses": [
+    "fr_attendre_verb",
+    "fr_dire_verb"
+   ],
+   "speakers": [
+    "Sophie",
+    "M. Blanc"
+   ],
+   "lines": [
+    {
+     "speaker": "Sophie",
+     "fr": "Monsieur Blanc, attendez ! Il y a une erreur sur votre paquet.",
+     "en": "Mr Blanc, wait! There's a mistake on your package."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Ah bon ? Quelle erreur ?",
+     "en": "Really? What mistake?"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "L'étiquette dit « Madame Lefort, mairie ». Ce n'est pas votre paquet !",
+     "en": "The label says \"Mrs Lefort, town hall\". It's not your package!"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Oh ! Alors où est le mien ? C'est une pièce pour une voiture.",
+     "en": "Oh! Then where's mine? It's a car part."
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Ici, je pense. Le petit paquet avec un ruban bleu ?",
+     "en": "Here, I think. The little package with a blue ribbon?"
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Avec un ruban ? Non, ça, c'est un cadeau !",
+     "en": "With a ribbon? No, that's a present!"
+    },
+    {
+     "speaker": "Sophie",
+     "fr": "Ah… Il est pour moi ! C'est mon anniversaire aujourd'hui.",
+     "en": "Ah… It's for me! It's my birthday today."
+    },
+    {
+     "speaker": "M. Blanc",
+     "fr": "Joyeux anniversaire, Sophie !",
+     "en": "Happy birthday, Sophie!"
+    }
+   ]
+  }
+ ]
+}
