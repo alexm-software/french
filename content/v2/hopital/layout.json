@@ -1,0 +1,1025 @@
+{
+ "building": "hopital",
+ "building_id": "B19_hopital",
+ "sector_id": "S07_health",
+ "name": "Hôpital",
+ "main": "hopital",
+ "roomList": [
+  {
+   "key": "hopital",
+   "short": "L'hôpital"
+  },
+  {
+   "key": "etage",
+   "short": "L'étage"
+  },
+  {
+   "key": "dentiste",
+   "short": "Le dentiste"
+  },
+  {
+   "key": "optique",
+   "short": "L'optique"
+  }
+ ],
+ "planned": {
+  "hopital": {
+   "vocabRoom": "R_hospital_01",
+   "only": [
+    "fr_ambulance_noun",
+    "fr_aide_noun_f",
+    "fr_extremite_noun",
+    "fr_operation_noun",
+    "fr_hanche_noun",
+    "fr_urgence_noun",
+    "fr_hopital_noun",
+    "fr_miracle_noun",
+    "fr_asile_noun",
+    "fr_repos_noun",
+    "fr_patient_noun",
+    "fr_secours_noun",
+    "fr_dommage_noun",
+    "fr_soin_noun"
+   ]
+  },
+  "plateau": {
+   "vocabRoom": "R_hospital_01",
+   "only": [
+    "fr_piqure_noun",
+    "fr_chirurgie_noun",
+    "fr_exploitation_noun",
+    "fr_injection_noun",
+    "fr_chirurgien_noun",
+    "fr_degat_noun",
+    "fr_detachement_noun",
+    "fr_operateur_noun"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_hospital_02",
+   "only": [
+    "fr_bosse_noun",
+    "fr_evacuation_noun",
+    "fr_interruption_noun",
+    "fr_fracture_noun",
+    "fr_infirmerie_noun",
+    "fr_recuperation_noun",
+    "fr_derision_noun",
+    "fr_anesthesie_noun",
+    "fr_entorse_noun",
+    "fr_veterinaire_noun",
+    "fr_chevet_noun",
+    "fr_sauvetage_noun",
+    "fr_handicap_noun",
+    "fr_scanner_noun"
+   ]
+  },
+  "chariot": {
+   "vocabRoom": "R_hospital_02",
+   "only": [
+    "fr_prothese_noun",
+    "fr_reanimation_noun",
+    "fr_infiltration_noun",
+    "fr_dejection_noun",
+    "fr_insertion_noun",
+    "fr_prejudice_noun",
+    "fr_ambulancier_noun",
+    "fr_dam_noun"
+   ]
+  },
+  "dentiste": {
+   "vocabRoom": "R_dentist_01",
+   "only": [
+    "fr_dent_noun",
+    "fr_vision_noun",
+    "fr_paupiere_noun",
+    "fr_illusion_noun",
+    "fr_perspective_noun",
+    "fr_reconnaissance_noun",
+    "fr_crete_noun",
+    "fr_fente_noun",
+    "fr_correspondance_noun",
+    "fr_dentiste_noun",
+    "fr_sourcil_noun",
+    "fr_reflexe_noun",
+    "fr_interlocuteur_noun"
+   ]
+  },
+  "optique": {
+   "vocabRoom": "R_dentist_02",
+   "only": [
+    "fr_gomme_noun",
+    "fr_lentille_noun",
+    "fr_prescription_noun",
+    "fr_loupe_noun",
+    "fr_aberration_noun",
+    "fr_dentaire_adj",
+    "fr_optique_adj",
+    "fr_iris_noun",
+    "fr_girofle_noun",
+    "fr_microscope_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "hopital": {
+   "name": "L'hôpital",
+   "room_id": "R_hospital_01",
+   "image": "hopital/hopital.jpg",
+   "alt": "The bright entrance hall of a friendly hospital, painted in ink and gouache: through the wide open glass doors on the far left a small smiling ambulance with a lance-shaped aerial waits; a patient in striped pyjamas stretches out on a lounger with a teacup, wiggling his toes; a kneeling nurse's assistant opens a red first-aid kit for a boy while his teddy holds a box of plasters; behind a half-open green curtain a surgeon sings opera while mending a teddy; a grandma twirls a hula hoop round her hip; a hedgehog nurse races a trolley along the green floor line; a blue door and a yellow door lead deeper inside; above them hangs a white enamel tray of little figurines; a tall nurse on stilts hands a flower petal to a boy in a wheelchair; a rose bush bursts into bloom; a patient elephant reads a tiny magazine on a bench; a gardener holds up a robin's nest box; a sloth rests in a hammock between palms; a St Bernard pulls a sled with a teddy skier and a mug of cocoa; a toy robot with a dented arm waits for repair; a swan sits on her nest by the fountain, and a wooden staircase climbs to the upper floor on the right.",
+   "nameplate": [
+    27,
+    10
+   ],
+   "mapExit": {
+    "box": [
+     200,
+     100,
+     50,
+     300
+    ],
+    "label": "Quartier de la Santé"
+   },
+   "doors": [
+    {
+     "to": "dentiste",
+     "label": "le dentiste",
+     "hint": "Go through the blue door to the dentist and optician",
+     "hit": [
+      474,
+      220,
+      94,
+      110
+     ]
+    },
+    {
+     "to": "optique",
+     "label": "l'optique",
+     "hint": "Go through the yellow door to the optics laboratory",
+     "hit": [
+      618,
+      222,
+      94,
+      270
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "l'étage",
+     "hint": "Climb the wooden staircase to the upper ward",
+     "hit": [
+      1215,
+      100,
+      63,
+      330
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "plateau",
+     "label": "le plateau",
+     "hint": "Look closer at the white enamel tray of figurines above the doors",
+     "at": [
+      584,
+      160
+     ],
+     "obj": [
+      434,
+      10,
+      300,
+      169
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_ambulance_noun",
+     "box": [
+      31,
+      218,
+      150,
+      185
+     ]
+    },
+    {
+     "id": "fr_aide_noun_f",
+     "box": [
+      100,
+      410,
+      175,
+      125
+     ]
+    },
+    {
+     "id": "fr_extremite_noun",
+     "box": [
+      40,
+      540,
+      250,
+      128
+     ]
+    },
+    {
+     "id": "fr_operation_noun",
+     "box": [
+      282,
+      226,
+      125,
+      100
+     ]
+    },
+    {
+     "id": "fr_hanche_noun",
+     "box": [
+      345,
+      330,
+      122,
+      225
+     ]
+    },
+    {
+     "id": "fr_urgence_noun",
+     "box": [
+      472,
+      336,
+      138,
+      165
+     ]
+    },
+    {
+     "id": "fr_hopital_noun",
+     "box": [
+      715,
+      40,
+      135,
+      300
+     ]
+    },
+    {
+     "id": "fr_miracle_noun",
+     "box": [
+      855,
+      60,
+      80,
+      190
+     ]
+    },
+    {
+     "id": "fr_asile_noun",
+     "box": [
+      940,
+      130,
+      120,
+      88
+     ]
+    },
+    {
+     "id": "fr_repos_noun",
+     "box": [
+      985,
+      225,
+      140,
+      85
+     ]
+    },
+    {
+     "id": "fr_patient_noun",
+     "box": [
+      860,
+      315,
+      165,
+      185
+     ]
+    },
+    {
+     "id": "fr_secours_noun",
+     "box": [
+      575,
+      505,
+      323,
+      163
+     ]
+    },
+    {
+     "id": "fr_dommage_noun",
+     "box": [
+      914,
+      530,
+      110,
+      138
+     ],
+     "labelAt": [
+      973,
+      535
+     ]
+    },
+    {
+     "id": "fr_soin_noun",
+     "box": [
+      1047,
+      515,
+      186,
+      153
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  },
+  "plateau": {
+   "name": "Le plateau d'examen",
+   "room_id": "R_hospital_01_z1",
+   "image": "hopital/plateau.jpg",
+   "parent": "hopital",
+   "alt": "Close-up of the white enamel examination tray on the hospital wall, with eight little painted figurines in a row: a bee peeks at a boy holding an ice cube to a tiny sting; a girl in a paper cap mends her teddy's ear; a hen with a clipboard runs the laundry, sheets hanging on a line; a brave puppy hugs a giant wooden toy syringe; a surgeon in green scrubs her hands at a little sink; a goat holds a chewed mop over a puddle; a calm grey cat with a white moustache washes a paw beside torn paper towels; and a technician in a blue cap swings a big round lamp.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_piqure_noun",
+     "box": [
+      90,
+      300,
+      190,
+      215
+     ],
+     "labelAt": [
+      185,
+      538
+     ]
+    },
+    {
+     "id": "fr_chirurgie_noun",
+     "box": [
+      290,
+      300,
+      145,
+      215
+     ],
+     "labelAt": [
+      362,
+      576
+     ]
+    },
+    {
+     "id": "fr_exploitation_noun",
+     "box": [
+      445,
+      300,
+      118,
+      215
+     ],
+     "labelAt": [
+      504,
+      538
+     ]
+    },
+    {
+     "id": "fr_injection_noun",
+     "box": [
+      565,
+      300,
+      140,
+      215
+     ],
+     "labelAt": [
+      635,
+      576
+     ]
+    },
+    {
+     "id": "fr_chirurgien_noun",
+     "box": [
+      735,
+      300,
+      120,
+      215
+     ],
+     "labelAt": [
+      795,
+      538
+     ]
+    },
+    {
+     "id": "fr_degat_noun",
+     "box": [
+      860,
+      300,
+      135,
+      220
+     ],
+     "labelAt": [
+      927,
+      576
+     ]
+    },
+    {
+     "id": "fr_detachement_noun",
+     "box": [
+      1000,
+      370,
+      92,
+      160
+     ],
+     "labelAt": [
+      1046,
+      538
+     ]
+    },
+    {
+     "id": "fr_operateur_noun",
+     "box": [
+      1095,
+      255,
+      110,
+      265
+     ],
+     "labelAt": [
+      1150,
+      576
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  },
+  "etage": {
+   "name": "L'étage des soins",
+   "room_id": "R_hospital_02",
+   "image": "hopital/etage.jpg",
+   "backTo": "hopital",
+   "alt": "The cheerful upstairs ward of the hospital, painted in ink and gouache: a boss in a suit clutches a bump on his head while a camel shows off its hump; a mother duck leads her ducklings under a green exit lamp; a toddler in pyjamas blows a toy trumpet behind a doctor with a clipboard; an X-ray of a striped leg glows on a light box beside a zebra in a cast; a crow sings by a bed while two parrots laugh at it from the bed rail; a girl hugs her rag doll as a nurse bandages it; a bear in a dressing gown lifts a teacup; a koala sleeps on a round cushion; a footballer rests on a bed with a blue ice pack on his ankle; a vet listens to a hamster in a tiny bed; a red car-shaped bedside table holds a glass of water; a lifeguard carries a little swimmer still hugging a red float; a boy races his wheelchair up a ramp, his cap flying; a girl lies in a big round scanner with friendly bones on its screen; a small pale-blue tray of figurines sits on a shelf, and an arched doorway leads back down the stairs.",
+   "nameplate": [
+    85,
+    94
+   ],
+   "doors": [
+    {
+     "to": "hopital",
+     "label": "l'escalier",
+     "hint": "Go back down the stairs to the hospital entrance hall",
+     "hit": [
+      1050,
+      10,
+      180,
+      240
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "chariot",
+     "label": "le petit plateau",
+     "hint": "Look closer at the little pale-blue tray of figurines on the shelf",
+     "at": [
+      860,
+      130
+     ],
+     "obj": [
+      655,
+      0,
+      296,
+      166
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_bosse_noun",
+     "box": [
+      0,
+      55,
+      175,
+      300
+     ],
+     "labelAt": [
+      80,
+      315
+     ]
+    },
+    {
+     "id": "fr_evacuation_noun",
+     "box": [
+      205,
+      100,
+      175,
+      165
+     ]
+    },
+    {
+     "id": "fr_interruption_noun",
+     "box": [
+      383,
+      40,
+      138,
+      200
+     ],
+     "labelAt": [
+      462,
+      200
+     ]
+    },
+    {
+     "id": "fr_fracture_noun",
+     "box": [
+      180,
+      275,
+      193,
+      250
+     ]
+    },
+    {
+     "id": "fr_infirmerie_noun",
+     "box": [
+      5,
+      365,
+      170,
+      280
+     ]
+    },
+    {
+     "id": "fr_recuperation_noun",
+     "box": [
+      400,
+      305,
+      120,
+      235
+     ],
+     "labelAt": [
+      463,
+      360
+     ]
+    },
+    {
+     "id": "fr_derision_noun",
+     "box": [
+      553,
+      340,
+      102,
+      115
+     ],
+     "labelAt": [
+      606,
+      420
+     ]
+    },
+    {
+     "id": "fr_anesthesie_noun",
+     "box": [
+      258,
+      547,
+      210,
+      125
+     ]
+    },
+    {
+     "id": "fr_entorse_noun",
+     "box": [
+      553,
+      470,
+      170,
+      200
+     ]
+    },
+    {
+     "id": "fr_veterinaire_noun",
+     "box": [
+      553,
+      150,
+      217,
+      180
+     ]
+    },
+    {
+     "id": "fr_chevet_noun",
+     "box": [
+      781,
+      203,
+      165,
+      125
+     ]
+    },
+    {
+     "id": "fr_sauvetage_noun",
+     "box": [
+      750,
+      336,
+      125,
+      305
+     ]
+    },
+    {
+     "id": "fr_handicap_noun",
+     "box": [
+      925,
+      360,
+      150,
+      250
+     ]
+    },
+    {
+     "id": "fr_scanner_noun",
+     "box": [
+      1078,
+      258,
+      202,
+      380
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  },
+  "chariot": {
+   "name": "Le petit plateau",
+   "room_id": "R_hospital_02_z1",
+   "image": "hopital/chariot.jpg",
+   "parent": "etage",
+   "alt": "Close-up of the little pale-blue tray on the shelf of the upstairs ward, with eight figurines: a runner jogs on a curved blade; a bunny smiles in a little bed beside a heartbeat monitor; rain drips through a cracked wooden roof into a filter funnel and a bucket; a nurse slips a fresh page into a chart binder; a football has tipped over a flowerpot; a paramedic in a yellow jacket wheels a stretcher with a smiling piglet; a beaver holds his broken twig dam over a puddle; and a small blank brass plaque is fixed on the front rim.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_prothese_noun",
+     "box": [
+      70,
+      185,
+      115,
+      200
+     ]
+    },
+    {
+     "id": "fr_reanimation_noun",
+     "box": [
+      200,
+      200,
+      205,
+      190
+     ]
+    },
+    {
+     "id": "fr_infiltration_noun",
+     "box": [
+      410,
+      95,
+      125,
+      295
+     ],
+     "labelAt": [
+      480,
+      395
+     ]
+    },
+    {
+     "id": "fr_dejection_noun",
+     "box": [
+      68,
+      415,
+      118,
+      42
+     ]
+    },
+    {
+     "id": "fr_insertion_noun",
+     "box": [
+      560,
+      155,
+      135,
+      235
+     ]
+    },
+    {
+     "id": "fr_prejudice_noun",
+     "box": [
+      720,
+      225,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_ambulancier_noun",
+     "box": [
+      880,
+      145,
+      140,
+      240
+     ]
+    },
+    {
+     "id": "fr_dam_noun",
+     "box": [
+      1050,
+      215,
+      160,
+      180
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  },
+  "dentiste": {
+   "name": "Le dentiste et l'opticien",
+   "room_id": "R_dentist_01",
+   "image": "hopital/dentiste.jpg",
+   "backTo": "hopital",
+   "alt": "A lilac waiting room shared by the dentist and the optician, painted in ink and gouache: a giant smiling tooth stretches at the sunrise window; an eagle reads an eye chart of shapes; a sleepy owl sniffs a red poppy; a man stares at a spinning spiral card; a pear in spectacles looks down a model street; an old man hugs his optician with a bouquet; a rooster stands on a crate while a fawn peeks through its slit; a postbag of letters spills and the envelopes dance; in the blue dental chair an otter dentist polishes a crocodile's teeth in front of the blue door; a clown in big frames raises one bushy eyebrow; a mouse doctor taps a kangaroo's knee and a slipper flies off; and a man in a bowler hat chats with a goose.",
+   "nameplate": [
+    62,
+    94
+   ],
+   "doors": [
+    {
+     "to": "hopital",
+     "label": "le hall",
+     "hint": "Go back through the blue door to the hospital entrance hall",
+     "hit": [
+      560,
+      45,
+      170,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_dent_noun",
+     "box": [
+      188,
+      23,
+      133,
+      137
+     ]
+    },
+    {
+     "id": "fr_vision_noun",
+     "box": [
+      8,
+      94,
+      130,
+      180
+     ]
+    },
+    {
+     "id": "fr_paupiere_noun",
+     "box": [
+      266,
+      165,
+      148,
+      100
+     ]
+    },
+    {
+     "id": "fr_illusion_noun",
+     "box": [
+      100,
+      290,
+      120,
+      105
+     ]
+    },
+    {
+     "id": "fr_perspective_noun",
+     "box": [
+      200,
+      400,
+      125,
+      113
+     ]
+    },
+    {
+     "id": "fr_reconnaissance_noun",
+     "box": [
+      330,
+      270,
+      200,
+      240
+     ]
+    },
+    {
+     "id": "fr_crete_noun",
+     "box": [
+      0,
+      415,
+      95,
+      140
+     ],
+     "labelAt": [
+      59,
+      560
+     ]
+    },
+    {
+     "id": "fr_fente_noun",
+     "box": [
+      112,
+      525,
+      65,
+      145
+     ]
+    },
+    {
+     "id": "fr_correspondance_noun",
+     "box": [
+      235,
+      520,
+      300,
+      136
+     ]
+    },
+    {
+     "id": "fr_dentiste_noun",
+     "box": [
+      555,
+      250,
+      270,
+      350
+     ]
+    },
+    {
+     "id": "fr_sourcil_noun",
+     "box": [
+      850,
+      55,
+      210,
+      270
+     ],
+     "labelAt": [
+      955,
+      290
+     ]
+    },
+    {
+     "id": "fr_reflexe_noun",
+     "box": [
+      832,
+      330,
+      243,
+      270
+     ]
+    },
+    {
+     "id": "fr_interlocuteur_noun",
+     "box": [
+      1080,
+      265,
+      195,
+      375
+     ],
+     "labelAt": [
+      1170,
+      645
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  },
+  "optique": {
+   "name": "Le cabinet d'optique",
+   "room_id": "R_dentist_02",
+   "image": "hopital/optique.jpg",
+   "backTo": "hopital",
+   "alt": "A cosy wooden optics laboratory under the roof, painted in ink and gouache: an old lady scientist holds up a big lens shaped like a lentil beside a bowl of lentils; a mole in new glasses looks through a brass telescope at the starry round window; a boy studies a beetle through a magnifying glass with a curly handle; a pink eraser and a pencil lie on the desk; a girl blows a perfectly square soap bubble; a squirrel polishes a big dental model of teeth; a toad peers through a brass lens machine; a lemur with a purple flower looks through a big brass lens; a giraffe leans in at the yellow door to nibble a clove from a lady dentist; and a raccoon police officer peers into a brass microscope.",
+   "nameplate": [
+    24,
+    93
+   ],
+   "doors": [
+    {
+     "to": "hopital",
+     "label": "le hall",
+     "hint": "Go back through the yellow door to the hospital entrance hall",
+     "hit": [
+      740,
+      30,
+      100,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gomme_noun",
+     "box": [
+      15,
+      545,
+      145,
+      90
+     ],
+     "labelAt": [
+      90,
+      513
+     ]
+    },
+    {
+     "id": "fr_lentille_noun",
+     "box": [
+      40,
+      60,
+      250,
+      240
+     ],
+     "labelAt": [
+      130,
+      250
+     ]
+    },
+    {
+     "id": "fr_prescription_noun",
+     "box": [
+      310,
+      80,
+      220,
+      180
+     ],
+     "labelAt": [
+      420,
+      100
+     ]
+    },
+    {
+     "id": "fr_loupe_noun",
+     "box": [
+      165,
+      310,
+      230,
+      285
+     ]
+    },
+    {
+     "id": "fr_aberration_noun",
+     "box": [
+      414,
+      265,
+      240,
+      175
+     ]
+    },
+    {
+     "id": "fr_dentaire_adj",
+     "box": [
+      406,
+      450,
+      245,
+      180
+     ],
+     "labelAt": [
+      528,
+      455
+     ]
+    },
+    {
+     "id": "fr_optique_adj",
+     "box": [
+      656,
+      405,
+      185,
+      220
+     ]
+    },
+    {
+     "id": "fr_iris_noun",
+     "box": [
+      848,
+      335,
+      182,
+      325
+     ]
+    },
+    {
+     "id": "fr_girofle_noun",
+     "box": [
+      860,
+      10,
+      290,
+      240
+     ],
+     "labelAt": [
+      935,
+      215
+     ]
+    },
+    {
+     "id": "fr_microscope_noun",
+     "box": [
+      1062,
+      258,
+      218,
+      380
+     ],
+     "labelAt": [
+      1170,
+      645
+     ]
+    }
+   ],
+   "building_id": "B19_hopital",
+   "sector_id": "S07_health"
+  }
+ }
+}

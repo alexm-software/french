@@ -1,0 +1,307 @@
+{
+ "building": "pharmacie",
+ "building_id": "B18_pharmacie",
+ "sector_id": "S07_health",
+ "name": "Pharmacie",
+ "main": "pharmacie",
+ "roomList": [
+  {
+   "key": "pharmacie",
+   "short": "La pharmacie"
+  }
+ ],
+ "planned": {
+  "pharmacie": {
+   "vocabRoom": "R_pharmacy",
+   "only": [
+    "fr_pharmacie_noun",
+    "fr_drogue_noun",
+    "fr_aiguille_noun",
+    "fr_medecine_noun",
+    "fr_ordonnance_noun",
+    "fr_pilule_noun",
+    "fr_comprime_noun",
+    "fr_pharmacien_noun",
+    "fr_traitement_noun",
+    "fr_sirop_noun",
+    "fr_flacon_noun",
+    "fr_remede_noun",
+    "fr_platre_noun",
+    "fr_medicament_noun"
+   ]
+  },
+  "etagere": {
+   "vocabRoom": "R_pharmacy",
+   "only": [
+    "fr_vitamine_noun",
+    "fr_cohorte_noun",
+    "fr_ponction_noun",
+    "fr_pharmaceutique_adj",
+    "fr_filon_noun",
+    "fr_antibiotique_noun",
+    "fr_appelant_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "pharmacie": {
+   "name": "La pharmacie",
+   "room_id": "R_pharmacy",
+   "image": "pharmacie/pharmacie.jpg",
+   "alt": "A bustling old-fashioned pharmacy, painted in ink and gouache: through the open shop door on the far left the street is sunny; a sea captain peers through a brass telescope under the green cross sign; a granny in a rocking chair knits with a pink marshmallow stuck on her needle; a maid measures a spoonful of medicine from a big brown bottle; a man dances, waving his prescription; a hamster sleeps on a soft round cushion; a farmer waits with his sneezing cow while a rabbit pulls the lever of a brass tablet press; the bearded pharmacist in a white coat carries a tray of warm towels and a drink to a sneezing bear in an armchair; his apprentice pours pink syrup into a bowl for two sniffly kittens; a mouse peeks into a tiny glass vial; a golden puppy shows off a plaster cast covered in paw prints beside a silver platter; a little man drives a toy car with a box of medicine towards a hedgehog; a beekeeper brings a steaming mug; a locked cabinet and a blank brass plaque hang on the wall, and a little wooden display case of toys stands on top of the jar shelves.",
+   "nameplate": [
+    10,
+    94
+   ],
+   "mapExit": {
+    "box": [
+     0,
+     40,
+     52,
+     330
+    ],
+    "label": "Quartier de la Santé"
+   },
+   "doors": [],
+   "zooms": [
+    {
+     "to": "etagere",
+     "label": "la petite vitrine",
+     "hint": "Look closer at the little wooden display case of toys on the back wall",
+     "at": [
+      736,
+      150
+     ],
+     "obj": [
+      590,
+      4,
+      292,
+      164
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_pharmacie_noun",
+     "box": [
+      100,
+      185,
+      225,
+      100
+     ]
+    },
+    {
+     "id": "fr_drogue_noun",
+     "box": [
+      372,
+      55,
+      90,
+      58
+     ]
+    },
+    {
+     "id": "fr_aiguille_noun",
+     "box": [
+      70,
+      390,
+      165,
+      120
+     ]
+    },
+    {
+     "id": "fr_medecine_noun",
+     "box": [
+      240,
+      290,
+      145,
+      200
+     ]
+    },
+    {
+     "id": "fr_ordonnance_noun",
+     "box": [
+      390,
+      255,
+      165,
+      255
+     ]
+    },
+    {
+     "id": "fr_pilule_noun",
+     "box": [
+      262,
+      540,
+      206,
+      130
+     ]
+    },
+    {
+     "id": "fr_comprime_noun",
+     "box": [
+      785,
+      300,
+      165,
+      115
+     ]
+    },
+    {
+     "id": "fr_pharmacien_noun",
+     "box": [
+      980,
+      215,
+      85,
+      200
+     ]
+    },
+    {
+     "id": "fr_traitement_noun",
+     "box": [
+      1110,
+      250,
+      158,
+      170
+     ]
+    },
+    {
+     "id": "fr_sirop_noun",
+     "box": [
+      905,
+      430,
+      100,
+      85
+     ]
+    },
+    {
+     "id": "fr_flacon_noun",
+     "box": [
+      1100,
+      436,
+      68,
+      86
+     ]
+    },
+    {
+     "id": "fr_remede_noun",
+     "box": [
+      1172,
+      450,
+      94,
+      230
+     ],
+     "labelAt": [
+      1207,
+      640
+     ]
+    },
+    {
+     "id": "fr_platre_noun",
+     "box": [
+      600,
+      480,
+      215,
+      210
+     ],
+     "labelAt": [
+      747,
+      488
+     ]
+    },
+    {
+     "id": "fr_medicament_noun",
+     "box": [
+      860,
+      590,
+      160,
+      115
+     ],
+     "labelAt": [
+      940,
+      597
+     ]
+    }
+   ],
+   "building_id": "B18_pharmacie",
+   "sector_id": "S07_health"
+  },
+  "etagere": {
+   "name": "La petite vitrine",
+   "room_id": "R_pharmacy_z1",
+   "image": "pharmacie/etagere.jpg",
+   "parent": "pharmacie",
+   "alt": "Close-up of the little wooden display case on the pharmacy's back wall: in the upper left a black ant pushes a huge orange ball, below it five wooden toy ducklings stand in a row, a tall narrow rack of coloured glass bottles stands in the middle, in the upper right a tiny toy miner touches a grey rock with glittering gold veins, below it a toy knight with a star shield chases two cheerful green germs away, and on the far right a pelican in a barrister's wig holds a rolled scroll. A small blank brass plaque is fixed on the bottom frame.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vitamine_noun",
+     "box": [
+      130,
+      115,
+      305,
+      180
+     ]
+    },
+    {
+     "id": "fr_cohorte_noun",
+     "box": [
+      55,
+      475,
+      415,
+      120
+     ]
+    },
+    {
+     "id": "fr_ponction_noun",
+     "box": [
+      108,
+      622,
+      170,
+      62
+     ],
+     "labelAt": [
+      370,
+      639
+     ]
+    },
+    {
+     "id": "fr_pharmaceutique_adj",
+     "box": [
+      480,
+      35,
+      145,
+      570
+     ]
+    },
+    {
+     "id": "fr_filon_noun",
+     "box": [
+      642,
+      72,
+      300,
+      225
+     ]
+    },
+    {
+     "id": "fr_antibiotique_noun",
+     "box": [
+      632,
+      340,
+      408,
+      260
+     ]
+    },
+    {
+     "id": "fr_appelant_noun",
+     "box": [
+      1045,
+      165,
+      200,
+      450
+     ]
+    }
+   ],
+   "building_id": "B18_pharmacie",
+   "sector_id": "S07_health"
+  }
+ }
+}
