@@ -29,16 +29,16 @@
       "id": "fr_cle_noun",
       "asset": "cle.webp",
       "rect": [
-        23,
-        47,
-        9,
+        7,
+        65,
+        6,
         10
       ],
       "label": [
-        27.5,
-        58.5
+        10,
+        76.5
       ],
-      "surface": "left workbench; clay base touches oak top",
+      "surface": "round wooden stool seat beside left workbench",
       "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
       "light": "neutral daylight from upper left",
       "target_height_px": 72,
@@ -67,19 +67,19 @@
       "id": "fr_planche_noun",
       "asset": "planche.webp",
       "rect": [
-        8,
-        47,
-        15,
-        14
+        16,
+        24,
+        14,
+        11
       ],
       "label": [
-        15.5,
-        62.2
+        23,
+        21.8
       ],
-      "surface": "left workbench; timber block rests on oak top",
+      "surface": "wall-mounted plank supported above the left peg rail",
       "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
       "light": "neutral daylight from upper left",
-      "target_height_px": 101,
+      "target_height_px": 79,
       "pose": "A goggled frog crouches on a PLANK, ready to PLUNGE. Plunge is an approximate cue for planche [PLAHNSH].",
       "occlusion": null,
       "card": {
@@ -274,44 +274,6 @@
       }
     },
     {
-      "id": "fr_bricolage_noun",
-      "asset": "bricolage.webp",
-      "rect": [
-        65.5,
-        58,
-        13.5,
-        28
-      ],
-      "label": [
-        72.25,
-        87.5
-      ],
-      "surface": "slate floor in front of right workbench; figure and freestanding easel grounded",
-      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
-      "light": "neutral daylight from upper left",
-      "target_height_px": 202,
-      "pose": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
-      "occlusion": null,
-      "card": {
-        "fr": "bricolage",
-        "art": "le",
-        "ind": "un",
-        "g": "m",
-        "en": "DIY; home craft work",
-        "ipa": "/bʁi.kɔ.laʒ/",
-        "say": "bree-koh-LAHZH",
-        "plural": "les bricolages",
-        "hook": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
-        "sound": "brick collage",
-        "strength": "strong",
-        "note": null,
-        "ex": [
-          "Mon père adore le bricolage.",
-          "My father loves DIY."
-        ]
-      }
-    },
-    {
       "id": "fr_atelier_noun",
       "asset": "atelier.webp",
       "rect": [
@@ -353,10 +315,10 @@
       "id": "fr_trou_noun",
       "asset": "trou.webp",
       "rect": [
-        53,
-        78,
-        9,
-        12
+        51.5,
+        76,
+        12,
+        14
       ],
       "label": [
         57.5,
@@ -366,7 +328,7 @@
       "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
       "light": "neutral daylight from upper left",
       "target_height_px": 86,
-      "pose": "A mole emerges from a HOLE holding a golf ball. Trou is pronounced [TROO]; this is a meaning picture.",
+      "pose": "A tiny TROOP of wind-up toy soldiers marches into a HOLE. TROOP without its final p sounds like trou [TROO].",
       "occlusion": null,
       "card": {
         "fr": "trou",
@@ -377,15 +339,517 @@
         "ipa": "/tʁu/",
         "say": "TROO",
         "plural": "les trous",
-        "hook": "A mole emerges from a HOLE holding a golf ball. Trou is pronounced [TROO]; this is a meaning picture.",
-        "sound": "none (meaning picture)",
-        "strength": "plain",
-        "note": null,
+        "hook": "A tiny TROOP of wind-up toy soldiers marches into a HOLE. TROOP without its final p sounds like trou [TROO].",
+        "sound": "troop, without final p",
+        "strength": "ok",
+        "note": "French trou ends in the vowel oo; the final p of English troop is omitted.",
         "ex": [
           "Il y a un trou dans le sol.",
           "There is a hole in the floor."
         ]
       }
+    },
+    {
+      "id": "fr_scier_verb",
+      "asset": "scier.webp",
+      "rect": [
+        10,
+        37,
+        20,
+        39
+      ],
+      "label": [
+        23,
+        57.9
+      ],
+      "surface": "left workbench; standing mime behind front fascia",
+      "camera": "three-quarter view at human scale",
+      "light": "neutral upper-left daylight",
+      "pose": "Monsieur Verbe SAWS a plank held firmly in a clamp. Scier is pronounced [SYAY]; this is a clear action picture.",
+      "card": {
+        "fr": "scier",
+        "verb": true,
+        "group": "-er",
+        "beret": "red",
+        "en": "to saw",
+        "ipa": "/sje/",
+        "say": "SYAY",
+        "hook": "Monsieur Verbe SAWS a plank held firmly in a clamp. Scier is pronounced [SYAY]; this is a clear action picture.",
+        "sound": "none (meaning picture)",
+        "strength": "plain",
+        "note": "An -er verb: the red beret. Scier keeps both i letters in nous sciions and vous sciiez.",
+        "ex": [
+          "Il scie une planche.",
+          "He saws a plank."
+        ],
+        "tenses": [
+          {
+            "key": "present",
+            "name": "Présent",
+            "rows": [
+              [
+                "je",
+                "scie"
+              ],
+              [
+                "tu",
+                "scies"
+              ],
+              [
+                "il / elle",
+                "scie"
+              ],
+              [
+                "nous",
+                "scions"
+              ],
+              [
+                "vous",
+                "sciez"
+              ],
+              [
+                "ils / elles",
+                "scient"
+              ]
+            ]
+          },
+          {
+            "key": "pc",
+            "name": "Passé composé",
+            "rows": [
+              [
+                "j'",
+                "ai scié"
+              ],
+              [
+                "tu",
+                "as scié"
+              ],
+              [
+                "il / elle",
+                "a scié"
+              ],
+              [
+                "nous",
+                "avons scié"
+              ],
+              [
+                "vous",
+                "avez scié"
+              ],
+              [
+                "ils / elles",
+                "ont scié"
+              ]
+            ]
+          },
+          {
+            "key": "imparfait",
+            "name": "Imparfait",
+            "rows": [
+              [
+                "je",
+                "sciais"
+              ],
+              [
+                "tu",
+                "sciais"
+              ],
+              [
+                "il / elle",
+                "sciait"
+              ],
+              [
+                "nous",
+                "sciions"
+              ],
+              [
+                "vous",
+                "sciiez"
+              ],
+              [
+                "ils / elles",
+                "sciaient"
+              ]
+            ]
+          },
+          {
+            "key": "futur",
+            "name": "Futur simple",
+            "rows": [
+              [
+                "je",
+                "scierai"
+              ],
+              [
+                "tu",
+                "scieras"
+              ],
+              [
+                "il / elle",
+                "sciera"
+              ],
+              [
+                "nous",
+                "scierons"
+              ],
+              [
+                "vous",
+                "scierez"
+              ],
+              [
+                "ils / elles",
+                "scieront"
+              ]
+            ]
+          },
+          {
+            "key": "cond",
+            "name": "Conditionnel présent",
+            "rows": [
+              [
+                "je",
+                "scierais"
+              ],
+              [
+                "tu",
+                "scierais"
+              ],
+              [
+                "il / elle",
+                "scierait"
+              ],
+              [
+                "nous",
+                "scierions"
+              ],
+              [
+                "vous",
+                "scieriez"
+              ],
+              [
+                "ils / elles",
+                "scieraient"
+              ]
+            ]
+          },
+          {
+            "key": "subj",
+            "name": "Subjonctif présent",
+            "rows": [
+              [
+                "que je",
+                "scie"
+              ],
+              [
+                "que tu",
+                "scies"
+              ],
+              [
+                "qu’il / qu’elle",
+                "scie"
+              ],
+              [
+                "que nous",
+                "sciions"
+              ],
+              [
+                "que vous",
+                "sciiez"
+              ],
+              [
+                "qu’ils / qu’elles",
+                "scient"
+              ]
+            ]
+          },
+          {
+            "key": "imper",
+            "name": "Impératif",
+            "rows": [
+              [
+                "(tu)",
+                "scie"
+              ],
+              [
+                "(nous)",
+                "scions"
+              ],
+              [
+                "(vous)",
+                "sciez"
+              ]
+            ]
+          }
+        ],
+        "parts": {
+          "present": "sciant",
+          "past": "scié",
+          "aux": "avoir"
+        }
+      },
+      "occlusion_polygons": [
+        [
+          [
+            8,
+            59
+          ],
+          [
+            37.5,
+            55
+          ],
+          [
+            37.5,
+            74
+          ],
+          [
+            8,
+            78
+          ]
+        ]
+      ],
+      "target_height_px": 281
+    },
+    {
+      "id": "fr_reparer_verb",
+      "asset": "reparer.webp",
+      "rect": [
+        65.5,
+        58,
+        13.5,
+        28
+      ],
+      "label": [
+        72.25,
+        88
+      ],
+      "surface": "right floor; crouching adult repairs a chair",
+      "camera": "three-quarter view at human scale",
+      "light": "neutral upper-left daylight",
+      "pose": "Monsieur Verbe REPAIRS a split chair leg with a clamp. Réparer [ray-pah-RAY] is related to English repair.",
+      "card": {
+        "fr": "réparer",
+        "verb": true,
+        "group": "-er",
+        "beret": "red",
+        "en": "to repair; to mend",
+        "ipa": "/ʁe.pa.ʁe/",
+        "say": "ray-pah-RAY",
+        "hook": "Monsieur Verbe REPAIRS a split chair leg with a clamp. Réparer [ray-pah-RAY] is related to English repair.",
+        "sound": "repair (related word)",
+        "strength": "plain",
+        "note": "Réparer un vélo, une chaise, une machine: repair a bicycle, chair or machine.",
+        "ex": [
+          "Mon père répare mon vélo.",
+          "My father is repairing my bike."
+        ],
+        "tenses": [
+          {
+            "key": "present",
+            "name": "Présent",
+            "rows": [
+              [
+                "je",
+                "répare"
+              ],
+              [
+                "tu",
+                "répares"
+              ],
+              [
+                "il / elle",
+                "répare"
+              ],
+              [
+                "nous",
+                "réparons"
+              ],
+              [
+                "vous",
+                "réparez"
+              ],
+              [
+                "ils / elles",
+                "réparent"
+              ]
+            ]
+          },
+          {
+            "key": "pc",
+            "name": "Passé composé",
+            "rows": [
+              [
+                "j'",
+                "ai réparé"
+              ],
+              [
+                "tu",
+                "as réparé"
+              ],
+              [
+                "il / elle",
+                "a réparé"
+              ],
+              [
+                "nous",
+                "avons réparé"
+              ],
+              [
+                "vous",
+                "avez réparé"
+              ],
+              [
+                "ils / elles",
+                "ont réparé"
+              ]
+            ]
+          },
+          {
+            "key": "imparfait",
+            "name": "Imparfait",
+            "rows": [
+              [
+                "je",
+                "réparais"
+              ],
+              [
+                "tu",
+                "réparais"
+              ],
+              [
+                "il / elle",
+                "réparait"
+              ],
+              [
+                "nous",
+                "réparions"
+              ],
+              [
+                "vous",
+                "répariez"
+              ],
+              [
+                "ils / elles",
+                "réparaient"
+              ]
+            ]
+          },
+          {
+            "key": "futur",
+            "name": "Futur simple",
+            "rows": [
+              [
+                "je",
+                "réparerai"
+              ],
+              [
+                "tu",
+                "répareras"
+              ],
+              [
+                "il / elle",
+                "réparera"
+              ],
+              [
+                "nous",
+                "réparerons"
+              ],
+              [
+                "vous",
+                "réparerez"
+              ],
+              [
+                "ils / elles",
+                "répareront"
+              ]
+            ]
+          },
+          {
+            "key": "cond",
+            "name": "Conditionnel présent",
+            "rows": [
+              [
+                "je",
+                "réparerais"
+              ],
+              [
+                "tu",
+                "réparerais"
+              ],
+              [
+                "il / elle",
+                "réparerait"
+              ],
+              [
+                "nous",
+                "réparerions"
+              ],
+              [
+                "vous",
+                "répareriez"
+              ],
+              [
+                "ils / elles",
+                "répareraient"
+              ]
+            ]
+          },
+          {
+            "key": "subj",
+            "name": "Subjonctif présent",
+            "rows": [
+              [
+                "que je",
+                "répare"
+              ],
+              [
+                "que tu",
+                "répares"
+              ],
+              [
+                "qu’il / qu’elle",
+                "répare"
+              ],
+              [
+                "que nous",
+                "réparions"
+              ],
+              [
+                "que vous",
+                "répariez"
+              ],
+              [
+                "qu’ils / qu’elles",
+                "réparent"
+              ]
+            ]
+          },
+          {
+            "key": "imper",
+            "name": "Impératif",
+            "rows": [
+              [
+                "(tu)",
+                "répare"
+              ],
+              [
+                "(nous)",
+                "réparons"
+              ],
+              [
+                "(vous)",
+                "réparez"
+              ]
+            ]
+          }
+        ],
+        "parts": {
+          "present": "réparant",
+          "past": "réparé",
+          "aux": "avoir"
+        }
+      },
+      "target_height_px": 202
     }
   ],
   "reserve": [],
@@ -451,5 +915,451 @@
       138
     ],
     "route": "#/garage"
-  }
+  },
+  "assignment_note": "User requested fuller workshop coverage. content/assignment.json explicitly assigns two verbs from superseded streets and moves bricolage to the planned workbench zoom.",
+  "assignment_changes": [
+    {
+      "id": "fr_scier_verb",
+      "from": "ST_perception_seg006",
+      "to": "R_garage"
+    },
+    {
+      "id": "fr_reparer_verb",
+      "from": "ST_making_seg001",
+      "to": "R_garage"
+    },
+    {
+      "id": "fr_bricolage_noun",
+      "from": "R_garage",
+      "to": "R_garage_z1"
+    }
+  ],
+  "zooms": [
+    {
+      "key": "tools",
+      "room_id": "R_garage_z1",
+      "name": "L’établi des outils",
+      "background": "tools-background.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "nameplate": [
+        76,
+        13
+      ],
+      "items": [
+        {
+          "id": "fr_ficelle_noun",
+          "asset": "ficelle.webp",
+          "rect": [
+            12,
+            26,
+            12,
+            19
+          ],
+          "label": [
+            18,
+            47
+          ],
+          "surface": "left tabletop",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A shop-mouse holds a payment FEE beside the TWINE it is selling. FEE–SELL loosely cues ficelle [fee-SEHL].",
+          "card": {
+            "fr": "ficelle",
+            "art": "la",
+            "ind": "une",
+            "g": "f",
+            "en": "twine; string",
+            "ipa": "/fi.sɛl/",
+            "say": "fee-SEHL",
+            "plural": "les ficelles",
+            "hook": "A shop-mouse holds a payment FEE beside the TWINE it is selling. FEE–SELL loosely cues ficelle [fee-SEHL].",
+            "sound": "fee, sell (approximate)",
+            "strength": "ok",
+            "ex": [
+              "Il attache le paquet avec une ficelle.",
+              "He ties the parcel with string."
+            ]
+          },
+          "target_height_px": 137
+        },
+        {
+          "id": "fr_vis_noun",
+          "asset": "vis.webp",
+          "rect": [
+            28,
+            32,
+            12,
+            16
+          ],
+          "label": [
+            34,
+            50
+          ],
+          "surface": "left tabletop",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "Two toy GEESE hold a SCREW. Vis [VEES] rhymes with geese; the first consonant is v.",
+          "card": {
+            "fr": "vis",
+            "art": "la",
+            "ind": "une",
+            "g": "f",
+            "en": "screw",
+            "ipa": "/vis/",
+            "say": "VEES",
+            "plural": "les vis",
+            "hook": "Two toy GEESE hold a SCREW. Vis [VEES] rhymes with geese; the first consonant is v.",
+            "sound": "geese (rhyme)",
+            "strength": "ok",
+            "ex": [
+              "Il serre la vis avec un tournevis.",
+              "He tightens the screw with a screwdriver."
+            ],
+            "note": "Pronounce VEES, rhyming with geese. English vise/vice sounds different. The singular and plural are spelled vis."
+          },
+          "target_height_px": 115
+        },
+        {
+          "id": "fr_attache_noun",
+          "asset": "attache.webp",
+          "rect": [
+            40.8,
+            0,
+            7,
+            18
+          ],
+          "label": [
+            44.3,
+            20.5
+          ],
+          "surface": "left wall peg",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A metal FASTENER holds a fake MOUSTACHE: a TASH recalls attache [ah-TAHSH].",
+          "card": {
+            "fr": "attache",
+            "art": "l'",
+            "ind": "une",
+            "g": "f",
+            "en": "fastener; clip",
+            "ipa": "/a.taʃ/",
+            "say": "ah-TAHSH",
+            "plural": "les attaches",
+            "hook": "A metal FASTENER holds a fake MOUSTACHE: a TASH recalls attache [ah-TAHSH].",
+            "sound": "a tash",
+            "strength": "strong",
+            "ex": [
+              "L'attache de mon sac est cassée.",
+              "My bag's fastener is broken."
+            ]
+          },
+          "target_height_px": 130
+        },
+        {
+          "id": "fr_manivelle_noun",
+          "asset": "manivelle.webp",
+          "rect": [
+            17,
+            64,
+            14,
+            17
+          ],
+          "label": [
+            24,
+            83
+          ],
+          "surface": "left lower shelf",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A toy MAN on one KNEE turns the hand CRANK of a tiny WELL. MAN–KNEE–WELL loosely cues manivelle [mah-nee-VEHL].",
+          "card": {
+            "fr": "manivelle",
+            "art": "la",
+            "ind": "une",
+            "g": "f",
+            "en": "hand crank",
+            "ipa": "/ma.ni.vɛl/",
+            "say": "mah-nee-VEHL",
+            "plural": "les manivelles",
+            "hook": "A toy MAN on one KNEE turns the hand CRANK of a tiny WELL. MAN–KNEE–WELL loosely cues manivelle [mah-nee-VEHL].",
+            "sound": "man, knee, well (approximate)",
+            "strength": "ok",
+            "ex": [
+              "Il tourne la manivelle pour ouvrir le store.",
+              "He turns the crank to open the blind."
+            ]
+          },
+          "target_height_px": 122
+        },
+        {
+          "id": "fr_outil_noun",
+          "asset": "outil.webp",
+          "rect": [
+            48.5,
+            11.5,
+            7,
+            19
+          ],
+          "label": [
+            52.5,
+            31.5
+          ],
+          "surface": "right wall peg",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A wrench, a TOOL, grips a cup of TEA. TEA cues only the end of outil [oo-TEE].",
+          "card": {
+            "fr": "outil",
+            "art": "l'",
+            "ind": "un",
+            "g": "m",
+            "en": "tool",
+            "ipa": "/u.ti/",
+            "say": "oo-TEE",
+            "plural": "les outils",
+            "hook": "A wrench, a TOOL, grips a cup of TEA. TEA cues only the end of outil [oo-TEE].",
+            "sound": "tea (ending cue)",
+            "strength": "ok",
+            "ex": [
+              "Mon père range ses outils dans le garage.",
+              "My father keeps his tools in the garage."
+            ]
+          },
+          "target_height_px": 137,
+          "rotation": 50
+        },
+        {
+          "id": "fr_clou_noun",
+          "asset": "clou.webp",
+          "rect": [
+            56,
+            33,
+            13,
+            11
+          ],
+          "label": [
+            62.5,
+            46
+          ],
+          "surface": "right tabletop",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A magnifying glass examines a fingerprint on a NAIL as a CLUE: clou [KLOO].",
+          "card": {
+            "fr": "clou",
+            "art": "le",
+            "ind": "un",
+            "g": "m",
+            "en": "nail",
+            "ipa": "/klu/",
+            "say": "KLOO",
+            "plural": "les clous",
+            "hook": "A magnifying glass examines a fingerprint on a NAIL as a CLUE: clou [KLOO].",
+            "sound": "clue",
+            "strength": "ok",
+            "ex": [
+              "Il plante un clou dans le mur.",
+              "He hammers a nail into the wall."
+            ]
+          },
+          "target_height_px": 79
+        },
+        {
+          "id": "fr_marteau_noun",
+          "asset": "marteau.webp",
+          "rect": [
+            70,
+            23,
+            10,
+            17
+          ],
+          "label": [
+            75,
+            42
+          ],
+          "surface": "right tabletop",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A red toy MARtian holds a HAMMER above its boot TOE. MAR–TOE loosely cues marteau [mahr-TOH].",
+          "card": {
+            "fr": "marteau",
+            "art": "le",
+            "ind": "un",
+            "g": "m",
+            "en": "hammer",
+            "ipa": "/maʁ.to/",
+            "say": "mahr-TOH",
+            "plural": "les marteaux",
+            "hook": "A red toy MARtian holds a HAMMER above its boot TOE. MAR–TOE loosely cues marteau [mahr-TOH].",
+            "sound": "Mar(tian), toe (approximate)",
+            "strength": "ok",
+            "ex": [
+              "Passe-moi le marteau.",
+              "Pass me the hammer."
+            ]
+          },
+          "target_height_px": 122
+        },
+        {
+          "id": "fr_ressort_noun",
+          "asset": "ressort.webp",
+          "rect": [
+            83,
+            20,
+            9,
+            17
+          ],
+          "label": [
+            87.5,
+            39
+          ],
+          "surface": "far-right tabletop",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A tiny holiday RESORT rests on a coil SPRING. Resort loosely cues ressort [ruh-SOR].",
+          "card": {
+            "fr": "ressort",
+            "art": "le",
+            "ind": "un",
+            "g": "m",
+            "en": "spring",
+            "ipa": "/ʁə.sɔʁ/",
+            "say": "ruh-SOR",
+            "plural": "les ressorts",
+            "hook": "A tiny holiday RESORT rests on a coil SPRING. Resort loosely cues ressort [ruh-SOR].",
+            "sound": "resort (approximate)",
+            "strength": "ok",
+            "ex": [
+              "Le ressort du matelas est cassé.",
+              "The mattress spring is broken."
+            ]
+          },
+          "target_height_px": 122
+        },
+        {
+          "id": "fr_ciseau_noun",
+          "asset": "ciseau.webp",
+          "rect": [
+            52,
+            52.5,
+            14,
+            12
+          ],
+          "label": [
+            59,
+            66.5
+          ],
+          "surface": "right lower shelf",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A CHISEL cuts a spiral into a limestone block. Ciseau is pronounced [see-ZOH]; this is a meaning picture.",
+          "card": {
+            "fr": "ciseau",
+            "art": "le",
+            "ind": "un",
+            "g": "m",
+            "en": "chisel",
+            "ipa": "/si.zo/",
+            "say": "see-ZOH",
+            "plural": "les ciseaux",
+            "hook": "A CHISEL cuts a spiral into a limestone block. Ciseau is pronounced [see-ZOH]; this is a meaning picture.",
+            "sound": "none (meaning picture)",
+            "strength": "plain",
+            "ex": [
+              "Le sculpteur travaille le bois au ciseau.",
+              "The sculptor works the wood with a chisel."
+            ],
+            "note": "Un ciseau is a chisel; les ciseaux usually means scissors."
+          },
+          "target_height_px": 86
+        },
+        {
+          "id": "fr_assemblage_noun",
+          "asset": "assemblage.webp",
+          "rect": [
+            50.5,
+            71,
+            15,
+            14
+          ],
+          "label": [
+            58,
+            87
+          ],
+          "surface": "floor beneath bench",
+          "camera": "close three-quarter view, slightly above",
+          "light": "neutral upper-left daylight",
+          "pose": "A tiny wooden go-kart is halfway through ASSEMBLY, with its loose wheel and axle beside it. Assemblage is pronounced [ah-sahn-BLAHZH].",
+          "card": {
+            "fr": "assemblage",
+            "art": "l'",
+            "ind": "un",
+            "g": "m",
+            "en": "assembly; putting parts together",
+            "ipa": "/a.sɑ̃.blaʒ/",
+            "say": "ah-sahn-BLAHZH",
+            "plural": "les assemblages",
+            "hook": "A tiny wooden go-kart is halfway through ASSEMBLY, with its loose wheel and axle beside it. Assemblage is pronounced [ah-sahn-BLAHZH].",
+            "sound": "none (meaning picture)",
+            "strength": "plain",
+            "ex": [
+              "L'assemblage du meuble prend une heure.",
+              "Assembling the furniture takes an hour."
+            ]
+          },
+          "target_height_px": 101
+        },
+        {
+          "id": "fr_bricolage_noun",
+          "asset": "bricolage.webp",
+          "rect": [
+            68,
+            60,
+            25,
+            33
+          ],
+          "label": [
+            80.5,
+            94.5
+          ],
+          "surface": "slate floor beside the same left workbench; adult crouching at close-up scale",
+          "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+          "light": "neutral daylight from upper left",
+          "target_height_px": 238,
+          "pose": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
+          "occlusion": null,
+          "card": {
+            "fr": "bricolage",
+            "art": "le",
+            "ind": "un",
+            "g": "m",
+            "en": "DIY; home craft work",
+            "ipa": "/bʁi.kɔ.laʒ/",
+            "say": "bree-koh-LAHZH",
+            "plural": "les bricolages",
+            "hook": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
+            "sound": "brick collage",
+            "strength": "strong",
+            "note": null,
+            "ex": [
+              "Mon père adore le bricolage.",
+              "My father loves DIY."
+            ]
+          }
+        }
+      ],
+      "alt": "Close view of the same scarred oak workbench, sage wall, left window and blue slate floor; eleven tools and DIY projects.",
+      "zoom_from": {
+        "label": "Les outils",
+        "hint": "Explore the workbench tools",
+        "at": [
+          270,
+          470
+        ]
+      }
+    }
+  ]
 }

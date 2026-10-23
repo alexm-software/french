@@ -1,48 +1,40 @@
-# Garage package review
+# Garage expansion — pre-merge review
 
-Base: `09d0b3c8681f34172510428070aa599294974606`. Claim commit: `6d7e0434c956ba58cf3d656972dd038e651dd910`. Independent reviewer: `garage_review` (separate agent, required by the repository release-gates skill).
+Base: `dac80bfe9b41d98b9b64c8367dc84e119c1ddd7e`. Independent reviewer: `garage_review`, separate from the painter.
 
-Verdict: **independent visual and package checks pass; user approved merge**. No unresolved asset/hook/content findings in the nine reviewed sprites. Browser/integration gates are pending, not certified.
+**Pass in reviewed scope:** 21 source assets and matching hooks, both final composition proofs, French tables/plurals, image decoding, package geometry and static navigation. User already authorized merge. Actual browser/mobile/fullscreen and whole-site gates are not certified by this pre-merge review.
 
-| Word | Source asset / hook / anatomy | Final composition proof |
-|---|---|---|
-| la clé | Pass | Pass |
-| la planche | Pass | Pass |
-| l'échelle | Pass | Pass |
-| la réparation | Pass | Pass |
-| le garage | Pass | Pass |
-| le verrou | Pass | Pass |
-| le bricolage | Pass | Pass |
-| l'atelier | Pass | Pass |
-| le trou | Pass | Pass |
+## User feedback addressed
 
-## Findings resolved
+- Garage was sparse and noun-only: expand from nine words to21 across main room10 and workbench zoom11. Add scier and réparer, with red-beret Monsieur Verbe, full seven-tense cards, participles, auxiliary and examples. Keep all nineteen planned garage/tool nouns; move bricolage into the close-up through an explicit assignment update.
+- Trou had a weak meaning-only hook: replace the mole/golf-ball sprite with a TROOP of wind-up toys marching into a HOLE. TROOP without final p gives TROO. Redraw the asset and replace its hook together.
 
-- Brick collage originally showed a landscape: replaced only its sprite with physical colored bricks.
-- Garage model initially floated above its niche: moved onto the stone sill.
-- Adult craft figures were too small: enlarged and reflowed them.
-- Plank and ladder contact with surfaces corrected; ladder lower legs occluded behind workbench.
-- The independent reviewer found an empty derived atelier card: rebuilt it, reran checks and independently verified its nonzero size.
-- Label/hotspot collisions found during layout were cleared and the package checker now passes.
+## Fixes during review
 
-## Checks performed
+- Remove accidental miniature benches from ficelle, vis, clou, marteau, ciseau and assemblage sprites; enlarge the isolated tools and helpers.
+- Remove manivelle's colored/opaque halo.
+- Ground the sawing plank/clamp on the actual bench, with lower-body furniture occlusion and tight post-occlusion hotspots.
+- Hang attache and outil from their peg positions; move the outil label to expose its tea-cup cue.
+- Correct marteau → les marteaux and ciseau → les ciseaux.
+- Preserve whole source sprites; generate smaller 384px card crops and write outputs atomically so no reader sees an empty file.
 
-- Exact inventory equality: 9/9 planned R_garage words, no duplicates or borrowed zoom words.
-- Gender halves, French articles/plurals, original example pairs and honest hook ratings.
-- Separate alpha sprites; item/hotspot separation, 6% asset margins and clear courtyard doorway.
-- Conservative label rectangles in the explicit DejaVu Serif fallback font; no overlaps with other labels/assets/door.
-- Every source sprite and final composition proof visually inspected independently.
-- JavaScript syntax, Python package checker and `git diff --check` pass.
-- Independent map review confirms the upper-right outbuilding polygon is separate from the windmill and market. Normal map routing, lazy-loaded garage data, main-entry stylesheet and return-door wiring pass static checks. The hover tag is inset to avoid right-edge clipping.
+## Checks
 
-## Not checked / release limits
+- Exact explicit assignment: 21 unique IDs =19 original garage/tool nouns +2 relevant verbs from superseded verb streets. Other sector assignments are preserved.
+- Feminine nouns left and masculine nouns right; two red-beret -er verbs.
+- All seven tense tabs and six-person forms (three imperative forms), including scier sciions/sciiez; correct participles and avoir auxiliary.
+- Alpha and decoding of all referenced images; no empty files. Hotspot separation, fallback-font label estimates, margins, doorway clearance and zoom badge clearance pass.
+- Independent native-size crop/scene review passes. No accidental furniture, wrong hooks or floating assets remain in the reviewed proofs.
+- JavaScript syntax, Python package checker and diff whitespace checks pass.
+- Static village-map → garage → tools → garage and painted garage-door → village wiring pass. Tense choices now wrap.
 
-- Actual browser interaction, fullscreen and phone rendering: no browser binary was available; the Chromium download returned an invalid archive. The proof is a deterministic composition, not a browser screenshot.
-- Exact browser font metrics, every live-site control, whole-palace CLIP similarity and full-site release gates remain unverified. Canonical historical gate tools named by the skill are absent from this checkout.
-- The existing top-strip Home and Back controls were not globally redesigned. The village map now links its small stone outbuilding beside the windmill to `#/garage`; the room door returns to the map. The standalone `garage-preview.html` entry is also retained.
-- The user reviewed the direction during work and explicitly authorized merge. No further approval is pending. Browser limits above remain documented.
+Minor findings: the two mime faces differ slightly (one moustache); zoom density11 is within the warning range. Neither obscures a word or changes the grammar convention.
 
-## Reviewed proof hashes
+Browser checks are performed after deployment and reported separately; a composition proof is not a browser screenshot. No mobile/fullscreen or whole-site verdict is inferred from these package checks.
 
-- `room-proof.jpg`: `dbde543738551b818beff5a26f714362f4e302dc80e62a805eac86a10b784b29`
-- `item-crops.jpg`: `5a644eb18caa1814ad10d3d7e29637fb61142a20ecb4693d7d35c0f48e6ba811`
+## Reviewed proofs
+
+- `room-proof.jpg`: SHA-256 `eef8b510a4be4e62e6f3ddd3f63af258f1db4cd57d57f214a17e6e46ea85c5a2`
+- `tools-proof.jpg`: SHA-256 `491a49cbfe11eb6075540b9f38b9a2cb9a99610bd26461f5955318f148ad6373`
+- `item-crops.jpg`: SHA-256 `a3d3e05fbb6b940967c3f0608207962c29d99af32a685301a9a9ce49c3b7b376`
+- `tools-crops.jpg`: SHA-256 `e2dc0c88bcd82051b7a4d4ef756a730e64880b9e2b647eafd1f38d47f5a37d78`
