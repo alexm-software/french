@@ -42,7 +42,7 @@ TOBACC = BLOCK[-1]
 SMOKE_NOUNS = {"fr_fumee_noun"}
 TABAC_NOUNS = {"fr_tabac_noun"}
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
-ART = re.compile(r"^(le|la|les|l'|le/la|un|une) ?", re.I)
+ART = re.compile(r"^(?:(?:le|la|les|le/la|un|une) |l['’])", re.I)  # 'las', 'lent', 'unique' are not articles
 
 
 def load_payload(bld):
