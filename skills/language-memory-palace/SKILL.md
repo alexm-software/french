@@ -49,6 +49,8 @@ Mix verbs into the ordinary themed rooms where the action naturally happens (cut
 - **Mature or sensitive words** go as text on a museum wall, never drawn.
 
 ## Room density
+Before calling a room populated, audit coverage as well as count: list its common objects, natural actions and planned zoom contents. A noun-only assignment is not a complete activity room. Move suitable verbs from superseded verb streets into the themed room through an explicit assignment update, retain the verb character and full verb cards, and finish useful planned close-ups. Do not stop at a small noun quota when the setting has room for meaningful actions.
+
 Each room's main painting holds about 10 to 12 of its commonest words, well spaced, with the verbs among them. Add zoom spots (a counter, shelf, desk or stall of about 6 words each) only where the room needs more space and the spot makes sense; there is no fixed number. Rare words can wait in a room or zoom as cards without pictures.
 
 ## Detail card for every word
