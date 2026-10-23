@@ -1,0 +1,455 @@
+{
+  "schema": 1,
+  "room_id": "R_garage",
+  "building_id": "B05_maison",
+  "name": "Le garage",
+  "style": "ink and gouache storybook, natural daylight, curved teal truss and circular window",
+  "background": "background.jpg",
+  "size": [
+    1280,
+    720
+  ],
+  "nameplate": [
+    52,
+    27.7
+  ],
+  "exit": {
+    "box": [
+      43,
+      32,
+      22,
+      37
+    ],
+    "destination": "village",
+    "label": "Le village"
+  },
+  "assignment_source": "data/source/rooms.json: R_garage.words",
+  "items": [
+    {
+      "id": "fr_cle_noun",
+      "asset": "cle.webp",
+      "rect": [
+        23,
+        47,
+        9,
+        10
+      ],
+      "label": [
+        27.5,
+        58.5
+      ],
+      "surface": "left workbench; clay base touches oak top",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 72,
+      "pose": "A slab of CLAY holds a deep KEY impression, with the silver key at its foot. CLAY recalls clé [KLAY].",
+      "occlusion": null,
+      "card": {
+        "fr": "clé",
+        "art": "la",
+        "ind": "une",
+        "g": "f",
+        "en": "key",
+        "ipa": "/kle/",
+        "say": "KLAY",
+        "plural": "les clés",
+        "hook": "A slab of CLAY holds a deep KEY impression, with the silver key at its foot. CLAY recalls clé [KLAY].",
+        "sound": "clay",
+        "strength": "strong",
+        "note": null,
+        "ex": [
+          "J'ai perdu ma clé.",
+          "I've lost my key."
+        ]
+      }
+    },
+    {
+      "id": "fr_planche_noun",
+      "asset": "planche.webp",
+      "rect": [
+        8,
+        47,
+        15,
+        14
+      ],
+      "label": [
+        15.5,
+        62.2
+      ],
+      "surface": "left workbench; timber block rests on oak top",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 101,
+      "pose": "A goggled frog crouches on a PLANK, ready to PLUNGE. Plunge is an approximate cue for planche [PLAHNSH].",
+      "occlusion": null,
+      "card": {
+        "fr": "planche",
+        "art": "la",
+        "ind": "une",
+        "g": "f",
+        "en": "plank",
+        "ipa": "/plɑ̃ʃ/",
+        "say": "PLAHNSH",
+        "plural": "les planches",
+        "hook": "A goggled frog crouches on a PLANK, ready to PLUNGE. Plunge is an approximate cue for planche [PLAHNSH].",
+        "sound": "plunge (approximate)",
+        "strength": "ok",
+        "note": "The French final sound is sh, rather than the j sound in English plunge.",
+        "ex": [
+          "Il coupe une planche de bois.",
+          "He's cutting a wooden plank."
+        ]
+      }
+    },
+    {
+      "id": "fr_echelle_noun",
+      "asset": "echelle.webp",
+      "rect": [
+        31,
+        27,
+        11.5,
+        41
+      ],
+      "label": [
+        39,
+        63
+      ],
+      "surface": "floor behind left workbench; bench occludes lower ladder",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 295,
+      "pose": "A SHELL rests on top of a wooden LADDER: a shell recalls échelle [ay-SHEHL].",
+      "occlusion": "left bench top and fascia",
+      "card": {
+        "fr": "échelle",
+        "art": "l'",
+        "ind": "une",
+        "g": "f",
+        "en": "ladder",
+        "ipa": "/e.ʃɛl/",
+        "say": "ay-SHEHL",
+        "plural": "les échelles",
+        "hook": "A SHELL rests on top of a wooden LADDER: a shell recalls échelle [ay-SHEHL].",
+        "sound": "a shell",
+        "strength": "strong",
+        "note": null,
+        "ex": [
+          "Il monte sur l'échelle.",
+          "He climbs up the ladder."
+        ]
+      },
+      "occlusion_polygons": [
+        [
+          [
+            30.5,
+            56
+          ],
+          [
+            37.3,
+            53.5
+          ],
+          [
+            37.3,
+            68.5
+          ],
+          [
+            30.5,
+            68.5
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "fr_reparation_noun",
+      "asset": "reparation.webp",
+      "rect": [
+        17,
+        70,
+        24,
+        19
+      ],
+      "label": [
+        29,
+        90.5
+      ],
+      "surface": "left foreground slate floor; bicycle stand and robot feet grounded",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 137,
+      "pose": "A little blue robot tightens the wheel nut to REPAIR a bicycle. Réparation [ray-pah-rah-SYOHN] means repair; this is a meaning picture, not a full sound pun.",
+      "occlusion": null,
+      "card": {
+        "fr": "réparation",
+        "art": "la",
+        "ind": "une",
+        "g": "f",
+        "en": "repair",
+        "ipa": "/ʁe.pa.ʁa.sjɔ̃/",
+        "say": "ray-pah-rah-SYOHN",
+        "plural": "les réparations",
+        "hook": "A little blue robot tightens the wheel nut to REPAIR a bicycle. Réparation [ray-pah-rah-SYOHN] means repair; this is a meaning picture, not a full sound pun.",
+        "sound": "repair (related word)",
+        "strength": "plain",
+        "note": "Une réparation is a repair; faire réparer means to have something repaired.",
+        "ex": [
+          "La réparation du vélo est terminée.",
+          "The bicycle repair is finished."
+        ]
+      }
+    },
+    {
+      "id": "fr_garage_noun",
+      "asset": "garage.webp",
+      "rect": [
+        69.5,
+        44,
+        8,
+        10
+      ],
+      "label": [
+        73.5,
+        40
+      ],
+      "surface": "back wall niche stone sill; small architectural model",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 72,
+      "pose": "A red car is parked inside a miniature GARAGE. The French word sounds gah-RAHZH, with a soft zh ending.",
+      "occlusion": null,
+      "card": {
+        "fr": "garage",
+        "art": "le",
+        "ind": "un",
+        "g": "m",
+        "en": "garage",
+        "ipa": "/ɡa.ʁaʒ/",
+        "say": "gah-RAHZH",
+        "plural": "les garages",
+        "hook": "A red car is parked inside a miniature GARAGE. The French word sounds gah-RAHZH, with a soft zh ending.",
+        "sound": "garage (cognate)",
+        "strength": "plain",
+        "note": null,
+        "ex": [
+          "La voiture est au garage.",
+          "The car is in the garage."
+        ]
+      }
+    },
+    {
+      "id": "fr_verrou_noun",
+      "asset": "verrou.webp",
+      "rect": [
+        86.5,
+        43,
+        7,
+        13
+      ],
+      "label": [
+        90,
+        40
+      ],
+      "surface": "right cupboard door; both mounting plates screwed to wood",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 94,
+      "pose": "A tiny kangaroo grips a sliding door BOLT. Roo cues the ending of verrou [veh-ROO]; the first syllable is veh.",
+      "occlusion": null,
+      "card": {
+        "fr": "verrou",
+        "art": "le",
+        "ind": "un",
+        "g": "m",
+        "en": "sliding bolt",
+        "ipa": "/vɛ.ʁu/",
+        "say": "veh-ROO",
+        "plural": "les verrous",
+        "hook": "A tiny kangaroo grips a sliding door BOLT. Roo cues the ending of verrou [veh-ROO]; the first syllable is veh.",
+        "sound": "roo (ending cue)",
+        "strength": "ok",
+        "note": "A verrou is a sliding bolt, not a key-operated lock (une serrure).",
+        "ex": [
+          "Il ferme la porte au verrou.",
+          "He bolts the door."
+        ]
+      }
+    },
+    {
+      "id": "fr_bricolage_noun",
+      "asset": "bricolage.webp",
+      "rect": [
+        65.5,
+        58,
+        13.5,
+        28
+      ],
+      "label": [
+        72.25,
+        87.5
+      ],
+      "surface": "slate floor in front of right workbench; figure and freestanding easel grounded",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 202,
+      "pose": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
+      "occlusion": null,
+      "card": {
+        "fr": "bricolage",
+        "art": "le",
+        "ind": "un",
+        "g": "m",
+        "en": "DIY; home craft work",
+        "ipa": "/bʁi.kɔ.laʒ/",
+        "say": "bree-koh-LAHZH",
+        "plural": "les bricolages",
+        "hook": "A craftswoman assembles a BRICK COLLAGE: a homemade DIY project, bricolage [bree-koh-LAHZH].",
+        "sound": "brick collage",
+        "strength": "strong",
+        "note": null,
+        "ex": [
+          "Mon père adore le bricolage.",
+          "My father loves DIY."
+        ]
+      }
+    },
+    {
+      "id": "fr_atelier_noun",
+      "asset": "atelier.webp",
+      "rect": [
+        79,
+        57,
+        15,
+        34
+      ],
+      "label": [
+        86,
+        93.4
+      ],
+      "surface": "right foreground slate floor; adult carpenter at human scale",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 245,
+      "pose": "A carpenter proudly holds up the tall stool he made in his WORKSHOP, atelier [ah-tuh-LYAY]. This is a meaning picture.",
+      "occlusion": null,
+      "card": {
+        "fr": "atelier",
+        "art": "l'",
+        "ind": "un",
+        "g": "m",
+        "en": "workshop",
+        "ipa": "/a.tə.lje/",
+        "say": "ah-tuh-LYAY",
+        "plural": "les ateliers",
+        "hook": "A carpenter proudly holds up the tall stool he made in his WORKSHOP, atelier [ah-tuh-LYAY]. This is a meaning picture.",
+        "sound": "none (meaning picture)",
+        "strength": "plain",
+        "note": null,
+        "ex": [
+          "Je travaille dans mon atelier.",
+          "I work in my workshop."
+        ]
+      }
+    },
+    {
+      "id": "fr_trou_noun",
+      "asset": "trou.webp",
+      "rect": [
+        53,
+        78,
+        9,
+        12
+      ],
+      "label": [
+        57.5,
+        91.5
+      ],
+      "surface": "right slate floor; mole emerges through a broken tile",
+      "camera": "front three-quarter, eye level, downward view of horizontal surfaces",
+      "light": "neutral daylight from upper left",
+      "target_height_px": 86,
+      "pose": "A mole emerges from a HOLE holding a golf ball. Trou is pronounced [TROO]; this is a meaning picture.",
+      "occlusion": null,
+      "card": {
+        "fr": "trou",
+        "art": "le",
+        "ind": "un",
+        "g": "m",
+        "en": "hole",
+        "ipa": "/tʁu/",
+        "say": "TROO",
+        "plural": "les trous",
+        "hook": "A mole emerges from a HOLE holding a golf ball. Trou is pronounced [TROO]; this is a meaning picture.",
+        "sound": "none (meaning picture)",
+        "strength": "plain",
+        "note": null,
+        "ex": [
+          "Il y a un trou dans le sol.",
+          "There is a hole in the floor."
+        ]
+      }
+    }
+  ],
+  "reserve": [],
+  "dialogue": {
+    "title": "Réparer le vélo",
+    "speakers": [
+      "Camille",
+      "Alex"
+    ],
+    "lines": [
+      [
+        "Camille",
+        "Tu peux m’aider à réparer mon vélo ?",
+        "Can you help me repair my bicycle?"
+      ],
+      [
+        "Alex",
+        "Oui. Apporte-le dans le garage. Mon atelier est prêt.",
+        "Yes. Bring it into the garage. My workshop is ready."
+      ],
+      [
+        "Camille",
+        "La réparation va prendre longtemps ?",
+        "Will the repair take long?"
+      ],
+      [
+        "Alex",
+        "Non, mais ferme le verrou et pose la clé sur la planche.",
+        "No, but slide the bolt shut and put the key on the plank."
+      ]
+    ]
+  },
+  "map_entrance": {
+    "building": "small stone outbuilding beside the windmill",
+    "polygon": [
+      [
+        1194,
+        116
+      ],
+      [
+        1223,
+        80
+      ],
+      [
+        1249,
+        87
+      ],
+      [
+        1266,
+        118
+      ],
+      [
+        1262,
+        157
+      ],
+      [
+        1195,
+        150
+      ]
+    ],
+    "door": [
+      1236,
+      138
+    ],
+    "route": "#/garage"
+  }
+}
