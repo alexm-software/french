@@ -349,8 +349,8 @@ L = json.loads(r'''{
    "backTo": "port",
    "alt": "The cove at the end of the harbour seen from the jetty: a cruise ship with an escalator gangway, a container ship, an otter in a deckchair, a crab riding an anchor, a seagull leading ducklings, a pea pirate in a canoe, four otters rowing past signal flags, a parrot tying a knot, a castaway on a palm islet, a ferry with a red car between the cliffs, a penguin at a ship's wheel, an explorer with a telescope, a seal clapping and a boy arriving with flowers.",
    "nameplate": [
-    50,
-    4.5
+    33,
+    5
    ],
    "doors": [
     {
@@ -383,10 +383,10 @@ L = json.loads(r'''{
     {
      "id": "fr_container_noun",
      "box": [
-      300,
-      62,
-      220,
-      98
+      748,
+      222,
+      140,
+      82
      ]
     },
     {

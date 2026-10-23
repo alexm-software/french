@@ -13,6 +13,13 @@ v2-specific inputs live in content/v2/<building>/:
   hooks.json   optional {word_id: {"hook": ..., "why": ...}} overrides, used ONLY where the
                v1 hook breaks the content rules or cannot be painted; the painting must show
                the override hook. v1 data is never edited.
+               An entry may also (or only) carry "art" and/or "g" to correct the article or
+               gender on labels and cards, e.g. {"fr_hammam_noun": {"art": "le"}} (aspirate h)
+               or {"fr_container_noun": {"art": "le", "g": "m"}}; a "g" change also moves the
+               word's side (f left, m right) and its indefinite article.
+  content/v2/vocab_fixes.json  the same art/g corrections for every building (known vocab.jsonl
+               errors), so a building package picks them up without editing shared files;
+               a building's own hooks.json entry wins.
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
   the map uses them to put the building on its sector map (see village/v2/README.md).
@@ -125,6 +132,19 @@ def headword(it):
     return ("l'" + it["fr"]) if a == "l'" else f"{a} {it['fr']}"
 
 
+def apply_grammar_fix(it, fix):
+    """Article/gender correction from hooks.json or vocab_fixes.json (nouns only)."""
+    if it.get("verb") or it.get("adj"):
+        return
+    if fix.get("g"):
+        assert fix["g"] in ("m", "f", "mf"), fix
+        it["g"] = fix["g"]
+        it["ind"] = {"f": "une", "m": "un", "mf": "un/une"}[fix["g"]]
+    if fix.get("art"):
+        assert fix["art"] in ("le", "la", "l'", "les"), fix
+        it["art"] = fix["art"]
+
+
 def side_of(it):
     return {"f": "L", "m": "R"}.get(it.get("g"), "C")
 
@@ -223,6 +243,9 @@ def build(bld, v1, vocab):
     hp = ROOT / "content" / "v2" / bld / "hooks.json"
     overrides = json.loads(hp.read_text(encoding="utf-8")) if hp.exists() else {}
     overrides = {k: v for k, v in overrides.items() if not k.startswith("_")}
+    fp = ROOT / "content" / "v2" / "vocab_fixes.json"
+    fixes = json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
+    fixes = {k: v for k, v in fixes.items() if not k.startswith("_")}
     out_rooms = {}
     for key, room in L["rooms"].items():
         img = Image.open(V2 / room["image"]).convert("RGB")
@@ -236,9 +259,12 @@ def build(bld, v1, vocab):
                 it = item_from_vocab(vocab[wid])
             else:
                 raise SystemExit(f"{bld}/{key}: unknown word id {wid}")
+            fix = dict(fixes.get(wid, {}))
+            fix.update({k: v for k, v in overrides.get(wid, {}).items() if k in ("art", "g")})
+            apply_grammar_fix(it, fix)
             it["_hw"] = headword(it)
             it["box"] = spec["box"]
-            if wid in overrides:
+            if overrides.get(wid, {}).get("hook"):
                 it["hook"] = overrides[wid]["hook"]
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]

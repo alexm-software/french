@@ -44,7 +44,10 @@ for w in W["sectors"]:
         assert pid not in ids, ("duplicate building id", pid)
         ids[pid] = w["slug"]
         bl.append(o)
+    for t in S["streets"]:  # verb streets go live as data/<id lowercased>.js (app.js); ids must stay unique too
+        assert t["id"].lower() not in ids, ("duplicate street id", t["id"])
+        ids[t["id"].lower()] = w["slug"]
     out["sectors"][w["slug"]] = {"id": S["id"], "slug": S["slug"], "name": S["name"], "image": S["image"], "alt": S["alt"],
                                  "buildings": bl, "streets": [item(t, ("id", "name", "rect", "tag")) for t in S["streets"]]}
 (V2 / "data" / "map.js").write_text("window.V2_MAP=" + json.dumps(out, ensure_ascii=False) + ";\n", encoding="utf-8")
-print("map: sectors", len(out["sectors"]), "buildings", len(ids), "streets", sum(len(s["streets"]) for s in out["sectors"].values()))
+print("map: sectors", len(out["sectors"]), "buildings", sum(len(s["buildings"]) for s in out["sectors"].values()), "streets", sum(len(s["streets"]) for s in out["sectors"].values()))

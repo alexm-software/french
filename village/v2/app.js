@@ -84,7 +84,10 @@ scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#p
 // registry entry (the école and mairie layouts predate those fields).
 var LIVE={}, probed=false, REG={}, BYBID={};
 MAP.world.sectors.forEach(function(w){ var S=MAP.sectors[w.slug]; S.buildings.forEach(function(b){
-  b.id=b.id||b.building_id.replace(/^B\d+_/,''); b.sector=w.slug; REG[b.id]=b; BYBID[b.building_id]=BYBID[b.building_id]||b }) });
+  b.id=b.id||b.building_id.replace(/^B\d+_/,''); b.sector=w.slug; REG[b.id]=b; BYBID[b.building_id]=BYBID[b.building_id]||b });
+  // verb streets go live the same way: building_id = the street id (ST_priere), data id = it lowercased (data/st_priere.js)
+  S.streets.forEach(function(t){ t.building_id=t.building_id||t.id; t.id=t.building_id.toLowerCase(); t.street=1; t.sector=w.slug;
+    REG[t.id]=t; BYBID[t.building_id]=BYBID[t.building_id]||t }) });
 function sectorById(sid){ return MAP.world.sectors.filter(function(w){return w.id===sid})[0] }
 function homeOf(bld){ // {slug, entry} where the building lives on the maps
   var D=window.VILLAGE_DATA&&window.VILLAGE_DATA[bld], e=REG[bld];
@@ -143,10 +146,10 @@ function renderSector(slug){
   var S=MAP.sectors[slug]; view='sector'; curSector=slug; document.title=S.name+' · Le Village';
   back.hidden=false; rooms.hidden=true; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
   var live=[], soon=[], here={};
-  liveIn(slug).forEach(function(id){ var e=homeOf(id).entry; if(!e||here[e.building_id])return; here[e.building_id]=1;
-    live.push({href:'#/'+id,name:e.name,rect:e.rect,tag:e.tag,door:e.door,aria:'Enter '+e.name}) });
-  S.buildings.forEach(function(b){ if(!here[b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
-  S.streets.forEach(function(t){ soon.push({name:t.name,rect:t.rect,tag:t.tag,small:'rue des verbes'+(probed?' · bientôt':'')}) });
+  liveIn(slug).forEach(function(id){ var e=homeOf(id).entry; if(!e||here[e.id||e.building_id])return; here[e.id||e.building_id]=1;
+    live.push({href:'#/'+id,name:e.name,rect:e.rect,tag:e.tag,door:e.door,small:e.street?'rue des verbes':'',aria:'Enter '+e.name}) });
+  S.buildings.forEach(function(b){ if(!here[b.id||b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
+  S.streets.forEach(function(t){ if(!here[t.id]&&!(LIVE[t.id]&&homeOf(t.id).slug===slug)) soon.push({name:t.name,rect:t.rect,tag:t.tag,small:'rue des verbes'+(probed?' · bientôt':'')}) });
   drawMap(S.image,S.alt,S.name+' map',live,soon);
 }
 // ---------- room / zoom ----------
@@ -183,7 +186,7 @@ function renderRoom(bld,key){
     h+='<a class="doorway" data-d="'+i+'" href="'+roomHref(bld,d.to)+'" title="'+esc(d.hint)+'" aria-label="'+esc(d.label)+': '+esc(d.hint)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+';height:'+pct(g[3]/7.2)+'">';
     h+='<span class="dpill" aria-hidden="true">'+(d.thumb?'<img src="'+d.thumb+'" alt="">':'')+'<span>'+esc(d.label)+' ›</span></span></a>';
   });
-  R.zooms.forEach(function(z){
+  (R.zooms||[]).forEach(function(z){
     h+='<a class="zoombadge" href="#/'+bld+'/'+z.to+'" title="'+esc(z.hint)+'" style="left:'+pct(z.at[0]/12.8)+';top:'+pct(z.at[1]/7.2)+'"><span class="mag" aria-hidden="true">🔍</span>'+esc(z.label)+'</a>';
   });
   stage.innerHTML=h;

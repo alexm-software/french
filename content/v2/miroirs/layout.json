@@ -1,0 +1,568 @@
+{
+ "building": "miroirs",
+ "building_id": "B52_miroirs",
+ "sector_id": "S16_park",
+ "v1_room_id": "R_adj_size_01",
+ "name": "Le palais des glaces",
+ "main": "miroirs",
+ "roomList": [
+  {
+   "key": "miroirs",
+   "short": "Le hall"
+  },
+  {
+   "key": "couloir",
+   "short": "Le couloir"
+  },
+  {
+   "key": "etage",
+   "short": "L'étage"
+  }
+ ],
+ "planned": {
+  "miroirs": {
+   "vocabRoom": "R_adj_size_01",
+   "only": [
+    "fr_enorme_adj",
+    "fr_immense_adj",
+    "fr_rond_adj",
+    "fr_minuscule_adj",
+    "fr_vaste_adj"
+   ]
+  },
+  "couloir": {
+   "vocabRoom": "R_adj_size_01",
+   "only": [
+    "fr_profond_adj",
+    "fr_electrique_adj",
+    "fr_epais_adj",
+    "fr_douloureux_adj",
+    "fr_serre_adj"
+   ]
+  },
+  "guichet": {
+   "vocabRoom": "R_adj_size_01",
+   "only": [
+    "fr_gigantesque_adj",
+    "fr_considerable_adj",
+    "fr_mineur_adj",
+    "fr_tendu_adj",
+    "fr_quelconque_adj",
+    "fr_creux_adj",
+    "fr_massif_adj",
+    "fr_oriental_adj",
+    "fr_tenace_adj",
+    "fr_fondamental_adj",
+    "fr_monumental_adj",
+    "fr_aise_adj"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_adj_size_02",
+   "only": [
+    "fr_pesant_adj",
+    "fr_horizontal_adj",
+    "fr_colossal_adj",
+    "fr_spacieux_adj",
+    "fr_appreciable_adj"
+   ]
+  },
+  "vitrine": {
+   "vocabRoom": "R_adj_size_02",
+   "only": [
+    "fr_rectangulaire_adj",
+    "fr_fulgurant_adj",
+    "fr_minimal_adj",
+    "fr_hexagonal_adj",
+    "fr_electromagnetique_adj",
+    "fr_conformiste_adj",
+    "fr_contraignant_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "miroirs": {
+   "name": "Le palais des glaces",
+   "room_id": "R_adj_size_01",
+   "image": "miroirs/miroirs.jpg",
+   "alt": "The entrance hall of a hall of mirrors under a red-and-white striped tent, painted in ink and gouache: a ticket booth with a striped awning whose window shows a cabinet of little cubbies, a giant filling a tall mirror, a mouse seeing itself huge in a wobbly mirror while the real tiny mouse sits below, a boy rolling a round red ball, a ladybird in sunglasses on a stool, and an oval mirror that makes the hall look a mile long with a far-away mouse waving. The tent curtain on the left opens onto the park; on the right a gilt archway leads to the mirror corridor and wooden stairs climb to the upper floor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     10,
+     80,
+     170,
+     350
+    ],
+    "label": "Parc des Curiosités"
+   },
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "Go through the gilt archway into the corridor of mirrors",
+     "hit": [
+      1030,
+      140,
+      75,
+      300
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "L'étage",
+     "hint": "Climb the wooden stairs to the upper floor",
+     "hit": [
+      1115,
+      150,
+      160,
+      400
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "guichet",
+     "label": "le guichet",
+     "hint": "Look closer at the ticket booth's cabinet of curiosities",
+     "at": [
+      567,
+      150
+     ],
+     "obj": [
+      365,
+      118,
+      404,
+      227
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_immense_adj",
+     "box": [
+      310,
+      350,
+      170,
+      260
+     ]
+    },
+    {
+     "id": "fr_minuscule_adj",
+     "box": [
+      495,
+      465,
+      95,
+      100
+     ],
+     "labelAt": [
+      530,
+      662
+     ]
+    },
+    {
+     "id": "fr_rond_adj",
+     "box": [
+      610,
+      350,
+      160,
+      240
+     ]
+    },
+    {
+     "id": "fr_enorme_adj",
+     "box": [
+      775,
+      80,
+      165,
+      230
+     ]
+    },
+    {
+     "id": "fr_vaste_adj",
+     "box": [
+      800,
+      360,
+      190,
+      290
+     ]
+    }
+   ]
+  },
+  "guichet": {
+   "name": "Le guichet",
+   "room_id": "R_adj_size_01_z1",
+   "image": "miroirs/guichet.jpg",
+   "parent": "miroirs",
+   "alt": "Close-up of the ticket kiosk in the hall of mirrors: under the red-and-white scalloped striped awning, with the striped tent and fairy lights behind, the wooden plank kiosk frames a cabinet of twelve cubbies. A gigantic hamster at a doll's desk, an elephant filling its cubby, a cat with a magnifier spotting a tiny scratch on a mirror, an acrobat on a taut tightrope, a shopkeeper plonking any old hat on a boy, owls in a hollow stump, an elephant seeing himself tiny in a hand mirror, a compass pointing east, a terrier gripping a rope toy, a chalkboard with a crossed-out laughing face, a poodle beside a framed lighthouse, and a crowned cat lounging on a cushion. The gilt frames of the mouse mirror and the giant's mirror show at either side.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gigantesque_adj",
+     "box": [
+      368,
+      238,
+      175,
+      105
+     ]
+    },
+    {
+     "id": "fr_considerable_adj",
+     "box": [
+      552,
+      238,
+      178,
+      105
+     ]
+    },
+    {
+     "id": "fr_mineur_adj",
+     "box": [
+      740,
+      238,
+      190,
+      105
+     ]
+    },
+    {
+     "id": "fr_tendu_adj",
+     "box": [
+      368,
+      352,
+      175,
+      104
+     ]
+    },
+    {
+     "id": "fr_quelconque_adj",
+     "box": [
+      552,
+      352,
+      178,
+      104
+     ]
+    },
+    {
+     "id": "fr_creux_adj",
+     "box": [
+      740,
+      352,
+      190,
+      104
+     ]
+    },
+    {
+     "id": "fr_massif_adj",
+     "box": [
+      368,
+      466,
+      175,
+      92
+     ]
+    },
+    {
+     "id": "fr_oriental_adj",
+     "box": [
+      552,
+      466,
+      178,
+      92
+     ]
+    },
+    {
+     "id": "fr_tenace_adj",
+     "box": [
+      740,
+      466,
+      190,
+      92
+     ]
+    },
+    {
+     "id": "fr_fondamental_adj",
+     "box": [
+      345,
+      566,
+      190,
+      96
+     ]
+    },
+    {
+     "id": "fr_monumental_adj",
+     "box": [
+      545,
+      566,
+      185,
+      96
+     ]
+    },
+    {
+     "id": "fr_aise_adj",
+     "box": [
+      740,
+      566,
+      195,
+      96
+     ]
+    }
+   ]
+  },
+  "couloir": {
+   "name": "Le couloir des miroirs",
+   "room_id": "R_adj_size_01_b",
+   "image": "miroirs/couloir.jpg",
+   "backTo": "miroirs",
+   "alt": "A corridor of tall mirrors under the striped tent, painted in ink and gouache: a giant in a mirror hopping with a red sore toe and pain stars, a mirror showing a diver sinking into deep water, a magician zapping a spark that lights up her mirror, a girl paying a coin for a very thick slice of cake, and a round gentleman gasping at his tight belt. An archway on the left leads back to the hall; stairs on the right go up to the upper floor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "miroirs",
+     "label": "Le palais des glaces",
+     "hint": "Back through the archway to the entrance hall",
+     "hit": [
+      10,
+      100,
+      170,
+      330
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "L'étage",
+     "hint": "Climb the far stairs to the upper floor",
+     "hit": [
+      1110,
+      110,
+      165,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_douloureux_adj",
+     "box": [
+      290,
+      180,
+      200,
+      420
+     ]
+    },
+    {
+     "id": "fr_profond_adj",
+     "box": [
+      500,
+      90,
+      160,
+      260
+     ],
+     "labelAt": [
+      580,
+      318
+     ]
+    },
+    {
+     "id": "fr_electrique_adj",
+     "box": [
+      760,
+      120,
+      180,
+      240
+     ]
+    },
+    {
+     "id": "fr_epais_adj",
+     "box": [
+      540,
+      370,
+      250,
+      230
+     ]
+    },
+    {
+     "id": "fr_serre_adj",
+     "box": [
+      800,
+      380,
+      190,
+      250
+     ]
+    }
+   ]
+  },
+  "etage": {
+   "name": "L'étage",
+   "room_id": "R_adj_size_02",
+   "image": "miroirs/etage.jpg",
+   "backTo": "miroirs",
+   "alt": "The upper floor of the hall of mirrors, painted in ink and gouache: a peasant boy staggering under a heavy sack, a sloth hanging perfectly flat between two mirror frames, a colossal mirror mouse towering over a tiny real mouse, a round ginger cat, a mirror where one snail echoes into a hundred down a spacious hall, and a mirror showing a mouse on one side and a mighty lion on the other. Stairs on the left lead down; on the right a wide wooden display case holds a lit diorama.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "miroirs",
+     "label": "Le palais des glaces",
+     "hint": "Go back down the stairs to the entrance hall",
+     "hit": [
+      10,
+      170,
+      200,
+      260
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "vitrine",
+     "label": "la vitrine",
+     "hint": "Look closer at the diorama in the display case",
+     "at": [
+      1061,
+      300
+     ],
+     "obj": [
+      939,
+      285,
+      245,
+      145
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_pesant_adj",
+     "box": [
+      315,
+      270,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_horizontal_adj",
+     "box": [
+      505,
+      130,
+      145,
+      130
+     ]
+    },
+    {
+     "id": "fr_colossal_adj",
+     "box": [
+      690,
+      80,
+      180,
+      320
+     ]
+    },
+    {
+     "id": "fr_spacieux_adj",
+     "box": [
+      390,
+      425,
+      170,
+      245
+     ]
+    },
+    {
+     "id": "fr_appreciable_adj",
+     "box": [
+      700,
+      445,
+      190,
+      245
+     ],
+     "labelAt": [
+      795,
+      652
+     ]
+    }
+   ]
+  },
+  "vitrine": {
+   "name": "La vitrine",
+   "room_id": "R_adj_size_02_z1",
+   "image": "miroirs/vitrine.jpg",
+   "parent": "etage",
+   "alt": "Close-up through the glass of the display case: a toy diorama on a three-tier stand. A rectangular mirror stretching a round cat into a loaf, a sprinter with a lightning bolt behind his trainers, a grumpy mouse's shop with one shelf and one sock, a bee on a honeycomb shaped like France, a tin robot whose magnet chest yanks spoons and keys, identical sheep following each other into the mist, and a little train squeezed onto tight narrow tracks.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_rectangulaire_adj",
+     "box": [
+      390,
+      65,
+      195,
+      165
+     ]
+    },
+    {
+     "id": "fr_fulgurant_adj",
+     "box": [
+      665,
+      80,
+      215,
+      155
+     ]
+    },
+    {
+     "id": "fr_minimal_adj",
+     "box": [
+      305,
+      265,
+      165,
+      180
+     ]
+    },
+    {
+     "id": "fr_hexagonal_adj",
+     "box": [
+      520,
+      260,
+      130,
+      185
+     ]
+    },
+    {
+     "id": "fr_electromagnetique_adj",
+     "box": [
+      700,
+      270,
+      195,
+      175
+     ]
+    },
+    {
+     "id": "fr_conformiste_adj",
+     "box": [
+      400,
+      490,
+      290,
+      115
+     ]
+    },
+    {
+     "id": "fr_contraignant_adj",
+     "box": [
+      720,
+      480,
+      170,
+      140
+     ]
+    }
+   ]
+  }
+ }
+}
