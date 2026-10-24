@@ -1,0 +1,1789 @@
+{
+ "building": "horloge",
+ "building_id": "B03_horloge",
+ "sector_id": "S01_beginner",
+ "name": "Tour de l'Horloge",
+ "main": "horloge",
+ "roomList": [
+  {
+   "key": "horloge",
+   "short": "Le hall"
+  },
+  {
+   "key": "escalier",
+   "short": "L'escalier"
+  },
+  {
+   "key": "fresque",
+   "short": "La fresque"
+  },
+  {
+   "key": "calendrier",
+   "short": "Le calendrier"
+  },
+  {
+   "key": "semaines",
+   "short": "Les semaines"
+  },
+  {
+   "key": "palier",
+   "short": "Le palier"
+  },
+  {
+   "key": "cadran",
+   "short": "Le cadran"
+  },
+  {
+   "key": "galerie",
+   "short": "La galerie"
+  },
+  {
+   "key": "sommet",
+   "short": "Le sommet"
+  }
+ ],
+ "planned": {
+  "horloge": {
+   "vocabRoom": "R_time_clock_01",
+   "only": [
+    "fr_heure_noun",
+    "fr_nuit_noun",
+    "fr_minute_noun",
+    "fr_journee_noun",
+    "fr_jour_noun",
+    "fr_temps_noun",
+    "fr_moment_noun"
+   ]
+  },
+  "place": {
+   "vocabRoom": "R_time_clock_01",
+   "only": [
+    "fr_soir_noun",
+    "fr_matin_noun",
+    "fr_instant_noun"
+   ]
+  },
+  "escalier": {
+   "vocabRoom": "R_adv_time_01",
+   "only": [
+    "fr_alors_adv",
+    "fr_encore_adv",
+    "fr_toujours_adv",
+    "fr_jamais_adv",
+    "fr_maintenant_adv",
+    "fr_tard_adv"
+   ]
+  },
+  "alcove": {
+   "vocabRoom": "R_adv_time_01",
+   "only": [
+    "fr_longtemps_adv",
+    "fr_deja_adv",
+    "fr_aujourd_hui_adv",
+    "fr_demain_adv"
+   ]
+  },
+  "fresque": {
+   "vocabRoom": "R_abs_time_01",
+   "only": [
+    "fr_naissance_noun",
+    "fr_fin_noun",
+    "fr_epoque_noun",
+    "fr_enfance_noun",
+    "fr_generation_noun",
+    "fr_depart_noun",
+    "fr_avenir_noun",
+    "fr_passe_noun"
+   ]
+  },
+  "scene": {
+   "vocabRoom": "R_abs_time_01",
+   "only": [
+    "fr_existence_noun",
+    "fr_retraite_noun",
+    "fr_periode_noun",
+    "fr_debut_noun",
+    "fr_destin_noun",
+    "fr_sort_noun"
+   ]
+  },
+  "calendrier": {
+   "vocabRoom": "R_time_days_01",
+   "only": [
+    "fr_annee_noun",
+    "fr_fete_noun",
+    "fr_echeance_noun",
+    "fr_mensuel_adj",
+    "fr_saisonnier_adj",
+    "fr_an_noun",
+    "fr_ete_noun",
+    "fr_hiver_noun"
+   ]
+  },
+  "fenetre": {
+   "vocabRoom": "R_time_days_01",
+   "only": [
+    "fr_saison_noun",
+    "fr_printemps_noun",
+    "fr_mai_noun",
+    "fr_juillet_noun",
+    "fr_octobre_noun"
+   ]
+  },
+  "semaines": {
+   "vocabRoom": "R_time_days_02",
+   "only": [
+    "fr_semaine_noun",
+    "fr_date_noun",
+    "fr_canicule_noun",
+    "fr_hebdomadaire_adj",
+    "fr_dominical_adj",
+    "fr_dimanche_noun",
+    "fr_rendez_vous_noun",
+    "fr_lundi_noun",
+    "fr_week_end_noun"
+   ]
+  },
+  "balcon": {
+   "vocabRoom": "R_time_days_02",
+   "only": [
+    "fr_samedi_noun",
+    "fr_juin_noun",
+    "fr_septembre_noun",
+    "fr_vendredi_noun"
+   ]
+  },
+  "palier": {
+   "vocabRoom": "R_adv_time_02",
+   "only": [
+    "fr_desormais_adv",
+    "fr_jadis_adv",
+    "fr_tantot_adv"
+   ]
+  },
+  "marches": {
+   "vocabRoom": "R_adv_time_02",
+   "only": [
+    "fr_normalement_adv",
+    "fr_longuement_adv",
+    "fr_regulierement_adv"
+   ]
+  },
+  "lucarne": {
+   "vocabRoom": "R_adv_time_02",
+   "only": [
+    "fr_auparavant_adv",
+    "fr_generalement_adv",
+    "fr_recemment_adv",
+    "fr_rarement_adv"
+   ]
+  },
+  "cadran": {
+   "vocabRoom": "R_time_clock_02",
+   "only": [
+    "fr_horloge_noun",
+    "fr_matinee_noun",
+    "fr_pendule_noun_f",
+    "fr_alerte_noun",
+    "fr_matinal_adj",
+    "fr_delai_noun",
+    "fr_crepuscule_noun",
+    "fr_retardataire_noun"
+   ]
+  },
+  "salon": {
+   "vocabRoom": "R_time_clock_02",
+   "only": [
+    "fr_session_noun",
+    "fr_reprise_noun",
+    "fr_millenaire_noun",
+    "fr_interim_noun"
+   ]
+  },
+  "galerie": {
+   "vocabRoom": "R_abs_time_02",
+   "only": [
+    "fr_issue_noun",
+    "fr_ere_noun",
+    "fr_destinee_noun",
+    "fr_immortalite_noun",
+    "fr_preface_noun",
+    "fr_commencement_noun",
+    "fr_prolongement_noun"
+   ]
+  },
+  "terrasse": {
+   "vocabRoom": "R_abs_time_02",
+   "only": [
+    "fr_pension_noun",
+    "fr_initiation_noun",
+    "fr_introduction_noun",
+    "fr_decennie_noun",
+    "fr_retraite_noun_2",
+    "fr_renouvellement_noun"
+   ]
+  },
+  "sommet": {
+   "vocabRoom": "R_adv_time_03",
+   "only": [
+    "fr_indefiniment_adv",
+    "fr_prochainement_adv",
+    "fr_frequemment_adv",
+    "fr_invariablement_adv"
+   ]
+  },
+  "vue": {
+   "vocabRoom": "R_adv_time_03",
+   "only": [
+    "fr_continuellement_adv",
+    "fr_quotidiennement_adv",
+    "fr_provisoirement_adv",
+    "fr_communement_adv",
+    "fr_periodiquement_adv"
+   ]
+  }
+ },
+ "rooms": {
+  "horloge": {
+   "name": "Le hall de l'horloge",
+   "room_id": "R_time_clock_01",
+   "image": "horloge/horloge.jpg",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     12,
+     88,
+     105,
+     262
+    ],
+    "label": "Place du Village"
+   },
+   "doors": [
+    {
+     "to": "escalier",
+     "label": "l'escalier",
+     "hint": "Up to the red door on the balcony",
+     "hit": [
+      350,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "fresque",
+     "label": "la fresque",
+     "hint": "Up to the orange door on the balcony",
+     "hit": [
+      450,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "calendrier",
+     "label": "le calendrier",
+     "hint": "Up to the yellow door on the balcony",
+     "hit": [
+      550,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "semaines",
+     "label": "les semaines",
+     "hint": "Up to the green door on the balcony",
+     "hit": [
+      650,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "palier",
+     "label": "le palier",
+     "hint": "Up to the teal door on the balcony",
+     "hit": [
+      750,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "cadran",
+     "label": "le cadran",
+     "hint": "Up to the blue door on the balcony",
+     "hit": [
+      850,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "galerie",
+     "label": "la galerie",
+     "hint": "Up to the purple door on the balcony",
+     "hit": [
+      950,
+      110,
+      62,
+      134
+     ]
+    },
+    {
+     "to": "sommet",
+     "label": "le sommet",
+     "hint": "Up to the pink door on the balcony",
+     "hit": [
+      1050,
+      110,
+      62,
+      134
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "place",
+     "label": "la place",
+     "hint": "Look closer through the arch onto the village square",
+     "at": [
+      205,
+      190
+     ],
+     "obj": [
+      117,
+      117,
+      180,
+      240
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_heure_noun",
+     "box": [
+      16,
+      359,
+      150,
+      297
+     ]
+    },
+    {
+     "id": "fr_nuit_noun",
+     "box": [
+      172,
+      336,
+      169,
+      320
+     ]
+    },
+    {
+     "id": "fr_minute_noun",
+     "box": [
+      356,
+      438,
+      138,
+      219
+     ]
+    },
+    {
+     "id": "fr_journee_noun",
+     "box": [
+      500,
+      375,
+      169,
+      281
+     ]
+    },
+    {
+     "id": "fr_jour_noun",
+     "box": [
+      680,
+      281,
+      130,
+      375
+     ]
+    },
+    {
+     "id": "fr_temps_noun",
+     "box": [
+      816,
+      422,
+      216,
+      227
+     ]
+    },
+    {
+     "id": "fr_moment_noun",
+     "box": [
+      1039,
+      359,
+      211,
+      297
+     ]
+    }
+   ],
+   "alt": "The clock hall at the foot of the village clock tower, painted in ink and gouache: the big wooden front door on the far left leads back out to the village square, seen through a stone arch with its fountain; a wall clock with dots for hours hangs above a balcony with eight coloured doors (red, orange, yellow, green, teal, blue, purple and pink); below, a puzzled man stares at a giant pocket watch, a sleepy gnu in a nightcap dangles a moon lantern, a squirrel on a stool clutches his nut, a traveller with a suitcase and walking stick sets off, a boy in a red uniform holds up a smiling sun, a sunbather in sunglasses lounges by an hourglass, and a man pauses beside his red lawnmower."
+  },
+  "place": {
+   "name": "La place du village",
+   "room_id": "R_time_clock_01_z1",
+   "image": "horloge/place.jpg",
+   "parent": "horloge",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_soir_noun",
+     "box": [
+      712,
+      476,
+      160,
+      222
+     ]
+    },
+    {
+     "id": "fr_matin_noun",
+     "box": [
+      880,
+      400,
+      190,
+      285
+     ]
+    },
+    {
+     "id": "fr_instant_noun",
+     "box": [
+      1078,
+      365,
+      190,
+      325
+     ]
+    }
+   ],
+   "alt": "Close-up through the arch onto the village square: a white swan glides on a little round fountain pond, a man does yoga on his blue mat as the sun rises behind him, and a man snaps an instant camera with a bright flash."
+  },
+  "escalier": {
+   "name": "L'escalier",
+   "room_id": "R_adv_time_01",
+   "image": "horloge/escalier.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the sun door to the clock hall",
+     "hit": [
+      1133,
+      414,
+      117,
+      195
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "alcove",
+     "label": "l'alcôve",
+     "hint": "Look closer into the alcove under the stairs",
+     "at": [
+      100,
+      430
+     ],
+     "obj": [
+      39,
+      367,
+      125,
+      235
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_alors_adv",
+     "box": [
+      250,
+      140,
+      284,
+      230
+     ]
+    },
+    {
+     "id": "fr_encore_adv",
+     "box": [
+      540,
+      125,
+      265,
+      249
+     ]
+    },
+    {
+     "id": "fr_toujours_adv",
+     "box": [
+      812,
+      165,
+      150,
+      210
+     ]
+    },
+    {
+     "id": "fr_jamais_adv",
+     "box": [
+      222,
+      380,
+      327,
+      282
+     ]
+    },
+    {
+     "id": "fr_maintenant_adv",
+     "box": [
+      555,
+      383,
+      172,
+      265
+     ]
+    },
+    {
+     "id": "fr_tard_adv",
+     "box": [
+      806,
+      400,
+      175,
+      260
+     ]
+    }
+   ],
+   "alt": "The tower stairway, painted in ink and gouache: a boy shrugs beside his big red lorry, a singer in a black gown bows among roses, two old sweethearts hold hands on a bench, a boy crosses his arms beside a giant jam jar, a granny slams a big red button holding a stopwatch, and a baker in a nightcap rushes in with a tart and a candle. An alcove under the stairs holds an armchair; the arched door with the sun leads back to the clock hall."
+  },
+  "alcove": {
+   "name": "L'alcôve de l'escalier",
+   "room_id": "R_adv_time_01_z1",
+   "image": "horloge/alcove.jpg",
+   "parent": "escalier",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_longtemps_adv",
+     "box": [
+      300,
+      10,
+      360,
+      320
+     ]
+    },
+    {
+     "id": "fr_deja_adv",
+     "box": [
+      248,
+      338,
+      305,
+      310
+     ]
+    },
+    {
+     "id": "fr_aujourd_hui_adv",
+     "box": [
+      672,
+      120,
+      228,
+      310
+     ]
+    },
+    {
+     "id": "fr_demain_adv",
+     "box": [
+      596,
+      436,
+      184,
+      216
+     ]
+    }
+   ],
+   "alt": "Close-up into the alcove under the stairs: two identical grey cats stare at each other through an empty mirror frame, an old man with a beard down to the floor sits in a cobwebbed armchair, an alarm clock stands on a packed suitcase, and a girl holds fresh daisies and a sunny mug."
+  },
+  "fresque": {
+   "name": "La fresque du temps",
+   "room_id": "R_abs_time_01",
+   "image": "horloge/fresque.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the open wooden door to the clock hall",
+     "hit": [
+      5,
+      60,
+      190,
+      285
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "scene",
+     "label": "la scène",
+     "hint": "Look closer at the little stage",
+     "at": [
+      1150,
+      170
+     ],
+     "obj": [
+      1040,
+      30,
+      225,
+      300
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_naissance_noun",
+     "box": [
+      258,
+      39,
+      188,
+      164
+     ]
+    },
+    {
+     "id": "fr_fin_noun",
+     "box": [
+      268,
+      235,
+      140,
+      106
+     ]
+    },
+    {
+     "id": "fr_epoque_noun",
+     "box": [
+      414,
+      230,
+      223,
+      254
+     ]
+    },
+    {
+     "id": "fr_enfance_noun",
+     "box": [
+      398,
+      490,
+      225,
+      195
+     ]
+    },
+    {
+     "id": "fr_generation_noun",
+     "box": [
+      8,
+      351,
+      384,
+      334
+     ]
+    },
+    {
+     "id": "fr_depart_noun",
+     "box": [
+      664,
+      195,
+      370,
+      160
+     ]
+    },
+    {
+     "id": "fr_avenir_noun",
+     "box": [
+      690,
+      440,
+      249,
+      245
+     ]
+    },
+    {
+     "id": "fr_passe_noun",
+     "box": [
+      945,
+      362,
+      275,
+      323
+     ]
+    }
+   ],
+   "alt": "The timeline mural room, painted in ink and gouache: a stork flies a baby bundle across the painted wall; a girl waves her fan, a 1920s flapper pokes a gramophone, a baby shakes a rattle in her pram and a grandmother, mother and daughter walk hand in hand; a boy drops a chequered flag as two boys race off, a man cups his ear to a crystal ball, and a grandpa shows his old photo album. A little curtained stage stands on the right; the open wooden door on the left leads back to the clock hall."
+  },
+  "scene": {
+   "name": "La scène de la fresque",
+   "room_id": "R_abs_time_01_z1",
+   "image": "horloge/scene.jpg",
+   "parent": "fresque",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_existence_noun",
+     "box": [
+      23,
+      258,
+      180,
+      352
+     ]
+    },
+    {
+     "id": "fr_retraite_noun",
+     "box": [
+      211,
+      227,
+      224,
+      375
+     ]
+    },
+    {
+     "id": "fr_periode_noun",
+     "box": [
+      441,
+      205,
+      227,
+      395
+     ]
+    },
+    {
+     "id": "fr_debut_noun",
+     "box": [
+      674,
+      266,
+      131,
+      336
+     ]
+    },
+    {
+     "id": "fr_destin_noun",
+     "box": [
+      812,
+      234,
+      222,
+      375
+     ]
+    },
+    {
+     "id": "fr_sort_noun",
+     "box": [
+      1040,
+      105,
+      225,
+      510
+     ]
+    }
+   ],
+   "alt": "Close-up of the little stage: a girl holds a chick hatching from its egg, a grandma in a rocking chair holds a cream cake, a woman stretches out her accordion, a boy shouts on his first day on stage, a man at a desk spins a wheel of fortune, and a wizard in a starry robe casts a sparkling spell."
+  },
+  "calendrier": {
+   "name": "Le calendrier",
+   "room_id": "R_time_days_01",
+   "image": "horloge/calendrier.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the arched wooden door to the clock hall",
+     "hit": [
+      39,
+      62,
+      120,
+      170
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "fenetre",
+     "label": "la fenêtre",
+     "hint": "Look closer through the window",
+     "at": [
+      1082,
+      170
+     ],
+     "obj": [
+      1000,
+      60,
+      165,
+      215
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_annee_noun",
+     "box": [
+      5,
+      238,
+      250,
+      271
+     ]
+    },
+    {
+     "id": "fr_fete_noun",
+     "box": [
+      328,
+      258,
+      198,
+      250
+     ]
+    },
+    {
+     "id": "fr_echeance_noun",
+     "box": [
+      15,
+      515,
+      505,
+      170
+     ]
+    },
+    {
+     "id": "fr_mensuel_adj",
+     "box": [
+      625,
+      86,
+      325,
+      340
+     ]
+    },
+    {
+     "id": "fr_saisonnier_adj",
+     "box": [
+      532,
+      440,
+      234,
+      245
+     ]
+    },
+    {
+     "id": "fr_an_noun",
+     "box": [
+      962,
+      280,
+      250,
+      159
+     ]
+    },
+    {
+     "id": "fr_ete_noun",
+     "box": [
+      790,
+      445,
+      200,
+      240
+     ]
+    },
+    {
+     "id": "fr_hiver_noun",
+     "box": [
+      1023,
+      453,
+      227,
+      235
+     ]
+    }
+   ],
+   "alt": "The calendar room, painted in ink and gouache: a white horse neighs beside a big spoked wheel, a girl with balloons stands by a cream cake, ants haul little chairs toward a circled day on the wall calendar, a little surfer rides a wave under the moon's phases, a girl cheers over a crate of strawberries and pumpkins, a giant ant blows out birthday candles, a man in a straw hat sips an iced tea in his deckchair and a man in a fur coat shivers beside a snowman. The arched wooden door on the left leads back to the clock hall; a window looks out on the village."
+  },
+  "fenetre": {
+   "name": "La fenêtre du calendrier",
+   "room_id": "R_time_days_01_z1",
+   "image": "horloge/fenetre.jpg",
+   "parent": "calendrier",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_saison_noun",
+     "box": [
+      150,
+      195,
+      460,
+      415
+     ]
+    },
+    {
+     "id": "fr_printemps_noun",
+     "box": [
+      676,
+      175,
+      200,
+      183
+     ]
+    },
+    {
+     "id": "fr_mai_noun",
+     "box": [
+      883,
+      47,
+      242,
+      297
+     ]
+    },
+    {
+     "id": "fr_juillet_noun",
+     "box": [
+      672,
+      364,
+      205,
+      245
+     ]
+    },
+    {
+     "id": "fr_octobre_noun",
+     "box": [
+      884,
+      359,
+      280,
+      227
+     ]
+    }
+   ],
+   "alt": "Close-up through the calendar room window onto the village square: a girl sprinkles a salt shaker over four little trees, blossoming, green, orange and snowy; across the square a man prints sheets of flowers on a printing press, a girl dances round a maypole, a man waves a sparkler and an octopus juggles pumpkins among falling leaves."
+  },
+  "semaines": {
+   "name": "Les jours de la semaine",
+   "room_id": "R_time_days_02",
+   "image": "horloge/semaines.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the green door to the clock hall",
+     "hit": [
+      44,
+      56,
+      125,
+      169
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "balcon",
+     "label": "le balcon",
+     "hint": "Look closer out onto the balcony and the market street",
+     "at": [
+      1075,
+      200
+     ],
+     "obj": [
+      950,
+      62,
+      250,
+      325
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_semaine_noun",
+     "box": [
+      81,
+      231,
+      156,
+      238
+     ]
+    },
+    {
+     "id": "fr_date_noun",
+     "box": [
+      281,
+      219,
+      128,
+      231
+     ]
+    },
+    {
+     "id": "fr_canicule_noun",
+     "box": [
+      44,
+      475,
+      294,
+      238
+     ]
+    },
+    {
+     "id": "fr_hebdomadaire_adj",
+     "box": [
+      415,
+      306,
+      147,
+      256
+     ]
+    },
+    {
+     "id": "fr_dominical_adj",
+     "box": [
+      569,
+      262,
+      228,
+      312
+     ]
+    },
+    {
+     "id": "fr_dimanche_noun",
+     "box": [
+      831,
+      212,
+      156,
+      275
+     ]
+    },
+    {
+     "id": "fr_rendez_vous_noun",
+     "box": [
+      1044,
+      300,
+      175,
+      188
+     ]
+    },
+    {
+     "id": "fr_lundi_noun",
+     "box": [
+      803,
+      494,
+      122,
+      219
+     ]
+    },
+    {
+     "id": "fr_week_end_noun",
+     "box": [
+      975,
+      494,
+      294,
+      188
+     ]
+    }
+   ],
+   "alt": "The days-of-the-week room, painted in ink and gouache: a girl in a sailor dress holds a seven-day pill box, a boy throws a dart into the wall calendar, a sweltering girl fans herself by a red-hot thermometer, a paperboy brings a magazine with a sun picture, a grandpa plays dominoes, a man in his Sunday best munches a croissant, a hedgehog with a bouquet checks his watch, a yawning boy carries a moon lunchbox and a man snoozes in a hammock. The green door on the left leads back to the clock hall; open French doors lead onto a balcony."
+  },
+  "balcon": {
+   "name": "Le balcon du marché",
+   "room_id": "R_time_days_02_z1",
+   "image": "horloge/balcon.jpg",
+   "parent": "semaines",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_samedi_noun",
+     "box": [
+      600,
+      300,
+      152,
+      300
+     ]
+    },
+    {
+     "id": "fr_juin_noun",
+     "box": [
+      814,
+      242,
+      112,
+      330
+     ],
+     "labelAt": [
+      868,
+      208
+     ]
+    },
+    {
+     "id": "fr_septembre_noun",
+     "box": [
+      932,
+      278,
+      130,
+      316
+     ],
+     "labelAt": [
+      925,
+      606
+     ]
+    },
+    {
+     "id": "fr_vendredi_noun",
+     "box": [
+      1068,
+      258,
+      160,
+      384
+     ]
+    }
+   ],
+   "alt": "Close-up from the balcony onto the market street: a boy skates to market with his basket, a man carries a basket of strawberries, a schoolboy walks with a new brown satchel and a fishmonger pushes a little blue handcart of fish."
+  },
+  "palier": {
+   "name": "Le palier",
+   "room_id": "R_adv_time_02",
+   "image": "horloge/palier.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the teal door to the clock hall",
+     "hit": [
+      38,
+      50,
+      138,
+      188
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "marches",
+     "label": "les marches",
+     "hint": "Look closer at the staircase",
+     "at": [
+      385,
+      150
+     ],
+     "obj": [
+      206,
+      25,
+      356,
+      288
+     ]
+    },
+    {
+     "to": "lucarne",
+     "label": "la fenêtre",
+     "hint": "Look closer through the open window",
+     "at": [
+      1084,
+      200
+     ],
+     "obj": [
+      962,
+      69,
+      244,
+      338
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_desormais_adv",
+     "box": [
+      281,
+      238,
+      254,
+      269
+     ]
+    },
+    {
+     "id": "fr_jadis_adv",
+     "box": [
+      541,
+      188,
+      140,
+      338
+     ]
+    },
+    {
+     "id": "fr_tantot_adv",
+     "box": [
+      725,
+      125,
+      238,
+      388
+     ]
+    }
+   ],
+   "alt": "The landing, painted in ink and gouache: a girl in a sailor dress turns over a giant leaf, a knight in armour cradles a jade statuette, and a barefoot woman holds a sun hat in one hand and an umbrella in the other. A wooden staircase climbs at the back, open French doors look out on the village, and the teal door on the left leads back to the clock hall."
+  },
+  "marches": {
+   "name": "Les marches du palier",
+   "room_id": "R_adv_time_02_z1",
+   "image": "horloge/marches.jpg",
+   "parent": "palier",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_normalement_adv",
+     "box": [
+      388,
+      15,
+      142,
+      420
+     ]
+    },
+    {
+     "id": "fr_longuement_adv",
+     "box": [
+      538,
+      120,
+      224,
+      560
+     ]
+    },
+    {
+     "id": "fr_regulierement_adv",
+     "box": [
+      768,
+      240,
+      252,
+      330
+     ]
+    }
+   ],
+   "alt": "Close-up of the landing staircase: a man in a grey suit sips his coffee on a step, a boy reads a scroll so long it unrolls down the stairs, and a kneeling man winds a metronome."
+  },
+  "lucarne": {
+   "name": "La fenêtre du palier",
+   "room_id": "R_adv_time_02_z2",
+   "image": "horloge/lucarne.jpg",
+   "parent": "palier",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_auparavant_adv",
+     "box": [
+      344,
+      100,
+      306,
+      209
+     ]
+    },
+    {
+     "id": "fr_generalement_adv",
+     "box": [
+      656,
+      38,
+      200,
+      331
+     ]
+    },
+    {
+     "id": "fr_recemment_adv",
+     "box": [
+      362,
+      315,
+      244,
+      272
+     ]
+    },
+    {
+     "id": "fr_rarement_adv",
+     "box": [
+      662,
+      375,
+      238,
+      206
+     ]
+    }
+   ],
+   "alt": "Close-up through the open window of the landing: a man packs a parachute into a van, a general with a chest full of medals points, a boy who has just won a race stands beside a puffing man, and a man squints at a four-leaf clover through a magnifying glass."
+  },
+  "cadran": {
+   "name": "Le cadran",
+   "room_id": "R_time_clock_02",
+   "image": "horloge/cadran.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    64,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the blue door to the clock hall",
+     "hit": [
+      31,
+      56,
+      131,
+      181
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "salon",
+     "label": "le salon",
+     "hint": "Look closer through the archway into the music room",
+     "at": [
+      1162,
+      200
+     ],
+     "obj": [
+      1062,
+      75,
+      200,
+      244
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_horloge_noun",
+     "box": [
+      275,
+      56,
+      294,
+      312
+     ]
+    },
+    {
+     "id": "fr_matinee_noun",
+     "box": [
+      39,
+      250,
+      211,
+      200
+     ]
+    },
+    {
+     "id": "fr_pendule_noun_f",
+     "box": [
+      31,
+      456,
+      375,
+      256
+     ]
+    },
+    {
+     "id": "fr_alerte_noun",
+     "box": [
+      425,
+      375,
+      162,
+      338
+     ]
+    },
+    {
+     "id": "fr_matinal_adj",
+     "box": [
+      600,
+      194,
+      200,
+      344
+     ]
+    },
+    {
+     "id": "fr_delai_noun",
+     "box": [
+      662,
+      544,
+      269,
+      162
+     ]
+    },
+    {
+     "id": "fr_crepuscule_noun",
+     "box": [
+      869,
+      200,
+      128,
+      294
+     ]
+    },
+    {
+     "id": "fr_retardataire_noun",
+     "box": [
+      1003,
+      325,
+      209,
+      350
+     ]
+    }
+   ],
+   "alt": "The clock-face room, painted in ink and gouache: an oar leans on a giant wall clock with dots for hours; a lady in a feathered hat holds her ticket and opera glasses, a woman polishes a pan beside a little mantel clock, a lark sings in its cage, a jogger runs with a rooster on his shoulder, a hen sits on her nest beside an hourglass, a man eats a crêpe by a pink dusk window and a latecomer dashes in clutching his clock. An archway on the right opens onto a music room; the blue door on the left leads back to the clock hall."
+  },
+  "salon": {
+   "name": "Le salon de musique",
+   "room_id": "R_time_clock_02_z1",
+   "image": "horloge/salon.jpg",
+   "parent": "cadran",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_session_noun",
+     "box": [
+      25,
+      170,
+      290,
+      500
+     ]
+    },
+    {
+     "id": "fr_reprise_noun",
+     "box": [
+      372,
+      225,
+      282,
+      490
+     ]
+    },
+    {
+     "id": "fr_millenaire_noun",
+     "box": [
+      665,
+      15,
+      335,
+      690
+     ]
+    },
+    {
+     "id": "fr_interim_noun",
+     "box": [
+      1006,
+      180,
+      262,
+      535
+     ]
+    }
+   ],
+   "alt": "Close-up through the archway into the music room: a pianist plays at a grand piano, a girl holds up her trophy again, an old wizard carries a cake with a forest of candles, and a stand-in waiter balances a teacup on the rim of his tray."
+  },
+  "galerie": {
+   "name": "La galerie des époques",
+   "room_id": "R_abs_time_02",
+   "image": "horloge/galerie.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the purple door to the clock hall",
+     "hit": [
+      25,
+      50,
+      138,
+      188
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "terrasse",
+     "label": "la terrasse",
+     "hint": "Look closer through the glass doors onto the terrace",
+     "at": [
+      1140,
+      200
+     ],
+     "obj": [
+      1025,
+      75,
+      238,
+      325
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_issue_noun",
+     "box": [
+      338,
+      122,
+      87,
+      115
+     ]
+    },
+    {
+     "id": "fr_ere_noun",
+     "box": [
+      544,
+      106,
+      169,
+      200
+     ]
+    },
+    {
+     "id": "fr_destinee_noun",
+     "box": [
+      102,
+      244,
+      320,
+      193
+     ]
+    },
+    {
+     "id": "fr_immortalite_noun",
+     "box": [
+      8,
+      443,
+      245,
+      261
+     ]
+    },
+    {
+     "id": "fr_preface_noun",
+     "box": [
+      494,
+      369,
+      188,
+      344
+     ]
+    },
+    {
+     "id": "fr_commencement_noun",
+     "box": [
+      762,
+      175,
+      186,
+      319
+     ]
+    },
+    {
+     "id": "fr_prolongement_noun",
+     "box": [
+      954,
+      320,
+      248,
+      370
+     ]
+    }
+   ],
+   "alt": "The gallery of eras, painted in ink and gouache: a girl steps out of a hedge maze, a cavewoman holds a huge dinosaur egg, a woman spins at a starry wheel, a phoenix rises from its flames, a girl holds a mask before her face over an open book, a mayor cuts a red ribbon and a boy pulls out a long ladder on a trestle. Glass doors on the right open onto a terrace; the purple door on the left leads back to the clock hall."
+  },
+  "terrasse": {
+   "name": "La terrasse",
+   "room_id": "R_abs_time_02_z1",
+   "image": "horloge/terrasse.jpg",
+   "parent": "galerie",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pension_noun",
+     "box": [
+      140,
+      45,
+      288,
+      278
+     ]
+    },
+    {
+     "id": "fr_initiation_noun",
+     "box": [
+      434,
+      100,
+      156,
+      224
+     ]
+    },
+    {
+     "id": "fr_introduction_noun",
+     "box": [
+      130,
+      330,
+      205,
+      370
+     ]
+    },
+    {
+     "id": "fr_decennie_noun",
+     "box": [
+      341,
+      330,
+      265,
+      305
+     ]
+    },
+    {
+     "id": "fr_retraite_noun_2",
+     "box": [
+      628,
+      35,
+      265,
+      277
+     ]
+    },
+    {
+     "id": "fr_renouvellement_noun",
+     "box": [
+      646,
+      318,
+      274,
+      384
+     ]
+    }
+   ],
+   "alt": "Close-up through the glass doors onto the sunny terrace: an old lady holds a new frying pan and her piggy bank, a girl kneels holding a wooden sword, a woman with a microphone waves hello, a woman on one knee shows her bracelets, an old man fishes from his deckchair, and a boy unwraps a shiny new red bicycle."
+  },
+  "sommet": {
+   "name": "Le sommet de la tour",
+   "room_id": "R_adv_time_03",
+   "image": "horloge/sommet.jpg",
+   "backTo": "horloge",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "horloge",
+     "label": "le hall",
+     "hint": "Back through the pink door to the clock hall",
+     "hit": [
+      31,
+      69,
+      156,
+      294
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "vue",
+     "label": "la fenêtre",
+     "hint": "Look closer through the window at the top of the tower",
+     "at": [
+      1160,
+      200
+     ],
+     "obj": [
+      1075,
+      56,
+      169,
+      319
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_indefiniment_adv",
+     "box": [
+      319,
+      238,
+      142,
+      288
+     ]
+    },
+    {
+     "id": "fr_prochainement_adv",
+     "box": [
+      505,
+      190,
+      320,
+      194
+     ]
+    },
+    {
+     "id": "fr_frequemment_adv",
+     "box": [
+      467,
+      420,
+      214,
+      293
+     ]
+    },
+    {
+     "id": "fr_invariablement_adv",
+     "box": [
+      712,
+      390,
+      256,
+      310
+     ]
+    }
+   ],
+   "alt": "The top of the tower under the great bell, painted in ink and gouache: a granny in a rocking chair knits a scarf that coils across the floor, an usher stands by a red curtain behind a rope, a boy films with an old camera and a flash, and a boy gapes as his toast falls butter side down. The pink door on the left leads back to the clock hall; an arched window on the right looks out to sea."
+  },
+  "vue": {
+   "name": "La vue du sommet",
+   "room_id": "R_adv_time_03_z1",
+   "image": "horloge/vue.jpg",
+   "parent": "sommet",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_continuellement_adv",
+     "box": [
+      512,
+      548,
+      144,
+      122
+     ]
+    },
+    {
+     "id": "fr_quotidiennement_adv",
+     "box": [
+      667,
+      497,
+      133,
+      175
+     ]
+    },
+    {
+     "id": "fr_provisoirement_adv",
+     "box": [
+      478,
+      430,
+      183,
+      112
+     ]
+    },
+    {
+     "id": "fr_communement_adv",
+     "box": [
+      717,
+      418,
+      118,
+      72
+     ]
+    },
+    {
+     "id": "fr_periodiquement_adv",
+     "box": [
+      636,
+      228,
+      110,
+      182
+     ]
+    }
+   ],
+   "alt": "Close-up through the arched window at the top of the tower onto a green hill by the sea: a hamster runs in its wheel in a cage, a man in a green cap sits at the door of a little orange tent, a milkman carries a crate of milk bottles, a man on a bench feeds a pigeon, and a lighthouse on the hilltop flashes its lantern."
+  }
+ }
+}
