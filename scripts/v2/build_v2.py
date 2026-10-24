@@ -36,6 +36,8 @@ v2-specific inputs live in content/v2/<building>/:
   data/cache/conjugations.json. vocab "reflexive" only means a pronominal form exists, so the card
   uses it (se trouver, mirror, être) only when the example sentence does; a hooks.json entry
   {"reflexive": true|false} forces it either way.
+  When vocab has no pronominal form (fr_cramponner_verb, glossed "(se cramponner) to cling"),
+  hooks.json {"pronominal_form": "se cramponner", "reflexive": true} supplies it.
   Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
   Adverbs (vocab pos "adv") get no article and no gender either, sit in the centre band too
   (genderless words live in the middle) and their card says "adverb · invariable".
@@ -475,6 +477,8 @@ def build(bld, v1, vocab):
                 it = {k: v for k, v in v1[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
             elif wid in vocab:
                 w = vocab[wid]
+                if overrides.get(wid, {}).get("pronominal_form"):  # se-form missing in vocab (fr_cramponner_verb)
+                    w = dict(w, reflexive=True, pronominal_form=overrides[wid]["pronominal_form"])
                 if "reflexive" in overrides.get(wid, {}):  # force a verb card reflexive or plain
                     w = dict(w, _reflexive=bool(overrides[wid]["reflexive"]))
                 it = item_from_vocab(w)
