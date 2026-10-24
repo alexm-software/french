@@ -1,0 +1,393 @@
+{
+ "building": "st_marees",
+ "building_id": "ST_marees",
+ "sector_id": "S09_nature",
+ "name": "Quai des Marées",
+ "main": "st_marees",
+ "roomList": [
+  {
+   "key": "st_marees",
+   "short": "Les cristaux"
+  },
+  {
+   "key": "porte_voix",
+   "short": "Les porte-voix"
+  },
+  {
+   "key": "chavires",
+   "short": "Les chavirés"
+  },
+  {
+   "key": "pull_retreci",
+   "short": "Le pull rétréci"
+  }
+ ],
+ "planned": {
+  "st_marees": {
+   "vocabRoom": "ST_change_seg016",
+   "only": [
+    "fr_promulguer_verb",
+    "fr_embellir_verb",
+    "fr_inculquer_verb",
+    "fr_affiner_verb",
+    "fr_cristalliser_verb",
+    "fr_differer_verb"
+   ]
+  },
+  "porte_voix": {
+   "vocabRoom": "ST_change_seg017",
+   "only": [
+    "fr_resorber_verb",
+    "fr_valoriser_verb",
+    "fr_amplifier_verb",
+    "fr_extenuer_verb",
+    "fr_indemniser_verb"
+   ]
+  },
+  "chavires": {
+   "vocabRoom": "ST_change_seg018",
+   "only": [
+    "fr_piocher_verb",
+    "fr_accaparer_verb",
+    "fr_chavirer_verb",
+    "fr_simplifier_verb",
+    "fr_exceder_verb"
+   ]
+  },
+  "pull_retreci": {
+   "vocabRoom": "ST_change_seg019",
+   "only": [
+    "fr_submerger_verb",
+    "fr_retrecir_verb",
+    "fr_rallonger_verb",
+    "fr_scinder_verb",
+    "fr_abreger_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_marees": {
+   "name": "Passage des Cristaux",
+   "image": "st_marees/st_marees.jpg",
+   "alt": "A sunny harbour quay with a lighthouse and glittering salt pans, painted in ink and gouache: Monsieur Verbe the mime rings a bell and holds up a blank sealed scroll like a town crier, hangs a flower garland in a green beret, bows to teach a puppy good manners, turns a big round cheese on a board, rakes white salt crystals and compares two different seashells. The stone archway on the left leads back to the valley; the blue, yellow and green doors lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     10,
+     10,
+     270,
+     265
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "porte_voix",
+     "label": "Allée des Porte-Voix",
+     "hint": "Through the blue door",
+     "hit": [
+      431,
+      160,
+      92,
+      165
+     ]
+    },
+    {
+     "to": "chavires",
+     "label": "Quai des Chavirés",
+     "hint": "Through the yellow door",
+     "hit": [
+      660,
+      160,
+      108,
+      165
+     ]
+    },
+    {
+     "to": "pull_retreci",
+     "label": "Ruelle du Pull-Rétréci",
+     "hint": "Through the green door",
+     "hit": [
+      897,
+      160,
+      110,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_promulguer_verb",
+     "box": [
+      60,
+      290,
+      210,
+      368
+     ]
+    },
+    {
+     "id": "fr_embellir_verb",
+     "box": [
+      278,
+      290,
+      148,
+      365
+     ]
+    },
+    {
+     "id": "fr_inculquer_verb",
+     "box": [
+      448,
+      335,
+      165,
+      320
+     ]
+    },
+    {
+     "id": "fr_affiner_verb",
+     "box": [
+      638,
+      337,
+      182,
+      316
+     ]
+    },
+    {
+     "id": "fr_cristalliser_verb",
+     "box": [
+      845,
+      354,
+      195,
+      320
+     ]
+    },
+    {
+     "id": "fr_differer_verb",
+     "box": [
+      1046,
+      315,
+      200,
+      342
+     ]
+    }
+   ]
+  },
+  "porte_voix": {
+   "name": "Allée des Porte-Voix",
+   "image": "st_marees/porte_voix.jpg",
+   "backTo": "st_marees",
+   "alt": "A harbour lane with boats in the bay: Monsieur Verbe the mime watches a puddle shrink away in the sun, sets his finest seashell on a red velvet cushion, shouts happily through a megaphone, slumps worn out on a bench with his rucksack, and kneels to give a cat a fresh fish beside its empty plate. The blue door on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_marees",
+     "label": "Passage des Cristaux",
+     "hint": "Back through the blue door",
+     "hit": [
+      20,
+      44,
+      132,
+      162
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_resorber_verb",
+     "box": [
+      32,
+      212,
+      318,
+      428
+     ]
+    },
+    {
+     "id": "fr_valoriser_verb",
+     "box": [
+      376,
+      218,
+      190,
+      402
+     ]
+    },
+    {
+     "id": "fr_amplifier_verb",
+     "box": [
+      572,
+      224,
+      198,
+      402
+     ]
+    },
+    {
+     "id": "fr_extenuer_verb",
+     "box": [
+      776,
+      325,
+      180,
+      300
+     ]
+    },
+    {
+     "id": "fr_indemniser_verb",
+     "box": [
+      962,
+      300,
+      305,
+      322
+     ]
+    }
+   ]
+  },
+  "chavires": {
+   "name": "Quai des Chavirés",
+   "image": "st_marees/chavires.jpg",
+   "backTo": "st_marees",
+   "alt": "A sea wall above the open sea with a little round boating pond: Monsieur Verbe the mime draws a card from a deck on a barrel, hugs all the beach buckets for himself, kneels in dismay as his toy sailboat tips over in the pond, coils a knotted rope into one simple loop, and frowns at a suitcase on a scale whose needle is in the red. The yellow door on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_marees",
+     "label": "Passage des Cristaux",
+     "hint": "Back through the yellow door",
+     "hit": [
+      56,
+      48,
+      126,
+      102
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_piocher_verb",
+     "box": [
+      44,
+      156,
+      230,
+      456
+     ]
+    },
+    {
+     "id": "fr_accaparer_verb",
+     "box": [
+      282,
+      144,
+      232,
+      445
+     ]
+    },
+    {
+     "id": "fr_chavirer_verb",
+     "box": [
+      520,
+      250,
+      260,
+      425
+     ]
+    },
+    {
+     "id": "fr_simplifier_verb",
+     "box": [
+      786,
+      186,
+      165,
+      400
+     ]
+    },
+    {
+     "id": "fr_exceder_verb",
+     "box": [
+      994,
+      186,
+      236,
+      440
+     ]
+    }
+   ]
+  },
+  "pull_retreci": {
+   "name": "Ruelle du Pull-Rétréci",
+   "image": "st_marees/pull_retreci.jpg",
+   "backTo": "st_marees",
+   "alt": "A narrow alley running down to the beach under a washing line: Monsieur Verbe the mime is drenched by a splashing wave, holds up a tiny shrunken striped jumper in a green beret, knits a scarf longer and longer, splits a pile of seashells into two heaps, and checks his pocket watch while rolling up his long speech at a lectern. The green door on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_marees",
+     "label": "Passage des Cristaux",
+     "hint": "Back through the green door",
+     "hit": [
+      60,
+      26,
+      140,
+      187
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_submerger_verb",
+     "box": [
+      60,
+      219,
+      248,
+      404
+     ]
+    },
+    {
+     "id": "fr_retrecir_verb",
+     "box": [
+      318,
+      215,
+      180,
+      405
+     ]
+    },
+    {
+     "id": "fr_rallonger_verb",
+     "box": [
+      530,
+      231,
+      195,
+      408
+     ]
+    },
+    {
+     "id": "fr_scinder_verb",
+     "box": [
+      730,
+      331,
+      285,
+      302
+     ]
+    },
+    {
+     "id": "fr_abreger_verb",
+     "box": [
+      1022,
+      229,
+      215,
+      402
+     ]
+    }
+   ]
+  }
+ }
+}
