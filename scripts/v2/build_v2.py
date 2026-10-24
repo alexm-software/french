@@ -24,6 +24,8 @@ v2-specific inputs live in content/v2/<building>/:
                breaks the content rules (e.g. a smoking/tobacco example), with a "why".
                "say" / "f_say" replace the v1/vocab respelling and "hook" the hook text (e.g. no
                syllable that reads as "pee"/"poo": pee-LOT -> pea-LOT); hooks.json may carry them too.
+               "en" replaces the gloss (e.g. an idiom whose usual English equivalent trips the content
+               filter: "to kill two birds with one stone" -> "to do two things at once"), with a "why".
                A hooks.json entry may carry "plaque": true for a word shown only as text on a blank
                museum plaque (nothing depicted, e.g. fr_tuer_verb "to kill"): check_v2 then skips the
                content filter on that item's gloss (en) only; hook/scene/note/ex are still checked.
@@ -485,7 +487,7 @@ def build(bld, v1, vocab):
             it["box"] = spec["box"]
             # text overrides: vocab_fixes.json first, then the building's hooks.json (which wins)
             for src in (fixes.get(wid, {}), overrides.get(wid, {})):
-                for k in ("say", "f_say", "hook"):
+                for k in ("say", "f_say", "hook", "en"):
                     if src.get(k):
                         it[k] = src[k]
                 if src.get("ex"):
