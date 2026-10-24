@@ -1,0 +1,734 @@
+{
+ "building": "couture",
+ "building_id": "B62_couture",
+ "sector_id": "S03_market",
+ "name": "La Maison de Couture",
+ "main": "couture",
+ "roomList": [
+  {
+   "key": "couture",
+   "short": "Le salon"
+  },
+  {
+   "key": "boudoir",
+   "short": "Le boudoir"
+  },
+  {
+   "key": "atelier",
+   "short": "L'atelier"
+  }
+ ],
+ "planned": {
+  "couture": {
+   "vocabRoom": "R_abs_beauty_01",
+   "only": [
+    "fr_coutume_noun",
+    "fr_curiosite_noun",
+    "fr_revelation_noun",
+    "fr_ruse_noun",
+    "fr_harmonie_noun",
+    "fr_elegant_adj",
+    "fr_choix_noun",
+    "fr_semblant_noun",
+    "fr_eclat_noun",
+    "fr_luxe_noun"
+   ]
+  },
+  "vitrine": {
+   "vocabRoom": "R_abs_beauty_01_z1",
+   "only": [
+    "fr_preference_noun",
+    "fr_splendeur_noun",
+    "fr_clin_noun",
+    "fr_tranquillite_noun",
+    "fr_scrupule_noun",
+    "fr_exotisme_noun"
+   ]
+  },
+  "boudoir": {
+   "vocabRoom": "R_abs_beauty_02",
+   "only": [
+    "fr_maniere_noun",
+    "fr_apparition_noun",
+    "fr_merci_noun_m",
+    "fr_apparence_noun",
+    "fr_elegance_noun",
+    "fr_magie_noun",
+    "fr_beaute_noun",
+    "fr_chic_adj",
+    "fr_charme_noun",
+    "fr_compliment_noun",
+    "fr_look_noun"
+   ]
+  },
+  "theatre": {
+   "vocabRoom": "R_abs_beauty_02_z1",
+   "only": [
+    "fr_allure_noun",
+    "fr_admiration_noun",
+    "fr_variete_noun",
+    "fr_perfection_noun",
+    "fr_plaine_noun",
+    "fr_abord_noun"
+   ]
+  },
+  "atelier": {
+   "vocabRoom": "R_abs_beauty_03",
+   "only": [
+    "fr_lucidite_noun",
+    "fr_parure_noun",
+    "fr_laideur_noun",
+    "fr_virilite_noun",
+    "fr_outrance_noun",
+    "fr_asperite_noun",
+    "fr_fadeur_noun",
+    "fr_attrait_noun",
+    "fr_porte_bonheur_noun",
+    "fr_snobisme_noun"
+   ]
+  },
+  "malle": {
+   "vocabRoom": "R_abs_beauty_03_z1",
+   "only": [
+    "fr_aubaine_noun",
+    "fr_agrement_noun",
+    "fr_avant_gout_noun",
+    "fr_vecu_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "couture": {
+   "name": "Le salon de couture",
+   "room_id": "R_abs_beauty_01",
+   "image": "couture/couture.jpg",
+   "mapExit": {
+    "box": [
+     4,
+     8,
+     196,
+     320
+    ],
+    "label": "Place du Marché"
+   },
+   "doors": [
+    {
+     "to": "boudoir",
+     "label": "le boudoir",
+     "hint": "Go through the rose-pink door behind the flamingo to the styling boudoir",
+     "hit": [
+      668,
+      92,
+      98,
+      124
+     ]
+    },
+    {
+     "to": "atelier",
+     "label": "l'atelier",
+     "hint": "Climb the staircase to the deep-blue door of the upstairs studio",
+     "hit": [
+      1094,
+      10,
+      112,
+      160
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "vitrine",
+     "label": "la vitrine",
+     "hint": "Look closer at the little glass display cabinet",
+     "at": [
+      651,
+      640
+     ],
+     "obj": [
+      519,
+      486,
+      278,
+      214
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_coutume_noun",
+     "box": [
+      52,
+      340,
+      176,
+      165
+     ]
+    },
+    {
+     "id": "fr_curiosite_noun",
+     "box": [
+      100,
+      514,
+      282,
+      170
+     ]
+    },
+    {
+     "id": "fr_revelation_noun",
+     "box": [
+      232,
+      150,
+      178,
+      172
+     ]
+    },
+    {
+     "id": "fr_ruse_noun",
+     "box": [
+      418,
+      132,
+      128,
+      186
+     ],
+     "labelAt": [
+      482,
+      276
+     ]
+    },
+    {
+     "id": "fr_harmonie_noun",
+     "box": [
+      336,
+      326,
+      206,
+      160
+     ]
+    },
+    {
+     "id": "fr_elegant_adj",
+     "box": [
+      548,
+      226,
+      166,
+      240
+     ]
+    },
+    {
+     "id": "fr_choix_noun",
+     "box": [
+      772,
+      92,
+      180,
+      330
+     ]
+    },
+    {
+     "id": "fr_semblant_noun",
+     "box": [
+      962,
+      220,
+      166,
+      205
+     ]
+    },
+    {
+     "id": "fr_eclat_noun",
+     "box": [
+      792,
+      440,
+      196,
+      150
+     ]
+    },
+    {
+     "id": "fr_luxe_noun",
+     "box": [
+      996,
+      436,
+      264,
+      264
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "The fashion-house salon, painted in ink and gouache: glass entrance doors on the far left lead back to the market square; a rose-pink door in the back wall and a deep-blue door at the top of a curving staircase lead on; a pigeon greets guests by the doorway, a kitten peeks into a hatbox, a curtain is pulled back to reveal a model in a blue gown, a fox dresses up as a hen, three cats sing on a sofa, a flamingo in pearls stands on one leg, a shah chooses between two capes, a mannequin wears a duchess's gown, a tiara sparkles on a cushion, a poodle eats grapes on a velvet pouffe, and a small gilded glass display cabinet of figurines stands in front.",
+   "nameplate": [
+    38,
+    10
+   ]
+  },
+  "vitrine": {
+   "name": "La vitrine",
+   "room_id": "R_abs_beauty_01_z1",
+   "image": "couture/vitrine.jpg",
+   "parent": "couture",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_preference_noun",
+     "box": [
+      272,
+      169,
+      214,
+      188
+     ]
+    },
+    {
+     "id": "fr_splendeur_noun",
+     "box": [
+      494,
+      175,
+      226,
+      200
+     ]
+    },
+    {
+     "id": "fr_clin_noun",
+     "box": [
+      725,
+      225,
+      325,
+      150
+     ]
+    },
+    {
+     "id": "fr_tranquillite_noun",
+     "box": [
+      350,
+      364,
+      138,
+      161
+     ]
+    },
+    {
+     "id": "fr_scrupule_noun",
+     "box": [
+      648,
+      381,
+      183,
+      181
+     ]
+    },
+    {
+     "id": "fr_exotisme_noun",
+     "box": [
+      840,
+      444,
+      200,
+      168
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the little gilded glass display cabinet in the salon, full of figurines: a white cat sits on a golden cushion, a peacock spreads its tail, four owls perch on a branch and one winks; in front, a little girl turns the key of her music box, a puppy on a round mirror-pool stand holds a pearl earring, and a straw hat trimmed with parrot feathers and a tropical flower."
+  },
+  "boudoir": {
+   "name": "Le boudoir",
+   "room_id": "R_abs_beauty_02",
+   "image": "couture/boudoir.jpg",
+   "backTo": "couture",
+   "doors": [
+    {
+     "to": "couture",
+     "label": "le salon de couture",
+     "hint": "Go back through the rose-pink door to the fashion salon",
+     "hit": [
+      1062,
+      46,
+      100,
+      226
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "theatre",
+     "label": "le petit théâtre",
+     "hint": "Look closer at the little toy theatre",
+     "at": [
+      500,
+      640
+     ],
+     "obj": [
+      355,
+      492,
+      277,
+      208
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_maniere_noun",
+     "box": [
+      192,
+      30,
+      170,
+      248
+     ],
+     "labelAt": [
+      277,
+      243
+     ]
+    },
+    {
+     "id": "fr_apparition_noun",
+     "box": [
+      384,
+      32,
+      264,
+      248
+     ],
+     "labelAt": [
+      516,
+      245
+     ]
+    },
+    {
+     "id": "fr_merci_noun_m",
+     "box": [
+      812,
+      86,
+      150,
+      128
+     ]
+    },
+    {
+     "id": "fr_apparence_noun",
+     "box": [
+      4,
+      282,
+      146,
+      160
+     ]
+    },
+    {
+     "id": "fr_elegance_noun",
+     "box": [
+      70,
+      450,
+      170,
+      215
+     ]
+    },
+    {
+     "id": "fr_magie_noun",
+     "box": [
+      214,
+      284,
+      150,
+      160
+     ]
+    },
+    {
+     "id": "fr_beaute_noun",
+     "box": [
+      372,
+      300,
+      200,
+      190
+     ]
+    },
+    {
+     "id": "fr_chic_adj",
+     "box": [
+      656,
+      220,
+      166,
+      300
+     ]
+    },
+    {
+     "id": "fr_charme_noun",
+     "box": [
+      842,
+      296,
+      212,
+      220
+     ]
+    },
+    {
+     "id": "fr_compliment_noun",
+     "box": [
+      800,
+      526,
+      170,
+      174
+     ]
+    },
+    {
+     "id": "fr_look_noun",
+     "box": [
+      1060,
+      500,
+      184,
+      200
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "The styling boudoir: a rose-pink door on the right leads back to the salon; a gentleman bows and offers a rose, a silk dress floats by itself like a ghost, a heart card lies on a bench, a kneeling lady sprinkles sparkles on her gown, a stylist waves her comb over a growing hairdo, a heron walks a red carpet, a model bows over her teapot, a sheikh in a tailored robe strolls in, a boy charms a snake from its basket, a hedgehog blushes under a new hat, a pug poses in sunglasses and a scarf, and a little toy theatre with figurines on its stage sits on the floor.",
+   "nameplate": [
+    73,
+    35
+   ]
+  },
+  "theatre": {
+   "name": "Le petit théâtre",
+   "room_id": "R_abs_beauty_02_z1",
+   "image": "couture/theatre.jpg",
+   "parent": "boudoir",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_allure_noun",
+     "box": [
+      222,
+      472,
+      122,
+      103
+     ]
+    },
+    {
+     "id": "fr_admiration_noun",
+     "box": [
+      350,
+      472,
+      133,
+      106
+     ]
+    },
+    {
+     "id": "fr_variete_noun",
+     "box": [
+      383,
+      258,
+      160,
+      150
+     ]
+    },
+    {
+     "id": "fr_perfection_noun",
+     "box": [
+      497,
+      412,
+      120,
+      150
+     ]
+    },
+    {
+     "id": "fr_plaine_noun",
+     "box": [
+      555,
+      352,
+      117,
+      55
+     ]
+    },
+    {
+     "id": "fr_abord_noun",
+     "box": [
+      680,
+      419,
+      141,
+      167
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the carved toy theatre on the boudoir floor: before a painted backdrop of a wide grassy plain with one lone tree, a toy horse trots onto the stage, two white geese gaze up admiringly, a giraffe stands by a stand of hats, a tailor pins a blue gown on a dress form, and a sailor waves guests aboard his little boat."
+  },
+  "atelier": {
+   "name": "L'atelier sous les toits",
+   "room_id": "R_abs_beauty_03",
+   "image": "couture/atelier.jpg",
+   "backTo": "couture",
+   "doors": [
+    {
+     "to": "couture",
+     "label": "le salon de couture",
+     "hint": "Go back through the deep-blue door and down the stairs to the fashion salon",
+     "hit": [
+      1096,
+      10,
+      108,
+      196
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "malle",
+     "label": "la malle",
+     "hint": "Look closer inside the big open travel trunk",
+     "at": [
+      1120,
+      640
+     ],
+     "obj": [
+      954,
+      446,
+      324,
+      254
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_lucidite_noun",
+     "box": [
+      12,
+      134,
+      206,
+      190
+     ]
+    },
+    {
+     "id": "fr_parure_noun",
+     "box": [
+      222,
+      130,
+      170,
+      240
+     ]
+    },
+    {
+     "id": "fr_laideur_noun",
+     "box": [
+      412,
+      60,
+      240,
+      300
+     ],
+     "labelAt": [
+      532,
+      325
+     ]
+    },
+    {
+     "id": "fr_virilite_noun",
+     "box": [
+      20,
+      340,
+      190,
+      358
+     ]
+    },
+    {
+     "id": "fr_outrance_noun",
+     "box": [
+      214,
+      392,
+      232,
+      140
+     ]
+    },
+    {
+     "id": "fr_asperite_noun",
+     "box": [
+      384,
+      542,
+      140,
+      156
+     ]
+    },
+    {
+     "id": "fr_fadeur_noun",
+     "box": [
+      528,
+      372,
+      164,
+      236
+     ]
+    },
+    {
+     "id": "fr_attrait_noun",
+     "box": [
+      660,
+      92,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_porte_bonheur_noun",
+     "box": [
+      862,
+      80,
+      128,
+      150
+     ]
+    },
+    {
+     "id": "fr_snobisme_noun",
+     "box": [
+      842,
+      330,
+      236,
+      106
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "The upstairs studio under the roof: a deep-blue door at the top right leads back down to the salon; a parrot speaks to a student, a strongman lifts a dumbbell, a cat duchess tries on jewels at her mirror, a troll stands by a ladder that leans away, a dancer whirls in feathers, a boy trips over a rough rock, a painter pushes a slider and the colours fade to grey, a tray of shimmering hats, a clover pendant, a poodle snubbing a mongrel, and a big open travel trunk with tiny figurines on its folded fabrics.",
+   "nameplate": [
+    17,
+    10
+   ]
+  },
+  "malle": {
+   "name": "La malle",
+   "room_id": "R_abs_beauty_03_z1",
+   "image": "couture/malle.jpg",
+   "parent": "atelier",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_aubaine_noun",
+     "box": [
+      381,
+      69,
+      175,
+      269
+     ]
+    },
+    {
+     "id": "fr_agrement_noun",
+     "box": [
+      606,
+      175,
+      144,
+      219
+     ]
+    },
+    {
+     "id": "fr_avant_gout_noun",
+     "box": [
+      752,
+      225,
+      123,
+      188
+     ]
+    },
+    {
+     "id": "fr_vecu_noun",
+     "box": [
+      880,
+      312,
+      212,
+      188
+     ]
+    }
+   ],
+   "building_id": "B62_couture",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the big open travel trunk in the studio: on its rim a little man figurine leaps to catch a blank green banknote; on the folded fabrics inside stand deckchairs and a striped parasol beside a tiny fountain, an ice-cream cart handing a spoonful to a child, and a grandpa laughing as he sits on his big open photo album."
+  }
+ }
+}
