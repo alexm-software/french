@@ -43,6 +43,10 @@ TOBACC = BLOCK[-1]
 # tobacco depiction (TOBACCO below), and every other BLOCK pattern still applies to all fields.
 SMOKE_NOUNS = {"fr_fumee_noun"}
 TABAC_NOUNS = {"fr_tabac_noun"}
+# "le smoking" (fr_smoking_noun, gloss "tuxedo, dinner jacket") is a garment: the French example necessarily contains
+# the headword, so the generic smoke pattern is skipped on the example (ex) only; hook/scene/note/en are still checked
+# with every BLOCK pattern plus TOBACCO, so the hook must not use the English word.
+TUXEDO_NOUNS = {"fr_smoking_noun"}
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
 ART = re.compile(r"^(?:(?:le|la|les|le/la|un|une) |l['’])", re.I)  # 'las', 'lent', 'unique' are not articles
 
@@ -164,8 +168,13 @@ def check_building(bld, errs, warns):
             depict = " ".join(str(it.get(k) or "") for k in ("hook", "scene", "note"))
             smoke_noun = it["id"] in SMOKE_NOUNS and not it.get("verb") and it.get("en", "").strip().lower() == "smoke"
             tabac_noun = it["id"] in TABAC_NOUNS and not it.get("verb") and "tobacco" in (it.get("en") or "").strip().lower()
+            tux_noun = it["id"] in TUXEDO_NOUNS and not it.get("verb") and "tuxedo" in (it.get("en") or "").lower()
             for pat in BLOCK:
                 if smoke_noun and pat == SMOKE: continue
+                if tux_noun and pat == SMOKE:
+                    if re.search(pat, text[:len(text) - len(" ".join(it.get("ex") or []))], re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
+                    if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
+                    continue
                 if tabac_noun and pat == TOBACC:
                     if re.search(pat, depict, re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
                     continue
