@@ -1,0 +1,387 @@
+{
+ "building": "st_riviere",
+ "building_id": "ST_riviere",
+ "sector_id": "S09_nature",
+ "name": "Berge des Pêcheurs",
+ "main": "st_riviere",
+ "roomList": [
+  {
+   "key": "st_riviere",
+   "short": "Les pêcheurs"
+  },
+  {
+   "key": "glacons",
+   "short": "Les glaçons"
+  },
+  {
+   "key": "etincelles",
+   "short": "Les étincelles"
+  },
+  {
+   "key": "graines",
+   "short": "Les graines"
+  }
+ ],
+ "planned": {
+  "st_riviere": {
+   "vocabRoom": "ST_nature_seg006",
+   "only": [
+    "fr_sombrer_verb",
+    "fr_arroser_verb",
+    "fr_percher_verb",
+    "fr_pecher_verb",
+    "fr_neiger_verb"
+   ]
+  },
+  "glacons": {
+   "vocabRoom": "ST_nature_seg007",
+   "only": [
+    "fr_glacer_verb",
+    "fr_figer_verb",
+    "fr_drainer_verb",
+    "fr_rejaillir_verb",
+    "fr_survoler_verb"
+   ]
+  },
+  "etincelles": {
+   "vocabRoom": "ST_nature_seg008",
+   "only": [
+    "fr_deverser_verb",
+    "fr_pomper_verb",
+    "fr_etinceler_verb",
+    "fr_polluer_verb",
+    "fr_rayonner_verb"
+   ]
+  },
+  "graines": {
+   "vocabRoom": "ST_nature_seg009",
+   "only": [
+    "fr_jucher_verb",
+    "fr_germer_verb",
+    "fr_enfanter_verb",
+    "fr_bronzer_verb",
+    "fr_carburer_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_riviere": {
+   "name": "Quai des Pêcheurs",
+   "image": "st_riviere/st_riviere.jpg",
+   "alt": "A riverside quay in a green valley village, painted in ink and gouache: Monsieur Verbe the mime watches his toy boat sink in a tub of water, waters a clump of flowers, points up at a robin perched on a tall post, catches a little fish with a rod, and catches snowflakes under a tiny snow cloud. The stone archway on the left leads back to the valley; the pale blue door, the orange door and the wooden garden gate lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     15,
+     12,
+     268,
+     310
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "glacons",
+     "label": "Impasse des Glaçons",
+     "hint": "Through the pale blue door",
+     "hit": [
+      433,
+      142,
+      92,
+      180
+     ]
+    },
+    {
+     "to": "etincelles",
+     "label": "Rue des Étincelles",
+     "hint": "Through the orange door",
+     "hit": [
+      668,
+      142,
+      85,
+      165
+     ]
+    },
+    {
+     "to": "graines",
+     "label": "Chemin des Graines",
+     "hint": "Through the wooden garden gate",
+     "hit": [
+      889,
+      150,
+      100,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sombrer_verb",
+     "box": [
+      68,
+      335,
+      210,
+      315
+     ]
+    },
+    {
+     "id": "fr_arroser_verb",
+     "box": [
+      294,
+      337,
+      238,
+      320
+     ]
+    },
+    {
+     "id": "fr_percher_verb",
+     "box": [
+      540,
+      315,
+      218,
+      335
+     ]
+    },
+    {
+     "id": "fr_pecher_verb",
+     "box": [
+      764,
+      347,
+      268,
+      280
+     ]
+    },
+    {
+     "id": "fr_neiger_verb",
+     "box": [
+      1058,
+      265,
+      200,
+      385
+     ]
+    }
+   ]
+  },
+  "glacons": {
+   "name": "Impasse des Glaçons",
+   "image": "st_riviere/glacons.jpg",
+   "backTo": "st_riviere",
+   "alt": "A snowy dead-end lane by the river with icicles on the windows: Monsieur Verbe the mime shivers and blows on his icy hands, stands frozen stiff and frosted like a statue, digs a channel so a puddle drains away, gets splashed by a pebble dropped in a puddle in a green beret, and flies a bird-shaped kite high over the river. The pale blue door on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_riviere",
+     "label": "Quai des Pêcheurs",
+     "hint": "Back through the pale blue door",
+     "hit": [
+      62,
+      88,
+      120,
+      193
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_glacer_verb",
+     "box": [
+      125,
+      287,
+      203,
+      345
+     ]
+    },
+    {
+     "id": "fr_figer_verb",
+     "box": [
+      335,
+      281,
+      205,
+      350
+     ]
+    },
+    {
+     "id": "fr_drainer_verb",
+     "box": [
+      568,
+      306,
+      196,
+      340
+     ]
+    },
+    {
+     "id": "fr_rejaillir_verb",
+     "box": [
+      794,
+      306,
+      195,
+      350
+     ]
+    },
+    {
+     "id": "fr_survoler_verb",
+     "box": [
+      1008,
+      18,
+      212,
+      615
+     ]
+    }
+   ]
+  },
+  "etincelles": {
+   "name": "Rue des Étincelles",
+   "image": "st_riviere/etincelles.jpg",
+   "backTo": "st_riviere",
+   "alt": "A sunny village street where a little stream pours over rocks into a pool: Monsieur Verbe the mime, hand mirror in his hand, shows the stream pouring into the pool, works an old water pump into a bucket, holds up a sparkling diamond, sadly picks a plastic bottle out of a dirty puddle, and beams with joy in a burst of golden rays. The orange door on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_riviere",
+     "label": "Quai des Pêcheurs",
+     "hint": "Back through the orange door",
+     "hit": [
+      42,
+      188,
+      80,
+      118
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_deverser_verb",
+     "box": [
+      86,
+      312,
+      200,
+      335
+     ]
+    },
+    {
+     "id": "fr_pomper_verb",
+     "box": [
+      318,
+      312,
+      232,
+      335
+     ]
+    },
+    {
+     "id": "fr_etinceler_verb",
+     "box": [
+      562,
+      315,
+      178,
+      330
+     ]
+    },
+    {
+     "id": "fr_polluer_verb",
+     "box": [
+      776,
+      335,
+      195,
+      310
+     ]
+    },
+    {
+     "id": "fr_rayonner_verb",
+     "box": [
+      978,
+      300,
+      268,
+      345
+     ]
+    }
+   ]
+  },
+  "graines": {
+   "name": "Chemin des Graines",
+   "image": "st_riviere/graines.jpg",
+   "backTo": "st_riviere",
+   "alt": "A walled garden path with seed beds: Monsieur Verbe the mime sits perched on a tall stool with a hand mirror, kneels as green sprouts pop up in a flower pot, gestures like a museum guide at a blank gold-framed plaque on an easel, sunbathes in a deckchair with sunglasses, and gulps a huge steaming cup of coffee. The wooden garden gate on the left leads back to the quay.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_riviere",
+     "label": "Quai des Pêcheurs",
+     "hint": "Back through the wooden garden gate",
+     "hit": [
+      68,
+      100,
+      110,
+      100
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_jucher_verb",
+     "box": [
+      32,
+      206,
+      182,
+      380
+     ]
+    },
+    {
+     "id": "fr_germer_verb",
+     "box": [
+      232,
+      256,
+      222,
+      325
+     ]
+    },
+    {
+     "id": "fr_enfanter_verb",
+     "box": [
+      494,
+      219,
+      285,
+      360
+     ],
+     "labelAt": [
+      694,
+      340
+     ]
+    },
+    {
+     "id": "fr_bronzer_verb",
+     "box": [
+      786,
+      327,
+      228,
+      262
+     ]
+    },
+    {
+     "id": "fr_carburer_verb",
+     "box": [
+      1050,
+      256,
+      206,
+      330
+     ]
+    }
+   ]
+  }
+ }
+}
