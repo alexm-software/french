@@ -1,0 +1,2869 @@
+{
+ "building": "rue_commercante",
+ "building_id": "B07_rue_commercante",
+ "sector_id": "S03_market",
+ "name": "La Rue Commerçante",
+ "main": "rue_commercante",
+ "roomList": [
+  {
+   "key": "rue_commercante",
+   "short": "La rue"
+  },
+  {
+   "key": "magasin",
+   "short": "Le magasin"
+  },
+  {
+   "key": "reserve",
+   "short": "La réserve"
+  },
+  {
+   "key": "ventes",
+   "short": "Les ventes"
+  },
+  {
+   "key": "fleuriste",
+   "short": "La fleuriste"
+  },
+  {
+   "key": "quincaillerie",
+   "short": "La quincaillerie"
+  },
+  {
+   "key": "ferronnerie",
+   "short": "La ferronnerie"
+  },
+  {
+   "key": "librairie",
+   "short": "La librairie"
+  },
+  {
+   "key": "imprimerie",
+   "short": "L'imprimerie"
+  },
+  {
+   "key": "bijouterie",
+   "short": "La bijouterie"
+  },
+  {
+   "key": "mode",
+   "short": "La mode"
+  },
+  {
+   "key": "parfumerie",
+   "short": "La parfumerie"
+  }
+ ],
+ "planned": {
+  "rue_commercante": {
+   "vocabRoom": "R_shop_general_01",
+   "only": [
+    "fr_valeur_noun",
+    "fr_queue_noun",
+    "fr_boutique_noun",
+    "fr_inscription_noun",
+    "fr_commercial_adj",
+    "fr_magasin_noun",
+    "fr_produit_noun",
+    "fr_client_noun",
+    "fr_echange_noun",
+    "fr_prix_noun",
+    "fr_commerce_noun",
+    "fr_achat_noun"
+   ]
+  },
+  "magasin": {
+   "vocabRoom": "R_shop_general_02",
+   "only": [
+    "fr_vente_noun",
+    "fr_offre_noun",
+    "fr_fermeture_noun",
+    "fr_garantie_noun",
+    "fr_marchand_noun",
+    "fr_registre_noun",
+    "fr_tarif_noun",
+    "fr_negociation_noun",
+    "fr_ticket_noun",
+    "fr_provision_noun",
+    "fr_reduction_noun",
+    "fr_clientele_noun"
+   ]
+  },
+  "caisse": {
+   "vocabRoom": "R_shop_general_02_z1",
+   "only": [
+    "fr_cout_noun",
+    "fr_enregistrement_noun",
+    "fr_compromis_noun"
+   ]
+  },
+  "reserve": {
+   "vocabRoom": "R_shop_general_03",
+   "only": [
+    "fr_vitrine_noun",
+    "fr_marchandise_noun",
+    "fr_corbeille_noun",
+    "fr_enseigne_noun_f",
+    "fr_epicerie_noun",
+    "fr_comptoir_noun",
+    "fr_panier_noun",
+    "fr_vendeur_noun",
+    "fr_commercant_noun",
+    "fr_passant_noun",
+    "fr_caissier_noun",
+    "fr_collectionneur_noun"
+   ]
+  },
+  "jouets": {
+   "vocabRoom": "R_shop_general_03_z1",
+   "only": [
+    "fr_consommateur_noun",
+    "fr_bourg_noun",
+    "fr_depot_noun"
+   ]
+  },
+  "ventes": {
+   "vocabRoom": "R_shop_general_04",
+   "only": [
+    "fr_echoppe_noun",
+    "fr_brocante_noun",
+    "fr_halle_noun",
+    "fr_enchere_noun",
+    "fr_acheteur_noun",
+    "fr_abonnement_noun",
+    "fr_distributeur_noun",
+    "fr_bonus_noun",
+    "fr_souk_noun",
+    "fr_prelevement_noun",
+    "fr_acquisition_noun"
+   ]
+  },
+  "lot": {
+   "vocabRoom": "R_shop_general_04_z1",
+   "only": [
+    "fr_shopping_noun",
+    "fr_rabais_noun",
+    "fr_negociant_noun",
+    "fr_abonne_noun",
+    "fr_troc_noun"
+   ]
+  },
+  "fleuriste": {
+   "vocabRoom": "R_florist",
+   "only": [
+    "fr_fleur_noun",
+    "fr_fougere_noun",
+    "fr_fee_noun",
+    "fr_plante_noun",
+    "fr_cocarde_noun",
+    "fr_floral_adj",
+    "fr_vegetal_adj",
+    "fr_bouquet_noun",
+    "fr_floraison_noun",
+    "fr_vase_noun_m",
+    "fr_lis_noun",
+    "fr_rosier_noun"
+   ]
+  },
+  "cagette": {
+   "vocabRoom": "R_florist_z1",
+   "only": [
+    "fr_marmotte_noun",
+    "fr_tulipe_noun",
+    "fr_lavande_noun",
+    "fr_muguet_noun",
+    "fr_bulbe_noun"
+   ]
+  },
+  "quincaillerie": {
+   "vocabRoom": "R_hardware_01",
+   "only": [
+    "fr_matiere_noun",
+    "fr_fibre_noun",
+    "fr_cire_noun",
+    "fr_etoffe_noun",
+    "fr_colle_noun",
+    "fr_cuir_noun",
+    "fr_carton_noun",
+    "fr_tissu_noun",
+    "fr_caoutchouc_noun",
+    "fr_enceinte_noun",
+    "fr_adhesion_noun",
+    "fr_resine_noun"
+   ]
+  },
+  "bac": {
+   "vocabRoom": "R_hardware_01_z1",
+   "only": [
+    "fr_materiel_adj",
+    "fr_plastique_noun",
+    "fr_sabot_noun",
+    "fr_materiau_noun",
+    "fr_adherent_noun"
+   ]
+  },
+  "ferronnerie": {
+   "vocabRoom": "R_hardware_02",
+   "only": [
+    "fr_chaine_noun",
+    "fr_corde_noun",
+    "fr_liaison_noun",
+    "fr_ferraille_noun",
+    "fr_grille_noun",
+    "fr_rayure_noun",
+    "fr_fer_noun",
+    "fr_fil_noun",
+    "fr_metal_noun",
+    "fr_marbre_noun",
+    "fr_acier_noun",
+    "fr_couchage_noun"
+   ]
+  },
+  "casier": {
+   "vocabRoom": "R_hardware_02_z1",
+   "only": [
+    "fr_metallique_adj",
+    "fr_tuyau_noun",
+    "fr_barreau_noun",
+    "fr_cuivre_noun",
+    "fr_bronze_noun",
+    "fr_cordon_noun"
+   ]
+  },
+  "librairie": {
+   "vocabRoom": "R_bookshop_01",
+   "only": [
+    "fr_page_noun_f",
+    "fr_presse_noun",
+    "fr_edition_noun",
+    "fr_bibliotheque_noun",
+    "fr_livre_noun_m",
+    "fr_journal_noun",
+    "fr_papier_noun",
+    "fr_page_noun_m",
+    "fr_crayon_noun",
+    "fr_guide_noun_m",
+    "fr_carnet_noun",
+    "fr_lecteur_noun",
+    "fr_cahier_noun",
+    "fr_bouquin_noun"
+   ]
+  },
+  "bac_livres": {
+   "vocabRoom": "R_bookshop_01_z1",
+   "only": [
+    "fr_copie_noun",
+    "fr_librairie_noun",
+    "fr_encre_noun",
+    "fr_recommandation_noun",
+    "fr_libraire_noun",
+    "fr_stylo_noun",
+    "fr_manuscrit_noun",
+    "fr_manuel_noun"
+   ]
+  },
+  "imprimerie": {
+   "vocabRoom": "R_bookshop_02",
+   "only": [
+    "fr_imprimerie_noun",
+    "fr_rene_noun",
+    "fr_repere_noun",
+    "fr_agenda_noun",
+    "fr_livret_noun",
+    "fr_correspondant_noun",
+    "fr_pamphlet_noun",
+    "fr_imprimeur_noun",
+    "fr_essuie_glace_noun",
+    "fr_depliant_noun"
+   ]
+  },
+  "bijouterie": {
+   "vocabRoom": "R_boutique_01",
+   "only": [
+    "fr_sonnerie_noun",
+    "fr_montre_noun",
+    "fr_bague_noun",
+    "fr_ronde_noun",
+    "fr_perle_noun",
+    "fr_lustre_noun",
+    "fr_diamant_noun",
+    "fr_poignet_noun",
+    "fr_bijou_noun",
+    "fr_collier_noun",
+    "fr_bracelet_noun",
+    "fr_eventail_noun",
+    "fr_or_noun"
+   ]
+  },
+  "mode": {
+   "vocabRoom": "R_boutique_02",
+   "only": [
+    "fr_mode_noun_f",
+    "fr_soie_noun",
+    "fr_couture_noun",
+    "fr_sac_noun",
+    "fr_parfum_noun",
+    "fr_tailleur_noun",
+    "fr_style_noun",
+    "fr_mannequin_noun",
+    "fr_maquillage_noun",
+    "fr_accessoire_noun",
+    "fr_bourse_noun",
+    "fr_composition_noun",
+    "fr_purete_noun"
+   ]
+  },
+  "parfumerie": {
+   "vocabRoom": "R_boutique_03",
+   "only": [
+    "fr_senteur_noun",
+    "fr_vogue_noun",
+    "fr_palette_noun",
+    "fr_icone_noun",
+    "fr_rondelle_noun",
+    "fr_faction_noun",
+    "fr_porte_monnaie_noun",
+    "fr_joyau_noun",
+    "fr_veilleur_noun",
+    "fr_dandy_noun",
+    "fr_ambre_noun",
+    "fr_parfumeur_noun",
+    "fr_bijoutier_noun",
+    "fr_jade_noun"
+   ]
+  },
+  "coffre": {
+   "vocabRoom": "R_boutique_03_z1",
+   "only": [
+    "fr_mantille_noun",
+    "fr_styliste_noun",
+    "fr_enchanteur_noun",
+    "fr_saphir_noun",
+    "fr_boubou_noun",
+    "fr_glamour_noun",
+    "fr_joaillier_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "rue_commercante": {
+   "name": "La rue Commerçante",
+   "room_id": "R_shop_general_01",
+   "image": "rue_commercante/rue_commercante.jpg",
+   "mapExit": {
+    "box": [
+     0,
+     20,
+     170,
+     240
+    ],
+    "label": "Place du Marché"
+   },
+   "doors": [
+    {
+     "to": "magasin",
+     "label": "le magasin général",
+     "hint": "Go through the red door to the general store",
+     "hit": [
+      202,
+      194,
+      58,
+      72
+     ]
+    },
+    {
+     "to": "reserve",
+     "label": "la réserve",
+     "hint": "Go through the orange door to the stockroom",
+     "hit": [
+      292,
+      194,
+      52,
+      76
+     ]
+    },
+    {
+     "to": "ventes",
+     "label": "la salle des ventes",
+     "hint": "Go through the yellow door to the upstairs sale room",
+     "hit": [
+      372,
+      194,
+      52,
+      96
+     ]
+    },
+    {
+     "to": "fleuriste",
+     "label": "la fleuriste",
+     "hint": "Go through the lime-green door to the florist's",
+     "hit": [
+      450,
+      194,
+      50,
+      96
+     ]
+    },
+    {
+     "to": "quincaillerie",
+     "label": "la quincaillerie",
+     "hint": "Go through the dark-green door to the hardware store",
+     "hit": [
+      522,
+      194,
+      60,
+      62
+     ]
+    },
+    {
+     "to": "ferronnerie",
+     "label": "la ferronnerie",
+     "hint": "Go through the teal door to the ironmonger's",
+     "hit": [
+      610,
+      194,
+      56,
+      66
+     ]
+    },
+    {
+     "to": "librairie",
+     "label": "la librairie",
+     "hint": "Go through the sky-blue door to the bookshop",
+     "hit": [
+      712,
+      196,
+      48,
+      64
+     ]
+    },
+    {
+     "to": "imprimerie",
+     "label": "l'imprimerie",
+     "hint": "Go through the navy-blue door to the print shop upstairs",
+     "hit": [
+      792,
+      196,
+      62,
+      44
+     ]
+    },
+    {
+     "to": "bijouterie",
+     "label": "la bijouterie",
+     "hint": "Go through the purple door to the jeweller's",
+     "hit": [
+      890,
+      196,
+      66,
+      56
+     ]
+    },
+    {
+     "to": "mode",
+     "label": "la boutique de mode",
+     "hint": "Go through the pink door to the fashion boutique",
+     "hit": [
+      1022,
+      196,
+      48,
+      56
+     ]
+    },
+    {
+     "to": "parfumerie",
+     "label": "la parfumerie",
+     "hint": "Go through the white door to the perfumery upstairs",
+     "hit": [
+      1138,
+      196,
+      60,
+      38
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_valeur_noun",
+     "box": [
+      2,
+      270,
+      238,
+      156
+     ]
+    },
+    {
+     "id": "fr_queue_noun",
+     "box": [
+      56,
+      436,
+      256,
+      268
+     ]
+    },
+    {
+     "id": "fr_boutique_noun",
+     "box": [
+      318,
+      550,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_inscription_noun",
+     "box": [
+      366,
+      346,
+      140,
+      196
+     ]
+    },
+    {
+     "id": "fr_commercial_adj",
+     "box": [
+      508,
+      264,
+      160,
+      298
+     ]
+    },
+    {
+     "id": "fr_magasin_noun",
+     "box": [
+      676,
+      262,
+      120,
+      300
+     ]
+    },
+    {
+     "id": "fr_produit_noun",
+     "box": [
+      912,
+      256,
+      106,
+      118
+     ]
+    },
+    {
+     "id": "fr_client_noun",
+     "box": [
+      866,
+      378,
+      176,
+      122
+     ]
+    },
+    {
+     "id": "fr_echange_noun",
+     "box": [
+      800,
+      504,
+      256,
+      212
+     ]
+    },
+    {
+     "id": "fr_prix_noun",
+     "box": [
+      1050,
+      258,
+      84,
+      140
+     ]
+    },
+    {
+     "id": "fr_commerce_noun",
+     "box": [
+      1060,
+      416,
+      180,
+      262
+     ]
+    },
+    {
+     "id": "fr_achat_noun",
+     "box": [
+      1146,
+      244,
+      132,
+      170
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "La rue Commerçante: a cobbled shopping street lined with tall shop fronts under striped awnings, each with a door in its own colour, red, orange, yellow, lime green, dark green, teal, sky blue, navy blue, purple, pink and white; an archway on the left opens onto the market square. Children queue with a tabby cat, a boy films with an old camera, a man in a top hat swaps a hat for a dove, a girl writes at a desk, a stack of books, a rosette and a gold trophy, and a boy carries a crate of red apples.",
+   "nameplate": [
+    50,
+    10
+   ]
+  },
+  "magasin": {
+   "name": "Le magasin général",
+   "room_id": "R_shop_general_02",
+   "image": "rue_commercante/magasin.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the red door to the shopping street",
+     "hit": [
+      586,
+      50,
+      122,
+      280
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "caisse",
+     "label": "la caisse",
+     "hint": "Look closer at the brass till and everyone around it",
+     "at": [
+      1180,
+      690
+     ],
+     "obj": [
+      444,
+      250,
+      836,
+      470
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_vente_noun",
+     "box": [
+      0,
+      85,
+      180,
+      275
+     ]
+    },
+    {
+     "id": "fr_offre_noun",
+     "box": [
+      8,
+      372,
+      165,
+      130
+     ]
+    },
+    {
+     "id": "fr_fermeture_noun",
+     "box": [
+      184,
+      133,
+      150,
+      340
+     ],
+     "labelAt": [
+      259,
+      330
+     ]
+    },
+    {
+     "id": "fr_garantie_noun",
+     "box": [
+      383,
+      148,
+      172,
+      182
+     ]
+    },
+    {
+     "id": "fr_marchand_noun",
+     "box": [
+      712,
+      70,
+      190,
+      215
+     ],
+     "labelAt": [
+      807,
+      249
+     ]
+    },
+    {
+     "id": "fr_registre_noun",
+     "box": [
+      934,
+      164,
+      176,
+      140
+     ]
+    },
+    {
+     "id": "fr_tarif_noun",
+     "box": [
+      1060,
+      30,
+      215,
+      130
+     ]
+    },
+    {
+     "id": "fr_negociation_noun",
+     "box": [
+      520,
+      335,
+      235,
+      150
+     ]
+    },
+    {
+     "id": "fr_ticket_noun",
+     "box": [
+      812,
+      290,
+      118,
+      185
+     ]
+    },
+    {
+     "id": "fr_provision_noun",
+     "box": [
+      60,
+      515,
+      112,
+      140
+     ]
+    },
+    {
+     "id": "fr_reduction_noun",
+     "box": [
+      190,
+      497,
+      130,
+      175
+     ]
+    },
+    {
+     "id": "fr_clientele_noun",
+     "box": [
+      338,
+      430,
+      177,
+      270
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The general store: a red door at the back leads out to the street. A squirrel, a hamster, a white duck and two tortoises cross the floor, a shopkeeper serves at his counter, a boy brings a pony, a man unrolls a long paper roll beside a brass till, a pigeon watches, and children share a cake by a sack of provisions.",
+   "nameplate": [
+    32,
+    10
+   ]
+  },
+  "caisse": {
+   "name": "La caisse",
+   "room_id": "R_shop_general_02_z1",
+   "image": "rue_commercante/caisse.jpg",
+   "parent": "magasin",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cout_noun",
+     "box": [
+      750,
+      218,
+      215,
+      200
+     ]
+    },
+    {
+     "id": "fr_enregistrement_noun",
+     "box": [
+      1045,
+      0,
+      232,
+      300
+     ]
+    },
+    {
+     "id": "fr_compromis_noun",
+     "box": [
+      737,
+      425,
+      365,
+      295
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the market crate in the general store: a pigeon pecks at birdseed, a man perches on a big brass till writing in his book, and two children share a cake, half each."
+  },
+  "reserve": {
+   "name": "La réserve",
+   "room_id": "R_shop_general_03",
+   "image": "rue_commercante/reserve.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the orange door to the shopping street",
+     "hit": [
+      478,
+      45,
+      80,
+      150
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "jouets",
+     "label": "la caisse de jouets",
+     "hint": "Look closer at the big crate of toys",
+     "at": [
+      960,
+      698
+     ],
+     "obj": [
+      650,
+      366,
+      630,
+      354
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_vitrine_noun",
+     "box": [
+      0,
+      20,
+      180,
+      235
+     ],
+     "labelAt": [
+      90,
+      219
+     ]
+    },
+    {
+     "id": "fr_marchandise_noun",
+     "box": [
+      15,
+      262,
+      170,
+      300
+     ]
+    },
+    {
+     "id": "fr_corbeille_noun",
+     "box": [
+      190,
+      150,
+      194,
+      175
+     ]
+    },
+    {
+     "id": "fr_enseigne_noun_f",
+     "box": [
+      272,
+      10,
+      140,
+      135
+     ],
+     "labelAt": [
+      342,
+      109
+     ]
+    },
+    {
+     "id": "fr_epicerie_noun",
+     "box": [
+      388,
+      282,
+      132,
+      320
+     ]
+    },
+    {
+     "id": "fr_comptoir_noun",
+     "box": [
+      550,
+      200,
+      192,
+      120
+     ]
+    },
+    {
+     "id": "fr_panier_noun",
+     "box": [
+      660,
+      325,
+      135,
+      115
+     ]
+    },
+    {
+     "id": "fr_vendeur_noun",
+     "box": [
+      746,
+      30,
+      150,
+      168
+     ],
+     "labelAt": [
+      821,
+      163
+     ]
+    },
+    {
+     "id": "fr_commercant_noun",
+     "box": [
+      815,
+      215,
+      125,
+      195
+     ]
+    },
+    {
+     "id": "fr_passant_noun",
+     "box": [
+      945,
+      115,
+      105,
+      210
+     ]
+    },
+    {
+     "id": "fr_caissier_noun",
+     "box": [
+      1055,
+      125,
+      100,
+      165
+     ]
+    },
+    {
+     "id": "fr_collectionneur_noun",
+     "box": [
+      1160,
+      195,
+      120,
+      180
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The stockroom: an orange door at the back leads out to the street. Cakes on stands by the window, a raven on a basket of apples, stacked cardboard boxes, a boot hanging as a shop sign, a baker with loaves at the counter, a balloon seller, a badger sweeping, a passer-by in a long coat, a cashier at her till, and a toy crate of model houses.",
+   "nameplate": [
+    79,
+    10
+   ]
+  },
+  "jouets": {
+   "name": "La caisse de jouets",
+   "room_id": "R_shop_general_03_z1",
+   "image": "rue_commercante/jouets.jpg",
+   "parent": "reserve",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_consommateur_noun",
+     "box": [
+      700,
+      135,
+      250,
+      300
+     ]
+    },
+    {
+     "id": "fr_bourg_noun",
+     "box": [
+      1040,
+      236,
+      235,
+      186
+     ]
+    },
+    {
+     "id": "fr_depot_noun",
+     "box": [
+      737,
+      440,
+      470,
+      260
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the toy crate in the stockroom: an old lady with a full trolley licks an ice-cream cone, a model market town of red-roofed houses, and a little panda sweeping out a toy bus depot."
+  },
+  "ventes": {
+   "name": "La salle des ventes",
+   "room_id": "R_shop_general_04",
+   "image": "rue_commercante/ventes.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the yellow door to the shopping street",
+     "hit": [
+      714,
+      45,
+      70,
+      230
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "lot",
+     "label": "le lot",
+     "hint": "Look closer at the big crate of lots for sale",
+     "at": [
+      700,
+      690
+     ],
+     "obj": [
+      604,
+      342,
+      672,
+      378
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_echoppe_noun",
+     "box": [
+      0,
+      20,
+      158,
+      210
+     ],
+     "labelAt": [
+      79,
+      195
+     ]
+    },
+    {
+     "id": "fr_brocante_noun",
+     "box": [
+      0,
+      232,
+      158,
+      234
+     ]
+    },
+    {
+     "id": "fr_halle_noun",
+     "box": [
+      160,
+      60,
+      265,
+      405
+     ],
+     "labelAt": [
+      292,
+      429
+     ]
+    },
+    {
+     "id": "fr_enchere_noun",
+     "box": [
+      432,
+      95,
+      108,
+      345
+     ]
+    },
+    {
+     "id": "fr_acheteur_noun",
+     "box": [
+      575,
+      130,
+      135,
+      290
+     ]
+    },
+    {
+     "id": "fr_abonnement_noun",
+     "box": [
+      788,
+      130,
+      85,
+      238
+     ]
+    },
+    {
+     "id": "fr_distributeur_noun",
+     "box": [
+      876,
+      60,
+      108,
+      115
+     ],
+     "labelAt": [
+      958,
+      139
+     ]
+    },
+    {
+     "id": "fr_bonus_noun",
+     "box": [
+      905,
+      180,
+      195,
+      186
+     ]
+    },
+    {
+     "id": "fr_souk_noun",
+     "box": [
+      1105,
+      62,
+      175,
+      395
+     ]
+    },
+    {
+     "id": "fr_prelevement_noun",
+     "box": [
+      714,
+      372,
+      229,
+      98
+     ]
+    },
+    {
+     "id": "fr_acquisition_noun",
+     "box": [
+      100,
+      470,
+      230,
+      170
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The upstairs sales room: a yellow door at the back leads out to the street. A market stall under a striped awning, a junk table of teapots, a beaming uncle spreading his arms, a woman waving a paddle beside a chair, a man with shopping bags, a lady in a bonnet with a stack of magazines, a parrot, a camel with rolled rugs, a hamster wheel, and an open crate of toy animals.",
+   "nameplate": [
+    34,
+    94
+   ]
+  },
+  "lot": {
+   "name": "Le lot",
+   "room_id": "R_shop_general_04_z1",
+   "image": "rue_commercante/lot.jpg",
+   "parent": "ventes",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_shopping_noun",
+     "box": [
+      600,
+      250,
+      150,
+      215
+     ]
+    },
+    {
+     "id": "fr_rabais_noun",
+     "box": [
+      762,
+      255,
+      140,
+      200
+     ]
+    },
+    {
+     "id": "fr_negociant_noun",
+     "box": [
+      906,
+      250,
+      135,
+      215
+     ]
+    },
+    {
+     "id": "fr_abonne_noun",
+     "box": [
+      1045,
+      255,
+      140,
+      210
+     ]
+    },
+    {
+     "id": "fr_troc_noun",
+     "box": [
+      720,
+      470,
+      380,
+      225
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the crate in the upstairs sales room: a penguin with shopping bags, a rabbit snipping with scissors beside his carrots, a merchant with an armful of carrots, a lady in a bonnet, and a goat beside a toy truck of cabbages."
+  },
+  "fleuriste": {
+   "name": "Chez la fleuriste",
+   "room_id": "R_florist",
+   "image": "rue_commercante/fleuriste.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the lime-green door to the shopping street",
+     "hit": [
+      958,
+      50,
+      110,
+      240
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cagette",
+     "label": "la cagette",
+     "hint": "Look closer at the little wooden crate of pots",
+     "at": [
+      300,
+      690
+     ],
+     "obj": [
+      0,
+      423,
+      528,
+      297
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_fleur_noun",
+     "box": [
+      0,
+      10,
+      186,
+      300
+     ],
+     "labelAt": [
+      93,
+      275
+     ]
+    },
+    {
+     "id": "fr_fougere_noun",
+     "box": [
+      0,
+      315,
+      140,
+      215
+     ]
+    },
+    {
+     "id": "fr_fee_noun",
+     "box": [
+      190,
+      236,
+      96,
+      128
+     ]
+    },
+    {
+     "id": "fr_plante_noun",
+     "box": [
+      296,
+      80,
+      120,
+      215
+     ]
+    },
+    {
+     "id": "fr_cocarde_noun",
+     "box": [
+      262,
+      368,
+      178,
+      135
+     ]
+    },
+    {
+     "id": "fr_floral_adj",
+     "box": [
+      445,
+      232,
+      118,
+      232
+     ]
+    },
+    {
+     "id": "fr_vegetal_adj",
+     "box": [
+      568,
+      30,
+      130,
+      410
+     ],
+     "labelAt": [
+      633,
+      405
+     ]
+    },
+    {
+     "id": "fr_bouquet_noun",
+     "box": [
+      760,
+      255,
+      128,
+      190
+     ]
+    },
+    {
+     "id": "fr_floraison_noun",
+     "box": [
+      484,
+      524,
+      300,
+      150
+     ]
+    },
+    {
+     "id": "fr_vase_noun_m",
+     "box": [
+      895,
+      320,
+      90,
+      175
+     ]
+    },
+    {
+     "id": "fr_lis_noun",
+     "box": [
+      1075,
+      40,
+      190,
+      320
+     ],
+     "labelAt": [
+      1170,
+      325
+     ]
+    },
+    {
+     "id": "fr_rosier_noun",
+     "box": [
+      992,
+      375,
+      275,
+      335
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The florist's greenhouse: a lime-green door on the right leads out to the street. Roses in a blue-and-white vase, a fern-haired gnome watering, a fairy, a girl on a ladder among ivy, a rooster, a tiny rosette, a lady in a floral dress followed by bumblebees, a friendly ghost, white lilies, a girl smelling a rose bush, and a wooden crate of potted flowers.",
+   "nameplate": [
+    56,
+    68
+   ]
+  },
+  "cagette": {
+   "name": "La cagette",
+   "room_id": "R_florist_z1",
+   "image": "rue_commercante/cagette.jpg",
+   "parent": "fleuriste",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_marmotte_noun",
+     "box": [
+      30,
+      412,
+      275,
+      300
+     ]
+    },
+    {
+     "id": "fr_tulipe_noun",
+     "box": [
+      232,
+      40,
+      300,
+      220
+     ]
+    },
+    {
+     "id": "fr_lavande_noun",
+     "box": [
+      425,
+      262,
+      290,
+      370
+     ]
+    },
+    {
+     "id": "fr_muguet_noun",
+     "box": [
+      720,
+      180,
+      240,
+      460
+     ]
+    },
+    {
+     "id": "fr_bulbe_noun",
+     "box": [
+      965,
+      170,
+      245,
+      430
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the flower crate at the florist's: a marmot curled asleep in a pot, two frogs leaping over a red tulip, a toy truck in front of purple lavender, lily of the valley in a mug, and a glowing flower bulb pushing up a shoot."
+  },
+  "quincaillerie": {
+   "name": "La quincaillerie",
+   "room_id": "R_hardware_01",
+   "image": "rue_commercante/quincaillerie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the dark-green door to the shopping street",
+     "hit": [
+      655,
+      40,
+      90,
+      280
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bac",
+     "label": "le bac",
+     "hint": "Look closer at the big wooden bin of building supplies",
+     "at": [
+      975,
+      698
+     ],
+     "obj": [
+      670,
+      377,
+      610,
+      343
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_matiere_noun",
+     "box": [
+      0,
+      100,
+      172,
+      320
+     ]
+    },
+    {
+     "id": "fr_fibre_noun",
+     "box": [
+      178,
+      60,
+      115,
+      142
+     ],
+     "labelAt": [
+      235,
+      167
+     ]
+    },
+    {
+     "id": "fr_cire_noun",
+     "box": [
+      222,
+      205,
+      170,
+      232
+     ]
+    },
+    {
+     "id": "fr_etoffe_noun",
+     "box": [
+      398,
+      15,
+      250,
+      300
+     ]
+    },
+    {
+     "id": "fr_colle_noun",
+     "box": [
+      520,
+      322,
+      160,
+      150
+     ]
+    },
+    {
+     "id": "fr_cuir_noun",
+     "box": [
+      752,
+      45,
+      125,
+      395
+     ]
+    },
+    {
+     "id": "fr_carton_noun",
+     "box": [
+      882,
+      275,
+      160,
+      165
+     ]
+    },
+    {
+     "id": "fr_tissu_noun",
+     "box": [
+      905,
+      106,
+      170,
+      164
+     ],
+     "labelAt": [
+      990,
+      235
+     ]
+    },
+    {
+     "id": "fr_caoutchouc_noun",
+     "box": [
+      1080,
+      175,
+      185,
+      265
+     ]
+    },
+    {
+     "id": "fr_enceinte_noun",
+     "box": [
+      0,
+      440,
+      182,
+      190
+     ]
+    },
+    {
+     "id": "fr_adhesion_noun",
+     "box": [
+      186,
+      452,
+      255,
+      250
+     ]
+    },
+    {
+     "id": "fr_resine_noun",
+     "box": [
+      448,
+      520,
+      200,
+      190
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The hardware and materials store: a dark-green door at the back leads out to the street. Women fold cloth and a fortune-teller gazes into a crystal ball, a man shows a big leather hide, a rubber duck, sheep on a fibre mat, a pot of glue spilling, a cowboy, a beaver, and an open crate of building materials with a goat in clogs.",
+   "nameplate": [
+    80,
+    10
+   ]
+  },
+  "bac": {
+   "name": "Le bac",
+   "room_id": "R_hardware_01_z1",
+   "image": "rue_commercante/bac.jpg",
+   "parent": "quincaillerie",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_materiel_adj",
+     "box": [
+      395,
+      160,
+      200,
+      290
+     ]
+    },
+    {
+     "id": "fr_plastique_noun",
+     "box": [
+      630,
+      110,
+      186,
+      215
+     ]
+    },
+    {
+     "id": "fr_sabot_noun",
+     "box": [
+      600,
+      330,
+      215,
+      270
+     ]
+    },
+    {
+     "id": "fr_materiau_noun",
+     "box": [
+      820,
+      190,
+      260,
+      450
+     ]
+    },
+    {
+     "id": "fr_adherent_noun",
+     "box": [
+      1082,
+      300,
+      180,
+      265
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the materials bin in the hardware store: a builder yelling as a pile collapses, a carpenter with a yellow plastic sheet and a teak plank, a goat in wooden clogs with a red bow, a man in a flat cap sitting on his stack of planks, and a beaver wearing a club badge."
+  },
+  "ferronnerie": {
+   "name": "La ferronnerie",
+   "room_id": "R_hardware_02",
+   "image": "rue_commercante/ferronnerie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the teal door to the shopping street",
+     "hit": [
+      155,
+      20,
+      135,
+      200
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "casier",
+     "label": "le casier",
+     "hint": "Look closer at the long wooden bin on the floor",
+     "at": [
+      900,
+      698
+     ],
+     "obj": [
+      560,
+      315,
+      720,
+      405
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_chaine_noun",
+     "box": [
+      188,
+      227,
+      148,
+      255
+     ]
+    },
+    {
+     "id": "fr_corde_noun",
+     "box": [
+      10,
+      345,
+      172,
+      280
+     ]
+    },
+    {
+     "id": "fr_liaison_noun",
+     "box": [
+      395,
+      55,
+      156,
+      150
+     ],
+     "labelAt": [
+      473,
+      170
+     ]
+    },
+    {
+     "id": "fr_ferraille_noun",
+     "box": [
+      555,
+      20,
+      155,
+      185
+     ],
+     "labelAt": [
+      632,
+      169
+     ]
+    },
+    {
+     "id": "fr_grille_noun",
+     "box": [
+      352,
+      211,
+      250,
+      270
+     ]
+    },
+    {
+     "id": "fr_rayure_noun",
+     "box": [
+      262,
+      488,
+      290,
+      225
+     ]
+    },
+    {
+     "id": "fr_fer_noun",
+     "box": [
+      712,
+      160,
+      115,
+      280
+     ]
+    },
+    {
+     "id": "fr_fil_noun",
+     "box": [
+      832,
+      50,
+      60,
+      110
+     ],
+     "labelAt": [
+      859,
+      125
+     ]
+    },
+    {
+     "id": "fr_metal_noun",
+     "box": [
+      896,
+      106,
+      214,
+      109
+     ]
+    },
+    {
+     "id": "fr_marbre_noun",
+     "box": [
+      830,
+      222,
+      160,
+      250
+     ]
+    },
+    {
+     "id": "fr_acier_noun",
+     "box": [
+      995,
+      322,
+      225,
+      150
+     ]
+    },
+    {
+     "id": "fr_couchage_noun",
+     "box": [
+      1120,
+      225,
+      160,
+      92
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The ironmonger's workshop: a teal door at the back leads out to the street. Chains hang from the wall, a monkey swings on a rope, a man plays the guitar on a coil of rope, a blacksmith at his anvil, an iron grille, a friendly robot, a spider on its thread, a marble block, a silver castle, and an open crate of metal pieces with a shiny leek.",
+   "nameplate": [
+    82,
+    10
+   ]
+  },
+  "casier": {
+   "name": "Le casier",
+   "room_id": "R_hardware_02_z1",
+   "image": "rue_commercante/casier.jpg",
+   "parent": "ferronnerie",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_metallique_adj",
+     "box": [
+      452,
+      285,
+      142,
+      300
+     ]
+    },
+    {
+     "id": "fr_tuyau_noun",
+     "box": [
+      600,
+      380,
+      126,
+      225
+     ]
+    },
+    {
+     "id": "fr_barreau_noun",
+     "box": [
+      728,
+      280,
+      92,
+      390
+     ]
+    },
+    {
+     "id": "fr_cuivre_noun",
+     "box": [
+      822,
+      428,
+      74,
+      140
+     ]
+    },
+    {
+     "id": "fr_bronze_noun",
+     "box": [
+      826,
+      572,
+      100,
+      125
+     ]
+    },
+    {
+     "id": "fr_cordon_noun",
+     "box": [
+      1044,
+      350,
+      225,
+      340
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the metal crate in the ironmonger's: a shiny silver leek, a bird peeping from a metal pipe, a cat on the rung of a ladder by a wheelbarrow, a copper pot and a brass trumpet, a beagle sniffing a bronze dog statue, and a man tugging a long red cord."
+  },
+  "librairie": {
+   "name": "La librairie",
+   "room_id": "R_bookshop_01",
+   "image": "rue_commercante/librairie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the sky-blue door to the shopping street",
+     "hit": [
+      300,
+      15,
+      120,
+      140
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bac_livres",
+     "label": "le bac à livres",
+     "hint": "Look closer at the big open crate of books",
+     "at": [
+      640,
+      690
+     ],
+     "obj": [
+      300,
+      345,
+      667,
+      375
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_page_noun_f",
+     "box": [
+      0,
+      180,
+      214,
+      220
+     ]
+    },
+    {
+     "id": "fr_presse_noun",
+     "box": [
+      222,
+      160,
+      195,
+      235
+     ]
+    },
+    {
+     "id": "fr_edition_noun",
+     "box": [
+      205,
+      405,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_bibliotheque_noun",
+     "box": [
+      438,
+      130,
+      125,
+      120
+     ]
+    },
+    {
+     "id": "fr_livre_noun_m",
+     "box": [
+      736,
+      16,
+      130,
+      280
+     ],
+     "labelAt": [
+      801,
+      261
+     ]
+    },
+    {
+     "id": "fr_journal_noun",
+     "box": [
+      870,
+      150,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_papier_noun",
+     "box": [
+      800,
+      300,
+      155,
+      160
+     ]
+    },
+    {
+     "id": "fr_page_noun_m",
+     "box": [
+      1024,
+      128,
+      92,
+      140
+     ]
+    },
+    {
+     "id": "fr_crayon_noun",
+     "box": [
+      1062,
+      272,
+      58,
+      116
+     ]
+    },
+    {
+     "id": "fr_guide_noun_m",
+     "box": [
+      1150,
+      185,
+      128,
+      240
+     ]
+    },
+    {
+     "id": "fr_carnet_noun",
+     "box": [
+      960,
+      392,
+      128,
+      170
+     ]
+    },
+    {
+     "id": "fr_lecteur_noun",
+     "box": [
+      1094,
+      432,
+      80,
+      143
+     ]
+    },
+    {
+     "id": "fr_cahier_noun",
+     "box": [
+      961,
+      578,
+      150,
+      80
+     ]
+    },
+    {
+     "id": "fr_bouquin_noun",
+     "box": [
+      1176,
+      525,
+      104,
+      190
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The bookshop: a sky-blue door at the back leads out to the street. Tall bookshelves, a printing press, a cat and a dragon reading, a bee, a hedgehog on a tower of books, an old lady writing, a mouse reading beside a cup of tea on a saucer, a pony and a little red toy car, children with notebooks, a ghost, and an open crate of books with a squid and an anchor.",
+   "nameplate": [
+    48,
+    10
+   ]
+  },
+  "bac_livres": {
+   "name": "Le bac à livres",
+   "room_id": "R_bookshop_01_z1",
+   "image": "rue_commercante/bac_livres.jpg",
+   "parent": "librairie",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_copie_noun",
+     "box": [
+      205,
+      45,
+      262,
+      208
+     ]
+    },
+    {
+     "id": "fr_librairie_noun",
+     "box": [
+      470,
+      0,
+      175,
+      250
+     ],
+     "labelAt": [
+      557,
+      215
+     ]
+    },
+    {
+     "id": "fr_encre_noun",
+     "box": [
+      75,
+      257,
+      215,
+      461
+     ]
+    },
+    {
+     "id": "fr_recommandation_noun",
+     "box": [
+      292,
+      330,
+      178,
+      200
+     ]
+    },
+    {
+     "id": "fr_libraire_noun",
+     "box": [
+      482,
+      260,
+      345,
+      250
+     ]
+    },
+    {
+     "id": "fr_stylo_noun",
+     "box": [
+      720,
+      5,
+      205,
+      250
+     ],
+     "labelAt": [
+      822,
+      220
+     ]
+    },
+    {
+     "id": "fr_manuscrit_noun",
+     "box": [
+      830,
+      258,
+      122,
+      300
+     ]
+    },
+    {
+     "id": "fr_manuel_noun",
+     "box": [
+      955,
+      280,
+      220,
+      270
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the book crate in the bookshop: a parrot copying a letter, a tiny bookshop of shelves, a squid whose ink spreads into an anchor, a cat asleep on a book, two mouse booksellers handing a book across, a stylish pen in sunglasses, a quill writing, and a bear reading a manual."
+  },
+  "imprimerie": {
+   "name": "L'imprimerie",
+   "room_id": "R_bookshop_02",
+   "image": "rue_commercante/imprimerie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the navy-blue door to the shopping street",
+     "hit": [
+      30,
+      50,
+      110,
+      255
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_imprimerie_noun",
+     "box": [
+      160,
+      20,
+      410,
+      152
+     ],
+     "labelAt": [
+      365,
+      137
+     ]
+    },
+    {
+     "id": "fr_rene_noun",
+     "box": [
+      84,
+      315,
+      366,
+      175
+     ]
+    },
+    {
+     "id": "fr_repere_noun",
+     "box": [
+      550,
+      176,
+      185,
+      139
+     ]
+    },
+    {
+     "id": "fr_agenda_noun",
+     "box": [
+      745,
+      100,
+      128,
+      215
+     ]
+    },
+    {
+     "id": "fr_livret_noun",
+     "box": [
+      698,
+      320,
+      125,
+      195
+     ]
+    },
+    {
+     "id": "fr_correspondant_noun",
+     "box": [
+      828,
+      435,
+      80,
+      170
+     ]
+    },
+    {
+     "id": "fr_pamphlet_noun",
+     "box": [
+      880,
+      30,
+      225,
+      150
+     ],
+     "labelAt": [
+      992,
+      145
+     ]
+    },
+    {
+     "id": "fr_imprimeur_noun",
+     "box": [
+      1000,
+      185,
+      270,
+      200
+     ]
+    },
+    {
+     "id": "fr_essuie_glace_noun",
+     "box": [
+      912,
+      490,
+      168,
+      100
+     ]
+    },
+    {
+     "id": "fr_depliant_noun",
+     "box": [
+      1085,
+      390,
+      195,
+      320
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The print shop: a navy-blue door on the left leads out to the street. Pictures of a bird, a ship and a flower hang on a line, a rocking horse, a kneeling man with a globe, a girl reading a booklet, a painter at a peacock canvas, an old press, a hedgehog, a little blue car with wipers, and a man unfolding a map by a stool.",
+   "nameplate": [
+    33,
+    29
+   ]
+  },
+  "bijouterie": {
+   "name": "La bijouterie",
+   "room_id": "R_boutique_01",
+   "image": "rue_commercante/bijouterie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the purple door to the shopping street",
+     "hit": [
+      580,
+      180,
+      135,
+      140
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sonnerie_noun",
+     "box": [
+      0,
+      285,
+      138,
+      165
+     ]
+    },
+    {
+     "id": "fr_montre_noun",
+     "box": [
+      148,
+      140,
+      240,
+      190
+     ]
+    },
+    {
+     "id": "fr_bague_noun",
+     "box": [
+      142,
+      378,
+      212,
+      330
+     ]
+    },
+    {
+     "id": "fr_ronde_noun",
+     "box": [
+      395,
+      180,
+      130,
+      200
+     ]
+    },
+    {
+     "id": "fr_perle_noun",
+     "box": [
+      358,
+      550,
+      170,
+      155
+     ]
+    },
+    {
+     "id": "fr_lustre_noun",
+     "box": [
+      500,
+      0,
+      290,
+      172
+     ],
+     "labelAt": [
+      645,
+      137
+     ]
+    },
+    {
+     "id": "fr_diamant_noun",
+     "box": [
+      725,
+      268,
+      200,
+      150
+     ]
+    },
+    {
+     "id": "fr_poignet_noun",
+     "box": [
+      578,
+      422,
+      205,
+      295
+     ]
+    },
+    {
+     "id": "fr_bijou_noun",
+     "box": [
+      928,
+      145,
+      150,
+      120
+     ]
+    },
+    {
+     "id": "fr_collier_noun",
+     "box": [
+      1023,
+      312,
+      112,
+      145
+     ]
+    },
+    {
+     "id": "fr_bracelet_noun",
+     "box": [
+      898,
+      462,
+      190,
+      240
+     ]
+    },
+    {
+     "id": "fr_eventail_noun",
+     "box": [
+      1140,
+      160,
+      140,
+      190
+     ]
+    },
+    {
+     "id": "fr_or_noun",
+     "box": [
+      1140,
+      355,
+      140,
+      255
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The jeweller's salon: a purple door at the back leads out to the street. A crystal chandelier, a big purple furry monster, a clock, a ginger cat, a giant diamond held up by a jeweller, a girl in a round dance, a pearl in an open shell, a chessboard of gold pieces, a collie with a necklace, a peacock, a fan and a cart of gold coins.",
+   "nameplate": [
+    29,
+    10
+   ]
+  },
+  "mode": {
+   "name": "La boutique de mode",
+   "room_id": "R_boutique_02",
+   "image": "rue_commercante/mode.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the pink door to the shopping street",
+     "hit": [
+      445,
+      72,
+      95,
+      90
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mode_noun_f",
+     "box": [
+      50,
+      25,
+      180,
+      390
+     ]
+    },
+    {
+     "id": "fr_soie_noun",
+     "box": [
+      236,
+      278,
+      104,
+      150
+     ]
+    },
+    {
+     "id": "fr_couture_noun",
+     "box": [
+      345,
+      165,
+      212,
+      290
+     ]
+    },
+    {
+     "id": "fr_sac_noun",
+     "box": [
+      617,
+      156,
+      110,
+      210
+     ]
+    },
+    {
+     "id": "fr_parfum_noun",
+     "box": [
+      758,
+      65,
+      190,
+      145
+     ],
+     "labelAt": [
+      853,
+      174
+     ]
+    },
+    {
+     "id": "fr_tailleur_noun",
+     "box": [
+      730,
+      215,
+      135,
+      255
+     ]
+    },
+    {
+     "id": "fr_style_noun",
+     "box": [
+      958,
+      45,
+      125,
+      240
+     ],
+     "labelAt": [
+      1020,
+      250
+     ]
+    },
+    {
+     "id": "fr_mannequin_noun",
+     "box": [
+      1088,
+      140,
+      185,
+      238
+     ]
+    },
+    {
+     "id": "fr_maquillage_noun",
+     "box": [
+      870,
+      290,
+      180,
+      300
+     ]
+    },
+    {
+     "id": "fr_accessoire_noun",
+     "box": [
+      1056,
+      385,
+      224,
+      315
+     ]
+    },
+    {
+     "id": "fr_bourse_noun",
+     "box": [
+      0,
+      462,
+      388,
+      225
+     ]
+    },
+    {
+     "id": "fr_composition_noun",
+     "box": [
+      395,
+      470,
+      162,
+      245
+     ]
+    },
+    {
+     "id": "fr_purete_noun",
+     "box": [
+      561,
+      378,
+      150,
+      215
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The fashion boutique: a pink door at the back leads out to the street. Models in pink and polka dots, a swan, a seamstress at a vast pink gown, loaves in a paper bag, a tailor pinning a jacket, a poodle, a suit of armour on a stand, a clown at a make-up mirror, a lady in a lilac hat, a bulldog on a pouf, wild boars with a purse, and a tray of glittering jewels.",
+   "nameplate": [
+    58,
+    87
+   ]
+  },
+  "parfumerie": {
+   "name": "La parfumerie",
+   "room_id": "R_boutique_03",
+   "image": "rue_commercante/parfumerie.jpg",
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back through the white door to the shopping street",
+     "hit": [
+      785,
+      30,
+      115,
+      230
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "coffre",
+     "label": "le coffre",
+     "hint": "Look closer at the big open chest in the middle of the shop",
+     "at": [
+      640,
+      700
+     ],
+     "obj": [
+      310,
+      350,
+      656,
+      369
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_senteur_noun",
+     "box": [
+      78,
+      187,
+      150,
+      270
+     ]
+    },
+    {
+     "id": "fr_vogue_noun",
+     "box": [
+      55,
+      470,
+      180,
+      170
+     ]
+    },
+    {
+     "id": "fr_palette_noun",
+     "box": [
+      240,
+      290,
+      166,
+      225
+     ]
+    },
+    {
+     "id": "fr_icone_noun",
+     "box": [
+      330,
+      20,
+      120,
+      118
+     ]
+    },
+    {
+     "id": "fr_rondelle_noun",
+     "box": [
+      408,
+      145,
+      72,
+      205
+     ],
+     "labelAt": [
+      417,
+      256
+     ]
+    },
+    {
+     "id": "fr_faction_noun",
+     "box": [
+      484,
+      75,
+      90,
+      280
+     ]
+    },
+    {
+     "id": "fr_porte_monnaie_noun",
+     "box": [
+      852,
+      297,
+      109,
+      133
+     ]
+    },
+    {
+     "id": "fr_joyau_noun",
+     "box": [
+      905,
+      95,
+      170,
+      200
+     ]
+    },
+    {
+     "id": "fr_veilleur_noun",
+     "box": [
+      1080,
+      20,
+      140,
+      175
+     ],
+     "labelAt": [
+      1150,
+      159
+     ]
+    },
+    {
+     "id": "fr_dandy_noun",
+     "box": [
+      1160,
+      200,
+      120,
+      270
+     ]
+    },
+    {
+     "id": "fr_ambre_noun",
+     "box": [
+      1030,
+      300,
+      114,
+      210
+     ]
+    },
+    {
+     "id": "fr_parfumeur_noun",
+     "box": [
+      955,
+      455,
+      72,
+      200
+     ],
+     "labelAt": [
+      954,
+      620
+     ]
+    },
+    {
+     "id": "fr_bijoutier_noun",
+     "box": [
+      1032,
+      515,
+      110,
+      190
+     ],
+     "labelAt": [
+      1079,
+      670
+     ]
+    },
+    {
+     "id": "fr_jade_noun",
+     "box": [
+      1148,
+      475,
+      132,
+      240
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "The perfumery: a white door at the back leads out to the street. Father Christmas sniffs a jar of herbs, a giraffe, a palace guard, an old painter with a kitten at her palette, a dandy in a top hat, penguins, a lady in black lace, an amber jewel, a cow, a panda, and an open chest of treasures with a blue glass globe.",
+   "nameplate": [
+    56,
+    41
+   ]
+  },
+  "coffre": {
+   "name": "Le coffre",
+   "room_id": "R_boutique_03_z1",
+   "image": "rue_commercante/coffre.jpg",
+   "parent": "parfumerie",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mantille_noun",
+     "box": [
+      110,
+      145,
+      300,
+      500
+     ]
+    },
+    {
+     "id": "fr_styliste_noun",
+     "box": [
+      415,
+      130,
+      145,
+      470
+     ]
+    },
+    {
+     "id": "fr_enchanteur_noun",
+     "box": [
+      612,
+      20,
+      175,
+      400
+     ],
+     "labelAt": [
+      699,
+      385
+     ]
+    },
+    {
+     "id": "fr_saphir_noun",
+     "box": [
+      565,
+      425,
+      235,
+      255
+     ]
+    },
+    {
+     "id": "fr_boubou_noun",
+     "box": [
+      790,
+      70,
+      200,
+      290
+     ],
+     "labelAt": [
+      890,
+      325
+     ]
+    },
+    {
+     "id": "fr_glamour_noun",
+     "box": [
+      1000,
+      110,
+      280,
+      250
+     ]
+    },
+    {
+     "id": "fr_joaillier_noun",
+     "box": [
+      835,
+      365,
+      240,
+      290
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market",
+   "alt": "Close-up of the treasure chest in the perfumery: a black lace mantilla on a mannequin, a designer pinning a dress form, an enchanter lifting his top hat with a tuba bursting out, a seahorse with a blue sapphire in its bowl, a man in a colourful boubou, a cow in pearls, and a jeweller cheering at his workbench."
+  }
+ }
+}
