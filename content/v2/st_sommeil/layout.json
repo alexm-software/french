@@ -1,0 +1,427 @@
+{
+ "building": "st_sommeil",
+ "building_id": "ST_sommeil",
+ "sector_id": "S02_home",
+ "name": "Ruelle du Sommeil",
+ "main": "st_sommeil",
+ "roomList": [
+  {
+   "key": "st_sommeil",
+   "short": "Le marchand de sable"
+  },
+  {
+   "key": "levetot",
+   "short": "Les lève-tôt"
+  },
+  {
+   "key": "lavandieres",
+   "short": "Les lavandières"
+  },
+  {
+   "key": "brosses",
+   "short": "Les brosses"
+  }
+ ],
+ "planned": {
+  "st_sommeil": {
+   "vocabRoom": "ST_routine_seg001",
+   "only": [
+    "fr_coucher_verb",
+    "fr_allonger_verb",
+    "fr_endormir_verb",
+    "fr_attendre_verb",
+    "fr_relever_verb",
+    "fr_asseoir_verb"
+   ]
+  },
+  "levetot": {
+   "vocabRoom": "ST_routine_seg002",
+   "only": [
+    "fr_dormir_verb",
+    "fr_habiter_verb",
+    "fr_reveiller_verb",
+    "fr_eclairer_verb",
+    "fr_ennuyer_verb",
+    "fr_habiller_verb"
+   ]
+  },
+  "lavandieres": {
+   "vocabRoom": "ST_routine_seg003",
+   "only": [
+    "fr_ranger_verb",
+    "fr_baigner_verb",
+    "fr_debarrasser_verb",
+    "fr_laver_verb",
+    "fr_eloigner_verb",
+    "fr_nettoyer_verb"
+   ]
+  },
+  "brosses": {
+   "vocabRoom": "ST_routine_seg004",
+   "only": [
+    "fr_effacer_verb",
+    "fr_brosser_verb",
+    "fr_froler_verb",
+    "fr_garnir_verb",
+    "fr_meubler_verb",
+    "fr_raser_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_sommeil": {
+   "name": "Rue du Marchand-de-Sable",
+   "room_id": "ST_routine_seg001",
+   "image": "st_sommeil/st_sommeil.jpg",
+   "alt": "A snowy lantern lane of half-timbered cottages on a winter morning, painted in ink and gouache: Monsieur Verbe the mime climbs into a little bed under a patchwork quilt holding his hand mirror, stretches a long striped scarf longer, nods off against a snowman with his mirror under a puff of moon and stars, waits by a lamp post checking his pocket watch, lifts a toppled lantern back up out of the snow and sits down on a snowy bench with his mirror. The stone archway with its open gate on the left leads back to Rue des Maisons; the red, green and blue cottage doors lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     70,
+     165,
+     200,
+     170
+    ],
+    "label": "Rue des Maisons"
+   },
+   "doors": [
+    {
+     "to": "levetot",
+     "label": "Rue des Lève-tôt",
+     "hint": "Through the red cottage door",
+     "hit": [
+      437,
+      225,
+      75,
+      113
+     ]
+    },
+    {
+     "to": "lavandieres",
+     "label": "Allée des Lavandières",
+     "hint": "Through the green cottage door",
+     "hit": [
+      747,
+      231,
+      75,
+      106
+     ]
+    },
+    {
+     "to": "brosses",
+     "label": "Ruelle des Brosses",
+     "hint": "Through the blue cottage door",
+     "hit": [
+      1027,
+      231,
+      75,
+      109
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_coucher_verb",
+     "box": [
+      10,
+      344,
+      262,
+      337
+     ]
+    },
+    {
+     "id": "fr_allonger_verb",
+     "box": [
+      275,
+      340,
+      195,
+      280
+     ]
+    },
+    {
+     "id": "fr_endormir_verb",
+     "box": [
+      481,
+      345,
+      225,
+      288
+     ]
+    },
+    {
+     "id": "fr_attendre_verb",
+     "box": [
+      737,
+      355,
+      150,
+      280
+     ]
+    },
+    {
+     "id": "fr_relever_verb",
+     "box": [
+      894,
+      400,
+      150,
+      245
+     ]
+    },
+    {
+     "id": "fr_asseoir_verb",
+     "box": [
+      1062,
+      385,
+      208,
+      260
+     ]
+    }
+   ]
+  },
+  "levetot": {
+   "name": "Rue des Lève-tôt",
+   "room_id": "ST_routine_seg002",
+   "image": "st_sommeil/levetot.jpg",
+   "backTo": "st_sommeil",
+   "alt": "A snowy cottage garden at sunrise, painted in ink and gouache: Monsieur Verbe the mime sleeps soundly in a hammock, waves from the window of his own little cottage, sits up in bed yawning with his hand mirror as a rooster crows, holds up a lantern to light a dark woodpile, slumps bored at a garden table with his mirror and sits in a warm winter coat with his mirror, dressed for the day. The red cottage door on the left leads back to Rue du Marchand-de-Sable.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_sommeil",
+     "label": "Rue du Marchand-de-Sable",
+     "hint": "Back through the red cottage door",
+     "hit": [
+      235,
+      215,
+      93,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_dormir_verb",
+     "box": [
+      50,
+      375,
+      325,
+      200
+     ]
+    },
+    {
+     "id": "fr_habiter_verb",
+     "box": [
+      594,
+      238,
+      169,
+      137
+     ]
+    },
+    {
+     "id": "fr_reveiller_verb",
+     "box": [
+      456,
+      388,
+      356,
+      300
+     ]
+    },
+    {
+     "id": "fr_eclairer_verb",
+     "box": [
+      869,
+      275,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_ennuyer_verb",
+     "box": [
+      906,
+      420,
+      163,
+      262
+     ]
+    },
+    {
+     "id": "fr_habiller_verb",
+     "box": [
+      1078,
+      400,
+      185,
+      282
+     ]
+    }
+   ]
+  },
+  "lavandieres": {
+   "name": "Allée des Lavandières",
+   "room_id": "ST_routine_seg003",
+   "image": "st_sommeil/lavandieres.jpg",
+   "backTo": "st_sommeil",
+   "alt": "A snowy washing yard with a stone well-house and a washing line, painted in ink and gouache: Monsieur Verbe the mime puts his toys away in a chest, bathes in a bubbly wooden tub with a rubber duck and his hand mirror, carries the dirty plates and cups away on a tray, washes his hands in a foaming stone basin, carries a ladder away from the wall and sponges a window until it sparkles. The green cottage door on the left leads back to Rue du Marchand-de-Sable.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_sommeil",
+     "label": "Rue du Marchand-de-Sable",
+     "hint": "Back through the green cottage door",
+     "hit": [
+      160,
+      162,
+      96,
+      173
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ranger_verb",
+     "box": [
+      12,
+      375,
+      250,
+      320
+     ]
+    },
+    {
+     "id": "fr_baigner_verb",
+     "box": [
+      265,
+      350,
+      243,
+      265
+     ]
+    },
+    {
+     "id": "fr_debarrasser_verb",
+     "box": [
+      519,
+      268,
+      150,
+      275
+     ]
+    },
+    {
+     "id": "fr_laver_verb",
+     "box": [
+      670,
+      345,
+      212,
+      310
+     ]
+    },
+    {
+     "id": "fr_eloigner_verb",
+     "box": [
+      885,
+      190,
+      195,
+      335
+     ]
+    },
+    {
+     "id": "fr_nettoyer_verb",
+     "box": [
+      1085,
+      250,
+      175,
+      325
+     ]
+    }
+   ]
+  },
+  "brosses": {
+   "name": "Ruelle des Brosses",
+   "room_id": "ST_routine_seg004",
+   "image": "st_sommeil/brosses.jpg",
+   "backTo": "st_sommeil",
+   "alt": "A snowy alley by a brush shop and a lamp-lit bay window, painted in ink and gouache: Monsieur Verbe the mime rubs chalk squiggles off a little blackboard, brushes his hair with his hand mirror, ducks as a snowball brushes past his nose, carries a cake topped with strawberries, carries an armchair to furnish the cosy room and shaves the foam off his chin with his hand mirror. The blue door on the left leads back to Rue du Marchand-de-Sable.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_sommeil",
+     "label": "Rue du Marchand-de-Sable",
+     "hint": "Back through the blue door",
+     "hit": [
+      94,
+      75,
+      181,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_effacer_verb",
+     "box": [
+      5,
+      280,
+      245,
+      375
+     ]
+    },
+    {
+     "id": "fr_brosser_verb",
+     "box": [
+      287,
+      268,
+      180,
+      365
+     ]
+    },
+    {
+     "id": "fr_froler_verb",
+     "box": [
+      500,
+      288,
+      175,
+      345
+     ]
+    },
+    {
+     "id": "fr_garnir_verb",
+     "box": [
+      678,
+      293,
+      182,
+      340
+     ]
+    },
+    {
+     "id": "fr_meubler_verb",
+     "box": [
+      862,
+      293,
+      211,
+      320
+     ]
+    },
+    {
+     "id": "fr_raser_verb",
+     "box": [
+      1075,
+      300,
+      185,
+      405
+     ]
+    }
+   ]
+  }
+ }
+}
