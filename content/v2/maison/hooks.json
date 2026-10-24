@@ -1,0 +1,614 @@
+{
+ "_note": "v2 hook overrides for la Maison familiale (B05_maison). Every hook describes what is actually painted (nothing is written in the paintings); plaque words are shown only as a small blank plaque.",
+ "fr_couloir_noun": {
+  "hook": "Two children fight a \"COOL WAR\" (\"koo-LWAHR\") with pillows down the CORRIDOR, feathers flying.",
+  "why": "Reworded to match the painting: the painted children have a pillow fight (no water pistols, so nothing weapon-like)."
+ },
+ "fr_immeuble_noun": {
+  "hook": "Across the courtyard a BLOCK OF FLATS with rows of round windows stands IMMOBILE (\"ee-MUHBL\").",
+  "why": "Reworded to match the painting: the window looks out on a real block of flats, not a model on a table."
+ },
+ "fr_appartement_noun": {
+  "hook": "From the top of the block A PARTY MAN in a paper crown throws streamers out of his FLAT (\"ah-pahr-tuh-MAHN\").",
+  "why": "Reworded to match the painting: the party man leans out of the top of the block of flats across the courtyard."
+ },
+ "fr_toit_noun": {
+  "hook": "A TOY (\"TWAH\") train runs along the ROOF of the block of flats.",
+  "why": "Reworded to match the painting: the train runs on the real block's roof, not a model."
+ },
+ "fr_lampe_noun": {
+  "hook": "Like English 'lamp', said LAHNP with a nasal: a girl in a blue dress switches on the reading LAMP while her tabby cat dozes on the rug nearby.",
+  "why": "Reworded to match the painting: the girl wears a blue dress and the tabby sleeps on the rug."
+ },
+ "fr_ampoule_noun": {
+  "hook": "A bare glowing LIGHT BULB hangs over the goldfish bowl, lighting up the fish's little POOL (\"ahn-POUL\").",
+  "say": "ahn-POUL",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the painting is unchanged."
+ },
+ "fr_placard_noun": {
+  "hook": "Not a protest placard: placard (\"plah-KAHR\") is the CUPBOARD a boy peeks out of, high on the oak sideboard.",
+  "why": "Reworded to match the painting: no blank placard is painted; the boy peeks out of the cupboard."
+ },
+ "fr_buffet_noun": {
+  "hook": "Like English 'buffet', said bew-FEH: a child in a white sheet pops out beside the oak SIDEBOARD going \"BOO!\".",
+  "why": "Reworded to match the painting: there is no little brother beside the ghost."
+ },
+ "fr_tapis_noun": {
+  "hook": "A tapir (\"tah-PIH\") sits proudly in the middle of the patterned RUG as if it owned it.",
+  "say": "tah-PIH",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the painting is unchanged."
+ },
+ "fr_crotte_noun": {
+  "hook": "Text plaque only: no droppings are painted; the small blank tag hanging on the dog basket stands for DROPPING (\"KROT\"), the thing a good dog owner always picks up.",
+  "plaque": true,
+  "ex": [
+   "Attention, il y a une crotte de chien sur le trottoir !",
+   "Watch out, there's a dog dropping on the pavement!"
+  ],
+  "why": "Museum plaque word: nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. The plaque is now a blank tag on the basket. Example gloss reworded to avoid a blocked word."
+ },
+ "fr_chien_noun": {
+  "hook": "A shaggy grey DOG (\"SHYAN\") has dropped a red ball and waits, tongue out, for someone to throw it.",
+  "why": "Reworded to match the painting: no boy is painted beside the dog."
+ },
+ "fr_fille_noun": {
+  "hook": "A GIRL with pigtails pays her FEE (\"FEE\") at a little cardboard-box booth.",
+  "why": "Reworded to match the painting: the booth is made of cardboard boxes."
+ },
+ "fr_cousin_noun": {
+  "hook": "A pigeon COOs (\"koo-ZAN\") on the lap of the boy COUSIN sitting in his little tent.",
+  "why": "Reworded to match the painting: the pigeon sits on the cousin's lap; there is no photo frame."
+ },
+ "fr_tante_noun": {
+  "hook": "The AUNT, still a girl at heart, knits woolly socks inside the spotted pink TENT (\"TAHNT\").",
+  "why": "Reworded to match the painting: the tent is spotted, not striped."
+ },
+ "fr_familial_adj": {
+  "hook": "The FAMILY dog wears the tartan family scarf in its oval portrait: everything here is FAMILIAL (\"fah-mee-LYAL\").",
+  "why": "Reworded to match the painting: the dog's scarf is tartan, not striped."
+ },
+ "fr_epoux_noun": {
+  "hook": "A bride and her SPOUSE sit side by side on a church bench, A PEW (\"ay-POU\").",
+  "say": "ay-POU",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the couple sit on a bench."
+ },
+ "fr_parent_noun": {
+  "hook": "A PARENT in red pushes the family pram with a green PARROT (\"pah-RAHN\") riding on her shoulder.",
+  "why": "Reworded to match the painting: the painted parent is a woman."
+ },
+ "fr_gendre_noun": {
+  "hook": "The new SON-IN-LAW sits with a big white GANDER (\"ZHAHNDR\") tucked under his arm.",
+  "why": "Reworded to match the painting: there is no bay window in the photo."
+ },
+ "fr_papi_noun": {
+  "hook": "GRANDPA in his green armchair hugs a floppy-eared PUPPY (\"pah-PIH\") on his lap.",
+  "say": "pah-PIH",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the photo has no fire."
+ },
+ "fr_cuisine_noun": {
+  "hook": "A young QUEEN (\"kwee-ZEEN\") in a gold crown and white apron rules her KITCHEN, waving a wooden spoon.",
+  "why": "Reworded to match the painting: the queen waves the spoon; she is not stirring."
+ },
+ "fr_vitre_noun": {
+  "hook": "A girl draws on the glassy (vitreous, \"VEETR\") WINDOW PANE of the kitchen window.",
+  "why": "Reworded to match the painting: it is the kitchen window, not a laundry door."
+ },
+ "fr_boite_noun": {
+  "hook": "A green frog in a sailor's cap sits in a cardboard BOX (\"BWAHT\", like \"boat\") as if it were his little BOAT.",
+  "why": "Reworded to match the painting: the box sits on the counter, not in a sink."
+ },
+ "fr_four_noun": {
+  "hook": "A cook in a chef's hat waves FOUR (\"FOOR\") fingers by the brick OVEN.",
+  "why": "Reworded to match the painting: the cook waves by the oven."
+ },
+ "fr_cendrier_noun": {
+  "hook": "Text plaque only: no ashtray is painted anywhere in the house; the blank cream plaque on the kitchen wall stands for the word ASHTRAY (\"sahn-dree-YAY\").",
+  "plaque": true,
+  "why": "Museum plaque word: nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. "
+ },
+ "fr_couteau_noun": {
+  "hook": "A sharp KNIFE lies in the drawer: careful, it could \"cut a TOE\" (\"koo-TOH\")!",
+  "why": "Reworded to match the painting: the knife lies in the drawer; there is no cutting board."
+ },
+ "fr_plaque_noun": {
+  "hook": "A boy polishes the round brass PLATE on the wardrobe: \"PLACK, PLACK!\" goes his cloth.",
+  "why": "Reworded to match the painting: the boy is not dressed as a knight."
+ },
+ "fr_lit_noun": {
+  "hook": "Little LEE (\"LEE\") sits up in the big wooden BED with her knitting.",
+  "why": "Reworded to match the painting: the painted knitter is a little girl, not a granny."
+ },
+ "fr_reveur_adj": {
+  "hook": "A DREAMY girl in the middle of the dream cloud rests her chin on her hands and gazes up (\"reh-VUHR\").",
+  "why": "Reworded to match the painting: the girl is inside the dream cloud."
+ },
+ "fr_baillement_noun": {
+  "hook": "A teddy bear waves \"BYE!\" mid-YAWN (\"bah-yuh-MAHN\"), mouth wide open.",
+  "why": "Reworded to match the painting: the yawner is a teddy bear (stripes are kept for Monsieur Verbe)."
+ },
+ "fr_eveil_noun": {
+  "hook": "In the framed picture a bride in A VEIL (\"ay-VEHY\") greets the sunrise, wide AWAKE.",
+  "en": "wakefulness, awakening",
+  "why": "Reworded to match the painting: the bride wears the veil at sunrise. Gloss simplified."
+ },
+ "fr_rappel_noun": {
+  "hook": "A tiny toy drummer in a little frame on the wall RAPS (\"rah-PEHL\") out a REMINDER.",
+  "why": "Reworded to match the painting: the drummer is in a small frame, not on a cork board."
+ },
+ "fr_pantalon_noun": {
+  "hook": "Twist on 'pantaloons': a clown dances in giant polka-dot TROUSERS (\"pahn-tah-LOHN\").",
+  "why": "Reworded to match the painting: the trousers are polka-dot (stripes are kept for Monsieur Verbe)."
+ },
+ "fr_dentelle_noun": {
+  "hook": "A white LACE veil hangs in the wardrobe, its scalloped edge like a row of little teeth (dent, \"dahn-TEHL\").",
+  "why": "Reworded to match the painting: only the lace is painted; no lady and no tooth."
+ },
+ "fr_blouson_noun": {
+  "hook": "A puffy BLUE (\"BLOO\") bomber JACKET, a blouson, hangs in the wardrobe.",
+  "why": "Reworded to match the painting: the jacket hangs in the wardrobe; no boy is painted."
+ },
+ "fr_cravate_noun": {
+  "hook": "A CRAB sits in a wooden VAT (\"krah-VAHT\") of water wearing a polka-dot TIE.",
+  "why": "Reworded to match the painting: the tie is polka-dot."
+ },
+ "fr_culotte_noun": {
+  "hook": "Text plaque only: no underwear is painted; the small blank plaque on the wall above the chest of drawers stands for KNICKERS, \"a CUTE LOT\" (\"kew-LOT\").",
+  "plaque": true,
+  "why": "Museum plaque word: nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. "
+ },
+ "fr_semelle_noun": {
+  "hook": "A shoe pokes out of the bottom drawer, its muddy SOLE showing: \"SMELL (\"suh-MEHL\") that!\"",
+  "why": "Reworded to match the painting: the shoe sticks out of the drawer; no boy is painted."
+ },
+ "fr_echarpe_noun": {
+  "hook": "A long red SCARF spills out of the top drawer, its fringe as SHARP (\"ay-SHAHRP\") as a row of teeth.",
+  "why": "Reworded to match the painting: no shark is painted; only the scarf."
+ },
+ "fr_fragment_noun": {
+  "hook": "The FRAGMENTS of a broken blue-and-white vase lie scattered on top of the chest: \"Frag, MAN!\" (\"frahg-MAHN\").",
+  "why": "Reworded to match the painting: the pieces lie on the chest; no boy is painted."
+ },
+ "fr_smoking_noun": {
+  "hook": "False friend: a black TUXEDO (\"smo-KEENG\") with a bow tie hangs on the clothes rail. In French, this word only ever means the dinner jacket.",
+  "why": "Reworded to match the painting: the tuxedo hangs on the rail."
+ },
+ "fr_manche_noun_f": {
+  "hook": "La manche: the long SLEEVE of a blue shirt dangles over the shelf edge, just right to MUNCH (\"MAHNSH\").",
+  "why": "Reworded to match the painting: no cat is painted; only the sleeve."
+ },
+ "fr_habit_noun": {
+  "hook": "A little dressmaker's dummy on the shelf wears a whole OUTFIT, tailcoat and bow tie, as neat as A BEE (\"ah-BEE\").",
+  "why": "Reworded to match the painting: the outfit is on a dummy; no bee is painted."
+ },
+ "fr_crepe_noun_m": {
+  "hook": "Le crêpe is the FABRIC, not the pancake: a crinkly dark CREPE (\"KREHP\") cloth lies folded on the bottom shelf.",
+  "why": "Reworded to match the painting: the cloth lies on the shelf; no pancake is painted."
+ },
+ "fr_toilette_noun": {
+  "hook": "A white poodle grooms the bulldog's ear beside the bath: \"TWO, LET me finish!\" (\"twah-LEHT\"), she is doing his TOILETTE (grooming, not the WC).",
+  "why": "Reworded to match the painting: the poodle grooms the bulldog in the tub."
+ },
+ "fr_tabouret_noun": {
+  "hook": "A ginger TABBY cat (\"tah-boo-REH\") sits up on the wooden STOOL.",
+  "why": "Reworded to match the painting: the cat is a ginger tabby."
+ },
+ "fr_mouchoir_noun": {
+  "hook": "A little brown calf holds a lace HANDKERCHIEF in her mouth: \"MOO\" (\"moo-SHWAHR\").",
+  "why": "Reworded to match the painting: the calf is brown."
+ },
+ "fr_pipe_noun": {
+  "hook": "Text plaque only: no pipe is painted anywhere in the house; the small blank plaque on the laundry wall stands for the word PIPE (\"PIHP\").",
+  "say": "PIHP",
+  "plaque": true,
+  "ex": [
+   "La vieille pipe en bois est rangée dans la vitrine du musée.",
+   "The old wooden pipe is kept in the museum display case."
+  ],
+  "why": "Museum plaque word: nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Example replaced: the v1 example describes smoking."
+ },
+ "fr_chose_noun_f": {
+  "hook": "La chose: a wicker hamper of THINGS for school SHOWS (\"SHOHZ\"): an umbrella, hats, a rubber duck, a wig.",
+  "why": "Reworded to match the painting: the hamper holds an umbrella (no swords)."
+ },
+ "fr_coffre_noun": {
+  "hook": "Twist on 'coffer': a boy opens a dusty CHEST and covers his mouth as he COUGHS (\"KOFR\") in the golden dust.",
+  "why": "Reworded to match the painting: golden dust motes rise from the chest."
+ },
+ "fr_grenier_noun": {
+  "hook": "Twist on 'granary': a black cat sits on sacks of grain under the eaves of the ATTIC.",
+  "why": "Reworded to match the painting: the cat is black."
+ },
+ "fr_sous_sol_noun": {
+  "hook": "Up the stairwell from the cellar a SOUS-chef carries a flat SOLE fish (\"soo-SOL\") from the BASEMENT.",
+  "why": "Reworded to match the painting: the stairwell is at the bottom right, not the far left."
+ },
+ "fr_colocataire_noun": {
+  "hook": "Two laughing boys, FLATMATES, tug at the same giant brass LOCK key (\"koh-LOK\"), nearly in TEARS (\"TEHR\") of laughter.",
+  "why": "Reworded to match the painting: two boys tug the key."
+ },
+ "fr_fondement_noun": {
+  "hook": "A little boy in a yellow hard hat, a very FOND little MAN (\"fohnd-MAHN\"), hugs the big stone FOUNDATION pillar.",
+  "why": "Reworded to match the painting: the builder is a little boy and the stone is a pillar."
+ },
+ "fr_maconnerie_noun": {
+  "hook": "Grandma (\"MA\") in her apron lays bricks into a low wall, SO neat (\"mah-SO-nuh-REE\"): MASONRY.",
+  "why": "Reworded to match the painting: she builds a low wall, not an arch."
+ },
+ "fr_hebergement_noun": {
+  "hook": "A brown BEAR (\"BEHR\") in a red nightcap sits up in a wooden guest bed: ACCOMMODATION.",
+  "why": "Reworded to match the painting: the nightcap is plain red (stripes are kept for Monsieur Verbe) and the bed is wooden."
+ },
+ "fr_vestibule_noun": {
+  "hook": "A man in a waistcoat, a VEST, leads a big BULL (\"BEWL\") past the open door of a VESTIBULE across the street.",
+  "why": "Reworded to match the painting: seen through the skylight; no rug is painted."
+ },
+ "fr_marelle_noun": {
+  "hook": "A red-capped mushroom (think MOREL, \"mah-REHL\") hops along the chalk HOPSCOTCH squares.",
+  "why": "Reworded to match the painting: the painted mushroom is a red cap."
+ },
+ "fr_billard_noun": {
+  "hook": "A furry fellow in a waistcoat lines up a shot at the little POOL TABLE of solid-coloured balls (\"bee-YAHR\").",
+  "why": "Reworded to match the painting: the balls are solid-coloured."
+ },
+ "fr_poupee_noun": {
+  "hook": "A girl hugs her floppy rag DOLL, really a PUPPET (\"pou-PAY\").",
+  "say": "pou-PAY",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the painting is unchanged."
+ },
+ "fr_ping_pong_noun": {
+  "hook": "A boy whacks the ball across the PING-PONG table: \"PING! PONG!\"",
+  "say": "pihng-POHNG",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the painting is unchanged."
+ },
+ "fr_pelote_noun": {
+  "hook": "A fluffy white BALL of wool sits at the cat's feet, round as a PILOT's (\"puh-LOT\") helmet.",
+  "why": "Reworded to match the painting: no kitten is painted; the ball of wool lies in the chest."
+ },
+ "fr_enigme_noun": {
+  "hook": "A sphinx-like grey cat sits in the open toy chest and stares at you, posing a RIDDLE (\"ay-NEEGM\").",
+  "why": "Reworded to match the painting: the cat sits without raising a paw."
+ },
+ "fr_haie_noun": {
+  "hook": "A horse leaps toward a round stack of HAY (\"EH\") in front of the tall HEDGE.",
+  "why": "Reworded to match the painting: the horse leaps toward the hay in front of the hedge."
+ },
+ "fr_pelouse_noun": {
+  "hook": "A green ball, like a giant PEA, rolls LOOSE (\"puh-LOOZ\") across the LAWN.",
+  "why": "Reworded to match the painting: a green ball rolls across a plain lawn."
+ },
+ "fr_gazon_noun": {
+  "hook": "A boy has put the GAS ON (\"gah-ZOHN\"): his red jerry can stands by the mower as he mows the TURF.",
+  "why": "Reworded to match the painting: the mower is pushed by a boy."
+ },
+ "fr_square_noun": {
+  "hook": "A stone fountain ringed by a clipped box hedge: a little public GARDEN (\"SKWAHR\") in miniature.",
+  "why": "Reworded to match the painting: the hedge rings a fountain."
+ },
+ "fr_serrure_noun": {
+  "hook": "The green door's LOCK plate is a brass lion's head that goes \"ROAR!\" (\"say-REWR\") when you turn the key.",
+  "why": "Reworded to match the painting: the lion's-head lock plate is on the door."
+ },
+ "fr_maman_noun": {
+  "hook": "In one little portrait a MAMA duck leads her line of four ducklings: MUM (\"mah-MAHN\").",
+  "why": "Reworded to match the painting: the duck family is in a portrait, not on a rug."
+ },
+ "fr_promesse_noun": {
+  "hook": "Two little hands link little fingers on the bedside table: a PROMISE never to MESS (\"pro-MEHS\") up the bed again.",
+  "why": "Reworded to match the painting: only the two linked hands are painted."
+ },
+ "fr_reve_noun": {
+  "hook": "The girl in bed has dozed off over her knitting, DREAMING of the toy red motorbike on the bedside shelf going \"REV, REV!\"",
+  "why": "Reworded to match the painting: the dreamer is a girl who has nodded off in bed."
+ },
+ "fr_voeu_noun": {
+  "hook": "A cupcake with one lit candle: blow it out and make a VOW (\"VEUH\").",
+  "why": "Reworded to match the painting: the bedside shelf holds a cupcake with a candle; no kneeling boy."
+ },
+ "fr_souhait_noun": {
+  "hook": "A dandelion clock stands in a glass vase, ready for a WISH: one puff and the seeds SWAY (\"SWEH\") away.",
+  "why": "Reworded to match the painting: the dandelion is in a vase; no boy is painted."
+ },
+ "fr_reveil_noun": {
+  "hook": "The big brass ALARM CLOCK on the bedside table rings the morning bugle call, the REVEILLE (\"ray-VEHY\").",
+  "why": "Reworded to match the painting: the clock face has plain tick marks."
+ },
+ "fr_tunique_noun": {
+  "hook": "A long white TUNIC hangs at the front of the trunk: hum a TUNE (\"tew-NEEK\") as you try it on.",
+  "why": "Reworded to match the painting: only the tunic on its hanger is painted."
+ },
+ "fr_pochette_noun": {
+  "hook": "A POSH (\"POSH\") sparkly sequinned CLUTCH BAG rests on the rim of the trunk.",
+  "why": "Reworded to match the painting: only the clutch bag is painted."
+ },
+ "fr_vestimentaire_adj": {
+  "hook": "A smart VEST (waistcoat) hangs on its hanger: this trunk is all about CLOTHING (\"vehs-tee-mahn-TEHR\").",
+  "why": "Reworded to match the painting: only the waistcoat is painted."
+ },
+ "fr_voile_noun_m": {
+  "hook": "Le voile is a VEIL: a white lace bridal VEIL drapes over the trunk lid, soft as the WALL (\"VWAHL\") of a tent.",
+  "why": "Reworded to match the painting: the veil drapes over the lid."
+ },
+ "fr_deguisement_noun": {
+  "hook": "\"THE GEESE MAN!\" (\"day-geez-MAHN\"): a white goose COSTUME with its orange beak sits in the trunk, a perfect DISGUISE.",
+  "why": "Reworded to match the painting: the goose costume lies in the trunk; nobody is wearing it."
+ },
+ "fr_capuchon_noun": {
+  "hook": "A little CAPUCHIN monkey (\"kah-pew-SHOHN\") sits in the trunk with the HOOD of its red top pulled up over its ears.",
+  "why": "Reworded to match the painting: the monkey is a toy sitting in the trunk."
+ },
+ "fr_impermeable_noun": {
+  "hook": "A yellow RAINCOAT spills over the edge of the trunk: every drop runs straight off this IMPERMEABLE coat (\"an-pehr-may-AHBL\").",
+  "why": "Reworded to match the painting: only the raincoat is painted."
+ },
+ "fr_textile_noun": {
+  "hook": "Bolts of colourful TEXTILE are stacked by the trunk, neat as roof TILES (\"tehks-TEEL\").",
+  "why": "Reworded to match the painting: the bolts are stacked on the floor; no cowboy."
+ },
+ "fr_pret_a_porter_noun": {
+  "hook": "Two jackets with price tags hang at the back of the trunk: READY-TO-WEAR, ready for a PORTER (\"por-TAY\") to carry off.",
+  "why": "Reworded to match the painting: the jackets hang on hangers; no porter is painted."
+ },
+ "fr_poussiere_noun": {
+  "hook": "\"POUF, SIR!\" (\"pou-SYEHR\"): a grey cloud of DUST puffs off the old rag rug draped over the boiler.",
+  "say": "pou-SYEHR",
+  "why": "Respelling reworded so no syllable reads as pee/poo; the dust puffs off the rug on the boiler."
+ },
+ "fr_poudre_noun": {
+  "hook": "White washing POWDER pours out of a tipped tin on the shelf, enough to make a poodle sneeze (\"POUDR\").",
+  "say": "POUDR",
+  "why": "Respelling reworded so no syllable reads as pee/poo; only the tin and the powder are painted."
+ },
+ "fr_cendre_noun": {
+  "hook": "A tin pail under the shelf is full of grey ASH (\"SAHNDR\"), left for Cinderella to empty.",
+  "why": "Reworded to match the painting: only the pail of ash is painted."
+ },
+ "fr_boue_noun": {
+  "hook": "A pair of rubber boots hangs on the post, dripping thick MUD: \"BOO!\" (\"BOO\").",
+  "say": "BOO",
+  "why": "Reworded to match the painting: only the muddy boots are painted."
+ },
+ "fr_salete_noun": {
+  "hook": "A cloth bag on the boiler hook bulges with grubby, SALTY beach clothes (\"sah-luh-TAY\"): DIRT everywhere.",
+  "why": "Reworded to match the painting: only the bag of dirty clothes is painted."
+ },
+ "fr_fouet_noun": {
+  "hook": "A WHISK hangs on the copper pipe, ready to whip the suds: \"FWAY, FWAY!\"",
+  "why": "Reworded to match the painting: only the whisk is painted."
+ },
+ "fr_menage_noun": {
+  "hook": "A long feather duster leans in the corner: whoever MANAGES (\"may-NAHZH\") the HOUSEWORK dusts every cobweb with it.",
+  "why": "Reworded to match the painting: only the duster is painted."
+ },
+ "fr_nettoyage_noun": {
+  "hook": "CLEANING day: a fishing NET (\"NEH\") and a TOY (\"TWAH\") boat sit in the blue bucket.",
+  "why": "Reworded to match the painting: the net and toy boat sit in a bucket."
+ },
+ "fr_clef_noun": {
+  "hook": "A big ornate brass KEY (\"KLAY\", spelt clef) hangs on a hook by the green door.",
+  "why": "Reworded to match the painting: the key hangs on the wall."
+ },
+ "fr_maison_noun": {
+  "hook": "A little wooden bird HOUSE hangs on the wall: a tiny MASON (\"meh-ZOHN\") must have built it.",
+  "why": "Reworded to match the painting: the house is a birdhouse on the wall."
+ },
+ "fr_porte_noun": {
+  "hook": "The tall green DOOR (\"PORT\") with its little window: a PORTER carries everything in through it.",
+  "why": "Reworded to match the painting: the door is plain green, with no anchor or porthole."
+ },
+ "fr_poignee_noun": {
+  "hook": "A plain brass lever HANDLE on the green door: \"PWAH, NYAY!\" (\"pwah-NYAY\") it groans when you push it.",
+  "why": "Reworded to match the painting: the handle is a plain lever; nobody is pushing it."
+ },
+ "fr_facade_noun": {
+  "hook": "The cream-and-timber FRONT of the house, with its lantern: give it a smile, never a SAD face (\"fah-SAHD\").",
+  "why": "Reworded to match the painting: the house wall itself is the façade."
+ },
+ "fr_balcon_noun": {
+  "hook": "A little wooden BALCONY with a flower pot sits on the veranda roof, just right for eating an ice-cream CONE (\"bahl-KOHN\").",
+  "why": "Reworded to match the painting: the balcony is wooden; nobody stands on it."
+ },
+ "fr_interieur_noun": {
+  "hook": "\"AN TERRIER\" (\"an-tay-RYUHR\") snoozes INSIDE the veranda at the foot of the stairs.",
+  "why": "Reworded to match the painting: the terrier lies at the foot of the stairs inside."
+ },
+ "fr_rez_de_chaussee_noun": {
+  "hook": "The veranda is on the GROUND FLOOR, with a SHOW (\"shoh-SAY\") of pink flowers in pots by its windows.",
+  "why": "Reworded to match the painting: no tap dancer is painted; the flowers make the show."
+ },
+ "fr_patte_noun": {
+  "hook": "The big dog in the basket rests one fluffy PAW on the rim, waiting for a gentle PAT (\"PAHT\").",
+  "why": "Reworded to match the painting: the paw belongs to the dog in the basket; no girl is painted."
+ },
+ "fr_laisse_noun": {
+  "hook": "A red LEASH, thin as a shoe-LACE (\"LEHS\"), hangs ready over the side of the basket.",
+  "why": "Reworded to match the painting: the lead hangs on the basket; nobody is walking a dog."
+ },
+ "fr_chat_noun": {
+  "hook": "\"SHHH-AH!\" (\"SHAH\"): the tabby CAT is fast asleep on its blue cushion, so tiptoe past.",
+  "why": "Reworded to match the painting: no girl is painted; the cat sleeps on a blue cushion."
+ },
+ "fr_rat_noun": {
+  "hook": "A white pet RAT bats two blue pom-pom balls about: \"RAH! RAH!\"",
+  "why": "Reworded to match the painting: the rat plays with blue balls; it wears no skirt."
+ },
+ "fr_chiot_noun": {
+  "hook": "A SHY (\"SHYOH\") little brown-and-white PUPPY hangs back by the red ball.",
+  "why": "Reworded to match the painting: the puppy stands on the floor, not in a basket."
+ },
+ "fr_chaton_noun": {
+  "hook": "A KITTEN hugs a red ball of wool that seems to weigh a TON (\"TOHN\").",
+  "why": "Reworded to match the painting: the kitten plays with a single red ball of wool."
+ },
+ "fr_hamster_noun": {
+  "hook": "A HAMSTER climbs a STAIR up a woman's green sleeved ARM (\"ahm-STEHR\").",
+  "why": "Reworded to match the painting: the hamster climbs a woman's green sleeve."
+ },
+ "fr_niece_noun": {
+  "hook": "A barefoot NIECE in blue dungarees sits on the floor and looks down at her bare KNEES (\"NYEHS\").",
+  "why": "Reworded to match the painting: the album photo shows no sticking plasters."
+ },
+ "fr_neveu_noun": {
+  "hook": "A small NEPHEW glares at the bowl of broccoli in front of him: \"NEVER!\" (\"nuh-VUH\").",
+  "why": "Reworded to match the painting: the boy faces the bowl in the album photo."
+ },
+ "fr_petit_fils_noun": {
+  "hook": "A tiny GRANDSON in a PETTY little red FEZ (\"puh-tee-FEESS\") stands proudly in his album photo.",
+  "why": "Reworded to match the painting: no window seat appears in the photo."
+ },
+ "fr_tranche_noun": {
+  "hook": "Like English 'tranche', said TRAHNSH: a thick SLICE of bread lies at the front of the drawer, cut so deep it left a TRENCH in the loaf.",
+  "why": "Reworded to match the painting: the slice lies in the drawer; no girl is painted."
+ },
+ "fr_fourchette_noun": {
+  "hook": "FOR (\"FOOR\") dinner, shiny FORKS lie side by side in the drawer, their little wooden SHED (\"SHEHT\").",
+  "why": "Reworded to match the painting: the forks lie in the drawer, not in a garden shed."
+ },
+ "fr_cuillere_noun": {
+  "hook": "A big wooden SPOON lies in the drawer, just asking to be waved: \"Whee, YEAH!\" (\"kwee-YEHR\").",
+  "why": "Reworded to match the painting: the spoon lies in the drawer; no girl is painted."
+ },
+ "fr_argenterie_noun": {
+  "hook": "A bundle of little silver spoons tied with string: the family SILVERWARE, the shiny fruit of \"our John's tree\" (\"ahr-zhahn-tuh-REE\").",
+  "why": "Reworded to match the painting: the silver is a bundle of spoons tied with string, not a tree."
+ },
+ "fr_baton_noun": {
+  "hook": "A long wooden STICK lies along the side of the drawer, heavy as a TON (\"bah-TOHN\").",
+  "why": "Reworded to match the painting: the stick lies in the drawer; no sheep is painted."
+ },
+ "fr_brin_noun": {
+  "hook": "A single SPRIG of parsley pokes up at the back of the drawer, thin as a flake of BRAN (\"BRAN\").",
+  "why": "Reworded to match the painting: the sprig lies in the drawer, not in a jar."
+ },
+ "fr_toast_noun": {
+  "hook": "Like English 'toast', said TOHST: a golden slice of TOAST is tucked into the corner of the drawer.",
+  "why": "Reworded to match the painting: the toast lies in the drawer; no terrier is painted."
+ },
+ "fr_reverie_noun": {
+  "hook": "In a DAYDREAM a girl is a REFEREE (\"reh-vuh-REE\"), blowing her whistle.",
+  "why": "Reworded to match the painting: the referee is in the dream cloud; no bed is painted."
+ },
+ "fr_songe_noun": {
+  "hook": "In a DREAM, mice under the crescent moon sing a SONG (\"SOHNZH\").",
+  "why": "Reworded to match the painting: no sleeping boy is painted; the mice are in the dream cloud."
+ },
+ "fr_cauchemar_noun": {
+  "hook": "In a NIGHTMARE a cow (\"kosh\") and a MARE loom over a frightened little boy.",
+  "why": "Reworded to match the painting: the painted figure is a small boy."
+ },
+ "fr_fantasme_noun": {
+  "hook": "Twist on 'phantasm': a FANTASY of a green dragon flying past a fairy-tale castle.",
+  "why": "Reworded to match the painting: the dragon flies by the castle in the dream cloud."
+ },
+ "fr_poche_noun": {
+  "hook": "A gold watch peeps out of the POCKET of a POSH (\"POSH\") grey waistcoat.",
+  "why": "Reworded to match the painting: the waistcoat hangs in the wardrobe; no penguin is painted."
+ },
+ "fr_masque_noun": {
+  "hook": "A black MASK (\"MAHSK\") hangs on its own hook in the wardrobe, ready for a fancy-dress ball.",
+  "why": "Reworded to match the painting: the mask hangs on the rail; no raccoon is painted."
+ },
+ "fr_soulier_noun": {
+  "hook": "A pair of polished SHOES waits on the wardrobe floor, ready to dance to SOUL music: \"YAY!\" (\"soo-LYAY\").",
+  "why": "Reworded to match the painting: the shoes stand still on the wardrobe floor."
+ },
+ "fr_jean_noun": {
+  "hook": "A pair of blue JEANS (\"DZHEEN\") hangs on the rail: rub the pocket and a GENIE might pop out.",
+  "why": "Reworded to match the painting: no genie is painted; only the jeans."
+ },
+ "fr_casque_noun": {
+  "hook": "A red fireman's HELMET sits on top of the chest of drawers, round as the lid of a CASK (\"KAHSK\").",
+  "why": "Reworded to match the painting: the helmet sits on the chest, not on a cask."
+ },
+ "fr_beret_noun": {
+  "hook": "A floppy red BERET (\"beh-REH\") lies beside the helmet, just the hat for a painting BEAR.",
+  "why": "Reworded to match the painting: no bear is painted; only the beret."
+ },
+ "fr_jupe_noun": {
+  "hook": "A red pleated SKIRT hangs on the rail, ready to twirl out when you JUMP (\"ZHEWP\").",
+  "why": "Reworded to match the painting: the skirt hangs on the rail; no girl is painted."
+ },
+ "fr_casquette_noun": {
+  "hook": "A navy peaked CAP hangs on the rail, the sort a guard wears to watch over a golden CASKET (\"kahs-KEHT\").",
+  "why": "Reworded to match the painting: the cap hangs on the rail; no chest is painted."
+ },
+ "fr_blouse_noun": {
+  "hook": "False friend: the white SMOCK spattered with red and blue paint on the rail is une blouse (BLOOZ), and the painter sings the BLUES about the stains. A woman's blouse is usually un chemisier.",
+  "why": "Reworded to match the painting: the smock hangs on the rail; no painter is painted."
+ },
+ "fr_lien_noun": {
+  "hook": "A toy LION (\"LYAN\") hangs from a chain of LINKS on the rail: the BOND that ties things together.",
+  "why": "Reworded to match the painting: the lion hangs from the chain."
+ },
+ "fr_gilet_noun": {
+  "hook": "A green WAISTCOAT hangs on the rail, as green as a wobbly JELLY (\"zhee-LEH\").",
+  "why": "Reworded to match the painting: only the waistcoat is painted."
+ },
+ "fr_short_noun": {
+  "hook": "A pair of red SHORTS (\"SHORT\") hangs on the rail: same word, same garment.",
+  "why": "Reworded to match the painting: no giraffe is painted; only the shorts."
+ },
+ "fr_tee_shirt_noun": {
+  "hook": "A plain white T-SHIRT hangs at the end of the rail, ready for a round of golf off the TEE (\"TEE\").",
+  "why": "Reworded to match the painting: the T-shirt hangs on the rail; no golfer is painted."
+ },
+ "fr_laine_noun": {
+  "hook": "A basket of coloured balls of WOOL sits on the shelf, soft enough for a sheep to LEAN (\"LEHN\") on.",
+  "why": "Reworded to match the painting: no sheep is painted; only the wool basket."
+ },
+ "fr_coton_noun": {
+  "hook": "A glass jar holds a TON (\"TOHN\") of fluffy white COTTON balls.",
+  "why": "Reworded to match the painting: the cotton is in a jar, not on a scale."
+ },
+ "fr_top_noun": {
+  "hook": "A painted spinning TOP (\"TOP\") stands on the bottom shelf.",
+  "why": "Reworded to match the painting: the top wears no clothes."
+ },
+ "fr_dome_noun": {
+  "hook": "A garden GNOME (\"DOHM\") stands under a glass DOME on a little stand by a doorway.",
+  "why": "Reworded to match the painting: the dome stands on a little stand."
+ },
+ "fr_figurine_noun": {
+  "hook": "A little china chef FIGURINE (\"fee-gew-REEN\") stands in the toy chest.",
+  "why": "Reworded to match the painting: the figurine is a chef."
+ },
+ "fr_boule_noun": {
+  "hook": "A striped BALL (\"BOOL\") sits in a blue-and-white BOWL in the chest.",
+  "why": "Reworded to match the painting: the ball sits in the bowl."
+ },
+ "fr_bille_noun": {
+  "hook": "A big swirly glass MARBLE (\"BEEY\") sits in the toy chest.",
+  "why": "Reworded to match the painting: the marble is in the chest; no pool table is painted."
+ },
+ "fr_panoplie_noun": {
+  "hook": "Twist on 'panoply': a little chef's apron hangs over the chest, part of a whole dressing-up COSTUME (\"pah-noh-PLEE\").",
+  "why": "Reworded to match the painting: the apron hangs over the chest; no girl is painted."
+ },
+ "fr_puzzle_noun": {
+  "hook": "A jigsaw PUZZLE stands in the chest, one piece still missing: \"puh-ZUHL!\"",
+  "why": "Reworded to match the painting: no boy is painted; only the puzzle."
+ },
+ "fr_casse_tete_noun": {
+  "hook": "CASSE (\"KAHSS\", break) your TÊTE (\"TEHT\", head): a puzzle card with a big brain on it is a real BRAINTEASER.",
+  "why": "Reworded to match the painting: the brainteaser is a puzzle card with a brain on it; no cassette is painted."
+ },
+ "fr_villa_noun": {
+  "hook": "\"VEE-LA!\" (\"vee-LAH\") A girl at an upstairs window holds out her little model country VILLA.",
+  "why": "Reworded to match the painting: the girl shows her model at a window; no calf is painted."
+ },
+ "fr_passe_noun_2": {
+  "hook": "A girl in football kit makes a neat PASS (\"PAHS\") along the grass while the brown dog bounds after her.",
+  "why": "Reworded to match the painting: the dog runs behind the girl."
+ },
+ "fr_fenetre_noun": {
+  "hook": "A fisherwoman leans out of a WINDOW across the courtyard to free her fishing NET (\"fuh-NEHTR\").",
+  "why": "Reworded to match the painting: the window is across the courtyard; no fish are painted on the sill."
+ },
+ "fr_ouverture_noun": {
+  "hook": "Violinists play an OVERTURE (\"oo-vehr-TUR\") in the arched OPENING of a doorway across the courtyard.",
+  "why": "Reworded to match the painting: the fiddlers stand under an arch across the courtyard."
+ },
+ "fr_cour_noun": {
+  "hook": "Down in the cobbled COURTYARD a boy drops an apple CORE (\"KOOR\").",
+  "why": "Reworded to match the painting: the boy is in the courtyard."
+ }
+}

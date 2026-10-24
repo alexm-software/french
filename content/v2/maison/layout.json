@@ -1,0 +1,3892 @@
+{
+ "building": "maison",
+ "building_id": "B05_maison",
+ "sector_id": "S02_home",
+ "v1_room_id": "R_entrance_01",
+ "name": "La Maison familiale",
+ "main": "maison",
+ "roomList": [
+  {
+   "key": "maison",
+   "short": "Le hall"
+  },
+  {
+   "key": "salon",
+   "short": "Le salon"
+  },
+  {
+   "key": "famille",
+   "short": "La famille"
+  },
+  {
+   "key": "cuisine",
+   "short": "La cuisine"
+  },
+  {
+   "key": "salle",
+   "short": "La salle à manger"
+  },
+  {
+   "key": "chambre",
+   "short": "La chambre"
+  },
+  {
+   "key": "dressing",
+   "short": "Le dressing"
+  },
+  {
+   "key": "penderie",
+   "short": "La penderie"
+  },
+  {
+   "key": "bains",
+   "short": "La salle de bains"
+  },
+  {
+   "key": "grenier",
+   "short": "Le grenier"
+  },
+  {
+   "key": "jeux",
+   "short": "La salle de jeux"
+  },
+  {
+   "key": "jardin",
+   "short": "Le jardin"
+  }
+ ],
+ "planned": {
+  "maison": {
+   "vocabRoom": "R_entrance_01",
+   "only": [
+    "fr_entree_noun",
+    "fr_sortie_noun",
+    "fr_hall_noun",
+    "fr_etage_noun",
+    "fr_plafond_noun",
+    "fr_mur_noun",
+    "fr_plancher_noun",
+    "fr_couloir_noun"
+   ]
+  },
+  "salon": {
+   "vocabRoom": "R_living",
+   "only": [
+    "fr_cheminee_noun",
+    "fr_piece_noun",
+    "fr_lampe_noun",
+    "fr_ampoule_noun",
+    "fr_prise_noun",
+    "fr_salon_noun",
+    "fr_rideau_noun",
+    "fr_fauteuil_noun",
+    "fr_buffet_noun",
+    "fr_placard_noun",
+    "fr_tapis_noun",
+    "fr_meuble_noun",
+    "fr_linge_noun",
+    "fr_canape_noun"
+   ]
+  },
+  "salon_panier": {
+   "vocabRoom": "R_pets",
+   "only": [
+    "fr_crotte_noun",
+    "fr_patte_noun",
+    "fr_laisse_noun",
+    "fr_toutou_noun",
+    "fr_chiot_noun",
+    "fr_chien_noun",
+    "fr_chat_noun",
+    "fr_chaton_noun",
+    "fr_rat_noun",
+    "fr_hamster_noun"
+   ]
+  },
+  "famille": {
+   "vocabRoom": "R_family_01",
+   "only": [
+    "fr_grand_mere_noun",
+    "fr_mere_noun",
+    "fr_fille_noun",
+    "fr_soeur_noun",
+    "fr_cousin_noun",
+    "fr_pere_noun",
+    "fr_frere_noun",
+    "fr_oncle_noun",
+    "fr_bebe_noun",
+    "fr_grand_pere_noun"
+   ]
+  },
+  "famille_portraits": {
+   "vocabRoom": "R_family_01",
+   "only": [
+    "fr_tante_noun",
+    "fr_famille_noun",
+    "fr_maman_noun",
+    "fr_familial_adj",
+    "fr_papa_noun",
+    "fr_mari_noun",
+    "fr_epoux_noun"
+   ]
+  },
+  "famille_album": {
+   "vocabRoom": "R_family_02",
+   "only": [
+    "fr_fillette_noun",
+    "fr_niece_noun",
+    "fr_mamie_noun",
+    "fr_parent_noun",
+    "fr_neveu_noun",
+    "fr_jumeau_noun",
+    "fr_beau_pere_noun",
+    "fr_petit_fils_noun",
+    "fr_gendre_noun",
+    "fr_papi_noun"
+   ]
+  },
+  "cuisine": {
+   "vocabRoom": "R_kitchen_01",
+   "only": [
+    "fr_cuisine_noun",
+    "fr_vitre_noun",
+    "fr_boite_noun",
+    "fr_cuvette_noun",
+    "fr_pot_noun",
+    "fr_four_noun",
+    "fr_poele_noun",
+    "fr_fourneau_noun",
+    "fr_cendrier_noun",
+    "fr_tablier_noun",
+    "fr_bol_noun"
+   ]
+  },
+  "cuisine_tiroir": {
+   "vocabRoom": "R_kitchen_02",
+   "only": [
+    "fr_tranche_noun",
+    "fr_fourchette_noun",
+    "fr_cuillere_noun",
+    "fr_argenterie_noun",
+    "fr_couteau_noun",
+    "fr_baton_noun",
+    "fr_brin_noun",
+    "fr_toast_noun"
+   ]
+  },
+  "salle": {
+   "vocabRoom": "R_dining",
+   "only": [
+    "fr_salle_noun",
+    "fr_table_noun",
+    "fr_chaise_noun",
+    "fr_nappe_noun",
+    "fr_diner_noun",
+    "fr_repas_noun",
+    "fr_dejeuner_noun",
+    "fr_reveillon_noun",
+    "fr_faim_noun",
+    "fr_assiette_noun",
+    "fr_vaisselle_noun",
+    "fr_alimentation_noun",
+    "fr_siege_noun",
+    "fr_mets_noun",
+    "fr_appetit_noun"
+   ]
+  },
+  "chambre": {
+   "vocabRoom": "R_bedroom_01",
+   "only": [
+    "fr_chambre_noun",
+    "fr_couverture_noun",
+    "fr_plaque_noun",
+    "fr_couche_noun",
+    "fr_lit_noun",
+    "fr_somme_noun_m",
+    "fr_drap_noun",
+    "fr_oreiller_noun",
+    "fr_confort_noun",
+    "fr_matelas_noun"
+   ]
+  },
+  "chambre_reves": {
+   "vocabRoom": "R_bedroom_02",
+   "only": [
+    "fr_fantaisie_noun",
+    "fr_reverie_noun",
+    "fr_anticipation_noun",
+    "fr_reveur_adj",
+    "fr_songe_noun",
+    "fr_cauchemar_noun",
+    "fr_fantasme_noun",
+    "fr_sommeil_noun",
+    "fr_baillement_noun"
+   ]
+  },
+  "chambre_chevet": {
+   "vocabRoom": "R_bedroom_02",
+   "only": [
+    "fr_promesse_noun",
+    "fr_rappel_noun",
+    "fr_eveil_noun",
+    "fr_reveil_noun",
+    "fr_souhait_noun",
+    "fr_voeu_noun",
+    "fr_reve_noun"
+   ]
+  },
+  "dressing": {
+   "vocabRoom": "R_wardrobe_01",
+   "only": [
+    "fr_robe_noun",
+    "fr_chemise_noun",
+    "fr_chaussure_noun",
+    "fr_veste_noun",
+    "fr_botte_noun",
+    "fr_chapeau_noun",
+    "fr_pantalon_noun",
+    "fr_manteau_noun",
+    "fr_costume_noun",
+    "fr_vetement_noun"
+   ]
+  },
+  "dressing_armoire": {
+   "vocabRoom": "R_wardrobe_01",
+   "only": [
+    "fr_poche_noun",
+    "fr_dentelle_noun",
+    "fr_masque_noun",
+    "fr_jean_noun",
+    "fr_pull_noun",
+    "fr_blouson_noun",
+    "fr_soulier_noun"
+   ]
+  },
+  "dressing_malle": {
+   "vocabRoom": "R_wardrobe_04",
+   "only": [
+    "fr_tunique_noun",
+    "fr_pochette_noun",
+    "fr_vestimentaire_adj",
+    "fr_deguisement_noun",
+    "fr_voile_noun_m",
+    "fr_capuchon_noun",
+    "fr_pret_a_porter_noun",
+    "fr_impermeable_noun",
+    "fr_textile_noun"
+   ]
+  },
+  "penderie": {
+   "vocabRoom": "R_wardrobe_03",
+   "only": [
+    "fr_ceinture_noun",
+    "fr_tenue_noun",
+    "fr_cravate_noun",
+    "fr_chaussette_noun",
+    "fr_corridor_noun",
+    "fr_talon_noun",
+    "fr_bouton_noun",
+    "fr_col_noun",
+    "fr_gant_noun",
+    "fr_bonnet_noun"
+   ]
+  },
+  "penderie_commode": {
+   "vocabRoom": "R_wardrobe_03",
+   "only": [
+    "fr_culotte_noun",
+    "fr_echarpe_noun",
+    "fr_semelle_noun",
+    "fr_casque_noun",
+    "fr_beret_noun",
+    "fr_fragment_noun"
+   ]
+  },
+  "penderie_portant": {
+   "vocabRoom": "R_wardrobe_02",
+   "only": [
+    "fr_jupe_noun",
+    "fr_casquette_noun",
+    "fr_blouse_noun",
+    "fr_lien_noun",
+    "fr_gilet_noun",
+    "fr_short_noun",
+    "fr_smoking_noun",
+    "fr_tee_shirt_noun"
+   ]
+  },
+  "penderie_etagere": {
+   "vocabRoom": "R_wardrobe_02",
+   "only": [
+    "fr_manche_noun_f",
+    "fr_sueur_noun",
+    "fr_laine_noun",
+    "fr_habit_noun",
+    "fr_coton_noun",
+    "fr_crepe_noun_m",
+    "fr_top_noun"
+   ]
+  },
+  "bains": {
+   "vocabRoom": "R_bathroom",
+   "only": [
+    "fr_douche_noun",
+    "fr_serviette_noun",
+    "fr_baignoire_noun",
+    "fr_toilette_noun",
+    "fr_hygiene_noun",
+    "fr_bain_noun",
+    "fr_mouchoir_noun",
+    "fr_savon_noun",
+    "fr_robinet_noun",
+    "fr_tabouret_noun"
+   ]
+  },
+  "bains_buanderie": {
+   "vocabRoom": "R_laundry_01",
+   "only": [
+    "fr_pipe_noun",
+    "fr_boue_noun",
+    "fr_poudre_noun",
+    "fr_cendre_noun",
+    "fr_poussiere_noun",
+    "fr_salete_noun",
+    "fr_fouet_noun",
+    "fr_menage_noun",
+    "fr_nettoyage_noun"
+   ]
+  },
+  "grenier": {
+   "vocabRoom": "R_attic",
+   "only": [
+    "fr_chose_noun_f",
+    "fr_caisse_noun",
+    "fr_case_noun",
+    "fr_cassette_noun",
+    "fr_chose_noun_m",
+    "fr_objet_noun",
+    "fr_tas_noun",
+    "fr_truc_noun",
+    "fr_coffre_noun",
+    "fr_grenier_noun",
+    "fr_contenu_noun",
+    "fr_machin_noun",
+    "fr_coffret_noun",
+    "fr_sous_sol_noun"
+   ]
+  },
+  "grenier_lucarne": {
+   "vocabRoom": "R_entrance_04",
+   "only": [
+    "fr_gouttiere_noun",
+    "fr_fissure_noun",
+    "fr_assise_noun",
+    "fr_maconnerie_noun",
+    "fr_colocataire_noun",
+    "fr_vestibule_noun",
+    "fr_dome_noun",
+    "fr_fondement_noun",
+    "fr_immobilier_noun",
+    "fr_hebergement_noun"
+   ]
+  },
+  "jeux": {
+   "vocabRoom": "R_playroom",
+   "only": [
+    "fr_balle_noun",
+    "fr_bulle_noun",
+    "fr_poupee_noun",
+    "fr_bascule_noun",
+    "fr_marelle_noun",
+    "fr_ballon_noun",
+    "fr_jouet_noun",
+    "fr_jet_noun",
+    "fr_ping_pong_noun",
+    "fr_billard_noun"
+   ]
+  },
+  "jeux_coffre_jouets": {
+   "vocabRoom": "R_playroom",
+   "only": [
+    "fr_enigme_noun",
+    "fr_pelote_noun",
+    "fr_figurine_noun",
+    "fr_boule_noun",
+    "fr_bille_noun",
+    "fr_panoplie_noun",
+    "fr_puzzle_noun",
+    "fr_casse_tete_noun"
+   ]
+  },
+  "jardin": {
+   "vocabRoom": "R_garden",
+   "only": [
+    "fr_veranda_noun",
+    "fr_haie_noun",
+    "fr_herbe_noun",
+    "fr_pelouse_noun",
+    "fr_jardin_noun",
+    "fr_parc_noun",
+    "fr_terrain_noun",
+    "fr_sentier_noun",
+    "fr_square_noun",
+    "fr_gazon_noun"
+   ]
+  },
+  "jardin_facade": {
+   "vocabRoom": "R_entrance_02",
+   "only": [
+    "fr_facade_noun",
+    "fr_clef_noun",
+    "fr_porte_noun",
+    "fr_poignee_noun",
+    "fr_serrure_noun",
+    "fr_maison_noun",
+    "fr_balcon_noun",
+    "fr_interieur_noun",
+    "fr_rez_de_chaussee_noun"
+   ]
+  },
+  "jardin_voisins": {
+   "vocabRoom": "R_entrance_03",
+   "only": [
+    "fr_habitation_noun",
+    "fr_demeure_noun",
+    "fr_villa_noun",
+    "fr_installation_noun",
+    "fr_propriete_noun",
+    "fr_residence_noun",
+    "fr_passe_noun_2",
+    "fr_domicile_noun",
+    "fr_etablissement_noun",
+    "fr_exterieur_noun"
+   ]
+  },
+  "maison_fenetre": {
+   "vocabRoom": "R_entrance_01",
+   "only": [
+    "fr_fenetre_noun",
+    "fr_ouverture_noun",
+    "fr_cour_noun",
+    "fr_toit_noun",
+    "fr_appartement_noun",
+    "fr_immeuble_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "maison": {
+   "name": "La Maison familiale",
+   "room_id": "R_entrance_01",
+   "image": "maison/maison.jpg",
+   "alt": "The two-storey entrance hall of a half-timbered family house, painted in ink and gouache. At the far left the open front door looks out to the village street; two waiters with trays stand by it, one coming in over the doormat and one going out. A wooden staircase climbs to a gallery with purple, orange, pink and teal doors and a small grey door to the attic stairs; an owl swoops under the beams, a man peers out between red curtains and another, up a ladder, fixes the ceiling by a jungle mural with a lion and a tiger. Downstairs a row of doors opens off the hall: red, blue, an arch onto the garden, green, yellow and white. A boy and a girl have a pillow fight on the long rug as feathers fly and a puppy runs between them, and a man on his knees nails down a floorboard. A small window high on the left looks out over the courtyard, where tiny figures show at the windows and in the yard.",
+   "nameplate": [
+    50,
+    95
+   ],
+   "mapExit": {
+    "box": [
+     5,
+     280,
+     110,
+     90
+    ],
+    "label": "Rue des Maisons"
+   },
+   "doors": [
+    {
+     "to": "salon",
+     "label": "Le salon",
+     "hint": "Go through the red door to the living room",
+     "hit": [
+      372,
+      352,
+      80,
+      180
+     ]
+    },
+    {
+     "to": "salle",
+     "label": "La salle à manger",
+     "hint": "Go through the blue door to the dining room",
+     "hit": [
+      470,
+      352,
+      84,
+      82
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "Go through the garden arch",
+     "hit": [
+      585,
+      338,
+      115,
+      70
+     ]
+    },
+    {
+     "to": "cuisine",
+     "label": "La cuisine",
+     "hint": "Go through the green door to the kitchen",
+     "hit": [
+      725,
+      352,
+      80,
+      80
+     ]
+    },
+    {
+     "to": "famille",
+     "label": "La famille",
+     "hint": "Go through the yellow door to the family room",
+     "hit": [
+      822,
+      352,
+      86,
+      180
+     ]
+    },
+    {
+     "to": "bains",
+     "label": "La salle de bains",
+     "hint": "Go through the white door to the bathroom",
+     "hit": [
+      915,
+      352,
+      65,
+      180
+     ]
+    },
+    {
+     "to": "chambre",
+     "label": "La chambre",
+     "hint": "Climb the stairs to the purple gallery door",
+     "hit": [
+      330,
+      100,
+      82,
+      110
+     ]
+    },
+    {
+     "to": "dressing",
+     "label": "Le dressing",
+     "hint": "Climb the stairs to the orange gallery door",
+     "hit": [
+      450,
+      100,
+      85,
+      110
+     ]
+    },
+    {
+     "to": "jeux",
+     "label": "La salle de jeux",
+     "hint": "Climb the stairs to the pink gallery door",
+     "hit": [
+      575,
+      100,
+      80,
+      110
+     ]
+    },
+    {
+     "to": "penderie",
+     "label": "La penderie",
+     "hint": "Climb the stairs to the teal gallery door",
+     "hit": [
+      690,
+      105,
+      85,
+      105
+     ]
+    },
+    {
+     "to": "grenier",
+     "label": "Le grenier",
+     "hint": "Climb the stairs to the small grey door up to the attic",
+     "hit": [
+      935,
+      135,
+      45,
+      85
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "maison_fenetre",
+     "label": "la fenêtre",
+     "hint": "Look out of the little window",
+     "at": [
+      130,
+      105
+     ],
+     "obj": [
+      80,
+      40,
+      100,
+      130
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_entree_noun",
+     "box": [
+      15,
+      380,
+      140,
+      230
+     ]
+    },
+    {
+     "id": "fr_sortie_noun",
+     "box": [
+      195,
+      395,
+      140,
+      240
+     ]
+    },
+    {
+     "id": "fr_hall_noun",
+     "box": [
+      665,
+      12,
+      125,
+      85
+     ]
+    },
+    {
+     "id": "fr_etage_noun",
+     "box": [
+      800,
+      80,
+      128,
+      135
+     ]
+    },
+    {
+     "id": "fr_plafond_noun",
+     "box": [
+      985,
+      25,
+      100,
+      125
+     ]
+    },
+    {
+     "id": "fr_mur_noun",
+     "box": [
+      1140,
+      250,
+      140,
+      228
+     ]
+    },
+    {
+     "id": "fr_plancher_noun",
+     "box": [
+      985,
+      485,
+      225,
+      190
+     ]
+    },
+    {
+     "id": "fr_couloir_noun",
+     "box": [
+      525,
+      438,
+      250,
+      105
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "salon": {
+   "name": "Le salon",
+   "room_id": "R_living",
+   "image": "maison/salon.jpg",
+   "backTo": "maison",
+   "alt": "The living room, painted in ink and gouache: a stone fireplace hung with a wreath and garland, red curtains, a green sofa and an oak sideboard. A girl kneels by a doll's house, a girl in a blue dress switches on a reading lamp while a tabby dozes on the rug, and a goldfish bowl glows under a bare bulb. A girl in green plugs a trophy lamp into the socket, a tapir sits on the big rug by a little table of marbles, and a mother folds white linen beside a canary and a plate of canapés. Boys play cowboys by the armchair with a teddy, a child in a white sheet pops out by the sideboard and a boy peeks out of the cupboard above it. At the bottom left a big dog sits in a wicker basket with a red lead and a tag hanging on it, surrounded by a poodle, a puppy, a shaggy grey dog with a red ball, a tabby asleep on a blue cushion, a kitten with a ball of wool, a white rat and a hamster climbing a green sleeve. The red door on the left leads back to the hall.",
+   "nameplate": [
+    81,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the red door to the hall",
+     "hit": [
+      20,
+      55,
+      100,
+      240
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "salon_panier",
+     "label": "le panier",
+     "hint": "Look closer at the dog basket",
+     "at": [
+      190,
+      640
+     ],
+     "obj": [
+      0,
+      480,
+      385,
+      215
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_cheminee_noun",
+     "box": [
+      155,
+      130,
+      220,
+      170
+     ]
+    },
+    {
+     "id": "fr_piece_noun",
+     "box": [
+      40,
+      300,
+      215,
+      170
+     ]
+    },
+    {
+     "id": "fr_lampe_noun",
+     "box": [
+      375,
+      165,
+      150,
+      250
+     ]
+    },
+    {
+     "id": "fr_ampoule_noun",
+     "box": [
+      470,
+      40,
+      70,
+      95
+     ]
+    },
+    {
+     "id": "fr_prise_noun",
+     "box": [
+      398,
+      520,
+      114,
+      160
+     ]
+    },
+    {
+     "id": "fr_salon_noun",
+     "box": [
+      650,
+      180,
+      132,
+      195
+     ]
+    },
+    {
+     "id": "fr_rideau_noun",
+     "box": [
+      645,
+      35,
+      240,
+      140
+     ]
+    },
+    {
+     "id": "fr_fauteuil_noun",
+     "box": [
+      782,
+      250,
+      105,
+      120
+     ]
+    },
+    {
+     "id": "fr_buffet_noun",
+     "box": [
+      1015,
+      200,
+      130,
+      160
+     ]
+    },
+    {
+     "id": "fr_placard_noun",
+     "box": [
+      1150,
+      75,
+      125,
+      200
+     ]
+    },
+    {
+     "id": "fr_tapis_noun",
+     "box": [
+      675,
+      375,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_meuble_noun",
+     "box": [
+      693,
+      550,
+      190,
+      155
+     ]
+    },
+    {
+     "id": "fr_linge_noun",
+     "box": [
+      890,
+      365,
+      255,
+      260
+     ]
+    },
+    {
+     "id": "fr_canape_noun",
+     "box": [
+      1150,
+      470,
+      130,
+      190
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "salon_panier": {
+   "name": "Le panier du chien",
+   "room_id": "R_living_z1",
+   "image": "maison/salon_panier.jpg",
+   "parent": "salon",
+   "alt": "A close-up of the dog basket in the corner of the living room, painted in ink and gouache. A big brown-and-white dog sits on the red cushion in the wicker basket, one paw on the rim; a red lead and a small blank tag hang over its side. Around it on the floorboards a fluffy white poodle prances, a little puppy and a shaggy grey dog wait by a red ball, a tabby sleeps on a blue cushion, a kitten hugs a red ball of wool, a white rat plays with two blue balls, and a hamster climbs the green sleeve of a woman at the right edge.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_crotte_noun",
+     "box": [
+      380,
+      505,
+      80,
+      195
+     ]
+    },
+    {
+     "id": "fr_patte_noun",
+     "box": [
+      180,
+      400,
+      130,
+      125
+     ]
+    },
+    {
+     "id": "fr_laisse_noun",
+     "box": [
+      15,
+      410,
+      100,
+      300
+     ]
+    },
+    {
+     "id": "fr_toutou_noun",
+     "box": [
+      530,
+      70,
+      265,
+      230
+     ]
+    },
+    {
+     "id": "fr_chiot_noun",
+     "box": [
+      800,
+      130,
+      150,
+      160
+     ]
+    },
+    {
+     "id": "fr_chien_noun",
+     "box": [
+      955,
+      5,
+      215,
+      255
+     ]
+    },
+    {
+     "id": "fr_chat_noun",
+     "box": [
+      705,
+      303,
+      320,
+      182
+     ]
+    },
+    {
+     "id": "fr_chaton_noun",
+     "box": [
+      650,
+      490,
+      190,
+      225
+     ]
+    },
+    {
+     "id": "fr_rat_noun",
+     "box": [
+      845,
+      545,
+      250,
+      175
+     ]
+    },
+    {
+     "id": "fr_hamster_noun",
+     "box": [
+      1140,
+      263,
+      138,
+      257
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "famille": {
+   "name": "La famille",
+   "room_id": "R_family_01",
+   "image": "maison/famille.jpg",
+   "backTo": "maison",
+   "alt": "The family room, painted in ink and gouache, with family portraits on the wall and an open family album full of photos on a low table at the front. A granny knits in a rocking chair, a horse looks in at the window, a mother holds a toy horse and a girl pays at a cardboard-box booth. A woman in red speaks by a blackboard, a little brother stands beside her, a boy cousin sits with a pigeon in a little tent, and young men hold up pears and blow a trumpet. A boy in a window seat plays with a toy boat and a grandpa with a pear sits in a red armchair. The yellow door on the left leads back to the hall.",
+   "nameplate": [
+    71,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the yellow door to the hall",
+     "hit": [
+      0,
+      150,
+      68,
+      385
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "famille_portraits",
+     "label": "les portraits",
+     "hint": "Look closer at the family portraits",
+     "at": [
+      640,
+      160
+     ],
+     "obj": [
+      545,
+      93,
+      190,
+      148
+     ]
+    },
+    {
+     "to": "famille_album",
+     "label": "l'album",
+     "hint": "Look closer at the family album",
+     "at": [
+      620,
+      635
+     ],
+     "obj": [
+      470,
+      582,
+      300,
+      105
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_grand_mere_noun",
+     "box": [
+      72,
+      110,
+      152,
+      500
+     ]
+    },
+    {
+     "id": "fr_mere_noun",
+     "box": [
+      226,
+      290,
+      138,
+      275
+     ]
+    },
+    {
+     "id": "fr_fille_noun",
+     "box": [
+      367,
+      355,
+      118,
+      215
+     ]
+    },
+    {
+     "id": "fr_soeur_noun",
+     "box": [
+      488,
+      250,
+      185,
+      300
+     ]
+    },
+    {
+     "id": "fr_cousin_noun",
+     "box": [
+      678,
+      375,
+      120,
+      190
+     ]
+    },
+    {
+     "id": "fr_pere_noun",
+     "box": [
+      802,
+      230,
+      122,
+      340
+     ]
+    },
+    {
+     "id": "fr_frere_noun",
+     "box": [
+      926,
+      262,
+      92,
+      325
+     ]
+    },
+    {
+     "id": "fr_oncle_noun",
+     "box": [
+      1022,
+      220,
+      118,
+      170
+     ]
+    },
+    {
+     "id": "fr_bebe_noun",
+     "box": [
+      1155,
+      200,
+      115,
+      120
+     ]
+    },
+    {
+     "id": "fr_grand_pere_noun",
+     "box": [
+      1040,
+      395,
+      240,
+      270
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "famille_portraits": {
+   "name": "Les portraits",
+   "room_id": "R_family_01_z1",
+   "image": "maison/famille_portraits.jpg",
+   "parent": "famille",
+   "alt": "A close-up of the big carved frame of family portraits on the wall, painted in ink and gouache, with seven little pictures in two rows. At the top a girl knits a sock in a spotted pink tent, a whole family sings together, a girl rides on her dad's shoulders and a man kneels holding up a ring. Below, a mother duck leads four ducklings, a dog in a tartan scarf sits in an oval frame, and a bride and groom sit side by side on a church bench.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tante_noun",
+     "box": [
+      335,
+      165,
+      150,
+      195
+     ]
+    },
+    {
+     "id": "fr_famille_noun",
+     "box": [
+      498,
+      185,
+      180,
+      178
+     ]
+    },
+    {
+     "id": "fr_maman_noun",
+     "box": [
+      350,
+      415,
+      210,
+      135
+     ]
+    },
+    {
+     "id": "fr_familial_adj",
+     "box": [
+      572,
+      378,
+      152,
+      195
+     ]
+    },
+    {
+     "id": "fr_papa_noun",
+     "box": [
+      694,
+      175,
+      100,
+      190
+     ]
+    },
+    {
+     "id": "fr_mari_noun",
+     "box": [
+      818,
+      200,
+      120,
+      158
+     ]
+    },
+    {
+     "id": "fr_epoux_noun",
+     "box": [
+      748,
+      385,
+      210,
+      192
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "famille_album": {
+   "name": "L'album de famille",
+   "room_id": "R_family_01_z2",
+   "image": "maison/famille_album.jpg",
+   "parent": "famille",
+   "alt": "A close-up of the open family album on the low table, painted in ink and gouache. On the left page three tall photos: a girl in yellow holds up a fried fish on a fork, a barefoot girl in blue dungarees sits on the floor, and a granny in a lilac shawl hugs a little boy wrapped in bandages. On the right page seven smaller photos: a woman in red pushes a pram with a parrot on her shoulder, a boy glares at a bowl of broccoli, twin boys hug a toy elephant, a man in a red bow tie holds a pear, a boy in a red fez, a young man holds a white gander, and a grandpa in a green armchair hugs a puppy.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fillette_noun",
+     "box": [
+      150,
+      250,
+      185,
+      250
+     ]
+    },
+    {
+     "id": "fr_niece_noun",
+     "box": [
+      340,
+      242,
+      128,
+      242
+     ]
+    },
+    {
+     "id": "fr_mamie_noun",
+     "box": [
+      470,
+      227,
+      163,
+      243
+     ]
+    },
+    {
+     "id": "fr_parent_noun",
+     "box": [
+      656,
+      195,
+      150,
+      157
+     ]
+    },
+    {
+     "id": "fr_neveu_noun",
+     "box": [
+      812,
+      200,
+      125,
+      145
+     ]
+    },
+    {
+     "id": "fr_jumeau_noun",
+     "box": [
+      938,
+      218,
+      148,
+      142
+     ]
+    },
+    {
+     "id": "fr_beau_pere_noun",
+     "box": [
+      656,
+      362,
+      125,
+      153
+     ]
+    },
+    {
+     "id": "fr_petit_fils_noun",
+     "box": [
+      781,
+      367,
+      97,
+      136
+     ]
+    },
+    {
+     "id": "fr_gendre_noun",
+     "box": [
+      907,
+      367,
+      93,
+      136
+     ]
+    },
+    {
+     "id": "fr_papi_noun",
+     "box": [
+      1013,
+      375,
+      128,
+      148
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "cuisine": {
+   "name": "La cuisine",
+   "room_id": "R_kitchen_01",
+   "image": "maison/cuisine.jpg",
+   "backTo": "maison",
+   "alt": "The kitchen, painted in ink and gouache, with a domed brick oven, a black range and a window. A young queen in a crown and apron waves a wooden spoon, a girl draws on the window pane, a frog sits in a cardboard box on the stone counter and a doctor bathes a puppy in a basin. A hippo blows bubbles into a big cooking pot, a cook waves by the brick oven where a hen sits, a man fries eggs in a pan, and a boy in an apron dances. A cat curls up in a bowl on a side table, a blank plaque hangs on the wall and a big kitchen table stands in the middle with its drawer pulled open, showing bread, cutlery, a sprig of parsley and toast. The green door on the left leads back to the hall.",
+   "nameplate": [
+    62,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the green door to the hall",
+     "hit": [
+      0,
+      85,
+      100,
+      108
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cuisine_tiroir",
+     "label": "le tiroir",
+     "hint": "Look closer at the open drawer",
+     "at": [
+      582,
+      600
+     ],
+     "obj": [
+      462,
+      544,
+      250,
+      100
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_cuisine_noun",
+     "box": [
+      20,
+      198,
+      176,
+      435
+     ]
+    },
+    {
+     "id": "fr_vitre_noun",
+     "box": [
+      205,
+      75,
+      128,
+      232
+     ]
+    },
+    {
+     "id": "fr_boite_noun",
+     "box": [
+      198,
+      338,
+      135,
+      130
+     ]
+    },
+    {
+     "id": "fr_cuvette_noun",
+     "box": [
+      338,
+      190,
+      200,
+      290
+     ]
+    },
+    {
+     "id": "fr_pot_noun",
+     "box": [
+      560,
+      180,
+      170,
+      300
+     ]
+    },
+    {
+     "id": "fr_four_noun",
+     "box": [
+      735,
+      130,
+      200,
+      250
+     ]
+    },
+    {
+     "id": "fr_poele_noun",
+     "box": [
+      940,
+      262,
+      100,
+      118
+     ]
+    },
+    {
+     "id": "fr_fourneau_noun",
+     "box": [
+      1078,
+      230,
+      200,
+      200
+     ]
+    },
+    {
+     "id": "fr_cendrier_noun",
+     "box": [
+      1118,
+      112,
+      152,
+      106
+     ]
+    },
+    {
+     "id": "fr_tablier_noun",
+     "box": [
+      925,
+      390,
+      150,
+      300
+     ]
+    },
+    {
+     "id": "fr_bol_noun",
+     "box": [
+      1132,
+      470,
+      148,
+      110
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "cuisine_tiroir": {
+   "name": "Le tiroir",
+   "room_id": "R_kitchen_01_z1",
+   "image": "maison/cuisine_tiroir.jpg",
+   "parent": "cuisine",
+   "alt": "A close-up of the kitchen table's drawer pulled open, painted in ink and gouache, in the same warm oak with dark round knobs. Inside lie a thick slice of bread, a row of shiny forks, a wooden spoon, a silver ladle, a bundle of little silver spoons tied with string, two knives, a long wooden stick, a sprig of parsley and a golden slice of toast.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tranche_noun",
+     "box": [
+      232,
+      258,
+      108,
+      187
+     ]
+    },
+    {
+     "id": "fr_fourchette_noun",
+     "box": [
+      341,
+      227,
+      110,
+      242
+     ]
+    },
+    {
+     "id": "fr_cuillere_noun",
+     "box": [
+      452,
+      211,
+      108,
+      215
+     ]
+    },
+    {
+     "id": "fr_argenterie_noun",
+     "box": [
+      563,
+      285,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_couteau_noun",
+     "box": [
+      690,
+      185,
+      105,
+      200
+     ]
+    },
+    {
+     "id": "fr_baton_noun",
+     "box": [
+      835,
+      240,
+      75,
+      140
+     ]
+    },
+    {
+     "id": "fr_brin_noun",
+     "box": [
+      800,
+      160,
+      108,
+      75
+     ]
+    },
+    {
+     "id": "fr_toast_noun",
+     "box": [
+      912,
+      234,
+      166,
+      133
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "salle": {
+   "name": "La salle à manger",
+   "room_id": "R_dining",
+   "image": "maison/salle.jpg",
+   "backTo": "maison",
+   "alt": "The dining room, painted in ink and gouache, under a big round lamp. A woman sweeps by a little table where a cat dances, a granny sits in an armchair, and a ginger cat naps on a lace tablecloth. A girl and a man share a roast chicken, a camel sits by a basket, and children dance around a Christmas tree. Along the front a boy eats a hot dog, a pirate carries a cake, a man in green carries a tower of bowls, a toddler eats in a high chair, a knight in armour sits on a red throne with a castle, a waiter lifts a cloche off a plate of spaghetti, and a dog licks its lips by a big bowl of stew. The blue door on the left leads back to the hall.",
+   "nameplate": [
+    45,
+    6
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the blue door to the hall",
+     "hit": [
+      12,
+      28,
+      85,
+      130
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_salle_noun",
+     "box": [
+      55,
+      162,
+      175,
+      185
+     ]
+    },
+    {
+     "id": "fr_table_noun",
+     "box": [
+      235,
+      75,
+      115,
+      260
+     ]
+    },
+    {
+     "id": "fr_chaise_noun",
+     "box": [
+      355,
+      80,
+      185,
+      232
+     ]
+    },
+    {
+     "id": "fr_nappe_noun",
+     "box": [
+      545,
+      182,
+      95,
+      160
+     ]
+    },
+    {
+     "id": "fr_diner_noun",
+     "box": [
+      658,
+      170,
+      105,
+      175
+     ]
+    },
+    {
+     "id": "fr_repas_noun",
+     "box": [
+      766,
+      75,
+      140,
+      200
+     ]
+    },
+    {
+     "id": "fr_dejeuner_noun",
+     "box": [
+      910,
+      95,
+      105,
+      255
+     ]
+    },
+    {
+     "id": "fr_reveillon_noun",
+     "box": [
+      1025,
+      15,
+      255,
+      340
+     ]
+    },
+    {
+     "id": "fr_faim_noun",
+     "box": [
+      12,
+      380,
+      145,
+      320
+     ]
+    },
+    {
+     "id": "fr_assiette_noun",
+     "box": [
+      160,
+      370,
+      190,
+      330
+     ]
+    },
+    {
+     "id": "fr_vaisselle_noun",
+     "box": [
+      352,
+      355,
+      190,
+      255
+     ]
+    },
+    {
+     "id": "fr_alimentation_noun",
+     "box": [
+      545,
+      440,
+      100,
+      260
+     ],
+     "labelAt": [
+      595,
+      662
+     ]
+    },
+    {
+     "id": "fr_siege_noun",
+     "box": [
+      682,
+      375,
+      193,
+      330
+     ]
+    },
+    {
+     "id": "fr_mets_noun",
+     "box": [
+      895,
+      370,
+      205,
+      325
+     ]
+    },
+    {
+     "id": "fr_appetit_noun",
+     "box": [
+      1105,
+      455,
+      170,
+      220
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "chambre": {
+   "name": "La chambre",
+   "room_id": "R_bedroom_01",
+   "image": "maison/chambre.jpg",
+   "backTo": "maison",
+   "alt": "The bedroom, painted in ink and gouache: a man in a turban by the purple door, a boy polishing the brass plate on the wardrobe, a pile of colourful blankets and a tortoise under a blanket. A boy sleeps in a canopy bed under a white dream cloud full of little pictures, a girl knits in a second bed beside a bedside table with an alarm clock, and a sloth lounges on a daybed. A girl and a boy spread a sheet over a chair, a rabbit sits on a pillow, a cat curls in a hanging basket and a llama rests on a mattress. The purple door on the left leads back to the hall.",
+   "nameplate": [
+    37,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the purple door to the hall",
+     "hit": [
+      12,
+      25,
+      70,
+      110
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "chambre_reves",
+     "label": "les rêves",
+     "hint": "Look closer at the dreams over the bed",
+     "at": [
+      650,
+      105
+     ],
+     "obj": [
+      549,
+      52,
+      200,
+      105
+     ]
+    },
+    {
+     "to": "chambre_chevet",
+     "label": "le chevet",
+     "hint": "Look closer at the bedside table",
+     "at": [
+      791,
+      250
+     ],
+     "obj": [
+      752,
+      160,
+      100,
+      128
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_chambre_noun",
+     "box": [
+      85,
+      62,
+      155,
+      235
+     ]
+    },
+    {
+     "id": "fr_couverture_noun",
+     "box": [
+      145,
+      300,
+      215,
+      110
+     ]
+    },
+    {
+     "id": "fr_plaque_noun",
+     "box": [
+      244,
+      95,
+      135,
+      200
+     ]
+    },
+    {
+     "id": "fr_couche_noun",
+     "box": [
+      383,
+      135,
+      125,
+      215
+     ]
+    },
+    {
+     "id": "fr_lit_noun",
+     "box": [
+      862,
+      130,
+      225,
+      250
+     ]
+    },
+    {
+     "id": "fr_somme_noun_m",
+     "box": [
+      1092,
+      170,
+      185,
+      170
+     ]
+    },
+    {
+     "id": "fr_drap_noun",
+     "box": [
+      620,
+      415,
+      250,
+      270
+     ]
+    },
+    {
+     "id": "fr_oreiller_noun",
+     "box": [
+      872,
+      485,
+      120,
+      170
+     ]
+    },
+    {
+     "id": "fr_confort_noun",
+     "box": [
+      995,
+      435,
+      120,
+      190
+     ]
+    },
+    {
+     "id": "fr_matelas_noun",
+     "box": [
+      1118,
+      425,
+      162,
+      250
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "chambre_reves": {
+   "name": "Les rêves",
+   "room_id": "R_bedroom_01_z1",
+   "image": "maison/chambre_reves.jpg",
+   "parent": "chambre",
+   "alt": "A close-up of the white dream cloud over the canopy bed, painted in ink and gouache, against the purple bed curtains. Inside the cloud float little round dream pictures: a fan blowing a tiny fairy, a girl referee with a whistle, a girl sipping cocoa beside wrapped presents, a dreamy girl resting her chin on her hands, mice under a crescent moon, a cow and a horse looming over a little boy, a green dragon by a castle, a postman asleep on his mailbag and a yawning teddy bear.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fantaisie_noun",
+     "box": [
+      375,
+      219,
+      188,
+      156
+     ]
+    },
+    {
+     "id": "fr_reverie_noun",
+     "box": [
+      269,
+      350,
+      106,
+      181
+     ]
+    },
+    {
+     "id": "fr_anticipation_noun",
+     "box": [
+      381,
+      450,
+      169,
+      150
+     ]
+    },
+    {
+     "id": "fr_reveur_adj",
+     "box": [
+      600,
+      256,
+      163,
+      188
+     ]
+    },
+    {
+     "id": "fr_songe_noun",
+     "box": [
+      800,
+      188,
+      188,
+      163
+     ]
+    },
+    {
+     "id": "fr_cauchemar_noun",
+     "box": [
+      588,
+      488,
+      206,
+      156
+     ]
+    },
+    {
+     "id": "fr_fantasme_noun",
+     "box": [
+      812,
+      400,
+      175,
+      104
+     ]
+    },
+    {
+     "id": "fr_sommeil_noun",
+     "box": [
+      862,
+      506,
+      150,
+      131
+     ]
+    },
+    {
+     "id": "fr_baillement_noun",
+     "box": [
+      1015,
+      381,
+      135,
+      156
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "chambre_chevet": {
+   "name": "Le chevet",
+   "room_id": "R_bedroom_01_z2",
+   "image": "maison/chambre_chevet.jpg",
+   "parent": "chambre",
+   "alt": "A close-up of the bedside table between the two beds, painted in ink and gouache. Two little hands link little fingers on the table top beside a big brass alarm clock with plain tick marks. On the shelf below a cloud night-light glows beside a toy red motorbike, a dandelion clock in a glass vase and a cupcake with one lit candle. Two small framed pictures hang above: a toy drummer and a bride in a veil at sunrise. At the right a girl has dozed off over her knitting in bed.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_promesse_noun",
+     "box": [
+      347,
+      372,
+      153,
+      116
+     ]
+    },
+    {
+     "id": "fr_rappel_noun",
+     "box": [
+      656,
+      16,
+      100,
+      109
+     ]
+    },
+    {
+     "id": "fr_eveil_noun",
+     "box": [
+      653,
+      140,
+      108,
+      110
+     ]
+    },
+    {
+     "id": "fr_reveil_noun",
+     "box": [
+      633,
+      255,
+      156,
+      217
+     ]
+    },
+    {
+     "id": "fr_souhait_noun",
+     "box": [
+      622,
+      505,
+      108,
+      180
+     ]
+    },
+    {
+     "id": "fr_voeu_noun",
+     "box": [
+      733,
+      530,
+      74,
+      162
+     ]
+    },
+    {
+     "id": "fr_reve_noun",
+     "box": [
+      985,
+      0,
+      295,
+      330
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "dressing": {
+   "name": "Le dressing",
+   "room_id": "R_wardrobe_01",
+   "image": "maison/dressing.jpg",
+   "backTo": "maison",
+   "alt": "The dressing room, painted in ink and gouache, with a folding screen, a tall carved wardrobe standing open and a window. A girl twirls in a pink gown, a figure hides behind the screen, and a boy in a white shirt sneezes. A boy's hat flies off, a clown in polka-dot trousers dances and a snowman wears a red coat. On the floor a shoe sits under a lamp, a boy pulls on a jacket, a frog sits in boots in a tub, a big trunk stands in the middle, a suit hangs on a stand and a man folds clothes beside a puppy and a kitten. The orange door on the left leads back to the hall.",
+   "nameplate": [
+    53,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the orange door to the hall",
+     "hit": [
+      10,
+      32,
+      82,
+      210
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "dressing_armoire",
+     "label": "l'armoire",
+     "hint": "Look closer at the wardrobe",
+     "at": [
+      642,
+      200
+     ],
+     "obj": [
+      530,
+      50,
+      224,
+      300
+     ]
+    },
+    {
+     "to": "dressing_malle",
+     "label": "la malle",
+     "hint": "Look closer at the trunk",
+     "at": [
+      640,
+      474
+     ],
+     "obj": [
+      515,
+      352,
+      252,
+      196
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_robe_noun",
+     "box": [
+      96,
+      105,
+      240,
+      247
+     ]
+    },
+    {
+     "id": "fr_chemise_noun",
+     "box": [
+      348,
+      148,
+      180,
+      245
+     ]
+    },
+    {
+     "id": "fr_chaussure_noun",
+     "box": [
+      18,
+      400,
+      170,
+      212
+     ]
+    },
+    {
+     "id": "fr_veste_noun",
+     "box": [
+      212,
+      356,
+      134,
+      290
+     ]
+    },
+    {
+     "id": "fr_botte_noun",
+     "box": [
+      352,
+      468,
+      160,
+      185
+     ]
+    },
+    {
+     "id": "fr_chapeau_noun",
+     "box": [
+      756,
+      62,
+      138,
+      320
+     ]
+    },
+    {
+     "id": "fr_pantalon_noun",
+     "box": [
+      895,
+      120,
+      205,
+      260
+     ]
+    },
+    {
+     "id": "fr_manteau_noun",
+     "box": [
+      1118,
+      138,
+      145,
+      262
+     ]
+    },
+    {
+     "id": "fr_costume_noun",
+     "box": [
+      818,
+      386,
+      150,
+      294
+     ]
+    },
+    {
+     "id": "fr_vetement_noun",
+     "box": [
+      975,
+      402,
+      305,
+      298
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "dressing_armoire": {
+   "name": "L'armoire",
+   "room_id": "R_wardrobe_01_z1",
+   "image": "maison/dressing_armoire.jpg",
+   "parent": "dressing",
+   "alt": "A close-up of the tall carved wardrobe with both doors open, painted in ink and gouache. On the rail hang a grey waistcoat with a gold pocket watch, a long white lace veil, a black mask, a pair of jeans and a puffy blue bomber jacket; a red reindeer jumper lies folded on the shelf and a pair of brown shoes stands on the wardrobe floor.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_poche_noun",
+     "box": [
+      440,
+      405,
+      68,
+      120
+     ]
+    },
+    {
+     "id": "fr_dentelle_noun",
+     "box": [
+      510,
+      227,
+      140,
+      477
+     ]
+    },
+    {
+     "id": "fr_masque_noun",
+     "box": [
+      690,
+      255,
+      52,
+      190
+     ]
+    },
+    {
+     "id": "fr_jean_noun",
+     "box": [
+      745,
+      280,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_pull_noun",
+     "box": [
+      675,
+      465,
+      155,
+      135
+     ]
+    },
+    {
+     "id": "fr_blouson_noun",
+     "box": [
+      852,
+      265,
+      140,
+      355
+     ]
+    },
+    {
+     "id": "fr_soulier_noun",
+     "box": [
+      805,
+      625,
+      148,
+      78
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "dressing_malle": {
+   "name": "La malle",
+   "room_id": "R_wardrobe_01_z2",
+   "image": "maison/dressing_malle.jpg",
+   "parent": "dressing",
+   "alt": "A close-up of the big dressing-up trunk standing open, painted in ink and gouache: a long white tunic and a waistcoat hang on hangers, a sparkly clutch bag rests on the rim and a lace veil drapes over the lid. A white goose costume and a toy monkey in a red hood sit on a heap of colourful clothes, a yellow raincoat spills over the edge, two green jackets with price tags hang at the back, and bolts of fabric are stacked on the floor beside the trunk.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tunique_noun",
+     "box": [
+      215,
+      100,
+      215,
+      240
+     ]
+    },
+    {
+     "id": "fr_pochette_noun",
+     "box": [
+      208,
+      345,
+      150,
+      100
+     ]
+    },
+    {
+     "id": "fr_vestimentaire_adj",
+     "box": [
+      440,
+      40,
+      165,
+      240
+     ]
+    },
+    {
+     "id": "fr_deguisement_noun",
+     "box": [
+      645,
+      195,
+      95,
+      245
+     ]
+    },
+    {
+     "id": "fr_voile_noun_m",
+     "box": [
+      690,
+      25,
+      165,
+      165
+     ]
+    },
+    {
+     "id": "fr_capuchon_noun",
+     "box": [
+      745,
+      250,
+      125,
+      195
+     ]
+    },
+    {
+     "id": "fr_pret_a_porter_noun",
+     "box": [
+      870,
+      55,
+      200,
+      250
+     ]
+    },
+    {
+     "id": "fr_impermeable_noun",
+     "box": [
+      880,
+      315,
+      135,
+      240
+     ]
+    },
+    {
+     "id": "fr_textile_noun",
+     "box": [
+      1050,
+      450,
+      225,
+      255
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "penderie": {
+   "name": "La penderie",
+   "room_id": "R_wardrobe_03",
+   "image": "maison/penderie.jpg",
+   "backTo": "maison",
+   "alt": "The walk-in closet, painted in ink and gouache, with a long rail of hanging clothes, shelves of folded jumpers and wool, and a small chest of drawers with its drawers open under a red helmet and beret. Santa adjusts his belt, a girl holds up a price tag, a boy laces a boot and another holds up a glove and a top hat. A boy runs down the corridor at the back, an eagle perches by a red high heel, a crab sits in a tub wearing a polka-dot tie, a red sock with eyes stands in a cubby, a collie wears a frilly collar and a rabbit wears a woolly hat. The teal door on the left leads back to the hall.",
+   "nameplate": [
+    15,
+    59
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the teal door to the hall",
+     "hit": [
+      10,
+      32,
+      108,
+      310
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "penderie_commode",
+     "label": "la commode",
+     "hint": "Look closer at the chest of drawers",
+     "at": [
+      358,
+      315
+     ],
+     "obj": [
+      318,
+      215,
+      80,
+      110
+     ]
+    },
+    {
+     "to": "penderie_portant",
+     "label": "le portant",
+     "hint": "Look closer at the clothes rail",
+     "at": [
+      660,
+      150
+     ],
+     "obj": [
+      567,
+      67,
+      190,
+      140
+     ]
+    },
+    {
+     "to": "penderie_etagere",
+     "label": "l'étagère",
+     "hint": "Look closer at the shelves",
+     "at": [
+      885,
+      150
+     ],
+     "obj": [
+      800,
+      70,
+      170,
+      150
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_ceinture_noun",
+     "box": [
+      125,
+      110,
+      185,
+      185
+     ]
+    },
+    {
+     "id": "fr_tenue_noun",
+     "box": [
+      400,
+      110,
+      165,
+      185
+     ]
+    },
+    {
+     "id": "fr_cravate_noun",
+     "box": [
+      50,
+      462,
+      245,
+      212
+     ]
+    },
+    {
+     "id": "fr_chaussette_noun",
+     "box": [
+      338,
+      420,
+      230,
+      230
+     ]
+    },
+    {
+     "id": "fr_corridor_noun",
+     "box": [
+      1045,
+      58,
+      160,
+      155
+     ]
+    },
+    {
+     "id": "fr_talon_noun",
+     "box": [
+      1137,
+      222,
+      141,
+      280
+     ]
+    },
+    {
+     "id": "fr_bouton_noun",
+     "box": [
+      682,
+      232,
+      195,
+      218
+     ]
+    },
+    {
+     "id": "fr_col_noun",
+     "box": [
+      618,
+      468,
+      232,
+      208
+     ]
+    },
+    {
+     "id": "fr_gant_noun",
+     "box": [
+      880,
+      320,
+      180,
+      345
+     ]
+    },
+    {
+     "id": "fr_bonnet_noun",
+     "box": [
+      1105,
+      505,
+      130,
+      178
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "penderie_commode": {
+   "name": "La commode",
+   "room_id": "R_wardrobe_03_z1",
+   "image": "maison/penderie_commode.jpg",
+   "parent": "penderie",
+   "alt": "A close-up of the small chest of drawers, painted in ink and gouache, with its two drawers pulled open: a long red scarf spills from the top drawer and a shoe pokes out of the bottom one, sole showing. On top sit a red fireman's helmet, a red beret and the scattered pieces of a broken blue-and-white vase, and a small blank plaque hangs on the wall above. Santa's sleeve shows at the left and a girl's purple dress at the right.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_culotte_noun",
+     "box": [
+      234,
+      8,
+      219,
+      55
+     ]
+    },
+    {
+     "id": "fr_echarpe_noun",
+     "box": [
+      250,
+      234,
+      122,
+      422
+     ]
+    },
+    {
+     "id": "fr_semelle_noun",
+     "box": [
+      376,
+      445,
+      155,
+      215
+     ]
+    },
+    {
+     "id": "fr_casque_noun",
+     "box": [
+      520,
+      45,
+      268,
+      160
+     ]
+    },
+    {
+     "id": "fr_beret_noun",
+     "box": [
+      792,
+      140,
+      150,
+      120
+     ]
+    },
+    {
+     "id": "fr_fragment_noun",
+     "box": [
+      810,
+      55,
+      150,
+      82
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "penderie_portant": {
+   "name": "Le portant",
+   "room_id": "R_wardrobe_03_z2",
+   "image": "maison/penderie_portant.jpg",
+   "parent": "penderie",
+   "alt": "A close-up of the long clothes rail, painted in ink and gouache. On wooden hangers hang a red pleated skirt, a navy peaked cap, a white smock spattered with paint, a toy lion on a chain, a green waistcoat, red shorts, a black tuxedo with a bow tie and a white T-shirt.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_jupe_noun",
+     "box": [
+      238,
+      338,
+      144,
+      312
+     ]
+    },
+    {
+     "id": "fr_casquette_noun",
+     "box": [
+      384,
+      238,
+      115,
+      169
+     ]
+    },
+    {
+     "id": "fr_blouse_noun",
+     "box": [
+      500,
+      300,
+      118,
+      370
+     ]
+    },
+    {
+     "id": "fr_lien_noun",
+     "box": [
+      620,
+      190,
+      124,
+      400
+     ]
+    },
+    {
+     "id": "fr_gilet_noun",
+     "box": [
+      748,
+      270,
+      115,
+      345
+     ]
+    },
+    {
+     "id": "fr_short_noun",
+     "box": [
+      866,
+      344,
+      108,
+      231
+     ]
+    },
+    {
+     "id": "fr_smoking_noun",
+     "box": [
+      976,
+      250,
+      118,
+      420
+     ]
+    },
+    {
+     "id": "fr_tee_shirt_noun",
+     "box": [
+      1096,
+      270,
+      104,
+      400
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "penderie_etagere": {
+   "name": "L'étagère",
+   "room_id": "R_wardrobe_03_z3",
+   "image": "maison/penderie_etagere.jpg",
+   "parent": "penderie",
+   "alt": "A close-up of the clothes shelves, painted in ink and gouache. On the top shelf a blue shirt sleeve dangles over a stack of folded jumpers, a tiny sweating worker climbs out of a manhole, a basket holds balls of wool, a little dummy wears a tailcoat and bow tie, and a glass jar is full of cotton balls. On the bottom shelf sit another basket of wool, a folded dark crinkly cloth and a painted spinning top.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_manche_noun_f",
+     "box": [
+      256,
+      181,
+      210,
+      281
+     ]
+    },
+    {
+     "id": "fr_sueur_noun",
+     "box": [
+      470,
+      295,
+      160,
+      130
+     ]
+    },
+    {
+     "id": "fr_laine_noun",
+     "box": [
+      250,
+      575,
+      156,
+      113
+     ]
+    },
+    {
+     "id": "fr_habit_noun",
+     "box": [
+      794,
+      156,
+      106,
+      263
+     ]
+    },
+    {
+     "id": "fr_coton_noun",
+     "box": [
+      902,
+      262,
+      100,
+      156
+     ]
+    },
+    {
+     "id": "fr_crepe_noun_m",
+     "box": [
+      612,
+      606,
+      282,
+      88
+     ]
+    },
+    {
+     "id": "fr_top_noun",
+     "box": [
+      918,
+      575,
+      64,
+      113
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "bains": {
+   "name": "La salle de bains",
+   "room_id": "R_bathroom",
+   "image": "maison/bains.jpg",
+   "backTo": "maison",
+   "alt": "The bathroom, painted in ink and gouache, with blue-and-white tiles, a shower, a copper boiler in the alcove at the back and a claw-foot tub. A shaggy dog stands by the shower while a butler holds a towel on a swan, a poodle grooms a bulldog's ear in a bath with rubber ducks, and a boy splashes in a basin on a stool. A calf holds a handkerchief, a duckling stands on a bar of soap, a bear plays a banjo in the bubbles, a robin perches on the tap of a basin and a ginger cat sits on a stool. The white door on the left leads back to the hall.",
+   "nameplate": [
+    86,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the white door to the hall",
+     "hit": [
+      12,
+      44,
+      112,
+      330
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "bains_buanderie",
+     "label": "la buanderie",
+     "hint": "Look closer at the laundry corner by the copper boiler",
+     "at": [
+      640,
+      150
+     ],
+     "obj": [
+      487,
+      67,
+      324,
+      182
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_douche_noun",
+     "box": [
+      131,
+      50,
+      148,
+      340
+     ]
+    },
+    {
+     "id": "fr_serviette_noun",
+     "box": [
+      283,
+      88,
+      180,
+      300
+     ]
+    },
+    {
+     "id": "fr_baignoire_noun",
+     "box": [
+      30,
+      440,
+      222,
+      250
+     ]
+    },
+    {
+     "id": "fr_toilette_noun",
+     "box": [
+      256,
+      395,
+      200,
+      240
+     ]
+    },
+    {
+     "id": "fr_hygiene_noun",
+     "box": [
+      466,
+      212,
+      132,
+      370
+     ]
+    },
+    {
+     "id": "fr_bain_noun",
+     "box": [
+      800,
+      80,
+      330,
+      250
+     ]
+    },
+    {
+     "id": "fr_mouchoir_noun",
+     "box": [
+      650,
+      306,
+      148,
+      190
+     ]
+    },
+    {
+     "id": "fr_savon_noun",
+     "box": [
+      744,
+      505,
+      158,
+      190
+     ]
+    },
+    {
+     "id": "fr_robinet_noun",
+     "box": [
+      962,
+      368,
+      158,
+      200
+     ]
+    },
+    {
+     "id": "fr_tabouret_noun",
+     "box": [
+      1132,
+      268,
+      145,
+      358
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "bains_buanderie": {
+   "name": "La buanderie",
+   "room_id": "R_bathroom_z1",
+   "image": "maison/bains_buanderie.jpg",
+   "parent": "bains",
+   "alt": "A close-up of the laundry alcove behind the bathroom, painted in ink and gouache, around a big copper boiler with a rag rug draped over its top and a grey cloud of dust puffing off it. A small blank plaque and a pair of muddy rubber boots hang on the left post, a tin of washing powder tips over on a shelf above a pail of ash, and a cloth bag of grubby clothes hangs from the boiler. On the right a whisk hangs on the pipe beside a long feather duster and a blue towel, and a blue bucket holds a net and a toy boat. The top of a boy's head shows at the bottom left.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pipe_noun",
+     "box": [
+      40,
+      78,
+      140,
+      98
+     ]
+    },
+    {
+     "id": "fr_boue_noun",
+     "box": [
+      15,
+      195,
+      198,
+      355
+     ]
+    },
+    {
+     "id": "fr_poudre_noun",
+     "box": [
+      230,
+      62,
+      160,
+      180
+     ]
+    },
+    {
+     "id": "fr_cendre_noun",
+     "box": [
+      217,
+      250,
+      136,
+      210
+     ]
+    },
+    {
+     "id": "fr_poussiere_noun",
+     "box": [
+      392,
+      72,
+      110,
+      95
+     ]
+    },
+    {
+     "id": "fr_salete_noun",
+     "box": [
+      355,
+      400,
+      200,
+      295
+     ]
+    },
+    {
+     "id": "fr_fouet_noun",
+     "box": [
+      865,
+      215,
+      68,
+      255
+     ]
+    },
+    {
+     "id": "fr_menage_noun",
+     "box": [
+      935,
+      225,
+      125,
+      480
+     ]
+    },
+    {
+     "id": "fr_nettoyage_noun",
+     "box": [
+      1065,
+      320,
+      195,
+      345
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "grenier": {
+   "name": "Le grenier",
+   "room_id": "R_attic",
+   "image": "maison/grenier.jpg",
+   "backTo": "maison",
+   "alt": "The attic under the roof beams, painted in ink and gouache, with a skylight that looks out over the village rooftops, where little figures go about their day. A hamper holds an umbrella, hats, a rubber duck and a wig; a cash register sits on a crate of apples, a girl in purple spins a hoop and a blue jay flies by a heap of clothes topped by a ginger cat. A boy covers his mouth in a cloud of golden dust by an open chest, a black cat sits on grain sacks and a toy lorry tips its load. A box holds toy cars, an old man plays a cassette, a suitcase spills letters and a teddy, a pile of gears and scrap rises in the middle, a girl holds a jewellery box and a chef carries a fish up the stairwell. The grey door on the left leads back to the hall.",
+   "nameplate": [
+    42,
+    40
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the grey door to the hall",
+     "hit": [
+      50,
+      82,
+      100,
+      186
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "grenier_lucarne",
+     "label": "la lucarne",
+     "hint": "Look closer under the skylight",
+     "at": [
+      592,
+      80
+     ],
+     "obj": [
+      530,
+      8,
+      136,
+      140
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_chose_noun_f",
+     "box": [
+      6,
+      272,
+      175,
+      140
+     ]
+    },
+    {
+     "id": "fr_caisse_noun",
+     "box": [
+      182,
+      185,
+      158,
+      228
+     ]
+    },
+    {
+     "id": "fr_case_noun",
+     "box": [
+      6,
+      475,
+      238,
+      208
+     ]
+    },
+    {
+     "id": "fr_cassette_noun",
+     "box": [
+      250,
+      418,
+      218,
+      247
+     ]
+    },
+    {
+     "id": "fr_chose_noun_m",
+     "box": [
+      668,
+      82,
+      165,
+      225
+     ]
+    },
+    {
+     "id": "fr_objet_noun",
+     "box": [
+      890,
+      88,
+      150,
+      125
+     ]
+    },
+    {
+     "id": "fr_tas_noun",
+     "box": [
+      1042,
+      118,
+      230,
+      200
+     ]
+    },
+    {
+     "id": "fr_truc_noun",
+     "box": [
+      588,
+      325,
+      182,
+      128
+     ]
+    },
+    {
+     "id": "fr_coffre_noun",
+     "box": [
+      812,
+      320,
+      265,
+      170
+     ]
+    },
+    {
+     "id": "fr_grenier_noun",
+     "box": [
+      1090,
+      330,
+      185,
+      155
+     ]
+    },
+    {
+     "id": "fr_contenu_noun",
+     "box": [
+      590,
+      508,
+      112,
+      180
+     ]
+    },
+    {
+     "id": "fr_machin_noun",
+     "box": [
+      706,
+      500,
+      185,
+      190
+     ]
+    },
+    {
+     "id": "fr_coffret_noun",
+     "box": [
+      895,
+      495,
+      130,
+      215
+     ]
+    },
+    {
+     "id": "fr_sous_sol_noun",
+     "box": [
+      1035,
+      494,
+      240,
+      226
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "grenier_lucarne": {
+   "name": "Sous la lucarne",
+   "room_id": "R_attic_z1",
+   "image": "maison/grenier_lucarne.jpg",
+   "parent": "grenier",
+   "alt": "A close-up of the attic skylight, painted in ink and gouache, looking out through its six panes at the village. A builder on a roof tips a gutter of green goo into a bucket, a man leads a bull past an open doorway and a gnome stands under a glass dome. A fish pokes out of a crack in a wall, a woman sits on a stone block with a piece of cheese, two boys tug a giant brass key and a little boy in a hard hat hugs a stone pillar. Below, grandma lays a low brick wall, a man holds up a mobile of tiny houses and a bear in a red nightcap sits up in bed.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gouttiere_noun",
+     "box": [
+      419,
+      88,
+      187,
+      181
+     ]
+    },
+    {
+     "id": "fr_fissure_noun",
+     "box": [
+      403,
+      300,
+      73,
+      75
+     ]
+    },
+    {
+     "id": "fr_assise_noun",
+     "box": [
+      481,
+      300,
+      106,
+      150
+     ]
+    },
+    {
+     "id": "fr_maconnerie_noun",
+     "box": [
+      331,
+      481,
+      238,
+      144
+     ]
+    },
+    {
+     "id": "fr_colocataire_noun",
+     "box": [
+      612,
+      319,
+      181,
+      131
+     ]
+    },
+    {
+     "id": "fr_vestibule_noun",
+     "box": [
+      656,
+      150,
+      181,
+      119
+     ]
+    },
+    {
+     "id": "fr_dome_noun",
+     "box": [
+      850,
+      162,
+      56,
+      113
+     ]
+    },
+    {
+     "id": "fr_fondement_noun",
+     "box": [
+      794,
+      319,
+      106,
+      137
+     ]
+    },
+    {
+     "id": "fr_immobilier_noun",
+     "box": [
+      588,
+      488,
+      137,
+      137
+     ]
+    },
+    {
+     "id": "fr_hebergement_noun",
+     "box": [
+      727,
+      488,
+      123,
+      137
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "jeux": {
+   "name": "La salle de jeux",
+   "room_id": "R_playroom",
+   "image": "maison/jeux.jpg",
+   "backTo": "maison",
+   "alt": "The playroom in the attic, painted in ink and gouache: big soap bubbles float, a bull and a puppy play with a ball, a boy plays guitar on a seesaw with a cat in sunglasses, and a girl hugs her doll. A mushroom hops along a chalk hopscotch grid, a girl runs with a balloon, a toy robot walks, a rocket trails a rainbow over the ping-pong table, and a furry fellow lines up a shot at the pool table while a boy watches. A wooden toy chest stands open against the wall with a cat, toys and a puzzle inside. The pink door on the left leads back to the hall.",
+   "nameplate": [
+    86,
+    21
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the pink door to the hall",
+     "hit": [
+      47,
+      82,
+      113,
+      268
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "jeux_coffre_jouets",
+     "label": "le coffre",
+     "hint": "Look closer at the toy chest",
+     "at": [
+      678,
+      280
+     ],
+     "obj": [
+      604,
+      185,
+      150,
+      155
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_balle_noun",
+     "box": [
+      12,
+      355,
+      128,
+      127
+     ]
+    },
+    {
+     "id": "fr_bulle_noun",
+     "box": [
+      162,
+      12,
+      203,
+      375
+     ]
+    },
+    {
+     "id": "fr_poupee_noun",
+     "box": [
+      142,
+      400,
+      150,
+      275
+     ]
+    },
+    {
+     "id": "fr_bascule_noun",
+     "box": [
+      372,
+      175,
+      230,
+      280
+     ]
+    },
+    {
+     "id": "fr_marelle_noun",
+     "box": [
+      445,
+      460,
+      275,
+      205
+     ]
+    },
+    {
+     "id": "fr_ballon_noun",
+     "box": [
+      758,
+      30,
+      125,
+      345
+     ]
+    },
+    {
+     "id": "fr_jouet_noun",
+     "box": [
+      886,
+      268,
+      112,
+      135
+     ]
+    },
+    {
+     "id": "fr_jet_noun",
+     "box": [
+      968,
+      200,
+      170,
+      68
+     ]
+    },
+    {
+     "id": "fr_ping_pong_noun",
+     "box": [
+      1140,
+      190,
+      135,
+      270
+     ]
+    },
+    {
+     "id": "fr_billard_noun",
+     "box": [
+      732,
+      405,
+      400,
+      300
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "jeux_coffre_jouets": {
+   "name": "Le coffre à jouets",
+   "room_id": "R_playroom_z1",
+   "image": "maison/jeux_coffre_jouets.jpg",
+   "parent": "jeux",
+   "alt": "A close-up of the wooden toy chest standing open against the wall, painted in ink and gouache. Inside sit a grey cat with a white ball of wool at its feet, a china chef figurine, a striped ball in a blue-and-white bowl, a big glass marble, a jigsaw puzzle and a puzzle card showing a brain; a little chef's apron hangs over the front. A girl in red runs with a balloon string at the right.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_enigme_noun",
+     "box": [
+      244,
+      212,
+      119,
+      130
+     ]
+    },
+    {
+     "id": "fr_pelote_noun",
+     "box": [
+      219,
+      345,
+      125,
+      72
+     ]
+    },
+    {
+     "id": "fr_figurine_noun",
+     "box": [
+      366,
+      212,
+      85,
+      140
+     ]
+    },
+    {
+     "id": "fr_boule_noun",
+     "box": [
+      455,
+      325,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_bille_noun",
+     "box": [
+      560,
+      319,
+      103,
+      94
+     ]
+    },
+    {
+     "id": "fr_panoplie_noun",
+     "box": [
+      270,
+      420,
+      200,
+      175
+     ]
+    },
+    {
+     "id": "fr_puzzle_noun",
+     "box": [
+      665,
+      181,
+      240,
+      95
+     ]
+    },
+    {
+     "id": "fr_casse_tete_noun",
+     "box": [
+      712,
+      282,
+      186,
+      130
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "jardin": {
+   "name": "Le jardin",
+   "room_id": "R_garden",
+   "image": "maison/jardin.jpg",
+   "backTo": "maison",
+   "alt": "The garden behind the house, painted in ink and gouache: a veranda with a granny in a chair beside the green back door, a bull grazes on the grass and a horse leaps toward a stack of hay in front of the hedge. A teddy sits in a little fenced plot, a jar of bees stands on a stone gatepost, a dog runs along a dirt path and a fox trots by. A boy pushes a mower beside a red jerry can near a fountain ringed by a box hedge; a green ball rolls across the lawn. The house wall rises at the top left and the neighbours' houses stand beyond the hedge at the top right, with tiny figures at their doors and windows. The green door on the left leads back to the hall.",
+   "nameplate": [
+    88,
+    95
+   ],
+   "doors": [
+    {
+     "to": "maison",
+     "label": "Le hall",
+     "hint": "Go back through the green door to the hall",
+     "hit": [
+      35,
+      188,
+      72,
+      188
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "jardin_facade",
+     "label": "la façade",
+     "hint": "Look closer at the front of the house",
+     "at": [
+      180,
+      140
+     ],
+     "obj": [
+      0,
+      118,
+      356,
+      200
+     ]
+    },
+    {
+     "to": "jardin_voisins",
+     "label": "les voisins",
+     "hint": "Look closer at the neighbours' houses",
+     "at": [
+      1113,
+      172
+     ],
+     "obj": [
+      975,
+      75,
+      295,
+      175
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_veranda_noun",
+     "box": [
+      148,
+      165,
+      190,
+      222
+     ]
+    },
+    {
+     "id": "fr_haie_noun",
+     "box": [
+      340,
+      200,
+      315,
+      225
+     ]
+    },
+    {
+     "id": "fr_herbe_noun",
+     "box": [
+      12,
+      400,
+      315,
+      190
+     ]
+    },
+    {
+     "id": "fr_pelouse_noun",
+     "box": [
+      415,
+      515,
+      80,
+      75
+     ]
+    },
+    {
+     "id": "fr_jardin_noun",
+     "box": [
+      725,
+      142,
+      70,
+      90
+     ]
+    },
+    {
+     "id": "fr_parc_noun",
+     "box": [
+      662,
+      298,
+      158,
+      130
+     ]
+    },
+    {
+     "id": "fr_terrain_noun",
+     "box": [
+      655,
+      445,
+      200,
+      250
+     ]
+    },
+    {
+     "id": "fr_sentier_noun",
+     "box": [
+      862,
+      428,
+      170,
+      92
+     ]
+    },
+    {
+     "id": "fr_square_noun",
+     "box": [
+      975,
+      256,
+      190,
+      168
+     ]
+    },
+    {
+     "id": "fr_gazon_noun",
+     "box": [
+      1040,
+      430,
+      235,
+      170
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "jardin_facade": {
+   "name": "La façade",
+   "room_id": "R_garden_z1",
+   "image": "maison/jardin_facade.jpg",
+   "parent": "jardin",
+   "alt": "A close-up of the house wall facing the garden, painted in ink and gouache: the cream-and-timber wall with a lantern, a big brass key on a hook and a green door with a little window, a brass lever handle and a lion's-head lock plate. A wooden birdhouse hangs on the wall, a little wooden balcony with a flower pot sits on the roof of the veranda, and inside the veranda a dog snoozes at the foot of the stairs while granny sits in her wicker chair. Pots of pink flowers stand by the veranda windows.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_facade_noun",
+     "box": [
+      5,
+      5,
+      470,
+      150
+     ]
+    },
+    {
+     "id": "fr_clef_noun",
+     "box": [
+      38,
+      430,
+      55,
+      145
+     ]
+    },
+    {
+     "id": "fr_porte_noun",
+     "box": [
+      140,
+      220,
+      240,
+      270
+     ]
+    },
+    {
+     "id": "fr_poignee_noun",
+     "box": [
+      295,
+      500,
+      55,
+      85
+     ],
+     "labelAt": [
+      232,
+      542
+     ]
+    },
+    {
+     "id": "fr_serrure_noun",
+     "box": [
+      298,
+      588,
+      58,
+      58
+     ],
+     "labelAt": [
+      232,
+      617
+     ]
+    },
+    {
+     "id": "fr_maison_noun",
+     "box": [
+      422,
+      380,
+      105,
+      125
+     ]
+    },
+    {
+     "id": "fr_balcon_noun",
+     "box": [
+      725,
+      0,
+      280,
+      175
+     ]
+    },
+    {
+     "id": "fr_interieur_noun",
+     "box": [
+      870,
+      260,
+      190,
+      360
+     ]
+    },
+    {
+     "id": "fr_rez_de_chaussee_noun",
+     "box": [
+      1065,
+      260,
+      145,
+      445
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "jardin_voisins": {
+   "name": "Les voisins",
+   "room_id": "R_garden_z2",
+   "image": "maison/jardin_voisins.jpg",
+   "parent": "jardin",
+   "alt": "A close-up of the neighbours' houses beyond the hedge, painted in ink and gouache, under the big garden tree. A bee hotel stands on a post with bees flying round it, a demure lady waits at her front door and a cow grazes by the hedge. A workman on a ladder fixes a lantern, a girl at an upstairs window holds out a little model house, a priest sprinkles holy water, a girl in football kit kicks a ball with a brown dog behind her and a girl twirls ribbons. On the right a seal balances a domino by a kennel, a boy sits at a lemonade table and a man on a stepladder reaches up to an upstairs window.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_habitation_noun",
+     "box": [
+      25,
+      320,
+      120,
+      225
+     ]
+    },
+    {
+     "id": "fr_demeure_noun",
+     "box": [
+      180,
+      438,
+      52,
+      94
+     ]
+    },
+    {
+     "id": "fr_villa_noun",
+     "box": [
+      500,
+      305,
+      86,
+      94
+     ]
+    },
+    {
+     "id": "fr_installation_noun",
+     "box": [
+      325,
+      340,
+      110,
+      110
+     ]
+    },
+    {
+     "id": "fr_propriete_noun",
+     "box": [
+      375,
+      450,
+      90,
+      105
+     ]
+    },
+    {
+     "id": "fr_residence_noun",
+     "box": [
+      547,
+      508,
+      62,
+      156
+     ]
+    },
+    {
+     "id": "fr_passe_noun_2",
+     "box": [
+      400,
+      560,
+      145,
+      130
+     ]
+    },
+    {
+     "id": "fr_domicile_noun",
+     "box": [
+      813,
+      460,
+      145,
+      135
+     ]
+    },
+    {
+     "id": "fr_etablissement_noun",
+     "box": [
+      962,
+      500,
+      124,
+      117
+     ]
+    },
+    {
+     "id": "fr_exterieur_noun",
+     "box": [
+      1010,
+      289,
+      140,
+      205
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  },
+  "maison_fenetre": {
+   "name": "La fenêtre",
+   "room_id": "R_entrance_01_z1",
+   "image": "maison/maison_fenetre.jpg",
+   "parent": "maison",
+   "alt": "A close-up of the little hall window high in the timbered wall, painted in ink and gouache, looking out at the courtyard. Across the yard a fisherwoman leans out of a window untangling her net, two fiddlers play under an arched doorway and a boy drops an apple core on the cobbles. To the right a toy train runs along a roof, a man in a paper crown leans out of a window throwing streamers, and a block with rows of round windows stands in the yard.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fenetre_noun",
+     "box": [
+      540,
+      190,
+      110,
+      200
+     ]
+    },
+    {
+     "id": "fr_ouverture_noun",
+     "box": [
+      523,
+      395,
+      135,
+      92
+     ]
+    },
+    {
+     "id": "fr_cour_noun",
+     "box": [
+      560,
+      490,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_toit_noun",
+     "box": [
+      711,
+      240,
+      125,
+      78
+     ]
+    },
+    {
+     "id": "fr_appartement_noun",
+     "box": [
+      750,
+      320,
+      70,
+      102
+     ]
+    },
+    {
+     "id": "fr_immeuble_noun",
+     "box": [
+      719,
+      461,
+      117,
+      172
+     ]
+    }
+   ],
+   "building_id": "B05_maison",
+   "sector_id": "S02_home"
+  }
+ }
+}
