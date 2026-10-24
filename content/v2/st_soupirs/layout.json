@@ -1,0 +1,423 @@
+{
+ "building": "st_soupirs",
+ "building_id": "ST_soupirs",
+ "sector_id": "S07_health",
+ "name": "Allée des Soupirs",
+ "main": "st_soupirs",
+ "roomList": [
+  {
+   "key": "st_soupirs",
+   "short": "L'allée"
+  },
+  {
+   "key": "rires",
+   "short": "Les rires"
+  },
+  {
+   "key": "applaudissements",
+   "short": "Les applaudissements"
+  },
+  {
+   "key": "sourire",
+   "short": "Le sourire"
+  }
+ ],
+ "planned": {
+  "st_soupirs": {
+   "vocabRoom": "ST_emotion_seg001",
+   "only": [
+    "fr_inquieter_verb",
+    "fr_plaindre_verb",
+    "fr_concerner_verb",
+    "fr_deranger_verb",
+    "fr_rassurer_verb",
+    "fr_crier_verb"
+   ]
+  },
+  "rires": {
+   "vocabRoom": "ST_emotion_seg002",
+   "only": [
+    "fr_pleurer_verb",
+    "fr_plaisanter_verb",
+    "fr_desoler_verb",
+    "fr_rire_verb",
+    "fr_decevoir_verb",
+    "fr_esperer_verb"
+   ]
+  },
+  "applaudissements": {
+   "vocabRoom": "ST_emotion_seg003",
+   "only": [
+    "fr_jurer_verb",
+    "fr_risquer_verb",
+    "fr_ressentir_verb",
+    "fr_priver_verb",
+    "fr_applaudir_verb",
+    "fr_regretter_verb"
+   ]
+  },
+  "sourire": {
+   "vocabRoom": "ST_emotion_seg004",
+   "only": [
+    "fr_sourire_verb",
+    "fr_apprecier_verb",
+    "fr_rater_verb",
+    "fr_plaire_verb",
+    "fr_hesiter_verb",
+    "fr_moquer_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_soupirs": {
+   "name": "Rue des Inquiets",
+   "image": "st_soupirs/st_soupirs.jpg",
+   "alt": "A quiet cobbled lane of cream stone houses, painted in ink and gouache: Monsieur Verbe the mime bites his glove under a little grey raincloud with a hand mirror in his other hand, frowns at a bowl of plain soup with a hand mirror of his own, holds up an envelope and points at himself, crashes two cymbals that wake a ginger cat, kneels to pat a trembling puppy and shouts with his hands cupped round his mouth. The stone archway on the left leads back to the Quartier de la Santé; the purple door, the teal door and the iron gate lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     25,
+     60,
+     200,
+     150
+    ],
+    "label": "Quartier de la Santé"
+   },
+   "doors": [
+    {
+     "to": "rires",
+     "label": "Allée des Rires-et-Larmes",
+     "hint": "Through the plum-purple door under the lantern",
+     "hit": [
+      432,
+      160,
+      90,
+      120
+     ]
+    },
+    {
+     "to": "applaudissements",
+     "label": "Place des Applaudissements",
+     "hint": "Through the teal arched door",
+     "hit": [
+      665,
+      160,
+      110,
+      150
+     ]
+    },
+    {
+     "to": "sourire",
+     "label": "Rue du Sourire",
+     "hint": "Through the iron garden gate under the roses",
+     "hit": [
+      1128,
+      195,
+      85,
+      100
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_inquieter_verb",
+     "box": [
+      65,
+      222,
+      188,
+      428
+     ]
+    },
+    {
+     "id": "fr_plaindre_verb",
+     "box": [
+      256,
+      288,
+      190,
+      358
+     ]
+    },
+    {
+     "id": "fr_concerner_verb",
+     "box": [
+      450,
+      288,
+      152,
+      358
+     ]
+    },
+    {
+     "id": "fr_deranger_verb",
+     "box": [
+      607,
+      323,
+      228,
+      327
+     ]
+    },
+    {
+     "id": "fr_rassurer_verb",
+     "box": [
+      840,
+      373,
+      200,
+      277
+     ]
+    },
+    {
+     "id": "fr_crier_verb",
+     "box": [
+      1047,
+      303,
+      175,
+      352
+     ]
+    }
+   ]
+  },
+  "rires": {
+   "name": "Allée des Rires-et-Larmes",
+   "image": "st_soupirs/rires.jpg",
+   "backTo": "st_soupirs",
+   "alt": "A cheerful lane with a blue-striped awning and window boxes: Monsieur Verbe the mime weeps over an onion on a chopping board, tells a joke to a laughing pheasant, puts a hand on his heart beside a spilled bunch of flowers, laughs while a feather tickles him from a basket, finds only an old sock in his top hat and tosses a coin into a wishing well. The plum-purple door on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_soupirs",
+     "label": "Rue des Inquiets",
+     "hint": "Back through the plum-purple door",
+     "hit": [
+      55,
+      50,
+      165,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pleurer_verb",
+     "box": [
+      0,
+      320,
+      228,
+      352
+     ]
+    },
+    {
+     "id": "fr_plaisanter_verb",
+     "box": [
+      230,
+      230,
+      210,
+      412
+     ]
+    },
+    {
+     "id": "fr_desoler_verb",
+     "box": [
+      445,
+      210,
+      190,
+      450
+     ]
+    },
+    {
+     "id": "fr_rire_verb",
+     "box": [
+      640,
+      227,
+      212,
+      423
+     ]
+    },
+    {
+     "id": "fr_decevoir_verb",
+     "box": [
+      855,
+      227,
+      165,
+      395
+     ]
+    },
+    {
+     "id": "fr_esperer_verb",
+     "box": [
+      1025,
+      242,
+      252,
+      388
+     ]
+    }
+   ]
+  },
+  "applaudissements": {
+   "name": "Place des Applaudissements",
+   "image": "st_soupirs/applaudissements.jpg",
+   "backTo": "st_soupirs",
+   "alt": "A town square with a bandstand and coloured bunting: Monsieur Verbe the mime raises his hand with the other on a big closed book, wobbles along a low rope between two posts, holds his heart while little hearts float up, sulks on a stool while a toy television sits out of reach on a high shelf, claps in a green beret and looks sorry at an empty cake plate. The teal door on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_soupirs",
+     "label": "Rue des Inquiets",
+     "hint": "Back through the teal arched door",
+     "hit": [
+      60,
+      90,
+      140,
+      135
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_jurer_verb",
+     "box": [
+      20,
+      232,
+      196,
+      402
+     ]
+    },
+    {
+     "id": "fr_risquer_verb",
+     "box": [
+      218,
+      210,
+      290,
+      425
+     ]
+    },
+    {
+     "id": "fr_ressentir_verb",
+     "box": [
+      512,
+      185,
+      150,
+      450
+     ]
+    },
+    {
+     "id": "fr_priver_verb",
+     "box": [
+      715,
+      280,
+      162,
+      355
+     ]
+    },
+    {
+     "id": "fr_applaudir_verb",
+     "box": [
+      898,
+      228,
+      152,
+      400
+     ]
+    },
+    {
+     "id": "fr_regretter_verb",
+     "box": [
+      1058,
+      265,
+      215,
+      395
+     ]
+    }
+   ]
+  },
+  "sourire": {
+   "name": "Rue du Sourire",
+   "image": "st_soupirs/sourire.jpg",
+   "backTo": "st_soupirs",
+   "alt": "A sunny garden lane with sunflowers and a fountain: Monsieur Verbe the mime beams with a sunflower, sips tea with his eyes closed, kicks at a red ball and misses, opens a gift box in delight, hesitates on a plank by the fountain pool and, with a hand mirror at his belt, pulls a cheeky face at a pigeon. The iron garden gate on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_soupirs",
+     "label": "Rue des Inquiets",
+     "hint": "Back through the iron garden gate",
+     "hit": [
+      90,
+      80,
+      170,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sourire_verb",
+     "box": [
+      36,
+      248,
+      208,
+      402
+     ]
+    },
+    {
+     "id": "fr_apprecier_verb",
+     "box": [
+      246,
+      262,
+      148,
+      388
+     ]
+    },
+    {
+     "id": "fr_rater_verb",
+     "box": [
+      397,
+      262,
+      267,
+      382
+     ]
+    },
+    {
+     "id": "fr_plaire_verb",
+     "box": [
+      668,
+      272,
+      176,
+      378
+     ]
+    },
+    {
+     "id": "fr_hesiter_verb",
+     "box": [
+      848,
+      276,
+      220,
+      420
+     ]
+    },
+    {
+     "id": "fr_moquer_verb",
+     "box": [
+      1070,
+      284,
+      200,
+      372
+     ]
+    }
+   ]
+  }
+ }
+}
