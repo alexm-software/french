@@ -1,0 +1,805 @@
+{
+ "building": "atelier_couleurs",
+ "building_id": "B04_atelier_couleurs",
+ "sector_id": "S01_beginner",
+ "name": "Atelier des Couleurs & Formes",
+ "main": "atelier_couleurs",
+ "roomList": [
+  {
+   "key": "atelier_couleurs",
+   "short": "L'atelier"
+  },
+  {
+   "key": "formes",
+   "short": "Les formes"
+  },
+  {
+   "key": "mesures",
+   "short": "Les mesures"
+  },
+  {
+   "key": "teintures",
+   "short": "Les teintures"
+  }
+ ],
+ "planned": {
+  "atelier_couleurs": {
+   "vocabRoom": "R_colors_01",
+   "only": [
+    "fr_couleur_noun",
+    "fr_noir_adj",
+    "fr_bleu_adj",
+    "fr_blanc_adj",
+    "fr_rouge_adj",
+    "fr_vert_adj"
+   ]
+  },
+  "tableau": {
+   "vocabRoom": "R_colors_01",
+   "only": [
+    "fr_gris_adj",
+    "fr_rose_adj",
+    "fr_pale_adj",
+    "fr_jaune_adj",
+    "fr_brun_adj"
+   ]
+  },
+  "formes": {
+   "vocabRoom": "R_shapes_03",
+   "only": [
+    "fr_forme_noun",
+    "fr_ligne_noun",
+    "fr_pointe_noun",
+    "fr_point_noun",
+    "fr_bord_noun",
+    "fr_coin_noun"
+   ]
+  },
+  "toile": {
+   "vocabRoom": "R_shapes_03",
+   "only": [
+    "fr_surface_noun",
+    "fr_trait_noun",
+    "fr_symbole_noun",
+    "fr_cercle_noun"
+   ]
+  },
+  "mesures": {
+   "vocabRoom": "R_shapes_02",
+   "only": [
+    "fr_grandeur_noun",
+    "fr_tonne_noun",
+    "fr_epaisseur_noun",
+    "fr_regulier_adj",
+    "fr_geant_noun",
+    "fr_foudre_noun_m",
+    "fr_carreau_noun"
+   ]
+  },
+  "port": {
+   "vocabRoom": "R_shapes_02",
+   "only": [
+    "fr_resolution_noun",
+    "fr_carre_adj",
+    "fr_centimetre_noun",
+    "fr_diametre_noun",
+    "fr_pourtour_noun",
+    "fr_hexagone_noun"
+   ]
+  },
+  "teintures": {
+   "vocabRoom": "R_colors_02",
+   "only": [
+    "fr_tache_noun_2",
+    "fr_teinte_noun",
+    "fr_violet_adj",
+    "fr_contraste_noun",
+    "fr_nuance_noun",
+    "fr_verdure_noun",
+    "fr_neutre_adj",
+    "fr_pourpre_noun"
+   ]
+  },
+  "pre": {
+   "vocabRoom": "R_colors_02",
+   "only": [
+    "fr_blancheur_noun",
+    "fr_diversite_noun",
+    "fr_emeraude_noun",
+    "fr_multiple_adj",
+    "fr_marron_adj",
+    "fr_mixte_adj",
+    "fr_lilas_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "atelier_couleurs": {
+   "name": "L'atelier des couleurs",
+   "room_id": "R_colors_01",
+   "image": "atelier_couleurs/atelier.jpg",
+   "nameplate": [
+    82,
+    6
+   ],
+   "mapExit": {
+    "box": [
+     25,
+     185,
+     86,
+     330
+    ],
+    "label": "Place du Village"
+   },
+   "doors": [
+    {
+     "to": "formes",
+     "label": "les formes",
+     "hint": "Up to the red door on the balcony",
+     "hit": [
+      376,
+      60,
+      80,
+      95
+     ]
+    },
+    {
+     "to": "mesures",
+     "label": "les mesures",
+     "hint": "Up to the blue door on the balcony",
+     "hit": [
+      630,
+      60,
+      80,
+      95
+     ]
+    },
+    {
+     "to": "teintures",
+     "label": "les teintures",
+     "hint": "Up to the yellow door on the balcony",
+     "hit": [
+      503,
+      60,
+      80,
+      95
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "tableau",
+     "label": "le tableau",
+     "hint": "Look closer at the big painting in the gold frame",
+     "at": [
+      978,
+      173
+     ],
+     "obj": [
+      805,
+      76,
+      347,
+      195
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_couleur_noun",
+     "box": [
+      118,
+      335,
+      200,
+      312
+     ]
+    },
+    {
+     "id": "fr_noir_adj",
+     "box": [
+      348,
+      250,
+      234,
+      185
+     ]
+    },
+    {
+     "id": "fr_bleu_adj",
+     "box": [
+      460,
+      447,
+      170,
+      228
+     ]
+    },
+    {
+     "id": "fr_blanc_adj",
+     "box": [
+      598,
+      256,
+      198,
+      185
+     ]
+    },
+    {
+     "id": "fr_rouge_adj",
+     "box": [
+      806,
+      256,
+      128,
+      190
+     ]
+    },
+    {
+     "id": "fr_vert_adj",
+     "box": [
+      700,
+      452,
+      148,
+      220
+     ]
+    }
+   ],
+   "alt": "The ground-floor colour workshop, painted in ink and gouache: the arched wooden front door on the far left leads back out to the village square; shelves of paint pots hang on the walls and a balcony above has three doors, red, yellow and blue; a big gold-framed painting of a sunny courtyard hangs on the right. On a low stage a detective in a black coat and hat holds a closed umbrella by a black-and-white striped easel, a young painter in a white smock points his brush at a blank white canvas, and a clown in a red suit touches his rosy cheek. In front, a girl in sunglasses holds up a rainbow colour wheel, a boy blows up a blue balloon and a green frog sits on a dripping tin of green paint."
+  },
+  "tableau": {
+   "name": "Le tableau de la cour",
+   "room_id": "R_colors_01_z1",
+   "image": "atelier_couleurs/tableau.jpg",
+   "parent": "atelier_couleurs",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gris_adj",
+     "box": [
+      312,
+      262,
+      165,
+      190
+     ]
+    },
+    {
+     "id": "fr_rose_adj",
+     "box": [
+      497,
+      245,
+      235,
+      188
+     ]
+    },
+    {
+     "id": "fr_pale_adj",
+     "box": [
+      745,
+      232,
+      200,
+      200
+     ]
+    },
+    {
+     "id": "fr_jaune_adj",
+     "box": [
+      383,
+      458,
+      250,
+      190
+     ]
+    },
+    {
+     "id": "fr_brun_adj",
+     "box": [
+      676,
+      440,
+      185,
+      222
+     ]
+    }
+   ],
+   "alt": "A close look at the gold-framed painting: a sunny village courtyard with a fountain, where a grey elephant peeks out of a sack of peanuts, a pink flamingo stands beside a pot of pink roses, two wooden mannequins compare a deep blue card and a pale blue card, a boy in yellow overalls rolls a yellow patch onto the paving and a brown teddy bear holds a plate with a chocolate bun."
+  },
+  "formes": {
+   "name": "Le grenier des formes",
+   "room_id": "R_shapes_03",
+   "image": "atelier_couleurs/formes.jpg",
+   "backTo": "atelier_couleurs",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "atelier_couleurs",
+     "label": "l'atelier",
+     "hint": "Back through the green door to the workshop",
+     "hit": [
+      266,
+      168,
+      120,
+      105
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "toile",
+     "label": "le tableau",
+     "hint": "Look closer at the painting of the meadow",
+     "at": [
+      844,
+      184
+     ],
+     "obj": [
+      680,
+      92,
+      328,
+      184
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_forme_noun",
+     "box": [
+      30,
+      275,
+      214,
+      350
+     ]
+    },
+    {
+     "id": "fr_ligne_noun",
+     "box": [
+      250,
+      280,
+      225,
+      270
+     ]
+    },
+    {
+     "id": "fr_pointe_noun",
+     "box": [
+      482,
+      147,
+      212,
+      450
+     ]
+    },
+    {
+     "id": "fr_point_noun",
+     "box": [
+      700,
+      339,
+      190,
+      300
+     ]
+    },
+    {
+     "id": "fr_bord_noun",
+     "box": [
+      896,
+      243,
+      176,
+      297
+     ]
+    },
+    {
+     "id": "fr_coin_noun",
+     "box": [
+      1080,
+      390,
+      180,
+      245
+     ]
+    }
+   ],
+   "alt": "The attic of shapes, painted in ink and gouache: a green arched door on the left leads back down to the workshop and a framed painting of a meadow hangs on the wall. A girl pats a heap of white foam into shapes, a girl in a yellow dress leans as she walks beside a long purple line on the floorboards, a ballerina balances on the tip of one pointe shoe on a paint tin, a giant wooden chess pawn stands on a big black dot, a bored boy perches on the edge of a stool with his chin in his hand, and a puppy sits on a big gold coin in the corner."
+  },
+  "toile": {
+   "name": "Le tableau du pré",
+   "room_id": "R_shapes_03_z1",
+   "image": "atelier_couleurs/toile.jpg",
+   "parent": "formes",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_surface_noun",
+     "box": [
+      120,
+      166,
+      410,
+      440
+     ]
+    },
+    {
+     "id": "fr_trait_noun",
+     "box": [
+      674,
+      275,
+      172,
+      290
+     ]
+    },
+    {
+     "id": "fr_symbole_noun",
+     "box": [
+      852,
+      250,
+      250,
+      345
+     ]
+    },
+    {
+     "id": "fr_cercle_noun",
+     "box": [
+      1112,
+      350,
+      160,
+      205
+     ]
+    }
+   ],
+   "alt": "A close look at the meadow painting: a girl leans over a wide stone basin and sees her face on the still water, a white canvas on an easel carries one bold black brushstroke, a boy kneels to draw a heart in a bowl of sand with a stick, and an orange hoop leans against a tree stump."
+  },
+  "mesures": {
+   "name": "La salle des mesures",
+   "room_id": "R_shapes_02",
+   "image": "atelier_couleurs/mesures.jpg",
+   "backTo": "atelier_couleurs",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "atelier_couleurs",
+     "label": "l'atelier",
+     "hint": "Back through the blue door to the workshop",
+     "hit": [
+      15,
+      130,
+      124,
+      180
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "port",
+     "label": "le tableau",
+     "hint": "Look closer at the painting of the harbour",
+     "at": [
+      467,
+      198
+     ],
+     "obj": [
+      313,
+      112,
+      308,
+      173
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_grandeur_noun",
+     "box": [
+      22,
+      316,
+      236,
+      270
+     ]
+    },
+    {
+     "id": "fr_tonne_noun",
+     "box": [
+      264,
+      335,
+      122,
+      230
+     ]
+    },
+    {
+     "id": "fr_epaisseur_noun",
+     "box": [
+      392,
+      314,
+      185,
+      256
+     ]
+    },
+    {
+     "id": "fr_regulier_adj",
+     "box": [
+      583,
+      300,
+      128,
+      305
+     ]
+    },
+    {
+     "id": "fr_geant_noun",
+     "box": [
+      717,
+      160,
+      283,
+      360
+     ]
+    },
+    {
+     "id": "fr_foudre_noun_m",
+     "box": [
+      1006,
+      170,
+      262,
+      350
+     ]
+    },
+    {
+     "id": "fr_carreau_noun",
+     "box": [
+      905,
+      528,
+      365,
+      155
+     ]
+    }
+   ],
+   "alt": "The measuring room, painted in ink and gouache: a blue door on the far left leads back to the workshop and a framed painting of a harbour hangs on the wall. A little girl gapes up at a potted sunflower much taller than her, a mouse in a red leotard hoists two iron weights, a chimp in a red bow tie hugs a very thick book, a boy marches over evenly spaced footprints, a stooping giant lets a blue jay perch on his thumb, a huge wooden barrel lies heaped with bread and apples, and a row of toy cars parks on a red-and-white checked floor."
+  },
+  "port": {
+   "name": "Le tableau du port",
+   "room_id": "R_shapes_02_z1",
+   "image": "atelier_couleurs/port.jpg",
+   "parent": "mesures",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_resolution_noun",
+     "box": [
+      60,
+      228,
+      255,
+      325
+     ]
+    },
+    {
+     "id": "fr_carre_adj",
+     "box": [
+      322,
+      300,
+      250,
+      260
+     ]
+    },
+    {
+     "id": "fr_centimetre_noun",
+     "box": [
+      646,
+      118,
+      300,
+      232
+     ]
+    },
+    {
+     "id": "fr_diametre_noun",
+     "box": [
+      952,
+      130,
+      290,
+      275
+     ]
+    },
+    {
+     "id": "fr_pourtour_noun",
+     "box": [
+      666,
+      356,
+      262,
+      284
+     ]
+    },
+    {
+     "id": "fr_hexagone_noun",
+     "box": [
+      936,
+      412,
+      300,
+      223
+     ]
+    }
+   ],
+   "alt": "A close look at the harbour painting: a girl shows off two crisp framed lion portraits, a square red toy car glows in a ray of sunshine, Santa kneels to measure along a long yellow ruler, a boy lays a stick straight across a cartwheel, another boy pours white sand around a chalk circle, and a hen on a green hexagon stares at her empty nest."
+  },
+  "teintures": {
+   "name": "L'atelier des teintures",
+   "room_id": "R_colors_02",
+   "image": "atelier_couleurs/teintures.jpg",
+   "backTo": "atelier_couleurs",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "atelier_couleurs",
+     "label": "l'atelier",
+     "hint": "Back through the yellow door to the workshop",
+     "hit": [
+      38,
+      55,
+      90,
+      300
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "pre",
+     "label": "le tableau",
+     "hint": "Look closer at the painting of the lilac meadow",
+     "at": [
+      1130,
+      135
+     ],
+     "obj": [
+      1005,
+      65,
+      249,
+      140
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_tache_noun_2",
+     "box": [
+      196,
+      80,
+      182,
+      302
+     ]
+    },
+    {
+     "id": "fr_teinte_noun",
+     "box": [
+      390,
+      80,
+      272,
+      305
+     ]
+    },
+    {
+     "id": "fr_violet_adj",
+     "box": [
+      670,
+      90,
+      170,
+      280
+     ]
+    },
+    {
+     "id": "fr_contraste_noun",
+     "box": [
+      846,
+      175,
+      105,
+      208
+     ]
+    },
+    {
+     "id": "fr_nuance_noun",
+     "box": [
+      36,
+      388,
+      236,
+      300
+     ]
+    },
+    {
+     "id": "fr_verdure_noun",
+     "box": [
+      306,
+      392,
+      245,
+      275
+     ]
+    },
+    {
+     "id": "fr_neutre_adj",
+     "box": [
+      592,
+      392,
+      300,
+      300
+     ]
+    },
+    {
+     "id": "fr_pourpre_noun",
+     "box": [
+      957,
+      262,
+      278,
+      440
+     ]
+    }
+   ],
+   "alt": "The dye workshop, painted in ink and gouache: a yellow arched door on the far left leads back to the workshop and a framed painting of a lilac meadow hangs high on the right. A laundress holds up a shirt with a moustache-shaped stain, a young man lifts a tent dyed blue at the bottom out of a vat, a boy in a violet suit plays a purple violin, a black cone and a white cone are tied together on a stool, a painter in blue mixes shades on her palette, a snail glides over a copper pot of greenery, a beige newt sits on a bench between a red dye tub and a blue dye tub, and an old seamstress pins a royal purple gown onto a mannequin."
+  },
+  "pre": {
+   "name": "Le tableau des lilas",
+   "room_id": "R_colors_02_z1",
+   "image": "atelier_couleurs/pre.jpg",
+   "parent": "teintures",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_blancheur_noun",
+     "box": [
+      145,
+      170,
+      215,
+      175
+     ]
+    },
+    {
+     "id": "fr_diversite_noun",
+     "box": [
+      366,
+      218,
+      200,
+      128
+     ]
+    },
+    {
+     "id": "fr_emeraude_noun",
+     "box": [
+      196,
+      352,
+      274,
+      334
+     ]
+    },
+    {
+     "id": "fr_multiple_adj",
+     "box": [
+      476,
+      352,
+      262,
+      170
+     ]
+    },
+    {
+     "id": "fr_marron_adj",
+     "box": [
+      652,
+      105,
+      188,
+      240
+     ]
+    },
+    {
+     "id": "fr_mixte_adj",
+     "box": [
+      556,
+      530,
+      190,
+      150
+     ]
+    },
+    {
+     "id": "fr_lilas_noun",
+     "box": [
+      846,
+      40,
+      310,
+      630
+     ]
+    }
+   ],
+   "alt": "A close look at the lilac meadow painting: a dazzling white sheet hangs on a line over a steaming tub, a crate overflows with bananas, grapes, apples and oranges, a young jeweller with a magnifier lays a row of green emeralds on green velvet, a pile of many blue tins stands in the grass, a boy pushes a cart of brown chestnuts, a patchwork kitten sits by the paint pots and a girl sings to a big lilac bush in bloom."
+  }
+ }
+}
