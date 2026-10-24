@@ -1,0 +1,534 @@
+{
+ "building": "st_ciel",
+ "building_id": "ST_ciel",
+ "sector_id": "S16_park",
+ "name": "Sentier du Ciel Changeant",
+ "main": "st_ciel",
+ "roomList": [
+  {
+   "key": "st_ciel",
+   "short": "Les averses"
+  },
+  {
+   "key": "soleil",
+   "short": "Le soleil"
+  },
+  {
+   "key": "jardiniers",
+   "short": "Les jardiniers"
+  },
+  {
+   "key": "moissons",
+   "short": "Les moissons"
+  },
+  {
+   "key": "inondations",
+   "short": "Les inondations"
+  }
+ ],
+ "planned": {
+  "st_ciel": {
+   "vocabRoom": "ST_nature_seg001",
+   "only": [
+    "fr_voler_verb",
+    "fr_pleuvoir_verb",
+    "fr_planter_verb",
+    "fr_couler_verb",
+    "fr_chasser_verb",
+    "fr_bruler_verb"
+   ]
+  },
+  "soleil": {
+   "vocabRoom": "ST_nature_seg002",
+   "only": [
+    "fr_luire_verb",
+    "fr_briller_verb",
+    "fr_illuminer_verb",
+    "fr_ensoleiller_verb",
+    "fr_rallumer_verb",
+    "fr_eclaircir_verb"
+   ]
+  },
+  "jardiniers": {
+   "vocabRoom": "ST_nature_seg003",
+   "only": [
+    "fr_polir_verb",
+    "fr_dorer_verb",
+    "fr_cultiver_verb",
+    "fr_epanouir_verb",
+    "fr_exasperer_verb",
+    "fr_cherir_verb"
+   ]
+  },
+  "moissons": {
+   "vocabRoom": "ST_nature_seg004",
+   "only": [
+    "fr_fleurir_verb",
+    "fr_recolter_verb",
+    "fr_tacher_verb_2",
+    "fr_mouiller_verb",
+    "fr_planer_verb",
+    "fr_feuilleter_verb"
+   ]
+  },
+  "inondations": {
+   "vocabRoom": "ST_nature_seg005",
+   "only": [
+    "fr_couver_verb",
+    "fr_piloter_verb",
+    "fr_inonder_verb",
+    "fr_enrouler_verb",
+    "fr_aerer_verb",
+    "fr_deborder_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_ciel": {
+   "name": "Allée des Averses",
+   "room_id": "ST_nature_seg001",
+   "image": "st_ciel/st_ciel.jpg",
+   "alt": "A showery spring meadow path lined with turf-roofed cottages under a rainbow, painted in ink and gouache: Monsieur Verbe the mime flaps his arms among a flock of swallows, stands under a little rain cloud that pours on his umbrella, plants a sapling with a trowel, kneels by a stream as his paper boat goes down, waves a tea towel to chase crows off the cabbages and snatches his hand back from a hot pie. The stone archway with its open wooden gate on the left leads back to the park; the round yellow, green, red and blue cottage doors lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     85,
+     170,
+     165,
+     180
+    ],
+    "label": "Parc des Curiosités"
+   },
+   "doors": [
+    {
+     "to": "soleil",
+     "label": "Rue Ensoleillée",
+     "hint": "Through the round yellow door",
+     "hit": [
+      395,
+      232,
+      85,
+      76
+     ]
+    },
+    {
+     "to": "jardiniers",
+     "label": "Chemin des Jardiniers",
+     "hint": "Through the round green door",
+     "hit": [
+      610,
+      245,
+      77,
+      93
+     ]
+    },
+    {
+     "to": "moissons",
+     "label": "Rue des Moissonneurs",
+     "hint": "Through the round red door",
+     "hit": [
+      855,
+      245,
+      85,
+      93
+     ]
+    },
+    {
+     "to": "inondations",
+     "label": "Quai des Inondations",
+     "hint": "Through the round blue door",
+     "hit": [
+      1098,
+      245,
+      82,
+      98
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_voler_verb",
+     "box": [
+      20,
+      355,
+      262,
+      280
+     ]
+    },
+    {
+     "id": "fr_pleuvoir_verb",
+     "box": [
+      296,
+      312,
+      140,
+      326
+     ]
+    },
+    {
+     "id": "fr_planter_verb",
+     "box": [
+      442,
+      445,
+      153,
+      190
+     ]
+    },
+    {
+     "id": "fr_couler_verb",
+     "box": [
+      605,
+      425,
+      195,
+      240
+     ]
+    },
+    {
+     "id": "fr_chasser_verb",
+     "box": [
+      806,
+      350,
+      230,
+      320
+     ]
+    },
+    {
+     "id": "fr_bruler_verb",
+     "box": [
+      1045,
+      365,
+      215,
+      265
+     ]
+    }
+   ]
+  },
+  "soleil": {
+   "name": "Rue Ensoleillée",
+   "room_id": "ST_nature_seg002",
+   "image": "st_ciel/soleil.jpg",
+   "backTo": "st_ciel",
+   "alt": "A sunny lane of turf-roofed cottages after the rain, painted in ink and gouache: Monsieur Verbe the mime peers at a black cat's glowing eyes in a dark hollow, beams in sunglasses under a smiling sun, hangs glowing paper lanterns on a little tree from a stepladder, flings open the shutters so sunlight pours into a cottage, pulls the chain of an old street lamp that comes back on and wipes a grey cloud from the sky with a big sponge. The round yellow door on the left leads back to the showers' alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ciel",
+     "label": "Allée des Averses",
+     "hint": "Back through the round yellow door",
+     "hit": [
+      94,
+      269,
+      69,
+      88
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_luire_verb",
+     "box": [
+      19,
+      412,
+      206,
+      207
+     ]
+    },
+    {
+     "id": "fr_briller_verb",
+     "box": [
+      262,
+      312,
+      115,
+      315
+     ]
+    },
+    {
+     "id": "fr_illuminer_verb",
+     "box": [
+      419,
+      187,
+      200,
+      445
+     ]
+    },
+    {
+     "id": "fr_ensoleiller_verb",
+     "box": [
+      631,
+      237,
+      208,
+      357
+     ]
+    },
+    {
+     "id": "fr_rallumer_verb",
+     "box": [
+      850,
+      87,
+      162,
+      507
+     ]
+    },
+    {
+     "id": "fr_eclaircir_verb",
+     "box": [
+      1069,
+      250,
+      187,
+      370
+     ]
+    }
+   ]
+  },
+  "jardiniers": {
+   "name": "Chemin des Jardiniers",
+   "room_id": "ST_nature_seg003",
+   "image": "st_ciel/jardiniers.jpg",
+   "backTo": "st_ciel",
+   "alt": "A sunny spring kitchen garden behind the turf-roofed cottages, painted in ink and gouache: Monsieur Verbe the mime polishes a silver teapot until it sparkles, dips his brush in a pot of gold paint, hoes rows of young lettuces, smiles into his hand mirror beside a rose bush in full bloom, throws up his hands in exasperation and hugs a little cherry tree laden with cherries. The round green door leads back to the showers' alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ciel",
+     "label": "Allée des Averses",
+     "hint": "Back through the round green door",
+     "hit": [
+      310,
+      194,
+      121,
+      120
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_polir_verb",
+     "box": [
+      37,
+      306,
+      182,
+      307
+     ]
+    },
+    {
+     "id": "fr_dorer_verb",
+     "box": [
+      237,
+      322,
+      182,
+      287
+     ]
+    },
+    {
+     "id": "fr_cultiver_verb",
+     "box": [
+      450,
+      312,
+      206,
+      307
+     ]
+    },
+    {
+     "id": "fr_epanouir_verb",
+     "box": [
+      675,
+      287,
+      160,
+      315
+     ]
+    },
+    {
+     "id": "fr_exasperer_verb",
+     "box": [
+      840,
+      287,
+      200,
+      320
+     ]
+    },
+    {
+     "id": "fr_cherir_verb",
+     "box": [
+      1050,
+      20,
+      225,
+      600
+     ]
+    }
+   ]
+  },
+  "moissons": {
+   "name": "Rue des Moissonneurs",
+   "room_id": "ST_nature_seg004",
+   "image": "st_ciel/moissons.jpg",
+   "backTo": "st_ciel",
+   "alt": "A sunny late-summer harvest field of golden wheat and hay bales, painted in ink and gouache: Monsieur Verbe the mime gapes as a flower box bursts into bloom, picks tomatoes into a wicker basket, stares at a coffee stain on his white apron, stands dripping in the spray of a sprinkler, spreads his arms like wings under a gliding eagle and leafs through a big book on a hay bale as autumn leaves flutter out. The round red cottage door on the left leads back to the showers' alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ciel",
+     "label": "Allée des Averses",
+     "hint": "Back through the round red door",
+     "hit": [
+      170,
+      215,
+      105,
+      80
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fleurir_verb",
+     "box": [
+      19,
+      300,
+      240,
+      335
+     ]
+    },
+    {
+     "id": "fr_recolter_verb",
+     "box": [
+      275,
+      344,
+      200,
+      344
+     ]
+    },
+    {
+     "id": "fr_tacher_verb_2",
+     "box": [
+      494,
+      331,
+      131,
+      338
+     ]
+    },
+    {
+     "id": "fr_mouiller_verb",
+     "box": [
+      644,
+      337,
+      169,
+      344
+     ]
+    },
+    {
+     "id": "fr_planer_verb",
+     "box": [
+      816,
+      319,
+      196,
+      345
+     ]
+    },
+    {
+     "id": "fr_feuilleter_verb",
+     "box": [
+      1031,
+      356,
+      200,
+      315
+     ]
+    }
+   ]
+  },
+  "inondations": {
+   "name": "Quai des Inondations",
+   "room_id": "ST_nature_seg005",
+   "image": "st_ciel/inondations.jpg",
+   "backTo": "st_ciel",
+   "alt": "A breezy riverside quay after a spring shower, the river brimming, painted in ink and gouache: Monsieur Verbe the mime tucks a knitted blanket over a hen on her eggs, steers a little wooden boat, stands knee-deep in his flooded vegetable patch among ducks, winds a long red scarf round his neck, shakes out a patchwork quilt in the breeze and gapes as a rain barrel overflows. The round blue cottage door on the far left leads back to the showers' alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ciel",
+     "label": "Allée des Averses",
+     "hint": "Back through the round blue door",
+     "hit": [
+      172,
+      175,
+      66,
+      70
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_couver_verb",
+     "box": [
+      50,
+      375,
+      256,
+      300
+     ]
+    },
+    {
+     "id": "fr_piloter_verb",
+     "box": [
+      313,
+      281,
+      225,
+      250
+     ]
+    },
+    {
+     "id": "fr_inonder_verb",
+     "box": [
+      570,
+      306,
+      140,
+      275
+     ]
+    },
+    {
+     "id": "fr_enrouler_verb",
+     "box": [
+      770,
+      290,
+      150,
+      340
+     ]
+    },
+    {
+     "id": "fr_aerer_verb",
+     "box": [
+      925,
+      188,
+      240,
+      200
+     ]
+    },
+    {
+     "id": "fr_deborder_verb",
+     "box": [
+      1000,
+      392,
+      255,
+      308
+     ]
+    }
+   ]
+  }
+ }
+}
