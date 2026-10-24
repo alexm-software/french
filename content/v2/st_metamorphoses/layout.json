@@ -1,0 +1,529 @@
+{
+ "building": "st_metamorphoses",
+ "building_id": "ST_metamorphoses",
+ "sector_id": "S09_nature",
+ "name": "Allée des Métamorphoses",
+ "main": "st_metamorphoses",
+ "roomList": [
+  {
+   "key": "st_metamorphoses",
+   "short": "Le coup d'envoi"
+  },
+  {
+   "key": "progres",
+   "short": "Le progrès"
+  },
+  {
+   "key": "chrysalides",
+   "short": "Les chrysalides"
+  },
+  {
+   "key": "demolisseurs",
+   "short": "Les démolisseurs"
+  },
+  {
+   "key": "ralentis",
+   "short": "Les ralentis"
+  }
+ ],
+ "planned": {
+  "st_metamorphoses": {
+   "vocabRoom": "ST_change_seg006",
+   "only": [
+    "fr_parfaire_verb",
+    "fr_preceder_verb",
+    "fr_proceder_verb",
+    "fr_completer_verb",
+    "fr_debuter_verb",
+    "fr_demarrer_verb"
+   ]
+  },
+  "progres": {
+   "vocabRoom": "ST_change_seg007",
+   "only": [
+    "fr_conclure_verb",
+    "fr_retomber_verb",
+    "fr_douer_verb",
+    "fr_progresser_verb",
+    "fr_succeder_verb",
+    "fr_stopper_verb"
+   ]
+  },
+  "chrysalides": {
+   "vocabRoom": "ST_change_seg008",
+   "only": [
+    "fr_metamorphoser_verb",
+    "fr_provenir_verb",
+    "fr_reciter_verb",
+    "fr_resigner_verb",
+    "fr_circuler_verb",
+    "fr_redevenir_verb"
+   ]
+  },
+  "demolisseurs": {
+   "vocabRoom": "ST_change_seg009",
+   "only": [
+    "fr_demolir_verb",
+    "fr_eliminer_verb",
+    "fr_attenuer_verb",
+    "fr_rajouter_verb",
+    "fr_diminuer_verb",
+    "fr_prolonger_verb"
+   ]
+  },
+  "ralentis": {
+   "vocabRoom": "ST_change_seg010",
+   "only": [
+    "fr_ralentir_verb",
+    "fr_bouleverser_verb",
+    "fr_effectuer_verb",
+    "fr_inverser_verb",
+    "fr_specialiser_verb",
+    "fr_reconduire_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_metamorphoses": {
+   "name": "Place du Coup-d'Envoi",
+   "image": "st_metamorphoses/st_metamorphoses.jpg",
+   "alt": "A golden stone village square with butterflies and flower pots, painted in ink and gouache: Monsieur Verbe the mime polishes a stone bird statue in a gold beret, walks ahead of three ducklings, steps carefully onto a stepping stone, puts the last egg into an egg box, opens the curtains of a little puppet theatre and cranks an old blue car into life. The stone archway on the left leads back to the valley; the purple, orange and turquoise doors and the iron garden gate lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     25,
+     15,
+     270,
+     250
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "progres",
+     "label": "Allée du Progrès",
+     "hint": "Through the purple door",
+     "hit": [
+      440,
+      148,
+      95,
+      140
+     ]
+    },
+    {
+     "to": "chrysalides",
+     "label": "Rue des Chrysalides",
+     "hint": "Through the orange door",
+     "hit": [
+      669,
+      148,
+      102,
+      140
+     ]
+    },
+    {
+     "to": "demolisseurs",
+     "label": "Rue des Démolisseurs",
+     "hint": "Through the turquoise door",
+     "hit": [
+      900,
+      148,
+      100,
+      140
+     ]
+    },
+    {
+     "to": "ralentis",
+     "label": "Chemin des Ralentis",
+     "hint": "Through the iron garden gate",
+     "hit": [
+      1121,
+      175,
+      85,
+      130
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_parfaire_verb",
+     "box": [
+      56,
+      288,
+      188,
+      318
+     ]
+    },
+    {
+     "id": "fr_preceder_verb",
+     "box": [
+      250,
+      300,
+      181,
+      325
+     ]
+    },
+    {
+     "id": "fr_proceder_verb",
+     "box": [
+      450,
+      300,
+      150,
+      300
+     ]
+    },
+    {
+     "id": "fr_completer_verb",
+     "box": [
+      612,
+      344,
+      188,
+      275
+     ]
+    },
+    {
+     "id": "fr_debuter_verb",
+     "box": [
+      812,
+      338,
+      195,
+      293
+     ]
+    },
+    {
+     "id": "fr_demarrer_verb",
+     "box": [
+      1025,
+      331,
+      250,
+      325
+     ]
+    }
+   ]
+  },
+  "progres": {
+   "name": "Allée du Progrès",
+   "image": "st_metamorphoses/progres.jpg",
+   "backTo": "st_metamorphoses",
+   "alt": "A blossoming garden lane above the valley, the last snow melting into tulips: Monsieur Verbe the mime finishes his speech at a wooden lectern in a gold beret, catches a red ball as it falls back down, plays a little black piano beautifully, climbs a wooden step-ladder, sweeps the snow away so spring flowers can follow the winter, and stops a toy car with his foot. The purple door on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_metamorphoses",
+     "label": "Place du Coup-d'Envoi",
+     "hint": "Back through the purple door",
+     "hit": [
+      75,
+      75,
+      125,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_conclure_verb",
+     "box": [
+      95,
+      285,
+      180,
+      340
+     ]
+    },
+    {
+     "id": "fr_retomber_verb",
+     "box": [
+      282,
+      275,
+      165,
+      320
+     ]
+    },
+    {
+     "id": "fr_douer_verb",
+     "box": [
+      455,
+      281,
+      185,
+      320
+     ]
+    },
+    {
+     "id": "fr_progresser_verb",
+     "box": [
+      648,
+      218,
+      187,
+      395
+     ]
+    },
+    {
+     "id": "fr_succeder_verb",
+     "box": [
+      845,
+      300,
+      165,
+      300
+     ]
+    },
+    {
+     "id": "fr_stopper_verb",
+     "box": [
+      1018,
+      318,
+      205,
+      275
+     ]
+    }
+   ]
+  },
+  "chrysalides": {
+   "name": "Rue des Chrysalides",
+   "image": "st_metamorphoses/chrysalides.jpg",
+   "backTo": "st_metamorphoses",
+   "alt": "A leafy street around a flowered roundabout, butterflies in the air: Monsieur Verbe the mime holds caterpillars that will turn into butterflies, lifts oranges from a crate and points to the far hills in a gold beret, recites a poem on a wooden box with his hand on his heart, sits resigned on the roundabout's edge under a rain cloud with a hand mirror, waves the toy cars round the roundabout, and pulls off a green monster mask in a gold beret. The orange door on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_metamorphoses",
+     "label": "Place du Coup-d'Envoi",
+     "hint": "Back through the orange door",
+     "hit": [
+      50,
+      95,
+      112,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_metamorphoser_verb",
+     "box": [
+      45,
+      266,
+      190,
+      365
+     ]
+    },
+    {
+     "id": "fr_provenir_verb",
+     "box": [
+      262,
+      256,
+      170,
+      370
+     ]
+    },
+    {
+     "id": "fr_reciter_verb",
+     "box": [
+      444,
+      185,
+      165,
+      375
+     ]
+    },
+    {
+     "id": "fr_resigner_verb",
+     "box": [
+      650,
+      331,
+      188,
+      295
+     ]
+    },
+    {
+     "id": "fr_circuler_verb",
+     "box": [
+      869,
+      288,
+      162,
+      340
+     ]
+    },
+    {
+     "id": "fr_redevenir_verb",
+     "box": [
+      1045,
+      256,
+      160,
+      380
+     ]
+    }
+   ]
+  },
+  "demolisseurs": {
+   "name": "Rue des Démolisseurs",
+   "image": "st_metamorphoses/demolisseurs.jpg",
+   "backTo": "st_metamorphoses",
+   "alt": "A sunny cobbled yard beside a cottage wall: Monsieur Verbe the mime knocks down a tower of cardboard boxes with a soft mallet in a green beret, holds his nose and drops an apple into the bin, presses a pillow over a ringing alarm clock, adds one more spoonful of sugar to his tea, watches his ice cream melt away and adds another piece to a wooden toy train track. The turquoise door on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_metamorphoses",
+     "label": "Place du Coup-d'Envoi",
+     "hint": "Back through the turquoise door",
+     "hit": [
+      125,
+      62,
+      140,
+      125
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_demolir_verb",
+     "box": [
+      85,
+      200,
+      195,
+      410
+     ]
+    },
+    {
+     "id": "fr_eliminer_verb",
+     "box": [
+      285,
+      210,
+      180,
+      428
+     ]
+    },
+    {
+     "id": "fr_attenuer_verb",
+     "box": [
+      500,
+      215,
+      190,
+      392
+     ]
+    },
+    {
+     "id": "fr_rajouter_verb",
+     "box": [
+      695,
+      244,
+      185,
+      382
+     ]
+    },
+    {
+     "id": "fr_diminuer_verb",
+     "box": [
+      887,
+      281,
+      165,
+      315
+     ]
+    },
+    {
+     "id": "fr_prolonger_verb",
+     "box": [
+      1060,
+      306,
+      215,
+      345
+     ]
+    }
+   ]
+  },
+  "ralentis": {
+   "name": "Chemin des Ralentis",
+   "image": "st_metamorphoses/ralentis.jpg",
+   "backTo": "st_metamorphoses",
+   "alt": "A country lane with a white picket fence and a sheep pen, rolling hills behind: Monsieur Verbe the mime slows down on roller skates beside a snail in a green beret, clutches his cheeks at a garden turned upside down, paints the fence with a roller, swaps a red and a blue flower pot, flips a pancake in a chef's apron with a hand mirror at his belt, and leads a lost lamb back to its pen in a gold beret. The iron garden gate on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_metamorphoses",
+     "label": "Place du Coup-d'Envoi",
+     "hint": "Back through the iron garden gate",
+     "hit": [
+      80,
+      60,
+      165,
+      220
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ralentir_verb",
+     "box": [
+      38,
+      294,
+      207,
+      350
+     ]
+    },
+    {
+     "id": "fr_bouleverser_verb",
+     "box": [
+      268,
+      238,
+      150,
+      357
+     ]
+    },
+    {
+     "id": "fr_effectuer_verb",
+     "box": [
+      430,
+      238,
+      222,
+      335
+     ]
+    },
+    {
+     "id": "fr_inverser_verb",
+     "box": [
+      662,
+      225,
+      130,
+      455
+     ]
+    },
+    {
+     "id": "fr_specialiser_verb",
+     "box": [
+      798,
+      256,
+      232,
+      358
+     ]
+    },
+    {
+     "id": "fr_reconduire_verb",
+     "box": [
+      1035,
+      281,
+      240,
+      350
+     ]
+    }
+   ]
+  }
+ }
+}

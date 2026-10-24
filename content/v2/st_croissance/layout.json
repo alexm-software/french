@@ -1,0 +1,529 @@
+{
+ "building": "st_croissance",
+ "building_id": "ST_croissance",
+ "sector_id": "S09_nature",
+ "name": "Montée de la Croissance",
+ "main": "st_croissance",
+ "roomList": [
+  {
+   "key": "st_croissance",
+   "short": "Les hauts et bas"
+  },
+  {
+   "key": "transformistes",
+   "short": "Les transformistes"
+  },
+  {
+   "key": "reussite",
+   "short": "La réussite"
+  },
+  {
+   "key": "recommencement",
+   "short": "Le recommencement"
+  },
+  {
+   "key": "point_final",
+   "short": "Le point final"
+  }
+ ],
+ "planned": {
+  "st_croissance": {
+   "vocabRoom": "ST_change_seg001",
+   "only": [
+    "fr_soulever_verb",
+    "fr_dresser_verb",
+    "fr_elever_verb",
+    "fr_augmenter_verb",
+    "fr_baisser_verb",
+    "fr_depasser_verb"
+   ]
+  },
+  "transformistes": {
+   "vocabRoom": "ST_change_seg002",
+   "only": [
+    "fr_reduire_verb",
+    "fr_grandir_verb",
+    "fr_transformer_verb",
+    "fr_atteindre_verb",
+    "fr_adapter_verb",
+    "fr_varier_verb"
+   ]
+  },
+  "reussite": {
+   "vocabRoom": "ST_change_seg003",
+   "only": [
+    "fr_devenir_verb",
+    "fr_accomplir_verb",
+    "fr_remplacer_verb",
+    "fr_evoluer_verb",
+    "fr_refaire_verb",
+    "fr_reussir_verb"
+   ]
+  },
+  "recommencement": {
+   "vocabRoom": "ST_change_seg004",
+   "only": [
+    "fr_ajouter_verb",
+    "fr_renvoyer_verb",
+    "fr_recommencer_verb",
+    "fr_commencer_verb",
+    "fr_cesser_verb",
+    "fr_repeter_verb"
+   ]
+  },
+  "point_final": {
+   "vocabRoom": "ST_change_seg005",
+   "only": [
+    "fr_arreter_verb",
+    "fr_empecher_verb",
+    "fr_continuer_verb",
+    "fr_terminer_verb",
+    "fr_finir_verb",
+    "fr_achever_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_croissance": {
+   "name": "Allée des Hauts-et-Bas",
+   "image": "st_croissance/st_croissance.jpg",
+   "alt": "A cobbled lane climbing a green hill past stone cottages, painted in ink and gouache: Monsieur Verbe the mime lifts a heavy suitcase over his head, pulls a rope to stand up an orange tent, scatters grain for hens and chicks, adds a coin to the tallest of three growing stacks, turns down an old wooden radio and cycles past a tortoise. The stone archway on the left leads back to the valley; the yellow, blue and red doors and the white garden gate lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     30,
+     25,
+     255,
+     190
+    ],
+    "label": "La vallée"
+   },
+   "doors": [
+    {
+     "to": "transformistes",
+     "label": "Rue des Transformistes",
+     "hint": "Through the yellow cottage door",
+     "hit": [
+      462,
+      85,
+      66,
+      140
+     ]
+    },
+    {
+     "to": "reussite",
+     "label": "Place de la Réussite",
+     "hint": "Through the blue cottage door",
+     "hit": [
+      697,
+      93,
+      66,
+      142
+     ]
+    },
+    {
+     "to": "recommencement",
+     "label": "Rue du Recommencement",
+     "hint": "Through the round-topped red door",
+     "hit": [
+      908,
+      100,
+      64,
+      158
+     ]
+    },
+    {
+     "to": "point_final",
+     "label": "Impasse du Point-Final",
+     "hint": "Through the white garden gate",
+     "hit": [
+      1140,
+      222,
+      72,
+      86
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_soulever_verb",
+     "box": [
+      45,
+      219,
+      172,
+      415
+     ]
+    },
+    {
+     "id": "fr_dresser_verb",
+     "box": [
+      220,
+      303,
+      215,
+      345
+     ]
+    },
+    {
+     "id": "fr_elever_verb",
+     "box": [
+      437,
+      310,
+      195,
+      345
+     ]
+    },
+    {
+     "id": "fr_augmenter_verb",
+     "box": [
+      638,
+      310,
+      165,
+      335
+     ]
+    },
+    {
+     "id": "fr_baisser_verb",
+     "box": [
+      808,
+      333,
+      195,
+      307
+     ]
+    },
+    {
+     "id": "fr_depasser_verb",
+     "box": [
+      1010,
+      312,
+      250,
+      352
+     ]
+    }
+   ]
+  },
+  "transformistes": {
+   "name": "Rue des Transformistes",
+   "image": "st_croissance/transformistes.jpg",
+   "backTo": "st_croissance",
+   "alt": "A sunny hillside lane with an apple tree and garden walls: Monsieur Verbe the mime squashes a tin can flat in a crusher in a gold beret, stretches tall beside a growing sunflower in a green beret, waves a magic wand over a pumpkin, reaches up to touch a high apple in a gold beret, wraps on a woolly scarf in the falling snow with a hand mirror, and holds an ice cream of many different colours. The yellow cottage door on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_croissance",
+     "label": "Allée des Hauts-et-Bas",
+     "hint": "Back through the yellow cottage door",
+     "hit": [
+      60,
+      105,
+      130,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_reduire_verb",
+     "box": [
+      55,
+      268,
+      205,
+      372
+     ]
+    },
+    {
+     "id": "fr_grandir_verb",
+     "box": [
+      263,
+      218,
+      200,
+      400
+     ]
+    },
+    {
+     "id": "fr_transformer_verb",
+     "box": [
+      470,
+      272,
+      241,
+      370
+     ]
+    },
+    {
+     "id": "fr_atteindre_verb",
+     "box": [
+      714,
+      155,
+      150,
+      450
+     ]
+    },
+    {
+     "id": "fr_adapter_verb",
+     "box": [
+      870,
+      280,
+      180,
+      360
+     ]
+    },
+    {
+     "id": "fr_varier_verb",
+     "box": [
+      1058,
+      280,
+      175,
+      370
+     ]
+    }
+   ]
+  },
+  "reussite": {
+   "name": "Place de la Réussite",
+   "image": "st_croissance/reussite.jpg",
+   "backTo": "st_croissance",
+   "alt": "A small hilltop square with a fountain and bunting: Monsieur Verbe the mime gazes at a red firefighter's helmet in a gold beret, presses the last piece into a jigsaw in a green beret, screws a new bulb into a lantern from a stepladder, points at jars holding a tadpole, a froglet and a frog, rebuilds a sandcastle in a gold beret, and leaps with a golden trophy in a green beret. The blue cottage door on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_croissance",
+     "label": "Allée des Hauts-et-Bas",
+     "hint": "Back through the blue cottage door",
+     "hit": [
+      62,
+      95,
+      118,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_devenir_verb",
+     "box": [
+      55,
+      265,
+      195,
+      385
+     ]
+    },
+    {
+     "id": "fr_accomplir_verb",
+     "box": [
+      253,
+      335,
+      170,
+      335
+     ]
+    },
+    {
+     "id": "fr_remplacer_verb",
+     "box": [
+      425,
+      140,
+      180,
+      415
+     ]
+    },
+    {
+     "id": "fr_evoluer_verb",
+     "box": [
+      607,
+      312,
+      222,
+      390
+     ]
+    },
+    {
+     "id": "fr_refaire_verb",
+     "box": [
+      840,
+      358,
+      155,
+      290
+     ]
+    },
+    {
+     "id": "fr_reussir_verb",
+     "box": [
+      998,
+      250,
+      245,
+      330
+     ]
+    }
+   ]
+  },
+  "recommencement": {
+   "name": "Rue du Recommencement",
+   "image": "st_croissance/recommencement.jpg",
+   "backTo": "st_croissance",
+   "alt": "A village lane on the hill with a little grass tennis court, the clouds clearing to sunshine: Monsieur Verbe the mime sprinkles salt into a soup pot, hits a tennis ball back over the net in a gold beret, tosses away a crumpled sheet and starts again at a blank easel, crouches at a starting line, closes his umbrella as the rain stops, and speaks while a green parrot copies him. The round-topped red door on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_croissance",
+     "label": "Allée des Hauts-et-Bas",
+     "hint": "Back through the round-topped red door",
+     "hit": [
+      62,
+      78,
+      110,
+      175
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ajouter_verb",
+     "box": [
+      47,
+      258,
+      203,
+      345
+     ]
+    },
+    {
+     "id": "fr_renvoyer_verb",
+     "box": [
+      258,
+      272,
+      198,
+      312
+     ]
+    },
+    {
+     "id": "fr_recommencer_verb",
+     "box": [
+      462,
+      265,
+      202,
+      315
+     ]
+    },
+    {
+     "id": "fr_commencer_verb",
+     "box": [
+      669,
+      365,
+      183,
+      252
+     ]
+    },
+    {
+     "id": "fr_cesser_verb",
+     "box": [
+      856,
+      280,
+      175,
+      322
+     ]
+    },
+    {
+     "id": "fr_repeter_verb",
+     "box": [
+      1040,
+      265,
+      235,
+      340
+     ]
+    }
+   ]
+  },
+  "point_final": {
+   "name": "Impasse du Point-Final",
+   "image": "st_croissance/point_final.jpg",
+   "backTo": "st_croissance",
+   "alt": "The quiet end of a hilltop lane looking out over the valley: Monsieur Verbe the mime skids to a halt on a scooter with a hand mirror, claps a hand over his mouth to hold back a giggle with a hand mirror, strides on with a walking stick, puts a cherry on top of a cake, breaks the finishing ribbon in a green beret, and adds the last brushstroke to a landscape painting. The white garden gate on the left leads back to the lane.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_croissance",
+     "label": "Allée des Hauts-et-Bas",
+     "hint": "Back through the white garden gate",
+     "hit": [
+      45,
+      215,
+      128,
+      70
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_arreter_verb",
+     "box": [
+      70,
+      289,
+      205,
+      360
+     ]
+    },
+    {
+     "id": "fr_empecher_verb",
+     "box": [
+      281,
+      289,
+      165,
+      330
+     ]
+    },
+    {
+     "id": "fr_continuer_verb",
+     "box": [
+      450,
+      289,
+      183,
+      335
+     ]
+    },
+    {
+     "id": "fr_terminer_verb",
+     "box": [
+      636,
+      303,
+      200,
+      315
+     ]
+    },
+    {
+     "id": "fr_finir_verb",
+     "box": [
+      838,
+      285,
+      185,
+      340
+     ]
+    },
+    {
+     "id": "fr_achever_verb",
+     "box": [
+      1028,
+      280,
+      240,
+      355
+     ]
+    }
+   ]
+  }
+ }
+}
