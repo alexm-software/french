@@ -1,0 +1,564 @@
+{
+ "building": "st_reflets",
+ "building_id": "ST_reflets",
+ "sector_id": "S16_park",
+ "name": "Allée des Reflets",
+ "main": "st_reflets",
+ "roomList": [
+  {
+   "key": "st_reflets",
+   "short": "Les témoins"
+  },
+  {
+   "key": "soupcons",
+   "short": "Les soupçons"
+  },
+  {
+   "key": "berceaux",
+   "short": "Les berceaux"
+  },
+  {
+   "key": "espions",
+   "short": "Les espions"
+  },
+  {
+   "key": "miroirs",
+   "short": "Les miroirs"
+  }
+ ],
+ "planned": {
+  "st_reflets": {
+   "vocabRoom": "ST_perception_seg005",
+   "only": [
+    "fr_temoigner_verb",
+    "fr_demontrer_verb",
+    "fr_guetter_verb",
+    "fr_figurer_verb",
+    "fr_manifester_verb",
+    "fr_capter_verb"
+   ]
+  },
+  "soupcons": {
+   "vocabRoom": "ST_perception_seg006",
+   "only": [
+    "fr_capturer_verb",
+    "fr_surgir_verb",
+    "fr_soupconner_verb",
+    "fr_scier_verb",
+    "fr_feindre_verb",
+    "fr_alerter_verb"
+   ]
+  },
+  "berceaux": {
+   "vocabRoom": "ST_perception_seg007",
+   "only": [
+    "fr_bercer_verb",
+    "fr_embeter_verb",
+    "fr_averer_verb",
+    "fr_armer_verb",
+    "fr_eveiller_verb",
+    "fr_stimuler_verb"
+   ]
+  },
+  "espions": {
+   "vocabRoom": "ST_perception_seg008",
+   "only": [
+    "fr_espionner_verb",
+    "fr_percevoir_verb",
+    "fr_vibrer_verb",
+    "fr_irriter_verb",
+    "fr_cerner_verb",
+    "fr_semer_verb"
+   ]
+  },
+  "miroirs": {
+   "vocabRoom": "ST_perception_seg009",
+   "only": [
+    "fr_parer_verb",
+    "fr_aveugler_verb",
+    "fr_empoisonner_verb",
+    "fr_bruire_verb",
+    "fr_degouter_verb",
+    "fr_refleter_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_reflets": {
+   "name": "Place des Témoins",
+   "room_id": "ST_perception_seg005",
+   "image": "st_reflets/st_reflets.jpg",
+   "alt": "A sunny summer garden square in the lakeside park, painted in ink and gouache, under a big shady tree: Monsieur Verbe the mime raises his hand at a witness stand holding up an onion, spins a toy windmill on a little table, crouches beside a cat watching a mouse hole in a stone mound, poses inside an empty gilded picture frame, jumps for joy with a blank smiley placard and tunes an old radio with a tall antenna. The stone archway with its iron gate on the left leads back to the park; the blue arched door, the green arched door in the ivy wall, the red door of the boathouse by the lake and the white picket gate on the right lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     50,
+     90,
+     125,
+     215
+    ],
+    "label": "Parc des Curiosités"
+   },
+   "doors": [
+    {
+     "to": "soupcons",
+     "label": "Ruelle des Soupçons",
+     "hint": "Through the blue arched door",
+     "hit": [
+      400,
+      211,
+      68,
+      115
+     ]
+    },
+    {
+     "to": "miroirs",
+     "label": "Rue des Miroirs",
+     "hint": "Through the green arched door in the ivy wall",
+     "hit": [
+      551,
+      234,
+      58,
+      148
+     ]
+    },
+    {
+     "to": "espions",
+     "label": "Passage des Espions",
+     "hint": "Through the red door of the boathouse",
+     "hit": [
+      810,
+      262,
+      47,
+      70
+     ]
+    },
+    {
+     "to": "berceaux",
+     "label": "Allée des Berceaux",
+     "hint": "Through the white picket gate",
+     "hit": [
+      1150,
+      262,
+      66,
+      105
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_temoigner_verb",
+     "box": [
+      47,
+      312,
+      180,
+      330
+     ]
+    },
+    {
+     "id": "fr_demontrer_verb",
+     "box": [
+      250,
+      330,
+      218,
+      305
+     ]
+    },
+    {
+     "id": "fr_guetter_verb",
+     "box": [
+      470,
+      418,
+      170,
+      240
+     ]
+    },
+    {
+     "id": "fr_figurer_verb",
+     "box": [
+      642,
+      334,
+      210,
+      316
+     ]
+    },
+    {
+     "id": "fr_manifester_verb",
+     "box": [
+      862,
+      218,
+      153,
+      350
+     ]
+    },
+    {
+     "id": "fr_capter_verb",
+     "box": [
+      1018,
+      372,
+      220,
+      272
+     ]
+    }
+   ]
+  },
+  "soupcons": {
+   "name": "Ruelle des Soupçons",
+   "room_id": "ST_perception_seg006",
+   "image": "st_reflets/soupcons.jpg",
+   "backTo": "st_reflets",
+   "alt": "A sunny lakeside lane, painted in ink and gouache: Monsieur Verbe the mime catches a blue butterfly in his net, leaps back as an orange cat bursts out of a laundry basket, peers through a magnifying glass at a black cat beside a bowl of soup, saws a plank on trestles, swoons on a bench with the back of his hand on his forehead and rings a brass bell on a post while a duck flaps away in surprise. The blue door on the left leads back to the square; the red door of the boathouse on the right leads on to the spies' passage.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_reflets",
+     "label": "Place des Témoins",
+     "hint": "Back through the blue door",
+     "hit": [
+      70,
+      117,
+      118,
+      96
+     ]
+    },
+    {
+     "to": "espions",
+     "label": "Passage des Espions",
+     "hint": "Through the red door of the boathouse",
+     "hit": [
+      1078,
+      172,
+      94,
+      122
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_capturer_verb",
+     "box": [
+      34,
+      219,
+      196,
+      400
+     ]
+    },
+    {
+     "id": "fr_surgir_verb",
+     "box": [
+      234,
+      330,
+      200,
+      310
+     ]
+    },
+    {
+     "id": "fr_soupconner_verb",
+     "box": [
+      442,
+      352,
+      198,
+      304
+     ]
+    },
+    {
+     "id": "fr_scier_verb",
+     "box": [
+      645,
+      320,
+      205,
+      292
+     ]
+    },
+    {
+     "id": "fr_feindre_verb",
+     "box": [
+      856,
+      320,
+      184,
+      268
+     ]
+    },
+    {
+     "id": "fr_alerter_verb",
+     "box": [
+      1045,
+      300,
+      224,
+      335
+     ]
+    }
+   ]
+  },
+  "berceaux": {
+   "name": "Allée des Berceaux",
+   "room_id": "ST_perception_seg007",
+   "image": "st_reflets/berceaux.jpg",
+   "backTo": "st_reflets",
+   "alt": "A sunny garden alley of apple trees, painted in ink and gouache: Monsieur Verbe the mime rocks a cradle with a teddy bear in it, tickles a grumpy goat with a feather, holds his hand mirror as he lifts the lid of an old chest to find a golden crown, points as a guide at a blank plaque on a wooden signboard, yawns awake in a hammock while a rooster crows and cranks a jack-in-the-box until the clown pops up. The white picket gate on the left leads back to the square; the green gate in the hedge on the right leads on to the street of mirrors.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_reflets",
+     "label": "Place des Témoins",
+     "hint": "Back through the white picket gate",
+     "hit": [
+      70,
+      180,
+      102,
+      158
+     ]
+    },
+    {
+     "to": "miroirs",
+     "label": "Rue des Miroirs",
+     "hint": "Through the green gate in the hedge",
+     "hit": [
+      1124,
+      195,
+      99,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bercer_verb",
+     "box": [
+      31,
+      347,
+      247,
+      309
+     ]
+    },
+    {
+     "id": "fr_embeter_verb",
+     "box": [
+      281,
+      356,
+      209,
+      277
+     ]
+    },
+    {
+     "id": "fr_averer_verb",
+     "box": [
+      494,
+      350,
+      240,
+      325
+     ]
+    },
+    {
+     "id": "fr_armer_verb",
+     "box": [
+      745,
+      344,
+      232,
+      304
+     ],
+     "labelAt": [
+      907,
+      398
+     ]
+    },
+    {
+     "id": "fr_eveiller_verb",
+     "box": [
+      734,
+      128,
+      224,
+      182
+     ]
+    },
+    {
+     "id": "fr_stimuler_verb",
+     "box": [
+      1000,
+      356,
+      250,
+      300
+     ]
+    }
+   ]
+  },
+  "espions": {
+   "name": "Passage des Espions",
+   "room_id": "ST_perception_seg008",
+   "image": "st_reflets/espions.jpg",
+   "backTo": "st_reflets",
+   "alt": "A sunny lakeside path with a jetty and a rowing boat, painted in ink and gouache: Monsieur Verbe the mime spies through binoculars from behind a hedge, cups his ear beside a purse on a tree stump, holds a buzzing phone, scowls at a fly at his ear, stands ringed by a gaggle of geese and sows seeds from a basket as sparrows hop after them. The red door of the boathouse on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_reflets",
+     "label": "Place des Témoins",
+     "hint": "Back through the red boathouse door",
+     "hit": [
+      86,
+      133,
+      89,
+      182
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_espionner_verb",
+     "box": [
+      40,
+      322,
+      180,
+      222
+     ]
+    },
+    {
+     "id": "fr_percevoir_verb",
+     "box": [
+      231,
+      352,
+      196,
+      296
+     ]
+    },
+    {
+     "id": "fr_vibrer_verb",
+     "box": [
+      440,
+      340,
+      160,
+      308
+     ]
+    },
+    {
+     "id": "fr_irriter_verb",
+     "box": [
+      608,
+      340,
+      130,
+      310
+     ]
+    },
+    {
+     "id": "fr_cerner_verb",
+     "box": [
+      742,
+      352,
+      298,
+      330
+     ]
+    },
+    {
+     "id": "fr_semer_verb",
+     "box": [
+      1045,
+      347,
+      223,
+      312
+     ]
+    }
+   ]
+  },
+  "miroirs": {
+   "name": "Rue des Miroirs",
+   "room_id": "ST_perception_seg009",
+   "image": "st_reflets/miroirs.jpg",
+   "backTo": "st_reflets",
+   "alt": "A sunny lakeside street with a perfectly still lake mirroring the mountains, painted in ink and gouache: Monsieur Verbe the mime drapes a flower garland round a parrot's neck, shields his eyes from the dazzling headlights of a little cream car, points as a guide at a blank framed plaque on a stone wall, cups his ear to a poplar's rustling leaves, pulls a face at a bowl of spinach and kneels at the water to see his own reflection. The green garden gate between the stone pillars on the left leads back to the square.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_reflets",
+     "label": "Place des Témoins",
+     "hint": "Back through the green garden gate",
+     "hit": [
+      86,
+      150,
+      117,
+      148
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_parer_verb",
+     "box": [
+      62,
+      305,
+      188,
+      305
+     ]
+    },
+    {
+     "id": "fr_aveugler_verb",
+     "box": [
+      258,
+      309,
+      140,
+      301
+     ]
+    },
+    {
+     "id": "fr_empoisonner_verb",
+     "box": [
+      484,
+      300,
+      182,
+      312
+     ],
+     "labelAt": [
+      620,
+      348
+     ]
+    },
+    {
+     "id": "fr_bruire_verb",
+     "box": [
+      695,
+      305,
+      130,
+      300
+     ]
+    },
+    {
+     "id": "fr_degouter_verb",
+     "box": [
+      866,
+      325,
+      150,
+      285
+     ]
+    },
+    {
+     "id": "fr_refleter_verb",
+     "box": [
+      1040,
+      410,
+      228,
+      305
+     ]
+    }
+   ]
+  }
+ }
+}

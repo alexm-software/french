@@ -218,24 +218,42 @@ def _pron_label(pr):
     return pr if pr.endswith("'") else pr
 
 
-def verb_tenses(tables, reflexive):
+# Impersonal verbs only have an "il" (= it) form: il pleut, il faut. The cache (verbecc) leaves the
+# other persons empty (None) but still lists "ils/elles pleuvent" and "il/elle"; the card shows only "il".
+# Defective verbs (bruire, frire, clore) also have None cells: those persons are simply left out, and a
+# tense with no forms at all (no imperative) says so instead of showing an empty table.
+IMPERSONAL = {"pleuvoir", "falloir", "neiger", "grêler", "bruiner", "venter", "tonner", "pleuvasser",
+              "pleuviner", "brouillasser"}
+
+
+def verb_tenses(tables, reflexive, impersonal=False):
     out = []
     for key, name, src in TENSES:
         cells = tables.get(src) or []
         rows = []
         if key == "imper":
             for pr, cell in zip(("(tu)", "(nous)", "(vous)"), cells):
-                rows.append([pr, cell])
+                if cell and not impersonal:
+                    rows.append([pr, cell])
         else:
-            for cell in cells:
+            for i, cell in enumerate(cells):
+                if not cell or (impersonal and i != 2):
+                    continue
                 if " / " in cell:
                     pr, form = _merge_genders(cell)
                 else:
                     pr, form = _split(cell)
                     pr = (pr or "").strip()
                 pr = _pron_label(pr.replace("que j'", "que j'"))
+                if impersonal:
+                    pr = {"il / elle": "il", "qu'il / qu'elle": "qu'il"}.get(pr, pr)
                 rows.append([pr, form])
-        out.append({"key": key, "name": name, "rows": rows, "note": None})
+        note = None
+        if not rows:
+            note = "No imperative." if key == "imper" else "Not used in this tense."
+        elif impersonal and key == "present":
+            note = "Impersonal verb: only the il (= it) form."
+        out.append({"key": key, "name": name, "rows": rows, "note": note})
     return out
 
 
@@ -258,8 +276,9 @@ def verb_from_vocab(w):
     grp, irr = w.get("verb_group"), w.get("irregular")
     if grp == 1 and not irr:
         group, beret = "-er", "red"
-    elif grp == 2 and not irr and w["lemma"].endswith("ir") and [_split(c)[1] for c in t.get("present") or [""] * 4][3:4] == [w["lemma"][:-1] + "ssons"]:
-        group, beret = "-ir", "green"  # checked on the table: vocab marks some 3rd-group verbs (partir) as group 2
+    elif grp == 2 and not irr and w["lemma"].endswith("ir") and [_split(c)[1].removeprefix("nous ") for c in t.get("present") or [""] * 4][3:4] == [w["lemma"].split("'")[-1].removeprefix("se ")[:-1] + "ssons"]:
+        group, beret = "-ir", "green"  # checked on the table: vocab marks some 3rd-group verbs (partir) as group 2;
+        # a reflexive table reads "nous nous épanouissons", so the second "nous " is dropped before comparing
     elif grp == 3 and _regular_re(w["lemma"], t):
         group, beret = "-re", "purple"
     else:
@@ -277,6 +296,8 @@ def verb_from_vocab(w):
     if aux == "être":
         pp, ppf = t.get("participe_passe", ""), t.get("participe_passe_f") or t.get("participe_passe", "") + "e"
         bits.append(f"Passé composé with ÊTRE: the participle agrees ({pp}, {ppf}, {pp}s, {ppf}s)." if pp and not pp.endswith(("e", "s")) else "Passé composé with ÊTRE: the participle agrees with the subject.")
+    if w["lemma"] in IMPERSONAL:
+        bits.append("Impersonal: only il (= it), e.g. il pleut.")
     if w.get("prepositions"):
         bits.append(w["lemma"] + " + " + " / ".join(w["prepositions"]) + ".")
     if w.get("usage_warning"):
@@ -286,7 +307,7 @@ def verb_from_vocab(w):
           "hook": hook, "sound": mh.get("sound_alike"), "strength": mh.get("strength"),
           "note": " ".join(bits), "ex": [w.get("example_fr", ""), w.get("example_en", "")],
           "parts": {"present": t.get("participe_present", ""), "past": t.get("participe_passe", ""), "aux": aux},
-          "tenses": verb_tenses(t, refl)}
+          "tenses": verb_tenses(t, refl, w["lemma"] in IMPERSONAL)}
     if refl:
         it["reflexive"] = True
     return it
