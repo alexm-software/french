@@ -443,7 +443,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The map room: a father showing his little son how to fold a map, a deer nudging a brass pointer on its pedestal, a zebra with a paint roller in its striped zone, a stork in her nest at the sunny window, a coat over the side of a chair, a ghost popping up at the end of a model street, a girl pushing a pin into a town plan, a boy pointing sticks at a chalk circle, a little mouse by a windmill in the middle of a bench, a polar bear gnawing an icicle, a cat on a target, a donkey pulling a cart of little houses, three gingerbread men at a garden gate and a removal man pushing a house on a trolley. A shelf of toys sits above.",
+      "alt": "The map room: a father showing his little son how to fold a map, a deer nudging a brass pointer on its pedestal, a little girl painter with a paint roller beside the striped zone she painted, a stork in her nest at the sunny window, a coat over the side of a chair, a ghost popping up at the end of a model street, a girl pushing a pin into a town plan, a boy pointing sticks at a chalk circle, a little mouse by a windmill in the middle of a bench, a polar bear lying on the floor gnawing an icicle, a cat on a target, a donkey pulling a cart of little houses, three gingerbread men at a garden gate and a removal man pushing a house on a trolley. A shelf of toys sits above.",
       "doors": [
         {
           "to": "monde",
@@ -764,7 +764,7 @@ L = json.loads(r'''{
         64.5,
         4.5
       ],
-      "alt": "The first floor of the tourist office, a warm room with floorboards, beams, a window and a wooden door: a blue jay on a pointer at a wall map with a bar graph, a boy painting a map at an easel, a man kneeling by a globe talking on an old telephone, a young count rolling a cheese on a cartwheel, a boar trotting out of a model stone town gate, a woman with an apple on her tablet, a kangaroo, a panda and a fox under a blue flag, a gorilla on a pole in a model of skyscrapers, a hippo tearing his ticket at a striped barrier, a man planting a young tree, a lizard with a container ship on a ring round a globe, a toy train between two model villages on a desk, a girl in a sash leading two tourists to a model building with a flag, grey geese with suitcases on a welcome mat and two old men in berets.",
+      "alt": "The first floor of the tourist office, a warm room with floorboards, beams, a window and a wooden door: a blue jay on a pointer at a wall map with a bar graph, a boy painting a map at an easel, a man kneeling by a globe talking on an old telephone, a young count rolling a cheese on a cartwheel, a boar trotting out of a model stone town gate, a woman with an apple on her tablet, three children arm in arm under a blue flag held high, a gorilla on a pole in a model of skyscrapers, a stout traveller tearing his ticket at a striped barrier, a man planting a young tree, a lizard with a container ship on a ring round a globe, a toy train between two model villages on a desk, a girl in a sash leading two tourists to a model building with a flag, grey geese with suitcases on a welcome mat and two old men in berets.",
       "doors": [
         {
           "to": "monde",
@@ -841,10 +841,10 @@ L = json.loads(r'''{
         {
           "id": "fr_nation_noun",
           "box": [
-            156,
-            185,
-            202,
-            160
+            158,
+            183,
+            190,
+            167
           ]
         },
         {
@@ -929,7 +929,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The compass room, with a big compass rose painted on the floor: a man on a deckchair before a world map of wide blue oceans, a porter stretching up for a hat on top of a rack that holds a model landscape, a cat in an explorer's helmet pointing, an ostrich holding up a picture card for a puppy folding a paper plane, a canary in a gold cage, a squirrel hiding coins in a flowerpot, an ant with a compass and map, a cat and a spaniel squeezed on a bench, a painter behind her canvas, a neighbour waving from a window, an inventor beside a machine of cogs and pulleys, a granny ringing a bell for a row of rabbits, a little cowboy boy in a tub of suds and a duck in a soapy nest.",
+      "alt": "The compass room, with a big compass rose painted on the floor: a man on a deckchair before a world map of wide blue oceans, a porter stretching up for a hat on top of a rack that holds a model landscape, a little explorer boy in a pith helmet pointing, an ostrich holding up a picture card beside a puppy and a paper plane, a canary in a gold cage, a squirrel hiding coins in a flowerpot, a girl scout kneeling with a compass on a paper map, a cat and a spaniel squeezed on a bench, a painter behind her canvas, a neighbour waving from a window, an inventor beside a machine of cogs and pulleys, a granny ringing a bell for a row of rabbits, a little cowboy boy in a tub of suds and a duck in a soapy nest.",
       "doors": [
         {
           "to": "monde",
@@ -1267,7 +1267,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The attic under sloping beams: a cat in sunglasses on the ring of a big globe, a crab waving one claw in a little fenced plot, a seal and a copper penny on a sea map with a long peninsula, a young chauffeur polishing a black saloon car, a photographer with a box camera aimed at a mountain painting, an old woman in a shawl pointing the way for two young tourists beside a grandfather clock, a lady architect in a hard hat at a drafting table of model streets, a hamster asleep in half a globe, a chef behind the biggest model town, a strongman lifting a huge tin can beside a red flag and a young farmer driving a green van full of vegetables.",
+      "alt": "The attic under sloping beams: a cool boy in sunglasses and a cap, arms folded, sitting on the ring of a big globe, a crab waving one claw in a little fenced plot, a seal and a copper penny on a sea map with a long peninsula, a young chauffeur polishing a black saloon car, a photographer with a box camera aimed at a mountain painting, an old woman in a shawl pointing the way for two young tourists beside a grandfather clock, a lady architect in a hard hat at a drafting table of model streets, a hamster asleep in half a globe, a chef behind the biggest model town, a strongman lifting a huge tin can beside a red flag and a young farmer driving a green van full of vegetables.",
       "doors": [
         {
           "to": "monde",
