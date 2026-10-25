@@ -1,0 +1,292 @@
+{
+ "building": "ingenierie",
+ "building_id": "B38_ingenierie",
+ "sector_id": "S10_university",
+ "v1_room_id": "R_engineering",
+ "name": "L'École d'Ingénieurs · The engineering school",
+ "main": "ingenierie",
+ "roomList": [
+  {
+   "key": "ingenierie",
+   "short": "L'atelier d'ingénierie · The engineering workshop"
+  }
+ ],
+ "planned": {
+  "ingenierie": {
+   "vocabRoom": "R_engineering",
+   "only": [
+    "fr_appareil_noun",
+    "fr_machine_noun",
+    "fr_moteur_noun",
+    "fr_technologie_noun",
+    "fr_robot_noun",
+    "fr_invention_noun",
+    "fr_circuit_noun",
+    "fr_puits_noun",
+    "fr_palier_noun",
+    "fr_engin_noun",
+    "fr_maquette_noun",
+    "fr_technologique_adj"
+   ]
+  },
+  "etabli": {
+   "vocabRoom": "R_engineering_z1",
+   "only": [
+    "fr_mecanisme_noun",
+    "fr_brevet_noun",
+    "fr_radar_noun",
+    "fr_conduit_noun",
+    "fr_gadget_noun",
+    "fr_prototype_noun",
+    "fr_emetteur_noun",
+    "fr_capteur_noun",
+    "fr_microprocesseur_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "ingenierie": {
+   "name": "L'atelier d'ingénierie · The engineering workshop",
+   "room_id": "R_engineering",
+   "image": "ingenierie/atelier.jpg",
+   "alt": "The engineering workshop inside the honey-sandstone engineering school, painted in ink and gouache, with a huge gear-shaped round window at the back showing light snow. On the left the glass double doors stand open to the campus path; a young woman fixes her hair in the mirror-bright sheen of a chrome machine, a tablet glows on a stack of logs, an inventor unveils a fan blowing ribbons into an air vent, and a cardboard model town sits beside an open kit box. In the middle a robot arm pats a giggling boy's cheek beside his buttered toast. On the right two friends high-five on the stair landing, a silver robot takes a bow, a yellow digger with a boy in its cab, a device of springs and dials wearing a pair of goggles, a toy race car on a figure-eight circuit, a kitten asleep on a motor and a puppy peering down a stone well, and on the far right wall a lab bench of gadgets.",
+   "nameplate": [
+    45,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     20,
+     40,
+     160,
+     330
+    ],
+    "label": "Le campus · The campus"
+   },
+   "doors": [],
+   "zooms": [
+    {
+     "to": "etabli",
+     "label": "l'établi",
+     "hint": "Look closer at the gadgets on the lab bench",
+     "at": [
+      1210,
+      300
+     ],
+     "obj": [
+      1000,
+      220,
+      280,
+      158
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_appareil_noun",
+     "box": [
+      985,
+      228,
+      110,
+      185
+     ]
+    },
+    {
+     "id": "fr_machine_noun",
+     "box": [
+      195,
+      320,
+      200,
+      262
+     ]
+    },
+    {
+     "id": "fr_moteur_noun",
+     "box": [
+      865,
+      520,
+      190,
+      198
+     ]
+    },
+    {
+     "id": "fr_technologie_noun",
+     "box": [
+      10,
+      480,
+      180,
+      235
+     ]
+    },
+    {
+     "id": "fr_robot_noun",
+     "box": [
+      872,
+      80,
+      118,
+      133
+     ]
+    },
+    {
+     "id": "fr_invention_noun",
+     "box": [
+      275,
+      118,
+      235,
+      192
+     ]
+    },
+    {
+     "id": "fr_circuit_noun",
+     "box": [
+      835,
+      420,
+      225,
+      92
+     ]
+    },
+    {
+     "id": "fr_puits_noun",
+     "box": [
+      1065,
+      440,
+      210,
+      235
+     ]
+    },
+    {
+     "id": "fr_palier_noun",
+     "box": [
+      995,
+      20,
+      260,
+      180
+     ]
+    },
+    {
+     "id": "fr_engin_noun",
+     "box": [
+      735,
+      215,
+      225,
+      198
+     ]
+    },
+    {
+     "id": "fr_maquette_noun",
+     "box": [
+      400,
+      312,
+      190,
+      76
+     ]
+    },
+    {
+     "id": "fr_technologique_adj",
+     "box": [
+      430,
+      440,
+      240,
+      275
+     ]
+    }
+   ],
+   "building_id": "B38_ingenierie",
+   "sector_id": "S10_university"
+  },
+  "etabli": {
+   "name": "L'établi · The lab bench",
+   "room_id": "R_engineering_z1",
+   "image": "ingenierie/etabli.jpg",
+   "parent": "ingenierie",
+   "alt": "Close-up of the lab bench on the right wall: a spring-and-goggles device on the left; on the right a radar dish over a green radar screen, a glass pipe with a goldfish swimming through it, three silver transmitter towers sending out signal waves, a tiny computer chip beside a ladybird, an open clock full of gears with a spanner in it, a sensor with a big glass eye whose arm holds a baseball mitt that has caught a ball, a brass gadget with levers and a bell cracking a walnut, a winged model bicycle, a teapot robot and a rolled scroll with a red wax seal.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mecanisme_noun",
+     "box": [
+      832,
+      308,
+      190,
+      90
+     ]
+    },
+    {
+     "id": "fr_brevet_noun",
+     "box": [
+      965,
+      600,
+      240,
+      112
+     ]
+    },
+    {
+     "id": "fr_radar_noun",
+     "box": [
+      560,
+      160,
+      205,
+      440
+     ]
+    },
+    {
+     "id": "fr_conduit_noun",
+     "box": [
+      798,
+      110,
+      180,
+      150
+     ]
+    },
+    {
+     "id": "fr_gadget_noun",
+     "box": [
+      770,
+      478,
+      103,
+      135
+     ]
+    },
+    {
+     "id": "fr_prototype_noun",
+     "box": [
+      1050,
+      330,
+      225,
+      265
+     ]
+    },
+    {
+     "id": "fr_emetteur_noun",
+     "box": [
+      985,
+      5,
+      275,
+      250
+     ]
+    },
+    {
+     "id": "fr_capteur_noun",
+     "box": [
+      875,
+      402,
+      170,
+      190
+     ]
+    },
+    {
+     "id": "fr_microprocesseur_noun",
+     "box": [
+      800,
+      262,
+      125,
+      42
+     ]
+    }
+   ],
+   "building_id": "B38_ingenierie",
+   "sector_id": "S10_university"
+  }
+ }
+}
