@@ -262,6 +262,8 @@ def _regular_re(lemma, t):
         return False
     st = lemma[:-2]
     want = [st + e for e in ("s", "s", "", "ons", "ez", "ent")]
+    if None in (t.get("present") or []):  # defective verb (clore): not a regular -re table
+        return False
     got = [_split(c)[1] for c in t.get("present") or []]
     return got == want and t.get("participe_passe") == st + "u"
 

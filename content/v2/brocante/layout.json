@@ -1,0 +1,1153 @@
+{
+ "building": "brocante",
+ "building_id": "B59_brocante",
+ "sector_id": "S03_market",
+ "name": "La brocante · The Flea Market",
+ "main": "brocante",
+ "roomList": [
+  {
+   "key": "brocante",
+   "short": "La brocante"
+  },
+  {
+   "key": "souvenirs",
+   "short": "Les souvenirs"
+  },
+  {
+   "key": "grenier",
+   "short": "Le grenier"
+  },
+  {
+   "key": "fouilles",
+   "short": "Les fouilles"
+  }
+ ],
+ "planned": {
+  "brocante": {
+   "vocabRoom": "R_adj_time_01",
+   "only": [
+    "fr_different_adj",
+    "fr_prochain_adj",
+    "fr_inconnu_adj",
+    "fr_futur_adj",
+    "fr_commun_adj",
+    "fr_suivant_adj",
+    "fr_age_adj",
+    "fr_quotidien_adj",
+    "fr_actuel_adj",
+    "fr_original_adj"
+   ]
+  },
+  "souvenirs": {
+   "vocabRoom": "R_adj_time_02",
+   "only": [
+    "fr_ordinaire_adj",
+    "fr_recent_adj",
+    "fr_precedent_adj",
+    "fr_contemporain_adj",
+    "fr_inevitable_adj",
+    "fr_perpetuel_adj",
+    "fr_successif_adj",
+    "fr_primitif_adj",
+    "fr_veuf_adj",
+    "fr_orphelin_adj",
+    "fr_mouvant_adj"
+   ]
+  },
+  "vitrine": {
+   "vocabRoom": "R_adj_time_03",
+   "only": [
+    "fr_obscur_adj",
+    "fr_banal_adj",
+    "fr_romain_adj",
+    "fr_grec_adj",
+    "fr_antique_adj",
+    "fr_pascal_adj",
+    "fr_relatif_adj",
+    "fr_egyptien_adj",
+    "fr_automobile_adj",
+    "fr_algerien_adj",
+    "fr_mediterraneen_adj",
+    "fr_marocain_adj"
+   ]
+  },
+  "grenier": {
+   "vocabRoom": "R_adj_time_04",
+   "only": [
+    "fr_initial_adj",
+    "fr_conventionnel_adj",
+    "fr_previsible_adj",
+    "fr_primordial_adj",
+    "fr_systematique_adj",
+    "fr_existant_adj",
+    "fr_prealable_adj",
+    "fr_recherche_adj",
+    "fr_preliminaire_adj",
+    "fr_preparatoire_adj",
+    "fr_consecutif_adj",
+    "fr_architectural_adj",
+    "fr_initiatique_adj"
+   ]
+  },
+  "casier": {
+   "vocabRoom": "R_adj_time_05",
+   "only": [
+    "fr_tardif_adj",
+    "fr_immuable_adj",
+    "fr_optimiste_adj",
+    "fr_fervent_adj",
+    "fr_nostalgique_adj",
+    "fr_temporel_adj",
+    "fr_ponctuel_adj",
+    "fr_revelateur_adj",
+    "fr_centenaire_adj",
+    "fr_rafraichissant_adj",
+    "fr_vieillissant_adj",
+    "fr_recurrent_adj",
+    "fr_obsolete_adj",
+    "fr_futuriste_adj"
+   ]
+  },
+  "fouilles": {
+   "vocabRoom": "R_adj_time_06",
+   "only": [
+    "fr_decouvert_adj",
+    "fr_legendaire_adj",
+    "fr_venerable_adj",
+    "fr_rustique_adj",
+    "fr_baroque_adj",
+    "fr_mythique_adj",
+    "fr_indigene_adj",
+    "fr_prehistorique_adj",
+    "fr_archeologique_adj",
+    "fr_archaique_adj",
+    "fr_feodal_adj",
+    "fr_artisanal_adj",
+    "fr_fossile_adj"
+   ]
+  },
+  "cabinet": {
+   "vocabRoom": "R_adj_time_07",
+   "only": [
+    "fr_originel_adj",
+    "fr_venitien_adj",
+    "fr_crucial_adj",
+    "fr_germanique_adj",
+    "fr_asiatique_adj",
+    "fr_anglo_saxon_adj",
+    "fr_tunisien_adj",
+    "fr_celte_adj",
+    "fr_celtique_adj",
+    "fr_equatorial_adj",
+    "fr_alpin_adj",
+    "fr_eolien_adj",
+    "fr_trentenaire_adj",
+    "fr_gallo_romain_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "brocante": {
+   "name": "La brocante · The Flea Market",
+   "room_id": "R_adj_time_01",
+   "image": "brocante/brocante.jpg",
+   "alt": "An open-air flea market on a lawn: a big wooden stall with a slate roof stands in the middle. On top: a row of white jugs with one red jug, a pair of boots, one with a pro shine and the dusty next one waiting, a mystery parcel riding in a little canoe and a crystal ball with a tiny rocket inside. In the middle: two teddies sharing a seesaw, a sweet pink-and-blue ice-cream van, a cracked old rocking horse and an everyday coat and hat on pegs. Below: two puppets acting in a little theatre and a brass gramophone. Two upholstered armchairs sit on the grass on the left; on the right stands a grandfather clock. Behind, a garden arch leads back to the market square, a red door opens in a little shed, and a blue door and a green door open in the outbuilding.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     47,
+     148,
+     156,
+     212
+    ],
+    "label": "Place du Marché"
+   },
+   "doors": [
+    {
+     "to": "souvenirs",
+     "label": "le stand des souvenirs",
+     "hint": "Go through the red shed door to the keepsake stall",
+     "hit": [
+      262,
+      242,
+      44,
+      114
+     ]
+    },
+    {
+     "to": "grenier",
+     "label": "le grenier",
+     "hint": "Go through the blue door to the attic of finds",
+     "hit": [
+      1102,
+      231,
+      55,
+      152
+     ]
+    },
+    {
+     "to": "fouilles",
+     "label": "le stand des fouilles",
+     "hint": "Go through the green door to the dig-finds stall",
+     "hit": [
+      1164,
+      231,
+      62,
+      159
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_different_adj",
+     "box": [
+      380,
+      184,
+      131,
+      84
+     ]
+    },
+    {
+     "id": "fr_prochain_adj",
+     "box": [
+      536,
+      188,
+      112,
+      81
+     ]
+    },
+    {
+     "id": "fr_inconnu_adj",
+     "box": [
+      672,
+      175,
+      122,
+      94
+     ]
+    },
+    {
+     "id": "fr_futur_adj",
+     "box": [
+      836,
+      169,
+      78,
+      97
+     ]
+    },
+    {
+     "id": "fr_commun_adj",
+     "box": [
+      375,
+      309,
+      144,
+      89
+     ]
+    },
+    {
+     "id": "fr_suivant_adj",
+     "box": [
+      531,
+      309,
+      117,
+      97
+     ]
+    },
+    {
+     "id": "fr_age_adj",
+     "box": [
+      675,
+      297,
+      119,
+      112
+     ]
+    },
+    {
+     "id": "fr_quotidien_adj",
+     "box": [
+      825,
+      300,
+      113,
+      166
+     ]
+    },
+    {
+     "id": "fr_actuel_adj",
+     "box": [
+      391,
+      425,
+      125,
+      114
+     ]
+    },
+    {
+     "id": "fr_original_adj",
+     "box": [
+      680,
+      422,
+      89,
+      169
+     ]
+    }
+   ]
+  },
+  "souvenirs": {
+   "name": "Le stand des souvenirs · The Keepsake Stall",
+   "room_id": "R_adj_time_02",
+   "image": "brocante/souvenirs.jpg",
+   "backTo": "brocante",
+   "alt": "A wooden keepsake stall with a red door on the left and a window on the right. On the shelves: a plain brown teapot, a freshly sawn stool in a ray of sunlight, an open book of pressed flowers, a modern silver sculpture, a row of toppling dominoes, a Newton's cradle, a set of nesting dolls, a stone wheel, a lone porcelain swan, an odd striped sock falling into a basket and a jar of sand with an ant on it. On a side table by the window sits a small glass-fronted display cabinet.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "brocante",
+     "label": "la brocante",
+     "hint": "Go back through the red door to the flea market",
+     "hit": [
+      62,
+      86,
+      176,
+      531
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "vitrine",
+     "label": "la vitrine",
+     "hint": "Look closer at the display cabinet on the side table",
+     "at": [
+      1129,
+      425
+     ],
+     "obj": [
+      1024,
+      262,
+      210,
+      176
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_ordinaire_adj",
+     "box": [
+      367,
+      211,
+      109,
+      86
+     ]
+    },
+    {
+     "id": "fr_recent_adj",
+     "box": [
+      524,
+      219,
+      109,
+      86
+     ]
+    },
+    {
+     "id": "fr_precedent_adj",
+     "box": [
+      664,
+      219,
+      136,
+      81
+     ]
+    },
+    {
+     "id": "fr_contemporain_adj",
+     "box": [
+      836,
+      191,
+      86,
+      109
+     ]
+    },
+    {
+     "id": "fr_inevitable_adj",
+     "box": [
+      356,
+      356,
+      125,
+      69
+     ]
+    },
+    {
+     "id": "fr_perpetuel_adj",
+     "box": [
+      516,
+      341,
+      106,
+      84
+     ]
+    },
+    {
+     "id": "fr_successif_adj",
+     "box": [
+      669,
+      328,
+      128,
+      97
+     ]
+    },
+    {
+     "id": "fr_primitif_adj",
+     "box": [
+      836,
+      328,
+      94,
+      97
+     ]
+    },
+    {
+     "id": "fr_veuf_adj",
+     "box": [
+      372,
+      456,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_orphelin_adj",
+     "box": [
+      513,
+      450,
+      116,
+      109
+     ]
+    },
+    {
+     "id": "fr_mouvant_adj",
+     "box": [
+      688,
+      450,
+      78,
+      109
+     ]
+    }
+   ]
+  },
+  "vitrine": {
+   "name": "La vitrine · The Display Cabinet",
+   "room_id": "R_adj_time_03",
+   "image": "brocante/vitrine.jpg",
+   "parent": "souvenirs",
+   "alt": "A close look into the display cabinet: a dark lantern, a banana, a little rowing galley, a Greek vase, an antique hand mirror, a decorated Easter egg, a big teddy beside a small one, a cat in front of a pyramid, a toy car, a tiled pot of green algae, a bottle holding a tiny sea and a slipper full of pebbles.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_obscur_adj",
+     "box": [
+      369,
+      119,
+      81,
+      144
+     ]
+    },
+    {
+     "id": "fr_banal_adj",
+     "box": [
+      494,
+      135,
+      121,
+      115
+     ]
+    },
+    {
+     "id": "fr_romain_adj",
+     "box": [
+      640,
+      156,
+      132,
+      100
+     ]
+    },
+    {
+     "id": "fr_grec_adj",
+     "box": [
+      810,
+      122,
+      105,
+      138
+     ]
+    },
+    {
+     "id": "fr_antique_adj",
+     "box": [
+      356,
+      288,
+      100,
+      127
+     ]
+    },
+    {
+     "id": "fr_pascal_adj",
+     "box": [
+      512,
+      288,
+      85,
+      125
+     ]
+    },
+    {
+     "id": "fr_relatif_adj",
+     "box": [
+      650,
+      282,
+      122,
+      133
+     ]
+    },
+    {
+     "id": "fr_egyptien_adj",
+     "box": [
+      812,
+      285,
+      123,
+      130
+     ]
+    },
+    {
+     "id": "fr_automobile_adj",
+     "box": [
+      340,
+      472,
+      135,
+      96
+     ]
+    },
+    {
+     "id": "fr_algerien_adj",
+     "box": [
+      510,
+      450,
+      92,
+      125
+     ]
+    },
+    {
+     "id": "fr_mediterraneen_adj",
+     "box": [
+      648,
+      444,
+      117,
+      131
+     ]
+    },
+    {
+     "id": "fr_marocain_adj",
+     "box": [
+      795,
+      456,
+      130,
+      121
+     ]
+    }
+   ]
+  },
+  "grenier": {
+   "name": "Le grenier aux trouvailles · The Attic of Finds",
+   "room_id": "R_adj_time_04",
+   "image": "brocante/grenier.jpg",
+   "backTo": "brocante",
+   "alt": "A warm attic stall with a blue door on the left and a window on the right. On the shelves: a pair of first baby shoes, three teddies meeting together, a barometer with a little rain cloud above it, a bowl of green soup, three neatly sorted jars, a wind-up ant, a jar with a blank label, a magnifying glass on a book, a sketch on an easel, a mixing bowl with a whisk, three wooden ducks in a row, a little temple model and a golden key on a cushion. On a side table under the window stands a small slanted pigeonhole rack.",
+   "nameplate": [
+    24,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "brocante",
+     "label": "la brocante",
+     "hint": "Go back through the blue door to the flea market",
+     "hit": [
+      94,
+      100,
+      241,
+      488
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "casier",
+     "label": "le casier",
+     "hint": "Look closer at the pigeonhole rack on the side table",
+     "at": [
+      1116,
+      474
+     ],
+     "obj": [
+      1006,
+      302,
+      220,
+      185
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_initial_adj",
+     "box": [
+      375,
+      194,
+      102,
+      69
+     ]
+    },
+    {
+     "id": "fr_conventionnel_adj",
+     "box": [
+      506,
+      175,
+      134,
+      88
+     ]
+    },
+    {
+     "id": "fr_previsible_adj",
+     "box": [
+      685,
+      56,
+      88,
+      206
+     ]
+    },
+    {
+     "id": "fr_primordial_adj",
+     "box": [
+      812,
+      188,
+      98,
+      72
+     ]
+    },
+    {
+     "id": "fr_systematique_adj",
+     "box": [
+      370,
+      294,
+      122,
+      88
+     ]
+    },
+    {
+     "id": "fr_existant_adj",
+     "box": [
+      531,
+      290,
+      84,
+      95
+     ]
+    },
+    {
+     "id": "fr_prealable_adj",
+     "box": [
+      681,
+      288,
+      74,
+      97
+     ]
+    },
+    {
+     "id": "fr_recherche_adj",
+     "box": [
+      806,
+      300,
+      113,
+      81
+     ]
+    },
+    {
+     "id": "fr_preliminaire_adj",
+     "box": [
+      385,
+      400,
+      84,
+      106
+     ]
+    },
+    {
+     "id": "fr_preparatoire_adj",
+     "box": [
+      520,
+      408,
+      105,
+      98
+     ]
+    },
+    {
+     "id": "fr_consecutif_adj",
+     "box": [
+      660,
+      428,
+      123,
+      80
+     ]
+    },
+    {
+     "id": "fr_architectural_adj",
+     "box": [
+      815,
+      406,
+      93,
+      101
+     ]
+    },
+    {
+     "id": "fr_initiatique_adj",
+     "box": [
+      371,
+      535,
+      109,
+      78
+     ]
+    }
+   ]
+  },
+  "casier": {
+   "name": "Le casier · The Pigeonhole Rack",
+   "room_id": "R_adj_time_05",
+   "image": "brocante/casier.jpg",
+   "parent": "grenier",
+   "alt": "A close look into the pigeonhole rack: a snail riding a little clock, a cow stuck on a block, a sunflower turned to a glowing sun, a fur muff over a warm vent, a music box with a dancer, an hourglass, a hole punch beside a pocket watch, a little curtain drawn back on a star, a cake with candles, a folding fan with a cool breeze, a candle burned low, a toy boat circling in a bowl, a rotary phone and a little robot.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tardif_adj",
+     "box": [
+      369,
+      88,
+      81,
+      122
+     ]
+    },
+    {
+     "id": "fr_immuable_adj",
+     "box": [
+      500,
+      81,
+      115,
+      129
+     ]
+    },
+    {
+     "id": "fr_optimiste_adj",
+     "box": [
+      650,
+      62,
+      119,
+      148
+     ]
+    },
+    {
+     "id": "fr_fervent_adj",
+     "box": [
+      800,
+      94,
+      119,
+      109
+     ]
+    },
+    {
+     "id": "fr_nostalgique_adj",
+     "box": [
+      350,
+      238,
+      90,
+      127
+     ]
+    },
+    {
+     "id": "fr_temporel_adj",
+     "box": [
+      525,
+      231,
+      63,
+      129
+     ]
+    },
+    {
+     "id": "fr_ponctuel_adj",
+     "box": [
+      650,
+      244,
+      115,
+      116
+     ]
+    },
+    {
+     "id": "fr_revelateur_adj",
+     "box": [
+      800,
+      228,
+      135,
+      135
+     ]
+    },
+    {
+     "id": "fr_centenaire_adj",
+     "box": [
+      340,
+      388,
+      120,
+      119
+     ]
+    },
+    {
+     "id": "fr_rafraichissant_adj",
+     "box": [
+      498,
+      390,
+      127,
+      107
+     ]
+    },
+    {
+     "id": "fr_vieillissant_adj",
+     "box": [
+      660,
+      398,
+      96,
+      105
+     ]
+    },
+    {
+     "id": "fr_recurrent_adj",
+     "box": [
+      802,
+      388,
+      129,
+      119
+     ]
+    },
+    {
+     "id": "fr_obsolete_adj",
+     "box": [
+      494,
+      528,
+      116,
+      104
+     ]
+    },
+    {
+     "id": "fr_futuriste_adj",
+     "box": [
+      672,
+      519,
+      75,
+      116
+     ]
+    }
+   ]
+  },
+  "fouilles": {
+   "name": "Le stand des fouilles · The Dig-Finds Stall",
+   "room_id": "R_adj_time_06",
+   "image": "brocante/fouilles.jpg",
+   "backTo": "brocante",
+   "alt": "A sunny dig-finds stall with a green door on the left and a window on the right. On the shelves: a chest with its lid lifted on gold, a green dragon, an ancient bonsai, a wooden butter churn, a gilded mirror, a unicorn, wild flowers in a denim pouch, a toy dinosaur, a tray of dug-up shards, a little wooden ark, a toy castle, a handmade jug and an ammonite fossil. Under the window a small curiosity cabinet sits on a side table.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "brocante",
+     "label": "la brocante",
+     "hint": "Go back through the green door to the flea market",
+     "hit": [
+      156,
+      40,
+      175,
+      604
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cabinet",
+     "label": "le cabinet",
+     "hint": "Look closer at the curiosity cabinet on the side table",
+     "at": [
+      1075,
+      452
+     ],
+     "obj": [
+      975,
+      289,
+      200,
+      178
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_decouvert_adj",
+     "box": [
+      400,
+      122,
+      102,
+      105
+     ]
+    },
+    {
+     "id": "fr_legendaire_adj",
+     "box": [
+      535,
+      122,
+      96,
+      105
+     ]
+    },
+    {
+     "id": "fr_venerable_adj",
+     "box": [
+      660,
+      106,
+      115,
+      119
+     ]
+    },
+    {
+     "id": "fr_rustique_adj",
+     "box": [
+      815,
+      125,
+      66,
+      102
+     ]
+    },
+    {
+     "id": "fr_baroque_adj",
+     "box": [
+      410,
+      248,
+      78,
+      117
+     ]
+    },
+    {
+     "id": "fr_mythique_adj",
+     "box": [
+      538,
+      250,
+      94,
+      115
+     ]
+    },
+    {
+     "id": "fr_indigene_adj",
+     "box": [
+      665,
+      248,
+      100,
+      115
+     ]
+    },
+    {
+     "id": "fr_prehistorique_adj",
+     "box": [
+      800,
+      265,
+      110,
+      100
+     ]
+    },
+    {
+     "id": "fr_archeologique_adj",
+     "box": [
+      398,
+      406,
+      109,
+      88
+     ]
+    },
+    {
+     "id": "fr_archaique_adj",
+     "box": [
+      525,
+      402,
+      110,
+      91
+     ]
+    },
+    {
+     "id": "fr_feodal_adj",
+     "box": [
+      662,
+      388,
+      106,
+      106
+     ]
+    },
+    {
+     "id": "fr_artisanal_adj",
+     "box": [
+      806,
+      388,
+      84,
+      102
+     ]
+    },
+    {
+     "id": "fr_fossile_adj",
+     "box": [
+      412,
+      519,
+      69,
+      62
+     ]
+    }
+   ]
+  },
+  "cabinet": {
+   "name": "Le cabinet de curiosités · The Curiosity Cabinet",
+   "room_id": "R_adj_time_07",
+   "image": "brocante/cabinet.jpg",
+   "parent": "fouilles",
+   "alt": "A close look into the curiosity cabinet: a nest with the very first egg, a little Venetian sailing ship, a stone arch held by its keystone, a cuckoo clock, a paper lantern, a saxophone tilted at an angle, a blue-and-white birdcage, a knot brooch, a harp, a globe with a belt round its middle, a flag pinned on a snowy mountain top, a windmill pinwheel, a little steam train and a rooster mosaic.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_originel_adj",
+     "box": [
+      344,
+      90,
+      129,
+      108
+     ]
+    },
+    {
+     "id": "fr_venitien_adj",
+     "box": [
+      498,
+      72,
+      130,
+      125
+     ]
+    },
+    {
+     "id": "fr_crucial_adj",
+     "box": [
+      662,
+      78,
+      106,
+      120
+     ]
+    },
+    {
+     "id": "fr_germanique_adj",
+     "box": [
+      819,
+      65,
+      106,
+      138
+     ]
+    },
+    {
+     "id": "fr_asiatique_adj",
+     "box": [
+      360,
+      219,
+      88,
+      129
+     ]
+    },
+    {
+     "id": "fr_anglo_saxon_adj",
+     "box": [
+      519,
+      215,
+      71,
+      133
+     ]
+    },
+    {
+     "id": "fr_tunisien_adj",
+     "box": [
+      675,
+      219,
+      81,
+      129
+     ]
+    },
+    {
+     "id": "fr_celte_adj",
+     "box": [
+      825,
+      231,
+      98,
+      109
+     ]
+    },
+    {
+     "id": "fr_celtique_adj",
+     "box": [
+      356,
+      365,
+      88,
+      133
+     ]
+    },
+    {
+     "id": "fr_equatorial_adj",
+     "box": [
+      510,
+      372,
+      96,
+      125
+     ]
+    },
+    {
+     "id": "fr_alpin_adj",
+     "box": [
+      648,
+      372,
+      142,
+      125
+     ]
+    },
+    {
+     "id": "fr_eolien_adj",
+     "box": [
+      825,
+      372,
+      98,
+      125
+     ]
+    },
+    {
+     "id": "fr_trentenaire_adj",
+     "box": [
+      500,
+      515,
+      112,
+      116
+     ]
+    },
+    {
+     "id": "fr_gallo_romain_adj",
+     "box": [
+      669,
+      519,
+      106,
+      112
+     ]
+    }
+   ]
+  }
+ }
+}
