@@ -33,7 +33,7 @@
   "boulangerie": {
    "name": "La boulangerie · Bakery Shop",
    "image": "boulangerie/boulangerie.jpg",
-   "alt": "Inside the village bakery, painted in ink and gouache: a brass till, Monsieur Verbe in a red beret counting on his fingers beside a bowl of coins, Monsieur Verbe in a purple beret selling a baguette, Monsieur Verbe in a red beret holding up a gold coin, a glass display case holding dough, a fruit tart, a cake, butter, sugar and a chocolate éclair, with a little green-beret mime choosing, a little girl in a yellow dress slipping a baguette from a tall stack into a paper bag, a sack of flour, a jolly baker juggling croissants beside a price-tag rosette, a sack of baguettes, an egg lifting weights and a child's bike with a wicker pannier; the glass shop door on the left leads out to the village and a purple door on the right opens into the bakehouse.",
+   "alt": "Inside the village bakery, painted in ink and gouache: a brass till, Monsieur Verbe in a red beret counting on his fingers beside a bowl of coins, Monsieur Verbe in a purple beret selling a baguette, Monsieur Verbe in a red beret holding up a gold coin, a glass display case where the shopkeepers lift out a fruit tart and show off a strawberry cake beside the dough, butter, sugar and a chocolate éclair, with a little green-beret mime choosing, a little girl in a yellow dress slipping a baguette from a tall stack into a paper bag, a sack of flour, a jolly baker juggling croissants beside a price-tag rosette, a sack of baguettes, an egg lifting weights and a child's bike with a wicker pannier; the glass shop door on the left leads out to the village and a purple door on the right opens into the bakehouse.",
    "nameplate": [
     50,
     4.5
@@ -69,10 +69,10 @@
       470
      ],
      "obj": [
-      442,
+      450,
+      350,
       384,
-      394,
-      176
+      216
      ]
     }
    ],
@@ -220,35 +220,35 @@
    "name": "La vitrine · Display Case",
    "image": "boulangerie/comptoir.jpg",
    "parent": "boulangerie",
-   "alt": "A close-up of the bakery's glass display case, painted in ink and gouache: dough on a board, a fruit tart, Monsieur Verbe in a green beret tapping his chin as he chooses, a cake, butter in earmuffs, sugar under a lollipop and a chocolate éclair with a yellow lightning zigzag of icing and a little mouse sniffing it, all inside the case.",
+   "alt": "A close-up of the bakery's glass display case at a busy moment, painted in ink and gouache: behind the glass one shopkeeper mime lifts the fruit tart out with a cake server while the other turns the tall strawberry cake on its stand to show it off; the ball of dough pats its tummy in a puff of flour, the butter shivers in its scarf and earmuffs on a dish of ice, a lollipop stands in a bowl of sparkling sugar cubes and a little mouse sniffs the chocolate éclair with its yellow lightning icing, while in front of the case Monsieur Verbe as a little boy in a green beret taps his chin, choosing.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_pate_noun",
      "box": [
-      24,
-      320,
-      228,
-      196
+      100,
+      360,
+      268,
+      230
      ]
     },
     {
      "id": "fr_tarte_noun",
      "box": [
-      256,
-      350,
-      140,
-      138
+      360,
+      170,
+      240,
+      170
      ]
     },
     {
      "id": "fr_choisir_verb",
      "box": [
-      400,
-      276,
-      206,
-      440
+      380,
+      372,
+      318,
+      305
      ],
      "labelAt": [
       503,
@@ -258,37 +258,37 @@
     {
      "id": "fr_gateau_noun",
      "box": [
-      612,
-      282,
-      156,
-      214
+      660,
+      43,
+      220,
+      290
      ]
     },
     {
      "id": "fr_beurre_noun",
      "box": [
-      770,
-      340,
-      140,
-      170
+      715,
+      370,
+      215,
+      210
      ]
     },
     {
      "id": "fr_sucre_noun",
      "box": [
-      912,
-      268,
-      124,
-      244
+      935,
+      290,
+      120,
+      295
      ]
     },
     {
      "id": "fr_eclair_noun",
      "box": [
-      1040,
-      270,
-      186,
-      220
+      1060,
+      335,
+      143,
+      230
      ]
     }
    ]
@@ -297,7 +297,7 @@
    "name": "Le fournil · Bakehouse",
    "image": "boulangerie/fournil.jpg",
    "backTo": "boulangerie",
-   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, where the mimes can be seen behind the display case, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, Monsieur Verbe in a green beret kneading dough in a giant petri dish, Monsieur Verbe in a red beret mixing batter in half a watermelon, Monsieur Verbe in a gold beret and choir collar singing as he cooks a pancake, a brick oven wearing a fur stole, a tray on a little rocky mesa, a leaky bucket by the oven sewn up with a needle and red thread, a smiling apron-table, and a workbench with a slice of bread in a trench coat, a cake box with a sail, a salt shaker in a stone cell, an alarm clock, a toy mule in a cake tin and a knight's gauntlet.",
+   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, where the mimes can be seen behind the display case, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, Monsieur Verbe in a green beret kneading dough in a giant petri dish, Monsieur Verbe in a red beret mixing batter in half a watermelon, Monsieur Verbe in a gold beret and choir collar singing as he cooks a pancake, a brick oven wearing a fur stole, a tray on a little rocky mesa, a leaky bucket by the oven sewn up with a needle and red thread, a smiling apron-table, and a workbench where a slice of bread in a trench coat inspects a puddle with a sailing cake box, a salt shaker shakes salt from its stone cell, an alarm clock blows a bugle at a rearing toy mule in a cake tin and a knight's gauntlet carries a steaming loaf.",
    "doors": [
     {
      "to": "boulangerie",
@@ -321,9 +321,9 @@
      ],
      "obj": [
       676,
-      530,
-      398,
-      180
+      504,
+      384,
+      216
      ]
     }
    ],
@@ -449,62 +449,62 @@
    "name": "Le plan de travail · Worktop",
    "image": "boulangerie/plan.jpg",
    "parent": "fournil",
-   "alt": "A close-up of the bakehouse workbench, painted in ink and gouache: a slice of bread in a trench coat, a cake box with a sail on a puddle, a salt shaker locked in a little stone cell, an alarm clock tooting a little bugle, a toy mule wearing a cake tin and a knight's gauntlet.",
+   "alt": "A close-up of the bakehouse workbench in the middle of a little commotion, painted in ink and gouache: a slice of bread in a trench coat inspects a spilled puddle through a magnifying glass, where a cake box with a sail floats like a boat and drips off the edge; a salt shaker locked in a little stone cell shakes salt out through the bars, an alarm clock blows a brass bugle, a toy mule on wheels wearing a cake tin rears up at the noise, and a knight's gauntlet carries a tray with a steaming loaf, while a baker's shoes hurry past behind.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_tranche_noun",
      "box": [
-      60,
-      200,
-      220,
-      280
+      77,
+      125,
+      225,
+      300
      ]
     },
     {
      "id": "fr_boite_noun",
      "box": [
-      282,
-      130,
-      226,
-      370
+      305,
+      170,
+      215,
+      320
      ]
     },
     {
      "id": "fr_sel_noun",
      "box": [
-      662,
-      212,
-      160,
-      226
+      660,
+      105,
+      190,
+      240
      ]
     },
     {
      "id": "fr_reveil_noun",
      "box": [
-      824,
-      250,
-      114,
-      200
+      715,
+      350,
+      160,
+      130
      ]
     },
     {
      "id": "fr_moule_noun_m",
      "box": [
-      940,
-      178,
-      160,
-      250
+      885,
+      195,
+      200,
+      295
      ]
     },
     {
      "id": "fr_gant_noun",
      "box": [
-      1102,
-      135,
-      140,
-      300
+      1095,
+      95,
+      108,
+      310
      ]
     }
    ]
