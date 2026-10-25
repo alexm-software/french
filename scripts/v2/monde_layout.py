@@ -443,7 +443,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The map room: a father bear showing his cub how to fold a map, a deer in a navy coat turning a brass pointer on its pedestal, a zebra with a paint roller in its striped zone, a stork in her nest at the sunny window, a coat over the side of a chair, a ghost popping up at the end of a model street, a girl pushing a pin into a town plan, a boy pointing sticks at a chalk circle, a mouse with a windmill in the middle of a bench, a polar bear gnawing an icicle, a cat on a target, a donkey pulling a cart of little houses, three gingerbread men at a garden gate and a removal man pushing a house on a trolley. A shelf of toys sits above.",
+      "alt": "The map room: a father showing his little son how to fold a map, a deer nudging a brass pointer on its pedestal, a zebra with a paint roller in its striped zone, a stork in her nest at the sunny window, a coat over the side of a chair, a ghost popping up at the end of a model street, a girl pushing a pin into a town plan, a boy pointing sticks at a chalk circle, a little mouse by a windmill in the middle of a bench, a polar bear gnawing an icicle, a cat on a target, a donkey pulling a cart of little houses, three gingerbread men at a garden gate and a removal man pushing a house on a trolley. A shelf of toys sits above.",
       "doors": [
         {
           "to": "monde",
@@ -478,10 +478,10 @@ L = json.loads(r'''{
         {
           "id": "fr_facon_noun",
           "box": [
-            128,
-            110,
-            162,
-            270
+            132,
+            100,
+            191,
+            292
           ],
           "labelAt": [
             210,
@@ -659,7 +659,7 @@ L = json.loads(r'''{
       "name": "Le porte-bagages",
       "image": "monde/bagages.jpg",
       "parent": "cartes",
-      "alt": "Close-up of the toy shelf: a frog with a posy posing on an X on a chart, a blue-and-white vase on a stone base, a goat and a sheep pulling a rope opposite ways, a ladybird between the points of brass dividers, a mouse putting down a wedge of cheese, three ducklings in a line and a snail inside a ring of sand.",
+      "alt": "Close-up of the toy shelf: a girl doll with a flower posing on an X on a chart, a blue-and-white vase on a stone base, two child dolls pulling a rope opposite ways, a ladybird between the points of brass dividers, a mouse putting down a wedge of cheese, three ducklings in a line and a snail inside a ring of sand.",
       "doors": [],
       "zooms": [],
       "items": [
@@ -693,9 +693,9 @@ L = json.loads(r'''{
           "id": "fr_contraire_noun",
           "box": [
             665,
-            55,
-            520,
-            265
+            70,
+            470,
+            255
           ],
           "labelAt": [
             924,
@@ -929,7 +929,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The compass room, with a big compass rose painted on the floor: a man on a deckchair before a world map of wide blue oceans, a porter stretching up for a hat on top of a rack that holds a model landscape, a cat in an explorer's helmet pointing, an ostrich holding up a picture card for a puppy folding a paper plane, a canary in a gold cage, a squirrel hiding coins in a flowerpot, an ant with a compass and map, a cat and a spaniel squeezed on a bench, a painter behind her canvas, a neighbour waving from a window, an inventor beside a machine of cogs and pulleys, a granny ringing a bell for a row of rabbits, a sheep in a cowboy hat in a tub of suds and a duck in a soapy nest.",
+      "alt": "The compass room, with a big compass rose painted on the floor: a man on a deckchair before a world map of wide blue oceans, a porter stretching up for a hat on top of a rack that holds a model landscape, a cat in an explorer's helmet pointing, an ostrich holding up a picture card for a puppy folding a paper plane, a canary in a gold cage, a squirrel hiding coins in a flowerpot, an ant with a compass and map, a cat and a spaniel squeezed on a bench, a painter behind her canvas, a neighbour waving from a window, an inventor beside a machine of cogs and pulleys, a granny ringing a bell for a row of rabbits, a little cowboy boy in a tub of suds and a duck in a soapy nest.",
       "doors": [
         {
           "to": "monde",
@@ -1267,7 +1267,7 @@ L = json.loads(r'''{
         50,
         4.5
       ],
-      "alt": "The attic under sloping beams: a cat in sunglasses on the ring of a big globe, a crab waving one claw in a little fenced plot, a seal and a copper penny on a sea map with a long peninsula, a bear polishing a black saloon car, a photographer with a box camera aimed at a mountain painting, an old woman in a shawl pointing the way for two young tourists beside a grandfather clock, an owl in a hard hat at a drafting table of model streets, a hamster asleep in half a globe, a chef behind the biggest model town, a strongman lifting a huge tin can beside a red flag and a young farmer driving a green van full of vegetables.",
+      "alt": "The attic under sloping beams: a cat in sunglasses on the ring of a big globe, a crab waving one claw in a little fenced plot, a seal and a copper penny on a sea map with a long peninsula, a young chauffeur polishing a black saloon car, a photographer with a box camera aimed at a mountain painting, an old woman in a shawl pointing the way for two young tourists beside a grandfather clock, a lady architect in a hard hat at a drafting table of model streets, a hamster asleep in half a globe, a chef behind the biggest model town, a strongman lifting a huge tin can beside a red flag and a young farmer driving a green van full of vegetables.",
       "doors": [
         {
           "to": "monde",

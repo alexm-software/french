@@ -42,7 +42,7 @@ L = json.loads(r'''{
     "aeroport": {
       "name": "L'aéroport",
       "image": "aeroport/aeroport.jpg",
-      "alt": "A sunny village airport terminal with big windows on the runway: a goose in a vintage biplane, a cut-away plane cabin with a teddy passenger, a vet driving the shuttle cart, a suitcase on a dog leash, an eagle above the control tower, a helicopter, a jet with a blue V on its tail, a juggling pilot, a stork at the security arch, a kangaroo on a bench, a baggage belt led by a train suitcase and a girl making a paper-plane collage.",
+      "alt": "A sunny village airport terminal with big windows on the runway: a pioneer aviator in a vintage biplane with a little aviary of songbirds on its wing, a cut-away plane cabin with a teddy passenger, a vet driving the shuttle cart, a suitcase on a dog leash, an eagle above the control tower, a helicopter, a jet with a blue V on its tail, a juggling pilot, a stork at the security arch, a dog leaping over a bench with a bone, a baggage belt led by a train suitcase and a girl making a paper-plane collage.",
       "nameplate": [
         36,
         4.5
@@ -62,10 +62,10 @@ L = json.loads(r'''{
         {
           "id": "fr_aviation_noun",
           "box": [
-            20,
-            205,
-            275,
-            170
+            15,
+            196,
+            282,
+            182
           ]
         },
         {
@@ -196,10 +196,10 @@ L = json.loads(r'''{
         {
           "id": "fr_bond_noun",
           "box": [
-            915,
-            362,
-            110,
-            153
+            912,
+            360,
+            135,
+            125
           ]
         },
         {
