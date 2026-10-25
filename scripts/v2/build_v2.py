@@ -510,6 +510,11 @@ def build(bld, v1, vocab):
             fix = dict(fixes.get(wid, {}))
             fix.update({k: v for k, v in overrides.get(wid, {}).items() if k in ("art", "g")})
             apply_grammar_fix(it, fix)
+            # phrase-only words are taught as their phrase ("fr": "en avoir marre", "la tombée de la nuit"
+            # keeps its article): vocab_fixes.json first, then the building's hooks.json
+            for src in (fixes.get(wid, {}), overrides.get(wid, {})):
+                if src.get("fr"):
+                    it["fr"] = src["fr"]
             it["_hw"] = headword(it)
             it["box"] = spec["box"]
             # text overrides: vocab_fixes.json first, then the building's hooks.json (which wins)

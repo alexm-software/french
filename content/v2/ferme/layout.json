@@ -32,7 +32,6 @@
    "only": [
     "fr_corne_noun",
     "fr_mule_noun",
-    "fr_comte_noun",
     "fr_cavalier_noun",
     "fr_ane_noun",
     "fr_taureau_noun",
@@ -46,8 +45,6 @@
    "only": [
     "fr_porcelaine_noun",
     "fr_selle_noun",
-    "fr_cavalerie_noun",
-    "fr_corrida_noun",
     "fr_troupeau_noun",
     "fr_relais_noun",
     "fr_boeuf_noun"
@@ -77,8 +74,7 @@
     "fr_volaille_noun",
     "fr_hangar_noun",
     "fr_agneau_noun",
-    "fr_lard_noun",
-    "fr_gitan_noun"
+    "fr_lard_noun"
    ]
   },
   "manege": {
@@ -97,7 +93,8 @@
     "fr_aboiement_noun",
     "fr_humus_noun",
     "fr_dada_noun",
-    "fr_dinosaure_noun"
+    "fr_dinosaure_noun",
+    "fr_dressage_noun"
    ]
   },
   "champs": {
@@ -134,10 +131,8 @@
     "fr_agglomeration_noun",
     "fr_friche_noun",
     "fr_semence_noun",
-    "fr_famine_noun",
     "fr_sillon_noun",
     "fr_eperon_noun",
-    "fr_socle_noun",
     "fr_villageois_noun",
     "fr_engrais_noun"
    ]
@@ -256,19 +251,6 @@
      ]
     },
     {
-     "id": "fr_comte_noun",
-     "box": [
-      1105,
-      25,
-      60,
-      50
-     ],
-     "labelAt": [
-      1040,
-      30
-     ]
-    },
-    {
      "id": "fr_cavalier_noun",
      "box": [
       765,
@@ -355,24 +337,6 @@
       380,
       180,
       170
-     ]
-    },
-    {
-     "id": "fr_cavalerie_noun",
-     "box": [
-      170,
-      80,
-      515,
-      220
-     ]
-    },
-    {
-     "id": "fr_corrida_noun",
-     "box": [
-      495,
-      420,
-      112,
-      140
      ]
     },
     {
@@ -550,7 +514,7 @@
    "room_id": "R_farm_animals_02_z1",
    "image": "ferme/souchebasse.jpg",
    "parent": "bassecour",
-   "alt": "Close-up of the farmyard tree stump: a little scientist plotting a single dot on a big graph on an easel, a turkey in a dandy waistcoat and bow tie, a ewe nuzzling her baby lamb, a hen and a duck pecking as a volleyball bounces past, a farm hangar big enough for a tractor, a plane and cows, a wet lamb standing in the water trough, a pan of sizzling bacon on a little stove and a small blank wooden sign.",
+   "alt": "Close-up of the farmyard tree stump: a little scientist plotting a single dot on a big graph on an easel, a turkey in a dandy waistcoat and bow tie, a ewe nuzzling her baby lamb, a hen and a duck pecking as a volleyball bounces past, a farm hangar big enough for a tractor, a plane and cows, a wet lamb standing in the water trough and a pan of sizzling bacon on a little stove.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -615,15 +579,6 @@
       425,
       165,
       85
-     ]
-    },
-    {
-     "id": "fr_gitan_noun",
-     "box": [
-      1115,
-      265,
-      115,
-      160
      ]
     }
    ],
@@ -791,6 +746,15 @@
       435,
       180,
       210
+     ]
+    },
+    {
+     "id": "fr_dressage_noun",
+     "box": [
+      1105,
+      220,
+      170,
+      205
      ]
     }
    ],
@@ -1102,19 +1066,6 @@
      ]
     },
     {
-     "id": "fr_famine_noun",
-     "box": [
-      458,
-      410,
-      140,
-      112
-     ],
-     "labelAt": [
-      528,
-      500
-     ]
-    },
-    {
      "id": "fr_sillon_noun",
      "box": [
       770,
@@ -1130,15 +1081,6 @@
       291,
       85,
       155
-     ]
-    },
-    {
-     "id": "fr_socle_noun",
-     "box": [
-      955,
-      295,
-      105,
-      152
      ]
     },
     {

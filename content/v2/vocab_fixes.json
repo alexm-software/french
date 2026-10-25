@@ -1,5 +1,5 @@
 {
- "_note": "Article/gender corrections applied by scripts/v2/build_v2.py to every building (data/source/vocab.jsonl is never edited). A building's content/v2/<bld>/hooks.json may override an entry. Keys: art (le/la/l'), g (m/f/mf). Also say/f_say (respelling) and hook text overrides, e.g. no respelling syllable that reads as \"pee\"/\"poo\".",
+ "_note": "Article/gender corrections applied by scripts/v2/build_v2.py to every building (data/source/vocab.jsonl is never edited). A building's content/v2/<bld>/hooks.json may override an entry. Keys: art (le/la/l'), g (m/f/mf). Also say/f_say (respelling) and hook text overrides, e.g. no respelling syllable that reads as \"pee\"/\"poo\". Also fr (headword shown on the label and card) for phrase-only words, e.g. \"en avoir marre\".",
  "fr_hammam_noun": {
   "art": "le",
   "why": "Aspirate h: le hammam, not l'hammam."
@@ -163,5 +163,35 @@
  "fr_epicier_noun": {
   "say": "ay-pea-SYAY",
   "why": "Respelling \"ay-pee-SYAY\" reads as pee/poo; same sound respelled \"ay-pea-SYAY\"."
+ },
+ "fr_marre_adv": {
+  "fr": "en avoir marre",
+  "en": "(en avoir marre) to be fed up",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+ },
+ "fr_guere_adv": {
+  "fr": "ne… guère",
+  "en": "(ne… guère) hardly, barely",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+ },
+ "fr_clin_noun": {
+  "fr": "clin d'œil",
+  "en": "a wink (un clin d'œil)",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+ },
+ "fr_tombee_noun": {
+  "fr": "tombée de la nuit",
+  "en": "nightfall (la tombée de la nuit)",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+ },
+ "fr_metteur_noun": {
+  "fr": "metteur en scène",
+  "en": "director (un metteur en scène, film or theatre)",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+ },
+ "fr_par_ci_adv": {
+  "fr": "par-ci, par-là",
+  "en": "here and there (par-ci, par-là)",
+  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
  }
 }
