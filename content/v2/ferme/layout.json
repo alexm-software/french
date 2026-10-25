@@ -38,8 +38,7 @@
     "fr_taureau_noun",
     "fr_cheval_noun",
     "fr_berger_noun",
-    "fr_veau_noun",
-    "fr_heu_noun"
+    "fr_veau_noun"
    ]
   },
   "souche": {
@@ -104,7 +103,6 @@
   "champs": {
    "vocabRoom": "R_fields_01",
    "only": [
-    "fr_colonne_noun",
     "fr_agriculture_noun",
     "fr_graine_noun",
     "fr_champ_noun",
@@ -140,7 +138,6 @@
     "fr_sillon_noun",
     "fr_eperon_noun",
     "fr_socle_noun",
-    "fr_attribut_noun",
     "fr_villageois_noun",
     "fr_engrais_noun"
    ]
@@ -162,7 +159,7 @@
    "name": "La ferme",
    "room_id": "R_farm_animals_01",
    "image": "ferme/ferme.jpg",
-   "alt": "A sunny farm painted in ink and gouache: a rhino's horn poking up through a field of tall corn, a stubborn mule with baskets refusing the carrots a boy holds out, a count in a red cloak waving from the battlements of a castle on the hill, a tiny rider galloping on a white sheepdog with a toy sword, a donkey trotting with a boy in a feathered hat on her back, a bull lying in a row of daisies reading a book covered in stars, a farmer coaxing his horse into its stable, a mother cow with her newborn calf, a shepherd on a hay bale sharing his burger with a white sheepdog and a boy scratching his head at a blackboard. The red barn leads to the farmyard, the white paddock gate to the riding ring, the wooden field gates to the fields and the vine arch on the hill to the hillside vineyard; an old tree stump in the middle can be looked at closer, and the white gate at the bottom left leads out to the valley.",
+   "alt": "A sunny farm painted in ink and gouache: a rhino's horn poking up through a field of tall corn, a stubborn mule with baskets refusing the carrots a boy holds out, a count in a red cloak waving from the battlements of a castle on the hill, a dashing cavalier in a big feathered hat and blue cape galloping on a brown pony, a donkey trotting with a boy in a green hat on her back, a bull lying in a row of daisies reading a book covered in stars, a farmer coaxing his horse into its stable, a mother cow with her newborn calf and a shepherd on a hay bale sharing his burger with a white sheepdog beside a wooden fence. The red barn leads to the farmyard, the white paddock gate to the riding ring, the wooden field gates to the fields and the vine arch on the hill to the hillside vineyard; an old tree stump in the middle can be looked at closer, and the white gate at the bottom left leads out to the valley.",
    "nameplate": [
     44,
     5.5
@@ -274,10 +271,10 @@
     {
      "id": "fr_cavalier_noun",
      "box": [
-      762,
-      226,
+      765,
+      228,
       110,
-      88
+      86
      ]
     },
     {
@@ -327,19 +324,6 @@
      "labelAt": [
       687,
       648
-     ]
-    },
-    {
-     "id": "fr_heu_noun",
-     "box": [
-      1040,
-      535,
-      200,
-      170
-     ],
-     "labelAt": [
-      1140,
-      645
      ]
     }
    ],
@@ -427,7 +411,7 @@
    "room_id": "R_farm_animals_02",
    "image": "ferme/bassecour.jpg",
    "backTo": "ferme",
-   "alt": "The farmyard behind the barn: a red barn so full of hay that a cow pops out of the hayloft door, a cow enjoying a foamy brush wash, a goat nibbling a striped chevron sign, a horse lying on a pillow in the stable while a vet gives him his cure, a rooster crowing on top of a giant green glass bottle, a pig snoozing on a huge cushion, a fisherman on a little jetty, a farmer forking a steaming manure heap beside a sunflower, a sheep trying to moo at two surprised cows and chickens paddling in a blue paddling pool. An old tree stump with tiny things on it can be looked at closer, and the open white gate at the bottom right leads back to the farm.",
+   "alt": "The farmyard behind the barn: a red barn with a cow peeping out of the hayloft and a black cast-iron cooking range and a steaming pot of soup standing in its doorway, a cow enjoying a foamy brush wash, a goat nibbling a striped chevron sign, a horse lying on a pillow in the stable while a vet gives him his cure, a rooster crowing on top of a giant green glass bottle, a pig snoozing on a huge cushion, a fisherman on a little jetty, a farmer forking a steaming manure heap beside a sunflower, a sheep trying to moo at two surprised cows and chickens paddling in a blue paddling pool. An old tree stump with tiny things on it can be looked at closer, and the open white gate at the bottom right leads back to the farm.",
    "nameplate": [
     42,
     5.5
@@ -818,7 +802,7 @@
    "room_id": "R_fields_01",
    "image": "ferme/champs.jpg",
    "backTo": "ferme",
-   "alt": "The harvest fields: a tall column of wheat sheaves with a mouse sitting proudly on top, a sheep driving a red tractor, a seed sprouting in a little pot on a crate, a farmer waving his hat beside a field of sunflowers, a cow mooing at the miller by a windmill, a mouse harvesting a stalk of wheat, young helpers with baskets of apples, a horse munching hay with straw stuck in its mane, a gran pushing one giant grain of wheat in a wheelbarrow and a cow kneeling as if to pray in a meadow of buttercups. An old tree stump with tiny things on it can be looked at closer, and the wooden field gate at the bottom left leads back to the farm.",
+   "alt": "The harvest fields: a sheep driving a red tractor among the corn and wheat, a seed sprouting in a little pot on a crate, a farmer proudly holding up a gold medal in his field of sunflowers, a cow mooing at the miller by a windmill, a mouse harvesting a stalk of wheat, a farmer paying his son coins for a basket of apples, a horse fanning itself with a big fan made of hay held in its teeth, a gran peering through a microscope at one tiny grain beside a big wheat sheaf and a cow kneeling to pray in a little fenced meadow full of flowers and butterflies. An old tree stump with tiny things on it can be looked at closer, and the wooden field gate at the bottom left leads back to the farm.",
    "nameplate": [
     44,
     5.5
@@ -854,15 +838,6 @@
     }
    ],
    "items": [
-    {
-     "id": "fr_colonne_noun",
-     "box": [
-      355,
-      120,
-      165,
-      240
-     ]
-    },
     {
      "id": "fr_agriculture_noun",
      "box": [
@@ -917,7 +892,7 @@
      "box": [
       800,
       335,
-      210,
+      240,
       160
      ]
     },
@@ -1059,7 +1034,7 @@
    "room_id": "R_fields_02",
    "image": "ferme/coteau.jpg",
    "backTo": "ferme",
-   "alt": "The hillside vineyard: a built-up town of red roofs piled like toy blocks on the far hill, fallow land overrun with poppies and rabbits, a little judge-owl in a white wig holding out a summons, a small blank wooden board, a ploughman and his horse cutting a long furrow, a young cowboy showing the shiny spur on his boot, a sock standing on a stone plinth like a statue, a scarecrow with a straw hat, a crooked smile and a crow on each arm, a villager wheeling a pumpkin home with a cat on top and a boy scooping grey fertilizer from a sack. An old tree stump with tiny things on it can be looked at closer, and the vine arch at the left leads back to the farm.",
+   "alt": "The hillside vineyard: a built-up town of red roofs piled like toy blocks on the far hill, fallow land overrun with poppies and rabbits, a little judge-owl in a white wig holding out a summons over a pile of seeds, a mean farmer with crossed arms in a dead, cracked patch of field turning away a hungry sparrow, a horse yawning hugely as the ploughman cuts a long furrow, a young cowboy showing the shiny spur on his boot, a sock standing on a stone plinth like a statue, a villager blowing a trumpet beside his little white villa and a boy scooping grey fertilizer from a sack. An old tree stump with tiny things on it can be looked at closer, and the vine arch at the left leads back to the farm.",
    "nameplate": [
     50,
     5.5
@@ -1108,40 +1083,44 @@
      "id": "fr_friche_noun",
      "box": [
       140,
-      520,
-      500,
-      190
+      545,
+      480,
+      165
      ],
      "labelAt": [
       390,
-      650
+      655
      ]
     },
     {
      "id": "fr_semence_noun",
      "box": [
-      345,
-      380,
+      340,
+      385,
       110,
-      130
+      125
      ]
     },
     {
      "id": "fr_famine_noun",
      "box": [
-      495,
-      420,
-      85,
-      92
+      458,
+      410,
+      140,
+      112
+     ],
+     "labelAt": [
+      528,
+      500
      ]
     },
     {
      "id": "fr_sillon_noun",
      "box": [
       770,
-      170,
-      280,
-      120
+      168,
+      290,
+      118
      ]
     },
     {
@@ -1163,24 +1142,15 @@
      ]
     },
     {
-     "id": "fr_attribut_noun",
-     "box": [
-      1075,
-      215,
-      195,
-      232
-     ]
-    },
-    {
      "id": "fr_villageois_noun",
      "box": [
-      785,
-      448,
-      230,
-      252
+      720,
+      452,
+      280,
+      250
      ],
      "labelAt": [
-      900,
+      860,
       650
      ]
     },
@@ -1202,7 +1172,7 @@
    "room_id": "R_fields_02_z1",
    "image": "ferme/souchecoteau.jpg",
    "parent": "coteau",
-   "alt": "Close-up of the tree stump in the vineyard: grape pickers with baskets piled high with purple grapes, a mole dentist pulling a carrot out of the ground with pliers, two children racing to pick strawberries into baskets, a little sloping bank of vines with rich soil in the sun, a little truck driving along neat rows while a farmer in the back sows seeds, and a smiling landlord handing a big key to a visitor beside a sign with a key on it.",
+   "alt": "Close-up of the tree stump in the vineyard: grape pickers with baskets piled high with purple grapes, a mole dentist pulling a carrot out of the ground with pliers, two children racing to pick strawberries into baskets while a referee blows his whistle and holds up a hand, a little bank of vines whose grape bunches shake with terrified faces, a little truck driving along neat rows while a farmer in the back sows seeds, and a smiling landlord handing a big key to a visitor beside a sign with a key on it.",
    "doors": [],
    "zooms": [],
    "items": [
