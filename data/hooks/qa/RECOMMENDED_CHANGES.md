@@ -34,7 +34,7 @@ Room references use `building/room`, the keys in `village/v2/data/*.js`. Unbuilt
    - *racisme* is in the stadium.
 
    These should move first.
-5. **Mnemonics.** 33 words have two different hooks in two rooms. Many hooks invent a pun where the word's own parts would do better (*toujours* = *tous les jours*), and 164 *-ment* adverbs each get a full scene when one rule would cover them. Part 2 has 10 worked rewrites.
+5. **Mnemonics.** Most puns work. The ones to fix are forced: the sound is off, the pun has too many pieces, or the pun never meets the meaning. 33 words also have two different hooks in two rooms. Part 2 has 10 worked rewrites and 20 more proposals.
 
 ---
 
@@ -526,49 +526,78 @@ Pick one home per word, or keep both placements and share a single hook (see Par
 ### 1.6 Structural suggestions
 
 - **Rooms that are lists, not scenes.** `gare/aiguillage` and `gare/bagages` hold 24 abstract nouns (cause, sorte, effet, comparaison…). The switching-yard metaphor ("points = choices") only works if the room says so. Alternatively, move these into `B34_humanites/R_philosophy_*` and `R_linguistics_01`, and give the station real station words. The same applies to most of `couture/*`: its abstract nouns (manner, charm, curiosity…) don't belong in a sewing room. Bring in the plan's actual sewing words (*coudre, fil, aiguille, dé à coudre, ourlet, patron* in its sewing sense) and send the abstract ones to B34 and B50.
-- **Adverb buildings.** `cirque` (10 rooms) and `balance` hold most of the 164 *-ment* adverbs in v2. That's fine as a building, but each one doesn't need its own scene. See rule 3 below.
+- **Adverb buildings.** `cirque` (10 rooms) and `balance` hold most of the 164 *-ment* adverbs in v2. That's fine as a building; see §2.3 for a cheaper fix for the weak ones.
 - **Add a placement check** to `scripts/qa/check_v2.py`. It would flag a word whose room theme matches its English gloss only through a shared word (bank, stock, firm, coach, fire, party, star, band, scale, lead, shot, stage, league, race…). It would have caught most of the table above.
 
 ---
 
 ## Part 2: Mnemonics
 
-`HOOK_PROPOSALS.md` already covers gender, broken templates and irregular verbs. These rules come from reading every live v2 hook.
+Puns are the house style, and most of them work: *ciel* (an L-shaped cloud), *étoile* (a star wrapped in A TOWEL), *routine* (a teenage kangaroo, ROO + TEEN), *témoigner* (a TAME ONION). The aim is to fix the puns that are **forced**, not to replace puns with explanations. `HOOK_PROPOSALS.md` already covers gender, broken templates and irregular verbs.
 
-1. **One hook per word, everywhere.** 33 words have different hooks in different rooms. A learner who meets *chiffre* twice learns two unrelated pictures. Keep the better one, and adapt only the setting when the room changes.
-2. **Use the word's own parts before inventing a pun.** Compounds and transparent words remember themselves:
-   - *tou-jours* (all days)
-   - *main-tenant* (holding in the hand)
-   - *au-jour-d'hui*
-   - *pour-boire* (already done well)
-   - *d'avantage*
-3. **Teach the *-ment* rule once.** feminine adjective + *-ment* = *-ly*. Hook the adjective (*lent* → *lentement*), not each adverb. That replaces 164 separate scenes with one rule plus the adjective hooks the learner mostly already has.
-4. **Real cognates get a plain card:** the cognate, the sound trap and the gender. Don't force a pun. A forced pun on a cognate (*période* as an accordion "PAY-RYOD") is harder to remember than the English word it already resembles.
-5. **Phrases get a chunk-by-chunk translation, not a whole-phrase pun.** Puns built from the whole sound of a phrase ("COME ON, TALLY, VOO") don't hold.
-6. **The sound-alike and the meaning must meet in one action.** Many hooks put the sound object and the meaning object side by side, like a stingray named Ray beside an elephant's ear. Make one act on the other.
-7. **A moved word needs its hook redrawn.** Many hooks describe their room's painting ("in the bank hall", "on the chart"), so moving a word means rewriting that sentence.
+### What makes a pun forced
+
+1. **The sound is off.** The English words don't sound like the French: "CHEF + R" for *chiffre* has the wrong vowel.
+2. **Too many pieces.** Three or four unrelated sound chunks strung together ("EBB-DOME-A-DARE", "IN DEW TREE, YELL", "COME ON, TALLY, VOO"). One chunk that lands on the stressed syllable beats four that cover every sound.
+3. **The pun and the meaning don't meet.** The sound object and the meaning object are just side by side, like a stingray named Ray in a tank next to an elephant's ear, or a cat next to a bottle of soy sauce. The pun object should *do something* to the meaning.
+4. **No pun at all.** The hook only acts out the meaning ("a strongman cradles a lion GENTLY"), so nothing ties the sound to it.
+5. **The wrong template.** "Like English 'same'" on *même*, which isn't a cognate.
+
+### Rules for rewrites
+
+1. **One hook per word, everywhere.** 33 words have a different hook in each of their rooms. Keep the better pun and only adapt the setting.
+2. **Use only English the learner already knows.** No Latin or word-history explanations. A French word the learner has certainly met already (*jour*, *rouge*, *froid*) is fine as a helper.
+3. **A real cognate can stay plain** ("Like English 'assembly', said ah-sahn-BLAY") when no natural pun turns up. A fun pun on a cognate is welcome; a forced one isn't.
+4. **Phrases: one pun on one chunk.** Don't try to pun the whole phrase.
+5. **A moved word needs its hook redrawn**, because many hooks describe the painting of the room they're in.
 
 ### 2.1 Ten hooks to improve
 
-| # | Word (room) | Current hook | What's wrong | Proposed hook |
+| # | Word (room) | Current hook | Problem | Proposed hook |
 |---|---|---|---|---|
-| 1 | **chiffre** (`balance/balance`, `ecole/pupitre`) | Balance: *"SHEEFR" ≈ "CHEF + R": a CHEF counts on his fingers, one DIGIT at a time.* École: *The wooden DIGIT 7 wears a CHEF's hat.* | Two different hooks, and both are rated weak. "Chef + r" doesn't point to digits. | **Same root as English CIPHER** (both come from the Arabic for "zero"). A spy's codebook: a page of nothing but DIGITS, a secret cipher. *Un chiffre* is a single digit (0–9); 25 is *un nombre* with *deux chiffres*. Say SHEEFR. |
-| 2 | **maintenant** (`horloge/escalier`) | *"MAN-TEN-NAN" ("mant-NAHN"): Nan slams the big red button with her stopwatch held up. NOW!* | The respelling disagrees with the card (man-tuh-NAHN), and the pun is three unrelated sounds. | **MAIN (hand) + TENANT (holding):** what you're holding in your hand is happening NOW. A hand holds up a stopwatch reading 0:00: *maintenant!* Say man-tuh-NAHN (in speech often mant-NAHN). |
-| 3 | **aujourd'hui** (`horloge/alcove`) | *"OH, SURE, DWEE!": a girl with fresh-picked daisies and a sunny mug. This very day, TODAY.* | "Dwee" means nothing, and daisies don't say "today". | **You already know *jour* from *bonJOUR*.** *Au jour d'hui* = "on the day of today", today said twice. A tear-off calendar shows one page stamped JOUR, with today's date circled in red. Say oh-zhoor-DWEE. |
-| 4 | **toujours** (`horloge/escalier`) | *"TWO, SURE" ("too-ZHOOR"): two old sweethearts on a bench, holding hands as they ALWAYS have.* | Rated weak. "Two, sure" has no link to "always", and the "still" sense is missing. | ***Tous les jours* (all the days) squeezed into one word = ALWAYS.** A calendar with every single day ticked. Second sense: *il pleut toujours* = it's STILL raining (the rain on every day). Say too-ZHOOR. |
-| 5 | **comment allez-vous ?** (`fontaine/salutations`) | *"COME ON, TALLY, VOO?": a gentleman tips his top hat to a lady holding a TALLY counter.* | A whole-phrase pun with a tally counter in it. Learners need the parts. | **Chunk it:** *comment* (how) + *allez* (go) + *vous* (you) = "How go you?", like old English "How goes it?". The *t* of *comment* links: koh-mahn-tah-lay-VOO. Picture: a gentleman tips his hat at the fountain. *Vous* is the polite form; *ça va ?* is the casual one. |
-| 6 | **davantage** (`balance/cageot`) | *The little girl licks her ice cream by DA VAN: MORE, from the ice-cream VAN!* | Rated weak, and it misses the real link. | **Hear ADVANTAGE inside it** (it comes from *d'avantage*). The side with the ADVANTAGE has MORE: a tug-of-war where one team has more players. *Davantage de temps* = more time. Say dah-vahn-TAHZH. |
-| 7 | **mise** (`monde/bagages`) | *A grey mouse carefully PUTS DOWN a wedge of CHEESE on the chart: "chEESE" with an M, "MEEZ".* | Rated weak. A respelling trick on "cheese", and no link to the bet sense. | **From *mettre* (to put): *mis, mise* = put.** A chef's MISE EN PLACE, everything PUT in place. At the card table, *la mise* is the stake you PUT down. (Move the word to the games room; see §1.2.) |
-| 8 | **ciel** (`ciel/ciel`) | *Look up at the SKY: you can see an L-shaped ("SYEL") cloud floating in the blue.* | The letter-shape pun is weak, and the link to English is ignored. | **Same Latin root as CEILING and CELESTIAL:** the SKY is the world's ceiling. Paint the observatory's ceiling as open sky. Also heaven: *au ciel*. Say SYEHL. |
-| 9 | **doucement** (`cirque/cirque`) | *A circus strongman cradles a baby lion GENTLY ("doo-suh-MAHN"), rocking it softly to sleep.* | Rated weak: there's no sound link at all, only the meaning. | ***Doux/douce* (soft, sweet; think DULCET) + *-ment* (-ly) = SOFTLY, GENTLY.** The strongman whispers "*douce*-MENT" as he lowers the lion cub into its basket. This is the model for rule 3: hook *doux* once, and every *-ment* adverb follows. |
-| 10 | **oreille** (`cabinet/visage`) | *A friendly stingray RAY ("oh-REHY") watches from its glass tank beside a baby elephant fanning out one huge floppy EAR.* | Sound object and meaning object side by side (rule 6), and two animals to remember. | **"OH, RAY?"** Ray cups his hand behind his EAR: "Oh, Ray? Speak up, I can't hear you!" One person, one action, and the same root as English *aural*. Say oh-REHY. |
+| 1 | **chiffre** (`balance/balance`, `ecole/pupitre`) | Balance: *"SHEEFR" ≈ "CHEF + R": a CHEF counts on his fingers, one DIGIT at a time.* École: *The wooden DIGIT 7 wears a CHEF's hat.* | Two different hooks. "Chef" has the wrong vowel (SHEF, not SHEEF). | **"SHEAF-ruh" (SHEEFR):** a farmer ties each SHEAF of wheat and hangs a big tag with one DIGIT on it: 1, 2, 3… Use it in both rooms. |
+| 2 | **maintenant** (`horloge/escalier`) | *"MAN-TEN-NAN": Nan slams the big red button with her stopwatch held up. NOW!* | Three good pun pieces, but nothing links them. | **Keep MAN-TEN-NAN and make it one action:** at a rocket launch, the MAN counts down from TEN, and NAN slams the big red button: NOW! (man-tuh-NAHN) |
+| 3 | **aujourd'hui** (`horloge/alcove`) | *"OH, SURE, DWEE!": a girl with fresh-picked daisies and a sunny mug. This very day, TODAY.* | "Dwee" means nothing, and daisies don't say "today". | **"OH, YOUR DUE-EE!" (oh-zhoor-DWEE):** the librarian taps the stamped date in a library book: "OH, YOUR DUE date is TODAY!" |
+| 4 | **toujours** (`horloge/escalier`) | *"TWO, SURE": two old sweethearts on a bench, holding hands as they ALWAYS have.* | Rated weak. "Two, sure" doesn't lead to "always". | **"TOO SURE" (too-ZHOOR):** Tom is TOO SURE of himself: his hand is ALWAYS up first in class, and it's STILL up after the bell (*toujours* also means "still"). |
+| 5 | **comment allez-vous ?** (`fontaine/salutations`) | *"COME ON, TALLY, VOO?": a gentleman tips his top hat to a lady holding a TALLY counter.* | A four-piece pun with a tally counter in it. | **Pun on one chunk: COMMENT-ator.** A sports COMMENTATOR holds his microphone out to a lady at the fountain: "COMMENT ALLEZ-VOUS?", the polite HOW ARE YOU? She answers "Très bien, merci!" (koh-mahn-tah-lay-VOO; the t links). |
+| 6 | **davantage** (`balance/cageot`) | *The little girl licks her ice cream by DA VAN: MORE, from the ice-cream VAN!* | Rated weak; "da van" is a stretch for the sound. | **"ADVANTAGE" (dah-vahn-TAHZH):** in a tug-of-war, one team has the ADVANTAGE because it has MORE players on the rope. |
+| 7 | **mise** (`monde/bagages`) | *A grey mouse carefully PUTS DOWN a wedge of CHEESE on the chart: "chEESE" with an M, "MEEZ".* | Rated weak: a spelling trick, not a sound. | **"MEASLY" (MEEZ):** at the card table, a gambler pushes forward one MEASLY coin as his BET: *la mise*. (This goes with moving the word to the games room, §1.2.) |
+| 8 | **seuil** (`balance/comptes`) | *"SUHY": the cat sits on its doormat, the THRESHOLD of its little corner, beside a bottle of SOY.* | Rated weak. The soy bottle just sits there. | **"SOY" (SUHY), in one action:** the cat knocks over a bottle of SOY sauce, and a dark puddle spreads right across the THRESHOLD. |
+| 9 | **doucement** (`cirque/cirque`) | *A circus strongman cradles a baby lion GENTLY ("doo-suh-MAHN"), rocking it softly to sleep.* | Rated weak: no pun at all. | **"DEW-SO-MAN" (doo-suh-MAHN):** the strongman lifts a dewy rose SO GENTLY that not one drop of DEW falls off it. |
+| 10 | **oreille** (`cabinet/visage`) | *A friendly stingray RAY ("oh-REHY") watches from its glass tank beside a baby elephant fanning out one huge floppy EAR.* | Pun and meaning are side by side, with two animals to remember. | **"OH, RAY?" (oh-REHY):** Grandpa cups his hand behind his EAR: "OH, RAY? Speak up!" One person, one action. |
 
-**Others that would benefit from the same treatment:**
-- *période*: a forced pun on a true cognate (rule 4). The trap worth teaching is the gender: LA période.
-- *demain*: the hook needs a "tomorrow" anchor, for example an alarm clock set for the MORNING; *demain* comes from *de mane*, "from the morning".
-- *secteur*: rated weak; the pizza slice works, but the hook could be cut to a plain cognate card.
-- *vol*: the hook covers only "flight". Add the second sense (theft), which shares the spelling and the hook's vole.
-- *lentement*: it should follow from *lent* (rule 3).
+### 2.2 More weak hooks, with proposals
+
+These come from the 117 live hooks rated weak and from reading the A1–A2 hooks. Hooks not listed here are fine as they are.
+
+| Word (room) | Problem | Proposed hook |
+|---|---|---|
+| **même** (`concours/concours`) | Says "Like English 'same'", but it isn't a cognate. | **"MEME" (MEHM):** the SAME MEME is posted twice, side by side: exactly the SAME. |
+| **dire** (`cafe/terrasse`) | The DEER antlers and the "saying" don't connect. | **"DEER" (DEER):** a talking DEER SAYS "Bonjour!", with a speech bubble coming from its own mouth. |
+| **pied** (`cabinet/cabinet`) | The PIE sits *by* her foot. | **"PIE" (PYAY):** the physio steps her FOOT right into the apple PIE. Splat. |
+| **mal** (`cirque/cirque`) | Lists bad things but has no pun. | **"MALL" (MAHL):** a clown's trip to the MALL goes BADLY: a dropped ice cream and a stuck escalator. |
+| **demain** (`horloge/alcove`) | "DUH-MAN" plus a packed case: nothing says "tomorrow". | **"THE MAIN" (duh-MAN):** a circus poster: "THE MAIN EVENT: TOMORROW!" |
+| **période** (`horloge/scene`) | A forced pun (an accordion "PAY-RYOD") on a real cognate. | **"PAIR + ODE" (pay-RYOD):** a PAIR of poets read one long ODE that lasts the whole school PERIOD. Or keep it plain: "Like English 'period'"; the trap is LA période. |
+| **cuisse** (`cabinet/organes`) | The QUICHE and the THIGH are separate. | **"QUICHE" (KWEES):** the waiter balances a hot QUICHE on his THIGH while he opens the door. |
+| **pêcheur** (`ferme/bassecour`) | "Pay, sure!" is forced. | **"PERCHER" (peh-SHUHR):** a FISHERMAN PERCHED on the jetty pulls up a PERCH. (Also move the word to the port, §1.2.) |
+| **noix** (`foret/foret`) | "N'wah!" is a noise, not a word. | **"NO WAY!" (NWAH):** the squirrel strains with both paws: "NO WAY!" This WALNUT won't crack. |
+| **fauve** (`foret/soucheanimaux`) | No pun at all. | **"FOE" (FOHV):** the antelopes freeze: the BIG CAT on the rock is their FOE. |
+| **proie** (`foret/loups`) | "prwah!" is a noise. | **"PRAY" (PRWAH):** the mouse clasps its paws and PRAYS as the hawk dives: the PREY must PRAY. |
+| **veau** (`ferme/ferme`) | No pun. | **"WHOA!" (VOH):** the farmer shouts "WHOA!" as the wobbly newborn CALF takes its first steps. |
+| **aube** (`eglise/armoire`) | Two senses jammed into one scene: a rooster at dawn, plus an alb. | **The vestment in the sacristy: "ROBE without the R" (OHB):** the priest's long white ALB is a ROBE that lost its R. Keep "dawn" for a sky room. |
+| **chandelle** (`eglise/eglise`) | Relies on "chandler", which few learners know. | **"CHANDELIER" (shahn-DEHL):** the old CHANDELIER is a ring of CANDLES; *une chandelle* is one of them. |
+| **scier** (`garage/garage`) | The hook says it has no pun ("a clear action picture"). | **"SEE-(saw)" (SYAY):** Monsieur Verbe SAWS a plank in half and turns it into a SEE-SAW. |
+| **aveugler** (`st_reflets/miroirs`) | No pun. | **"GLARE" (ah-vuh-GLAY):** the GLARE of the headlights BLINDS Monsieur Verbe. |
+| **ressortir** (`st_bagages/demenageurs`) | No pun. | **"RE-SORT HERE" (ruh-sor-TEER):** he RE-SORTS the pile of cushions, and the red one STANDS OUT. |
+| **filière** (`zone_artisanale/atelier`) | "FILE YARE" is forced. | **"FILLY-AIR" (fee-LYEHR):** a young FILLY gallops down a fenced CHANNEL: her TRACK. |
+| **réchauffement** (`zone_artisanale/pupitre`) | "RE-SHOVE MAN" is forced. | **"RAY'S SHOW, MAN" (ray-shohf-MAHN):** weatherman RAY's SHOW: a map turning redder and redder: global WARMING. |
+| **combustible** (`zone_artisanale/table`) | "CON BUS TABLE" is forced, and it misses the trap. | **Plain card:** like English "combustible" (it burns), but in French it's the noun FUEL: a pile of logs labelled *combustible*. |
+| **assemblée**, **industriel**, **montage**, **manufacture** (`zone_artisanale/*`) | Multi-piece puns ("A SUMMONED BLAY", "IN DEW TREE, YELL", "MON TAJ", "MANY FACTORY TOUR"). | **Plain cognate cards.** Two need notes: *montage* is mostly ASSEMBLY (putting parts together), and *une manufacture* is a FACTORY. |
+| **épouvantable** (`concours/gateaux_casier`) | Fine as it is ("a VAN tips its honey pots onto the cake TABLE"). | Keep it. It shows what works: two chunks and one action. |
+
+### 2.3 Optional: *-ment* adverbs
+
+`cirque` and `balance` paint 164 *-ment* adverbs, each with its own scene. They can keep their puns: many are good, like *lentement*'s "lantern man". Where an adverb's pun is weak, a cheaper fix is to reuse the adjective's pun and add "-ly": *doux* → *doucement* in the strongman scene above, *rapide* → *rapidement*.
 
 ---
 
@@ -578,6 +607,6 @@ Pick one home per word, or keep both placements and share a single hook (see Par
 2. **Make the gloss fixes in §1.4.** Each is one line of data and needs no repainting.
 3. **Settle §1.3 before those buildings are painted.** It costs nothing now.
 4. **Add the placement check** described in §1.6.
-5. **Rule 1 (one hook per word):** merge the 33 double hooks.
-6. **Rule 3 (*-ment* adverbs):** decide whether to pursue it, since it changes how `cirque` and `balance` are painted.
+5. **One hook per word:** merge the 33 double hooks.
+6. **Rewrite the hooks in §2.1 and §2.2.** Each one is a single field in `vocab.jsonl`, or in a v2 `hooks.json` override.
 7. **Work through the rest of §1.2 B and C building by building** whenever a building is next repainted.
