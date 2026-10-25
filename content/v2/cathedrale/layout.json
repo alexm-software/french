@@ -1,0 +1,282 @@
+{
+ "building": "cathedrale",
+ "building_id": "B42_cathedrale",
+ "sector_id": "S11_church",
+ "v1_room_id": "R_ch_hierarchy",
+ "name": "La cathédrale · The cathedral",
+ "main": "cathedrale",
+ "roomList": [
+  {
+   "key": "cathedrale",
+   "short": "La salle de l'évêque · The bishop's hall"
+  }
+ ],
+ "planned": {
+  "cathedrale": {
+   "vocabRoom": "R_ch_hierarchy",
+   "only": [
+    "fr_pape_noun",
+    "fr_pretre_noun",
+    "fr_cure_noun",
+    "fr_eveque_noun",
+    "fr_cardinal_noun",
+    "fr_vatican_noun",
+    "fr_seminaire_noun",
+    "fr_clerge_noun",
+    "fr_concile_noun",
+    "fr_vicaire_noun"
+   ]
+  },
+  "credence": {
+   "vocabRoom": "R_ch_hierarchy_z1",
+   "only": [
+    "fr_crosse_noun",
+    "fr_mitre_noun",
+    "fr_ordination_noun",
+    "fr_encyclique_noun",
+    "fr_seminariste_noun",
+    "fr_diocese_noun",
+    "fr_pontife_noun",
+    "fr_conclave_noun",
+    "fr_apostolique_adj",
+    "fr_pontifical_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "cathedrale": {
+   "name": "La salle de l'évêque · The bishop's hall",
+   "room_id": "R_ch_hierarchy",
+   "image": "cathedrale/cathedrale.jpg",
+   "alt": "The bishop's hall inside the honey-stone gothic cathedral, painted in ink and gouache: the tall open door on the left looks out on the sunny cathedral square and its twin spires; beside it a credence table holds a mitre, a crosier and other treasures; a cheerful bishop vacuums the red carpet; on the right a group portrait of the clergy with a blue jay on its frame, a model dome in a wooden vat beside a tin can, three stools in a semicircle with open books, a pop-up pope over a book on the lectern, a council table with a sealed scroll, and a cardinal with a red cardinal bird, a young priest with a tray of teacups, an old parish priest watering a geranium and a young curate with a basket of bread and apples.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     60,
+     40,
+     175,
+     126
+    ],
+    "label": "Le parvis · The square"
+   },
+   "doors": [],
+   "zooms": [
+    {
+     "to": "credence",
+     "label": "la crédence",
+     "hint": "Look closer at the treasures on the credence table",
+     "at": [
+      300,
+      180
+     ],
+     "obj": [
+      20,
+      170,
+      520,
+      292
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_pape_noun",
+     "box": [
+      900,
+      210,
+      140,
+      166
+     ]
+    },
+    {
+     "id": "fr_pretre_noun",
+     "box": [
+      864,
+      380,
+      108,
+      314
+     ]
+    },
+    {
+     "id": "fr_cure_noun",
+     "box": [
+      976,
+      388,
+      150,
+      310
+     ]
+    },
+    {
+     "id": "fr_eveque_noun",
+     "box": [
+      548,
+      281,
+      132,
+      320
+     ]
+    },
+    {
+     "id": "fr_cardinal_noun",
+     "box": [
+      719,
+      381,
+      140,
+      313
+     ]
+    },
+    {
+     "id": "fr_vatican_noun",
+     "box": [
+      1056,
+      40,
+      185,
+      165
+     ]
+    },
+    {
+     "id": "fr_seminaire_noun",
+     "box": [
+      690,
+      240,
+      190,
+      138
+     ]
+    },
+    {
+     "id": "fr_clerge_noun",
+     "box": [
+      775,
+      12,
+      195,
+      195
+     ]
+    },
+    {
+     "id": "fr_concile_noun",
+     "box": [
+      1050,
+      215,
+      225,
+      170
+     ]
+    },
+    {
+     "id": "fr_vicaire_noun",
+     "box": [
+      1130,
+      415,
+      140,
+      300
+     ]
+    }
+   ],
+   "building_id": "B42_cathedrale",
+   "sector_id": "S11_church"
+  },
+  "credence": {
+   "name": "La crédence · The credence table",
+   "room_id": "R_ch_hierarchy_z1",
+   "image": "cathedrale/credence.jpg",
+   "parent": "cathedrale",
+   "alt": "Close-up of the credence table: a white mitre with a tape measure, a golden crosier lying across the cloth, a little painting of candles in a neat row on the open door, a rolled letter riding a tiny bicycle, a sealed letter on a little post with a leek, a crossed-keys coat of arms on the wall, a wedge of cheese holding down a map, a model chapel with a cone roof and a white puff, a figurine of a seminarian balancing books on his wrist and a figurine of the pope standing on a stone bridge.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_crosse_noun",
+     "box": [
+      30,
+      455,
+      160,
+      262
+     ]
+    },
+    {
+     "id": "fr_mitre_noun",
+     "box": [
+      200,
+      340,
+      185,
+      225
+     ]
+    },
+    {
+     "id": "fr_ordination_noun",
+     "box": [
+      490,
+      100,
+      131,
+      190
+     ]
+    },
+    {
+     "id": "fr_encyclique_noun",
+     "box": [
+      437,
+      415,
+      238,
+      140
+     ]
+    },
+    {
+     "id": "fr_seminariste_noun",
+     "box": [
+      890,
+      325,
+      115,
+      265
+     ]
+    },
+    {
+     "id": "fr_diocese_noun",
+     "box": [
+      735,
+      470,
+      128,
+      150
+     ]
+    },
+    {
+     "id": "fr_pontife_noun",
+     "box": [
+      1015,
+      180,
+      215,
+      490
+     ]
+    },
+    {
+     "id": "fr_conclave_noun",
+     "box": [
+      785,
+      20,
+      175,
+      290
+     ]
+    },
+    {
+     "id": "fr_apostolique_adj",
+     "box": [
+      556,
+      560,
+      175,
+      134
+     ]
+    },
+    {
+     "id": "fr_pontifical_adj",
+     "box": [
+      694,
+      56,
+      87,
+      116
+     ]
+    }
+   ],
+   "building_id": "B42_cathedrale",
+   "sector_id": "S11_church"
+  }
+ }
+}
