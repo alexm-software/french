@@ -118,3 +118,8 @@ Run these in addition to the generic Validation section of the Memory palace bui
 - **Adverbs:** where an -ment adverb's own pun is weak, reuse the adjective's pun plus "-ly".
 - **A moved word needs its hook and painting redone**, because hooks describe the room they're painted in.
 - **Inner areas match the overview.** Every district's sector map, building exteriors and interiors keep the landmarks, architecture, materials and colours the top-level map shows for it.
+
+## Verbs live inside the scenes (user review, Oct 25 evening)
+- Don't cluster verbs: no verb corner, no row of verb mimes along one edge, no separate verb street or alley. Grouping pushes them aside, so learners miss them.
+- Each verb sits in the room where its action naturally happens, spread across the scene among the nouns and doing something with them: the verb character kneads the dough on the baker's table, haggles over the scale at the stall, or carries the trunk up the stairs. Keep the verb character's costume cue so a verb is still easy to spot.
+- When a building is repainted, move the verbs from its sector's verb street into its rooms where they fit, and retire the emptied street or give it a real non-verb purpose.

@@ -137,3 +137,4 @@ These are blocking. A space does not ship until each one passes, and the builder
 - No-overflow gate: every room's words share an honest theme that can be painted as one scene. Rooms of leftover abstract nouns fail.
 - One-hook gate: a word that appears in more than one room has the same hook everywhere.
 - Forced-pun gate: reject hooks with the wrong vowel, more than two sound chunks, a pun object that only sits beside the meaning, no pun at all, or a "like English X" template on a non-cognate.
+- Integrated-verbs gate: a room's verbs are spread through the scene and interact with its nouns. A room fails if its verbs are bunched in one zone, lined up along an edge, or kept in a verb-only street.
