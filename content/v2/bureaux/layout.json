@@ -1,1988 +1,1996 @@
 {
-  "building": "bureaux",
-  "building_id": "B11_bureaux",
-  "sector_id": "S05_bank",
-  "name": "Les Bureaux",
-  "main": "bureaux",
-  "roomList": [
-    {
-      "key": "bureaux",
-      "short": "Le hall"
-    },
-    {
-      "key": "etage",
-      "short": "Le premier étage"
-    },
-    {
-      "key": "direction",
-      "short": "La direction"
-    },
-    {
-      "key": "metiers",
-      "short": "Les métiers"
-    },
-    {
-      "key": "services",
-      "short": "Les services"
-    },
-    {
-      "key": "apprentis",
-      "short": "Les apprentis"
-    },
-    {
-      "key": "gardes",
-      "short": "Les gardes"
-    },
-    {
-      "key": "savants",
-      "short": "Les savants"
-    }
-  ],
-  "planned": {
-    "bureaux": {
-      "vocabRoom": "R_office_01",
-      "only": [
-        "fr_entreprise_noun",
-        "fr_fonction_noun",
-        "fr_affaire_noun",
-        "fr_compagnie_noun",
-        "fr_bureau_noun",
-        "fr_rapport_noun",
-        "fr_aide_noun_m",
-        "fr_directeur_noun",
-        "fr_chef_noun",
-        "fr_patron_noun"
-      ]
-    },
-    "table": {
-      "vocabRoom": "R_office_01",
-      "only": [
-        "fr_reunion_noun",
-        "fr_liste_noun",
-        "fr_collegue_noun",
-        "fr_contrat_noun",
-        "fr_employe_noun",
-        "fr_conge_noun",
-        "fr_chomage_noun",
-        "fr_interim_noun"
-      ]
-    },
-    "etage": {
-      "vocabRoom": "R_office_02",
-      "only": [
-        "fr_facture_noun",
-        "fr_augmentation_noun",
-        "fr_comptabilite_noun",
-        "fr_candidature_noun",
-        "fr_cabinet_noun",
-        "fr_entretien_noun",
-        "fr_salarie_noun",
-        "fr_syndicat_noun",
-        "fr_salaire_noun"
-      ]
-    },
-    "classeur": {
-      "vocabRoom": "R_office_02",
-      "only": [
-        "fr_reportage_noun",
-        "fr_business_noun",
-        "fr_collaborateur_noun",
-        "fr_prefet_noun",
-        "fr_confrere_noun",
-        "fr_rassemblement_noun",
-        "fr_employeur_noun",
-        "fr_arrete_noun",
-        "fr_secretariat_noun"
-      ]
-    },
-    "ecritoire": {
-      "vocabRoom": "R_office_02",
-      "only": [
-        "fr_convention_noun",
-        "fr_paie_noun",
-        "fr_pacte_noun"
-      ]
-    },
-    "direction": {
-      "vocabRoom": "R_office_03",
-      "only": [
-        "fr_degradation_noun",
-        "fr_demission_noun",
-        "fr_resignation_noun",
-        "fr_compensation_noun",
-        "fr_firme_noun",
-        "fr_indemnite_noun",
-        "fr_fournisseur_noun",
-        "fr_entrepreneur_noun",
-        "fr_compere_noun"
-      ]
-    },
-    "pupitre": {
-      "vocabRoom": "R_office_03",
-      "only": [
-        "fr_corporation_noun",
-        "fr_remuneration_noun",
-        "fr_licenciement_noun",
-        "fr_coordinateur_noun"
-      ]
-    },
-    "metiers": {
-      "vocabRoom": "R_occupations_01",
-      "only": [
-        "fr_carriere_noun",
-        "fr_medecin_noun",
-        "fr_secretaire_noun",
-        "fr_metier_noun",
-        "fr_ouvrier_noun",
-        "fr_oeuvre_noun_m",
-        "fr_infirmier_noun",
-        "fr_emploi_noun",
-        "fr_assistant_noun"
-      ]
-    },
-    "comptoir": {
-      "vocabRoom": "R_occupations_01",
-      "only": [
-        "fr_profession_noun",
-        "fr_specialite_noun",
-        "fr_ingenieur_noun"
-      ]
-    },
-    "services": {
-      "vocabRoom": "R_occupations_02",
-      "only": [
-        "fr_bonne_noun",
-        "fr_charrette_noun",
-        "fr_concierge_noun",
-        "fr_fonctionnaire_noun",
-        "fr_specialiste_noun",
-        "fr_architecte_noun",
-        "fr_ambassadeur_noun",
-        "fr_tube_noun",
-        "fr_serviteur_noun",
-        "fr_boulanger_noun"
-      ]
-    },
-    "guichet": {
-      "vocabRoom": "R_occupations_02",
-      "only": [
-        "fr_nourrice_noun",
-        "fr_bourgeoisie_noun",
-        "fr_psychiatre_noun",
-        "fr_magicien_noun",
-        "fr_epicier_noun"
-      ]
-    },
-    "apprentis": {
-      "vocabRoom": "R_occupations_03",
-      "only": [
-        "fr_occupation_noun",
-        "fr_job_noun",
-        "fr_apprenti_noun",
-        "fr_second_noun",
-        "fr_apprentissage_noun",
-        "fr_stage_noun",
-        "fr_diplome_noun",
-        "fr_pompier_noun",
-        "fr_chomeur_noun",
-        "fr_associe_noun"
-      ]
-    },
-    "etabli": {
-      "vocabRoom": "R_occupations_03",
-      "only": [
-        "fr_embauche_noun",
-        "fr_pro_noun",
-        "fr_adepte_noun",
-        "fr_travailleur_noun",
-        "fr_technicien_noun",
-        "fr_coach_noun"
-      ]
-    },
-    "gardes": {
-      "vocabRoom": "R_occupations_04",
-      "only": [
-        "fr_nounou_noun",
-        "fr_demoiselle_noun",
-        "fr_baby_sitter_noun",
-        "fr_surveillant_noun",
-        "fr_forgeron_noun",
-        "fr_menuisier_noun",
-        "fr_inventeur_noun",
-        "fr_caniveau_noun"
-      ]
-    },
-    "tablette": {
-      "vocabRoom": "R_occupations_04",
-      "only": [
-        "fr_canalisation_noun",
-        "fr_garderie_noun",
-        "fr_promoteur_noun"
-      ]
-    },
-    "savants": {
-      "vocabRoom": "R_occupations_05",
-      "only": [
-        "fr_diplomatie_noun",
-        "fr_qualification_noun",
-        "fr_aristocrate_noun",
-        "fr_stagiaire_noun",
-        "fr_analyste_noun",
-        "fr_resume_noun",
-        "fr_educateur_noun",
-        "fr_electricien_noun",
-        "fr_assureur_noun"
-      ]
-    },
-    "console": {
-      "vocabRoom": "R_occupations_05",
-      "only": [
-        "fr_doctorat_noun",
-        "fr_praticien_noun",
-        "fr_academicien_noun"
-      ]
-    }
+ "building": "bureaux",
+ "building_id": "B11_bureaux",
+ "sector_id": "S05_bank",
+ "name": "Les Bureaux",
+ "main": "bureaux",
+ "roomList": [
+  {
+   "key": "bureaux",
+   "short": "Le hall"
   },
-  "rooms": {
-    "bureaux": {
-      "name": "Le hall des bureaux",
-      "room_id": "R_office_01",
-      "image": "bureaux/bureaux.jpg",
-      "alt": "The busy ground-floor hall of the village offices, painted in ink and gouache: through the open entrance door on the far left an autumn street glows; a woman carries her firm's gold prize on a silver tray; a little girl in a party hat spins at the office party; a businesswoman with her briefcase closes a deal; a lady leads a little white pony through the hall; seven coloured doors (purple, teal, mustard, coral, slate blue, olive and navy) line the back wall; a grey donkey in glasses works at his desk; a man in a cap reads out a thick report; a young assistant hurries over with a first-aid box; a film director calls through his megaphone; the boss strides about in a tall white chef's hat, and jolly old Pa sits on his carved throne.",
-      "nameplate": [
-        50,
-        94
-      ],
-      "mapExit": {
-        "box": [
-          5,
-          40,
-          165,
-          220
-        ],
-        "label": "Quai de la Banque"
-      },
-      "doors": [
-        {
-          "to": "metiers",
-          "label": "les métiers",
-          "hint": "Go through the purple door to the jobs gallery",
-          "hit": [
-            295,
-            115,
-            85,
-            160
-          ]
-        },
-        {
-          "to": "services",
-          "label": "les services",
-          "hint": "Go through the teal door to the services gallery",
-          "hit": [
-            432,
-            115,
-            90,
-            170
-          ]
-        },
-        {
-          "to": "apprentis",
-          "label": "les apprentis",
-          "hint": "Go through the mustard door to the apprentices' gallery",
-          "hit": [
-            565,
-            115,
-            90,
-            170
-          ]
-        },
-        {
-          "to": "etage",
-          "label": "le premier étage",
-          "hint": "Go through the coral door up to the first-floor office",
-          "hit": [
-            705,
-            115,
-            90,
-            165
-          ]
-        },
-        {
-          "to": "gardes",
-          "label": "les gardes",
-          "hint": "Go through the slate-blue door to the minders' gallery",
-          "hit": [
-            838,
-            115,
-            82,
-            165
-          ]
-        },
-        {
-          "to": "direction",
-          "label": "la direction",
-          "hint": "Go through the olive door up to the management floor",
-          "hit": [
-            972,
-            115,
-            88,
-            135
-          ]
-        },
-        {
-          "to": "savants",
-          "label": "les savants",
-          "hint": "Go through the navy door to the scholars' gallery",
-          "hit": [
-            1120,
-            115,
-            80,
-            85
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "table",
-          "label": "la table",
-          "hint": "Look closer at the big desk in the middle of the hall",
-          "at": [
-            710,
-            330
-          ],
-          "obj": [
-            440,
-            270,
-            370,
-            208
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_entreprise_noun",
-          "box": [
-            60,
-            268,
-            128,
-            300
-          ]
-        },
-        {
-          "id": "fr_fonction_noun",
-          "box": [
-            190,
-            400,
-            82,
-            212
-          ],
-          "labelAt": [
-            231,
-            623
-          ]
-        },
-        {
-          "id": "fr_affaire_noun",
-          "box": [
-            278,
-            282,
-            150,
-            276
-          ]
-        },
-        {
-          "id": "fr_compagnie_noun",
-          "box": [
-            432,
-            484,
-            224,
-            150
-          ]
-        },
-        {
-          "id": "fr_bureau_noun",
-          "box": [
-            700,
-            380,
-            140,
-            245
-          ]
-        },
-        {
-          "id": "fr_rapport_noun",
-          "box": [
-            842,
-            290,
-            78,
-            290
-          ]
-        },
-        {
-          "id": "fr_aide_noun_m",
-          "box": [
-            922,
-            372,
-            100,
-            300
-          ]
-        },
-        {
-          "id": "fr_directeur_noun",
-          "box": [
-            945,
-            288,
-            140,
-            80
-          ],
-          "labelAt": [
-            1015,
-            268
-          ]
-        },
-        {
-          "id": "fr_chef_noun",
-          "box": [
-            1090,
-            200,
-            110,
-            140
-          ]
-        },
-        {
-          "id": "fr_patron_noun",
-          "box": [
-            1096,
-            345,
-            176,
-            285
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "table": {
-      "name": "La table du hall",
-      "room_id": "R_office_01_z1",
-      "image": "bureaux/table.jpg",
-      "parent": "bureaux",
-      "alt": "Close-up of the big desk in the hall: little wooden figurines sit round a tiny meeting table; a very long list unrolls over the edge of the desk past the businesswoman's arm; two smiling eggs stand side by side in their cups; a toy tractor parks on a sealed contract; a little worker figurine throws up both arms; a conga drum stands by a small beach picture, and a little wizard with his empty hat holds up a sign showing a magnifying glass over a briefcase: he is looking for work. A nervous stand-in waiter balances a teacup near the rim of his tray in front of the desk. The pony's head and the donkey's ears peep in at the bottom.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_reunion_noun",
-          "box": [
-            269,
-            119,
-            312,
-            222
-          ]
-        },
-        {
-          "id": "fr_liste_noun",
-          "box": [
-            356,
-            350,
-            262,
-            310
-          ]
-        },
-        {
-          "id": "fr_collegue_noun",
-          "box": [
-            594,
-            206,
-            144,
-            144
-          ]
-        },
-        {
-          "id": "fr_contrat_noun",
-          "box": [
-            742,
-            206,
-            166,
-            206
-          ]
-        },
-        {
-          "id": "fr_employe_noun",
-          "box": [
-            912,
-            112,
-            135,
-            174
-          ]
-        },
-        {
-          "id": "fr_conge_noun",
-          "box": [
-            990,
-            290,
-            160,
-            88
-          ]
-        },
-        {
-          "id": "fr_chomage_noun",
-          "box": [
-            1050,
-            70,
-            218,
-            212
-          ]
-        },
-        {
-          "id": "fr_interim_noun",
-          "box": [
-            740,
-            425,
-            145,
-            290
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "etage": {
-      "name": "Le premier étage",
-      "room_id": "R_office_02",
-      "image": "bureaux/etage.jpg",
-      "backTo": "bureaux",
-      "alt": "The first-floor landing on job-interview day, seen from the top of the stairs under a round skylight, painted in ink and gouache: a woman in green hands over the bill for the little toy factory with its smoking chimney; a proud woman lifts her money plant, now taller than she is; at the writing desk with its figurines, toy van and sealed parcel a woman clacks a big abacus; a young candidate holds out her rolled application; across the landing a nervous young man is handed a cup of tea as he steps in for his interview, a worker in overalls waves his lunchbox, a sandy cat on its hind legs holds up a placard, a lawyer in a black gown greets visitors at the door of his wood-panelled cabin, a Roman in a toga is paid in a big bowl of salad, and papers fly from the tall filing cabinet by the right wall.",
-      "nameplate": [
-        27,
-        8
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the coral door down to the hall",
-          "hit": [
-            40,
-            72,
-            120,
-            68
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "ecritoire",
-          "label": "l'écritoire",
-          "hint": "Look closer at the writing desk on the left",
-          "at": [
-            450,
-            640
-          ],
-          "obj": [
-            300,
-            588,
-            320,
-            122
-          ]
-        },
-        {
-          "to": "classeur",
-          "label": "le classeur",
-          "hint": "Look closer at the filing cabinet on the right",
-          "at": [
-            1200,
-            250
-          ],
-          "obj": [
-            1125,
-            150,
-            155,
-            200
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_facture_noun",
-          "box": [
-            75,
-            150,
-            315,
-            240
-          ]
-        },
-        {
-          "id": "fr_augmentation_noun",
-          "box": [
-            478,
-            72,
-            118,
-            250
-          ]
-        },
-        {
-          "id": "fr_comptabilite_noun",
-          "box": [
-            185,
-            400,
-            245,
-            175
-          ],
-          "labelAt": [
-            186,
-            401
-          ]
-        },
-        {
-          "id": "fr_candidature_noun",
-          "box": [
-            440,
-            335,
-            165,
-            215
-          ],
-          "labelAt": [
-            478,
-            332
-          ]
-        },
-        {
-          "id": "fr_cabinet_noun",
-          "box": [
-            960,
-            130,
-            150,
-            215
-          ]
-        },
-        {
-          "id": "fr_entretien_noun",
-          "box": [
-            668,
-            125,
-            165,
-            150
-          ],
-          "labelAt": [
-            670,
-            120
-          ]
-        },
-        {
-          "id": "fr_salarie_noun",
-          "box": [
-            668,
-            285,
-            163,
-            265
-          ]
-        },
-        {
-          "id": "fr_syndicat_noun",
-          "box": [
-            841,
-            405,
-            127,
-            255
-          ]
-        },
-        {
-          "id": "fr_salaire_noun",
-          "box": [
-            990,
-            358,
-            190,
-            312
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "classeur": {
-      "name": "Le classeur",
-      "room_id": "R_office_02_z1",
-      "image": "bureaux/classeur.jpg",
-      "parent": "etage",
-      "alt": "A close-up at the first floor's filing cabinet on a cool autumn morning: ochre plaster wall, honey wood panelling and leaves on the parquet. On the left the tall wooden cabinet has every brass-handled drawer yanked open and a clerk on a ladder sends a storm of papers fluttering down. On the right the office bustles: a boy films a toy ship in a washbasin harbour with an old box camera; a bumblebee flies off with a tiny briefcase; two labrador puppies pull a little cart together; a neat little official in a gold-braided cap stands to attention; two doctors in white coats confer; raspberries are gathered on a saucer on a stool; a top-hatted employer holds out a golden key; a police officer holds up a stamped decree; and a typewriter on a small desk is chained shut with a padlock.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_reportage_noun",
-          "box": [
-            850,
-            69,
-            198,
-            156
-          ]
-        },
-        {
-          "id": "fr_business_noun",
-          "box": [
-            1072,
-            22,
-            112,
-            82
-          ],
-          "labelAt": [
-            1090,
-            18
-          ]
-        },
-        {
-          "id": "fr_collaborateur_noun",
-          "box": [
-            1058,
-            112,
-            195,
-            132
-          ],
-          "labelAt": [
-            1142,
-            116
-          ]
-        },
-        {
-          "id": "fr_prefet_noun",
-          "box": [
-            700,
-            245,
-            100,
-            212
-          ]
-        },
-        {
-          "id": "fr_confrere_noun",
-          "box": [
-            818,
-            250,
-            232,
-            195
-          ]
-        },
-        {
-          "id": "fr_rassemblement_noun",
-          "box": [
-            1090,
-            356,
-            82,
-            52
-          ]
-        },
-        {
-          "id": "fr_employeur_noun",
-          "box": [
-            694,
-            482,
-            140,
-            218
-          ],
-          "labelAt": [
-            696,
-            486
-          ]
-        },
-        {
-          "id": "fr_arrete_noun",
-          "box": [
-            875,
-            482,
-            180,
-            220
-          ],
-          "labelAt": [
-            891,
-            490
-          ]
-        },
-        {
-          "id": "fr_secretariat_noun",
-          "box": [
-            1088,
-            530,
-            175,
-            122
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "ecritoire": {
-      "name": "L'écritoire",
-      "room_id": "R_office_02_z2",
-      "image": "bureaux/ecritoire.jpg",
-      "parent": "etage",
-      "alt": "A close-up of the writing desk on the first-floor landing, the big abacus at the back: a woman counts gold coins one by one into her little envelope; two carved wooden figurines shake hands on a deal while their little blue-and-white van waits behind them; and a pair of hands presses down on a brown paper parcel packed so tight it bulges, tied with string and sealed with a big blob of red wax, while tiny wooden figurines cheer all round.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_convention_noun",
-          "box": [
-            390,
-            165,
-            250,
-            355
-          ]
-        },
-        {
-          "id": "fr_paie_noun",
-          "box": [
-            77,
-            60,
-            303,
-            615
-          ],
-          "labelAt": [
-            82,
-            53
-          ]
-        },
-        {
-          "id": "fr_pacte_noun",
-          "box": [
-            705,
-            165,
-            495,
-            480
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "direction": {
-      "name": "La direction",
-      "room_id": "R_office_03",
-      "image": "bureaux/direction.jpg",
-      "backTo": "bureaux",
-      "alt": "The directors' boardroom on a stormy night, painted in ink and gouache: lightning flashes in the tall windows and rain lashes a stone statue crumbling by the window; a secret agent in a trench coat walks out through the open door with his briefcase; a tabby cat sits in a clawfoot bath with a resigned sigh; a little girl beams at the fresh pink ice cream that replaces the cone she dropped; two businesswomen shake hands firmly under the chandelier; a sorry black dog lies by a pair of chewed shoes; a boy pours lemonade at his own little stand; a supplier wheels in a trolley of boxes; three grinning old comedians in bowler hats walk arm in arm; and on the big desk at the front a model office tower, a girl with her pay envelope and a line of ducklings wait.",
-      "nameplate": [
-        50,
-        10
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the olive door down to the hall",
-          "hit": [
-            1010,
-            80,
-            160,
-            105
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "pupitre",
-          "label": "le pupitre",
-          "hint": "Look closer at the carved desk on the right",
-          "at": [
-            1100,
-            560
-          ],
-          "obj": [
-            915,
-            405,
-            365,
-            315
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_degradation_noun",
-          "box": [
-            77,
-            150,
-            100,
-            290
-          ]
-        },
-        {
-          "id": "fr_demission_noun",
-          "box": [
-            240,
-            185,
-            120,
-            170
-          ]
-        },
-        {
-          "id": "fr_resignation_noun",
-          "box": [
-            80,
-            452,
-            235,
-            150
-          ]
-        },
-        {
-          "id": "fr_compensation_noun",
-          "box": [
-            328,
-            368,
-            108,
-            294
-          ]
-        },
-        {
-          "id": "fr_firme_noun",
-          "box": [
-            500,
-            190,
-            150,
-            180
-          ]
-        },
-        {
-          "id": "fr_indemnite_noun",
-          "box": [
-            450,
-            485,
-            220,
-            190
-          ],
-          "labelAt": [
-            510,
-            476
-          ]
-        },
-        {
-          "id": "fr_fournisseur_noun",
-          "box": [
-            830,
-            240,
-            230,
-            115
-          ]
-        },
-        {
-          "id": "fr_entrepreneur_noun",
-          "box": [
-            705,
-            372,
-            195,
-            248
-          ]
-        },
-        {
-          "id": "fr_compere_noun",
-          "box": [
-            1072,
-            195,
-            150,
-            198
-          ],
-          "labelAt": [
-            1097,
-            196
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "pupitre": {
-      "name": "Le pupitre de la direction",
-      "room_id": "R_office_03_z1",
-      "image": "bureaux/pupitre.jpg",
-      "parent": "direction",
-      "alt": "A close-up of the big desk in the stormy-night boardroom: on the left a model glass office tower with a tiny cheerful worker waving from every window; a young woman tears open her fat pay envelope and gold coins tumble into her hands; a kind grey-haired boss gently hands a card back to a sad young worker hugging his box of belongings, a pot plant and a mug poking out; and on the right a coordinator in a waistcoat points the way for a neat line of fluffy yellow ducklings marching across the desk.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_corporation_noun",
-          "box": [
-            77,
-            43,
-            235,
-            590
-          ]
-        },
-        {
-          "id": "fr_remuneration_noun",
-          "box": [
-            325,
-            90,
-            255,
-            510
-          ]
-        },
-        {
-          "id": "fr_licenciement_noun",
-          "box": [
-            600,
-            45,
-            330,
-            560
-          ]
-        },
-        {
-          "id": "fr_coordinateur_noun",
-          "box": [
-            945,
-            190,
-            258,
-            450
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "metiers": {
-      "name": "La galerie des métiers",
-      "room_id": "R_occupations_01",
-      "image": "bureaux/metiers.jpg",
-      "backTo": "bureaux",
-      "alt": "The trades fair in the cobbled courtyard of the offices, under bunting and balloons, painted in ink and gouache: by the door on the left a young woman climbs a ladder carrying the basket of a little striped hot-air balloon; a doctor kneels to give a boy on a stool a spoonful of medicine; a secretary bird stands at its little writing desk with a quill; on the stage under the striped awning a boy potter lifts his first blue vase, a worker in overalls cheers beside a red toolbox tied with a bow and an old alchemist holds up his glowing masterpiece by his bubbling flasks; in front, a male nurse tucks a blanket round a smiling old man in a wheelchair, a tabby cat with a shiny badge on its collar sits on the stage edge, a young assistant in a lab coat holds out a frying pan, and on the corner counter a beaver sits beside a blue teapot.",
-      "nameplate": [
-        48,
-        10
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the purple door to the hall",
-          "hit": [
-            8,
-            80,
-            85,
-            330
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "comptoir",
-          "label": "le comptoir",
-          "hint": "Look closer at the desk on the right",
-          "at": [
-            1180,
-            620
-          ],
-          "obj": [
-            1080,
-            515,
-            200,
-            205
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_carriere_noun",
-          "box": [
-            175,
-            25,
-            240,
-            250
-          ]
-        },
-        {
-          "id": "fr_medecin_noun",
-          "box": [
-            300,
-            288,
-            272,
-            330
-          ]
-        },
-        {
-          "id": "fr_secretaire_noun",
-          "box": [
-            585,
-            235,
-            195,
-            150
-          ]
-        },
-        {
-          "id": "fr_metier_noun",
-          "box": [
-            780,
-            85,
-            120,
-            230
-          ]
-        },
-        {
-          "id": "fr_ouvrier_noun",
-          "box": [
-            908,
-            120,
-            112,
-            240
-          ],
-          "labelAt": [
-            962,
-            106
-          ]
-        },
-        {
-          "id": "fr_oeuvre_noun_m",
-          "box": [
-            1030,
-            100,
-            173,
-            200
-          ]
-        },
-        {
-          "id": "fr_infirmier_noun",
-          "box": [
-            615,
-            398,
-            310,
-            280
-          ],
-          "labelAt": [
-            846,
-            386
-          ]
-        },
-        {
-          "id": "fr_emploi_noun",
-          "box": [
-            1080,
-            368,
-            105,
-            135
-          ],
-          "labelAt": [
-            1082,
-            355
-          ]
-        },
-        {
-          "id": "fr_assistant_noun",
-          "box": [
-            935,
-            410,
-            135,
-            265
-          ],
-          "labelAt": [
-            994,
-            396
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "comptoir": {
-      "name": "Le comptoir des métiers",
-      "room_id": "R_occupations_01_z1",
-      "image": "bureaux/comptoir.jpg",
-      "parent": "metiers",
-      "alt": "A close-up of the little corner counter at the courtyard trades fair, under the striped awning: a proud beaver carries a big log for the stick dam he is building; beside it an owl perches watching a blue teapot pour a curl of steaming special tea into a cup; and on the right an engineer in a yellow hard hat tightens the last bolt on a giant brass clockwork engine full of cogs.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_profession_noun",
-          "box": [
-            77,
-            168,
-            285,
-            440
-          ]
-        },
-        {
-          "id": "fr_specialite_noun",
-          "box": [
-            374,
-            155,
-            283,
-            450
-          ]
-        },
-        {
-          "id": "fr_ingenieur_noun",
-          "box": [
-            705,
-            85,
-            498,
-            545
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "services": {
-      "name": "La galerie des services",
-      "room_id": "R_occupations_02",
-      "image": "bureaux/services.jpg",
-      "backTo": "bureaux",
-      "alt": "The services gallery at lunchtime, painted in ink and gouache in deep perspective, autumn leaves blowing across the parquet from a teal door standing open on the left onto golden trees. A maid in a frilly apron rushes forward with one round bun on a silver tray; a caretaker pins up a big floor-plan chart of the building; a farmer's hay cart tips and spills; a child clerk stamps a single paper beside a slow tortoise; a specialist lies on his tummy peering at an ant through a magnifying glass; a girl architect holds a house blueprint over her head; a goose in a diplomat's collar waddles past; a man on a ladder peers through a long brass tube; a servant in a powdered wig sends his covered silver dish flying; and a jolly baker juggles croissants. The tall carved cabinet stands open at the far end.",
-      "nameplate": [
-        80,
-        11
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the teal door to the hall",
-          "hit": [
-            95,
-            95,
-            180,
-            140
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "guichet",
-          "label": "la vitrine",
-          "hint": "Look closer at the tall carved cabinet at the far end",
-          "at": [
-            640,
-            195
-          ],
-          "obj": [
-            600,
-            165,
-            215,
-            215
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_bonne_noun",
-          "box": [
-            80,
-            250,
-            210,
-            370
-          ]
-        },
-        {
-          "id": "fr_charrette_noun",
-          "box": [
-            470,
-            305,
-            205,
-            125
-          ],
-          "labelAt": [
-            474,
-            299
-          ]
-        },
-        {
-          "id": "fr_concierge_noun",
-          "box": [
-            330,
-            130,
-            155,
-            160
-          ]
-        },
-        {
-          "id": "fr_fonctionnaire_noun",
-          "box": [
-            300,
-            440,
-            265,
-            190
-          ]
-        },
-        {
-          "id": "fr_specialiste_noun",
-          "box": [
-            585,
-            445,
-            135,
-            115
-          ]
-        },
-        {
-          "id": "fr_architecte_noun",
-          "box": [
-            690,
-            215,
-            95,
-            205
-          ],
-          "labelAt": [
-            694,
-            93
-          ]
-        },
-        {
-          "id": "fr_ambassadeur_noun",
-          "box": [
-            795,
-            335,
-            110,
-            140
-          ]
-        },
-        {
-          "id": "fr_tube_noun",
-          "box": [
-            845,
-            140,
-            125,
-            185
-          ],
-          "labelAt": [
-            846,
-            128
-          ]
-        },
-        {
-          "id": "fr_serviteur_noun",
-          "box": [
-            940,
-            335,
-            140,
-            245
-          ]
-        },
-        {
-          "id": "fr_boulanger_noun",
-          "box": [
-            1095,
-            250,
-            108,
-            250
-          ],
-          "labelAt": [
-            1099,
-            240
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "guichet": {
-      "name": "La vitrine des services",
-      "room_id": "R_occupations_02_z1",
-      "image": "bureaux/guichet.jpg",
-      "parent": "services",
-      "alt": "A close-up of the services' carved honey-oak cabinet, its doors thrown open onto one little stage with a pale-blue painted sky: a nanny in a white apron hands a toddler a fresh round biscuit; a well-off couple on a red velvet sofa laugh as they share one giant burger; in the middle a calm grey-bearded psychiatrist takes notes while a nervous young man on a couch waves his hands as he talks; a magician sweeps off his top hat and a white rabbit pops out among sparkles; and a grocer beside a crate of vegetables hands a single green pea to a small boy.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_nourrice_noun",
-          "box": [
-            170,
-            112,
-            310,
-            195
-          ]
-        },
-        {
-          "id": "fr_bourgeoisie_noun",
-          "box": [
-            80,
-            320,
-            390,
-            340
-          ]
-        },
-        {
-          "id": "fr_psychiatre_noun",
-          "box": [
-            485,
-            232,
-            300,
-            325
-          ]
-        },
-        {
-          "id": "fr_magicien_noun",
-          "box": [
-            800,
-            112,
-            300,
-            200
-          ]
-        },
-        {
-          "id": "fr_epicier_noun",
-          "box": [
-            800,
-            326,
-            400,
-            344
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "apprentis": {
-      "name": "La galerie des apprentis",
-      "room_id": "R_occupations_03",
-      "image": "bureaux/apprentis.jpg",
-      "backTo": "bureaux",
-      "alt": "The apprentices' workshop gallery on open-day morning, painted in ink and gouache: by the door on the left a hamster runs in its wheel in front of a long workbench covered in a tiny toy-factory world; a girl in a headband rides her bicycle across the room tossing newspapers from her basket; up on the wooden balcony a green parrot perches on a ship's wheel, a penguin holds up a diploma tied with red ribbon, a dalmatian in a red fire helmet barks by a gushing red pump and a juggler on a park bench keeps three balls in the air; below, a young apprentice painter stirs his paint bucket over a huge colourful splat while a wise old woman watches, a nervous intern takes notes on a little curtained stage, and a businessman bends to shake the paw of a sitting red fox.",
-      "nameplate": [
-        33,
-        7
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the mustard door to the hall",
-          "hit": [
-            15,
-            150,
-            95,
-            450
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "etabli",
-          "label": "l'établi",
-          "hint": "Look closer at the workbench of figurines",
-          "at": [
-            240,
-            400
-          ],
-          "obj": [
-            118,
-            310,
-            240,
-            170
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_occupation_noun",
-          "box": [
-            150,
-            490,
-            175,
-            185
-          ],
-          "labelAt": [
-            188,
-            490
-          ]
-        },
-        {
-          "id": "fr_job_noun",
-          "box": [
-            372,
-            288,
-            255,
-            312
-          ]
-        },
-        {
-          "id": "fr_apprenti_noun",
-          "box": [
-            640,
-            458,
-            212,
-            212
-          ]
-        },
-        {
-          "id": "fr_second_noun",
-          "box": [
-            652,
-            95,
-            112,
-            180
-          ]
-        },
-        {
-          "id": "fr_apprentissage_noun",
-          "box": [
-            740,
-            305,
-            105,
-            140
-          ]
-        },
-        {
-          "id": "fr_stage_noun",
-          "box": [
-            880,
-            310,
-            130,
-            320
-          ]
-        },
-        {
-          "id": "fr_diplome_noun",
-          "box": [
-            772,
-            50,
-            110,
-            225
-          ]
-        },
-        {
-          "id": "fr_pompier_noun",
-          "box": [
-            892,
-            50,
-            183,
-            225
-          ]
-        },
-        {
-          "id": "fr_chomeur_noun",
-          "box": [
-            1087,
-            60,
-            150,
-            220
-          ],
-          "labelAt": [
-            1148,
-            48
-          ]
-        },
-        {
-          "id": "fr_associe_noun",
-          "box": [
-            1022,
-            318,
-            185,
-            340
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "etabli": {
-      "name": "L'établi des apprentis",
-      "room_id": "R_occupations_03_z1",
-      "image": "bureaux/etabli.jpg",
-      "parent": "apprentis",
-      "alt": "A close-up of the apprentices' workbench by the glass door, at bench-top level in warm late-afternoon light, with golden autumn trees outside and the ochre wall behind. The bench top is a busy little toy world: a smiling boss figure waves a line of tiny workers in through a toy factory gate; a toy tennis pro leaps to serve an ace; an apprentice's hands let a paper crane flap away; a toy worker carries a stack of bricks to a half-built wall; a toy technician with a spanner fixes a little tin robot; and a toy coach with a whistle cheers a row of racing cars zooming to the edge of the bench, among sawdust, a pot of brushes and fallen leaves.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_embauche_noun",
-          "box": [
-            188,
-            195,
-            250,
-            290
-          ]
-        },
-        {
-          "id": "fr_pro_noun",
-          "box": [
-            450,
-            145,
-            212,
-            268
-          ]
-        },
-        {
-          "id": "fr_adepte_noun",
-          "box": [
-            485,
-            425,
-            245,
-            235
-          ]
-        },
-        {
-          "id": "fr_travailleur_noun",
-          "box": [
-            700,
-            155,
-            155,
-            262
-          ]
-        },
-        {
-          "id": "fr_technicien_noun",
-          "box": [
-            862,
-            200,
-            250,
-            160
-          ]
-        },
-        {
-          "id": "fr_coach_noun",
-          "box": [
-            1080,
-            370,
-            170,
-            290
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "gardes": {
-      "name": "La galerie des gardes",
-      "room_id": "R_occupations_04",
-      "image": "bureaux/gardes.jpg",
-      "backTo": "bureaux",
-      "alt": "The guards' gallery at dusk on a windy autumn evening, painted in ink and gouache from low by the floor: a crescent moon and golden trees show through the open glass door on the left, and brass lanterns glow on the ochre walls. A nanny sings as she pushes a big black pram; a damsel holds a ladder against an indoor tree where a knight in armour is stuck on a branch; on a round rug a babysitter reads a picture book to a sleepy little girl; a supervisor on a ladder holds up a lantern over children writing at tiny exam desks; a blacksmith hammers by a glowing forge, sparks flying; a boy joiner taps a wooden easel with his mallet; a hedgehog opens the door of the little house he built; and a tin can floats down the stone gutter. High on the right wall a shelf holds a toy building site.",
-      "nameplate": [
-        15,
-        95
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the slate-blue door to the hall",
-          "hit": [
-            60,
-            60,
-            140,
-            150
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "tablette",
-          "label": "l'étagère",
-          "hint": "Look closer at the toy building site on the high shelf",
-          "at": [
-            1065,
-            150
-          ],
-          "obj": [
-            930,
-            40,
-            270,
-            190
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_nounou_noun",
-          "box": [
-            77,
-            228,
-            298,
-            420
-          ]
-        },
-        {
-          "id": "fr_demoiselle_noun",
-          "box": [
-            390,
-            60,
-            165,
-            330
-          ]
-        },
-        {
-          "id": "fr_baby_sitter_noun",
-          "box": [
-            440,
-            400,
-            290,
-            180
-          ]
-        },
-        {
-          "id": "fr_surveillant_noun",
-          "box": [
-            700,
-            130,
-            140,
-            250
-          ]
-        },
-        {
-          "id": "fr_forgeron_noun",
-          "box": [
-            850,
-            230,
-            120,
-            180
-          ]
-        },
-        {
-          "id": "fr_menuisier_noun",
-          "box": [
-            980,
-            240,
-            105,
-            160
-          ],
-          "labelAt": [
-            1048,
-            240
-          ]
-        },
-        {
-          "id": "fr_inventeur_noun",
-          "box": [
-            1000,
-            415,
-            150,
-            170
-          ]
-        },
-        {
-          "id": "fr_caniveau_noun",
-          "box": [
-            800,
-            595,
-            190,
-            80
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "tablette": {
-      "name": "L'étagère des gardes",
-      "room_id": "R_occupations_04_z1",
-      "image": "bureaux/tablette.jpg",
-      "parent": "gardes",
-      "alt": "A close-up at the guards' high wall shelf at dusk: a toy copper water main has burst and sprays a glittering jet while a little plumber in blue overalls heaves on the red valve wheel, the water running away along a small stone canal; in a picket-fence play pen three toddlers laugh and build with coloured blocks in the spray while their carer stands guard at the gate; and on a mound of fresh earth a property developer in a yellow hard hat waves the little red flag he has just planted, a toy wheelbarrow beside him.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_canalisation_noun",
-          "box": [
-            85,
-            70,
-            370,
-            450
-          ]
-        },
-        {
-          "id": "fr_garderie_noun",
-          "box": [
-            470,
-            165,
-            210,
-            250
-          ]
-        },
-        {
-          "id": "fr_promoteur_noun",
-          "box": [
-            935,
-            75,
-            268,
-            330
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "savants": {
-      "name": "La galerie des savants",
-      "room_id": "R_occupations_05",
-      "image": "bureaux/savants.jpg",
-      "backTo": "bureaux",
-      "alt": "The scholars' gallery as a small wooden lecture amphitheatre seen from the back row, curved honey-oak tiers stepping down to a round floor, autumn trees in the tall windows and a teal door ajar at the top. A man shakes his big shaggy dog's paw while a dove flies above and a cat watches; a proud young woman holds up a framed certificate; a white cat in a tiny tiara sits on a crate; a woman analyst peers at a line chart through a magnifying glass; a nervous intern on a little box stage holds a big coat; a teacher leads two little girls by the hand down the aisle; a girl squeezes a fat book; an electrician on a stepladder fixes the fuse box, sparks flying; an insurance agent holds a blue umbrella over an old lady; and on a podium a graduation photo is taken with a flash: a graduate with her scroll, a young doctor with a little girl and an academician with a long quill.",
-      "nameplate": [
-        20,
-        95
-      ],
-      "doors": [
-        {
-          "to": "bureaux",
-          "label": "le hall",
-          "hint": "Go back through the navy door to the hall",
-          "hit": [
-            365,
-            20,
-            135,
-            190
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "console",
-          "label": "la console",
-          "hint": "Look closer at the graduation photo on the podium",
-          "at": [
-            860,
-            520
-          ],
-          "obj": [
-            810,
-            420,
-            393,
-            255
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_diplomatie_noun",
-          "box": [
-            77,
-            40,
-            280,
-            260
-          ],
-          "labelAt": [
-            89,
-            30
-          ]
-        },
-        {
-          "id": "fr_qualification_noun",
-          "box": [
-            125,
-            320,
-            180,
-            318
-          ]
-        },
-        {
-          "id": "fr_aristocrate_noun",
-          "box": [
-            320,
-            470,
-            150,
-            168
-          ]
-        },
-        {
-          "id": "fr_stagiaire_noun",
-          "box": [
-            585,
-            310,
-            140,
-            345
-          ]
-        },
-        {
-          "id": "fr_analyste_noun",
-          "box": [
-            360,
-            220,
-            210,
-            240
-          ]
-        },
-        {
-          "id": "fr_resume_noun",
-          "box": [
-            750,
-            235,
-            115,
-            150
-          ],
-          "labelAt": [
-            800,
-            242
-          ]
-        },
-        {
-          "id": "fr_educateur_noun",
-          "box": [
-            640,
-            55,
-            150,
-            170
-          ]
-        },
-        {
-          "id": "fr_electricien_noun",
-          "box": [
-            815,
-            30,
-            110,
-            200
-          ],
-          "labelAt": [
-            820,
-            20
-          ]
-        },
-        {
-          "id": "fr_assureur_noun",
-          "box": [
-            935,
-            120,
-            190,
-            290
-          ],
-          "labelAt": [
-            992,
-            106
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    },
-    "console": {
-      "name": "La console des savants",
-      "room_id": "R_occupations_05_z1",
-      "image": "bureaux/console.jpg",
-      "parent": "savants",
-      "alt": "A close-up of the graduation photo on the podium in the scholars' amphitheatre: on the left a photographer in a flat cap squeezes the bulb of an old box camera and the flash pops in a burst of light; on the podium a young graduate in gown and mortarboard jumps and thrusts her scroll high; a young doctor crouches to listen to a giggling little girl's chest with his stethoscope; and an old academician in an embroidered blue coat and tricorn hat raises his long white quills.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_doctorat_noun",
-          "box": [
-            615,
-            50,
-            220,
-            230
-          ]
-        },
-        {
-          "id": "fr_praticien_noun",
-          "box": [
-            715,
-            292,
-            300,
-            358
-          ]
-        },
-        {
-          "id": "fr_academicien_noun",
-          "box": [
-            1030,
-            60,
-            173,
-            616
-          ],
-          "labelAt": [
-            1030,
-            54
-          ]
-        }
-      ],
-      "building_id": "B11_bureaux",
-      "sector_id": "S05_bank"
-    }
+  {
+   "key": "etage",
+   "short": "Le premier étage"
+  },
+  {
+   "key": "direction",
+   "short": "La direction"
+  },
+  {
+   "key": "metiers",
+   "short": "Les métiers"
+  },
+  {
+   "key": "services",
+   "short": "Les services"
+  },
+  {
+   "key": "apprentis",
+   "short": "Les apprentis"
+  },
+  {
+   "key": "gardes",
+   "short": "Les gardes"
+  },
+  {
+   "key": "savants",
+   "short": "Les savants"
   }
+ ],
+ "planned": {
+  "bureaux": {
+   "vocabRoom": "R_office_01",
+   "only": [
+    "fr_entreprise_noun",
+    "fr_fonction_noun",
+    "fr_affaire_noun",
+    "fr_compagnie_noun",
+    "fr_bureau_noun",
+    "fr_rapport_noun",
+    "fr_aide_noun_m",
+    "fr_directeur_noun",
+    "fr_chef_noun",
+    "fr_patron_noun"
+   ]
+  },
+  "table": {
+   "vocabRoom": "R_office_01",
+   "only": [
+    "fr_reunion_noun",
+    "fr_liste_noun",
+    "fr_collegue_noun",
+    "fr_contrat_noun",
+    "fr_employe_noun",
+    "fr_conge_noun",
+    "fr_chomage_noun",
+    "fr_interim_noun"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_office_02",
+   "only": [
+    "fr_facture_noun",
+    "fr_augmentation_noun",
+    "fr_comptabilite_noun",
+    "fr_candidature_noun",
+    "fr_cabinet_noun",
+    "fr_entretien_noun",
+    "fr_salarie_noun",
+    "fr_syndicat_noun",
+    "fr_salaire_noun"
+   ]
+  },
+  "classeur": {
+   "vocabRoom": "R_office_02",
+   "only": [
+    "fr_reportage_noun",
+    "fr_business_noun",
+    "fr_collaborateur_noun",
+    "fr_prefet_noun",
+    "fr_confrere_noun",
+    "fr_rassemblement_noun",
+    "fr_employeur_noun",
+    "fr_arrete_noun",
+    "fr_secretariat_noun"
+   ]
+  },
+  "ecritoire": {
+   "vocabRoom": "R_office_02",
+   "only": [
+    "fr_convention_noun",
+    "fr_paie_noun",
+    "fr_pacte_noun"
+   ]
+  },
+  "direction": {
+   "vocabRoom": "R_office_03",
+   "only": [
+    "fr_degradation_noun",
+    "fr_demission_noun",
+    "fr_resignation_noun",
+    "fr_compensation_noun",
+    "fr_firme_noun",
+    "fr_indemnite_noun",
+    "fr_fournisseur_noun",
+    "fr_entrepreneur_noun",
+    "fr_compere_noun"
+   ]
+  },
+  "pupitre": {
+   "vocabRoom": "R_office_03",
+   "only": [
+    "fr_corporation_noun",
+    "fr_remuneration_noun",
+    "fr_licenciement_noun",
+    "fr_coordinateur_noun"
+   ]
+  },
+  "metiers": {
+   "vocabRoom": "R_occupations_01",
+   "only": [
+    "fr_carriere_noun",
+    "fr_medecin_noun",
+    "fr_secretaire_noun",
+    "fr_metier_noun",
+    "fr_ouvrier_noun",
+    "fr_oeuvre_noun_m",
+    "fr_infirmier_noun",
+    "fr_emploi_noun",
+    "fr_assistant_noun"
+   ]
+  },
+  "comptoir": {
+   "vocabRoom": "R_occupations_01",
+   "only": [
+    "fr_profession_noun",
+    "fr_specialite_noun",
+    "fr_ingenieur_noun"
+   ]
+  },
+  "services": {
+   "vocabRoom": "R_occupations_02",
+   "only": [
+    "fr_bonne_noun",
+    "fr_charrette_noun",
+    "fr_concierge_noun",
+    "fr_fonctionnaire_noun",
+    "fr_specialiste_noun",
+    "fr_architecte_noun",
+    "fr_ambassadeur_noun",
+    "fr_tube_noun",
+    "fr_serviteur_noun",
+    "fr_boulanger_noun"
+   ]
+  },
+  "guichet": {
+   "vocabRoom": "R_occupations_02",
+   "only": [
+    "fr_nourrice_noun",
+    "fr_bourgeoisie_noun",
+    "fr_psychiatre_noun",
+    "fr_magicien_noun",
+    "fr_epicier_noun"
+   ]
+  },
+  "apprentis": {
+   "vocabRoom": "R_occupations_03",
+   "only": [
+    "fr_occupation_noun",
+    "fr_job_noun",
+    "fr_apprenti_noun",
+    "fr_second_noun",
+    "fr_apprentissage_noun",
+    "fr_stage_noun",
+    "fr_diplome_noun",
+    "fr_pompier_noun",
+    "fr_chomeur_noun",
+    "fr_associe_noun"
+   ]
+  },
+  "etabli": {
+   "vocabRoom": "R_occupations_03",
+   "only": [
+    "fr_embauche_noun",
+    "fr_pro_noun",
+    "fr_adepte_noun",
+    "fr_travailleur_noun",
+    "fr_technicien_noun",
+    "fr_coach_noun"
+   ]
+  },
+  "gardes": {
+   "vocabRoom": "R_occupations_04",
+   "only": [
+    "fr_nounou_noun",
+    "fr_demoiselle_noun",
+    "fr_baby_sitter_noun",
+    "fr_surveillant_noun",
+    "fr_forgeron_noun",
+    "fr_menuisier_noun",
+    "fr_inventeur_noun",
+    "fr_caniveau_noun"
+   ]
+  },
+  "tablette": {
+   "vocabRoom": "R_occupations_04",
+   "only": [
+    "fr_canalisation_noun",
+    "fr_garderie_noun",
+    "fr_promoteur_noun"
+   ]
+  },
+  "savants": {
+   "vocabRoom": "R_occupations_05",
+   "only": [
+    "fr_diplomatie_noun",
+    "fr_qualification_noun",
+    "fr_aristocrate_noun",
+    "fr_stagiaire_noun",
+    "fr_analyste_noun",
+    "fr_resume_noun",
+    "fr_educateur_noun",
+    "fr_electricien_noun",
+    "fr_assureur_noun"
+   ]
+  },
+  "console": {
+   "vocabRoom": "R_occupations_05",
+   "only": [
+    "fr_doctorat_noun",
+    "fr_praticien_noun",
+    "fr_academicien_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "bureaux": {
+   "name": "Le hall des bureaux",
+   "room_id": "R_office_01",
+   "image": "bureaux/bureaux.jpg",
+   "alt": "The busy ground-floor hall of the village offices, painted in ink and gouache: through the open entrance door on the far left an autumn street glows; a woman carries her firm's gold prize on a silver tray; a little girl in a party hat spins at the office party; a businesswoman with her briefcase closes a deal; a lady leads a little white pony through the hall; seven coloured doors (purple, teal, mustard, coral, slate blue, olive and navy) line the back wall; a grey donkey in glasses works at his desk; a man in a cap reads out a thick report; a young assistant hurries over with a first-aid box; a film director calls through his megaphone; the boss strides about in a tall white chef's hat, and jolly old Pa sits on his carved throne.",
+   "nameplate": [
+    50,
+    94
+   ],
+   "mapExit": {
+    "box": [
+     5,
+     40,
+     165,
+     220
+    ],
+    "label": "Quai de la Banque"
+   },
+   "doors": [
+    {
+     "to": "metiers",
+     "label": "les métiers",
+     "hint": "Go through the purple door to the jobs gallery",
+     "hit": [
+      295,
+      115,
+      85,
+      160
+     ]
+    },
+    {
+     "to": "services",
+     "label": "les services",
+     "hint": "Go through the teal door to the services gallery",
+     "hit": [
+      432,
+      115,
+      90,
+      170
+     ]
+    },
+    {
+     "to": "apprentis",
+     "label": "les apprentis",
+     "hint": "Go through the mustard door to the apprentices' gallery",
+     "hit": [
+      565,
+      115,
+      90,
+      170
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "le premier étage",
+     "hint": "Go through the coral door up to the first-floor office",
+     "hit": [
+      705,
+      115,
+      90,
+      165
+     ]
+    },
+    {
+     "to": "gardes",
+     "label": "les gardes",
+     "hint": "Go through the slate-blue door to the minders' gallery",
+     "hit": [
+      838,
+      115,
+      82,
+      165
+     ]
+    },
+    {
+     "to": "direction",
+     "label": "la direction",
+     "hint": "Go through the olive door up to the management floor",
+     "hit": [
+      972,
+      115,
+      88,
+      135
+     ]
+    },
+    {
+     "to": "savants",
+     "label": "les savants",
+     "hint": "Go through the navy door to the scholars' gallery",
+     "hit": [
+      1120,
+      115,
+      80,
+      85
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "table",
+     "label": "la table",
+     "hint": "Look closer at the big desk in the middle of the hall",
+     "at": [
+      710,
+      330
+     ],
+     "obj": [
+      440,
+      270,
+      370,
+      208
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_entreprise_noun",
+     "box": [
+      60,
+      268,
+      128,
+      300
+     ]
+    },
+    {
+     "id": "fr_fonction_noun",
+     "box": [
+      190,
+      400,
+      82,
+      212
+     ],
+     "labelAt": [
+      231,
+      623
+     ]
+    },
+    {
+     "id": "fr_affaire_noun",
+     "box": [
+      278,
+      282,
+      150,
+      276
+     ]
+    },
+    {
+     "id": "fr_compagnie_noun",
+     "box": [
+      432,
+      484,
+      224,
+      150
+     ]
+    },
+    {
+     "id": "fr_bureau_noun",
+     "box": [
+      700,
+      380,
+      140,
+      245
+     ]
+    },
+    {
+     "id": "fr_rapport_noun",
+     "box": [
+      842,
+      290,
+      78,
+      290
+     ]
+    },
+    {
+     "id": "fr_aide_noun_m",
+     "box": [
+      922,
+      372,
+      100,
+      300
+     ]
+    },
+    {
+     "id": "fr_directeur_noun",
+     "box": [
+      945,
+      288,
+      140,
+      80
+     ],
+     "labelAt": [
+      1015,
+      268
+     ]
+    },
+    {
+     "id": "fr_chef_noun",
+     "box": [
+      1090,
+      200,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_patron_noun",
+     "box": [
+      1096,
+      345,
+      176,
+      285
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "table": {
+   "name": "La table du hall",
+   "room_id": "R_office_01_z1",
+   "image": "bureaux/table.jpg",
+   "parent": "bureaux",
+   "alt": "Close-up of the big desk in the hall: little wooden figurines sit round a tiny meeting table; a very long list unrolls over the edge of the desk past the businesswoman's arm; two smiling eggs stand side by side in their cups; a toy tractor parks on a sealed contract; a little worker figurine throws up both arms; a conga drum stands by a small beach picture, and a little wizard with his empty hat holds up a sign showing a magnifying glass over a briefcase: he is looking for work. A nervous stand-in waiter balances a teacup near the rim of his tray in front of the desk. The pony's head and the donkey's ears peep in at the bottom.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_reunion_noun",
+     "box": [
+      269,
+      119,
+      312,
+      222
+     ]
+    },
+    {
+     "id": "fr_liste_noun",
+     "box": [
+      356,
+      350,
+      262,
+      310
+     ]
+    },
+    {
+     "id": "fr_collegue_noun",
+     "box": [
+      594,
+      206,
+      144,
+      144
+     ]
+    },
+    {
+     "id": "fr_contrat_noun",
+     "box": [
+      742,
+      206,
+      166,
+      206
+     ]
+    },
+    {
+     "id": "fr_employe_noun",
+     "box": [
+      912,
+      112,
+      135,
+      174
+     ]
+    },
+    {
+     "id": "fr_conge_noun",
+     "box": [
+      990,
+      290,
+      160,
+      88
+     ]
+    },
+    {
+     "id": "fr_chomage_noun",
+     "box": [
+      1050,
+      70,
+      218,
+      212
+     ]
+    },
+    {
+     "id": "fr_interim_noun",
+     "box": [
+      740,
+      425,
+      145,
+      290
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "etage": {
+   "name": "Le premier étage",
+   "room_id": "R_office_02",
+   "image": "bureaux/etage.jpg",
+   "backTo": "bureaux",
+   "alt": "The first-floor landing on job-interview day, seen from the top of the stairs under a round skylight, painted in ink and gouache: a woman in green hands over the bill for the little toy factory with its smoking chimney; a proud woman lifts her money plant, now taller than she is; at the writing desk with its figurines, toy van and sealed parcel a woman clacks a big abacus; a young candidate holds out her rolled application; across the landing a nervous young man is handed a cup of tea as he steps in for his interview, a worker in overalls waves his lunchbox, a sandy cat on its hind legs holds up a placard, a lawyer in a black gown greets visitors at the door of his wood-panelled cabin, a Roman in a toga is paid in a big bowl of salad, and papers fly from the tall filing cabinet by the right wall.",
+   "nameplate": [
+    27,
+    8
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the coral door down to the hall",
+     "hit": [
+      28,
+      100,
+      135,
+      92
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "ecritoire",
+     "label": "l'écritoire",
+     "hint": "Look closer at the writing desk on the left",
+     "at": [
+      450,
+      640
+     ],
+     "obj": [
+      300,
+      588,
+      320,
+      122
+     ]
+    },
+    {
+     "to": "classeur",
+     "label": "le classeur",
+     "hint": "Look closer at the filing cabinet on the right",
+     "at": [
+      1200,
+      250
+     ],
+     "obj": [
+      1125,
+      150,
+      155,
+      200
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_facture_noun",
+     "box": [
+      75,
+      200,
+      315,
+      190
+     ]
+    },
+    {
+     "id": "fr_augmentation_noun",
+     "box": [
+      478,
+      72,
+      118,
+      250
+     ]
+    },
+    {
+     "id": "fr_comptabilite_noun",
+     "box": [
+      185,
+      400,
+      245,
+      175
+     ],
+     "labelAt": [
+      186,
+      401
+     ]
+    },
+    {
+     "id": "fr_candidature_noun",
+     "box": [
+      440,
+      335,
+      165,
+      215
+     ],
+     "labelAt": [
+      478,
+      332
+     ]
+    },
+    {
+     "id": "fr_cabinet_noun",
+     "box": [
+      960,
+      130,
+      150,
+      215
+     ]
+    },
+    {
+     "id": "fr_entretien_noun",
+     "box": [
+      668,
+      125,
+      165,
+      150
+     ],
+     "labelAt": [
+      670,
+      120
+     ]
+    },
+    {
+     "id": "fr_salarie_noun",
+     "box": [
+      668,
+      285,
+      163,
+      265
+     ]
+    },
+    {
+     "id": "fr_syndicat_noun",
+     "box": [
+      841,
+      405,
+      127,
+      255
+     ]
+    },
+    {
+     "id": "fr_salaire_noun",
+     "box": [
+      990,
+      358,
+      190,
+      312
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "classeur": {
+   "name": "Le classeur",
+   "room_id": "R_office_02_z1",
+   "image": "bureaux/classeur.jpg",
+   "parent": "etage",
+   "alt": "A close-up at the first floor's filing corner on a cool autumn morning: ochre plaster wall, honey wood panelling and leaves on the parquet. At the left edge a tall wooden filing cabinet has a drawer pulled out; a clerk on a ladder flings blank papers that swirl through the air like a flock of birds, a girl in a blue dress runs to catch them in a wicker basket and a small boy stuffs letters into a canvas sack. On the right the office bustles: a bumblebee flies off with a tiny briefcase; a boy films a toy ship in a washbasin harbour with an old box camera; a neat little official in a gold-braided cap salutes; two labrador puppies ride their little cart; two doctors in white coats confer; a top-hatted employer holds out a golden key; a police officer holds up a stamped decree; raspberries are gathered on a saucer on a stool; and a typewriter on a small desk is chained shut with a padlock.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_reportage_noun",
+     "box": [
+      755,
+      175,
+      190,
+      110
+     ]
+    },
+    {
+     "id": "fr_business_noun",
+     "box": [
+      655,
+      25,
+      130,
+      125
+     ]
+    },
+    {
+     "id": "fr_collaborateur_noun",
+     "box": [
+      912,
+      290,
+      95,
+      82
+     ]
+    },
+    {
+     "id": "fr_prefet_noun",
+     "box": [
+      968,
+      112,
+      112,
+      172
+     ]
+    },
+    {
+     "id": "fr_confrere_noun",
+     "box": [
+      1085,
+      145,
+      185,
+      230
+     ],
+     "labelAt": [
+      1152,
+      132
+     ]
+    },
+    {
+     "id": "fr_rassemblement_noun",
+     "box": [
+      850,
+      555,
+      85,
+      62
+     ],
+     "labelAt": [
+      836,
+      590
+     ]
+    },
+    {
+     "id": "fr_employeur_noun",
+     "box": [
+      645,
+      315,
+      250,
+      230
+     ]
+    },
+    {
+     "id": "fr_arrete_noun",
+     "box": [
+      940,
+      378,
+      172,
+      342
+     ],
+     "labelAt": [
+      952,
+      378
+     ]
+    },
+    {
+     "id": "fr_secretariat_noun",
+     "box": [
+      1120,
+      455,
+      160,
+      225
+     ],
+     "labelAt": [
+      1192,
+      445
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "ecritoire": {
+   "name": "L'écritoire",
+   "room_id": "R_office_02_z2",
+   "image": "bureaux/ecritoire.jpg",
+   "parent": "etage",
+   "alt": "A close-up of the writing desk on the first-floor landing, the big abacus at the back: a woman counts gold coins one by one into her little envelope; two carved wooden figurines shake hands on a deal while their little blue-and-white van waits behind them; and a pair of hands presses down on a brown paper parcel packed so tight it bulges, tied with string and sealed with a big blob of red wax, while tiny wooden figurines cheer all round.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_convention_noun",
+     "box": [
+      390,
+      165,
+      250,
+      355
+     ]
+    },
+    {
+     "id": "fr_paie_noun",
+     "box": [
+      77,
+      60,
+      303,
+      615
+     ],
+     "labelAt": [
+      82,
+      53
+     ]
+    },
+    {
+     "id": "fr_pacte_noun",
+     "box": [
+      705,
+      165,
+      495,
+      480
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "direction": {
+   "name": "La direction",
+   "room_id": "R_office_03",
+   "image": "bureaux/direction.jpg",
+   "backTo": "bureaux",
+   "alt": "The directors' boardroom on a stormy night, painted in ink and gouache: lightning flashes in the tall windows and rain lashes a stone statue crumbling by the window; a secret agent in a trench coat walks out through the open door with his briefcase; a tabby cat sits in a clawfoot bath with a resigned sigh; a little girl beams at the fresh pink ice cream that replaces the cone she dropped; two businesswomen shake hands firmly under the chandelier; a sorry black dog lies by a pair of chewed shoes; a boy pours lemonade at his own little stand; a supplier wheels in a trolley of boxes; three grinning old comedians in bowler hats walk arm in arm; and on the big desk at the front a model office tower, a girl with her pay envelope and a line of ducklings wait.",
+   "nameplate": [
+    50,
+    10
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the olive door down to the hall",
+     "hit": [
+      1010,
+      80,
+      160,
+      105
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "pupitre",
+     "label": "le pupitre",
+     "hint": "Look closer at the carved desk on the right",
+     "at": [
+      1100,
+      560
+     ],
+     "obj": [
+      915,
+      405,
+      365,
+      315
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_degradation_noun",
+     "box": [
+      77,
+      150,
+      100,
+      290
+     ]
+    },
+    {
+     "id": "fr_demission_noun",
+     "box": [
+      240,
+      185,
+      120,
+      170
+     ]
+    },
+    {
+     "id": "fr_resignation_noun",
+     "box": [
+      80,
+      452,
+      235,
+      150
+     ]
+    },
+    {
+     "id": "fr_compensation_noun",
+     "box": [
+      328,
+      368,
+      108,
+      294
+     ]
+    },
+    {
+     "id": "fr_firme_noun",
+     "box": [
+      468,
+      195,
+      212,
+      175
+     ]
+    },
+    {
+     "id": "fr_indemnite_noun",
+     "box": [
+      450,
+      485,
+      220,
+      190
+     ],
+     "labelAt": [
+      510,
+      476
+     ]
+    },
+    {
+     "id": "fr_fournisseur_noun",
+     "box": [
+      830,
+      240,
+      230,
+      115
+     ]
+    },
+    {
+     "id": "fr_entrepreneur_noun",
+     "box": [
+      705,
+      372,
+      195,
+      248
+     ]
+    },
+    {
+     "id": "fr_compere_noun",
+     "box": [
+      1072,
+      195,
+      150,
+      198
+     ],
+     "labelAt": [
+      1097,
+      196
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "pupitre": {
+   "name": "Le pupitre de la direction",
+   "room_id": "R_office_03_z1",
+   "image": "bureaux/pupitre.jpg",
+   "parent": "direction",
+   "alt": "A close-up of the big desk in the stormy-night boardroom: on the left a model glass office tower with a tiny cheerful worker waving from every window; a young woman tears open her fat pay envelope and gold coins tumble into her hands; a kind grey-haired boss gently hands a card back to a sad young worker hugging his box of belongings, a pot plant and a mug poking out; and on the right a coordinator in a waistcoat points the way for a neat line of fluffy yellow ducklings marching across the desk.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_corporation_noun",
+     "box": [
+      77,
+      43,
+      235,
+      590
+     ]
+    },
+    {
+     "id": "fr_remuneration_noun",
+     "box": [
+      325,
+      90,
+      255,
+      510
+     ]
+    },
+    {
+     "id": "fr_licenciement_noun",
+     "box": [
+      600,
+      45,
+      330,
+      560
+     ]
+    },
+    {
+     "id": "fr_coordinateur_noun",
+     "box": [
+      945,
+      190,
+      258,
+      450
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "metiers": {
+   "name": "La galerie des métiers",
+   "room_id": "R_occupations_01",
+   "image": "bureaux/metiers.jpg",
+   "backTo": "bureaux",
+   "alt": "The trades fair in the cobbled courtyard of the offices, under bunting and balloons, painted in ink and gouache: by the door on the left a young woman climbs a ladder carrying the basket of a little striped hot-air balloon; a doctor kneels to give a boy on a stool a spoonful of medicine; a secretary bird stands at its little writing desk with a quill; on the stage under the striped awning a boy potter lifts his first blue vase, a worker in overalls cheers beside a red toolbox tied with a bow and an old alchemist holds up his glowing masterpiece by his bubbling flasks; in front, a male nurse tucks a blanket round a smiling old man in a wheelchair, a tabby cat with a shiny badge on its collar sits on the stage edge, a young assistant in a lab coat holds out a frying pan, and on the corner counter a beaver sits beside a blue teapot.",
+   "nameplate": [
+    48,
+    10
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the purple door to the hall",
+     "hit": [
+      8,
+      80,
+      85,
+      330
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "comptoir",
+     "label": "le comptoir",
+     "hint": "Look closer at the desk on the right",
+     "at": [
+      1180,
+      620
+     ],
+     "obj": [
+      1080,
+      515,
+      200,
+      205
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_carriere_noun",
+     "box": [
+      175,
+      25,
+      240,
+      250
+     ]
+    },
+    {
+     "id": "fr_medecin_noun",
+     "box": [
+      300,
+      288,
+      272,
+      330
+     ]
+    },
+    {
+     "id": "fr_secretaire_noun",
+     "box": [
+      585,
+      235,
+      195,
+      150
+     ]
+    },
+    {
+     "id": "fr_metier_noun",
+     "box": [
+      780,
+      85,
+      120,
+      230
+     ]
+    },
+    {
+     "id": "fr_ouvrier_noun",
+     "box": [
+      908,
+      120,
+      112,
+      240
+     ],
+     "labelAt": [
+      962,
+      106
+     ]
+    },
+    {
+     "id": "fr_oeuvre_noun_m",
+     "box": [
+      1030,
+      100,
+      173,
+      200
+     ]
+    },
+    {
+     "id": "fr_infirmier_noun",
+     "box": [
+      615,
+      398,
+      310,
+      280
+     ],
+     "labelAt": [
+      846,
+      386
+     ]
+    },
+    {
+     "id": "fr_emploi_noun",
+     "box": [
+      1080,
+      368,
+      105,
+      135
+     ],
+     "labelAt": [
+      1082,
+      355
+     ]
+    },
+    {
+     "id": "fr_assistant_noun",
+     "box": [
+      935,
+      410,
+      135,
+      265
+     ],
+     "labelAt": [
+      994,
+      396
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "comptoir": {
+   "name": "Le comptoir des métiers",
+   "room_id": "R_occupations_01_z1",
+   "image": "bureaux/comptoir.jpg",
+   "parent": "metiers",
+   "alt": "A close-up of the little corner counter at the courtyard trades fair, under the striped awning: a proud beaver carries a big log for the stick dam he is building; beside it an owl perches watching a blue teapot pour a curl of steaming special tea into a cup; and on the right an engineer in a yellow hard hat tightens the last bolt on a giant brass clockwork engine full of cogs.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_profession_noun",
+     "box": [
+      77,
+      168,
+      285,
+      440
+     ]
+    },
+    {
+     "id": "fr_specialite_noun",
+     "box": [
+      374,
+      155,
+      283,
+      450
+     ]
+    },
+    {
+     "id": "fr_ingenieur_noun",
+     "box": [
+      705,
+      85,
+      498,
+      545
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "services": {
+   "name": "La galerie des services",
+   "room_id": "R_occupations_02",
+   "image": "bureaux/services.jpg",
+   "backTo": "bureaux",
+   "alt": "The services gallery at lunchtime, painted in ink and gouache in deep perspective, autumn leaves blowing across the parquet from a teal door standing open on the left onto golden trees. A maid in a frilly apron rushes forward with one round bun on a silver tray; a caretaker pins up a big floor-plan chart of the building; a farmer's hay cart tips and spills; a child clerk stamps a single paper beside a slow tortoise; a specialist lies on his tummy peering at an ant through a magnifying glass; a girl architect holds a house blueprint over her head; a goose in a diplomat's collar waddles past; a man on a ladder peers through a long brass tube; a servant in a powdered wig sends his covered silver dish flying; and a jolly baker juggles croissants. The tall carved cabinet stands open at the far end.",
+   "nameplate": [
+    80,
+    11
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the teal door to the hall",
+     "hit": [
+      95,
+      95,
+      180,
+      140
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "guichet",
+     "label": "la vitrine",
+     "hint": "Look closer at the tall carved cabinet at the far end",
+     "at": [
+      640,
+      195
+     ],
+     "obj": [
+      600,
+      165,
+      215,
+      215
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_bonne_noun",
+     "box": [
+      80,
+      250,
+      210,
+      370
+     ]
+    },
+    {
+     "id": "fr_charrette_noun",
+     "box": [
+      470,
+      305,
+      205,
+      125
+     ],
+     "labelAt": [
+      474,
+      299
+     ]
+    },
+    {
+     "id": "fr_concierge_noun",
+     "box": [
+      330,
+      130,
+      155,
+      160
+     ]
+    },
+    {
+     "id": "fr_fonctionnaire_noun",
+     "box": [
+      300,
+      440,
+      265,
+      190
+     ]
+    },
+    {
+     "id": "fr_specialiste_noun",
+     "box": [
+      585,
+      445,
+      135,
+      115
+     ]
+    },
+    {
+     "id": "fr_architecte_noun",
+     "box": [
+      690,
+      215,
+      95,
+      205
+     ],
+     "labelAt": [
+      694,
+      93
+     ]
+    },
+    {
+     "id": "fr_ambassadeur_noun",
+     "box": [
+      795,
+      335,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_tube_noun",
+     "box": [
+      845,
+      140,
+      125,
+      185
+     ],
+     "labelAt": [
+      846,
+      128
+     ]
+    },
+    {
+     "id": "fr_serviteur_noun",
+     "box": [
+      940,
+      335,
+      140,
+      245
+     ]
+    },
+    {
+     "id": "fr_boulanger_noun",
+     "box": [
+      1095,
+      250,
+      108,
+      250
+     ],
+     "labelAt": [
+      1099,
+      240
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "guichet": {
+   "name": "La vitrine des services",
+   "room_id": "R_occupations_02_z1",
+   "image": "bureaux/guichet.jpg",
+   "parent": "services",
+   "alt": "A close-up of the services' carved honey-oak cabinet, its doors thrown open onto one little stage with a pale-blue painted sky: a nanny in a white apron hands a toddler a fresh round biscuit; a well-off couple on a red velvet sofa laugh as they share one giant burger; in the middle a calm grey-bearded psychiatrist takes notes while a nervous young man on a couch waves his hands as he talks; a magician sweeps off his top hat and a white rabbit pops out among sparkles; and a grocer beside a crate of vegetables hands a single green pea to a small boy.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_nourrice_noun",
+     "box": [
+      170,
+      112,
+      310,
+      195
+     ]
+    },
+    {
+     "id": "fr_bourgeoisie_noun",
+     "box": [
+      80,
+      320,
+      390,
+      340
+     ]
+    },
+    {
+     "id": "fr_psychiatre_noun",
+     "box": [
+      485,
+      232,
+      300,
+      325
+     ]
+    },
+    {
+     "id": "fr_magicien_noun",
+     "box": [
+      800,
+      112,
+      300,
+      200
+     ]
+    },
+    {
+     "id": "fr_epicier_noun",
+     "box": [
+      800,
+      326,
+      400,
+      344
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "apprentis": {
+   "name": "La galerie des apprentis",
+   "room_id": "R_occupations_03",
+   "image": "bureaux/apprentis.jpg",
+   "backTo": "bureaux",
+   "alt": "The apprentices' workshop gallery on open-day morning, painted in ink and gouache: by the door on the left a hamster runs in its wheel in front of a long workbench covered in a tiny toy-factory world; a girl in a headband rides her bicycle across the room tossing newspapers from her basket; up on the wooden balcony a green parrot perches on a ship's wheel, a penguin holds up a diploma tied with red ribbon, a dalmatian in a red fire helmet barks by a gushing red pump and a juggler on a park bench keeps three balls in the air; below, a young apprentice painter stirs his paint bucket over a huge colourful splat while a wise old woman watches, a nervous intern takes notes on a little curtained stage, and a businessman bends to shake the paw of a sitting red fox.",
+   "nameplate": [
+    33,
+    7
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the mustard door to the hall",
+     "hit": [
+      15,
+      150,
+      95,
+      450
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "etabli",
+     "label": "l'établi",
+     "hint": "Look closer at the workbench of figurines",
+     "at": [
+      240,
+      400
+     ],
+     "obj": [
+      118,
+      310,
+      240,
+      170
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_occupation_noun",
+     "box": [
+      150,
+      490,
+      175,
+      185
+     ],
+     "labelAt": [
+      188,
+      490
+     ]
+    },
+    {
+     "id": "fr_job_noun",
+     "box": [
+      372,
+      288,
+      255,
+      312
+     ]
+    },
+    {
+     "id": "fr_apprenti_noun",
+     "box": [
+      640,
+      406,
+      145,
+      264
+     ]
+    },
+    {
+     "id": "fr_second_noun",
+     "box": [
+      652,
+      95,
+      112,
+      180
+     ]
+    },
+    {
+     "id": "fr_apprentissage_noun",
+     "box": [
+      740,
+      295,
+      105,
+      108
+     ]
+    },
+    {
+     "id": "fr_stage_noun",
+     "box": [
+      880,
+      310,
+      130,
+      320
+     ]
+    },
+    {
+     "id": "fr_diplome_noun",
+     "box": [
+      772,
+      50,
+      110,
+      225
+     ]
+    },
+    {
+     "id": "fr_pompier_noun",
+     "box": [
+      892,
+      50,
+      183,
+      225
+     ]
+    },
+    {
+     "id": "fr_chomeur_noun",
+     "box": [
+      1087,
+      60,
+      150,
+      220
+     ],
+     "labelAt": [
+      1148,
+      48
+     ]
+    },
+    {
+     "id": "fr_associe_noun",
+     "box": [
+      1022,
+      318,
+      185,
+      340
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "etabli": {
+   "name": "L'établi des apprentis",
+   "room_id": "R_occupations_03_z1",
+   "image": "bureaux/etabli.jpg",
+   "parent": "apprentis",
+   "alt": "A close-up of the apprentices' workbench by the glass door, at bench-top level in warm late-afternoon light, with golden autumn trees outside and the ochre wall behind. The bench top is a busy little toy world: a smiling boss figure waves a line of tiny workers in through a toy factory gate; a toy tennis pro leaps to serve an ace; an apprentice's hands let a paper crane flap away; a toy worker carries a stack of bricks to a half-built wall; a toy technician with a spanner fixes a little tin robot; and a toy coach with a whistle cheers a row of racing cars zooming to the edge of the bench, among sawdust, a pot of brushes and fallen leaves.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_embauche_noun",
+     "box": [
+      188,
+      195,
+      250,
+      290
+     ]
+    },
+    {
+     "id": "fr_pro_noun",
+     "box": [
+      450,
+      145,
+      212,
+      268
+     ]
+    },
+    {
+     "id": "fr_adepte_noun",
+     "box": [
+      485,
+      425,
+      245,
+      235
+     ]
+    },
+    {
+     "id": "fr_travailleur_noun",
+     "box": [
+      700,
+      155,
+      155,
+      262
+     ]
+    },
+    {
+     "id": "fr_technicien_noun",
+     "box": [
+      862,
+      200,
+      250,
+      160
+     ]
+    },
+    {
+     "id": "fr_coach_noun",
+     "box": [
+      885,
+      365,
+      365,
+      300
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "gardes": {
+   "name": "La galerie des gardes",
+   "room_id": "R_occupations_04",
+   "image": "bureaux/gardes.jpg",
+   "backTo": "bureaux",
+   "alt": "The guards' gallery at dusk on a windy autumn evening, painted in ink and gouache from low by the floor: a crescent moon and golden trees show through the open glass door on the left, and brass lanterns glow on the ochre walls. A nanny sings as she pushes a big black pram; a damsel holds a ladder against an indoor tree where a knight in armour is stuck on a branch; on a round rug a babysitter reads a picture book to a sleepy little girl; a supervisor on a ladder holds up a lantern over children writing at tiny exam desks; a blacksmith hammers by a glowing forge, sparks flying; a boy joiner taps a wooden easel with his mallet; a hedgehog opens the door of the little house he built; and a tin can floats down the stone gutter. High on the right wall a shelf holds a toy building site.",
+   "nameplate": [
+    15,
+    95
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the slate-blue door to the hall",
+     "hit": [
+      60,
+      60,
+      140,
+      150
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "tablette",
+     "label": "l'étagère",
+     "hint": "Look closer at the toy building site on the high shelf",
+     "at": [
+      1065,
+      150
+     ],
+     "obj": [
+      930,
+      40,
+      270,
+      190
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_nounou_noun",
+     "box": [
+      77,
+      228,
+      263,
+      420
+     ]
+    },
+    {
+     "id": "fr_demoiselle_noun",
+     "box": [
+      345,
+      250,
+      88,
+      200
+     ],
+     "labelAt": [
+      423,
+      240
+     ]
+    },
+    {
+     "id": "fr_baby_sitter_noun",
+     "box": [
+      440,
+      400,
+      290,
+      180
+     ]
+    },
+    {
+     "id": "fr_surveillant_noun",
+     "box": [
+      700,
+      130,
+      140,
+      250
+     ]
+    },
+    {
+     "id": "fr_forgeron_noun",
+     "box": [
+      850,
+      230,
+      120,
+      180
+     ]
+    },
+    {
+     "id": "fr_menuisier_noun",
+     "box": [
+      980,
+      240,
+      105,
+      160
+     ],
+     "labelAt": [
+      1048,
+      240
+     ]
+    },
+    {
+     "id": "fr_inventeur_noun",
+     "box": [
+      1000,
+      415,
+      150,
+      170
+     ]
+    },
+    {
+     "id": "fr_caniveau_noun",
+     "box": [
+      800,
+      595,
+      190,
+      80
+     ],
+     "labelAt": [
+      803,
+      584
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "tablette": {
+   "name": "L'étagère des gardes",
+   "room_id": "R_occupations_04_z1",
+   "image": "bureaux/tablette.jpg",
+   "parent": "gardes",
+   "alt": "A close-up at the guards' high wall shelf at dusk: a toy copper water main has burst and sprays a glittering jet while a little plumber in blue overalls heaves on the red valve wheel, the water running away along a small stone canal; in a picket-fence play pen three toddlers laugh and build with coloured blocks in the spray while their carer stands guard at the gate; and on a mound of fresh earth a property developer in a yellow hard hat waves the little red flag he has just planted, a toy wheelbarrow beside him.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_canalisation_noun",
+     "box": [
+      85,
+      70,
+      370,
+      450
+     ]
+    },
+    {
+     "id": "fr_garderie_noun",
+     "box": [
+      470,
+      165,
+      210,
+      250
+     ]
+    },
+    {
+     "id": "fr_promoteur_noun",
+     "box": [
+      935,
+      75,
+      268,
+      330
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "savants": {
+   "name": "La galerie des savants",
+   "room_id": "R_occupations_05",
+   "image": "bureaux/savants.jpg",
+   "backTo": "bureaux",
+   "alt": "The scholars' gallery as a small wooden lecture amphitheatre seen from the back row, curved honey-oak tiers stepping down to a round floor, autumn trees in the tall windows and a teal door ajar at the top. A man shakes his big shaggy dog's paw while a dove flies above and a cat watches; a proud young woman holds up a framed certificate; a white cat in a tiny tiara sits on a crate; a woman analyst peers at a line chart through a magnifying glass; a nervous intern on a little box stage holds a big coat; a teacher leads two little girls by the hand down the aisle; a girl squeezes a fat book; an electrician on a stepladder fixes the fuse box, sparks flying; an insurance agent holds a blue umbrella over an old lady; and on a podium a graduation photo is taken with a flash: a graduate with her scroll, a young doctor with a little girl and an academician with a long quill.",
+   "nameplate": [
+    20,
+    95
+   ],
+   "doors": [
+    {
+     "to": "bureaux",
+     "label": "le hall",
+     "hint": "Go back through the navy door to the hall",
+     "hit": [
+      365,
+      20,
+      135,
+      190
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "console",
+     "label": "la console",
+     "hint": "Look closer at the graduation photo on the podium",
+     "at": [
+      860,
+      520
+     ],
+     "obj": [
+      810,
+      420,
+      393,
+      255
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_diplomatie_noun",
+     "box": [
+      77,
+      40,
+      280,
+      260
+     ],
+     "labelAt": [
+      89,
+      30
+     ]
+    },
+    {
+     "id": "fr_qualification_noun",
+     "box": [
+      125,
+      320,
+      180,
+      318
+     ]
+    },
+    {
+     "id": "fr_aristocrate_noun",
+     "box": [
+      320,
+      470,
+      150,
+      168
+     ]
+    },
+    {
+     "id": "fr_stagiaire_noun",
+     "box": [
+      585,
+      310,
+      140,
+      345
+     ]
+    },
+    {
+     "id": "fr_analyste_noun",
+     "box": [
+      360,
+      220,
+      210,
+      240
+     ]
+    },
+    {
+     "id": "fr_resume_noun",
+     "box": [
+      750,
+      235,
+      115,
+      150
+     ],
+     "labelAt": [
+      800,
+      242
+     ]
+    },
+    {
+     "id": "fr_educateur_noun",
+     "box": [
+      640,
+      55,
+      150,
+      170
+     ]
+    },
+    {
+     "id": "fr_electricien_noun",
+     "box": [
+      815,
+      30,
+      110,
+      200
+     ],
+     "labelAt": [
+      820,
+      20
+     ]
+    },
+    {
+     "id": "fr_assureur_noun",
+     "box": [
+      935,
+      120,
+      190,
+      290
+     ],
+     "labelAt": [
+      992,
+      106
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  },
+  "console": {
+   "name": "La console des savants",
+   "room_id": "R_occupations_05_z1",
+   "image": "bureaux/console.jpg",
+   "parent": "savants",
+   "alt": "A close-up of the graduation photo on the podium in the scholars' amphitheatre: on the left a photographer in a flat cap squeezes the bulb of an old box camera and the flash pops in a burst of light; on the podium a young graduate in gown and mortarboard jumps and thrusts her scroll high; a young doctor crouches to listen to a giggling little girl's chest with his stethoscope; and an old academician in an embroidered blue coat and tricorn hat raises his long white quills.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_doctorat_noun",
+     "box": [
+      615,
+      50,
+      220,
+      230
+     ]
+    },
+    {
+     "id": "fr_praticien_noun",
+     "box": [
+      715,
+      292,
+      300,
+      358
+     ]
+    },
+    {
+     "id": "fr_academicien_noun",
+     "box": [
+      1030,
+      60,
+      173,
+      616
+     ],
+     "labelAt": [
+      1030,
+      54
+     ]
+    }
+   ],
+   "building_id": "B11_bureaux",
+   "sector_id": "S05_bank"
+  }
+ }
 }
