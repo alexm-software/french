@@ -143,3 +143,11 @@ body .tabs{flex-wrap:wrap;overflow:visible;mask-image:none;-webkit-mask-image:no
 .ffnote.full{border-color:#c8463c;background:#fdf0ee}
 .ffnote.part{border-color:#d39a1c;background:#fff8e4}
 .ffnote h3{margin-top:6px}
+/* world map signposts: always shown (hidden in hover-label mode until hovered), sized with the painting */
+.tag.pin{opacity:1;transform:translate(-50%,-50%);white-space:normal;text-align:center;width:max-content;max-width:calc(168px*var(--s,1));pointer-events:auto;cursor:pointer;text-decoration:none;font-family:Georgia,"Palatino Linotype",serif;font-size:calc(13px*var(--s,1));line-height:1.1;color:#2b1d14;background:#fff8e6;border:calc(2px*var(--s,1) + .5px) solid #3a2a1c;border-radius:calc(10px*var(--s,1));padding:calc(2px*var(--s,1)) calc(8px*var(--s,1)) calc(3px*var(--s,1));box-shadow:0 calc(2px*var(--s,1)) 0 rgba(0,0,0,.28)}
+.tag.pin.show{transform:translate(-50%,-50%) scale(1.06);background:#fff1b8}
+.tag.pin .en{font-weight:400;font-style:italic;font-size:.86em;color:#5b4a3b}
+.tag.pin.soonpin{background:#efe7d6}
+.lhover .tag.pin{opacity:0;pointer-events:none}
+.lhover .tag.pin.show{opacity:1}
+

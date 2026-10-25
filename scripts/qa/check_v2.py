@@ -17,10 +17,12 @@ Static rules (per building/room):
   * no respelling that reads as pee/poo: say/f_say never contain 'pee'/'poo'; hook/example words pee(s/d/ing), poo(s/p/h)
   * adjectives: no article, centre band 30-70%, gram line 'adjective · m/f' on the card (browser)
   * adverbs: no article, no gender, centre band 30-70%, gram line 'adverb · invariable' (browser)
-  * maps (data/map.js): no rect overlap within the world map or within any sector map; every
+  * maps (data/map.js): no rect overlap within the world map or within any sector map; world
+    sectors with "poly" overlap only when the polygons themselves overlap (4 px sample). Every
     layout building has a rect on its sector map (by the payload's building_id/sector_id, else by id)
-  * --browser: every world-map and sector-map label (live and bientôt) stays at least 6% inside
-    the painting at desktop and phone widths; crossing or touching that margin fails
+  * --browser: world-map signposts stay 6% inside the painting, 3 px apart, and each label centre
+    lies inside its own click polygon. Sector hover labels (live and bientôt) stay 6% inside the
+    painting at desktop and phone widths
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/v2/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
@@ -60,6 +62,25 @@ def load_payload(bld):
 
 def inter(a, b):
     return a[0] < b[0] + b[2] and b[0] < a[0] + a[2] and a[1] < b[1] + b[3] and b[1] < a[1] + a[3]
+
+
+def inside(x, y, ring):
+    c = False
+    for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
+        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1): c = not c
+    return c
+
+
+def overlap(a, b):
+    """rect overlap, or (when both give "poly") polygon overlap sampled on a 4 px grid"""
+    if not inter(a["rect"], b["rect"]): return False
+    if not (a.get("poly") and b.get("poly")): return True
+    ra, rb = a["rect"], b["rect"]
+    x0, y0, x1, y1 = max(ra[0], rb[0]), max(ra[1], rb[1]), min(ra[0] + ra[2], rb[0] + rb[2]), min(ra[1] + ra[3], rb[1] + rb[3])
+    for y in range(int(y0) + 2, int(y1), 4):
+        for x in range(int(x0) + 2, int(x1), 4):
+            if any(inside(x, y, r) for r in a["poly"]) and any(inside(x, y, r) for r in b["poly"]): return True
+    return False
 
 
 def vocab_rooms():
@@ -233,6 +254,7 @@ MAP_LABEL_EDGES = r"""
   const m = 0.06, L = sr.width * m, T = sr.height * m, R = sr.width * (1 - m), B = sr.height * (1 - m);
   const bad = [];
   const judge = (el) => {
+    if (el.classList.contains('pin')) return;
     el.style.transition = 'none';
     const r = el.getBoundingClientRect();
     const b = {l: r.left - sr.left, t: r.top - sr.top, r: r.right - sr.left, b: r.bottom - sr.top};
@@ -275,8 +297,20 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
             wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
             if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
                 errs.append(f"world map @{vw}: sector links {wl}")
+            # world signposts: inside the painting with a 6% margin, centred inside their own click polygon, touching nothing
+            pins = await pg.evaluate("""(()=>{const S=document.getElementById('stage').getBoundingClientRect();
+              return [...document.querySelectorAll('.tag.pin')].map(e=>{const r=e.getBoundingClientRect();
+                return {t:e.textContent,x0:(r.left-S.left)/S.width*1280,y0:(r.top-S.top)/S.height*720,x1:(r.right-S.left)/S.width*1280,y1:(r.bottom-S.top)/S.height*720}})})()""")
+            for k, p in enumerate(pins):
+                if p["x0"] < 76.8 or p["y0"] < 43.2 or p["x1"] > 1203.2 or p["y1"] > 676.8:
+                    errs.append(f"world map @{vw}: label '{p['t']}' is within 6% of the painting edge")
+                for q in pins[k + 1:]:
+                    if p["x0"] < q["x1"] + 3 and q["x0"] < p["x1"] + 3 and p["y0"] < q["y1"] + 3 and q["y0"] < p["y1"] + 3:
+                        errs.append(f"world map @{vw}: label '{p['t']}' touches '{q['t']}'")
+            for w in M["world"]["sectors"]:
+                if w.get("poly") and not any(inside(w["tag"][0], w["tag"][1], r) for r in w["poly"]):
+                    errs.append(f"world map: {w['name']} label centre is outside its click area")
             await pg.screenshot(path=str(shots / f"map_{vw}.png"))
-            await map_label_edges(pg, f"world map @{vw}", errs)
             live = []
             for w in M["world"]["sectors"]:
                 await pg.goto(base + f"#/quartier/{w['slug']}")
@@ -415,7 +449,7 @@ def main():
     for nm, allb in maps:
         for i in range(len(allb)):
             for j in range(i + 1, len(allb)):
-                if inter(allb[i]["rect"], allb[j]["rect"]): errs.append(f"map {nm}: {allb[i]['name']} overlaps {allb[j]['name']}")
+                if overlap(allb[i], allb[j]): errs.append(f"map {nm}: {allb[i]['name']} overlaps {allb[j]['name']}")
     for w in M["world"]["sectors"]:
         if w["slug"] not in M["sectors"]: errs.append(f"map: sector {w['id']} has no sector map")
         elif not (V2 / M["sectors"][w["slug"]]["image"]).exists(): errs.append(f"map: {w['slug']} painting missing")

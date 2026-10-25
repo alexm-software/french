@@ -10,7 +10,9 @@ building / ST_ verb street of each sector is painted on that sector's map. Nothi
 buildings are live: the app probes village/v2/data/<id>.js for each building at runtime, where
 id = building_id without its "Bnn_" prefix (B29_plage -> plage) unless the entry gives a legacy "id"
 (B06_marche -> boulangerie, B05_maison's garage -> garage). So shipping a building never needs this
-script or map.js to change. Hover tags and door arrows are placed from the rect unless given."""
+script or map.js to change. Hover tags and door arrows are placed from the rect unless given.
+World sectors may also give "en" (English name for the bilingual label) and "poly" (a list of
+rings of [x, y] points in the 1280x720 painting): the click area is then the polygon(s), not the rect."""
 import json, re
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
@@ -30,7 +32,7 @@ def item(b, keys):
 
 W = M["world"]
 out = {"world": {"image": W["image"], "alt": W["alt"],
-                 "sectors": [dict(item(s, ("id", "slug", "name", "rect", "tag")), door=s.get("door", door(s["rect"])))
+                 "sectors": [dict(item(s, ("id", "slug", "name", "en", "rect", "poly", "tag")), door=s.get("door", door(s["rect"])))
                              for s in W["sectors"]]},
        "sectors": {}}
 ids = {}

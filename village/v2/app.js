@@ -71,7 +71,8 @@ function fit(){
   scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2);
   var hint=$('#panHint'); hint.hidden=!pan;
   if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'||view==='sector'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
-  if(stage.querySelector('.tag.live,#tagSoon')) clampMapLabels();
+  // Sector hover tags only. World signposts (.tag.pin) stay on their authored centres.
+  if(stage.querySelector('.tag.live:not(.pin),#tagSoon')) clampMapLabels();
 }
 window.addEventListener('resize',fit);
 document.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse'},true);
@@ -103,7 +104,8 @@ function pts(r){ return r[0]+','+r[1]+' '+(r[0]+r[2])+','+r[1]+' '+(r[0]+r[2])+'
 function tagAt(r){ return [r[0]+r[2]/2, r[1]+Math.min(14,r[3]/4)] }
 function doorAt(r){ return [r[0]+r[2]/2, r[1]+r[3]-Math.min(34,r[3]/3)] }
 function liveIn(slug){ return Object.keys(LIVE).filter(function(id){ return homeOf(id).slug===slug }) }
-// Hover tags stay on the painting: at least 6% inside every edge, and off other buildings' click boxes and doors.
+// Sector hover tags stay on the painting: at least 6% inside every edge, and off other buildings' click boxes and doors.
+// World-map signposts (.tag.pin) are placed by their tag point and are not moved here.
 function relRect(el){
   var s=stage.getBoundingClientRect(), r=el.getBoundingClientRect();
   return {l:r.left-s.left, t:r.top-s.top, r:r.right-s.left, b:r.bottom-s.top, w:r.width, h:r.height};
@@ -112,7 +114,6 @@ function mapFrame(){
   var s=stage.getBoundingClientRect(), m=0.06;
   return {l:s.width*m, t:s.height*m, r:s.width*(1-m), b:s.height*(1-m), w:s.width, h:s.height};
 }
-function rectsTouch(a,b,g){ return a.l<b.r+g && a.r>b.l-g && a.t<b.b+g && a.b>b.t-g }
 function inFrame(a,f){ return a.l>=f.l-0.5 && a.t>=f.t-0.5 && a.r<=f.r+0.5 && a.b<=f.b+0.5 }
 function labelObstacles(ownPoly, ownDoor){
   var o=[];
@@ -135,8 +136,6 @@ function nudgeLabel(el, dx, dy){
   el.style.top=(parseFloat(el.style.top)+dy/s.height*100)+'%';
 }
 function intoFrame(el, f){
-  // 4px inside the 6% line so percentage rounding cannot land back on the margin.
-  // Repeat: a wrapping label can grow when it is moved, which would poke out again.
   var pad=4, g={l:f.l+pad, t:f.t+pad, r:f.r-pad, b:f.b-pad}, b=relRect(el);
   for(var i=0;i<4;i++){
     var dx=0, dy=0;
@@ -175,6 +174,7 @@ function separateLabel(el, f, obs){
   return inFrame(b,f) && overlapArea(b, obs)===0;
 }
 function clampOne(el, ownPoly, ownDoor){
+  if(el.classList.contains('pin')) return;
   if(el.dataset.ox===undefined){ el.dataset.ox=el.style.left; el.dataset.oy=el.style.top; }
   var shown=el.classList.contains('show');
   el.style.transition='none';
@@ -184,7 +184,6 @@ function clampOne(el, ownPoly, ownDoor){
   var f=mapFrame(), obs=labelObstacles(ownPoly, ownDoor);
   var ok=separateLabel(el, f, obs);
   if(!ok){
-    // Flip the label below its anchor, then try again before wrapping.
     var h=relRect(el).h;
     el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
     nudgeLabel(el, 0, h+8);
@@ -194,14 +193,11 @@ function clampOne(el, ownPoly, ownDoor){
   el.style.transition='';
   if(!shown) el.classList.remove('show');
 }
-// Last resort: wrap the label into the part of its own building that is inside the frame,
-// so it cannot cover a neighbour's click box.
 function parkOnOwn(el, ownPoly, ownDoor, f){
   el.classList.remove('wrap'); el.style.width=''; el.style.maxWidth=''; el.style.fontSize='';
   el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
   if(!ownPoly){ intoFrame(el, f); return; }
   var p=relRect(ownPoly), door=ownDoor?relRect(ownDoor):null;
-  // Prefer the open band just above the building, clear of every other click box.
   var above=relRect(el);
   nudgeLabel(el, 0, (p.t-6)-above.b);
   above=intoFrame(el, f);
@@ -219,11 +215,10 @@ function parkOnOwn(el, ownPoly, ownDoor, f){
   nudgeLabel(el, L-b.l, T-b.t);
   b=relRect(el);
   nudgeLabel(el, L-b.l, T-b.t);
-  b=relRect(el);
-  if(!inFrame(b, f)) intoFrame(el, f);
+  if(!inFrame(relRect(el), f)) intoFrame(el, f);
 }
 function clampMapLabels(){
-  stage.querySelectorAll('.tag.live').forEach(function(el){
+  stage.querySelectorAll('.tag.live:not(.pin)').forEach(function(el){
     var i=el.id.replace('tagLive','');
     var link=stage.querySelector('a.lnk[data-i="'+i+'"]');
     clampOne(el, link?link.querySelector('polygon'):null, stage.querySelector('.door[data-i="'+i+'"]'));
@@ -236,10 +231,14 @@ function drawMap(img,alt,label,live,soon){
   h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="'+esc(label)+'">';
   soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+pts(b.rect)+'"><title>'+esc(b.name)+(b.small?' ('+esc(b.small)+')':'')+'</title></polygon>'});
   live.forEach(function(L,i){
-    h+='<a href="'+L.href+'" class="lnk" data-i="'+i+'" aria-label="'+esc(L.aria)+'"><polygon class="bld live" tabindex="-1" points="'+pts(L.rect)+'"></polygon></a>';
+    var rings=L.poly?L.poly.map(function(r){return r.map(function(p){return p.join(',')}).join(' ')}):[pts(L.rect)];
+    h+='<a href="'+L.href+'" class="lnk" data-i="'+i+'" aria-label="'+esc(L.aria)+'">'+rings.map(function(r){return '<polygon class="bld live" tabindex="-1" points="'+r+'"></polygon>'}).join('')+'</a>';
   });
   h+='</svg>';
   live.forEach(function(L,i){ var d=L.door||doorAt(L.rect), t=L.tag||tagAt(L.rect);
+    if(L.pin){ // world map: an always-on bilingual signpost centred on L.tag; it is a link too, so a click on it opens its own sector
+      h+='<a class="tag live pin'+(L.nodoor?' soonpin':'')+'" id="tagLive'+i+'" href="'+L.href+'" tabindex="-1" aria-hidden="true" title="'+esc(L.small||'')+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(t[1]/7.2)+'"><b>'+esc(L.name)+'</b>'+(L.en?'<span class="en"> ·\u00a0'+esc(L.en)+'</span>':'')+'</a>';
+      return }
     if(!L.nodoor) h+='<div class="door" data-i="'+i+'" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
     h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
   });
@@ -247,9 +246,10 @@ function drawMap(img,alt,label,live,soon){
   stage.innerHTML=h;
   var ts=$('#tagSoon');
   stage.querySelectorAll('a.lnk').forEach(function(lnk){
-    var poly=$('.bld.live',lnk), tl=$('#tagLive'+lnk.dataset.i);
-    function on(){tl.classList.add('show');poly.classList.add('hot')} function off(){tl.classList.remove('show');poly.classList.remove('hot')}
+    var polys=lnk.querySelectorAll('.bld.live'), tl=$('#tagLive'+lnk.dataset.i);
+    function on(){tl.classList.add('show');polys.forEach(function(p){p.classList.add('hot')})} function off(){tl.classList.remove('show');polys.forEach(function(p){p.classList.remove('hot')})}
     lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
+    if(tl.classList.contains('pin')){ tl.addEventListener('mouseenter',on); tl.addEventListener('mouseleave',off) }
   });
   stage.querySelectorAll('.bld.soon').forEach(function(p){
     var b=soon[+p.dataset.i], t=b.tag||tagAt(b.rect);
@@ -271,7 +271,7 @@ function renderMap(){
   back.hidden=true; rooms.hidden=true;
   var W=MAP.world, live=[];
   W.sectors.forEach(function(w){ var n=liveIn(w.slug).length;
-    live.push({href:sectorHref(w.slug),name:w.name,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
+    live.push({href:sectorHref(w.slug),name:w.name,en:w.en,poly:w.poly,pin:!!w.poly,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
       small:probed?(n?n+(n>1?' bâtiments ouverts':' bâtiment ouvert'):'bientôt'):''}) });
   drawMap(W.image,W.alt,'Village map',live,[]);
 }
