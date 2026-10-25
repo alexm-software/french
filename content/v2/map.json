@@ -1,17 +1,50 @@
 {
  "world": {
   "image": "map/world.jpg",
-  "alt": "Ink-and-gouache map of the whole French village: fifteen walled quarters and, outside the walls, the green valley with its mountain, forest, lake and beach.",
+  "alt": "Ink-and-gouache painting of the whole French village seen from above: winding lanes lead from the fountain square past a cathedral, a mosque, a synagogue and an onion-domed church, the museum portico, a red-brick campus, the town hall with its flag, a fire station and post office, a columned bank on the river quay, a hospital and pharmacy, a market hall and a bakery with a giant baguette, a restaurant with a chef's-hat roof, a theatre and stadium, a circus tent, Ferris wheel and maze, a heart-shaped garden, a railway station with a train on its track, an airfield, a harbour with a boat, and around it all the farm fields, mountains, lake and beach of the green valley.",
   "sectors": [
    {
     "id": "S11_church",
     "slug": "church",
     "name": "Abbaye & Paroisse Notre-Dame",
     "rect": [
-     47,
-     40,
-     180,
-     180
+     390,
+     15,
+     255,
+     163
+    ],
+    "en": "Abbey & Parish of Our Lady",
+    "poly": [
+     [
+      [
+       390,
+       15
+      ],
+      [
+       645,
+       15
+      ],
+      [
+       645,
+       140
+      ],
+      [
+       605,
+       145
+      ],
+      [
+       600,
+       178
+      ],
+      [
+       390,
+       178
+      ]
+     ]
+    ],
+    "tag": [
+     520,
+     170
     ]
    },
    {
@@ -19,10 +52,47 @@
     "slug": "faiths",
     "name": "Rue de la Concorde",
     "rect": [
-     234,
+     10,
      40,
-     180,
-     180
+     375,
+     200
+    ],
+    "en": "Harmony Street",
+    "poly": [
+     [
+      [
+       10,
+       40
+      ],
+      [
+       385,
+       40
+      ],
+      [
+       385,
+       165
+      ],
+      [
+       240,
+       180
+      ],
+      [
+       205,
+       240
+      ],
+      [
+       110,
+       240
+      ],
+      [
+       10,
+       195
+      ]
+     ]
+    ],
+    "tag": [
+     230,
+     196
     ]
    },
    {
@@ -30,10 +100,35 @@
     "slug": "museum",
     "name": "Musée du Village",
     "rect": [
-     437,
-     40,
-     166,
-     180
+     660,
+     30,
+     165,
+     145
+    ],
+    "en": "Village Museum",
+    "poly": [
+     [
+      [
+       660,
+       30
+      ],
+      [
+       825,
+       30
+      ],
+      [
+       825,
+       175
+      ],
+      [
+       660,
+       175
+      ]
+     ]
+    ],
+    "tag": [
+     740,
+     172
     ]
    },
    {
@@ -41,10 +136,35 @@
     "slug": "university",
     "name": "Campus",
     "rect": [
-     609,
-     40,
-     172,
-     180
+     830,
+     20,
+     230,
+     155
+    ],
+    "en": "University Campus",
+    "poly": [
+     [
+      [
+       830,
+       20
+      ],
+      [
+       1050,
+       20
+      ],
+      [
+       1060,
+       175
+      ],
+      [
+       830,
+       175
+      ]
+     ]
+    ],
+    "tag": [
+     945,
+     163
     ]
    },
    {
@@ -52,10 +172,39 @@
     "slug": "bank",
     "name": "Quai de la Banque",
     "rect": [
-     797,
-     40,
-     172,
-     180
+     1080,
+     240,
+     195,
+     145
+    ],
+    "en": "Bank Quay",
+    "poly": [
+     [
+      [
+       1100,
+       240
+      ],
+      [
+       1270,
+       240
+      ],
+      [
+       1275,
+       385
+      ],
+      [
+       1110,
+       385
+      ],
+      [
+       1080,
+       300
+      ]
+     ]
+    ],
+    "tag": [
+     1110,
+     250
     ]
    },
    {
@@ -63,10 +212,43 @@
     "slug": "home",
     "name": "Rue des Maisons",
     "rect": [
-     47,
-     240,
+     225,
      180,
-     205
+     167,
+     172
+    ],
+    "en": "House Street",
+    "poly": [
+     [
+      [
+       245,
+       192
+      ],
+      [
+       388,
+       180
+      ],
+      [
+       392,
+       318
+      ],
+      [
+       372,
+       352
+      ],
+      [
+       240,
+       352
+      ],
+      [
+       225,
+       325
+      ]
+     ]
+    ],
+    "tag": [
+     310,
+     335
     ]
    },
    {
@@ -74,10 +256,63 @@
     "slug": "beginner",
     "name": "Place du Village",
     "rect": [
-     234,
-     240,
-     180,
-     205
+     405,
+     150,
+     285,
+     220
+    ],
+    "en": "Village Square",
+    "poly": [
+     [
+      [
+       405,
+       185
+      ],
+      [
+       598,
+       183
+      ],
+      [
+       608,
+       150
+      ],
+      [
+       650,
+       150
+      ],
+      [
+       658,
+       180
+      ],
+      [
+       690,
+       185
+      ],
+      [
+       690,
+       330
+      ],
+      [
+       670,
+       370
+      ],
+      [
+       545,
+       370
+      ],
+      [
+       530,
+       295
+      ],
+      [
+       405,
+       295
+      ]
+     ]
+    ],
+    "tag": [
+     480,
+     265
     ]
    },
    {
@@ -85,10 +320,47 @@
     "slug": "townhall",
     "name": "Place de la Mairie",
     "rect": [
-     437,
-     240,
-     166,
-     205
+     700,
+     180,
+     330,
+     200
+    ],
+    "en": "Town Hall Square",
+    "poly": [
+     [
+      [
+       700,
+       180
+      ],
+      [
+       840,
+       180
+      ],
+      [
+       960,
+       230
+      ],
+      [
+       1030,
+       270
+      ],
+      [
+       1030,
+       380
+      ],
+      [
+       860,
+       360
+      ],
+      [
+       700,
+       330
+      ]
+     ]
+    ],
+    "tag": [
+     760,
+     335
     ]
    },
    {
@@ -96,10 +368,43 @@
     "slug": "health",
     "name": "Quartier de la Santé",
     "rect": [
-     609,
-     240,
-     172,
-     205
+     975,
+     390,
+     200,
+     145
+    ],
+    "en": "Health Quarter",
+    "poly": [
+     [
+      [
+       1010,
+       390
+      ],
+      [
+       1175,
+       390
+      ],
+      [
+       1175,
+       510
+      ],
+      [
+       1050,
+       535
+      ],
+      [
+       975,
+       530
+      ],
+      [
+       975,
+       465
+      ]
+     ]
+    ],
+    "tag": [
+     1100,
+     512
     ]
    },
    {
@@ -107,10 +412,55 @@
     "slug": "travel",
     "name": "Carrefour des Voyages",
     "rect": [
-     797,
-     240,
-     172,
-     205
+     740,
+     430,
+     540,
+     290
+    ],
+    "en": "Travel Crossroads",
+    "poly": [
+     [
+      [
+       840,
+       500
+      ],
+      [
+       970,
+       540
+      ],
+      [
+       1050,
+       548
+      ],
+      [
+       1180,
+       523
+      ],
+      [
+       1280,
+       430
+      ],
+      [
+       1280,
+       720
+      ],
+      [
+       740,
+       720
+      ],
+      [
+       790,
+       640
+      ],
+      [
+       790,
+       580
+      ]
+     ]
+    ],
+    "tag": [
+     815,
+     612
     ]
    },
    {
@@ -118,10 +468,43 @@
     "slug": "feelings",
     "name": "Jardin des Cœurs",
     "rect": [
-     47,
-     465,
-     180,
-     160
+     172,
+     545,
+     253,
+     167
+    ],
+    "en": "Garden of Hearts",
+    "poly": [
+     [
+      [
+       172,
+       550
+      ],
+      [
+       365,
+       545
+      ],
+      [
+       375,
+       610
+      ],
+      [
+       425,
+       650
+      ],
+      [
+       425,
+       712
+      ],
+      [
+       172,
+       712
+      ]
+     ]
+    ],
+    "tag": [
+     300,
+     568
     ]
    },
    {
@@ -129,10 +512,59 @@
     "slug": "park",
     "name": "Parc des Curiosités",
     "rect": [
-     234,
-     465,
-     180,
-     160
+     380,
+     510,
+     400,
+     195
+    ],
+    "en": "Park of Curiosities",
+    "poly": [
+     [
+      [
+       380,
+       535
+      ],
+      [
+       470,
+       510
+      ],
+      [
+       560,
+       515
+      ],
+      [
+       680,
+       512
+      ],
+      [
+       760,
+       520
+      ],
+      [
+       780,
+       640
+      ],
+      [
+       700,
+       705
+      ],
+      [
+       520,
+       705
+      ],
+      [
+       440,
+       640
+      ],
+      [
+       380,
+       600
+      ]
+     ]
+    ],
+    "tag": [
+     460,
+     655
     ]
    },
    {
@@ -140,10 +572,43 @@
     "slug": "culture",
     "name": "Boulevard des Loisirs",
     "rect": [
-     437,
-     465,
-     166,
-     160
+     680,
+     365,
+     290,
+     125
+    ],
+    "en": "Leisure Boulevard",
+    "poly": [
+     [
+      [
+       685,
+       368
+      ],
+      [
+       850,
+       365
+      ],
+      [
+       970,
+       395
+      ],
+      [
+       970,
+       475
+      ],
+      [
+       800,
+       490
+      ],
+      [
+       680,
+       490
+      ]
+     ]
+    ],
+    "tag": [
+     870,
+     478
     ]
    },
    {
@@ -151,10 +616,39 @@
     "slug": "cafes",
     "name": "Rue des Saveurs",
     "rect": [
-     609,
-     465,
-     172,
-     160
+     488,
+     378,
+     177,
+     127
+    ],
+    "en": "Flavour Street",
+    "poly": [
+     [
+      [
+       540,
+       378
+      ],
+      [
+       665,
+       378
+      ],
+      [
+       665,
+       505
+      ],
+      [
+       500,
+       505
+      ],
+      [
+       488,
+       480
+      ]
+     ]
+    ],
+    "tag": [
+     585,
+     492
     ]
    },
    {
@@ -162,10 +656,55 @@
     "slug": "market",
     "name": "Place du Marché",
     "rect": [
-     797,
-     465,
      172,
-     160
+     300,
+     353,
+     220
+    ],
+    "en": "Market Square",
+    "poly": [
+     [
+      [
+       172,
+       356
+      ],
+      [
+       372,
+       356
+      ],
+      [
+       400,
+       322
+      ],
+      [
+       405,
+       300
+      ],
+      [
+       525,
+       300
+      ],
+      [
+       520,
+       395
+      ],
+      [
+       470,
+       470
+      ],
+      [
+       400,
+       520
+      ],
+      [
+       172,
+       520
+      ]
+     ]
+    ],
+    "tag": [
+     250,
+     506
     ]
    },
    {
@@ -173,10 +712,73 @@
     "slug": "nature",
     "name": "Vallée Verte",
     "rect": [
-     1000,
-     20,
-     280,
-     700
+     0,
+     0,
+     1280,
+     720
+    ],
+    "en": "Green Valley",
+    "poly": [
+     [
+      [
+       1065,
+       0
+      ],
+      [
+       1280,
+       0
+      ],
+      [
+       1280,
+       235
+      ],
+      [
+       1180,
+       240
+      ],
+      [
+       1100,
+       230
+      ],
+      [
+       1065,
+       175
+      ]
+     ],
+     [
+      [
+       0,
+       245
+      ],
+      [
+       150,
+       245
+      ],
+      [
+       165,
+       345
+      ],
+      [
+       150,
+       470
+      ],
+      [
+       165,
+       545
+      ],
+      [
+       150,
+       720
+      ],
+      [
+       0,
+       720
+      ]
+     ]
+    ],
+    "tag": [
+     1115,
+     118
     ]
    }
   ]
