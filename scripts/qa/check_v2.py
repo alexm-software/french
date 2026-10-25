@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""QA for the v2 village (village/v2/). Static checks on the built payloads, then (with --browser)
+"""QA for the village (village/). Static checks on the built payloads, then (with --browser)
 a Playwright pass that measures the rendered page.
 
 Static rules (per building/room):
@@ -24,7 +24,7 @@ Static rules (per building/room):
     lies inside its own click polygon. Sector hover labels (live and bientôt) stay 6% inside the
     painting at desktop and phone widths
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
-    sector maps == village/v2/data/<bld>.js files; the main room's exit and Back go to its sector map
+    sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
 overlap, every route renders with no JS error, Back goes to the right place, verb cards have no
 sideways scroll. Screenshots go to --shots.
@@ -34,7 +34,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-V2 = ROOT / "village" / "v2"
+V2 = ROOT / "village"
 W, H = 1280, 720
 BLOCK = [r"\bgod the father\b", r"dieu le p[eè]re", r"\bdrunk", r"\bbeer\b", r"\bcigar", r"\bsmok(e|ing)\b(?!.*(incense|censer|chimney|smoke rises))",
          r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill", r"\btobacc"]
@@ -93,7 +93,7 @@ def vocab_rooms():
 
 
 def v1_room(bld, room):
-    s = (ROOT / "village" / "assets" / "data" / f"{bld}.js").read_text(encoding="utf-8")
+    s = (ROOT / "data" / "v1-payloads" / f"{bld}.js").read_text(encoding="utf-8")
     d = json.loads(s[s.index("]=") + 2:].rstrip().rstrip(";"))
     return [it["id"] for it in d["rooms"][room]["items"]]
 
@@ -436,7 +436,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("buildings", nargs="*")
     ap.add_argument("--browser", action="store_true")
-    ap.add_argument("--base", default="http://localhost:8765/v2/index.html")
+    ap.add_argument("--base", default="http://localhost:8765/index.html")
     ap.add_argument("--shots", default="/tmp/v2_shots")
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")

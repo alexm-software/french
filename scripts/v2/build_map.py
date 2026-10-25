@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write village/v2/data/map.js from content/v2/map.json (shared file; run once, not per building).
+"""Write village/data/map.js from content/v2/map.json (shared file; run once, not per building).
 
 map.json = {"world": {image, alt, sectors: [{id, slug, name, rect}]},
             "sectors": {slug: {id, slug, name, image, alt,
@@ -7,7 +7,7 @@ map.json = {"world": {image, alt, sectors: [{id, slug, name, rect}]},
                                streets:   [{id, name, rect}]}}}
 It follows the memory-palace registry (data/sectors.json, data/buildings.json): every sector and every
 building / ST_ verb street of each sector is painted on that sector's map. Nothing here says which
-buildings are live: the app probes village/v2/data/<id>.js for each building at runtime, where
+buildings are live: the app probes village/data/<id>.js for each building at runtime, where
 id = building_id without its "Bnn_" prefix (B29_plage -> plage) unless the entry gives a legacy "id"
 (B06_marche -> boulangerie, B05_maison's garage -> garage). So shipping a building never needs this
 script or map.js to change. Hover tags and door arrows are placed from the rect unless given.
@@ -16,7 +16,7 @@ rings of [x, y] points in the 1280x720 painting): the click area is then the pol
 import json, re
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
-V2 = ROOT / "village" / "v2"
+V2 = ROOT / "village"
 M = json.loads((ROOT / "content" / "v2" / "map.json").read_text(encoding="utf-8"))
 
 
