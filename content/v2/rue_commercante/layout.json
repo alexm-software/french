@@ -119,7 +119,8 @@
    "only": [
     "fr_consommateur_noun",
     "fr_bourg_noun",
-    "fr_depot_noun"
+    "fr_depot_noun",
+    "fr_racheter_verb"
    ]
   },
   "ventes": {
@@ -135,7 +136,8 @@
     "fr_bonus_noun",
     "fr_souk_noun",
     "fr_prelevement_noun",
-    "fr_acquisition_noun"
+    "fr_acquisition_noun",
+    "fr_revendre_verb"
    ]
   },
   "lot": {
@@ -145,7 +147,8 @@
     "fr_rabais_noun",
     "fr_negociant_noun",
     "fr_abonne_noun",
-    "fr_troc_noun"
+    "fr_troc_noun",
+    "fr_debattre_verb"
    ]
   },
   "fleuriste": {
@@ -281,7 +284,6 @@
   "bijouterie": {
    "vocabRoom": "R_boutique_01",
    "only": [
-    "fr_sonnerie_noun",
     "fr_montre_noun",
     "fr_bague_noun",
     "fr_ronde_noun",
@@ -813,12 +815,12 @@
     {
      "to": "rue_commercante",
      "label": "la rue Commerçante",
-     "hint": "Go back through the orange door to the shopping street",
+     "hint": "Go back out through the orange door to the twilight shopping street",
      "hit": [
-      478,
-      45,
-      80,
-      150
+      345,
+      150,
+      190,
+      260
      ]
     }
    ],
@@ -826,16 +828,16 @@
     {
      "to": "jouets",
      "label": "la caisse de jouets",
-     "hint": "Look closer at the big crate of toys",
+     "hint": "Look closer at the open toy chest on the rug",
      "at": [
-      960,
-      698
+      800,
+      662
      ],
      "obj": [
-      650,
-      366,
-      630,
-      354
+      580,
+      400,
+      500,
+      281
      ]
     }
    ],
@@ -843,129 +845,125 @@
     {
      "id": "fr_vitrine_noun",
      "box": [
-      0,
-      20,
-      180,
-      235
-     ],
-     "labelAt": [
-      90,
-      219
+      77,
+      43,
+      215,
+      250
      ]
     },
     {
      "id": "fr_marchandise_noun",
      "box": [
-      15,
-      262,
-      170,
-      300
+      77,
+      300,
+      160,
+      215
      ]
     },
     {
      "id": "fr_corbeille_noun",
      "box": [
-      190,
-      150,
-      194,
-      175
+      140,
+      520,
+      165,
+      140
      ]
     },
     {
      "id": "fr_enseigne_noun_f",
      "box": [
-      272,
-      10,
-      140,
-      135
-     ],
-     "labelAt": [
-      342,
-      109
+      345,
+      43,
+      135,
+      95
      ]
     },
     {
      "id": "fr_epicerie_noun",
      "box": [
-      388,
-      282,
-      132,
-      320
+      410,
+      420,
+      150,
+      215
      ]
     },
     {
      "id": "fr_comptoir_noun",
      "box": [
-      550,
-      200,
-      192,
-      120
+      1115,
+      240,
+      88,
+      125
      ]
     },
     {
      "id": "fr_panier_noun",
      "box": [
-      660,
-      325,
-      135,
-      115
+      1110,
+      370,
+      93,
+      85
      ]
     },
     {
      "id": "fr_vendeur_noun",
      "box": [
-      746,
-      30,
-      150,
-      168
+      700,
+      120,
+      92,
+      275
      ],
      "labelAt": [
-      821,
-      163
+      755,
+      100
      ]
     },
     {
      "id": "fr_commercant_noun",
      "box": [
-      815,
-      215,
-      125,
-      195
+      1110,
+      460,
+      93,
+      217
      ]
     },
     {
      "id": "fr_passant_noun",
      "box": [
-      945,
-      115,
-      105,
-      210
+      596,
+      205,
+      95,
+      190
      ]
     },
     {
      "id": "fr_caissier_noun",
      "box": [
-      1055,
-      125,
-      100,
-      165
+      984,
+      175,
+      128,
+      150
      ]
     },
     {
      "id": "fr_collectionneur_noun",
      "box": [
-      1160,
-      195,
-      120,
-      180
+      818,
+      205,
+      140,
+      185
+     ],
+     "labelAt": [
+      889,
+      372
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The stockroom: an orange door at the back leads out to the street. Cakes on stands by the window, a raven on a basket of apples, stacked cardboard boxes, a boot hanging as a shop sign, a baker with loaves at the counter, a balloon seller, a shopkeeper with a moustache sweeping, a passer-by in a long coat, a cashier at her till, and a toy crate of model houses.",
+   "alt": "The shop's stockroom at dusk, under an iron gallery and hanging lanterns, painted in ink and gouache, with the orange door ajar onto the twilight street. On the left cakes glow in a lit window, a mouse guards a pile of smiling cardboard boxes, a crow pecks an apple from a girl's wicker basket, a boy on a ladder paints a boot-shaped shop sign on its iron arm, and the grocer tips a pea from her scoop. On the right a passer-by tips his hat, a balloon seller holds his bunch of balloons, a collector peers at his stamp album through a magnifier, the cashier rings up at her brass till, two toddlers share cookies on the counter, a bicycle pannier is piled with baguettes and a moustached shopkeeper sweeps up a puff of dust. In front, Monsieur Verbe buys back a plush rat from a boy over an open toy chest while an old lady licks an ice cream beside her trolley.",
    "nameplate": [
-    79,
+    80,
     10
    ]
   },
@@ -980,34 +978,43 @@
     {
      "id": "fr_consommateur_noun",
      "box": [
-      700,
-      135,
-      250,
-      300
+      1040,
+      43,
+      163,
+      390
      ]
     },
     {
      "id": "fr_bourg_noun",
      "box": [
-      1040,
-      236,
-      235,
-      186
+      560,
+      380,
+      170,
+      190
      ]
     },
     {
      "id": "fr_depot_noun",
      "box": [
-      737,
-      440,
+      735,
       470,
-      260
+      165,
+      180
+     ]
+    },
+    {
+     "id": "fr_racheter_verb",
+     "box": [
+      290,
+      170,
+      265,
+      330
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the toy crate in the stockroom: an old lady with a full trolley licks an ice-cream cone, a model market town of red-roofed houses, and a little boy in a blue cap sweeping out a toy bus depot."
+   "alt": "Close-up of the open toy chest in the stockroom: Monsieur Verbe in his red beret hands a coin to a little boy to buy back a fluffy grey toy rat, a model market town of red-roofed houses with a clock tower fills the chest, beside it a toy bus depot where a tiny figure in a blue cap sweeps, and an old lady licks a pink ice cream beside her full wire trolley."
   },
   "ventes": {
    "name": "La salle des ventes",
@@ -1018,12 +1025,12 @@
     {
      "to": "rue_commercante",
      "label": "la rue Commerçante",
-     "hint": "Go back through the yellow door to the shopping street",
+     "hint": "Go back out through the yellow door, left ajar onto the rainy shopping street",
      "hit": [
-      714,
-      45,
+      490,
       70,
-      230
+      60,
+      215
      ]
     }
    ],
@@ -1031,16 +1038,16 @@
     {
      "to": "lot",
      "label": "le lot",
-     "hint": "Look closer at the big crate of lots for sale",
+     "hint": "Look closer at the busy carrot stall in the middle of the saleroom",
      "at": [
-      700,
-      690
+      770,
+      590
      ],
      "obj": [
-      604,
-      342,
-      672,
-      378
+      490,
+      290,
+      560,
+      315
      ]
     }
    ],
@@ -1048,121 +1055,118 @@
     {
      "id": "fr_echoppe_noun",
      "box": [
-      0,
-      20,
-      158,
-      210
-     ],
-     "labelAt": [
-      79,
-      195
+      77,
+      110,
+      95,
+      200
      ]
     },
     {
      "id": "fr_brocante_noun",
      "box": [
-      0,
-      232,
-      158,
-      234
+      180,
+      205,
+      180,
+      160
      ]
     },
     {
      "id": "fr_halle_noun",
      "box": [
-      160,
+      180,
       60,
-      265,
-      405
-     ],
-     "labelAt": [
-      292,
-      429
+      170,
+      140
      ]
     },
     {
      "id": "fr_enchere_noun",
      "box": [
-      432,
-      95,
-      108,
-      345
+      370,
+      170,
+      112,
+      300
      ]
     },
     {
      "id": "fr_acheteur_noun",
      "box": [
-      575,
-      130,
-      135,
-      290
+      850,
+      50,
+      100,
+      235
      ]
     },
     {
      "id": "fr_abonnement_noun",
      "box": [
-      788,
-      130,
-      85,
-      238
+      955,
+      95,
+      150,
+      100
      ]
     },
     {
      "id": "fr_distributeur_noun",
      "box": [
-      876,
-      60,
-      108,
-      115
-     ],
-     "labelAt": [
-      958,
-      139
+      1110,
+      43,
+      93,
+      130
      ]
     },
     {
      "id": "fr_bonus_noun",
      "box": [
-      905,
-      180,
-      195,
-      186
+      990,
+      200,
+      213,
+      95
      ]
     },
     {
      "id": "fr_souk_noun",
      "box": [
-      1105,
-      62,
-      175,
-      395
+      1075,
+      300,
+      128,
+      210
      ]
     },
     {
      "id": "fr_prelevement_noun",
      "box": [
-      714,
-      372,
-      229,
-      98
+      1055,
+      515,
+      148,
+      162
      ]
     },
     {
      "id": "fr_acquisition_noun",
      "box": [
-      100,
-      470,
+      90,
+      420,
       230,
-      170
+      250
+     ]
+    },
+    {
+     "id": "fr_revendre_verb",
+     "box": [
+      560,
+      80,
+      285,
+      205
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The upstairs sales room: a yellow door at the back leads out to the street. A market stall under a striped awning, a junk table of teapots, a beaming uncle spreading his arms, a woman waving a paddle beside a chair, a man with shopping bags, a lady in a bonnet with a stack of magazines, a parrot, a camel with rolled rugs, a hamster wheel, and an open crate of toy animals.",
+   "alt": "A rainy blue-grey morning in the auction saleroom, painted in ink and gouache, seen from up high, with the yellow door ajar onto the wet street. On the left a clerk leans out of her little wooden booth, a beaming uncle spreads his arms wide below the arched window, an aunt in a shawl sorts a junk table of teapots, a woman lifts her bidding paddle beside a chair and a hamster runs in its wheel. On the stage Monsieur Verbe in his purple beret hands his old bicycle over to a man in a cap. On the right a man holds up a tower of shoe boxes, a lady in a bonnet hugs a stack of magazines, a parrot perches on the vending machine, a baker tosses a bone to a jumping spaniel, a camel waits with rolled carpets and lanterns and a magpie pecks at a barrel of nuts. In the middle Monsieur Verbe in a gold beret haggles over a busy carrot stall.",
    "nameplate": [
-    34,
-    94
+    36,
+    93
    ]
   },
   "lot": {
@@ -1176,52 +1180,61 @@
     {
      "id": "fr_shopping_noun",
      "box": [
-      600,
-      250,
-      150,
-      215
+      1066,
+      240,
+      137,
+      300
      ]
     },
     {
      "id": "fr_rabais_noun",
      "box": [
-      762,
-      255,
-      140,
-      200
+      668,
+      290,
+      240,
+      250
      ]
     },
     {
      "id": "fr_negociant_noun",
      "box": [
-      906,
-      250,
-      135,
-      215
+      668,
+      43,
+      222,
+      240
      ]
     },
     {
      "id": "fr_abonne_noun",
      "box": [
-      1045,
-      255,
-      140,
-      210
+      912,
+      43,
+      150,
+      330
      ]
     },
     {
      "id": "fr_troc_noun",
      "box": [
-      720,
-      470,
-      380,
-      225
+      740,
+      550,
+      463,
+      127
+     ]
+    },
+    {
+     "id": "fr_debattre_verb",
+     "box": [
+      300,
+      43,
+      360,
+      345
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the crate in the upstairs sales room: a penguin with shopping bags, a rabbit snipping with scissors beside his carrots, a merchant with an armful of carrots, a lady in a bonnet, and a goat beside a toy truck of cabbages."
+   "alt": "Close-up of the carrot stall in the saleroom: Monsieur Verbe in a gold beret and a painted moustache debates the price with one finger raised, the merchant offers an armful of carrots, a rabbit snips the price with his scissors, a lady in a bonnet carries her basket of carrots, a penguin waddles past with paper shopping bags, and a goat stands beside a toy truck of cabbages."
   },
   "fleuriste": {
    "name": "Chez la fleuriste",
@@ -1245,7 +1258,7 @@
     {
      "to": "cagette",
      "label": "la cagette",
-     "hint": "Look closer at the little wooden crate of pots",
+     "hint": "Look closer at Grandma and the children busy with flower pots on the floor",
      "at": [
       300,
       690
@@ -1382,7 +1395,7 @@
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The florist's greenhouse: a lime-green door on the right leads out to the street. Roses in a blue-and-white vase, a fern-haired gnome watering, a fairy, a girl on a ladder among ivy, a rooster, a tiny rosette, a lady in a floral dress followed by bumblebees, a friendly ghost, white lilies, a girl smelling a rose bush, and a wooden crate of potted flowers.",
+   "alt": "The florist's greenhouse: a lime-green door on the right leads out to the street. Roses in a blue-and-white vase, a fern-haired gnome watering, a fairy, a girl on a ladder among ivy, a rooster, a tiny rosette, a lady in a floral dress followed by bumblebees, a friendly ghost, white lilies, a girl smelling a rose bush, and on the floor in front a grandmother and three children busy with flower pots.",
    "nameplate": [
     56,
     68
@@ -1399,52 +1412,52 @@
     {
      "id": "fr_marmotte_noun",
      "box": [
-      30,
-      412,
-      275,
-      300
+      77,
+      360,
+      215,
+      280
      ]
     },
     {
      "id": "fr_tulipe_noun",
      "box": [
-      232,
-      40,
       300,
-      220
+      55,
+      310,
+      370
      ]
     },
     {
      "id": "fr_lavande_noun",
      "box": [
-      425,
-      262,
-      290,
-      370
+      400,
+      440,
+      240,
+      237
      ]
     },
     {
      "id": "fr_muguet_noun",
      "box": [
-      720,
-      180,
-      240,
-      460
+      770,
+      150,
+      210,
+      290
      ]
     },
     {
      "id": "fr_bulbe_noun",
      "box": [
-      965,
+      985,
+      400,
       170,
-      245,
-      430
+      277
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the flower crate at the florist's: a marmot curled asleep in a pot, two frogs leaping over a red tulip, a toy truck in front of purple lavender, lily of the valley in a mug, and a glowing flower bulb pushing up a shoot."
+   "alt": "Close-up of the greenhouse floor in low morning sunbeams: a marmot snoozes curled up in a tipped-over flower pot, two frogs leap over a red tulip while a little boy laughs, a little girl pulls a toy truck overflowing with lavender on a string, a grandmother holds up a flowery mug of ringing lily of the valley, and a boy with a trowel plants a flower bulb that glows like a light bulb."
   },
   "quincaillerie": {
    "name": "La quincaillerie",
@@ -1455,12 +1468,12 @@
     {
      "to": "rue_commercante",
      "label": "la rue Commerçante",
-     "hint": "Go back through the dark-green door to the shopping street",
+     "hint": "Go back out through the green door at the back to the shopping street",
      "hit": [
-      655,
-      40,
+      455,
+      125,
       90,
-      280
+      260
      ]
     }
    ],
@@ -1468,16 +1481,16 @@
     {
      "to": "bac",
      "label": "le bac",
-     "hint": "Look closer at the big wooden bin of building supplies",
+     "hint": "Look closer at the grey metal bin of bricks and the busy corner around it",
      "at": [
-      975,
-      698
+      1000,
+      630
      ],
      "obj": [
-      670,
-      377,
-      610,
-      343
+      480,
+      200,
+      800,
+      450
      ]
     }
    ],
@@ -1485,19 +1498,19 @@
     {
      "id": "fr_matiere_noun",
      "box": [
-      0,
-      100,
-      172,
-      320
+      77,
+      222,
+      135,
+      190
      ]
     },
     {
      "id": "fr_fibre_noun",
      "box": [
-      178,
-      60,
-      115,
-      142
+      180,
+      95,
+      120,
+      95
      ],
      "labelAt": [
       235,
@@ -1508,54 +1521,54 @@
      "id": "fr_cire_noun",
      "box": [
       222,
-      205,
-      170,
-      232
+      200,
+      125,
+      215
      ]
     },
     {
      "id": "fr_etoffe_noun",
      "box": [
-      398,
-      15,
-      250,
-      300
+      350,
+      175,
+      95,
+      240
      ]
     },
     {
      "id": "fr_colle_noun",
      "box": [
-      520,
-      322,
-      160,
-      150
+      150,
+      420,
+      165,
+      135
      ]
     },
     {
      "id": "fr_cuir_noun",
      "box": [
-      752,
-      45,
-      125,
-      395
+      600,
+      165,
+      95,
+      330
      ]
     },
     {
      "id": "fr_carton_noun",
      "box": [
-      882,
-      275,
-      160,
-      165
+      700,
+      195,
+      100,
+      120
      ]
     },
     {
      "id": "fr_tissu_noun",
      "box": [
-      905,
-      106,
-      170,
-      164
+      805,
+      195,
+      110,
+      120
      ],
      "labelAt": [
       990,
@@ -1565,43 +1578,43 @@
     {
      "id": "fr_caoutchouc_noun",
      "box": [
-      1080,
-      175,
-      185,
-      265
+      700,
+      350,
+      105,
+      240
      ]
     },
     {
      "id": "fr_enceinte_noun",
      "box": [
-      0,
-      440,
-      182,
-      190
+      77,
+      565,
+      200,
+      112
      ]
     },
     {
      "id": "fr_adhesion_noun",
      "box": [
-      186,
-      452,
-      255,
-      250
+      335,
+      440,
+      180,
+      140
      ]
     },
     {
      "id": "fr_resine_noun",
      "box": [
-      448,
-      520,
-      200,
-      190
+      370,
+      590,
+      230,
+      87
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The hardware and materials store: a dark-green door at the back leads out to the street. Women fold cloth and a fortune-teller gazes into a crystal ball, a man shows a big leather hide, a rubber duck, sheep on a fibre mat, a pot of glue spilling, a cowboy, and an open crate of building materials with a girl in clogs and a boy with a star badge.",
+   "alt": "A warm, cluttered hardware and materials shop under a green scalloped awning, painted in ink and gouache, with a big window onto the sunny street and a green door ajar at the back. Afternoon light falls across the cobbled floor. On the left a woman rips a length of material, a toy elephant hangs from a single fibre, a fortune-teller gazes into a crystal ball beside a melting wax candle, and a toff in a top hat holds up a bolt of cloth. Below, a collie has its paw stuck to a glue bottle, little sheep stand in a fenced enclosure on a heap of sand, a cat is taped to a plank, and a beetle crawls through sticky resin on a log. In the middle a cowboy dances in squeaky new leather boots, a cardboard box on toy wheels carries a heavy iron weight, an old tailor sips tea as he sews, and a boy in yellow rubber boots sneezes. On the right a little builder yells from a grey metal bin of tumbling bricks, a carpenter holds up yellow plastic and a teak plank, a boy shows off his club badge, a girl with a red bow clatters in wooden clogs and a man in a flat cap sits on his stack of planks.",
    "nameplate": [
     80,
     10
@@ -1618,52 +1631,52 @@
     {
      "id": "fr_materiel_adj",
      "box": [
-      395,
-      160,
-      200,
-      290
+      700,
+      178,
+      230,
+      180
      ]
     },
     {
      "id": "fr_plastique_noun",
      "box": [
-      630,
-      110,
-      186,
-      215
+      880,
+      43,
+      200,
+      130
      ]
     },
     {
      "id": "fr_sabot_noun",
      "box": [
-      600,
-      330,
-      215,
-      270
+      590,
+      420,
+      165,
+      200
      ]
     },
     {
      "id": "fr_materiau_noun",
      "box": [
-      820,
-      190,
-      260,
-      450
+      960,
+      330,
+      243,
+      340
      ]
     },
     {
      "id": "fr_adherent_noun",
      "box": [
-      1082,
-      300,
-      180,
-      265
+      1090,
+      90,
+      113,
+      230
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the materials bin in the hardware store: a builder yelling as a pile collapses, a carpenter with a yellow plastic sheet and a teak plank, a little girl with a red bow in wooden clogs, a man in a flat cap sitting on his stack of planks, and a boy wearing a club badge."
+   "alt": "A close-up of the grey metal bin corner of the hardware shop, in warm ink and gouache: a little builder in a yellow hard hat yells as bricks tumble around him, a carpenter holds up a shiny yellow plastic sheet and a teak plank, a boy in a blue jumper beams over his gold star club badge, a girl with a red bow clatters a yellow wooden clog, and a man in a flat cap sits on his stack of planks. Behind them the cowboy waves, an old tailor sips tea and a boy in yellow rubber boots sneezes."
   },
   "ferronnerie": {
    "name": "La ferronnerie",
@@ -1687,7 +1700,7 @@
     {
      "to": "casier",
      "label": "le casier",
-     "hint": "Look closer at the long wooden bin on the floor",
+     "hint": "Look closer at the girl carrying her gleaming box through the sparks on the floor",
      "at": [
       900,
       698
@@ -1824,7 +1837,7 @@
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The ironmonger's workshop: a teal door at the back leads out to the street. Chains hang from the wall, a monkey swings on a rope, a man plays the guitar on a coil of rope, a blacksmith at his anvil, an iron grille, a friendly robot, a spider on its thread, a marble block, a silver castle, and an open crate of metal pieces with a shiny leek.",
+   "alt": "The ironmonger's workshop: a teal door at the back leads out to the street. Chains hang from the wall, a monkey swings on a rope, a man plays the guitar on a coil of rope, a blacksmith at his anvil, an iron grille, a friendly robot, a spider on its thread, a marble block, a silver castle, and on the floor in the forge glow a girl carries a gleaming silver leek past a pipe, a beagle and a man ringing a bell.",
    "nameplate": [
     82,
     10
@@ -1841,61 +1854,61 @@
     {
      "id": "fr_metallique_adj",
      "box": [
-      452,
-      285,
-      142,
-      300
+      500,
+      290,
+      170,
+      205
      ]
     },
     {
      "id": "fr_tuyau_noun",
      "box": [
-      600,
-      380,
-      126,
-      225
+      580,
+      500,
+      150,
+      177
      ]
     },
     {
      "id": "fr_barreau_noun",
      "box": [
-      728,
-      280,
-      92,
-      390
+      1050,
+      110,
+      153,
+      330
      ]
     },
     {
      "id": "fr_cuivre_noun",
      "box": [
-      822,
-      428,
-      74,
-      140
+      800,
+      300,
+      245,
+      150
      ]
     },
     {
      "id": "fr_bronze_noun",
      "box": [
-      826,
-      572,
-      100,
-      125
+      735,
+      455,
+      240,
+      222
      ]
     },
     {
      "id": "fr_cordon_noun",
      "box": [
-      1044,
-      350,
-      225,
-      340
+      1050,
+      450,
+      153,
+      227
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the metal crate in the ironmonger's: a shiny silver leek, a bird peeping from a metal pipe, a cat on the rung of a ladder by a wheelbarrow, a copper pot and a brass trumpet, a beagle sniffing a bronze dog statue, and a man tugging a long red cord."
+   "alt": "Close-up of the forge floor at the ironmonger's in a warm orange glow and flying sparks: a girl in a red bobble hat carries a small box with a shiny silver metallic leek standing upright in it, a yellow bird tweets from inside a metal pipe lying on the floor, a cat sits on a rung of the ladder above a parked wheelbarrow, a copper pot and a brass trumpet quiver on the bench, a beagle sniffs a bronze dog statue, and Don tugs the long red cord to clang the bell."
   },
   "librairie": {
    "name": "La librairie",
@@ -1908,10 +1921,10 @@
      "label": "la rue Commerçante",
      "hint": "Go back through the sky-blue door to the shopping street",
      "hit": [
-      300,
-      15,
-      120,
-      140
+      330,
+      75,
+      100,
+      130
      ]
     }
    ],
@@ -1919,16 +1932,16 @@
     {
      "to": "bac_livres",
      "label": "le bac à livres",
-     "hint": "Look closer at the big open crate of books",
+     "hint": "Look closer at the wheeled book cart in the middle of the shop",
      "at": [
-      640,
-      690
+      690,
+      610
      ],
      "obj": [
-      300,
-      345,
-      667,
-      375
+      380,
+      320,
+      600,
+      338
      ]
     }
    ],
@@ -1936,46 +1949,46 @@
     {
      "id": "fr_page_noun_f",
      "box": [
-      0,
-      180,
-      214,
-      220
+      77,
+      225,
+      130,
+      200
      ]
     },
     {
      "id": "fr_presse_noun",
      "box": [
-      222,
-      160,
-      195,
-      235
+      215,
+      212,
+      175,
+      190
      ]
     },
     {
      "id": "fr_edition_noun",
      "box": [
-      205,
-      405,
-      135,
-      160
+      215,
+      410,
+      100,
+      195
      ]
     },
     {
      "id": "fr_bibliotheque_noun",
      "box": [
-      438,
-      130,
-      125,
-      120
+      432,
+      180,
+      120,
+      110
      ]
     },
     {
      "id": "fr_livre_noun_m",
      "box": [
-      736,
-      16,
-      130,
-      280
+      760,
+      65,
+      110,
+      270
      ],
      "labelAt": [
       801,
@@ -1985,88 +1998,88 @@
     {
      "id": "fr_journal_noun",
      "box": [
-      870,
-      150,
-      150,
-      140
+      878,
+      205,
+      135,
+      130
      ]
     },
     {
      "id": "fr_papier_noun",
      "box": [
-      800,
-      300,
-      155,
-      160
+      818,
+      340,
+      115,
+      150
      ]
     },
     {
      "id": "fr_page_noun_m",
      "box": [
-      1024,
-      128,
-      92,
-      140
+      1030,
+      178,
+      82,
+      188
      ]
     },
     {
      "id": "fr_crayon_noun",
      "box": [
-      1062,
-      272,
-      58,
-      116
+      985,
+      565,
+      110,
+      112
      ]
     },
     {
      "id": "fr_guide_noun_m",
      "box": [
-      1150,
-      185,
-      128,
-      240
+      1120,
+      240,
+      83,
+      120
      ]
     },
     {
      "id": "fr_carnet_noun",
      "box": [
-      960,
-      392,
-      128,
-      170
+      935,
+      432,
+      106,
+      125
      ]
     },
     {
      "id": "fr_lecteur_noun",
      "box": [
-      1094,
-      432,
-      80,
-      143
+      1045,
+      370,
+      158,
+      185
      ]
     },
     {
      "id": "fr_cahier_noun",
      "box": [
-      961,
-      578,
-      150,
-      80
+      822,
+      565,
+      160,
+      100
      ]
     },
     {
      "id": "fr_bouquin_noun",
      "box": [
-      1176,
-      525,
-      104,
-      190
+      1110,
+      562,
+      93,
+      115
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The bookshop: a sky-blue door at the back leads out to the street. Tall bookshelves, a printing press, a cat and a dragon reading, a bee, a girl on a tower of books, an old lady writing, an old gentleman reading beside a cup of tea on a saucer, a pony and a little red toy car, children with notebooks, a ghost, and an open crate of books with a squid and an anchor.",
+   "alt": "A tall, narrow shophouse bookshop on a rainy morning, painted in ink and gouache, seen from the back of the shop: rain streams down the big front window under the green striped awning, with the wet market street beyond, and a sky-blue glass door leads out to it. Brass lamps glow over a wooden gallery and ladder. On the left a cat turns the page of a giant book and a paper dragon springs out, an iron press squeezes out the morning papers, an old gentleman on a stool reads a first edition with his teacup on its saucer, and a bee with a tiny tablet buzzes along the shelves. In the middle, young booksellers work at a wheeled bargain-book cart, where a parrot types and a squid's ink spreads into an anchor. On the right a girl adds one more book to her wobbly tower, old Al writes his diary, a page boy in velvet carries a ring on a cushion, a tour guide holds up his guidebook with ducks waddling after him, Pa Pierre folds a paper boat, a toy pony rears at a little red car, a blue paper kayak sits on the rug, a girl draws with a rainbow-wrapped pencil, a reader is so lost in his book that a cat sleeps on his head, and a ghost pops out of an old book.",
    "nameplate": [
     48,
     10
@@ -2083,87 +2096,87 @@
     {
      "id": "fr_copie_noun",
      "box": [
-      205,
-      45,
-      262,
-      208
+      77,
+      55,
+      260,
+      265
      ]
     },
     {
      "id": "fr_librairie_noun",
      "box": [
-      470,
-      0,
-      175,
-      250
+      345,
+      43,
+      185,
+      170
      ],
      "labelAt": [
-      557,
+      437,
       215
      ]
     },
     {
      "id": "fr_encre_noun",
      "box": [
-      75,
-      257,
-      215,
-      461
+      410,
+      248,
+      205,
+      330
      ]
     },
     {
      "id": "fr_recommandation_noun",
      "box": [
-      292,
-      330,
-      178,
-      200
+      160,
+      365,
+      245,
+      195
      ]
     },
     {
      "id": "fr_libraire_noun",
      "box": [
-      482,
-      260,
-      345,
-      250
+      565,
+      43,
+      165,
+      190
      ]
     },
     {
      "id": "fr_stylo_noun",
      "box": [
-      720,
-      5,
-      205,
-      250
+      740,
+      250,
+      105,
+      95
      ],
      "labelAt": [
-      822,
-      220
+      792,
+      222
      ]
     },
     {
      "id": "fr_manuscrit_noun",
      "box": [
-      830,
-      258,
-      122,
-      300
+      620,
+      350,
+      210,
+      290
      ]
     },
     {
      "id": "fr_manuel_noun",
      "box": [
-      955,
-      280,
-      220,
-      270
+      850,
+      225,
+      200,
+      400
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the book crate in the bookshop: a parrot copying a letter, a tiny bookshop of shelves, a squid whose ink spreads into an anchor, a cat asleep on a book, two young booksellers handing a book across, a stylish pen in sunglasses, a quill writing, and a boy reading a manual."
+   "alt": "Close-up of the wheeled bargain-book cart in the rainy-day bookshop, painted in ink and gouache: a parrot pecks a typewriter, typing out a copy of a letter; a tiny wooden dollhouse bookshop has shelves full of books for sale; a squid in a glass jar squirts ink onto a sheet, where it spreads into an anchor; the shop cat sleeps on its recommended book; two young booksellers in caps and aprons hand a book across the cart; a fountain pen in sunglasses and a pink scarf poses; a feather quill scratches out a long manuscript by itself; and a boy reads a manual on building a bookshelf and shrugs."
   },
   "imprimerie": {
    "name": "L'imprimerie",
@@ -2331,15 +2344,6 @@
      ]
     },
     {
-     "id": "fr_sonnerie_noun",
-     "box": [
-      0,
-      285,
-      138,
-      165
-     ]
-    },
-    {
      "id": "fr_montre_noun",
      "box": [
       200,
@@ -2454,7 +2458,7 @@
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The jeweller's salon: a purple door at the back leads out to the street. By the arched window an elderly lady in a lilac shawl brushes the sparkling purple brooch pinned to it. A crystal chandelier, a big purple furry monster, a clock, a ginger cat, a giant diamond held up by a jeweller, a girl in a round dance, a pearl in an open shell, a chessboard of gold pieces, a collie with a necklace, a peacock, a fan and a cart of gold coins.",
+   "alt": "The jeweller's salon: a purple door at the back leads out to the street. By the arched window an elderly lady in a lilac shawl brushes the sparkling purple brooch pinned to it. A crystal chandelier, a big purple furry monster, a ginger cat, a giant diamond held up by a jeweller, a girl in a round dance, a pearl in an open shell, a chessboard of gold pieces, a collie with a necklace, a peacock, a fan and a cart of gold coins.",
    "nameplate": [
     29,
     10
@@ -2625,10 +2629,10 @@
      "label": "la rue Commerçante",
      "hint": "Go back through the white door to the shopping street",
      "hit": [
-      785,
+      585,
       30,
-      115,
-      230
+      82,
+      270
      ]
     }
    ],
@@ -2638,14 +2642,14 @@
      "label": "le coffre",
      "hint": "Look closer at the big open chest in the middle of the shop",
      "at": [
-      640,
-      700
+      430,
+      660
      ],
      "obj": [
-      310,
-      350,
-      656,
-      369
+      290,
+      330,
+      693,
+      390
      ]
     }
    ],
@@ -2653,86 +2657,86 @@
     {
      "id": "fr_senteur_noun",
      "box": [
-      78,
-      187,
-      150,
-      270
+      77,
+      205,
+      170,
+      235
      ]
     },
     {
      "id": "fr_vogue_noun",
      "box": [
-      55,
-      470,
-      180,
-      170
+      77,
+      450,
+      175,
+      220
      ]
     },
     {
      "id": "fr_palette_noun",
      "box": [
-      240,
-      290,
-      166,
+      252,
+      265,
+      165,
       225
      ]
     },
     {
      "id": "fr_icone_noun",
      "box": [
-      330,
-      20,
-      120,
-      118
+      325,
+      43,
+      100,
+      215
      ]
     },
     {
      "id": "fr_rondelle_noun",
      "box": [
-      408,
+      428,
       145,
-      72,
-      205
+      58,
+      195
      ],
      "labelAt": [
-      417,
-      256
+      540,
+      355
      ]
     },
     {
      "id": "fr_faction_noun",
      "box": [
-      484,
-      75,
+      490,
+      85,
       90,
-      280
+      265
      ]
     },
     {
      "id": "fr_porte_monnaie_noun",
      "box": [
-      852,
-      297,
-      109,
-      133
+      830,
+      292,
+      105,
+      85
      ]
     },
     {
      "id": "fr_joyau_noun",
      "box": [
-      905,
-      95,
-      170,
-      200
+      900,
+      125,
+      160,
+      112
      ]
     },
     {
      "id": "fr_veilleur_noun",
      "box": [
-      1080,
-      20,
-      140,
-      175
+      1065,
+      43,
+      138,
+      190
      ],
      "labelAt": [
       1150,
@@ -2742,28 +2746,28 @@
     {
      "id": "fr_dandy_noun",
      "box": [
-      1160,
-      200,
-      120,
-      270
+      1122,
+      240,
+      81,
+      170
      ]
     },
     {
      "id": "fr_ambre_noun",
      "box": [
       1030,
-      300,
-      114,
-      210
+      240,
+      90,
+      150
      ]
     },
     {
      "id": "fr_parfumeur_noun",
      "box": [
-      955,
-      455,
-      72,
-      200
+      920,
+      470,
+      124,
+      155
      ],
      "labelAt": [
       954,
@@ -2773,10 +2777,10 @@
     {
      "id": "fr_bijoutier_noun",
      "box": [
-      1032,
-      515,
-      110,
-      190
+      1045,
+      430,
+      95,
+      245
      ],
      "labelAt": [
       1079,
@@ -2786,19 +2790,19 @@
     {
      "id": "fr_jade_noun",
      "box": [
-      1148,
-      475,
-      132,
-      240
+      1145,
+      415,
+      58,
+      260
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "The perfumery: a white door at the back leads out to the street. Father Christmas sniffs a jar of herbs, a tall lady in a cone hat, a palace guard, an old painter with a kitten at her palette, a dandy in a top hat, two models in sunglasses, a lady in black lace, an amber jewel, a lady in pearls, a lady in a silk robe, and an open chest of treasures with a blue glass globe.",
+   "alt": "A bright, sunny pastel perfumery in a narrow shophouse, painted in ink and gouache and seen from high on the mezzanine: pale pink walls, a curved glass counter full of coloured perfume bottles, and sunbeams slanting in under the yellow-and-white striped awning. A white door stands open to the sunny street at the back. On the left Father Christmas sniffs a jar of pine at the counter, two models in sunglasses strut down the lilac runner, an old painter lets a kitten dab its paws on her palette, a fashion lady poses in a pointy cone hat, a tower of metal washers wobbles on a box, and a palace guard keeps watch by his lantern. In the front a big blue-and-brass steamer trunk stands open with a little crowd of treasures and people around it. On the right a purse spills coins on a stool, a man leaps for joy beside a huge purple jewel, the old watchman finds a lace veil on his lantern, a dandy twirls his moustache in a hand mirror, a jeweller holds amber up to the sun, a grey cat stirs rose oil in a copper bowl, a bee sets gems on a tiered stand, and a lady in a silk robe slips on a jade bangle.",
    "nameplate": [
-    56,
-    41
+    69,
+    4
    ]
   },
   "coffre": {
@@ -2812,28 +2816,28 @@
     {
      "id": "fr_mantille_noun",
      "box": [
-      110,
-      145,
-      300,
-      500
+      135,
+      175,
+      290,
+      470
      ]
     },
     {
      "id": "fr_styliste_noun",
      "box": [
-      415,
-      130,
+      428,
       145,
-      470
+      170,
+      395
      ]
     },
     {
      "id": "fr_enchanteur_noun",
      "box": [
-      612,
-      20,
-      175,
-      400
+      606,
+      43,
+      190,
+      320
      ],
      "labelAt": [
       699,
@@ -2843,19 +2847,19 @@
     {
      "id": "fr_saphir_noun",
      "box": [
-      565,
-      425,
-      235,
-      255
+      600,
+      422,
+      210,
+      218
      ]
     },
     {
      "id": "fr_boubou_noun",
      "box": [
-      790,
-      70,
-      200,
-      290
+      800,
+      80,
+      180,
+      275
      ],
      "labelAt": [
       890,
@@ -2865,25 +2869,25 @@
     {
      "id": "fr_glamour_noun",
      "box": [
-      1000,
+      985,
       110,
-      280,
-      250
+      218,
+      245
      ]
     },
     {
      "id": "fr_joaillier_noun",
      "box": [
-      835,
-      365,
-      240,
-      290
+      812,
+      360,
+      215,
+      280
      ]
     }
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "Close-up of the treasure chest in the perfumery: a black lace mantilla on a mannequin, a designer pinning a dress form, an enchanter lifting his top hat with a tuba bursting out, a seahorse with a blue sapphire in its bowl, a man in a colourful boubou, a lady in pearls and a spotted gown, and a jeweller cheering at his workbench."
+   "alt": "Close-up of the big open blue-and-brass steamer trunk in the sunny perfumery: a man in a top hat sips his tea and admires the black lace mantilla on a mannequin, a fashion designer pins a dress form, an enchanter holds his top hat upside down as a shiny golden tuba bursts out of it in a puff of sparkles, a seahorse shows off a blue sapphire in its glass bowl, a smiling man looks splendid in a long striped boubou, a lady in pearls and a spotted gown strikes a glamorous pose, and a jeweller at a tiny workbench cheers as he holds up a finished gold ring."
   }
  }
 }
