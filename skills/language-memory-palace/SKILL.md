@@ -1,5 +1,5 @@
 ---
-name: language-memory-palace
+name: Language memory palace
 description: >-
   Use when building a memory palace for learning a foreign language's vocabulary
   and grammar; load together with the Memory palace builder skill.
@@ -24,7 +24,7 @@ Each word is drawn as something that, said aloud in the learner's native languag
 - Never use the meaning as the sound-alike. 'cook' for cuisinier or 'cat' for chat (said SHAH) link nothing to the French sound. Derive the sound-alike from the pronunciation (IPA or respelling) and check it out loud.
 - Cognates count only when the word both looks AND sounds close (sauce, soupe). Write them plainly ("Same as English 'sauce', said SOHS") with one vivid image that fits the room, and note any pronunciation trap. Words that look alike but sound different (frite, said FREET) still need a sound cue. Mark false friends explicitly on the card.
 - Cognates still need a playful, memorable twist, ideally one that encodes the target-language pronunciation where it differs. A flat "like English X: someone uses X" line is not a mnemonic. Paint the twist.
-- Never drop a word for lack of a perfect hook; a plain, appealing depiction of the item is fine. Rate it `plain` and give the real pronunciation instead of inventing a sound cue. Label approximate or ending-only cues honestly (`plunge` for planche is approximate; `roo` cues only the end of verrou). Do not rate a meaning-only picture or a spoken exclamation as a strong sound link.
+- Never drop a word for lack of a perfect hook; a plain, appealing depiction of the item is fine.
 - No template or meta wording on cards ("Picture the plain object", "label glowing"). Every hook is a specific scene, and both the sound cue and the meaning are visibly painted.
 - Before bulk generation, write and get sign-off on a sample room of hooks. After generation, audit by reading each hook aloud against its respelling. Never trust a generator's own strength rating.
 - Watch automatic glosses for vulgar senses (dictionary data often lists slang first) and replace them with the everyday meaning.
@@ -39,18 +39,24 @@ Deciding how each kind of item is represented is part of building the palace, no
 - **Sensitive words**: as text on a museum wall, never drawn.
 Check every device against the others for clashes, put the device's meaning on the word card (for example a beret icon next to the conjugation), and record the decisions in the project plan so every later room follows them.
 
-### Proven device for verbs: one recurring verb character
-Mix verbs into the ordinary themed rooms where the action naturally happens (cutting in the kitchen, leaving at the station, praying in the church) instead of separate verb streets. Make them unmistakable by having every verb acted out by one recurring character that nobody else in the world resembles. For French this was "Monsieur Verbe", a cheerful mime in a striped shirt, suspenders and white gloves with motion lines (approved by the user). One costume item encodes the verb group through its colour, and the colours avoid the gender label colours: a red beret for -er, green for -ir, purple for -re and gold for irregular verbs. A hand mirror marks reflexive or pronominal verbs. The scene around him carries the hook (French example: *manger* is Monsieur Verbe in a red beret eating lunch in a donkey's manger; the card notes it's a spelling link, since it's said mahn-ZHAY). A troupe of identical-costume characters is fine when one room has many verbs. Adapt the character and the colour code to the target language's verb classes.
+### Choosing how verbs are represented (decide per language)
+How verbs look is a design decision for each target language and culture. The French build's mime is one example, not the default. In the representation spec, before painting:
+1. **List what a learner must tell apart** in that language: verbs from nouns at a glance, plus the verb features worth encoding (conjugation class or group, irregularity, reflexive or middle voice, aspect pairs such as Russian or Polish perfective and imperfective, separable prefixes in German or Dutch, Arabic root patterns, Japanese ichidan, godan and irregular classes, transitivity, measure-word or particle patterns).
+2. **Pick one recurring verb marker that's culturally at home in the target country** and that nobody else in the world resembles. Examples: a mime in a striped shirt for French; a flamenco dancer for Spanish; a Bavarian brass-band musician or a craftsman in a Wanderjahr outfit for German; a Peking-opera performer or a tai-chi practitioner for Mandarin; a ballet dancer for Russian; a calligrapher-storyteller (*hakawati*) for Arabic; a kabuki actor or a *kuroko* stagehand for Japanese. Avoid stereotypes or caricature, religious figures, uniforms of armed forces, and anything a native speaker could find mocking. Check with someone who knows the culture when unsure.
+3. **Give each verb feature its own visual channel on that marker** (one costume item's colour for the class, a held prop for reflexive, a pair of matching figures or a before/after pose for aspect pairs, a detachable badge for a separable prefix). Keep these channels clear of the gender and placement cues.
+4. **The marker acts inside the room's scene** with the room's nouns, never bunched with other verbs (see "Verbs live inside the scenes"). A troupe of identical-costume markers is fine when one room has many verbs.
+5. **Show a sample to the user and get sign-off** on the marker and its code before bulk painting. Record the choice in the project plan.
+6. **When a marker doesn't fit at all** (for example, a language with few inflected verbs), a simpler cue can carry it, such as a motion-line halo or a small consistent hand icon, as long as verbs stay easy to spot and are still acted out.
+
+French reference build: "Monsieur Verbe", a cheerful mime in a striped shirt, suspenders and white gloves with motion lines (approved by the user). A beret's colour encodes the group (red -er, green -ir, purple -re, gold irregular), chosen to avoid the gender label colours, and a hand mirror marks pronominal verbs. Example: *manger* is Monsieur Verbe in a red beret eating lunch in a donkey's manger (the card notes it's a spelling link, said mahn-ZHAY). Mix verbs into the themed rooms where the action happens (cutting in the kitchen, leaving at the station).
 
 ## Placement grammar (adapt to the language)
 - **Grammatical gender**: feminine nouns clearly on the left half of the room, masculine clearly on the right (a middle zone for neuter where the language has it). Don't put a big physical divider or object splitting the room; an item near the middle may overhang the centre line slightly, but its main body sits on its side. Zoom spots are their own small rooms and follow the same rule. Don't tint the walls; optionally color the word's label text by gender.
-- **Verbs** sit in the ordinary themed rooms, acted out by the recurring verb character (see Representation design). Governed prepositions and constructions (e.g. *aller à*, *venir de*) go on the card and may be hinted with a small prop.
+- **Verbs** sit in the ordinary themed rooms, acted out by the language's chosen verb marker (see "Choosing how verbs are represented"). Governed prepositions and constructions (e.g. *aller à*, *venir de*) go on the card and may be hinted with a small prop.
 - **Adjectives, adverbs, opposites, emotions, idioms**: place them in themed rooms where they fit, or in their own rooms when there's no natural home; opposites can face each other across a room.
 - **Mature or sensitive words** go as text on a museum wall, never drawn.
 
 ## Room density
-Before calling a room populated, audit coverage as well as count: list its common objects, natural actions and planned zoom contents. A noun-only assignment is not a complete activity room. Move suitable verbs from superseded verb streets into the themed room through an explicit assignment update, retain the verb character and full verb cards, and finish useful planned close-ups. Do not stop at a small noun quota when the setting has room for meaningful actions.
-
 Each room's main painting holds about 10 to 12 of its commonest words, well spaced, with the verbs among them. Add zoom spots (a counter, shelf, desk or stall of about 6 words each) only where the room needs more space and the spot makes sense; there is no fixed number. Rare words can wait in a room or zoom as cards without pictures.
 
 ## Detail card for every word
@@ -99,3 +105,30 @@ Run these in addition to the generic Validation section of the Memory palace bui
 - **Mnemonics:** the sound link works for a native speaker of the learner's language. Hooks contain no crude or slang sound-alikes.
 - **Pronunciation:** if there is audio or speech synthesis, check that the target-language voice is used.
 - **Quoted texts:** prayers and other quoted texts use the public-domain or licensed wording recorded in the audit. Required entries are present, and similar texts are clearly named.
+
+## Hook lessons (user review, Oct 25)
+- Build each hook from an English sound-alike of the whole word, then paint it literally: talus is a tall loo, rocher is rowing through snow, grandir is a grand deer, abaisser is the letters A, B and C (ah-bay-say) being lowered, vieillir is an old man cheering "yay, a year".
+- Never lean on another word in the same language (piéger cannot be shown with a piège) or on knowing the target language.
+- For abstract or quantity words, show the meaning and the sound together (le grain is a microscope on a tiny grain beside wheat).
+- Keep homonyms out of a themed room unless the room fits that sense (tronc the trunk belongs in the forest, tronc the church box does not).
+- Verbs: the verb character acts the sound-alike inside a natural scene for the street's setting, with props that carry the sound (a rat for rattacher, a chariot for charrier).
+
+## Placement and hook lessons (outside review, Oct 25)
+- **Place by meaning, never by a shared English gloss word.** Most misfits came from this: berge (river *bank*) in the bank, éleveur (*stock*breeder) with investments, polonais (*Polish*) in the repair shop, licencier (to *fire* someone) next to embraser (to set on *fire*), cocher (*coach*man) in the stadium. Run a placement check that flags any word whose only tie to its room is a shared gloss word (bank, stock, firm, coach, fire, party, star, band, scale, lead, shot, stage, league, race, game, trump, fair, parcel, shell, plain, heading, handle).
+- **Gloss the sense the room teaches.** A forest teaches feuille as *leaf*, not "sheet of paper"; a sky room teaches éclair as *lightning*, not the pastry; a sacristy teaches aube as the *alb*. When one spelling has two senses in two rooms (éclair, serviette, caisse, crêpe, croissant, facteur, cascade, régime), give each sense its own word id, card and hook, so each one can't be mistaken for the other.
+- **Grave or sensitive words never sit in light-hearted rooms** (no suicide verb on a "Relief Street", no killing in a hair salon). They go to a sober text gallery as plain wall text, or are dropped.
+- **No overflow rooms.** A leftover "stump", "attic" or "rack" room filled with unrelated abstract nouns can't be painted as a scene. Either give the room an honest abstract theme and paint it as one, or move the words to buildings whose theme fits (humanities, philosophy, problems rooms). Themed buildings get their real themed words (a sewing room teaches coudre, fil, aiguille, ourlet).
+- **Phrase-only words are taught as their phrase** (en avoir marre, ne… guère, clin d'œil, lors de, afin de, au sein de), and verbs that are only ever reflexive are shown with *se*.
+- **One hook per word, everywhere.** A word placed in two rooms shares one hook; only the setting adapts. Prefer one home per word.
+- **What makes a pun forced:** the sound is off (wrong vowel), there are too many pieces (one chunk on the stressed syllable beats four chunks covering every sound), the pun object only sits *beside* the meaning instead of acting on it, there's no pun at all (just the meaning acted out), or the wrong template is used (calling a non-cognate "like English X"). Good model: two chunks and one action, with one person or one animal.
+- **Use only English the learner knows.** No Latin or word-history hooks, and no obscure English ("chandler"). A French word the learner has certainly met already is fine as a helper.
+- **A real cognate may stay plain** when no natural pun turns up; note any false-friend trap (combustible means *fuel*).
+- **Adverbs:** where an -ment adverb's own pun is weak, reuse the adjective's pun plus "-ly".
+- **A moved word needs its hook and painting redone**, because hooks describe the room they're painted in.
+- **Inner areas match the overview.** Every district's sector map, building exteriors and interiors keep the landmarks, architecture, materials and colours the top-level map shows for it.
+
+## Verbs live inside the scenes (user review, Oct 25 evening)
+- Most verbs belong in the themed rooms where their action naturally happens, spread across the scene among the nouns and doing something with them: kneading dough on the baker's table, haggling over the scale at a stall, carrying a trunk up the stairs. Keep the verb marker's cue so a verb is still easy to spot.
+- Avoid pushing verbs aside: don't bunch a room's verbs into one corner or line them along an edge, and don't put nearly all verbs on separate streets where learners walk past them.
+- This is a balance, not an absolute. A verb street or a cluster of related actions is fine where it genuinely makes sense (a removals street for carrying and lifting verbs, a dance hall for dance moves), as long as most verbs are part of the scenes.
+- When repainting a building, bring the verbs from its sector's verb street that fit its rooms into those rooms, and keep the street only if what's left still makes a real scene.
