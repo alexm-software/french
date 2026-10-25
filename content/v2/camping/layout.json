@@ -24,12 +24,8 @@
     "fr_fumee_noun",
     "fr_bouffee_noun",
     "fr_chaleur_noun",
-    "fr_boucle_noun",
-    "fr_explosion_noun",
     "fr_allumette_noun",
     "fr_feu_noun",
-    "fr_incendie_noun",
-    "fr_fumeur_noun",
     "fr_briquet_noun"
    ]
   },
@@ -45,8 +41,6 @@
     "fr_balade_noun",
     "fr_sacoche_noun",
     "fr_promenade_noun",
-    "fr_demarche_noun",
-    "fr_traine_noun",
     "fr_camp_noun",
     "fr_pli_noun",
     "fr_camping_noun"
@@ -57,12 +51,8 @@
    "only": [
     "fr_campement_noun",
     "fr_gite_noun",
-    "fr_chamois_noun",
     "fr_kit_noun",
-    "fr_retrait_noun",
-    "fr_compartiment_noun",
-    "fr_sachet_noun",
-    "fr_littoral_noun"
+    "fr_sachet_noun"
    ]
   }
  },
@@ -71,7 +61,7 @@
    "name": "Le camping",
    "room_id": "R_camping_01",
    "image": "camping/camping.jpg",
-   "alt": "A sunny campsite by a pine forest painted in ink and gouache: a camper waving a flaming torch at a tree with glowing owl eyes, a lantern hanging from a branch with moths dancing round it, a child toasting a golden marshmallow over a leaping flame, campfire smoke curling into a rabbit that three kids try to pat, a straw hat blown off at the picnic buffet, a dog panting in the shallow water of a paddling pool, a girl whose big loop of curly hair is fastened with a shiny gold buckle, wearing hoop earrings, popcorn exploding out of a boy's pan on a camp stove while a wild raccoon stares up at it, a boy on a little blue mat lighting a candle with a match, a bear lying on all fours warming his fur by a small cosy campfire, a hand flicking a lighter at a brick barbecue, firefighters hosing a barn ablaze with roaring flames and smoke on the far hill while cows watch, a small blank brass-framed plaque on a post by the tents and a camper van with a sleeping bag and a picnic basket in its open boot. A dirt path climbs between the tents to the tent field, and the white gate at the bottom left leads out to the valley.",
+   "alt": "A sunny campsite by a pine forest painted in ink and gouache: a camper waving a flaming torch at a tree with glowing owl eyes, a lantern hanging from a branch with moths dancing round it, a child toasting a golden marshmallow over a leaping flame, campfire smoke curling into a rabbit that three kids try to pat, a straw hat blown off at the picnic buffet, a dog panting in the shallow water of a paddling pool, a girl with a big bun of curly hair and hoop earrings, a boy frying sausages in a pan on a camp stove while a wild raccoon stares up at it, a boy on a little blue mat lighting a candle with a match, a bear lying on all fours warming his fur by a small cosy campfire, a hand flicking a lighter at a brick barbecue, two firefighters strolling past a red barn on the far hill while cows graze, a small blank brass-framed plaque on a post by the tents and a camper van with a sleeping bag and a picnic basket in its open boot. A dirt path climbs between the tents to the tent field, and the white gate at the bottom left leads out to the valley.",
    "nameplate": [
     60,
     4
@@ -159,28 +149,6 @@
      ]
     },
     {
-     "id": "fr_boucle_noun",
-     "box": [
-      340,
-      350,
-      140,
-      180
-     ]
-    },
-    {
-     "id": "fr_explosion_noun",
-     "box": [
-      345,
-      535,
-      315,
-      180
-     ],
-     "labelAt": [
-      505,
-      655
-     ]
-    },
-    {
      "id": "fr_allumette_noun",
      "box": [
       545,
@@ -196,24 +164,6 @@
       342,
       268,
       108
-     ]
-    },
-    {
-     "id": "fr_incendie_noun",
-     "box": [
-      970,
-      5,
-      210,
-      125
-     ]
-    },
-    {
-     "id": "fr_fumeur_noun",
-     "box": [
-      1115,
-      226,
-      122,
-      100
      ]
     },
     {
@@ -238,7 +188,7 @@
    "room_id": "R_camping_02",
    "image": "camping/tentes.jpg",
    "backTo": "camping",
-   "alt": "The tent field, split by a wooden rail fence. Left of the fence: children in a little tree hut with a rope ladder, a family hiking with a pony, a painted wooden caravan on big wheels, a girl stacking a tower of bean cans at the canteen counter, a crow teasing a boy whose orange tent has collapsed on him, a girl guide tying a knot at the washroom mirror, a couple strolling arm in arm singing a ballad, a bicycle with a leather saddlebag, a mother duck leading her ducklings along the path, a penguin waddling across the marsh with its flippers out and a bride whose long train carries three ducklings. Right of the fence: a big bearded camper by his tent warming a can of beans on a little stove, two scouts kneeling over a creased map, one of them pleading with folded hands, a boy hammering tent pegs that ring like bells, and an old tree stump covered in tiny things that can be looked at closer. A wooden arch at the bottom right leads back to the campfire.",
+   "alt": "The tent field, split by a wooden rail fence. Left of the fence: children in a little tree hut with a rope ladder, a family hiking with a pony, a painted wooden caravan on big wheels, a girl stacking a tower of bean cans at the canteen counter, a crow teasing a boy whose orange tent has collapsed on him, a girl guide tying a knot at the washroom mirror, a couple strolling arm in arm singing a ballad, a bicycle with a leather saddlebag, a mother duck leading her ducklings along the path and a small muddy puddle ringed with reeds. Right of the fence: a big bearded camper by his tent warming a can of beans on a little stove, two scouts kneeling over a creased map, one of them pleading with folded hands, a boy hammering tent pegs that ring like bells, and an old tree stump covered in tiny things that can be looked at closer. A wooden arch at the bottom right leads back to the campfire.",
    "nameplate": [
     53,
     88
@@ -356,24 +306,6 @@
      ]
     },
     {
-     "id": "fr_demarche_noun",
-     "box": [
-      225,
-      505,
-      160,
-      125
-     ]
-    },
-    {
-     "id": "fr_traine_noun",
-     "box": [
-      385,
-      455,
-      195,
-      200
-     ]
-    },
-    {
      "id": "fr_camp_noun",
      "box": [
       870,
@@ -409,7 +341,7 @@
    "room_id": "R_camping_02_z1",
    "image": "camping/souche.jpg",
    "parent": "tentes",
-   "alt": "Close-up of the old tree stump beside the two scouts with their map: two tiny children toasting acorns over a tiny campfire among miniature tents, a little stone cottage with a white sheet flapping on the washing line, a chamois on the top ledge blowing a kiss, an open camping kit full of tiny tools on a mossy shelf with a hedgehog peeking in, two tiny campers running from a skunk and dropping their tray of marshmallows, a backpack full of pockets with a hamster in the smallest one, a hedgehog snoozing on a sleeping bag with a lavender sachet, and a crab marching with a flag along a little strip of sandy shore.",
+   "alt": "Close-up of the old tree stump beside the two scouts with their map: two tiny children toasting acorns over a tiny campfire among miniature tents, a little stone cottage with a white sheet flapping on the washing line, a mossy rock on the top ledge, an open camping kit full of tiny tools on a mossy shelf with a hedgehog peeking in, a backpack full of pockets with a rolled green cloth tucked in the front one, a hedgehog snoozing on a sleeping bag with a lavender sachet and a little strip of sandy shore by a stream.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -432,47 +364,12 @@
      ]
     },
     {
-     "id": "fr_chamois_noun",
-     "box": [
-      990,
-      20,
-      165,
-      135
-     ],
-     "labelAt": [
-      1072,
-      11
-     ]
-    },
-    {
      "id": "fr_kit_noun",
      "box": [
       600,
       255,
       230,
       130
-     ]
-    },
-    {
-     "id": "fr_retrait_noun",
-     "box": [
-      1100,
-      295,
-      175,
-      150
-     ]
-    },
-    {
-     "id": "fr_compartiment_noun",
-     "box": [
-      870,
-      390,
-      215,
-      300
-     ],
-     "labelAt": [
-      978,
-      680
      ]
     },
     {
@@ -485,19 +382,6 @@
      ],
      "labelAt": [
       728,
-      680
-     ]
-    },
-    {
-     "id": "fr_littoral_noun",
-     "box": [
-      1125,
-      540,
-      150,
-      170
-     ],
-     "labelAt": [
-      1200,
       680
      ]
     }

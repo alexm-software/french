@@ -19,7 +19,6 @@
   "plage": {
    "vocabRoom": "R_beach_01",
    "only": [
-    "fr_phase_noun",
     "fr_baleine_noun",
     "fr_ile_noun",
     "fr_mer_noun",
@@ -28,11 +27,9 @@
     "fr_plage_noun",
     "fr_maree_noun",
     "fr_vase_noun_f",
-    "fr_cape_noun",
     "fr_ocean_noun",
     "fr_flot_noun",
     "fr_sable_noun",
-    "fr_echo_noun",
     "fr_rivage_noun"
    ]
   },
@@ -40,28 +37,23 @@
    "vocabRoom": "R_beach_01",
    "only": [
     "fr_cap_noun",
-    "fr_vice_noun",
-    "fr_abime_noun",
-    "fr_peignoir_noun",
+    "fr_plongeur_noun",
     "fr_dauphin_noun",
-    "fr_plongeur_noun"
+    "fr_abime_noun"
    ]
   },
   "dunes": {
    "vocabRoom": "R_beach_02",
    "only": [
-    "fr_dune_noun",
     "fr_plongee_noun",
     "fr_derive_noun",
-    "fr_contree_noun",
+    "fr_dune_noun",
     "fr_oasis_noun",
-    "fr_coquillage_noun",
     "fr_mirage_noun",
-    "fr_golfe_noun",
     "fr_parasol_noun",
     "fr_surf_noun",
-    "fr_exode_noun",
-    "fr_glacier_noun"
+    "fr_golfe_noun",
+    "fr_coquillage_noun"
    ]
   }
  },
@@ -70,7 +62,7 @@
    "name": "La plage",
    "room_id": "R_beach_01",
    "image": "plage/plage.jpg",
-   "alt": "A sunny beach painted in ink and gouache: five moon faces across the sky, a whale in a pink tutu leaping, an eel coiled round a palm island, a white mare galloping through the waves, a mermaid on a rock singing with a little wren on her finger, a dog digging on the stone seawall, an ice-cream cart among sandcastles, a girl in yellow by her sandcastle, a blue vase sunk in grey mud, a little boy posing in a red superhero cape, a girl gasping at a huge curling wave, rubber ducks bobbing down a stream, two crabs squabbling over a sandcastle, a boy shouting into a cave, a boy peering at a small blank brass-framed plaque in a glass case; on the headland a lighthouse, a diver and a dolphin. Wooden steps at the bottom left lead back to the valley and a sandy path at the bottom right leads to the dunes.",
+   "alt": "A sunny beach painted in ink and gouache: a whale in a pink tutu leaping, an eel coiled round a palm island, a white mare galloping through the waves, a mermaid on a rock singing with a little wren on her finger, a dog digging on the stone seawall, an ice-cream cart among sandcastles, a girl in yellow by her sandcastle, a blue vase sunk in grey mud, a girl gasping at a huge curling wave, rubber ducks bobbing down a stream, two crabs squabbling over a sandcastle, an empty sea cave, a boy peering at a small blank brass-framed plaque in a glass case; on the headland a lighthouse, a diver and a dolphin. Wooden steps at the bottom left lead back to the valley and a sandy path at the bottom right leads to the dunes.",
    "nameplate": [
     50,
     4.5
@@ -115,19 +107,6 @@
     }
    ],
    "items": [
-    {
-     "id": "fr_phase_noun",
-     "box": [
-      60,
-      30,
-      380,
-      75
-     ],
-     "labelAt": [
-      492,
-      52
-     ]
-    },
     {
      "id": "fr_baleine_noun",
      "box": [
@@ -205,15 +184,6 @@
      ]
     },
     {
-     "id": "fr_cape_noun",
-     "box": [
-      478,
-      515,
-      170,
-      160
-     ]
-    },
-    {
      "id": "fr_ocean_noun",
      "box": [
       592,
@@ -241,15 +211,6 @@
      ]
     },
     {
-     "id": "fr_echo_noun",
-     "box": [
-      770,
-      255,
-      195,
-      140
-     ]
-    },
-    {
      "id": "fr_rivage_noun",
      "box": [
       1020,
@@ -267,7 +228,7 @@
    "room_id": "R_beach_01_z1",
    "image": "plage/cap.jpg",
    "parent": "plage",
-   "alt": "Close-up of the headland: the red-and-white lighthouse on the rocky cape, a seagull with a chip in its beak by a picnic basket, a diver leaping off a wooden springboard, a dolphin leaping beside a rowing boat where a baker fans a ball of dough, a rope bridge over a deep chasm lit by a sunbeam, and a bathing cabin with a white bathrobe on a hook.",
+   "alt": "Close-up of the headland: the red-and-white lighthouse on the rocky cape, a diver leaping off a wooden springboard, a dolphin leaping beside a rowing boat where a baker fans a ball of dough, a rope bridge over a deep chasm lit by a sunbeam, and an empty bathing cabin with its door open.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -282,15 +243,6 @@
      "labelAt": [
       900,
       88
-     ]
-    },
-    {
-     "id": "fr_vice_noun",
-     "box": [
-      945,
-      258,
-      165,
-      80
      ]
     },
     {
@@ -323,15 +275,6 @@
       870,
       668
      ]
-    },
-    {
-     "id": "fr_peignoir_noun",
-     "box": [
-      1035,
-      350,
-      240,
-      265
-     ]
     }
    ],
    "building_id": "B29_plage",
@@ -342,7 +285,7 @@
    "room_id": "R_beach_02",
    "image": "plage/dunes.jpg",
    "backTo": "plage",
-   "alt": "The far end of the beach among the sand dunes, painted in ink and gouache: a girl in a sunhat sand-boarding down a dune on a red surfboard, a swimmer diving into the sea, an empty sailboat drifting towards a reef, a sailor pointing at a far-off land of bread-loaf hills on a tray, an oasis with a palm where camels wait their turn and a wild rabbit drinks, a camel staring at a mirage of a lemonade pool, a boy under a striped parasol beside a sun in sunglasses, a boy surfing with a seagull on his head, a golf ball splashing into the gulf, a line of crabs scuttling away, an ice-cream seller whose cart carries a little blue glacier of ice, and cookie-shaped seashells with crabs nibbling them; a sandy roped path at the bottom left leads back to the beach.",
+   "alt": "The far end of the beach among the sand dunes, painted in ink and gouache: a girl in a sunhat sand-boarding down a dune on a red surfboard, a swimmer diving into the sea, an empty sailboat drifting towards a reef, an oasis with a palm where camels wait their turn and a wild rabbit drinks, a camel staring at a mirage of a lemonade pool, a boy under a striped parasol beside a sun in sunglasses, a boy surfing with a seagull on his head, a golf ball splashing into the gulf, and cookie-shaped seashells with crabs nibbling them; a sandy roped path at the bottom left leads back to the beach.",
    "nameplate": [
     50,
     4.5
@@ -382,15 +325,6 @@
      "labelAt": [
       410,
       66
-     ]
-    },
-    {
-     "id": "fr_contree_noun",
-     "box": [
-      510,
-      188,
-      215,
-      60
      ]
     },
     {
@@ -448,15 +382,6 @@
      ]
     },
     {
-     "id": "fr_exode_noun",
-     "box": [
-      1065,
-      320,
-      200,
-      135
-     ]
-    },
-    {
      "id": "fr_coquillage_noun",
      "box": [
       830,
@@ -467,19 +392,6 @@
      "labelAt": [
       1012,
       672
-     ]
-    },
-    {
-     "id": "fr_glacier_noun",
-     "box": [
-      862,
-      438,
-      102,
-      88
-     ],
-     "labelAt": [
-      1018,
-      492
      ]
     }
    ],
