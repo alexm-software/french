@@ -222,7 +222,10 @@ def check_building(bld, errs, warns, places=None):
                 if re.fullmatch(r"p(ee|oo)(s|ss|d|p|h|ng|ing)?", tok, re.I): E(f"{tag}: respelling '{tok}' in {it['fr']} reads as pee/poo")
         # routes
         for d in R.get("doors", []):
-            if d["to"] not in rooms: E(f"{tag}: door to unknown room {d['to']}")
+            if d.get("building"):  # door into another building's room
+                if not (V2 / "data" / f"{d['building']}.js").exists(): E(f"{tag}: door to unknown building {d['building']}")
+                elif d["to"] not in load_payload(d["building"])["rooms"]: E(f"{tag}: door to unknown room {d['building']}/{d['to']}")
+            elif d["to"] not in rooms: E(f"{tag}: door to unknown room {d['to']}")
             if not d.get("hit"): E(f"{tag}: door to {d['to']} has no painted hit box")
         for z in R.get("zooms", []):
             Z = rooms.get(z["to"])
@@ -363,6 +366,12 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                             for j in range(i + 1, len(A)):
                                 if inter(A[i], A[j]):
                                     errs.append(f"{bld}/{key} @{vw}: rendered {kind} {R['items'][i]['fr']} overlaps {R['items'][j]['fr']}")
+                    # doors into another building link to that building's room
+                    hrefs = await pg.evaluate("[...document.querySelectorAll('a.doorway:not(.mapexit)')].map(a=>a.getAttribute('href'))")
+                    for d, hr in zip(R.get("doors", []), hrefs):
+                        b2 = d.get("building") or bld
+                        want_d = f"#/{b2}" if d["to"] == b2 else f"#/{b2}/{d['to']}"
+                        if hr != want_d: errs.append(f"{bld}/{key}: door to {d['to']} links {hr}, expected {want_d}")
                     for i, d in enumerate(rects["door"]):
                         for j, h in enumerate(rects["hot"]):
                             if inter(d, h): errs.append(f"{bld}/{key} @{vw}: door/exit {i} overlaps hotspot {R['items'][j]['fr']}")

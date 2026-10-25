@@ -552,7 +552,11 @@ def build(bld, v1, vocab):
         r2 = {k: v for k, v in room.items() if k != "items"}
         r2["items"] = out_items
         for d in r2.get("doors", []):
-            d.setdefault("thumb", L["rooms"][d["to"]]["image"])
+            if d.get("building"):  # door into another building: thumb = that building's room painting
+                L2 = json.loads((ROOT / "content" / "v2" / d["building"] / "layout.json").read_text(encoding="utf-8"))
+                d.setdefault("thumb", L2["rooms"][d["to"]]["image"])
+            else:
+                d.setdefault("thumb", L["rooms"][d["to"]]["image"])
         r2.setdefault("parent", None)
         if r2.get("mapExit"):
             b = r2["mapExit"]["box"]

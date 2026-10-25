@@ -12,7 +12,9 @@ id = building_id without its "Bnn_" prefix (B29_plage -> plage) unless the entry
 (B06_marche -> boulangerie, B05_maison's garage -> garage). So shipping a building never needs this
 script or map.js to change. Hover tags and door arrows are placed from the rect unless given.
 World sectors may also give "en" (English name for the bilingual label) and "poly" (a list of
-rings of [x, y] points in the 1280x720 painting): the click area is then the polygon(s), not the rect."""
+rings of [x, y] points in the 1280x720 painting): the click area is then the polygon(s), not the rect.
+World sectors and sector buildings may give "icon": a key of window.V2_ICONS (village/icons.js), the small
+decorative symbol drawn at the start of their map label."""
 import json, re
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
@@ -32,7 +34,7 @@ def item(b, keys):
 
 W = M["world"]
 out = {"world": {"image": W["image"], "alt": W["alt"],
-                 "sectors": [dict(item(s, ("id", "slug", "name", "en", "rect", "poly", "tag")), door=s.get("door", door(s["rect"])))
+                 "sectors": [dict(item(s, ("id", "slug", "name", "en", "rect", "poly", "tag", "icon")), door=s.get("door", door(s["rect"])))
                              for s in W["sectors"]]},
        "sectors": {}}
 ids = {}
@@ -40,7 +42,7 @@ for w in W["sectors"]:
     S = M["sectors"][w["slug"]]
     bl = []
     for b in S["buildings"]:
-        o = item(b, ("building_id", "id", "name", "rect", "tag"))
+        o = item(b, ("building_id", "id", "name", "rect", "tag", "icon"))
         o["door"] = b.get("door", door(b["rect"]))
         pid = b.get("id") or re.sub(r"^B\d+_", "", b["building_id"])
         assert pid not in ids, ("duplicate building id", pid)

@@ -225,6 +225,8 @@ function clampMapLabels(){
   });
 }
 // live: [{href,name,rect,aria}], soon: [{name,rect,small}]
+// small decorative label symbol from the shared icon set (icons.js); the label text carries the meaning
+function ico(k){ var I=window.V2_ICONS||{}; return k&&I[k]?'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+I[k]+'</svg>':'' }
 function drawMap(img,alt,label,live,soon){
   blur.style.backgroundImage='url('+img+')';
   var h='<img class="bg" src="'+img+'" alt="'+esc(alt)+'">';
@@ -237,10 +239,10 @@ function drawMap(img,alt,label,live,soon){
   h+='</svg>';
   live.forEach(function(L,i){ var d=L.door||doorAt(L.rect), t=L.tag||tagAt(L.rect);
     if(L.pin){ // world map: an always-on bilingual signpost centred on L.tag; it is a link too, so a click on it opens its own sector
-      h+='<a class="tag live pin'+(L.nodoor?' soonpin':'')+'" id="tagLive'+i+'" href="'+L.href+'" tabindex="-1" aria-hidden="true" title="'+esc(L.small||'')+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(t[1]/7.2)+'"><b>'+esc(L.name)+'</b>'+(L.en?'<span class="en"> ·\u00a0'+esc(L.en)+'</span>':'')+'</a>';
+      h+='<a class="tag live pin'+(L.nodoor?' soonpin':'')+'" id="tagLive'+i+'" href="'+L.href+'" tabindex="-1" aria-hidden="true" title="'+esc(L.small||'')+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(t[1]/7.2)+'">'+ico(L.icon)+'<b>'+esc(L.name)+'</b>'+(L.en?'<span class="en"> ·\u00a0'+esc(L.en)+'</span>':'')+'</a>';
       return }
     if(!L.nodoor) h+='<div class="door" data-i="'+i+'" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
-    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
+    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+ico(L.icon)+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
   });
   h+='<div class="tag" id="tagSoon"></div>';
   stage.innerHTML=h;
@@ -254,7 +256,7 @@ function drawMap(img,alt,label,live,soon){
   stage.querySelectorAll('.bld.soon').forEach(function(p){
     var b=soon[+p.dataset.i], t=b.tag||tagAt(b.rect);
     function show(){
-      ts.innerHTML=esc(b.name)+(b.small?'<small>'+esc(b.small)+'</small>':'');
+      ts.innerHTML=ico(b.icon)+esc(b.name)+(b.small?'<small>'+esc(b.small)+'</small>':'');
       ts.style.left=pct(t[0]/12.8); ts.style.top=pct(Math.max(t[1],60)/7.2);
       ts.dataset.ox=ts.style.left; ts.dataset.oy=ts.style.top;
       ts.classList.add('show');
@@ -271,7 +273,7 @@ function renderMap(){
   back.hidden=true; rooms.hidden=true;
   var W=MAP.world, live=[];
   W.sectors.forEach(function(w){ var n=liveIn(w.slug).length;
-    live.push({href:sectorHref(w.slug),name:w.name,en:w.en,poly:w.poly,pin:!!w.poly,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
+    live.push({href:sectorHref(w.slug),name:w.name,en:w.en,icon:w.icon,poly:w.poly,pin:!!w.poly,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
       small:probed?(n?n+(n>1?' bâtiments ouverts':' bâtiment ouvert'):'bientôt'):''}) });
   drawMap(W.image,W.alt,'Village map',live,[]);
 }
@@ -281,8 +283,8 @@ function renderSector(slug){
   back.hidden=false; rooms.hidden=true; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
   var live=[], soon=[], here={};
   liveIn(slug).forEach(function(id){ var e=homeOf(id).entry; if(!e||here[e.id||e.building_id])return; here[e.id||e.building_id]=1;
-    live.push({href:'#/'+id,name:e.name,rect:e.rect,tag:e.tag,door:e.door,small:e.street?'rue des verbes':'',aria:'Enter '+e.name}) });
-  S.buildings.forEach(function(b){ if(!here[b.id||b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
+    live.push({href:'#/'+id,name:e.name,icon:e.icon,rect:e.rect,tag:e.tag,door:e.door,small:e.street?'rue des verbes':'',aria:'Enter '+e.name}) });
+  S.buildings.forEach(function(b){ if(!here[b.id||b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,icon:b.icon,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
   S.streets.forEach(function(t){ if(!here[t.id]&&!(LIVE[t.id]&&homeOf(t.id).slug===slug)) soon.push({name:t.name,rect:t.rect,tag:t.tag,small:'rue des verbes'+(probed?' · bientôt':'')}) });
   drawMap(S.image,S.alt,S.name+' map',live,soon);
 }
@@ -317,7 +319,7 @@ function renderRoom(bld,key){
   (R.doors||[]).forEach(function(d,i){
     var g=d.hit, T=D.rooms[d.to];
     if(d.img){ var q=d.img.box; h+='<img class="doorimg" src="'+d.img.src+'" alt="" style="left:'+pct(q[0]/12.8)+';top:'+pct(q[1]/7.2)+';width:'+pct(q[2]/12.8)+'">'; }
-    h+='<a class="doorway" data-d="'+i+'" href="'+roomHref(bld,d.to)+'" title="'+esc(d.hint)+'" aria-label="'+esc(d.label)+': '+esc(d.hint)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+';height:'+pct(g[3]/7.2)+'">';
+    h+='<a class="doorway'+(d.building?' crossdoor':'')+'" data-d="'+i+'" href="'+roomHref(d.building||bld,d.to)+'" title="'+esc(d.hint)+'" aria-label="'+esc(d.label)+': '+esc(d.hint)+'" style="left:'+pct(g[0]/12.8)+';top:'+pct(g[1]/7.2)+';width:'+pct(g[2]/12.8)+';height:'+pct(g[3]/7.2)+'">';
     h+='<span class="dpill" aria-hidden="true">'+(d.thumb?'<img src="'+d.thumb+'" alt="">':'')+'<span>'+esc(d.label)+' ›</span></span></a>';
   });
   (R.zooms||[]).forEach(function(z){

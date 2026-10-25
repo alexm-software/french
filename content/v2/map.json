@@ -1,7 +1,7 @@
 {
  "world": {
   "image": "map/world.jpg",
-  "alt": "Ink-and-gouache painting of the whole French village seen from above: winding lanes lead from the fountain square past a cathedral, a mosque, a synagogue and an onion-domed church, the museum portico, a red-brick campus, the town hall with its flag, a fire station and post office, a columned bank on the river quay, a hospital and pharmacy, a market hall and a bakery with a giant baguette, a restaurant with a chef's-hat roof, a theatre and stadium, a circus tent, Ferris wheel and maze, a heart-shaped garden, a railway station with a train on its track, an airfield, a harbour with a boat, and around it all the farm fields, mountains, lake and beach of the green valley.",
+  "alt": "Ink-and-gouache painting of the whole French village seen from above: winding lanes lead from the fountain square past a parish church, a twin-towered abbey cathedral and its priory garden, a mosque, a synagogue and an onion-domed church, the museum portico, a campus of small faculties around a pond (a spired lycée, a glass geodesic dome, a columned faculty, an observatory dome, a gear-fronted engineering school and a glass science hall with a telescope), the town hall with its flag, a fire station and post office, a columned bank on the river quay, a hospital and pharmacy, a market hall and a bakery with a giant baguette, a restaurant with a chef's-hat roof, a theatre and stadium, a circus tent, Ferris wheel and maze, a heart-shaped garden, a railway station with a train on its track, an airfield, a harbour with a boat, and around it all the farm fields, mountains, lake and beach of the green valley.",
   "sectors": [
    {
     "id": "S11_church",
@@ -45,7 +45,8 @@
     "tag": [
      520,
      170
-    ]
+    ],
+    "icon": "church"
    },
    {
     "id": "S12_faiths",
@@ -93,7 +94,8 @@
     "tag": [
      230,
      196
-    ]
+    ],
+    "icon": "dove"
    },
    {
     "id": "S13_museum",
@@ -129,7 +131,8 @@
     "tag": [
      740,
      172
-    ]
+    ],
+    "icon": "columns"
    },
    {
     "id": "S10_university",
@@ -165,7 +168,8 @@
     "tag": [
      945,
      163
-    ]
+    ],
+    "icon": "cap"
    },
    {
     "id": "S05_bank",
@@ -205,7 +209,8 @@
     "tag": [
      1110,
      250
-    ]
+    ],
+    "icon": "coins"
    },
    {
     "id": "S02_home",
@@ -249,7 +254,8 @@
     "tag": [
      310,
      335
-    ]
+    ],
+    "icon": "house"
    },
    {
     "id": "S01_beginner",
@@ -313,7 +319,8 @@
     "tag": [
      480,
      265
-    ]
+    ],
+    "icon": "fountain"
    },
    {
     "id": "S06_townhall",
@@ -361,7 +368,8 @@
     "tag": [
      760,
      335
-    ]
+    ],
+    "icon": "flag"
    },
    {
     "id": "S07_health",
@@ -405,7 +413,8 @@
     "tag": [
      1100,
      512
-    ]
+    ],
+    "icon": "cross"
    },
    {
     "id": "S08_travel",
@@ -461,7 +470,8 @@
     "tag": [
      815,
      612
-    ]
+    ],
+    "icon": "suitcase"
    },
    {
     "id": "S15_feelings",
@@ -505,7 +515,8 @@
     "tag": [
      300,
      568
-    ]
+    ],
+    "icon": "heart"
    },
    {
     "id": "S16_park",
@@ -565,7 +576,8 @@
     "tag": [
      460,
      655
-    ]
+    ],
+    "icon": "tent"
    },
    {
     "id": "S14_culture",
@@ -609,7 +621,8 @@
     "tag": [
      870,
      478
-    ]
+    ],
+    "icon": "masks"
    },
    {
     "id": "S04_cafes",
@@ -649,7 +662,8 @@
     "tag": [
      585,
      492
-    ]
+    ],
+    "icon": "chef"
    },
    {
     "id": "S03_market",
@@ -705,7 +719,8 @@
     "tag": [
      250,
      506
-    ]
+    ],
+    "icon": "bread"
    },
    {
     "id": "S09_nature",
@@ -779,7 +794,8 @@
     "tag": [
      1115,
      118
-    ]
+    ],
+    "icon": "mountain"
    }
   ]
  },
@@ -799,7 +815,8 @@
       15,
       340,
       200
-     ]
+     ],
+     "icon": "bell"
     },
     {
      "building_id": "B03_horloge",
@@ -809,7 +826,8 @@
       5,
       150,
       295
-     ]
+     ],
+     "icon": "clock"
     },
     {
      "building_id": "B01_fontaine",
@@ -819,7 +837,8 @@
       300,
       210,
       215
-     ]
+     ],
+     "icon": "fountain"
     },
     {
      "building_id": "B04_atelier_couleurs",
@@ -829,7 +848,8 @@
       305,
       325,
       360
-     ]
+     ],
+     "icon": "palette"
     }
    ],
    "streets": [
@@ -860,7 +880,8 @@
       31,
       228,
       265
-     ]
+     ],
+     "icon": "house"
     },
     {
      "id": "garage",
@@ -871,7 +892,8 @@
       81,
       158,
       215
-     ]
+     ],
+     "icon": "car"
     }
    ],
    "streets": [
@@ -942,70 +964,76 @@
    "slug": "market",
    "name": "Place du Marché",
    "image": "map/market.jpg",
-   "alt": "Ink-and-gouache map of Place du Marché: the weighing hall with its scales, the purple boulangerie with its baguette beside the covered market, the fashion house, a row of shops, the repair workshop, the antiques corner and three arcade lanes.",
+   "alt": "Ink-and-gouache map of Place du Marché laid out like a real village: winding cobbled lanes and a little canal with two stone bridges; the round weighing tower crowned by a brass balance, a curving lane of narrow shops with coloured awnings, the glass-and-blue-iron covered market beside the bakery with its giant baguette roof, the blue-roofed fashion house with mannequins in its windows, the timber repair shed under a glass roof on green iron arches, with red, blue and green doors, a giant teapot, bicycles and a bench of china plates, the glass-roofed flea-market pavilion on green iron arches with a two-storey junk wagon, a rocking horse and a gramophone, and three lively lanes: porters with hand carts, a money-changer's booth by the fountain, and a passage of second-hand tables.",
    "buildings": [
     {
      "building_id": "B60_balance",
      "name": "Halle aux Poids",
      "rect": [
-      23,
-      8,
-      265,
-      235
-     ]
+      135,
+      10,
+      108,
+      228
+     ],
+     "icon": "scale"
     },
     {
      "building_id": "B06_marche",
      "name": "La boulangerie et le marché",
      "rect": [
-      318,
-      22,
-      612,
-      225
+      410,
+      115,
+      580,
+      330
      ],
-     "id": "boulangerie"
+     "id": "boulangerie",
+     "icon": "bread"
     },
     {
      "building_id": "B62_couture",
      "name": "Maison de Couture",
      "rect": [
-      977,
-      15,
+      1005,
+      0,
       273,
-      235
-     ]
+      300
+     ],
+     "icon": "scissors"
     },
     {
      "building_id": "B07_rue_commercante",
      "name": "Rue Commerçante",
      "rect": [
-      282,
-      250,
-      670,
-      205
-     ]
+      245,
+      80,
+      163,
+      262
+     ],
+     "icon": "shop"
     },
     {
      "building_id": "B61_reparation",
      "name": "Atelier de Réparation",
      "rect": [
-      1000,
-      265,
-      258,
-      200
+      995,
+      315,
+      283,
+      255
      ],
-     "id": "reparation"
+     "id": "reparation",
+     "icon": "wrench"
     },
     {
      "building_id": "B59_brocante",
      "name": "Brocante",
      "rect": [
-      15,
-      470,
-      350,
-      235
+      0,
+      345,
+      375,
+      375
      ],
-     "id": "brocante"
+     "id": "brocante",
+     "icon": "chair"
     }
    ],
    "streets": [
@@ -1013,30 +1041,30 @@
      "id": "ST_porteurs",
      "name": "Rue des Débardeurs",
      "rect": [
-      383,
+      380,
       470,
-      288,
-      240
+      240,
+      250
      ]
     },
     {
      "id": "ST_ecus",
      "name": "Rue des Écus",
      "rect": [
-      688,
-      485,
-      265,
-      220
+      625,
+      460,
+      310,
+      260
      ]
     },
     {
      "id": "ST_brocante",
      "name": "Passage de la Brocante",
      "rect": [
-      961,
-      470,
-      310,
-      240
+      940,
+      575,
+      338,
+      145
      ]
     }
    ]
@@ -1056,7 +1084,8 @@
       150,
       360,
       335
-     ]
+     ],
+     "icon": "cup"
     },
     {
      "building_id": "B09_restaurant",
@@ -1066,7 +1095,8 @@
       86,
       375,
       330
-     ]
+     ],
+     "icon": "cutlery"
     }
    ],
    "streets": [
@@ -1127,7 +1157,8 @@
       44,
       306,
       206
-     ]
+     ],
+     "icon": "coins"
     },
     {
      "building_id": "B11_bureaux",
@@ -1137,7 +1168,8 @@
       206,
       281,
       238
-     ]
+     ],
+     "icon": "briefcase"
     },
     {
      "building_id": "B12_zone_artisanale",
@@ -1147,7 +1179,8 @@
       12,
       330,
       300
-     ]
+     ],
+     "icon": "factory"
     }
    ],
    "streets": [
@@ -1218,7 +1251,8 @@
       119,
       250,
       237
-     ]
+     ],
+     "icon": "flag"
     },
     {
      "building_id": "B14_tribunal",
@@ -1228,7 +1262,8 @@
       115,
       250,
       295
-     ]
+     ],
+     "icon": "scale"
     },
     {
      "building_id": "B15_poste",
@@ -1239,7 +1274,8 @@
       135,
       205
      ],
-     "id": "poste"
+     "id": "poste",
+     "icon": "envelope"
     },
     {
      "building_id": "B63_pompiers",
@@ -1249,7 +1285,8 @@
       200,
       272,
       262
-     ]
+     ],
+     "icon": "flame"
     },
     {
      "building_id": "B16_caserne",
@@ -1259,7 +1296,8 @@
       360,
       285,
       315
-     ]
+     ],
+     "icon": "obelisk"
     }
    ],
    "streets": [
@@ -1370,7 +1408,8 @@
       62,
       312,
       290
-     ]
+     ],
+     "icon": "stethoscope"
     },
     {
      "building_id": "B18_pharmacie",
@@ -1380,7 +1419,8 @@
       25,
       281,
       244
-     ]
+     ],
+     "icon": "pill"
     },
     {
      "building_id": "B19_hopital",
@@ -1390,7 +1430,8 @@
       5,
       460,
       335
-     ]
+     ],
+     "icon": "cross"
     }
    ],
    "streets": [
@@ -1431,7 +1472,8 @@
       228,
       285,
       135
-     ]
+     ],
+     "icon": "train"
     },
     {
      "building_id": "B25_monde",
@@ -1441,7 +1483,8 @@
       62,
       195,
       185
-     ]
+     ],
+     "icon": "globe"
     },
     {
      "building_id": "B22_hotel",
@@ -1451,7 +1494,8 @@
       69,
       163,
       163
-     ]
+     ],
+     "icon": "bed"
     },
     {
      "building_id": "B21_aeroport",
@@ -1461,7 +1505,8 @@
       390,
       170,
       170
-     ]
+     ],
+     "icon": "plane"
     },
     {
      "building_id": "B23_route",
@@ -1471,7 +1516,8 @@
       405,
       280,
       270
-     ]
+     ],
+     "icon": "car"
     },
     {
      "building_id": "B24_port",
@@ -1481,7 +1527,8 @@
       485,
       360,
       230
-     ]
+     ],
+     "icon": "anchor"
     }
    ],
    "streets": [
@@ -1552,7 +1599,8 @@
       15,
       335,
       280
-     ]
+     ],
+     "icon": "mountain"
     },
     {
      "building_id": "B32_ciel",
@@ -1562,7 +1610,8 @@
       8,
       115,
       125
-     ]
+     ],
+     "icon": "telescope"
     },
     {
      "building_id": "B27_foret",
@@ -1572,7 +1621,8 @@
       30,
       265,
       190
-     ]
+     ],
+     "icon": "tree"
     },
     {
      "building_id": "B31_ferme",
@@ -1582,7 +1632,8 @@
       225,
       330,
       175
-     ]
+     ],
+     "icon": "barn"
     },
     {
      "building_id": "B28_riviere",
@@ -1592,7 +1643,8 @@
       330,
       240,
       130
-     ]
+     ],
+     "icon": "waves"
     },
     {
      "building_id": "B30_camping",
@@ -1602,7 +1654,8 @@
       210,
       290,
       110
-     ]
+     ],
+     "icon": "tent"
     },
     {
      "building_id": "B64_serre",
@@ -1612,7 +1665,8 @@
       405,
       170,
       110
-     ]
+     ],
+     "icon": "sprout"
     },
     {
      "building_id": "B29_plage",
@@ -1622,7 +1676,8 @@
       520,
       515,
       195
-     ]
+     ],
+     "icon": "umbrella"
     }
    ],
    "streets": [
@@ -1703,7 +1758,8 @@
       12,
       232,
       250
-     ]
+     ],
+     "icon": "book"
     },
     {
      "building_id": "B36_maths",
@@ -1713,7 +1769,8 @@
       19,
       225,
       212
-     ]
+     ],
+     "icon": "pi"
     },
     {
      "building_id": "B34_humanites",
@@ -1723,7 +1780,8 @@
       25,
       306,
       212
-     ]
+     ],
+     "icon": "quill"
     },
     {
      "building_id": "B35_sciences",
@@ -1733,7 +1791,8 @@
       245,
       320,
       255
-     ]
+     ],
+     "icon": "flask"
     },
     {
      "building_id": "B38_ingenierie",
@@ -1744,7 +1803,8 @@
       288,
       180
      ],
-     "id": "ingenierie"
+     "id": "ingenierie",
+     "icon": "gear"
     },
     {
      "building_id": "B37_informatique",
@@ -1755,7 +1815,8 @@
       288,
       193
      ],
-     "id": "informatique"
+     "id": "informatique",
+     "icon": "laptop"
     }
    ],
    "streets": [
@@ -1836,7 +1897,8 @@
       250,
       275,
       238
-     ]
+     ],
+     "icon": "house"
     },
     {
      "building_id": "B39_eglise",
@@ -1846,7 +1908,8 @@
       56,
       288,
       419
-     ]
+     ],
+     "icon": "church"
     },
     {
      "building_id": "B42_cathedrale",
@@ -1856,7 +1919,8 @@
       12,
       350,
       360
-     ]
+     ],
+     "icon": "church"
     },
     {
      "building_id": "B40_abbaye",
@@ -1866,7 +1930,8 @@
       378,
       520,
       310
-     ]
+     ],
+     "icon": "bell"
     }
    ],
    "streets": [
@@ -1897,7 +1962,8 @@
       140,
       400,
       330
-     ]
+     ],
+     "icon": "dove"
     }
    ],
    "streets": [
@@ -1928,7 +1994,8 @@
       5,
       425,
       460
-     ]
+     ],
+     "icon": "columns"
     }
    ],
    "streets": [
@@ -1989,7 +2056,8 @@
       88,
       319,
       145
-     ]
+     ],
+     "icon": "ball"
     },
     {
      "building_id": "B49_kiosque",
@@ -1999,7 +2067,8 @@
       19,
       181,
       181
-     ]
+     ],
+     "icon": "newspaper"
     },
     {
      "building_id": "B46_conservatoire",
@@ -2009,7 +2078,8 @@
       25,
       225,
       120
-     ]
+     ],
+     "icon": "note"
     },
     {
      "building_id": "B48_jeux",
@@ -2019,7 +2089,8 @@
       150,
       165,
       95
-     ]
+     ],
+     "icon": "dice"
     },
     {
      "building_id": "B45_theatre",
@@ -2029,7 +2100,8 @@
       244,
       306,
       281
-     ]
+     ],
+     "icon": "masks"
     }
    ],
    "streets": [
@@ -2120,7 +2192,8 @@
       169,
       488,
       431
-     ]
+     ],
+     "icon": "gazebo"
     },
     {
      "building_id": "B51_portraits",
@@ -2130,7 +2203,8 @@
       37,
       345,
       340
-     ]
+     ],
+     "icon": "portrait"
     }
    ],
    "streets": [
@@ -2191,7 +2265,8 @@
       12,
       225,
       257
-     ]
+     ],
+     "icon": "speech"
     },
     {
      "building_id": "B56_labyrinthe",
@@ -2201,7 +2276,8 @@
       50,
       294,
       181
-     ]
+     ],
+     "icon": "maze"
     },
     {
      "building_id": "B54_concours",
@@ -2211,7 +2287,8 @@
       37,
       225,
       219
-     ]
+     ],
+     "icon": "trophy"
     },
     {
      "building_id": "B52_miroirs",
@@ -2221,7 +2298,8 @@
       169,
       256,
       194
-     ]
+     ],
+     "icon": "mirror"
     },
     {
      "building_id": "B55_cirque",
@@ -2231,7 +2309,8 @@
       319,
       256,
       269
-     ]
+     ],
+     "icon": "bigtop"
     },
     {
      "building_id": "B53_hercule",
@@ -2241,7 +2320,8 @@
       375,
       355,
       305
-     ]
+     ],
+     "icon": "dumbbell"
     },
     {
      "building_id": "B57_pont",
@@ -2251,7 +2331,8 @@
       444,
       313,
       144
-     ]
+     ],
+     "icon": "bridge"
     }
    ],
    "streets": [
