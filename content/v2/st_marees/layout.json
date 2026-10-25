@@ -67,54 +67,54 @@
  },
  "rooms": {
   "st_marees": {
-   "name": "Passage des Cristaux",
+   "name": "Pointe des Cristaux",
    "image": "st_marees/st_marees.jpg",
-   "alt": "A sunny harbour quay with a lighthouse and glittering salt pans, painted in ink and gouache: Monsieur Verbe the mime rings a bell and holds up a blank sealed scroll like a town crier, hangs a flower garland in a green beret, bows to teach a puppy good manners, turns a big round cheese on a board, rakes white salt crystals and compares two different seashells. The stone archway on the left leads back to the valley; the blue, yellow and green doors lead on.",
+   "alt": "A sunny rocky headland on a wild coast, close under a red-and-white striped lighthouse, with gorse, sea-pinks, gulls and rocky islets, painted in ink and gouache: Monsieur Verbe stands on a boulder like a town crier, ringing a bell and holding up a sealed scroll; hangs a flower garland on the lighthouse railing in a green beret; bows with a puppy to teach it manners; turns a big round cheese on a board; kneels by a rock pool glittering with salt crystals; and compares a round shell with a spiky one. The cliff path on the left leads back to the valley. The yellow door in the rock, the blue lighthouse door and the green gate above the cove steps lead on.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     10,
-     10,
-     270,
-     265
+     12,
+     90,
+     160,
+     160
     ],
     "label": "La vallée"
    },
    "doors": [
     {
      "to": "porte_voix",
-     "label": "Allée des Porte-Voix",
-     "hint": "Through the blue door",
+     "label": "Balcon des Porte-Voix",
+     "hint": "Up through the blue lighthouse door",
      "hit": [
-      431,
-      160,
-      92,
-      165
+      806,
+      256,
+      50,
+      100
      ]
     },
     {
      "to": "chavires",
-     "label": "Quai des Chavirés",
-     "hint": "Through the yellow door",
+     "label": "Rochers des Chavirés",
+     "hint": "Down through the yellow door in the rock",
      "hit": [
-      660,
-      160,
-      108,
-      165
+      288,
+      366,
+      48,
+      74
      ]
     },
     {
      "to": "pull_retreci",
-     "label": "Ruelle du Pull-Rétréci",
-     "hint": "Through the green door",
+     "label": "Crique du Pull-Rétréci",
+     "hint": "Down through the green gate to the cove",
      "hit": [
-      897,
-      160,
-      110,
-      170
+      1081,
+      394,
+      69,
+      119
      ]
     }
    ],
@@ -123,64 +123,64 @@
     {
      "id": "fr_promulguer_verb",
      "box": [
-      60,
-      290,
-      210,
-      368
+      72,
+      256,
+      200,
+      350
      ]
     },
     {
      "id": "fr_embellir_verb",
      "box": [
-      278,
-      290,
-      148,
-      365
+      694,
+      80,
+      108,
+      190
      ]
     },
     {
      "id": "fr_inculquer_verb",
      "box": [
-      448,
-      335,
-      165,
-      320
+      328,
+      444,
+      185,
+      190
      ]
     },
     {
      "id": "fr_affiner_verb",
      "box": [
-      638,
-      337,
-      182,
-      316
+      531,
+      438,
+      160,
+      200
      ]
     },
     {
      "id": "fr_cristalliser_verb",
      "box": [
-      845,
-      354,
-      195,
-      320
+      694,
+      440,
+      206,
+      248
      ]
     },
     {
      "id": "fr_differer_verb",
      "box": [
-      1046,
-      315,
-      200,
-      342
+      903,
+      481,
+      130,
+      190
      ]
     }
    ]
   },
   "porte_voix": {
-   "name": "Allée des Porte-Voix",
+   "name": "Balcon des Porte-Voix",
    "image": "st_marees/porte_voix.jpg",
    "backTo": "st_marees",
-   "alt": "A harbour lane with boats in the bay: Monsieur Verbe the mime watches a puddle shrink away in the sun, sets his finest seashell on a red velvet cushion, shouts happily through a megaphone, slumps worn out on a bench with his rucksack, and kneels to give a cat a fresh fish beside its empty plate. The blue door on the left leads back to the quay.",
+   "alt": "The high balcony at the top of the lighthouse, by the great glass lantern, looking far out over a turquoise sea and rocky islets: Monsieur Verbe slumps worn out on a bench beside his rucksack after the climb, watches a puddle dry up and shrink in the sunshine, sets his finest shell on a red velvet cushion, shouts out to sea through a megaphone, and kneels to give a cat a fresh fish beside its empty plate. The blue door in the lighthouse wall on the left leads back down.",
    "nameplate": [
     50,
     4.5
@@ -188,13 +188,13 @@
    "doors": [
     {
      "to": "st_marees",
-     "label": "Passage des Cristaux",
-     "hint": "Back through the blue door",
+     "label": "Pointe des Cristaux",
+     "hint": "Back down through the blue lighthouse door",
      "hit": [
-      20,
-      44,
-      132,
-      162
+      72,
+      50,
+      125,
+      155
      ]
     }
    ],
@@ -203,55 +203,55 @@
     {
      "id": "fr_resorber_verb",
      "box": [
-      32,
-      212,
-      318,
-      428
+      322,
+      294,
+      215,
+      362
      ]
     },
     {
      "id": "fr_valoriser_verb",
      "box": [
-      376,
-      218,
-      190,
-      402
+      540,
+      144,
+      185,
+      280
      ]
     },
     {
      "id": "fr_amplifier_verb",
      "box": [
-      572,
-      224,
-      198,
-      402
+      728,
+      181,
+      310,
+      185
      ]
     },
     {
      "id": "fr_extenuer_verb",
      "box": [
-      776,
-      325,
-      180,
-      300
+      50,
+      212,
+      270,
+      275
      ]
     },
     {
      "id": "fr_indemniser_verb",
      "box": [
-      962,
-      300,
-      305,
-      322
+      775,
+      372,
+      380,
+      305
      ]
     }
    ]
   },
   "chavires": {
-   "name": "Quai des Chavirés",
+   "name": "Rochers des Chavirés",
    "image": "st_marees/chavires.jpg",
    "backTo": "st_marees",
-   "alt": "A sea wall above the open sea with a little round boating pond: Monsieur Verbe the mime draws a card from a deck on a barrel, hugs all the beach buckets for himself, kneels in dismay as his toy sailboat tips over in the pond, coils a knotted rope into one simple loop, and frowns at a suitcase on a scale whose needle is in the red. The yellow door on the left leads back to the quay.",
+   "alt": "Flat rocks and rock pools at low tide below the sea cliffs, with the lighthouse on its rock across the water: Monsieur Verbe draws a card from a deck on a flat rock, hugs all the seaside buckets for himself, calmly shaves in a little rowboat that is filling with water and tipping over, holds up a tangled rope made into one simple loop, and frowns at a hanging scale whose needle is in the red under a heavy basket of fish. The yellow door in the cliff on the left leads back up.",
    "nameplate": [
     50,
     4.5
@@ -259,13 +259,13 @@
    "doors": [
     {
      "to": "st_marees",
-     "label": "Passage des Cristaux",
-     "hint": "Back through the yellow door",
+     "label": "Pointe des Cristaux",
+     "hint": "Back up through the yellow door in the cliff",
      "hit": [
-      56,
       48,
-      126,
-      102
+      125,
+      100,
+      170
      ]
     }
    ],
@@ -274,55 +274,55 @@
     {
      "id": "fr_piocher_verb",
      "box": [
-      44,
-      156,
-      230,
-      456
+      62,
+      298,
+      240,
+      315
      ]
     },
     {
      "id": "fr_accaparer_verb",
      "box": [
-      282,
-      144,
-      232,
-      445
+      312,
+      312,
+      212,
+      270
      ]
     },
     {
      "id": "fr_chavirer_verb",
      "box": [
-      520,
-      250,
-      260,
-      425
+      531,
+      231,
+      270,
+      190
      ]
     },
     {
      "id": "fr_simplifier_verb",
      "box": [
-      786,
-      186,
-      165,
+      825,
+      219,
+      175,
       400
      ]
     },
     {
      "id": "fr_exceder_verb",
      "box": [
-      994,
-      186,
-      236,
-      440
+      1025,
+      138,
+      240,
+      480
      ]
     }
    ]
   },
   "pull_retreci": {
-   "name": "Ruelle du Pull-Rétréci",
+   "name": "Crique du Pull-Rétréci",
    "image": "st_marees/pull_retreci.jpg",
    "backTo": "st_marees",
-   "alt": "A narrow alley running down to the beach under a washing line: Monsieur Verbe the mime is drenched by a splashing wave, holds up a tiny shrunken striped jumper in a green beret, knits a scarf longer and longer, splits a pile of seashells into two heaps, and checks his pocket watch while rolling up his long speech at a lectern. The green door on the left leads back to the quay.",
+   "alt": "A small sandy cove between the rocks, with the lighthouse just across the water and a washing line on driftwood poles: Monsieur Verbe is drenched by a wave crashing over him and the rocks, holds up a shrunken striped jumper in a green beret, cheers with a pom-pom while pulling a brass telescope out longer and longer, splits a grey cinder block in two with a hammer and chisel, and checks his pocket watch while rolling a long scroll up short. The green gate at the top of the steps on the left leads back up.",
    "nameplate": [
     50,
     4.5
@@ -330,13 +330,13 @@
    "doors": [
     {
      "to": "st_marees",
-     "label": "Passage des Cristaux",
-     "hint": "Back through the green door",
+     "label": "Pointe des Cristaux",
+     "hint": "Back up through the green gate",
      "hit": [
-      60,
-      26,
-      140,
-      187
+      169,
+      20,
+      69,
+      120
      ]
     }
    ],
@@ -345,46 +345,46 @@
     {
      "id": "fr_submerger_verb",
      "box": [
-      60,
-      219,
-      248,
-      404
+      94,
+      275,
+      218,
+      312
      ]
     },
     {
      "id": "fr_retrecir_verb",
      "box": [
-      318,
-      215,
-      180,
-      405
+      419,
+      225,
+      175,
+      170
      ]
     },
     {
      "id": "fr_rallonger_verb",
      "box": [
-      530,
-      231,
-      195,
-      408
+      681,
+      175,
+      270,
+      222
      ]
     },
     {
      "id": "fr_scinder_verb",
      "box": [
-      730,
-      331,
-      285,
-      302
+      481,
+      400,
+      332,
+      300
      ]
     },
     {
      "id": "fr_abreger_verb",
      "box": [
-      1022,
-      229,
-      215,
-      402
+      956,
+      319,
+      240,
+      395
      ]
     }
    ]

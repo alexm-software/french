@@ -1,0 +1,387 @@
+{
+ "building": "st_brocante",
+ "building_id": "ST_brocante",
+ "sector_id": "S03_market",
+ "name": "Passage de la Brocante · Flea-Market Passage",
+ "main": "st_brocante",
+ "roomList": [
+  {
+   "key": "st_brocante",
+   "short": "Partage"
+  },
+  {
+   "key": "entrepots",
+   "short": "Entrepôts"
+  },
+  {
+   "key": "monnaie",
+   "short": "Monnaie"
+  },
+  {
+   "key": "surcharges",
+   "short": "Surcharges"
+  }
+ ],
+ "planned": {
+  "st_brocante": {
+   "vocabRoom": "ST_commerce_seg005",
+   "only": [
+    "fr_negocier_verb",
+    "fr_combler_verb",
+    "fr_decreter_verb",
+    "fr_distribuer_verb",
+    "fr_repartir_verb_2"
+   ]
+  },
+  "entrepots": {
+   "vocabRoom": "ST_commerce_seg006",
+   "only": [
+    "fr_entreposer_verb",
+    "fr_demarquer_verb",
+    "fr_allouer_verb",
+    "fr_miner_verb",
+    "fr_equilibrer_verb"
+   ]
+  },
+  "monnaie": {
+   "vocabRoom": "ST_commerce_seg007",
+   "only": [
+    "fr_subventionner_verb",
+    "fr_liquider_verb",
+    "fr_monnayer_verb",
+    "fr_cumuler_verb",
+    "fr_taxer_verb"
+   ]
+  },
+  "surcharges": {
+   "vocabRoom": "ST_commerce_seg008",
+   "only": [
+    "fr_surcharger_verb",
+    "fr_recharger_verb",
+    "fr_enraciner_verb",
+    "fr_acquitter_verb",
+    "fr_deposseder_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_brocante": {
+   "name": "Allée du Partage · Sharing Alley",
+   "room_id": "ST_commerce_seg005",
+   "image": "st_brocante/st_brocante.jpg",
+   "alt": "An autumn flea-market alley with golden leaves falling on bric-a-brac stalls: a mime haggles with an old stallholder over a brass gramophone; one kneels to fill a big wicker basket to overflowing with hair combs; one stands on an upturned crate holding open a blank scroll; one hands out red apples to two small children; a green-beret mime shares out paper party hats to three children. The stone archway on the left leads back to the market square; the orange, teal and plum doors lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     50,
+     90,
+     135,
+     190
+    ],
+    "label": "Place du Marché"
+   },
+   "doors": [
+    {
+     "to": "entrepots",
+     "label": "Quai des Entrepôts · Warehouse Quay",
+     "hint": "Through the orange door",
+     "hit": [
+      360,
+      94,
+      102,
+      170
+     ]
+    },
+    {
+     "to": "monnaie",
+     "label": "Rue de la Monnaie · Coin Street",
+     "hint": "Through the teal door",
+     "hit": [
+      531,
+      106,
+      94,
+      170
+     ]
+    },
+    {
+     "to": "surcharges",
+     "label": "Impasse des Surcharges · Overload Court",
+     "hint": "Through the plum door",
+     "hit": [
+      685,
+      119,
+      80,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_negocier_verb",
+     "box": [
+      432,
+      282,
+      168,
+      246
+     ]
+    },
+    {
+     "id": "fr_combler_verb",
+     "box": [
+      190,
+      410,
+      240,
+      290
+     ]
+    },
+    {
+     "id": "fr_decreter_verb",
+     "box": [
+      815,
+      170,
+      165,
+      245
+     ]
+    },
+    {
+     "id": "fr_distribuer_verb",
+     "box": [
+      612,
+      381,
+      190,
+      313
+     ]
+    },
+    {
+     "id": "fr_repartir_verb_2",
+     "box": [
+      950,
+      420,
+      250,
+      280
+     ]
+    }
+   ]
+  },
+  "entrepots": {
+   "name": "Quai des Entrepôts · Warehouse Quay",
+   "room_id": "ST_commerce_seg006",
+   "image": "st_brocante/entrepots.jpg",
+   "backTo": "st_brocante",
+   "alt": "An autumn riverside warehouse quay behind the flea market: a mime carries an old armchair into the warehouse, striking a pose; one holds a big blue vase, peeling off its mark; one hands a loaf of bread to each of the small children; one with a miner's headlamp over his beret digs into a heap of coal; one balances a tall stack of teacups on one hand, standing on one foot. The orange door on the left leads back to the alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_brocante",
+     "label": "Allée du Partage · Sharing Alley",
+     "hint": "Back through the orange door",
+     "hit": [
+      50,
+      81,
+      162,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_entreposer_verb",
+     "box": [
+      356,
+      125,
+      220,
+      215
+     ]
+    },
+    {
+     "id": "fr_demarquer_verb",
+     "box": [
+      681,
+      194,
+      165,
+      175
+     ]
+    },
+    {
+     "id": "fr_allouer_verb",
+     "box": [
+      45,
+      345,
+      440,
+      350
+     ]
+    },
+    {
+     "id": "fr_miner_verb",
+     "box": [
+      612,
+      375,
+      190,
+      295
+     ]
+    },
+    {
+     "id": "fr_equilibrer_verb",
+     "box": [
+      894,
+      88,
+      280,
+      550
+     ]
+    }
+   ]
+  },
+  "monnaie": {
+   "name": "Rue de la Monnaie · Coin Street",
+   "room_id": "ST_commerce_seg007",
+   "image": "st_brocante/monnaie.jpg",
+   "backTo": "st_brocante",
+   "alt": "An autumn street of curiosity stalls under big cumulus clouds: a mime drops coins into the hatch of a yellow toy submarine; one pours coloured liquid out of old bottles at a clearance stall; one blows a brass trumpet that sprays out gold coins; one wears three hats stacked on his beret; one sits in a red pedal-car taxi holding out a tin for a coin. The teal door on the left leads back to the alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_brocante",
+     "label": "Allée du Partage · Sharing Alley",
+     "hint": "Back through the teal door",
+     "hit": [
+      50,
+      125,
+      118,
+      195
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_subventionner_verb",
+     "box": [
+      75,
+      330,
+      270,
+      345
+     ]
+    },
+    {
+     "id": "fr_liquider_verb",
+     "box": [
+      350,
+      225,
+      135,
+      270
+     ]
+    },
+    {
+     "id": "fr_monnayer_verb",
+     "box": [
+      487,
+      294,
+      270,
+      337
+     ]
+    },
+    {
+     "id": "fr_cumuler_verb",
+     "box": [
+      712,
+      138,
+      165,
+      150
+     ]
+    },
+    {
+     "id": "fr_taxer_verb",
+     "box": [
+      875,
+      412,
+      320,
+      300
+     ]
+    }
+   ]
+  },
+  "surcharges": {
+   "name": "Impasse des Surcharges · Overload Court",
+   "room_id": "ST_commerce_seg008",
+   "image": "st_brocante/surcharges.jpg",
+   "backTo": "st_brocante",
+   "alt": "A cosy autumn courtyard at the back of the flea market, with a tea stall and a dressmaker's mannequin: a mime pushes a hand-cart piled sky-high with chairs, lamps and suitcases; one cranks an old lantern until it glows; one plants a sapling in a big silver racing trophy cup; one pays the tea lady with a coin and a brass key; one lifts a golden crown off the mannequin. The plum door on the left leads back to the alley.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_brocante",
+     "label": "Allée du Partage · Sharing Alley",
+     "hint": "Back through the plum door",
+     "hit": [
+      44,
+      38,
+      156,
+      220
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_surcharger_verb",
+     "box": [
+      20,
+      275,
+      500,
+      420
+     ]
+    },
+    {
+     "id": "fr_recharger_verb",
+     "box": [
+      525,
+      150,
+      200,
+      220
+     ]
+    },
+    {
+     "id": "fr_enraciner_verb",
+     "box": [
+      600,
+      375,
+      312,
+      305
+     ]
+    },
+    {
+     "id": "fr_acquitter_verb",
+     "box": [
+      869,
+      150,
+      145,
+      155
+     ]
+    },
+    {
+     "id": "fr_deposseder_verb",
+     "box": [
+      950,
+      312,
+      300,
+      370
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1207 @@
+{
+ "building": "fontaine",
+ "building_id": "B01_fontaine",
+ "sector_id": "S01_beginner",
+ "name": "Fontaine des Salutations",
+ "main": "fontaine",
+ "roomList": [
+  {
+   "key": "fontaine",
+   "short": "La fontaine"
+  },
+  {
+   "key": "portail",
+   "short": "Le portail"
+  },
+  {
+   "key": "salutations",
+   "short": "Les présentations"
+  },
+  {
+   "key": "politesse",
+   "short": "La politesse"
+  },
+  {
+   "key": "allees",
+   "short": "Les allées"
+  },
+  {
+   "key": "fond",
+   "short": "Le fond du jardin"
+  }
+ ],
+ "planned": {
+  "fontaine": {
+   "vocabRoom": "R_farewell",
+   "only": [
+    "fr_bon_week_end_phrase",
+    "fr_a_bientot_phrase",
+    "fr_bonne_journee_phrase",
+    "fr_a_demain_phrase"
+   ]
+  },
+  "grille": {
+   "vocabRoom": "R_farewell",
+   "only": [
+    "fr_au_revoir_phrase",
+    "fr_a_plus_tard_phrase"
+   ]
+  },
+  "bassin": {
+   "vocabRoom": "R_farewell",
+   "only": [
+    "fr_a_tout_a_l_heure_phrase",
+    "fr_bonne_soiree_phrase",
+    "fr_bonne_nuit_phrase"
+   ]
+  },
+  "portail": {
+   "vocabRoom": "R_exclaim_01",
+   "only": [
+    "fr_oh_intj",
+    "fr_eh_intj",
+    "fr_he_intj",
+    "fr_ah_intj",
+    "fr_ouais_intj",
+    "fr_tiens_intj"
+   ]
+  },
+  "scene": {
+   "vocabRoom": "R_exclaim_01",
+   "only": [
+    "fr_euh_intj",
+    "fr_bravo_intj",
+    "fr_allo_intj",
+    "fr_hein_intj"
+   ]
+  },
+  "salutations": {
+   "vocabRoom": "R_greet",
+   "only": [
+    "fr_salutation_noun",
+    "fr_comment_allez_vous_phrase",
+    "fr_comment_ca_va_phrase",
+    "fr_prenom_noun"
+   ]
+  },
+  "chalet": {
+   "vocabRoom": "R_greet",
+   "only": [
+    "fr_coucou_phrase",
+    "fr_bonsoir_phrase",
+    "fr_je_m_appelle_phrase",
+    "fr_comment_vous_appelez_vous_phrase",
+    "fr_ca_va_bien_merci_phrase"
+   ]
+  },
+  "politesse": {
+   "vocabRoom": "R_polite",
+   "only": [
+    "fr_d_accord_phrase",
+    "fr_excusez_moi_phrase",
+    "fr_bon_appetit_phrase",
+    "fr_merci_phrase",
+    "fr_de_rien_phrase",
+    "fr_non_phrase",
+    "fr_parlez_vous_anglais_phrase",
+    "fr_remerciement_noun"
+   ]
+  },
+  "pupitre": {
+   "vocabRoom": "R_polite_z1",
+   "only": [
+    "fr_pouvez_vous_repeter_phrase",
+    "fr_s_il_te_plait_phrase",
+    "fr_s_il_vous_plait_phrase",
+    "fr_avec_plaisir_phrase",
+    "fr_je_vous_en_prie_phrase",
+    "fr_sante_phrase",
+    "fr_si_phrase"
+   ]
+  },
+  "toboggan": {
+   "vocabRoom": "R_polite",
+   "only": [
+    "fr_oui_phrase",
+    "fr_je_ne_comprends_pas_phrase",
+    "fr_merci_beaucoup_phrase"
+   ]
+  },
+  "allees": {
+   "vocabRoom": "R_exclaim_02",
+   "only": [
+    "fr_chut_intj",
+    "fr_bah_intj",
+    "fr_ouf_intj",
+    "fr_helas_intj",
+    "fr_hum_intj"
+   ]
+  },
+  "kiosque": {
+   "vocabRoom": "R_exclaim_02",
+   "only": [
+    "fr_bis_adj",
+    "fr_hop_intj",
+    "fr_bof_intj",
+    "fr_tchao_intj"
+   ]
+  },
+  "fond": {
+   "vocabRoom": "R_exclaim_03",
+   "only": [
+    "fr_aie_intj",
+    "fr_zut_intj",
+    "fr_pff_intj",
+    "fr_vlan_intj",
+    "fr_ouah_intj",
+    "fr_beurk_intj"
+   ]
+  },
+  "mare": {
+   "vocabRoom": "R_exclaim_03",
+   "only": [
+    "fr_ouh_intj",
+    "fr_dia_intj",
+    "fr_hue_intj",
+    "fr_ciao_intj",
+    "fr_ohe_intj"
+   ]
+  }
+ },
+ "rooms": {
+  "fontaine": {
+   "name": "La fontaine des salutations · Fountain of Greetings",
+   "room_id": "R_farewell",
+   "image": "fontaine/fontaine.jpg",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     45,
+     55,
+     185,
+     130
+    ],
+    "label": "Place du Village"
+   },
+   "doors": [
+    {
+     "to": "portail",
+     "label": "le portail",
+     "hint": "Through the red door in the garden wall",
+     "hit": [
+      292,
+      83,
+      90,
+      166
+     ]
+    },
+    {
+     "to": "salutations",
+     "label": "les présentations",
+     "hint": "Through the yellow door in the garden wall",
+     "hit": [
+      461,
+      83,
+      79,
+      166
+     ]
+    },
+    {
+     "to": "politesse",
+     "label": "la cour de la politesse",
+     "hint": "Through the green door in the garden wall",
+     "hit": [
+      765,
+      81,
+      90,
+      162
+     ]
+    },
+    {
+     "to": "allees",
+     "label": "les allées",
+     "hint": "Through the blue door in the garden wall",
+     "hit": [
+      947,
+      81,
+      85,
+      162
+     ]
+    },
+    {
+     "to": "fond",
+     "label": "le fond du jardin",
+     "hint": "Through the purple door in the garden wall",
+     "hit": [
+      1126,
+      77,
+      92,
+      166
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "grille",
+     "label": "la grille",
+     "hint": "Look closer through the iron gate at the lane",
+     "at": [
+      210,
+      330
+     ],
+     "obj": [
+      16,
+      178,
+      368,
+      207
+     ]
+    },
+    {
+     "to": "bassin",
+     "label": "le bassin",
+     "hint": "Look closer at the fountain basin and the pond",
+     "at": [
+      1000,
+      330
+     ],
+     "obj": [
+      770,
+      110,
+      510,
+      305
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_bon_week_end_phrase",
+     "box": [
+      352,
+      255,
+      234,
+      142
+     ]
+    },
+    {
+     "id": "fr_a_bientot_phrase",
+     "box": [
+      608,
+      189,
+      135,
+      226
+     ]
+    },
+    {
+     "id": "fr_bonne_journee_phrase",
+     "box": [
+      410,
+      403,
+      192,
+      282
+     ]
+    },
+    {
+     "id": "fr_a_demain_phrase",
+     "box": [
+      653,
+      425,
+      410,
+      290
+     ]
+    }
+   ],
+   "alt": "A sunny walled garden with a stone fountain in the middle and five painted doors in the garden wall: red, yellow, green, blue and purple. A dog lounges on a cushion gnawing a bone, a girl on a stool laughs at a bee on a string, a hiker sets off with a big bun under his arm, and a girl waves to the old gardener pushing his wheelbarrow. Through the iron gate on the left a girl drives off in a red pedal car past a boy with a paper; by the fountain a fisher boy, a toy tugboat, a waiter with buns and a girl at a doll's bed. The iron gate at the top left leads out to the village square."
+  },
+  "grille": {
+   "name": "La grille du jardin · Garden Gate",
+   "room_id": "R_farewell_z1",
+   "image": "fontaine/grille.jpg",
+   "parent": "fontaine",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_au_revoir_phrase",
+     "box": [
+      230,
+      40,
+      440,
+      400
+     ]
+    },
+    {
+     "id": "fr_a_plus_tard_phrase",
+     "box": [
+      725,
+      40,
+      340,
+      680
+     ]
+    }
+   ],
+   "alt": "Close-up at the iron garden gate: a girl waves from her little red pedal car as she zooms off, and a schoolboy in dungarees waves a blank paper as he steps into a black puddle of tar."
+  },
+  "bassin": {
+   "name": "Le bassin · Fountain Basin",
+   "room_id": "R_farewell_z2",
+   "image": "fontaine/bassin.jpg",
+   "parent": "fontaine",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_a_tout_a_l_heure_phrase",
+     "box": [
+      150,
+      175,
+      475,
+      450
+     ]
+    },
+    {
+     "id": "fr_bonne_soiree_phrase",
+     "box": [
+      640,
+      137,
+      435,
+      250
+     ]
+    },
+    {
+     "id": "fr_bonne_nuit_phrase",
+     "box": [
+      632,
+      412,
+      478,
+      294
+     ]
+    }
+   ],
+   "alt": "Close-up of the fountain basin: a fisher boy waves his rod as a toy tugboat sails off, a waiter carries a tray of warm buns, and a girl tucks a bun into her doll's bed."
+  },
+  "portail": {
+   "name": "Le portail · Garden Corner",
+   "room_id": "R_exclaim_01",
+   "image": "fontaine/portail.jpg",
+   "backTo": "fontaine",
+   "nameplate": [
+    57,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "fontaine",
+     "label": "la fontaine",
+     "hint": "Back through the red door to the fountain",
+     "hit": [
+      45,
+      60,
+      240,
+      320
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "scene",
+     "label": "la scène",
+     "hint": "Look closer at the little open-air stage",
+     "at": [
+      1060,
+      300
+     ],
+     "obj": [
+      711,
+      130,
+      569,
+      392
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_oh_intj",
+     "box": [
+      385,
+      130,
+      160,
+      180
+     ]
+    },
+    {
+     "id": "fr_eh_intj",
+     "box": [
+      569,
+      150,
+      112,
+      160
+     ]
+    },
+    {
+     "id": "fr_he_intj",
+     "box": [
+      719,
+      175,
+      125,
+      205
+     ]
+    },
+    {
+     "id": "fr_ah_intj",
+     "box": [
+      300,
+      390,
+      175,
+      310
+     ]
+    },
+    {
+     "id": "fr_ouais_intj",
+     "box": [
+      482,
+      320,
+      190,
+      370
+     ]
+    },
+    {
+     "id": "fr_tiens_intj",
+     "box": [
+      680,
+      390,
+      180,
+      305
+     ]
+    }
+   ],
+   "alt": "A garden corner at dusk under paper lanterns, with a firework in the sky. An owl stares in surprise on the wall beside a puzzled cat, a boy waves, a girl holds a big box of chocolates, a teenager carries his skateboard and a girl offers a cup of tea. A little stage with red curtains stands at the right. The red door on the left leads back to the fountain."
+  },
+  "scene": {
+   "name": "La petite scène · Little Stage",
+   "room_id": "R_exclaim_01_z1",
+   "image": "fontaine/scene.jpg",
+   "parent": "portail",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_euh_intj",
+     "box": [
+      705,
+      10,
+      145,
+      345
+     ]
+    },
+    {
+     "id": "fr_bravo_intj",
+     "box": [
+      295,
+      105,
+      270,
+      265
+     ]
+    },
+    {
+     "id": "fr_allo_intj",
+     "box": [
+      540,
+      375,
+      225,
+      345
+     ]
+    },
+    {
+     "id": "fr_hein_intj",
+     "box": [
+      772,
+      400,
+      230,
+      320
+     ]
+    }
+   ],
+   "alt": "Close-up of the little open-air stage: a shy boy on stage scratches his head, a grandpa claps with a bouquet, a lady answers an old telephone at a café table and another lady cups her ear."
+  },
+  "salutations": {
+   "name": "Les présentations · Introductions",
+   "room_id": "R_greet",
+   "image": "fontaine/salutations.jpg",
+   "backTo": "fontaine",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "fontaine",
+     "label": "la fontaine",
+     "hint": "Back through the yellow door to the fountain",
+     "hit": [
+      56,
+      56,
+      256,
+      363
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "chalet",
+     "label": "le chalet",
+     "hint": "Look closer into the little summer-house",
+     "at": [
+      1140,
+      560
+     ],
+     "obj": [
+      657,
+      130,
+      623,
+      456
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_salutation_noun",
+     "box": [
+      318,
+      160,
+      267,
+      250
+     ]
+    },
+    {
+     "id": "fr_comment_allez_vous_phrase",
+     "box": [
+      630,
+      115,
+      285,
+      280
+     ]
+    },
+    {
+     "id": "fr_comment_ca_va_phrase",
+     "box": [
+      395,
+      420,
+      195,
+      300
+     ]
+    },
+    {
+     "id": "fr_prenom_noun",
+     "box": [
+      598,
+      400,
+      265,
+      320
+     ]
+    }
+   ],
+   "alt": "A garden courtyard with a summer-house on the right. Two knights in armour raise their visors, a gentleman in a top hat greets a grey-haired lady holding a tally counter, a green parrot perches on a ship's wheel and a mother kneels to talk to her toddler. The yellow double door on the left leads back to the fountain."
+  },
+  "chalet": {
+   "name": "Le chalet du jardin · Summer-house",
+   "room_id": "R_greet_z1",
+   "image": "fontaine/chalet.jpg",
+   "parent": "salutations",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_coucou_phrase",
+     "box": [
+      660,
+      0,
+      250,
+      200
+     ]
+    },
+    {
+     "id": "fr_bonsoir_phrase",
+     "box": [
+      395,
+      140,
+      205,
+      190
+     ],
+     "labelAt": [
+      497,
+      102
+     ]
+    },
+    {
+     "id": "fr_je_m_appelle_phrase",
+     "box": [
+      345,
+      440,
+      200,
+      280
+     ]
+    },
+    {
+     "id": "fr_comment_vous_appelez_vous_phrase",
+     "box": [
+      605,
+      200,
+      130,
+      240
+     ],
+     "labelAt": [
+      670,
+      352
+     ]
+    },
+    {
+     "id": "fr_ca_va_bien_merci_phrase",
+     "box": [
+      565,
+      445,
+      420,
+      275
+     ]
+    }
+   ],
+   "alt": "Close-up of the summer-house: a cuckoo clock hangs on the wall, a girl lifts a glowing jar of fireflies, a boy with a maple-leaf badge holds out his hand, a little robot holds out a blank badge and an old man gives a thumbs-up beside a big bee."
+  },
+  "politesse": {
+   "name": "La cour de la politesse · Courtyard of Manners",
+   "room_id": "R_polite",
+   "image": "fontaine/politesse.jpg",
+   "backTo": "fontaine",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "fontaine",
+     "label": "la fontaine",
+     "hint": "Back through the green door to the fountain",
+     "hit": [
+      50,
+      30,
+      120,
+      260
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "pupitre",
+     "label": "le pupitre",
+     "hint": "Look closer at the school desk by the back wall",
+     "at": [
+      631,
+      150
+     ],
+     "obj": [
+      508,
+      108,
+      256,
+      144
+     ]
+    },
+    {
+     "to": "toboggan",
+     "label": "le toboggan",
+     "hint": "Look closer at the playground slide",
+     "at": [
+      1120,
+      226
+     ],
+     "obj": [
+      840,
+      80,
+      440,
+      292
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_d_accord_phrase",
+     "box": [
+      369,
+      262,
+      219,
+      200
+     ]
+    },
+    {
+     "id": "fr_excusez_moi_phrase",
+     "box": [
+      630,
+      244,
+      178,
+      219
+     ]
+    },
+    {
+     "id": "fr_bon_appetit_phrase",
+     "box": [
+      362,
+      481,
+      138,
+      190
+     ]
+    },
+    {
+     "id": "fr_merci_phrase",
+     "box": [
+      544,
+      470,
+      112,
+      199
+     ]
+    },
+    {
+     "id": "fr_de_rien_phrase",
+     "box": [
+      664,
+      470,
+      106,
+      199
+     ]
+    },
+    {
+     "id": "fr_non_phrase",
+     "box": [
+      794,
+      475,
+      150,
+      213
+     ]
+    },
+    {
+     "id": "fr_parlez_vous_anglais_phrase",
+     "box": [
+      813,
+      108,
+      74,
+      203
+     ]
+    },
+    {
+     "id": "fr_remerciement_noun",
+     "box": [
+      889,
+      147,
+      71,
+      162
+     ],
+     "labelAt": [
+      930,
+      330
+     ]
+    }
+   ],
+   "alt": "A sunny playground courtyard. Two girls shake on a cord, a little girl squeezes past a boy blowing a kiss, a dog drools over a bone, a boy hands a girl a cake and a toddler frowns at her broccoli. A school desk with little figurines stands by the back wall, and a slide, a policeman and a grandpa on a bench are on the right. The green door on the left leads back to the fountain."
+  },
+  "pupitre": {
+   "name": "Le pupitre · School Desk",
+   "room_id": "R_polite_z1",
+   "image": "fontaine/pupitre.jpg",
+   "parent": "politesse",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pouvez_vous_repeter_phrase",
+     "box": [
+      356,
+      130,
+      58,
+      215
+     ]
+    },
+    {
+     "id": "fr_s_il_te_plait_phrase",
+     "box": [
+      425,
+      190,
+      210,
+      160
+     ]
+    },
+    {
+     "id": "fr_s_il_vous_plait_phrase",
+     "box": [
+      660,
+      145,
+      128,
+      205
+     ]
+    },
+    {
+     "id": "fr_avec_plaisir_phrase",
+     "box": [
+      790,
+      100,
+      200,
+      250
+     ]
+    },
+    {
+     "id": "fr_je_vous_en_prie_phrase",
+     "box": [
+      325,
+      355,
+      180,
+      240
+     ]
+    },
+    {
+     "id": "fr_sante_phrase",
+     "box": [
+      518,
+      355,
+      190,
+      240
+     ]
+    },
+    {
+     "id": "fr_si_phrase",
+     "box": [
+      718,
+      355,
+      195,
+      240
+     ]
+    }
+   ],
+   "alt": "Close-up of the school desk and its little figurines: a mynah bird in a cage, a seal pup with a ball, a stone seal, a butler with a teapot, a doorman boy at a little door, Santa with a glass of milk and a cheering child."
+  },
+  "toboggan": {
+   "name": "Le toboggan · Slide",
+   "room_id": "R_polite_z2",
+   "image": "fontaine/toboggan.jpg",
+   "parent": "politesse",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_oui_phrase",
+     "box": [
+      509,
+      50,
+      265,
+      270
+     ]
+    },
+    {
+     "id": "fr_je_ne_comprends_pas_phrase",
+     "box": [
+      678,
+      330,
+      330,
+      390
+     ]
+    },
+    {
+     "id": "fr_merci_beaucoup_phrase",
+     "box": [
+      478,
+      520,
+      155,
+      165
+     ]
+    }
+   ],
+   "alt": "Close-up of the slide corner: a policeman stands by the slide as a child whizzes down, a grandpa on a bench puzzles over his newspaper and a pigeon bows."
+  },
+  "allees": {
+   "name": "Les allées · Garden Paths",
+   "room_id": "R_exclaim_02",
+   "image": "fontaine/allees.jpg",
+   "backTo": "fontaine",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "fontaine",
+     "label": "la fontaine",
+     "hint": "Back through the blue door to the fountain",
+     "hit": [
+      40,
+      40,
+      200,
+      260
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "kiosque",
+     "label": "le kiosque",
+     "hint": "Look closer at the bandstand",
+     "at": [
+      1100,
+      380
+     ],
+     "obj": [
+      720,
+      110,
+      560,
+      405
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_chut_intj",
+     "box": [
+      312,
+      448,
+      206,
+      202
+     ]
+    },
+    {
+     "id": "fr_bah_intj",
+     "box": [
+      531,
+      450,
+      138,
+      195
+     ]
+    },
+    {
+     "id": "fr_ouf_intj",
+     "box": [
+      744,
+      425,
+      159,
+      231
+     ]
+    },
+    {
+     "id": "fr_helas_intj",
+     "box": [
+      419,
+      244,
+      144,
+      190
+     ]
+    },
+    {
+     "id": "fr_hum_intj",
+     "box": [
+      605,
+      205,
+      138,
+      235
+     ]
+    }
+   ],
+   "alt": "Garden paths between flower beds. A librarian with a book cart hushes a raven, a sheep shrugs, a boy puts down a heavy suitcase, a little prince has dropped his ice cream and a bearded old man sits thinking on a tree stump. A white bandstand stands on the right. The blue door on the left leads back to the fountain."
+  },
+  "kiosque": {
+   "name": "Le kiosque à musique · Bandstand",
+   "room_id": "R_exclaim_02_z1",
+   "image": "fontaine/kiosque.jpg",
+   "parent": "allees",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bis_adj",
+     "box": [
+      166,
+      0,
+      520,
+      255
+     ]
+    },
+    {
+     "id": "fr_hop_intj",
+     "box": [
+      691,
+      50,
+      215,
+      370
+     ]
+    },
+    {
+     "id": "fr_bof_intj",
+     "box": [
+      411,
+      265,
+      275,
+      340
+     ]
+    },
+    {
+     "id": "fr_tchao_intj",
+     "box": [
+      716,
+      425,
+      280,
+      295
+     ]
+    }
+   ],
+   "alt": "Close-up of the bandstand: children clap for a singer, a magician pulls a rabbit from a hat, a bored teenager slumps on a bench and a girl waves from a little garden train."
+  },
+  "fond": {
+   "name": "Le fond du jardin · Bottom of the Garden",
+   "room_id": "R_exclaim_03",
+   "image": "fontaine/fond.jpg",
+   "backTo": "fontaine",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "fontaine",
+     "label": "la fontaine",
+     "hint": "Back through the purple door to the fountain",
+     "hit": [
+      40,
+      45,
+      200,
+      255
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "mare",
+     "label": "la mare",
+     "hint": "Look closer at the pond and the puppet booth",
+     "at": [
+      1140,
+      470
+     ],
+     "obj": [
+      740,
+      115,
+      540,
+      380
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_aie_intj",
+     "box": [
+      352,
+      432,
+      80,
+      212
+     ]
+    },
+    {
+     "id": "fr_zut_intj",
+     "box": [
+      406,
+      260,
+      113,
+      165
+     ]
+    },
+    {
+     "id": "fr_pff_intj",
+     "box": [
+      625,
+      275,
+      165,
+      231
+     ]
+    },
+    {
+     "id": "fr_vlan_intj",
+     "box": [
+      525,
+      72,
+      212,
+      190
+     ]
+    },
+    {
+     "id": "fr_ouah_intj",
+     "box": [
+      475,
+      494,
+      144,
+      175
+     ]
+    },
+    {
+     "id": "fr_beurk_intj",
+     "box": [
+      748,
+      519,
+      196,
+      144
+     ]
+    }
+   ],
+   "alt": "The far end of the garden. A boy clutches his toe by a chair, a juggler drops his balls, a tired boy pushes his bike, a garden shed door slams, a dog stares at a giant bone and a dachshund turns away from broccoli. A pond with boats and a puppet booth lie on the right. The purple door on the left leads back to the fountain."
+  },
+  "mare": {
+   "name": "La mare · Pond",
+   "room_id": "R_exclaim_03_z1",
+   "image": "fontaine/mare.jpg",
+   "parent": "fond",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ouh_intj",
+     "box": [
+      190,
+      0,
+      410,
+      305
+     ]
+    },
+    {
+     "id": "fr_dia_intj",
+     "box": [
+      600,
+      15,
+      165,
+      347
+     ]
+    },
+    {
+     "id": "fr_hue_intj",
+     "box": [
+      770,
+      30,
+      120,
+      240
+     ]
+    },
+    {
+     "id": "fr_ciao_intj",
+     "box": [
+      375,
+      440,
+      275,
+      215
+     ]
+    },
+    {
+     "id": "fr_ohe_intj",
+     "box": [
+      680,
+      560,
+      250,
+      160
+     ]
+    }
+   ],
+   "alt": "Close-up of the pond: two children gasp at a puppet dragon in a striped booth, a young carter drives a horse with a glowing light bulb above its head, a girl waves from a gondola under a stone bridge and a sailor boy waves from his sailing boat."
+  }
+ }
+}
