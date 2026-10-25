@@ -211,3 +211,7 @@ If a snag or a new user idea would help future palaces, fold it back into this s
 ## Distinct palettes per sector
 - Make sectors distinct through setting, materials, architecture, and time of day, NOT colour grading. Image models drift toward a golden/orange "cozy" cast, so prompt explicitly for neutral daylight, true colours, and white whites, and reject warm-cast images. Avoid orange, terracotta, and peach walls in interiors. Post-hoc colour correction only softens a cast, so repaint when a scene still reads orange. Every scene uses natural true colours and clear lighting with no overall tint or filter, so items stay easy to see. Keep the realism level constant across sectors.
 - A "no gender tint" rule bans an overall pink or blue wash, not natural blue sky, water, or blossoms. Don't let painters strip every blue.
+
+
+## Map levels zoom, they don't change (user review, Oct 25)
+Every map level is a zoom of the level above it. A district on the world map shows, in miniature, the same buildings in the same arrangement as the district map it opens, and a building's exterior on the district map matches its interiors. Paint the detailed level first, then derive the overview's patch from it, or repaint both together. Never paint them independently and hope they agree.
