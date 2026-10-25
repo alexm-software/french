@@ -88,17 +88,17 @@
    "name": "Passage des Nœuds",
    "room_id": "ST_routine_seg005",
    "image": "st_lavoir/st_lavoir.jpg",
-   "alt": "A sunny canal-side quay of half-timbered houses with washing hung between the windows, painted in ink and gouache: Monsieur Verbe the mime polishes a black boot with a tin of wax, scratches his head, unclips a beagle's lead from a bollard, knots a red tie, hammers a nail into a wooden bench and drapes a cloth over a canary's cage. The stone archway on the left leads back to Rue des Maisons; the yellow, red, blue and green house doors lead on.",
+   "alt": "A sunny wooden deck on stilts along the blue canal by the old wash-house, with a rowing boat moored to a post, an iron bollard, a bench and a canary in its cage on a barrel; four painted doors stand along the back: yellow in the wash-house, red in the boat shed, blue in the stone cottage across the footbridge and green in the ivy-covered wall. Monsieur Verbe polishes a black boot with wax on his crate; scratches his head, puzzled; unclips the beagle's lead from the bollard; ties the boat's rope in a big knot round the post; hammers a nail into the bench; and drapes a cloth over the canary's cage. The cobbled lane on the left leads back to the houses.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     40,
-     225,
-     165,
-     140
+     10,
+     200,
+     150,
+     160
     ],
     "label": "Rue des Maisons"
    },
@@ -106,45 +106,45 @@
     {
      "to": "balayeurs",
      "label": "Rue des Balayeurs",
-     "hint": "Through the yellow house door",
+     "hint": "Through the yellow wash-house door",
      "hit": [
-      386,
-      272,
-      48,
-      130
+      352,
+      94,
+      62,
+      150
      ]
     },
     {
      "to": "repasser",
      "label": "Allée du Fer-à-Repasser",
-     "hint": "Through the red house door",
+     "hint": "Through the red boat-shed door",
      "hit": [
-      602,
-      281,
-      57,
-      121
+      494,
+      106,
+      62,
+      144
      ]
     },
     {
      "to": "clowns",
      "label": "Ruelle des Clowns",
-     "hint": "Through the blue house door",
+     "hint": "Through the blue cottage door",
      "hit": [
-      804,
-      291,
-      53,
-      70
+      781,
+      110,
+      45,
+      125
      ]
     },
     {
      "to": "torchons",
      "label": "Rue des Torchons",
-     "hint": "Through the green house door",
+     "hint": "Through the green door in the ivy wall",
      "hit": [
-      994,
-      296,
-      46,
-      75
+      1112,
+      82,
+      82,
+      180
      ]
     }
    ],
@@ -153,55 +153,55 @@
     {
      "id": "fr_cirer_verb",
      "box": [
-      50,
-      375,
-      200,
-      315
+      40,
+      380,
+      235,
+      310
      ]
     },
     {
      "id": "fr_gratter_verb",
      "box": [
-      256,
-      325,
-      125,
-      350
+      210,
+      175,
+      135,
+      195
      ]
     },
     {
      "id": "fr_detacher_verb",
      "box": [
-      437,
-      370,
-      160,
-      315
+      372,
+      265,
+      265,
+      390
      ]
     },
     {
      "id": "fr_nouer_verb",
      "box": [
-      662,
-      330,
-      110,
-      345
+      642,
+      245,
+      150,
+      340
      ]
     },
     {
      "id": "fr_clouer_verb",
      "box": [
-      775,
-      362,
-      195,
-      333
+      830,
+      175,
+      175,
+      300
      ]
     },
     {
      "id": "fr_voiler_verb",
      "box": [
-      981,
-      375,
-      200,
-      320
+      1040,
+      272,
+      215,
+      420
      ]
     }
    ]
@@ -211,7 +211,7 @@
    "room_id": "ST_routine_seg006",
    "image": "st_lavoir/balayeurs.jpg",
    "backTo": "st_lavoir",
-   "alt": "A canal-side washing green with a stone trough and sheets on the line, painted in ink and gouache: Monsieur Verbe the mime looks down at mud splashed all over his clothes, gasps as a muddy puppy leaves paw prints across a clean white sheet, lifts a snow-white shirt out of the suds, shields his eyes from a dazzling brass basin, sweeps the flagstones with a broom and holds a carnival mask over his face. The yellow door on the left leads back to Passage des Nœuds.",
+   "alt": "Inside the open-sided old wash-house over the canal, with a round stone washing basin full of suds, white sheets hanging from the beams, a clean sheet spread on the flagstones and a shiny brass basin: Monsieur Verbe stares at the mud splashed all over his stripes in a green beret; gasps as a muddy puppy leaves paw prints on the clean sheet; lifts a snow-white shirt out of the suds in a green beret; shields his eyes from a dazzling flash of light in a green beret; sweeps the petals with a big broom; and holds a carnival mask over his face. The yellow door leads back.",
    "nameplate": [
     50,
     4.5
@@ -222,10 +222,10 @@
      "label": "Passage des Nœuds",
      "hint": "Back through the yellow door",
      "hit": [
-      100,
-      85,
-      165,
-      170
+      25,
+      45,
+      170,
+      120
      ]
     }
    ],
@@ -234,55 +234,55 @@
     {
      "id": "fr_salir_verb",
      "box": [
-      50,
-      256,
-      165,
-      370
+      85,
+      175,
+      150,
+      400
      ]
     },
     {
      "id": "fr_souiller_verb",
      "box": [
-      222,
-      256,
-      250,
-      410
+      245,
+      330,
+      330,
+      330
      ]
     },
     {
      "id": "fr_blanchir_verb",
      "box": [
-      482,
-      212,
-      218,
-      280
+      495,
+      120,
+      175,
+      200
      ]
     },
     {
      "id": "fr_eblouir_verb",
      "box": [
-      705,
-      231,
+      720,
       180,
-      240
+      185,
+      400
      ]
     },
     {
      "id": "fr_balayer_verb",
      "box": [
-      890,
-      265,
-      195,
-      365
+      915,
+      160,
+      180,
+      350
      ]
     },
     {
      "id": "fr_masquer_verb",
      "box": [
       1100,
-      262,
-      155,
-      365
+      205,
+      165,
+      460
      ]
     }
    ]
@@ -292,7 +292,7 @@
    "room_id": "ST_routine_seg007",
    "image": "st_lavoir/repasser.jpg",
    "backTo": "st_lavoir",
-   "alt": "A blossoming farmyard orchard by the canal, painted in ink and gouache: Monsieur Verbe the mime irons a shirt, pulls the chain off a gate and lets a flock of geese burst out, rubs his hands together, dunks a croissant into a big bowl, pegs a dripping shirt on the line to dry and opens a treasure chest of keepsakes beside a portrait of his grandmother. The red barn door on the left leads back to Passage des Nœuds.",
+   "alt": "A grassy drying green on the canal bank beside the wooden boat shed, with a washing line between two posts and a gate chained shut on a flock of geese: Monsieur Verbe irons a shirt on the ironing board; pulls the chain off the gate as the geese burst out honking; shivers and rubs his hands together; dunks a croissant into a big bowl; pegs a shirt on the washing line; and kneels by an open treasure chest beside Grandma's portrait, lifting out her necklace. The red door of the boat shed leads back.",
    "nameplate": [
     50,
     4.5
@@ -301,12 +301,12 @@
     {
      "to": "st_lavoir",
      "label": "Passage des Nœuds",
-     "hint": "Back through the red barn door",
+     "hint": "Back through the red boat-shed door",
      "hit": [
-      100,
-      130,
-      130,
-      150
+      55,
+      132,
+      135,
+      65
      ]
     }
    ],
@@ -315,55 +315,55 @@
     {
      "id": "fr_repasser_verb",
      "box": [
-      12,
-      287,
-      245,
-      315
+      10,
+      205,
+      255,
+      385
      ]
     },
     {
      "id": "fr_dechainer_verb",
      "box": [
-      262,
-      295,
-      330,
-      385
+      275,
+      195,
+      240,
+      390
      ]
     },
     {
      "id": "fr_frotter_verb",
      "box": [
-      600,
-      294,
-      110,
-      330
+      525,
+      195,
+      165,
+      370
      ]
     },
     {
      "id": "fr_tremper_verb",
      "box": [
-      725,
-      306,
-      170,
-      325
+      700,
+      240,
+      200,
+      350
      ]
     },
     {
      "id": "fr_secher_verb",
      "box": [
-      905,
-      235,
-      200,
-      140
+      915,
+      140,
+      260,
+      200
      ]
     },
     {
      "id": "fr_heriter_verb",
      "box": [
       1005,
-      380,
-      270,
-      300
+      350,
+      265,
+      330
      ]
     }
    ]
@@ -373,7 +373,7 @@
    "room_id": "ST_routine_seg008",
    "image": "st_lavoir/clowns.jpg",
    "backTo": "st_lavoir",
-   "alt": "A spring meadow by a striped circus tent and a caravan, painted in ink and gouache: Monsieur Verbe the mime paints on a clown's red nose with his hand mirror, swirls on a long blue cloak, turns pale green at a dangling spider, leaps over a hurdle, bursts through a paper hoop and digs a hole with a spade. The blue door on the left leads back to Passage des Nœuds.",
+   "alt": "A canal towpath where a circus barge with bunting is moored, with a striped circus tent on the bank, a big tree with a spider dangling from a branch, a little hurdle and a paper hoop on a stand: Monsieur Verbe paints on a round red clown nose in his hand mirror; swirls a long blue cloak over his shoulders in a gold beret; goes pale green with fright as the spider drops in front of his nose, in a green beret; leaps over the hurdle in a green beret; bursts through the paper hoop; and digs a hole with his spade. The blue door across the footbridge leads back.",
    "nameplate": [
     50,
     4.5
@@ -382,12 +382,12 @@
     {
      "to": "st_lavoir",
      "label": "Passage des Nœuds",
-     "hint": "Back through the blue door",
+     "hint": "Back over the footbridge, through the blue door",
      "hit": [
-      78,
       70,
-      165,
-      190
+      150,
+      55,
+      95
      ]
     }
    ],
@@ -396,55 +396,55 @@
     {
      "id": "fr_maquiller_verb",
      "box": [
-      25,
-      269,
-      220,
-      395
+      55,
+      285,
+      210,
+      390
      ]
     },
     {
      "id": "fr_revetir_verb",
      "box": [
-      245,
-      256,
-      255,
-      390
+      290,
+      295,
+      250,
+      345
      ]
     },
     {
      "id": "fr_palir_verb",
      "box": [
-      500,
-      125,
-      145,
-      500
+      560,
+      210,
+      140,
+      290
      ]
     },
     {
      "id": "fr_franchir_verb",
      "box": [
-      650,
-      195,
-      215,
-      430
+      705,
+      145,
+      170,
+      230
      ]
     },
     {
      "id": "fr_defoncer_verb",
      "box": [
-      870,
+      885,
       220,
-      230,
-      345
+      205,
+      250
      ]
     },
     {
      "id": "fr_creuser_verb",
      "box": [
-      1100,
-      330,
-      175,
-      355
+      1095,
+      345,
+      160,
+      330
      ]
     }
    ]
@@ -454,7 +454,7 @@
    "room_id": "ST_routine_seg009",
    "image": "st_lavoir/torchons.jpg",
    "backTo": "st_lavoir",
-   "alt": "A kitchen garden by the canal with tea towels on the line, painted in ink and gouache: Monsieur Verbe the mime massages an old man's shoulders, wipes a plate dry with a checked tea towel, straightens a crooked picture on an easel, holds up a birdhouse as a bluebird moves in, blushes over a spilt jug of milk and clutches his head as a hailstorm flattens his lettuces. The green door on the left leads back to Passage des Nœuds.",
+   "alt": "The lock-keeper's cottage garden beside the canal, with checked tea towels on a line, a garden chair, a crooked picture on an easel, a birdhouse on a pole, a table with a tipped-over milk jug and a box of lettuces under a little grey hail cloud: Monsieur Verbe massages the shoulders of a smiling old gentleman; wipes a wet plate with a checked tea towel; straightens the picture on the easel; holds up the birdhouse as a bluebird flies in; blushes pink over the spilt milk; and clutches his head as the hail flattens his lettuces, in a green beret. The green garden door leads back.",
    "nameplate": [
     50,
     4.5
@@ -465,10 +465,10 @@
      "label": "Passage des Nœuds",
      "hint": "Back through the green garden door",
      "hit": [
-      112,
-      95,
-      145,
-      130
+      60,
+      92,
+      170,
+      105
      ]
     }
    ],
@@ -477,55 +477,55 @@
     {
      "id": "fr_masser_verb",
      "box": [
-      25,
-      226,
-      315,
-      440
+      40,
+      205,
+      320,
+      480
      ]
     },
     {
      "id": "fr_essuyer_verb",
      "box": [
-      342,
-      245,
-      140,
-      380
+      365,
+      180,
+      165,
+      360
      ]
     },
     {
      "id": "fr_redresser_verb",
      "box": [
-      490,
-      250,
-      225,
-      405
+      575,
+      145,
+      165,
+      420
      ]
     },
     {
      "id": "fr_loger_verb",
      "box": [
-      720,
-      80,
-      150,
-      470
+      765,
+      160,
+      160,
+      170
      ]
     },
     {
      "id": "fr_embarrasser_verb",
      "box": [
-      875,
-      270,
-      155,
-      390
+      810,
+      340,
+      220,
+      360
      ]
     },
     {
      "id": "fr_aneantir_verb",
      "box": [
-      1040,
-      250,
-      235,
-      410
+      1045,
+      205,
+      190,
+      335
      ]
     }
    ]

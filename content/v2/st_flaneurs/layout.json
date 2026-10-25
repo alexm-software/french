@@ -7,7 +7,7 @@
  "roomList": [
   {
    "key": "st_flaneurs",
-   "short": "Le quai"
+   "short": "Le ruisseau"
   },
   {
    "key": "cyclistes",
@@ -15,11 +15,11 @@
   },
   {
    "key": "parachutistes",
-   "short": "La place"
+   "short": "Le pré"
   },
   {
    "key": "convois",
-   "short": "Les convois"
+   "short": "Le hangar"
   }
  ],
  "planned": {
@@ -67,19 +67,19 @@
  },
  "rooms": {
   "st_flaneurs": {
-   "name": "Quai des Ancres",
+   "name": "Ruisseau des Ancres",
    "image": "st_flaneurs/st_flaneurs.jpg",
-   "alt": "A sunny spring country path beside a little canal, between clipped hedges and blossom trees: Monsieur Verbe the mime drops a little anchor from his rowing boat, tumbles down a wooden chute into the hay, trots beside a pony, as a doctor writes a prescription for a yawning sheep, sets two alarm clocks to the same time and pushes back the nozzle of a red fuel pump. The hedge arch with the white gate on the left leads back to the crossroads; the wooden garden gate, the hedge arch tunnel and the stone footbridge lead on.",
+   "alt": "A winding country road between hedges beside a little brook, with a red-roofed farmhouse, a hay chute and a kite in the sky, painted in ink and gouache: Monsieur Verbe drops a little iron anchor from his rowing boat into the brook; slides down the hay chute legs in the air; trots knees-high beside a pony; hands a doctor's note to a yawning sheep in a gold beret; sets two alarm clocks to the same time on a fence; and pushes the nozzle back into an old fuel pump. The road at the far left leads back to the crossroads. The garden gate in the hedge, the leafy tunnel and the stone footbridge lead on.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     110,
-     150,
-     190,
-     190
+     70,
+     300,
+     115,
+     100
     ],
     "label": "Carrefour des Voyages"
    },
@@ -89,32 +89,32 @@
      "label": "Allée des Cyclistes",
      "hint": "Through the wooden garden gate in the hedge",
      "hit": [
-      440,
-      256,
-      70,
-      82
+      195,
+      315,
+      55,
+      75
      ]
     },
     {
      "to": "parachutistes",
-     "label": "Place des Parachutistes",
-     "hint": "Through the arched tunnel in the hedge",
+     "label": "Pré des Parachutistes",
+     "hint": "Through the leafy tunnel in the hedge",
      "hit": [
-      690,
-      140,
-      170,
-      185
+      785,
+      265,
+      70,
+      100
      ]
     },
     {
      "to": "convois",
-     "label": "Quai des Convois",
+     "label": "Hangar des Convois",
      "hint": "Over the stone footbridge",
      "hit": [
-      950,
-      256,
-      285,
-      90
+      830,
+      525,
+      330,
+      110
      ]
     }
    ],
@@ -123,55 +123,55 @@
     {
      "id": "fr_ancrer_verb",
      "box": [
-      12,
-      375,
-      190,
-      262
+      10,
+      445,
+      290,
+      215
      ]
     },
     {
      "id": "fr_chuter_verb",
      "box": [
-      210,
-      360,
-      225,
-      250
+      325,
+      200,
+      100,
+      180
      ]
     },
     {
      "id": "fr_trotter_verb",
      "box": [
-      441,
-      350,
-      184,
-      260
+      440,
+      320,
+      225,
+      205
      ]
     },
     {
      "id": "fr_prescrire_verb",
      "box": [
-      631,
-      345,
-      225,
-      265
+      670,
+      305,
+      105,
+      245
      ]
     },
     {
      "id": "fr_synchroniser_verb",
      "box": [
-      862,
-      355,
-      165,
-      270
+      937,
+      255,
+      125,
+      195
      ]
     },
     {
      "id": "fr_refouler_verb",
      "box": [
-      1075,
-      360,
-      190,
-      255
+      1100,
+      290,
+      170,
+      225
      ]
     }
    ],
@@ -181,7 +181,7 @@
    "name": "Allée des Cyclistes",
    "image": "st_flaneurs/cyclistes.jpg",
    "backTo": "st_flaneurs",
-   "alt": "A sunny spring lane between hedges by a thatched cottage: Monsieur Verbe the mime watches melted ice trickle out of his cool box, strolls along in a flannel scarf, sniffs a steaming pie on the window sill, raises his paddle higher at a little farm auction and pedals a tiny red tricycle. The wooden garden gate on the left leads back to the canal path; the open farm gate on the right leads on.",
+   "alt": "The flowery front garden of the red-roofed farmhouse beside the country road, with a cattle pen, a gravel path and a pie cooling on the window sill: Monsieur Verbe looks sadly at his cool box melted into a puddle; strolls past the flowers in a long flannel scarf; raises his bidding paddle at the farm auction in a green beret; follows his nose to the steaming pie; and pedals a tiny tricycle with his knees up to his ears. The garden gate on the left leads back to the road; the open farm gate on the right leads on to the meadow.",
    "nameplate": [
     50,
     4.5
@@ -189,24 +189,24 @@
    "doors": [
     {
      "to": "st_flaneurs",
-     "label": "Quai des Ancres",
+     "label": "Ruisseau des Ancres",
      "hint": "Back through the wooden garden gate",
      "hit": [
-      200,
-      268,
-      106,
-      100
+      80,
+      290,
+      85,
+      160
      ]
     },
     {
      "to": "parachutistes",
-     "label": "Place des Parachutistes",
-     "hint": "Through the open farm gate",
+     "label": "Pré des Parachutistes",
+     "hint": "Through the open farm gate to the meadow",
      "hit": [
-      1100,
-      294,
-      170,
-      200
+      1135,
+      355,
+      125,
+      210
      ]
     }
    ],
@@ -215,56 +215,56 @@
     {
      "id": "fr_decouler_verb",
      "box": [
-      12,
-      375,
-      313,
-      275
+      170,
+      335,
+      155,
+      345
      ]
     },
     {
      "id": "fr_flaner_verb",
      "box": [
-      331,
-      275,
-      145,
-      325
+      330,
+      255,
+      120,
+      235
      ]
     },
     {
      "id": "fr_emaner_verb",
      "box": [
-      519,
-      262,
-      175,
-      290
+      765,
+      235,
+      130,
+      185
      ]
     },
     {
      "id": "fr_rencherir_verb",
      "box": [
-      731,
-      231,
-      158,
-      388
+      560,
+      225,
+      105,
+      190
      ]
     },
     {
      "id": "fr_pedaler_verb",
      "box": [
-      925,
-      381,
-      156,
-      260
+      915,
+      410,
+      160,
+      235
      ]
     }
    ],
    "room_id": "ST_movement_seg022"
   },
   "parachutistes": {
-   "name": "Place des Parachutistes",
+   "name": "Pré des Parachutistes",
    "image": "st_flaneurs/parachutistes.jpg",
    "backTo": "st_flaneurs",
-   "alt": "A sunny spring village green with a windsock, ringed by hedges: Monsieur Verbe the mime rides the fastest horse with sandbags hung on its saddle, puts a coin in a red vending machine, pulls a lever to lower a little drawbridge, sets off abroad with his suitcase and mirror past a potted palm tree and floats down under a patchwork parachute by a lamp post. The farm gate at the back leads back to the canal path; the stone footbridge on the right leads on.",
+   "alt": "A breezy meadow beside the country road, with kites in the sky, a ditch with a little wooden drawbridge, a red vending machine by a bench, a potted palm and an old lamp post: Monsieur Verbe leads a racehorse carrying sandbags; puts a coin in the vending machine; pulls the lever to lower the drawbridge; walks off past the palm tree with a suitcase and a hand mirror; and floats down under a striped parachute towards the lamp post. The farm gate on the left leads back; the stone footbridge on the right leads on.",
    "nameplate": [
     30,
     4.5
@@ -272,24 +272,24 @@
    "doors": [
     {
      "to": "st_flaneurs",
-     "label": "Quai des Ancres",
+     "label": "Ruisseau des Ancres",
      "hint": "Back through the farm gate",
      "hit": [
-      344,
-      244,
-      188,
-      91
+      12,
+      285,
+      140,
+      150
      ]
     },
     {
      "to": "convois",
-     "label": "Quai des Convois",
+     "label": "Hangar des Convois",
      "hint": "Over the stone footbridge",
      "hit": [
-      1000,
-      258,
-      240,
-      50
+      1075,
+      400,
+      200,
+      125
      ]
     }
    ],
@@ -298,56 +298,56 @@
     {
      "id": "fr_handicaper_verb",
      "box": [
-      12,
+      168,
+      290,
       262,
-      295,
-      375
+      170
      ]
     },
     {
      "id": "fr_inserer_verb",
      "box": [
-      328,
-      348,
-      212,
-      283
+      480,
+      295,
+      125,
+      165
      ]
     },
     {
      "id": "fr_actionner_verb",
      "box": [
-      548,
-      356,
-      215,
-      260
+      612,
+      385,
+      170,
+      280
      ]
     },
     {
      "id": "fr_expatrier_verb",
      "box": [
-      925,
-      315,
-      190,
-      280
+      890,
+      340,
+      110,
+      160
      ]
     },
     {
      "id": "fr_parachuter_verb",
      "box": [
-      931,
-      6,
-      206,
-      214
+      785,
+      80,
+      215,
+      220
      ]
     }
    ],
    "room_id": "ST_movement_seg023"
   },
   "convois": {
-   "name": "Quai des Convois",
+   "name": "Hangar des Convois",
    "image": "st_flaneurs/convois.jpg",
    "backTo": "st_flaneurs",
-   "alt": "A sunny spring canal quay with blossom, a wooden post shed and telegraph wires: Monsieur Verbe the mime sits in a bubble bath and refuses it, arms braced on the edge, waves goodbye to swallows flying south, rides the parcel conveyor belt through the shed, rides a postal pony carrying a parcel and drives a little yellow tow truck carrying a broken bicycle. The stone footbridge on the left leads back to the canal path.",
+   "alt": "A farm lane beside the brook with a wooden parcel-sorting shed and its conveyor belt, blossom trees and swallows on the telegraph wires: Monsieur Verbe crosses his arms and frowns at his bubble bath; waves goodbye to the swallows flying south; rides the conveyor belt with the parcels; trots down the lane on the postal pony with a parcel; and drives a little yellow tow truck carrying a broken bicycle. The stone footbridge on the left leads back to the road.",
    "nameplate": [
     50,
     4.5
@@ -355,13 +355,13 @@
    "doors": [
     {
      "to": "st_flaneurs",
-     "label": "Quai des Ancres",
+     "label": "Ruisseau des Ancres",
      "hint": "Back over the stone footbridge",
      "hit": [
-      60,
-      250,
-      230,
-      90
+      62,
+      300,
+      210,
+      60
      ]
     }
    ],
@@ -370,46 +370,46 @@
     {
      "id": "fr_objecter_verb",
      "box": [
-      25,
-      354,
-      268,
+      180,
+      365,
+      235,
       290
      ]
     },
     {
      "id": "fr_emigrer_verb",
      "box": [
-      300,
-      325,
-      150,
-      287
+      438,
+      280,
+      95,
+      245
      ]
     },
     {
      "id": "fr_transiter_verb",
      "box": [
-      460,
-      265,
-      233,
-      200
+      670,
+      285,
+      100,
+      135
      ]
     },
     {
      "id": "fr_acheminer_verb",
      "box": [
-      700,
-      350,
-      215,
-      290
+      968,
+      195,
+      125,
+      220
      ]
     },
     {
      "id": "fr_vehiculer_verb",
      "box": [
-      921,
-      330,
-      340,
-      245
+      738,
+      425,
+      512,
+      280
      ]
     }
    ],
