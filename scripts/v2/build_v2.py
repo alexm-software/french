@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build the v2 village (village/v2/) from the SAME text metadata as v1.
+"""Build the village (village/) from the SAME text metadata as the retired v1 payloads.
 
 Card text (French word, article, gloss, IPA, respelling, memory hook, example, plural,
 notes, verb tables) is read, never rewritten, from:
-  1. the live v1 payloads village/assets/data/<building>.js (items matched by id), else
+  1. the retired v1 payloads data/v1-payloads/<building>.js (items matched by id), else
   2. data/source/vocab.jsonl (+ data/source/rooms.json for planned room membership).
 A layout entry may set "text": "vocab" to use data/source/vocab.jsonl instead of the v1 payload
 (e.g. v1's « le banc » hook is a piggy bank; the source hook is a pew/bench).
@@ -31,7 +31,7 @@ v2-specific inputs live in content/v2/<building>/:
                content filter on that item's gloss (en) only; hook/scene/note/ex are still checked.
   layout.json may also carry top-level "building_id" (memory-palace id, e.g. B29_plage),
   "sector_id" (e.g. S09_nature) and "v1_room_id"; they are copied to data/<building>.js and
-  the map uses them to put the building on its sector map (see village/v2/README.md).
+  the map uses them to put the building on its sector map (see village/README.md).
   Verbs (vocab pos "verb") become v1-style verb cards (beret colour, participles, 7 tenses) from
   data/cache/conjugations.json. vocab "reflexive" only means a pronominal form exists, so the card
   uses it (se trouver, mirror, être) only when the example sentence does; a hooks.json entry
@@ -52,7 +52,7 @@ from pathlib import Path
 from PIL import Image, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
-V2 = ROOT / "village" / "v2"
+V2 = ROOT / "village"
 W, H = 1280, 720
 FONT = None
 for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]:
@@ -71,7 +71,7 @@ def label_w(text):
 
 def load_v1_items():
     items = {}
-    for js in sorted((ROOT / "village" / "assets" / "data").glob("*.js")):
+    for js in sorted((ROOT / "data" / "v1-payloads").glob("*.js")):
         src = js.read_text(encoding="utf-8")
         m = re.search(r"=\s*(\{.*\})\s*;?\s*$", src, re.S)
         if not m:

@@ -23,8 +23,9 @@ jobs:
         run: |
           test -f village/.nojekyll
           test -f village/index.html
-          test -f village/assets/app.js
-          test -f village/assets/map/village.jpg
+          test -f village/app.js
+          test -f village/map/world.jpg
+          test -f village/v2/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: village

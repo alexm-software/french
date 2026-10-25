@@ -9,7 +9,7 @@ This file only makes proposals. Nothing in the word list, the room data or the h
 
 The S01 list in `MISFITS.md` is not repeated here. Those suggestions still stand.
 
-Room references use `building/room`, the keys in `village/v2/data/*.js`. Unbuilt rooms use their plan id, such as `B06_marche/R_vegetables`.
+Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt rooms use their plan id, such as `B06_marche/R_vegetables`.
 
 ## Summary
 
