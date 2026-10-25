@@ -8,31 +8,31 @@
  "roomList": [
   {
    "key": "foret",
-   "short": "La forêt"
+   "short": "La forêt · The forest"
   },
   {
    "key": "arbres",
-   "short": "Les arbres"
+   "short": "Les arbres · The trees"
   },
   {
    "key": "animaux",
-   "short": "Les animaux"
+   "short": "Les animaux · The animals"
   },
   {
    "key": "loups",
-   "short": "Les loups"
+   "short": "Les prédateurs · The predators"
   },
   {
    "key": "oiseaux",
-   "short": "Les oiseaux"
+   "short": "Les oiseaux · The birds"
   },
   {
    "key": "cygnes",
-   "short": "Les cygnes"
+   "short": "Le lac · The lake"
   },
   {
    "key": "insectes",
-   "short": "Les insectes"
+   "short": "Les insectes · The insects"
   }
  ],
  "planned": {
@@ -59,7 +59,6 @@
     "fr_nature_noun",
     "fr_mousse_noun_f",
     "fr_arbre_noun",
-    "fr_tabac_noun",
     "fr_chene_noun",
     "fr_feuillage_noun",
     "fr_champignon_noun",
@@ -128,20 +127,17 @@
     "fr_chasseur_noun",
     "fr_piege_noun",
     "fr_elan_noun",
-    "fr_mepris_noun",
-    "fr_ours_noun",
-    "fr_vampire_noun"
+    "fr_ours_noun"
    ]
   },
   "soucheloups": {
    "vocabRoom": "R_wildlife_02",
    "only": [
     "fr_hurlement_noun",
-    "fr_survivant_noun",
+    "fr_aventurier_noun",
     "fr_renard_noun",
     "fr_pic_noun",
-    "fr_sanglier_noun",
-    "fr_aventurier_noun"
+    "fr_sanglier_noun"
    ]
   },
   "oiseaux": {
@@ -149,13 +145,9 @@
    "only": [
     "fr_aile_noun",
     "fr_plume_noun",
-    "fr_lame_noun",
-    "fr_nana_noun",
     "fr_poule_noun",
     "fr_oiseau_noun",
-    "fr_genie_noun",
     "fr_canard_noun",
-    "fr_murmure_noun",
     "fr_bouge_noun"
    ]
   },
@@ -173,16 +165,12 @@
   "cygnes": {
    "vocabRoom": "R_birds_02",
    "only": [
-    "fr_broche_noun",
     "fr_migration_noun",
     "fr_fronde_noun",
     "fr_aviaire_adj",
     "fr_cygne_noun",
-    "fr_maintien_noun",
     "fr_poussin_noun",
-    "fr_vautour_noun",
-    "fr_baril_noun",
-    "fr_menestrel_noun"
+    "fr_vautour_noun"
    ]
   },
   "insectes": {
@@ -217,88 +205,88 @@
  },
  "rooms": {
   "foret": {
-   "name": "La forêt",
+   "name": "La forêt · The forest",
    "room_id": "R_forest_01",
    "image": "foret/foret.jpg",
-   "alt": "A sunny forest glade painted in ink and gouache. Along the back, four painted ways lead deeper into the woods: a wooden arch hung with birdhouses, an arch of flowers buzzing with bees, a carved arch with paw prints and a giant hollow tree, plus two little signposts, one carved with a swan and one with a wolf's head. In the glade: a fox sits in four rays of sunlight, a squirrel bounces on a branch like a diving board, another cracks a walnut on a stump, toy racing cars zoom along a track among twisting roots, a log burns in a ring of stones beside a Yule log cake on a stump, a boa coils on a fallen log, a fir tree oozes sap into a little pan, a throne is carved from a great tree trunk, a bison calf peeps out of a round bush, pine cones drop into a frying pan on a stove, and a lumberjack in a checked shirt chops a tree. The white gate at the bottom left leads out to the valley.",
+   "alt": "A bright, sunny forest glade painted in ink and gouache. Along the back, six painted ways lead deeper into the woods: a wooden arch hung with birdhouses, a little signpost painted with a swan, an arch of pink flowers, a carved arch with paw prints, a signpost painted with a wolf's head, and a giant hollow tree. Left: four smiling manta rays climb up a tree trunk, a squirrel bounces on a branch like a diving board, another squirrel cracks a walnut on a stump, toy racing cars zoom along a track made of twisting roots, and a log burns with little flames as it rests on top of a round bush. Right: a boa coils on a fallen log, a fir tree drips sap into a little pan, a throne is carved from a great tree trunk, a bison calf peeps out of a big round bush, pine cones drop into a frying pan on a stove, and a lumberjack in a checked shirt chops a tree. The white gate at the bottom left leads out to the valley.",
    "nameplate": [
-    44,
-    32
+    57.4,
+    60.4
    ],
    "mapExit": {
     "box": [
      0,
-     520,
-     225,
-     200
+     530,
+     240,
+     190
     ],
     "label": "La vallée"
    },
    "doors": [
     {
      "to": "oiseaux",
-     "label": "Les oiseaux",
+     "label": "Les oiseaux · The birds",
      "hint": "Walk under the arch hung with birdhouses",
      "hit": [
-      85,
-      15,
-      200,
-      170
+      188,
+      30,
+      172,
+      185
      ]
     },
     {
      "to": "cygnes",
-     "label": "Les cygnes",
+     "label": "Le lac · The lake",
      "hint": "Follow the little signpost carved with a swan",
      "hit": [
-      300,
-      90,
-      88,
-      108
+      365,
+      115,
+      75,
+      105
      ]
     },
     {
      "to": "insectes",
-     "label": "Les insectes",
+     "label": "Les insectes · The insects",
      "hint": "Walk under the arch of flowers and bees",
      "hit": [
-      398,
-      15,
-      190,
-      170
+      445,
+      30,
+      210,
+      185
      ]
     },
     {
      "to": "animaux",
-     "label": "Les animaux",
+     "label": "Les animaux · The animals",
      "hint": "Walk under the carved paw-print arch",
      "hit": [
-      682,
-      15,
-      178,
-      170
+      712,
+      30,
+      180,
+      175
      ]
     },
     {
      "to": "loups",
-     "label": "Les loups",
+     "label": "Les prédateurs · The predators",
      "hint": "Follow the little signpost carved with a wolf's head",
      "hit": [
-      870,
-      92,
-      94,
-      104
+      895,
+      118,
+      90,
+      120
      ]
     },
     {
      "to": "arbres",
-     "label": "Les arbres",
+     "label": "Les arbres · The trees",
      "hint": "Walk through the giant hollow tree",
      "hit": [
-      978,
+      1000,
       15,
-      240,
-      170
+      250,
+      210
      ]
     }
    ],
@@ -307,120 +295,100 @@
     {
      "id": "fr_foret_noun",
      "box": [
-      45,
-      200,
+      25,
+      40,
       160,
-      140
+      325
      ]
     },
     {
      "id": "fr_branche_noun",
      "box": [
-      270,
-      205,
-      205,
-      115
+      300,
+      220,
+      220,
+      140
      ]
     },
     {
      "id": "fr_racine_noun",
      "box": [
-      10,
-      355,
-      320,
-      140
-     ],
-     "labelAt": [
-      170,
-      410
+      40,
+      375,
+      285,
+      150
      ]
     },
     {
      "id": "fr_noix_noun",
      "box": [
-      345,
-      330,
-      170,
-      150
+      385,
+      362,
+      175,
+      132
      ]
     },
     {
      "id": "fr_buche_noun",
      "box": [
-      250,
-      500,
-      350,
-      180
-     ],
-     "labelAt": [
-      425,
-      680
+      332,
+      498,
+      145,
+      182
      ]
     },
     {
      "id": "fr_bois_noun",
      "box": [
-      710,
-      235,
-      260,
-      155
+      712,
+      250,
+      258,
+      148
      ]
     },
     {
      "id": "fr_sapin_noun",
      "box": [
-      990,
-      200,
-      100,
-      190
+      1000,
+      232,
+      105,
+      170
      ]
     },
     {
      "id": "fr_tronc_noun",
      "box": [
-      1100,
-      255,
-      160,
-      230
+      1110,
+      268,
+      150,
+      232
      ]
     },
     {
      "id": "fr_buisson_noun",
      "box": [
-      625,
-      455,
-      250,
-      230
-     ],
-     "labelAt": [
-      750,
-      680
+      645,
+      472,
+      230,
+      203
      ]
     },
     {
      "id": "fr_pin_noun",
      "box": [
       880,
-      440,
+      500,
       125,
-      240
-     ],
-     "labelAt": [
-      942,
-      680
+      190
      ]
     },
     {
      "id": "fr_bucheron_noun",
      "box": [
       1050,
-      490,
+      500,
       215,
-      200
-     ],
-     "labelAt": [
-      1158,
-      680
+      205
      ]
     }
    ],
@@ -428,11 +396,11 @@
    "sector_id": "S09_nature"
   },
   "arbres": {
-   "name": "Les arbres",
+   "name": "Les arbres · The trees",
    "room_id": "R_forest_02",
    "image": "foret/arbres.jpg",
    "backTo": "foret",
-   "alt": "A grove of great trees. Left half: a hiker admiring a fawn, a squirrel and mushrooms, a shiny tin-foil leaf landing on a blank sheet of paper, and a moose lying happily on a soft bed of moss. Right half: a great tree bending its branches into an arbour over a children's picnic, a little blank museum board, a mighty oak dropping acorns with a chain swing, a chameleon hidden in the foliage, a mushroom wearing a champion's medal, a palm tree dropping a coconut onto a crab's sunhat, and an ancient olive tree with a sleepy owl in its hollow. In the middle stands an old tree stump covered in tiny things to look at closer. The hollow-tree arch at the top left leads back to the forest glade.",
+   "alt": "A grove of great trees. Left half: a hiker admiring a fawn, a squirrel and mushrooms, a shiny tin-foil leaf landing on a blank sheet of paper, and a moose lying happily on a soft bed of moss. Right half: a great tree bending its branches into an arbour over a children's picnic, a mighty oak dropping acorns with a chain swing, a chameleon hidden in the foliage, a mushroom wearing a champion's medal, a palm tree dropping a coconut onto a crab's sunhat, and an ancient olive tree with a sleepy owl in its hollow. In the middle stands an old tree stump covered in tiny things to look at closer. The hollow-tree arch at the top left leads back to the forest glade.",
    "nameplate": [
     50,
     95
@@ -440,8 +408,8 @@
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back through the hollow-tree arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back through the hollow-tree arch to the forest",
      "hit": [
       20,
       130,
@@ -453,7 +421,7 @@
    "zooms": [
     {
      "to": "souche",
-     "label": "la souche",
+     "label": "la souche · the stump",
      "hint": "Look closer at the old tree stump",
      "at": [
       600,
@@ -502,15 +470,6 @@
       110,
       250,
       180
-     ]
-    },
-    {
-     "id": "fr_tabac_noun",
-     "box": [
-      895,
-      295,
-      85,
-      95
      ]
     },
     {
@@ -567,7 +526,7 @@
    "sector_id": "S09_nature"
   },
   "souche": {
-   "name": "La souche des arbres",
+   "name": "La souche des arbres · The trees' stump",
    "room_id": "R_forest_02_z1",
    "image": "foret/souche.jpg",
    "parent": "arbres",
@@ -670,20 +629,20 @@
    "sector_id": "S09_nature"
   },
   "animaux": {
-   "name": "Les animaux",
+   "name": "Les animaux · The animals",
    "room_id": "R_wildlife_01",
    "image": "foret/animaux.jpg",
    "backTo": "foret",
-   "alt": "A wild clearing full of animals. Left half: a goat in a hat placing a bet at a little kiosk, a six-legged furry creature giving rangers a tour of its burrow, a monkey swinging on a vine dropping a banana onto a dozing tiger, forest animals queuing at an old phone box, an ostrich rushing for a spilled sack of oats, and a zebra driving a striped van across golden grass while giraffes peer in. Right half: a zookeeper with a hedgehog on his knee while a fox and a badger wait their turn, a monkey singing into a banana microphone, a lion yawning as a butterfly flutters past, a dragon puffing steam beside a toasted acorn, a tiger with an empty teacup, a rabbit in a frying pan munching a carrot, a snake coiled round a pan, and an old tree stump with tiny things to look at closer. The carved arch at the top left leads back to the glade; the paw-print arch at the top right leads to the wolves.",
+   "alt": "A wild clearing full of animals. Left half: a goat in a hat placing a bet at a little kiosk, a furry little creature giving rangers a tour of its burrow, a monkey swinging on a vine dropping a banana onto a dozing tiger, forest animals queuing at an old phone box, an ostrich rushing for a spilled sack of oats, and a zebra driving a striped van across golden grass while giraffes peer in. Right half: a zookeeper with a hedgehog on his knee while a fox and a badger wait their turn, a monkey singing into a banana microphone, a lion yawning as a butterfly flutters past, a dragon puffing steam beside a toasted acorn, a tiger with an empty teacup, a rabbit in a frying pan munching a carrot, a snake coiled round a pan, and an old tree stump with tiny things to look at closer. The carved arch at the top left leads back to the glade; the paw-print arch at the top right leads to the wolves.",
    "nameplate": [
-    15,
+    15.6,
     95
    ],
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back through the carved arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back through the carved arch to the forest",
      "hit": [
       20,
       20,
@@ -693,8 +652,8 @@
     },
     {
      "to": "loups",
-     "label": "Les loups",
-     "hint": "Walk under the paw-print arch to the wolves",
+     "label": "Les prédateurs · The predators",
+     "hint": "Walk under the paw-print arch to the predators",
      "hit": [
       1100,
       10,
@@ -706,10 +665,10 @@
    "zooms": [
     {
      "to": "soucheanimaux",
-     "label": "la souche",
+     "label": "la souche · the stump",
      "hint": "Look closer at the old tree stump",
      "at": [
-      1165,
+      1142,
       640
      ],
      "obj": [
@@ -765,9 +724,9 @@
      "id": "fr_autruche_noun",
      "box": [
       325,
-      460,
+      450,
       290,
-      200
+      185
      ]
     },
     {
@@ -847,21 +806,21 @@
    "sector_id": "S09_nature"
   },
   "soucheanimaux": {
-   "name": "La souche des animaux",
+   "name": "La souche des animaux · The animals' stump",
    "room_id": "R_wildlife_01_z1",
    "image": "foret/soucheanimaux.jpg",
    "parent": "animaux",
-   "alt": "Close-up of the old tree stump among the animals, all on the right: a child at the zoo squirted by a baby elephant, an elephant cooling herself with a huge paper fan, a squirrel scurrying up a sapling with an acorn, a cheeky squirrel jeering at a grey cat, a lizard in a tiny crown on a hot rock, a big cat stretching on a rock, a crocodile in a waistcoat shaking a heron's wing, a hare pulling a lever, a teal reptile in a deckchair, a mother bear cuddling her cub, a stick lodge with a cosy reading nook, and a rat in a top hat making the mice gasp. On the left, the snake's frying pan in the grass.",
+   "alt": "Close-up of the old tree stump among the animals, all on the right: a boy at the zoo squirted by a baby elephant through the bars of its cage, an elephant cooling herself with a huge paper fan, a squirrel scurrying up a sapling with an acorn, a cheeky squirrel jeering at a grey cat, a lizard in a tiny crown on a hot rock, a big cat stretching on a rock, a crocodile in a waistcoat shaking a heron's wing, a hare pulling a lever, a teal reptile in a deckchair, a mother bear cuddling her cub, a stick lodge with a cosy reading nook, and a rat in a top hat making the mice gasp. On the left, the snake's frying pan in the grass.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_zoo_noun",
      "box": [
-      655,
-      55,
-      225,
-      120
+      650,
+      38,
+      228,
+      150
      ]
     },
     {
@@ -976,42 +935,42 @@
    "sector_id": "S09_nature"
   },
   "loups": {
-   "name": "Les loups",
+   "name": "Les prédateurs · The predators",
    "room_id": "R_wildlife_02",
    "image": "foret/loups.jpg",
    "backTo": "foret",
-   "alt": "A deep pine wood where the wolves roam. Left half: a fox chasing its own tail while a hound sits puzzled, a hawk diving at a toy mouse, a fox being fitted for a fur coat by a tailor, and a grumpy lion showing a claw beside a griffin statue. Right half: a wolf running round a loop, a hunter whose rabbit hops away laughing, a mouse tiptoeing away from a trap under a pie, a moose galloping across a frozen lake, a snooty cat sniffing at a prize ribbon on a stump, a bear riding a horse, a vampire peering out of a black van, and an old tree stump with tiny things to look at closer. The paw-print arch at the top left leads back to the glade.",
+   "alt": "A pine wood where the predators hunt. Left side: a fox chasing its own tail while a beagle sits puzzled, a hawk diving at a toy mouse, a tailor holding up a fur coat for a fox, and a lion showing a claw beside a griffin statue. Right side: a wolf running round a loop, a hunter whose rabbit hops away laughing, a mouse tiptoeing away from a trap under a pie, a moose galloping across a frozen lake, a bear riding a grey horse, and an old tree stump with little scenes to look at closer. The paw-print arch at the top left leads back to the forest.",
    "nameplate": [
-    12,
-    94
+    18,
+    95.3
    ],
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back through the paw-print arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back through the paw-print arch to the forest",
      "hit": [
-      30,
-      15,
-      180,
-      180
+      18,
+      8,
+      222,
+      212
      ]
     }
    ],
    "zooms": [
     {
      "to": "soucheloups",
-     "label": "la souche",
+     "label": "la souche · the stump",
      "hint": "Look closer at the old tree stump",
      "at": [
-      1080,
-      650
+      1135,
+      628
      ],
      "obj": [
-      985,
-      585,
-      290,
-      130
+      992,
+      540,
+      286,
+      178
      ]
     }
    ],
@@ -1019,116 +978,82 @@
     {
      "id": "fr_chasse_noun",
      "box": [
-      100,
-      195,
-      340,
-      185
+      62,
+      228,
+      410,
+      150
      ]
     },
     {
      "id": "fr_proie_noun",
      "box": [
-      330,
-      5,
-      175,
-      185
-     ],
-     "labelAt": [
-      417,
-      150
+      318,
+      6,
+      210,
+      218
      ]
     },
     {
      "id": "fr_fourrure_noun",
      "box": [
-      40,
-      390,
-      230,
-      215
+      6,
+      382,
+      306,
+      250
      ]
     },
     {
      "id": "fr_griffe_noun",
      "box": [
-      290,
-      390,
-      310,
-      320
-     ],
-     "labelAt": [
-      445,
-      680
+      320,
+      385,
+      292,
+      262
      ]
     },
     {
      "id": "fr_loup_noun",
      "box": [
-      755,
-      25,
-      250,
-      165
+      792,
+      38,
+      270,
+      140
      ]
     },
     {
      "id": "fr_chasseur_noun",
      "box": [
-      620,
-      105,
-      125,
-      190
+      644,
+      106,
+      140,
+      200
      ]
     },
     {
      "id": "fr_piege_noun",
      "box": [
-      610,
-      300,
-      215,
+      619,
+      310,
+      240,
       100
      ]
     },
     {
      "id": "fr_elan_noun",
      "box": [
-      930,
-      215,
-      335,
-      200
-     ]
-    },
-    {
-     "id": "fr_mepris_noun",
-     "box": [
-      1100,
-      30,
-      170,
-      180
-     ],
-     "labelAt": [
-      1185,
-      11
+      990,
+      206,
+      288,
+      190
      ]
     },
     {
      "id": "fr_ours_noun",
      "box": [
-      672,
-      420,
-      280,
-      280
-     ],
-     "labelAt": [
-      812,
-      680
-     ]
-    },
-    {
-     "id": "fr_vampire_noun",
-     "box": [
-      1040,
-      437,
-      230,
-      140
+      694,
+      414,
+      290,
+      290
      ]
     }
    ],
@@ -1136,66 +1061,57 @@
    "sector_id": "S09_nature"
   },
   "soucheloups": {
-   "name": "La souche des loups",
+   "name": "La souche des prédateurs · The predators' stump",
    "room_id": "R_wildlife_02_z1",
    "image": "foret/soucheloups.jpg",
    "parent": "loups",
-   "alt": "Close-up of the old tree stump in the pine wood, all on the right: a man in a nightcap sitting up in bed, woken by a howl, a soggy tortoise crawling out from under a toy van, a sly fox sneaking past a henhouse, a woodpecker pecking a log, a wild boar singing as it snuffles, and an adventurer in a pith helmet rattling along in a little van with a map flapping out of the window.",
+   "alt": "Close-up of the old tree stump: a boy in striped pyjamas stands on the stump hurling a pillow at a grey wolf howling at the sky, an adventurer in a pith helmet drives a little blue van with a map flapping out of the window, a red fox sprints through a finish-line ribbon, a woodpecker holds a tiny pickaxe on a rock, and a wild boar sings with its mouth wide open as music notes float up. The grey horse's tail swishes at the left edge.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_hurlement_noun",
      "box": [
-      570,
-      200,
-      200,
-      175
-     ]
-    },
-    {
-     "id": "fr_survivant_noun",
-     "box": [
-      812,
-      75,
-      230,
-      165
-     ]
-    },
-    {
-     "id": "fr_renard_noun",
-     "box": [
-      790,
-      260,
-      255,
-      165
-     ]
-    },
-    {
-     "id": "fr_pic_noun",
-     "box": [
-      1050,
-      225,
-      200,
-      165
-     ]
-    },
-    {
-     "id": "fr_sanglier_noun",
-     "box": [
-      662,
-      480,
-      245,
-      175
+      550,
+      50,
+      350,
+      325
      ]
     },
     {
      "id": "fr_aventurier_noun",
      "box": [
-      925,
-      430,
-      330,
-      240
+      906,
+      44,
+      360,
+      262
+     ]
+    },
+    {
+     "id": "fr_renard_noun",
+     "box": [
+      606,
+      380,
+      290,
+      195
+     ]
+    },
+    {
+     "id": "fr_pic_noun",
+     "box": [
+      900,
+      375,
+      145,
+      275
+     ]
+    },
+    {
+     "id": "fr_sanglier_noun",
+     "box": [
+      1055,
+      312,
+      222,
+      303
      ]
     }
    ],
@@ -1203,20 +1119,20 @@
    "sector_id": "S09_nature"
   },
   "oiseaux": {
-   "name": "Les oiseaux",
+   "name": "Les oiseaux · The birds",
    "room_id": "R_birds_01",
    "image": "foret/oiseaux.jpg",
    "backTo": "foret",
-   "alt": "A birdsong clearing. Left half: a tiny elf riding a bird's wing, a peacock dropping a feather that a robin uses as a quill, a lamb watching a farmer sharpen the blade of his scythe, two girls in sunglasses sharing a banana, and a hen paddling in a little pool beside her eggs. Right half: a bird singing on a zoo gate, a genie swirling out of a teapot offering wishes to a robin, a duck dipping its head into a watering can, a wren humming on a rock in a murmuring stream, a tiny hovel where a mouse dances, and an old tree stump with tiny things to look at closer. The birdhouse arch at the top left leads back to the glade; the blue swan arch at the top right leads to the swans.",
+   "alt": "A birdsong clearing. Left half: a tiny elf riding a bird's wing, a peacock dropping a feather that a robin uses as a quill, and a hen paddling in a little pool beside her eggs. Right half: a bird singing on a zoo gate, a robin in the grass, a duck dipping its head into a watering can, a wren on a rock in a stream, a tiny hovel where a mouse dances, and an old tree stump with tiny things to look at closer. The birdhouse arch at the top left leads back to the glade; the blue swan arch at the top right leads to the lake.",
    "nameplate": [
-    12,
-    94
+    13.8,
+    59.2
    ],
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back under the birdhouse arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back under the birdhouse arch to the forest",
      "hit": [
       40,
       15,
@@ -1226,7 +1142,7 @@
     },
     {
      "to": "cygnes",
-     "label": "Les cygnes",
+     "label": "Le lac · The lake",
      "hint": "Walk under the blue swan arch to the lake",
      "hit": [
       1010,
@@ -1239,7 +1155,7 @@
    "zooms": [
     {
      "to": "soucheoiseaux",
-     "label": "la souche",
+     "label": "la souche · the stump",
      "hint": "Look closer at the old tree stump",
      "at": [
       600,
@@ -1277,24 +1193,6 @@
      ]
     },
     {
-     "id": "fr_lame_noun",
-     "box": [
-      225,
-      190,
-      215,
-      225
-     ]
-    },
-    {
-     "id": "fr_nana_noun",
-     "box": [
-      30,
-      420,
-      240,
-      220
-     ]
-    },
-    {
      "id": "fr_poule_noun",
      "box": [
       295,
@@ -1317,34 +1215,12 @@
      ]
     },
     {
-     "id": "fr_genie_noun",
-     "box": [
-      790,
-      180,
-      210,
-      165
-     ]
-    },
-    {
      "id": "fr_canard_noun",
      "box": [
       705,
       415,
       180,
       150
-     ]
-    },
-    {
-     "id": "fr_murmure_noun",
-     "box": [
-      800,
-      575,
-      200,
-      140
-     ],
-     "labelAt": [
-      900,
-      680
      ]
     },
     {
@@ -1361,11 +1237,11 @@
    "sector_id": "S09_nature"
   },
   "soucheoiseaux": {
-   "name": "La souche des oiseaux",
+   "name": "La souche des oiseaux · The birds' stump",
    "room_id": "R_birds_01_z1",
    "image": "foret/soucheoiseaux.jpg",
    "parent": "oiseaux",
-   "alt": "Close-up of the old tree stump in the birdsong clearing. Left: a goose honking as it chases a farmer round a pond. Right: a toucan pecking a fruit with its huge beak, a pigeon strutting in a bow tie, a proud stag wearing a tiny crown, a nest with three eggs beside a boy's knee, and an eagle guarding an egg on a high rocky nest.",
+   "alt": "Close-up of the old tree stump in the birdsong clearing. Left: a goose bawling \"wah wah\" with big tears in a pond while a farmer boy reaches out to her. Right: a toucan pecking a fruit with its huge beak, a pigeon strutting in a bow tie, a stag standing to attention and saluting, a nest with three eggs beside a boy's knee, and an eagle guarding an egg on a high rocky nest.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -1428,11 +1304,11 @@
    "sector_id": "S09_nature"
   },
   "cygnes": {
-   "name": "Les cygnes",
+   "name": "Le lac · The lake",
    "room_id": "R_birds_02",
    "image": "foret/cygnes.jpg",
    "backTo": "foret",
-   "alt": "A lakeside clearing for the swans. Left half: a songbird pinning a shiny brooch on her chest, a flock of swallows checking a map before migrating, and a squirrel aiming a slingshot from behind a fern frond. In the middle, a chattering aviary full of finches, parrots and one puzzled pigeon. Right half: a white swan gliding with a little sign in its beak, a woodpecker tapping nails into a birdhouse, a chick pushing to the front of the bird-feeder queue, a vulture with a rosette and a megaphone riding a tour bus, a fisherman on a barrel winding his reel, and a blackbird minstrel strumming a lute. The blue swan arch at the top left leads back to the glade.",
+   "alt": "A lakeside clearing in warm evening light. Left side: a flock of swallows holding up a map to plan their migration, and a squirrel aiming a slingshot from behind a fern frond. In the middle, a big birdcage aviary full of finches and parrots with a puzzled pigeon in front. Right side: a white swan gliding up to a little wooden sign on the lake, a fluffy yellow chick pushing to the front of the bird-feeder queue, and a vulture with a rosette and a megaphone riding on top of an old tour bus. The blue swan arch at the far left leads back to the forest.",
    "nameplate": [
     40,
     95
@@ -1440,122 +1316,70 @@
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back under the swan arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back under the swan arch to the forest",
      "hit": [
       0,
-      40,
-      180,
-      300
+      50,
+      184,
+      380
      ]
     }
    ],
    "zooms": [],
    "items": [
     {
-     "id": "fr_broche_noun",
-     "box": [
-      195,
-      125,
-      150,
-      180
-     ]
-    },
-    {
      "id": "fr_migration_noun",
      "box": [
-      355,
-      5,
-      335,
-      215
-     ],
-     "labelAt": [
-      522,
-      216
+      362,
+      6,
+      325,
+      208
      ]
     },
     {
      "id": "fr_fronde_noun",
      "box": [
-      190,
-      320,
-      270,
-      265
+      188,
+      318,
+      275,
+      150
      ]
     },
     {
      "id": "fr_aviaire_adj",
      "box": [
       475,
-      255,
-      300,
-      315
+      218,
+      312,
+      357
      ]
     },
     {
      "id": "fr_cygne_noun",
      "box": [
-      875,
-      305,
-      210,
-      115
-     ]
-    },
-    {
-     "id": "fr_maintien_noun",
-     "box": [
-      785,
-      30,
-      170,
-      215
-     ],
-     "labelAt": [
-      870,
-      11
+      844,
+      280,
+      245,
+      140
      ]
     },
     {
      "id": "fr_poussin_noun",
      "box": [
-      860,
-      440,
-      190,
-      130
+      880,
+      470,
+      180,
+      115
      ]
     },
     {
      "id": "fr_vautour_noun",
      "box": [
       1000,
-      10,
-      270,
-      290
-     ],
-     "labelAt": [
-      1210,
-      304
-     ]
-    },
-    {
-     "id": "fr_baril_noun",
-     "box": [
-      720,
-      580,
-      160,
-      140
-     ],
-     "labelAt": [
-      800,
-      680
-     ]
-    },
-    {
-     "id": "fr_menestrel_noun",
-     "box": [
-      1110,
-      355,
-      165,
-      200
+      18,
+      258,
+      255
      ]
     }
    ],
@@ -1563,20 +1387,20 @@
    "sector_id": "S09_nature"
   },
   "insectes": {
-   "name": "Les insectes",
+   "name": "Les insectes · The insects",
    "room_id": "R_insects",
    "image": "foret/insectes.jpg",
    "backTo": "foret",
    "alt": "A flowery meadow full of insects. Left half: a fly landing on a cross-eyed moose's nose, a flea in a puce jacket hopping onto a computer chip, an ant carrying a cookie crumb, a bee carrying honey pots over yellow flowers, and an old tree stump with tiny things to look at closer. Right half: a snail carrying a cargo of parcels, a little red beetle racing round daisies in a scarf, an insect orchestra with a grasshopper violinist and a beetle drummer, a butterfly on a papillon dog's ear, a nurse combing a louse out with a giant comb, a ladybird riding a swing like a pendulum, a worm waving from an apple, a mosquito with a moustache near a man asleep in a hammock, and a scarab beetle pushing a ball of mud. The flower arch at the top left leads back to the glade.",
    "nameplate": [
-    50,
-    96
+    55.3,
+    95.8
    ],
    "doors": [
     {
      "to": "foret",
-     "label": "La forêt",
-     "hint": "Walk back under the flower arch to the glade",
+     "label": "La forêt · The forest",
+     "hint": "Walk back under the flower arch to the forest",
      "hit": [
       60,
       40,
@@ -1588,7 +1412,7 @@
    "zooms": [
     {
      "to": "soucheinsectes",
-     "label": "la souche",
+     "label": "la souche · the stump",
      "hint": "Look closer at the old tree stump",
      "at": [
       140,
@@ -1741,7 +1565,7 @@
    "sector_id": "S09_nature"
   },
   "soucheinsectes": {
-   "name": "La souche des insectes",
+   "name": "La souche des insectes · The insects' stump",
    "room_id": "R_insects_z1",
    "image": "foret/soucheinsectes.jpg",
    "parent": "insectes",
