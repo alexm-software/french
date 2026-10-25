@@ -139,3 +139,13 @@ These are blocking. A space does not ship until each one passes, and the builder
 - One-hook gate: a word that appears in more than one room has the same hook everywhere.
 - Forced-pun gate: reject hooks with the wrong vowel, more than two sound chunks, a pun object that only sits beside the meaning, no pun at all, or a "like English X" template on a non-cognate.
 - Integrated-verbs gate: a room's verbs are spread through the scene and interact with its nouns. A room fails if its verbs are bunched in one zone or lined up along an edge. Verb streets are allowed where they make sense, but most of a sector's verbs should sit in its themed rooms.
+
+## Round 9 additions (evening wrap-up, Oct 25): blocking gates
+- **Rebuild after every repaint.** If a scene painting changes, rebuild that building's cards and data js with the project's build script in the same pack. A painting shipped with stale cards or zoom thumbnails is a failed pack; it needs a hotfix.
+- **Parent miniature and zoom hint.** When a zoom room is repainted, the parent room's miniature (the window, hatch, shelf or booth that opens it) is repainted to match, and the zoom-hint text is rewritten to describe the new scene. Hook text that names where an item sits ("on the tray's rim") is re-checked against the new art.
+- **Shelf audit.** Periodically rank every built room by how much of it is shelves, cubbies or rows of figurines, and repaint the worst as lively scenes, each with its own composition. A shelf is fine as one element. A whole room of cubbies fails.
+- **No text, including props.** The no-text check covers mugs, speech or thought bubbles, coins, signs, price tags and badges. Generated props often come back with letters, "…" or "$". Paint them out.
+- **Ownership before paint.** Before painting a room, check the other workers' packs and the live site for a more recent repaint of the same file. A pack built on an older version of a repainted image must be dropped and redone on current main, never merged over the newer art.
+- **Shared data merges.** When two packs touch the same building's data js or cards, regenerate those files from the merged layout with the build script. Don't hand-merge them.
+- **Deploy attachment limit.** Keep every deploy tarball under 25 MB. Keep screenshots and review sheets outside the tarball, and slim any pack that's too big by re-packing without them.
+- **Removal accounting.** Track every word a fix takes off the live site (plan-only moves) and every room left sparse. Report both counts to the user at each stopping point. Paint words back where they fit.
