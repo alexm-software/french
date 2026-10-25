@@ -49,7 +49,7 @@
    "name": "L'atelier d'ingénierie · The engineering workshop",
    "room_id": "R_engineering",
    "image": "ingenierie/atelier.jpg",
-   "alt": "The engineering workshop inside the honey-sandstone engineering school, painted in ink and gouache, with a huge gear-shaped round window at the back showing light snow. On the left the glass double doors stand open to the campus path; a young woman fixes her hair in the mirror-bright sheen of a chrome machine, a tablet glows on a stack of logs, an inventor unveils a fan blowing ribbons into an air vent, and a cardboard model town sits beside an open kit box. In the middle a robot arm pats a giggling boy's cheek beside his buttered toast. On the right two friends high-five on the stair landing, a silver robot takes a bow, a yellow digger with a boy in its cab, a device of springs and dials wearing a pair of goggles, a toy race car on a figure-eight circuit, a kitten asleep on a motor and a puppy peering down a stone well, and on the far right wall a lab bench of gadgets.",
+   "alt": "The engineering workshop inside the honey-sandstone engineering school, painted in ink and gouache, with a huge gear-shaped round window at the back showing light snow. On the left the glass double doors stand open to the campus path; a young woman fixes her hair in the mirror-bright sheen of a chrome machine, a tablet glows on a stack of logs, an inventor unveils a fan blowing ribbons into an air vent, and a cardboard model town sits beside an open kit box. In the middle a robot arm pats a giggling boy's cheek beside his buttered toast. On the right two friends high-five on the stair landing, a silver robot takes a bow, a yellow digger with a boy in its cab, a device of springs and dials wearing a pair of goggles, a toy race car on a figure-eight circuit, a kitten asleep on a motor and a puppy peering down a stone well, and on the far right wall a lab bench of gadgets. At the top of the stairs, on the landing at the far right, a red door stands open onto the autumn Engineers Walk.",
    "nameplate": [
     45,
     4.5
@@ -63,7 +63,20 @@
     ],
     "label": "Le campus · The campus"
    },
-   "doors": [],
+   "doors": [
+    {
+     "to": "st_ingenieurs",
+     "building": "st_ingenieurs",
+     "label": "Allée des Ingénieurs · Engineers Walk",
+     "hint": "Through the red door on the stair landing",
+     "hit": [
+      1204,
+      4,
+      76,
+      156
+     ]
+    }
+   ],
    "zooms": [
     {
      "to": "etabli",
@@ -159,7 +172,7 @@
      "box": [
       995,
       20,
-      260,
+      205,
       180
      ]
     },

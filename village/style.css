@@ -36,6 +36,8 @@ html,body{margin:0;height:100%;background:#1f2e31;color:var(--ink);font-family:"
 .tag.wrap{white-space:normal;text-align:center;line-height:1.15}
 .tag.wrap small{display:block;margin:2px 0 0}
 .tag.live{background:#fff4c7}
+#stage .tag svg.ico{position:static;inset:auto;display:inline-block;width:1em;height:1em;vertical-align:-.14em;margin-right:.3em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+#stage .tag.pin svg.ico{width:1.05em;height:1.05em;margin-right:.25em}
 .door{position:absolute;transform:translate(-50%,-50%);width:clamp(22px,2.6vw,34px);height:clamp(22px,2.6vw,34px);border-radius:50%;background:var(--paper);border:3px solid #3a2a1c;display:grid;place-items:center;font-size:clamp(11px,1.3vw,17px);pointer-events:none;box-shadow:0 2px 0 rgba(0,0,0,.3);animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{50%{transform:translate(-50%,-62%)}}
 /* room */
