@@ -1,0 +1,408 @@
+{
+ "building": "informatique",
+ "building_id": "B37_informatique",
+ "sector_id": "S10_university",
+ "name": "L'école d'informatique · The Computer School",
+ "main": "informatique",
+ "roomList": [
+  {
+   "key": "informatique",
+   "short": "La salle"
+  },
+  {
+   "key": "etage",
+   "short": "L'étage"
+  },
+  {
+   "key": "pause",
+   "short": "Le coin pause"
+  }
+ ],
+ "planned": {
+  "informatique": {
+   "vocabRoom": "R_computing_01",
+   "only": [
+    "fr_seance_noun",
+    "fr_souris_noun",
+    "fr_ressource_noun",
+    "fr_programme_noun",
+    "fr_ordinateur_noun",
+    "fr_internet_noun",
+    "fr_systeme_noun",
+    "fr_code_noun",
+    "fr_reseau_noun",
+    "fr_chercheur_noun"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_computing_02",
+   "only": [
+    "fr_telecommunication_noun",
+    "fr_simulation_noun",
+    "fr_suppression_noun",
+    "fr_connexion_noun",
+    "fr_protocole_noun",
+    "fr_moniteur_noun",
+    "fr_automate_noun",
+    "fr_clavier_noun",
+    "fr_safari_noun",
+    "fr_mandataire_noun"
+   ]
+  },
+  "pause": {
+   "vocabRoom": "R_computing_01_z1",
+   "only": [
+    "fr_informatique_noun",
+    "fr_halte_noun",
+    "fr_console_noun",
+    "fr_mail_noun",
+    "fr_logiciel_noun",
+    "fr_informaticien_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "informatique": {
+   "name": "La salle des ordinateurs · The Computer Room",
+   "room_id": "R_computing_01",
+   "image": "informatique/informatique.jpg",
+   "alt": "A sunny stone-walled computer room. On the left a closed wooden door; a tutor raises one finger as she teaches two students at a round table; a boy throws up his hands, sorry, as the computer mouse he knocked off the desk dangles by its cord; a girl takes a book from a low bookshelf. In the middle the glass front doors stand open onto stone steps and green bushes. On the right, along a wooden desk, a boy holds up a long printout that spills to the floor, an old desktop computer, a screen with a glowing globe wrapped in a net of lines, a tall server cabinet with blinking lights and a keypad on the wall; a technician kneels to tie blue cables, and a researcher in a white coat shares her notebook with a colleague beneath a wooden staircase.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     508,
+     60,
+     178,
+     390
+    ],
+    "label": "Campus"
+   },
+   "doors": [
+    {
+     "to": "pause",
+     "label": "le coin pause",
+     "hint": "Go through the wooden door to the break corner",
+     "hit": [
+      2,
+      55,
+      165,
+      190
+     ]
+    },
+    {
+     "to": "etage",
+     "label": "l'étage",
+     "hint": "Go up the stairs to the upstairs lab",
+     "hit": [
+      1175,
+      0,
+      105,
+      230
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_seance_noun",
+     "box": [
+      10,
+      255,
+      295,
+      400
+     ]
+    },
+    {
+     "id": "fr_souris_noun",
+     "box": [
+      312,
+      285,
+      148,
+      285
+     ]
+    },
+    {
+     "id": "fr_ressource_noun",
+     "box": [
+      306,
+      190,
+      200,
+      92
+     ]
+    },
+    {
+     "id": "fr_programme_noun",
+     "box": [
+      686,
+      270,
+      140,
+      375
+     ]
+    },
+    {
+     "id": "fr_ordinateur_noun",
+     "box": [
+      828,
+      285,
+      108,
+      148
+     ]
+    },
+    {
+     "id": "fr_internet_noun",
+     "box": [
+      944,
+      285,
+      160,
+      128
+     ]
+    },
+    {
+     "id": "fr_systeme_noun",
+     "box": [
+      1108,
+      275,
+      88,
+      165
+     ]
+    },
+    {
+     "id": "fr_code_noun",
+     "box": [
+      1200,
+      355,
+      80,
+      90
+     ],
+     "labelAt": [
+      1232,
+      448
+     ]
+    },
+    {
+     "id": "fr_reseau_noun",
+     "box": [
+      1000,
+      482,
+      272,
+      208
+     ]
+    },
+    {
+     "id": "fr_chercheur_noun",
+     "box": [
+      925,
+      110,
+      140,
+      170
+     ]
+    }
+   ]
+  },
+  "etage": {
+   "name": "L'étage · The Upstairs Lab",
+   "room_id": "R_computing_02",
+   "image": "informatique/etage.jpg",
+   "backTo": "informatique",
+   "alt": "The attic computer lab upstairs. On the left the staircase comes up beside a window with a big white satellite dish on the roof outside; a boy steers a flight simulator in front of a curved screen of clouds; a girl drops crumpled paper into a wicker bin; two girls kneel on the floor plugging two cables together. On the right a man in a grey suit ticks a checklist on his clipboard beside a very large monitor; a little brass clockwork robot walks on the desk; a man plays the keyboard like a piano; a man in a safari hat looks through binoculars at a screen of giraffes; and in front a man sits in his boss's leather chair holding a signed paper with a red seal.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "informatique",
+     "label": "la salle des ordinateurs",
+     "hint": "Go back down the stairs to the computer room",
+     "hit": [
+      0,
+      330,
+      135,
+      330
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_telecommunication_noun",
+     "box": [
+      10,
+      80,
+      128,
+      170
+     ]
+    },
+    {
+     "id": "fr_simulation_noun",
+     "box": [
+      140,
+      150,
+      265,
+      145
+     ]
+    },
+    {
+     "id": "fr_suppression_noun",
+     "box": [
+      185,
+      300,
+      195,
+      128
+     ]
+    },
+    {
+     "id": "fr_connexion_noun",
+     "box": [
+      350,
+      430,
+      420,
+      260
+     ]
+    },
+    {
+     "id": "fr_protocole_noun",
+     "box": [
+      645,
+      95,
+      125,
+      330
+     ]
+    },
+    {
+     "id": "fr_moniteur_noun",
+     "box": [
+      775,
+      100,
+      190,
+      95
+     ]
+    },
+    {
+     "id": "fr_automate_noun",
+     "box": [
+      800,
+      205,
+      110,
+      160
+     ],
+     "labelAt": [
+      845,
+      374
+     ]
+    },
+    {
+     "id": "fr_clavier_noun",
+     "box": [
+      912,
+      198,
+      140,
+      165
+     ]
+    },
+    {
+     "id": "fr_safari_noun",
+     "box": [
+      1056,
+      85,
+      224,
+      200
+     ]
+    },
+    {
+     "id": "fr_mandataire_noun",
+     "box": [
+      925,
+      368,
+      350,
+      350
+     ]
+    }
+   ]
+  },
+  "pause": {
+   "name": "Le coin pause · The Break Corner",
+   "room_id": "R_computing_01_z1",
+   "image": "informatique/pause.jpg",
+   "backTo": "informatique",
+   "alt": "A cosy break corner with a tall window onto green trees and a potted plant. On the left a wooden door; a girl points inside an open computer case to show her friend the circuit board; a young woman on a bench raises her palm for a break beside her sandwich; on a green sofa a girl comforts her sad friend holding a games controller. On the right a man at his laptop tosses a paper airplane, a man breaks the red wax seal on a boxed software package, and a cheerful IT specialist in a magician's top hat waves a wand at an open computer, his toolbag at his feet.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "informatique",
+     "label": "la salle des ordinateurs",
+     "hint": "Go back through the wooden door to the computer room",
+     "hit": [
+      2,
+      20,
+      128,
+      125
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_informatique_noun",
+     "box": [
+      0,
+      150,
+      345,
+      195
+     ]
+    },
+    {
+     "id": "fr_halte_noun",
+     "box": [
+      350,
+      92,
+      175,
+      255
+     ]
+    },
+    {
+     "id": "fr_console_noun",
+     "box": [
+      20,
+      350,
+      480,
+      368
+     ]
+    },
+    {
+     "id": "fr_mail_noun",
+     "box": [
+      862,
+      80,
+      248,
+      225
+     ]
+    },
+    {
+     "id": "fr_logiciel_noun",
+     "box": [
+      1112,
+      115,
+      168,
+      198
+     ]
+    },
+    {
+     "id": "fr_informaticien_noun",
+     "box": [
+      900,
+      318,
+      380,
+      290
+     ]
+    }
+   ]
+  }
+ }
+}
