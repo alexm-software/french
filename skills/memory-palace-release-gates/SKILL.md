@@ -123,3 +123,8 @@ These are blocking. A space does not ship until each one passes, and the builder
 - Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read.
 
 - **Hook edits are surgical:** when rewriting a word's hook, change only its `hook` and `why` fields. Replacing the whole entry drops the `say`/`f_say` respellings, and strict QA then fails (e.g. unwanted "pee"/"poo" sound flags). Diff the entry before and after.
+
+## Round 7 additions (user review, Oct 25 afternoon): blocking gates
+- Liveliness gate: a room is a lively scene, not an inventory. A few items lined up is fine where that's natural (three loaves on a counter, a row of boots by a door), but a room must not be mostly items in cubbyholes, pigeonholes, shelf grids, stall rows or display cases. Most items are in use in the scene: carried, cooked, sold, thrown, worn, repaired or argued over. A room that reads as a catalogue fails.
+- Distinct-room gate: before shipping a building, put all its room thumbnails side by side. Each room needs its own composition, camera angle, focal action and dominant colour or light, so a learner can tell rooms apart from a thumbnail. Two rooms with the same layout (for example two stalls with goods on shelves) fail. This is what makes the loci work: rooms that blend together lose their memories.
+- Exterior-character gate: on the overview and sector maps, every building's exterior shows its function at a glance through its silhouette, iconic features and props (an oven chimney and bread for a bakery, a steeple for a church). A generic house or box shape that could be any building fails, as does an exterior that looks like its neighbours'.
