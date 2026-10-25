@@ -1,5 +1,5 @@
 ---
-name: memory-palace-release-gates
+name: Memory palace release gates
 description: >-
   Use together with the Memory palace builder skill whenever painting,
   installing, reviewing or shipping any memory palace space: mandatory per-item
@@ -79,12 +79,9 @@ Mnemonic pictures are now made as separate assets, independent of the room, then
 **F. Final scene (after compositing).** Check the finished room at desktop and phone sizes:
 - **No overlaps:** no asset overlaps another asset, a hotspot box, a label or a control. Each asset is clearly separate, with breathing room.
 - **No confusing labels:** each label (or hover highlight) sits on its own asset and can't be read as belonging to a neighbour; text is readable, and gender colour (if any) is only on labels.
-- **Not pasted on:** every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow on that surface. Inspect its visible base against that exact surface after aspect-preserving placement; a valid slot rectangle does not prove contact. A garage model once floated above its niche sill. Compare adult height with doors and benches at the same depth; clean anatomy can still be toy-sized. Match light, colour and occlusion, and inspect bases and edges at native resolution.
+- **Not pasted on:** every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow on that surface. Its scale is right for its depth in the room, its lighting and colour tint match the room, it doesn't float or sink into furniture, and nothing is cut by a wall or edge unnaturally. Zoom in on each asset's base and edges.
 - **Coherent room:** the room still reads as one real place with its landmark visible, nothing important is hidden behind assets, and the empty background has no leftover artifacts (smudges, ghost objects).
 - **Hotspots line up:** clicking the centre of each asset opens its own card at every screen size.
-- **Main-entry round trip:** verify normal village map → intended room → painted exit → village, including lazy-loaded data and layered-art styles. Ensure sprites are always visible, not just hover highlights. Check the map polygon against neighbouring buildings and hover-name pills against the image edge; a standalone preview passing does not prove the main entry works.
-- **Built files are real:** after the build has finished, decode every referenced room, placed and card image and reject empty or corrupt outputs. The garage review caught a zero-byte card. Recheck the affected file after rebuilding; when transferring through GitHub blobs, compare uploaded hashes with the tested local files before creating the commit.
-- **Evidence stays precise:** label a deterministic composition as a proof, not a browser screenshot. Record source-asset, final-scene, static wiring, desktop/mobile/fullscreen and deployment checks separately. A fallback-font label estimate is not an exact browser measurement. Mark unavailable checks unverified with the reason; never promote a package-only check into a whole-site pass.
 Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then show the user.
 - **Signs are assets, labels always show (user, 14:29 UTC):** a room's name sign is its own asset with its text fitted inside the plaque with padding at every screen size; text overflowing a sign's edges fails. Every placed item carries a visible label (word with article, verbs as the infinitive), always shown, not only on hover. In language palaces, place feminine nouns clearly left and masculine clearly right, in zooms too, with no physical divider; slight overhang of the centre line is fine, and any real exception is listed.
 
@@ -106,3 +103,23 @@ Gates G and H. Each must pass before a space is shown to the user.
 - **Cards show all options at once.** All tense tabs or similar choices are visible at every screen size by wrapping or a grid, never by sideways scrolling.
 - **Every hook element is visible.** The sound-alike creature or object is drawn in the item's own picture. (Once, the boire picture had no boar.)
 - **Show before shipping.** Show the user clean screenshots of a redone space before it goes live, and fix what they flag before starting the next space.
+
+## Round 5 additions (user review of integrated scenes)
+These are blocking. A space does not ship until each one passes, and the builder looks at the rendered screenshots personally, never just at the checker output.
+- **Zoom matches parent.** For every zoom, render a side-by-side of the zoom next to the crop of the same object in the parent painting. Object, contents, arrangement, colours and materials must agree, e.g. wooden doors in both (never glass in one), and the same counter items in the same order. Fix the cheaper side by regenerating that region locally.
+- **Verbs use the recurring mime.** If the palace has a recurring verb character, every verb is that character acting out its hook. Never swap in other people for variety.
+- **Labels clear of everything.** No label may overlap or touch another label, another item's click box, a door or passage, a different word's painted item, or the scene edge. Treat "touches" warnings as failures. Check at every supported viewport width.
+- **Re-audit what is already live.** When a new gate is added, audit the spaces already shipped against it and fix them in the next release.
+
+## Round 6 additions (user review, Oct 25): blocking gates
+- Hook gate: every mnemonic is a visible sound-alike of the target word, acted out ON or touching the item. Fail if the hook is a random prop, sits far from the item, needs another target-language word to work (e.g. a trap for piéger), or uses the target language itself.
+- Animal gate: no anthropomorphic animals unless the animal is the hook. Otherwise use an ordinary person carrying the hook.
+- Anatomy gate: count the arms, legs, feet and limbs on every figure, check faces look normal, and check for duplicated objects (e.g. two teapots or four cups for two people). Any oddity fails.
+- Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, line weight, texture). Any drift in a single room or a whole building fails. Every area is fully coloured, with no unpainted patches.
+- Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room that fits them. Near-synonyms in one room need a visible distinction.
+- Naming gate: room names make sense for their contents, and every place name shows a translation.
+- Verb-room gate: each verb room is a natural, unique scene that fits its street's setting. A row of mimes on a plain strip fails.
+- Exterior gate: a building or street seen from the level above shows the landmarks visible inside (and vice versa).
+- Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read.
+
+- **Hook edits are surgical:** when rewriting a word's hook, change only its `hook` and `why` fields. Replacing the whole entry drops the `say`/`f_say` respellings, and strict QA then fails (e.g. unwanted "pee"/"poo" sound flags). Diff the entry before and after.
