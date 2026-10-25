@@ -10,13 +10,17 @@
   {
    "key": "poste",
    "short": "La poste"
+  },
+  {
+   "key": "conseil",
+   "short": "La salle du conseil"
   }
  ],
  "rooms": {
   "mairie": {
    "name": "La mairie · Town Hall",
    "image": "mairie/mairie.jpg",
-   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village and a blue door on the right leads to the post office.",
+   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village a blue door on the right leads to the post office and a teal double door in the back wall opens onto the council chamber.",
    "nameplate": [
     50,
     4.5
@@ -40,6 +44,17 @@
       40,
       90,
       350
+     ]
+    },
+    {
+     "to": "conseil",
+     "label": "La salle du conseil",
+     "hint": "Through the teal double door to the council chamber",
+     "hit": [
+      350,
+      30,
+      130,
+      190
      ]
     }
    ],
@@ -469,6 +484,246 @@
      ]
     }
    ]
+  },
+  "conseil": {
+   "name": "La salle du conseil · Council Chamber",
+   "image": "mairie/conseil.jpg",
+   "backTo": "mairie",
+   "alt": "The town council chamber painted in ink and gouache: a woman pulls the cord of a ceiling fan, a goat walks along the bench tops, a grandpa holds up a hand to stop a duckling, a smiling councillor holds up one single salmon, a donkey brays at a surprised man, a councillor bangs a gavel, a bearded man waits his turn holding one big pink sweet, a jug overflows a glass while a bald man raises his hand, Ann shows a young man how to fold a ballot into the box, a grey-haired lady works a shrugging hand puppet; the teal double door on the left leads back to the town hall and the arched alcove on the right opens onto the councillors' gallery.",
+   "doors": [
+    {
+     "to": "mairie",
+     "label": "La mairie",
+     "hint": "Back through the teal double door to the town hall",
+     "hit": [
+      95,
+      25,
+      195,
+      360
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "tribune",
+     "label": "la tribune",
+     "hint": "Look up into the councillors' gallery in the alcove",
+     "at": [
+      1092,
+      335
+     ],
+     "obj": [
+      1005,
+      150,
+      175,
+      215
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_enfin_adv",
+     "box": [
+      410,
+      45,
+      200,
+      165
+     ]
+    },
+    {
+     "id": "fr_surement_adv",
+     "box": [
+      745,
+      85,
+      135,
+      135
+     ]
+    },
+    {
+     "id": "fr_pas_adv",
+     "box": [
+      385,
+      235,
+      170,
+      140
+     ]
+    },
+    {
+     "id": "fr_seulement_adv",
+     "box": [
+      565,
+      218,
+      140,
+      107
+     ]
+    },
+    {
+     "id": "fr_vraiment_adv",
+     "box": [
+      737,
+      228,
+      148,
+      137
+     ],
+     "labelAt": [
+      945,
+      282
+     ]
+    },
+    {
+     "id": "fr_donc_adv",
+     "box": [
+      555,
+      355,
+      135,
+      82
+     ]
+    },
+    {
+     "id": "fr_ensuite_adv",
+     "box": [
+      700,
+      368,
+      145,
+      112
+     ],
+     "labelAt": [
+      901,
+      400
+     ]
+    },
+    {
+     "id": "fr_assez_adv",
+     "box": [
+      385,
+      442,
+      176,
+      158
+     ]
+    },
+    {
+     "id": "fr_ainsi_adv",
+     "box": [
+      566,
+      485,
+      170,
+      162
+     ]
+    },
+    {
+     "id": "fr_peut_etre_adv",
+     "box": [
+      742,
+      490,
+      158,
+      150
+     ]
+    }
+   ]
+  },
+  "tribune": {
+   "name": "La tribune · Councillors' Gallery",
+   "image": "mairie/tribune.jpg",
+   "parent": "conseil",
+   "alt": "Close-up of the councillors' gallery in the chamber alcove: a lady with an umbrella at a rainy window, a knight holding up ten fingers, a video man filming a cat beside a pie, a snail crossing a finish ribbon, a sleeping councillor whose wig slides down, a ginger councillor banging his fist so the inkpots jump, a boy called Dan with a saucepan and a biscuit, a striped strongman diving to catch a falling jug, a grey-haired lady holding up a blank certificate and a vase of roses with one dahlia.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_probablement_adv",
+     "box": [
+      505,
+      44,
+      160,
+      108
+     ]
+    },
+    {
+     "id": "fr_certainement_adv",
+     "box": [
+      698,
+      52,
+      152,
+      112
+     ]
+    },
+    {
+     "id": "fr_evidemment_adv",
+     "box": [
+      385,
+      157,
+      195,
+      143
+     ]
+    },
+    {
+     "id": "fr_finalement_adv",
+     "box": [
+      598,
+      228,
+      150,
+      72
+     ]
+    },
+    {
+     "id": "fr_completement_adv",
+     "box": [
+      762,
+      190,
+      128,
+      110
+     ]
+    },
+    {
+     "id": "fr_absolument_adv",
+     "box": [
+      490,
+      308,
+      258,
+      102
+     ],
+     "labelAt": [
+      822,
+      342
+     ]
+    },
+    {
+     "id": "fr_cependant_adv",
+     "box": [
+      400,
+      438,
+      128,
+      160
+     ]
+    },
+    {
+     "id": "fr_heureusement_adv",
+     "box": [
+      532,
+      425,
+      180,
+      205
+     ]
+    },
+    {
+     "id": "fr_certes_adv",
+     "box": [
+      716,
+      415,
+      175,
+      107
+     ]
+    },
+    {
+     "id": "fr_d_ailleurs_adv",
+     "box": [
+      716,
+      530,
+      85,
+      135
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -490,6 +745,34 @@
     "fr_ruban_noun",
     "fr_cadeau_noun",
     "fr_paquet_noun"
+   ]
+  },
+  "conseil": {
+   "only": [
+    "fr_enfin_adv",
+    "fr_surement_adv",
+    "fr_pas_adv",
+    "fr_seulement_adv",
+    "fr_vraiment_adv",
+    "fr_donc_adv",
+    "fr_ensuite_adv",
+    "fr_assez_adv",
+    "fr_ainsi_adv",
+    "fr_peut_etre_adv"
+   ]
+  },
+  "tribune": {
+   "only": [
+    "fr_probablement_adv",
+    "fr_certainement_adv",
+    "fr_evidemment_adv",
+    "fr_finalement_adv",
+    "fr_completement_adv",
+    "fr_absolument_adv",
+    "fr_cependant_adv",
+    "fr_heureusement_adv",
+    "fr_certes_adv",
+    "fr_d_ailleurs_adv"
    ]
   }
  },
