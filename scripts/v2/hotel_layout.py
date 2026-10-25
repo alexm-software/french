@@ -3,598 +3,606 @@
 import json, os
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "content", "v2", "hotel", "layout.json")
 L = json.loads(r'''{
- "building": "hotel",
- "name": "L'hôtel des Voyageurs",
- "main": "hotel",
- "roomList": [
-  {
-   "key": "hotel",
-   "short": "Le hall"
+  "building": "hotel",
+  "name": "L'hôtel des Voyageurs",
+  "main": "hotel",
+  "roomList": [
+    {
+      "key": "hotel",
+      "short": "Le hall"
+    },
+    {
+      "key": "etage",
+      "short": "Le premier étage"
+    },
+    {
+      "key": "terrasse",
+      "short": "La terrasse"
+    }
+  ],
+  "building_id": "B22_hotel",
+  "sector_id": "S08_travel",
+  "planned": {
+    "hotel": {
+      "only": [
+        "fr_hotel_noun",
+        "fr_voyage_noun",
+        "fr_visite_noun",
+        "fr_vacance_noun",
+        "fr_aventure_noun",
+        "fr_sejour_noun",
+        "fr_reserve_noun",
+        "fr_invite_noun",
+        "fr_voyageur_noun",
+        "fr_visiteur_noun",
+        "fr_touriste_noun",
+        "fr_auberge_noun",
+        "fr_accueil_noun",
+        "fr_destination_noun",
+        "fr_tourisme_noun"
+      ]
+    },
+    "etage": {
+      "only": [
+        "fr_disposition_noun",
+        "fr_tournee_noun",
+        "fr_hote_noun",
+        "fr_reception_noun",
+        "fr_deplacement_noun",
+        "fr_itineraire_noun",
+        "fr_touristique_adj",
+        "fr_pavillon_noun",
+        "fr_tripe_noun",
+        "fr_excursion_noun",
+        "fr_restauration_noun",
+        "fr_reservation_noun"
+      ]
+    },
+    "terrasse": {
+      "only": [
+        "fr_palace_noun",
+        "fr_pelerinage_noun",
+        "fr_hospitalite_noun",
+        "fr_aubergiste_noun",
+        "fr_periple_noun",
+        "fr_recepteur_noun",
+        "fr_flanerie_noun",
+        "fr_hotellerie_noun",
+        "fr_hammam_noun",
+        "fr_hotelier_noun",
+        "fr_emigration_noun"
+      ]
+    }
   },
-  {
-   "key": "etage",
-   "short": "Le premier étage"
-  },
-  {
-   "key": "terrasse",
-   "short": "La terrasse"
+  "rooms": {
+    "hotel": {
+      "name": "L'hôtel des Voyageurs",
+      "image": "hotel/hotel.jpg",
+      "alt": "The cosy lobby of a village hotel: a granny in a feathered hat arriving, a young woman in sunglasses in a deckchair, an old explorer in a red pedal van, a girl pointing at a globe, a stock cupboard stacked with towels, a bear sitting by a lantern and a model inn, a tourist with two parrots, a bellboy and a receptionist at the desk, a koi in a fishbowl, a visitor ringing the bell, a weary traveller with a stickered suitcase, a young guest with tea and an invitation, a sailor boy on a travel trunk, a boy with a bucket and a big key and a lady tourist at the postcard rack.",
+      "nameplate": [
+        26.5,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          10,
+          28,
+          172,
+          138
+        ],
+        "label": "Carrefour des Voyages"
+      },
+      "doors": [
+        {
+          "to": "etage",
+          "label": "Le premier étage",
+          "hint": "Monte l'escalier",
+          "hit": [
+            505,
+            8,
+            85,
+            90
+          ]
+        },
+        {
+          "to": "terrasse",
+          "label": "La terrasse",
+          "hint": "Prends l'ascenseur",
+          "hit": [
+            700,
+            40,
+            165,
+            160
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_visite_noun",
+          "box": [
+            40,
+            190,
+            150,
+            232
+          ]
+        },
+        {
+          "id": "fr_vacance_noun",
+          "box": [
+            194,
+            100,
+            140,
+            235
+          ]
+        },
+        {
+          "id": "fr_aventure_noun",
+          "box": [
+            336,
+            138,
+            212,
+            292
+          ],
+          "labelAt": [
+            430,
+            104
+          ]
+        },
+        {
+          "id": "fr_destination_noun",
+          "box": [
+            8,
+            425,
+            255,
+            285
+          ],
+          "labelAt": [
+            135,
+            680
+          ]
+        },
+        {
+          "id": "fr_reserve_noun",
+          "box": [
+            270,
+            438,
+            190,
+            245
+          ],
+          "labelAt": [
+            365,
+            680
+          ]
+        },
+        {
+          "id": "fr_auberge_noun",
+          "box": [
+            462,
+            448,
+            256,
+            262
+          ],
+          "labelAt": [
+            600,
+            680
+          ]
+        },
+        {
+          "id": "fr_touriste_noun",
+          "box": [
+            548,
+            210,
+            122,
+            234
+          ]
+        },
+        {
+          "id": "fr_hotel_noun",
+          "box": [
+            878,
+            92,
+            185,
+            135
+          ]
+        },
+        {
+          "id": "fr_accueil_noun",
+          "box": [
+            1066,
+            160,
+            96,
+            80
+          ],
+          "labelAt": [
+            1112,
+            243
+          ]
+        },
+        {
+          "id": "fr_visiteur_noun",
+          "box": [
+            1166,
+            95,
+            104,
+            145
+          ],
+          "labelAt": [
+            1208,
+            60
+          ]
+        },
+        {
+          "id": "fr_voyageur_noun",
+          "box": [
+            722,
+            248,
+            210,
+            180
+          ],
+          "labelAt": [
+            827,
+            300
+          ]
+        },
+        {
+          "id": "fr_invite_noun",
+          "box": [
+            932,
+            272,
+            108,
+            158
+          ]
+        },
+        {
+          "id": "fr_voyage_noun",
+          "box": [
+            790,
+            436,
+            200,
+            268
+          ],
+          "labelAt": [
+            890,
+            600
+          ]
+        },
+        {
+          "id": "fr_sejour_noun",
+          "box": [
+            1022,
+            470,
+            132,
+            240
+          ],
+          "labelAt": [
+            1088,
+            680
+          ]
+        },
+        {
+          "id": "fr_tourisme_noun",
+          "box": [
+            1158,
+            296,
+            116,
+            340
+          ],
+          "labelAt": [
+            1206,
+            277
+          ]
+        }
+      ]
+    },
+    "etage": {
+      "name": "Le premier étage",
+      "image": "hotel/etage.jpg",
+      "alt": "La salle à manger du premier étage de l'hôtel : un réceptionniste, un caniche, une accordéoniste sur un poney cabré, un cygne, un grand serveur, un âne, un chef moustachu, des souris touristes, un hôte, une oie, un pavillon et un homme d'affaires qui traîne une lourde valise.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "hotel",
+      "doors": [
+        {
+          "to": "hotel",
+          "label": "Le hall",
+          "hint": "Redescends l'escalier",
+          "hit": [
+            1150,
+            20,
+            125,
+            270
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_reception_noun",
+          "box": [
+            20,
+            55,
+            140,
+            190
+          ],
+          "labelAt": [
+            178,
+            16
+          ]
+        },
+        {
+          "id": "fr_disposition_noun",
+          "box": [
+            185,
+            100,
+            85,
+            148
+          ],
+          "labelAt": [
+            242,
+            68
+          ]
+        },
+        {
+          "id": "fr_tournee_noun",
+          "box": [
+            328,
+            62,
+            290,
+            168
+          ]
+        },
+        {
+          "id": "fr_reservation_noun",
+          "box": [
+            40,
+            250,
+            190,
+            160
+          ]
+        },
+        {
+          "id": "fr_tripe_noun",
+          "box": [
+            272,
+            232,
+            123,
+            218
+          ]
+        },
+        {
+          "id": "fr_excursion_noun",
+          "box": [
+            35,
+            452,
+            270,
+            260
+          ],
+          "labelAt": [
+            160,
+            650
+          ]
+        },
+        {
+          "id": "fr_restauration_noun",
+          "box": [
+            398,
+            424,
+            225,
+            281
+          ],
+          "labelAt": [
+            510,
+            650
+          ]
+        },
+        {
+          "id": "fr_touristique_adj",
+          "box": [
+            498,
+            312,
+            190,
+            108
+          ]
+        },
+        {
+          "id": "fr_hote_noun",
+          "box": [
+            760,
+            225,
+            165,
+            375
+          ]
+        },
+        {
+          "id": "fr_itineraire_noun",
+          "box": [
+            818,
+            118,
+            110,
+            105
+          ]
+        },
+        {
+          "id": "fr_pavillon_noun",
+          "box": [
+            930,
+            10,
+            200,
+            200
+          ]
+        },
+        {
+          "id": "fr_deplacement_noun",
+          "box": [
+            1080,
+            300,
+            195,
+            350
+          ]
+        }
+      ]
+    },
+    "terrasse": {
+      "name": "La terrasse",
+      "image": "hotel/terrasse.jpg",
+      "alt": "La terrasse sur le toit de l'hôtel : une infirmière sert le thé, un promeneur en pyjama, un hérisson comptable, une famille qui salue un paquebot, l'aubergiste au chapeau aubergine, une jeune fille qui astique la maquette d'un palace, un pèlerin, un canard dans la piscine, le hammam, l'hôtelier qui tend la clé à une cliente, et un client au téléphone.",
+      "nameplate": [
+        20,
+        4.5
+      ],
+      "backTo": "hotel",
+      "doors": [
+        {
+          "to": "hotel",
+          "label": "Le hall",
+          "hint": "Reprends l'ascenseur",
+          "hit": [
+            486,
+            25,
+            175,
+            275
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_emigration_noun",
+          "box": [
+            190,
+            120,
+            178,
+            150
+          ]
+        },
+        {
+          "id": "fr_hospitalite_noun",
+          "box": [
+            8,
+            274,
+            310,
+            214
+          ],
+          "labelAt": [
+            90,
+            240
+          ]
+        },
+        {
+          "id": "fr_flanerie_noun",
+          "box": [
+            372,
+            262,
+            110,
+            236
+          ],
+          "labelAt": [
+            427,
+            462
+          ]
+        },
+        {
+          "id": "fr_hotellerie_noun",
+          "box": [
+            160,
+            500,
+            330,
+            200
+          ],
+          "labelAt": [
+            300,
+            655
+          ]
+        },
+        {
+          "id": "fr_aubergiste_noun",
+          "box": [
+            530,
+            312,
+            186,
+            398
+          ],
+          "labelAt": [
+            623,
+            655
+          ]
+        },
+        {
+          "id": "fr_palace_noun",
+          "box": [
+            690,
+            95,
+            150,
+            215
+          ]
+        },
+        {
+          "id": "fr_pelerinage_noun",
+          "box": [
+            858,
+            148,
+            90,
+            180
+          ],
+          "labelAt": [
+            930,
+            296
+          ]
+        },
+        {
+          "id": "fr_hammam_noun",
+          "box": [
+            1015,
+            45,
+            240,
+            265
+          ]
+        },
+        {
+          "id": "fr_periple_noun",
+          "box": [
+            845,
+            375,
+            100,
+            48
+          ],
+          "labelAt": [
+            785,
+            352
+          ]
+        },
+        {
+          "id": "fr_hotelier_noun",
+          "box": [
+            718,
+            425,
+            212,
+            287
+          ],
+          "labelAt": [
+            824,
+            655
+          ]
+        },
+        {
+          "id": "fr_recepteur_noun",
+          "box": [
+            940,
+            440,
+            335,
+            272
+          ],
+          "labelAt": [
+            1107,
+            655
+          ]
+        }
+      ]
+    }
   }
- ],
- "building_id": "B22_hotel",
- "sector_id": "S08_travel",
- "planned": {
-  "hotel": {
-   "only": [
-    "fr_hotel_noun",
-    "fr_voyage_noun",
-    "fr_visite_noun",
-    "fr_vacance_noun",
-    "fr_aventure_noun",
-    "fr_sejour_noun",
-    "fr_reserve_noun",
-    "fr_invite_noun",
-    "fr_voyageur_noun",
-    "fr_visiteur_noun",
-    "fr_touriste_noun",
-    "fr_auberge_noun",
-    "fr_accueil_noun",
-    "fr_destination_noun",
-    "fr_tourisme_noun"
-   ]
-  },
-  "etage": {
-   "only": [
-    "fr_disposition_noun",
-    "fr_tournee_noun",
-    "fr_hote_noun",
-    "fr_reception_noun",
-    "fr_deplacement_noun",
-    "fr_itineraire_noun",
-    "fr_touristique_adj",
-    "fr_pavillon_noun",
-    "fr_tripe_noun",
-    "fr_excursion_noun",
-    "fr_restauration_noun",
-    "fr_reservation_noun"
-   ]
-  },
-  "terrasse": {
-   "only": [
-    "fr_palace_noun",
-    "fr_pelerinage_noun",
-    "fr_hospitalite_noun",
-    "fr_aubergiste_noun",
-    "fr_periple_noun",
-    "fr_recepteur_noun",
-    "fr_flanerie_noun",
-    "fr_hotellerie_noun",
-    "fr_hammam_noun",
-    "fr_hotelier_noun",
-    "fr_emigration_noun"
-   ]
-  }
- },
- "rooms": {
-  "hotel": {
-   "name": "L'hôtel des Voyageurs",
-   "image": "hotel/hotel.jpg",
-   "alt": "The cosy lobby of a village hotel: a granny in a feathered hat arriving, a goat in sunglasses in a deckchair, an old explorer in a red pedal van, a girl pointing at a globe, a mouse counting towels in the stock cupboard, a bear with a lantern and a model inn, a tourist with two parrots, a bellboy and a grey cat at the desk, a koi in a bow tie, a visitor ringing the bell, a weary traveller with a stickered suitcase, a young guest with tea and an invitation, a tortoise with a suitcase on its shell, a boy with a bucket and a big key and a goat at the postcard rack.",
-   "nameplate": [
-    26.5,
-    4.5
-   ],
-   "mapExit": {
-    "box": [
-     10,
-     28,
-     172,
-     138
-    ],
-    "label": "Carrefour des Voyages"
-   },
-   "doors": [
-    {
-     "to": "etage",
-     "label": "Le premier étage",
-     "hint": "Monte l'escalier",
-     "hit": [
-      505,
-      8,
-      85,
-      90
-     ]
-    },
-    {
-     "to": "terrasse",
-     "label": "La terrasse",
-     "hint": "Prends l'ascenseur",
-     "hit": [
-      700,
-      40,
-      165,
-      160
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_visite_noun",
-     "box": [
-      40,
-      190,
-      150,
-      232
-     ]
-    },
-    {
-     "id": "fr_vacance_noun",
-     "box": [
-      194,
-      100,
-      140,
-      235
-     ]
-    },
-    {
-     "id": "fr_aventure_noun",
-     "box": [
-      336,
-      138,
-      212,
-      292
-     ],
-     "labelAt": [
-      430,
-      104
-     ]
-    },
-    {
-     "id": "fr_destination_noun",
-     "box": [
-      8,
-      425,
-      255,
-      285
-     ],
-     "labelAt": [
-      135,
-      680
-     ]
-    },
-    {
-     "id": "fr_reserve_noun",
-     "box": [
-      270,
-      438,
-      190,
-      245
-     ],
-     "labelAt": [
-      365,
-      680
-     ]
-    },
-    {
-     "id": "fr_auberge_noun",
-     "box": [
-      462,
-      448,
-      256,
-      262
-     ],
-     "labelAt": [
-      600,
-      680
-     ]
-    },
-    {
-     "id": "fr_touriste_noun",
-     "box": [
-      548,
-      210,
-      122,
-      234
-     ]
-    },
-    {
-     "id": "fr_hotel_noun",
-     "box": [
-      878,
-      92,
-      185,
-      135
-     ]
-    },
-    {
-     "id": "fr_accueil_noun",
-     "box": [
-      1066,
-      160,
-      96,
-      80
-     ],
-     "labelAt": [
-      1112,
-      243
-     ]
-    },
-    {
-     "id": "fr_visiteur_noun",
-     "box": [
-      1166,
-      95,
-      104,
-      145
-     ],
-     "labelAt": [
-      1208,
-      60
-     ]
-    },
-    {
-     "id": "fr_voyageur_noun",
-     "box": [
-      722,
-      248,
-      210,
-      280
-     ]
-    },
-    {
-     "id": "fr_invite_noun",
-     "box": [
-      932,
-      272,
-      108,
-      195
-     ]
-    },
-    {
-     "id": "fr_voyage_noun",
-     "box": [
-      778,
-      530,
-      185,
-      150
-     ],
-     "labelAt": [
-      870,
-      648
-     ]
-    },
-    {
-     "id": "fr_sejour_noun",
-     "box": [
-      1022,
-      470,
-      132,
-      240
-     ],
-     "labelAt": [
-      1088,
-      680
-     ]
-    },
-    {
-     "id": "fr_tourisme_noun",
-     "box": [
-      1158,
-      296,
-      116,
-      340
-     ],
-     "labelAt": [
-      1206,
-      277
-     ]
-    }
-   ]
-  },
-  "etage": {
-   "name": "Le premier étage",
-   "image": "hotel/etage.jpg",
-   "alt": "La salle à manger du premier étage de l'hôtel : un renard maître d'hôtel, un caniche, un orchestre sur un poney, un cygne, une cigogne serveuse, un âne, un canard chef, des souris touristes, un hôte, une oie, un pavillon et un blaireau.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "hotel",
-   "doors": [
-    {
-     "to": "hotel",
-     "label": "Le hall",
-     "hint": "Redescends l'escalier",
-     "hit": [
-      1150,
-      20,
-      125,
-      270
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_reception_noun",
-     "box": [
-      20,
-      55,
-      140,
-      190
-     ]
-    },
-    {
-     "id": "fr_disposition_noun",
-     "box": [
-      185,
-      100,
-      85,
-      148
-     ],
-     "labelAt": [
-      242,
-      68
-     ]
-    },
-    {
-     "id": "fr_tournee_noun",
-     "box": [
-      328,
-      62,
-      290,
-      168
-     ]
-    },
-    {
-     "id": "fr_reservation_noun",
-     "box": [
-      40,
-      250,
-      190,
-      160
-     ]
-    },
-    {
-     "id": "fr_tripe_noun",
-     "box": [
-      272,
-      232,
-      123,
-      218
-     ]
-    },
-    {
-     "id": "fr_excursion_noun",
-     "box": [
-      35,
-      452,
-      270,
-      260
-     ],
-     "labelAt": [
-      160,
-      650
-     ]
-    },
-    {
-     "id": "fr_restauration_noun",
-     "box": [
-      398,
-      424,
-      225,
-      281
-     ],
-     "labelAt": [
-      510,
-      650
-     ]
-    },
-    {
-     "id": "fr_touristique_adj",
-     "box": [
-      498,
-      312,
-      190,
-      108
-     ]
-    },
-    {
-     "id": "fr_hote_noun",
-     "box": [
-      760,
-      225,
-      165,
-      375
-     ]
-    },
-    {
-     "id": "fr_itineraire_noun",
-     "box": [
-      818,
-      118,
-      110,
-      105
-     ]
-    },
-    {
-     "id": "fr_pavillon_noun",
-     "box": [
-      930,
-      10,
-      200,
-      200
-     ]
-    },
-    {
-     "id": "fr_deplacement_noun",
-     "box": [
-      1080,
-      300,
-      195,
-      350
-     ]
-    }
-   ]
-  },
-  "terrasse": {
-   "name": "La terrasse",
-   "image": "hotel/terrasse.jpg",
-   "alt": "La terrasse sur le toit de l'hôtel : une chouette infirmière sert le thé, un promeneur en pyjama, un hérisson comptable, une famille qui salue un paquebot, l'aubergiste au chapeau aubergine, une jeune fille qui astique la maquette d'un palace, un pèlerin, un canard dans la piscine, le hammam, l'hôtelier qui tend la clé à une cliente, et un client au téléphone.",
-   "nameplate": [
-    20,
-    4.5
-   ],
-   "backTo": "hotel",
-   "doors": [
-    {
-     "to": "hotel",
-     "label": "Le hall",
-     "hint": "Reprends l'ascenseur",
-     "hit": [
-      486,
-      25,
-      175,
-      275
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_emigration_noun",
-     "box": [
-      190,
-      120,
-      178,
-      150
-     ]
-    },
-    {
-     "id": "fr_hospitalite_noun",
-     "box": [
-      8,
-      274,
-      310,
-      214
-     ],
-     "labelAt": [
-      90,
-      240
-     ]
-    },
-    {
-     "id": "fr_flanerie_noun",
-     "box": [
-      372,
-      262,
-      110,
-      236
-     ],
-     "labelAt": [
-      427,
-      462
-     ]
-    },
-    {
-     "id": "fr_hotellerie_noun",
-     "box": [
-      160,
-      500,
-      330,
-      200
-     ],
-     "labelAt": [
-      300,
-      655
-     ]
-    },
-    {
-     "id": "fr_aubergiste_noun",
-     "box": [
-      530,
-      312,
-      186,
-      398
-     ],
-     "labelAt": [
-      623,
-      655
-     ]
-    },
-    {
-     "id": "fr_palace_noun",
-     "box": [
-      690,
-      95,
-      150,
-      215
-     ]
-    },
-    {
-     "id": "fr_pelerinage_noun",
-     "box": [
-      858,
-      148,
-      90,
-      180
-     ],
-     "labelAt": [
-      930,
-      296
-     ]
-    },
-    {
-     "id": "fr_hammam_noun",
-     "box": [
-      1015,
-      45,
-      240,
-      265
-     ]
-    },
-    {
-     "id": "fr_periple_noun",
-     "box": [
-      845,
-      375,
-      100,
-      48
-     ],
-     "labelAt": [
-      785,
-      352
-     ]
-    },
-    {
-     "id": "fr_hotelier_noun",
-     "box": [
-      718,
-      425,
-      212,
-      287
-     ],
-     "labelAt": [
-      824,
-      655
-     ]
-    },
-    {
-     "id": "fr_recepteur_noun",
-     "box": [
-      940,
-      440,
-      335,
-      272
-     ],
-     "labelAt": [
-      1107,
-      655
-     ]
-    }
-   ]
-  }
- }
 }''')
 with open(OUT, "w", encoding="utf-8") as f:
     json.dump(L, f, ensure_ascii=False, indent=2)
