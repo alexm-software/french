@@ -85,19 +85,19 @@
  },
  "rooms": {
   "st_renouveau": {
-   "name": "Allée du Renouveau",
+   "name": "Clairière du Renouveau",
    "image": "st_renouveau/st_renouveau.jpg",
-   "alt": "A golden stone village lane in spring, painted in ink and gouache: Monsieur Verbe the mime puts fresh flowers in a vase and drops the wilted ones, swaps a block of butter for a bottle of oil over a bowl, cheers on a puppy, hammers a new roof onto a birdhouse, pretends to be old with a white beard and a stick in a green beret, and fixes little wings onto a toy car. The stone archway on the left leads back to the valley; the yellow, red and blue doors and the white picket garden gate lead on.",
+   "alt": "A sunny spring clearing on a forest trail, with blossom, bluebells and huge old trees, painted in ink and gouache: Monsieur Verbe puts fresh daffodils in a vase and drops the wilted ones, holds a bottle of oil over a bowl instead of butter, cheers a timid lion cub across a log, gives a little letterbox a new roof and fresh paint, cheers 'yay!' at a birthday cake as a white-bearded old man in a green beret, and fixes little wings onto a toy car. The mossy arch on the left leads back to the valley; the yellow, red and blue doors in the tree trunks and the white picket gate lead on.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     10,
-     10,
-     280,
-     270
+     100,
+     90,
+     235,
+     200
     ],
     "label": "La vallée"
    },
@@ -105,45 +105,45 @@
     {
      "to": "etirements",
      "label": "Passage des Étirements",
-     "hint": "Through the yellow door",
+     "hint": "Through the yellow door in the oak",
      "hit": [
       431,
-      152,
-      104,
-      140
+      225,
+      69,
+      72
      ]
     },
     {
      "to": "loupes",
-     "label": "Quai des Loupes",
-     "hint": "Through the red door",
+     "label": "Berge des Loupes",
+     "hint": "Through the red door in the oak",
      "hit": [
-      669,
-      162,
-      96,
-      130
+      681,
+      228,
+      75,
+      70
      ]
     },
     {
      "to": "novateurs",
-     "label": "Place des Novateurs",
-     "hint": "Through the blue door",
+     "label": "Clairière des Novateurs",
+     "hint": "Through the blue door in the oak",
      "hit": [
-      894,
-      165,
-      102,
-      130
+      1022,
+      219,
+      78,
+      95
      ]
     },
     {
      "to": "renovateurs",
-     "label": "Ruelle des Rénovateurs",
-     "hint": "Through the white picket garden gate",
+     "label": "Sentier des Rénovateurs",
+     "hint": "Through the white picket gate",
      "hit": [
-      1112,
-      195,
-      150,
-      165
+      1158,
+      320,
+      100,
+      110
      ]
     }
    ],
@@ -152,55 +152,55 @@
     {
      "id": "fr_renouveler_verb",
      "box": [
-      48,
-      296,
-      217,
-      360
+      40,
+      306,
+      255,
+      370
      ]
     },
     {
      "id": "fr_substituer_verb",
      "box": [
-      272,
-      296,
-      168,
-      355
+      298,
+      300,
+      215,
+      212
      ]
     },
     {
      "id": "fr_encourager_verb",
      "box": [
-      450,
-      304,
-      200,
-      358
+      516,
+      300,
+      272,
+      250
      ]
     },
     {
      "id": "fr_ameliorer_verb",
      "box": [
-      655,
-      325,
-      200,
-      332
+      690,
+      81,
+      175,
+      140
      ]
     },
     {
      "id": "fr_vieillir_verb",
      "box": [
-      862,
-      328,
-      160,
-      322
+      790,
+      319,
+      250,
+      330
      ]
     },
     {
      "id": "fr_modifier_verb",
      "box": [
-      1030,
-      372,
-      225,
-      292
+      1050,
+      437,
+      200,
+      213
      ]
     }
    ]
@@ -209,7 +209,7 @@
    "name": "Passage des Étirements",
    "image": "st_renouveau/etirements.jpg",
    "backTo": "st_renouveau",
-   "alt": "A sunny stone passage: Monsieur Verbe the mime adds a weight to a little balance scale, pulls down a slatted blind, lifts dumbbells, stretches one arm high with a yawn holding a hand mirror, stands proudly behind seedlings growing from tiny to tall in a gold beret, and blows on a steaming cake in a green beret. The yellow door on the left leads back to the lane.",
+   "alt": "A green beech wood on the trail: Monsieur Verbe adds a weight to a little balance scale on a stump, lowers three alphabet blocks on a rope, lifts dumbbells, stretches one arm high with a yawn holding a hand mirror, kneels proudly behind seedlings growing from tiny to tall in a gold beret, and blows on a steaming cake in a green beret. The yellow door in the oak on the left leads back to the clearing.",
    "nameplate": [
     50,
     4.5
@@ -217,13 +217,13 @@
    "doors": [
     {
      "to": "st_renouveau",
-     "label": "Allée du Renouveau",
-     "hint": "Back through the yellow door",
+     "label": "Clairière du Renouveau",
+     "hint": "Back through the yellow door in the oak",
      "hit": [
-      56,
-      62,
-      190,
-      126
+      188,
+      268,
+      75,
+      58
      ]
     }
    ],
@@ -232,64 +232,64 @@
     {
      "id": "fr_compenser_verb",
      "box": [
-      38,
-      194,
-      180,
-      415
+      45,
+      330,
+      240,
+      300
      ]
     },
     {
      "id": "fr_abaisser_verb",
      "box": [
-      256,
-      198,
-      180,
-      410
+      325,
+      312,
+      145,
+      270
      ]
     },
     {
      "id": "fr_renforcer_verb",
      "box": [
-      442,
-      188,
-      227,
-      418
+      481,
+      285,
+      170,
+      265
      ]
     },
     {
      "id": "fr_etirer_verb",
      "box": [
-      675,
-      138,
-      180,
-      470
+      688,
+      219,
+      150,
+      337
      ]
     },
     {
      "id": "fr_croitre_verb",
      "box": [
-      866,
-      198,
-      150,
-      415
+      850,
+      375,
+      140,
+      215
      ]
     },
     {
      "id": "fr_refroidir_verb",
      "box": [
-      1072,
-      200,
-      190,
-      408
+      1000,
+      406,
+      230,
+      220
      ]
     }
    ]
   },
   "loupes": {
-   "name": "Quai des Loupes",
+   "name": "Berge des Loupes",
    "image": "st_renouveau/loupes.jpg",
    "backTo": "st_renouveau",
-   "alt": "A village quay beside a calm river: Monsieur Verbe the mime presses down a suitcase lid in a gold beret, shrugs his shoulders, adds an apple to a tall pyramid of apples in a gold beret, pulls a rope twice as hard, looks at a ladybird through a big magnifying glass in a green beret, and moves the edging stones of a path outward with a spade in a green beret. The red door on the left leads back to the lane.",
+   "alt": "A mossy forest stream bank with a little footbridge and willows: Monsieur Verbe presses down an overstuffed suitcase lid in a gold beret, shrugs his shoulders, adds an apple to a tall pyramid in a gold beret, heaves twice as hard on a rope to pull a boat in, looks at a ladybird through a big magnifying glass in a green beret, and moves the path's edging stones outward with a spade in a green beret. The red door in the oak on the left leads back to the clearing.",
    "nameplate": [
     50,
     4.5
@@ -297,13 +297,13 @@
    "doors": [
     {
      "to": "st_renouveau",
-     "label": "Allée du Renouveau",
-     "hint": "Back through the red door",
+     "label": "Clairière du Renouveau",
+     "hint": "Back through the red door in the oak",
      "hit": [
-      56,
-      46,
-      138,
-      189
+      119,
+      160,
+      94,
+      62
      ]
     }
    ],
@@ -312,64 +312,64 @@
     {
      "id": "fr_rabattre_verb",
      "box": [
-      38,
-      241,
-      208,
-      372
+      100,
+      226,
+      312,
+      330
      ]
     },
     {
      "id": "fr_hausser_verb",
      "box": [
-      254,
-      225,
-      180,
-      365
+      415,
+      144,
+      120,
+      278
      ]
     },
     {
      "id": "fr_accroitre_verb",
      "box": [
-      440,
-      222,
-      205,
-      392
+      540,
+      140,
+      212,
+      285
      ]
     },
     {
      "id": "fr_redoubler_verb",
      "box": [
-      650,
-      244,
-      158,
-      370
+      819,
+      269,
+      236,
+      295
      ]
     },
     {
      "id": "fr_agrandir_verb",
      "box": [
-      815,
-      262,
-      185,
-      330
+      506,
+      425,
+      300,
+      295
      ]
     },
     {
      "id": "fr_elargir_verb",
      "box": [
-      1025,
-      277,
+      1060,
       200,
-      335
+      200,
+      180
      ]
     }
    ]
   },
   "novateurs": {
-   "name": "Place des Novateurs",
+   "name": "Clairière des Novateurs",
    "image": "st_renouveau/novateurs.jpg",
    "backTo": "st_renouveau",
-   "alt": "A village square with a little workshop: Monsieur Verbe the mime holds a huge snowball in a green beret, studies at a desk with a pile of books, swaps an old oil lamp for a modern one, stands by a machine of cogs and pipes under a glowing light bulb, shows off a cart with a big wooden wheel, and sifts fine white sugar into a bowl. The blue door on the left leads back to the lane.",
+   "alt": "An inventor's camp under a canvas awning in a forest clearing: Monsieur Verbe holds his nose beside a growing pile of rubbish in a green beret, studies with a pile of books, swaps an old oil lamp for a new one, stands by a machine of cogs under a glowing light bulb, shows off a cart with a big spinning wheel, and sifts fine sugar into a bowl. The blue door in the oak on the left leads back to the clearing.",
    "nameplate": [
     50,
     4.5
@@ -377,13 +377,13 @@
    "doors": [
     {
      "to": "st_renouveau",
-     "label": "Allée du Renouveau",
-     "hint": "Back through the blue door",
+     "label": "Clairière du Renouveau",
+     "hint": "Back through the blue door in the oak",
      "hit": [
-      32,
-      88,
-      155,
-      225
+      238,
+      186,
+      94,
+      70
      ]
     }
    ],
@@ -392,64 +392,64 @@
     {
      "id": "fr_grossir_verb",
      "box": [
-      44,
-      319,
-      190,
-      330
+      20,
+      262,
+      425,
+      440
      ]
     },
     {
      "id": "fr_reviser_verb",
      "box": [
-      244,
-      315,
-      200,
-      342
+      481,
+      269,
+      150,
+      140
      ]
     },
     {
      "id": "fr_moderniser_verb",
      "box": [
-      452,
-      318,
-      162,
-      315
+      662,
+      225,
+      140,
+      120
      ]
     },
     {
      "id": "fr_innover_verb",
      "box": [
-      620,
-      310,
-      215,
-      343
+      881,
+      200,
+      115,
+      148
      ]
     },
     {
      "id": "fr_revolutionner_verb",
      "box": [
-      850,
-      328,
-      200,
-      322
+      644,
+      352,
+      300,
+      318
      ]
     },
     {
      "id": "fr_raffiner_verb",
      "box": [
-      1055,
-      328,
-      200,
-      317
+      1000,
+      312,
+      240,
+      325
      ]
     }
    ]
   },
   "renovateurs": {
-   "name": "Ruelle des Rénovateurs",
+   "name": "Sentier des Rénovateurs",
    "image": "st_renouveau/renovateurs.jpg",
    "backTo": "st_renouveau",
-   "alt": "A narrow village alley with scaffolding on an old cottage: Monsieur Verbe the mime paints flowers on his watering can, mends a crumbling wall with a trowel and bricks, drops glass bottles into a recycling bin, plants red and white flowers in turn, watches the rain smudge his chalk drawing, and frowns at a dull, darkened silver teapot in a green beret. The white picket garden gate on the left leads back to the lane.",
+   "alt": "A woodland trail beside an old mossy dry-stone wall: Monsieur Verbe paints little flowers on his watering can, mends the crumbling wall with a trowel and new stones, drops bottles into a recycling bin, plants red and white flowers in turn, watches a rain cloud smudge his chalk drawing on a big rock, and frowns at a dull, darkened silver teapot in a green beret. The white picket gate under the roses on the left leads back to the clearing.",
    "nameplate": [
     50,
     4.5
@@ -457,13 +457,13 @@
    "doors": [
     {
      "to": "st_renouveau",
-     "label": "Allée du Renouveau",
-     "hint": "Back through the white picket garden gate",
+     "label": "Clairière du Renouveau",
+     "hint": "Back through the white picket gate",
      "hit": [
-      92,
-      176,
-      180,
-      112
+      100,
+      50,
+      225,
+      118
      ]
     }
    ],
@@ -472,55 +472,55 @@
     {
      "id": "fr_personnaliser_verb",
      "box": [
-      62,
-      294,
-      210,
-      338
+      112,
+      175,
+      215,
+      265
      ]
     },
     {
      "id": "fr_renover_verb",
      "box": [
-      278,
-      272,
-      190,
-      360
+      331,
+      306,
+      225,
+      315
      ]
     },
     {
      "id": "fr_retraiter_verb",
      "box": [
-      475,
-      281,
-      160,
-      342
+      600,
+      181,
+      162,
+      245
      ]
     },
     {
      "id": "fr_alterner_verb",
      "box": [
-      640,
-      347,
-      218,
-      303
+      560,
+      430,
+      290,
+      225
      ]
     },
     {
      "id": "fr_alterer_verb",
      "box": [
-      865,
-      290,
+      856,
+      270,
       200,
-      385
+      355
      ]
     },
     {
      "id": "fr_ternir_verb",
      "box": [
-      1072,
-      290,
+      1062,
+      287,
       180,
-      345
+      340
      ]
     }
    ]

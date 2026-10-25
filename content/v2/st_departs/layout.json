@@ -7,7 +7,7 @@
  "roomList": [
   {
    "key": "st_departs",
-   "short": "La place"
+   "short": "La halte"
   },
   {
    "key": "retours",
@@ -19,11 +19,11 @@
   },
   {
    "key": "presses",
-   "short": "La rue"
+   "short": "Le marché"
   },
   {
    "key": "galopins",
-   "short": "L'allée"
+   "short": "La piste"
   }
  ],
  "planned": {
@@ -85,19 +85,19 @@
  },
  "rooms": {
   "st_departs": {
-   "name": "Place des Départs",
+   "name": "Halte des Départs",
    "image": "st_departs/st_departs.jpg",
-   "alt": "A sunny square off the Boulevard des Départs, painted in ink and gouache: Monsieur Verbe the mime leads a line of toy soldiers out of a green booth, waves to a porter with his suitcase, brings two hedgehogs together under a red mushroom, runs a tray of cakes in through a green door, rides a pony and waves from a party train with balloons. A stone archway on the left leads back to the crossroads; the canal quay, the hill stairs, an iron arcade and a little back street lead on.",
+   "alt": "A tiny country railway halt in a flowery garden, with an old red-brown tram carriage on a short track, a green ticket booth, a big tree and a stone bridge over the canal, painted in ink and gouache: Monsieur Verbe leads toy soldiers marching out of the ticket booth in a gold beret; waves to the porter and sets off with his suitcase in a gold beret; brings two shy hedgehogs together under a toadstool; runs back into the carriage with a tray of cream cakes; climbs back onto his pony; and waves goodbye from the carriage step with his party balloons in a gold beret. The lane at the top left leads back to the crossroads. The steps down to the canal, the path behind the tree, the stairs up the hill and the iron gateway lead on.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     5,
-     110,
-     190,
-     195
+     15,
+     90,
+     120,
+     100
     ],
     "label": "Carrefour des Voyages"
    },
@@ -105,45 +105,45 @@
     {
      "to": "retours",
      "label": "Quai des Retours",
-     "hint": "Down to the canal quay",
+     "hint": "Down the stone steps to the canal quay",
      "hit": [
-      485,
-      300,
+      125,
+      465,
       160,
-      88
+      230
      ]
     },
     {
      "to": "galopins",
-     "label": "Allée des Galopins",
-     "hint": "Along the little street behind the tree",
+     "label": "Piste des Galopins",
+     "hint": "Along the little path behind the big tree",
      "hit": [
-      700,
-      230,
-      120,
-      85
+      625,
+      200,
+      75,
+      90
      ]
     },
     {
      "to": "grimpeurs",
      "label": "Chemin des Grimpeurs",
-     "hint": "Up the stone stairs",
+     "hint": "Up the stone stairs on the hill",
      "hit": [
-      890,
-      200,
-      90,
-      150
+      1155,
+      20,
+      95,
+      240
      ]
     },
     {
      "to": "presses",
-     "label": "Rue des Pressés",
-     "hint": "Under the iron arcade to the shopping street",
+     "label": "Marché des Pressés",
+     "hint": "Through the iron gateway to the market",
      "hit": [
-      1000,
-      50,
-      220,
-      145
+      825,
+      375,
+      250,
+      330
      ]
     }
    ],
@@ -152,55 +152,55 @@
     {
      "id": "fr_sortir_verb",
      "box": [
-      40,
-      385,
-      210,
-      225
+      62,
+      194,
+      256,
+      220
      ]
     },
     {
      "id": "fr_aller_verb",
      "box": [
-      258,
-      367,
-      220,
-      275
+      330,
+      240,
+      170,
+      195
      ]
     },
     {
      "id": "fr_rapprocher_verb",
      "box": [
-      492,
-      450,
-      258,
+      590,
+      365,
+      215,
       190
      ]
     },
     {
      "id": "fr_rentrer_verb",
      "box": [
-      768,
-      362,
-      92,
-      170
+      820,
+      195,
+      165,
+      175
      ]
     },
     {
      "id": "fr_remonter_verb",
      "box": [
-      870,
-      375,
-      205,
-      280
+      1102,
+      270,
+      140,
+      195
      ]
     },
     {
      "id": "fr_partir_verb",
      "box": [
-      1085,
-      335,
-      185,
-      320
+      990,
+      25,
+      110,
+      315
      ]
     }
    ],
@@ -210,7 +210,7 @@
    "name": "Quai des Retours",
    "image": "st_departs/retours.jpg",
    "backTo": "st_departs",
-   "alt": "A canal quay in summer: Monsieur Verbe the mime carries a freshly varnished table back from the workshop booth, gives up at the clock post, chases a rat that escaped a trap, jumps back from a cucumber, tells his little terrier to stay on its rug and takes his red ball back from a crow on the roof. Stairs on the left climb back to the square; steps on the right lead up the hill.",
+   "alt": "A quiet green canal quay below the railway halt, with a towpath, a moored barge, a willow, an old clock post and a little boathouse: Monsieur Verbe carries a freshly varnished table off the barge in a gold beret; holds out his palm, refusing to climb the clock post; chases a rat that escaped from its trap; jumps back from a cucumber on the path; holds up his hand while his little dog stays on its rug; and climbs a ladder to take his red ball back from a crow on the boathouse roof. The stone stairs on the left lead back up to the halt; the steps up the hill lead on.",
    "nameplate": [
     50,
     4.5
@@ -218,13 +218,13 @@
    "doors": [
     {
      "to": "st_departs",
-     "label": "Place des Départs",
-     "hint": "Climb the stairs back to the square",
+     "label": "Halte des Départs",
+     "hint": "Climb the stairs back up to the halt",
      "hit": [
-      95,
-      290,
-      160,
-      95
+      10,
+      185,
+      130,
+      190
      ]
     },
     {
@@ -232,10 +232,10 @@
      "label": "Chemin des Grimpeurs",
      "hint": "Up the steps on the hill",
      "hit": [
-      985,
-      295,
-      80,
-      95
+      850,
+      140,
+      100,
+      110
      ]
     }
    ],
@@ -244,55 +244,55 @@
     {
      "id": "fr_revenir_verb",
      "box": [
-      50,
-      395,
-      180,
-      260
+      162,
+      256,
+      215,
+      235
      ]
     },
     {
      "id": "fr_renoncer_verb",
      "box": [
-      289,
-      335,
-      140,
-      280
+      395,
+      100,
+      200,
+      375
      ]
     },
     {
      "id": "fr_rattraper_verb",
      "box": [
-      470,
-      412,
-      295,
-      230
+      600,
+      300,
+      180,
+      240
      ]
     },
     {
      "id": "fr_reculer_verb",
      "box": [
-      773,
-      380,
-      162,
-      280
+      795,
+      305,
+      140,
+      235
      ]
     },
     {
      "id": "fr_rester_verb",
      "box": [
-      942,
-      420,
-      263,
-      245
+      935,
+      318,
+      120,
+      280
      ]
     },
     {
      "id": "fr_recuperer_verb",
      "box": [
-      1055,
-      90,
+      1060,
+      75,
       190,
-      180
+      450
      ]
     }
    ],
@@ -302,7 +302,7 @@
    "name": "Chemin des Grimpeurs",
    "image": "st_departs/grimpeurs.jpg",
    "backTo": "st_departs",
-   "alt": "A steep garden path on a hill: Monsieur Verbe the mime leaves a key under the mat, leaves again with his parrot and suitcase, bows to his mirror beside a snorting horse, climbs a mountain of mashed potato with gravy, climbs a tree for Grandpa's kite while Grandpa and his son wait with cake, and scales a clock tower on a tiny ladder. The clock post on the left leads back to the square; the green canopies on the right lead on.",
+   "alt": "A grassy hillside path above the railway halt, with a stone cottage, a big tree with a kite caught in it, a little clock tower and a view over the canal valley: Monsieur Verbe tucks the key under the doormat and walks off; picks up his suitcase to leave again as his parrot squawks, in a gold beret; bows to his own reflection in a hand mirror beside a horse; climbs a mountain of mashed potato with gravy in a green beret; climbs the tree for the kite while Grandpa waits with a cake; and scales the clock tower on a tiny ladder. The stone steps on the left lead back down; the path under the green market awnings leads on.",
    "nameplate": [
     50,
     4.5
@@ -310,24 +310,24 @@
    "doors": [
     {
      "to": "st_departs",
-     "label": "Place des Départs",
-     "hint": "Back down past the clock to the square",
+     "label": "Halte des Départs",
+     "hint": "Back down the stone steps to the halt",
      "hit": [
-      20,
-      300,
-      85,
-      250
+      30,
+      475,
+      190,
+      230
      ]
     },
     {
      "to": "presses",
-     "label": "Rue des Pressés",
-     "hint": "On under the green canopies",
+     "label": "Marché des Pressés",
+     "hint": "On under the green market awnings",
      "hit": [
-      955,
-      430,
-      165,
-      200
+      1110,
+      240,
+      160,
+      280
      ]
     }
    ],
@@ -336,65 +336,65 @@
     {
      "id": "fr_quitter_verb",
      "box": [
-      45,
-      110,
-      195,
-      190
+      355,
+      315,
+      140,
+      170
      ]
     },
     {
      "id": "fr_repartir_verb",
      "box": [
-      290,
-      150,
-      140,
-      240
+      545,
+      225,
+      180,
+      235
      ]
     },
     {
      "id": "fr_incliner_verb",
      "box": [
-      436,
-      255,
-      246,
-      262
+      800,
+      265,
+      115,
+      175
      ]
     },
     {
      "id": "fr_gravir_verb",
      "box": [
-      690,
-      315,
-      215,
-      340
+      725,
+      442,
+      345,
+      250
      ]
     },
     {
      "id": "fr_grimper_verb",
      "box": [
-      835,
-      150,
-      140,
-      160
+      600,
+      80,
+      160,
+      140
      ]
     },
     {
      "id": "fr_escalader_verb",
      "box": [
-      1150,
-      255,
-      118,
-      360
+      930,
+      80,
+      145,
+      330
      ]
     }
    ],
    "room_id": "ST_movement_seg008"
   },
   "presses": {
-   "name": "Rue des Pressés",
+   "name": "Marché des Pressés",
    "image": "st_departs/presses.jpg",
    "backTo": "st_departs",
-   "alt": "A busy shopping street under green iron canopies: Monsieur Verbe the mime rides a racing snail past a lettuce, hurries with a hatbox and his mirror, dashes with his notebook and mirror, dozes bored in a rocking chair, climbs a step ladder to the cookie jar and is carried shoulder-high by cheering friends with his hamster. The clock post on the left leads back to the square; the stone arch on the right leads on to the alley.",
+   "alt": "A busy little country market lane beside the railway halt, under green canvas awnings, with a bakery stall, a hat stall and villagers: Monsieur Verbe zooms past a cabbage on a giant racing snail; hurries with a hatbox, glancing in his hand mirror; rushes his newspaper to the printing press, mirror in hand; climbs a step ladder to reach the cookie jar; dozes wearily in a rocking chair with his mirror drooping; and is lifted high on two villagers' shoulders with his hamster and his mirror. The old station clock on the left leads back to the halt; the stone arch leads on.",
    "nameplate": [
     50,
     4.5
@@ -402,24 +402,24 @@
    "doors": [
     {
      "to": "st_departs",
-     "label": "Place des Départs",
-     "hint": "Back past the clock to the square",
+     "label": "Halte des Départs",
+     "hint": "Back past the station clock to the halt",
      "hit": [
-      40,
+      20,
       140,
-      80,
-      150
+      70,
+      250
      ]
     },
     {
      "to": "galopins",
-     "label": "Allée des Galopins",
-     "hint": "Through the stone arch to the alley",
+     "label": "Piste des Galopins",
+     "hint": "Through the stone arch to the farm track",
      "hit": [
-      1165,
-      60,
-      110,
-      140
+      1035,
+      90,
+      65,
+      200
      ]
     }
    ],
@@ -428,65 +428,65 @@
     {
      "id": "fr_accelerer_verb",
      "box": [
-      25,
-      315,
-      265,
-      300
+      300,
+      240,
+      245,
+      370
      ]
     },
     {
      "id": "fr_hater_verb",
      "box": [
-      312,
-      312,
-      190,
-      290
+      552,
+      245,
+      125,
+      265
      ]
     },
     {
      "id": "fr_empresser_verb",
      "box": [
-      508,
-      328,
-      180,
-      305
+      700,
+      250,
+      255,
+      210
      ]
     },
     {
      "id": "fr_lasser_verb",
      "box": [
-      695,
-      390,
-      215,
-      275
+      810,
+      465,
+      275,
+      225
      ]
     },
     {
      "id": "fr_acceder_verb",
      "box": [
-      812,
-      165,
-      125,
-      220
+      880,
+      80,
+      145,
+      165
      ]
     },
     {
      "id": "fr_exalter_verb",
      "box": [
-      945,
-      210,
-      275,
-      440
+      1102,
+      125,
+      165,
+      335
      ]
     }
    ],
    "room_id": "ST_movement_seg009"
   },
   "galopins": {
-   "name": "Allée des Galopins",
+   "name": "Piste des Galopins",
    "image": "st_departs/galopins.jpg",
    "backTo": "st_departs",
-   "alt": "A cobbled alley of old houses: Monsieur Verbe the mime leaps a fence beside a fawn, follows muddy paw prints with a magnifying glass, gallops on a pony with a baguette, heaves a trunk on a cart, pops out of a manhole in a hard hat beside a mole and sets off round the world with a backpack, a globe and a tortoise. The archway by the clock on the left leads back to the square.",
+   "alt": "A muddy farm track behind the railway halt, with a wooden fence, a meadow, the old tram in the distance and an open manhole: Monsieur Verbe leaps over the fence beside a little fawn in a green beret; follows muddy paw prints with a magnifying glass; gallops on his pony with a baguette; heaves a huge trunk onto a cart; pops out of the manhole in a hard hat, nose to nose with a mole; and sets off round the world with a backpack, a globe and a tortoise in a gold beret. The stone archway on the left leads back to the halt.",
    "nameplate": [
     50,
     4.5
@@ -494,13 +494,13 @@
    "doors": [
     {
      "to": "st_departs",
-     "label": "Place des Départs",
-     "hint": "Back through the archway to the square",
+     "label": "Halte des Départs",
+     "hint": "Back through the stone archway to the halt",
      "hit": [
-      25,
-      185,
-      170,
-      115
+      35,
+      20,
+      165,
+      195
      ]
     }
    ],
@@ -509,55 +509,55 @@
     {
      "id": "fr_bondir_verb",
      "box": [
-      30,
-      305,
-      235,
-      300
+      205,
+      45,
+      250,
+      295
      ]
     },
     {
      "id": "fr_traquer_verb",
      "box": [
-      273,
-      420,
-      140,
-      210
+      330,
+      342,
+      230,
+      225
      ]
     },
     {
      "id": "fr_galoper_verb",
      "box": [
-      418,
-      350,
-      278,
-      290
+      565,
+      110,
+      190,
+      305
      ]
     },
     {
      "id": "fr_tacher_verb",
      "box": [
-      700,
-      370,
-      200,
+      758,
+      235,
+      330,
       250
      ]
     },
     {
      "id": "fr_emerger_verb",
      "box": [
-      905,
-      510,
-      150,
-      165
+      750,
+      500,
+      290,
+      180
      ]
     },
     {
      "id": "fr_entreprendre_verb",
      "box": [
-      1062,
-      350,
-      205,
-      290
+      1090,
+      165,
+      175,
+      420
      ]
     }
    ],
