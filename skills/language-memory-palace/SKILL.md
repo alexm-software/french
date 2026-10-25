@@ -128,6 +128,7 @@ Run these in addition to the generic Validation section of the Memory palace bui
 - **Inner areas match the overview.** Every district's sector map, building exteriors and interiors keep the landmarks, architecture, materials and colours the top-level map shows for it.
 
 ## Verbs live inside the scenes (user review, Oct 25 evening)
-- Don't cluster verbs: no verb corner, no row of verb mimes along one edge, no separate verb street or alley. Grouping pushes them aside, so learners miss them.
-- Each verb sits in the room where its action naturally happens, spread across the scene among the nouns and doing something with them: the verb character kneads the dough on the baker's table, haggles over the scale at the stall, or carries the trunk up the stairs. Keep the verb character's costume cue so a verb is still easy to spot.
-- When a building is repainted, move the verbs from its sector's verb street into its rooms where they fit, and retire the emptied street or give it a real non-verb purpose.
+- Most verbs belong in the themed rooms where their action naturally happens, spread across the scene among the nouns and doing something with them: kneading dough on the baker's table, haggling over the scale at a stall, carrying a trunk up the stairs. Keep the verb marker's cue so a verb is still easy to spot.
+- Avoid pushing verbs aside: don't bunch a room's verbs into one corner or line them along an edge, and don't put nearly all verbs on separate streets where learners walk past them.
+- This is a balance, not an absolute. A verb street or a cluster of related actions is fine where it genuinely makes sense (a removals street for carrying and lifting verbs, a dance hall for dance moves), as long as most verbs are part of the scenes.
+- When repainting a building, bring the verbs from its sector's verb street that fit its rooms into those rooms, and keep the street only if what's left still makes a real scene.

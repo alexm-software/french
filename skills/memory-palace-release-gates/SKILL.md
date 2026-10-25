@@ -118,7 +118,7 @@ These are blocking. A space does not ship until each one passes, and the builder
 - Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, line weight, texture). Any drift in a single room or a whole building fails. Every area is fully coloured, with no unpainted patches.
 - Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room that fits them. Near-synonyms in one room need a visible distinction.
 - Naming gate: room names make sense for their contents, and every place name shows a translation.
-- Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain strip fails, and so does a verb-only street.
+- Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain strip fails; a verb street must be a real, lively scene.
 - Exterior gate: a building or street seen from the level above shows the landmarks visible inside (and vice versa).
 - Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read.
 
@@ -137,4 +137,4 @@ These are blocking. A space does not ship until each one passes, and the builder
 - No-overflow gate: every room's words share an honest theme that can be painted as one scene. Rooms of leftover abstract nouns fail.
 - One-hook gate: a word that appears in more than one room has the same hook everywhere.
 - Forced-pun gate: reject hooks with the wrong vowel, more than two sound chunks, a pun object that only sits beside the meaning, no pun at all, or a "like English X" template on a non-cognate.
-- Integrated-verbs gate: a room's verbs are spread through the scene and interact with its nouns. A room fails if its verbs are bunched in one zone, lined up along an edge, or kept in a verb-only street.
+- Integrated-verbs gate: a room's verbs are spread through the scene and interact with its nouns. A room fails if its verbs are bunched in one zone or lined up along an edge. Verb streets are allowed where they make sense, but most of a sector's verbs should sit in its themed rooms.
