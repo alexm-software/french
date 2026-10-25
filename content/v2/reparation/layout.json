@@ -1,0 +1,809 @@
+{
+ "building": "reparation",
+ "building_id": "B61_reparation",
+ "sector_id": "S03_market",
+ "name": "L'atelier de réparation · The Repair Workshop",
+ "main": "reparation",
+ "roomList": [
+  {
+   "key": "reparation",
+   "short": "L'atelier"
+  },
+  {
+   "key": "comptoir",
+   "short": "Le comptoir"
+  },
+  {
+   "key": "attente",
+   "short": "L'attente"
+  },
+  {
+   "key": "pannes",
+   "short": "Les pannes"
+  }
+ ],
+ "planned": {
+  "reparation": {
+   "vocabRoom": "R_adj_state_02",
+   "only": [
+    "fr_intact_adj",
+    "fr_polonais_adj",
+    "fr_infini_adj",
+    "fr_innombrable_adj",
+    "fr_soigne_adj",
+    "fr_humide_adj",
+    "fr_fragile_adj",
+    "fr_net_adj",
+    "fr_liquide_adj",
+    "fr_use_adj",
+    "fr_poussiereux_adj",
+    "fr_menager_adj",
+    "fr_incomprehensible_adj"
+   ]
+  },
+  "comptoir": {
+   "vocabRoom": "R_adj_state_03",
+   "only": [
+    "fr_desert_adj",
+    "fr_fixe_adj",
+    "fr_urgent_adj",
+    "fr_casse_adj",
+    "fr_souple_adj",
+    "fr_disponible_adj",
+    "fr_fini_adj",
+    "fr_pris_adj",
+    "fr_provisoire_adj",
+    "fr_illegal_adj",
+    "fr_mobile_adj",
+    "fr_interesse_adj",
+    "fr_temporaire_adj"
+   ]
+  },
+  "attente": {
+   "vocabRoom": "R_adj_state_04",
+   "only": [
+    "fr_pret_adj",
+    "fr_libre_adj",
+    "fr_malade_adj",
+    "fr_frais_adj",
+    "fr_gauche_adj",
+    "fr_sauvage_adj",
+    "fr_complet_adj",
+    "fr_continu_adj",
+    "fr_boueux_adj",
+    "fr_reserve_adj"
+   ]
+  },
+  "cageot": {
+   "vocabRoom": "R_adj_state_04_z1",
+   "only": [
+    "fr_impur_adj",
+    "fr_pacifique_adj",
+    "fr_aride_adj",
+    "fr_vacant_adj",
+    "fr_integral_adj",
+    "fr_fluide_adj",
+    "fr_terrien_adj",
+    "fr_restant_adj",
+    "fr_lyonnais_adj",
+    "fr_oral_adj"
+   ]
+  },
+  "pannes": {
+   "vocabRoom": "R_adj_state_05",
+   "only": [
+    "fr_operationnel_adj",
+    "fr_respectif_adj",
+    "fr_gele_adj",
+    "fr_manquant_adj",
+    "fr_infidele_adj",
+    "fr_introuvable_adj",
+    "fr_inexistant_adj",
+    "fr_compatible_adj",
+    "fr_defectueux_adj",
+    "fr_incompatible_adj",
+    "fr_intermittent_adj",
+    "fr_defaillant_adj",
+    "fr_inactif_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "reparation": {
+   "name": "L'atelier de réparation · The Repair Workshop",
+   "room_id": "R_adj_state_02",
+   "image": "reparation/reparation.jpg",
+   "alt": "An open timber repair shed under a slate roof, tools hanging on the walls. A big repair dresser stands in the middle with the big white teapot on top; its cubbies hold a blue-dotted mug with a polishing cloth, a toy train on a figure-eight track, a jar of countless buttons, a neat porcelain swan, a steaming kettle with a damp towel, a teetering stack of china plates, a spotless butterfly net, glue pouring into a pot, a boot worn through at the toe, a feather duster pushing dust off a book, an iron with a little broom and a tangle of springs and gears. On the left the open archway leads out to the market square beside a red door; on the right are a blue door, a green door and a black bicycle.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     178,
+     62,
+     78,
+     360
+    ],
+    "label": "Place du Marché"
+   },
+   "doors": [
+    {
+     "to": "comptoir",
+     "label": "le comptoir",
+     "hint": "Go through the red door to the repair counter",
+     "hit": [
+      66,
+      160,
+      104,
+      420
+     ]
+    },
+    {
+     "to": "attente",
+     "label": "la salle d'attente",
+     "hint": "Go through the blue door to the waiting room",
+     "hit": [
+      1030,
+      186,
+      72,
+      168
+     ]
+    },
+    {
+     "to": "pannes",
+     "label": "la salle des pannes",
+     "hint": "Go through the green door to the breakdown room",
+     "hit": [
+      1120,
+      152,
+      112,
+      288
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_intact_adj",
+     "box": [
+      555,
+      86,
+      164,
+      125
+     ]
+    },
+    {
+     "id": "fr_polonais_adj",
+     "box": [
+      356,
+      262,
+      90,
+      98
+     ]
+    },
+    {
+     "id": "fr_infini_adj",
+     "box": [
+      452,
+      262,
+      170,
+      90
+     ]
+    },
+    {
+     "id": "fr_innombrable_adj",
+     "box": [
+      662,
+      232,
+      108,
+      120
+     ]
+    },
+    {
+     "id": "fr_soigne_adj",
+     "box": [
+      826,
+      232,
+      120,
+      118
+     ]
+    },
+    {
+     "id": "fr_humide_adj",
+     "box": [
+      340,
+      366,
+      105,
+      100
+     ]
+    },
+    {
+     "id": "fr_fragile_adj",
+     "box": [
+      486,
+      395,
+      122,
+      80
+     ]
+    },
+    {
+     "id": "fr_net_adj",
+     "box": [
+      645,
+      372,
+      130,
+      100
+     ]
+    },
+    {
+     "id": "fr_liquide_adj",
+     "box": [
+      828,
+      356,
+      120,
+      118
+     ]
+    },
+    {
+     "id": "fr_use_adj",
+     "box": [
+      342,
+      495,
+      102,
+      108
+     ]
+    },
+    {
+     "id": "fr_poussiereux_adj",
+     "box": [
+      446,
+      500,
+      165,
+      118
+     ]
+    },
+    {
+     "id": "fr_menager_adj",
+     "box": [
+      628,
+      500,
+      172,
+      110
+     ]
+    },
+    {
+     "id": "fr_incomprehensible_adj",
+     "box": [
+      822,
+      498,
+      128,
+      106
+     ]
+    }
+   ]
+  },
+  "comptoir": {
+   "name": "Le comptoir des réparations · The Repair Counter",
+   "room_id": "R_adj_state_03",
+   "image": "reparation/comptoir.jpg",
+   "backTo": "reparation",
+   "alt": "The repair counter room under a sloping roof, with a red door on the left and a window and tool rack on the right. On top of the shelves: a dolls' house with sand drifting in, a clamped desk lamp, a ringing red bell, a casserole dish cracked in two and a bendy soup ladle. In the cubbies: a gumball dispenser, a finished toy fish with shiny fins, a chair with a coat and a prize rosette, a chair leg tied up with wire, a toy eagle with a bandaged wing, a mobile of paper birds, a curious boy with a magnifying glass over a pocket watch and an umbrella patched with tape.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "reparation",
+     "label": "l'atelier",
+     "hint": "Go back through the red door to the workshop",
+     "hit": [
+      240,
+      90,
+      140,
+      505
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_desert_adj",
+     "box": [
+      425,
+      108,
+      125,
+      115
+     ]
+    },
+    {
+     "id": "fr_fixe_adj",
+     "box": [
+      566,
+      106,
+      86,
+      160
+     ]
+    },
+    {
+     "id": "fr_urgent_adj",
+     "box": [
+      662,
+      130,
+      72,
+      95
+     ]
+    },
+    {
+     "id": "fr_casse_adj",
+     "box": [
+      735,
+      140,
+      120,
+      88
+     ]
+    },
+    {
+     "id": "fr_souple_adj",
+     "box": [
+      857,
+      118,
+      55,
+      108
+     ]
+    },
+    {
+     "id": "fr_disponible_adj",
+     "box": [
+      440,
+      252,
+      70,
+      125
+     ]
+    },
+    {
+     "id": "fr_fini_adj",
+     "box": [
+      544,
+      270,
+      104,
+      100
+     ]
+    },
+    {
+     "id": "fr_pris_adj",
+     "box": [
+      656,
+      250,
+      104,
+      125
+     ]
+    },
+    {
+     "id": "fr_provisoire_adj",
+     "box": [
+      812,
+      256,
+      56,
+      120
+     ]
+    },
+    {
+     "id": "fr_illegal_adj",
+     "box": [
+      412,
+      388,
+      104,
+      128
+     ]
+    },
+    {
+     "id": "fr_mobile_adj",
+     "box": [
+      535,
+      405,
+      102,
+      100
+     ]
+    },
+    {
+     "id": "fr_interesse_adj",
+     "box": [
+      640,
+      378,
+      142,
+      145
+     ]
+    },
+    {
+     "id": "fr_temporaire_adj",
+     "box": [
+      790,
+      400,
+      110,
+      118
+     ]
+    }
+   ]
+  },
+  "attente": {
+   "name": "La salle d'attente · The Waiting Room",
+   "room_id": "R_adj_state_04",
+   "image": "reparation/attente.jpg",
+   "backTo": "reparation",
+   "alt": "A cosy waiting room with a blue door on the left and a window on the right. A market crate full of little compartments sits on top of a wooden dresser. In the cubbies: a girl with hands pressed together beside her mended toy bike, an open birdcage with a canary flying free, a sick teddy in bed with a hot-water bottle and thermometer, a bowl of fresh strawberries, a clumsy boy whose left elbow knocks a jar of buttons, wild flowers bursting from an old kettle, a complete jigsaw, a long trailing scarf, muddy boots and a little armchair with a reserved ribbon.",
+   "nameplate": [
+    22,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "reparation",
+     "label": "l'atelier",
+     "hint": "Go back through the blue door to the workshop",
+     "hit": [
+      97,
+      94,
+      250,
+      492
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cageot",
+     "label": "le cageot",
+     "hint": "Look closer at the market crate on top of the dresser",
+     "at": [
+      641,
+      214
+     ],
+     "obj": [
+      473,
+      46,
+      336,
+      186
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_pret_adj",
+     "box": [
+      383,
+      250,
+      125,
+      112
+     ]
+    },
+    {
+     "id": "fr_libre_adj",
+     "box": [
+      545,
+      255,
+      98,
+      112
+     ]
+    },
+    {
+     "id": "fr_malade_adj",
+     "box": [
+      664,
+      258,
+      118,
+      110
+     ]
+    },
+    {
+     "id": "fr_frais_adj",
+     "box": [
+      808,
+      262,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_gauche_adj",
+     "box": [
+      372,
+      385,
+      132,
+      150
+     ]
+    },
+    {
+     "id": "fr_sauvage_adj",
+     "box": [
+      537,
+      384,
+      104,
+      100
+     ]
+    },
+    {
+     "id": "fr_complet_adj",
+     "box": [
+      664,
+      386,
+      118,
+      92
+     ]
+    },
+    {
+     "id": "fr_continu_adj",
+     "box": [
+      802,
+      388,
+      128,
+      125
+     ]
+    },
+    {
+     "id": "fr_boueux_adj",
+     "box": [
+      531,
+      512,
+      102,
+      92
+     ]
+    },
+    {
+     "id": "fr_reserve_adj",
+     "box": [
+      670,
+      500,
+      110,
+      100
+     ]
+    }
+   ]
+  },
+  "cageot": {
+   "name": "Le cageot · The Market Crate",
+   "room_id": "R_adj_state_04_z1",
+   "image": "reparation/cageot.jpg",
+   "parent": "attente",
+   "alt": "A close look into the market crate: a jar of cloudy water, a pacifier on a blue blanket, a cactus in dry cracked earth, an empty birdhouse, a whole wholemeal loaf, a flowing silk ribbon, a little Earth globe, a last biscuit with an ant resting beside it, a toy lion and a toothbrush with toothpaste.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_impur_adj",
+     "box": [
+      350,
+      156,
+      104,
+      134
+     ]
+    },
+    {
+     "id": "fr_pacifique_adj",
+     "box": [
+      496,
+      176,
+      140,
+      114
+     ]
+    },
+    {
+     "id": "fr_aride_adj",
+     "box": [
+      654,
+      130,
+      112,
+      160
+     ]
+    },
+    {
+     "id": "fr_vacant_adj",
+     "box": [
+      792,
+      145,
+      120,
+      145
+     ]
+    },
+    {
+     "id": "fr_integral_adj",
+     "box": [
+      330,
+      300,
+      134,
+      104
+     ]
+    },
+    {
+     "id": "fr_fluide_adj",
+     "box": [
+      506,
+      305,
+      266,
+      100
+     ]
+    },
+    {
+     "id": "fr_terrien_adj",
+     "box": [
+      812,
+      298,
+      112,
+      106
+     ]
+    },
+    {
+     "id": "fr_restant_adj",
+     "box": [
+      328,
+      415,
+      124,
+      102
+     ]
+    },
+    {
+     "id": "fr_lyonnais_adj",
+     "box": [
+      531,
+      408,
+      160,
+      110
+     ]
+    },
+    {
+     "id": "fr_oral_adj",
+     "box": [
+      725,
+      428,
+      240,
+      92
+     ]
+    }
+   ]
+  },
+  "pannes": {
+   "name": "La salle des pannes · The Breakdown Room",
+   "room_id": "R_adj_state_05",
+   "image": "reparation/pannes.jpg",
+   "backTo": "reparation",
+   "alt": "The breakdown room, with a green door on the left and a window and tool rack on the right. A whirring fan stands on top of the shelves. In the cubbies: three cups each on its own saucer, a frozen jelly, a jigsaw with a missing piece, a violin with a snapped string, a puzzled man hunting for the glasses on his own head, an empty picture frame, a plug in a socket, a toaster flinging toast, a square peg block, a flickering bulb, a toppling wind-up ant and a cat asleep on a switched-off radio.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "reparation",
+     "label": "l'atelier",
+     "hint": "Go back through the green door to the workshop",
+     "hit": [
+      82,
+      100,
+      218,
+      488
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_operationnel_adj",
+     "box": [
+      583,
+      86,
+      116,
+      138
+     ]
+    },
+    {
+     "id": "fr_respectif_adj",
+     "box": [
+      340,
+      268,
+      160,
+      70
+     ]
+    },
+    {
+     "id": "fr_gele_adj",
+     "box": [
+      528,
+      252,
+      106,
+      86
+     ]
+    },
+    {
+     "id": "fr_manquant_adj",
+     "box": [
+      666,
+      250,
+      100,
+      88
+     ]
+    },
+    {
+     "id": "fr_infidele_adj",
+     "box": [
+      800,
+      240,
+      150,
+      85
+     ]
+    },
+    {
+     "id": "fr_introuvable_adj",
+     "box": [
+      338,
+      350,
+      150,
+      128
+     ]
+    },
+    {
+     "id": "fr_inexistant_adj",
+     "box": [
+      528,
+      362,
+      88,
+      100
+     ]
+    },
+    {
+     "id": "fr_compatible_adj",
+     "box": [
+      670,
+      362,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_defectueux_adj",
+     "box": [
+      808,
+      345,
+      124,
+      124
+     ]
+    },
+    {
+     "id": "fr_incompatible_adj",
+     "box": [
+      372,
+      496,
+      92,
+      86
+     ]
+    },
+    {
+     "id": "fr_intermittent_adj",
+     "box": [
+      525,
+      480,
+      90,
+      106
+     ]
+    },
+    {
+     "id": "fr_defaillant_adj",
+     "box": [
+      666,
+      505,
+      110,
+      82
+     ]
+    },
+    {
+     "id": "fr_inactif_adj",
+     "box": [
+      806,
+      480,
+      140,
+      114
+     ]
+    }
+   ]
+  }
+ }
+}

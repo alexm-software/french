@@ -11,11 +11,11 @@
   },
   {
    "key": "vacanciers",
-   "short": "Les vacanciers"
+   "short": "Le jardin"
   },
   {
    "key": "demenageurs",
-   "short": "Les déménageurs"
+   "short": "La cour"
   },
   {
    "key": "voisins",
@@ -23,7 +23,7 @@
   },
   {
    "key": "lambins",
-   "short": "La ruelle"
+   "short": "Le sentier"
   }
  ],
  "planned": {
@@ -87,63 +87,63 @@
   "st_bagages": {
    "name": "Chemin des Éclaireurs",
    "image": "st_bagages/st_bagages.jpg",
-   "alt": "A rainy station street with tram tracks and a green tram: Monsieur Verbe the mime strides off empty-handed and leaves his cake alone on a café table, spots a pear on top of a lamp post through binoculars, walks a lost duckling back to its white mother duck, rides a courier bicycle loaded with parcels, puts a toy tram back together from its pieces and claims a red armchair as his own, mirror in hand. The stone archway on the left leads back to the crossroads; the green door, the iron gate, the stone stairs and the arched passage lead on.",
+   "alt": "A sunny country road winding between hedges and green fields, with a wooden bus shelter, a signpost and a reedy pond, painted in ink and gouache: Monsieur Verbe strides away leaving his slice of cake alone on a picnic table; spots a pear on top of the signpost through binoculars; walks a lost duckling back to its mother at the pond; rides a delivery bike piled with parcels in a gold beret; kneels to put a toy bus back together; and lounges in an abandoned red armchair on the verge, admiring himself in a hand mirror. The road on the left leads back to the crossroads. The green caravan door, the iron farm gate, the stile steps and the arch in the hedge lead on.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     30,
-     130,
-     150,
-     200
+     120,
+     135,
+     110,
+     120
     ],
     "label": "Carrefour des Voyages"
    },
    "doors": [
     {
      "to": "vacanciers",
-     "label": "Rue des Vacanciers",
-     "hint": "Through the green door under the striped canopy",
+     "label": "Jardin des Vacanciers",
+     "hint": "Through the green door of the caravan under the striped canopy",
      "hit": [
-      262,
-      272,
-      28,
-      72
+      38,
+      206,
+      40,
+      100
      ]
     },
     {
      "to": "demenageurs",
-     "label": "Rue des Déménageurs",
-     "hint": "Through the iron gate",
+     "label": "Cour des Déménageurs",
+     "hint": "Through the iron farm gate",
      "hit": [
-      645,
-      212,
-      105,
-      135
+      631,
+      238,
+      110,
+      137
      ]
     },
     {
      "to": "voisins",
      "label": "Allée des Nouveaux-Voisins",
-     "hint": "Up the stone stairs",
+     "hint": "Up the stone steps of the stile",
      "hit": [
-      890,
-      212,
-      100,
-      135
+      745,
+      188,
+      78,
+      190
      ]
     },
     {
      "to": "lambins",
-     "label": "Ruelle des Lambins",
-     "hint": "Through the arched passage",
+     "label": "Sentier des Lambins",
+     "hint": "Through the arch in the hedge",
      "hit": [
-      1120,
-      206,
-      130,
-      135
+      1030,
+      150,
+      68,
+      150
      ]
     }
    ],
@@ -152,65 +152,65 @@
     {
      "id": "fr_deserter_verb",
      "box": [
-      25,
-      350,
-      255,
-      275
+      50,
+      312,
+      235,
+      240
      ]
     },
     {
      "id": "fr_reperer_verb",
      "box": [
-      296,
-      350,
-      104,
-      275
+      425,
+      128,
+      140,
+      362
      ]
     },
     {
      "id": "fr_raccompagner_verb",
      "box": [
-      430,
-      355,
-      230,
-      285
+      568,
+      418,
+      282,
+      227
      ]
     },
     {
      "id": "fr_parcourir_verb",
      "box": [
-      668,
-      356,
-      215,
-      290
+      835,
+      222,
+      190,
+      190
      ]
     },
     {
      "id": "fr_reconstituer_verb",
      "box": [
-      900,
-      450,
+      870,
+      472,
       165,
-      180
+      190
      ]
     },
     {
      "id": "fr_approprier_verb",
      "box": [
-      1075,
-      355,
-      195,
-      285
+      1040,
+      304,
+      225,
+      196
      ]
     }
    ],
    "room_id": "ST_movement_seg016"
   },
   "vacanciers": {
-   "name": "Rue des Vacanciers",
+   "name": "Jardin des Vacanciers",
    "image": "st_bagages/vacanciers.jpg",
    "backTo": "st_bagages",
-   "alt": "A rainy holiday street with a little hotel as the sun comes out: Monsieur Verbe the mime steps off a ferry gangway with a patchwork suitcase and his pet moose, diverts the rainwater from a drainpipe into a flower pot, lounges on the hotel balcony with his tea, hands his tray and towel to a cat to quit his job, lowers his umbrella and points as the sun reappears and in a magician's top hat gasps as a cat pops back out of his other hat. The stone archway on the left leads back to the station street; the hotel door on the right leads on.",
+   "alt": "The garden of a little country guesthouse after a shower, with deckchairs, a tea table and flower pots, and a country bus stopped at the gate: Monsieur Verbe steps off the bus with his suitcase and his pet moose; guides rainwater from the gutter into a flower pot; relaxes in a deckchair with his feet up and a cup of tea; hands his waiter's tray and towel to a cat; lowers his umbrella and points as the sun comes back out, in a gold beret; and, in a gold beret, pulls a cat out of his magician's hat. The stone archway on the left leads back to the road; the guesthouse door leads on.",
    "nameplate": [
     72,
     4.5
@@ -221,20 +221,20 @@
      "label": "Chemin des Éclaireurs",
      "hint": "Back through the stone archway",
      "hit": [
-      50,
-      110,
-      200,
-      170
+      20,
+      155,
+      165,
+      230
      ]
     },
     {
      "to": "demenageurs",
-     "label": "Rue des Déménageurs",
-     "hint": "Through the hotel door",
+     "label": "Cour des Déménageurs",
+     "hint": "Through the guesthouse door",
      "hit": [
-      1165,
-      300,
-      70,
+      1112,
+      150,
+      65,
       140
      ]
     }
@@ -244,65 +244,65 @@
     {
      "id": "fr_immigrer_verb",
      "box": [
-      45,
-      295,
-      250,
-      305
+      190,
+      200,
+      235,
+      215
      ]
     },
     {
      "id": "fr_detourner_verb",
      "box": [
-      306,
-      338,
-      205,
-      280
+      345,
+      425,
+      155,
+      265
      ]
     },
     {
      "id": "fr_sejourner_verb",
      "box": [
-      538,
-      25,
-      190,
-      155
+      556,
+      394,
+      238,
+      220
      ]
     },
     {
      "id": "fr_demissionner_verb",
      "box": [
-      550,
-      325,
-      215,
-      250
+      797,
+      352,
+      208,
+      230
      ]
     },
     {
      "id": "fr_reparaitre_verb",
      "box": [
-      806,
-      325,
-      155,
-      315
+      750,
+      160,
+      165,
+      188
      ]
     },
     {
      "id": "fr_reapparaitre_verb",
      "box": [
-      975,
-      320,
-      180,
-      330
+      1025,
+      375,
+      225,
+      240
      ]
     }
    ],
    "room_id": "ST_movement_seg017"
   },
   "demenageurs": {
-   "name": "Rue des Déménageurs",
+   "name": "Cour des Déménageurs",
    "image": "st_bagages/demenageurs.jpg",
    "backTo": "st_bagages",
-   "alt": "A rainy street on moving day with a blue removal van: Monsieur Verbe the mime pushes two potted bushes apart for his hand cart, walks up the van ramp with his clipboard to load an armchair, struggles to move in a suit of armour with his mirror, holds up a red cushion that stands out on a pile of white ones, pours his goldfish into a big new tank and dabs happy tears with his handkerchief over a letter. The iron gate on the left leads back to the station street; the stone archway on the right leads on.",
+   "alt": "Moving day in a farmhouse yard down a country lane, with hay bales in the fields and a removal van with its ramp down: Monsieur Verbe pushes two bushes apart to make room for his handcart; wheels an armchair up the ramp with his clipboard; clanks about in a heavy suit of armour with a gold beret, checking himself in a hand mirror; holds up one red cushion from a pile of white ones in a gold beret; pours his goldfish from a small bowl into a big tank; and dabs happy tears over a letter in a gold beret. The iron gate on the left leads back to the road; the stone archway leads on.",
    "nameplate": [
     50,
     4.5
@@ -311,12 +311,12 @@
     {
      "to": "st_bagages",
      "label": "Chemin des Éclaireurs",
-     "hint": "Back through the iron gate",
+     "hint": "Back through the iron farm gate",
      "hit": [
-      25,
-      40,
-      200,
-      280
+      88,
+      45,
+      180,
+      235
      ]
     },
     {
@@ -324,10 +324,10 @@
      "label": "Allée des Nouveaux-Voisins",
      "hint": "Through the stone archway",
      "hit": [
-      1045,
-      115,
-      200,
-      180
+      1085,
+      60,
+      95,
+      160
      ]
     }
    ],
@@ -336,55 +336,55 @@
     {
      "id": "fr_ecarter_verb",
      "box": [
-      10,
-      330,
-      340,
-      295
+      55,
+      280,
+      360,
+      300
      ]
     },
     {
      "id": "fr_demenager_verb",
      "box": [
-      375,
-      280,
-      190,
-      250
+      570,
+      100,
+      210,
+      198
      ]
     },
     {
      "id": "fr_mouvoir_verb",
      "box": [
-      581,
+      425,
       330,
-      175,
-      295
+      235,
+      375
      ]
     },
     {
      "id": "fr_ressortir_verb",
      "box": [
-      762,
-      343,
-      155,
-      300
+      782,
+      302,
+      180,
+      398
      ]
     },
     {
      "id": "fr_transferer_verb",
      "box": [
-      944,
-      343,
-      175,
-      290
+      965,
+      225,
+      140,
+      300
      ]
     },
     {
      "id": "fr_emouvoir_verb",
      "box": [
-      1126,
-      340,
-      135,
-      290
+      1110,
+      320,
+      155,
+      380
      ]
     }
    ],
@@ -394,7 +394,7 @@
    "name": "Allée des Nouveaux-Voisins",
    "image": "st_bagages/voisins.jpg",
    "backTo": "st_bagages",
-   "alt": "A rainy lane of houses with window boxes: Monsieur Verbe the mime moves into his new house with a parrot, a rabbit and a cat, climbs a ladder to his own upstairs window, is baffled by a cat playing a tuba, ignores his dusty piano to munch a deli sandwich, swoons from the heat of a radiator into a red armchair and, arms crossed, turns up his nose at a plate of sprouts. The iron gate at the end of the lane leads back to the station street; the wooden garden gate on the right leads on.",
+   "alt": "A small new cottage with a front garden at the edge of green fields, a washing line and a picket fence, under a blazing sun: Monsieur Verbe carries a box inside followed by a parrot, a rabbit and a cat; climbs a ladder to an upstairs window in a gold beret; scratches his head at a cat playing a tuba at the cellar window; walks away from a dusty piano munching a deli sandwich; nearly faints from the heat in a deckchair, fanning himself, in a gold beret; and turns up his nose at a plate of sprouts. The iron gate on the left leads back to the road; the wooden garden gate leads on.",
    "nameplate": [
     50,
     4.5
@@ -405,21 +405,21 @@
      "label": "Chemin des Éclaireurs",
      "hint": "Back through the iron gate at the end of the lane",
      "hit": [
-      862,
-      345,
-      70,
-      48
+      40,
+      280,
+      210,
+      210
      ]
     },
     {
      "to": "lambins",
-     "label": "Ruelle des Lambins",
+     "label": "Sentier des Lambins",
      "hint": "Through the wooden garden gate",
      "hit": [
-      1162,
-      350,
-      95,
-      205
+      1050,
+      275,
+      130,
+      140
      ]
     }
    ],
@@ -428,65 +428,65 @@
     {
      "id": "fr_emmenager_verb",
      "box": [
-      15,
+      415,
       280,
-      230,
-      340
+      215,
+      230
      ]
     },
     {
      "id": "fr_recourir_verb",
      "box": [
-      256,
-      70,
-      145,
-      330
+      630,
+      100,
+      135,
+      215
      ]
     },
     {
      "id": "fr_deconcerter_verb",
      "box": [
-      412,
-      85,
-      120,
-      540
+      300,
+      512,
+      275,
+      200
      ]
     },
     {
      "id": "fr_delaisser_verb",
      "box": [
-      545,
-      340,
-      190,
-      285
+      632,
+      320,
+      210,
+      148
      ]
     },
     {
      "id": "fr_defaillir_verb",
      "box": [
-      750,
-      400,
-      210,
-      240
+      735,
+      470,
+      295,
+      230
      ]
     },
     {
      "id": "fr_dedaigner_verb",
      "box": [
-      970,
-      385,
-      180,
-      250
+      1030,
+      425,
+      170,
+      190
      ]
     }
    ],
    "room_id": "ST_movement_seg019"
   },
   "lambins": {
-   "name": "Ruelle des Lambins",
+   "name": "Sentier des Lambins",
    "image": "st_bagages/lambins.jpg",
    "backTo": "st_bagages",
-   "alt": "A quiet rainy back lane with a café awning: Monsieur Verbe the mime weaves his bicycle back and forth through the puddles, unplugs his laptop, mirror in hand, jumps back as a tower of old books crumbles and tumbles, slips away from the café with his coat over his arm and his mirror in hand, dawdles with his satchel to watch two snails on a café table and sings out loud on a crate to the pigeons. The stone archway on the left leads back to the station street.",
+   "alt": "A slow, grassy lane between hedgerows and fields after rain, with puddles, a picnic bench and a huge old oak: Monsieur Verbe weaves his bike back and forth between the puddles; unplugs his laptop at the picnic bench, mirror in hand; jumps back as a tower of old books on a wheelbarrow collapses; puts on his coat and tiptoes away, mirror in hand; crouches with his satchel to watch two snails race on a tree stump; and stands on a crate singing to the pigeons. The arch in the hedge on the left leads back to the road.",
    "nameplate": [
     50,
     4.5
@@ -495,12 +495,12 @@
     {
      "to": "st_bagages",
      "label": "Chemin des Éclaireurs",
-     "hint": "Back through the stone archway",
+     "hint": "Back through the arch in the hedge",
      "hit": [
-      5,
-      125,
-      170,
-      160
+      40,
+      60,
+      150,
+      190
      ]
     }
    ],
@@ -509,55 +509,55 @@
     {
      "id": "fr_sillonner_verb",
      "box": [
-      30,
-      300,
-      195,
-      340
+      70,
+      290,
+      160,
+      320
      ]
     },
     {
      "id": "fr_deconnecter_verb",
      "box": [
-      258,
-      312,
-      185,
-      275
+      255,
+      255,
+      240,
+      235
      ]
     },
     {
      "id": "fr_crouler_verb",
      "box": [
-      482,
-      88,
-      205,
-      512
+      495,
+      200,
+      250,
+      350
      ]
     },
     {
      "id": "fr_absenter_verb",
      "box": [
-      700,
-      306,
-      185,
-      310
+      748,
+      200,
+      135,
+      215
      ]
     },
     {
      "id": "fr_muser_verb",
      "box": [
-      895,
-      356,
-      170,
-      270
+      745,
+      425,
+      295,
+      210
      ]
     },
     {
      "id": "fr_entonner_verb",
      "box": [
-      1075,
-      275,
-      165,
-      310
+      1050,
+      160,
+      215,
+      330
      ]
     }
    ],

@@ -1,0 +1,524 @@
+{
+ "building": "st_bricoleurs",
+ "building_id": "ST_bricoleurs",
+ "sector_id": "S02_home",
+ "name": "Avenue des Petits Travaux · Odd-jobs Avenue",
+ "main": "st_bricoleurs",
+ "roomList": [
+  {
+   "key": "st_bricoleurs",
+   "short": "Bricoleurs"
+  },
+  {
+   "key": "houppettes",
+   "short": "Houppettes"
+  },
+  {
+   "key": "reveillematin",
+   "short": "Réveille-Matin"
+  },
+  {
+   "key": "selliers",
+   "short": "Selliers"
+  },
+  {
+   "key": "rendormis",
+   "short": "Rendormis"
+  }
+ ],
+ "planned": {
+  "st_bricoleurs": {
+   "vocabRoom": "ST_routine_seg015",
+   "only": [
+    "fr_ruser_verb",
+    "fr_bricoler_verb",
+    "fr_conjuguer_verb",
+    "fr_adjoindre_verb",
+    "fr_decortiquer_verb",
+    "fr_costumer_verb"
+   ]
+  },
+  "houppettes": {
+   "vocabRoom": "ST_routine_seg016",
+   "only": [
+    "fr_voiturer_verb",
+    "fr_culminer_verb",
+    "fr_poudrer_verb",
+    "fr_degainer_verb",
+    "fr_gommer_verb",
+    "fr_alleger_verb"
+   ]
+  },
+  "reveillematin": {
+   "vocabRoom": "ST_routine_seg017",
+   "only": [
+    "fr_rider_verb",
+    "fr_outrer_verb",
+    "fr_abstenir_verb",
+    "fr_doucher_verb",
+    "fr_egrener_verb",
+    "fr_alarmer_verb"
+   ]
+  },
+  "selliers": {
+   "vocabRoom": "ST_routine_seg018",
+   "only": [
+    "fr_seller_verb",
+    "fr_ecumer_verb",
+    "fr_assecher_verb",
+    "fr_renouer_verb",
+    "fr_friser_verb",
+    "fr_sieger_verb"
+   ]
+  },
+  "rendormis": {
+   "vocabRoom": "ST_routine_seg019",
+   "only": [
+    "fr_bonder_verb",
+    "fr_rendormir_verb",
+    "fr_adosser_verb",
+    "fr_degourdir_verb",
+    "fr_apposer_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_bricoleurs": {
+   "name": "Allée des Bricoleurs · Do-It-Yourselfers' Alley",
+   "room_id": "ST_routine_seg015",
+   "image": "st_bricoleurs/st_bricoleurs.jpg",
+   "alt": "A high-summer country path between tree-lined lawns and a wooden fence: a mime hides in a rose bush, one lays bricks for a birdhouse, one ties two milk jugs together, a gold-beret mime with a mirror joins the fence, one shells peanuts over a tea cake at a picnic table, one wears a ladybird costume with a may-blossom crown. A wooden gateway leads back to the street; a pink hedge door, a yellow cottage door with a bell, a red barn and a green hedge arch lead on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     50,
+     106,
+     169,
+     219
+    ],
+    "label": "Rue des Maisons"
+   },
+   "doors": [
+    {
+     "to": "houppettes",
+     "label": "Ruelle des Houppettes · Powder-Puffs Lane",
+     "hint": "Through the pink door in the rose hedge",
+     "hit": [
+      331,
+      138,
+      112,
+      168
+     ]
+    },
+    {
+     "to": "reveillematin",
+     "label": "Rue du Réveille-Matin · Alarm-Clock Street",
+     "hint": "Through the yellow cottage door with the bell",
+     "hit": [
+      606,
+      169,
+      79,
+      129
+     ]
+    },
+    {
+     "to": "selliers",
+     "label": "Rue des Selliers · Saddlers' Street",
+     "hint": "Into the red barn",
+     "hit": [
+      838,
+      138,
+      162,
+      160
+     ]
+    },
+    {
+     "to": "rendormis",
+     "label": "Impasse des Rendormis · Back-to-Sleep Close",
+     "hint": "Through the green hedge arch",
+     "hit": [
+      1056,
+      106,
+      169,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ruser_verb",
+     "box": [
+      30,
+      365,
+      220,
+      275
+     ]
+    },
+    {
+     "id": "fr_bricoler_verb",
+     "box": [
+      256,
+      322,
+      256,
+      246
+     ]
+    },
+    {
+     "id": "fr_conjuguer_verb",
+     "box": [
+      520,
+      362,
+      150,
+      330
+     ]
+    },
+    {
+     "id": "fr_adjoindre_verb",
+     "box": [
+      681,
+      310,
+      181,
+      284
+     ]
+    },
+    {
+     "id": "fr_decortiquer_verb",
+     "box": [
+      905,
+      350,
+      190,
+      240
+     ]
+    },
+    {
+     "id": "fr_costumer_verb",
+     "box": [
+      1106,
+      338,
+      144,
+      368
+     ]
+    }
+   ]
+  },
+  "houppettes": {
+   "name": "Ruelle des Houppettes · Powder-Puffs Lane",
+   "room_id": "ST_routine_seg016",
+   "image": "st_bricoleurs/houppettes.jpg",
+   "backTo": "st_bricoleurs",
+   "alt": "A summer lane of pink pom-pom hydrangeas curving to a grassy hill: a mime drives two children in a little cream car, one cheers on the hilltop in sunglasses, one powders a curly wig, one quick-draws a paintbrush beside a startled pony, one blows bubble gum while erasing a drawing, one hauls a huge book out of his rucksack. The pink garden gate on the left leads back.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bricoleurs",
+     "label": "Allée des Bricoleurs · Do-It-Yourselfers' Alley",
+     "hint": "Back through the pink garden gate",
+     "hit": [
+      119,
+      215,
+      130,
+      95
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_voiturer_verb",
+     "box": [
+      169,
+      312,
+      288,
+      250
+     ]
+    },
+    {
+     "id": "fr_culminer_verb",
+     "box": [
+      880,
+      80,
+      95,
+      125
+     ]
+    },
+    {
+     "id": "fr_poudrer_verb",
+     "box": [
+      612,
+      206,
+      213,
+      194
+     ]
+    },
+    {
+     "id": "fr_degainer_verb",
+     "box": [
+      475,
+      412,
+      380,
+      245
+     ]
+    },
+    {
+     "id": "fr_gommer_verb",
+     "box": [
+      862,
+      281,
+      175,
+      158
+     ]
+    },
+    {
+     "id": "fr_alleger_verb",
+     "box": [
+      918,
+      444,
+      250,
+      262
+     ]
+    }
+   ]
+  },
+  "reveillematin": {
+   "name": "Rue du Réveille-Matin · Alarm-Clock Street",
+   "room_id": "ST_routine_seg017",
+   "image": "st_bricoleurs/reveillematin.jpg",
+   "backTo": "st_bricoleurs",
+   "alt": "A cottage back garden at sunrise with a lily pond and a checked breakfast table: a mime pedals a red pedal boat, one gasps at a tipped breakfast tray, a gold-beret mime with a mirror waves away jam doughnuts, a mime with a mirror showers under a watering can, one pops green peas into a bowl, one leaps at a ringing alarm clock. The yellow cottage door with the bell leads back.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bricoleurs",
+     "label": "Allée des Bricoleurs · Do-It-Yourselfers' Alley",
+     "hint": "Back through the yellow cottage door",
+     "hit": [
+      60,
+      125,
+      100,
+      140
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_rider_verb",
+     "box": [
+      20,
+      272,
+      290,
+      300
+     ]
+    },
+    {
+     "id": "fr_outrer_verb",
+     "box": [
+      325,
+      319,
+      150,
+      375
+     ]
+    },
+    {
+     "id": "fr_abstenir_verb",
+     "box": [
+      480,
+      225,
+      230,
+      330
+     ]
+    },
+    {
+     "id": "fr_doucher_verb",
+     "box": [
+      775,
+      112,
+      175,
+      215
+     ]
+    },
+    {
+     "id": "fr_egrener_verb",
+     "box": [
+      740,
+      335,
+      225,
+      290
+     ]
+    },
+    {
+     "id": "fr_alarmer_verb",
+     "box": [
+      990,
+      212,
+      250,
+      365
+     ]
+    }
+   ]
+  },
+  "selliers": {
+   "name": "Rue des Selliers · Saddlers' Street",
+   "room_id": "ST_routine_seg018",
+   "image": "st_bricoleurs/selliers.jpg",
+   "backTo": "st_bricoleurs",
+   "alt": "A sunny stable yard behind the red barn: a mime saddles a brown pony, one scrubs a wash tub whose foam towers like a cloud, one pours a sachet of sawdust on a puddle, one re-ties a snapped swing rope, one brushes a white horse's mane into frizzy curls, one sits on a hay-bale throne with a blue jay. The open barn doors lead back.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bricoleurs",
+     "label": "Allée des Bricoleurs · Do-It-Yourselfers' Alley",
+     "hint": "Back through the open barn doors",
+     "hit": [
+      60,
+      105,
+      180,
+      125
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_seller_verb",
+     "box": [
+      15,
+      240,
+      270,
+      385
+     ]
+    },
+    {
+     "id": "fr_ecumer_verb",
+     "box": [
+      290,
+      80,
+      235,
+      580
+     ]
+    },
+    {
+     "id": "fr_assecher_verb",
+     "box": [
+      530,
+      369,
+      235,
+      320
+     ]
+    },
+    {
+     "id": "fr_renouer_verb",
+     "box": [
+      620,
+      100,
+      200,
+      262
+     ]
+    },
+    {
+     "id": "fr_friser_verb",
+     "box": [
+      830,
+      240,
+      215,
+      405
+     ]
+    },
+    {
+     "id": "fr_sieger_verb",
+     "box": [
+      1050,
+      115,
+      200,
+      490
+     ]
+    }
+   ]
+  },
+  "rendormis": {
+   "name": "Impasse des Rendormis · Back-to-Sleep Close",
+   "room_id": "ST_routine_seg019",
+   "image": "st_bricoleurs/rendormis.jpg",
+   "backTo": "st_bricoleurs",
+   "alt": "A shady summer close under a great oak with a sleepy blue-doored cottage: a mime carries a basket crammed with buns, a gold-beret mime sleeps in a hammock, a mime dozes against the oak, a green-beret mime stretches beside a young deer, a mime hangs a posy on the picket gate. The green hedge arch on the left leads back.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_bricoleurs",
+     "label": "Allée des Bricoleurs · Do-It-Yourselfers' Alley",
+     "hint": "Back through the green hedge arch",
+     "hit": [
+      60,
+      190,
+      105,
+      250
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bonder_verb",
+     "box": [
+      170,
+      270,
+      200,
+      375
+     ]
+    },
+    {
+     "id": "fr_rendormir_verb",
+     "box": [
+      406,
+      225,
+      294,
+      160
+     ]
+    },
+    {
+     "id": "fr_adosser_verb",
+     "box": [
+      725,
+      225,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_degourdir_verb",
+     "box": [
+      494,
+      390,
+      505,
+      262
+     ]
+    },
+    {
+     "id": "fr_apposer_verb",
+     "box": [
+      1000,
+      256,
+      170,
+      310
+     ]
+    }
+   ]
+  }
+ }
+}
