@@ -1,0 +1,440 @@
+{
+ "building": "poste",
+ "building_id": "B15_poste",
+ "sector_id": "S06_townhall",
+ "name": "La poste · The Post Office",
+ "main": "poste",
+ "roomList": [
+  {
+   "key": "poste",
+   "short": "La poste"
+  },
+  {
+   "key": "guichet",
+   "short": "Le guichet"
+  },
+  {
+   "key": "cour",
+   "short": "La cour"
+  }
+ ],
+ "planned": {
+  "poste": {
+   "vocabRoom": "R_post_01",
+   "only": [
+    "fr_poste_noun_f",
+    "fr_adresse_noun",
+    "fr_enveloppe_noun",
+    "fr_expedition_noun",
+    "fr_paquet_noun",
+    "fr_choc_noun",
+    "fr_drapeau_noun",
+    "fr_timbre_noun",
+    "fr_courrier_noun",
+    "fr_telegramme_noun"
+   ]
+  },
+  "guichet": {
+   "vocabRoom": "R_post_01_z1",
+   "only": [
+    "fr_guichet_noun",
+    "fr_postier_noun",
+    "fr_poincon_noun",
+    "fr_change_noun",
+    "fr_emballage_noun",
+    "fr_philtre_noun",
+    "fr_demandeur_noun",
+    "fr_expediteur_noun",
+    "fr_envoi_noun",
+    "fr_colis_noun"
+   ]
+  },
+  "cour": {
+   "vocabRoom": "R_post_01_z2",
+   "only": [
+    "fr_distribution_noun",
+    "fr_repartition_noun",
+    "fr_parcelle_noun",
+    "fr_livraison_noun",
+    "fr_remise_noun",
+    "fr_postal_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "poste": {
+   "name": "La poste · The Post Office",
+   "room_id": "R_post_01",
+   "image": "poste/poste.jpg",
+   "alt": "A sunny yellow post office hall with blue woodwork. On the left the front door stands open under a yellow-and-white striped awning, a bicycle outside; inside are a yellow post box, a girl writing an address on a big white envelope and an explorer setting down his expedition crate. A red door stands in the back wall. On the right a postman holds up a string-tied packet, a man leaps back in shock as a parcel thumps to the floor, a striped flag stands on its pole, a courier's mail bag bulges with letters, a telegraph machine curls out its tape, and a giant stamp of a tree hangs on a timber log beside a blue door.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     40,
+     90,
+     165,
+     390
+    ],
+    "label": "Place de la Mairie"
+   },
+   "doors": [
+    {
+     "to": "guichet",
+     "label": "le guichet",
+     "hint": "Go through the red door to the counter window",
+     "hit": [
+      565,
+      120,
+      150,
+      295
+     ]
+    },
+    {
+     "to": "cour",
+     "label": "la cour de livraison",
+     "hint": "Go through the blue door to the delivery yard",
+     "hit": [
+      1208,
+      100,
+      70,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_poste_noun_f",
+     "box": [
+      210,
+      340,
+      105,
+      262
+     ]
+    },
+    {
+     "id": "fr_adresse_noun",
+     "box": [
+      325,
+      335,
+      72,
+      190
+     ],
+     "labelAt": [
+      361,
+      300
+     ]
+    },
+    {
+     "id": "fr_enveloppe_noun",
+     "box": [
+      398,
+      425,
+      55,
+      42
+     ],
+     "labelAt": [
+      425,
+      535
+     ]
+    },
+    {
+     "id": "fr_expedition_noun",
+     "box": [
+      456,
+      235,
+      96,
+      285
+     ],
+     "labelAt": [
+      478,
+      200
+     ]
+    },
+    {
+     "id": "fr_paquet_noun",
+     "box": [
+      722,
+      182,
+      135,
+      305
+     ],
+     "labelAt": [
+      790,
+      150
+     ]
+    },
+    {
+     "id": "fr_choc_noun",
+     "box": [
+      862,
+      225,
+      105,
+      190
+     ],
+     "labelAt": [
+      917,
+      190
+     ]
+    },
+    {
+     "id": "fr_drapeau_noun",
+     "box": [
+      976,
+      215,
+      44,
+      200
+     ],
+     "labelAt": [
+      998,
+      418
+     ]
+    },
+    {
+     "id": "fr_timbre_noun",
+     "box": [
+      1028,
+      50,
+      165,
+      285
+     ],
+     "labelAt": [
+      1110,
+      16
+     ]
+    },
+    {
+     "id": "fr_courrier_noun",
+     "box": [
+      905,
+      462,
+      165,
+      192
+     ]
+    },
+    {
+     "id": "fr_telegramme_noun",
+     "box": [
+      1078,
+      385,
+      125,
+      110
+     ],
+     "labelAt": [
+      1112,
+      350
+     ]
+    }
+   ]
+  },
+  "guichet": {
+   "name": "Le guichet · The Counter Window",
+   "room_id": "R_post_01_z1",
+   "image": "poste/guichet.jpg",
+   "backTo": "poste",
+   "alt": "The post office counter room: on the left a red door, a window, a bench and a potted plant. On the right, behind a barred counter window, a smiling clerk in a blue cap punches a wooden date stamp onto a letter. On the counter sit a tray of exchange coins, a roll of brown wrapping paper and a pink potion dripping through a coffee filter. A woman waves her form, a man slides his letter across, and an envoy in a red sash carries a sealed letter. In front, a collie dog sits beside a big parcel.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "poste",
+     "label": "la poste",
+     "hint": "Go back through the red door to the post office hall",
+     "hit": [
+      20,
+      30,
+      180,
+      480
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_guichet_noun",
+     "box": [
+      886,
+      48,
+      62,
+      160
+     ],
+     "labelAt": [
+      917,
+      14
+     ]
+    },
+    {
+     "id": "fr_postier_noun",
+     "box": [
+      712,
+      88,
+      170,
+      145
+     ]
+    },
+    {
+     "id": "fr_poincon_noun",
+     "box": [
+      758,
+      236,
+      58,
+      62
+     ]
+    },
+    {
+     "id": "fr_change_noun",
+     "box": [
+      692,
+      345,
+      95,
+      45
+     ]
+    },
+    {
+     "id": "fr_emballage_noun",
+     "box": [
+      792,
+      338,
+      90,
+      48
+     ]
+    },
+    {
+     "id": "fr_philtre_noun",
+     "box": [
+      898,
+      268,
+      50,
+      102
+     ],
+     "labelAt": [
+      898,
+      236
+     ]
+    },
+    {
+     "id": "fr_demandeur_noun",
+     "box": [
+      958,
+      130,
+      104,
+      300
+     ]
+    },
+    {
+     "id": "fr_expediteur_noun",
+     "box": [
+      1065,
+      95,
+      110,
+      290
+     ]
+    },
+    {
+     "id": "fr_envoi_noun",
+     "box": [
+      1180,
+      70,
+      98,
+      300
+     ]
+    },
+    {
+     "id": "fr_colis_noun",
+     "box": [
+      880,
+      490,
+      320,
+      225
+     ]
+    }
+   ]
+  },
+  "cour": {
+   "name": "La cour de livraison · The Delivery Yard",
+   "room_id": "R_post_01_z2",
+   "image": "poste/cour.jpg",
+   "backTo": "poste",
+   "alt": "The sunny cobbled yard behind the yellow post office. Against the wall a postwoman drops letters into three wooden letterboxes above a sorting tray split by a partition. A boy by his bicycle leaves a box of raisins at the blue door, two girls hand over a parcel, and a little fenced vegetable plot grows in the corner. A red postal van is parked in the middle, with a lawn, a stone wall and a big tree on the right.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "poste",
+     "label": "la poste",
+     "hint": "Go back through the blue door to the post office hall",
+     "hit": [
+      282,
+      130,
+      56,
+      80
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_distribution_noun",
+     "box": [
+      40,
+      120,
+      230,
+      140
+     ]
+    },
+    {
+     "id": "fr_repartition_noun",
+     "box": [
+      25,
+      262,
+      230,
+      120
+     ]
+    },
+    {
+     "id": "fr_parcelle_noun",
+     "box": [
+      0,
+      480,
+      370,
+      238
+     ]
+    },
+    {
+     "id": "fr_livraison_noun",
+     "box": [
+      292,
+      215,
+      130,
+      195
+     ]
+    },
+    {
+     "id": "fr_remise_noun",
+     "box": [
+      480,
+      255,
+      150,
+      225
+     ]
+    },
+    {
+     "id": "fr_postal_adj",
+     "box": [
+      632,
+      172,
+      175,
+      200
+     ]
+    }
+   ]
+  }
+ }
+}
