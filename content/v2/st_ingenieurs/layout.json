@@ -1,0 +1,387 @@
+{
+ "building": "st_ingenieurs",
+ "building_id": "ST_ingenieurs",
+ "sector_id": "S10_university",
+ "name": "Allée des Ingénieurs · Engineers Walk",
+ "main": "st_ingenieurs",
+ "roomList": [
+  {
+   "key": "st_ingenieurs",
+   "short": "Chapeliers"
+  },
+  {
+   "key": "paveurs",
+   "short": "Paveurs"
+  },
+  {
+   "key": "verriers",
+   "short": "Verriers"
+  },
+  {
+   "key": "vitraux",
+   "short": "Vitraux"
+  }
+ ],
+ "planned": {
+  "st_ingenieurs": {
+   "vocabRoom": "ST_making_seg010",
+   "only": [
+    "fr_faconner_verb",
+    "fr_reinventer_verb",
+    "fr_devaster_verb",
+    "fr_assembler_verb",
+    "fr_impatienter_verb"
+   ]
+  },
+  "paveurs": {
+   "vocabRoom": "ST_making_seg011",
+   "only": [
+    "fr_paver_verb",
+    "fr_instaurer_verb",
+    "fr_structurer_verb",
+    "fr_approvisionner_verb",
+    "fr_generer_verb"
+   ]
+  },
+  "verriers": {
+   "vocabRoom": "ST_making_seg012",
+   "only": [
+    "fr_emailler_verb",
+    "fr_axer_verb",
+    "fr_fuser_verb",
+    "fr_synthetiser_verb",
+    "fr_exporter_verb"
+   ]
+  },
+  "vitraux": {
+   "vocabRoom": "ST_making_seg013",
+   "only": [
+    "fr_styliser_verb",
+    "fr_superposer_verb",
+    "fr_chiner_verb",
+    "fr_roser_verb",
+    "fr_sublimer_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "st_ingenieurs": {
+   "name": "Rue des Chapeliers · Hatters' Street",
+   "room_id": "ST_making_seg010",
+   "image": "st_ingenieurs/st_ingenieurs.jpg",
+   "alt": "An autumn engineering avenue on the campus: red-brick workshop walls under orange trees, glass-and-brick buildings and a big blue iron gear sculpture behind. On the left a brick archway opens back onto the campus path where two students walk away; along the wall stand a teal door, an orange door and a green arched door. Monsieur Verbe shapes a grey felt hat on a wooden hat block at the hat-maker's bench; another holds up a top hat with a little propeller on top; another clutches his face before a vast heap of toppled hatboxes; another kneels to assemble a metal stool with a screwdriver; and on the right another stands with crossed arms tapping his foot beside a tall mirror that shows his reflection.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     235,
+     108,
+     115,
+     262
+    ],
+    "label": "Campus"
+   },
+   "doors": [
+    {
+     "to": "paveurs",
+     "label": "Rue des Paveurs · Cobble-Layers' Street",
+     "hint": "Through the teal door",
+     "hit": [
+      440,
+      168,
+      116,
+      72
+     ]
+    },
+    {
+     "to": "verriers",
+     "label": "Quai des Verriers · Glassblowers' Quay",
+     "hint": "Through the orange door",
+     "hit": [
+      600,
+      175,
+      50,
+      205
+     ]
+    },
+    {
+     "to": "vitraux",
+     "label": "Impasse des Vitraux · Stained-Glass Close",
+     "hint": "Through the green arched door",
+     "hit": [
+      752,
+      188,
+      62,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_faconner_verb",
+     "box": [
+      55,
+      268,
+      175,
+      320
+     ]
+    },
+    {
+     "id": "fr_reinventer_verb",
+     "box": [
+      360,
+      246,
+      165,
+      366
+     ]
+    },
+    {
+     "id": "fr_devaster_verb",
+     "box": [
+      655,
+      258,
+      95,
+      230
+     ]
+    },
+    {
+     "id": "fr_assembler_verb",
+     "box": [
+      850,
+      430,
+      210,
+      265
+     ]
+    },
+    {
+     "id": "fr_impatienter_verb",
+     "box": [
+      1040,
+      222,
+      210,
+      205
+     ]
+    }
+   ]
+  },
+  "paveurs": {
+   "name": "Rue des Paveurs · Cobble-Layers' Street",
+   "room_id": "ST_making_seg011",
+   "image": "st_ingenieurs/paveurs.jpg",
+   "backTo": "st_ingenieurs",
+   "alt": "A campus street half laid with fresh grey cobblestones and half sandy, carpeted with orange leaves before red-brick engineering halls. On the left the teal door stands open in a brick wall. Monsieur Verbe kneels to tap a cobblestone into place with a mallet; behind him another opens the striped awning of a brand-new wooden kiosk; in the middle another bolts blue steel beams into a tall frame; another pushes a cart of crates full of apples and vegetables; and on the right another turns the crank of a brass dynamo so the bulb on top glows. A student reads on a bench.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ingenieurs",
+     "label": "Rue des Chapeliers · Hatters' Street",
+     "hint": "Back through the teal door",
+     "hit": [
+      30,
+      40,
+      140,
+      470
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_paver_verb",
+     "box": [
+      180,
+      285,
+      200,
+      360
+     ]
+    },
+    {
+     "id": "fr_instaurer_verb",
+     "box": [
+      392,
+      150,
+      150,
+      250
+     ]
+    },
+    {
+     "id": "fr_structurer_verb",
+     "box": [
+      560,
+      120,
+      165,
+      250
+     ]
+    },
+    {
+     "id": "fr_approvisionner_verb",
+     "box": [
+      728,
+      258,
+      200,
+      232
+     ]
+    },
+    {
+     "id": "fr_generer_verb",
+     "box": [
+      985,
+      205,
+      290,
+      390
+     ]
+    }
+   ]
+  },
+  "verriers": {
+   "name": "Quai des Verriers · Glassblowers' Quay",
+   "room_id": "ST_making_seg012",
+   "image": "st_ingenieurs/verriers.jpg",
+   "backTo": "st_ingenieurs",
+   "alt": "An autumn canal quay beside brick glass workshops, where a glassblower holds a glowing vase on his pipe before the furnace arch. On the left the orange door stands open. Monsieur Verbe brushes shiny blue enamel onto a round letterbox on the door; up a ladder another turns the weathervane arrow on its axis; in the middle another bursts out laughing as his party popper bursts confetti; another plays a small synthesizer keyboard on a stand; and on the right another lifts a wooden crate onto a barge on the canal.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ingenieurs",
+     "label": "Rue des Chapeliers · Hatters' Street",
+     "hint": "Back through the orange door",
+     "hit": [
+      30,
+      75,
+      112,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_emailler_verb",
+     "box": [
+      148,
+      262,
+      235,
+      400
+     ]
+    },
+    {
+     "id": "fr_axer_verb",
+     "box": [
+      300,
+      66,
+      140,
+      190
+     ]
+    },
+    {
+     "id": "fr_fuser_verb",
+     "box": [
+      520,
+      250,
+      200,
+      470
+     ]
+    },
+    {
+     "id": "fr_synthetiser_verb",
+     "box": [
+      725,
+      312,
+      160,
+      295
+     ]
+    },
+    {
+     "id": "fr_exporter_verb",
+     "box": [
+      888,
+      355,
+      380,
+      300
+     ]
+    }
+   ]
+  },
+  "vitraux": {
+   "name": "Impasse des Vitraux · Stained-Glass Close",
+   "room_id": "ST_making_seg013",
+   "image": "st_ingenieurs/vitraux.jpg",
+   "backTo": "st_ingenieurs",
+   "alt": "A quiet autumn courtyard closed by an art studio with tall windows of abstract coloured glass circles and triangles, fallen leaves on the flagstones. On the left the green door stands open under a brick arch. Monsieur Verbe draws a simple stylised sun at an easel; behind him another holds a red and a blue glass pane overlapped into purple; in the middle another holds up a shiny old brass lamp found on a junk table; another, cheeks rosy from the cold, smells a pink rose; and in front another holds a bright lime slice up to the coloured light.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "st_ingenieurs",
+     "label": "Rue des Chapeliers · Hatters' Street",
+     "hint": "Back through the green door",
+     "hit": [
+      62,
+      88,
+      162,
+      437
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_styliser_verb",
+     "box": [
+      232,
+      245,
+      185,
+      295
+     ]
+    },
+    {
+     "id": "fr_superposer_verb",
+     "box": [
+      468,
+      170,
+      170,
+      128
+     ]
+    },
+    {
+     "id": "fr_chiner_verb",
+     "box": [
+      588,
+      300,
+      160,
+      390
+     ]
+    },
+    {
+     "id": "fr_roser_verb",
+     "box": [
+      808,
+      235,
+      115,
+      290
+     ]
+    },
+    {
+     "id": "fr_sublimer_verb",
+     "box": [
+      930,
+      300,
+      250,
+      420
+     ]
+    }
+   ]
+  }
+ }
+}
