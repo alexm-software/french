@@ -107,7 +107,7 @@ Gates G and H. Each must pass before a space is shown to the user.
 ## Round 5 additions (user review of integrated scenes)
 These are blocking. A space does not ship until each one passes, and the builder looks at the rendered screenshots personally, never just at the checker output.
 - **Zoom matches parent.** For every zoom, render a side-by-side of the zoom next to the crop of the same object in the parent painting. Object, contents, arrangement, colours and materials must agree, e.g. wooden doors in both (never glass in one), and the same counter items in the same order. Fix the cheaper side by regenerating that region locally.
-- **Verbs use the recurring mime.** If the palace has a recurring verb character, every verb is that character acting out its hook. Never swap in other people for variety.
+- **Verbs use the language's chosen verb marker.** Every verb is acted out by the recurring verb marker picked for that language (the French build uses a mime; other languages use their own, culturally fitting marker), with its feature code correct. Never swap in other people for variety.
 - **Labels clear of everything.** No label may overlap or touch another label, another item's click box, a door or passage, a different word's painted item, or the scene edge. Treat "touches" warnings as failures. Check at every supported viewport width.
 - **Re-audit what is already live.** When a new gate is added, audit the spaces already shipped against it and fix them in the next release.
 
@@ -118,7 +118,7 @@ These are blocking. A space does not ship until each one passes, and the builder
 - Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, line weight, texture). Any drift in a single room or a whole building fails. Every area is fully coloured, with no unpainted patches.
 - Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room that fits them. Near-synonyms in one room need a visible distinction.
 - Naming gate: room names make sense for their contents, and every place name shows a translation.
-- Verb-room gate: each verb room is a natural, unique scene that fits its street's setting. A row of mimes on a plain strip fails.
+- Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain strip fails, and so does a verb-only street.
 - Exterior gate: a building or street seen from the level above shows the landmarks visible inside (and vice versa).
 - Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read.
 
