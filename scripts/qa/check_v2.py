@@ -23,6 +23,10 @@ Static rules (per building/room):
   * --browser: world-map signposts stay 6% inside the painting, 3 px apart, and each label centre
     lies inside its own click polygon. Sector hover labels (live and bientôt) stay 6% inside the
     painting at desktop and phone widths
+  * placement (scripts/qa/placement.py): a word whose English gloss shares an ambiguous word (bank, firm, fire, star,
+    band, scale, lead, stage, race...) with its room's theme is printed as PLACE: it may sit there only through the
+    shared English word (river bank in the bank). Kept placements go in data/hooks/qa/placement_ok.tsv with a reason.
+    PLACE lines are reports; --placement makes them failures (--strict alone does not, so other packs are not blocked)
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
@@ -32,6 +36,8 @@ sideways scroll. Screenshots go to --shots.
 import argparse, json, re, sys
 from pathlib import Path
 from PIL import Image
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import placement
 
 ROOT = Path(__file__).resolve().parents[2]
 V2 = ROOT / "village"
@@ -52,6 +58,8 @@ TABAC_NOUNS = {"fr_tabac_noun"}
 # with every BLOCK pattern plus TOBACCO, so the hook must not use the English word.
 TUXEDO_NOUNS = {"fr_smoking_noun"}
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
+ROOMS_JSON = {r["id"]: r for r in json.loads((ROOT / "data" / "source" / "rooms.json").read_text(encoding="utf-8"))["rooms"]}
+PLACE_OK = placement.load_ok(ROOT / "data" / "hooks" / "qa" / "placement_ok.tsv")
 ART = re.compile(r"^(?:(?:le|la|les|le/la|un|une) |l['’])", re.I)  # 'las', 'lent', 'unique' are not articles
 
 
@@ -103,7 +111,7 @@ def badge_rect(z):
     return [z["at"][0] - w / 2, z["at"][1] - 17, w, 34]
 
 
-def check_building(bld, errs, warns):
+def check_building(bld, errs, warns, places=None):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
     D = load_payload(bld)
     VR = vocab_rooms()
@@ -134,6 +142,9 @@ def check_building(bld, errs, warns):
             if extra: E(f"{tag}: words not planned for this room {extra}")
         else:
             warns.append(f"{bld}/{tag}: no 'planned' list in layout.json; word coverage not checked")
+        if places is not None:
+            for wid, tok, en in placement.flags(L, key, R, ROOMS_JSON, PLACE_OK):
+                places.append(f"{bld}/{tag}: {wid} ('{en}') may be here only through the English word '{tok}'")
         for w in ids:
             if w in seen: E(f"{tag}: {w} also in {seen[w]}")
             seen[w] = key
@@ -440,9 +451,10 @@ def main():
     ap.add_argument("--shots", default="/tmp/v2_shots")
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")
+    ap.add_argument("--placement", action="store_true", help="PLACE lines (word tied to its room only by a shared English gloss word) count as failures")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
-    errs, warns = [], []
+    errs, warns, places = [], [], []
     s = (V2 / "data" / "map.js").read_text(encoding="utf-8")
     M = json.loads(s[s.index("=") + 1:].rstrip().rstrip(";"))
     maps = [("world", M["world"]["sectors"])] + [(sl, S["buildings"] + S["streets"]) for sl, S in M["sectors"].items()]
@@ -457,13 +469,15 @@ def main():
         if not (V2 / "data" / f"{bld}.js").exists(): continue
         sl, b = map_home(M, bld, load_payload(bld))
         if not b: errs.append(f"map: {bld} has a layout but no rect on its sector map in content/v2/map.json")
-        c = check_building(bld, errs, warns)
+        c = check_building(bld, errs, warns, places)
         print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     if a.browser:
         import asyncio
         asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M, a.maps_only))
     if a.strict: errs += [f"(strict) {w}" for w in warns]; warns = []
     for w in warns: print("WARN", w)
+    for p in places: print("PLACE", p)
+    if a.placement: errs += [f"(placement) {p}" for p in places]
     for e in errs: print("FAIL", e)
     print("PASS" if not errs else f"{len(errs)} problem(s)")
     sys.exit(1 if errs else 0)

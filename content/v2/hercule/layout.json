@@ -72,13 +72,13 @@
     "fr_constant_adj",
     "fr_genant_adj",
     "fr_gracieux_adj",
-    "fr_vulnerable_adj"
+    "fr_vulnerable_adj",
+    "fr_ferme_adj"
    ]
   },
   "calme_guichet": {
    "vocabRoom": "R_adj_intensity_02",
    "only": [
-    "fr_viril_adj",
     "fr_majestueux_adj",
     "fr_abondant_adj",
     "fr_conjugal_adj",
@@ -107,7 +107,6 @@
     "fr_menacant_adj",
     "fr_impuissant_adj",
     "fr_force_adj",
-    "fr_sensuel_adj",
     "fr_exigeant_adj",
     "fr_imposant_adj"
    ]
@@ -597,6 +596,15 @@
       782.5,
       672
      ]
+    },
+    {
+     "id": "fr_ferme_adj",
+     "box": [
+      580,
+      565,
+      98,
+      100
+     ]
     }
    ]
   },
@@ -605,19 +613,10 @@
    "room_id": "R_adj_intensity_02_z1",
    "image": "hercule/calme_guichet.jpg",
    "parent": "calme",
-   "alt": "Close-up of the ticket booth in the quiet corner: a cabinet of six cubbies. A blank museum plaque, a stag with a robin on one antler, a strongman staggering under an armful of apples, an old couple sharing a table with two cups, a scoreboard of red bars climbing higher, and a strongman and a lion laughing together.",
+   "alt": "Close-up of the ticket booth in the quiet corner: a cabinet of six cubbies. An empty cubby, a stag with a robin on one antler, a strongman staggering under an armful of apples, an old couple sharing a table with two cups, a scoreboard of red bars climbing higher, and a strongman and a lion laughing together.",
    "doors": [],
    "zooms": [],
    "items": [
-    {
-     "id": "fr_viril_adj",
-     "box": [
-      381,
-      175,
-      156,
-      225
-     ]
-    },
     {
      "id": "fr_majestueux_adj",
      "box": [
@@ -811,7 +810,7 @@
    "room_id": "R_adj_intensity_03_z1",
    "image": "hercule/arene_guichet.jpg",
    "parent": "arene",
-   "alt": "Close-up of the ticket booth in the fighting ring: a cabinet of six cubbies. A storm cloud over a little striped tent, a tiny red imp with a toy sword on a heap of straw, a strongman grinning stiffly under a hippo, a blank museum plaque, a secret agent inspecting an egg with a magnifying glass, and a strongman shoving the tent pole aside with his pose.",
+   "alt": "Close-up of the ticket booth in the fighting ring: a cabinet of six cubbies. A storm cloud over a little striped tent, a tiny red imp with a toy sword on a heap of straw, a strongman grinning stiffly under a hippo, an empty cubby, a secret agent inspecting an egg with a magnifying glass, and a strongman shoving the tent pole aside with his pose.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -840,15 +839,6 @@
       236,
       175,
       200
-     ]
-    },
-    {
-     "id": "fr_sensuel_adj",
-     "box": [
-      394,
-      505,
-      128,
-      92
      ]
     },
     {
