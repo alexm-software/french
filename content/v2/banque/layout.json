@@ -55,11 +55,8 @@
    "only": [
     "fr_reputation_noun",
     "fr_consommation_noun",
-    "fr_greve_noun",
-    "fr_epingle_noun",
     "fr_sou_noun",
     "fr_credit_noun",
-    "fr_profil_noun",
     "fr_portefeuille_noun"
    ]
   },
@@ -84,10 +81,7 @@
     "fr_prestation_noun",
     "fr_notoriete_noun",
     "fr_emprunt_noun",
-    "fr_debit_noun",
-    "fr_contre_courant_noun",
-    "fr_generique_noun",
-    "fr_utilisateur_noun"
+    "fr_debit_noun"
    ]
   },
   "pupitre": {
@@ -95,8 +89,7 @@
    "only": [
     "fr_cotisation_noun",
     "fr_denomination_noun",
-    "fr_versement_noun",
-    "fr_usager_noun"
+    "fr_versement_noun"
    ]
   },
   "commerce": {
@@ -177,13 +170,10 @@
    "only": [
     "fr_prosperite_noun",
     "fr_expertise_noun",
-    "fr_prospection_noun",
     "fr_actionnaire_noun",
     "fr_investissement_noun",
     "fr_capitalisme_noun",
     "fr_placement_noun",
-    "fr_hypermarche_noun",
-    "fr_eleveur_noun",
     "fr_debouche_noun"
    ]
   },
@@ -392,7 +382,7 @@
    "room_id": "R_bank_counter_02",
    "image": "banque/guichet.jpg",
    "backTo": "banque",
-   "alt": "The cashier's hall on the bank's first floor, painted in ink and gouache: a dark green door on the left; a proud lady with a gold star on her coat is admired by two bowing neighbours; a wicker basket of groceries and a tall thermometer gauge hang on the wall; three grave clerks fold their arms beside blank cardboard placards on sticks; an old tailor pushes a giant round-headed pin through the red rosette on his apron; a little girl drops a copper coin into a money box; a boy with a giant crayon pays at a lectern; through the big window a riverside scene is full of little figures; a black paper silhouette profile stands on a board, and a man in a mustard suit opens his wallet.",
+   "alt": "The cashier's hall on the bank's first floor, painted in ink and gouache: a dark green door on the left; a proud lady with a gold star on her coat is admired by two bowing neighbours; a wicker basket of groceries and a tall thermometer gauge hang on the wall; a little girl drops a copper coin into a money box; a boy with a giant crayon pays at a lectern; through the big window a riverside scene is full of little figures, and a man in a mustard suit opens his wallet.",
    "nameplate": [
     20,
     95
@@ -451,24 +441,6 @@
      ]
     },
     {
-     "id": "fr_greve_noun",
-     "box": [
-      308,
-      285,
-      250,
-      290
-     ]
-    },
-    {
-     "id": "fr_epingle_noun",
-     "box": [
-      560,
-      170,
-      152,
-      212
-     ]
-    },
-    {
      "id": "fr_sou_noun",
      "box": [
       650,
@@ -488,15 +460,6 @@
       270,
       170,
       330
-     ]
-    },
-    {
-     "id": "fr_profil_noun",
-     "box": [
-      1107,
-      172,
-      160,
-      175
      ]
     },
     {
@@ -618,7 +581,7 @@
    "room_id": "R_bank_counter_03",
    "image": "banque/prets.jpg",
    "backTo": "banque",
-   "alt": "The busy loans office upstairs in the bank, painted in ink and gouache: a shelf of little figurines runs along the top left; a clerk holds a banknote up to the window under a magnifying glass; another clerk drops one gold coin into each of a row of plain tins; a mother presses the button of a brass payout machine and an envelope slides out; a wigged notary sips tea among admiring fans; a purple door stands at the back; a granny signs for a cart of prunes; a salmon leaps up a fountain; a blue genie swirls out of an old television; a miner strikes a glittering gold vein; a girl times a gushing tap with a stopwatch, and a man with a tool belt taps at a brass terminal.",
+   "alt": "The busy loans office upstairs in the bank, painted in ink and gouache: a shelf of little figurines runs along the top left; a clerk holds a banknote up to the window under a magnifying glass; another clerk drops one gold coin into each of a row of plain tins; a mother presses the button of a brass payout machine and an envelope slides out; a wigged notary sips tea among admiring fans; a purple door stands at the back; a granny signs for a cart of prunes; a small fountain splashes in a stone alcove beside a rocky cliff; a girl times a gushing tap with a stopwatch, and a grey terminal stands by the brass tap.",
    "nameplate": [
     29,
     11
@@ -715,41 +678,6 @@
       944,
       675
      ]
-    },
-    {
-     "id": "fr_contre_courant_noun",
-     "box": [
-      808,
-      140,
-      182,
-      260
-     ]
-    },
-    {
-     "id": "fr_generique_noun",
-     "box": [
-      992,
-      20,
-      139,
-      338
-     ],
-     "labelAt": [
-      1060,
-      105
-     ]
-    },
-    {
-     "id": "fr_utilisateur_noun",
-     "box": [
-      1062,
-      360,
-      218,
-      360
-     ],
-     "labelAt": [
-      1170,
-      679
-     ]
     }
    ],
    "building_id": "B10_banque",
@@ -760,7 +688,7 @@
    "room_id": "R_bank_counter_03_z1",
    "image": "banque/pupitre.jpg",
    "parent": "prets",
-   "alt": "Close-up of the wooden shelf in the loans office: club members drop coins into a baby's cot; a girl sorts banknotes into piles by colour and size; a poet with his arm raised recites a verse while sliding coins across a little counter; and an old sage with a long beard and walking staff waits his turn holding a blank ticket.",
+   "alt": "Close-up of the wooden shelf in the loans office: club members drop coins into a baby's cot; a girl sorts banknotes into piles by colour and size; a poet with his arm raised recites a verse while sliding coins across a little counter, beside a row of bronze statuettes.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -789,15 +717,6 @@
       130,
       190,
       285
-     ]
-    },
-    {
-     "id": "fr_usager_noun",
-     "box": [
-      802,
-      155,
-      208,
-      260
      ]
     }
    ],
@@ -1422,7 +1341,7 @@
    "room_id": "R_bank_economy_04",
    "image": "banque/placements.jpg",
    "backTo": "banque",
-   "alt": "The investment office of the bank, painted in ink and gouache, open to an orchard: villagers feast under fruit trees; a prospector pans a stream for gold; a lady with a magnifying glass studies a painting, a parrot perched behind her; a lady holds a fan of certificates; a copper-red door at the back; a girl drops a coin into a flowerpot where a green sprout grows; a man in a flat cap sits on a pyramid of gold coins; a shelf holds little figures; a man puts his savings in an iron safe; a boy races a shopping trolley; a farmer lifts sheep in a wooden hoist, and a brass pipe pours gold into a basket.",
+   "alt": "The investment office of the bank, painted in ink and gouache, open to an orchard: villagers feast under fruit trees; a little stream runs past the doorway; a lady with a magnifying glass studies a painting, a parrot perched behind her; a lady holds a fan of certificates; a copper-red door at the back; a girl drops a coin into a flowerpot where a green sprout grows; a man in a flat cap sits on a pyramid of gold coins; a shelf holds little figures; a man puts his savings in an iron safe; ivy climbs the cream wall, and a brass pipe pours gold into a basket.",
    "nameplate": [
     16.2,
     95
@@ -1481,15 +1400,6 @@
      ]
     },
     {
-     "id": "fr_prospection_noun",
-     "box": [
-      100,
-      413,
-      197,
-      236
-     ]
-    },
-    {
      "id": "fr_actionnaire_noun",
      "box": [
       455,
@@ -1531,32 +1441,6 @@
      "labelAt": [
       1013,
       281
-     ]
-    },
-    {
-     "id": "fr_hypermarche_noun",
-     "box": [
-      1090,
-      300,
-      185,
-      222
-     ],
-     "labelAt": [
-      1182,
-      487
-     ]
-    },
-    {
-     "id": "fr_eleveur_noun",
-     "box": [
-      1030,
-      20,
-      230,
-      243
-     ],
-     "labelAt": [
-      1144,
-      227
      ]
     },
     {
