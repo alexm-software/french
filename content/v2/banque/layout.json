@@ -57,7 +57,8 @@
     "fr_consommation_noun",
     "fr_sou_noun",
     "fr_credit_noun",
-    "fr_portefeuille_noun"
+    "fr_portefeuille_noun",
+    "fr_retrait_noun"
    ]
   },
   "bureau": {
@@ -89,7 +90,8 @@
    "only": [
     "fr_cotisation_noun",
     "fr_denomination_noun",
-    "fr_versement_noun"
+    "fr_versement_noun",
+    "fr_ducat_noun"
    ]
   },
   "commerce": {
@@ -140,7 +142,8 @@
     "fr_opportunite_noun",
     "fr_faillite_noun",
     "fr_capital_adj",
-    "fr_bilan_noun"
+    "fr_bilan_noun",
+    "fr_essor_noun"
    ]
   },
   "impots": {
@@ -382,7 +385,7 @@
    "room_id": "R_bank_counter_02",
    "image": "banque/guichet.jpg",
    "backTo": "banque",
-   "alt": "The cashier's hall on the bank's first floor, painted in ink and gouache: a dark green door on the left; a proud lady with a gold star on her coat is admired by two bowing neighbours; a wicker basket of groceries and a tall thermometer gauge hang on the wall; a little girl drops a copper coin into a money box; a boy with a giant crayon pays at a lectern; through the big window a riverside scene is full of little figures, and a man in a mustard suit opens his wallet.",
+   "alt": "The cashier's hall on the bank's first floor, painted in ink and gouache: a dark green door on the left; a proud lady with a gold star on her coat is admired by two bowing neighbours; a wicker basket of groceries and a tall thermometer gauge hang on the wall; a little girl drops a copper coin into a money box; a boy with a giant crayon pays at a lectern; through the big window a riverside scene is full of little figures, a man in a mustard suit opens his wallet, and in the right-hand pane a lady takes her banknotes from a clerk at a little riverside kiosk.",
    "nameplate": [
     20,
     95
@@ -473,6 +476,15 @@
      "labelAt": [
       1133,
       679
+     ]
+    },
+    {
+     "id": "fr_retrait_noun",
+     "box": [
+      1135,
+      140,
+      140,
+      170
      ]
     }
    ],
@@ -688,7 +700,7 @@
    "room_id": "R_bank_counter_03_z1",
    "image": "banque/pupitre.jpg",
    "parent": "prets",
-   "alt": "Close-up of the wooden shelf in the loans office: club members drop coins into a baby's cot; a girl sorts banknotes into piles by colour and size; a poet with his arm raised recites a verse while sliding coins across a little counter, beside a row of bronze statuettes.",
+   "alt": "Close-up of the wooden shelf in the loans office: club members drop coins into a baby's cot; a girl sorts banknotes into piles by colour and size; a poet with his arm raised recites a verse while sliding coins across a little counter, while a little toy duke in a plumed hat holds up a big gold coin for his grey cat, beside a row of bronze statuettes.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -717,6 +729,15 @@
       130,
       190,
       285
+     ]
+    },
+    {
+     "id": "fr_ducat_noun",
+     "box": [
+      800,
+      255,
+      215,
+      165
      ]
     }
    ],
@@ -1088,7 +1109,7 @@
    "room_id": "R_bank_economy_02_z1",
    "image": "banque/tableau.jpg",
    "parent": "finances",
-   "alt": "Close-up of the sideboard under the old map in the finance office: a cow slides down a red zig-zag arrow; gold coins dance over an open ledger; a little door stands ajar with a teacup on its step; a little shop-box has toppled and spilt its coins while its shopkeeper clutches his cheeks; a black top hat brims with gold coins; and bumblebees hover over a strip of lawn with a small blank slate.",
+   "alt": "Close-up of the sideboard under the old map in the finance office: a golden eagle soars up across the map; a cow slides down a red zig-zag arrow; gold coins dance over an open ledger; a little door stands ajar with a teacup on its step; a little shop-box has toppled and spilt its coins while its shopkeeper clutches his cheeks; a black top hat brims with gold coins; and bumblebees hover over a strip of lawn with a small blank slate.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -1148,6 +1169,15 @@
       315,
       225,
       245
+     ]
+    },
+    {
+     "id": "fr_essor_noun",
+     "box": [
+      825,
+      20,
+      255,
+      255
      ]
     }
    ],
