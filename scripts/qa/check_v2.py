@@ -19,6 +19,8 @@ Static rules (per building/room):
   * adverbs: no article, no gender, centre band 30-70%, gram line 'adverb · invariable' (browser)
   * maps (data/map.js): no rect overlap within the world map or within any sector map; every
     layout building has a rect on its sector map (by the payload's building_id/sector_id, else by id)
+  * --browser: every world-map and sector-map label (live and bientôt) stays at least 6% inside
+    the painting at desktop and phone widths; crossing or touching that margin fails
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/v2/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
@@ -224,7 +226,38 @@ def map_home(M, bld, D):
     return slug, None
 
 
-async def browser_checks(blds, base, shots, errs, strict=False, M=None):
+MAP_LABEL_EDGES = r"""
+() => {
+  const stage = document.getElementById('stage');
+  const sr = stage.getBoundingClientRect();
+  const m = 0.06, L = sr.width * m, T = sr.height * m, R = sr.width * (1 - m), B = sr.height * (1 - m);
+  const bad = [];
+  const judge = (el) => {
+    el.style.transition = 'none';
+    const r = el.getBoundingClientRect();
+    const b = {l: r.left - sr.left, t: r.top - sr.top, r: r.right - sr.left, b: r.bottom - sr.top};
+    if (b.l < L - 0.5 || b.t < T - 0.5 || b.r > R + 0.5 || b.b > B + 0.5) {
+      bad.push((el.innerText || '').replace(/\s+/g, ' ').trim() + ' @' + [b.l, b.t, b.r, b.b].map(n => Math.round(n)).join(','));
+    }
+  };
+  document.querySelectorAll('#stage .tag.live').forEach(el => { el.classList.add('show'); judge(el); el.classList.remove('show'); });
+  document.querySelectorAll('#stage .bld.soon').forEach(p => {
+    p.dispatchEvent(new MouseEvent('mouseenter', {bubbles: true}));
+    const ts = document.getElementById('tagSoon');
+    if (ts && ts.classList.contains('show')) judge(ts);
+    p.dispatchEvent(new MouseEvent('mouseleave', {bubbles: true}));
+  });
+  return bad;
+}
+"""
+
+
+async def map_label_edges(pg, where, errs):
+    for item in await pg.evaluate(MAP_LABEL_EDGES):
+        errs.append(f"{where}: map label crosses the 6% margin: {item}")
+
+
+async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_only=False):
     from playwright.async_api import async_playwright
     shots.mkdir(parents=True, exist_ok=True)
     async with async_playwright() as p:
@@ -243,6 +276,7 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
             if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
                 errs.append(f"world map @{vw}: sector links {wl}")
             await pg.screenshot(path=str(shots / f"map_{vw}.png"))
+            await map_label_edges(pg, f"world map @{vw}", errs)
             live = []
             for w in M["world"]["sectors"]:
                 await pg.goto(base + f"#/quartier/{w['slug']}")
@@ -257,11 +291,16 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None):
                     errs.append(f"sector {w['slug']} @{vw}: {len(ln)} live + {nsoon} soon != {len(S['buildings'])} buildings + {len(S['streets'])} streets")
                 live += ln
                 if ln or vw == 1400: await pg.screenshot(path=str(shots / f"sector_{w['slug']}_{vw}.png"))
+                await map_label_edges(pg, f"sector {w['slug']} @{vw}", errs)
                 await pg.click("#back"); await pg.wait_for_timeout(200)
                 if await pg.evaluate("location.hash") not in ("#/", ""): errs.append(f"sector {w['slug']}: Back does not go to the village map")
             have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem != "map")
             if sorted(live) != have:
                 errs.append(f"maps @{vw}: live buildings {sorted(live)} != data files {have}")
+            if maps_only:
+                for e in jserr: errs.append(f"JS error @{vw}: {e}")
+                await pg.close()
+                continue
             for bld in blds:
                 D = load_payload(bld)
                 for key, R in D["rooms"].items():
@@ -366,6 +405,7 @@ def main():
     ap.add_argument("--base", default="http://localhost:8765/v2/index.html")
     ap.add_argument("--shots", default="/tmp/v2_shots")
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
+    ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     errs, warns = [], []
@@ -387,7 +427,7 @@ def main():
         print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     if a.browser:
         import asyncio
-        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M))
+        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M, a.maps_only))
     if a.strict: errs += [f"(strict) {w}" for w in warns]; warns = []
     for w in warns: print("WARN", w)
     for e in errs: print("FAIL", e)

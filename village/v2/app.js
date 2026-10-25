@@ -71,6 +71,7 @@ function fit(){
   scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2);
   var hint=$('#panHint'); hint.hidden=!pan;
   if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'||view==='sector'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
+  if(stage.querySelector('.tag.live,#tagSoon')) clampMapLabels();
 }
 window.addEventListener('resize',fit);
 document.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse'},true);
@@ -102,6 +103,132 @@ function pts(r){ return r[0]+','+r[1]+' '+(r[0]+r[2])+','+r[1]+' '+(r[0]+r[2])+'
 function tagAt(r){ return [r[0]+r[2]/2, r[1]+Math.min(14,r[3]/4)] }
 function doorAt(r){ return [r[0]+r[2]/2, r[1]+r[3]-Math.min(34,r[3]/3)] }
 function liveIn(slug){ return Object.keys(LIVE).filter(function(id){ return homeOf(id).slug===slug }) }
+// Hover tags stay on the painting: at least 6% inside every edge, and off other buildings' click boxes and doors.
+function relRect(el){
+  var s=stage.getBoundingClientRect(), r=el.getBoundingClientRect();
+  return {l:r.left-s.left, t:r.top-s.top, r:r.right-s.left, b:r.bottom-s.top, w:r.width, h:r.height};
+}
+function mapFrame(){
+  var s=stage.getBoundingClientRect(), m=0.06;
+  return {l:s.width*m, t:s.height*m, r:s.width*(1-m), b:s.height*(1-m), w:s.width, h:s.height};
+}
+function rectsTouch(a,b,g){ return a.l<b.r+g && a.r>b.l-g && a.t<b.b+g && a.b>b.t-g }
+function inFrame(a,f){ return a.l>=f.l-0.5 && a.t>=f.t-0.5 && a.r<=f.r+0.5 && a.b<=f.b+0.5 }
+function labelObstacles(ownPoly, ownDoor){
+  var o=[];
+  stage.querySelectorAll('polygon.bld').forEach(function(p){ if(p!==ownPoly) o.push(relRect(p)) });
+  stage.querySelectorAll('.door').forEach(function(d){ if(d!==ownDoor) o.push(relRect(d)) });
+  return o;
+}
+function overlapArea(b, obs){
+  var a=0;
+  for(var i=0;i<obs.length;i++){
+    var o=obs[i], x=Math.min(b.r,o.r)-Math.max(b.l,o.l), y=Math.min(b.b,o.b)-Math.max(b.t,o.t);
+    if(x>0 && y>0) a+=x*y;
+  }
+  return a;
+}
+function nudgeLabel(el, dx, dy){
+  var s=stage.getBoundingClientRect();
+  if(!s.width||!s.height) return;
+  el.style.left=(parseFloat(el.style.left)+dx/s.width*100)+'%';
+  el.style.top=(parseFloat(el.style.top)+dy/s.height*100)+'%';
+}
+function intoFrame(el, f){
+  // 4px inside the 6% line so percentage rounding cannot land back on the margin.
+  // Repeat: a wrapping label can grow when it is moved, which would poke out again.
+  var pad=4, g={l:f.l+pad, t:f.t+pad, r:f.r-pad, b:f.b-pad}, b=relRect(el);
+  for(var i=0;i<4;i++){
+    var dx=0, dy=0;
+    if(b.w>g.r-g.l) dx=g.l-b.l;
+    else { if(b.l<g.l) dx=g.l-b.l; if(b.r+dx>g.r) dx=g.r-b.r; }
+    if(b.h>g.b-g.t) dy=g.t-b.t;
+    else { if(b.t<g.t) dy=g.t-b.t; if(b.b+dy>g.b) dy=g.b-b.b; }
+    if(!dx && !dy) break;
+    nudgeLabel(el, dx, dy);
+    var n=relRect(el);
+    if(Math.abs(n.l-b.l)<0.5 && Math.abs(n.t-b.t)<0.5 && Math.abs(n.r-b.r)<0.5 && Math.abs(n.b-b.b)<0.5) break;
+    b=n;
+  }
+  return b;
+}
+function separateLabel(el, f, obs){
+  var b=intoFrame(el, f), best={left:el.style.left, top:el.style.top, area:inFrame(b,f)?overlapArea(b,obs):1e12};
+  for(var n=0;n<12;n++){
+    if(inFrame(b,f) && overlapArea(b,obs)===0) return true;
+    var hit=null, area=0;
+    for(var i=0;i<obs.length;i++){
+      var o=obs[i], x=Math.min(b.r,o.r)-Math.max(b.l,o.l), y=Math.min(b.b,o.b)-Math.max(b.t,o.t);
+      if(x>0 && y>0 && x*y>area){ area=x*y; hit={o:o,x:x,y:y}; }
+    }
+    if(!hit) break;
+    var gap=4, dx=0, dy=0;
+    if(hit.x<=hit.y) dx=((b.l+b.r)<(hit.o.l+hit.o.r)?-1:1)*(hit.x+gap);
+    else dy=((b.t+b.b)<(hit.o.t+hit.o.b)?-1:1)*(hit.y+gap);
+    nudgeLabel(el, dx, dy);
+    b=intoFrame(el, f);
+    var left=overlapArea(b, obs);
+    if(inFrame(b,f) && left<best.area) best={left:el.style.left, top:el.style.top, area:left};
+  }
+  el.style.left=best.left; el.style.top=best.top;
+  b=relRect(el);
+  return inFrame(b,f) && overlapArea(b, obs)===0;
+}
+function clampOne(el, ownPoly, ownDoor){
+  if(el.dataset.ox===undefined){ el.dataset.ox=el.style.left; el.dataset.oy=el.style.top; }
+  var shown=el.classList.contains('show');
+  el.style.transition='none';
+  el.classList.add('show');
+  el.classList.remove('wrap'); el.style.maxWidth=''; el.style.width=''; el.style.fontSize='';
+  el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
+  var f=mapFrame(), obs=labelObstacles(ownPoly, ownDoor);
+  var ok=separateLabel(el, f, obs);
+  if(!ok){
+    // Flip the label below its anchor, then try again before wrapping.
+    var h=relRect(el).h;
+    el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
+    nudgeLabel(el, 0, h+8);
+    ok=separateLabel(el, f, obs);
+  }
+  if(!ok) parkOnOwn(el, ownPoly, ownDoor, f);
+  el.style.transition='';
+  if(!shown) el.classList.remove('show');
+}
+// Last resort: wrap the label into the part of its own building that is inside the frame,
+// so it cannot cover a neighbour's click box.
+function parkOnOwn(el, ownPoly, ownDoor, f){
+  el.classList.remove('wrap'); el.style.width=''; el.style.maxWidth=''; el.style.fontSize='';
+  el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
+  if(!ownPoly){ intoFrame(el, f); return; }
+  var p=relRect(ownPoly), door=ownDoor?relRect(ownDoor):null;
+  // Prefer the open band just above the building, clear of every other click box.
+  var above=relRect(el);
+  nudgeLabel(el, 0, (p.t-6)-above.b);
+  above=intoFrame(el, f);
+  var obs=labelObstacles(ownPoly, ownDoor);
+  if(inFrame(above, f) && overlapArea(above, obs)===0) return;
+  el.classList.remove('wrap'); el.style.width=''; el.style.maxWidth=''; el.style.fontSize='';
+  el.style.left=el.dataset.ox; el.style.top=el.dataset.oy;
+  var L=Math.max(p.l+4, f.l), R=Math.min(p.r-4, f.r), T=Math.max(p.t+4, f.t), B=Math.min(p.b-4, f.b);
+  if(door && door.t-4>T+24) B=Math.min(B, door.t-4);
+  var span=Math.max(28, R-L), room=Math.max(24, B-T);
+  el.classList.add('wrap');
+  el.style.width=Math.round(span)+'px'; el.style.maxWidth=el.style.width;
+  var size=20, b=relRect(el);
+  while(b.h>room && size>9){ size-=1; el.style.fontSize=size+'px'; b=relRect(el); }
+  nudgeLabel(el, L-b.l, T-b.t);
+  b=relRect(el);
+  nudgeLabel(el, L-b.l, T-b.t);
+  b=relRect(el);
+  if(!inFrame(b, f)) intoFrame(el, f);
+}
+function clampMapLabels(){
+  stage.querySelectorAll('.tag.live').forEach(function(el){
+    var i=el.id.replace('tagLive','');
+    var link=stage.querySelector('a.lnk[data-i="'+i+'"]');
+    clampOne(el, link?link.querySelector('polygon'):null, stage.querySelector('.door[data-i="'+i+'"]'));
+  });
+}
 // live: [{href,name,rect,aria}], soon: [{name,rect,small}]
 function drawMap(img,alt,label,live,soon){
   blur.style.backgroundImage='url('+img+')';
@@ -113,7 +240,7 @@ function drawMap(img,alt,label,live,soon){
   });
   h+='</svg>';
   live.forEach(function(L,i){ var d=L.door||doorAt(L.rect), t=L.tag||tagAt(L.rect);
-    if(!L.nodoor) h+='<div class="door" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
+    if(!L.nodoor) h+='<div class="door" data-i="'+i+'" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
     h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
   });
   h+='<div class="tag" id="tagSoon"></div>';
@@ -126,7 +253,13 @@ function drawMap(img,alt,label,live,soon){
   });
   stage.querySelectorAll('.bld.soon').forEach(function(p){
     var b=soon[+p.dataset.i], t=b.tag||tagAt(b.rect);
-    function show(){ts.innerHTML=esc(b.name)+(b.small?'<small>'+esc(b.small)+'</small>':'');ts.style.left=pct(t[0]/12.8);ts.style.top=pct(Math.max(t[1],60)/7.2);ts.classList.add('show')}
+    function show(){
+      ts.innerHTML=esc(b.name)+(b.small?'<small>'+esc(b.small)+'</small>':'');
+      ts.style.left=pct(t[0]/12.8); ts.style.top=pct(Math.max(t[1],60)/7.2);
+      ts.dataset.ox=ts.style.left; ts.dataset.oy=ts.style.top;
+      ts.classList.add('show');
+      clampOne(ts, p, null);
+    }
     p.addEventListener('mouseenter',show); p.addEventListener('mouseleave',function(){ts.classList.remove('show')});
     p.addEventListener('click',function(){show();clearTimeout(p._t);p._t=setTimeout(function(){ts.classList.remove('show')},1600)});
   });
