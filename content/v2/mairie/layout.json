@@ -14,13 +14,17 @@
   {
    "key": "conseil",
    "short": "La salle du conseil"
+  },
+  {
+   "key": "archives",
+   "short": "Les archives"
   }
  ],
  "rooms": {
   "mairie": {
    "name": "La mairie · Town Hall",
    "image": "mairie/mairie.jpg",
-   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village a blue door on the right leads to the post office and a teal double door in the back wall opens onto the council chamber.",
+   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green bin with a bell, three eels queueing with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolour sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village a blue door on the right leads to the post office and a teal double door in the back wall opens onto the council chamber; behind the horse a half-open teal door shows the archive drawers.",
    "nameplate": [
     50,
     4.5
@@ -55,6 +59,17 @@
       30,
       130,
       190
+     ]
+    },
+    {
+     "to": "archives",
+     "label": "Les archives",
+     "hint": "Through the half-open teal door behind the horse to the town archives",
+     "hit": [
+      798,
+      30,
+      100,
+      78
      ]
     }
    ],
@@ -724,6 +739,331 @@
      ]
     }
    ]
+  },
+  "archives": {
+   "name": "Les archives · Town Archives",
+   "image": "mairie/archives.jpg",
+   "backTo": "mairie",
+   "alt": "The town archives painted in ink and gouache: a young man waves a small black-red-gold flag, a cool archivist in sunglasses shows two children a lute and a lace fan, a baker leans in through the window with a basket of baguettes, a man pins picture postcards on a globe, an archivist opens Russian nesting dolls as the smallest vanishes in a puff, a girl files windmill postcards into a drawer, a woman opens a big book tied with a blue-white-red ribbon, a waffle carries a tiny black-yellow-red flag, a young man in a navy coat holds an Eiffel Tower postcard, a gondolier in a straw boater sings with a rolled map, a spaniel dances with hand bells and a traveller carries a sticker-covered suitcase; the teal door on the left leads back to the town hall and the arched doorway on the right looks into the map room.",
+   "doors": [
+    {
+     "to": "mairie",
+     "label": "La mairie",
+     "hint": "Back through the teal door to the town hall",
+     "hit": [
+      65,
+      40,
+      180,
+      320
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "cartes",
+     "label": "la salle des cartes",
+     "hint": "Look through the arched doorway into the map room",
+     "at": [
+      1102,
+      295
+     ],
+     "obj": [
+      1030,
+      40,
+      175,
+      290
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_allemand_adj",
+     "box": [
+      385,
+      10,
+      120,
+      130
+     ],
+     "labelAt": [
+      326,
+      10
+     ]
+    },
+    {
+     "id": "fr_culturel_adj",
+     "box": [
+      325,
+      142,
+      135,
+      205
+     ],
+     "labelAt": [
+      512,
+      148
+     ]
+    },
+    {
+     "id": "fr_international_adj",
+     "box": [
+      575,
+      155,
+      165,
+      190
+     ]
+    },
+    {
+     "id": "fr_local_adj",
+     "box": [
+      765,
+      25,
+      140,
+      150
+     ],
+     "labelAt": [
+      728,
+      25
+     ]
+    },
+    {
+     "id": "fr_russe_adj",
+     "box": [
+      765,
+      190,
+      160,
+      125
+     ],
+     "labelAt": [
+      966,
+      190
+     ]
+    },
+    {
+     "id": "fr_europeen_adj",
+     "box": [
+      305,
+      350,
+      245,
+      85
+     ],
+     "labelAt": [
+      246,
+      368
+     ]
+    },
+    {
+     "id": "fr_francais_adj",
+     "box": [
+      555,
+      350,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_belge_adj",
+     "box": [
+      695,
+      395,
+      85,
+      110
+     ]
+    },
+    {
+     "id": "fr_parisien_adj",
+     "box": [
+      745,
+      320,
+      130,
+      70
+     ]
+    },
+    {
+     "id": "fr_italien_adj",
+     "box": [
+      790,
+      455,
+      135,
+      250
+     ],
+     "labelAt": [
+      970,
+      455
+     ]
+    },
+    {
+     "id": "fr_espagnol_adj",
+     "box": [
+      585,
+      586,
+      125,
+      124
+     ],
+     "labelAt": [
+      645,
+      549
+     ]
+    },
+    {
+     "id": "fr_etranger_adj",
+     "box": [
+      345,
+      440,
+      190,
+      270
+     ],
+     "labelAt": [
+      289,
+      440
+     ]
+    }
+   ]
+  },
+  "cartes": {
+   "name": "La salle des cartes · Map Room",
+   "image": "mairie/cartes.jpg",
+   "parent": "archives",
+   "alt": "The archives map room painted in ink and gouache: a general covered in medals sorts colour-coded folders, a boy turns the dial on a giant globe, a girl waves a paper fan under a red Chinese lantern beside a little dragon, an official in a sash bangs a giant rubber stamp, a woman folds a flag into a box, a green parrot squawks from a teak podium, a man holds a map of a winding river beside a carved giraffe, a young woman files a prairie map and a bison postcard, a party guest lines up shoe boxes by size, a drawer spills a compass, a feather, a key and flippers, a fox family snuggles in a den under the table while children peek in, a corgi in a tiny crown sits on a velvet cushion and a friendly uncle chats with a queue.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_general_adj",
+     "box": [
+      365,
+      105,
+      100,
+      165
+     ]
+    },
+    {
+     "id": "fr_mondial_adj",
+     "box": [
+      470,
+      10,
+      110,
+      225
+     ]
+    },
+    {
+     "id": "fr_chinois_adj",
+     "box": [
+      585,
+      42,
+      110,
+      193
+     ],
+     "labelAt": [
+      630,
+      8
+     ]
+    },
+    {
+     "id": "fr_officiel_adj",
+     "box": [
+      702,
+      55,
+      95,
+      120
+     ]
+    },
+    {
+     "id": "fr_africain_adj",
+     "box": [
+      735,
+      178,
+      72,
+      110
+     ],
+     "labelAt": [
+      858,
+      256
+     ]
+    },
+    {
+     "id": "fr_americain_adj",
+     "box": [
+      810,
+      120,
+      95,
+      130
+     ]
+    },
+    {
+     "id": "fr_national_adj",
+     "box": [
+      445,
+      275,
+      115,
+      85
+     ],
+     "labelAt": [
+      391,
+      311
+     ]
+    },
+    {
+     "id": "fr_politique_adj",
+     "box": [
+      650,
+      235,
+      75,
+      90
+     ],
+     "labelAt": [
+      687,
+      328
+     ]
+    },
+    {
+     "id": "fr_particulier_adj",
+     "box": [
+      360,
+      362,
+      330,
+      80
+     ]
+    },
+    {
+     "id": "fr_divers_adj",
+     "box": [
+      655,
+      445,
+      145,
+      80
+     ]
+    },
+    {
+     "id": "fr_populaire_adj",
+     "box": [
+      410,
+      480,
+      210,
+      145
+     ]
+    },
+    {
+     "id": "fr_royal_adj",
+     "box": [
+      745,
+      540,
+      120,
+      160
+     ],
+     "labelAt": [
+      840,
+      507
+     ]
+    },
+    {
+     "id": "fr_social_adj",
+     "box": [
+      770,
+      292,
+      165,
+      150
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -773,6 +1113,39 @@
     "fr_heureusement_adv",
     "fr_certes_adv",
     "fr_d_ailleurs_adv"
+   ]
+  },
+  "archives": {
+   "only": [
+    "fr_allemand_adj",
+    "fr_culturel_adj",
+    "fr_international_adj",
+    "fr_local_adj",
+    "fr_russe_adj",
+    "fr_europeen_adj",
+    "fr_francais_adj",
+    "fr_belge_adj",
+    "fr_parisien_adj",
+    "fr_italien_adj",
+    "fr_espagnol_adj",
+    "fr_etranger_adj"
+   ]
+  },
+  "cartes": {
+   "only": [
+    "fr_general_adj",
+    "fr_mondial_adj",
+    "fr_chinois_adj",
+    "fr_officiel_adj",
+    "fr_africain_adj",
+    "fr_americain_adj",
+    "fr_national_adj",
+    "fr_politique_adj",
+    "fr_particulier_adj",
+    "fr_divers_adj",
+    "fr_populaire_adj",
+    "fr_royal_adj",
+    "fr_social_adj"
    ]
   }
  },
