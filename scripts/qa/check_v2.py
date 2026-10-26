@@ -241,11 +241,17 @@ def check_building(bld, errs, warns, places=None):
         elif key == main:
             if not R.get("mapExit"): E(f"{tag}: main room has no painted exit to the village")
             for k2 in keys_in_list:
-                if k2 != main and not any(d["to"] == k2 for d in R.get("doors", [])): E(f"{tag}: no painted door to sub-room {k2}")
+                if k2 != main and rooms.get(k2, {}).get("backTo", main) == main and not any(d["to"] == k2 for d in R.get("doors", [])): E(f"{tag}: no painted door to sub-room {k2}")
         else:
             if key not in keys_in_list: E(f"{tag}: room not in roomList")
-            if R.get("backTo") != main: E(f"{tag}: Back goes to {R.get('backTo')}, should be {main}")
-            if not any(d["to"] == main for d in R.get("doors", [])): E(f"{tag}: no painted door back to {main}")
+            # a sub-room is entered from main, or from another listed sub-room (nested, e.g. maths -> recre);
+            # Back goes to the room it was entered from, and both rooms need a real painted door.
+            bt = R.get("backTo")
+            if bt != main and (bt not in keys_in_list or rooms.get(bt, {}).get("backTo") != main):
+                E(f"{tag}: Back goes to {bt}, should be {main} (or a sub-room of {main})")
+            elif bt != main and not any(d["to"] == key for d in rooms[bt].get("doors", [])):
+                E(f"{tag}: {bt} has no painted door to sub-room {key}")
+            if not any(d["to"] == bt for d in R.get("doors", [])): E(f"{tag}: no painted door back to {bt}")
     return counts
 
 
@@ -419,7 +425,8 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                     await pg.click("#back")
                     await pg.wait_for_timeout(300)
                     home = "#/quartier/" + map_home(M, bld, D)[0]
-                    want = f"#/{bld}/{R['parent']}" if R.get("parent") and R["parent"] != D["main"] else (f"#/{bld}" if (R.get("parent") or R.get("backTo")) else home)
+                    bt = R.get("parent") or R.get("backTo")
+                    want = f"#/{bld}/{bt}" if bt and bt != D["main"] else (f"#/{bld}" if bt else home)
                     got = await pg.evaluate("location.hash")
                     if got != want: errs.append(f"{bld}/{key}: Back went to {got}, expected {want}")
                     # painted exit of the main room goes to the sector map (or its mapExit.href)
