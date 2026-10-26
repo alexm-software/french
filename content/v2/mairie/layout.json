@@ -504,7 +504,7 @@
    "name": "La salle du conseil · Council Chamber",
    "image": "mairie/conseil.jpg",
    "backTo": "mairie",
-   "alt": "The town council chamber painted in ink and gouache: a woman pulls the cord of a ceiling fan, a goat walks along the bench tops, a grandpa holds up a hand to stop a duckling, a smiling councillor holds up one single salmon, a donkey brays at a surprised man, a councillor bangs a gavel, a bearded man waits his turn holding one big pink sweet, a jug overflows a glass while a bald man raises his hand, Ann shows a young man how to fold a ballot into the box, a grey-haired lady works a shrugging hand puppet; the teal double door on the left leads back to the town hall and the arched alcove on the right opens onto the councillors' gallery; a narrow arched doorway in the back wall gives a glimpse of the civic hall's open day.",
+   "alt": "The town council chamber painted in ink and gouache: a woman pulls the cord of a ceiling fan, a goat walks along the bench tops, a grandpa holds up a hand to stop a duckling, a smiling councillor holds up one single salmon, a donkey brays at a surprised man, a councillor bangs a gavel, a bearded man waits his turn holding one big pink sweet, a jug overflows a glass while a bald man raises his hand, Ann shows a young man how to fold a ballot into the box, a grey-haired lady works a shrugging hand puppet; the teal double door on the left leads back to the town hall and the arched alcove on the right opens onto the councillors' gallery; a narrow arched doorway in the back wall gives a glimpse of the civic hall's open day; a narrow wooden side door in the right wall stands half open onto the sunny courtyard fair.",
    "doors": [
     {
      "to": "mairie",
@@ -547,6 +547,21 @@
       35,
       90,
       400
+     ]
+    },
+    {
+     "to": "cour",
+     "label": "la cour",
+     "hint": "Step through the narrow side door into the courtyard fair",
+     "at": [
+      1215,
+      375
+     ],
+     "obj": [
+      1186,
+      180,
+      90,
+      240
      ]
     }
    ],
@@ -1235,6 +1250,146 @@
      ]
     }
    ]
+  },
+  "cour": {
+   "name": "La cour des associations · Community Courtyard",
+   "image": "mairie/cour.jpg",
+   "parent": "conseil",
+   "alt": "The town hall's sunny inner courtyard on community-fair day, seen through the council chamber's side door: three cheerful marchers with blank placards and a drum, a big three-generation family popping out from behind a potted olive tree shouting boo, a man holding a model village round a green common with one toy cow, a girl holding a toy merry-go-round with four horses, four friends linking arms on one solid granite block, a boy sharing a whole fruit pie with another boy, a level brass scale with two equal eggs beside a tipped scale with one huge and one tiny egg, a boy in a party hat raising his hand to join in, and a plain framed blank plaque on a low stand; on the right a clerk stamps forms at the registration table under the arcade.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_manifestation_noun",
+     "box": [
+      10,
+      44,
+      262,
+      150
+     ],
+     "labelAt": [
+      100,
+      198
+     ]
+    },
+    {
+     "id": "fr_tribu_noun",
+     "box": [
+      350,
+      78,
+      200,
+      122
+     ],
+     "labelAt": [
+      602,
+      110
+     ]
+    },
+    {
+     "id": "fr_commune_noun",
+     "box": [
+      12,
+      236,
+      196,
+      116
+     ],
+     "labelAt": [
+      81,
+      356
+     ]
+    },
+    {
+     "id": "fr_foire_noun",
+     "box": [
+      224,
+      222,
+      128,
+      112
+     ],
+     "labelAt": [
+      288,
+      337
+     ]
+    },
+    {
+     "id": "fr_solidarite_noun",
+     "box": [
+      368,
+      214,
+      186,
+      236
+     ],
+     "labelAt": [
+      627,
+      330
+     ]
+    },
+    {
+     "id": "fr_generosite_noun",
+     "box": [
+      156,
+      370,
+      190,
+      92
+     ],
+     "labelAt": [
+      251,
+      465
+     ]
+    },
+    {
+     "id": "fr_egalite_noun",
+     "box": [
+      12,
+      442,
+      134,
+      226
+     ],
+     "labelAt": [
+      79,
+      672
+     ]
+    },
+    {
+     "id": "fr_inegalite_noun",
+     "box": [
+      162,
+      502,
+      164,
+      170
+     ],
+     "labelAt": [
+      244,
+      675
+     ]
+    },
+    {
+     "id": "fr_participation_noun",
+     "box": [
+      332,
+      488,
+      82,
+      178
+     ],
+     "labelAt": [
+      436,
+      454
+     ]
+    },
+    {
+     "id": "fr_pauvrete_noun",
+     "box": [
+      420,
+      552,
+      140,
+      156
+     ],
+     "labelAt": [
+      628,
+      600
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -1335,6 +1490,20 @@
     "fr_refuge_noun",
     "fr_clan_noun",
     "fr_esclavage_noun"
+   ]
+  },
+  "cour": {
+   "only": [
+    "fr_manifestation_noun",
+    "fr_tribu_noun",
+    "fr_commune_noun",
+    "fr_foire_noun",
+    "fr_solidarite_noun",
+    "fr_generosite_noun",
+    "fr_egalite_noun",
+    "fr_inegalite_noun",
+    "fr_participation_noun",
+    "fr_pauvrete_noun"
    ]
   }
  },
