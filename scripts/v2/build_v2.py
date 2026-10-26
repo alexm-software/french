@@ -43,6 +43,8 @@ v2-specific inputs live in content/v2/<building>/:
   (genderless words live in the middle) and their card says "adverb · invariable".
   Numbers, determiners and letters (pos "num" / "det" / "letter") are built like adverbs too
   (no article, centre band); their card says "number · invariable", "determiner" or "letter of the alphabet".
+  Prepositions, pronouns and conjunctions (pos "prep" / "pron" / "conj") are built like adverbs too;
+  their card says "preposition · invariable", "pronoun" or "conjunction · invariable".
   Interjections, set phrases and idioms (pos "intj" / "phrase" / "idiom") are built like adverbs;
   their card says "interjection · invariable", "phrase · fixed expression" or "idiom · fixed expression".
 Everything is checked by scripts/qa/check_v2.py.
@@ -343,6 +345,13 @@ def item_from_vocab(w):
         it = adv_from_vocab(w)
         it["gramLine"] = {"num": "number · invariable", "det": "determiner",
                           "letter": "letter of the alphabet · le " + w["lemma"]}[w["pos"]]
+        return it
+    if w.get("pos") in ("prep", "pron", "conj"):
+        # function words (à, sous, parmi; vous, elle, lui-même; et, mais): no article and no gender,
+        # centre band, like adverbs; the card's gram line names the part of speech
+        it = adv_from_vocab(w)
+        it["gramLine"] = {"prep": "preposition · invariable", "pron": "pronoun",
+                          "conj": "conjunction · invariable"}[w["pos"]]
         return it
     if w.get("pos") in ("intj", "phrase", "idiom"):
         # interjections, set phrases and idioms (bonjour, au revoir, oh, zut, coûter les yeux de la tête…):
