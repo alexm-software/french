@@ -149,3 +149,9 @@ These are blocking. A space does not ship until each one passes, and the builder
 - **Shared data merges.** When two packs touch the same building's data js or cards, regenerate those files from the merged layout with the build script. Don't hand-merge them.
 - **Deploy attachment limit.** Keep every deploy tarball under 25 MB. Keep screenshots and review sheets outside the tarball, and slim any pack that's too big by re-packing without them.
 - **Removal accounting.** Track every word a fix takes off the live site (plan-only moves) and every room left sparse. Report both counts to the user at each stopping point. Paint words back where they fit.
+
+## Round 10 additions (user review, Oct 26): blocking gates
+- **Overview is one painting, never patches.** When a district on the overview doesn't match its sector map, repaint the whole overview in one pass from a layout guide built out of every sector map, then make only small feathered fixes. Local pasted-in patches look stuck on, with mismatched light, scale and hard edges, and they fail. Every building on a sector map must appear on the overview in the same arrangement. "Extra buildings sit off-patch" is a fail, not a pass. Small props may be dropped. Buildings may not.
+- **Number rooms count exactly.** Every number item shows exactly that many easy-to-count things (onze is 11 footballers, quatre is 4 cats, and the zéro nest is empty). Count each one at 2x before packing.
+- **"Unbuilt" is checked by word id.** Before building a planned room as new, search every live data file for its word ids. Room ids drift between the plan and the site, so a planned room can already be live under another name.
+- **Sensitive words in new rooms.** For a grave word that lands in an ordinary room (slavery, poverty), use a blank museum-style plaque on a stand or wall, with the word only as the overlay label. Never paint the thing itself, and avoid cultural-costume shorthand for peoples or tribes.
