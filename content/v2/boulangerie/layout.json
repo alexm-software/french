@@ -51,6 +51,24 @@
   },
   "plan": {
    "v1": "boulangerie/plan"
+  },
+  "boucherie": {
+   "only": [
+    "fr_viande_noun",
+    "fr_chair_noun",
+    "fr_saucisse_noun",
+    "fr_carcasse_noun",
+    "fr_moule_noun_f",
+    "fr_sardine_noun",
+    "fr_charcuterie_noun",
+    "fr_galop_noun",
+    "fr_saucisson_noun",
+    "fr_saumon_noun",
+    "fr_poisson_noun",
+    "fr_pate_noun_2",
+    "fr_jambon_noun",
+    "fr_porc_noun"
+   ]
   }
  },
  "rooms": {
@@ -321,7 +339,7 @@
    "name": "Le fournil · Bakehouse",
    "image": "boulangerie/fournil.jpg",
    "backTo": "boulangerie",
-   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, where the mimes can be seen behind the display case, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, Monsieur Verbe in a green beret kneading dough in a giant petri dish, Monsieur Verbe in a red beret mixing batter in half a watermelon, Monsieur Verbe in a gold beret and choir collar singing as he cooks a pancake, a brick oven beside which a baker in a chef's hat holds up four fingers, a tray on a little rocky mesa, a leaky bucket by the oven sewn up with a needle and red thread, a smiling apron-table, and a workbench where a slice of bread in a trench coat inspects a puddle with a sailing cake box, a salt shaker shakes salt from its stone cell, an alarm clock blows a bugle at a rearing toy mule in a cake tin and a knight's gauntlet carries a steaming loaf.",
+   "alt": "The bakehouse behind the shop, painted in ink and gouache: a purple arched door back to the shop, where the mimes can be seen behind the display case, a gasping water jug and a pair of scales on a shelf, a pelican carrying a loaf on a baker's peel, a pile of logs by a bush, Monsieur Verbe in a green beret kneading dough in a giant petri dish, Monsieur Verbe in a red beret mixing batter in half a watermelon, Monsieur Verbe in a gold beret and choir collar singing as he cooks a pancake, a brick oven beside which a baker in a chef's hat holds up four fingers, a tray on a little rocky mesa, a leaky bucket by the oven sewn up with a needle and red thread, a smiling apron-table, and a workbench where a slice of bread in a trench coat inspects a puddle with a sailing cake box, a salt shaker shakes salt from its stone cell, an alarm clock blows a bugle at a rearing toy mule in a cake tin and a knight's gauntlet carries a steaming loaf. A half-open wooden back door behind the stirring mime gives a glimpse of the butcher's shop next door.",
    "doors": [
     {
      "to": "boulangerie",
@@ -348,6 +366,21 @@
       504,
       384,
       216
+     ]
+    },
+    {
+     "to": "boucherie",
+     "label": "la boucherie",
+     "hint": "Peek through the half-open back door into the butcher's next door",
+     "at": [
+      787,
+      200
+     ],
+     "obj": [
+      712,
+      88,
+      150,
+      150
      ]
     }
    ],
@@ -529,6 +562,166 @@
       95,
       108,
       310
+     ]
+    }
+   ]
+  },
+  "boucherie": {
+   "name": "La boucherie · Butcher & Fishmonger",
+   "image": "boulangerie/boucherie.jpg",
+   "parent": "fournil",
+   "alt": "The busy butcher and fishmonger next door, seen through the bakehouse back door: a girl carrying a big tied roast of meat on a platter, a salmon fillet lying on a little kitchen chair while a sauce boat pours beside a string of fresh sausages, a side of meat hanging on a hook, a mule peeking in at the window with panniers of black mussels, an open tin of sardines, a shark-shaped board of sliced cured meats, a carved galloping horse on the wall, a dried salami with white bloom hanging on a string, a whole salmon on ice beside pink salmon steaks, a jolly butcher with a big fish on ice next to an open pea pod, a boy patting a terrine of pâté, a ham with a jar of jam on top, and pork chops beside a pink piggy bank.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_viande_noun",
+     "box": [
+      94,
+      372,
+      212,
+      130
+     ]
+    },
+    {
+     "id": "fr_chair_noun",
+     "box": [
+      375,
+      412,
+      194,
+      138
+     ],
+     "labelAt": [
+      478,
+      378
+     ]
+    },
+    {
+     "id": "fr_saucisse_noun",
+     "box": [
+      372,
+      80,
+      52,
+      220
+     ]
+    },
+    {
+     "id": "fr_carcasse_noun",
+     "box": [
+      212,
+      106,
+      136,
+      247
+     ]
+    },
+    {
+     "id": "fr_moule_noun_f",
+     "box": [
+      430,
+      100,
+      200,
+      272
+     ]
+    },
+    {
+     "id": "fr_sardine_noun",
+     "box": [
+      44,
+      560,
+      160,
+      110
+     ]
+    },
+    {
+     "id": "fr_charcuterie_noun",
+     "box": [
+      210,
+      555,
+      270,
+      165
+     ],
+     "labelAt": [
+      562,
+      615
+     ]
+    },
+    {
+     "id": "fr_galop_noun",
+     "box": [
+      900,
+      6,
+      290,
+      182
+     ],
+     "labelAt": [
+      845,
+      80
+     ]
+    },
+    {
+     "id": "fr_saucisson_noun",
+     "box": [
+      1194,
+      0,
+      75,
+      268
+     ],
+     "labelAt": [
+      1192,
+      272
+     ]
+    },
+    {
+     "id": "fr_saumon_noun",
+     "box": [
+      944,
+      215,
+      172,
+      123
+     ]
+    },
+    {
+     "id": "fr_poisson_noun",
+     "box": [
+      640,
+      450,
+      220,
+      160
+     ]
+    },
+    {
+     "id": "fr_pate_noun_2",
+     "box": [
+      892,
+      440,
+      165,
+      110
+     ],
+     "labelAt": [
+      836,
+      404
+     ]
+    },
+    {
+     "id": "fr_jambon_noun",
+     "box": [
+      1094,
+      410,
+      184,
+      140
+     ]
+    },
+    {
+     "id": "fr_porc_noun",
+     "box": [
+      862,
+      560,
+      410,
+      160
+     ],
+     "labelAt": [
+      814,
+      650
      ]
     }
    ]
