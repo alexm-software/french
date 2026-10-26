@@ -1,19 +1,61 @@
 {
-  "_help": "Planning gate: fill this BEFORE painting, check it against the skill checklist, then paint. precheck.py --manifest reads it. Delete _help/_example keys or leave them; they are ignored.",
+  "_help": "Planning gate: fill this BEFORE painting, check it against the skill checklists, write prompt_text from builder reference/prompt-template.md (every field filled), then paint. precheck.py --manifest FAILS a manifest missing scene_situation, interactions, siblings, used_motifs or prompt_text. Keys starting with _ are ignored.",
   "building": "ecole",
   "room": "cantine",
   "room_id": "R_pronouns_02",
   "setting": "School canteen at lunch: long tables, a rug, a serving counter at the back.",
   "theme_fit": "Every word below is something a person does or meets in this place (placement by gloss, not by the English word).",
+  "scene_situation": "Lunch service in the school canteen: children queue at the counter, share tables and pass dishes.",
+  "interactions": [
+    {
+      "who": [
+        "fr_nous_pron",
+        "fr_vous_pron"
+      ],
+      "doing": "two pairs share one long table; the vous pair hands bread across to the nous children"
+    },
+    {
+      "who": [
+        "fr_manger_verb",
+        "background: dinner lady"
+      ],
+      "doing": "Monsieur Verbe takes his tray from the dinner lady at the counter and bites his sandwich"
+    }
+  ],
+  "_interactions_rule": "small groups of 2-4 doing one thing together; every word belongs to a group (precheck WARNs on a word in no group). 'background: ...' marks unlabelled scenery figures (natural-scene gate).",
+  "siblings": [
+    "ecole/jardin: garden from a high angle, green, digging in beds",
+    "ecole/theatre: stage from the stalls, warm stage lights"
+  ],
+  "used_motifs": [
+    "duck (ecole/basse_cour)",
+    "red toy car (ecole/preau)"
+  ],
   "doors": [
-    {"to": "jardin", "where": "top-left blue door, x 72-282, y 12-297", "painted_as": "open blue door onto the garden"},
-    {"to": "map", "where": "left edge, mid-height", "painted_as": "clear path off the left edge"}
+    {
+      "to": "jardin",
+      "where": "top-left blue door, x 72-282, y 12-297",
+      "painted_as": "open blue door onto the garden"
+    },
+    {
+      "to": "map",
+      "where": "left edge, mid-height",
+      "painted_as": "clear path off the left edge"
+    }
   ],
   "zooms": [
-    {"to": "", "words": [], "_rule": "no one-object zooms: a zoom with fewer than about 4 words is folded into a fuller scene"}
+    {
+      "to": "",
+      "words": [],
+      "_rule": "no one-object zooms: a zoom with fewer than about 4 words is folded into a fuller scene"
+    }
   ],
   "text_in_image": [
-    {"text": "CANTINE", "where": "sign over the counter", "why": "a real canteen would have this sign; it names the place, not a word being taught"}
+    {
+      "text": "CANTINE",
+      "where": "sign over the counter",
+      "why": "a real canteen would have this sign; it names the place, not a word being taught"
+    }
   ],
   "items": [
     {
@@ -29,7 +71,12 @@
       "sensitive": "none",
       "side": "centre",
       "zone": "centre table on the rug",
-      "box_hint": [560, 380, 200, 140]
+      "box_hint": [
+        560,
+        380,
+        200,
+        140
+      ]
     },
     {
       "id": "fr_manger_verb",
@@ -54,5 +101,6 @@
       "count": null,
       "sensitive": "plaque: nothing depicted"
     }
-  ]
+  ],
+  "prompt_text": "Paste the filled builder reference/prompt-template.md block here, exactly as sent (all 15 sections, no {fields} left)."
 }

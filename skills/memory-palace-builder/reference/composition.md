@@ -4,6 +4,7 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 
 ## Mnemonic images
 
+- **Natural scene first (v13.1).** Compose the room as one named everyday situation with small interacting groups, varied facing and depth, clusters and open floor, never a lineup or grid of isolated hook figures each doing its own gag; with labels hidden it must read as a storybook moment. The prompt carries this via `reference/prompt-template.md` (SITUATION, COMPOSITION); the gate is release-gates reference/space-gates.md (natural-scene gate). <!-- N8 -->
 - Each item is a zany, whimsical object, character, or creature that both sounds like the item (when said aloud in the learner's language) and visually represents its meaning. <!-- B42 -->
 - Props that carry the sound cue must be large, prominent, and unambiguous. <!-- B43 -->
 - A helper character that carries the sound cue must sit right next to (visibly interacting with or pointing at) the item it helps with, never far across the room. <!-- B44 -->

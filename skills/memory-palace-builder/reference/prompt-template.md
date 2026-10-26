@@ -1,0 +1,49 @@
+# Painting prompt template (mandatory for every room and zoom painting)
+
+Build every room or zoom painting prompt from the block below, with every `{field}` filled in. Fill it from the item manifest (builder reference/planning.md) and copy the final text into the manifest's `prompt_text` (precheck.py --manifest FAILS a manifest without it, a prompt_text missing any of the 15 section headings, an unfilled `{field}`, or an item word the prompt never names). Keep every line, even when a field is "none". The template only prevents rework: every gate still applies, strictly, to the finished painting. Delete only the bracketed hints. Each line traces to a gate (PROMPT_AUDIT.md); dropping one means repaints.
+
+```text
+IMAGE: one integrated {room | zoom} painting, 1280x720 (16:9), {camera: eye-level three-quarter from ...}, of {building} / {room name}.
+[zoom only] This is a close-up of {parent room}'s {object/spot}, a real spot where these objects belong: same object, materials, colours, contents and arrangement as in the parent painting (crop attached); the same gender sides and bands as the parent.
+[repaint only] Fix these open repaint-queue rows: {rows}. Keep everything else that passed.
+[sprite / paint-back only] One item on a transparent background, full silhouette with its base intact, drawn at the angle of {surface} at about {px} high, lit from {direction} like the room (room attached as the style and light reference), and reading well alone on its card.
+
+STYLE: storybook ink and gouache, dark ink contours, style slider {3: respectful, slightly realistic painterly with cartoony elements}. Same line weight, saturation and texture as the reference scenes {refs}. Matches this {building's exterior | sector} look and materials: {walls, floor, roof, wood/stone, palette}. Fully painted to every edge, no unpainted patches.
+
+LIGHT AND COLOUR: clear natural neutral daylight from {direction}, natural true colours (off-white walls, white whites, varied clothing). No golden, amber, orange, sepia or "cozy" cast; no orange, terracotta or peach walls; no pink or blue wash (natural blue sky, water and blossoms are fine). Set this room apart by {time of day / light / dominant colour}, not by a colour grade.
+
+SETTING: a real {place} with its own walls, floor and depth, and one big nameable landmark: {landmark}. Only enough setting to be believable. Whimsy is tied to what the place holds: {playful architectural feature}. Use the whole frame (walls, windows, beams, stairs, ground), not just a foreground strip. The scene is lively but not too busy to read, with little non-item clutter.
+
+SITUATION: one coherent everyday situation that everyone takes part in: "{named situation, e.g. feeding time in the school farmyard}". The hook props are part of this shared activity, used for it, not separate gags.
+
+COMPOSITION: a natural scene, like a storybook illustration that still makes sense with every label removed. People and animals stand in small interacting groups of 2-4: {group 1: who, doing what with whom}; {group 2: ...}; {group 3: ...}. They look at, hand things to, help and react to each other. Facing directions vary (profile, three-quarter, back view, some toward the viewer). Depth varies, with foreground, middle and background figures, partial overlaps and changes of scale. Clusters with open floor between them. NOT a lineup, row, grid or evenly spaced arrangement; NOT everyone facing the viewer; NOT one isolated figure per gag. Items are in use (carried, cooked, sold, worn, repaired, argued over), not displayed in shelves, cubbies, pigeonholes, stall rows or display cases (at most one shelf as an element). The composition, camera angle, focal action and dominant light differ from the sibling rooms {sibling rooms and how they look}.
+
+ITEMS: exactly {N (10 or fewer; zooms 4-6)}. One clear concept each. Each hook object is LARGE, prominent and unambiguous, and it touches or is acted on by the figure:
+{n}. {word} = {gloss, in the sense this room teaches}: hook object {sound-alike thing}; shown as {what is shown, the same character and gender as the hook}; pose/action {pose}; count {exact integer or "-"}; at {side, zone, depth}; interacts with {group / neighbour}.
+(repeat per item: the mnemonic action is visibly shown, not implied; no item could be read as an ordinary furnishing)
+Verbs: Monsieur Verbe (cheerful mime: striped shirt, suspenders, white gloves, motion lines; beret {red -er | green -ir | purple -re | gold irregular}; holding a hand mirror when pronominal), at human scale, inside the scene and acting on {noun} as part of the situation. Verbs are spread among the nouns, not bunched in one zone or lined along an edge.
+Non-verbs: ordinary people, creatures or objects with no mime look (no striped shirt with white gloves and beret).
+Reference-board items {alphabet, number list, article table | none}: one board or poster, not a picture per letter.
+Every hook element is visible: the sound-alike object AND the meaning, with any counted things shown exactly ({count list}), and each easy to count.
+Plaque-only words {list or "none"}: a blank museum-style plaque on a stand, with nothing depicted.
+
+PLACEMENT AND SPACING: feminine nouns clearly in the left half and masculine in the right half, with no divider. Adjectives and adverbs in the central 30-70% band; opposites may face each other. Each item, figure and key prop is fully in frame. Every item and its helper are compact enough for one tight box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). There are about 110 px between neighbouring items and room under each figure for its label. No item overlaps or hides another.
+
+DOORS AND EXITS: {door 1: to X, where, painted as a door that looks like X with a glimpse of it}; {door 2 / map exit: ...}. Keep every opening clear: no figure or prop overlaps a door frame, leaf or opening, or seems to grow out of it. Views through doors and windows show {what lies beyond, per the plan}, and the interior fits the exterior. Stairs go the way they lead; only ground-floor doors lead outside. Direction signs sit at the edges or overhead, never like an item's prop.
+
+GROUNDING AND ANATOMY: every prop is held, mounted or resting on a surface, with a contact shadow. Nothing floats; a thrown thing is just leaving the hand with motion lines. Buttons, levers and taps are mounted on a machine, with the figure touching them. Correct anatomy (two arms, two hands, five fingers, normal faces). No severed body parts as props, no duplicated objects, nothing garbled or half-formed.
+
+FIGURES: every figure is either a word's figure or the helper its hook names, beside that item, or plainly background scenery. Scenery is small or further back, takes part in the shared situation, is not the focus, does no gag of its own and holds no prop that could read as a word. Helpers are never bigger than their item. Each word figure is unique in character, age, profession, pose and scale. Animals are not anthropomorphic unless the animal is the hook. No decorative props that stand for no word.
+
+TEXT: scene text only where it naturally belongs: {text_in_image list, e.g. "CANTINE" on the sign over the counter | none}, spelled correctly and clear of every item. Otherwise no letters or words, no symbols or currency signs on props, no digits (no shirt numbers, clocks or prices that could compete with a count), no speech or thought bubbles, no captions, and no labels naming items. Name signs are left as blank plates: {where}.
+
+CONTENT: suitable for all ages. No crude or potty humour. Nobody drinks or smokes; alcohol and tobacco appear only as closed, untouched objects, with no child anywhere in such a room. No weapons. No child romance cues or children in unsafe spots. No depiction of God the Father; sacred things are shown reverently, with no whimsy on or touching them and no animals on crosses or altars. No cultural-costume shorthand or caricature (e.g. feathered headbands). Grave or mature words are never drawn. Harmless whimsy and cartoon slapstick are fine.
+
+VARIETY: no repeated motifs across rooms: do not reuse a motif already painted in a sibling room or elsewhere in this building ({used motifs, e.g. the duck, the red toy car}). The composition is unique among the sibling rooms: {how this room's camera, layout, focal action and light differ}.
+
+AVOID: lineup, row of figures, grid, evenly spaced, everyone facing the camera, one gag per person, isolated figures, sticker look, catalogue, shelves of items, cubbies, display case, floating objects, props attached to nothing, figure in a doorway, amber/orange/sepia cast, warm grade, garbled text, random letters, numbers, speech bubbles, labels, captions, extra limbs, merged hands, severed body parts, duplicates, unpainted patches, items cut by the frame edge, drinking, smoking, cigarettes, weapons, potty humour, costume stereotypes, anthropomorphic animals {unless hook}.
+```
+
+**Fields to fill, all required:** camera, refs, materials, light, landmark, the named situation, the groups and their interactions, siblings, N, one line per item, the verb beret colours, plaque words, doors, text_in_image, sign plates, used motifs. The manifest holds the same facts as `scene_situation`, `interactions`, `siblings`, `used_motifs` and `prompt_text`.
+
+**Before sending:** read the filled prompt against the manifest. Check that the item lines match exactly, the counts match `count`, every door is listed, and the scene text matches `text_in_image`. Then check it against the labels-off storybook test: would someone who has never seen the word list describe this as one believable moment?
