@@ -240,6 +240,22 @@
     "fr_communement_adv",
     "fr_periodiquement_adv"
    ]
+  },
+  "classe": {
+   "vocabRoom": "R_adv_time_01",
+   "only": [
+    "fr_bientot_adv",
+    "fr_souvent_adv",
+    "fr_hier_adv",
+    "fr_lors_adv",
+    "fr_puis_adv",
+    "fr_quelquefois_adv",
+    "fr_tot_adv",
+    "fr_autrefois_adv",
+    "fr_actuellement_adv",
+    "fr_parfois_adv",
+    "fr_malheureusement_adv"
+   ]
   }
  },
  "rooms": {
@@ -509,6 +525,21 @@
       125,
       235
      ]
+    },
+    {
+     "to": "classe",
+     "label": "la classe",
+     "hint": "Climb the little steps through the arch into the tower schoolroom",
+     "at": [
+      1192,
+      300
+     ],
+     "obj": [
+      1160,
+      72,
+      76,
+      264
+     ]
     }
    ],
    "items": [
@@ -567,7 +598,7 @@
      ]
     }
    ],
-   "alt": "The tower stairway, painted in ink and gouache: a boy shrugs beside his big red lorry, a singer in a black gown bows among roses, two old sweethearts hold hands on a bench, a boy crosses his arms beside a giant jam jar, a granny slams a big red button holding a stopwatch, and a baker in a nightcap rushes in with a tart and a candle. An alcove under the stairs holds an armchair; the arched door with the sun leads back to the clock hall."
+   "alt": "The tower stairway, painted in ink and gouache: a boy shrugs beside his big red lorry, a singer in a black gown bows among roses, two old sweethearts hold hands on a bench, a boy crosses his arms beside a giant jam jar, a granny slams a big red button holding a stopwatch, and a baker in a nightcap rushes in with a tart and a candle. An alcove under the stairs holds an armchair; the arched door with the sun leads back to the clock hall. Through the tall stone arch at the top right, a few steps lead up into a little schoolroom with a blackboard and two children at their desks."
   },
   "alcove": {
    "name": "L'alcôve de l'escalier · Stair Alcove",
@@ -1774,6 +1805,159 @@
     }
    ],
    "alt": "Close-up through the arched window at the top of the tower onto a green hill by the sea: a hamster runs in its wheel in a cage, a man in a green cap sits at the door of a little orange tent, a milkman carries a crate of milk bottles, a man on a bench feeds a pigeon, and a lighthouse on the hilltop flashes its lantern."
+  },
+  "classe": {
+   "name": "La salle de classe · Tower Schoolroom",
+   "image": "horloge/classe.jpg",
+   "parent": "escalier",
+   "alt": "A cosy stone schoolroom up the tower steps, with a blank green blackboard, an arched window and a round window, a coat peg with a satchel and bookshelves with a globe: a honeybee hovers over a closed tulip bud on a wall shelf; a boy holds up a toy camper van covered in travel stickers; a white-bearded old schoolmaster listens through a brass ear trumpet to a drooping wilted rose; a boy dressed as a little lord mayor in a red robe and gold chain; a girl watches a row of dominoes topple one after another; a girl opens a big shell with a pearl inside; a boy sleeps on a chair with an alarm clock tied to his big toe; a boy holds an antique brass toy car; two children speak into a microphone beside an old radio with a glowing red lamp; a boy putts a golf ball toward a toy hole; and a dismayed boy kneels by a knocked-over flowerpot with spilled soil and a rose.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bientot_adv",
+     "box": [
+      300,
+      62,
+      184,
+      70
+     ],
+     "labelAt": [
+      230,
+      82
+     ]
+    },
+    {
+     "id": "fr_souvent_adv",
+     "box": [
+      440,
+      136,
+      135,
+      76
+     ],
+     "labelAt": [
+      540,
+      100
+     ]
+    },
+    {
+     "id": "fr_hier_adv",
+     "box": [
+      318,
+      216,
+      222,
+      124
+     ],
+     "labelAt": [
+      255,
+      262
+     ]
+    },
+    {
+     "id": "fr_lors_adv",
+     "box": [
+      578,
+      200,
+      124,
+      140
+     ],
+     "labelAt": [
+      640,
+      167
+     ]
+    },
+    {
+     "id": "fr_puis_adv",
+     "box": [
+      706,
+      150,
+      156,
+      112
+     ],
+     "labelAt": [
+      784,
+      117
+     ]
+    },
+    {
+     "id": "fr_quelquefois_adv",
+     "box": [
+      806,
+      266,
+      150,
+      80
+     ],
+     "labelAt": [
+      1032,
+      282
+     ]
+    },
+    {
+     "id": "fr_tot_adv",
+     "box": [
+      318,
+      344,
+      190,
+      190
+     ],
+     "labelAt": [
+      270,
+      420
+     ]
+    },
+    {
+     "id": "fr_autrefois_adv",
+     "box": [
+      575,
+      350,
+      140,
+      150
+     ],
+     "labelAt": [
+      636,
+      503
+     ]
+    },
+    {
+     "id": "fr_actuellement_adv",
+     "box": [
+      740,
+      350,
+      190,
+      140
+     ],
+     "labelAt": [
+      1032,
+      405
+     ]
+    },
+    {
+     "id": "fr_parfois_adv",
+     "box": [
+      318,
+      540,
+      210,
+      170
+     ],
+     "labelAt": [
+      245,
+      610
+     ]
+    },
+    {
+     "id": "fr_malheureusement_adv",
+     "box": [
+      700,
+      515,
+      260,
+      195
+     ],
+     "labelAt": [
+      1062,
+      600
+     ]
+    }
+   ]
   }
  }
 }
