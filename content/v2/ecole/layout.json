@@ -18,13 +18,25 @@
   {
    "key": "theatre",
    "short": "Le théâtre"
+  },
+  {
+   "key": "terrain",
+   "short": "Le terrain de sport"
+  },
+  {
+   "key": "jardin",
+   "short": "Le jardin de l'école"
+  },
+  {
+   "key": "cantine",
+   "short": "La cantine"
   }
  ],
  "rooms": {
   "ecole": {
    "name": "L'école : la salle de classe · School: the Classroom",
    "image": "ecole/ecole.jpg",
-   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table, a goldfish pinning a card to the notice board, a globe with blue jelly, a young doe with a sack on her back and an exercise book folded into a kayak; an open door on the left leads to the playground, a half-open wooden door at the back shows the red curtains of the school theatre and a teal door on the right leads to the maths classroom.",
+   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table, a goldfish pinning a card to the notice board, a globe with blue jelly, a young doe with a sack on her back and an exercise book folded into a kayak; an open green door on the left leads to the school garden, a half-open wooden door at the back shows the red curtains of the school theatre and a teal door on the right leads to the maths classroom.",
    "nameplate": [
     66.5,
     5
@@ -59,6 +71,17 @@
       35,
       130,
       185
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin de l'école",
+     "hint": "Through the open green door to the school garden",
+     "hit": [
+      10,
+      40,
+      135,
+      300
      ]
     }
    ],
@@ -748,7 +771,7 @@
    "name": "Le théâtre de l'école · School Theatre",
    "image": "ecole/theatre.jpg",
    "backTo": "ecole",
-   "alt": "The school theatre painted in ink and gouache: under bunting and spotlights a little diva in pink sings la-la-la, a boy lugs a big sack over his shoulder, a girl in a grass skirt wears many flower leis and a striped strongman lifts a huge iron weight; in front of the stage a child dressed as the Wizard of Oz in a green robe points to a row of little painted doors, a mime holds up one finger, a girl in pink holds up one giant wooden spoon and a boy hugs his teddy; a model village with a river, boats and a cathedral sits on a table on the left, rows of chairs face the stage, costumes hang on a rail and the open door on the right leads back to the classroom.",
+   "alt": "The school theatre painted in ink and gouache: under bunting and spotlights a little diva in pink sings la-la-la, a boy lugs a big sack over his shoulder, a girl in a grass skirt wears many flower leis and a striped strongman lifts a huge iron weight; in front of the stage a child dressed as the Wizard of Oz in a green robe points to a row of little painted doors, a mime holds up one finger, a girl in pink holds up one giant wooden spoon and a boy hugs his teddy; a model village with a river, boats and a cathedral sits on a table on the left, rows of chairs face the stage, costumes hang on a rail the open door on the right leads back to the classroom and the open garden door on the left, by the bookcase, looks out onto the sports field and its red running track.",
    "doors": [
     {
      "to": "ecole",
@@ -759,6 +782,17 @@
       150,
       72,
       255
+     ]
+    },
+    {
+     "to": "terrain",
+     "label": "Le terrain de sport",
+     "hint": "Through the open garden door to the sports field",
+     "hit": [
+      186,
+      110,
+      100,
+      225
      ]
     }
    ],
@@ -917,6 +951,290 @@
      ]
     }
    ]
+  },
+  "terrain": {
+   "name": "Le terrain de sport · Sports Field",
+   "image": "ecole/terrain.jpg",
+   "backTo": "theatre",
+   "alt": "The school sports field painted in ink and gouache, ringed by a red running track: a big white van with twenty footballs on its roof rack in two rows of ten; a red toy train pulling three wagons, each heaped with ten yellow balls; a girl at a wooden table laid with four rows of ten carrots, a big black ant on the grass in front of it; a wooden boat on a round pond carrying five crates of ten red apples, an ant on top of its mast; a white swan at the back corner of a sandpit laid with six rows of ten white shells; a ginger cat beside four little white vans, each with twenty orange balls on its roof rack in four rows of five; children watching and playing; the white garden gate on the left leads back to the school theatre.",
+   "doors": [
+    {
+     "to": "theatre",
+     "label": "Le théâtre",
+     "hint": "Back through the garden door to the theatre",
+     "hit": [
+      0,
+      180,
+      95,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vingtaine_noun",
+     "box": [
+      150,
+      92,
+      365,
+      180
+     ]
+    },
+    {
+     "id": "fr_trente_num",
+     "box": [
+      355,
+      280,
+      285,
+      95
+     ]
+    },
+    {
+     "id": "fr_quarante_num",
+     "box": [
+      645,
+      180,
+      265,
+      125
+     ]
+    },
+    {
+     "id": "fr_cinquante_num",
+     "box": [
+      775,
+      335,
+      225,
+      165
+     ]
+    },
+    {
+     "id": "fr_soixante_num",
+     "box": [
+      455,
+      392,
+      300,
+      138
+     ]
+    },
+    {
+     "id": "fr_quatre_vingts_num",
+     "box": [
+      585,
+      533,
+      390,
+      140
+     ]
+    }
+   ]
+  },
+  "jardin": {
+   "name": "Le jardin de l'école · School Garden",
+   "image": "ecole/jardin.jpg",
+   "backTo": "ecole",
+   "alt": "The school garden painted in ink and gouache, a green lawn criss-crossed by brick paths: a moustached chef waves from the door of his little red-roofed hut; a girl in orange dungarees hides among three palms in wicker baskets; an old golfer in a flat cap putts his ball through a wire hoop on a putting green; a boy in board shorts stands on a wooden crate beside his surfboard; a girl dances inside her red hula hoop; a man in a brown suit stands in front of a blue sofa; a girl in a yellow raincoat runs to her kneeling grandpa; a girl drives a red pedal car; a boy in striped pyjamas sits under a little table that holds his bowl of soup; flowers everywhere; the open green door on the left leads back into the classroom and a small canteen with a blue door stands on the right.",
+   "doors": [
+    {
+     "to": "ecole",
+     "label": "L'école",
+     "hint": "Back through the green door into the classroom",
+     "hit": [
+      25,
+      100,
+      230,
+      275
+     ]
+    },
+    {
+     "to": "cantine",
+     "label": "La cantine",
+     "hint": "Through the blue door to the school canteen",
+     "hit": [
+      1045,
+      150,
+      180,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_chez_prep",
+     "box": [
+      362,
+      75,
+      158,
+      180
+     ]
+    },
+    {
+     "id": "fr_parmi_prep",
+     "box": [
+      588,
+      48,
+      150,
+      235
+     ]
+    },
+    {
+     "id": "fr_par_prep",
+     "box": [
+      812,
+      100,
+      140,
+      180
+     ]
+    },
+    {
+     "id": "fr_sur_prep",
+     "box": [
+      425,
+      268,
+      128,
+      206
+     ]
+    },
+    {
+     "id": "fr_dans_prep",
+     "box": [
+      588,
+      305,
+      112,
+      180
+     ]
+    },
+    {
+     "id": "fr_devant_prep",
+     "box": [
+      735,
+      290,
+      210,
+      200
+     ]
+    },
+    {
+     "id": "fr_a_prep",
+     "box": [
+      300,
+      478,
+      240,
+      197
+     ]
+    },
+    {
+     "id": "fr_en_prep",
+     "box": [
+      598,
+      495,
+      170,
+      180
+     ]
+    },
+    {
+     "id": "fr_sous_prep",
+     "box": [
+      792,
+      500,
+      160,
+      175
+     ]
+    }
+   ]
+  },
+  "cantine": {
+   "name": "La cantine · School Canteen",
+   "image": "ecole/cantine.jpg",
+   "backTo": "jardin",
+   "alt": "The school canteen painted in ink and gouache, wooden floorboards and a big red woven rug: a butler in a tailcoat bows and steps aside so two grannies get the best view from the window; a girl switches on a glowing standing lamp; a boy at an easel paints a portrait of himself, a little mirror beside him; a girl rings a big brass hand bell; two friends at a little table share one bowl, each slurping an end of one long noodle; a boy holds up his wooden toy horse with a thumbs-up; a man with shaving suds on his cheeks shaves himself at a mirror and washbasin; a little girl holds out a teddy bear to you; long tables, benches and pans on the dresser; the open blue door on the left leads back to the school garden.",
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin de l'école",
+     "hint": "Back through the blue door to the school garden",
+     "hit": [
+      72,
+      12,
+      210,
+      285
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vous_pron",
+     "box": [
+      344,
+      82,
+      220,
+      190
+     ]
+    },
+    {
+     "id": "fr_on_pron",
+     "box": [
+      588,
+      45,
+      118,
+      205
+     ]
+    },
+    {
+     "id": "fr_lui_meme_pron",
+     "box": [
+      750,
+      45,
+      195,
+      225
+     ]
+    },
+    {
+     "id": "fr_elle_pron",
+     "box": [
+      356,
+      282,
+      145,
+      200
+     ]
+    },
+    {
+     "id": "fr_nous_pron",
+     "box": [
+      525,
+      300,
+      238,
+      195
+     ]
+    },
+    {
+     "id": "fr_toi_pron",
+     "box": [
+      785,
+      300,
+      115,
+      215
+     ]
+    },
+    {
+     "id": "fr_se_pron",
+     "box": [
+      288,
+      500,
+      262,
+      177
+     ]
+    },
+    {
+     "id": "fr_te_pron",
+     "box": [
+      706,
+      522,
+      152,
+      155
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -980,6 +1298,41 @@
     "fr_au_det",
     "fr_des_det",
     "fr_du_det"
+   ]
+  },
+  "terrain": {
+   "only": [
+    "fr_vingtaine_noun",
+    "fr_trente_num",
+    "fr_quarante_num",
+    "fr_cinquante_num",
+    "fr_soixante_num",
+    "fr_quatre_vingts_num"
+   ]
+  },
+  "jardin": {
+   "only": [
+    "fr_chez_prep",
+    "fr_parmi_prep",
+    "fr_par_prep",
+    "fr_sur_prep",
+    "fr_dans_prep",
+    "fr_devant_prep",
+    "fr_a_prep",
+    "fr_en_prep",
+    "fr_sous_prep"
+   ]
+  },
+  "cantine": {
+   "only": [
+    "fr_vous_pron",
+    "fr_on_pron",
+    "fr_lui_meme_pron",
+    "fr_elle_pron",
+    "fr_nous_pron",
+    "fr_toi_pron",
+    "fr_se_pron",
+    "fr_te_pron"
    ]
   }
  },
