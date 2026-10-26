@@ -12,8 +12,8 @@ A space is NOT done until every gate passes, and the checker must actually look 
 
 ## Order of work (reference/tools-and-logs.md)
 - 0. Run `tools/unbuilt.py` (by word id, fresh main) before choosing what to paint.
-- 1. Write the item manifest and check it against all the gates below before painting (builder reference/planning.md).
-- 2. After painting, run `tools/precheck.py --manifest` and fix every FAIL (size, overlaps, touching, detached labels, counts, verb targets, doors).
+- 1. Write the item manifest and check it against all the gates below before painting (builder reference/planning.md); build the prompt from builder reference/prompt-template.md, every field filled (it prevents rework; every gate below still applies strictly).
+- 2. After painting, run `tools/precheck.py --manifest` and fix every FAIL (size, overlaps, touching, detached labels, counts, verb targets, doors, the prompt fields).
 - 3. Judge each OCR FLAG by eye; scene text that makes sense may stay, and OCR never auto-rejects.
 - 4. Run the project's gate scripts (the canonical copies in scripts/qa/); a non-zero exit blocks release.
 - 5. Review ONE contact sheet per room (`tools/contact_sheet.py`), opening full-size crops only where a tile raises doubt.
@@ -23,7 +23,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 1. Hook match: the figure shows exactly the hook scene; check the sound-clue object first.
 - 2. Anatomy: limbs, hands, fingers and faces are right; no severed parts as props; no duplicated objects.
 - 3. Clean rendering: nothing garbled or half-formed; regenerate rather than accept it.
-- 4. Grounded props: everything is held, mounted or resting; nothing floats.
+- 4. Grounded props, no strays: nothing floats; no prop or figure stands for no word or reads as an unlabelled word; plain background figures are fine as scenery.
 - 5. Hook strength: the sound-alike comes from the real pronunciation and is an English word, never the target word or its meaning.
 - 6. Content, in the art and the hook text: adult items appear only as objects, no child is near them, and nobody drinks or smokes.
 - Every hook element is visible; the hook acts on or touches the item; no anthropomorphic animals unless the animal is the hook.
@@ -53,10 +53,11 @@ A space is NOT done until every gate passes, and the checker must actually look 
 ## G, H and rounds 5-10: scene gates (reference/space-gates.md)
 - The planned assignment is law; every word suits the place; close-ups are real spots that look like their parent.
 - No rows of stickers; the scene is painted first and assets are drawn to fit; nothing grows out of a door frame.
+- Natural scene: one named situation, small interacting groups, varied facing and depth; a lineup or grid of isolated hook figures fails, and so does the labels-off storybook test.
 - Verbs are acted at human scale by the language's marker, spread through the scene among the nouns.
 - A zoom matches its parent side by side; the style matches the references; no unpainted patches.
 - Theme, naming, clutter and liveliness gates pass; no room is mostly shelves or cubbies (periodic shelf audit).
-- Distinct rooms: put a building's thumbnails side by side, and each needs its own composition and light.
+- Distinct rooms: put a building's thumbnails side by side, and each needs its own composition and light, with no repeated motifs.
 - No one-object zooms; zooms under about 4 words are folded into a fuller scene.
 - Maps: exteriors show their function, overview and inner maps agree, and the overview is one painting (builder reference/maps-and-navigation.md).
 - Placement-by-meaning, sense, no-overflow and sensitive-setting gates pass (language reference/placement-and-senses.md).

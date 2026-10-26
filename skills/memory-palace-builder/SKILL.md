@@ -16,7 +16,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - One canonical position per object in data; one style guide and prompt preamble for every image.
 - Natural true colour in neutral daylight, no tint or cast; sectors differ by setting, never by grade.
 
-## Plan before painting (reference/planning.md)
+## Plan before painting (reference/planning.md, reference/prompt-template.md)
 - Step 0 of every job: run `tools/unbuilt.py` and read the target building's partial/unbuilt rooms.
 - "Unbuilt" is checked by word id across all live data, never by room id or memory.
 - Build in order: inventory, assign to rooms once, sectors, world map, rooms, then site shell.
@@ -25,11 +25,13 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - No one-object zooms: fold any zoom under about 4 words into a fuller scene.
 - Placement encodes meaning (side, height, recurring prop); never tint the scene by category.
 - Every word suits its place; no catch-all rooms; place by meaning, not a shared gloss word.
-- Write the item manifest (`tools/manifest_template.json`): word, what is shown, pose or action, exact count, where verbs act, sensitive treatment, side or zone, doors and exits, zooms, intended scene text.
+- Write the item manifest (`tools/manifest_template.json`): word, what is shown, pose or action, exact count, where verbs act, sensitive treatment, side or zone, doors and exits, zooms, intended scene text, plus the room's named situation, interaction groups, sibling rooms and motifs already used.
 - Check the manifest against these checklists, fix it, and only then write the prompt and paint.
+- Every room/zoom painting prompt is built from reference/prompt-template.md with every field filled; store it as the manifest's `prompt_text`.
 
 ## Compose the room (reference/composition.md)
-- Every figure or creature stands for one item; no decorative whimsy; props are hooks too.
+- One named everyday situation: small interacting groups, varied facing and depth; never a lineup or grid of isolated hook figures.
+- Every whimsical figure or creature stands for one item; plain background people are scenery only; props are hooks too.
 - The sound-cue prop is large, and its helper touches or acts on the item.
 - One clear concept per object; the mnemonic action is visibly shown.
 - Exactly one tight hotspot per item (item plus helper); boxes never overlap or nest.

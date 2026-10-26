@@ -16,7 +16,10 @@ Checks (FAIL = must fix before review, WARN = look at it, FLAG = a human decides
           adjective/adverb box centre outside the 30-70 % band                        WARN
   manifest  every room word is in the manifest and vice versa; each entry says what is
           shown + pose/action; numbers carry an exact count; verbs say what they act on;
-          sensitive treatment stated; doors/exits listed; thin (one-object) zooms       FAIL/WARN
+          sensitive treatment stated; doors/exits listed; thin (one-object) zooms;
+          prompt gate: scene_situation, interactions (2+ per group), siblings, used_motifs,
+          prompt_text with every template section, no unfilled {field}, every item named FAIL
+          a word in no interaction group (isolated figure)                              WARN
 Exit code 1 if any FAIL, else 0.
 """
 import argparse, json, os, re, shutil, subprocess, sys, tempfile
@@ -27,6 +30,8 @@ from PIL import Image, ImageFont
 W, H = 1280, 720
 GROW = 3   # check_v2 --strict: "touching" = closer than this (px)
 EDGE = 8   # check_v2 --strict: min clear gap label <-> scene edge (px)
+PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOUR", "SETTING", "SITUATION", "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING",
+                   "DOORS AND EXITS", "GROUNDING AND ANATOMY", "FIGURES", "TEXT", "CONTENT", "VARIETY", "AVOID")
 DETACH = 12  # build_v2 places labels 4 px off their box; farther than this = detached (manual labelAt?)
 FONT = None
 for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]:
@@ -241,7 +246,37 @@ def main():
             if pos == "verb" and not str(e.get("verb_acts_on", "")).strip():
                 F.append(f"manifest: verb {i} has no 'verb_acts_on' (who acts on what, where)")
         for z in M.get("zooms", []):
+            if not str(z.get("to", "")).strip() and not z.get("words"): continue   # empty template row
             if len(z.get("words", [])) <= 1: F.append(f"manifest: zoom {z.get('to')} has {len(z.get('words', []))} word(s): fold it")
+        # prompt gate (builder reference/prompt-template.md): the prompt is built from the template, every field filled
+        sit = str(M.get("scene_situation", "")).strip()
+        if not sit: F.append("manifest: no 'scene_situation' (the one named everyday situation everyone takes part in)")
+        grp = M.get("interactions")
+        if not isinstance(grp, list) or not grp:
+            F.append("manifest: no 'interactions' (small interacting groups: who does what with whom)")
+        else:
+            inq = set()
+            for g in grp:
+                who = g.get("who", []) if isinstance(g, dict) else []
+                if len(who) < 2 or not str(g.get("doing", "")).strip():
+                    F.append(f"manifest: interaction {who or g} needs 2+ 'who' and a 'doing'")
+                inq.update(who)
+            for i, e in ent.items():
+                if i and i not in inq and "plaque" not in str(e.get("sensitive", "")) + str(e.get("shown", "")):
+                    Wn.append(f"manifest: {i} is in no interaction group (isolated figure? natural-scene gate)")
+        for k in ("siblings", "used_motifs"):
+            if k not in M: F.append(f"manifest: no '{k}' (list sibling rooms / motifs already used; [] if none)")
+        pt = str(M.get("prompt_text", ""))
+        if not pt.strip(): F.append("manifest: no 'prompt_text' (the filled prompt-template text actually sent)")
+        else:
+            miss = [h for h in PROMPT_SECTIONS if h + ":" not in pt]
+            if miss: F.append("manifest: prompt_text lacks template section(s): " + ", ".join(miss))
+            left = re.findall(r"\{[^{}\n]{1,60}\}", pt)
+            if left: F.append(f"manifest: prompt_text has {len(left)} unfilled field(s), e.g. {left[0]}")
+            for i, e in ent.items():
+                w = str(e.get("word", "")).strip()
+                if w and w.lower() not in pt.lower(): F.append(f"manifest: prompt_text does not list item {w}")
+            if sit and sit.lower()[:40] not in pt.lower(): Wn.append("manifest: prompt_text does not quote scene_situation")
         notes.append(f"manifest: {len(ent)} entries checked")
 
     for n in notes: print("  ok   ", n)
