@@ -1,0 +1,56 @@
+# Per-space gates (B, C, F, H and the blocking rounds)
+
+Read when reviewing a whole room, building or street.
+
+## B. Labels and controls
+
+7. **Rendered label rectangles.** Compute every label's on-screen rectangle by the exact render path: the label text is the card headword (article included), the site's font, weight, size, anchor and baseline formula, plus the halo stroke. Verb plates use their sign box. Test each rectangle against every other label, every other item box, every control (way badges, zoom badges and pills, placed by the viewer's own placement routine, plus hover previews in their visible state) and the image edge, at desktop, laptop and mobile frame sizes. Any overlap fails; checking only anchor points is not enough (users found the beer and cigarette labels overlapping). Hotspot boxes must not overlap each other either. If moving the label within its own box can't clear it, re-lay out the space or split it. <!-- G32 -->
+8. **One control per destination.** Count every on-screen navigation element per destination: strip Back, strip sector button, every way badge, zoom badge and pill, breadcrumb crumbs, mini-map cells and thumbnail pills. Never two to the same place (users found a step-back button plus another back arrow in a wine cellar's counter view). Typical failures and where they get fixed: (a) a build step adds a synthetic "Step back" exit to zoom rooms when strip Back already exists (fix in the build); (b) the sector button and Back both go to the sector (the viewer hides the sector button when its target equals Back); (c) a painted door to the Back target carries its own always-visible badge (keep the hit area and a hover pill that names the place, drop the badge). A breadcrumb replaces the strip Back and sector button; it never sits beside them. Fix it in code when code causes the duplicate, and in data only when a space's own file lists two exits to one place. A zoom room gets no painted or synthetic back arrow when strip Back already leads to its parent. <!-- G33 -->
+9. **Exits look like their destination and name it.** A kitchen door looks like a restaurant kitchen door (swinging, porthole windows, stoves and steam visible), not like restroom doors. Every exit shows a glimpse of where it leads, and its control text names the destination ("Back to the dining hall", "Kitchen"). Generic text like "Step back", "Forward" or "Open" fails automatically (gate 9a), and a bare arrow is never enough. Entering an upper-floor room from the street through a window also fails: only ground-floor doors lead outside. A destination preview (thumbnail plus name) shows only on hover, focus or first tap, never always on the painting. <!-- G34 -->
+10. **Way out, sector button and plan.** Every space has a painted way back out plus the always-visible way up to its sector (unless that duplicates Back, see 8). Views through doors and windows match the top-down plan. Stairs go the right way. The interior fits the exterior. Room names and floor labels in the data ("first floor", "upstairs") match the plan and the paintings; if a repaint moves a room to another floor, rename it in the same package. A mini-map, if shown, lives outside the painting and is drawn from the area's top-down plan. <!-- G35 -->
+- **Labels clear of everything.** No label may overlap or touch another label, another item's click box, a door or passage, a different word's painted item, or the scene edge. Treat "touches" warnings as failures. Check at every supported viewport width. <!-- G111 -->
+
+## C. Setting and layout
+
+11. A rich, real-feeling setting with its own wall colour, floor, depth and one big nameable landmark. Never a plain white or bare room. <!-- G38 -->
+12. At most about 10 items (11-12 is a warning, more than 12 fails, zoom spots counted separately), well separated, every box at least 6% from each edge, figures grounded (never in rows on shelves or counters). Split crowded rooms into zones. Rows of small items on one counter also show up as gate 7 failures, which is the earliest sign a room is too dense. <!-- G39 -->
+13. **No look-alikes.** Compare every pair of spaces in the same building or street with an image-similarity measure (e.g. CLIP cosine plus a colour histogram plus a coarse layout correlation), then look at the flagged pairs side by side. Segments of one long street are the usual offenders. <!-- G40 -->
+14. One style per building or street, matching its exterior in every view. <!-- G41 -->
+15. **Colour**: builder reference/setup-and-style.md (merged colour rule).
+
+## F. Final scene (after compositing)
+
+**F. Final scene (after compositing).** Check the finished room at desktop and phone sizes: <!-- G79 -->
+- **No overlaps:** no asset overlaps another asset, a hotspot box, a label or a control. Each asset is clearly separate, with breathing room. <!-- G80 -->
+- **No confusing labels:** each label (or hover highlight) sits on its own asset and can't be read as belonging to a neighbour; text is readable, and gender colour (if any) is only on labels. <!-- G81 -->
+- **Not pasted on:** every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow on that surface. Its scale is right for its depth in the room, its lighting and colour tint match the room, it doesn't float or sink into furniture, and nothing is cut by a wall or edge unnaturally. Zoom in on each asset's base and edges. <!-- G82 -->
+- **Coherent room:** the room still reads as one real place with its landmark visible, nothing important is hidden behind assets, and the empty background has no leftover artifacts (smudges, ghost objects). <!-- G83 -->
+- **Hotspots line up:** clicking the centre of each asset opens its own card at every screen size. <!-- G84 -->
+Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then show the user. <!-- G85 -->
+
+## G and H. Place fit and integrated scene
+
+Gates G and H. Each must pass before a space is shown to the user. <!-- G89 -->
+
+- Place fit (planned assignments are law, every word suits the place, real close-up spots, close-up looks like its parent): builder reference/planning.md.
+- **No rows of stickers.** Items are never lined up in the foreground of an empty room. Use the whole frame: walls, shelves, beams, windows, noticeboards, stairs, pews, niches. Vary depth and scale, and add ambient life (background people and activity) so the place feels lived in. Background figures are scenery and carry no hotspot. <!-- G98 -->
+- **Scene first, then assets drawn to fit.** Paint the room first, then write a slot spec for every item before generating it: the surface it rests on, the camera angle at that spot, the light direction and colour, its target height from perspective, its pose, and what hides it (pew backs, counters). Generate one sprite per slot, all of a room's slots in parallel, with the spec in the prompt. Harmonise in code: match colour and light to the surrounding patch, remove fringes, add contact and cast shadows, and paste furniture from the background back over figures that sit behind it. Never repaint a whole room to fix one item; redraw only the failing sprite. (Once, generic cut-outs dropped onto a church floated in front of the pews and were called "genuinely terrible". Slot-specific sprites with occlusion fixed it.) <!-- G99 -->
+- **Nothing merges with architecture.** No figure overlaps a door frame, door leaf or exit opening so that it seems to come out of it. Keep exit openings clear and clickable. (Once, a man with lilies seemed to grow out of a side door.) <!-- G100 -->
+- **Verb characters act at human scale** in the scene, never as tiny figures in a row. <!-- G101 -->
+- **Cards show all options at once.** All tense tabs or similar choices are visible at every screen size by wrapping or a grid, never by sideways scrolling. <!-- G103 -->
+
+## Rounds 5-10 scene gates
+
+These are blocking. A space does not ship until each one passes, and the builder looks at the rendered screenshots personally, never just at the checker output. <!-- G108 -->
+
+- **Zoom matches parent.** For every zoom, render a side-by-side of the zoom next to the crop of the same object in the parent painting. Object, contents, arrangement, colours and materials must agree, e.g. wooden doors in both (never glass in one), and the same counter items in the same order. Fix the cheaper side by regenerating that region locally. <!-- G109 -->
+- **Verbs use the language's chosen verb marker.** Every verb is acted out by the recurring verb marker picked for that language (the French build uses a mime; other languages use their own, culturally fitting marker), with its feature code correct. Never swap in other people for variety. <!-- G110 -->
+- Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, line weight, texture). Any drift in a single room or a whole building fails. Every area is fully coloured, with no unpainted patches. <!-- G118 -->
+- Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room that fits them. Near-synonyms in one room need a visible distinction. <!-- G119 -->
+- Naming gate: room names make sense for their contents, and every place name shows a translation. <!-- G120 -->
+- Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain strip fails; a verb street must be a real, lively scene. <!-- G121 -->
+- Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read. <!-- G123 -->
+- Liveliness gate: a room is a lively scene, not an inventory. A few items lined up is fine where that's natural (three loaves on a counter, a row of boots by a door), but a room must not be mostly items in cubbyholes, pigeonholes, shelf grids, stall rows or display cases. Most items are in use in the scene: carried, cooked, sold, thrown, worn, repaired or argued over. A room that reads as a catalogue fails. <!-- G128 -->
+- Distinct-room gate: before shipping a building, put all its room thumbnails side by side. Each room needs its own composition, camera angle, focal action and dominant colour or light, so a learner can tell rooms apart from a thumbnail. Two rooms with the same layout (for example two stalls with goods on shelves) fail. This is what makes the loci work: rooms that blend together lose their memories. <!-- G129 -->
+- **Shelf audit.** Periodically rank every built room by how much of it is shelves, cubbies or rows of figurines, and repaint the worst as lively scenes, each with its own composition. A shelf is fine as one element. A whole room of cubbies fails. <!-- G146 -->
+- Exterior, zoom-continuity, overview-consistency and overview-is-one-painting gates: builder reference/maps-and-navigation.md. Placement-by-meaning, sense, no-overflow gates: language reference/placement-and-senses.md. One-hook and forced-pun gates: builder reference/hooks.md. Integrated verbs: language reference/verbs.md. Sensitive setting: builder reference/sensitive-content.md.

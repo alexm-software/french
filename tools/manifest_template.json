@@ -1,0 +1,58 @@
+{
+  "_help": "Planning gate: fill this BEFORE painting, check it against the skill checklist, then paint. precheck.py --manifest reads it. Delete _help/_example keys or leave them; they are ignored.",
+  "building": "ecole",
+  "room": "cantine",
+  "room_id": "R_pronouns_02",
+  "setting": "School canteen at lunch: long tables, a rug, a serving counter at the back.",
+  "theme_fit": "Every word below is something a person does or meets in this place (placement by gloss, not by the English word).",
+  "doors": [
+    {"to": "jardin", "where": "top-left blue door, x 72-282, y 12-297", "painted_as": "open blue door onto the garden"},
+    {"to": "map", "where": "left edge, mid-height", "painted_as": "clear path off the left edge"}
+  ],
+  "zooms": [
+    {"to": "", "words": [], "_rule": "no one-object zooms: a zoom with fewer than about 4 words is folded into a fuller scene"}
+  ],
+  "text_in_image": [
+    {"text": "CANTINE", "where": "sign over the counter", "why": "a real canteen would have this sign; it names the place, not a word being taught"}
+  ],
+  "items": [
+    {
+      "id": "fr_nous_pron",
+      "word": "nous",
+      "pos": "pron",
+      "gloss": "we, us",
+      "hook": "the mnemonic sentence the card will show, verbatim",
+      "shown": "two children sharing one big bowl of soup with two straws",
+      "pose_action": "both sip at the same moment, heads touching",
+      "count": 2,
+      "verb_acts_on": "",
+      "sensitive": "none",
+      "side": "centre",
+      "zone": "centre table on the rug",
+      "box_hint": [560, 380, 200, 140]
+    },
+    {
+      "id": "fr_manger_verb",
+      "word": "manger",
+      "pos": "verb",
+      "gloss": "to eat",
+      "hook": "...",
+      "shown": "the house verb figure",
+      "pose_action": "mid-bite into a sandwich, cheeks full",
+      "count": null,
+      "verb_acts_on": "on the sandwich at the long right table, human scale, inside the scene",
+      "sensitive": "none",
+      "side": "any",
+      "zone": "right long table"
+    },
+    {
+      "_example": "a sensitive word: say exactly how it is treated (plaque only / mild depiction / omitted with note)",
+      "id": "fr_example_noun",
+      "word": "la ...",
+      "shown": "blank museum-style plaque only",
+      "pose_action": "none (plaque)",
+      "count": null,
+      "sensitive": "plaque: nothing depicted"
+    }
+  ]
+}
