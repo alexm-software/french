@@ -3,155 +3,79 @@ name: Memory palace release gates
 description: >-
   Use together with the Memory palace builder skill whenever painting,
   installing, reviewing or shipping any memory palace space: mandatory per-item
-  and per-space gates that must all pass before a space counts as done.
+  and per-space gates that must all pass before a space counts as done. A
+  one-page gate checklist; procedures live in reference/*.md, read when relevant.
 ---
 # Memory palace release gates
 
-These gates come from issues users found room after room. A space is NOT done until every gate passes, and the checker must have actually looked: view crops with an image reader, not just read the json. Record the result per space in a gates log (space | gate | pass/fail | note), with the site commit the checks ran against in the log header. Safety and content failures (gate 6) block release. Any other failure is a major issue.
+A space is NOT done until every gate passes, and the checker must actually look at the images. Each line is one gate. The file named in a section heading holds the full procedure and examples. Record each result in a dated gates log (space | gate | pass/fail | note) with the site commit. Gate 6 (content) failures block release; any other failure is a major.
 
-**Tools.** The automatable gates are scripted where the project has them, e.g. `scripts/qa/release_gates.py` for gates 7, 8, 9a, 12 and 13 over the whole live site, built with the site's own build script, `scripts/qa/package_gates.py` for one package, and `scripts/qa/label_overlap.py` for gate 7 detail. Crop sheets come from `scripts/qa/hook_sheets.py`, label-only fixes from `scripts/qa/label_fix.py`, and the procedure is in `scripts/qa/hook_image_match.md`. A gate script that exits non-zero blocks the release. Port the viewer code into the checker (font, anchor, badge placement, which controls render). Never re-guess it. After any viewer or build change, re-run every gate script on the new commit before trusting its counts. A checker that disagrees with the viewer is itself a release blocker, so fix the checker first (once, a stale checker reported 20 false gate 8 failures after the viewer already hid the duplicate sector button). Gate 13 counts in reports always come from the full measure with CLIP; a run without it is only a smoke test. Keep ONE canonical copy of each gate script in the project's scripts/qa/ and update it in the same change as any viewer change; a track-local port is fine for a draft, but the release decision runs the canonical script. Write each run's log to its own dated file, so a smoke run never overwrites the full CLIP run (once, the live viewer had used a breadcrumb for hours while scripts/qa/release_gates.py still modelled the old Back button).
+## Order of work (reference/tools-and-logs.md)
+- 0. Run `tools/unbuilt.py` (by word id, fresh main) before choosing what to paint.
+- 1. Write the item manifest and check it against all the gates below before painting (builder reference/planning.md).
+- 2. After painting, run `tools/precheck.py --manifest` and fix every FAIL (size, overlaps, touching, detached labels, counts, verb targets, doors).
+- 3. Judge each OCR FLAG by eye; scene text that makes sense may stay, and OCR never auto-rejects.
+- 4. Run the project's gate scripts (the canonical copies in scripts/qa/); a non-zero exit blocks release.
+- 5. Review ONE contact sheet per room (`tools/contact_sheet.py`), opening full-size crops only where a tile raises doubt.
+- A checker that disagrees with the viewer is a blocker: port the viewer's geometry and re-run after any viewer change.
 
-## Before painting
-- Budget room for labels. Estimate each label's rendered width (about 0.5 x font size per character, article included) and keep neighbouring boxes far enough apart that both labels fit under their own figures, roughly 110 px between neighbours with long words.
-- Rooms that hold adult items (alcohol, tobacco) contain adults and animals only. Children go elsewhere.
-- Any prop that gets operated (a button, lever or tap) is mounted on a machine or panel, with its figure touching it.
-- Hooks never carry meta prefixes ("Twist on a cognate:", "Like English", "False friend:"). Cognate and false-friend notes go in their own card field.
-- Hooks never open with a placement phrase ("On the balcony", "At the upper window", "On the roof"). The item's position in the painting shows where it is, and the hook describes the action and the sound clue only.
-- Before repainting a space, read its open rows in the repaint queue; each one must be fixed by the repaint.
+## A. Every item and exit crop, at 256 px or more with the headword and hook under it (reference/item-gates.md)
+- 1. Hook match: the figure shows exactly the hook scene; check the sound-clue object first.
+- 2. Anatomy: limbs, hands, fingers and faces are right; no severed parts as props; no duplicated objects.
+- 3. Clean rendering: nothing garbled or half-formed; regenerate rather than accept it.
+- 4. Grounded props: everything is held, mounted or resting; nothing floats.
+- 5. Hook strength: the sound-alike comes from the real pronunciation and is an English word, never the target word or its meaning.
+- 6. Content, in the art and the hook text: adult items appear only as objects, no child is near them, and nobody drinks or smokes.
+- Every hook element is visible; the hook acts on or touches the item; no anthropomorphic animals unless the animal is the hook.
+- Operated props are mounted, with the figure touching them; open repaint-queue rows are fixed by the repaint.
 
-## A. Per item: crop review (every drawn item, every time)
-Crop each item box AND each exit box out of the final painting, at least 256 px on the long side. Lay them out on labelled sheets of about 12. Under each tile, print the headword, the hook's sound-alike and the hook scene, taken from the package's own hook rows merged over current data (or the exit's destination). A sheet without hook text can only check gates 2-4 and 6, and gate 1 then stays open. Look at every crop and confirm:
-1. **Hook match.** The figure shows exactly what the hook scene says: the same character, gender, action, props and sound-clue object. Check the sound-clue object first, because it is the part most often missing (no viola for violet, no cigar or toy car for le cigare, no plump deer for arrondir). A whole room can drift: after one repaint, 6 of 12 hooks described a different picture. When a room is repainted, every hook in it is rewritten from the new crop in the same pass, or the art is redone. Never ship a hook that describes something else or is still the template line written before painting. A reflexive verb (se dépêcher, se promener...) shows a mirror inside its own box, and the hook mentions it; check it per item on the crop and with a scripted pre-check over the specs (one batch painted 6 reflexives with no mirror, while all 45 live ones had one).
-2. **Anatomy.** Count arms, hands, legs and fingers on every figure. Watch for merged hands, missing limbs, extra limbs and melted faces (users found a juggler with one arm). Disembodied or severed body parts used as props also fail (a giant foot on a table for "toe"); show the body part on a whole figure or a toy.
-3. **Clean rendering.** Nothing garbled, smeared, half-formed or mashed together. Regenerate rather than accept a bad render.
-4. **Grounded props, no strays.** Every prop is held by someone, mounted on something or resting on a surface. No floating buttons, signs or objects (users found a reset button attached to nothing). Thrown or flying things count as grounded only when the motion is unmistakable: the object is just leaving the hand or has motion lines, or the creature visibly has wings and is mid-flap. Anything else hanging in the air is a floating prop. A figure or prop that stands for no word fails too (a pipe, an ashtray, a hose with no vacuum), and so does part of a neighbour's figure poking into a crop so it reads as a floating object. A helper figure is allowed only when the hook names it and it sits inside the item's box, next to the item. A person or animal outside every box, or one the hook doesn't mention, is a stray even when it belongs to the scene, and a helper bigger than the item reads as an unlabelled word (a raven reselling spoons between two unmentioned men; a dog chasing the dépêcher peach).
-5. **Hook strength.** The sound-alike comes from the real pronunciation (read the respelling aloud). It is an English word or phrase, never the French word said again and never the meaning, and the scene is vivid and specific. Mechanical pre-screen before the eye pass: flag every "Same as English"/"Like English" hook with no twist that's rated strong, every hook rated weak, every sound-alike equal to the gloss, every meta or placement opener, and every opening phrase shared by more than 5 hooks. Re-rate honestly: a flat cognate line is "ok" at best.
-6. **Content, in the art AND the hook text.** Adult items (alcohol, tobacco) appear only as objects, such as closed bottles and untouched packs. Nobody drinks or smokes, and hook text never says gulping, sipping or smoking either. No child is near them, meaning not at the same table, counter group, zone or next table, and no child or child-looking worker appears anywhere in a room whose words include alcohol. No romance cue involving a child (a boy giving a woman a rose, children kissing, love hearts between kids), and no child in an unsafe pose (outside a balcony railing, on a roof edge, near knives or medicine); show an adult or change the scene. Words about adult states (such as l'ivresse) may be drawn through a gentle, innocent stand-in like dizzy grape-stomping, never through drinking. Truly mature words are wall text only.
+## B. Labels and controls (reference/space-gates.md)
+- 7. Rendered label rectangles are computed by the exact render path; no label overlaps or touches anything, at every viewport.
+- 8. One control per destination, never two to the same place.
+- 9. Exits look like their destination, show a glimpse of it, and name it.
+- 10. Every space has a painted way out plus the way up; door views match the plan; stairs go the right way.
 
-## B. Per space: labels and controls
-7. **Rendered label rectangles.** Compute every label's on-screen rectangle by the exact render path: the label text is the card headword (article included), the site's font, weight, size, anchor and baseline formula, plus the halo stroke. Verb plates use their sign box. Test each rectangle against every other label, every other item box, every control (way badges, zoom badges and pills, placed by the viewer's own placement routine, plus hover previews in their visible state) and the image edge, at desktop, laptop and mobile frame sizes. Any overlap fails; checking only anchor points is not enough (users found the beer and cigarette labels overlapping). Hotspot boxes must not overlap each other either. If moving the label within its own box can't clear it, re-lay out the space or split it.
-8. **One control per destination.** Count every on-screen navigation element per destination: strip Back, strip sector button, every way badge, zoom badge and pill, breadcrumb crumbs, mini-map cells and thumbnail pills. Never two to the same place (users found a step-back button plus another back arrow in a wine cellar's counter view). Typical failures and where they get fixed: (a) a build step adds a synthetic "Step back" exit to zoom rooms when strip Back already exists (fix in the build); (b) the sector button and Back both go to the sector (the viewer hides the sector button when its target equals Back); (c) a painted door to the Back target carries its own always-visible badge (keep the hit area and a hover pill that names the place, drop the badge). A breadcrumb replaces the strip Back and sector button; it never sits beside them. Fix it in code when code causes the duplicate, and in data only when a space's own file lists two exits to one place. A zoom room gets no painted or synthetic back arrow when strip Back already leads to its parent.
-9. **Exits look like their destination and name it.** A kitchen door looks like a restaurant kitchen door (swinging, porthole windows, stoves and steam visible), not like restroom doors. Every exit shows a glimpse of where it leads, and its control text names the destination ("Back to the dining hall", "Kitchen"). Generic text like "Step back", "Forward" or "Open" fails automatically (gate 9a), and a bare arrow is never enough. Entering an upper-floor room from the street through a window also fails: only ground-floor doors lead outside. A destination preview (thumbnail plus name) shows only on hover, focus or first tap, never always on the painting.
-10. **Way out, sector button and plan.** Every space has a painted way back out plus the always-visible way up to its sector (unless that duplicates Back, see 8). Views through doors and windows match the top-down plan. Stairs go the right way. The interior fits the exterior. Room names and floor labels in the data ("first floor", "upstairs") match the plan and the paintings; if a repaint moves a room to another floor, rename it in the same package. A mini-map, if shown, lives outside the painting and is drawn from the area's top-down plan.
+## C. Setting and layout (reference/space-gates.md)
+- 11. A rich, real setting with its own walls, floor, depth and one nameable landmark.
+- 12. At most about 10 items (more than 12 fails), each box at least 6% from every edge, figures grounded, no rows on shelves.
+- 13. No look-alike spaces: run a similarity measure, then compare the flagged pairs by eye.
+- 14. One style per building or street, matching its exterior.
+- 15. Colour: natural neutral daylight, matching the palette sheet; a whole-room amber or orange cast fails.
 
-## C. Per space: setting and layout
-11. A rich, real-feeling setting with its own wall colour, floor, depth and one big nameable landmark. Never a plain white or bare room.
-12. At most about 10 items (11-12 is a warning, more than 12 fails, zoom spots counted separately), well separated, every box at least 6% from each edge, figures grounded (never in rows on shelves or counters). Split crowded rooms into zones. Rows of small items on one counter also show up as gate 7 failures, which is the earliest sign a room is too dense.
-13. **No look-alikes.** Compare every pair of spaces in the same building or street with an image-similarity measure (e.g. CLIP cosine plus a colour histogram plus a coarse layout correlation), then look at the flagged pairs side by side. Segments of one long street are the usual offenders.
-14. One style per building or street, matching its exterior in every view.
-15. **Colour.** Natural, neutral daylight. Compare each painting with the approved palette sheet; an amber, sepia or orange cast over a whole street or room fails.
+## Text in the image (builder reference/text-and-labels.md)
+- Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.
+- Stray or garbled text, prop symbols, speech bubbles and count-breaking digits fail.
 
-## D. Process gates
-- Before painting, write the item layout with label room in mind.
-- After painting, run A to D, fix and re-run. Ship only on a full pass.
-- **Independent sign-off.** The crop review sign-off for a package is done by someone other than the worker who painted it. A self-certified review counts as pending, and a package whose crop review is pending never ships. The reviewer also re-checks every open repaint-queue row for the package's spaces.
-- **Queued problems block their space.** When a package contains a space with an open row in the repaint queue, its README says how each row was fixed, or the package fails. Fixed rows are closed in the queue with the package name.
-- **Staged fixes must survive the merge.** Before a combined build ships, run the text pre-screens (gates 5 and 6) and the gate scripts on the built public data, not only on the patches. Any staged fix the combined build leaves out is listed in its README with the reason and an owner.
-- **User-reported issues ship as hotfixes.** Every review lists each issue the user reported, whether it is still live, and the package that fixes it. A user-reported issue, or any P0/P1, whose fix has passed independent review ships as its own small hotfix in the next deploy window and never waits for an unrelated combined build. If a combined build leaves out the space that carries a fix (for an unrelated exit or dependency), its README says so and the fix is split out (once, a user-reported label overlap stayed live for hours behind a combined build, and a fixed painting was dropped from a build over an unrelated exit).
-- Every time a user reports a new kind of issue, add it here as a numbered gate with the example, and add an automated check where possible. Crop review covers what scripts can't.
-- At review checkpoints, re-run every gate over the whole live site plus everything in the deploy queue and in sectors/ that's about to ship, not just new work. Confirm earlier fixes haven't regressed, and put the counts in every release report.
-- Never skip a space because someone else is repainting it: run the gates on it, report it, and leave the fix to its owner.
-- Try one small navigation or UX improvement per checkpoint, using mockups first. Keep it if it passes the gates and makes the walk clearer, and note the result here. Round 1 result: a breadcrumb trail (Village > Sector > Building > Room) that replaces Back and the sector button won clearly; hover/first-tap destination previews on painted exits help; a mini-map belongs behind a "Plan" button outside the painting. Round 2 result: the breadcrumb and previews passed gate 8 with crumbs counted; mocked next are a short "you came from" glow on the exit you entered through and non-clickable progress dots for short streets ("place 3 of 5"). Any transient caption follows the preview rule: never over a figure or item box.
+## E, F. Composited scenes (reference/item-gates.md, reference/space-gates.md)
+- E: each asset shows the hook and the meaning, is one word only, renders cleanly, matches the style, is cleanly cut out and card-ready, and has the right perspective.
+- F: no overlaps; labels sit on their own asset; assets rest on surfaces with contact shadows; the room is coherent; hotspots line up.
 
-## Notes for the builder and language skills
-- Prefer orientation cues that highlight an existing exit (a brief glow on the way you came in, progress dots along a short street) over new buttons, because they add no second control to any destination.
-- Navigation pattern: the breadcrumb is the hierarchy control, painted exits show a hover or first-tap preview of the destination with its name, and an optional Plan panel shows the top-down plan with a you-are-here dot.
-- Verb-street hooks describe the action and the sound clue only. The balcony, window or roof tier is shown by placement, never written into the hook.
+## G, H and rounds 5-10: scene gates (reference/space-gates.md)
+- The planned assignment is law; every word suits the place; close-ups are real spots that look like their parent.
+- No rows of stickers; the scene is painted first and assets are drawn to fit; nothing grows out of a door frame.
+- Verbs are acted at human scale by the language's marker, spread through the scene among the nouns.
+- A zoom matches its parent side by side; the style matches the references; no unpainted patches.
+- Theme, naming, clutter and liveliness gates pass; no room is mostly shelves or cubbies (periodic shelf audit).
+- Distinct rooms: put a building's thumbnails side by side, and each needs its own composition and light.
+- No one-object zooms; zooms under about 4 words are folded into a fuller scene.
+- Maps: exteriors show their function, overview and inner maps agree, and the overview is one painting (builder reference/maps-and-navigation.md).
+- Placement-by-meaning, sense, no-overflow and sensitive-setting gates pass (language reference/placement-and-senses.md).
+- One-hook and forced-pun gates pass (builder reference/hooks.md).
 
-## Round 3 additions (Oct 22, 11:52 UTC, from the 1046Z / B63 review)
-- **Don't over-police (user, 13:12 UTC):** harmless whimsy is fine, e.g. a bee on a Bible or cartoonish slapstick danger. Only flag the user's actual content rules (no crude content, no drinking or smoking, no depictions of God the Father, mature words as text only). Spend review effort on whether the place looks good, is cartoonish enough, and makes sense as a coherent village.
-- **User-hook coverage gate:** every row the user wrote (qa_020 / qa_100) must be applied in every build, loading last, wherever the painting matches it. A painted user-hook word whose painting shows a different scene keeps its old matching hook, but only if it is listed as a P1 repaint in user_hooks_need_repaint.tsv and REPAINT_QUEUE, and it ships no worse than live. Shipping a hook that mismatches its painting always fails, and so does a user row silently dropped with no repaint row. (Refined at 12:25 UTC after 1216Z: this keeps a mismatch from ever going live while not blocking a build that's no regression from live.)
-- **Integration mirror check:** run reflexive_mirror_check.py on every combined build's art, not only on packages. The 0951Z review missed 7 missing mirrors because it trusted the package verdicts.
-- **Hooks file apply order:** packages that each ship a whole hooks file must declare a row count, and the build uses the newest superset copy. Note it in the README.
+## Number and count rooms (reference/number-and-count-rooms.md)
+- Every number item shows exactly that many easy-to-count things; count each at 2x before packing.
+- The manifest holds the count, and painted digits never compete with it.
 
-## Composited scenes: per-word assets (user, Oct 22, 14:26 UTC)
-Mnemonic pictures are now made as separate assets, independent of the room, then placed into an empty painted room. That allows two levels of checks. Both must pass, and the checker looks at the images, not just the json.
+## Process (reference/process.md)
+- Crop sign-off comes from someone other than the painter; a self-certified review counts as pending and never ships.
+- Queued problems block their space; staged fixes are re-checked on the combined build.
+- Show the user clean screenshots before shipping, and fix what they flag first.
+- At checkpoints, re-run every gate on the whole live site plus the queue; re-audit live spaces whenever a gate is added.
+- Each new kind of user-reported issue becomes a numbered gate, with a script where possible.
 
-**E. Per asset (before it may be placed).** Check every word's asset on its own, at full size:
-- **Mnemonic represented:** the asset shows the hook's sound-alike object AND the meaning, as the hook text describes. If the hook is a spelling link, the card says so. A verb asset shows the verb character with the right colour code (and the mirror if reflexive). Rewrite the hook or regenerate until they match.
-- **One word only:** nothing in the asset stands for another word or an unnamed extra figure.
-- **Clean render and anatomy:** gates 2 and 3 apply (limbs, hands, faces, no garbled parts, no stray text, symbols or currency signs).
-- **Style match:** the same line weight, saturation and cartoon level as the room's style family, lit from the same direction as the target room.
-- **Clean cutout:** a transparent background, no white fringe or halo, no cut-off parts, and the base (feet, bottom edge) intact so it can rest on a surface.
-- **Perspective fits its spot:** the asset is drawn at the angle of the surface it will sit on (an item for a counter follows the counter's angle). Note the intended surface in the asset's metadata.
-- **Card-ready:** the same file reads well alone on the word card.
-
-**F. Final scene (after compositing).** Check the finished room at desktop and phone sizes:
-- **No overlaps:** no asset overlaps another asset, a hotspot box, a label or a control. Each asset is clearly separate, with breathing room.
-- **No confusing labels:** each label (or hover highlight) sits on its own asset and can't be read as belonging to a neighbour; text is readable, and gender colour (if any) is only on labels.
-- **Not pasted on:** every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow on that surface. Its scale is right for its depth in the room, its lighting and colour tint match the room, it doesn't float or sink into furniture, and nothing is cut by a wall or edge unnaturally. Zoom in on each asset's base and edges.
-- **Coherent room:** the room still reads as one real place with its landmark visible, nothing important is hidden behind assets, and the empty background has no leftover artifacts (smudges, ghost objects).
-- **Hotspots line up:** clicking the centre of each asset opens its own card at every screen size.
-Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then show the user.
-- **Signs are assets, labels always show (user, 14:29 UTC):** a room's name sign is its own asset with its text fitted inside the plaque with padding at every screen size; text overflowing a sign's edges fails. Every placed item carries a visible label (word with article, verbs as the infinitive), always shown, not only on hover. In language palaces, place feminine nouns clearly left and masculine clearly right, in zooms too, with no physical divider; slight overhang of the centre line is fine, and any real exception is listed.
-
-## Round 4 additions (user review, Oct 23)
-Gates G and H. Each must pass before a space is shown to the user.
-
-**G. Place fit (words and close-ups).**
-- **Planned assignments are law.** Every space takes its words from the project's planned item-to-room assignment (the inventory's room id and the room list's theme). Never pick words because they are unused or easy to draw. If a planned room has no space yet, build that space; don't borrow its words. Words that leave a space go to a reserve file tagged with their planned room. (Once a parish hall got an umbrella, a coat and knitting words, and the plan already had a home for each of them.)
-- **Every word suits the place.** A teacher reading the room's name would expect each item there. Furniture that isn't needed (a random table) is never a reason to hold unrelated items.
-- **A close-up is a real spot where its objects belong:** a coat peg, a knitting basket, an easel, a vestment cupboard. It's never a generic table.
-- **A close-up looks like the same place as its parent:** the same piece of furniture, walls, light and style, just closer. The object it zooms into is visible in the parent painting, and its hotspot opens the zoom. (Once a desk zoom looked like a desk in a different building, and a classroom had no desk until you zoomed in.)
-
-**H. Integrated scene.**
-- **No rows of stickers.** Items are never lined up in the foreground of an empty room. Use the whole frame: walls, shelves, beams, windows, noticeboards, stairs, pews, niches. Vary depth and scale, and add ambient life (background people and activity) so the place feels lived in. Background figures are scenery and carry no hotspot.
-- **Scene first, then assets drawn to fit.** Paint the room first, then write a slot spec for every item before generating it: the surface it rests on, the camera angle at that spot, the light direction and colour, its target height from perspective, its pose, and what hides it (pew backs, counters). Generate one sprite per slot, all of a room's slots in parallel, with the spec in the prompt. Harmonise in code: match colour and light to the surrounding patch, remove fringes, add contact and cast shadows, and paste furniture from the background back over figures that sit behind it. Never repaint a whole room to fix one item; redraw only the failing sprite. (Once, generic cut-outs dropped onto a church floated in front of the pews and were called "genuinely terrible". Slot-specific sprites with occlusion fixed it.)
-- **Nothing merges with architecture.** No figure overlaps a door frame, door leaf or exit opening so that it seems to come out of it. Keep exit openings clear and clickable. (Once, a man with lilies seemed to grow out of a side door.)
-- **Verb characters act at human scale** in the scene, never as tiny figures in a row.
-- **Real doors to sub-rooms.** A sub-room is reached through a painted door, stair or archway, never a sign on a wall. Every building's main room has a painted way out (front door or porch) to the map, as well as Back. Back from a sub-room goes to its building's main room, and from a zoom to its parent.
-- **Cards show all options at once.** All tense tabs or similar choices are visible at every screen size by wrapping or a grid, never by sideways scrolling.
-- **Every hook element is visible.** The sound-alike creature or object is drawn in the item's own picture. (Once, the boire picture had no boar.)
-- **Show before shipping.** Show the user clean screenshots of a redone space before it goes live, and fix what they flag before starting the next space.
-
-## Round 5 additions (user review of integrated scenes)
-These are blocking. A space does not ship until each one passes, and the builder looks at the rendered screenshots personally, never just at the checker output.
-- **Zoom matches parent.** For every zoom, render a side-by-side of the zoom next to the crop of the same object in the parent painting. Object, contents, arrangement, colours and materials must agree, e.g. wooden doors in both (never glass in one), and the same counter items in the same order. Fix the cheaper side by regenerating that region locally.
-- **Verbs use the language's chosen verb marker.** Every verb is acted out by the recurring verb marker picked for that language (the French build uses a mime; other languages use their own, culturally fitting marker), with its feature code correct. Never swap in other people for variety.
-- **Labels clear of everything.** No label may overlap or touch another label, another item's click box, a door or passage, a different word's painted item, or the scene edge. Treat "touches" warnings as failures. Check at every supported viewport width.
-- **Re-audit what is already live.** When a new gate is added, audit the spaces already shipped against it and fix them in the next release.
-
-## Round 6 additions (user review, Oct 25): blocking gates
-- Hook gate: every mnemonic is a visible sound-alike of the target word, acted out ON or touching the item. Fail if the hook is a random prop, sits far from the item, needs another target-language word to work (e.g. a trap for piéger), or uses the target language itself.
-- Animal gate: no anthropomorphic animals unless the animal is the hook. Otherwise use an ordinary person carrying the hook.
-- Anatomy gate: count the arms, legs, feet and limbs on every figure, check faces look normal, and check for duplicated objects (e.g. two teapots or four cups for two people). Any oddity fails.
-- Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, line weight, texture). Any drift in a single room or a whole building fails. Every area is fully coloured, with no unpainted patches.
-- Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room that fits them. Near-synonyms in one room need a visible distinction.
-- Naming gate: room names make sense for their contents, and every place name shows a translation.
-- Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain strip fails; a verb street must be a real, lively scene.
-- Exterior gate: a building or street seen from the level above shows the landmarks visible inside (and vice versa).
-- Clutter gate: no overlapping items, believable layouts (tracks, crossroads, floors), and scenes that aren't too busy to read.
-
-- **Hook edits are surgical:** when rewriting a word's hook, change only its `hook` and `why` fields. Replacing the whole entry drops the `say`/`f_say` respellings, and strict QA then fails (e.g. unwanted "pee"/"poo" sound flags). Diff the entry before and after.
-
-## Round 7 additions (user review, Oct 25 afternoon): blocking gates
-- Liveliness gate: a room is a lively scene, not an inventory. A few items lined up is fine where that's natural (three loaves on a counter, a row of boots by a door), but a room must not be mostly items in cubbyholes, pigeonholes, shelf grids, stall rows or display cases. Most items are in use in the scene: carried, cooked, sold, thrown, worn, repaired or argued over. A room that reads as a catalogue fails.
-- Distinct-room gate: before shipping a building, put all its room thumbnails side by side. Each room needs its own composition, camera angle, focal action and dominant colour or light, so a learner can tell rooms apart from a thumbnail. Two rooms with the same layout (for example two stalls with goods on shelves) fail. This is what makes the loci work: rooms that blend together lose their memories.
-- Exterior-character gate: on the overview and sector maps, every building's exterior shows its function at a glance through its silhouette, iconic features and props (an oven chimney and bread for a bakery, a steeple for a church). A generic house or box shape that could be any building fails, as does an exterior that looks like its neighbours'.
-- Zoom-continuity gate: each district on the overview map is a zoomed-out miniature of the map you get when you click it, with the same key buildings and silhouettes, roughly the same relative positions, and the same water, paths and colours. Clicking must feel like zooming in. One generic landmark standing in for a cluster of different buildings (a single brick college for a six-building campus) fails. Check every district by putting its overview crop next to its sector map. At the same time, the overview stays one coherent painting: lanes, water, trees and light continue across district edges at a matching scale and perspective, so districts look connected and fit together, yet each district is distinguishable at a glance. A patchwork of pasted-in tiles fails. Map labels may carry a small symbol of the place's character (a graduation cap for a university).
-- Overview-consistency gate: every district's sector map, building exteriors and interior establishing views match what the top-level overview map paints for that district (same landmarks, architecture, roof shapes, materials, colours, and water or terrain in the same places). Repainting the overview means re-auditing the inner levels, and the other way round.
-
-## Round 8 additions (outside review, Oct 25): blocking gates
-- Placement-by-meaning gate: no word sits in a room only because its English gloss shares a word with the room's theme (bank, stock, fire, star, band, stage…). The QA script flags these and each one gets a manual check.
-- Sense gate: the gloss and picture show the sense the room teaches; a homograph with two senses in two rooms has two word ids and two hooks.
-- Sensitive-setting gate: no grave or sensitive word in a light-hearted room; it is plain wall text in a sober gallery, or dropped.
-- No-overflow gate: every room's words share an honest theme that can be painted as one scene. Rooms of leftover abstract nouns fail.
-- One-hook gate: a word that appears in more than one room has the same hook everywhere.
-- Forced-pun gate: reject hooks with the wrong vowel, more than two sound chunks, a pun object that only sits beside the meaning, no pun at all, or a "like English X" template on a non-cognate.
-- Integrated-verbs gate: a room's verbs are spread through the scene and interact with its nouns. A room fails if its verbs are bunched in one zone or lined up along an edge. Verb streets are allowed where they make sense, but most of a sector's verbs should sit in its themed rooms.
-
-## Round 9 additions (evening wrap-up, Oct 25): blocking gates
-- **Rebuild after every repaint.** If a scene painting changes, rebuild that building's cards and data js with the project's build script in the same pack. A painting shipped with stale cards or zoom thumbnails is a failed pack; it needs a hotfix.
-- **Parent miniature and zoom hint.** When a zoom room is repainted, the parent room's miniature (the window, hatch, shelf or booth that opens it) is repainted to match, and the zoom-hint text is rewritten to describe the new scene. Hook text that names where an item sits ("on the tray's rim") is re-checked against the new art.
-- **Shelf audit.** Periodically rank every built room by how much of it is shelves, cubbies or rows of figurines, and repaint the worst as lively scenes, each with its own composition. A shelf is fine as one element. A whole room of cubbies fails.
-- **No text, including props.** The no-text check covers mugs, speech or thought bubbles, coins, signs, price tags and badges. Generated props often come back with letters, "…" or "$". Paint them out.
-- **Ownership before paint.** Before painting a room, check the other workers' packs and the live site for a more recent repaint of the same file. A pack built on an older version of a repainted image must be dropped and redone on current main, never merged over the newer art.
-- **Shared data merges.** When two packs touch the same building's data js or cards, regenerate those files from the merged layout with the build script. Don't hand-merge them.
-- **Deploy attachment limit.** Keep every deploy tarball under 25 MB. Keep screenshots and review sheets outside the tarball, and slim any pack that's too big by re-packing without them.
-- **Removal accounting.** Track every word a fix takes off the live site (plan-only moves) and every room left sparse. Report both counts to the user at each stopping point. Paint words back where they fit.
-
-## Round 10 additions (user review, Oct 26): blocking gates
-- **Overview is one painting, never patches.** When a district on the overview doesn't match its sector map, repaint the whole overview in one pass from a layout guide built out of every sector map, then make only small feathered fixes. Local pasted-in patches look stuck on, with mismatched light, scale and hard edges, and they fail. Every building on a sector map must appear on the overview in the same arrangement. "Extra buildings sit off-patch" is a fail, not a pass. Small props may be dropped. Buildings may not.
-- **Number rooms count exactly.** Every number item shows exactly that many easy-to-count things (onze is 11 footballers, quatre is 4 cats, and the zéro nest is empty). Count each one at 2x before packing.
-- **"Unbuilt" is checked by word id.** Before building a planned room as new, search every live data file for its word ids. Room ids drift between the plan and the site, so a planned room can already be live under another name.
-- **Sensitive words in new rooms.** For a grave word that lands in an ordinary room (slavery, poverty), use a blank museum-style plaque on a stand or wall, with the word only as the overlay label. Never paint the thing itself, and avoid cultural-costume shorthand for peoples or tribes.
+## Deploy (reference/deploy.md)
+- Make one combined pack per batch of rooms; the deploy reports once, when live.
+- User-reported, P0 and P1 fixes still ship as small hotfixes in the next window.
+- Rebuild cards and data after every repaint, in the same pack.
+- Check ownership before painting; regenerate shared data from the merged layout.
+- Keep each tarball under 25 MB with no screenshots; account for removals (plan-only words, sparse rooms) at every stop.
