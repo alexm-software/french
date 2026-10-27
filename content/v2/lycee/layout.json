@@ -1,0 +1,556 @@
+{
+ "building": "lycee",
+ "building_id": "B33_lycee",
+ "sector_id": "S10_university",
+ "name": "Le lycée · The High School",
+ "main": "lycee",
+ "roomList": [
+  {
+   "key": "lycee",
+   "short": "Le hall"
+  },
+  {
+   "key": "etage",
+   "short": "L'étage"
+  },
+  {
+   "key": "combles",
+   "short": "Sous les combles"
+  }
+ ],
+ "planned": {
+  "lycee": {
+   "vocabRoom": "R_school_01",
+   "only": [
+    "fr_ecole_noun",
+    "fr_universite_noun",
+    "fr_note_noun",
+    "fr_classe_noun",
+    "fr_eleve_noun",
+    "fr_prof_noun",
+    "fr_maitre_noun",
+    "fr_lycee_noun",
+    "fr_college_noun",
+    "fr_enseignement_noun"
+   ]
+  },
+  "paillasse": {
+   "vocabRoom": "R_school_01_z1",
+   "only": [
+    "fr_scolaire_adj",
+    "fr_etudiant_noun",
+    "fr_professeur_noun",
+    "fr_examen_noun"
+   ]
+  },
+  "etage": {
+   "vocabRoom": "R_school_02",
+   "only": [
+    "fr_rentree_noun",
+    "fr_creche_noun",
+    "fr_fac_noun",
+    "fr_description_noun",
+    "fr_education_noun",
+    "fr_epreuve_noun",
+    "fr_indice_noun",
+    "fr_enseignant_noun",
+    "fr_institut_noun",
+    "fr_test_noun",
+    "fr_lyceen_noun",
+    "fr_ecolier_noun"
+   ]
+  },
+  "combles": {
+   "vocabRoom": "R_school_03",
+   "only": [
+    "fr_scolarite_noun",
+    "fr_classification_noun",
+    "fr_pedagogie_noun",
+    "fr_elimination_noun",
+    "fr_evaluation_noun",
+    "fr_baccalaureat_noun",
+    "fr_sujet_noun",
+    "fr_semestre_noun",
+    "fr_detail_noun",
+    "fr_collegien_noun",
+    "fr_campus_noun",
+    "fr_standard_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "lycee": {
+   "name": "Le hall du lycée · The Entrance Hall",
+   "room_id": "R_school_01",
+   "image": "lycee/lycee.jpg",
+   "alt": "The lycée entrance hall on open-house morning, painted in ink and gouache: a little girl rings a brass hand-bell, the music teacher clashes cymbals for her class, a former pupil pours tea from a starry globe teapot, marked papers tied in a red-ribbon knot, a pupil pulls the lever of the drinking fountain, the drama teacher carries a cardboard crown, the woodwork master measures a bench with a metre stick, a senior boy offers lychees to a boy with a paper collage, a teacher leads the tour with an ensign flag, and a student with a tuba sits on the stairs by the science bench; the open front doors lead out to the campus, the oak staircase goes up to the first floor and the science bench is along the back wall.",
+   "nameplate": [
+    58,
+    4
+   ],
+   "mapExit": {
+    "box": [
+     305,
+     15,
+     205,
+     400
+    ],
+    "label": "Campus"
+   },
+   "doors": [
+    {
+     "to": "etage",
+     "label": "L'étage",
+     "hint": "Go up the oak staircase to the first floor",
+     "hit": [
+      965,
+      0,
+      115,
+      100
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "paillasse",
+     "label": "la paillasse",
+     "hint": "Look closely at the science bench",
+     "at": [
+      1110,
+      320
+     ],
+     "obj": [
+      960,
+      120,
+      300,
+      300
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_ecole_noun",
+     "box": [
+      64,
+      480,
+      186,
+      195
+     ]
+    },
+    {
+     "id": "fr_universite_noun",
+     "box": [
+      78,
+      200,
+      120,
+      175
+     ]
+    },
+    {
+     "id": "fr_note_noun",
+     "box": [
+      80,
+      382,
+      170,
+      93
+     ]
+    },
+    {
+     "id": "fr_classe_noun",
+     "box": [
+      255,
+      422,
+      300,
+      255
+     ]
+    },
+    {
+     "id": "fr_eleve_noun",
+     "box": [
+      560,
+      262,
+      150,
+      190
+     ]
+    },
+    {
+     "id": "fr_prof_noun",
+     "box": [
+      722,
+      180,
+      145,
+      155
+     ]
+    },
+    {
+     "id": "fr_maitre_noun",
+     "box": [
+      712,
+      345,
+      168,
+      290
+     ]
+    },
+    {
+     "id": "fr_lycee_noun",
+     "box": [
+      885,
+      370,
+      170,
+      300
+     ]
+    },
+    {
+     "id": "fr_college_noun",
+     "box": [
+      1080,
+      420,
+      123,
+      255
+     ]
+    },
+    {
+     "id": "fr_enseignement_noun",
+     "box": [
+      885,
+      105,
+      92,
+      255
+     ]
+    }
+   ]
+  },
+  "paillasse": {
+   "name": "La paillasse · The Science Bench",
+   "room_id": "R_school_01_z1",
+   "image": "lycee/paillasse.jpg",
+   "parent": "lycee",
+   "alt": "Close-up of the hall's science bench: a young scholar in a mortarboard and lab coat holds up a flask, the grey-haired teacher shows a fizzing beaker and points at a brass balance weighing three eggs, while a student with a big brass tuba sits on the oak staircase behind.",
+   "nameplate": [
+    22,
+    4.5
+   ],
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_scolaire_adj",
+     "box": [
+      310,
+      165,
+      250,
+      400
+     ]
+    },
+    {
+     "id": "fr_etudiant_noun",
+     "box": [
+      940,
+      150,
+      263,
+      515
+     ]
+    },
+    {
+     "id": "fr_professeur_noun",
+     "box": [
+      600,
+      115,
+      320,
+      350
+     ]
+    },
+    {
+     "id": "fr_examen_noun",
+     "box": [
+      565,
+      505,
+      290,
+      170
+     ]
+    }
+   ]
+  },
+  "etage": {
+   "name": "L'étage · The First-Floor Landing",
+   "room_id": "R_school_02",
+   "image": "lycee/etage.jpg",
+   "backTo": "lycee",
+   "alt": "The first-floor landing on the first morning back at school, painted in ink and gouache: a girl carries a tray of new pencils, a toddler's block tower crashes in the nursery corner, a fax machine prints a university letter, a girl describes a caterpillar creeping along her ruler, a mother on a big cushion reads to her toddler, a girl's bread dough has risen in its bowl, a boy finds a pair of dice, a teacher shows a cut onion, the cooking-institute chef ladles stew, a boy does a test with toast, a lycée boy ties his laces on the stairs and a schoolboy hugs the family collie; the staircase goes down to the hall and another goes up to the top floor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "lycee",
+     "label": "Le hall",
+     "hint": "Go back down the stairs to the entrance hall",
+     "hit": [
+      0,
+      520,
+      230,
+      195
+     ]
+    },
+    {
+     "to": "combles",
+     "label": "Sous les combles",
+     "hint": "Go up the stairs to the top-floor hall",
+     "hit": [
+      1170,
+      0,
+      110,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_rentree_noun",
+     "box": [
+      78,
+      330,
+      100,
+      175
+     ]
+    },
+    {
+     "id": "fr_creche_noun",
+     "box": [
+      182,
+      275,
+      102,
+      165
+     ]
+    },
+    {
+     "id": "fr_fac_noun",
+     "box": [
+      285,
+      150,
+      130,
+      125
+     ]
+    },
+    {
+     "id": "fr_description_noun",
+     "box": [
+      292,
+      282,
+      145,
+      160
+     ]
+    },
+    {
+     "id": "fr_education_noun",
+     "box": [
+      258,
+      455,
+      180,
+      220
+     ]
+    },
+    {
+     "id": "fr_epreuve_noun",
+     "box": [
+      442,
+      345,
+      135,
+      195
+     ]
+    },
+    {
+     "id": "fr_indice_noun",
+     "box": [
+      672,
+      352,
+      180,
+      156
+     ]
+    },
+    {
+     "id": "fr_enseignant_noun",
+     "box": [
+      735,
+      100,
+      115,
+      240
+     ]
+    },
+    {
+     "id": "fr_institut_noun",
+     "box": [
+      860,
+      195,
+      170,
+      250
+     ]
+    },
+    {
+     "id": "fr_test_noun",
+     "box": [
+      855,
+      450,
+      190,
+      225
+     ]
+    },
+    {
+     "id": "fr_lyceen_noun",
+     "box": [
+      1048,
+      45,
+      115,
+      175
+     ]
+    },
+    {
+     "id": "fr_ecolier_noun",
+     "box": [
+      1062,
+      290,
+      140,
+      320
+     ]
+    }
+   ]
+  },
+  "combles": {
+   "name": "Sous les combles · The Top-Floor Hall",
+   "room_id": "R_school_03",
+   "image": "lycee/combles.jpg",
+   "backTo": "etage",
+   "alt": "The top-floor hall under the roof beams at the end-of-year party, painted in ink and gouache: a girl unrolls a scroll of class photos, a boy sorts glassy marbles into three bowls, a teacher builds a pagoda of blocks, a girl out of the lemon-and-spoon race holds her lemon, the art teacher assesses a valley painting, a boy in a laurel wreath, a blue jay on a stand, a boy conductor before a two-halves chart, a ladybird on a boy's tie, a boy rubs a genie lamp, a boy holds a compass over the campus model and the switchboard stands on a stand with a gold star; the staircase on the left goes down to the first floor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "etage",
+     "label": "L'étage",
+     "hint": "Go back down the stairs to the first floor",
+     "hit": [
+      50,
+      150,
+      105,
+      225
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_scolarite_noun",
+     "box": [
+      78,
+      393,
+      180,
+      277
+     ]
+    },
+    {
+     "id": "fr_classification_noun",
+     "box": [
+      262,
+      430,
+      222,
+      247
+     ]
+    },
+    {
+     "id": "fr_pedagogie_noun",
+     "box": [
+      165,
+      225,
+      158,
+      165
+     ]
+    },
+    {
+     "id": "fr_elimination_noun",
+     "box": [
+      350,
+      290,
+      104,
+      135
+     ]
+    },
+    {
+     "id": "fr_evaluation_noun",
+     "box": [
+      479,
+      220,
+      135,
+      168
+     ]
+    },
+    {
+     "id": "fr_baccalaureat_noun",
+     "box": [
+      641,
+      266,
+      84,
+      170
+     ]
+    },
+    {
+     "id": "fr_sujet_noun",
+     "box": [
+      728,
+      236,
+      84,
+      70
+     ]
+    },
+    {
+     "id": "fr_semestre_noun",
+     "box": [
+      862,
+      200,
+      206,
+      198
+     ]
+    },
+    {
+     "id": "fr_detail_noun",
+     "box": [
+      906,
+      402,
+      122,
+      198
+     ]
+    },
+    {
+     "id": "fr_collegien_noun",
+     "box": [
+      712,
+      440,
+      190,
+      237
+     ]
+    },
+    {
+     "id": "fr_campus_noun",
+     "box": [
+      1032,
+      405,
+      171,
+      272
+     ]
+    },
+    {
+     "id": "fr_standard_noun",
+     "box": [
+      1075,
+      160,
+      128,
+      240
+     ]
+    }
+   ]
+  }
+ }
+}
