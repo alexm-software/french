@@ -59,6 +59,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - Theme, naming, clutter and liveliness gates pass; no room is mostly shelves or cubbies (periodic shelf audit).
 - Distinct rooms: put a building's thumbnails side by side, and each needs its own composition and light, with no repeated motifs.
 - No one-object zooms; zooms under about 4 words are folded into a fuller scene.
+- Alphabet = one blackboard zoom with all letters in chalk; no per-letter mnemonics, never multiple rooms (language reference/representation.md).
 - Maps: exteriors show their function, overview and inner maps agree, and the overview is one painting (builder reference/maps-and-navigation.md).
 - Placement-by-meaning, sense, no-overflow and sensitive-setting gates pass (language reference/placement-and-senses.md).
 - One-hook and forced-pun gates pass (builder reference/hooks.md).

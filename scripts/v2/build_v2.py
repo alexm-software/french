@@ -41,6 +41,8 @@ v2-specific inputs live in content/v2/<building>/:
   Adjectives (vocab pos "adj") get no article, sit in the centre band and show their m/f forms.
   Adverbs (vocab pos "adv") get no article and no gender either, sit in the centre band too
   (genderless words live in the middle) and their card says "adverb · invariable".
+  Alphabet: letters live on ONE blackboard zoom (chalk letters, no per-letter mnemonic): hooks.json
+  {"noMnemonic": "alphabet"} empties the hook; the layout item's "lab" sets its label ("A — a").
   Numbers, determiners and letters (pos "num" / "det" / "letter") are built like adverbs too
   (no article, centre band); their card says "number · invariable", "determiner" or "letter of the alphabet".
   Prepositions, pronouns and conjunctions (pos "prep" / "pron" / "conj") are built like adverbs too;
@@ -545,6 +547,16 @@ def build(bld, v1, vocab):
             # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
             if overrides.get(wid, {}).get("plaque") is True:
                 it["plaque"] = True
+            # alphabet board (one blackboard zoom, letters in chalk): hooks.json {"noMnemonic": "alphabet"}
+            # on a pos "letter" word = no memory hook at all; layout "lab" = the label text ("A — a")
+            if overrides.get(wid, {}).get("noMnemonic") == "alphabet":
+                assert it.get("gramLine", "").startswith("letter of the alphabet"), (bld, wid)
+                it["hook"] = ""
+                it["noMnemonic"] = "alphabet"
+                it.pop("scene", None)
+            if spec.get("lab"):
+                it["lab"] = spec["lab"]
+                it["_hw"] = spec["lab"]
             if spec.get("labelAt"):
                 it["_labelAt"] = spec["labelAt"]
             if spec.get("scene"):

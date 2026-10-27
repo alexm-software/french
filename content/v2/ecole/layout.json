@@ -8,10 +8,6 @@
    "short": "L'école"
   },
   {
-   "key": "jeux",
-   "short": "La salle de jeux"
-  },
-  {
    "key": "maths",
    "short": "La classe de maths"
   },
@@ -56,7 +52,7 @@
   "ecole": {
    "name": "L'école : la salle de classe · School: the Classroom",
    "image": "ecole/ecole.jpg",
-   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table, a goldfish pinning a card to the notice board, a globe with blue jelly, a young doe with a sack on her back and an exercise book folded into a kayak; an open green door on the left leads to the school garden, a half-open wooden door at the back shows the red curtains of the school theatre a narrow green door at the back opens onto the playroom and its fireplace, and a teal door on the right leads to the maths classroom.",
+   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table with the alphabet chalked on it, a goldfish pinning a card to the notice board, a globe with blue jelly, a young doe with a sack on her back and an exercise book folded into a kayak; an open green door on the left leads to the school garden, a half-open wooden door at the back shows the red curtains of the school theatre and a teal door on the right leads to the maths classroom.",
    "nameplate": [
     66.5,
     5
@@ -103,17 +99,6 @@
       135,
       300
      ]
-    },
-    {
-     "to": "jeux",
-     "label": "La salle de jeux",
-     "hint": "Through the green door at the back to the playroom",
-     "hit": [
-      504,
-      65,
-      52,
-      150
-     ]
     }
    ],
    "zooms": [
@@ -130,6 +115,21 @@
       515,
       355,
       205
+     ]
+    },
+    {
+     "to": "tableau",
+     "label": "le tableau",
+     "hint": "Look closely at the alphabet on the blackboard",
+     "at": [
+      895,
+      352
+     ],
+     "obj": [
+      755,
+      170,
+      215,
+      200
      ]
     }
    ],
@@ -1315,128 +1315,108 @@
    "name": "Le préau · Covered Yard",
    "image": "ecole/preau.jpg",
    "backTo": "jardin",
-   "alt": "The school's covered yard painted in ink and gouache, a timber roof on wooden posts over cobbles marked with chalk: a girl swings the pendulum of a grandfather clock, a boy peeps out between the red curtains of a puppet booth, a man pushes his vacuum cleaner, a girl pushes a red toy van, a little footballer waits on a bench beside a cobweb while a group of people stand behind him, an old man sits in a green armchair while his friend perches on the arm, a man in a flat cap leans behind a big dairy churn, a girl holds a slice of cake on a plate, a man pours orange juice right up to the brim of a glass on a boy's head, two children press their palms against each other, a girl pours water into a bowl for her thirsty puppy and a barefoot boy stands beside his shoes; an open wooden gate on the left leads back to the school garden.",
+   "alt": "The school's covered yard on a pouring wet afternoon, painted in ink and gouache: under the timber roof a grandpa in a flat cap sits on a plump red cushion with a little footballer beside him and a cobweb by his ball; a girl reaches up to swing the gold pendulum of the post clock while two friends lean against the post; the caretaker vacuums and mops a puddle beside a barefoot boy whose shoes lie on the dry floor; the snack trolley with its milk churn and cups waits by the back wall. Out in the rain, people hurry in from a blue van under umbrellas, a man with an umbrella in front and a little boy in green running between them; a small green garden gate on the left leads back to the school garden.",
    "doors": [
     {
      "to": "jardin",
      "label": "Le jardin de l'école",
-     "hint": "Back through the wooden gate to the school garden",
+     "hint": "Back through the little green gate to the school garden",
      "hit": [
-      160,
-      130,
-      150,
-      170
+      434,
+      420,
+      46,
+      225
      ]
     }
    ],
-   "zooms": [],
-   "items": [
+   "zooms": [
     {
-     "id": "fr_pendant_prep",
-     "box": [
-      340,
-      55,
-      104,
-      195
+     "to": "gouter",
+     "label": "le goûter",
+     "hint": "Look closely at the snack trolley",
+     "at": [
+      1080,
+      330
+     ],
+     "obj": [
+      930,
+      300,
+      345,
+      275
      ]
-    },
+    }
+   ],
+   "items": [
     {
      "id": "fr_entre_prep",
      "box": [
-      456,
-      68,
-      150,
-      186
-     ]
-    },
-    {
-     "id": "fr_avec_prep",
-     "box": [
-      606,
-      102,
-      112,
-      193
+      368,
+      330,
+      58,
+      183
      ]
     },
     {
      "id": "fr_avant_prep",
      "box": [
-      722,
-      138,
-      72,
-      137
-     ]
-    },
-    {
-     "id": "fr_depuis_prep",
-     "box": [
-      800,
-      196,
-      144,
-      118
+      362,
+      160,
+      119,
+      162
      ]
     },
     {
      "id": "fr_sauf_prep",
      "box": [
-      340,
-      258,
-      198,
-      205
-     ]
-    },
-    {
-     "id": "fr_derriere_prep",
-     "box": [
-      569,
-      300,
+      488,
+      290,
       100,
-      188
+      335
      ]
     },
     {
-     "id": "fr_de_prep",
+     "id": "fr_depuis_prep",
      "box": [
-      700,
-      318,
-      70,
-      170
+      590,
+      418,
+      66,
+      207
      ]
     },
     {
-     "id": "fr_jusque_prep",
+     "id": "fr_pendant_prep",
      "box": [
-      818,
-      320,
-      126,
-      158
+      600,
+      250,
+      80,
+      165
      ]
     },
     {
      "id": "fr_contre_prep",
      "box": [
-      344,
-      488,
-      162,
-      189
+      684,
+      235,
+      72,
+      140
      ]
     },
     {
-     "id": "fr_pour_prep",
+     "id": "fr_avec_prep",
      "box": [
-      556,
-      494,
-      200,
-      183
+      710,
+      378,
+      110,
+      262
      ]
     },
     {
      "id": "fr_sans_prep",
      "box": [
-      785,
-      485,
-      146,
-      190
+      822,
+      344,
+      100,
+      306
      ]
     }
    ]
@@ -1445,128 +1425,154 @@
    "name": "La basse-cour · Farmyard",
    "image": "ecole/basse_cour.jpg",
    "backTo": "jardin",
-   "alt": "The school farmyard painted in ink and gouache, a red barn behind wooden fences, straw on the ground and a little pond: a carpenter holds up his saw, a cow turns and moos, a hiker with a map points far away, a man holds up an eel by the pond, a man with a jug points at himself, a boy shows off his cello, two boys wave to each other, a lady in a feathered hat blows a kiss to herself in her hand mirror, a man spreads his empty hands, a man sits among a pile of baskets and hay, a girl toots her tin whistle and a girl points at an egg on the ground; an open wooden gate on the left leads back to the school garden.",
+   "alt": "The school farmyard at morning feeding and milking time, painted in ink and gouache: a whitewashed barn wall with an open garden gate on the left, the big wooden barn at the back and a hen house on stilts with a ramp on the right. A milkmaid milks a brown-and-white cow that turns to moo while a farm boy holds up a milk jug and points at himself; a farmer's wife kneels by an open cellar hatch and points at a sack of potatoes as a girl leans in; a straw-hatted grandpa with a saw hands his bucket to little Louie in a red jumper; a boy runs up lifting an eel from his water bucket; a boy pushes a barrow heaped far too high with turnips while a girl shades her eyes and points over to the hen house.",
    "doors": [
     {
      "to": "jardin",
      "label": "Le jardin de l'école",
-     "hint": "Back through the wooden gate to the school garden",
+     "hint": "Back through the open gateway to the school garden",
      "hit": [
-      28,
-      120,
-      100,
-      165
+      70,
+      110,
+      190,
+      250
      ]
     }
    ],
-   "zooms": [],
+   "zooms": [
+    {
+     "to": "poulailler",
+     "label": "le poulailler",
+     "hint": "Look closely at the hen house",
+     "at": [
+      1110,
+      150
+     ],
+     "obj": [
+      945,
+      40,
+      330,
+      450
+     ]
+    }
+   ],
    "items": [
     {
-     "id": "fr_ce_pron",
+     "id": "fr_je_pron",
      "box": [
-      356,
-      45,
-      138,
-      160
+      300,
+      222,
+      180,
+      135
      ]
     },
     {
      "id": "fr_me_pron",
      "box": [
-      550,
-      45,
-      168,
-      160
-     ]
-    },
-    {
-     "id": "fr_y_pron",
-     "box": [
-      756,
-      45,
-      126,
-      140
-     ]
-    },
-    {
-     "id": "fr_il_pron",
-     "box": [
-      350,
-      210,
-      138,
-      170
-     ]
-    },
-    {
-     "id": "fr_je_pron",
-     "box": [
-      575,
-      210,
-      125,
-      185
+      492,
+      112,
+      150,
+      136
      ]
     },
     {
      "id": "fr_cela_pron",
      "box": [
-      750,
-      190,
-      150,
-      180
+      455,
+      365,
+      129,
+      320
      ]
     },
     {
      "id": "fr_lui_pron",
      "box": [
-      344,
-      385,
-      180,
-      155
+      586,
+      402,
+      82,
+      263
      ]
     },
     {
-     "id": "fr_moi_pron",
+     "id": "fr_ce_pron",
      "box": [
-      562,
-      400,
-      158,
-      122
-     ]
-    },
-    {
-     "id": "fr_rien_noun",
-     "box": [
-      760,
-      375,
-      160,
-      170
-     ]
-    },
-    {
-     "id": "fr_tout_pron",
-     "box": [
-      270,
-      545,
+      645,
       250,
-      132
-     ]
-    },
-    {
-     "id": "fr_tu_pron",
-     "box": [
-      600,
-      527,
       90,
       150
      ]
     },
     {
+     "id": "fr_il_pron",
+     "box": [
+      737,
+      375,
+      183,
+      305
+     ]
+    },
+    {
+     "id": "fr_tout_pron",
+     "box": [
+      738,
+      150,
+      100,
+      205
+     ]
+    },
+    {
+     "id": "fr_y_pron",
+     "box": [
+      840,
+      165,
+      95,
+      205
+     ]
+    }
+   ]
+  },
+  "poulailler": {
+   "name": "Le poulailler · Hen House",
+   "image": "ecole/poulailler.jpg",
+   "parent": "basse_cour",
+   "alt": "Close-up in front of the farmyard hen house at egg-collecting time: hens tumble down the ramp on the left while a girl in yellow toots a tin whistle to call them, a tiny curly-haired girl in red puts a hand on her chest and blows a kiss, Ryan in blue dungarees holds out an empty nest, and a girl kneeling in the straw points at one brown egg beside her knee.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_moi_pron",
+     "box": [
+      425,
+      246,
+      156,
+      392
+     ]
+    },
+    {
+     "id": "fr_tu_pron",
+     "box": [
+      494,
+      69,
+      125,
+      175
+     ]
+    },
+    {
+     "id": "fr_rien_noun",
+     "box": [
+      625,
+      75,
+      148,
+      550
+     ]
+    },
+    {
      "id": "fr_ceci_pron",
      "box": [
-      788,
-      550,
-      130,
-      127
+      775,
+      281,
+      225,
+      394
      ]
     }
    ]
@@ -1575,17 +1581,17 @@
    "name": "La bibliothèque · Library",
    "image": "ecole/bibliotheque.jpg",
    "backTo": "theatre",
-   "alt": "The school library painted in ink and gouache, tall bookcases all around and a round blue rug: an owl with binoculars peers from the top of a bookcase, a boy in diving goggles and flippers holds up two strands of kelp, a boy holds up a giant golden key, a man in a patched waistcoat turns out his empty pockets, a white duck quacks, a girl combs beans into rows on a table, a boy frowns over an instruction booklet and a heap of parts, a boy points at the hats on a hat stand and a girl sorts books at a table; an open door on the right shows the red curtains of the school theatre.",
+   "alt": "The school library at book-choosing hour, painted in ink and gouache from a high view of the whole room: tall pale-wood bookcases line the walls, lamps hang from the white ceiling and cool daylight pours through the tall window on the left; a boy and his sister press their noses to a kelp aquarium where a seahorse hides, while a little girl runs up holding a plush koala; a girl on the rolling library ladder looks along the shelves with a little brown owl perched on top; on the round green rug two boys kneel over a heap of model-kit pieces and an open craft book, one throwing up his hands, and beside them a boy holds up his picture book; at her desk the librarian holds up a big golden key while a boy reads, a boy beside her turns out his empty pockets, and at the little side table a girl combs jelly beans into rows next to the guessing jar; floor cushions and an empty book trolley stand on the oak floor, and an open arched door shows the red curtains and seats of the school theatre.",
    "doors": [
     {
      "to": "theatre",
      "label": "Le théâtre de l'école",
      "hint": "Back through the open door to the school theatre",
      "hit": [
-      1020,
-      50,
-      230,
-      390
+      828,
+      162,
+      82,
+      130
      ]
     }
    ],
@@ -1594,73 +1600,77 @@
     {
      "id": "fr_ou_adv",
      "box": [
-      456,
-      45,
-      88,
-      80
+      570,
+      170,
+      60,
+      145
      ]
     },
     {
      "id": "fr_quel_pron",
      "box": [
-      480,
-      194,
-      150,
-      240
-     ]
-    },
-    {
-     "id": "fr_qui_pron",
-     "box": [
-      644,
-      75,
-      118,
-      285
-     ]
-    },
-    {
-     "id": "fr_pourquoi_adv",
-     "box": [
-      770,
-      88,
-      136,
-      293
+      378,
+      300,
+      112,
+      98
      ]
     },
     {
      "id": "fr_quoi_pron",
      "box": [
-      668,
-      365,
-      95,
-      115
-     ]
-    },
-    {
-     "id": "fr_combien_adv",
-     "box": [
-      300,
-      380,
-      175,
-      270
+      452,
+      400,
+      85,
+      148
      ]
     },
     {
      "id": "fr_comment_adv",
      "box": [
-      556,
-      484,
-      170,
-      193
+      562,
+      405,
+      135,
+      155
      ]
     },
     {
      "id": "fr_lequel_pron",
      "box": [
-      781,
-      386,
-      206,
-      291
+      700,
+      418,
+      78,
+      112
+     ]
+    },
+    {
+     "id": "fr_qui_pron",
+     "box": [
+      756,
+      236,
+      64,
+      150
+     ]
+    },
+    {
+     "id": "fr_pourquoi_adv",
+     "box": [
+      830,
+      298,
+      52,
+      88
+     ],
+     "labelAt": [
+      938,
+      330
+     ]
+    },
+    {
+     "id": "fr_combien_adv",
+     "box": [
+      840,
+      388,
+      86,
+      95
      ]
     }
    ]
@@ -1669,17 +1679,17 @@
    "name": "La fête de l'école · School Fête",
    "image": "ecole/fete.jpg",
    "backTo": "theatre",
-   "alt": "The school fête painted in ink and gouache in a sunny courtyard under bunting: a cuckoo clock sings so loudly by the piano that a boy covers his ears, a girl dances round a maypole with ribbons, a smiling busker in patches fiddles to an empty hat, a girl combs her hair just like her cat licks its fur, a boy listens at a tin-can telephone, a girl feeds hay and a carrot to a pony, a boy lies on the ground beside his toy car, two children ride a seesaw, a girl cools herself with a fan and a duck quacks at the front; a cake table stands on the left and an open door on the right shows the red curtains of the school theatre.",
+   "alt": "The school fête painted in ink and gouache in a sunny courtyard under bunting, a natural crowd scene: on the left a cake table where children and a cook serve from a wooden cart; a granny on a bench fans herself while a small boy and his dad read picture comics side by side in the same pose; children dance round a tall white maypole with ribbons, one girl reaching up to it; a girl swings on a rope swing from the big plane tree; in the foreground a little boy holds out a huge gold prize cup to show a girl who hugs a plush quokka; a little further back a girl offers a grey pony hay and a carrot while her friend, seen from behind, holds a tin-can telephone to her ear, and a smiling busker in patches fiddles for the pony beside his empty hat; an open door at the back shows the red curtains of the school theatre.",
    "doors": [
     {
      "to": "theatre",
      "label": "Le théâtre de l'école",
      "hint": "Back through the open door to the school theatre",
      "hit": [
-      960,
-      45,
-      280,
-      270
+      752,
+      48,
+      56,
+      148
      ]
     }
    ],
@@ -1689,14 +1699,14 @@
      "label": "la table des gâteaux",
      "hint": "Look closely at the cake table",
      "at": [
-      200,
-      420
+      222,
+      415
      ],
      "obj": [
-      80,
-      312,
+      100,
+      250,
       245,
-      220
+      190
      ]
     }
    ],
@@ -1704,91 +1714,91 @@
     {
      "id": "fr_que_conj",
      "box": [
-      322,
-      88,
-      222,
-      218
+      445,
+      490,
+      115,
+      225
      ]
     },
     {
      "id": "fr_mais_conj",
      "box": [
-      560,
-      115,
-      120,
-      185
+      575,
+      255,
+      95,
+      210
      ]
     },
     {
      "id": "fr_pourtant_adv",
      "box": [
-      756,
-      88,
-      140,
-      225
+      846,
+      395,
+      98,
+      245
      ]
     },
     {
      "id": "fr_comme_conj",
      "box": [
-      335,
-      310,
-      160,
-      160
+      432,
+      300,
+      128,
+      186
      ]
     },
     {
      "id": "fr_quand_conj",
      "box": [
-      544,
-      304,
-      110,
-      170
+      728,
+      552,
+      82,
+      165
      ]
     },
     {
      "id": "fr_et_conj",
      "box": [
-      700,
-      318,
-      232,
-      145
+      728,
+      452,
+      112,
+      96
      ]
     },
     {
      "id": "fr_car_conj",
      "box": [
-      322,
-      488,
-      166,
-      170
+      380,
+      110,
+      105,
+      150
      ]
     },
     {
      "id": "fr_soit_conj",
      "box": [
-      492,
-      478,
-      236,
-      120
+      812,
+      150,
+      95,
+      140
      ]
     },
     {
      "id": "fr_afin_conj",
      "box": [
-      775,
-      481,
-      131,
-      196
+      348,
+      300,
+      82,
+      205
      ]
     },
     {
      "id": "fr_quoique_conj",
      "box": [
-      569,
-      600,
-      108,
-      77
+      562,
+      495,
+      100,
+      220
      ]
     }
    ]
@@ -1857,167 +1867,322 @@
     }
    ]
   },
-  "jeux": {
-   "name": "La salle de jeux · Playroom",
-   "image": "ecole/jeux.jpg",
-   "backTo": "ecole",
-   "alt": "The school playroom painted in ink and gouache, arched windows, a stone fireplace and a round blue rug: a woman lounges on a day-bed, a little chimney sweep carries his brush and a bucket of ash, a blue jay sits on its perch, a nurse holds a tongue depressor while a boy goes aah, a photographer stands behind his old box camera, a woman holds up a wreath of bay leaves, a strongman lifts a barbell with effort, a woman by a stool shrieks at a mouse and a boy in a red cap licks an ice cream; a toy chest stands on the right and an open green door shows the classroom with its chalkboard.",
-   "doors": [
-    {
-     "to": "ecole",
-     "label": "L'école",
-     "hint": "Back through the green door to the classroom",
-     "hit": [
-      981,
-      50,
-      231,
-      306
-     ]
-    }
-   ],
-   "zooms": [
-    {
-     "to": "coffre",
-     "label": "le coffre à jouets",
-     "hint": "Open the toy chest",
-     "at": [
-      1084,
-      545
-     ],
-     "obj": [
-      968,
-      415,
-      232,
-      260
-     ]
-    }
-   ],
-   "items": [
-    {
-     "id": "fr_d_letter",
-     "box": [
-      310,
-      94,
-      250,
-      141
-     ]
-    },
-    {
-     "id": "fr_h_letter",
-     "box": [
-      569,
-      56,
-      181,
-      178
-     ]
-    },
-    {
-     "id": "fr_g_letter",
-     "box": [
-      831,
-      80,
-      82,
-      128
-     ]
-    },
-    {
-     "id": "fr_a_letter",
-     "box": [
-      356,
-      240,
-      188,
-      235
-     ]
-    },
-    {
-     "id": "fr_c_letter",
-     "box": [
-      612,
-      240,
-      125,
-      200
-     ]
-    },
-    {
-     "id": "fr_b_letter",
-     "box": [
-      788,
-      213,
-      162,
-      232
-     ]
-    },
-    {
-     "id": "fr_f_letter",
-     "box": [
-      550,
-      445,
-      238,
-      232
-     ]
-    },
-    {
-     "id": "fr_i_letter",
-     "box": [
-      338,
-      480,
-      208,
-      197
-     ]
-    },
-    {
-     "id": "fr_m_letter",
-     "box": [
-      800,
-      452,
-      92,
-      225
-     ]
-    }
-   ]
-  },
-  "coffre": {
-   "name": "Le coffre à jouets · Toy Chest",
-   "image": "ecole/coffre.jpg",
-   "parent": "jeux",
-   "alt": "Close-up of the open wooden toy chest on the playroom floor: a puzzled wooden toy soldier in a red tunic scratches his head, a little cowboy rides a rocking horse, a red pedal car and a grey toy elephant.",
+  "tableau": {
+   "name": "Le tableau · The Alphabet Blackboard",
+   "image": "ecole/tableau.jpg",
+   "parent": "ecole",
+   "alt": "Close-up of the classroom blackboard in its wooden frame: the 26 letters of the alphabet, A to Z, written in white chalk in five neat rows, with a felt eraser and two sticks of chalk on the ledge.",
    "doors": [],
    "zooms": [],
    "items": [
     {
+     "id": "fr_a_letter",
+     "box": [
+      346,
+      92,
+      76,
+      62
+     ],
+     "lab": "A — a"
+    },
+    {
+     "id": "fr_b_letter",
+     "box": [
+      448,
+      92,
+      76,
+      62
+     ],
+     "lab": "B — bé"
+    },
+    {
+     "id": "fr_c_letter",
+     "box": [
+      551,
+      92,
+      76,
+      62
+     ],
+     "lab": "C — cé"
+    },
+    {
+     "id": "fr_d_letter",
+     "box": [
+      653,
+      92,
+      76,
+      62
+     ],
+     "lab": "D — dé"
+    },
+    {
      "id": "fr_e_letter",
      "box": [
-      336,
-      205,
-      140,
-      319
-     ]
+      756,
+      92,
+      76,
+      62
+     ],
+     "lab": "E — e"
+    },
+    {
+     "id": "fr_f_letter",
+     "box": [
+      858,
+      92,
+      76,
+      62
+     ],
+     "lab": "F — effe"
+    },
+    {
+     "id": "fr_g_letter",
+     "box": [
+      342,
+      196,
+      84,
+      62
+     ],
+     "lab": "G — gé"
+    },
+    {
+     "id": "fr_h_letter",
+     "box": [
+      470,
+      196,
+      84,
+      62
+     ],
+     "lab": "H — ache"
+    },
+    {
+     "id": "fr_i_letter",
+     "box": [
+      598,
+      196,
+      84,
+      62
+     ],
+     "lab": "I — i"
     },
     {
      "id": "fr_j_letter",
      "box": [
-      480,
-      205,
-      171,
-      298
-     ]
+      726,
+      196,
+      84,
+      62
+     ],
+     "lab": "J — ji"
     },
     {
      "id": "fr_k_letter",
      "box": [
-      655,
-      325,
-      160,
-      150
-     ]
+      854,
+      196,
+      84,
+      62
+     ],
+     "lab": "K — ka"
     },
     {
      "id": "fr_l_letter",
      "box": [
-      815,
-      296,
-      147,
-      161
+      342,
+      300,
+      84,
+      62
+     ],
+     "lab": "L — elle"
+    },
+    {
+     "id": "fr_m_letter",
+     "box": [
+      470,
+      300,
+      84,
+      62
+     ],
+     "lab": "M — emme"
+    },
+    {
+     "id": "fr_n_letter",
+     "box": [
+      598,
+      300,
+      84,
+      62
+     ],
+     "lab": "N — enne"
+    },
+    {
+     "id": "fr_o_letter",
+     "box": [
+      726,
+      300,
+      84,
+      62
+     ],
+     "lab": "O — o"
+    },
+    {
+     "id": "fr_p_letter",
+     "box": [
+      854,
+      300,
+      84,
+      62
+     ],
+     "lab": "P — pé"
+    },
+    {
+     "id": "fr_q_letter",
+     "box": [
+      342,
+      404,
+      84,
+      62
+     ],
+     "lab": "Q — qu"
+    },
+    {
+     "id": "fr_r_letter",
+     "box": [
+      470,
+      404,
+      84,
+      62
+     ],
+     "lab": "R — erre"
+    },
+    {
+     "id": "fr_s_letter",
+     "box": [
+      598,
+      404,
+      84,
+      62
+     ],
+     "lab": "S — esse"
+    },
+    {
+     "id": "fr_t_letter",
+     "box": [
+      726,
+      404,
+      84,
+      62
+     ],
+     "lab": "T — té"
+    },
+    {
+     "id": "fr_u_letter",
+     "box": [
+      854,
+      404,
+      84,
+      62
+     ],
+     "lab": "U — u"
+    },
+    {
+     "id": "fr_v_letter",
+     "box": [
+      342,
+      508,
+      84,
+      62
+     ],
+     "lab": "V — vé"
+    },
+    {
+     "id": "fr_w_letter",
+     "box": [
+      470,
+      508,
+      84,
+      62
+     ],
+     "lab": "W — double vé"
+    },
+    {
+     "id": "fr_x_letter",
+     "box": [
+      598,
+      508,
+      84,
+      62
+     ],
+     "lab": "X — ixe"
+    },
+    {
+     "id": "fr_y_letter",
+     "box": [
+      726,
+      508,
+      84,
+      62
+     ],
+     "lab": "Y — i grec",
+     "labelAt": [
+      774,
+      574
+     ]
+    },
+    {
+     "id": "fr_z_letter",
+     "box": [
+      854,
+      508,
+      84,
+      62
+     ],
+     "lab": "Z — zède"
+    }
+   ]
+  },
+  "gouter": {
+   "name": "Le goûter · Snack Trolley",
+   "image": "ecole/gouter.jpg",
+   "parent": "preau",
+   "alt": "Close-up of the covered yard's green snack trolley at snack time while the rain pours past the roof edge: the moustached dinner man pours orange juice right up to the brim of a boy's cup, a girl pours cocoa from a jug for her granny, who waits on a low stool, a girl holds out two slices of bread and jam, and a small boy peeks out from behind the big silver dairy churn on the trolley.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_jusque_prep",
+     "box": [
+      300,
+      15,
+      280,
+      285
+     ]
+    },
+    {
+     "id": "fr_pour_prep",
+     "box": [
+      290,
+      300,
+      230,
+      400
+     ]
+    },
+    {
+     "id": "fr_de_prep",
+     "box": [
+      530,
+      300,
+      220,
+      400
+     ]
+    },
+    {
+     "id": "fr_derriere_prep",
+     "box": [
+      760,
+      215,
+      180,
+      200
      ]
     }
    ]
@@ -2123,46 +2288,38 @@
   },
   "preau": {
    "only": [
-    "fr_pendant_prep",
     "fr_entre_prep",
-    "fr_avec_prep",
     "fr_avant_prep",
-    "fr_depuis_prep",
     "fr_sauf_prep",
-    "fr_derriere_prep",
-    "fr_de_prep",
-    "fr_jusque_prep",
+    "fr_depuis_prep",
+    "fr_pendant_prep",
     "fr_contre_prep",
-    "fr_pour_prep",
+    "fr_avec_prep",
     "fr_sans_prep"
    ]
   },
   "basse_cour": {
    "only": [
-    "fr_ce_pron",
-    "fr_me_pron",
-    "fr_y_pron",
-    "fr_il_pron",
     "fr_je_pron",
+    "fr_me_pron",
     "fr_cela_pron",
     "fr_lui_pron",
-    "fr_moi_pron",
-    "fr_rien_noun",
+    "fr_ce_pron",
+    "fr_il_pron",
     "fr_tout_pron",
-    "fr_tu_pron",
-    "fr_ceci_pron"
+    "fr_y_pron"
    ]
   },
   "bibliotheque": {
    "only": [
     "fr_ou_adv",
     "fr_quel_pron",
+    "fr_quoi_pron",
+    "fr_comment_adv",
+    "fr_lequel_pron",
     "fr_qui_pron",
     "fr_pourquoi_adv",
-    "fr_quoi_pron",
-    "fr_combien_adv",
-    "fr_comment_adv",
-    "fr_lequel_pron"
+    "fr_combien_adv"
    ]
   },
   "fete": {
@@ -2189,25 +2346,50 @@
     "fr_ou_conj"
    ]
   },
-  "jeux": {
+  "tableau": {
    "only": [
-    "fr_d_letter",
-    "fr_h_letter",
-    "fr_g_letter",
     "fr_a_letter",
-    "fr_c_letter",
     "fr_b_letter",
-    "fr_f_letter",
-    "fr_i_letter",
-    "fr_m_letter"
-   ]
-  },
-  "coffre": {
-   "only": [
+    "fr_c_letter",
+    "fr_d_letter",
     "fr_e_letter",
+    "fr_f_letter",
+    "fr_g_letter",
+    "fr_h_letter",
+    "fr_i_letter",
     "fr_j_letter",
     "fr_k_letter",
-    "fr_l_letter"
+    "fr_l_letter",
+    "fr_m_letter",
+    "fr_n_letter",
+    "fr_o_letter",
+    "fr_p_letter",
+    "fr_q_letter",
+    "fr_r_letter",
+    "fr_s_letter",
+    "fr_t_letter",
+    "fr_u_letter",
+    "fr_v_letter",
+    "fr_w_letter",
+    "fr_x_letter",
+    "fr_y_letter",
+    "fr_z_letter"
+   ]
+  },
+  "poulailler": {
+   "only": [
+    "fr_moi_pron",
+    "fr_tu_pron",
+    "fr_rien_noun",
+    "fr_ceci_pron"
+   ]
+  },
+  "gouter": {
+   "only": [
+    "fr_jusque_prep",
+    "fr_pour_prep",
+    "fr_de_prep",
+    "fr_derriere_prep"
    ]
   }
  },

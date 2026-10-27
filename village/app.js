@@ -314,7 +314,7 @@ function renderRoom(bld,key){
     var g=it.img,b=it.box,l=it.label;
     h+='<div class="v2box" id="ov'+i+'" aria-hidden="true" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'"></div>';
     h+='<button class="hot" data-i="'+i+'" style="left:'+pct(b[0])+';top:'+pct(b[1])+';width:'+pct(b[2])+';height:'+pct(b[3])+'" aria-label="'+esc(headword(it))+': '+esc(it.en)+'"></button>';
-    h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(headword(it))+'</button>';
+    h+='<button class="lab'+(it.verb?' verb':'')+'" data-i="'+i+'" tabindex="-1" aria-hidden="true" style="left:'+pct(l[0])+';top:'+pct(l[1])+'">'+esc(it.lab||headword(it))+'</button>';
   });
   (R.doors||[]).forEach(function(d,i){
     var g=d.hit, T=D.rooms[d.to];
@@ -375,7 +375,7 @@ function openCard(it,from){
   if(ff) h+='<div class="ffbadge '+(ff.kind==='partial'?'part':'full')+'"><span aria-hidden="true">\u2691</span> '+(ff.kind==='partial'?'Partly a false friend':'False friend')+' \u00b7 <i lang="fr">faux ami</i></div>';
   h+='</div></div>';
   if(ff) h+='<div class="sec ffnote '+(ff.kind==='partial'?'part':'full')+'"><h3>Watch out</h3><p>'+esc(ff.note)+'</p></div>';
-  h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.scene?'<p class="scene"><b>In the picture:</b> '+esc(it.scene)+'</p>':'')+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
+  if(!it.noMnemonic) h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.scene?'<p class="scene"><b>In the picture:</b> '+esc(it.scene)+'</p>':'')+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
   h+=exH;
   if(it.alphabet){
