@@ -194,7 +194,10 @@ def check_building(bld, errs, warns, places=None):
             else:
                 if len(it.get("tenses") or []) != 7: E(f"{tag}: verb {it['fr']} has {len(it.get('tenses') or [])} tenses, need 7")
             if not (V2 / it["cardSrc"]).exists(): E(f"{tag}: card image missing for {it['fr']}")
-            if not it.get("hook"): E(f"{tag}: no memory hook for {it['fr']}")
+            # alphabet exception: letters on the blackboard zoom carry no mnemonic (noMnemonic "alphabet", letters only)
+            alpha = it.get("noMnemonic") == "alphabet"
+            if alpha and not (it.get("gramLine") or "").startswith("letter of the alphabet"): E(f"{tag}: noMnemonic on a non-letter {it['fr']}")
+            if not it.get("hook") and not alpha: E(f"{tag}: no memory hook for {it['fr']}")
             # "plaque": true (set from hooks.json) = the word appears only as text on a blank museum plaque, nothing is
             # depicted: the gloss (en) is not content-filtered for that item; hook/scene/note/ex still are.
             plaque = it.get("plaque") is True
@@ -439,7 +442,9 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                         if not (it.get("adj") or it.get("adv")): continue
                         kind = "adjective" if it.get("adj") else "adverb"
                         lab = await pg.evaluate(f"document.querySelectorAll('.lab')[{i}].textContent")
-                        if lab.strip() != it["fr"]: errs.append(f"{bld}/{key}: {kind} label '{lab}' has an article")
+                        # alphabet board: the label is the item's "lab" ("A — a"), which must start with the letter itself
+                        want_lab = it.get("lab") if (it.get("noMnemonic") == "alphabet" and (it.get("lab") or "").startswith(it["fr"] + " ")) else it["fr"]
+                        if lab.strip() != want_lab: errs.append(f"{bld}/{key}: {kind} label '{lab}' has an article")
                         await pg.evaluate(f"document.querySelectorAll('.hot')[{i}].click()"); await pg.wait_for_timeout(200)
                         gl = await pg.evaluate("(document.querySelector('#card .gram')||{}).textContent||''")
                         want = "adjective · " if it.get("adj") else (it.get("gramLine") or "adverb · invariable")
