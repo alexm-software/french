@@ -317,15 +317,16 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
             except Exception:
                 errs.append(f"map @{vw}: building discovery never finished (stage.dataset.probed)")
             await pg.wait_for_timeout(400)
+            WH = M["world"].get("h", 720)
             wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
             if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
                 errs.append(f"world map @{vw}: sector links {wl}")
             # world signposts: inside the painting with a 6% margin, centred inside their own click polygon, touching nothing
             pins = await pg.evaluate("""(()=>{const S=document.getElementById('stage').getBoundingClientRect();
               return [...document.querySelectorAll('.tag.pin')].map(e=>{const r=e.getBoundingClientRect();
-                return {t:e.textContent,x0:(r.left-S.left)/S.width*1280,y0:(r.top-S.top)/S.height*720,x1:(r.right-S.left)/S.width*1280,y1:(r.bottom-S.top)/S.height*720}})})()""")
-            for k, p in enumerate(pins):
-                if p["x0"] < 76.8 or p["y0"] < 43.2 or p["x1"] > 1203.2 or p["y1"] > 676.8:
+                return {t:e.textContent,x0:(r.left-S.left)/S.width*1280,y0:(r.top-S.top)/S.height*%d,x1:(r.right-S.left)/S.width*1280,y1:(r.bottom-S.top)/S.height*%d}})})()""" % (WH, WH))
+            for k, p in enumerate(pins):  # tall world (world.h): same 43.2-unit top/bottom margin as a 720 painting
+                if p["x0"] < 76.8 or p["y0"] < 43.2 or p["x1"] > 1203.2 or p["y1"] > WH - 43.2:
                     errs.append(f"world map @{vw}: label '{p['t']}' is within 6% of the painting edge")
                 for q in pins[k + 1:]:
                     if p["x0"] < q["x1"] + 3 and q["x0"] < p["x1"] + 3 and p["y0"] < q["y1"] + 3 and q["y0"] < p["y1"] + 3:
@@ -334,6 +335,20 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                 if w.get("poly") and not any(inside(w["tag"][0], w["tag"][1], r) for r in w["poly"]):
                     errs.append(f"world map: {w['name']} label centre is outside its click area")
             await pg.screenshot(path=str(shots / f"map_{vw}.png"))
+            if M["world"].get("h"):  # tall world: scroll to each district, click its painted area (not the label), Back must restore the scroll
+                await pg.screenshot(path=str(shots / f"map_{vw}_full.png"), full_page=False)
+                for w in M["world"]["sectors"]:
+                    x, y = w["door"]
+                    st = await pg.evaluate(f"""(()=>{{const sc=document.getElementById('scroller'),S=document.getElementById('stage'),k=S.offsetWidth/1280;
+                      sc.scrollTop=Math.max(0,{y}*k-sc.clientHeight/2); sc.scrollLeft=Math.max(0,{x}*k-sc.clientWidth/2); return sc.scrollTop}})()""")
+                    await pg.wait_for_timeout(120)
+                    pt = await pg.evaluate(f"""(()=>{{const S=document.getElementById('stage').getBoundingClientRect(),k=S.width/1280;return [S.left+{x}*k,S.top+{y}*k]}})()""")
+                    await pg.mouse.click(pt[0], pt[1]); await pg.wait_for_timeout(250)
+                    if await pg.evaluate("location.hash") != f"#/quartier/{w['slug']}":
+                        errs.append(f"world map @{vw}: click on {w['slug']} area at {w['door']} went to {await pg.evaluate('location.hash')}"); await pg.goto(base + "#/"); continue
+                    await pg.click("#back"); await pg.wait_for_timeout(300)
+                    st2 = await pg.evaluate("document.getElementById('scroller').scrollTop")
+                    if abs(st2 - st) > 4: errs.append(f"world map @{vw}: scroll not restored after {w['slug']} ({st} -> {st2})")
             live = []
             for w in M["world"]["sectors"]:
                 await pg.goto(base + f"#/quartier/{w['slug']}")

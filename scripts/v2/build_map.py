@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Write village/data/map.js from content/v2/map.json (shared file; run once, not per building).
 
-map.json = {"world": {image, alt, sectors: [{id, slug, name, rect}]},
+map.json = {"world": {image, alt, h?, sectors: [{id, slug, name, rect}]},
             "sectors": {slug: {id, slug, name, image, alt,
                                buildings: [{building_id, name, rect, id?}],
                                streets:   [{id, name, rect}]}}}
@@ -9,10 +9,11 @@ It follows the memory-palace registry (data/sectors.json, data/buildings.json): 
 building / ST_ verb street of each sector is painted on that sector's map. Nothing here says which
 buildings are live: the app probes village/data/<id>.js for each building at runtime, where
 id = building_id without its "Bnn_" prefix (B29_plage -> plage) unless the entry gives a legacy "id"
-(B06_marche -> boulangerie, B05_maison's garage -> garage). So shipping a building never needs this
+(B06_marche -> boulangerie, B05_maison's garage -> garage). The world may give "h": the height of a tall, vertically scrolling world painting (default 720).
+So shipping a building never needs this
 script or map.js to change. Hover tags and door arrows are placed from the rect unless given.
 World sectors may also give "en" (English name for the bilingual label) and "poly" (a list of
-rings of [x, y] points in the 1280x720 painting): the click area is then the polygon(s), not the rect.
+rings of [x, y] points in the 1280-wide painting): the click area is then the polygon(s), not the rect.
 World sectors and sector buildings may give "icon": a key of window.V2_ICONS (village/icons.js), the small
 decorative symbol drawn at the start of their map label."""
 import json, re
@@ -33,7 +34,7 @@ def item(b, keys):
 
 
 W = M["world"]
-out = {"world": {"image": W["image"], "alt": W["alt"],
+out = {"world": {"image": W["image"], "alt": W["alt"], **({"h": W["h"]} if W.get("h") else {}),
                  "sectors": [dict(item(s, ("id", "slug", "name", "en", "rect", "poly", "tag", "icon")), door=s.get("door", door(s["rect"])))
                              for s in W["sectors"]]},
        "sectors": {}}

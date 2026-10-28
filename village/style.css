@@ -20,6 +20,8 @@ html,body{margin:0;height:100%;background:#1f2e31;color:var(--ink);font-family:"
 #scroller.pan{justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 #scroller.pan::-webkit-scrollbar{display:none}
 #scroller.pan2{align-items:flex-start;overflow-y:auto}
+#scroller.tall{scrollbar-width:auto}#scroller.tall::-webkit-scrollbar{display:block}
+#scroller.tall #stage{border-radius:0}
 #stage{position:relative;flex:0 0 auto;border-radius:6px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.45);background:#000}
 #stage>img.bg{position:absolute;inset:0;width:100%;height:100%;display:block;user-select:none;-webkit-user-drag:none}
 #stage svg{position:absolute;inset:0;width:100%;height:100%}
