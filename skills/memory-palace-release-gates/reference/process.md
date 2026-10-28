@@ -19,4 +19,4 @@ Read when organising review, sign-off, queues, checkpoints and UX experiments.
 
 - **Show before shipping.** Show the user clean screenshots of a redone space before it goes live, and fix what they flag before starting the next space. <!-- G105 -->
 - **Re-audit what is already live.** When a new gate is added, audit the spaces already shipped against it and fix them in the next release. <!-- G112 -->
-- **Integration mirror check:** run reflexive_mirror_check.py on every combined build's art, not only on packages. The 0951Z review missed 7 missing mirrors because it trusted the package verdicts. <!-- G64 -->
+- **Integration mirror check:** on every combined build, check on the contact sheets that every reflexive verb (`reflexive: true` in the room data) shows the hand mirror, not only on each package. Once, a review missed 7 missing mirrors because it trusted the package verdicts. <!-- G64 -->

@@ -13,7 +13,8 @@ Checks (FAIL = must fix before review, WARN = look at it, FLAG = a human decides
           door hit / mapExit boxPx / zoom badge / nameplate                            FAIL
           label touches another hotspot; labels within 3 px (strict "touching" grow);
           label closer than 8 px to the scene edge; label detached from its own box;
-          adjective/adverb box centre outside the 30-70 % band                        WARN
+          adjective/adverb box centre outside the centre band; more than room_target items WARN
+          more than room_max items (numbers from skills/limits.json)                  FAIL
   manifest  every room word is in the manifest and vice versa; each entry says what is
           shown + pose/action; numbers carry an exact count; verbs say what they act on;
           sensitive treatment stated; doors/exits listed; thin (one-object) zooms;
@@ -29,7 +30,9 @@ from PIL import Image, ImageFont
 
 W, H = 1280, 720
 GROW = 3   # check_v2 --strict: "touching" = closer than this (px)
-EDGE = 8   # check_v2 --strict: min clear gap label <-> scene edge (px)
+LIMITS = json.loads((Path(__file__).resolve().parents[1] / "skills" / "limits.json").read_text(encoding="utf-8"))
+EDGE = LIMITS["label_edge_px"]   # check_v2 --strict: min clear gap label <-> scene edge (px)
+BAND = LIMITS["centre_band"]     # adjectives and adverbs
 PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOUR", "SETTING", "SITUATION", "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING",
                    "DOORS AND EXITS", "GROUNDING AND ANATOMY", "FIGURES", "TEXT", "CONTENT", "VARIETY", "AVOID")
 DETACH = 12  # build_v2 places labels 4 px off their box; farther than this = detached (manual labelAt?)
@@ -216,8 +219,11 @@ def main():
             if g > DETACH: Wn.append(f"label {m} is {g:.0f}px from its own box (detached)")
         for it in items:
             cx = (it["boxPx"][0] + it["boxPx"][2] / 2) / W
-            if (it.get("adj") or it.get("adv")) and not 0.3 <= cx <= 0.7:
+            if (it.get("adj") or it.get("adv")) and not BAND[0] <= cx <= BAND[1]:
                 Wn.append(f"{'adjective' if it.get('adj') else 'adverb'} {it['fr']} outside the centre band ({cx:.0%})")
+        n_it = sum(1 for it in items if not it.get("noMnemonic"))
+        if n_it > LIMITS["room_max"]: F.append(f"room size: {n_it} items, more than room_max {LIMITS['room_max']} (skills/limits.json)")
+        elif n_it > LIMITS["room_warn_over"]: Wn.append(f"room size: {n_it} items, over the target of {LIMITS['room_target']}")
         notes.append(f"labels: {len(items)} items, {len(fixed)} fixed rects (doors/mapExit/zoom badges/nameplate) checked")
         if R.get("zooms") is not None and D:
             for z in R["zooms"]:

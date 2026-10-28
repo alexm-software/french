@@ -2,7 +2,7 @@
 
 Read when prompting or reviewing anything with text, signs or labels in or over a painting.
 
-## Text in the painting (CHANGED in v13)
+## Text in the painting
 
 - **Labels and names are overlays.** Item labels and sign names are real HTML/SVG text over the image, never baked into the generated painting, so they are legible, correct and translatable; all sign and label text fits inside its sign at all supported screen sizes. Style them to blend into the scene (carved, painted, engraved or chalk lettering matching the material) rather than looking like a UI label. <!-- B58 -->
 - **Text in the image is NOT absolutely forbidden (owner, Oct 26).** Natural scene text that makes sense there, such as a shop sign, a book spine, a poster or a station board, may stay when it is spelled correctly, fits the place, covers no item and never stands in for a taught word's picture or label. <!-- N1 G147 -->

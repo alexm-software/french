@@ -27,6 +27,10 @@ Static rules (per building/room):
     band, scale, lead, stage, race...) with its room's theme is printed as PLACE: it may sit there only through the
     shared English word (river bank in the bank). Kept placements go in data/hooks/qa/placement_ok.tsv with a reason.
     PLACE lines are reports; --placement makes them failures (--strict alone does not, so other packs are not blocked)
+  * room size: a room holds at most room_max items (skills/limits.json), except rooms listed with their current
+    count in data/hooks/qa/room_size_ok.tsv (the baseline; a listed room may not grow)
+  * one hook per word: an id may not carry two different hook texts across rooms, except ids listed in
+    data/hooks/qa/two_hooks_ok.tsv (each copy describes its own painting)
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
@@ -59,6 +63,39 @@ TABAC_NOUNS = {"fr_tabac_noun"}
 TUXEDO_NOUNS = {"fr_smoking_noun"}
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
 ROOMS_JSON = {r["id"]: r for r in json.loads((ROOT / "data" / "source" / "rooms.json").read_text(encoding="utf-8"))["rooms"]}
+LIMITS = json.loads((ROOT / "skills" / "limits.json").read_text(encoding="utf-8"))
+QA = ROOT / "data" / "hooks" / "qa"
+
+
+def load_tsv(name):
+    f = QA / name
+    if not f.exists():
+        return []
+    return [l.rstrip("\n").split("\t") for l in f.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
+
+
+def site_gates(blds, errs):
+    """Room size and one hook per word, with the baseline allowlists."""
+    size_ok = {(r[0], r[1]): int(r[2]) for r in load_tsv("room_size_ok.tsv")}
+    two_ok = {r[0] for r in load_tsv("two_hooks_ok.tsv")}
+    hooks = {}
+    for bld in blds:
+        if not (V2 / "data" / f"{bld}.js").exists():
+            continue
+        D = load_payload(bld)
+        for key, R in D["rooms"].items():
+            n = sum(1 for it in R["items"] if not it.get("noMnemonic"))
+            cap = max(LIMITS["room_max"], size_ok.get((bld, key), 0))
+            if n > cap:
+                errs.append(f"{bld}: {key}: {n} items, more than {cap}" + (" (its allowlisted count in room_size_ok.tsv)" if (bld, key) in size_ok else f" (room_max in skills/limits.json)"))
+            for it in R["items"]:
+                if it.get("hook"):
+                    hooks.setdefault(it["id"], {}).setdefault(it["hook"], f"{bld}/{key}")
+    for wid, h in sorted(hooks.items()):
+        if len(h) > 1 and wid not in two_ok:
+            errs.append(f"{wid}: {len(h)} different hook texts ({', '.join(sorted(h.values()))}); one hook per word, or list it in two_hooks_ok.tsv")
+
+
 PLACE_OK = placement.load_ok(ROOT / "data" / "hooks" / "qa" / "placement_ok.tsv")
 ART = re.compile(r"^(?:(?:le|la|les|le/la|un|une) |l['’])", re.I)  # 'las', 'lent', 'unique' are not articles
 
@@ -488,9 +525,11 @@ def main():
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")
     ap.add_argument("--placement", action="store_true", help="PLACE lines (word tied to its room only by a shared English gloss word) count as failures")
+    ap.add_argument("-v", "--verbose", action="store_true", help="print each building's word counts")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     errs, warns, places = [], [], []
+    nb = nw = 0
     s = (V2 / "data" / "map.js").read_text(encoding="utf-8")
     M = json.loads(s[s.index("=") + 1:].rstrip().rstrip(";"))
     maps = [("world", M["world"]["sectors"])] + [(sl, S["buildings"] + S["streets"]) for sl, S in M["sectors"].items()]
@@ -506,7 +545,10 @@ def main():
         sl, b = map_home(M, bld, load_payload(bld))
         if not b: errs.append(f"map: {bld} has a layout but no rect on its sector map in content/v2/map.json")
         c = check_building(bld, errs, warns, places)
-        print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
+        nb += 1; nw += sum(c.values())
+        if a.verbose: print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
+    site_gates(blds, errs)
+    print(f"{nb} buildings, {nw} words checked")
     if a.browser:
         import asyncio
         asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M, a.maps_only))

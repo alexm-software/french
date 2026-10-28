@@ -16,7 +16,7 @@ Layer this on top of the Memory palace builder skill, which covers build order, 
 
 Each room's main painting holds about 10 to 12 of its commonest words, well spaced, with the verbs among them. Add zoom spots (a counter, shelf, desk or stall of about 6 words each) only where the room needs more space and the spot makes sense; there is no fixed number. Rare words can wait in a room or zoom as cards without pictures. <!-- L60 -->
 
-- No one-object zooms (v13): fold a zoom of fewer than about 4 words into a fuller scene; see the builder reference/planning.md.
+- No one-object zooms: fold a zoom of fewer than about 4 words into a fuller scene; see the builder reference/planning.md.
 
 ## Beginner area (the starting point)
 
