@@ -1,89 +1,53 @@
-# Memory Village
+# Le Village: a French vocabulary memory palace
 
-A French vocabulary memory palace, from A1 to C2. You walk a map of sixteen quarters. Each word lives in a room, on a piece of furniture, or along a verb street, so the place brings the word back.
+A French vocabulary memory palace from A1 to C2. You walk a painted map of sixteen quarters, go into buildings, and find each word as an object or a person in a room. Feminine nouns stand on the left of a room and masculine nouns on the right; adjectives and adverbs stand in the middle. Verbs are acted out by Monsieur Verbe, a mime whose beret colour gives the verb group and who holds a hand mirror for reflexive verbs. Click anything to open its card: meaning, pronunciation (IPA and an English-style respelling), gender and plural, a memory hook, an example, false-friend warnings, and full conjugation tables with the prepositions each verb takes.
 
-Rue des Saveurs (S04, cafés and restaurants) is the open quarter: the square, Café de la Place, Restaurant Le Bon Goût, and seven tiered cooking places along Ruelle des Gourmets. The other quarters are on the map and marked coming soon. The long walk still begins in the beginner quarter; that door is drawn, and it is not open yet.
+The live site is the static folder `village/`, published with GitHub Pages.
 
-You walk by the painted doors, paths and stairs. Forward and back (and left or right, when the picture has them) stay on the painting as `exits`. The cooking walk is the square, then the seven named stops from Place du Grand-Festin to Allée des Cuisiniers, then back to the square. Rooms in one building connect by the painted stairs and doors. Do not hard-code the verb list. Each painted item has one clickable box: if a `mnemonic_box` is still present, it widens that box and is not a second target. A word label uses `label_xy` when the hotspot has it, centred on that point; otherwise it sits inside the bottom of its own box.
+## Layout of the repo
 
-`content/assignment.json` decides which words are drawn in a painting. A word that `rooms.json` still lists, but the painting does not draw, stays in that room’s word list and is marked as not in the painting. Street paintings store prev/next under `exits`. Building fronts and the sector view store doors under `links`. The build accepts both.
+| Path | What it holds |
+|---|---|
+| `village/` | The site: `index.html`, `app.js`, `style.css`, the paintings (`village/<building>/*.jpg`, card crops in `cards/`), the maps (`map/`) and the generated data (`data/<building>.js`, `data/map.js`). See `village/README.md`. |
+| `content/v2/<building>/` | Per-building inputs: `layout.json` (hotspot boxes in painting pixels, doors, zooms) and `hooks.json` (hook and text overrides for that building). |
+| `content/v2/vocab_fixes.json` | Text corrections for every building: article and gender, respelling, gloss, example, plural, note. |
+| `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, `sectors.json`, the dialogues (`village_dialogues.json`, `conversations.json`) and credits. |
+| `data/curated/` | Hand-written tables, e.g. `verb_patterns.json` (the prepositions each verb takes). |
+| `data/cache/conjugations.json` | Verb tables (seven tenses), read by the build. |
+| `data/v1-payloads/` | Card text from the first village; the build still reads it. |
+| `data/hooks/qa/`, `docs/` | Review notes, proposals and change logs. |
+| `skills/` | The memory-palace build skills (builder, language, release gates). Start with each `SKILL.md`. |
+| `tools/` | Cheap checks before review: `unbuilt.py`, `precheck.py`, `contact_sheet.py`, the manifest template. See `tools/README.md`. |
+| `scripts/v2/`, `scripts/qa/` | The build (`build_v2.py`, `build_map.py`) and the gate checks (`check_v2.py`, `placement.py`). |
 
-## Run it
+## Build and check
+
+Needs Python 3 and Pillow.
 
 ```bash
 python3 -m pip install pillow
-npm install
-npm run build
-npm run preview
+python3 scripts/v2/build_v2.py              # every building; or name some: build_v2.py ecole mairie
+python3 scripts/v2/build_v2.py --no-cards   # text-only rebuild: keeps the existing card crops
+python3 scripts/v2/build_map.py
+python3 scripts/qa/check_v2.py              # add --strict --placement before a release
 ```
 
-`npm run build` paints any missing placeholder scenes, splits the vocabulary into per-room files, and writes `dist/`. Open the preview and the hash routes do the rest.
+Preview by serving the folder, e.g. `cd village && python3 -m http.server`, and open the printed address.
 
-`npm test` checks the built data: the open quarter, floor order, the bar-counter zoom, conjugation tables, and the church hotspot specimen used only as a format test.
+Text changes (a hook, a gloss, an example, a plural) go in `content/v2/<building>/hooks.json` or `content/v2/vocab_fixes.json`, never in the generated `village/data/*.js`; then rebuild.
 
-## What is open
+## Adding or repainting a room
 
-`content/site.json` lists `open_sectors`. Only those sectors get full word cards, quizzes, conversations and paintings. To open another quarter later, add its id and rebuild. Rooms outside that list stay on the map as coming soon and are not loaded as word files.
-
-Street contents are not hard-coded. Ruelle des Gourmets is read from `rooms.json` and `vocab.jsonl`. The live street is seven named stops (`ST_cooking_seg001` to `seg007`, Place du Grand-Festin through Allée des Cuisiniers), laid out in tiers: street, balcony, upper and roof. Each stop is labelled with its own street name. Replace those paintings and data files, then rebuild, when a later street arrives.
-
-## Add a room’s painting
-
-For each space, drop a text-free 16:9 painting and a hotspot file:
-
-```
-content/art/<room_id>/base.jpg
-content/art/<room_id>/hotspots.json
-```
-
-Then delete `content/art/<room_id>/placeholder.json`. While that marker is present, the next build repaints the placeholder and overwrites `base.jpg`.
-
-`hotspots.json` uses pixel coordinates on the painting. The page scales them with an SVG viewBox. The church files in `content/examples/eglise/` are the older specimen (item boxes or polygons, `text_areas.sign` and `text_areas.plaque`, helper `mnemonic_box`). They are for checking the format. They are not a live room.
-
-A hotspot may include:
-
-- `word_id` — a vocabulary id from `vocab.jsonl`
-- `box` — `[x0, y0, x1, y1]`, and `polygon` when the clickable shape is not a rectangle
-- `text_areas.sign` and `text_areas.plaque` — each with `box` and `text_box`
-- `mnemonic_box` — optional. The build unions it into `box` so the page has one hotspot. New paintings can omit it
-- `links` — doors, stairs and windows (`target`, `box`, `label`, `name`)
-- `exits` — `forward` / `back`, and `left` / `right` when the painting has them. Older files may still say `prev` / `next`
-- `text_areas` may set `role` to `building_name`, `street_name`, `room_name`, `verb_sign` or `direction`. Direction signs include the small arrow boards and the `-er` / `-ir / -re` side markers. A verb place may set `layout` to `tiered`
-- `door_plaque` or `door_plaque_box` — where a verb’s preposition is set in type
-- `mirror_box` — a reflexive verb
-- `zoom_from` — a closer view, such as the bar counter (`room_id`, `box`, `label`)
-
-Do not paint signs or labels into the image. The site draws them in the text boxes.
-
-Optional French names for the hanging sign live in `content/signs.json`. A verb street uses the street’s name from `buildings.json` on the sign, and numbers the stretches from the room records.
-
-Rebuild:
-
-```bash
-python3 scripts/placeholder_art.py
-python3 scripts/build_data.py
-npm run build
-```
-
-`placeholder_art.py` only fills rooms that still have no real painting.
+Follow the skills in `skills/`: run `tools/unbuilt.py`, write the item manifest, build the painting prompt from the template, paint, run `tools/precheck.py`, review one contact sheet per room, then add the room to `content/v2/<building>/layout.json` and rebuild. `content/v2/README.md` explains how a building goes live on the map.
 
 ## Conjugations
 
-Verb tables (présent, passé composé, imparfait, futur, conditionnel, impératif, subjonctif) are generated once and stored in `data/cache/conjugations.json`. The site build reads that cache and does not need the conjugator installed. To refresh it after new verbs arrive:
-
-```bash
-python3 -m pip install -r scripts/requirements.txt
-python3 scripts/build_data.py
-```
-
-A cache miss calls the conjugator and writes the new tables back. The group printed in the source data is not shown; the tables are.
+`data/cache/conjugations.json` holds the verb tables. The build stops with a message if a new verb has no table; add its table to the cache, checking irregular verbs against an open reference.
 
 ## Pages
 
-`.github/workflows/pages.yml` builds the site and deploys `dist/` with GitHub Pages when this lands on `main`. The workflow does not run from a pull request. In the repository settings, Pages needs to be set to GitHub Actions.
+`.github/workflows/pages.yml` publishes `village/` to GitHub Pages when a change lands on `main`.
 
 ## Credits
 
-Word lists, glosses, examples and dialogues are CC BY-SA 4.0. See `LICENSE-DATA.md` and the Credits page (`data/source/CREDITS.md`). The prayers are public-domain editions, named on each prayer page; the project’s own Divine Mercy translations stay with the word data. Baloo 2 and Patrick Hand are SIL Open Font License; the licence texts sit beside the font files in `src/fonts/`. A licence for the site code has not been chosen yet, so there is no code `LICENSE` file.
-
-Interface copy is in `data/i18n.json` (`en` and `fr`). The Village guide is `data/guide.json`. Place records may add `name_fr` and `description_fr`; the build prints any that are still missing and the page falls back to English. The language switch defaults to English.
+Word lists, glosses, examples and dialogues are CC BY-SA 4.0. See `LICENSE-DATA.md` and `data/source/CREDITS.md`. A licence for the site code has not been chosen yet, so there is no code `LICENSE` file.

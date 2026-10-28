@@ -51,7 +51,10 @@ v2-specific inputs live in content/v2/<building>/:
   their card says "interjection · invariable", "phrase · fixed expression" or "idiom · fixed expression".
 Everything is checked by scripts/qa/check_v2.py.
 
-usage: python3 scripts/v2/build_v2.py [building ...]   (default: every content/v2/*/layout.json)
+usage: python3 scripts/v2/build_v2.py [--no-cards] [building ...]   (default: every content/v2/*/layout.json)
+  --no-cards  keep the existing card crops in village/<bld>/cards/ (text-only rebuild; only missing crops are written)
+Verb cards also get data/curated/verb_patterns.json (Patterns section) and a named stem spelling change (polish_verb).
+vocab_fixes.json / hooks.json may also carry "plural" (string, or null for no plural) and "note" (string or null).
 """
 import json, re, sys
 from pathlib import Path
@@ -498,6 +501,60 @@ def card_crop(img, box, out):
     c.save(out, "WEBP", quality=84)
 
 
+VERB_PATTERNS = None
+
+
+def load_verb_patterns():
+    global VERB_PATTERNS
+    if VERB_PATTERNS is None:
+        fp = ROOT / "data" / "curated" / "verb_patterns.json"
+        VERB_PATTERNS = {k: v for k, v in json.loads(fp.read_text(encoding="utf-8")).items() if not k.startswith("_")} if fp.exists() else {}
+    return VERB_PATTERNS
+
+
+_PREP = r"(?:à|de|d'|en|sur|par|avec|dans|pour|contre|chez|vers)"
+
+
+def polish_verb(it):
+    """Verb card text, for v1 and vocab verbs alike (docs/PROPOSALS_2026-10-28.md 1.2):
+    - drop the note's beret sentence and mirror sentence (the card's grammar line already says both);
+    - drop bare "x + à." tags (they mislead without an object) in favour of the Patterns section;
+    - name the stem spelling change of a red-beret verb (j'achète / nous achetons), and flag it;
+    - attach the curated patterns (data/curated/verb_patterns.json)."""
+    note = it.get("note") or ""
+    note = re.sub(r"(?i)\b(?:red|green|purple|gold) beret = [^.]*\.\s*", "", note)
+    note = re.sub(r"Mirror = reflexive \(se / s'\)\.\s*", "", note)
+    note = re.sub(r"(?:^|(?<=[.!?] ))[\wÀ-ÿ'’ -]+ \+ " + _PREP + r"(?: / " + _PREP + r")*\.\s*", "", note)
+    rows = next((t["rows"] for t in it.get("tenses") or [] if t["key"] == "present"), None)
+    if it.get("beret") == "red" and rows and len(rows) >= 6:
+        def form(i):
+            pr = rows[i][0].split(" / ")[0]
+            return pr + ("" if pr.endswith(("'", "’")) else " ") + rows[i][1].split(" / ")[0]
+        explained = re.search(r"(?i)spelling|doubles|\bè\b|ç", note)
+        def stem(i, end):
+            w = rows[i][1].split(" / ")[0].split()[-1].split("'")[-1].split("’")[-1]
+            return w[: -len(end)] if w.endswith(end) else w
+        inf = it["fr"].split("'")[-1].split("’")[-1].removeprefix("se ")
+        if inf.endswith(("cer", "ger")):
+            extra = "ç before a and o" if inf.endswith("cer") else "an e after the g before a and o"
+            if not explained:
+                note = (note + " " if note else "") + f"Spelling: {extra} ({form(3)})."
+            it["spelling"] = True
+        elif stem(0, "e") != stem(3, "ons"):
+            if not explained:
+                note = (note + " " if note else "") + f"Spelling: the stem changes when the ending is silent: {form(0)}, {form(5)}, but {form(3)}, {form(4)}."
+            it["spelling"] = True
+    pats = load_verb_patterns()
+    key = it["fr"] if it["fr"] in pats else re.sub(r"^(?:se |s'|s’)", "", it["fr"])
+    p = pats.get(it["fr"]) or pats.get(key)
+    if p:
+        it["patterns"] = p["patterns"]
+        if p.get("noPrep"):
+            it["noPrep"] = p["noPrep"]
+    note = re.sub(r"\s+", " ", note).strip()
+    it["note"] = note or None
+
+
 def build(bld, v1, vocab):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
     # v2 hook overrides (content/v2/<bld>/hooks.json): {word_id: {"hook": ..., "why": ...}}
@@ -541,8 +598,14 @@ def build(bld, v1, vocab):
                 for k in ("say", "f_say", "hook", "en"):
                     if src.get(k):
                         it[k] = src[k]
+                if "plural" in src:  # a string replaces the plural line; null removes it (no plural)
+                    it["plural"] = src["plural"]
+                if "note" in src:  # a string replaces the card note; null removes it
+                    it["note"] = src["note"]
                 if src.get("ex"):
                     it["ex"] = list(src["ex"])
+            if it.get("verb"):
+                polish_verb(it)
             # museum-plaque words (word shown only as text on a blank plaque, nothing depicted):
             # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
             if overrides.get(wid, {}).get("plaque") is True:
@@ -569,7 +632,8 @@ def build(bld, v1, vocab):
             x, y, w, h = it["box"]
             r = it["_lab"]
             card = f"{bld}/cards/{it['id']}.webp"
-            card_crop(img, it["box"], V2 / card)
+            if WRITE_CARDS or not (V2 / card).exists():
+                card_crop(img, it["box"], V2 / card)
             o = {k: v for k, v in it.items() if not k.startswith("_")}
             o.update({
                 "box": [round(x / 12.8, 4), round(y / 7.2, 4), round(w / 12.8, 4), round(h / 7.2, 4)],
@@ -603,7 +667,14 @@ def build(bld, v1, vocab):
     print(f"built {bld}: {len(out_rooms)} rooms, {n} words")
 
 
+WRITE_CARDS = True
+
+
 def main():
+    global WRITE_CARDS
+    if "--no-cards" in sys.argv:  # text-only rebuild: keep existing card crops (writes only missing ones)
+        WRITE_CARDS = False
+        sys.argv.remove("--no-cards")
     blds = sys.argv[1:] or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     v1, vocab = load_v1_items(), load_vocab()
     for b in blds:

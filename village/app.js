@@ -374,7 +374,7 @@ function openCard(it,from){
   if(it.adj){ var F=it.forms||{}; h+='<div class="gram">adjective · '+(it.invariable?esc(it.fr)+' (same for both)':esc(F.m_sg||it.fr)+'/'+esc(F.f_sg||it.fr))+(F.m_pl?' · plural: '+esc(F.m_pl)+(F.f_pl&&F.f_pl!==F.m_pl?'/'+esc(F.f_pl):''):'')+'</div>';
     if(it.f_ipa&&!it.invariable) h+='<div class="pron small">feminine '+esc(F.f_sg||'')+': '+esc(it.f_ipa)+(it.f_say?' · say <b>'+esc(it.f_say)+'</b>':'')+'</div>'; }
   else if(it.adv) h+='<div class="gram">'+esc(it.gramLine||'adverb · invariable')+'</div>';
-  else if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
+  else if(it.verb) h+='<div class="gram beret">'+beretSvg(BERET[it.beret])+' '+esc(GROUP[it.beret])+(it.spelling?' · <span class="spellchg" title="The stem changes spelling in some forms: see the note">spelling change</span>':'')+(it.reflexive?' · <span aria-hidden="true">🪞</span> hand mirror: reflexive verb':'')+'</div>';
   else h+='<div class="gram">'+(it.g==='f'?'feminine':it.g==='mf'?'masculine or feminine':'masculine')+' noun · '+esc(it.ind)+(/[\u2019']$/.test(it.ind)?'':' ')+esc(it.fr)+(it.plural?' · plural: '+esc(it.plural):'')+(it.fem?' · woman: '+esc(it.fem):'')+'</div>';
   var ff=it.falseFriend;
   if(ff) h+='<div class="ffbadge '+(ff.kind==='partial'?'part':'full')+'"><span aria-hidden="true">\u2691</span> '+(ff.kind==='partial'?'Partly a false friend':'False friend')+' \u00b7 <i lang="fr">faux ami</i></div>';
@@ -383,6 +383,12 @@ function openCard(it,from){
   if(!it.noMnemonic) h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.scene?'<p class="scene"><b>In the picture:</b> '+esc(it.scene)+'</p>':'')+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
   h+=exH;
+  if(it.verb&&(it.patterns||it.noPrep)){
+    h+='<div class="sec pats"><h3>Patterns</h3>'+((it.patterns||[]).some(function(p){return /qq/.test(p.fr)})?'<p class="small">qqn = quelqu\u2019un (someone) \u00b7 qqch = quelque chose (something)</p>':'');
+    if(it.noPrep) h+='<p class="noprep"><span aria-hidden="true">\u26a0</span> '+esc(it.noPrep)+'</p>';
+    (it.patterns||[]).forEach(function(p){ h+='<div class="pat"><b lang="fr">'+esc(p.fr)+'</b> <span class="pen">'+esc(p.en)+'</span>'+(p.ex?'<div class="pex"><i lang="fr">'+esc(p.ex)+'</i>'+(sp?' <button class="say" data-say="'+esc(p.ex)+'" aria-label="Listen: '+esc(p.ex)+'">🔊</button>':'')+(p.ex_en?'<span class="tr"> '+esc(p.ex_en)+'</span>':'')+'</div>':'')+'</div>' });
+    h+='</div>';
+  }
   if(it.alphabet){
     h+='<div class="sec abc"><h3>L\u2019alphabet</h3><p class="small">Tap a letter to hear its French name.</p><div class="abcgrid">';
     it.alphabet.letters.forEach(function(x){ h+='<button class="abcl" '+(sp?'data-say="'+esc(x.l)+'" ':'')+'aria-label="'+esc(x.l)+': '+esc(x.name)+'"><b>'+esc(x.l)+'</b><span>'+esc(x.name)+'</span></button>' });

@@ -1,0 +1,239 @@
+{
+ "_note": "Verb constructions shown in the 'Patterns' section of verb cards (scripts/v2/build_v2.py). Keyed by infinitive (with se/s' for pronominal verbs). Each pattern: fr = the construction with a placeholder (qqn = quelqu'un, qqch = quelque chose), en = meaning, ex/ex_en = a short example. noPrep = a warning when English uses a preposition and French does not. Hand-written; check a new entry against a dictionary before adding it.",
+ "accepter": {"patterns": [
+  {"fr": "accepter qqch", "en": "to accept something", "ex": "J'accepte ton invitation.", "ex_en": "I accept your invitation."},
+  {"fr": "accepter de + verb", "en": "to agree to do", "ex": "Il accepte de nous aider.", "ex_en": "He agrees to help us."}]},
+ "acheter": {"patterns": [
+  {"fr": "acheter qqch", "en": "to buy something", "ex": "J'achète du pain.", "ex_en": "I'm buying bread."},
+  {"fr": "acheter qqch à qqn", "en": "to buy something from someone, or for someone", "ex": "J'achète des fleurs à ma mère.", "ex_en": "I'm buying flowers for my mother (or: from my mother)."}]},
+ "aider": {"patterns": [
+  {"fr": "aider qqn", "en": "to help someone (no preposition)", "ex": "J'aide mon frère.", "ex_en": "I help my brother."},
+  {"fr": "aider qqn à + verb", "en": "to help someone do", "ex": "Elle m'aide à porter le sac.", "ex_en": "She helps me carry the bag."}]},
+ "aller": {"patterns": [
+  {"fr": "aller à + town / place", "en": "to go to", "ex": "Je vais à Paris, à l'école.", "ex_en": "I'm going to Paris, to school."},
+  {"fr": "aller en + feminine country", "en": "to go to (a country)", "ex": "Nous allons en France.", "ex_en": "We're going to France."},
+  {"fr": "aller chez qqn", "en": "to go to someone's place", "ex": "Je vais chez le médecin.", "ex_en": "I'm going to the doctor's."},
+  {"fr": "aller + verb", "en": "to be going to do (near future)", "ex": "Je vais manger.", "ex_en": "I'm going to eat."}]},
+ "apprendre": {"patterns": [
+  {"fr": "apprendre qqch", "en": "to learn something", "ex": "J'apprends le français.", "ex_en": "I'm learning French."},
+  {"fr": "apprendre à + verb", "en": "to learn to do", "ex": "Il apprend à nager.", "ex_en": "He's learning to swim."},
+  {"fr": "apprendre qqch à qqn", "en": "to teach someone something", "ex": "Elle apprend la musique aux enfants.", "ex_en": "She teaches the children music."}]},
+ "arrêter": {"patterns": [
+  {"fr": "arrêter qqch / qqn", "en": "to stop something; to arrest someone", "ex": "La police arrête le voleur.", "ex_en": "The police arrest the thief."},
+  {"fr": "arrêter de + verb", "en": "to stop doing", "ex": "Arrête de crier !", "ex_en": "Stop shouting!"}]},
+ "s'arrêter": {"patterns": [
+  {"fr": "s'arrêter", "en": "to stop (oneself)", "ex": "Le bus s'arrête ici.", "ex_en": "The bus stops here."},
+  {"fr": "s'arrêter de + verb", "en": "to stop doing", "ex": "Il s'arrête de travailler à midi.", "ex_en": "He stops working at noon."}]},
+ "assister": {"patterns": [
+  {"fr": "assister à qqch", "en": "to attend, to be present at", "ex": "J'assiste à la réunion.", "ex_en": "I'm attending the meeting."},
+  {"fr": "assister qqn", "en": "to assist someone", "ex": "L'infirmière assiste le médecin.", "ex_en": "The nurse assists the doctor."}]},
+ "attendre": {"patterns": [
+  {"fr": "attendre qqn / qqch", "en": "to wait for", "ex": "J'attends le bus.", "ex_en": "I'm waiting for the bus."},
+  {"fr": "s'attendre à qqch", "en": "to expect something", "ex": "Je ne m'attendais pas à ça.", "ex_en": "I wasn't expecting that."}],
+  "noPrep": "No preposition: attendre le bus = to wait FOR the bus."},
+ "avoir": {"patterns": [
+  {"fr": "avoir qqch", "en": "to have", "ex": "J'ai un chat.", "ex_en": "I have a cat."},
+  {"fr": "avoir à + verb", "en": "to have to (less common than devoir)", "ex": "J'ai à travailler ce soir.", "ex_en": "I have to work tonight."},
+  {"fr": "avoir besoin de / envie de / peur de", "en": "to need / to want / to be afraid of", "ex": "J'ai besoin d'aide.", "ex_en": "I need help."}]},
+ "changer": {"patterns": [
+  {"fr": "changer qqch", "en": "to change something (alter it)", "ex": "Il change le programme.", "ex_en": "He changes the programme."},
+  {"fr": "changer de + noun (no article)", "en": "to change one thing for another", "ex": "Je change de train à Lyon.", "ex_en": "I change trains in Lyon."}]},
+ "charger": {"patterns": [
+  {"fr": "charger qqch", "en": "to load; to charge (a battery)", "ex": "Je charge mon téléphone.", "ex_en": "I'm charging my phone."},
+  {"fr": "charger qqn de qqch", "en": "to put someone in charge of something", "ex": "On le charge de la cuisine.", "ex_en": "He's put in charge of the cooking."}]},
+ "chercher": {"patterns": [
+  {"fr": "chercher qqch / qqn", "en": "to look for", "ex": "Je cherche mes clés.", "ex_en": "I'm looking for my keys."},
+  {"fr": "chercher à + verb", "en": "to try to", "ex": "Il cherche à comprendre.", "ex_en": "He's trying to understand."},
+  {"fr": "aller chercher qqn", "en": "to fetch, to pick someone up", "ex": "Je vais chercher les enfants.", "ex_en": "I'm going to pick up the children."}],
+  "noPrep": "No preposition: chercher ses clés = to look FOR your keys."},
+ "commencer": {"patterns": [
+  {"fr": "commencer qqch", "en": "to begin something", "ex": "Je commence le livre.", "ex_en": "I'm starting the book."},
+  {"fr": "commencer à + verb", "en": "to begin to do", "ex": "Il commence à pleuvoir.", "ex_en": "It's starting to rain."},
+  {"fr": "commencer par + noun / verb", "en": "to begin by", "ex": "Commençons par la soupe.", "ex_en": "Let's start with the soup."}]},
+ "conseiller": {"patterns": [
+  {"fr": "conseiller qqch à qqn", "en": "to recommend something to someone", "ex": "Je te conseille ce livre.", "ex_en": "I recommend this book to you."},
+  {"fr": "conseiller à qqn de + verb", "en": "to advise someone to do", "ex": "Il me conseille de partir.", "ex_en": "He advises me to leave."}]},
+ "continuer": {"patterns": [
+  {"fr": "continuer qqch", "en": "to carry on with something", "ex": "Nous continuons le travail.", "ex_en": "We carry on with the work."},
+  {"fr": "continuer à / de + verb", "en": "to keep doing (both are correct)", "ex": "Il continue à neiger.", "ex_en": "It keeps snowing."}]},
+ "couvrir": {"patterns": [
+  {"fr": "couvrir qqch", "en": "to cover", "ex": "Couvre la casserole.", "ex_en": "Cover the saucepan."},
+  {"fr": "couvrir qqch de qqch", "en": "to cover something with something", "ex": "La neige couvre le jardin de blanc.", "ex_en": "The snow covers the garden in white."}]},
+ "croire": {"patterns": [
+  {"fr": "croire qqn / qqch", "en": "to believe someone, something", "ex": "Je te crois.", "ex_en": "I believe you."},
+  {"fr": "croire à qqch", "en": "to believe in something", "ex": "Il croit aux fantômes.", "ex_en": "He believes in ghosts."},
+  {"fr": "croire en qqn / en Dieu", "en": "to believe in someone, in God", "ex": "Je crois en toi.", "ex_en": "I believe in you."}]},
+ "décider": {"patterns": [
+  {"fr": "décider de + verb", "en": "to decide to do", "ex": "J'ai décidé de partir.", "ex_en": "I've decided to leave."},
+  {"fr": "se décider à + verb", "en": "to make up one's mind to do", "ex": "Il se décide enfin à parler.", "ex_en": "He finally makes up his mind to speak."}]},
+ "demander": {"patterns": [
+  {"fr": "demander qqch", "en": "to ask for something", "ex": "Je demande l'addition.", "ex_en": "I ask for the bill."},
+  {"fr": "demander qqch à qqn", "en": "to ask someone for something", "ex": "Je demande le sel à Paul.", "ex_en": "I ask Paul for the salt."},
+  {"fr": "demander à qqn de + verb", "en": "to ask someone to do", "ex": "Elle me demande de venir.", "ex_en": "She asks me to come."}],
+  "noPrep": "No preposition: demander l'addition = to ask FOR the bill."},
+ "dépendre": {"patterns": [
+  {"fr": "dépendre de qqch / qqn", "en": "to depend on", "ex": "Ça dépend du temps.", "ex_en": "It depends on the weather."}]},
+ "dire": {"patterns": [
+  {"fr": "dire qqch à qqn", "en": "to say something to someone, to tell someone something", "ex": "Je dis bonjour à la voisine.", "ex_en": "I say hello to the neighbour."},
+  {"fr": "dire à qqn de + verb", "en": "to tell someone to do", "ex": "Il me dit de me taire.", "ex_en": "He tells me to be quiet."}]},
+ "donner": {"patterns": [
+  {"fr": "donner qqch à qqn", "en": "to give someone something", "ex": "Je donne un cadeau à ma sœur.", "ex_en": "I give my sister a present."},
+  {"fr": "donner sur qqch", "en": "to look out onto (a window, a room)", "ex": "La chambre donne sur la mer.", "ex_en": "The bedroom looks out onto the sea."}]},
+ "écouter": {"patterns": [
+  {"fr": "écouter qqn / qqch", "en": "to listen to", "ex": "J'écoute la radio.", "ex_en": "I'm listening to the radio."}],
+  "noPrep": "No preposition: écouter la radio = to listen TO the radio."},
+ "emprunter": {"patterns": [
+  {"fr": "emprunter qqch à qqn", "en": "to borrow something from someone", "ex": "J'emprunte un stylo à Léa.", "ex_en": "I borrow a pen from Léa."}]},
+ "s'empêcher": {"patterns": [
+  {"fr": "ne pas pouvoir s'empêcher de + verb", "en": "not to be able to help doing", "ex": "Je ne peux pas m'empêcher de rire.", "ex_en": "I can't help laughing."}]},
+ "empêcher": {"patterns": [
+  {"fr": "empêcher qqn de + verb", "en": "to stop someone (from) doing", "ex": "Le bruit m'empêche de dormir.", "ex_en": "The noise stops me from sleeping."}]},
+ "encourager": {"patterns": [
+  {"fr": "encourager qqn", "en": "to encourage, to cheer on", "ex": "Nous encourageons l'équipe.", "ex_en": "We cheer the team on."},
+  {"fr": "encourager qqn à + verb", "en": "to encourage someone to do", "ex": "Elle m'encourage à chanter.", "ex_en": "She encourages me to sing."}]},
+ "entrer": {"patterns": [
+  {"fr": "entrer dans + place", "en": "to go into, to enter", "ex": "J'entre dans la maison.", "ex_en": "I go into the house."}],
+  "noPrep": "Needs a preposition: entrer DANS la maison = to enter the house."},
+ "envoyer": {"patterns": [
+  {"fr": "envoyer qqch à qqn", "en": "to send someone something", "ex": "J'envoie une lettre à ma grand-mère.", "ex_en": "I send my grandmother a letter."}]},
+ "essayer": {"patterns": [
+  {"fr": "essayer qqch", "en": "to try something (on)", "ex": "J'essaie la robe.", "ex_en": "I'm trying the dress on."},
+  {"fr": "essayer de + verb", "en": "to try to do", "ex": "J'essaie de dormir.", "ex_en": "I'm trying to sleep."}]},
+ "finir": {"patterns": [
+  {"fr": "finir qqch", "en": "to finish something", "ex": "Je finis mes devoirs.", "ex_en": "I'm finishing my homework."},
+  {"fr": "finir de + verb", "en": "to finish doing", "ex": "J'ai fini de manger.", "ex_en": "I've finished eating."},
+  {"fr": "finir par + verb", "en": "to end up doing", "ex": "Il a fini par accepter.", "ex_en": "He ended up accepting."}]},
+ "habiter": {"patterns": [
+  {"fr": "habiter + place, or habiter à / en / dans", "en": "to live in", "ex": "J'habite (à) Lyon, dans une petite maison.", "ex_en": "I live in Lyon, in a small house."}]},
+ "hésiter": {"patterns": [
+  {"fr": "hésiter à + verb", "en": "to hesitate to do", "ex": "N'hésitez pas à demander.", "ex_en": "Don't hesitate to ask."},
+  {"fr": "hésiter entre qqch et qqch", "en": "to be torn between", "ex": "J'hésite entre le thé et le café.", "ex_en": "I can't decide between tea and coffee."}]},
+ "s'intéresser": {"patterns": [
+  {"fr": "s'intéresser à qqch", "en": "to be interested in", "ex": "Je m'intéresse à l'histoire.", "ex_en": "I'm interested in history."}]},
+ "jouer": {"patterns": [
+  {"fr": "jouer à + game / sport", "en": "to play (a game, a sport)", "ex": "Je joue au foot, aux cartes.", "ex_en": "I play football, cards."},
+  {"fr": "jouer de + instrument", "en": "to play (an instrument)", "ex": "Elle joue du piano.", "ex_en": "She plays the piano."}]},
+ "manquer": {"patterns": [
+  {"fr": "manquer qqch", "en": "to miss (a train, a class)", "ex": "J'ai manqué le bus.", "ex_en": "I missed the bus."},
+  {"fr": "manquer à qqn", "en": "to be missed by someone (back to front!)", "ex": "Tu me manques.", "ex_en": "I miss you (literally: you are missing to me)."},
+  {"fr": "manquer de qqch", "en": "to lack, to be short of", "ex": "Il manque de temps.", "ex_en": "He's short of time."}]},
+ "se moquer": {"patterns": [
+  {"fr": "se moquer de qqn / qqch", "en": "to make fun of; not to care about", "ex": "Ils se moquent de moi.", "ex_en": "They make fun of me."}]},
+ "mourir": {"patterns": [
+  {"fr": "mourir de qqch", "en": "to die of", "ex": "Je meurs de faim !", "ex_en": "I'm starving! (literally: dying of hunger)"}]},
+ "obéir": {"patterns": [
+  {"fr": "obéir à qqn / qqch", "en": "to obey", "ex": "Le chien obéit à son maître.", "ex_en": "The dog obeys its master."}],
+  "noPrep": "Needs à: obéir À ses parents = to obey your parents."},
+ "s'occuper": {"patterns": [
+  {"fr": "s'occuper de qqn / qqch", "en": "to look after, to deal with", "ex": "Je m'occupe du chat.", "ex_en": "I look after the cat."}]},
+ "offrir": {"patterns": [
+  {"fr": "offrir qqch à qqn", "en": "to give someone something (as a gift)", "ex": "J'offre des fleurs à ma mère.", "ex_en": "I give my mother flowers."},
+  {"fr": "offrir de + verb", "en": "to offer to do", "ex": "Il offre de payer.", "ex_en": "He offers to pay."}]},
+ "oublier": {"patterns": [
+  {"fr": "oublier qqch", "en": "to forget something", "ex": "J'ai oublié mon parapluie.", "ex_en": "I forgot my umbrella."},
+  {"fr": "oublier de + verb", "en": "to forget to do", "ex": "N'oublie pas de fermer la porte.", "ex_en": "Don't forget to shut the door."}]},
+ "parler": {"patterns": [
+  {"fr": "parler à qqn", "en": "to talk to someone", "ex": "Je parle à mon voisin.", "ex_en": "I'm talking to my neighbour."},
+  {"fr": "parler de qqch / qqn", "en": "to talk about", "ex": "On parle du film.", "ex_en": "We're talking about the film."},
+  {"fr": "parler + language (no article)", "en": "to speak a language", "ex": "Je parle français.", "ex_en": "I speak French."}]},
+ "partir": {"patterns": [
+  {"fr": "partir de + place", "en": "to leave from", "ex": "Le train part de Lyon.", "ex_en": "The train leaves from Lyon."},
+  {"fr": "partir pour / à + place", "en": "to leave for", "ex": "Je pars pour Rome demain.", "ex_en": "I'm leaving for Rome tomorrow."}],
+  "noPrep": "To leave a place is quitter: je quitte la maison (partir needs de)."},
+ "payer": {"patterns": [
+  {"fr": "payer qqch", "en": "to pay for something", "ex": "Je paie le repas.", "ex_en": "I'm paying for the meal."},
+  {"fr": "payer qqn", "en": "to pay someone", "ex": "Il paie le plombier.", "ex_en": "He pays the plumber."}],
+  "noPrep": "No preposition: payer le repas = to pay FOR the meal."},
+ "penser": {"patterns": [
+  {"fr": "penser à qqn / qqch", "en": "to think about, to remember", "ex": "Je pense à toi.", "ex_en": "I'm thinking about you."},
+  {"fr": "penser de qqch / qqn", "en": "to think of (have an opinion)", "ex": "Que penses-tu de ce film ?", "ex_en": "What do you think of this film?"},
+  {"fr": "penser + verb", "en": "to intend to", "ex": "Je pense partir demain.", "ex_en": "I intend to leave tomorrow."}]},
+ "se plaindre": {"patterns": [
+  {"fr": "se plaindre de qqch / qqn", "en": "to complain about", "ex": "Il se plaint du bruit.", "ex_en": "He complains about the noise."}]},
+ "plaire": {"patterns": [
+  {"fr": "plaire à qqn", "en": "to please someone; X plaît à Y = Y likes X (back to front!)", "ex": "Ce film me plaît.", "ex_en": "I like this film (literally: it pleases me)."}]},
+ "pousser": {"patterns": [
+  {"fr": "pousser qqch / qqn", "en": "to push", "ex": "Pousse la porte.", "ex_en": "Push the door."},
+  {"fr": "pousser qqn à + verb", "en": "to push someone into doing", "ex": "Ses amis le poussent à chanter.", "ex_en": "His friends push him into singing."}]},
+ "prêter": {"patterns": [
+  {"fr": "prêter qqch à qqn", "en": "to lend someone something", "ex": "Je prête mon vélo à Tom.", "ex_en": "I lend Tom my bike."}]},
+ "profiter": {"patterns": [
+  {"fr": "profiter de qqch", "en": "to make the most of, to enjoy", "ex": "Profitez du soleil !", "ex_en": "Make the most of the sunshine!"}]},
+ "regarder": {"patterns": [
+  {"fr": "regarder qqn / qqch", "en": "to look at, to watch", "ex": "Je regarde la télé.", "ex_en": "I'm watching TV."}],
+  "noPrep": "No preposition: regarder la photo = to look AT the photo."},
+ "regretter": {"patterns": [
+  {"fr": "regretter qqch", "en": "to regret; to miss (someone, a place)", "ex": "Je regrette mon ancienne école.", "ex_en": "I miss my old school."},
+  {"fr": "regretter de + verb", "en": "to be sorry for doing", "ex": "Je regrette d'être en retard.", "ex_en": "I'm sorry I'm late."}]},
+ "remercier": {"patterns": [
+  {"fr": "remercier qqn de / pour qqch", "en": "to thank someone for", "ex": "Je vous remercie pour le cadeau.", "ex_en": "Thank you for the present."}]},
+ "renoncer": {"patterns": [
+  {"fr": "renoncer à qqch / à + verb", "en": "to give up", "ex": "Il renonce à son voyage.", "ex_en": "He gives up his trip."}]},
+ "rentrer": {"patterns": [
+  {"fr": "rentrer à / chez + place", "en": "to go back home, to return", "ex": "Je rentre à la maison.", "ex_en": "I'm going back home."},
+  {"fr": "rentrer de + place", "en": "to come back from", "ex": "Elle rentre du travail.", "ex_en": "She's coming back from work."}]},
+ "répondre": {"patterns": [
+  {"fr": "répondre à qqn / qqch", "en": "to answer", "ex": "Je réponds à la question.", "ex_en": "I answer the question."}],
+  "noPrep": "Needs à: répondre À la question = to answer the question."},
+ "ressembler": {"patterns": [
+  {"fr": "ressembler à qqn / qqch", "en": "to look like, to resemble", "ex": "Elle ressemble à sa mère.", "ex_en": "She looks like her mother."}],
+  "noPrep": "Needs à: ressembler À sa mère = to resemble her mother."},
+ "rester": {"patterns": [
+  {"fr": "rester à / chez + place", "en": "to stay (somewhere)", "ex": "Je reste à la maison.", "ex_en": "I'm staying at home."},
+  {"fr": "il reste qqch à qqn", "en": "someone has something left", "ex": "Il me reste dix euros.", "ex_en": "I have ten euros left."}]},
+ "retourner": {"patterns": [
+  {"fr": "retourner à / en + place", "en": "to go back to", "ex": "Je retourne à Paris.", "ex_en": "I'm going back to Paris."},
+  {"fr": "retourner qqch", "en": "to turn something over", "ex": "Retourne la crêpe !", "ex_en": "Flip the pancake!"}]},
+ "réussir": {"patterns": [
+  {"fr": "réussir qqch", "en": "to make a success of something", "ex": "Il a réussi son gâteau.", "ex_en": "His cake turned out well."},
+  {"fr": "réussir à + verb", "en": "to manage to do", "ex": "J'ai réussi à ouvrir la porte.", "ex_en": "I managed to open the door."},
+  {"fr": "réussir (à) un examen", "en": "to pass an exam", "ex": "Elle a réussi son examen.", "ex_en": "She passed her exam."}]},
+ "revenir": {"patterns": [
+  {"fr": "revenir de + place", "en": "to come back from", "ex": "Il revient de Rome.", "ex_en": "He's coming back from Rome."},
+  {"fr": "revenir à + place", "en": "to come back to", "ex": "Reviens à la maison !", "ex_en": "Come back home!"}]},
+ "rêver": {"patterns": [
+  {"fr": "rêver de qqch / de + verb", "en": "to dream of, about", "ex": "Je rêve de voyager.", "ex_en": "I dream of travelling."}]},
+ "rire": {"patterns": [
+  {"fr": "rire de qqch / qqn", "en": "to laugh at, about", "ex": "On rit de ses blagues.", "ex_en": "We laugh at his jokes."}]},
+ "risquer": {"patterns": [
+  {"fr": "risquer qqch", "en": "to risk something", "ex": "Il risque sa vie.", "ex_en": "He risks his life."},
+  {"fr": "risquer de + verb", "en": "to be likely to (usually something bad)", "ex": "Il risque de pleuvoir.", "ex_en": "It might well rain."}]},
+ "servir": {"patterns": [
+  {"fr": "servir qqch / qqn", "en": "to serve", "ex": "Le serveur sert le café.", "ex_en": "The waiter serves the coffee."},
+  {"fr": "servir à + verb", "en": "to be used for", "ex": "Ça sert à couper le pain.", "ex_en": "It's used for cutting bread."},
+  {"fr": "se servir de qqch", "en": "to use something", "ex": "Je me sers d'un couteau.", "ex_en": "I use a knife."}]},
+ "sortir": {"patterns": [
+  {"fr": "sortir de + place", "en": "to go out of, to leave", "ex": "Je sors de la maison.", "ex_en": "I go out of the house."},
+  {"fr": "sortir qqch", "en": "to take something out (auxiliary avoir)", "ex": "J'ai sorti la poubelle.", "ex_en": "I took the bin out."}]},
+ "souffrir": {"patterns": [
+  {"fr": "souffrir de qqch", "en": "to suffer from", "ex": "Il souffre du froid.", "ex_en": "He suffers from the cold."}]},
+ "sourire": {"patterns": [
+  {"fr": "sourire à qqn", "en": "to smile at someone", "ex": "Le bébé sourit à sa mère.", "ex_en": "The baby smiles at its mother."}]},
+ "se souvenir": {"patterns": [
+  {"fr": "se souvenir de qqch / qqn", "en": "to remember", "ex": "Je me souviens de toi.", "ex_en": "I remember you."}]},
+ "succéder": {"patterns": [
+  {"fr": "succéder à qqn / qqch", "en": "to succeed, to follow (someone, something)", "ex": "La nuit succède au jour.", "ex_en": "Night follows day."}]},
+ "téléphoner": {"patterns": [
+  {"fr": "téléphoner à qqn", "en": "to phone someone", "ex": "Je téléphone à ma mère.", "ex_en": "I phone my mother."}],
+  "noPrep": "Needs à: téléphoner À sa mère = to phone her mother."},
+ "tendre": {"patterns": [
+  {"fr": "tendre qqch à qqn", "en": "to hold something out to someone", "ex": "Il me tend la main.", "ex_en": "He holds out his hand to me."},
+  {"fr": "tendre à + verb", "en": "to tend to", "ex": "Les prix tendent à monter.", "ex_en": "Prices tend to rise."}]},
+ "tenir": {"patterns": [
+  {"fr": "tenir qqch", "en": "to hold", "ex": "Tiens bien la main de ton frère.", "ex_en": "Hold your brother's hand tight."},
+  {"fr": "tenir à qqn / qqch / à + verb", "en": "to be fond of; to insist on", "ex": "Je tiens à ce vieux pull.", "ex_en": "I'm fond of this old jumper."},
+  {"fr": "tenir de qqn", "en": "to take after someone", "ex": "Elle tient de son père.", "ex_en": "She takes after her father."}]},
+ "veiller": {"patterns": [
+  {"fr": "veiller", "en": "to stay up", "ex": "Nous veillons jusqu'à minuit.", "ex_en": "We stay up until midnight."},
+  {"fr": "veiller sur qqn", "en": "to watch over someone", "ex": "Elle veille sur son petit frère.", "ex_en": "She watches over her little brother."},
+  {"fr": "veiller à + noun / verb", "en": "to make sure of", "ex": "Veillez à fermer la porte.", "ex_en": "Make sure you close the door."}]},
+ "vendre": {"patterns": [
+  {"fr": "vendre qqch à qqn", "en": "to sell someone something", "ex": "Elle vend son vélo à un voisin.", "ex_en": "She sells her bike to a neighbour."}]},
+ "venir": {"patterns": [
+  {"fr": "venir de + place", "en": "to come from", "ex": "Je viens de Lyon.", "ex_en": "I come from Lyon."},
+  {"fr": "venir de + verb", "en": "to have just done", "ex": "Je viens de manger.", "ex_en": "I've just eaten."},
+  {"fr": "venir + verb", "en": "to come and do", "ex": "Viens manger !", "ex_en": "Come and eat!"}]},
+ "vivre": {"patterns": [
+  {"fr": "vivre à / en / dans + place", "en": "to live in", "ex": "Ils vivent à la campagne.", "ex_en": "They live in the country."},
+  {"fr": "vivre de qqch", "en": "to live on, to make a living from", "ex": "Il vit de sa musique.", "ex_en": "He makes a living from his music."}]}
+}
