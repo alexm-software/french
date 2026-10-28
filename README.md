@@ -18,7 +18,7 @@ The live site is the static folder `village/`, published with GitHub Pages.
 | `data/hooks/qa/`, `docs/` | Review notes, proposals and change logs. |
 | `skills/` | The memory-palace build skills (builder, language, release gates). Start with each `SKILL.md`. |
 | `tools/` | Cheap checks before review: `unbuilt.py`, `precheck.py`, `contact_sheet.py`, the manifest template. See `tools/README.md`. |
-| `scripts/v2/`, `scripts/qa/` | The build (`build_v2.py`, `build_map.py`) and the gate checks (`check_v2.py`, `placement.py`). |
+| `scripts/v2/`, `scripts/qa/` | The build (`build_v2.py`, `build_map.py`, `build_extras.py`) and the gate checks (`check_v2.py`, `placement.py`). |
 
 ## Build and check
 
@@ -29,6 +29,7 @@ python3 -m pip install pillow
 python3 scripts/v2/build_v2.py              # every building; or name some: build_v2.py ecole mairie
 python3 scripts/v2/build_v2.py --no-cards   # text-only rebuild: keeps the existing card crops
 python3 scripts/v2/build_map.py
+python3 scripts/v2/build_extras.py         # live buildings, search index, room conversations
 python3 scripts/qa/check_v2.py              # add --strict --placement before a release
 ```
 

@@ -44,7 +44,7 @@ function applyLabelMode(){
   b.querySelector('.sr').textContent=on?' always shown':' only on hover or tap';
   disarm();
 }
-function setLabelMode(m){ labelMode=m; try{localStorage.setItem(LKEY,m)}catch(e){} applyLabelMode() }
+function setLabelMode(m){ labelMode=m; try{localStorage.setItem(LKEY,m)}catch(e){} applyLabelMode(); if(view==='sector')renderSector(curSector) }
 function showLab(i,on){ var l=stage.querySelector('.lab[data-i="'+i+'"]'); if(l) l.classList.toggle('show',on) }
 function disarm(){ if(armed>=0){ showLab(armed,false); var o=document.getElementById('ov'+armed); if(o)o.classList.remove('on') } armed=-1 }
 var cardWrap=$('#cardWrap'), card=$('#card'), lastFocus=null, view=null;
@@ -96,12 +96,14 @@ MAP.world.sectors.forEach(function(w){ var S=MAP.sectors[w.slug]; S.buildings.fo
     REG[t.id]=t; BYBID[t.building_id]=BYBID[t.building_id]||t }) });
 function sectorById(sid){ return MAP.world.sectors.filter(function(w){return w.id===sid})[0] }
 function homeOf(bld){ // {slug, entry} where the building lives on the maps
-  var D=window.VILLAGE_DATA&&window.VILLAGE_DATA[bld], e=REG[bld];
+  var D=(window.VILLAGE_DATA&&window.VILLAGE_DATA[bld])||(window.V2_LIVE&&window.V2_LIVE[bld]), e=REG[bld];
   if(D&&D.building_id&&BYBID[D.building_id]&&BYBID[D.building_id].id===bld) e=BYBID[D.building_id];
   var w=D&&D.sector_id&&sectorById(D.sector_id);
   return {slug:w?w.slug:(e&&e.sector), entry:e} }
 function sectorHref(slug){ return slug?'#/quartier/'+slug:'#/' }
-function probeAll(cb){ var ids=Object.keys(REG), n=ids.length; if(!n){probed=true;cb();return}
+function probeAll(cb){ var LV=window.V2_LIVE; // data/live.js (scripts/v2/build_extras.py): what is built, without one request per planned building
+  if(LV){ Object.keys(LV).forEach(function(id){ if(REG[id])LIVE[id]=1 }); probed=true; cb(); return }
+  var ids=Object.keys(REG), n=ids.length; if(!n){probed=true;cb();return}
   ids.forEach(function(id){ loadData(id,function(ok){ if(ok&&window.VILLAGE_DATA[id])LIVE[id]=1; if(--n===0){probed=true;cb()} }) }) }
 function pts(r){ return r[0]+','+r[1]+' '+(r[0]+r[2])+','+r[1]+' '+(r[0]+r[2])+','+(r[1]+r[3])+' '+r[0]+','+(r[1]+r[3]) }
 function tagAt(r){ return [r[0]+r[2]/2, r[1]+Math.min(14,r[3]/4)] }
@@ -253,7 +255,8 @@ function drawMap(img,alt,label,live,soon,H){
   var ts=$('#tagSoon');
   stage.querySelectorAll('a.lnk').forEach(function(lnk){
     var polys=lnk.querySelectorAll('.bld.live'), tl=$('#tagLive'+lnk.dataset.i);
-    function on(){tl.classList.add('show');polys.forEach(function(p){p.classList.add('hot')})} function off(){tl.classList.remove('show');polys.forEach(function(p){p.classList.remove('hot')})}
+    function on(){tl.classList.add('show');polys.forEach(function(p){p.classList.add('hot')})} function off(){if(labelMode!=='always'||tl.classList.contains('pin'))tl.classList.remove('show');polys.forEach(function(p){p.classList.remove('hot')})}
+    if(labelMode==='always'&&!tl.classList.contains('pin'))tl.classList.add('show');
     lnk.addEventListener('mouseenter',on); lnk.addEventListener('mouseleave',off); lnk.addEventListener('focus',on); lnk.addEventListener('blur',off);
     if(tl.classList.contains('pin')){ tl.addEventListener('mouseenter',on); tl.addEventListener('mouseleave',off) }
   });
@@ -294,7 +297,12 @@ function renderSector(slug){
   drawMap(S.image,S.alt,S.name+' map',live,soon); scroller.scrollTop=0;
 }
 // ---------- room / zoom ----------
-var R=null, B=null;
+var R=null, B=null, curKey=null;
+// small API for extras.js (search, recall, review, help, dialogues): hooks run after a room or a card renders
+var API=window.Village={onCard:[],onRoom:[],onView:[],openCard:function(it,from){openCard(it,from)},closeCard:function(){closeCard()},
+  speak:function(t){speak(t)},headword:function(it){return headword(it)},hasVoice:function(){return hasVoice()},
+  here:function(){return {view:view,bld:B,key:curKey,room:R}},roomHref:function(b,k){return roomHref(b,k)},
+  loadData:function(b,cb){loadData(b,cb)},stage:function(){return stage}};
 function roomHref(bld,key){ return key===bld?'#/'+bld:'#/'+bld+'/'+key }
 function renderRooms(bld,key){
   var D=window.VILLAGE_DATA[bld], L=D.roomList||[], cur=D.rooms[key];
@@ -304,7 +312,7 @@ function renderRooms(bld,key){
     return '<a href="'+roomHref(bld,r.key)+'"'+(on?' aria-current="page"':'')+'>'+esc(r.short)+'</a>' }).join('<span class="dot" aria-hidden="true">·</span>');
 }
 function renderRoom(bld,key){
-  B=bld; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
+  B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
   back.hidden=false; renderRooms(bld,key);
   var BT=R.parent||R.backTo;
   if(BT){ $('#backLabel').textContent=D.rooms[BT].name; back.title='Back to '+D.rooms[BT].name; }
@@ -353,6 +361,7 @@ function renderRoom(bld,key){
   });
   applyLabelMode();
   fit();
+  API.onRoom.forEach(function(f){ try{f(bld,key,R)}catch(e){console.error(e)} });
 }
 function headword(it){ if(it.verb||it.adj||it.adv) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
 // ---------- speech (browser built-in, French voice) ----------
@@ -360,13 +369,14 @@ var frVoice=null;
 function pickVoice(){ if(!('speechSynthesis' in window))return; var v=speechSynthesis.getVoices();
   frVoice=v.filter(function(x){return /^fr[-_]FR/i.test(x.lang)})[0]||v.filter(function(x){return /^fr/i.test(x.lang)})[0]||null }
 if('speechSynthesis' in window){pickVoice(); speechSynthesis.onvoiceschanged=pickVoice}
-function speak(t){ if(!('speechSynthesis' in window))return; speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='fr-FR'; if(frVoice)u.voice=frVoice; u.rate=0.85; speechSynthesis.speak(u) }
+function hasVoice(){ if(!('speechSynthesis' in window))return false; var v=speechSynthesis.getVoices(); return !v.length||!!frVoice }
+function speak(t){ if(!('speechSynthesis' in window))return; speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='fr-FR'; if(frVoice)u.voice=frVoice; u.rate=API.rate||0.85; speechSynthesis.speak(u) }
 var BERET={red:'#d8322f',green:'#3c8a3a',purple:'#7b3fa0',gold:'#e8b32a'};
 var GROUP={red:'-er verb: red beret',green:'-ir verb: green beret',purple:'-re verb: purple beret',gold:'irregular verb: gold beret'};
 function beretSvg(c){return '<svg viewBox="0 0 34 22" aria-hidden="true"><ellipse cx="17" cy="13" rx="15" ry="7.5" fill="'+c+'" stroke="#2b1d14" stroke-width="2"/><path d="M15 6 q2 -5 4 0" fill="'+c+'" stroke="#2b1d14" stroke-width="2"/><path d="M5 15 q12 5 24 0" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="2"/></svg>'}
 function openCard(it,from){
   lastFocus=from||document.activeElement;
-  var hw=headword(it), sp='speechSynthesis' in window;
+  var hw=headword(it), sp=hasVoice();
   var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="'+esc(it.cardSrc||'')+'" alt=""></div><div class="hw">';
   h+='<h2 id="cardTitle">'+(it.verb||it.adj||it.adv?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
@@ -412,12 +422,17 @@ function openCard(it,from){
       h+='<button class="tab" role="tab" id="tab-'+t.key+'" data-tense="'+t.key+'" aria-controls="tp-'+t.key+'" aria-selected="'+on+'" tabindex="'+(on?0:-1)+'">'+esc(t.name)+'</button>'});
     h+='</div>';
     it.tenses.forEach(function(t){
-      h+='<div class="tpanel" role="tabpanel" id="tp-'+t.key+'" aria-labelledby="tab-'+t.key+'"'+(t.key===cur?'':' hidden')+'><table class="conj">'+t.rows.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'}).join('')+'</table>'+(t.note?'<div class="small">'+esc(t.note)+'</div>':'')+'</div>';
+      h+='<div class="tpanel" role="tabpanel" id="tp-'+t.key+'" aria-labelledby="tab-'+t.key+'"'+(t.key===cur?'':' hidden')+'><table class="conj">'+t.rows.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+conjCell(r[1])+'</td></tr>'}).join('')+'</table>'+(t.note?'<div class="small">'+esc(t.note)+'</div>':'')+'</div>';
     });
     h+='</div>';
   }
   card.innerHTML=h; cardWrap.hidden=false; card.scrollTop=0; card.focus(); var st=card.querySelector('.tab[aria-selected="true"]'); if(st)revealTab(st);
+  API.onCard.forEach(function(f){ try{f(it,card)}catch(e){console.error(e)} });
 }
+function conjCell(v){ var p=String(v).split(' / '); if(p.length<2)return esc(v);
+  var stem=function(x){return x.replace(/e?s?$/,'')}; // "est allé / est allée": a gender ending, not an alternative
+  if(p.every(function(x){return stem(x)===stem(p[0])}))return esc(v);
+  return esc(p[0])+'<span class="altform"> / '+esc(p.slice(1).join(' / '))+'</span>' }
 function closeCard(){ if(cardWrap.hidden)return; cardWrap.hidden=true; if('speechSynthesis' in window)speechSynthesis.cancel(); if(lastFocus&&lastFocus.focus)lastFocus.focus() }
 function revealTab(b){ var tl=b.parentNode, x=b.offsetLeft-tl.offsetLeft, w=tl.clientWidth;
   if(x<tl.scrollLeft+8||x+b.offsetWidth>tl.scrollLeft+w-8) tl.scrollLeft=Math.max(0,x-(w-b.offsetWidth)/2) }
@@ -446,8 +461,9 @@ document.addEventListener('keydown',function(e){
   if(e.key==='h'||e.key==='H')toggleHL(); else if(e.key==='l'||e.key==='L')$('#labMode').click(); else if(e.key==='f'||e.key==='F')toggleFS();
   else if(e.key==='Backspace'&&(view==='room'||view==='zoom'||view==='sector')){back.click();e.preventDefault()}
 });
-function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
-  var m=location.hash.match(/^#\/([a-z0-9_]+)(?:\/([a-z0-9_]+))?$/), bld=m&&m[1];
+function route(){ closeCard(); API.onView.forEach(function(f){ try{f()}catch(e){} }); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
+  var q=location.hash.split('?'), wq=(q[1]||'').match(/(?:^|&)w=([A-Za-z0-9_]+)/), want=wq&&wq[1];
+  var m=q[0].match(/^#\/([a-z0-9_]+)(?:\/([a-z0-9_]+))?$/), bld=m&&m[1];
   if(bld==='quartier'){ if(m[2]&&MAP.sectors[m[2]]) renderSector(m[2]); else location.replace('#/'); return }
   if(!bld||!REG[bld]){ renderMap(); return }
   loadData(bld,function(ok){
@@ -455,6 +471,7 @@ function route(){ closeCard(); delete scroller.dataset.centred; stage.classList.
     var Rk=D&&D.rooms[key], ok2=Rk&&(!m[2]||(key!==bld&&(Rk.parent?!!D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent:(D.roomList||[]).some(function(r){return r.key===key}))));
     if(!ok2){ if(location.hash!=='#/')location.replace('#/'); else renderMap(); return }
     renderRoom(bld,key);
+    if(want){ var hit=R.items.filter(function(x){return x.id===want})[0]; if(hit) openCard(hit,stage.querySelector('.hot[data-i="'+R.items.indexOf(hit)+'"]')) }
   });
 }
 var loading={};
