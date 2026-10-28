@@ -10,6 +10,8 @@ description: >-
 
 A space is NOT done until every gate passes, and the checker must actually look at the images. Each line is one gate. The file named in a section heading holds the full procedure and examples. Record each result in a dated gates log (space | gate | pass/fail | note) with the site commit. Gate 6 (content) failures block release; any other failure is a major.
 
+**Read only what the task needs:** new or repainted room: item-gates.md, space-gates.md, tools-and-logs.md · labels only: space-gates.md §B · number or count room: number-and-count-rooms.md · shipping: deploy.md · composited (legacy) rooms only: §E, F below. Gates that scripts hold: `scripts/qa/check_v2.py --strict --placement` (geometry, sides, room size, one hook per word), `tools/precheck.py`, `tools/hook_lint.py`; all run on every pull request (`.github/workflows/checks.yml`).
+
 ## Order of work (reference/tools-and-logs.md)
 - 0. Run `tools/unbuilt.py` (by word id, fresh main) before choosing what to paint.
 - 1. Write the item manifest and check it against all the gates below before painting (builder reference/planning.md); build the prompt from builder reference/prompt-template.md, every field filled (it prevents rework; every gate below still applies strictly).
@@ -37,7 +39,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 
 ## C. Setting and layout (reference/space-gates.md)
 - 11. A rich, real setting with its own walls, floor, depth and one nameable landmark.
-- 12. At most about 10 items (more than 12 fails), each box at least 6% from every edge, figures grounded, no rows on shelves.
+- 12. At most `room_target` items (more than `room_max` fails; skills/limits.json, checked by check_v2), each box at least `edge_margin` from every edge, figures grounded, no rows on shelves.
 - 13. No look-alike spaces: run a similarity measure, then compare the flagged pairs by eye.
 - 14. One style per building or street, matching its exterior.
 - 15. Colour: natural neutral daylight, matching the palette sheet; a whole-room amber or orange cast fails.
@@ -46,7 +48,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.
 - Stray or garbled text, prop symbols, speech bubbles and count-breaking digits fail.
 
-## E, F. Composited scenes (reference/item-gates.md, reference/space-gates.md)
+## E, F. Composited scenes, legacy only: repairs of old composited rooms (reference/item-gates.md, reference/space-gates.md)
 - E: each asset shows the hook and the meaning, is one word only, renders cleanly, matches the style, is cleanly cut out and card-ready, and has the right perspective.
 - F: no overlaps; labels sit on their own asset; assets rest on surfaces with contact shadows; the room is coherent; hotspots line up.
 

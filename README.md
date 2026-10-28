@@ -30,8 +30,11 @@ python3 scripts/v2/build_v2.py              # every building; or name some: buil
 python3 scripts/v2/build_v2.py --no-cards   # text-only rebuild: keeps the existing card crops
 python3 scripts/v2/build_map.py
 python3 scripts/v2/build_extras.py         # live buildings, search index, room conversations
-python3 scripts/qa/check_v2.py              # add --strict --placement before a release
+python3 scripts/qa/check_v2.py              # add --strict --placement before a release; -v for word counts
+python3 tools/hook_lint.py                  # mechanical hook checks (report only)
 ```
+
+Every pull request runs `check_v2.py --strict --placement`, `tools/skills_paths.py` and the hook lint (`.github/workflows/checks.yml`). Room-size and spacing numbers live in `skills/limits.json`.
 
 Preview by serving the folder, e.g. `cd village && python3 -m http.server`, and open the printed address.
 

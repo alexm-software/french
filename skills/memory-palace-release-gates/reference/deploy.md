@@ -2,7 +2,7 @@
 
 Read before building any pack or asking for a deploy.
 
-## Batch deploys (v13)
+## Batch deploys
 
 - **One combined pack per batch of rooms.** Group the rooms finished in a work batch into one slim pack (one base SHA, one file list, one CHANGES note, before/after and browser shots kept outside the pack), and ask for one deploy. The deploy reports once, when the batch is live; no per-room deploy pings. <!-- N4 -->
 - **Exception kept from gate D:** a user-reported issue or a P0/P1 fix that has passed independent review still ships as its own small hotfix in the next deploy window (it may ride in a batch only if that batch goes out in the same window); it never waits for an unrelated combined build (process.md, G50). "Pack small increments" (B227) now means: keep each batch to the rooms of one work batch. <!-- N4 B227 -->

@@ -9,10 +9,25 @@ description: >-
 
 A one-page checklist for building an explorable memory palace. Each line is one checkable rule. The file named in a section heading holds the full rules and lessons; open it only when that topic comes up. Load the release-gates skill too, and the language skill for language palaces.
 
+**Current pipeline:** each room or zoom is ONE integrated painting (1280x720) with the objects painted in; the site adds only hotspots and labels. Rules marked *composited* (release gates E and F, space-gates "Scene first, then assets drawn to fit") apply only when repairing an old composited room.
+
+**Room sizes and spacing:** the numbers live in `skills/limits.json` (room target and maximum, zoom size, floor, edge margin, label gap, centre band); `scripts/qa/check_v2.py` and `tools/precheck.py` read it.
+
+**Read only what the task needs:**
+| Task | Read |
+|---|---|
+| Paint a new room or zoom | reference/planning.md, reference/prompt-template.md, reference/composition.md; release gates item-gates.md §A, space-gates.md §C and §G |
+| Repaint a live room | the row above, plus reference/moving-words.md |
+| Fix labels or hotspots only | reference/text-and-labels.md; release gates space-gates.md §B |
+| Rewrite hooks (no repaint) | reference/hooks.md; language skill reference/hooks.md |
+| Move a word | reference/moving-words.md; language skill reference/placement-and-senses.md |
+| Map or navigation | reference/maps-and-navigation.md |
+| Site code or cards | reference/site-ui.md; language skill reference/cards-and-site.md |
+
 ## Set up once (reference/setup-and-style.md)
 - Fix subject, levels, setting, style slider (1-5), art style (ask), site look (ask and mock up), output.
 - Record the audience and sacred/cultural sensitivities (reference/sensitive-content.md).
-- Choose the art pipeline: painted empty room as the fixed scene, each item drawn to fit its slot.
+- Art pipeline: one integrated painting per room or zoom, objects painted in (see the top of this file).
 - One canonical position per object in data; one style guide and prompt preamble for every image.
 - Natural true colour in neutral daylight, no tint or cast; sectors differ by setting, never by grade.
 
@@ -60,7 +75,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 
 ## Moving words (reference/moving-words.md)
 - A move is three edits: inpaint the old spot, update the plan data, redraw the hook and painting in the new room.
-- Never strip a live room below about 6 words without painting something back in the same pack.
+- Never strip a live room below `room_floor` words (skills/limits.json) without painting something back in the same pack.
 - Count plan-only moves and sparse rooms with a script; report both counts at every stopping point.
 - Paint-backs keep bands and sides; fix stale alt text and the parent miniature.
 

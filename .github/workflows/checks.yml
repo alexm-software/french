@@ -1,0 +1,34 @@
+name: Checks
+
+# Runs the gates on every pull request, so a change from any agent or person that breaks one is seen before merge.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pillow
+      - name: Gates on the built data (check_v2 --strict --placement)
+        run: python scripts/qa/check_v2.py --strict --placement
+      - name: Every path the skills name exists
+        run: python tools/skills_paths.py
+      - name: Hook lint (report only)
+        run: python tools/hook_lint.py
+      - name: Generated data matches its sources
+        # Rebuilds the text (not the card crops) and reports files that differ from what was committed.
+        # Report only for now: other pipelines also write village/data.
+        continue-on-error: true
+        run: |
+          python scripts/v2/build_v2.py --no-cards > /dev/null
+          python scripts/v2/build_map.py > /dev/null
+          python scripts/v2/build_extras.py > /dev/null
+          git diff --stat --exit-code -- village/data

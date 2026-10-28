@@ -9,12 +9,14 @@ description: >-
 
 The language layer on top of the Memory palace builder skill. Each line is one checkable rule. The file named in a section heading holds the full rules, examples and lessons; open it only when that topic comes up.
 
+**Read only what the task needs:** new room: scope-and-levels.md, representation.md, verbs.md (if it holds verbs), placement-and-senses.md · hooks only: hooks.md · moving a word: placement-and-senses.md · card text or site: cards-and-site.md · checks: validation.md.
+
 ## Scope, levels and density (reference/scope-and-levels.md)
 - Tag every word with its level (e.g. CEFR A1-C2) and build the inventory from openly licensed lists, credited.
 - Cross-check noisy level lists against corpus frequency, and boost concrete everyday words.
 - Keep every requested word; rare words may get a home and a card now and a picture later.
 - The core village holds beginner to intermediate words; advanced words go upstairs, in back rooms or in an advanced area.
-- Each main painting holds about 10-12 of its commonest words, verbs among them; zoom spots hold about 6.
+- Each main painting holds about `room_target` of its commonest words (never more than `room_max`), verbs among them; zoom spots hold `zoom_min` to `zoom_max` (numbers in skills/limits.json).
 - No one-object zooms: fold a zoom of fewer than about 4 words into a fuller scene.
 - The beginner area holds greetings, the alphabet on one board, sounds, articles, numbers, pronouns and basic grammar.
 - Sectors are thematic and fit the culture.
