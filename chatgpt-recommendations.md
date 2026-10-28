@@ -315,3 +315,99 @@ An initial success criterion is practical: one small repair updates every
 dependent artifact, passes the applicable checks, has a readable before/after
 comparison, and does not require a new whole-site read or whole-room repaint.
 No site, skill, tool, image, or data changes are implemented by this document.
+
+## Candidate mnemonic improvements
+
+Reviewed live card text at `3b1072f054df736ee58cef9bf17fb14896923294`.
+These are proposed hooks and painting directions, not applied corrections.
+They have not been tested with learners or independently signed off. English
+keywords are retrieval aids, not substitutes for the French IPA and audio.
+Room locations below describe the reviewed site; they do not override planned
+relocations or establish that the current placement is appropriate.
+
+The best opportunities are not necessarily the longest or most complicated
+French words. Fix obvious sound mismatches, make the English cue visible, and
+make it physically interact with the thing being learned. Keep an existing good
+hook rather than replacing it just for novelty.
+
+### Close sound cues and more concrete scenes
+
+| Word / live location | Current weakness | Proposed hook and image | Sound match and limits |
+|---|---|---|---|
+| **la ficelle** `/fi.sɛl/` — `garage/tools` (`fr_ficelle_noun`) | The current card uses fi-CELL(o), although "fi" is not an English keyword and the cello adds an unwanted ending. | **FEE + CELL:** a visitor pays a coin to open a toy prison CELL, then pulls the TWINE that operates its door. Keep the coin payment, recognisable barred cell, and working string together as one compact workbench toy. | FEE + CELL gives a close two-part cue to fee-SEHL, without the cello's final vowel. Payment must be visible; a loose unexplained coin is insufficient. No prison storyline or extra characters are needed. |
+| **la boue** `/bu/` — `maison/bains_buanderie` (`fr_boue_noun`) | Muddy boots plus the word "BOO!" in the hook do not give the picture a sound cue. | **BOO:** a friendly ghost climbs out of a muddy boot, its lower half trailing thick MUD back into the boot. The ghost and mud are one event. | BOO is a close whole-word cue. The ghost should be identifiable without a speech bubble. **Motif dependency:** a ghost is already visible in `maison/salon`; `route/casier` also has a ghost in the carburant hook. Resolve the destination and motif conflict before choosing this design; do not simply add another ghost to either building. |
+| **la selle** `/sɛl/` — `ferme/souche` (`fr_selle_noun`) | The current seller cue is not actually shown and has an extra syllable. | **CELL:** a miniature prison CELL has a leather SADDLE for its only seat, complete with stirrups projecting outside the bars. Present it as one toy on the existing work surface, with the saddle clearly recognisable. | English CELL is a close whole-word match. This avoids needing a nameless "seller" or a spoken explanation. Check that the image reads as a prison cell rather than a generic cage. |
+| **le rideau** `/ʁi.do/` — `maison/salon` (`fr_rideau_noun`) | The existing REDO cue is written as "ree-DOH", but ordinary English redo ends in an oo sound. | **REED + DOUGH:** a child hangs a CURTAIN woven from long REEDS; soft bread DOUGH is visibly wrapped around the lower ends as comical curtain weights. Both materials form the curtain itself. | REED + DOUGH approximates ree-DOH, sharing the d at the join. English dough's vowel and the English r are not identical to French. The raw dough must be unmistakable, not generic round beads. |
+| **la chaire** `/ʃɛʁ/` — `eglise/eglise` (`fr_chaire_noun`) | "Linked to chair" encourages the wrong initial English ch sound and shows no distinct sound-cue action. | **SHARE:** two parish speakers respectfully SHARE one broad PULPIT and the same open book, each using one side. Keep the pulpit's raised platform and access steps clear. | SHARE is a close cue, with the French r supplied by pronunciation practice. Sharing must be physically visible, rather than only saying that a priest "shares a sermon". This refines the SHARE proposal already in `docs/PROPOSALS_2026-10-28.md`; it is not a newly discovered keyword. |
+| **le fer** `/fɛʁ/` — `rue_commercante/ferronnerie` (`fr_fer_noun`) | The current hook merely says the blacksmith acts "as if" at a FAIR; the fair is not part of the described object. | **FAIR:** the blacksmith assembles a miniature FAIR ride, a Ferris wheel, directly from the IRON bars on his anvil. Show the last straight bar being bent into the wheel. | FAIR is a close accent-dependent cue, not a perfect model of French r. This keeps the existing keyword but makes it visible and makes the iron participate in it. Use a small working model, not a second fairground scene. |
+| **le casque** `/kask/` — `maison/penderie_commode` (`fr_casque_noun`) | The current helmet is only described as round like a CASK; the cask is not actually present. | **CASK:** a HELMET is made from a tiny wooden CASK, with curved barrel staves, metal hoops, and a fitted chinstrap. It still has the unmistakable silhouette of wearable head protection. | One simple keyword fused with the meaning. The vowel in English cask varies by accent and differs from French /a/ for many speakers: treat this as an approximate cue, not an exact pronunciation. Coordinate with the existing proposal to relocate casque. |
+
+### Partial cues worth auditioning, with the missing sounds stated
+
+These are candidates for comparison with a plain meaning picture, not automatic
+upgrades to "strong". The card must not claim that the full English word is
+pronounced like the French word.
+
+| Word / live location | Proposed scene | Why it may help; required caveat |
+|---|---|---|
+| **la laine** `/lɛn/` — `maison/penderie_etagere` (`fr_laine_noun`) | A spinner winds thick WOOL around the rim of a giant magnifying LENS, turning the lens into a wool-covered winding wheel. | Use **LENS without its final /z/** as the sound bridge. That leaves /lɛn/. The current LEAN cue has the wrong vowel. The lens must stay recognisable through its clear centre and magnification. This is an explicit sound-subtraction cue, not a claim that lens and laine are identical. |
+| **prêt** `/pʁɛ/` — `reparation/attente` (`fr_pret_adj`) | A cyclist waits READY to set off: helmet fastened, foot poised on a pedal, gripping a giant PRETZEL-shaped handlebar. | The opening **PRE- of PRETZEL** is closer to /prɛ/ than English PRAY, whose vowel is different. Only the opening chunk is used; the rest of pretzel is not in prêt. Readiness must be apparent without a written READY sign. Keep the adjective's centre-band placement. |
+
+### Smaller refinements that preserve an existing useful keyword
+
+- **la bague** `/baɡ/`, `rue_commercante/bijouterie`
+  (`fr_bague_noun`): keep **BAG**. Instead of a ring merely hidden in a bag,
+  make a jeweller's tiny BAG fasten with a giant jewelled RING: the ring passes
+  through both handles to close it. This fuses cue and meaning into one object.
+  The English vowel varies by accent; retain the French pronunciation separately.
+- **vendre** `/vɑ̃dʁ/`, `boulangerie/boulangerie`
+  (`fr_vendre_verb`): make the existing **VEND** connection visible through a
+  small baguette VENDING machine. Monsieur Verbe accepts a customer's coin and
+  operates the machine to SELL a baguette. Treat this as a familiar related-word
+  bridge, not a claim that English vend is pronounced like vendre. Preserve the
+  correct mime and beret code. This is a possible way to clarify an existing
+  lexical connection, rather than inventing another multi-part pun.
+
+### Misleading sound claims to remove before inventing new puns
+
+| Current cue | Problem | Recommendation |
+|---|---|---|
+| **four** `/fuʁ/` = English FOUR | English four normally has a different vowel. Holding up four fingers does not teach the French sound. | Keep a clear OVEN picture and accurate audio unless a genuinely better cue is found. Do not spell English four as "FOOR" to manufacture a match. |
+| **scier** `/sje/` = SEE-SAW | See-saw adds an extra syllable and different final sounds; it does not model the one-syllable French word. | Retain the natural sawing action as a plain meaning picture. The current live strength is already plain; keep that honest classification. |
+| **graine** `/ɡʁɛn/` = GREEN | English green has /i:/, whereas graine has /ɛ/. | Keep a distinctive SEED image or find a closer cue. Do not teach the English green vowel. |
+| **souris** `/su.ʁi/` = SORRY | The first vowel and overall sound differ, especially in American English. | Use a clear MOUSE/computer-mouse scene and French audio until a better candidate is available. The recent computer-room repaint is not a reason to change its art again for another weak pun. |
+| **cage** `/kaʒ/` = GARAGE without "ga" | Removing ga from garage leaves something like /ʁaʒ/, not /kaʒ/. | Drop that derivation. A plain CAGE with its real pronunciation is better. |
+| **bûche** `/byʃ/` = BUSH | English bush has a different vowel from French /y/. | If kept, call bush an approximation and teach rounded French u explicitly. Never claim equality. |
+| **soif** `/swaf/` = SWADDLED, suggested as a better example in the language skill | Ordinary English swaddled does not contain the full /swaf/ sequence. A skill example can also be weak. | Reassess this example rather than treating its presence in a skill as proof. No replacement pun is asserted here. |
+
+Harder words such as farine, manivelle, and ciseau should not get a longer,
+less accurate pun merely to avoid the label plain. The current trou troop-minus-p
+cue, clou/CLUE, seau/SEW, and roue/ROO already provide useful compact links;
+they do not need a wholesale rewrite for novelty. Each still needs its genuine
+French pronunciation and a matching picture.
+
+### How to choose and apply a proposed hook later
+
+1. Say the French word and English keyword aloud separately. Check vowels,
+   nasalisation, consonants, and syllable count. Record whether the cue covers
+   the whole word, an opening chunk, an explicit subtraction, or a related word.
+   Have an independent reviewer or learner audition it; the proposing model's
+   confidence is not validation.
+2. Check the current building's motif index and the planned word placement.
+   The boue ghost conflict above is a concrete reason this matters. Avoid moving
+   a word or adding a repeated motif merely to make the new pun convenient.
+3. Draw one compact interaction: the English cue acts on, is made from, or
+   operates the meaning. Attach it to the room's shared activity. Avoid generic
+   helper figures, unexplained coins, name tags, speech bubbles, and cues that
+   exist only in narration.
+4. Compare candidate versus current hook and plain meaning picture on a small
+   sample. A useful check is whether a learner can recover both the French word
+   and its meaning later; an attractive image alone is not enough.
+5. Only after selection, update the hook and matching asset together, plus any
+   parent miniature, card crop, alt text, and derived payload. Preserve unrelated
+   fields and current user overrides. Until then these rows remain proposals in
+   this file, never a text-only replacement over mismatching live art.
+
+Suggested first auditions: **ficelle (FEE + CELL), selle (CELL), rideau
+(REED + DOUGH), and chaire (SHARE)**. The boue/BOO cue has a close sound match,
+but its motif/placement conflict should be settled before painting.
