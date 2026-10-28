@@ -82,6 +82,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 ## Maps and navigation (reference/maps-and-navigation.md)
 - Each map level is a zoom of the level above; the overview, sector maps and interiors agree.
 - The overview is repainted in one pass, never patched.
+- Expansions widen or heighten the approved map; never squeeze new places in. Roads look normal and lead somewhere (maps-and-navigation.md).
 - There are no disconnected areas; every place is reachable and has a way back.
 - Links are physically plausible (doors, stairs, arches); stairs go the way they lead.
 - Sub-rooms are reached through painted doors.
