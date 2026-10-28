@@ -61,6 +61,47 @@ The learner is told one thing and shown another. **Proposal:** keep the red bere
 - *chercher quelque chose* · *chercher à* + verb = to try to
 - *avoir à* + verb = to have to
 
+**d) A "Patterns" section on every verb card.** The language skill already asks for prepositions on the verb card (verbs.md: "conjugation tables … plus participles, auxiliary verb, and prepositions"). Today, only 42 of the 711 live verbs mention one, as a bare tag in the note, and some are misleading. *Tenir* says "tenir + à", but its everyday use is *tenir quelque chose* (to hold); *tenir à* means "to be attached to, to insist on". The prepositions are the part of a verb learners get wrong longest, so they deserve their own section on the card, between the example and the conjugation tabs.
+
+- **Data:** a `patterns` list per verb in `vocab.jsonl`. Each entry has the construction with a placeholder object, its meaning, and a short example with a translation. For example, for *penser*:
+  - `{fr: "penser à quelqu'un / quelque chose", en: "to think about", ex: "Je pense à toi.", ex_en: "I'm thinking about you."}`
+  - `{fr: "penser de", en: "to have an opinion of", ex: "Que penses-tu de ce film ?"}`
+  - `{fr: "penser + infinitive", en: "to intend to", ex: "Je pense partir demain."}`
+
+  The build copies the list onto the card; the note no longer carries "+ à".
+- **On the card**, one line per pattern: the construction in bold, the meaning, and the example with 🔊. Mark the main pattern first. When the preposition changes the meaning, show it as a pair so the contrast is the point:
+  - *jouer **à*** (a game or sport: *jouer au foot*) vs *jouer **de*** (an instrument: *jouer du piano*)
+  - *parler **à*** (to talk to) vs *parler **de*** (to talk about)
+  - *manquer **à*** (*tu me manques* = I miss you, back to front for English speakers) vs *manquer **de*** (to lack)
+  - *tenir **à*** (to care about, to insist) vs *tenir **de*** (to take after someone)
+  - *venir **de*** + infinitive (to have just done) vs *venir* + infinitive (to come and do)
+  - *commencer **à*** / *commencer **par*** and *finir **de*** / *finir **par*** (to begin by / end up)
+  - *croire **à*** vs *croire **en*** (believe in a thing vs in a person or God)
+  - *rêver **de*** (dream of), *changer **de*** (*changer de train*: no article)
+- **"No preposition in French" warnings.** These are just as important: the English verb takes a preposition and the French one doesn't. A small "⚠ no preposition" line:
+  - *attendre le bus* (wait **for**); this card already has it, and is the model
+  - *chercher ses clés* (look **for**)
+  - *écouter la radio* (listen **to**)
+  - *regarder la télé* (look **at**)
+  - *payer le repas* (pay **for**)
+  - *demander l'addition* (ask **for**)
+
+  The reverse traps get a line too: *répondre **à*** (answer someone), *obéir **à***, *téléphoner **à***, *ressembler **à***, *plaire **à***, *entrer **dans***, *assister **à*** (to attend).
+- **The pronoun that replaces it:** one short line, because *à* and *de* decide which pronoun replaces the phrase:
+  - *j'**y** pense* (*penser à* + thing)
+  - *je pense **à lui*** (*penser à* + person)
+  - *j'**en** parle* (*parler de*)
+  - *il **lui** répond* (*répondre à* + person)
+- **Verb + infinitive groups.** A small badge says whether the verb takes ***à*** + infinitive or ***de*** + infinitive, with one example of each, and lists the related verbs:
+  - *à*: *aider à, apprendre à, commencer à, continuer à, réussir à, chercher à*
+  - *de*: *décider de, essayer de, oublier de, refuser de, arrêter de, finir de, demander de*
+  - none: *aimer, vouloir, pouvoir, devoir, aller*
+
+  In the palace this can be a door plaque on the verb's spot, which the old build already planned (`door_plaque` in the root README). Keep the plaque's colours separate from the beret colours, so the two codes never clash (the representation spec asks devices to be checked against each other).
+- **Where the patterns come from:** generate a first draft from an openly licensed valency list. For French, Wiktionary's verb constructions and the *Lexique* / *Dicovalence* data carry these. Then have a person check each verb's main pattern and examples, as the skill asks for verb tables ("generate…, then spot-check"). Every verb gets either a pattern list or an explicit "no preposition" line, so an empty section never means "not checked".
+- **Practice:** in the recall mode (§4.1), a pattern drill: show "*Je pense ___ mes vacances*" and pick *à* / *de* / (nothing), with the answer explained from the card.
+- **Coverage today:** of 48 common preposition-sensitive verbs, only 16 are live yet (*tenir, commencer, finir, apprendre, demander, dire, plaire, changer, continuer, réussir, chercher, attendre, écouter, payer, habiter, répondre*). The rest (*penser, parler, jouer, venir, manquer, décider, essayer*…) are still in the plan. So the `patterns` field should go into `vocab.jsonl` now, ready for when their rooms are painted.
+
 ### 1.3 Plural line
 - **Wrong for some compounds:** *les rez-de-chaussées* should be *les rez-de-chaussée*. *Prie-dieu* doesn't change in traditional spelling. *Sud-ouest*, *sud-est* and *ping-pong* shouldn't show a plural at all.
 - **Shown for mass nouns, where it's unhelpful or wrong:** *les santés*, *les faims*, *les argents* (money), *les ors*, *les pétroles*, *les aviations*. Mark these nouns as uncountable, and show "usually no plural" instead.
@@ -73,6 +114,9 @@ The learner is told one thing and shown another. **Proposal:** keep the red bere
 A check worth adding: flag examples whose English translation doesn't contain the card's first gloss. It would catch most of these.
 
 ### 1.5 Alphabet cards
+
+> **Withdrawn.** This conflicts with the release-gates rule "Alphabet = one blackboard zoom… no per-letter mnemonics". See `docs/SKILLS_PROPOSALS_2026-10-28.md` §A4.
+
 The 26 letter cards in the école have no hook. Most letters don't need one, but a few trip up every learner. Proposed puns:
 - **E** (UH): "the letter E just shrugs: UH"
 - **G** (ZHAY) and **J** (ZHEE): "G and J swapped hats", because G is said like English J and J like English G
