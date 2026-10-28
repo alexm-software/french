@@ -606,6 +606,8 @@ def build(bld, v1, vocab):
                     it["ex"] = list(src["ex"])
             if it.get("verb"):
                 polish_verb(it)
+            if not it.get("cefr") and vocab.get(wid, {}).get("cefr"):  # level badge, level filter, search
+                it["cefr"] = vocab[wid]["cefr"]
             # museum-plaque words (word shown only as text on a blank plaque, nothing depicted):
             # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
             if overrides.get(wid, {}).get("plaque") is True:
