@@ -63,12 +63,14 @@ function fit(){
   if(vw/vh<0.9){ // tall phone: make the painting taller and let the user swipe across it
     h=Math.min(vh*0.9, vw*1.45); w=h*ar; pan=w>vw+2;
   }
-  var pan2=false;
-  if(w<900){ // small landscape screens: keep labels readable, let the user pan both ways
+  var pan2=false, TH=view==='map'&&MAP.world.h;
+  if(TH){ // tall world map: full width, scroll down through the village (labels stay readable: never under 900 px wide)
+    w=Math.max(900,Math.min(vw,1800)); h=w*TH/1280; pan=w>vw+2; pan2=true;
+  } else if(w<900){ // small landscape screens: keep labels readable, let the user pan both ways
     w=900; h=w/ar; pan=w>vw+2; pan2=h>vh+2;
   }
   stage.style.width=Math.round(w)+'px'; stage.style.height=Math.round(h)+'px'; stage.style.setProperty('--s',(Math.round(w)/1280).toFixed(4));
-  scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2);
+  scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2); scroller.classList.toggle('tall',!!TH);
   var hint=$('#panHint'); hint.hidden=!pan;
   if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'||view==='sector'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
   // Sector hover tags only. World signposts (.tag.pin) stay on their authored centres.
@@ -78,7 +80,8 @@ window.addEventListener('resize',fit);
 document.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse'},true);
 document.addEventListener('keydown',function(){lastPointer='key'},true);
 var ignoreScroll=false;
-scroller.addEventListener('scroll',function(){if(ignoreScroll)return;var h=$('#panHint');if(!h.hidden)h.style.opacity=0},{passive:true});
+var mapScroll=0; // world-map scroll position (fraction of the painting height), restored on return from a sector
+scroller.addEventListener('scroll',function(){if(view==='map'&&MAP.world.h&&stage.offsetHeight)mapScroll=scroller.scrollTop/stage.offsetHeight;if(ignoreScroll)return;var h=$('#panHint');if(!h.hidden)h.style.opacity=0},{passive:true});
 // ---------- maps: world (#/) and sector maps (#/quartier/<slug>) ----------
 // data/map.js lists every sector and every building / verb street painted on each sector map
 // (content/v2/map.json). Buildings are discovered at runtime: a building is live as soon as
@@ -227,10 +230,11 @@ function clampMapLabels(){
 // live: [{href,name,rect,aria}], soon: [{name,rect,small}]
 // small decorative label symbol from the shared icon set (icons.js); the label text carries the meaning
 function ico(k){ var I=window.V2_ICONS||{}; return k&&I[k]?'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+I[k]+'</svg>':'' }
-function drawMap(img,alt,label,live,soon){
+function drawMap(img,alt,label,live,soon,H){
+  H=H||720; var ky=H/100;
   blur.style.backgroundImage='url('+img+')';
   var h='<img class="bg" src="'+img+'" alt="'+esc(alt)+'">';
-  h+='<svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-label="'+esc(label)+'">';
+  h+='<svg viewBox="0 0 1280 '+H+'" preserveAspectRatio="none" aria-label="'+esc(label)+'">';
   soon.forEach(function(b,i){h+='<polygon class="bld soon" data-i="'+i+'" points="'+pts(b.rect)+'"><title>'+esc(b.name)+(b.small?' ('+esc(b.small)+')':'')+'</title></polygon>'});
   live.forEach(function(L,i){
     var rings=L.poly?L.poly.map(function(r){return r.map(function(p){return p.join(',')}).join(' ')}):[pts(L.rect)];
@@ -239,10 +243,10 @@ function drawMap(img,alt,label,live,soon){
   h+='</svg>';
   live.forEach(function(L,i){ var d=L.door||doorAt(L.rect), t=L.tag||tagAt(L.rect);
     if(L.pin){ // world map: an always-on bilingual signpost centred on L.tag; it is a link too, so a click on it opens its own sector
-      h+='<a class="tag live pin'+(L.nodoor?' soonpin':'')+'" id="tagLive'+i+'" href="'+L.href+'" tabindex="-1" aria-hidden="true" title="'+esc(L.small||'')+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(t[1]/7.2)+'">'+ico(L.icon)+'<b>'+esc(L.name)+'</b>'+(L.en?'<span class="en"> ·\u00a0'+esc(L.en)+'</span>':'')+'</a>';
+      h+='<a class="tag live pin'+(L.nodoor?' soonpin':'')+'" id="tagLive'+i+'" href="'+L.href+'" tabindex="-1" aria-hidden="true" title="'+esc(L.small||'')+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(t[1]/ky)+'">'+ico(L.icon)+'<b>'+esc(L.name)+'</b>'+(L.en?'<span class="en"> ·\u00a0'+esc(L.en)+'</span>':'')+'</a>';
       return }
-    if(!L.nodoor) h+='<div class="door" data-i="'+i+'" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/7.2)+'" aria-hidden="true">➜</div>';
-    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/7.2)+'">'+ico(L.icon)+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
+    if(!L.nodoor) h+='<div class="door" data-i="'+i+'" style="left:'+pct(d[0]/12.8)+';top:'+pct(d[1]/ky)+'" aria-hidden="true">➜</div>';
+    h+='<div class="tag live" id="tagLive'+i+'" style="left:'+pct(t[0]/12.8)+';top:'+pct(Math.max(t[1],60)/ky)+'">'+ico(L.icon)+esc(L.name)+(L.small?'<small>'+esc(L.small)+'</small>':'')+'</div>';
   });
   h+='<div class="tag" id="tagSoon"></div>';
   stage.innerHTML=h;
@@ -275,7 +279,8 @@ function renderMap(){
   W.sectors.forEach(function(w){ var n=liveIn(w.slug).length;
     live.push({href:sectorHref(w.slug),name:w.name,en:w.en,icon:w.icon,poly:w.poly,pin:!!w.poly,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
       small:probed?(n?n+(n>1?' bâtiments ouverts':' bâtiment ouvert'):'bientôt'):''}) });
-  drawMap(W.image,W.alt,'Village map',live,[]);
+  drawMap(W.image,W.alt,'Village map',live,[],W.h);
+  if(W.h){ ignoreScroll=true; scroller.scrollTop=Math.round(mapScroll*stage.offsetHeight); setTimeout(function(){ignoreScroll=false},300) }
 }
 var curSector=null;
 function renderSector(slug){
@@ -286,7 +291,7 @@ function renderSector(slug){
     live.push({href:'#/'+id,name:e.name,icon:e.icon,rect:e.rect,tag:e.tag,door:e.door,small:e.street?'rue des verbes':'',aria:'Enter '+e.name}) });
   S.buildings.forEach(function(b){ if(!here[b.id||b.building_id]&&!(LIVE[b.id]&&homeOf(b.id).slug===slug)) soon.push({name:b.name,icon:b.icon,rect:b.rect,tag:b.tag,small:probed?'bientôt':''}) });
   S.streets.forEach(function(t){ if(!here[t.id]&&!(LIVE[t.id]&&homeOf(t.id).slug===slug)) soon.push({name:t.name,rect:t.rect,tag:t.tag,small:'rue des verbes'+(probed?' · bientôt':'')}) });
-  drawMap(S.image,S.alt,S.name+' map',live,soon);
+  drawMap(S.image,S.alt,S.name+' map',live,soon); scroller.scrollTop=0;
 }
 // ---------- room / zoom ----------
 var R=null, B=null;
