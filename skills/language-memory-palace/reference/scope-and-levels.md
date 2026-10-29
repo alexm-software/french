@@ -9,7 +9,7 @@ Layer this on top of the Memory palace builder skill, which covers build order, 
 - Cover the target levels (e.g. CEFR A1 to C2). Tag every word with its level so paths and quizzes can filter by level. <!-- L12 -->
 - Build the inventory from frequency lists and level-based syllabi under open licenses; record sources and attributions in a credits file. <!-- L13 -->
 - Level lists are noisy (everyday words can be graded C2). Cross-check level with corpus frequency and boost concrete everyday words; spot-check samples per level. <!-- L14 -->
-- Keep the full word list the user asked for, rare words included, but you may defer drawing assets for the rarest words: give them a home (room or zoom) and a card with no picture until later. Leave out only obsolete words and narrow professional jargon unless the user wants them. <!-- L15 -->
+- Keep the full word list the user asked for, rare words included, but you may defer painting the rarest words: give them a home (room or zoom) and a card with no picture until later. Leave out only obsolete words and narrow professional jargon unless the user wants them. <!-- L15 -->
 - Organize by level: the core village holds beginner to intermediate words; themed advanced words go on an upper floor or back room of the same themed building; general abstract or academic advanced words may go in a temporary advanced area (e.g. a town across the bridge with a library, faculties, law court and museum), with the aim of eventually folding them into the main village. Never create numbered filler rooms; every room needs a memorable concrete theme, and a check should flag words that don't fit their room. <!-- L16 -->
 
 ## Room density

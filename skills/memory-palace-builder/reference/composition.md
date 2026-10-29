@@ -41,6 +41,6 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 - Zoomed-in sub-spaces follow the same placement rules (e.g. gender sides) as their parent room. <!-- B208 -->
 - Sign text and signs never covering items: see text-and-labels.md.
 
-## Compositing and paint-backs
+## Local edits and paint-backs
 
-- **Compositing.** A low-frequency color correction smears color when the new content differs a lot from what was there. For new figures, use a feathered polygon paste with a mean-color match on a small plain reference patch. Shift the paste offset so the generated surface line (shelf, ground) lands on the original one, and keep the polygon tight round the figures so the generated surface doesn't show as a band. <!-- B233 -->
+- **Local edits in context.** Edit a region (a paint-back, a hook fix) with the whole painting as the input image and a mask, asking to change only that region and keep everything else. Never paste in a separately generated figure or object, and never use a low-frequency color correction. If the edit shows a seam or a light or brushwork mismatch, repaint the room. <!-- B233 -->

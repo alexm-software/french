@@ -9,7 +9,7 @@ description: >-
 
 A one-page checklist for building an explorable memory palace. Each line is one checkable rule. The file named in a section heading holds the full rules and lessons; open it only when that topic comes up. Load the release-gates skill too, and the language skill for language palaces.
 
-**Current pipeline:** each room or zoom is ONE integrated painting (1280x720) with the objects painted in; the site adds only hotspots and labels. Rules marked *composited* (release gates E and F, space-gates "Scene first, then assets drawn to fit") apply only when repairing an old composited room.
+**Current pipeline:** each room or zoom is ONE integrated painting (1280x720): setting, people, objects, light, shadows and interactions painted together. The site adds only hotspots and labels, and word-card images are cropped from the finished painting. A local fix edits that region with the whole painting as context; if it can't keep the light, perspective, occlusion and interactions, repaint the room.
 
 **Room sizes and spacing:** the numbers live in `skills/limits.json` (room target and maximum, zoom size, floor, edge margin, label gap, center band); `scripts/qa/check_v2.py` and `tools/precheck.py` read it.
 
@@ -54,7 +54,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - Only enough setting to be believable; vary shapes, eras and architecture between rooms.
 - Zoom spots follow the parent room's placement rules.
 - Each room has a theme sign, clickable items with cards, a link back, and related links.
-- Composite with feathered pastes, not low-frequency color smears.
+- Fix a region by editing it in the context of the whole painting, never by pasting in a separately generated figure.
 
 ## Text, signs and labels (reference/text-and-labels.md)
 - Labels and sign names are HTML/SVG overlays, styled to the material; they fit their sign at every size.

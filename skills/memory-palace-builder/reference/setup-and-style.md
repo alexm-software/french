@@ -14,15 +14,9 @@ A generic recipe for building an explorable memory palace (a world of places whe
 - **Output**: static site (e.g. GitHub Pages), print, or images only. <!-- B19 -->
 - Sacred/cultural respect and audience: see sensitive-content.md.
 
-## Art pipeline and asset structure
+## Art pipeline
 
-Choose between generated illustrations (richer, harder to keep consistent and edit) and hand-coded SVG (each item a separate <g> with an id, class, and title, so it is clickable, consistent across map/sector/room, and editable). Show the user one example room in each candidate pipeline before committing. A generator script that emits SVG from the room data keeps token use low. <!-- B67 -->
-
-Current preferred method (user review, Oct 23): keep the painted empty room as the fixed scene, then draw each item's asset to fit its exact slot (surface, angle, light, size, pose, occlusion) and composite it with code harmonization. A single item can then be fixed without repainting the room. See gate H in the release-gates skill. The notes below are older lessons. <!-- B70 -->
-
-Lessons from testing: flat vector SVG looked noticeably uglier than painted art, and painted cutouts composited onto a painted room looked jarring (different brushwork and lighting, sticker effect) even with shadows and color matching. Prefer one full painting per room plus a hotspot data file (polygon or box per item) for clickability; edit by regenerating the room with the previous image as a reference. If you do composite, generate objects with the room as a style and lighting reference. <!-- B71 -->
-
-Alternative: keep each item as its own asset (one file per object) and each room as an empty background plus a layout data file (object id, position, scale, z-order, category side). A build script composes rooms, sector views, and the world map from these, so edits touch one small file, objects are reused consistently across views, and token use stays low. Shared style rules (palette, outline weight, light direction) plus an auto-added ground shadow make objects sit naturally in the scene. Large fixed features that interact deeply with the architecture can stay part of the background. <!-- B72 -->
+Each room or zoom is one integrated painting plus a hotspot data file (a polygon or box per item) for clickability; word-card images are cropped from the finished painting. Flat vector SVG looked noticeably uglier than painted art. Edit by regenerating the room with the previous image as a reference, or by editing a region with the whole painting as context. <!-- B71 -->
 
 ## Consistency
 
