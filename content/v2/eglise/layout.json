@@ -17,6 +17,10 @@
   {
    "key": "sacristie",
    "short": "La sacristie"
+  },
+  {
+   "key": "chapelle",
+   "short": "La chapelle"
   }
  ],
  "rooms": {
@@ -394,6 +398,17 @@
       232,
       556
      ]
+    },
+    {
+     "to": "chapelle",
+     "label": "La chapelle",
+     "hint": "Through the arched doorway to the Lady Chapel",
+     "hit": [
+      1182,
+      80,
+      98,
+      520
+     ]
     }
    ],
    "zooms": [
@@ -402,14 +417,14 @@
      "label": "l'armoire",
      "hint": "Open the armoire to see the vestments",
      "at": [
-      772,
-      250
+      734,
+      300
      ],
      "obj": [
-      606,
-      94,
-      332,
-      500
+      581,
+      88,
+      306,
+      490
      ]
     }
    ],
@@ -417,37 +432,41 @@
     {
      "id": "fr_sacristie_noun",
      "box": [
-      242,
-      104,
+      235,
       106,
-      152
+      96,
+      141
      ]
     },
     {
      "id": "fr_soutane_noun",
      "box": [
-      356,
-      140,
-      134,
-      454
+      354,
+      169,
+      110,
+      410
      ]
     },
     {
      "id": "fr_burette_noun",
      "box": [
-      242,
-      386,
-      104,
-      80
+      234,
+      375,
+      101,
+      75
+     ],
+     "labelAt": [
+      293,
+      454
      ]
     },
     {
      "id": "fr_enfant_de_choeur_noun",
      "box": [
-      496,
+      466,
       290,
       152,
-      420
+      386
      ],
      "labelAt": [
       572,
@@ -457,41 +476,45 @@
     {
      "id": "fr_amict_noun",
      "box": [
-      790,
-      476,
-      156,
-      180
+      750,
+      462,
+      178,
+      182
      ]
     },
     {
      "id": "fr_encensoir_noun",
      "box": [
-      976,
-      92,
-      88,
-      246
+      925,
+      94,
+      81,
+      225
      ],
      "labelAt": [
-      1000,
-      330
+      965,
+      328
      ]
     },
     {
      "id": "fr_encens_noun",
      "box": [
-      1000,
-      476,
-      86,
-      66
+      960,
+      469,
+      78,
+      50
+     ],
+     "labelAt": [
+      984,
+      524
      ]
     },
     {
      "id": "fr_sacristain_noun",
      "box": [
-      1090,
-      160,
-      170,
-      556
+      1040,
+      175,
+      141,
+      520
      ],
      "labelAt": [
       1175,
@@ -558,6 +581,154 @@
      ]
     }
    ]
+  },
+  "chapelle": {
+   "name": "La chapelle de la Vierge · Lady Chapel",
+   "image": "eglise/chapelle.jpg",
+   "backTo": "sacristie",
+   "alt": "DRAFT (Claude to finalise): A blue Lady Chapel with a white statue of the Virgin between lily banners; children carry a sunflower garland, choirboys sing, an old woman and a family of three pray the rosary in the pews.",
+   "doors": [
+    {
+     "to": "sacristie",
+     "label": "La sacristie",
+     "hint": "Back through the archway to the sacristy",
+     "hit": [
+      0,
+      50,
+      168,
+      540
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_notre_dame_noun",
+     "text": "vocab",
+     "box": [
+      215,
+      250,
+      60,
+      76
+     ],
+     "labelAt": [
+      255,
+      292
+     ]
+    },
+    {
+     "id": "fr_vierge_noun",
+     "text": "vocab",
+     "box": [
+      584,
+      81,
+      110,
+      280
+     ]
+    },
+    {
+     "id": "fr_chapelet_noun",
+     "text": "vocab",
+     "box": [
+      731,
+      425,
+      175,
+      252
+     ]
+    },
+    {
+     "id": "fr_devotion_noun",
+     "text": "vocab",
+     "box": [
+      276,
+      327,
+      82,
+      229
+     ],
+     "labelAt": [
+      290,
+      333
+     ]
+    },
+    {
+     "id": "fr_rosaire_noun",
+     "text": "vocab",
+     "box": [
+      907,
+      381,
+      200,
+      232
+     ]
+    },
+    {
+     "id": "fr_angelus_noun",
+     "text": "vocab",
+     "box": [
+      922,
+      43,
+      116,
+      285
+     ],
+     "labelAt": [
+      980,
+      333
+     ]
+    },
+    {
+     "id": "fr_annonciation_noun",
+     "text": "vocab",
+     "box": [
+      285,
+      43,
+      100,
+      238
+     ]
+    },
+    {
+     "id": "fr_assomption_noun",
+     "text": "vocab",
+     "box": [
+      360,
+      362,
+      265,
+      314
+     ]
+    },
+    {
+     "id": "fr_scapulaire_noun",
+     "text": "vocab",
+     "box": [
+      1047,
+      244,
+      51,
+      136
+     ],
+     "labelAt": [
+      1117,
+      298
+     ]
+    },
+    {
+     "id": "fr_magnificat_noun",
+     "text": "vocab",
+     "box": [
+      703,
+      265,
+      200,
+      157
+     ]
+    },
+    {
+     "id": "fr_marial_adj",
+     "text": "vocab",
+     "box": [
+      731,
+      44,
+      69,
+      214
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -589,6 +760,9 @@
     "fr_etole_noun",
     "fr_surplis_noun"
    ]
+  },
+  "chapelle": {
+   "vocabRoom": "R_ch_lady_chapel"
   }
  }
 }
