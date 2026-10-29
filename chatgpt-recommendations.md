@@ -406,7 +406,7 @@ pronounced like the French word.
 | **bûche** `/byʃ/` = BUSH | English bush has a different vowel from French /y/. | If kept, call bush an approximation and teach rounded French u explicitly. Never claim equality. |
 | **soif** `/swaf/` = SWADDLED, suggested as a better example in the language skill | Ordinary English swaddled does not contain the full /swaf/ sequence. A skill example can also be weak. | Reassess this example rather than treating its presence in a skill as proof. No replacement pun is asserted here. |
 
-Harder words such as farine, manivelle, and ciseau should not get a longer,
+Harder words such as farine and ciseau should not get a longer,
 less accurate pun merely to avoid the label plain. The current trou troop-minus-p
 cue, clou/CLUE, seau/SEW, and roue/ROO already provide useful compact links;
 they do not need a wholesale rewrite for novelty. Each still needs its genuine
@@ -438,3 +438,53 @@ French pronunciation and a matching picture.
 Suggested first auditions: **ficelle (FEE + CELL), selle (CELL), rideau
 (REED + DOUGH), and chaire (SHARE)**. The boue/BOO cue has a close sound match,
 but its motif/placement conflict should be settled before painting.
+
+## Additional mnemonic decisions and candidates (2026-10-29)
+
+This section records the subsequent conversation. Approval here means inclusion
+in the recommendations; no live hook, painting, or skill has been changed by
+this document. Keep the genuine French pronunciation alongside these English
+retrieval cues, which can be partial or approximate.
+
+### Ideas the user liked
+
+| Word | Recommended picture | Cue and limits |
+|---|---|---|
+| **jupe** `/ʒyp/` — skirt | The banded planet **JUPiter**, with its Great Red Spot visible, wears a giant **SKIRT** around its equator. | User-supplied idea. Use the opening JUP- as a retrieval cue. English Jupiter's initial consonant and vowel differ from French jupe; do not present it as exact pronunciation. |
+| **robe** `/ʁɔb/` — dress | A **ROBot wears a spectacular DRESS**, trying to zip it up. | Opening ROB- of robot, an approximate cue. The dress is unmistakably a dress rather than a bathrobe. |
+| **fauteuil** `/fo.tœj/` — armchair | A **TOY supervillain, your FOE, claims an enormous ARMCHAIR** as his throne and refuses to give it back. | FOE + TOY, approximate. Make the toy scale and villain character recognisable; French /œj/ still needs its own pronunciation model. |
+| **manivelle** `/ma.ni.vɛl/` — crank | Someone turns a **hand CRANK that winds MANY rolls of VELvet**. | MANY + VEL-, approximate, especially the first vowel. This is the selected alternative to the earlier man-knee-well construction; do not claim that the full English phrase equals the French word. |
+| **cœur** `/kœʁ/` — heart | A hairdresser shapes **CURly hair into a giant HEART**. | Opening CUR- of curly, approximate. More familiar English than the existing cur-dog cue; the French rounded vowel remains distinct. |
+| **bateau** `/ba.to/` — boat | A **BAT steers a BOAT with its TOE** on the tiller. | BAT + TOE, approximate. Both sound cues physically operate the boat; no spoken OH or detached body-part prop is needed. |
+
+### User-selected correction: accès
+
+**accès** `/ak.sɛ/` — access (`fr_acces_noun`, reviewed location
+`banque/bureau`): **an AXE chops through a wooden barrier across a doorway,
+giving someone ACCESS through it.** Show the obstruction opening and someone
+able to pass through; the action should communicate access, not just chopping
+wood. AXE cues the opening /aks/ approximately, not the full word: retain the
+French final /ɛ/ in the pronunciation/audio.
+
+The user selected this correction from the latest twelve-word review. Keep the
+other eleven hooks in that batch as they are: **valise, sable, œil, goutte,
+cochon, noix, poil, boulanger, exigence, jardin, and balcon**. Their sound-match
+comments were review observations, not approval to rewrite them. Do not add
+them to a replacement queue on the basis of that discussion.
+
+### Other brainstormed candidates, not selected for replacement
+
+| Word | Candidate picture | Status / limitation |
+|---|---|---|
+| **lapin** `/la.pɛ̃/` — rabbit | A RABBIT sits in someone's **LAP**, drawing a carrot with a large **PEN**. | LAP + PEN, approximate. Pen is closer to the final vowel than pan; the English lap vowel and the French nasal ending still differ. Not selected for implementation. |
+| **oreille** `/ɔ.ʁɛj/` — ear | Someone wears a ray-shaped EARring carved from metallic **ORE**: ORE + **RAY**. | Approximate, and the ore must be recognisable. Not selected for implementation. |
+| **accueil** `/a.kœj/` — welcome / reception | **A KOI** at a reception desk pushes a room key toward an arriving guest. | Makes the welcome action visible, but a koi only approximates the French sounds. Not selected for implementation. |
+
+No satisfactory compact English cue was found for **écureuil** or **voiture**;
+retain a memorable meaning scene and accurate French pronunciation rather than
+forcing a multi-part pun. No better candidate was selected for **ciseau**.
+
+When any selected idea is eventually painted, generate it as part of the
+integrated room scene and update its hook, card crop, parent miniature where
+applicable, alt text, and generated data together. These additions change only
+the recommendations document.
