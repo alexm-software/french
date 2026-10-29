@@ -1,6 +1,6 @@
 # Process gates
 
-Read when organising review, sign-off, queues, checkpoints and UX experiments.
+Read when organizing review, sign-off, queues, checkpoints and UX experiments.
 
 ## D. Process gates
 

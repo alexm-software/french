@@ -12,7 +12,7 @@ The main background remains unchanged. Scier works behind the left bench with fu
 - `assets/<name>.webp`: individual transparent source sprites.
 - `room.json`: assignments, slots, hooks, cards, labels, occlusion and navigation.
 - `scripts/build_garage.py`: scoped build of placed sprites, 384px card crops and composition proofs; writes images atomically and removes obsolete derived sprites.
-- `review/`: per-view proofs and labelled asset sheets. These are deterministic compositions, not browser screenshots.
+- `review/`: per-view proofs and labeled asset sheets. These are deterministic compositions, not browser screenshots.
 
 Run from the repository root:
 

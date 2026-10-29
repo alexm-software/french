@@ -54,7 +54,7 @@ These are generator output that was never rewritten. Several are wrong, not just
 | `fr_chandelier_noun` | Sound-alike is "shan't lie, eh?" | A single brass CANDLESTICK holds one candle (shahn-duh-LYAY). The big hanging light everyone calls a chandelier is *un lustre*. |
 | `fr_resume_noun` | "looks like résumé but means summary" | A student squeezes a fat novel into one neat page: a SUMMARY, *un résumé* (ray-zew-MAY). Your job CV is *un CV*. |
 | `fr_blouse_noun` | Sound-alike is "blues"; no scene | The chemist's white lab coat and the painter's splattered SMOCK are both *une blouse* (BLOOZ). A shirt for a woman is usually *un chemisier*. |
-| `fr_stage_noun` | Sound-alike "stahzh" is the word itself | A nervous INTERN takes notes on a theatre STAGE (STAHZH) on day one of her TRAINING: *un stage* = an internship or course, never a theatre stage (*une scène*). |
+| `fr_stage_noun` | Sound-alike "stahzh" is the word itself | A nervous INTERN takes notes on a theater STAGE (STAHZH) on day one of her TRAINING: *un stage* = an internship or course, never a theater stage (*une scène*). |
 | `fr_smoking_noun` | Sound-alike "smo-KING" | A dandy in a black TUXEDO (smo-KEENG) adjusts his bow tie. English once called it a "smoking jacket"; French kept *le smoking*. |
 | `fr_commode_noun` | Sound-alike "mod" | A tidy CHEST OF DRAWERS (koh-MOD) with a vase of flowers on top. Not a toilet! *Commode* also means "handy" as an adjective. |
 | `fr_supporter_verb` | "means 'to bear'" with no scene | Monsieur Verbe grits his teeth as a goat bleats in his ear: *je ne le supporte pas* (sew-por-TAY), I CAN'T STAND it. To support a team is *soutenir*. |
@@ -74,8 +74,8 @@ These are generator output that was never rewritten. Several are wrong, not just
 
 | word (room) | problem | proposed hook |
 |---|---|---|
-| **la moitié** (maths zoom), rated weak | MY TIE + yay. The corpus version, a kiss, was better. | She blows a kiss, MWAH!, and pushes HALF of her cake across the table: mwah-TYAY, *la moitié*. |
-| **le chiffre** (maths zoom) | CHEF teaches the wrong vowel (eh, not ee). | A SHEAF of wheat whose stalks bend into the DIGITS 1 to 9: SHEEF-r. |
+| **la moitié** (math zoom), rated weak | MY TIE + yay. The corpus version, a kiss, was better. | She blows a kiss, MWAH!, and pushes HALF of her cake across the table: mwah-TYAY, *la moitié*. |
+| **le chiffre** (math zoom) | CHEF teaches the wrong vowel (eh, not ee). | A SHEAF of wheat whose stalks bend into the DIGITS 1 to 9: SHEEF-r. |
 | **le sucre** (comptoir) | SUCKER teaches the "uh" vowel; French *u* is round-lipped "ee". | Little SUE (round your lips) CRUNCHES a SUGAR cube: SEW-kr. |
 | **le thé** (café) | A cat's TAIL invites a final L. | An Irish granny pours "a nice cup of TAY". That's how she says TEA, and so does French: *le thé*. |
 | **le couteau** (table zoom), rated weak | COO + TOE never touches "knife". | A dove COOs in alarm as the bread KNIFE drops point-first between its TOEs: koo-TOH. |
@@ -88,7 +88,7 @@ These are generator output that was never rewritten. Several are wrong, not just
 
 ## 4. Irregular verbs: put the trap in the hook
 
-The beret colour already says "irregular". But only 1 of the 7 gold-beret verbs live today (*boire*: "nous buvons") says *what* is irregular. Learners then reach for the regular form and get it wrong. One extra clause per verb fixes that:
+The beret color already says "irregular". But only 1 of the 7 gold-beret verbs live today (*boire*: "nous buvons") says *what* is irregular. Learners then reach for the regular form and get it wrong. One extra clause per verb fixes that:
 
 | verb | add to the existing hook |
 |---|---|

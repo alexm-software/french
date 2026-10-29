@@ -28,7 +28,7 @@ Base: `dac80bfe9b41d98b9b64c8367dc84e119c1ddd7e`. Independent reviewer: `garage_
 - JavaScript syntax, Python package checker and diff whitespace checks pass.
 - Static village-map → garage → tools → garage and painted garage-door → village wiring pass. Tense choices now wrap.
 
-Minor findings: the two mime faces differ slightly (one moustache); zoom density11 is within the warning range. Neither obscures a word or changes the grammar convention.
+Minor findings: the two mime faces differ slightly (one mustache); zoom density11 is within the warning range. Neither obscures a word or changes the grammar convention.
 
 Browser checks are performed after deployment and reported separately; a composition proof is not a browser screenshot. No mobile/fullscreen or whole-site verdict is inferred from these package checks.
 

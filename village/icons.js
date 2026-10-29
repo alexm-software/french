@@ -1,5 +1,5 @@
 /* Shared map-label symbols: one small monochrome line icon per place character.
-   24x24 viewBox, stroked in currentColor so each icon takes its label's ink colour.
+   24x24 viewBox, stroked in currentColor so each icon takes its label's ink color.
    Keyed by name; content/v2/map.json gives each world sector / sector building an "icon" key.
    Rendered by app.js as <svg class="ico" aria-hidden="true">, decorative only (the label text carries the meaning). */
 window.V2_ICONS={

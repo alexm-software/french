@@ -44,7 +44,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 
 | Pattern | Examples (word: English gloss → room it landed in) | Fix |
 |---|---|---|
-| **English-gloss pun** | *berge* bank, *rivage* bank → bank; *éleveur* stockbreeder, *gisement* deposit, *générique* credits, *utilisateur* / *usager* user → bank; *ferme* "firm" → offices; *cocher* coachman → stadium; *béquille* kickstand → stadium; *lieue* league → stadium; *race* race → stadium; *parti* party → party hall; *gibier* game → games room; *atout* trump → council chamber; *foire* fair → civic hall; *vedette* star → sky; *écaille* scale → measures room; *plomb* lead → power room; *oubli* oversight → power room; *habillé* smart → quiz studio; *tir* shot → cinema; *étape* stage → theatre; *bande*, *bandeau*, *rabat* band → music hall; *manche* handle, *sonnette* handbell → hands room; *rubrique* heading → body room; *plaine* plain → sewing room; *polonais* Polish → repair shop; *obus* shell → beach; *parcelle* parcel → post office; *feuilleter* to leaf through → harvest street; *émouvoir* to move (emotionally) → removals street; *licencier* to fire → beside *embraser*; *sympathiser* to hit it off → hammer street | Move each word to the room of its actual meaning (tables below). Add a check that flags a word whose only link to its room is a shared English gloss word. |
+| **English-gloss pun** | *berge* bank, *rivage* bank → bank; *éleveur* stockbreeder, *gisement* deposit, *générique* credits, *utilisateur* / *usager* user → bank; *ferme* "firm" → offices; *cocher* coachman → stadium; *béquille* kickstand → stadium; *lieue* league → stadium; *race* race → stadium; *parti* party → party hall; *gibier* game → games room; *atout* trump → council chamber; *foire* fair → civic hall; *vedette* star → sky; *écaille* scale → measures room; *plomb* lead → power room; *oubli* oversight → power room; *habillé* smart → quiz studio; *tir* shot → cinema; *étape* stage → theater; *bande*, *bandeau*, *rabat* band → music hall; *manche* handle, *sonnette* handbell → hands room; *rubrique* heading → body room; *plaine* plain → sewing room; *polonais* Polish → repair shop; *obus* shell → beach; *parcelle* parcel → post office; *feuilleter* to leaf through → harvest street; *émouvoir* to move (emotionally) → removals street; *licencier* to fire → beside *embraser*; *sympathiser* to hit it off → hammer street | Move each word to the room of its actual meaning (tables below). Add a check that flags a word whose only link to its room is a shared English gloss word. |
 | **Wrong sense glossed for the room** | §1.4 | Fix the gloss, or split the homograph into two entries |
 | **Overflow sub-rooms** | `gare/aiguillage` and `gare/bagages` (cause, sorte, type, comparaison…), most of `couture/*` (coutume, ruse, révélation…), `labyrinthe/coeur` (socialement, idem, incognito…), `zone_artisanale/cabane` (tâche, reproche, complicité…) | Either rename the room to an honest abstract theme and paint it as one, or move the words to the abstract buildings that already exist: B34 humanités, B47 stade trophy hall, B63 pompiers problems room |
 | **Grave or sensitive word in a light-hearted room** | §1.2 table A | Move to the text galleries (`B44_musee/R_text_*`) or a sober street, and use the plain wall-text treatment |
@@ -64,7 +64,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | virilité | `couture/atelier` | You excluded it from mnemonic hooks | Wall text in a sober gallery |
 | viril, sensuel | `hercule/calme_guichet`, `hercule/arene_guichet` | Same | Same |
 | accoucher (to give birth) | `st_navigateurs/balade` (a stroll) | No link | `hopital` or a body street (`ST_body`) |
-| mutiler, périr | `st_liens/lambris` (wood panelling) | Grave verbs in a carpentry lane | `ST_conflict` |
+| mutiler, périr | `st_liens/lambris` (wood paneling) | Grave verbs in a carpentry lane | `ST_conflict` |
 | empoisonner | `st_reflets/miroirs` | No link | `ST_conflict` |
 | sein | `monde/bagages` | It means breast and is used as *au sein de* (within); a luggage rack is the wrong place | Key it as the phrase *au sein de* in a prepositions room (`B02_ecole/R_prepositions_03`) |
 
@@ -112,7 +112,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | bureaux/gardes | inventeur: an inventor | `ingenierie/etabli` |
 | bureaux/gardes | caniveau: a gutter | `route/carrefour` |
 | bureaux/gardes | demoiselle: a young lady (also a damselfly) | `B51_portraits/R_people_01` |
-| bureaux/tablette | canalisation: pipes | `maison/bains_buanderie` |
+| bureaux/tablette | canalization: pipes | `maison/bains_buanderie` |
 | bureaux/tablette | garderie: a nursery | `B33_lycee/R_school_02` (beside *crèche*) |
 | bureaux/tablette | promoteur: a property developer | `maison/grenier_lucarne` (beside *immobilier*) |
 | bureaux/savants | aristocrate | `B34_humanites/R_history_02` |
@@ -133,7 +133,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | cabinet/combles | lifting: a facelift | `hopital/plateau` |
 | cabinet/combles | facette: a facet | `atelier_couleurs/formes` |
 | cabinet/combles | natte: a plait | `cabinet/visage` (hair) |
-| cabinet/docteur | ardeur: fervour | `B50_pavillons/R_emo_love_01` |
+| cabinet/docteur | ardeur: fervor | `B50_pavillons/R_emo_love_01` |
 | cabinet/bureau | filiation: descent, parentage | `maison/famille_album` |
 | camping/camping | explosion | `B35_sciences/R_chemistry_01` |
 | camping/camping | fumeur: a smoker | `B08_cafe/R_cafe_02` (beside *non-fumeur*) |
@@ -162,7 +162,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | couture/boudoir | merci: thank you | Already in `fontaine/politesse`; drop the duplicate |
 | couture/theatre | plaine: a plain (flat land) | `ferme/champs` |
 | couture/theatre | abord | `B44_musee/R_abs_senses_01` |
-| couture/atelier | parure: a matching jewellery set | `rue_commercante/bijouterie` |
+| couture/atelier | parure: a matching jewelry set | `rue_commercante/bijouterie` |
 | couture/atelier | porte-bonheur: a lucky charm | `B48_jeux/R_games_01` (with *chance*) |
 | couture/atelier | snobisme: snobbery | `B51_portraits/R_character_07` (beside *snob*) |
 | couture/malle | aubaine: a windfall | `banque/placements` |
@@ -292,7 +292,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | route/route | dehors: outside | `labyrinthe/labyrinthe` (place adverbs) |
 | route/parking | pétrolier: an oil tanker | `port/jetee` |
 | route/consigne | ducat: a gold coin | `banque/banque` |
-| route/consigne | colporteur: a pedlar | `rue_commercante/ventes` |
+| route/consigne | colporteur: a peddler | `rue_commercante/ventes` |
 | rue_commercante/jouets | bourg: a market town | `monde/monde` |
 | rue_commercante/fleuriste | fée: a fairy | `B34_humanites/R_literature_01` (*conte*) |
 | rue_commercante/fleuriste | cocarde: a rosette | `mairie/mairie` (beside *drapeau*) |
@@ -308,7 +308,7 @@ Room references use `building/room`, the keys in `village/data/*.js`. Unbuilt ro
 | rue_commercante/imprimerie | essuie-glace: a windscreen wiper | `route/station` |
 | rue_commercante/imprimerie | correspondant: a pen pal | `mairie/poste` |
 | rue_commercante/bijouterie | sonnerie: a ringtone; a bell's chime | `horloge/cadran` |
-| rue_commercante/bijouterie | lustre: a chandelier | `maison/salon` |
+| rue_commercante/bijouterie | luster: a chandelier | `maison/salon` |
 | rue_commercante/bijouterie | poignet: a wrist | `cabinet/mains` |
 | rue_commercante/bijouterie | éventail: a fan | `couture/boudoir` |
 | rue_commercante/bijouterie | ronde: a patrol; a round | `B14_tribunal/R_police_01` |
@@ -395,7 +395,7 @@ These rooms aren't in v2 yet, so moving words now costs nothing.
 | B14_tribunal/R_adj_logic_04 | londonien, provençal | Nationality and region adjectives |
 | B14_tribunal/R_adj_logic_04 | nuageux: cloudy | `ciel` |
 | B14_tribunal/R_court_03 | effluve: a whiff | Senses cabinet |
-| B15_poste/R_post_01 | philtre: a potion | `B34_humanites` (tales) |
+| B15_poste/R_post_01 | philter: a potion | `B34_humanites` (tales) |
 | B15_poste/R_post_01 | parcelle: a plot of land, not a parcel | `ferme/champs` |
 | B15_poste/R_post_01 | choc: a shock | Abstract |
 | B33_lycee/R_school_02 | bourgeois | History |
@@ -468,13 +468,13 @@ These rooms aren't in v2 yet, so moving words now costs nothing.
 | ST_conflict | décrypter: to decode | `ST_communication` |
 | ST_communication | ramer: to row | `port` |
 | ST_communication | enfiler: to thread | `couture` |
-| ST_communication | tripler: to triple | Maths |
+| ST_communication | tripler: to triple | Math |
 | ST_communication | miauler: to meow | Pets |
 | ST_communication | rémunérer: to pay | Offices |
 | ST_body | hypothéquer: to mortgage | `st_ecus` |
 | ST_play | noyer: to drown | Sober street |
 | ST_play | carreler: to tile | Building trades |
-| ST_play | coloniser: to colonise | History |
+| ST_play | coloniser: to colonize | History |
 | ST_play | harceler: to harass | `ST_conflict` |
 | ST_rule | licencier: to fire (from a job) | Offices; it sits beside *embraser* (to set on fire) only through the English word "fire" |
 | ST_rule | enflammer, embraser: to set on fire | Fire verbs |
@@ -502,7 +502,7 @@ These rooms aren't in v2 yet, so moving words now costs nothing.
 | parquet | B14 R_court_02 | parquet | the public prosecutor's office (and parquet flooring) |
 | tampon | B13 R_admin_02 | plug | rubber stamp |
 | faisceau | B35 R_physics_02 | fasces | beam (of light) |
-| facteur | B36 R_math_01 | postman | factor (maths); postman belongs in the post office |
+| facteur | B36 R_math_01 | postman | factor (math); postman belongs in the post office |
 | répétition | B45 R_theatre_02 | repetition | rehearsal |
 | cascade | B45 R_cinema_02 | waterfall | stunt (in film); waterfall belongs by the river |
 | peloton | B47 R_sports_04 | small ball | the pack (cycling); a platoon |
@@ -561,7 +561,7 @@ Puns are the house style, and most of them work: *ciel* (an L-shaped cloud), *é
 | 4 | **toujours** (`horloge/escalier`) | *"TWO, SURE": two old sweethearts on a bench, holding hands as they ALWAYS have.* | Rated weak. "Two, sure" doesn't lead to "always". | **"TOO SURE" (too-ZHOOR):** Tom is TOO SURE of himself: his hand is ALWAYS up first in class, and it's STILL up after the bell (*toujours* also means "still"). |
 | 5 | **comment allez-vous ?** (`fontaine/salutations`) | *"COME ON, TALLY, VOO?": a gentleman tips his top hat to a lady holding a TALLY counter.* | A four-piece pun with a tally counter in it. | **Pun on one chunk: COMMENT-ator.** A sports COMMENTATOR holds his microphone out to a lady at the fountain: "COMMENT ALLEZ-VOUS?", the polite HOW ARE YOU? She answers "Très bien, merci!" (koh-mahn-tah-lay-VOO; the t links). |
 | 6 | **davantage** (`balance/cageot`) | *The little girl licks her ice cream by DA VAN: MORE, from the ice-cream VAN!* | Rated weak; "da van" is a stretch for the sound. | **"ADVANTAGE" (dah-vahn-TAHZH):** in a tug-of-war, one team has the ADVANTAGE because it has MORE players on the rope. |
-| 7 | **mise** (`monde/bagages`) | *A grey mouse carefully PUTS DOWN a wedge of CHEESE on the chart: "chEESE" with an M, "MEEZ".* | Rated weak: a spelling trick, not a sound. | **"MEASLY" (MEEZ):** at the card table, a gambler pushes forward one MEASLY coin as his BET: *la mise*. (This goes with moving the word to the games room, §1.2.) |
+| 7 | **mise** (`monde/bagages`) | *A gray mouse carefully PUTS DOWN a wedge of CHEESE on the chart: "chEESE" with an M, "MEEZ".* | Rated weak: a spelling trick, not a sound. | **"MEASLY" (MEEZ):** at the card table, a gambler pushes forward one MEASLY coin as his BET: *la mise*. (This goes with moving the word to the games room, §1.2.) |
 | 8 | **seuil** (`balance/comptes`) | *"SUHY": the cat sits on its doormat, the THRESHOLD of its little corner, beside a bottle of SOY.* | Rated weak. The soy bottle just sits there. | **"SOY" (SUHY), in one action:** the cat knocks over a bottle of SOY sauce, and a dark puddle spreads right across the THRESHOLD. |
 | 9 | **doucement** (`cirque/cirque`) | *A circus strongman cradles a baby lion GENTLY ("doo-suh-MAHN"), rocking it softly to sleep.* | Rated weak: no pun at all. | **"DEW-SO-MAN" (doo-suh-MAHN):** the strongman lifts a dewy rose SO GENTLY that not one drop of DEW falls off it. |
 | 10 | **oreille** (`cabinet/visage`) | *A friendly stingray RAY ("oh-REHY") watches from its glass tank beside a baby elephant fanning out one huge floppy EAR.* | Pun and meaning are side by side, with two animals to remember. | **"OH, RAY?" (oh-REHY):** Grandpa cups his hand behind his EAR: "OH, RAY? Speak up!" One person, one action. |
@@ -591,7 +591,7 @@ These come from the 117 live hooks rated weak and from reading the A1–A2 hooks
 | **ressortir** (`st_bagages/demenageurs`) | No pun. | **"RE-SORT HERE" (ruh-sor-TEER):** he RE-SORTS the pile of cushions, and the red one STANDS OUT. |
 | **filière** (`zone_artisanale/atelier`) | "FILE YARE" is forced. | **"FILLY-AIR" (fee-LYEHR):** a young FILLY gallops down a fenced CHANNEL: her TRACK. |
 | **réchauffement** (`zone_artisanale/pupitre`) | "RE-SHOVE MAN" is forced. | **"RAY'S SHOW, MAN" (ray-shohf-MAHN):** weatherman RAY's SHOW: a map turning redder and redder: global WARMING. |
-| **combustible** (`zone_artisanale/table`) | "CON BUS TABLE" is forced, and it misses the trap. | **Plain card:** like English "combustible" (it burns), but in French it's the noun FUEL: a pile of logs labelled *combustible*. |
+| **combustible** (`zone_artisanale/table`) | "CON BUS TABLE" is forced, and it misses the trap. | **Plain card:** like English "combustible" (it burns), but in French it's the noun FUEL: a pile of logs labeled *combustible*. |
 | **assemblée**, **industriel**, **montage**, **manufacture** (`zone_artisanale/*`) | Multi-piece puns ("A SUMMONED BLAY", "IN DEW TREE, YELL", "MON TAJ", "MANY FACTORY TOUR"). | **Plain cognate cards.** Two need notes: *montage* is mostly ASSEMBLY (putting parts together), and *une manufacture* is a FACTORY. |
 | **épouvantable** (`concours/gateaux_casier`) | Fine as it is ("a VAN tips its honey pots onto the cake TABLE"). | Keep it. It shows what works: two chunks and one action. |
 

@@ -43,4 +43,4 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 
 ## Compositing and paint-backs
 
-- **Compositing.** A low-frequency colour correction smears colour when the new content differs a lot from what was there. For new figures, use a feathered polygon paste with a mean-colour match on a small plain reference patch. Shift the paste offset so the generated surface line (shelf, ground) lands on the original one, and keep the polygon tight round the figures so the generated surface doesn't show as a band. <!-- B233 -->
+- **Compositing.** A low-frequency color correction smears color when the new content differs a lot from what was there. For new figures, use a feathered polygon paste with a mean-color match on a small plain reference patch. Shift the paste offset so the generated surface line (shelf, ground) lands on the original one, and keep the polygon tight round the figures so the generated surface doesn't show as a band. <!-- B233 -->

@@ -11,7 +11,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 
 **Current pipeline:** each room or zoom is ONE integrated painting (1280x720) with the objects painted in; the site adds only hotspots and labels. Rules marked *composited* (release gates E and F, space-gates "Scene first, then assets drawn to fit") apply only when repairing an old composited room.
 
-**Room sizes and spacing:** the numbers live in `skills/limits.json` (room target and maximum, zoom size, floor, edge margin, label gap, centre band); `scripts/qa/check_v2.py` and `tools/precheck.py` read it.
+**Room sizes and spacing:** the numbers live in `skills/limits.json` (room target and maximum, zoom size, floor, edge margin, label gap, center band); `scripts/qa/check_v2.py` and `tools/precheck.py` read it.
 
 **Read only what the task needs:**
 | Task | Read |
@@ -29,7 +29,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - Record the audience and sacred/cultural sensitivities (reference/sensitive-content.md).
 - Art pipeline: one integrated painting per room or zoom, objects painted in (see the top of this file).
 - One canonical position per object in data; one style guide and prompt preamble for every image.
-- Natural true colour in neutral daylight, no tint or cast; sectors differ by setting, never by grade.
+- Natural true color in neutral daylight, no tint or cast; sectors differ by setting, never by grade.
 
 ## Plan before painting (reference/planning.md, reference/prompt-template.md)
 - Step 0 of every job: run `tools/unbuilt.py` and read the target building's partial/unbuilt rooms.
@@ -54,7 +54,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - Only enough setting to be believable; vary shapes, eras and architecture between rooms.
 - Zoom spots follow the parent room's placement rules.
 - Each room has a theme sign, clickable items with cards, a link back, and related links.
-- Composite with feathered pastes, not low-frequency colour smears.
+- Composite with feathered pastes, not low-frequency color smears.
 
 ## Text, signs and labels (reference/text-and-labels.md)
 - Labels and sign names are HTML/SVG overlays, styled to the material; they fit their sign at every size.
@@ -64,7 +64,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - Declare intended scene text in the manifest's `text_in_image`.
 - Signs never cover items; sign text is large and high-contrast; one label per thing.
 - Every item always shows its label, on or just under its own figure, nearer to it than to any other.
-- Budget about 110 px between neighbours with long labels.
+- Budget about 110 px between neighbors with long labels.
 
 ## Hooks (reference/hooks.md)
 - Store the hook in item metadata and explain it on the card; never drop an item for lack of a hook (fallback: a clear plain picture).

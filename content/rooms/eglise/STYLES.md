@@ -5,7 +5,7 @@ This palace uses the **ink-and-gouache storybook** style (dark ink outlines, sof
 ## Available styles
 
 ### 1. Ink and gouache storybook (chosen for this palace)
-Dark ink contours, soft natural gouache colors, warm cream and ochre, clear silhouettes, gentle daylight.  
+Dark ink contours, soft natural gouache colors, warm cream and ocher, clear silhouettes, gentle daylight.  
 Example: chair with chessboard in this style.
 
 ### 2. Soft watercolor

@@ -15,7 +15,7 @@ Served at `/french/`. `/french/v2/` redirects here and keeps the hash.
   room's exit and Back lead to its sector map.
   Adding a building never touches the shared shell — see `content/v2/README.md`.
 * Rules checked by `scripts/qa/check_v2.py [--browser]`: no overlapping hotspots/labels/doors, F left / M right,
-  articles on labels (adjectives: none, centre band), painted exit in every main room, painted door for every passage, Back from a sub-room
+  articles on labels (adjectives: none, center band), painted exit in every main room, painted door for every passage, Back from a sub-room
   goes to the main room, zoom objects visible in their parent, 7-tense verb cards without sideways scroll,
   content blocklist, planned word coverage.
 

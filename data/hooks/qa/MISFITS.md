@@ -3,13 +3,13 @@ Words whose main, everyday sense does not fit the room they are assigned to. Eac
 
 | word id | room | main sense | why it misfits | better home (suggestion) |
 |---|---|---|---|---|
-| fr_foudre_noun_m | R_shapes_02 (shapes & sizes) | le foudre = a large wine-ageing vat | a cellar/wine word; learners also confuse it with la foudre (lightning) | S04 wine cellar (R_wine_01) |
+| fr_foudre_noun_m | R_shapes_02 (shapes & sizes) | le foudre = a large wine-aging vat | a cellar/wine word; learners also confuse it with la foudre (lightning) | S04 wine cellar (R_wine_01) |
 | fr_resolution_noun | R_shapes_02 | a resolution, a decision (prendre une résolution) | the image-sharpness sense used here is technical and secondary | an abstract-decisions or computing room |
-| fr_mixte_adj | R_colors_02 (colours) | mixed; co-ed (école mixte) | not a colour word | school / people room |
-| fr_multiple_adj | R_colors_02 | multiple, many | not a colour word | quantities room |
-| fr_diversite_noun | R_colors_02 | diversity, variety | not a colour word (only loosely "many colours") | abstract-quantity / society room |
-| fr_distinct_adj | R_colors_02_z1 | distinct, separate | not a colour word | comparison / opposites room |
-| fr_varie_adj | R_colors_02_z1 | varied, assorted | not a colour word | comparison / quantities room |
+| fr_mixte_adj | R_colors_02 (colors) | mixed; co-ed (école mixte) | not a color word | school / people room |
+| fr_multiple_adj | R_colors_02 | multiple, many | not a color word | quantities room |
+| fr_diversite_noun | R_colors_02 | diversity, variety | not a color word (only loosely "many colors") | abstract-quantity / society room |
+| fr_distinct_adj | R_colors_02_z1 | distinct, separate | not a color word | comparison / opposites room |
+| fr_varie_adj | R_colors_02_z1 | varied, assorted | not a color word | comparison / quantities room |
 | fr_file_noun | R_shapes_03_z2 (shapes) | a queue / line of people or cars | not a geometric shape | shop, post office or road room |
 | fr_tournant_noun | R_shapes_03_z1 | a bend in the road; a turning point | road / driving vocabulary | road room (R_road_*) |
 | fr_virage_noun | R_shapes_03_z1 | a bend on a road | road / driving vocabulary | road room (R_road_*) |

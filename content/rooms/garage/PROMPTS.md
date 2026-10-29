@@ -2,13 +2,13 @@
 
 Tool: OpenAI built-in image generation. Background first; one independent transparent sprite per slot. No API/CLI fallback.
 
-Shared art direction: storybook gouache, dark ink contours, natural colours, neutral upper-left daylight, eye-level three-quarter camera; preserve full silhouettes and alpha. The empty workshop painting was supplied as the style and lighting reference for every sprite. See `room.json` for the current surface, camera, light, scale, pose and occlusion of each slot.
+Shared art direction: storybook gouache, dark ink contours, natural colors, neutral upper-left daylight, eye-level three-quarter camera; preserve full silhouettes and alpha. The empty workshop painting was supplied as the style and lighting reference for every sprite. See `room.json` for the current surface, camera, light, scale, pose and occlusion of each slot.
 
 Background: French village garage workshop, 16:9, pale sage plaster and limestone walls, slate floor, asymmetrical timber roof, curved teal truss and enormous round upper window. Clear central arched courtyard doorway, long left oak bench, right worktable, small wall niche and teal cupboard. No vocabulary objects, lettering or labels baked in.
 
 ## cle
 
-A close view of a terracotta modelling CLAY slab propped upright on its small clay base, a big unmistakable KEY-shaped impression pressed deeply into it, a single silver key resting at its foot. Clay = KLAY = la clé. This will sit on the left workbench, viewed slightly from above and right. About 90px high in final 1280px room. No person or hands.
+A close view of a terracotta modeling CLAY slab propped upright on its small clay base, a big unmistakable KEY-shaped impression pressed deeply into it, a single silver key resting at its foot. Clay = KLAY = la clé. This will sit on the left workbench, viewed slightly from above and right. About 90px high in final 1280px room. No person or hands.
 
 ## planche
 
@@ -32,7 +32,7 @@ An oversized old iron sliding door BOLT, shown with its two rectangular screwed 
 
 ## bricolage
 
-A homemade mosaic panel made of small coloured BRICKS with irregular but tidy spacing, and an adult craftswoman wearing blue overalls assembling the brick COLLAGE with a glue brush. She is leaning forward, shown waist-up with both arms visible, one applying glue and one steadying mosaic. Panel leans on its own small easel. Include her lower body too, feet level so she stands BEHIND the right worktable, final table will hide her lower legs. No table in sprite. Brick collage = bricolage DIY; target character 200px tall.
+A homemade mosaic panel made of small colored BRICKS with irregular but tidy spacing, and an adult craftswoman wearing blue overalls assembling the brick COLLAGE with a glue brush. She is leaning forward, shown waist-up with both arms visible, one applying glue and one steadying mosaic. Panel leans on its own small easel. Include her lower body too, feet level so she stands BEHIND the right worktable, final table will hide her lower legs. No table in sprite. Brick collage = bricolage DIY; target character 200px tall.
 
 ## atelier
 
@@ -72,7 +72,7 @@ A large clean steel coil SPRING supports a tiny tropical RESORT model: little bl
 
 ### ciseau
 
-A single clearly recognisable wood-handled CHISEL rests diagonally with its sharpened straight metal edge pressed into a small limestone block, one visible shallow spiral carving and three stone chips resting on the base. Plain meaning depiction of le ciseau [see-ZOH], no forced sound pun and no person. Intended right lower bench shelf, low wide group160px wide.
+A single clearly recognizable wood-handled CHISEL rests diagonally with its sharpened straight metal edge pressed into a small limestone block, one visible shallow spiral carving and three stone chips resting on the base. Plain meaning depiction of le ciseau [see-ZOH], no forced sound pun and no person. Intended right lower bench shelf, low wide group160px wide.
 
 ### assemblage
 
@@ -92,7 +92,7 @@ Two small full-bodied white toy GEESE jointly hold one giant steel SCREW between
 
 ### attache
 
-A sturdy metal FASTENER clip holds a large black FAKE MOUSTACHE costume prop. Clip is visibly attached to a small oval leather hanging tab with a top loop; moustache clipped onto it, everything joined. A TASH recalls attache [ah-TAHSH]. No face or body parts, clearly a standalone costume moustache on a clip. Intended hanging from left wall peg, target120px tall.
+A sturdy metal FASTENER clip holds a large black FAKE MUSTACHE costume prop. Clip is visibly attached to a small oval leather hanging tab with a top loop; mustache clipped onto it, everything joined. A TASH recalls attache [ah-TAHSH]. No face or body parts, clearly a standalone costume mustache on a clip. Intended hanging from left wall peg, target120px tall.
 
 ## Extraction corrections
 

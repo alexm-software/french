@@ -84,7 +84,7 @@ function help(){
   '<li>The verb card shows seven tenses and a <b>Patterns</b> section: the prepositions the verb takes (penser à / penser de).</li></ul>'+
   '<h3>On the cards</h3><ul><li>The <b>memory hook</b> links the sound of the word to the picture. Say it aloud.</li>'+
   '<li>A red <b>False friend</b> flag means the word does not mean what it looks like in English; amber means partly.</li></ul>'+
-  '<h3>Practise</h3><ul><li><b>Recall mode</b> hides the labels: tap an object, name it, and grade yourself. <b>Review</b> brings back each word when it is due, in its own room.</li>'+
+  '<h3>Practice</h3><ul><li><b>Recall mode</b> hides the labels: tap an object, name it, and grade yourself. <b>Review</b> brings back each word when it is due, in its own room.</li>'+
   '<li><b>Search</b> finds any word, French or English, and takes you to it.</li></ul>'+
   '<h3>Keys</h3><p class="keys"><kbd>/</kbd> search · <kbd>M</kbd> menu · <kbd>R</kbd> recall mode · <kbd>L</kbd> labels · <kbd>H</kbd> show clickable things · <kbd>F</kbd> full screen · <kbd>?</kbd> this help · <kbd>Esc</kbd> close</p>'+
   '</div>','panel');
@@ -217,7 +217,7 @@ function settings(){
     '<label>Speech speed <input id="srate" type="range" min="0.6" max="1.1" step="0.05" value="'+S.rate+'"> <span id="srv">'+S.rate+'</span></label>'+
     '<label>Show words up to <select id="slev"><option value="all">every level</option>'+LEVELS.map(function(l){return '<option'+(S.level===l?' selected':'')+'>'+l+'</option>'}).join('')+'</select></label>'+
     '<p class="small">Words above the chosen level are hidden in every room (labels and click areas).</p>'+
-    '<p>Progress: '+nP+' words practised, '+nK+' known, '+due().length+' due now. <button class="btn2 ghost" data-act="reset">Reset progress</button></p>'+
+    '<p>Progress: '+nP+' words practiced, '+nK+' known, '+due().length+' due now. <button class="btn2 ghost" data-act="reset">Reset progress</button></p>'+
     '<p class="small">Progress and settings are kept in this browser only.</p></div>','panel');
   $('#srate').addEventListener('input',function(e){ S.rate=+e.target.value; V.rate=S.rate; $('#srv').textContent=S.rate; save('village.settings',S) });
   $('#slev').addEventListener('change',function(e){ S.level=e.target.value; save('village.settings',S); applyLevel() });
@@ -245,7 +245,7 @@ V.onCard.push(function(it){
   var R=V.here().room, inRoom=R&&R.items.indexOf(it)>=0;
   var p=P[it.id], foot='<div class="cfoot">';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="prev" aria-label="Previous word">‹ prev</button>';
-  foot+='<span class="kn">'+(p&&p.b>=2?'<span class="small">You know this one.</span>':'<button class="btn2 ghost" data-act="k2" data-id="'+esc(it.id)+'">I know this</button> <button class="btn2 ghost" data-act="k0" data-id="'+esc(it.id)+'">Practise it</button>')+'</span>';
+  foot+='<span class="kn">'+(p&&p.b>=2?'<span class="small">You know this one.</span>':'<button class="btn2 ghost" data-act="k2" data-id="'+esc(it.id)+'">I know this</button> <button class="btn2 ghost" data-act="k0" data-id="'+esc(it.id)+'">Practice it</button>')+'</span>';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="next" aria-label="Next word">next ›</button>';
   card.insertAdjacentHTML('beforeend',foot+'</div><div class="also" hidden></div>');
   withIndex(function(IX){ if(cur!==it) return; var h=V.here(), other=IX.filter(function(r){return r[0]===it.id&&!(r[3]===h.bld&&r[4]===h.key)});

@@ -23,4 +23,4 @@ Give all site UI and meta text (guide, place names and descriptions, labels, too
 
 ## Quiz modes
 
-Image to word, word to image, gender (left or right), verb group (which beret colour), conjugation fill-in, listen and choose, and room recall. Filter by room, sector, or level. <!-- L86 -->
+Image to word, word to image, gender (left or right), verb group (which beret color), conjugation fill-in, listen and choose, and room recall. Filter by room, sector, or level. <!-- L86 -->

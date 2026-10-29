@@ -40,7 +40,7 @@ Use fixed spatial rules so position itself carries information. Decide them once
 
 ## Side placement in paintings
 
-- A rough left/right split is enough. Use the scene's natural composition; a centre pillar or other hard divider is optional, not required. <!-- B106 -->
+- A rough left/right split is enough. Use the scene's natural composition; a center pillar or other hard divider is optional, not required. <!-- B106 -->
 
 ## Place fit
 

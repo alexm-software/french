@@ -12,7 +12,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 - Already explicit in the prompt before: 7 (B14 style slider, B76 shared preamble, B161/G42 neutral daylight, G99 sprite slot spec, B71 room as style reference, B235 text on small props; earlier prompts also said 'no lettering').
 - Missing from the prompt before: 163 v12 rules + N6, N8, N9, N10 (every a/c row marked NO below). Most consequential: no named situation or interaction groups, nothing against lineups/grids/even spacing/everyone facing the viewer (G39, G98, G128, B170, N8: the ecole basse_cour/preau/bibliotheque/fete problem); placement sides/bands and 6% edge margins (B33, L-placement rules, G39); exact counts and the verb marker (L-verbs, G-number rooms); grounding/anatomy/no strays (G24–G27); doors and exits; content/sensitivity; distinct rooms and repeated motifs (G129, N10).
 
-- Template-only extras (prevention, no gate of their own): no weapons, no potty humour, no mime look on non-verbs, figures face varied directions; they tighten existing gates (B63 all ages, L-verb marker, N8).
+- Template-only extras (prevention, no gate of their own): no weapons, no potty humor, no mime look on non-verbs, figures face varied directions; they tighten existing gates (B63 all ages, L-verb marker, N8).
 - Method: classes assigned rule by rule; the section column is keyword-assisted with hand overrides for the composition, figure and grounding rules, so read it as "where to look", not an exhaustive list.
 
 ## By template section (a + c rows; a rule can count in several)
@@ -21,7 +21,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 - SETTING: 36
 - TEXT: 35
 - COMPOSITION: 33
-- LIGHT AND COLOUR: 26
+- LIGHT AND COLOR: 26
 - STYLE: 26
 - FIGURES: 26
 - CONTENT: 23
@@ -38,9 +38,9 @@ The template is prevention only: every gate still applies, strictly, to the fini
 |---|---|---|---|---|
 | B9 | A generic recipe for building an explorable memory palace (a world of places where each fact is pinned to a v… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B12 | Subject and scope: what body of knowledge, and its levels (e.g. beginner to expert). | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B13 | Setting: the overall world (village, castle, ship, campus). Prefer an idyllic, real-life-plausible place so l… | a | LIGHT AND COLOUR, SETTING | NO |
+| B13 | Setting: the overall world (village, castle, ship, campus). Prefer an idyllic, real-life-plausible place so l… | a | LIGHT AND COLOR, SETTING | NO |
 | B14 | Style slider from 1 (very cartoonish) to 5 (realistic). Record the chosen value and use it in every image pro… | a | STYLE, SETTING | yes |
-| B15 | Art style (ask, don't assume): before painting anything, ask what art style the person wants. Cover the mediu… | c | LIGHT AND COLOUR, FIGURES, COMPOSITION — plus post-paint check | NO |
+| B15 | Art style (ask, don't assume): before painting anything, ask what art style the person wants. Cover the mediu… | c | LIGHT AND COLOR, FIGURES, COMPOSITION — plus post-paint check | NO |
 | B16 | Site look (ask, and mock it up): ask what feel they want for the website itself (e.g. whimsical storybook vs … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B17 | Sacred and cultural respect: religious content is depicted reverently. Never mock sacred figures, objects, or… | a | CONTENT, TEXT, ITEMS | NO |
 | B18 | Audience: default to all ages. No crude terms, profanity, or crude mnemonics. Mature-but-necessary items are … | a | CONTENT, TEXT, ITEMS | NO |
@@ -54,7 +54,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B30 | Build navigation, extras, and the site shell (about page, quiz, audio, full screen). | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B33 | Use fixed spatial rules so position itself carries information. Decide them once and apply everywhere, and sh… | c | PLACEMENT AND SPACING — plus post-paint check | NO |
 | B34 | Left vs right side of the room for a binary category (e.g. grammatical gender). | a | PLACEMENT AND SPACING, SETTING | NO |
-| B35 | Do not tint the scene itself by category (it looked unnatural); if a color cue is wanted, apply it to the ite… | a | TEXT, LIGHT AND COLOUR, ITEMS | NO |
+| B35 | Do not tint the scene itself by category (it looked unnatural); if a color cue is wanted, apply it to the ite… | a | TEXT, LIGHT AND COLOR, ITEMS | NO |
 | B36 | Height (floor, table, shelf, ceiling) for frequency or level. | c | PLACEMENT AND SPACING, COMPOSITION, SETTING — plus post-paint check | NO |
 | B37 | A recurring prop for a property (e.g. a mirror for a reflexive form, a door plaque for associated rules). | a | TEXT, DOORS AND EXITS | NO |
 | B38 | Distinct building types or streets for distinct item classes. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -65,7 +65,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B45 | Store the mnemonic hook in the item metadata (sound-alike, one-line scene, strength, fallback) and always exp… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B46 | Never drop an item because a good or respectful mnemonic is hard. Fallback: depict the item itself clearly an… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B47 | Keep one clear concept per object; avoid scenes where the prop could be read as an ordinary furnishing. | a | ITEMS, COMPOSITION | NO |
-| B48 | Vary designs so rooms, buildings, and sectors never start to look the same: change shapes, palettes, eras, an… | a | VARIETY, LIGHT AND COLOUR, DOORS AND EXITS | NO |
+| B48 | Vary designs so rooms, buildings, and sectors never start to look the same: change shapes, palettes, eras, an… | a | VARIETY, LIGHT AND COLOR, DOORS AND EXITS | NO |
 | B51 | A sign naming the room's theme. | c | SETTING — plus post-paint check | NO |
 | B52 | Clickable items opening a detail card with the full information. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B53 | A link back to the sector, and links to related rooms where they make sense. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -74,22 +74,22 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B58 | All sign and label text fits inside its sign at all supported screen sizes. Render text as real HTML/SVG text… | c | CONTENT, TEXT, PLACEMENT AND SPACING — plus post-paint check | NO |
 | B59 | No copyright problems: write your own definitions and explanations, or use openly licensed sources with the r… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B60 | Every mnemonic actually works: say the sound-alike aloud, confirm it resembles the target, and confirm the pi… | c | ITEMS — plus post-paint check | NO |
-| B61 | Placement rules are obeyed (correct side, tint, prop) and positions match between the world map, sector view,… | c | LIGHT AND COLOUR, PLACEMENT AND SPACING, SETTING — plus post-paint check | NO |
+| B61 | Placement rules are obeyed (correct side, tint, prop) and positions match between the world map, sector view,… | c | LIGHT AND COLOR, PLACEMENT AND SPACING, SETTING — plus post-paint check | NO |
 | B62 | Room density is within the target range; overflow goes to a new room or zoom spot. | c | COMPOSITION, SETTING — plus post-paint check | NO |
 | B63 | Age-appropriate content only. | a | CONTENT (all ages) | NO |
 | B64 | Religious and cultural imagery is reverent and follows the sensitivities recorded for the project. | a | CONTENT | NO |
 | B67 | Choose between generated illustrations (richer, harder to keep consistent and edit) and hand-coded SVG (each … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B70 | Current preferred method (user review, Oct 23): keep the painted empty room as the fixed scene, then draw eac… | c | ITEMS, FIGURES, COMPOSITION — plus post-paint check | NO |
-| B71 | Lessons from testing: flat vector SVG looked noticeably uglier than painted art, and painted cutouts composit… | c | LIGHT AND COLOUR, ITEMS, COMPOSITION — plus post-paint check | yes |
+| B71 | Lessons from testing: flat vector SVG looked noticeably uglier than painted art, and painted cutouts composit… | c | LIGHT AND COLOR, ITEMS, COMPOSITION — plus post-paint check | yes |
 | B72 | Alternative: keep each item as its own asset (one file per object) and each room as an empty background plus … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B75 | Each object has one canonical position stored in data; the map, sector, and room views all read from it. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B76 | Keep a style guide (style slider value, palette, line weight, lighting) and reuse the same prompt preamble fo… | a | LIGHT AND COLOUR, STYLE | yes |
+| B76 | Keep a style guide (style slider value, palette, line weight, lighting) and reuse the same prompt preamble fo… | a | LIGHT AND COLOR, STYLE | yes |
 | B79 | Store content in data files and generate pages from templates rather than hand-writing each room. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B80 | Write small scripts for: validating data (missing fields, duplicates, room size limits, placement rules), che… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B81 | Batch-generate items from the data file and only hand-review the flagged ones. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B84 | World map, sector views, rooms, detail cards, a beginner/start area, an about page, quiz mode, full screen mo… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B87 | The core test: a user can wander the whole place immersively in fullscreen, learning items in their locations… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B88 | The look should be whimsical and storybook-like, not stuffy or formal. Use soft natural UI colours, never ora… | c | LIGHT AND COLOUR, FIGURES — plus post-paint check | NO |
+| B88 | The look should be whimsical and storybook-like, not stuffy or formal. Use soft natural UI colors, never ora… | c | LIGHT AND COLOR, FIGURES — plus post-paint check | NO |
 | B89 | The painting is the whole experience. Fullscreen must really fill the screen with the image (Fullscreen API) … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B90 | Don't use a side panel, and put no text below the image. Item details and any other info open as centred dial… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B91 | Add a toggle (also a key, e.g. H) that highlights all clickable areas, plus a hover effect and a pointing-han… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -105,7 +105,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B101 | Include a site guide (an overlay opened from the top strip) explaining every placement convention: what secto… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B102 | Drop explanatory "how this memory works" boxes on cards. The mnemonic/hook explanation is enough. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B103 | Audit every hotspot so it lands on the right thing (crop each box and check it). A click that leads to the wr… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B106 | A rough left/right split is enough. Use the scene's natural composition; a centre pillar or other hard divide… | a | PLACEMENT AND SPACING, COMPOSITION | NO |
+| B106 | A rough left/right split is enough. Use the scene's natural composition; a center pillar or other hard divide… | a | PLACEMENT AND SPACING, COMPOSITION | NO |
 | B109 | Rate every hook honestly (strong/ok/weak/plain) and re-check the weak ones before calling the set done. A hoo… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B110 | Parallelize big hook batches by slice (level or sector). Helpers write only to their own folder of batch file… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B111 | Keep a FORMAT note for batch files and a stats script. Progress counts should include written-but-unmerged ba… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -114,10 +114,10 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B116 | Audit everything that ships: quoted texts (prayers, poems, liturgical translations; prefer public-domain vers… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B117 | Lessons from the first audit: | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B118 | Modern official liturgical translations are often copyrighted and need permission (e.g. AELF in French, ICEL … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B119 | Watch for licence clashes: a non-commercial (NC) dataset can't be mixed into share-alike (SA) public data. Ke… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| B119 | Watch for license clashes: a non-commercial (NC) dataset can't be mixed into share-alike (SA) public data. Ke… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B120 | Rewrite copied dictionary glosses in your own words sector by sector as each sector ships (it also improves q… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B121 | Credit AI image tools and disclose AI generation where their terms ask for it. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B122 | The public repo needs a LICENSE for the code and a data licence file that matches its share-alike sources. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| B122 | The public repo needs a LICENSE for the code and a data license file that matches its share-alike sources. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B125 | A validator is a separate reviewer bot or pass that checks a sector or release before it ships. It did not bu… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B128 | Walk the live site as a learner before anything else: in a normal window and in fullscreen, click into every … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B129 | Validate one sector or room set at a time, and run the whole checklist every time, not only the parts that ch… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -142,15 +142,15 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B156 | Each hook's sound link and image actually match the item. The image is concrete, visible in the painting, and… | c | ITEMS, STYLE — plus post-paint check | NO |
 | B157 | Every whimsical figure or prop stands for an item, and no hook relies on an offensive stereotype. | a | CONTENT, ITEMS, FIGURES | NO |
 | B158 | The hook text describes what is actually painted: the same figure (gender and pronouns, age, kind of characte… | c | TEXT, ITEMS, FIGURES — plus post-paint check | NO |
-| B161 | Natural true colour, with no tint or colour cast (check especially for orange or golden drift). Sectors diffe… | a | LIGHT AND COLOUR, SETTING | yes |
+| B161 | Natural true color, with no tint or color cast (check especially for orange or golden drift). Sectors diffe… | a | LIGHT AND COLOR, SETTING | yes |
 | B162 | Placement means what the project says it means. Read the project's placement scheme (its site guide or placem… | c | TEXT, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
-| B163 | Each label sits on or just under its own figure, clearly closer to it than to any neighbour, with a visible g… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| B163 | Each label sits on or just under its own figure, clearly closer to it than to any neighbor, with a visible g… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B164 | Nothing in an item's box that isn't in its hook. No stray animals or props: every element is either the sound… | a | ITEMS, FIGURES | NO |
 | B165 | Exactly one clickable box per item, covering the item and its mnemonic helper. Hotspot overlap is 0, and sign… | c | PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
 | B166 | Figures are varied and unique, with no repeated poses or characters. Buildings carry whimsy tied to their ite… | a | FIGURES (unique), VARIETY | NO |
 | B167 | Sign and building-name text is readable at normal size, and side-split signs are clearly split. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B168 | Signage never looks like an item. Direction and section signs use one signage-only style, sit at the edges or… | c | PLACEMENT AND SPACING, ITEMS, FIGURES — plus post-paint check | NO |
-| B169 | Check every painting's colour against the approved reference before release. Generators drift toward an orang… | a | CONTENT, LIGHT AND COLOUR, STYLE | NO |
+| B169 | Check every painting's color against the approved reference before release. Generators drift toward an orang… | a | CONTENT, LIGHT AND COLOR, STYLE | NO |
 | B170 | Every figure belongs to one coherent scene. People and animals stand on the floor, sit, or work at a real sur… | a | SITUATION, COMPOSITION, GROUNDING AND ANATOMY | NO |
 | B171 | Every item is fully in frame. No item, figure or key prop may be cropped by the image edge or hidden under th… | a | DOORS AND EXITS, GROUNDING AND ANATOMY, PLACEMENT AND SPACING | NO |
 | B172 | One label per thing. When a door, path or place has a sign naming it, hovering lights up that sign (glow, sli… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -166,7 +166,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B184 | Text formatting and layout. Put screenshots of each kind of dialog or card (e.g. noun, verb, place, guide, di… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B185 | The language toggle switches all UI and meta text and leaves the item content alone. The site guide matches w… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B186 | The site works on desktop and on a narrow mobile width, and the browser console shows no errors. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B189 | Run the copyright check above. Every shipped text, dataset, font, image and piece of code has a known licence… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| B189 | Run the copyright check above. Every shipped text, dataset, font, image and piece of code has a known license… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B192 | Give a verdict (ship, ship after fixes, or do not ship), counts by severity, the full findings list, and what… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B195 | Read user feedback for its spirit. When they describe an experience ("walk through it, pick up words"), impro… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B196 | If a snag or a new user idea would help future palaces, fold it back into this skill (or the subject-specific… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -181,8 +181,8 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B207 | Props are hooks too. Don't add decorative ornaments, like a teapot or cheese on a rooftop, that don't stand f… | a | ITEMS, FIGURES | NO |
 | B208 | Zoomed-in sub-spaces follow the same placement rules (e.g. gender sides) as their parent room. | a | PLACEMENT AND SPACING, COMPOSITION, SETTING | NO |
 | B209 | Sign text must be easy to read: large, high-contrast, on a light flat plate, consistently placed per side. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B212 | Make sectors distinct through setting, materials, architecture, and time of day, NOT colour grading. Image mo… | a | VARIETY, LIGHT AND COLOUR, DOORS AND EXITS | NO |
-| B213 | A "no gender tint" rule bans an overall pink or blue wash, not natural blue sky, water, or blossoms. Don't le… | a | LIGHT AND COLOUR, STYLE | NO |
+| B212 | Make sectors distinct through setting, materials, architecture, and time of day, NOT color grading. Image mo… | a | VARIETY, LIGHT AND COLOR, DOORS AND EXITS | NO |
+| B213 | A "no gender tint" rule bans an overall pink or blue wash, not natural blue sky, water, or blossoms. Don't le… | a | LIGHT AND COLOR, STYLE | NO |
 | B217 | Every map level is a zoom of the level above it. A district on the world map shows, in miniature, the same bu… | c | STYLE (sector look) / IMAGE zoom line; map paintings outside template scope — plus post-paint check | NO |
 | B220 | Placement check (script + teacher read). Flag any word whose room theme matches its gloss only through a shar… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B221 | Sensitive words go to sensitive-appropriate rooms. Death, crime, violence, illness and similar words never si… | c | CONTENT, TEXT, VARIETY — plus post-paint check | NO |
@@ -195,8 +195,8 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | B230 | Sparse floor. Never strip a live room below about 6 words, or below its count at base, without painting somet… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B231 | Count plan-only moves. A move that lives only in the data takes the word off the live site until its target r… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B232 | Paint-backs cut both lists. Pick a plan-only word whose meaning fits a sparse room in the same building, or a… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B233 | Compositing. A low-frequency colour correction smears colour when the new content differs a lot from what was… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| B234 | Placement bands apply to paint-backs too. Adjectives and adverbs go in the 30–70% centre band, feminine words… | c | PLACEMENT AND SPACING, ITEMS, SETTING — plus post-paint check | NO |
+| B233 | Compositing. A low-frequency color correction smears color when the new content differs a lot from what was… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| B234 | Placement bands apply to paint-backs too. Adjectives and adverbs go in the 30–70% center band, feminine words… | c | PLACEMENT AND SPACING, ITEMS, SETTING — plus post-paint check | NO |
 | B235 | Check small props for text. Generated coins, signs and labels often come back with a symbol or letters (e.g. … | a | TEXT | yes |
 | B236 | Fix stale alts while you're there. When you paint into a room, re-read its whole alt text and remove figures … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | B237 | Tooling hygiene. Use a new filename for every view crop, because image reads can be cached by path. Build the… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -219,7 +219,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | L31 | But do warn the learner: give any word with a vulgar, offensive, or insulting meaning a usage_warning on its … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L34 | Deciding how each kind of item is represented is part of building the palace, not an afterthought. Before any… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L35 | Each word class (nouns, verbs, adjectives, adverbs, function words, phrases): how it is drawn and how a learn… | c | ITEMS, SETTING — plus post-paint check | NO |
-| L36 | Each grammatical feature worth remembering (gender, verb group or irregularity, reflexive, plural quirks): wh… | c | CONTENT, LIGHT AND COLOUR, PLACEMENT AND SPACING — plus post-paint check | NO |
+| L36 | Each grammatical feature worth remembering (gender, verb group or irregularity, reflexive, plural quirks): wh… | c | CONTENT, LIGHT AND COLOR, PLACEMENT AND SPACING — plus post-paint check | NO |
 | L37 | Items that don't need a mnemonic each (alphabet letters, number lists, article tables, sound rules): one refe… | c | TEXT, ITEMS, STYLE — plus post-paint check | NO |
 | L38 | Rare or advanced words: where they live (zooms, upper floors, an advanced area) and whether their pictures ar… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L39 | Sensitive words: as text on a museum wall, never drawn. | a | TEXT, ITEMS, SETTING | NO |
@@ -227,12 +227,12 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | L43 | How verbs look is a design decision for each target language and culture. The French build's mime is one exam… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L44 | List what a learner must tell apart in that language: verbs from nouns at a glance, plus the verb features wo… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L45 | Pick one recurring verb marker that's culturally at home in the target country and that nobody else in the wo… | c | CONTENT, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
-| L46 | Give each verb feature its own visual channel on that marker (one costume item's colour for the class, a held… | c | CONTENT, LIGHT AND COLOUR, GROUNDING AND ANATOMY — plus post-paint check | NO |
+| L46 | Give each verb feature its own visual channel on that marker (one costume item's color for the class, a held… | c | CONTENT, LIGHT AND COLOR, GROUNDING AND ANATOMY — plus post-paint check | NO |
 | L47 | The marker acts inside the room's scene with the room's nouns, never bunched with other verbs (see "Verbs liv… | a | CONTENT, PLACEMENT AND SPACING, ITEMS | NO |
 | L48 | Show a sample to the user and get sign-off on the marker and its code before bulk painting. Record the choice… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L49 | When a marker doesn't fit at all (for example, a language with few inflected verbs), a simpler cue can carry … | c | ITEMS — plus post-paint check | NO |
-| L51 | French reference build: "Monsieur Verbe", a cheerful mime in a striped shirt, suspenders and white gloves wit… | a | TEXT, LIGHT AND COLOUR, ITEMS | NO |
-| L54 | Grammatical gender: feminine nouns clearly on the left half of the room, masculine clearly on the right (a mi… | a | TEXT, LIGHT AND COLOUR, PLACEMENT AND SPACING | NO |
+| L51 | French reference build: "Monsieur Verbe", a cheerful mime in a striped shirt, suspenders and white gloves wit… | a | TEXT, LIGHT AND COLOR, ITEMS | NO |
+| L54 | Grammatical gender: feminine nouns clearly on the left half of the room, masculine clearly on the right (a mi… | a | TEXT, LIGHT AND COLOR, PLACEMENT AND SPACING | NO |
 | L55 | Verbs sit in the ordinary themed rooms, acted out by the language's chosen verb marker (see "Choosing how ver… | a | PLACEMENT AND SPACING, ITEMS, SETTING | NO |
 | L56 | Adjectives, adverbs, opposites, emotions, idioms: place them in themed rooms where they fit, or in their own … | c | ITEMS, SETTING — plus post-paint check | NO |
 | L57 | Mature or sensitive words go as text on a museum wall, never drawn. | a | CONTENT, TEXT, ITEMS | NO |
@@ -246,12 +246,12 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | L77 | Never generate them from a template, and never have characters quiz each other ("Do you know the verb X? It m… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L80 | Every placed item has a label (word with article). Offer a header switch, remembered between visits, between … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L83 | Give all site UI and meta text (guide, place names and descriptions, labels, tooltips, page title) a native/t… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| L86 | Image to word, word to image, gender (left or right), verb group (which beret colour), conjugation fill-in, l… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| L86 | Image to word, word to image, gender (left or right), verb group (which beret color), conjugation fill-in, l… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L89 | Gender placement is correct for every noun. | c | PLACEMENT AND SPACING, SETTING — plus post-paint check | NO |
 | L90 | Articles, accents, and spelling are correct (validate with a script against the data file). | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L91 | Mnemonic truly connects the native-language sound (or, where flagged, the spelling) to the target meaning. | c | TEXT, ITEMS — plus post-paint check | NO |
 | L92 | False cognates are flagged. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| L93 | Conjugation tables are complete for every verb in the room, and each verb is acted by the verb character with… | c | LIGHT AND COLOUR, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
+| L93 | Conjugation tables are complete for every verb in the room, and each verb is acted by the verb character with… | c | LIGHT AND COLOR, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
 | L96 | Separate walk-through verb streets and alleys, with -er verbs on one side and -ir/-re on the other, were trie… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L99 | Run these in addition to the generic Validation section of the Memory palace builder skill. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L100 | Words: spelling, accents and grammatical properties (gender, class, etc. where the language has them) are cor… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -278,7 +278,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | L125 | A real cognate may stay plain when no natural pun turns up; note any false-friend trap (combustible means *fu… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L126 | Adverbs: where an -ment adverb's own pun is weak, reuse the adjective's pun plus "-ly". | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | L127 | A moved word needs its hook and painting redone, because hooks describe the room they're painted in. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| L128 | Inner areas match the overview. Every district's sector map, building exteriors and interiors keep the landma… | c | LIGHT AND COLOUR, DOORS AND EXITS, STYLE — plus post-paint check | NO |
+| L128 | Inner areas match the overview. Every district's sector map, building exteriors and interiors keep the landma… | c | LIGHT AND COLOR, DOORS AND EXITS, STYLE — plus post-paint check | NO |
 | L131 | Most verbs belong in the themed rooms where their action naturally happens, spread across the scene among the… | a | DOORS AND EXITS, ITEMS, COMPOSITION | NO |
 | L132 | Avoid pushing verbs aside: don't bunch a room's verbs into one corner or line them along an edge, and don't p… | a | PLACEMENT AND SPACING, ITEMS, SETTING | NO |
 | L133 | This is a balance, not an absolute. A verb street or a cluster of related actions is fine where it genuinely … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -302,11 +302,11 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | G33 | One control per destination. Count every on-screen navigation element per destination: strip Back, strip sect… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G34 | Exits look like their destination and name it. A kitchen door looks like a restaurant kitchen door (swinging,… | c | TEXT, VARIETY, DOORS AND EXITS — plus post-paint check | NO |
 | G35 | Way out, sector button and plan. Every space has a painted way back out plus the always-visible way up to its… | c | DOORS AND EXITS, GROUNDING AND ANATOMY, PLACEMENT AND SPACING — plus post-paint check | NO |
-| G38 | A rich, real-feeling setting with its own wall colour, floor, depth and one big nameable landmark. Never a pl… | a | SETTING (walls, floor, depth, landmark) | NO |
+| G38 | A rich, real-feeling setting with its own wall color, floor, depth and one big nameable landmark. Never a pl… | a | SETTING (walls, floor, depth, landmark) | NO |
 | G39 | At most about 10 items (11-12 is a warning, more than 12 fails, zoom spots counted separately), well separate… | c | COMPOSITION (no rows), ITEMS (N 10 or fewer), PLACEMENT AND SPACING — plus post-paint check | NO |
-| G40 | No look-alikes. Compare every pair of spaces in the same building or street with an image-similarity measure … | c | VARIETY, LIGHT AND COLOUR, PLACEMENT AND SPACING — plus post-paint check | NO |
+| G40 | No look-alikes. Compare every pair of spaces in the same building or street with an image-similarity measure … | c | VARIETY, LIGHT AND COLOR, PLACEMENT AND SPACING — plus post-paint check | NO |
 | G41 | One style per building or street, matching its exterior in every view. | a | STYLE (matches exterior) | NO |
-| G42 | Colour. Natural, neutral daylight. Compare each painting with the approved palette sheet; an amber, sepia or … | a | LIGHT AND COLOUR, SETTING | yes |
+| G42 | Color. Natural, neutral daylight. Compare each painting with the approved palette sheet; an amber, sepia or … | a | LIGHT AND COLOR, SETTING | yes |
 | G45 | Before painting, write the item layout with label room in mind. | c | ITEMS, SETTING — plus post-paint check | NO |
 | G46 | After painting, run A to D, fix and re-run. Ship only on a full pass. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G47 | Independent sign-off. The crop review sign-off for a package is done by someone other than the worker who pai… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -326,19 +326,19 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | G65 | Hooks file apply order: packages that each ship a whole hooks file must declare a row count, and the build us… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G68 | Mnemonic pictures are now made as separate assets, independent of the room, then placed into an empty painted… | c | STYLE, SETTING — plus post-paint check | NO |
 | G70 | E. Per asset (before it may be placed). Check every word's asset on its own, at full size: | c | ITEMS, SETTING — plus post-paint check | NO |
-| G71 | Mnemonic represented: the asset shows the hook's sound-alike object AND the meaning, as the hook text describ… | a | TEXT, LIGHT AND COLOUR, PLACEMENT AND SPACING | NO |
+| G71 | Mnemonic represented: the asset shows the hook's sound-alike object AND the meaning, as the hook text describ… | a | TEXT, LIGHT AND COLOR, PLACEMENT AND SPACING | NO |
 | G72 | One word only: nothing in the asset stands for another word or an unnamed extra figure. | a | ITEMS, FIGURES | NO |
 | G73 | Clean render and anatomy: gates 2 and 3 apply (limbs, hands, faces, no garbled parts, no stray text, symbols … | a | TEXT, GROUNDING AND ANATOMY, FIGURES | NO |
-| G74 | Style match: the same line weight, saturation and cartoon level as the room's style family, lit from the same… | a | LIGHT AND COLOUR, STYLE, SETTING | NO |
+| G74 | Style match: the same line weight, saturation and cartoon level as the room's style family, lit from the same… | a | LIGHT AND COLOR, STYLE, SETTING | NO |
 | G75 | Clean cutout: a transparent background, no white fringe or halo, no cut-off parts, and the base (feet, bottom… | c | GROUNDING AND ANATOMY, PLACEMENT AND SPACING — plus post-paint check | NO |
 | G76 | Perspective fits its spot: the asset is drawn at the angle of the surface it will sit on (an item for a count… | a | ITEMS | NO |
 | G77 | Card-ready: the same file reads well alone on the word card. | c | ITEMS — plus post-paint check | NO |
 | G79 | F. Final scene (after compositing). Check the finished room at desktop and phone sizes: | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G80 | No overlaps: no asset overlaps another asset, a hotspot box, a label or a control. Each asset is clearly sepa… | c | PLACEMENT AND SPACING, SETTING — plus post-paint check | NO |
 | G81 | No confusing labels: each label (or hover highlight) sits on its own asset and can't be read as belonging to … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| G82 | Not pasted on: every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow o… | a | LIGHT AND COLOUR, GROUNDING AND ANATOMY, PLACEMENT AND SPACING | NO |
+| G82 | Not pasted on: every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow o… | a | LIGHT AND COLOR, GROUNDING AND ANATOMY, PLACEMENT AND SPACING | NO |
 | G83 | Coherent room: the room still reads as one real place with its landmark visible, nothing important is hidden … | a | GROUNDING AND ANATOMY, PLACEMENT AND SPACING, SETTING | NO |
-| G84 | Hotspots line up: clicking the centre of each asset opens its own card at every screen size. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
+| G84 | Hotspots line up: clicking the center of each asset opens its own card at every screen size. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G85 | Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then s… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G86 | Signs are assets, labels always show (user, 14:29 UTC): a room's name sign is its own asset with its text fit… | c | TEXT, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
 | G89 | Gates G and H. Each must pass before a space is shown to the user. | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
@@ -347,7 +347,7 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | G94 | A close-up is a real spot where its objects belong: a coat peg, a knitting basket, an easel, a vestment cupbo… | c | IMAGE (zoom: real spot where objects belong) — plus post-paint check | NO |
 | G95 | A close-up looks like the same place as its parent: the same piece of furniture, walls, light and style, just… | a | COMPOSITION, STYLE, SETTING | NO |
 | G98 | No rows of stickers. Items are never lined up in the foreground of an empty room. Use the whole frame: walls,… | a | COMPOSITION (not a lineup, clusters + open floor), SETTING (whole frame) | NO |
-| G99 | Scene first, then assets drawn to fit. Paint the room first, then write a slot spec for every item before gen… | c | LIGHT AND COLOUR, GROUNDING AND ANATOMY, PLACEMENT AND SPACING — plus post-paint check | yes |
+| G99 | Scene first, then assets drawn to fit. Paint the room first, then write a slot spec for every item before gen… | c | LIGHT AND COLOR, GROUNDING AND ANATOMY, PLACEMENT AND SPACING — plus post-paint check | yes |
 | G100 | Nothing merges with architecture. No figure overlaps a door frame, door leaf or exit opening so that it seems… | a | DOORS AND EXITS, PLACEMENT AND SPACING, FIGURES | NO |
 | G101 | Verb characters act at human scale in the scene, never as tiny figures in a row. | a | ITEMS, FIGURES, COMPOSITION | NO |
 | G102 | Real doors to sub-rooms. A sub-room is reached through a painted door, stair or archway, never a sign on a wa… | a | DOORS AND EXITS, COMPOSITION, STYLE | NO |
@@ -355,14 +355,14 @@ The template is prevention only: every gate still applies, strictly, to the fini
 | G104 | Every hook element is visible. The sound-alike creature or object is drawn in the item's own picture. (Once, … | a | ITEMS, FIGURES | NO |
 | G105 | Show before shipping. Show the user clean screenshots of a redone space before it goes live, and fix what the… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G108 | These are blocking. A space does not ship until each one passes, and the builder looks at the rendered screen… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
-| G109 | Zoom matches parent. For every zoom, render a side-by-side of the zoom next to the crop of the same object in… | a | LIGHT AND COLOUR, DOORS AND EXITS, PLACEMENT AND SPACING | NO |
+| G109 | Zoom matches parent. For every zoom, render a side-by-side of the zoom next to the crop of the same object in… | a | LIGHT AND COLOR, DOORS AND EXITS, PLACEMENT AND SPACING | NO |
 | G110 | Verbs use the language's chosen verb marker. Every verb is acted out by the recurring verb marker picked for … | a | ITEMS | NO |
 | G111 | Labels clear of everything. No label may overlap or touch another label, another item's click box, a door or … | c | DOORS AND EXITS, PLACEMENT AND SPACING, ITEMS — plus post-paint check | NO |
 | G112 | Re-audit what is already live. When a new gate is added, audit the spaces already shipped against it and fix … | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G115 | Hook gate: every mnemonic is a visible sound-alike of the target word, acted out ON or touching the item. Fai… | c | ITEMS — plus post-paint check | NO |
 | G116 | Animal gate: no anthropomorphic animals unless the animal is the hook. Otherwise use an ordinary person carry… | a | ITEMS, FIGURES | NO |
 | G117 | Anatomy gate: count the arms, legs, feet and limbs on every figure, check faces look normal, and check for du… | a | GROUNDING AND ANATOMY, ITEMS, FIGURES | NO |
-| G118 | Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, l… | a | LIGHT AND COLOUR, COMPOSITION, STYLE | NO |
+| G118 | Style gate: compare each new or repainted space against the approved reference scenes (palette, saturation, l… | a | LIGHT AND COLOR, COMPOSITION, STYLE | NO |
 | G119 | Theme gate: every word fits its room's theme in the sense taught. Secondary or homonym senses go to a room th… | b | — (not a painting instruction: data, geometry, overlay, tooling, process or deploy; still gated after paint) |  |
 | G120 | Naming gate: room names make sense for their contents, and every place name shows a translation. | c | SETTING — plus post-paint check | NO |
 | G121 | Verb-scene gate: verbs are acted out inside natural, unique themed scenes. A row of verb markers on a plain s… | a | PLACEMENT AND SPACING, ITEMS, COMPOSITION | NO |
