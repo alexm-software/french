@@ -12,7 +12,7 @@ var LEVELS=['A1','A2','B1','B2','C1','C2'];
 var S=load('village.settings',{rate:0.85,level:'all'}); V.rate=S.rate;
 var P=load('village.progress',{}); // id -> {b: box 0-5, d: due time (ms), n: times graded}
 var DAY=864e5, GAP=[0,1,3,7,16,35];
-var recall=false, review=null, find=null;
+var recall=false, review=null, find=null, XM=[], XA=[]; // XM/XA: menu items and after-menu hooks added by practice.js
 var card=$('#card'), cardWrap=$('#cardWrap'), stage=V.stage(), app=$('#app');
 
 // ---------- data loading ----------
@@ -23,7 +23,6 @@ function need(src,cb){ if(scripts[src]===true){cb();return} if(scripts[src]){scr
   sc.onerror=function(){var l=scripts[src]; delete scripts[src]; l.forEach(function(f){f(true)})};
   document.head.appendChild(sc) }
 function withIndex(cb){ need('data/index.js',function(){cb(window.V2_INDEX||[])}) }
-function withDialogues(cb){ need('data/dialogues.js',function(){cb(window.V2_DIALOGUES||{rooms:{},cast:{}})}) }
 function hrefFor(b,k,id){ return V.roomHref(b,k)+(id?'?w='+id:'') }
 
 // ---------- progress ----------
@@ -62,13 +61,13 @@ function menu(){
   if(inRoom) html+='<button data-act="find" class="mi"><b>Find it</b><span>A word is called out; tap the object it belongs to.</span></button>';
   html+='<button data-act="review" class="mi"'+(n?'':' disabled')+'><b>Review '+(n?'('+n+' due)':'(nothing due)')+'</b><span>Walks you back to each due word, in its own room.</span></button>';
   if(inRoom) html+='<button data-act="words" class="mi"><b>Words in this room</b><span>The list, with your progress; export to Anki or print.</span></button>';
-  if(key) html+='<button data-act="talks" class="mi" id="miTalks" hidden><b>Conversations</b><span>Short dialogues that use this room’s words.</span></button>';
+  XM.forEach(function(f){ html+=f(h,key,inRoom)||'' });
   html+='<button data-act="hl" class="mi"><b>Show what you can click</b><span>Outlines everything you can click; choose it again to turn it off. (H)</span></button>';
   html+='<button data-act="settings" class="mi"><b>Settings</b><span>Speech speed, word level, progress.</span></button>';
   html+='<button data-act="help" class="mi"><b>How the village works</b><span>Sides, berets, mirrors, flags and keys. (?)</span></button>';
   html+='</div>';
   panel(html,'panel');
-  if(key) withDialogues(function(){ var D=window.V2_DIALOGUES, l=D&&D.rooms[key], b=$('#miTalks'); if(b&&l&&l.length){ b.hidden=false; b.querySelector('b').textContent='Conversations ('+l.length+')' } });
+  XA.forEach(function(f){ f(h,key,inRoom) });
 }
 menuBtn.addEventListener('click',menu);
 
@@ -85,6 +84,10 @@ function help(){
   '<h3>On the cards</h3><ul><li>The <b>memory hook</b> links the sound of the word to the picture. Say it aloud.</li>'+
   '<li>A red <b>False friend</b> flag means the word does not mean what it looks like in English; amber means partly.</li></ul>'+
   '<h3>Practice</h3><ul><li><b>Recall mode</b> hides the labels: tap an object, name it, and grade yourself. <b>Review</b> brings back each word when it is due, in its own room.</li>'+
+  '<li><b>Quiz</b> asks ten questions on the room: pictures, meanings, le or la, listening, verb forms and gaps in the room’s conversations.</li>'+
+  '<li><b>Conversations</b> use the room’s words: tap a highlighted word to open its card, tap a line for the English, or play the whole scene.</li>'+
+  '<li><b>Listening</b> plays a short paragraph; answer the questions, then read along.</li>'+
+  '<li>The <b>prayer book</b> 📖 holds the common Catholic prayers in French, with English beside them.</li>'+
   '<li><b>Search</b> finds any word, French or English, and takes you to it.</li></ul>'+
   '<h3>Keys</h3><p class="keys"><kbd>/</kbd> search · <kbd>M</kbd> menu · <kbd>R</kbd> recall mode · <kbd>L</kbd> labels · <kbd>H</kbd> show clickable things · <kbd>F</kbd> full screen · <kbd>?</kbd> this help · <kbd>Esc</kbd> close</p>'+
   '</div>','panel');
@@ -200,16 +203,6 @@ function csv(){ var h=V.here(), R=h.room; if(!R) return;
   var blob=new Blob(['#separator:tab\n#columns:French\tEnglish\tIPA\tSay\tExample\tExample (English)\tMemory hook\tRoom\n'+lines.join('\n')+'\n'],{type:'text/tab-separated-values'});
   var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='le-village-'+h.bld+'-'+h.key+'.tsv'; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500) }
 
-// ---------- conversations ----------
-function talks(){ var h=V.here(), key=h.bld+'/'+h.key;
-  withDialogues(function(){ var D=window.V2_DIALOGUES||{rooms:{},cast:{}}, L=D.rooms[key]||[];
-    var html='<h2 class="ptitle">Conversations</h2><p class="small">Tap a line to see the English. 🔊 reads it aloud.</p>';
-    L.forEach(function(d,n){ html+='<details class="talk"'+(n?'':' open')+'><summary><b lang="fr">'+esc(d.title)+'</b> <small>'+esc(d.cefr||'')+'</small><span class="small"> '+esc(d.premise||'')+'</span></summary><ol class="lines">'+
-      d.lines.map(function(l){ return '<li><span class="who">'+esc(l.speaker)+'</span> <span class="fr" lang="fr" tabindex="0">'+esc(l.fr)+'</span>'+(V.hasVoice()?' <button class="say" data-say="'+esc(l.fr)+'" aria-label="Listen">🔊</button>':'')+'<span class="en" hidden>'+esc(l.en)+'</span></li>' }).join('')+'</ol></details>' });
-    panel(html,'panel');
-    card.querySelectorAll('.lines .fr').forEach(function(s){ function t(){ var e=s.parentNode.querySelector('.en'); e.hidden=!e.hidden } s.addEventListener('click',t); s.addEventListener('keydown',function(ev){ if(ev.key==='Enter')t() }) });
-  }) }
-
 // ---------- settings ----------
 function settings(){
   var nP=Object.keys(P).length, nK=Object.keys(P).filter(known).length;
@@ -225,12 +218,15 @@ function settings(){
 
 var ACT={
   recall:function(){ setRecall(!recall); V.closeCard() }, find:function(){ startFind() }, review:function(){ startReview() },
-  words:words, talks:talks, hl:function(){ V.closeCard(); var b=$('#hl'); if(b) b.click() }, settings:settings, help:help, csv:csv, print:function(){ window.print() },
+  words:words, hl:function(){ V.closeCard(); var b=$('#hl'); if(b) b.click() }, settings:settings, help:help, csv:csv, print:function(){ window.print() },
   reset:function(){ if(confirmReset()) { P={}; save('village.progress',P); updateBadge(); settings() } },
   open:function(a){ var R=V.here().room, it=R&&R.items[+a.dataset.i]; if(!it) return; if(recall) ask(it,+a.dataset.i,null); else V.openCard(it) },
   prev:function(){ step(-1) }, next:function(){ step(1) }, k2:function(a){ grade(a.dataset.id,2); a.parentNode.innerHTML='<span class="small">Marked as known.</span>'; markRoom() },
   k0:function(a){ grade(a.dataset.id,0); a.parentNode.innerHTML='<span class="small">It will come back in review.</span>'; markRoom() }
 };
+// small API for practice.js (quizzes, conversations, listening, prayer book)
+window.VillageX={panel:panel,grade:grade,ACT:ACT,esc:esc,hrefFor:hrefFor,known:known,settings:S,hiddenByLevel:hiddenByLevel,need:need,
+  withIndex:withIndex,fold:fold,markRoom:function(){markRoom()},menuItems:XM,afterMenu:XA,menu:function(){menu()}};
 function confirmReset(){ var b=card.querySelector('[data-act="reset"]'); if(b&&!b.dataset.sure){ b.dataset.sure=1; b.textContent='Click again to erase all progress'; return false } return true }
 
 // ---------- card additions ----------

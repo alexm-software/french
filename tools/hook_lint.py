@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "village" / "data"
-SKIP = {"map.js", "live.js", "index.js", "dialogues.js"}
+SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js"}
 RESP = re.compile(r'\(\s*["“]?([A-Za-z][A-Za-z\'’\-]{1,40})["”]?\s*\)')
 ETYM = re.compile(r"\b(Linked to|Think of|Latin|Greek|[Rr]oots? (?:of|in|is)|[Ee]tymolog\w*|from the [A-Z][a-z]+ word)")
 OPEN = re.compile(r"^(On the (left|right)|In the (middle|centre|center)|Left side|Right side|Standing on the)", re.I)

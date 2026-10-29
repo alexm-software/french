@@ -22,7 +22,10 @@ Served at `/french/`. `/french/v2/` redirects here and keeps the hash.
 * `extras.js` adds search, recall mode, "Find it", spaced review (progress in localStorage), a level filter,
   a words list with Anki export, the room conversations, settings, help and card additions (level, side,
   prev/next, "also in"). It only uses the small `window.Village` API that `app.js` exposes (onCard, onRoom,
-  onView hooks; openCard, speak, here, roomHref). It loads `data/index.js` and `data/dialogues.js` on demand.
+  onView hooks; openCard, speak, here, roomHref). It loads `data/index.js` on demand.
+* `practice.js` (on `window.VillageX` from extras.js) adds the room quiz (Q), the conversations (`data/talk/<building>.js`,
+  room words linked to their cards, play the whole scene, check yourself), listening passages (`data/listening.js`) and the
+  prayer book (P, `data/prayers.js`). Cards show an Expressions section from `data/curated/expressions.json`.
   `sw.js` caches the shell and every room once visited, for offline use; `manifest.webmanifest` makes it installable.
 
 Build: `python3 scripts/v2/build_v2.py && python3 scripts/v2/build_map.py && python3 scripts/v2/build_extras.py && python3 scripts/qa/check_v2.py`

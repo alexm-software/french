@@ -393,6 +393,10 @@ function openCard(it,from){
   if(!it.noMnemonic) h+='<div class="sec"><h3>Memory hook</h3><p>'+esc(it.hook)+'</p>'+(it.scene?'<p class="scene"><b>In the picture:</b> '+esc(it.scene)+'</p>':'')+(it.note?'<div class="note">'+esc(it.note)+'</div>':'')+'</div>';
   var exH='<div class="sec ex"><h3>Example</h3><p class="fr">'+esc(it.ex[0])+(sp?' <button class="say" data-say="'+esc(it.ex[0])+'" aria-label="Listen to the example">🔊</button>':'')+'</p><p class="tr">'+esc(it.ex[1])+'</p></div>';
   h+=exH;
+  if(it.phrases&&it.phrases.length){
+    h+='<div class="sec phr"><h3>Expressions</h3>'+it.phrases.map(function(p){ return '<div class="pat"><b lang="fr">'+esc(p.fr)+'</b>'+(sp?' <button class="say" data-say="'+esc(p.fr)+'" aria-label="Listen: '+esc(p.fr)+'">\ud83d\udd0a</button>':'')+
+      ' <span class="pen">'+esc(p.en)+'</span>'+(p.lit?'<span class="lit"> (word for word: '+esc(p.lit)+')</span>':'')+'</div>' }).join('')+'</div>';
+  }
   if(it.verb&&(it.patterns||it.noPrep)){
     h+='<div class="sec pats"><h3>Patterns</h3>'+((it.patterns||[]).some(function(p){return /qq/.test(p.fr)})?'<p class="small">qqn = quelqu\u2019un (someone) \u00b7 qqch = quelque chose (something)</p>':'');
     if(it.noPrep) h+='<p class="noprep"><span aria-hidden="true">\u26a0</span> '+esc(it.noPrep)+'</p>';

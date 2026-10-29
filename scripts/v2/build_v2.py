@@ -54,6 +54,8 @@ Everything is checked by scripts/qa/check_v2.py.
 usage: python3 scripts/v2/build_v2.py [--no-cards] [building ...]   (default: every content/v2/*/layout.json)
   --no-cards  keep the existing card crops in village/<bld>/cards/ (text-only rebuild; only missing crops are written)
 Verb cards also get data/curated/verb_patterns.json (Patterns section) and a named stem spelling change (polish_verb).
+Cards whose word is in a common expression or idiom get an Expressions section (data/curated/expressions.json, plus the
+village's idiom entries linked to the nouns and adjectives they contain).
 vocab_fixes.json / hooks.json may also carry "plural" (string, or null for no plural) and "note" (string or null).
 """
 import json, re, sys
@@ -501,6 +503,37 @@ def card_crop(img, box, out):
     c.save(out, "WEBP", quality=84)
 
 
+EXPRESSIONS = None
+
+
+def expressions(vocab):
+    """{word id: [{fr, en, lit}]}: data/curated/expressions.json, plus every village idiom (vocab pos "idiom")
+    attached to the nouns and adjectives it contains (avoir le bras long -> le bras)."""
+    global EXPRESSIONS
+    if EXPRESSIONS is None:
+        fp = ROOT / "data" / "curated" / "expressions.json"
+        raw = {k: v for k, v in json.loads(fp.read_text(encoding="utf-8")).items() if not k.startswith("_")} if fp.exists() else {}
+        out = {k: [dict(fr=r[0], en=r[1], lit=r[2]) for r in v] for k, v in raw.items()}
+        by_lemma = {}
+        for v in vocab.values():
+            if v.get("pos") in ("noun", "adj"):
+                by_lemma.setdefault(v["lemma"].lower(), []).append(v["id"])
+        for v in vocab.values():
+            if v.get("pos") != "idiom":
+                continue
+            words = re.findall(r"[\w'-]+", v["lemma"].lower().replace("’", "'"))
+            for w in words:
+                w = re.sub(r"^[ldn]'", "", w)
+                for wid in by_lemma.get(w, []):
+                    if len(w) < 3:
+                        continue
+                    have = out.setdefault(wid, [])
+                    if not any(x["fr"].lower() == v["lemma"].lower() for x in have):
+                        have.append(dict(fr=v["lemma"], en=v["gloss"], lit=v.get("literal")))
+        EXPRESSIONS = out
+    return EXPRESSIONS
+
+
 VERB_PATTERNS = None
 
 
@@ -608,6 +641,9 @@ def build(bld, v1, vocab):
                 polish_verb(it)
             if not it.get("cefr") and vocab.get(wid, {}).get("cefr"):  # level badge, level filter, search
                 it["cefr"] = vocab[wid]["cefr"]
+            ph = expressions(vocab).get(wid) or expressions(vocab).get(re.sub(r"_\d+$", "", wid))
+            if ph:  # "Expressions" section: common phrases and idioms with this word
+                it["phrases"] = ph
             # museum-plaque words (word shown only as text on a blank plaque, nothing depicted):
             # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
             if overrides.get(wid, {}).get("plaque") is True:

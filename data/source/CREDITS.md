@@ -20,7 +20,7 @@ Lexique citation: New, B., Pallier, C., Brysbaert, M. and Ferrand, L. (2004). Le
 
 ## Written for this project
 
-Mnemonic scenes, example sentences, dialogues, room and street design, the English glosses marked "original", and the project's own translations of the Divine Mercy prayers are © the Memory Village authors and are shared under CC BY-SA 4.0 together with the word data.
+Mnemonic scenes, example sentences, dialogues and conversations, the listening passages and their questions, room and street design, the English glosses marked "original", and the project's own prayer translations (listed below) are © the Memory Village authors and are shared under CC BY-SA 4.0 together with the word data.
 
 ## Verb tables
 
@@ -36,9 +36,12 @@ The prayers are shown in older public-domain French and English wordings, not in
 - Gloire au Père: Dom Prosper Guéranger, L'Année liturgique (1858).
 - Angélus: Comtesse de Ségur, Livre de messe des petits enfants (1858), and Dom Guéranger (1858). English: The Catholic's Pocket Prayer-Book (1899).
 - Souvenez-vous (Memorare): as printed in J.-B. Proulx, L'Enfant perdu et retrouvé (1887). English: The Catholic's Pocket Prayer-Book (1899).
-- Donnez-leur, Seigneur, le repos éternel: Pierre Corneille, Les sept psaumes pénitentiaux (Marty-Laveaux edition, 1862).
+- Donne-leur, Seigneur, le repos éternel: Pierre Corneille, Les sept psaumes pénitentiaux (Marty-Laveaux edition, 1862).
 - Agneau de Dieu and Saint, Saint, Saint: traditional wording (Ségur 1858, Guéranger 1858, Bible de Sacy). English: The Catholic's Pocket Prayer-Book (1899).
 - Bénissez-nous, Seigneur: traditional anonymous family grace. The English is our own translation.
+- Le signe de la croix, Acte de foi, Acte d'espérance, Acte de charité, Acte de contrition, Ange de Dieu and Salut, Reine (Salve Regina): Catéchisme de la doctrine chrétienne publié par ordre de S. S. le pape Pie X, traduit et édité en français (Paris, Maison de la Bonne Presse, 1913), an anonymous translation in the public domain. Scan: https://www.liberius.net/livres/Catechisme_de_la_doctrine_chretienne_000000426.pdf . English: our own translations, except the Hail, Holy Queen (traditional 19th-century wording).
+- Prière à saint Michel, Reine du ciel (Regina caeli), Sous votre protection (Sub tuum), Je confesse à Dieu (the traditional Confiteor of the 1570 Missal) and Grâces après le repas: our own French and English translations from the Latin originals. They do not copy the AELF or ICEL liturgical texts.
+- Le Magnificat (Luke 1:46-55): our own French translation from the Latin Vulgate. English: Douay-Rheims Bible, Challoner revision (1750), public domain, with American spelling.
 - Chapelet de la Divine Miséricorde: our own French and English translations of the prayers in St Faustina Kowalska's Diary (no. 476). They are not the Marian Fathers' copyrighted English Diary translation.
 
 Public-domain texts were transcribed from Wikisource (fr.wikisource.org and en.wikisource.org).

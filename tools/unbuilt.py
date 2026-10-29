@@ -42,6 +42,8 @@ def live_ids(repo):
     """{fr_id: [(building, room_key), ...]} from every village/data/*.js room item."""
     out = defaultdict(list)
     for p in sorted((repo / "village" / "data").glob("*.js")):
+        if p.name in ("map.js", "live.js", "index.js", "listening.js", "prayers.js"):
+            continue
         try:
             D = load_payload(p)
         except Exception:  # not a building payload: fall back to a plain id scan

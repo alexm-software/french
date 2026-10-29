@@ -221,3 +221,33 @@ kbd{font:inherit;font-size:.85em;background:#efe6d2;border:1px solid #cdbd9c;bor
 @media print{#strip,#viewport,.x,.wbtns{display:none!important}#app{position:static}#cardWrap{position:static!important;background:none!important}#card{box-shadow:none;border:0;max-height:none;width:auto}}
 .lines .en[hidden]{display:none}
 @media (max-width:560px){ #fs,#hl{display:none} #title{white-space:nowrap;font-size:19px} .strip-right{gap:4px} .btn.icon{width:34px;height:34px} }
+/* ---- practice.js: quiz, conversations, listening, prayer book ---- */
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 6px}
+.qfr{font-size:1.25em;margin:.4em 0}
+.qopts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0}
+.qo{font:inherit;text-align:left;border:2px solid #d9cbb0;background:#fff;border-radius:12px;padding:9px 12px;cursor:pointer;color:var(--ink)}
+.qo:hover:not([disabled]){border-color:var(--strip)}
+.qo.right{border-color:#3c8a3a;background:#e5f3e1}.qo.wrong{border-color:#a4302c;background:#f8e3e1}.qo[disabled]{cursor:default}
+.quiz .apic img{display:block;max-width:100%;max-height:30vh;margin:0 auto 6px;border-radius:12px;border:3px solid #3a2a1c}
+.tbtns{display:flex;flex-wrap:wrap;gap:6px}
+.tw{font:inherit;border:0;padding:0 2px;margin:0;background:#fbe9b7;border-bottom:2px solid #d9a520;border-radius:3px;cursor:pointer;color:inherit}
+.tw:hover,.tw:focus-visible{background:#f6d77a;outline:none}
+.lines li.now,.sent.now{background:#e8f1f2;border-radius:6px}
+.lines li{padding:2px 4px}
+.backto{margin:0 0 8px}
+.ptext{font-size:1.12em;line-height:1.6;background:#fff;border:2px solid #e2d5ba;border-radius:12px;padding:10px 14px;margin:10px 0}
+.pen{opacity:.8;font-size:.95em;margin-bottom:10px}
+.lq{padding-left:1.3em}.lq>li{margin:.6em 0}.lq p{margin:.2em 0}
+.book{font-family:Georgia,"Palatino Linotype",serif}
+.bcover{text-align:center;background:linear-gradient(#5b1f2b,#3e1520);color:#f6e7c3;border-radius:14px;padding:22px 10px 16px;margin:-4px 0 12px;box-shadow:inset 0 0 0 3px #c9a24a}
+.bcover h2{margin:.1em 0;font-size:1.8em}.bcover p{margin:0}.bcross{font-size:1.8em;color:#e3c169}
+.btoc{columns:2 220px;padding-left:1.4em}.btoc li{break-inside:avoid;margin:.25em 0}.btoc a{color:var(--ink);text-decoration:none}.btoc a:hover b{text-decoration:underline}
+.btoc span{display:block;font-size:.85em;opacity:.7}
+.bpage .bcols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:10px 0}
+.bpage .bcols.fronly{grid-template-columns:1fr}.bpage .bcols.fronly .ben{display:none}
+.bfr{font-size:1.15em;line-height:1.6}.ben{line-height:1.55;opacity:.8;border-left:2px solid #e2d5ba;padding-left:12px}
+.bsrc summary{cursor:pointer;font-size:.9em;opacity:.8}
+.bnav{display:flex;justify-content:space-between;gap:8px;margin-top:12px}.bnav button{max-width:48%}
+@media (max-width:560px){ .bpage .bcols{grid-template-columns:1fr}.ben{border-left:0;padding-left:0;border-top:1px dashed #d9cbb0;padding-top:8px} #bookBtn{display:none} .qopts{grid-template-columns:1fr} }
+.qhead{padding-right:44px}.bnav button[disabled]{visibility:hidden}
+.phr .lit{font-size:.85em;opacity:.65;font-style:italic}

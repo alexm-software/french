@@ -42,4 +42,6 @@ ecole_cantine_sheet.jpg  (355 KB; 8 word tiles + 1 exit tile)
 
 ## Repo checks
 
+`copyright_check.py` fails a quoted text (prayer, scripture) with no pre-1929 edition or own-translation source, no usage statement, wording of the current liturgical translations, or no line in CREDITS.md.
+
 `skills_paths.py` fails if a skill names a repo path or script (in backticks) that does not exist. It runs on every pull request with `scripts/qa/check_v2.py --strict --placement` and `hook_lint.py` (see `.github/workflows/checks.yml`).

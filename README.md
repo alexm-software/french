@@ -11,8 +11,8 @@ The live site is the static folder `village/`, published with GitHub Pages.
 | `village/` | The site: `index.html`, `app.js`, `style.css`, the paintings (`village/<building>/*.jpg`, card crops in `cards/`), the maps (`map/`) and the generated data (`data/<building>.js`, `data/map.js`). See `village/README.md`. |
 | `content/v2/<building>/` | Per-building inputs: `layout.json` (hotspot boxes in painting pixels, doors, zooms) and `hooks.json` (hook and text overrides for that building). |
 | `content/v2/vocab_fixes.json` | Text corrections for every building: article and gender, respelling, gloss, example, plural, note. |
-| `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, `sectors.json`, the dialogues (`village_dialogues.json`, `conversations.json`) and credits. |
-| `data/curated/` | Hand-written tables, e.g. `verb_patterns.json` (the prepositions each verb takes). |
+| `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, `sectors.json`, the dialogues (`village_dialogues.json`, `conversations.json`), the listening passages (`listening.json`), the prayers (`prayers.json`) and credits. |
+| `data/curated/` | Hand-written tables: `verb_patterns.json` (the prepositions each verb takes), `expressions.json` (idioms shown on cards). |
 | `data/cache/conjugations.json` | Verb tables (seven tenses), read by the build. |
 | `data/v1-payloads/` | Card text from the first village; the build still reads it. |
 | `data/hooks/qa/`, `docs/` | Review notes, proposals and change logs. |
@@ -32,6 +32,7 @@ python3 scripts/v2/build_map.py
 python3 scripts/v2/build_extras.py         # live buildings, search index, room conversations
 python3 scripts/qa/check_v2.py              # add --strict --placement before a release; -v for word counts
 python3 tools/hook_lint.py                  # mechanical hook checks (report only)
+python3 tools/copyright_check.py            # prayers and other quoted texts have a public-domain or own source
 ```
 
 Every pull request runs `check_v2.py --strict --placement`, `tools/skills_paths.py` and the hook lint (`.github/workflows/checks.yml`). Room-size and spacing numbers live in `skills/limits.json`.

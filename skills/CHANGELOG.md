@@ -1,5 +1,8 @@
 # Skills changelog
 
+## 29 October 2026
+- **Copyright gate for quoted texts** (builder reference/copyright.md, release gates, language skill): dated public-domain edition or our own translation, recorded source and usage, named in CREDITS.md, and `tools/copyright_check.py` on every pull request.
+
 ## 28 October 2026
 - **One pipeline.** The builder skill now states the current pipeline at the top: one integrated painting per room or zoom, objects painted in. The composited rules (release gates E and F, "Scene first, then assets drawn to fit") are marked legacy: they apply only when repairing an old composited room.
 - **One set of numbers.** Room target and maximum, zoom size, room floor, edge margin, label gap and center band now live in `skills/limits.json`. The skills quote it; `check_v2.py`, `precheck.py` and `build_prompt.py` read it. Before, the room size was given six different ways.
