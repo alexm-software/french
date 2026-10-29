@@ -6,6 +6,29 @@ Reviewed revision: `d859bac75c044bf1ac1d58bacf7a20a46b427426`
 These are recommendations only. This review did not change the site or skills.
 Counts describe the reviewed revision, not necessarily later commits.
 
+## Required art-pipeline correction
+
+Generate each room as one coherent painting, with its setting, people, objects,
+lighting, perspective, shadows, and interactions designed together. Experience
+has shown that generating an empty background and separate word assets produces
+rooms whose objects look pasted on. Visual coherence takes priority over the
+theoretical token savings of that approach.
+
+**Delete the asset-per-word pipeline from the skills entirely.** Remove its
+instructions, examples, sprite-generation branches, empty-background workflow,
+per-word compositing guidance, and conflicting references throughout the main
+skills and their supporting files. Do not retain obsolete instructions with
+"deprecated", "superseded", "older lesson", or alternative-workflow labels.
+Do not move them to a new archive document. Git history already preserves them.
+
+The remaining instructions should describe integrated scene generation and
+edits made in the context of that scene. Derive word-card images from the
+finished painting. If a local correction can preserve the integrated lighting,
+perspective, occlusion, and surrounding interactions, edit that region using the
+whole painting as context. If it cannot, regenerate the room coherently.
+These are recommendations for the skill cleanup; this document update does not
+itself modify the skills or delete image files.
+
 ## Scope and main finding
 
 Reviewed the current repository, all three memory-palace skills and relevant
@@ -34,7 +57,7 @@ skills have not reached the current viewer.
 
 | Priority | Finding | Recommended improvement |
 |---|---|---|
-| High | **Conflicting art instructions:** the builder prefers separate assets, another paragraph prefers integrated paintings, and v2 documentation requires integrated paintings. | Declare one current approach: separate editable source assets plus a composed room image where useful. Mark older guidance as superseded. This preserves the user's token-saving preference. |
+| High | **Conflicting art instructions:** the skills still contain an asset-per-word pipeline that produces pasted-on-looking rooms. | Delete that pipeline and all obsolete alternatives from the skills and references. Generate each room as one integrated painting; derive card crops from it. Keep one current set of instructions, without deprecated or superseded versions in the skill files. |
 | High | The release-gates references name **six tools/procedure files that are not in the repo**. | Replace those references with actual commands. Clearly distinguish automated checks from human visual judgments. |
 | High | The deployment workflow checks only that five files exist. It does not enforce the skills' content/layout gates. | Define a small, reliable set of checks for changed buildings, with a separate periodic whole-site audit. |
 | Medium | Rules conflict about breadcrumbs versus Back, room lists, natural painted text, and density targets. | Consolidate each policy into one canonical rule referenced by the other skills. |
@@ -71,7 +94,7 @@ expansion.
   `skills/language-memory-palace/reference/cards-and-site.md`: conversations,
   audio, guide-related conventions, interface language, and quiz expectations.
 - `skills/memory-palace-builder/reference/setup-and-style.md`: competing art
-  pipeline instructions, including the separate-assets preference.
+  pipeline instructions that need the asset-per-word material removed.
 - `skills/memory-palace-builder/reference/site-ui.md` and
   `skills/memory-palace-release-gates/reference/process.md`: competing
   navigation guidance.
@@ -211,18 +234,18 @@ the existing rules executable, traceable, and easy to review.
 
 | ID | Proposal | Where it belongs | Concrete acceptance criterion |
 |---|---|---|---|
-| E1 | **One versioned rules registry.** Give each rule a stable ID, scope, severity, check method, and canonical reference. Generate the short skill checklists from it. Archive superseded instructions instead of leaving competing imperatives active. Record the approved style profile and reference-image hashes. | All three skills; builder setup/style; release gates. | A job names one ruleset version; contradictory active instructions and broken tool/reference links are reported before work starts. |
-| E2 | **A typed room manifest validated before generation.** Store word/sense IDs, composition groups, surfaces, counts, placement, doors, zoom links, and source assets in a schema. Declare coordinate units explicitly rather than mixing pixels and percentages. Separate planned geometry from final measured geometry. | Planning, manifest template, precheck, build tooling. | Missing IDs, duplicate assignments, bad units, impossible counts, invalid targets, and inconsistent geometry stop the job before an image request. A required manifest cannot silently become optional. |
+| E1 | **One versioned rules registry.** Give each rule a stable ID, scope, severity, check method, and canonical reference. Generate the short skill checklists from it. Delete obsolete instructions and examples from the skills and references; retain only current guidance. Record the approved style profile and reference-image hashes. | All three skills; builder setup/style; release gates. | A job names one ruleset version; contradictory instructions and broken tool/reference links are reported before work starts. The asset-per-word pipeline is absent, not retained under an obsolete label or moved into a new archive. |
+| E2 | **A typed room manifest validated before generation.** Store word/sense IDs, composition groups, surfaces, counts, placement, doors, zoom links, and whole-scene reference images in a schema. Declare coordinate units explicitly rather than mixing pixels and percentages. Separate planned geometry from final measured geometry. | Planning, manifest template, precheck, build tooling. | Missing IDs, duplicate assignments, bad units, impossible counts, invalid targets, and inconsistent geometry stop the job before an image request. A required manifest cannot silently become optional. |
 | E3 | **Make zoom continuity a linked contract.** Record the parent region, landmark geometry, materials, contents, relative arrangement, and allowed changes. Classify a link as magnification, opening a container, or entering another room. Generate the zoom using the actual parent crop as a reference; preserve visible landmarks even when revealing hidden detail. | Planning, moving-words, prompt template, G109/G145. | Every changed zoom has a dated parent/crop/zoom comparison. A parent or child image change invalidates the pair's review. A badge-inside-box check alone cannot count as a continuity pass. |
-| E4 | **Ship dependent changes atomically.** Track dependencies from a word/hook to its sprite, room painting, parent miniature, card crop, alt text, manifest, and generated payload. A zoom repaint should name every parent that previews it. | Build pipeline, moving-words, release process. | A proposed change produces an explicit affected-file list; stale dependants block that change. The whole dependency set lands together. |
-| E5 | **Review composition before detailed painting.** Make a cheap layout/rough showing the actual groups, surfaces, perspective, label budget, and focal action. Store one ordinary sentence describing the shared activity and what each group contributes. For sprites, write the surface, angle, scale, light, and occlusion slot before generation. | Composition, planning, prompt template. | The rough passes the labels-off storybook test and has room for every label before detailed assets are generated. Merely naming two IDs in an interaction group is insufficient. |
+| E4 | **Ship dependent changes atomically.** Track dependencies from a word/hook to its integrated room painting, parent miniature, card crop, alt text, manifest, and generated payload. A zoom repaint should name every parent that previews it. | Build pipeline, moving-words, release process. | A proposed change produces an explicit affected-file list; stale dependants block that change. The whole dependency set lands together. |
+| E5 | **Review composition before detailed painting.** Make a cheap whole-scene layout/rough showing the actual groups, surfaces, perspective, label budget, and focal action. Store one ordinary sentence describing the shared activity and what each group contributes. Design objects, figures, lighting, scale, and occlusion together in that composition. | Composition, planning, prompt template. | The rough passes the labels-off storybook test and has room for every label before generating the finished integrated painting. Merely naming two IDs in an interaction group is insufficient. |
 | E6 | **One authoritative word/sense/hook record with explicit override provenance.** Resolve legacy payloads, source vocabulary, shared corrections, building overrides, and user edits in a documented field-level order. Emit which source supplied each final field. Keep patch edits surgical. | Hook rules, language validation, build_v2 data assembly. | A word's final sense, pronunciation, hook, and example are inspectable together; silent replacement of a newer correction is detected. Hook/image mismatches remain pending until the linked art and text agree. |
 | E7 | **Share rendering geometry between viewer and checker.** Use the same coordinate conversion, label measurement, anchor, badge, and door placement functions. Add a few known-good and known-bad fixtures for recurrent errors. | Viewer, precheck, check_v2, release-gates tooling. | Fixtures catch px/% mistakes, detached labels, overlapping controls, clipped items, and narrow-screen tab failures. A viewer change cannot leave the checker modeling an older layout. |
 | E8 | **Evidence tied to content, not a remembered PASS.** Record image, manifest, ruleset, build, and relevant renderer hashes with each verdict. Use pass/fail/not-checked/not-applicable; record the exact reason and crop for a failure. | Review logs and release process. | Repainting or changing geometry invalidates the relevant evidence. A static check, thumbnail screen, and full visual review have distinct statuses. |
 | E9 | **Explicit room-type rules and exceptions.** Define separate density/count policies for rooms, tool close-ups, reference boards, and doorways. Count semantic reference boards separately from their letter/number controls. Allow a plain hook when appropriate. | Language representation, density rules, precheck. | An alphabet board with 26 letter controls is not automatically treated as 26 competing scene objects. An exception names its reason and applicable rule rather than silently weakening every gate. |
 | E10 | **A building-level composition and motif index.** Record a thumbnail, camera, landmark, situation, lighting, and distinctive hook motifs for each sibling room. Use image similarity and color statistics only to nominate comparisons. | Composition, G129/N10, contact-sheet tooling. | Every new room is compared against its siblings; a reviewer judges flagged look-alikes. Repeated grammatical markers such as the mime are distinguished from accidental repeated hook motifs. |
-| E11 | **Bounded, change-aware validation.** Run cheap structural checks, changed-room visual review, linked parent/zoom checks, then a small navigation/card smoke pass. Run whole-site audits periodically or when shared rules/rendering change. Keep every changed item in the visual review even when scripts pass. | Validation and release process. | A small sprite correction does not trigger an unbounded tour of 477 rooms; a shared renderer change expands the scope automatically. Required checks have real commands and record skipped checks honestly. |
-| E12 | **Control concurrent edits and retries.** Start from a recorded main SHA, declare owned paths and shared dependencies, merge narrow patches with an expected-head check, and rebuild derived data from the combined sources. After repeated failed image attempts, revisit the slot/hook/layout instead of resending the same prompt. | Planning, hook merge, build and deploy process. | No whole-file hook replacement erases another correction; stale-base updates are rejected safely; each regeneration states the specific failure it is correcting. |
+| E11 | **Bounded, change-aware validation.** Run cheap structural checks, changed-room visual review, linked parent/zoom checks, then a small navigation/card smoke pass. Run whole-site audits periodically or when shared rules/rendering change. Keep every changed item in the visual review even when scripts pass. | Validation and release process. | A local painting correction does not trigger an unbounded tour of 477 rooms; a shared renderer change expands the scope automatically. Required checks have real commands and record skipped checks honestly. |
+| E12 | **Control concurrent edits and retries.** Start from a recorded main SHA, declare owned paths and shared dependencies, merge narrow patches with an expected-head check, and rebuild derived data from the combined sources. After repeated failed image attempts, revisit the hook or whole-scene composition instead of resending the same prompt. | Planning, hook merge, build and deploy process. | No whole-file hook replacement erases another correction; stale-base updates are rejected safely; each regeneration states the specific failure it is correcting. |
 
 ### Why these proposals follow from the current implementation
 
@@ -253,16 +276,16 @@ design and make the task-specific context smaller and more reliable.
 | ID | Proposal | Practical saving and limit |
 |---|---|---|
 | T1 | **A short task router plus focused briefs.** Keep a compact entry checklist and map tasks such as new room, hook correction, zoom repaint, or UI change to the minimum relevant references and rules. | Reduces repeated reading of unrelated policies. Each brief still includes common invariants and the ruleset version; load full detail when an issue requires it. |
-| T2 | **Compile prompts from approved data.** A small tool expands a style-profile ID, room manifest, slot spec, and relevant constraints into the full generation prompt. Save the exact expanded prompt as an artifact. | Avoids manually restating the 15-section template for each item and prevents transcription omissions. An image generator does not know repository rule IDs: the compiler must expand the needed instructions before sending them. This reduces authoring/context repetition, not necessarily image-provider prompt tokens. |
-| T3 | **Keep editable assets separate from rooms.** Store one background, slot-specific assets, masks/occlusion, and a canonical layout; compose the published painting and crops deterministically. | A one-item correction needs the failing asset and its local reference region, rather than a whole-room regeneration. Deep architectural changes can still require an integrated edit. |
-| T4 | **Generate compact task packets.** Export only the target room's resolved words, relevant pronunciation/hooks, slots, parent crop, sibling thumbnails, ownership, and outstanding findings. | Avoids repeatedly opening the full vocabulary, every legacy payload, long conversation files, or historical review logs. The packet records source SHAs so omitted context can be retrieved deliberately. |
+| T2 | **Compile whole-scene prompts from approved data.** A small tool expands a style-profile ID, room manifest, shared activity, interaction groups, and relevant constraints into one complete room-generation prompt. Save the exact expanded prompt as an artifact. | Avoids manually restating the same style and composition instructions and prevents transcription omissions. An image generator does not know repository rule IDs: the compiler must expand the needed instructions before sending them. This reduces authoring/context repetition, not necessarily image-provider prompt tokens. |
+| T3 | **Reuse approved whole-scene references.** Keep the room painting and its compact composition manifest as the visual context for edits and zoom generation. Generate card crops directly from the finished painting. | Saves repeated scene reconstruction and separate card-image generation while preserving coherent light, perspective, scale, and interactions. Do not generate backgrounds and word objects independently to save tokens; repaint the room when needed for visual quality. |
+| T4 | **Generate compact task packets.** Export only the target room's resolved words, relevant pronunciation/hooks, composition, parent crop, sibling thumbnails, ownership, and outstanding findings. | Avoids repeatedly opening the full vocabulary, every legacy payload, long conversation files, or historical review logs. The packet records source SHAs so omitted context can be retrieved deliberately. |
 | T5 | **One small visual review packet per change.** Show the affected room with item crops, the parent/zoom pair, and relevant sibling thumbnails together. Open large images only for uncertain details. | Builds on the existing contact-sheet workflow. Keep counts, sound-cue props, and small text large enough to judge; thumbnail size is not evidence that a tiny detail passes. |
 | T6 | **Cache builds and reviews by their real dependencies.** Key generated crops, sheets, OCR results, and evidence by source hashes, ruleset, renderer, and review type. Give changed images new content-derived filenames. | Avoids repeated OCR, image inspection, and cached-path confusion. Reuse evidence only when every relevant dependency is unchanged; a changed rule may require a new judgment of the same image. |
 | T7 | **Use incremental builds and affected-room checks.** Build cards/data only for changed rooms and their dependants. Cache the global word-coverage index and update it from the diff. Reuse an existing checkout with `unbuilt.py --repo`. | Avoids repeated clone/full-build/global-review cycles. Shared data or rendering changes widen the dependency scope; scheduled whole-site audits remain useful. |
 | T8 | **Let scripts return structured, concise findings.** Emit stable rule IDs, affected items, exact coordinates, counts, and a short proposed next action; keep raw logs and image bytes out of model context. | Saves diagnostic tokens and makes fixes easier to target. The model still reads evidence for semantic and visual judgments. |
-| T9 | **Preserve a compact resumable work record.** Save base SHA, file ownership, approved choices, completed steps, open findings, asset hashes, and the next action. | Reduces re-reading long chat histories or restarting work after a pause. Reuse task context when available; do not require extra agents for a small job. If agents are explicitly requested, give them narrow packets and retain one owner per stream. |
-| T10 | **Prevent expensive retries with cheap preflight.** Validate schema, assignment, counts, layout, and prompt completeness before generating; inspect a rough before a batch; regenerate only failing regions/assets. | The largest likely saving is avoiding rework, not shortening a few sentences. Measure attempts, bytes/context supplied, generation cost, and accepted rooms before claiming a percentage saving. |
-| T11 | **Archive history outside the active skill path.** Keep the current normative rule once; move superseded lessons and long incident narratives to searchable history. Generate summaries instead of accumulating equivalent gates. | Reduces contradictory context and repeated instructions while retaining the evidence behind a rule. Never discard current user preferences or unresolved findings. |
+| T9 | **Preserve a compact resumable work record.** Save base SHA, file ownership, approved choices, completed steps, open findings, painting/reference hashes, and the next action. | Reduces re-reading long chat histories or restarting work after a pause. Reuse task context when available; do not require extra agents for a small job. If agents are explicitly requested, give them narrow packets and retain one owner per stream. |
+| T10 | **Prevent expensive retries with cheap preflight.** Validate schema, assignment, counts, layout, and prompt completeness before generating; inspect a whole-scene rough before a batch. For local repairs, edit within the original painting's context and recheck the full scene; regenerate the room if coherence cannot be preserved. | The largest likely saving is avoiding rework, not shortening a few sentences. Measure attempts, bytes/context supplied, generation cost, and accepted rooms before claiming a percentage saving. Visual quality takes priority over avoiding a whole-room generation. |
+| T11 | **Delete obsolete skill content.** Keep each current rule once. Remove obsolete workflows, duplicate rules, and outdated examples from the skill files and references instead of labeling or archiving them. | Reduces both contradictory instructions and reading cost. Git history preserves prior versions; retain current user preferences and unresolved findings, not the abandoned asset-per-word workflow. |
 
 ### Suggested compact job record
 
@@ -306,14 +329,17 @@ Recommended construction-workflow order:
    same change.
 3. Extend the existing contact sheets and implement dependency-aware evidence
    and incremental checks (E7-E8/E11, T5-T8).
-4. Standardize the separate-asset composition path and prompt compiler
-   (E5, T2-T3), using one pilot room before any bulk migration.
+4. Remove the asset-per-word instructions throughout the skills and references,
+   and standardize integrated room generation with the whole-scene prompt
+   compiler (E1/E5, T2-T3). Do not retain obsolete alternatives or marked-up
+   historical versions in the skills.
 5. Repair the named continuity/style failures in small coherent batches, using
    measured retry counts and review scope to refine the workflow.
 
 An initial success criterion is practical: one small repair updates every
 dependent artifact, passes the applicable checks, has a readable before/after
-comparison, and does not require a new whole-site read or whole-room repaint.
+comparison, and does not require a new whole-site read. A whole-room repaint
+is appropriate whenever it is needed to preserve a coherent scene.
 No site, skill, tool, image, or data changes are implemented by this document.
 
 ## Candidate mnemonic improvements
@@ -403,7 +429,8 @@ French pronunciation and a matching picture.
 4. Compare candidate versus current hook and plain meaning picture on a small
    sample. A useful check is whether a learner can recover both the French word
    and its meaning later; an attractive image alone is not enough.
-5. Only after selection, update the hook and matching asset together, plus any
+5. Only after selection, update the hook and its depiction in the integrated
+   painting together, plus any
    parent miniature, card crop, alt text, and derived payload. Preserve unrelated
    fields and current user overrides. Until then these rows remain proposals in
    this file, never a text-only replacement over mismatching live art.
