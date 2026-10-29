@@ -59,6 +59,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 - Every item has a label (article included); a remembered switch chooses always-on or hover.
 - All UI text has a native/target-language toggle, from one i18n file.
 - Quiz modes are filterable by room, sector and level.
+- Prayers, scripture and other quoted texts follow the copyright gate (builder reference/copyright.md): a pre-1929 edition or our own translation from the original, never the current liturgical translations.
 
 ## Checks (reference/validation.md)
 - In every room, check gender sides, articles, accents and spelling (by script), the mnemonic sound link, false cognates, and verb tables and codes.

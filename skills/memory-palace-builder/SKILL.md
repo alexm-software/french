@@ -98,6 +98,8 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - No children near alcohol or tobacco; nobody drinks or smokes; grave words go only to sober rooms.
 - Don't over-police harmless whimsy.
 - Audit everything that ships: quoted texts, glosses, data, fonts and code are public-domain, original or licensed and credited.
+- Quoted texts (prayers, scripture, poems, sayings) come only from an edition published before 1929 or are our own translation from the original; never paste a current liturgical translation (AELF, ICEL) or any song lyrics. Record the edition, year and URL in the text's `source`, name it in CREDITS.md, and run `tools/copyright_check.py` (it runs on every pull request).
+- Everything we write ourselves (hooks, dialogues, listening passages, quiz questions, our translations) is credited as the project's own, CC BY-SA.
 
 ## Validate and run cheaply (reference/validation.md, reference/tooling.md)
 - Run the cheap checks first (`tools/precheck.py`), then review one contact sheet per room (`tools/contact_sheet.py`).

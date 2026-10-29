@@ -403,7 +403,7 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                 await map_label_edges(pg, f"sector {w['slug']} @{vw}", errs)
                 await pg.click("#back"); await pg.wait_for_timeout(200)
                 if await pg.evaluate("location.hash") not in ("#/", ""): errs.append(f"sector {w['slug']}: Back does not go to the village map")
-            have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem != "map")
+            have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem not in ("map", "live", "index", "listening", "prayers"))
             if sorted(live) != have:
                 errs.append(f"maps @{vw}: live buildings {sorted(live)} != data files {have}")
             if maps_only:

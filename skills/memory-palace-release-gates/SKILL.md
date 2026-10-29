@@ -77,6 +77,9 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - At checkpoints, re-run every gate on the whole live site plus the queue; re-audit live spaces whenever a gate is added.
 - Each new kind of user-reported issue becomes a numbered gate, with a script where possible.
 
+## Copyright (builder reference/copyright.md)
+- Every quoted text has a dated public-domain source or is our own translation, says how it may be used, and is named in CREDITS.md; `tools/copyright_check.py` passes. A copyright failure blocks the release like gate 6.
+
 ## Deploy (reference/deploy.md)
 - Make one combined pack per batch of rooms; the deploy reports once, when live.
 - User-reported, P0 and P1 fixes still ship as small hotfixes in the next window.
