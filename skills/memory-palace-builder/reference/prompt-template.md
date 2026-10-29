@@ -6,7 +6,6 @@ Build every room or zoom painting prompt from the block below, with every `{fiel
 IMAGE: one integrated {room | zoom} painting, 1280x720 (16:9), {camera: eye-level three-quarter from ...}, of {building} / {room name}.
 [zoom only] This is a close-up of {parent room}'s {object/spot}, a real spot where these objects belong: same object, materials, colors, contents and arrangement as in the parent painting (crop attached); the same gender sides and bands as the parent.
 [repaint only] Fix these open repaint-queue rows: {rows}. Keep everything else that passed.
-[sprite / paint-back only] One item on a transparent background, full silhouette with its base intact, drawn at the angle of {surface} at about {px} high, lit from {direction} like the room (room attached as the style and light reference), and reading well alone on its card.
 
 STYLE: storybook ink and gouache, dark ink contours, style slider {3: respectful, slightly realistic painterly with cartoony elements}. Same line weight, saturation and texture as the reference scenes {refs}. Matches this {building's exterior | sector} look and materials: {walls, floor, roof, wood/stone, palette}. Fully painted to every edge, no unpainted patches.
 

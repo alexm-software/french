@@ -10,7 +10,7 @@ description: >-
 
 A space is NOT done until every gate passes, and the checker must actually look at the images. Each line is one gate. The file named in a section heading holds the full procedure and examples. Record each result in a dated gates log (space | gate | pass/fail | note) with the site commit. Gate 6 (content) failures block release; any other failure is a major.
 
-**Read only what the task needs:** new or repainted room: item-gates.md, space-gates.md, tools-and-logs.md · labels only: space-gates.md §B · number or count room: number-and-count-rooms.md · shipping: deploy.md · composited (legacy) rooms only: §E, F below. Gates that scripts hold: `scripts/qa/check_v2.py --strict --placement` (geometry, sides, room size, one hook per word), `tools/precheck.py`, `tools/hook_lint.py`; all run on every pull request (`.github/workflows/checks.yml`).
+**Read only what the task needs:** new or repainted room: item-gates.md, space-gates.md, tools-and-logs.md · labels only: space-gates.md §B · number or count room: number-and-count-rooms.md · shipping: deploy.md · final scene: space-gates.md §F. Gates that scripts hold: `scripts/qa/check_v2.py --strict --placement` (geometry, sides, room size, one hook per word), `tools/precheck.py`, `tools/hook_lint.py`; all run on every pull request (`.github/workflows/checks.yml`).
 
 ## Order of work (reference/tools-and-logs.md)
 - 0. Run `tools/unbuilt.py` (by word id, fresh main) before choosing what to paint.
@@ -48,13 +48,12 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.
 - Stray or garbled text, prop symbols, speech bubbles and count-breaking digits fail.
 
-## E, F. Composited scenes, legacy only: repairs of old composited rooms (reference/item-gates.md, reference/space-gates.md)
-- E: each asset shows the hook and the meaning, is one word only, renders cleanly, matches the style, is cleanly cut out and card-ready, and has the right perspective.
-- F: no overlaps; labels sit on their own asset; assets rest on surfaces with contact shadows; the room is coherent; hotspots line up.
+## F. Final scene (reference/space-gates.md)
+- F: no overlapping boxes or labels; objects grounded with contact shadows; one coherent painting with no seams or pasted patches; hotspots line up.
 
 ## G, H and rounds 5-10: scene gates (reference/space-gates.md)
 - The planned assignment is law; every word suits the place; close-ups are real spots that look like their parent.
-- No rows of stickers; the scene is painted first and assets are drawn to fit; nothing grows out of a door frame.
+- No rows of stickers; nothing grows out of a door frame.
 - Natural scene: one named situation, small interacting groups, varied facing and depth; a lineup or grid of isolated hook figures fails, and so does the labels-off storybook test.
 - Verbs are acted at human scale by the language's marker, spread through the scene among the nouns.
 - A zoom matches its parent side by side; the style matches the references; no unpainted patches.

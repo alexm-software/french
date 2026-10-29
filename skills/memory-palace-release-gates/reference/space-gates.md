@@ -18,15 +18,15 @@ Read when reviewing a whole room, building or street.
 14. One style per building or street, matching its exterior in every view. <!-- G41 -->
 15. **Color**: builder reference/setup-and-style.md (merged color rule).
 
-## F. Final scene (after compositing)
+## F. Final scene
 
-**F. Final scene (after compositing).** Check the finished room at desktop and phone sizes: <!-- G79 -->
-- **No overlaps:** no asset overlaps another asset, a hotspot box, a label or a control. Each asset is clearly separate, with breathing room. <!-- G80 -->
-- **No confusing labels:** each label (or hover highlight) sits on its own asset and can't be read as belonging to a neighbor; text is readable, and gender color (if any) is only on labels. <!-- G81 -->
-- **Not pasted on:** every asset rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow on that surface. Its scale is right for its depth in the room, its lighting and color tint match the room, it doesn't float or sink into furniture, and nothing is cut by a wall or edge unnaturally. Zoom in on each asset's base and edges. <!-- G82 -->
-- **Coherent room:** the room still reads as one real place with its landmark visible, nothing important is hidden behind assets, and the empty background has no leftover artifacts (smudges, ghost objects). <!-- G83 -->
-- **Hotspots line up:** clicking the center of each asset opens its own card at every screen size. <!-- G84 -->
-Report the E and F results per word and per room with screenshots or crops, fix and re-check, and only then show the user. <!-- G85 -->
+**F. Final scene.** Check the finished painting with its hotspots and labels at desktop and phone sizes: <!-- G79 -->
+- **No overlaps:** no hotspot box overlaps another box, a label or a control. Each item is clearly separate, with breathing room. <!-- G80 -->
+- **No confusing labels:** each label (or hover highlight) sits on its own item and can't be read as belonging to a neighbor; text is readable, and gender color (if any) is only on labels. <!-- G81 -->
+- **Grounded:** every object and figure rests on a real surface (floor, counter top, shelf, ledge) with a contact shadow, at the right scale for its depth, lit like the rest of the room, never floating or sinking into furniture. <!-- G82 -->
+- **Coherent room:** the room reads as one real place painted in one pass, with its landmark visible and nothing important hidden. No seams, halos, pale rectangles, mismatched brushwork or pasted-looking patches anywhere. <!-- G83 -->
+- **Hotspots line up:** clicking the center of each item opens its own card at every screen size. <!-- G84 -->
+Report the F results per room with screenshots or crops, fix and re-check, and only then show the user. <!-- G85 -->
 
 ## G and H. Place fit and integrated scene
 
@@ -34,7 +34,6 @@ Gates G and H. Each must pass before a space is shown to the user. <!-- G89 -->
 
 - Place fit (planned assignments are law, every word suits the place, real close-up spots, close-up looks like its parent): builder reference/planning.md.
 - **No rows of stickers.** Items are never lined up in the foreground of an empty room. Use the whole frame: walls, shelves, beams, windows, noticeboards, stairs, pews, niches. Vary depth and scale, and add ambient life (background people and activity) so the place feels lived in. Background figures are scenery and carry no hotspot. <!-- G98 -->
-- **Scene first, then assets drawn to fit.** Paint the room first, then write a slot spec for every item before generating it: the surface it rests on, the camera angle at that spot, the light direction and color, its target height from perspective, its pose, and what hides it (pew backs, counters). Generate one sprite per slot, all of a room's slots in parallel, with the spec in the prompt. Harmonize in code: match color and light to the surrounding patch, remove fringes, add contact and cast shadows, and paste furniture from the background back over figures that sit behind it. Never repaint a whole room to fix one item; redraw only the failing sprite. (Once, generic cut-outs dropped onto a church floated in front of the pews and were called "genuinely terrible". Slot-specific sprites with occlusion fixed it.) <!-- G99 -->
 - **Nothing merges with architecture.** No figure overlaps a door frame, door leaf or exit opening so that it seems to come out of it. Keep exit openings clear and clickable. (Once, a man with lilies seemed to grow out of a side door.) <!-- G100 -->
 - **Verb characters act at human scale** in the scene, never as tiny figures in a row. <!-- G101 -->
 - **Cards show all options at once.** All tense tabs or similar choices are visible at every screen size by wrapping or a grid, never by sideways scrolling. <!-- G103 -->

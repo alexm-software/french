@@ -1,6 +1,7 @@
 # Skills changelog
 
 ## 29 October 2026
+- **Asset-per-word pipeline deleted.** Removed release gates E (per-word assets) and G99 (sprites drawn to fit), the B70/B72 empty-background and per-asset alternatives, the sprite line of the prompt template and the feathered-paste compositing rule. F is now a final-scene check for integrated paintings (G83: no seams or pasted patches). Local fixes edit a region with the whole painting as context; otherwise repaint the room.
 - **Copyright gate for quoted texts** (builder reference/copyright.md, release gates, language skill): dated public-domain edition or our own translation, recorded source and usage, named in CREDITS.md, and `tools/copyright_check.py` on every pull request.
 
 ## 28 October 2026
