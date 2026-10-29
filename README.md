@@ -1,6 +1,6 @@
 # Le Village: a French vocabulary memory palace
 
-A French vocabulary memory palace from A1 to C2. You walk a painted map of sixteen quarters, go into buildings, and find each word as an object or a person in a room. Feminine nouns stand on the left of a room and masculine nouns on the right; adjectives and adverbs stand in the middle. Verbs are acted out by Monsieur Verbe, a mime whose beret colour gives the verb group and who holds a hand mirror for reflexive verbs. Click anything to open its card: meaning, pronunciation (IPA and an English-style respelling), gender and plural, a memory hook, an example, false-friend warnings, and full conjugation tables with the prepositions each verb takes.
+A French vocabulary memory palace from A1 to C2. You walk a painted map of sixteen quarters, go into buildings, and find each word as an object or a person in a room. Feminine nouns stand on the left of a room and masculine nouns on the right; adjectives and adverbs stand in the middle. Verbs are acted out by Monsieur Verbe, a mime whose beret color gives the verb group and who holds a hand mirror for reflexive verbs. Click anything to open its card: meaning, pronunciation (IPA and an English-style respelling), gender and plural, a memory hook, an example, false-friend warnings, and full conjugation tables with the prepositions each verb takes.
 
 The live site is the static folder `village/`, published with GitHub Pages.
 
@@ -54,4 +54,4 @@ Follow the skills in `skills/`: run `tools/unbuilt.py`, write the item manifest,
 
 ## Credits
 
-Word lists, glosses, examples and dialogues are CC BY-SA 4.0. See `LICENSE-DATA.md` and `data/source/CREDITS.md`. A licence for the site code has not been chosen yet, so there is no code `LICENSE` file.
+Word lists, glosses, examples and dialogues are CC BY-SA 4.0. See `LICENSE-DATA.md` and `data/source/CREDITS.md`. A license for the site code has not been chosen yet, so there is no code `LICENSE` file.

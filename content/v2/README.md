@@ -73,11 +73,11 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
   } } }
 ```
 * Adjectives (vocab `pos: "adj"`) are allowed: their label has no article, their card shows
-  `adjective · côtier/côtière` (or *same for both*) and their box centre must sit in the middle band (30–70 %).
+  `adjective · côtier/côtière` (or *same for both*) and their box center must sit in the middle band (30–70 %).
 * Adverbs (ids `fr_<key>_adv`) work the same way: no article or gender, card gram line `adverb · invariable`,
-  box centre in the middle band (30–70 %).
+  box center in the middle band (30–70 %).
 * Interjections, set phrases and idioms (vocab `pos: "intj"`, `"phrase"`, `"idiom"`) are built like adverbs:
-  no article or gender, box centre in the middle band (30–70 %); the card gram line says `interjection · invariable`,
+  no article or gender, box center in the middle band (30–70 %); the card gram line says `interjection · invariable`,
   `phrase · fixed expression` or `idiom · fixed expression`.
 * The room list drops below the strip when it does not fit beside the title; the painting is then pushed down
   36 px so the list never covers labels (`--strict` checks this).

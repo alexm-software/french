@@ -25,7 +25,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 1. Hook match: the figure shows exactly the hook scene; check the sound-clue object first.
 - 2. Anatomy: limbs, hands, fingers and faces are right; no severed parts as props; no duplicated objects.
 - 3. Clean rendering: nothing garbled or half-formed; regenerate rather than accept it.
-- 4. Grounded props, no strays: nothing floats; no prop or figure stands for no word or reads as an unlabelled word; plain background figures are fine as scenery.
+- 4. Grounded props, no strays: nothing floats; no prop or figure stands for no word or reads as an unlabeled word; plain background figures are fine as scenery.
 - 5. Hook strength: the sound-alike comes from the real pronunciation and is an English word, never the target word or its meaning.
 - 6. Content, in the art and the hook text: adult items appear only as objects, no child is near them, and nobody drinks or smokes.
 - Every hook element is visible; the hook acts on or touches the item; no anthropomorphic animals unless the animal is the hook.
@@ -42,7 +42,7 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 12. At most `room_target` items (more than `room_max` fails; skills/limits.json, checked by check_v2), each box at least `edge_margin` from every edge, figures grounded, no rows on shelves.
 - 13. No look-alike spaces: run a similarity measure, then compare the flagged pairs by eye.
 - 14. One style per building or street, matching its exterior.
-- 15. Colour: natural neutral daylight, matching the palette sheet; a whole-room amber or orange cast fails.
+- 15. Color: natural neutral daylight, matching the palette sheet; a whole-room amber or orange cast fails.
 
 ## Text in the image (builder reference/text-and-labels.md)
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.

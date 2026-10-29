@@ -73,7 +73,7 @@ function fit(){
   scroller.classList.toggle('pan',pan); scroller.classList.toggle('pan2',pan2); scroller.classList.toggle('tall',!!TH);
   var hint=$('#panHint'); hint.hidden=!pan;
   if(pan&&!scroller.dataset.centred){ignoreScroll=true;scroller.scrollLeft=(w-vw)*(view==='map'||view==='sector'?0.05:0.35);scroller.dataset.centred=1;hint.style.opacity=1;setTimeout(function(){ignoreScroll=false},300)}
-  // Sector hover tags only. World signposts (.tag.pin) stay on their authored centres.
+  // Sector hover tags only. World signposts (.tag.pin) stay on their authored centers.
   if(stage.querySelector('.tag.live:not(.pin),#tagSoon')) clampMapLabels();
 }
 window.addEventListener('resize',fit);

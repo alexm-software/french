@@ -9,7 +9,7 @@ World map, sector views, rooms, detail cards, a beginner/start area, an about pa
 ## Site UI rules (lessons from user review)
 
 - The core test: a user can wander the whole place immersively in fullscreen, learning items in their locations so the place itself aids memory, with real visual variety from space to space. Keep the UI simple, and don't add gadget features (collections, mini-maps) the user didn't ask for. <!-- B87 -->
-- The look should be whimsical and storybook-like, not stuffy or formal. Use soft natural UI colours, never orange or amber chrome. <!-- B88 -->
+- The look should be whimsical and storybook-like, not stuffy or formal. Use soft natural UI colors, never orange or amber chrome. <!-- B88 -->
 - The painting is the whole experience. Fullscreen must really fill the screen with the image (Fullscreen API) and everything must stay usable there. <!-- B89 -->
 - Don't use a side panel, and put no text below the image. Item details and any other info open as centred dialogs over the picture (close with X, Esc, or the backdrop). <!-- B90 -->
 - Add a toggle (also a key, e.g. H) that highlights all clickable areas, plus a hover effect and a pointing-hand cursor on every clickable area. Users can't otherwise tell what's clickable. <!-- B91 -->

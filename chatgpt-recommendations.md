@@ -100,15 +100,15 @@ per-item content, anatomy, hotspot, or mobile validation. The list below contain
 23 clear mismatches; it is not a claim that every other room passes.
 
 The current guides call for one coherent everyday situation, small interacting
-groups, varied poses and depth, natural neutral colour, and distinct sibling
+groups, varied poses and depth, natural neutral color, and distinct sibling
 compositions. The main failures are isolated mnemonic demonstrations and
-catalogue-like arrangements, rather than a lack of illustration quality.
+catalog-like arrangements, rather than a lack of illustration quality.
 
 | Room or zoom | Observed mismatch |
 |---|---|
 | `atelier_couleurs/mesures` | A literal lineup of figures across the floor, with a strong amber treatment. |
 | `atelier_couleurs/tableau` | Disconnected figures and objects arranged as separate demonstrations. |
-| `banque/tableau` | Objects spread along a sideboard like catalogue entries. |
+| `banque/tableau` | Objects spread along a sideboard like catalog entries. |
 | `banque/tiroir` | Three isolated demonstrations against a flat backdrop, with little scene depth or interaction. |
 | `cafe/comptoir` | Two shelves of unrelated mnemonic figures and a strong orange background. |
 | `mairie/conseil` | People and animals stacked in display-like tiers instead of participating in a council meeting. |
@@ -150,7 +150,7 @@ continuity, as the next section shows.
 
 Applicable references: builder `reference/composition.md`,
 `reference/setup-and-style.md`, and release-gates `reference/space-gates.md`
-(natural-scene rule N8; catalogue/liveliness G128; distinct-room G129; colour
+(natural-scene rule N8; catalogue/liveliness G128; distinct-room G129; color
 and style rules).
 
 ## Follow-up visual audit: parent-to-zoom continuity
@@ -217,10 +217,10 @@ the existing rules executable, traceable, and easy to review.
 | E4 | **Ship dependent changes atomically.** Track dependencies from a word/hook to its sprite, room painting, parent miniature, card crop, alt text, manifest, and generated payload. A zoom repaint should name every parent that previews it. | Build pipeline, moving-words, release process. | A proposed change produces an explicit affected-file list; stale dependants block that change. The whole dependency set lands together. |
 | E5 | **Review composition before detailed painting.** Make a cheap layout/rough showing the actual groups, surfaces, perspective, label budget, and focal action. Store one ordinary sentence describing the shared activity and what each group contributes. For sprites, write the surface, angle, scale, light, and occlusion slot before generation. | Composition, planning, prompt template. | The rough passes the labels-off storybook test and has room for every label before detailed assets are generated. Merely naming two IDs in an interaction group is insufficient. |
 | E6 | **One authoritative word/sense/hook record with explicit override provenance.** Resolve legacy payloads, source vocabulary, shared corrections, building overrides, and user edits in a documented field-level order. Emit which source supplied each final field. Keep patch edits surgical. | Hook rules, language validation, build_v2 data assembly. | A word's final sense, pronunciation, hook, and example are inspectable together; silent replacement of a newer correction is detected. Hook/image mismatches remain pending until the linked art and text agree. |
-| E7 | **Share rendering geometry between viewer and checker.** Use the same coordinate conversion, label measurement, anchor, badge, and door placement functions. Add a few known-good and known-bad fixtures for recurrent errors. | Viewer, precheck, check_v2, release-gates tooling. | Fixtures catch px/% mistakes, detached labels, overlapping controls, clipped items, and narrow-screen tab failures. A viewer change cannot leave the checker modelling an older layout. |
+| E7 | **Share rendering geometry between viewer and checker.** Use the same coordinate conversion, label measurement, anchor, badge, and door placement functions. Add a few known-good and known-bad fixtures for recurrent errors. | Viewer, precheck, check_v2, release-gates tooling. | Fixtures catch px/% mistakes, detached labels, overlapping controls, clipped items, and narrow-screen tab failures. A viewer change cannot leave the checker modeling an older layout. |
 | E8 | **Evidence tied to content, not a remembered PASS.** Record image, manifest, ruleset, build, and relevant renderer hashes with each verdict. Use pass/fail/not-checked/not-applicable; record the exact reason and crop for a failure. | Review logs and release process. | Repainting or changing geometry invalidates the relevant evidence. A static check, thumbnail screen, and full visual review have distinct statuses. |
 | E9 | **Explicit room-type rules and exceptions.** Define separate density/count policies for rooms, tool close-ups, reference boards, and doorways. Count semantic reference boards separately from their letter/number controls. Allow a plain hook when appropriate. | Language representation, density rules, precheck. | An alphabet board with 26 letter controls is not automatically treated as 26 competing scene objects. An exception names its reason and applicable rule rather than silently weakening every gate. |
-| E10 | **A building-level composition and motif index.** Record a thumbnail, camera, landmark, situation, lighting, and distinctive hook motifs for each sibling room. Use image similarity and colour statistics only to nominate comparisons. | Composition, G129/N10, contact-sheet tooling. | Every new room is compared against its siblings; a reviewer judges flagged look-alikes. Repeated grammatical markers such as the mime are distinguished from accidental repeated hook motifs. |
+| E10 | **A building-level composition and motif index.** Record a thumbnail, camera, landmark, situation, lighting, and distinctive hook motifs for each sibling room. Use image similarity and color statistics only to nominate comparisons. | Composition, G129/N10, contact-sheet tooling. | Every new room is compared against its siblings; a reviewer judges flagged look-alikes. Repeated grammatical markers such as the mime are distinguished from accidental repeated hook motifs. |
 | E11 | **Bounded, change-aware validation.** Run cheap structural checks, changed-room visual review, linked parent/zoom checks, then a small navigation/card smoke pass. Run whole-site audits periodically or when shared rules/rendering change. Keep every changed item in the visual review even when scripts pass. | Validation and release process. | A small sprite correction does not trigger an unbounded tour of 477 rooms; a shared renderer change expands the scope automatically. Required checks have real commands and record skipped checks honestly. |
 | E12 | **Control concurrent edits and retries.** Start from a recorded main SHA, declare owned paths and shared dependencies, merge narrow patches with an expected-head check, and rebuild derived data from the combined sources. After repeated failed image attempts, revisit the slot/hook/layout instead of resending the same prompt. | Planning, hook merge, build and deploy process. | No whole-file hook replacement erases another correction; stale-base updates are rejected safely; each regeneration states the specific failure it is correcting. |
 
@@ -334,9 +334,9 @@ hook rather than replacing it just for novelty.
 
 | Word / live location | Current weakness | Proposed hook and image | Sound match and limits |
 |---|---|---|---|
-| **la ficelle** `/fi.sɛl/` — `garage/tools` (`fr_ficelle_noun`) | The current card uses fi-CELL(o), although "fi" is not an English keyword and the cello adds an unwanted ending. | **FEE + CELL:** a visitor pays a coin to open a toy prison CELL, then pulls the TWINE that operates its door. Keep the coin payment, recognisable barred cell, and working string together as one compact workbench toy. | FEE + CELL gives a close two-part cue to fee-SEHL, without the cello's final vowel. Payment must be visible; a loose unexplained coin is insufficient. No prison storyline or extra characters are needed. |
+| **la ficelle** `/fi.sɛl/` — `garage/tools` (`fr_ficelle_noun`) | The current card uses fi-CELL(o), although "fi" is not an English keyword and the cello adds an unwanted ending. | **FEE + CELL:** a visitor pays a coin to open a toy prison CELL, then pulls the TWINE that operates its door. Keep the coin payment, recognizable barred cell, and working string together as one compact workbench toy. | FEE + CELL gives a close two-part cue to fee-SEHL, without the cello's final vowel. Payment must be visible; a loose unexplained coin is insufficient. No prison storyline or extra characters are needed. |
 | **la boue** `/bu/` — `maison/bains_buanderie` (`fr_boue_noun`) | Muddy boots plus the word "BOO!" in the hook do not give the picture a sound cue. | **BOO:** a friendly ghost climbs out of a muddy boot, its lower half trailing thick MUD back into the boot. The ghost and mud are one event. | BOO is a close whole-word cue. The ghost should be identifiable without a speech bubble. **Motif dependency:** a ghost is already visible in `maison/salon`; `route/casier` also has a ghost in the carburant hook. Resolve the destination and motif conflict before choosing this design; do not simply add another ghost to either building. |
-| **la selle** `/sɛl/` — `ferme/souche` (`fr_selle_noun`) | The current seller cue is not actually shown and has an extra syllable. | **CELL:** a miniature prison CELL has a leather SADDLE for its only seat, complete with stirrups projecting outside the bars. Present it as one toy on the existing work surface, with the saddle clearly recognisable. | English CELL is a close whole-word match. This avoids needing a nameless "seller" or a spoken explanation. Check that the image reads as a prison cell rather than a generic cage. |
+| **la selle** `/sɛl/` — `ferme/souche` (`fr_selle_noun`) | The current seller cue is not actually shown and has an extra syllable. | **CELL:** a miniature prison CELL has a leather SADDLE for its only seat, complete with stirrups projecting outside the bars. Present it as one toy on the existing work surface, with the saddle clearly recognizable. | English CELL is a close whole-word match. This avoids needing a nameless "seller" or a spoken explanation. Check that the image reads as a prison cell rather than a generic cage. |
 | **le rideau** `/ʁi.do/` — `maison/salon` (`fr_rideau_noun`) | The existing REDO cue is written as "ree-DOH", but ordinary English redo ends in an oo sound. | **REED + DOUGH:** a child hangs a CURTAIN woven from long REEDS; soft bread DOUGH is visibly wrapped around the lower ends as comical curtain weights. Both materials form the curtain itself. | REED + DOUGH approximates ree-DOH, sharing the d at the join. English dough's vowel and the English r are not identical to French. The raw dough must be unmistakable, not generic round beads. |
 | **la chaire** `/ʃɛʁ/` — `eglise/eglise` (`fr_chaire_noun`) | "Linked to chair" encourages the wrong initial English ch sound and shows no distinct sound-cue action. | **SHARE:** two parish speakers respectfully SHARE one broad PULPIT and the same open book, each using one side. Keep the pulpit's raised platform and access steps clear. | SHARE is a close cue, with the French r supplied by pronunciation practice. Sharing must be physically visible, rather than only saying that a priest "shares a sermon". This refines the SHARE proposal already in `docs/PROPOSALS_2026-10-28.md`; it is not a newly discovered keyword. |
 | **le fer** `/fɛʁ/` — `rue_commercante/ferronnerie` (`fr_fer_noun`) | The current hook merely says the blacksmith acts "as if" at a FAIR; the fair is not part of the described object. | **FAIR:** the blacksmith assembles a miniature FAIR ride, a Ferris wheel, directly from the IRON bars on his anvil. Show the last straight bar being bent into the wheel. | FAIR is a close accent-dependent cue, not a perfect model of French r. This keeps the existing keyword but makes it visible and makes the iron participate in it. Use a small working model, not a second fairground scene. |
@@ -350,14 +350,14 @@ pronounced like the French word.
 
 | Word / live location | Proposed scene | Why it may help; required caveat |
 |---|---|---|
-| **la laine** `/lɛn/` — `maison/penderie_etagere` (`fr_laine_noun`) | A spinner winds thick WOOL around the rim of a giant magnifying LENS, turning the lens into a wool-covered winding wheel. | Use **LENS without its final /z/** as the sound bridge. That leaves /lɛn/. The current LEAN cue has the wrong vowel. The lens must stay recognisable through its clear centre and magnification. This is an explicit sound-subtraction cue, not a claim that lens and laine are identical. |
-| **prêt** `/pʁɛ/` — `reparation/attente` (`fr_pret_adj`) | A cyclist waits READY to set off: helmet fastened, foot poised on a pedal, gripping a giant PRETZEL-shaped handlebar. | The opening **PRE- of PRETZEL** is closer to /prɛ/ than English PRAY, whose vowel is different. Only the opening chunk is used; the rest of pretzel is not in prêt. Readiness must be apparent without a written READY sign. Keep the adjective's centre-band placement. |
+| **la laine** `/lɛn/` — `maison/penderie_etagere` (`fr_laine_noun`) | A spinner winds thick WOOL around the rim of a giant magnifying LENS, turning the lens into a wool-covered winding wheel. | Use **LENS without its final /z/** as the sound bridge. That leaves /lɛn/. The current LEAN cue has the wrong vowel. The lens must stay recognizable through its clear center and magnification. This is an explicit sound-subtraction cue, not a claim that lens and laine are identical. |
+| **prêt** `/pʁɛ/` — `reparation/attente` (`fr_pret_adj`) | A cyclist waits READY to set off: helmet fastened, foot poised on a pedal, gripping a giant PRETZEL-shaped handlebar. | The opening **PRE- of PRETZEL** is closer to /prɛ/ than English PRAY, whose vowel is different. Only the opening chunk is used; the rest of pretzel is not in prêt. Readiness must be apparent without a written READY sign. Keep the adjective's center-band placement. |
 
 ### Smaller refinements that preserve an existing useful keyword
 
 - **la bague** `/baɡ/`, `rue_commercante/bijouterie`
   (`fr_bague_noun`): keep **BAG**. Instead of a ring merely hidden in a bag,
-  make a jeweller's tiny BAG fasten with a giant jewelled RING: the ring passes
+  make a jeweler's tiny BAG fasten with a giant jeweled RING: the ring passes
   through both handles to close it. This fuses cue and meaning into one object.
   The English vowel varies by accent; retain the French pronunciation separately.
 - **vendre** `/vɑ̃dʁ/`, `boulangerie/boulangerie`
@@ -389,7 +389,7 @@ French pronunciation and a matching picture.
 ### How to choose and apply a proposed hook later
 
 1. Say the French word and English keyword aloud separately. Check vowels,
-   nasalisation, consonants, and syllable count. Record whether the cue covers
+   nasalization, consonants, and syllable count. Record whether the cue covers
    the whole word, an opening chunk, an explicit subtraction, or a related word.
    Have an independent reviewer or learner audition it; the proposing model's
    confidence is not validation.

@@ -26,7 +26,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 - Show the user a drawn sample of each device and get sign-off before bulk painting.
 - Check the devices against each other for clashes, and put each device's meaning on the card.
 - Gender: feminine clearly left, masculine clearly right (neuter in the middle), with no physical divider; zooms too.
-- Adjectives and adverbs sit in the 30-70% centre band; opposites may face each other.
+- Adjectives and adverbs sit in the 30-70% center band; opposites may face each other.
 - Sensitive or mature words appear as museum wall text, never drawn.
 
 ## Verbs (reference/verbs.md)

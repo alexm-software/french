@@ -34,7 +34,7 @@ A validator is a separate reviewer bot or pass that checks a sector or release b
 - The hook text describes what is actually painted: the same figure (gender and pronouns, age, kind of character or creature), the same action and the same key props. Crop each box and compare. Whenever a painting is redone, update the hook to match the new art. <!-- B158 -->
 
 **Paintings**
-- Colour: see setup-and-style.md (merged colour rule).
+- Color: see setup-and-style.md (merged color rule).
 - Placement means what the project says it means. Read the project's placement scheme (its site guide or placement notes, e.g. which side, height, floor, plaque or mirror stands for what). Then check each object in each painting, zoom spots included, against the meaning its spot is supposed to carry, and flag any object whose position contradicts the scheme. <!-- B162 -->
 - Nothing in an item's box that isn't in its hook. No stray animals or props: every element is either the sound cue or the meaning. <!-- B164 -->
 - Exactly one clickable box per item, covering the item and its mnemonic helper. Hotspot overlap is 0, and signs never cover items. <!-- B165 -->

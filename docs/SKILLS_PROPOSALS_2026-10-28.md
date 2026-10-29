@@ -83,7 +83,7 @@ An agent following the skills either wastes tokens looking for them or quietly s
   | planning.md | "8 to 12 or more" | "6 to 12" |
   | N6 | — | "fold under about 4" |
 
-  **Proposal:** one `skills/limits.json` (room max, room target, zoom min and max, edge margin 6%, label gap 110 px, centre band 30–70%) that `precheck.py` and `check_v2.py` read. The skills quote the file instead of repeating numbers.
+  **Proposal:** one `skills/limits.json` (room max, room target, zoom min and max, edge margin 6%, label gap 110 px, center band 30–70%) that `precheck.py` and `check_v2.py` read. The skills quote the file instead of repeating numbers.
 - **Alphabet:** the gates say "one blackboard zoom… no per-letter mnemonics". This conflicts with my own proposal in `docs/PROPOSALS_2026-10-28.md` §1.5 (puns for tricky letters). I withdraw that proposal: the rule should win.
 
 ### A5. A hook linter (`tools/hook_lint.py`)

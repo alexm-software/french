@@ -1,12 +1,12 @@
-# Credits and licences
+# Credits and licenses
 
-Memory Village is a free, non-commercial French learning site. This page lists every outside source used in the words, prayers, fonts and pictures, with its licence.
+Memory Village is a free, non-commercial French learning site. This page lists every outside source used in the words, prayers, fonts and pictures, with its license.
 
 ## Word data
 
-The word data (data/source/vocab.jsonl and the room, building and sector files built from it) is released under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0), https://creativecommons.org/licenses/by-sa/4.0/ . This is required because it is adapted from the CC BY-SA sources below. You may reuse it if you credit the sources listed here and share your changes under the same licence.
+The word data (data/source/vocab.jsonl and the room, building and sector files built from it) is released under the Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0), https://creativecommons.org/licenses/by-sa/4.0/ . This is required because it is adapted from the CC BY-SA sources below. You may reuse it if you credit the sources listed here and share your changes under the same license.
 
-| Source | What we use | Licence |
+| Source | What we use | License |
 |---|---|---|
 | **Wiktionary** (English Wiktionary, French entries), via the **kaikki.org** Wiktextract extraction by Tatu Ylonen, https://kaikki.org/dictionary/French/ | English glosses marked "from Wiktionary" (shortened and edited by us), IPA pronunciations, plural and feminine forms, synonyms and antonyms, topic categories | CC BY-SA 4.0 and GFDL, https://en.wiktionary.org/wiki/Wiktionary:Copyrights |
 | **Lexique 3.83**, Boris New and Christophe Pallier, http://www.lexique.org/ | word list, part of speech, gender, frequencies, syllables (used to build the respellings) | CC BY-SA 4.0, http://www.lexique.org/databases/Lexique383/README-Lexique.txt |
@@ -45,12 +45,12 @@ Public-domain texts were transcribed from Wikisource (fr.wikisource.org and en.w
 
 ## Fonts
 
-| Font | Copyright | Licence |
+| Font | Copyright | License |
 |---|---|---|
 | **Baloo 2** | Copyright 2019 The Baloo 2 Project Authors, https://github.com/EkType/Baloo2 | SIL Open Font License 1.1 |
 | **Patrick Hand** | Copyright (c) 2010-2012 Patrick Wagesreiter | SIL Open Font License 1.1 |
 
-The full licence text is in src/fonts/ beside each font file and at https://openfontlicense.org/ . The fonts are unmodified.
+The full license text is in src/fonts/ beside each font file and at https://openfontlicense.org/ . The fonts are unmodified.
 
 ## Pictures
 
@@ -62,4 +62,4 @@ The room, street and building paintings were generated with Grok Imagine, an AI 
 
 ## Software
 
-The site is built with Vite (MIT licence), https://vitejs.dev/ . The site's own code is © the Memory Village authors (see LICENSE in the repository).
+The site is built with Vite (MIT license), https://vitejs.dev/ . The site's own code is © the Memory Village authors (see LICENSE in the repository).

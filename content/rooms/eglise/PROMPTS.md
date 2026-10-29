@@ -2,10 +2,10 @@
 
 Tool: Grok Imagine.
 
-Shared art direction: ink and gouache storybook, dark ink contours, natural colours, soft upper-left daylight, eye-level three-quarter view. Preserve full silhouettes. Empty church painting used as style and lighting reference.
+Shared art direction: ink and gouache storybook, dark ink contours, natural colors, soft upper-left daylight, eye-level three-quarter view. Preserve full silhouettes. Empty church painting used as style and lighting reference.
 
 ## Background
-Empty French village church interior, 16:9. Pale cream and ochre plaster / limestone walls, cool grey-slate tile floor, stone altar with white linen on two steps, tall arched stained-glass window with geometric blue/gold only (no figures), wooden benches left and right, holy-water stoup near left door, wall niche with shelf on left. No people, no animals, no objects, no text.
+Empty French village church interior, 16:9. Pale cream and ocher plaster / limestone walls, cool gray-slate tile floor, stone altar with white linen on two steps, tall arched stained-glass window with geometric blue/gold only (no figures), wooden benches left and right, holy-water stoup near left door, wall niche with shelf on left. No people, no animals, no objects, no text.
 
 ## croix
 Wooden Christian cross standing upright + small black crow standing on the floor in front looking up (never touching). Crow = KRWAH = la croix.
