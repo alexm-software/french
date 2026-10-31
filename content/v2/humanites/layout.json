@@ -52,6 +52,10 @@
   {
    "key": "histoire",
    "short": "L'histoire"
+  },
+  {
+   "key": "antiquite",
+   "short": "L'Antiquité"
   }
  ],
  "planned": {
@@ -223,6 +227,21 @@
     "fr_palais_noun",
     "fr_royaume_noun",
     "fr_siecle_noun"
+   ]
+  },
+  "antiquite": {
+   "vocabRoom": "R_history_02",
+   "only": [
+    "fr_antiquite_noun",
+    "fr_conquete_noun",
+    "fr_colonie_noun",
+    "fr_civilisation_noun",
+    "fr_coloniser_verb",
+    "fr_empire_noun",
+    "fr_vainqueur_noun",
+    "fr_empereur_noun",
+    "fr_cesar_noun",
+    "fr_vestige_noun"
    ]
   }
  },
@@ -616,7 +635,7 @@
    "name": "La salle d'éthique · The ethics room",
    "room_id": "R_philosophy_02",
    "image": "humanites/ethique.jpg",
-   "alt": "The ethics debating room of the Faculté des Lettres on a rainy day, seen from the front of the benches: cream walls, a marble floor, tiered oak benches in a half-circle, a tall window on the left, a big painted mural of a tortoise racing a hare on the back wall and a brass balance scale on a marble pedestal in the middle. On the left a wise old woman in a grey shawl holds up a bunch of sage, a child leaps up beside a popping jack-in-the-box, and in front a woman in an apron hands out morel mushrooms from a basket while a boy hides skewers of marshmallows. On the back benches a girl holds a latte, a runner lifts a relay baton, a girl compares two equal glasses of orange juice, and another girl reaches for a tray of filo pastries. By the pedestal a boy holds a dripping sponge over a puddle. On the right a smug man in a gown has an enormous long nose, a grey donkey trots between the benches and a potted fern wears a judge's wig. The white door with balance scales on the left leads back to the logic room and the dark-red door at the back right leads to the doctrines room.",
+   "alt": "The ethics debating room of the Faculté des Lettres on a rainy day, seen from the front of the benches: cream walls, a marble floor, tiered oak benches in a half-circle, a tall window on the left, a big painted mural of a tortoise racing a hare on the back wall and a brass balance scale on a marble pedestal in the middle. On the left a wise old woman in a gray shawl holds up a bunch of sage, a child leaps up beside a popping jack-in-the-box, and in front a woman in an apron hands out morel mushrooms from a basket while a boy hides skewers of marshmallows. On the back benches a girl holds a latte, a runner lifts a relay baton, a girl compares two equal glasses of orange juice, and another girl reaches for a tray of filo pastries. By the pedestal a boy holds a dripping sponge over a puddle. On the right a smug man in a gown has an enormous long nose, a gray donkey trots between the benches and a potted fern wears a judge's wig. The white door with balance scales on the left leads back to the logic room and the dark-red door at the back right leads to the doctrines room.",
    "nameplate": [
     62,
     4
@@ -888,7 +907,7 @@
    "name": "La salle de littérature · The literature room",
    "room_id": "R_literature_01",
    "image": "humanites/litterature.jpg",
-   "alt": "The literature seminar room of the Faculté des Lettres on an autumn afternoon, seen from the near right: cream walls, a honey oak floor, tall oak bookcases, a tall window on the left onto the red-brick campus, and a white marble fireplace with a gilt mirror and a plaster bust wearing a paper crown. On the left a grandmother in a blue shawl reads to two children with a big brass compass on her lap, a ginger cat lies with her kittens in a crate of old books, and at the back a tour guide with a red flag reads aloud to two boys beside a plaster knight whose broken foot lies on the floor. In the middle a girl in green on a footstool recites, holding up a posy, and an otter in a waistcoat sits at the long table opposite a smiling woman. On the right a Roman soldier reads a thick novel in an armchair, a cowboy reads a long scroll, and a writer types inside the open back of a cream toy van. The green door with the quill on the left leads back to the library, the plum door with the heart leads to the novels parlour and the navy door with the ink pot on the right leads to the writing workshop.",
+   "alt": "The literature seminar room of the Faculté des Lettres on an autumn afternoon, seen from the near right: cream walls, a honey oak floor, tall oak bookcases, a tall window on the left onto the red-brick campus, and a white marble fireplace with a gilt mirror and a plaster bust wearing a paper crown. On the left a grandmother in a blue shawl reads to two children with a big brass compass on her lap, a ginger cat lies with her kittens in a crate of old books, and at the back a tour guide with a red flag reads aloud to two boys beside a plaster knight whose broken foot lies on the floor. In the middle a girl in green on a footstool recites, holding up a posy, and an otter in a waistcoat sits at the long table opposite a smiling woman. On the right a Roman soldier reads a thick novel in an armchair, a cowboy reads a long scroll, and a writer types inside the open back of a cream toy van. The green door with the quill on the left leads back to the library, the plum door with the heart leads to the novels parlor and the navy door with the ink pot on the right leads to the writing workshop.",
    "nameplate": [
     40,
     4
@@ -909,7 +928,7 @@
     {
      "to": "romans",
      "label": "Les romans",
-     "hint": "the plum-red door with the heart on the back wall, to the novels parlour",
+     "hint": "the plum-red door with the heart on the back wall, to the novels parlor",
      "hit": [
       962,
       75,
@@ -1018,7 +1037,7 @@
    "name": "L'atelier d'écriture · The writing workshop",
    "room_id": "R_literature_02",
    "image": "humanites/ecriture.jpg",
-   "alt": "The writing workshop of the Faculté des Lettres on a busy day, seen from the near right: whitewashed brick walls, tall arched windows onto the red-brick town, sheets of paper drying on lines and a big black printing press with a red wheel at the back. On the left a green furry creature writes with a giant quill, children watch a knight and a dragon in a red puppet theatre, a pigtailed girl pulls an orange into segments, and a young woman with a pencil watches a line of big ants march along her desk. A goose glares at a pot of quills. On the right a shah in a jewelled turban reads to a boy, two diplomats in powdered wigs shake hands over a tea tray, a little girl on an old wooden chair writes at a small desk, a bald editor in a green eyeshade crosses out a page with a red pencil, and a bearded man leans back in fright as a paper spring snake pops out of his book. The navy door with the ink pot on the left leads back to the literature room and the lilac door with the lyre on the right leads to the poets' corner.",
+   "alt": "The writing workshop of the Faculté des Lettres on a busy day, seen from the near right: whitewashed brick walls, tall arched windows onto the red-brick town, sheets of paper drying on lines and a big black printing press with a red wheel at the back. On the left a green furry creature writes with a giant quill, children watch a knight and a dragon in a red puppet theater, a pigtailed girl pulls an orange into segments, and a young woman with a pencil watches a line of big ants march along her desk. A goose glares at a pot of quills. On the right a shah in a jewelled turban reads to a boy, two diplomats in powdered wigs shake hands over a tea tray, a little girl on an old wooden chair writes at a small desk, a bald editor in a green eyeshade crosses out a page with a red pencil, and a bearded man leans back in fright as a paper spring snake pops out of his book. The navy door with the ink pot on the left leads back to the literature room and the lilac door with the lyre on the right leads to the poets' corner.",
    "nameplate": [
     40,
     4
@@ -1137,7 +1156,7 @@
    "name": "Le coin des poètes · The poets' corner",
    "room_id": "R_literature_02",
    "image": "humanites/poetes.jpg",
-   "alt": "A glass-roofed poets' café with white wrought-iron arches, a spiral staircase, a chequered floor and a little wooden stage where a plump poet in a beret recites; a black cat in a beret applauds from a stool.",
+   "alt": "A glass-roofed poets' café with white wrought-iron arches, a spiral staircase, a checkered floor and a little wooden stage where a plump poet in a beret recites; a black cat in a beret applauds from a stool.",
    "nameplate": [
     40,
     4
@@ -1158,7 +1177,7 @@
     {
      "to": "redaction",
      "label": "La rédaction",
-     "hint": "the grey door with the typewriter at the back right, to the newsroom",
+     "hint": "the gray door with the typewriter at the back right, to the newsroom",
      "hit": [
       1165,
       100,
@@ -1256,7 +1275,7 @@
    "name": "La salle de rédaction · The editorial room",
    "room_id": "R_literature_03",
    "image": "humanites/redaction.jpg",
-   "alt": "An old-fashioned editorial room with brass pneumatic pipes, oak desks and typewriters, bookcases with a pigeon nest, and stacks of newspaper bundles; a knight with a poppy shield tells a story by the grey door.",
+   "alt": "An old-fashioned editorial room with brass pneumatic pipes, oak desks and typewriters, bookcases with a pigeon nest, and stacks of newspaper bundles; a knight with a poppy shield tells a story by the gray door.",
    "nameplate": [
     24,
     4
@@ -1266,7 +1285,7 @@
     {
      "to": "poetes",
      "label": "Les poètes",
-     "hint": "the grey door with the typewriter on the left, back to the poets' corner",
+     "hint": "the gray door with the typewriter on the left, back to the poets' corner",
      "hit": [
       130,
       90,
@@ -1356,7 +1375,7 @@
     {
      "to": "romans",
      "label": "Les romans",
-     "hint": "the white door with the laurel wreath on the left, back to the novels parlour",
+     "hint": "the white door with the laurel wreath on the left, back to the novels parlor",
      "hit": [
       95,
       75,
@@ -1442,10 +1461,10 @@
    ]
   },
   "romans": {
-   "name": "Le salon des romans · The novels parlour",
+   "name": "Le salon des romans · The novels parlor",
    "room_id": "R_literature_01",
    "image": "humanites/romans.jpg",
-   "alt": "The novels parlour of the Faculté des Lettres on a rainy afternoon, seen from the near left: cream walls, a red patterned carpet, green velvet sofas, a tall potted palm and a big bay window with green curtains onto the misty campus garden and its fountain. On the left two ladies in feathered hats whisper beside the palm, a lady in a deerstalker writes at a little desk beside a big black crow, and a girl in a silver space helmet sits at a candlelit table with a tin robot; at the back a man weaves at a loom topped by two toy trams. On the right an old man in an Elizabethan ruff flies out of a giant book, a boy in a red pedal car punches the air, a vampire count with a candle tells a tale to three children on the sofa, and a man in a trench coat and fedora peers over a big newspaper. A parrot by the window wears a tiny deerstalker. The plum door with the heart on the left leads back to the literature room and the white door with the laurel wreath on the right leads to the mythology hall.",
+   "alt": "The novels parlor of the Faculté des Lettres on a rainy afternoon, seen from the near left: cream walls, a red patterned carpet, green velvet sofas, a tall potted palm and a big bay window with green curtains onto the misty campus garden and its fountain. On the left two ladies in feathered hats whisper beside the palm, a lady in a deerstalker writes at a little desk beside a big black crow, and a girl in a silver space helmet sits at a candlelit table with a tin robot; at the back a man weaves at a loom topped by two toy trams. On the right an old man in an Elizabethan ruff flies out of a giant book, a boy in a red pedal car punches the air, a vampire count with a candle tells a tale to three children on the sofa, and a man in a trench coat and fedora peers over a big newspaper. A parrot by the window wears a tiny deerstalker. The plum door with the heart on the left leads back to the literature room and the white door with the laurel wreath on the right leads to the mythology hall.",
    "nameplate": [
     40,
     4
@@ -1555,7 +1574,7 @@
    "name": "La salle d'histoire · The history hall",
    "room_id": "R_history_01",
    "image": "humanites/histoire.jpg",
-   "alt": "An oak-panelled history hall with tapestries, a globe and a stone castle gateway with a raised portcullis; a knight's armour stands on a plinth and a red carpet runs across the floor.",
+   "alt": "An oak-panelled history hall with tapestries, a globe and a stone castle gateway with a raised portcullis; a knight's armor stands on a plinth and a red carpet runs across the floor.",
    "nameplate": [
     40,
     4
@@ -1571,6 +1590,17 @@
       75,
       100,
       160
+     ]
+    },
+    {
+     "to": "antiquite",
+     "label": "L'Antiquité",
+     "hint": "the sandstone door with the eagle on the back wall, to the antiquity room",
+     "hit": [
+      560,
+      150,
+      40,
+      80
      ]
     }
    ],
@@ -1655,6 +1685,123 @@
       235,
       85,
       190
+     ]
+    }
+   ]
+  },
+  "antiquite": {
+   "name": "La salle de l'Antiquité · The antiquity gallery",
+   "room_id": "R_history_02",
+   "image": "humanites/antiquite.jpg",
+   "alt": "A bright antiquities gallery with terracotta walls, sandstone columns, a mosaic floor, amphorae and marble statues; a round bronze shield hangs in a stone arch above a big wall map, and tall arched windows look onto cypress trees.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "histoire",
+   "doors": [
+    {
+     "to": "histoire",
+     "label": "L'histoire",
+     "hint": "the sandstone door with the eagle on the left, back to the history hall",
+     "hit": [
+      77,
+      45,
+      48,
+      130
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_antiquite_noun",
+     "box": [
+      77,
+      185,
+      150,
+      380
+     ]
+    },
+    {
+     "id": "fr_conquete_noun",
+     "box": [
+      285,
+      60,
+      145,
+      250
+     ]
+    },
+    {
+     "id": "fr_colonie_noun",
+     "box": [
+      228,
+      470,
+      248,
+      207
+     ]
+    },
+    {
+     "id": "fr_civilisation_noun",
+     "box": [
+      240,
+      312,
+      235,
+      148
+     ]
+    },
+    {
+     "id": "fr_coloniser_verb",
+     "box": [
+      478,
+      350,
+      284,
+      230
+     ]
+    },
+    {
+     "id": "fr_empire_noun",
+     "box": [
+      612,
+      150,
+      100,
+      200
+     ]
+    },
+    {
+     "id": "fr_vainqueur_noun",
+     "box": [
+      800,
+      405,
+      210,
+      272
+     ]
+    },
+    {
+     "id": "fr_empereur_noun",
+     "box": [
+      840,
+      100,
+      165,
+      300
+     ]
+    },
+    {
+     "id": "fr_cesar_noun",
+     "box": [
+      1010,
+      150,
+      140,
+      220
+     ]
+    },
+    {
+     "id": "fr_vestige_noun",
+     "box": [
+      1095,
+      375,
+      108,
+      302
      ]
     }
    ]
