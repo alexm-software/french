@@ -17,6 +17,21 @@ async def main():
       await pg.click('#back'); await pg.wait_for_timeout(500); h=await pg.evaluate('location.hash')
       good=h.startswith(want) if want.endswith('/') else h==want
       ok+=good; print(r,'->',h,'['+lab+']','OK' if good else 'FAIL')
-    print('ok',ok,'/',len(CASES),'js errors',errs)
+    # ⌂ Hub: second strip button -> first room / hub of the building or area; hidden in the hub itself (gate 19)
+    HUB=[('kiosque/potins','#/kiosque'),('kiosque/radio','#/kiosque'),('conservatoire/chorale','#/conservatoire'),('st_souffle/coiffeur','#/st_souffle'),('cafe/comptoir','#/cafe'),('kiosque',None),('st_souffle',None)]
+    for r,want in HUB:
+      await pg.goto('http://localhost:8894/#/'+r); await pg.wait_for_timeout(1000)
+      vis=await pg.evaluate("!document.querySelector('#hub').hidden && document.querySelector('#hub').offsetWidth>0")
+      if want is None:
+        good=not vis; print('hub',r,'hidden' if good else 'SHOWN in hub','OK' if good else 'FAIL')
+      else:
+        tip=await pg.evaluate("document.querySelector('#hub').title")
+        if vis: await pg.click('#hub'); await pg.wait_for_timeout(500)
+        h=await pg.evaluate('location.hash'); good=vis and h==want and bool(tip)
+        print('hub',r,'->',h,'['+tip+']','OK' if good else 'FAIL')
+      ok+=good
+    await pg.goto('http://localhost:8894/#/'); await pg.wait_for_timeout(800)
+    mh=await pg.evaluate("document.querySelector('#hub').hidden"); ok+=mh; print('hub hidden on map','OK' if mh else 'FAIL')
+    print('ok',ok,'/',len(CASES)+len(HUB)+1,'js errors',errs)
     await b.close()
 asyncio.run(main())

@@ -482,6 +482,15 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                             for z in ex["zoom"]:
                                 if inter(grow(p_), z): errs.append(f"{bld}/{key} @{vw}: nameplate touches a zoom badge")
                     await pg.screenshot(path=str(shots / f"{bld}_{key}_{vw}.png"))
+                    # gate 19: the ⌂ Hub button goes to the first room / hub of this building or area, hidden in the hub itself
+                    hb = await pg.evaluate("(()=>{const h=document.querySelector('#hub');return h?{v:!h.hidden&&h.offsetWidth>0,href:h.getAttribute('href'),t:h.title}:null})()")
+                    if hb is None: errs.append(f"{bld}/{key}: no ⌂ Hub button")
+                    elif key == D["main"]:
+                        if hb["v"]: errs.append(f"{bld}/{key}: ⌂ Hub shown in the hub itself")
+                    else:
+                        if not hb["v"]: errs.append(f"{bld}/{key}: ⌂ Hub button missing")
+                        if hb["href"] != f"#/{bld}": errs.append(f"{bld}/{key}: ⌂ Hub goes to {hb['href']}, expected #/{bld}")
+                        if hb["t"] != D["rooms"][D["main"]]["name"]: errs.append(f"{bld}/{key}: ⌂ Hub tooltip {hb['t']!r} is not the hub room name")
                     # back target
                     await pg.click("#back")
                     await pg.wait_for_timeout(300)

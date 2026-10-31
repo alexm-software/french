@@ -15,3 +15,10 @@
   of a building, to the street from a side room of an `ST_` verb street - and never to the previous room. Replaces
   8012885f ("Back returns the way you came"); a zoom close-up still closes to its own room. Painted doors are the way
   between rooms. check_v2 --browser and tools/reachability.py follow the same rule.
+* Gate 26 anatomy hotfix (Oct 31): 2x audit of every person/animal in Stade, Théâtre, Conservatoire, Jeux and Kiosque;
+  10 crop-edit fixes (kiosque hub waiter 3rd arm, radio photographer 3rd hand, interview floating mug, gymnase climber
+  extra arm, podium orphan hand, danse sheep missing arm + mime missing hand, théâtre wall painting merged dancers,
+  chorale wrong-skin hand, fête farandole tangled arms); paintings, words and hooks kept, cards rebuilt.
+* ⌂ Hub button (gate 19, Oct 31): a second strip button next to Back jumps to the first room / hub of the current
+  building or verb street (tooltip = hub room name), hidden in the hub itself and on the maps. back_check.py and
+  check_v2 --browser assert it.
