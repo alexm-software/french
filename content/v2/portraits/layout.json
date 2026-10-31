@@ -1,0 +1,774 @@
+{
+ "building": "portraits",
+ "building_id": "B51_portraits",
+ "sector_id": "S15_feelings",
+ "name": "Galerie des Portraits",
+ "main": "portraits",
+ "roomList": [
+  {
+   "key": "portraits",
+   "short": "Le hall"
+  },
+  {
+   "key": "ages",
+   "short": "Les âges"
+  },
+  {
+   "key": "apparences",
+   "short": "L'atelier"
+  },
+  {
+   "key": "caracteres",
+   "short": "Le salon"
+  },
+  {
+   "key": "courage",
+   "short": "Le courage"
+  }
+ ],
+ "planned": {
+  "portraits": {
+   "vocabRoom": "R_people_01",
+   "only": [
+    "fr_femme_noun",
+    "fr_madame_noun",
+    "fr_mademoiselle_noun",
+    "fr_dame_noun",
+    "fr_personne_noun",
+    "fr_proprietaire_noun",
+    "fr_homme_noun",
+    "fr_monsieur_noun",
+    "fr_gars_noun",
+    "fr_seigneur_noun",
+    "fr_gens_noun",
+    "fr_voisin_noun"
+   ]
+  },
+  "ages": {
+   "vocabRoom": "R_people_02",
+   "only": [
+    "fr_vie_noun",
+    "fr_jeunesse_noun",
+    "fr_foule_noun",
+    "fr_enfant_noun",
+    "fr_adulte_noun",
+    "fr_garcon_noun",
+    "fr_age_noun",
+    "fr_habitant_noun",
+    "fr_gamin_noun",
+    "fr_etre_noun",
+    "fr_peuple_noun",
+    "fr_individu_noun",
+    "fr_adolescent_noun"
+   ]
+  },
+  "apparences": {
+   "vocabRoom": "R_appearance_01",
+   "only": [
+    "fr_mignon_adj",
+    "fr_adorable_adj",
+    "fr_fatigue_adj",
+    "fr_joli_adj",
+    "fr_magnifique_adj",
+    "fr_gras_adj",
+    "fr_celebre_adj",
+    "fr_blond_adj",
+    "fr_vif_adj",
+    "fr_perdu_adj",
+    "fr_profil_noun"
+   ]
+  },
+  "caracteres": {
+   "vocabRoom": "R_character_01",
+   "only": [
+    "fr_attitude_noun",
+    "fr_content_adj",
+    "fr_humain_adj",
+    "fr_principal_adj",
+    "fr_fier_adj",
+    "fr_exact_adj",
+    "fr_unique_adj",
+    "fr_personnel_adj",
+    "fr_charmant_adj",
+    "fr_jaloux_adj"
+   ]
+  },
+  "courage": {
+   "vocabRoom": "R_character_01_z1",
+   "only": [
+    "fr_brave_adj",
+    "fr_timide_adj",
+    "fr_sympathique_adj",
+    "fr_independant_adj",
+    "fr_courageux_adj",
+    "fr_feminin_adj"
+   ]
+  }
+ },
+ "rooms": {
+  "portraits": {
+   "name": "Le hall d'entrée · The entrance hall",
+   "room_id": "R_people_01",
+   "image": "portraits/portraits.jpg",
+   "alt": "The sunny entrance hall of the portrait gallery: a woman shows a family snapshot, a lady in pearls rings the desk bell, a young flower seller blows a kiss, a lady with a parasol passes the beaver's dam in the fountain, a mother carries her son, the owner jingles his keys, a man meditates under the stairs, a gentleman finds paint on his white suit, a delivery guy wobbles his parcels, an old lord comes down the stairs, a group sets off with picnic baskets and a neighbor carries sunflowers.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     6,
+     12,
+     72,
+     560
+    ],
+    "label": "Jardin des Cœurs"
+   },
+   "doors": [
+    {
+     "to": "ages",
+     "label": "Les âges",
+     "hint": "the sky-blue door with the rocking horse, to the hall of ages",
+     "hit": [
+      302,
+      118,
+      68,
+      100
+     ]
+    },
+    {
+     "to": "apparences",
+     "label": "L'atelier",
+     "hint": "the rose-pink door with the mirror, to the portrait studio",
+     "hit": [
+      420,
+      145,
+      95,
+      150
+     ]
+    },
+    {
+     "to": "caracteres",
+     "label": "Le salon",
+     "hint": "the sage-green door with the two masks, to the character parlor",
+     "hit": [
+      1080,
+      150,
+      100,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_femme_noun",
+     "box": [
+      200,
+      228,
+      100,
+      240
+     ],
+     "labelAt": [
+      258,
+      472
+     ]
+    },
+    {
+     "id": "fr_madame_noun",
+     "box": [
+      322,
+      222,
+      95,
+      75
+     ],
+     "labelAt": [
+      369.5,
+      300
+     ]
+    },
+    {
+     "id": "fr_mademoiselle_noun",
+     "box": [
+      80,
+      300,
+      120,
+      400
+     ]
+    },
+    {
+     "id": "fr_dame_noun",
+     "box": [
+      345,
+      335,
+      175,
+      265
+     ]
+    },
+    {
+     "id": "fr_personne_noun",
+     "box": [
+      540,
+      190,
+      70,
+      100
+     ]
+    },
+    {
+     "id": "fr_proprietaire_noun",
+     "box": [
+      522,
+      330,
+      195,
+      350
+     ]
+    },
+    {
+     "id": "fr_homme_noun",
+     "box": [
+      730,
+      165,
+      115,
+      160
+     ]
+    },
+    {
+     "id": "fr_monsieur_noun",
+     "box": [
+      745,
+      330,
+      150,
+      382
+     ]
+    },
+    {
+     "id": "fr_gars_noun",
+     "box": [
+      900,
+      232,
+      85,
+      318
+     ]
+    },
+    {
+     "id": "fr_seigneur_noun",
+     "box": [
+      848,
+      56,
+      112,
+      152
+     ]
+    },
+    {
+     "id": "fr_gens_noun",
+     "box": [
+      988,
+      362,
+      175,
+      300
+     ]
+    },
+    {
+     "id": "fr_voisin_noun",
+     "box": [
+      1185,
+      215,
+      85,
+      140
+     ]
+    }
+   ]
+  },
+  "ages": {
+   "name": "La salle des âges · The hall of ages",
+   "room_id": "R_people_02",
+   "image": "portraits/ages.jpg",
+   "alt": "A sunny conservatory full of birthdays and ages: geese fly past in a V, a girl skateboards hugging a plush sea monster, cousins in jester hats crowd together, a child bounces on a hopper ball, a toddler swims in a grown-up suit, a boy wears a paper guard helmet, grandpa blows out his birthday candles, a penguin in a red scarf stands on the shelf, a farmer watches a bee, a glowing being offers a tray of lemonade, a boy speeds by on a scooter, a teenager lounges on a beanbag and a purple tapestry shows a whole crowd of people.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "portraits",
+   "doors": [
+    {
+     "to": "portraits",
+     "label": "Le hall",
+     "hint": "the sky-blue door with the rocking horse, back to the entrance hall",
+     "hit": [
+      6,
+      70,
+      70,
+      470
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vie_noun",
+     "box": [
+      90,
+      40,
+      170,
+      95
+     ]
+    },
+    {
+     "id": "fr_jeunesse_noun",
+     "box": [
+      140,
+      365,
+      200,
+      330
+     ]
+    },
+    {
+     "id": "fr_foule_noun",
+     "box": [
+      355,
+      225,
+      170,
+      75
+     ]
+    },
+    {
+     "id": "fr_enfant_noun",
+     "box": [
+      405,
+      340,
+      135,
+      235
+     ]
+    },
+    {
+     "id": "fr_adulte_noun",
+     "box": [
+      555,
+      420,
+      115,
+      235
+     ]
+    },
+    {
+     "id": "fr_garcon_noun",
+     "box": [
+      742,
+      228,
+      60,
+      115
+     ]
+    },
+    {
+     "id": "fr_age_noun",
+     "box": [
+      690,
+      345,
+      175,
+      165
+     ]
+    },
+    {
+     "id": "fr_habitant_noun",
+     "box": [
+      1055,
+      120,
+      90,
+      240
+     ],
+     "labelAt": [
+      1100,
+      328
+     ]
+    },
+    {
+     "id": "fr_gamin_noun",
+     "box": [
+      1010,
+      365,
+      165,
+      330
+     ]
+    },
+    {
+     "id": "fr_etre_noun",
+     "box": [
+      895,
+      225,
+      110,
+      95
+     ]
+    },
+    {
+     "id": "fr_peuple_noun",
+     "box": [
+      640,
+      70,
+      250,
+      120
+     ]
+    },
+    {
+     "id": "fr_individu_noun",
+     "box": [
+      1005,
+      112,
+      50,
+      85
+     ],
+     "labelAt": [
+      1030,
+      80
+     ]
+    },
+    {
+     "id": "fr_adolescent_noun",
+     "box": [
+      880,
+      320,
+      125,
+      170
+     ]
+    }
+   ]
+  },
+  "apparences": {
+   "name": "L'atelier des portraits · The portrait studio",
+   "room_id": "R_appearance_01",
+   "image": "portraits/apparences.jpg",
+   "alt": "A skylit painting studio on portrait class day: a cute kitten sleeps in a basket of onions, a baby bunny peeks from a cardboard house, a tired painter dozes on his stool, a jolly grandma poses with lilies, a mouse peers through a magnifying glass, a seagull swoops in with a greasy pizza slice, a famous singer bows in confetti, a lion has its blond mane blow-dried, a lively puppy runs off with a bone, two lost ducklings huddle under a fern and a boy paints a black profile.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "portraits",
+   "doors": [
+    {
+     "to": "portraits",
+     "label": "Le hall",
+     "hint": "the rose-pink door with the mirror, back to the entrance hall",
+     "hit": [
+      20,
+      40,
+      100,
+      485
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mignon_adj",
+     "box": [
+      335,
+      520,
+      110,
+      110
+     ]
+    },
+    {
+     "id": "fr_adorable_adj",
+     "box": [
+      456,
+      356,
+      100,
+      106
+     ]
+    },
+    {
+     "id": "fr_fatigue_adj",
+     "box": [
+      565,
+      250,
+      120,
+      260
+     ]
+    },
+    {
+     "id": "fr_joli_adj",
+     "box": [
+      338,
+      275,
+      110,
+      213
+     ]
+    },
+    {
+     "id": "fr_magnifique_adj",
+     "box": [
+      450,
+      525,
+      225,
+      125
+     ]
+    },
+    {
+     "id": "fr_gras_adj",
+     "box": [
+      606,
+      58,
+      215,
+      80
+     ]
+    },
+    {
+     "id": "fr_celebre_adj",
+     "box": [
+      455,
+      160,
+      100,
+      190
+     ]
+    },
+    {
+     "id": "fr_blond_adj",
+     "box": [
+      694,
+      200,
+      112,
+      175
+     ]
+    },
+    {
+     "id": "fr_vif_adj",
+     "box": [
+      740,
+      505,
+      235,
+      170
+     ]
+    },
+    {
+     "id": "fr_perdu_adj",
+     "box": [
+      712,
+      428,
+      90,
+      68
+     ]
+    },
+    {
+     "id": "fr_profil_noun",
+     "box": [
+      1040,
+      335,
+      230,
+      370
+     ]
+    }
+   ]
+  },
+  "caracteres": {
+   "name": "Le salon des caractères · The character parlor",
+   "room_id": "R_character_01",
+   "image": "portraits/caracteres.jpg",
+   "alt": "A cozy wood-paneled parlor on family game night: a girl with crossed arms sticks her nose in the air, a tanned man licks an ice-cream cone, a tin robot points at two little boys sharing a big armchair, one in a paper crown, a peacock fans its tail by the fire, a hen sits by a sack of eggs, one polka-dot zebra stands among striped ones on the mantel, a girl hugs her padlocked diary, a charming man kisses a granny's hand and a pug glares at a goldfish jar.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "portraits",
+   "doors": [
+    {
+     "to": "portraits",
+     "label": "Le hall",
+     "hint": "the sage-green door with the masks, back to the entrance hall",
+     "hit": [
+      1170,
+      25,
+      105,
+      475
+     ]
+    },
+    {
+     "to": "courage",
+     "label": "Le courage",
+     "hint": "the orange door with the trophy cup, to the courage gym",
+     "hit": [
+      330,
+      38,
+      90,
+      260
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_attitude_noun",
+     "box": [
+      218,
+      188,
+      110,
+      345
+     ]
+    },
+    {
+     "id": "fr_content_adj",
+     "box": [
+      328,
+      305,
+      116,
+      160
+     ]
+    },
+    {
+     "id": "fr_humain_adj",
+     "box": [
+      594,
+      412,
+      125,
+      175
+     ]
+    },
+    {
+     "id": "fr_principal_adj",
+     "box": [
+      462,
+      282,
+      128,
+      180
+     ]
+    },
+    {
+     "id": "fr_fier_adj",
+     "box": [
+      694,
+      225,
+      86,
+      135
+     ]
+    },
+    {
+     "id": "fr_exact_adj",
+     "box": [
+      422,
+      592,
+      272,
+      108
+     ]
+    },
+    {
+     "id": "fr_unique_adj",
+     "box": [
+      550,
+      112,
+      275,
+      65
+     ]
+    },
+    {
+     "id": "fr_personnel_adj",
+     "box": [
+      785,
+      300,
+      72,
+      180
+     ],
+     "labelAt": [
+      795,
+      484
+     ]
+    },
+    {
+     "id": "fr_charmant_adj",
+     "box": [
+      860,
+      235,
+      70,
+      285
+     ]
+    },
+    {
+     "id": "fr_jaloux_adj",
+     "box": [
+      722,
+      525,
+      253,
+      175
+     ]
+    }
+   ]
+  },
+  "courage": {
+   "name": "La salle du courage · The courage gym",
+   "room_id": "R_character_01_z1",
+   "image": "portraits/courage.jpg",
+   "alt": "A small wooden gym on obstacle-course day: a tiny hamster stands up to a barking dog, a shy rabbit peeks from behind a big blue teapot, a friendly koala pats a boy and holds a tray of cookies, a toddler with a shiny pendant climbs the rope ladder alone, a dove leaps into the foam pit, and a grandma gymnast in a frilly pink leotard twirls a ribbon, while a coach, a toy-soldier general and a trainer cheer at the right.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "caracteres",
+   "doors": [
+    {
+     "to": "caracteres",
+     "label": "Le salon",
+     "hint": "the orange door with the trophy cup, back to the character parlor",
+     "hit": [
+      6,
+      20,
+      125,
+      580
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_brave_adj",
+     "box": [
+      269,
+      470,
+      365,
+      195
+     ]
+    },
+    {
+     "id": "fr_timide_adj",
+     "box": [
+      312,
+      282,
+      150,
+      145
+     ]
+    },
+    {
+     "id": "fr_sympathique_adj",
+     "box": [
+      475,
+      250,
+      150,
+      215
+     ]
+    },
+    {
+     "id": "fr_independant_adj",
+     "box": [
+      638,
+      75,
+      90,
+      165
+     ]
+    },
+    {
+     "id": "fr_courageux_adj",
+     "box": [
+      638,
+      445,
+      145,
+      140
+     ]
+    },
+    {
+     "id": "fr_feminin_adj",
+     "box": [
+      730,
+      75,
+      165,
+      365
+     ]
+    }
+   ]
+  }
+ }
+}
