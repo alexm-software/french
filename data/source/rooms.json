@@ -13223,23 +13223,24 @@
    "small_objects": true,
    "base_room": "R_text_crime",
    "words": [
-    "fr_bagarre_noun",
     "fr_fleche_noun",
-    "fr_injure_noun",
-    "fr_gifle_noun",
-    "fr_recul_noun",
     "fr_abus_noun",
-    "fr_corrida_noun",
     "fr_meurtre_noun",
-    "fr_revolver_noun",
     "fr_tueur_noun",
     "fr_assassinat_noun",
     "fr_execution_noun",
     "fr_meurtrier_noun",
     "fr_terroriste_noun",
-    "fr_mutiler_verb"
+    "fr_mutiler_verb",
+    "fr_torture_noun",
+    "fr_noyer_verb",
+    "fr_perir_verb",
+    "fr_carceral_adj",
+    "fr_prostitue_noun",
+    "fr_terrorisme_noun",
+    "fr_stupefiant_noun"
    ],
-   "item_count": 15,
+   "item_count": 16,
    "total_items_incl_zooms": 13,
    "side_counts": {
     "left": 9,
@@ -13317,19 +13318,14 @@
     "fr_brutalite_noun",
     "fr_affut_noun",
     "fr_cambriolage_noun",
-    "fr_fleau_noun",
-    "fr_brigand_noun",
     "fr_penal_adj",
-    "fr_traumatisme_noun",
-    "fr_terrorisme_noun",
     "fr_criminalite_noun",
     "fr_scelerat_noun",
-    "fr_stupefiant_noun",
     "fr_racket_noun",
-    "fr_carceral_adj",
-    "fr_prostitue_noun"
+    "fr_injure_noun",
+    "fr_revolver_noun"
    ],
-   "item_count": 14,
+   "item_count": 9,
    "total_items_incl_zooms": 18,
    "side_counts": {
     "center": 1,
@@ -13365,23 +13361,19 @@
    "base_room": "R_text_medical",
    "words": [
     "fr_sang_noun",
-    "fr_sexe_noun",
     "fr_plaie_noun",
     "fr_cancer_noun",
-    "fr_sanglant_adj",
     "fr_epidemie_noun",
     "fr_infection_noun",
-    "fr_sanguin_adj",
-    "fr_avortement_noun",
     "fr_tuberculose_noun",
     "fr_accoucher_verb",
     "fr_diabete_noun",
-    "fr_ivre_adj",
-    "fr_saoul_adj",
     "fr_famine_noun",
-    "fr_mortalite_noun"
+    "fr_mortalite_noun",
+    "fr_fleau_noun",
+    "fr_recul_noun"
    ],
-   "item_count": 16,
+   "item_count": 12,
    "total_items_incl_zooms": 25,
    "side_counts": {
     "right": 6,
@@ -13416,7 +13408,6 @@
     "fr_cadavre_noun",
     "fr_deuil_noun",
     "fr_de_noun",
-    "fr_torture_noun",
     "fr_bourreau_noun",
     "fr_deces_noun",
     "fr_supplice_noun",
@@ -13424,10 +13415,13 @@
     "fr_decomposition_noun",
     "fr_charnier_noun",
     "fr_suicider_verb",
-    "fr_perir_verb",
-    "fr_noyer_verb"
+    "fr_sanglant_adj",
+    "fr_sanguin_adj",
+    "fr_traumatisme_noun",
+    "fr_sexe_noun",
+    "fr_avortement_noun"
    ],
-   "item_count": 14,
+   "item_count": 16,
    "total_items_incl_zooms": 18,
    "side_counts": {
     "right": 9,
@@ -35982,11 +35976,9 @@
     "fr_pathologie_noun",
     "fr_cholera_noun",
     "fr_alcoolisme_noun",
-    "fr_tabagisme_noun",
-    "fr_ivrogne_adj",
     "fr_pathologique_adj"
    ],
-   "item_count": 8,
+   "item_count": 6,
    "side_counts": {
     "left": 3,
     "right": 3,
@@ -37698,6 +37690,68 @@
     "left": 4,
     "right": 3
    }
+  },
+  {
+   "id": "R_tavern_01",
+   "name": "Harbor tavern · tavern, tipsy, scuffles",
+   "type": "theme",
+   "setting": "A reconstructed harbor tavern inside Musée des Beaux-Arts et d'Histoire.",
+   "kind": "full",
+   "sector_id": "S13_museum",
+   "building_id": "B44_musee",
+   "links_back_to_sector": "S13_museum",
+   "cefr_band": "C1",
+   "mean_level": 5.26,
+   "related_rooms": [
+    "R_text_crime_03"
+   ],
+   "conversation_ids": [],
+   "base_room": "R_tavern_01",
+   "words": [
+    "fr_ivre_adj",
+    "fr_saoul_adj",
+    "fr_ivrogne_adj",
+    "fr_tabagisme_noun",
+    "fr_bagarre_noun",
+    "fr_gifle_noun",
+    "fr_corrida_noun"
+   ],
+   "item_count": 7,
+   "total_items_incl_zooms": 0,
+   "side_counts": {}
+  },
+  {
+   "id": "R_pirate_ship_01",
+   "name": "Pirate ship · ship parts, pirates",
+   "type": "theme",
+   "setting": "A life-size pirate ship in the ship hall of Musée des Beaux-Arts et d'Histoire.",
+   "kind": "full",
+   "sector_id": "S13_museum",
+   "building_id": "B44_musee",
+   "links_back_to_sector": "S13_museum",
+   "cefr_band": "B2",
+   "mean_level": 5.26,
+   "related_rooms": [
+    "R_text_crime_03"
+   ],
+   "conversation_ids": [],
+   "base_room": "R_pirate_ship_01",
+   "words": [
+    "fr_pirate_noun",
+    "fr_corsaire_noun",
+    "fr_gouvernail_noun",
+    "fr_butin_noun",
+    "fr_mat_noun",
+    "fr_hublot_noun",
+    "fr_boussole_noun",
+    "fr_vigie_noun",
+    "fr_cargaison_noun",
+    "fr_cale_noun",
+    "fr_brigand_noun"
+   ],
+   "item_count": 11,
+   "total_items_incl_zooms": 0,
+   "side_counts": {}
   }
  ],
  "planned_rooms_2026_10_31": {

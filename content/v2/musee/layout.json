@@ -30,16 +30,24 @@
    "short": "Couloir des mots 1"
   },
   {
-   "key": "mots_crimes",
+   "key": "mots_deuil",
    "short": "Couloir des mots 2"
   },
   {
-   "key": "mots_sante",
-   "short": "Couloir des mots 3"
+   "key": "tribunal",
+   "short": "Le tribunal"
   },
   {
-   "key": "mots_deuil",
-   "short": "Couloir des mots 4"
+   "key": "taverne",
+   "short": "La taverne"
+  },
+  {
+   "key": "bateau_pirate",
+   "short": "Le bateau pirate"
+  },
+  {
+   "key": "hospice",
+   "short": "L'hospice"
   }
  ],
  "planned": {
@@ -124,74 +132,94 @@
   "mots_delits": {
    "vocabRoom": "R_text_crime_01",
    "only": [
-    "fr_bagarre_noun",
+    "fr_execution_noun",
+    "fr_torture_noun",
+    "fr_mutiler_verb",
+    "fr_noyer_verb",
+    "fr_perir_verb",
+    "fr_terroriste_noun",
+    "fr_carceral_adj",
     "fr_abus_noun",
-    "fr_corrida_noun",
-    "fr_gifle_noun",
-    "fr_injure_noun",
-    "fr_recul_noun",
     "fr_meurtre_noun",
-    "fr_revolver_noun",
     "fr_tueur_noun",
     "fr_assassinat_noun",
-    "fr_execution_noun",
     "fr_meurtrier_noun",
-    "fr_terroriste_noun",
-    "fr_mutiler_verb"
-   ]
-  },
-  "mots_crimes": {
-   "vocabRoom": "R_text_crime_03",
-   "only": [
-    "fr_affut_noun",
-    "fr_brigand_noun",
-    "fr_brutalite_noun",
-    "fr_cambriolage_noun",
-    "fr_criminalite_noun",
-    "fr_fleau_noun",
     "fr_prostitue_noun",
-    "fr_penal_adj",
     "fr_terrorisme_noun",
-    "fr_traumatisme_noun",
-    "fr_carceral_adj",
-    "fr_racket_noun",
-    "fr_scelerat_noun",
     "fr_stupefiant_noun"
-   ]
-  },
-  "mots_sante": {
-   "vocabRoom": "R_text_medical",
-   "only": [
-    "fr_sexe_noun",
-    "fr_accoucher_verb",
-    "fr_ivre_adj",
-    "fr_plaie_noun",
-    "fr_sanglant_adj",
-    "fr_saoul_adj",
-    "fr_epidemie_noun",
-    "fr_avortement_noun",
-    "fr_sanguin_adj",
-    "fr_ivrogne_adj",
-    "fr_secretion_noun",
-    "fr_tabagisme_noun"
    ]
   },
   "mots_deuil": {
    "vocabRoom": "R_text_death",
    "only": [
+    "fr_decomposition_noun",
+    "fr_suicider_verb",
+    "fr_sanglant_adj",
+    "fr_sanguin_adj",
+    "fr_mourant_adj",
     "fr_mort_noun_m",
     "fr_cadavre_noun",
-    "fr_noyer_verb",
     "fr_bourreau_noun",
     "fr_deuil_noun",
     "fr_deces_noun",
-    "fr_mourant_adj",
-    "fr_suicider_verb",
     "fr_supplice_noun",
-    "fr_torture_noun",
-    "fr_decomposition_noun",
-    "fr_perir_verb",
-    "fr_charnier_noun"
+    "fr_charnier_noun",
+    "fr_traumatisme_noun",
+    "fr_sexe_noun",
+    "fr_avortement_noun"
+   ]
+  },
+  "tribunal": {
+   "vocabRoom": "R_text_crime_03",
+   "only": [
+    "fr_injure_noun",
+    "fr_penal_adj",
+    "fr_criminalite_noun",
+    "fr_racket_noun",
+    "fr_scelerat_noun",
+    "fr_cambriolage_noun",
+    "fr_revolver_noun",
+    "fr_brutalite_noun",
+    "fr_affut_noun"
+   ]
+  },
+  "taverne": {
+   "vocabRoom": "R_tavern_01",
+   "only": [
+    "fr_ivre_adj",
+    "fr_saoul_adj",
+    "fr_ivrogne_adj",
+    "fr_tabagisme_noun",
+    "fr_bagarre_noun",
+    "fr_gifle_noun",
+    "fr_corrida_noun"
+   ]
+  },
+  "bateau_pirate": {
+   "vocabRoom": "R_pirate_ship_01",
+   "only": [
+    "fr_brigand_noun",
+    "fr_pirate_noun",
+    "fr_corsaire_noun",
+    "fr_gouvernail_noun",
+    "fr_butin_noun",
+    "fr_mat_noun",
+    "fr_hublot_noun",
+    "fr_boussole_noun",
+    "fr_vigie_noun",
+    "fr_cargaison_noun",
+    "fr_cale_noun"
+   ]
+  },
+  "hospice": {
+   "vocabRoom": "R_text_medical",
+   "only": [
+    "fr_plaie_noun",
+    "fr_epidemie_noun",
+    "fr_accoucher_verb",
+    "fr_secretion_noun",
+    "fr_fleau_noun",
+    "fr_recul_noun"
    ]
   }
  },
@@ -200,7 +228,7 @@
    "name": "Le grand hall du musée · The museum's great hall",
    "room_id": "R_art_01",
    "image": "musee/musee.jpg",
-   "alt": "The great hall of the village museum, seen from the near left and slightly above: cream stone columns, a polished pale marble floor, a glass pyramid skylight, a grand staircase rising to an upper gallery balcony and a draped white statue wearing a tiny visitor badge. Up on the balcony a young woman in a yellow dress waves a red scarf over the balustrade, and beside her a photographer in a green cardigan looks through a big old wooden bellows camera. On the left a tour guide in sunglasses and a blue blazer holds up a folded umbrella for his group, a white-haired granny points to her cabinet of colourful seashells, and a young cleaner in blue overalls vacuums the floor in front of a huge gilt-framed landscape masterpiece. In the middle an artist in a flowered smock stands at her easel holding a steaming cup of tea, and in front Monsieur Verbe in a red beret sits on a bench turning a big wooden hourglass, passing the time. On the right a jolly man dressed as a pirate raises his fist in delight at a framed painting, a grey cat sits beside a glass case holding a little model of the museum while a guard smiles at it, and a man in a tweed waistcoat puffs past carrying a tall white obelisk. A yellow door with a crayon on the left wall leads to the art workshop, a dark green door at the back leads to the detective gallery, and a white door with a microscope sign on the right wall leads to the medicine gallery.",
+   "alt": "The great hall of the village museum, seen from the near left and slightly above: cream stone columns, a polished pale marble floor, a glass pyramid skylight, a grand staircase rising to an upper gallery balcony and a draped white statue wearing a tiny visitor badge. Up on the balcony a young woman in a yellow dress waves a red scarf over the balustrade, and beside her a photographer in a green cardigan looks through a big old wooden bellows camera. On the left a tour guide in sunglasses and a blue blazer holds up a folded umbrella for his group, a white-haired granny with her hair in a bun and a pearl necklace points to her cabinet of colorful seashells, and a young cleaner in blue overalls vacuums the floor in front of a huge gilt-framed landscape masterpiece. In the middle an artist in a flowered smock stands at her easel holding a steaming cup of tea, and in front Monsieur Verbe in a red beret sits on a bench turning a big wooden hourglass, passing the time. On the right a jolly man dressed as a pirate raises his fist in delight at a framed painting, a gray cat sits beside a glass case holding a little model of the museum while a guard smiles at it, and a man in a tweed vest puffs past carrying a tall white obelisk. A yellow door with a crayon on the left wall leads to the art workshop, a dark green door at the back leads to the detective gallery, and a white door with a microscope sign on the right wall leads to the medicine gallery.",
    "nameplate": [
     62,
     4.5
@@ -347,7 +375,7 @@
    "name": "L'atelier des enfants · The children's workshop",
    "room_id": "R_art_02",
    "image": "musee/atelier.jpg",
-   "alt": "The museum's children's workshop on Saturday art club, seen from the near left: sunflower-yellow walls hung with children's paintings, paper ceiling lamps, low wooden tables with paint pots and crayons, a green play mat and a giant crayon used as a coat stand. At the back left a lady illustrator in glasses holds open a huge picture book with a blue whale, a girl with a black bob spins a round zoetrope drum with little galloping horses, and in the teddy hospital corner a girl tends a poorly doll tucked into a toy bed with a thermometer and a hot-water bottle. In front a little girl in a toy nurse's apron sticks a plaster on her teddy bear, and a red-pigtailed girl holds up two batteries beside her stopped toy robot with its battery hatch open. On the right a boy holds up his crayon drawing of a sunny beach, another dips a fat paintbrush into a frying pan of blue paint, a boy kneeling on the mat plays with a big white foam die, and two boys carry a smiling rag doll with a bandaged knee and an arm sling on a little toy stretcher. A slate-blue door on the left leads back to the great hall.",
+   "alt": "The museum's children's workshop on Saturday art club, seen from the near left: sunflower-yellow walls hung with children's paintings, paper ceiling lamps, low wooden tables with paint pots and crayons, a green play mat and a giant crayon used as a coat stand. At the back left a lady illustrator in glasses holds open a huge picture book with a blue whale, a girl with a black bob spins a round zoetrope drum with little galloping horses, and in the teddy hospital corner a girl tends a sick doll tucked into a toy bed with a thermometer and a hot-water bottle. In front a little girl in a toy nurse's apron sticks a bandage on her teddy bear, and a red-pigtailed girl holds up two batteries beside her stopped toy robot with its battery hatch open. On the right a boy holds up his crayon drawing of a sunny beach, another dips a fat paintbrush into a frying pan of blue paint, a boy kneeling on the mat paints a red flower on a sheet of white paper, and two boys carry a smiling rag doll with a bandaged knee and an arm sling on a little toy stretcher. A slate-blue door on the left leads back to the great hall.",
    "nameplate": [
     50,
     4.5
@@ -446,7 +474,7 @@
    "name": "Les romans policiers · Detective stories",
    "room_id": "R_text_crime_02",
    "image": "musee/enquete.jpg",
-   "alt": "The museum's detective-story gallery on its 'solve the mystery' family day, seen from the near left: bottle-green walls, brass picture lamps, red velvet ropes on brass posts and a giant deerstalker hat over the striped puppet booth. At the back left a cheerful lady in a black dress holds up a blue prize rosette behind the iron bars of the old prison-cell exhibit while her friend photographs her; at a café table two old ladies frown comically and tug the one teacup. In the middle Monsieur Verbe in a red beret plays the fairy-tale witch in the puppet booth, dipping a red apple into a bubbling green cauldron beside a hobby-horse pony and a girl in a witch hat. At the back right a waxwork gentleman-criminal in a top hat and mask holds an ice lolly and a little bell, and a waxwork villain in a cloak stands empty-handed in a tall glass case with sand at his boots. In front a young woman in a red cape raises a lantern and magnifying glass, a giant striped party popper bursts confetti as a girl in yellow claps, a girl offers a biscuit to a little white dog holding her teddy, and a detective in a deerstalker studies a red jewel cushion smeared with whipped cream. On the right a man in a Hawaiian shirt rushes the gift-shop postcard racks, a grinning masked burglar tiptoes off with a small painting and a fishing rod with a green lure, and a man in a bow tie clutches his hot cheeks beside a flame-red book on a lectern. Doors: slate-blue on the left back to the great hall, iron-studded oak at the back, plain grey at the back right.",
+   "alt": "The museum's detective-story gallery on its 'solve the mystery' family day, seen from the near left: bottle-green walls, brass picture lamps, red velvet ropes on brass posts and a giant deerstalker hat over the striped puppet booth. At the back left a cheerful lady in a black dress holds up a blue prize rosette behind the iron bars of the old prison-cell exhibit while her friend photographs her; at a café table two old ladies frown comically and tug the one teacup. In the middle Monsieur Verbe in a red beret plays the fairy-tale witch in the puppet booth, dipping a red apple into a bubbling green cauldron beside a hobby-horse pony and a girl in a witch hat. At the back right a waxwork gentleman-criminal in a top hat and mask holds a popsicle and a little bell, and a waxwork villain in a cloak stands empty-handed in a tall glass case with sand at his boots. In front a young woman in a red cape raises a lantern and magnifying glass, a giant striped party popper bursts confetti as a girl in yellow claps, a girl offers a cookie to a little white dog guarding a small white model of the Taj Mahal, and a detective in a deerstalker studies a red jewel cushion smeared with whipped cream. On the right a man in a Hawaiian shirt rushes the gift-shop postcard racks, a grinning masked burglar tiptoes off with a small painting and a fishing rod with a green lure, and a man in a bow tie clutches his hot cheeks beside a flame-red book on a lectern. Doors: slate-blue on the left back to the great hall, iron-studded oak at the back, plain gray at the back right.",
    "nameplate": [
     31.7,
     4.5
@@ -467,7 +495,7 @@
     {
      "to": "armes",
      "label": "La salle d'armes",
-     "hint": "the iron-studded oak door at the back, to the armoury hall",
+     "hint": "the iron-studded oak door at the back, to the armory hall",
      "hit": [
       669,
       15,
@@ -478,7 +506,7 @@
     {
      "to": "mots_delits",
      "label": "Couloir des mots 1",
-     "hint": "the plain grey door at the back right, to the word corridor",
+     "hint": "the plain gray door at the back right, to the word corridor",
      "hit": [
       1150,
       35,
@@ -528,10 +556,10 @@
     {
      "id": "fr_otage_noun",
      "box": [
-      525,
+      522,
       322,
-      175,
-      196
+      178,
+      222
      ]
     },
     {
@@ -600,10 +628,10 @@
    ]
   },
   "armes": {
-   "name": "La salle d'armes · The armoury hall",
+   "name": "La salle d'armes · The armory hall",
    "room_id": "R_heraldry_01",
    "image": "musee/armes.jpg",
-   "alt": "The museum's armoury hall, seen from the near left: grey stone walls with heraldic banners (one with a smiling golden lion), iron chandeliers and locked glass cases on oak bases; every weapon is an antique object behind glass and nobody holds one. At the back left two lady friends stand arm in arm before a tall case of crossed old weapons; a lady with a guidebook stands by a tall case with a striped jousting lance; a forester lady holds up an ash sprig by the case with an old axe; a shining empty suit of armour stands on a plinth with a ginger cat mewing at its feet. In front a lady offers sweets from a paper bag beside a case with a round black cartoon bomb, its fuse unlit, and a lady hands coins to a guard holding an audio guide by the sword case. In the middle a man in a green cardigan makes a peace sign by the small pistol case, behind him a visitor points at a case of knight's helmets. On the right a guard dozes on a stool by the rifle case, an old gentleman points a yardstick at the jewelled dagger, a man shows a toy Noah's ark by the bow case and a potter holds up a little clay shield beside a big round painted shield. Door: bottle-green on the left wall, back to the detective-story gallery.",
+   "alt": "The museum's armory hall, seen from the near left: gray stone walls, iron chandeliers with white bulbs, a blue banner with a smiling golden lion and one unbroken red velvet rope on brass posts running in front of the displays; every weapon is an antique display object and nobody holds one. On the far left a life-size figure of Sir Lancelot in a blue tunic with a white cross stands on a stone plinth beside his tall striped jousting lance. On the back wall a big bronze arm sticks out of the stone, holding up an old mace, while a little girl points up at it; a ginger cat mews at the feet of an empty suit of armor, and a forester lady holds an ash sprig up to an old ax on a wall rack. In front a lady offers a candy from a paper bag beside a small glass case with a round black cartoon bomb, its fuse unlit, and a gray-haired lady hands a coin to a guard beside a long shining sword lying on a red velvet cushion. On the right an old gentleman points a yardstick at a jeweled dagger on a cushion, a guard dozes on a stool below an old rifle on wall pegs, a man in a green cardigan makes a peace sign by the small pistol case, a boy holds up a toy Noah's ark toward the longbow on the wall, and a potter holds up a little clay shield beside a big round painted shield. Door: bottle-green on the left wall, back to the detective-story gallery.",
    "nameplate": [
     50,
     4.5
@@ -615,10 +643,10 @@
      "label": "Les romans policiers",
      "hint": "the bottle-green door on the left wall, back to the detective-story gallery",
      "hit": [
-      205,
-      30,
-      125,
-      150
+      150,
+      40,
+      55,
+      250
      ]
     }
    ],
@@ -627,100 +655,100 @@
     {
      "id": "fr_arme_noun",
      "box": [
-      375,
-      62,
-      265,
-      173
+      244,
+      100,
+      124,
+      160
      ]
     },
     {
      "id": "fr_lance_noun",
      "box": [
-      5,
-      100,
-      195,
-      330
+      20,
+      12,
+      128,
+      488
      ]
     },
     {
      "id": "fr_armure_noun",
      "box": [
-      228,
-      185,
-      124,
+      406,
+      94,
+      114,
       300
      ]
     },
     {
      "id": "fr_hache_noun",
      "box": [
-      355,
-      240,
-      255,
-      225
+      540,
+      90,
+      160,
+      290
      ]
     },
     {
      "id": "fr_bombe_noun",
      "box": [
-      0,
-      450,
-      228,
-      270
+      15,
+      505,
+      200,
+      195
      ]
     },
     {
      "id": "fr_epee_noun",
      "box": [
-      290,
-      488,
-      345,
-      232
+      444,
+      535,
+      356,
+      180
      ]
     },
     {
      "id": "fr_pistolet_noun",
      "box": [
-      640,
-      260,
-      282,
-      205
+      905,
+      530,
+      185,
+      175
      ]
     },
     {
      "id": "fr_fusil_noun",
      "box": [
-      940,
+      766,
       118,
-      330,
-      172
+      240,
+      105
      ]
     },
     {
      "id": "fr_poignard_noun",
      "box": [
-      975,
-      294,
-      290,
-      128
+      726,
+      228,
+      184,
+      199
      ]
     },
     {
      "id": "fr_arc_noun",
      "box": [
-      690,
-      468,
-      320,
-      252
+      1010,
+      25,
+      120,
+      262
      ]
     },
     {
      "id": "fr_bouclier_noun",
      "box": [
-      1012,
-      462,
-      268,
-      140
+      1132,
+      290,
+      148,
+      322
      ]
     }
    ]
@@ -729,7 +757,7 @@
    "name": "La galerie de la médecine · The history-of-medicine gallery",
    "room_id": "R_text_medical",
    "image": "musee/medecine.jpg",
-   "alt": "The museum's history-of-medicine gallery, seen from the near left: white and pale teal tiles, honey-wood apothecary cabinets, milk-glass ceiling globes and glass cases. At the back left a scientist peers into a giant brass microscope while her white-haired father in a white coat chats with a friend; a nurse in an old-fashioned cap holds up a giant plain white tube by a sanatorium chair with a tartan blanket; in front a girl in a lab coat sprays a giant green plush germ. In the middle a girl with an ice-cream cone yawns and her two friends yawn too, a farm lady in a headscarf shows an empty wooden bowl beside an empty grain bin of dry wheat stalks, and at the back a girl pours more tea beside a big hourglass whose sand has all run out. In the centre a cheeky long-nosed Pinocchio puppet stands in a glass case, and a cheerful boy on a bench reads a small grey blood-sugar meter beside a bowl of sugar cubes. On the right a Victorian doctor in a top hat and big white collar grips the curved iron pipe of an old black water pump, a boy lifts a giant red blood-cell model over his head, a bearded man in a white coat shows a red crab in a case under a star chart, and a boy walks his collie on a red lead past a case holding an empty old bottle and a glass of water. Doors: slate-blue on the left wall, back to the museum hall; plain grey at the back right, to the health wall-text room.",
+   "alt": "The museum's history-of-medicine gallery, seen from the near left: white and pale teal tiles, honey-wood apothecary cabinets, milk-glass ceiling globes and glass cases. At the back left a scientist peers into a giant brass microscope while her white-haired father in a white coat chats with a friend; a nurse in an old-fashioned cap holds up a giant plain white tube by a sanatorium chair with a plaid blanket; in front a girl in a lab coat sprays a giant green plush germ. In the middle a girl with an ice-cream cone yawns and her two friends yawn too, a farm lady in a headscarf shows an empty wooden bowl beside an empty grain bin of dry wheat stalks, and at the back a girl pours more tea beside a big hourglass whose sand has all run out. In the center a mischievous long-nosed Pinocchio puppet stands in a glass case, and a cheerful boy on a bench reads a small gray blood-sugar meter beside a bowl of sugar cubes. On the right a Victorian doctor in a top hat and big white collar grips the curved iron pipe of an old black water pump, a boy lifts a giant red blood-cell model over his head, a bearded man in a white coat shows a red crab in a case under a star chart, and a boy walks his collie on a red lead past a case holding an empty old bottle and a glass of water. Doors: slate-blue on the left wall, back to the museum hall; plain gray at the back right, to the health wall-text room.",
    "nameplate": [
     50,
     4.5
@@ -748,9 +776,9 @@
      ]
     },
     {
-     "to": "mots_sante",
-     "label": "Couloir des mots 3",
-     "hint": "the plain grey door at the back right, to the health wall-text room",
+     "to": "hospice",
+     "label": "L'hospice",
+     "hint": "the plain gray door at the back right, to the old hospital ward",
      "hit": [
       988,
       56,
@@ -875,7 +903,7 @@
    "name": "Le couloir des mots (1) · Word corridor 1 (text only)",
    "room_id": "R_text_crime_01",
    "image": "musee/mots_delits.jpg",
-   "alt": "A quiet, plain word corridor of the museum seen straight down its length: pale grey walls, pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights along both walls, five on the left and seven on the right; three low wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted fern stands on a bench against the back wall. Doors: plain grey on the left wall, back to the detective-story gallery; plain grey at the back, to the next word corridor.",
+   "alt": "A quiet, plain word corridor of the museum seen straight down its length: pale gray walls, pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights along both walls, five on the left and eight on the right; two low wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted fern stands on a bench against the back wall. Doors: plain gray on the left wall, back to the detective-story gallery; plain gray at the back, to the storybook courtroom.",
    "nameplate": [
     50,
     4.5
@@ -885,7 +913,7 @@
     {
      "to": "enquete",
      "label": "Les romans policiers",
-     "hint": "the plain grey door on the left wall, back to the detective-story gallery",
+     "hint": "the plain gray door on the left wall, back to the detective-story gallery",
      "hit": [
       291,
       187,
@@ -894,9 +922,9 @@
      ]
     },
     {
-     "to": "mots_crimes",
-     "label": "Couloir des mots 2",
-     "hint": "the plain grey door at the back, to the next word corridor",
+     "to": "tribunal",
+     "label": "Le tribunal",
+     "hint": "the plain gray door at the back, to the storybook courtroom",
      "hit": [
       716,
       237,
@@ -908,46 +936,6 @@
    "zooms": [],
    "items": [
     {
-     "id": "fr_bagarre_noun",
-     "box": [
-      162,
-      106,
-      60,
-      73
-     ]
-    },
-    {
-     "id": "fr_corrida_noun",
-     "box": [
-      405,
-      240,
-      44,
-      58
-     ]
-    },
-    {
-     "id": "fr_gifle_noun",
-     "box": [
-      207,
-      352,
-      47,
-      57
-     ]
-    },
-    {
-     "id": "fr_injure_noun",
-     "box": [
-      362,
-      370,
-      50,
-      90
-     ],
-     "labelAt": [
-      420,
-      337
-     ]
-    },
-    {
      "id": "fr_execution_noun",
      "box": [
       59,
@@ -957,21 +945,66 @@
      ]
     },
     {
+     "id": "fr_torture_noun",
+     "box": [
+      162,
+      106,
+      60,
+      73
+     ]
+    },
+    {
+     "id": "fr_mutiler_verb",
+     "box": [
+      207,
+      352,
+      47,
+      57
+     ]
+    },
+    {
+     "id": "fr_noyer_verb",
+     "box": [
+      362,
+      370,
+      50,
+      90
+     ]
+    },
+    {
+     "id": "fr_perir_verb",
+     "box": [
+      405,
+      240,
+      44,
+      58
+     ]
+    },
+    {
+     "id": "fr_terroriste_noun",
+     "box": [
+      444,
+      472,
+      102,
+      188
+     ]
+    },
+    {
+     "id": "fr_carceral_adj",
+     "box": [
+      589,
+      454,
+      101,
+      204
+     ]
+    },
+    {
      "id": "fr_abus_noun",
      "box": [
       1081,
       110,
       57,
       71
-     ]
-    },
-    {
-     "id": "fr_recul_noun",
-     "box": [
-      925,
-      230,
-      48,
-      60
      ]
     },
     {
@@ -985,19 +1018,6 @@
      "labelAt": [
       901,
       342
-     ]
-    },
-    {
-     "id": "fr_revolver_noun",
-     "box": [
-      955,
-      405,
-      45,
-      62
-     ],
-     "labelAt": [
-      977,
-      472
      ]
     },
     {
@@ -1028,351 +1048,57 @@
      ]
     },
     {
-     "id": "fr_terroriste_noun",
-     "box": [
-      444,
-      472,
-      102,
-      188
-     ]
-    },
-    {
-     "id": "fr_mutiler_verb",
-     "box": [
-      589,
-      454,
-      101,
-      204
-     ]
-    }
-   ]
-  },
-  "mots_crimes": {
-   "name": "Le couloir des mots (2) · Word corridor 2 (text only)",
-   "room_id": "R_text_crime_03",
-   "image": "musee/mots_crimes.jpg",
-   "alt": "The quiet end room of the museum word corridor, wide and square: pale grey walls and a pale oak floor. Small blank cream plaques with brass screws hang at different heights: two on the short left wall, four on the right half of the back wall and six along the right wall; two wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. An arched window lights a bench with a little potted lemon tree on the back wall. Door: plain grey on the left wall, back to the first word corridor.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "mots_delits",
-   "doors": [
-    {
-     "to": "mots_delits",
-     "label": "Couloir des mots 1",
-     "hint": "the plain grey door on the left wall, back to the first word corridor",
-     "hit": [
-      258,
-      180,
-      72,
-      340
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_criminalite_noun",
-     "box": [
-      105,
-      132,
-      75,
-      90
-     ]
-    },
-    {
-     "id": "fr_brutalite_noun",
-     "box": [
-      104,
-      442,
-      76,
-      103
-     ]
-    },
-    {
-     "id": "fr_affut_noun",
-     "box": [
-      779,
-      169,
-      52,
-      41
-     ]
-    },
-    {
-     "id": "fr_brigand_noun",
-     "box": [
-      736,
-      244,
-      43,
-      34
-     ]
-    },
-    {
-     "id": "fr_cambriolage_noun",
-     "box": [
-      626,
-      298,
-      44,
-      37
-     ]
-    },
-    {
-     "id": "fr_fleau_noun",
-     "box": [
-      745,
-      337,
-      41,
-      34
-     ]
-    },
-    {
      "id": "fr_prostitue_noun",
      "box": [
-      969,
-      198,
-      40,
-      59
+      925,
+      230,
+      48,
+      60
      ]
     },
     {
      "id": "fr_terrorisme_noun",
      "box": [
-      885,
-      252,
-      25,
-      41
-     ]
-    },
-    {
-     "id": "fr_traumatisme_noun",
-     "box": [
-      938,
-      369,
-      28,
-      49
-     ]
-    },
-    {
-     "id": "fr_racket_noun",
-     "box": [
-      1081,
-      350,
-      63,
-      72
-     ]
-    },
-    {
-     "id": "fr_scelerat_noun",
-     "box": [
-      1015,
-      433,
-      44,
-      69
+      955,
+      405,
+      45,
+      62
+     ],
+     "labelAt": [
+      977,
+      471
      ]
     },
     {
      "id": "fr_stupefiant_noun",
      "box": [
-      1162,
-      473,
-      84,
-      112
-     ]
-    },
-    {
-     "id": "fr_penal_adj",
-     "box": [
-      609,
-      409,
-      61,
-      66
-     ]
-    },
-    {
-     "id": "fr_carceral_adj",
-     "box": [
-      590,
-      475,
-      98,
-      190
-     ]
-    }
-   ]
-  },
-  "mots_sante": {
-   "name": "Le couloir des mots (3) · Word corridor 3 (text only)",
-   "room_id": "R_text_medical",
-   "image": "musee/mots_sante.jpg",
-   "alt": "A calm, light word corridor of the museum seen straight down its length: pale grey walls with a soft pale-green stripe at waist height, a pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights: three on the left wall, three on the right wall and three in a diagonal on the back wall; three wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted palm stands in the far left corner. Doors: plain grey on the left wall, back to the medicine gallery; plain grey at the right end of the back wall, to the last word corridor.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "medecine",
-   "doors": [
-    {
-     "to": "medecine",
-     "label": "La médecine",
-     "hint": "the plain grey door on the left wall, back to the medicine gallery",
-     "hit": [
-      290,
-      186,
-      67,
-      346
-     ]
-    },
-    {
-     "to": "mots_deuil",
-     "label": "Couloir des mots 4",
-     "hint": "the plain grey door at the right end of the back wall, to the last word corridor",
-     "hit": [
-      725,
-      246,
-      83,
-      174
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_plaie_noun",
-     "box": [
-      110,
-      149,
-      76,
-      91
-     ]
-    },
-    {
-     "id": "fr_epidemie_noun",
-     "box": [
-      192,
-      332,
-      59,
-      72
-     ]
-    },
-    {
-     "id": "fr_secretion_noun",
-     "box": [
-      380,
-      274,
-      32,
-      51
+      1007,
+      178,
+      48,
+      60
      ],
      "labelAt": [
-      428,
-      329
-     ]
-    },
-    {
-     "id": "fr_sexe_noun",
-     "box": [
-      1080,
-      168,
-      62,
-      83
-     ]
-    },
-    {
-     "id": "fr_avortement_noun",
-     "box": [
-      982,
-      317,
-      47,
-      64
-     ]
-    },
-    {
-     "id": "fr_tabagisme_noun",
-     "box": [
-      1060,
-      472,
-      70,
-      98
-     ]
-    },
-    {
-     "id": "fr_ivre_adj",
-     "box": [
-      543,
-      248,
-      38,
-      34
-     ]
-    },
-    {
-     "id": "fr_sanglant_adj",
-     "box": [
-      600,
-      291,
-      38,
-      35
-     ],
-     "labelAt": [
-      600,
-      330
-     ]
-    },
-    {
-     "id": "fr_saoul_adj",
-     "box": [
-      655,
-      338,
-      37,
-      32
-     ],
-     "labelAt": [
-      684,
-      362
-     ]
-    },
-    {
-     "id": "fr_ivrogne_adj",
-     "box": [
-      480,
-      440,
-      83,
-      140
-     ]
-    },
-    {
-     "id": "fr_sanguin_adj",
-     "box": [
-      608,
-      400,
-      64,
-      72
-     ]
-    },
-    {
-     "id": "fr_accoucher_verb",
-     "box": [
-      588,
-      473,
-      102,
-      207
+      1056,
+      242
      ]
     }
    ]
   },
   "mots_deuil": {
-   "name": "Le couloir des mots (4) · Word corridor 4 (text only)",
+   "name": "Le couloir des mots (2) · Word corridor 2 (text only)",
    "room_id": "R_text_death",
    "image": "musee/mots_deuil.jpg",
-   "alt": "The quiet last room of the museum word corridor, softly lit by a round skylight: pale grey walls with a dark-blue skirting board and a pale oak plank floor. Small blank cream plaques with brass screws hang at different heights: two on the left wall, five in a zigzag on the back wall and six along the right wall; two wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A wooden bench stands under the back wall and a potted olive tree in the back right corner. Door: plain grey on the left wall, back to the third word corridor.",
+   "alt": "The quiet second room of the museum word corridor, softly lit by a round skylight: pale gray walls with a dark-blue baseboard and a pale oak plank floor. Small blank cream plaques with brass screws hang at different heights: two on the left wall, four in a zigzag on the back wall and seven along the right wall; two wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A wooden bench stands under the back wall and a potted olive tree in the back right corner. Door: plain gray on the left wall, back to the old hospital ward.",
    "nameplate": [
     50,
     4.5
    ],
-   "backTo": "mots_sante",
+   "backTo": "hospice",
    "doors": [
     {
-     "to": "mots_sante",
-     "label": "Couloir des mots 3",
-     "hint": "the plain grey door on the left wall, back to the third word corridor",
+     "to": "hospice",
+     "label": "L'hospice",
+     "hint": "the plain gray door on the left wall, back to the old hospital ward",
      "hit": [
       260,
       162,
@@ -1384,15 +1110,6 @@
    "zooms": [],
    "items": [
     {
-     "id": "fr_torture_noun",
-     "box": [
-      103,
-      120,
-      77,
-      98
-     ]
-    },
-    {
      "id": "fr_decomposition_noun",
      "box": [
       103,
@@ -1402,7 +1119,16 @@
      ]
     },
     {
-     "id": "fr_noyer_verb",
+     "id": "fr_suicider_verb",
+     "box": [
+      103,
+      120,
+      77,
+      98
+     ]
+    },
+    {
+     "id": "fr_sanglant_adj",
      "box": [
       490,
       240,
@@ -1411,16 +1137,7 @@
      ]
     },
     {
-     "id": "fr_mourant_adj",
-     "box": [
-      617,
-      301,
-      48,
-      37
-     ]
-    },
-    {
-     "id": "fr_perir_verb",
+     "id": "fr_sanguin_adj",
      "box": [
       607,
       422,
@@ -1429,7 +1146,7 @@
      ]
     },
     {
-     "id": "fr_suicider_verb",
+     "id": "fr_mourant_adj",
      "box": [
       587,
       497,
@@ -1458,10 +1175,10 @@
     {
      "id": "fr_bourreau_noun",
      "box": [
-      901,
-      250,
-      26,
-      48
+      895,
+      245,
+      38,
+      72
      ]
     },
     {
@@ -1498,6 +1215,471 @@
       477,
       84,
       121
+     ]
+    },
+    {
+     "id": "fr_traumatisme_noun",
+     "box": [
+      725,
+      240,
+      46,
+      35
+     ]
+    },
+    {
+     "id": "fr_sexe_noun",
+     "box": [
+      946,
+      371,
+      30,
+      56
+     ]
+    },
+    {
+     "id": "fr_avortement_noun",
+     "box": [
+      1087,
+      210,
+      80,
+      90
+     ]
+    }
+   ]
+  },
+  "tribunal": {
+   "name": "Le tribunal des romans · The storybook courtroom",
+   "room_id": "R_text_crime_03",
+   "image": "musee/tribunal.jpg",
+   "alt": "A museum's reconstructed old courtroom on a family mock-trial day, dark wood paneling and a green-and-cream tiled floor under brass lamps. A smiling white-haired judge sits at the raised bench at the back. In the jury box at the back left a lady juror in a feathered hat wags her finger at a startled lawyer in a white wig. On a bench a cartoon criminal in a striped shirt and eye mask sips tea from a tin mug, and in the left foreground a big hairy brute looks sheepish over a china teapot and a smashed cup. In the middle a grinning jailbird signs a paper with an enormous feather quill pen. On the right a mafioso in a pinstripe suit poses with a tennis racket, a stalk of celery in a black mask and striped shirt sits in the dock, and a masked burglar tiptoes off with a giant wedge of brie. A small antique revolver lies on a turning stand in a glass case at the right, and three spectators on the upper balcony peer through opera glasses. Doors: plain gray on the left wall, back to the word corridor; red wood with a ship lantern at the back right, to the harbor tavern.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "mots_delits",
+   "doors": [
+    {
+     "to": "mots_delits",
+     "label": "Couloir des mots 1",
+     "hint": "the plain gray door on the left wall, back to the word corridor",
+     "hit": [
+      31,
+      118,
+      100,
+      262
+     ]
+    },
+    {
+     "to": "taverne",
+     "label": "La taverne",
+     "hint": "the red wooden door with the ship lantern at the back right, to the harbor tavern",
+     "hit": [
+      1082,
+      200,
+      60,
+      135
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_injure_noun",
+     "box": [
+      160,
+      100,
+      196,
+      215
+     ]
+    },
+    {
+     "id": "fr_criminalite_noun",
+     "box": [
+      325,
+      325,
+      125,
+      245
+     ]
+    },
+    {
+     "id": "fr_brutalite_noun",
+     "box": [
+      15,
+      385,
+      305,
+      315
+     ]
+    },
+    {
+     "id": "fr_penal_adj",
+     "box": [
+      470,
+      280,
+      265,
+      420
+     ]
+    },
+    {
+     "id": "fr_racket_noun",
+     "box": [
+      737,
+      150,
+      157,
+      230
+     ]
+    },
+    {
+     "id": "fr_scelerat_noun",
+     "box": [
+      906,
+      143,
+      94,
+      182
+     ]
+    },
+    {
+     "id": "fr_cambriolage_noun",
+     "box": [
+      775,
+      385,
+      325,
+      335
+     ]
+    },
+    {
+     "id": "fr_revolver_noun",
+     "box": [
+      1118,
+      340,
+      157,
+      125
+     ]
+    },
+    {
+     "id": "fr_affut_noun",
+     "box": [
+      1018,
+      0,
+      262,
+      78
+     ]
+    }
+   ]
+  },
+  "taverne": {
+   "name": "La taverne du port · The harbor tavern",
+   "room_id": "R_tavern_01",
+   "image": "musee/taverne.jpg",
+   "alt": "A museum's life-size reconstructed harbor tavern with timber beams, whitewashed walls, fishing nets, a ship's wheel and hanging ship lanterns; pewter mugs stand untouched on a shelf behind the bar and nobody is drinking. By the red door on the left a laughing young woman gives her grinning boyfriend a playful cartoon slap, little stars bursting, while he holds a bunch of flowers. In front of them a comic dust cloud of a scuffle rolls around a big duffel bag, a laughing sailor in a red bandana in the middle of it, nobody hurt. On a table two little cartoon bulls in red boxing gloves spar on a giant apple core. In the middle a tipsy rosy-nosed sailor dances with a potted fir tree, and at the bar a tipsy old fisherman dozes with his nose in his soup. In front, a red-nosed old cook weeps as he peels a big sack of onions. On the right a white-bearded old man with a cold, unlit pipe in his teeth holds a brass tuba; there is no smoke. Doors: red wood on the left wall, back to the courtroom; an open archway at the back right with a gangway up to the pirate ship.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "tribunal",
+   "doors": [
+    {
+     "to": "tribunal",
+     "label": "Le tribunal",
+     "hint": "the red wooden door on the left wall, back to the storybook courtroom",
+     "hit": [
+      31,
+      94,
+      110,
+      310
+     ]
+    },
+    {
+     "to": "bateau_pirate",
+     "label": "Le bateau pirate",
+     "hint": "the open archway and gangway at the back right, up to the pirate ship",
+     "hit": [
+      1035,
+      60,
+      175,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gifle_noun",
+     "box": [
+      144,
+      188,
+      300,
+      215
+     ]
+    },
+    {
+     "id": "fr_bagarre_noun",
+     "box": [
+      0,
+      410,
+      537,
+      310
+     ]
+    },
+    {
+     "id": "fr_corrida_noun",
+     "box": [
+      445,
+      165,
+      135,
+      170
+     ]
+    },
+    {
+     "id": "fr_ivre_adj",
+     "box": [
+      583,
+      88,
+      172,
+      355
+     ]
+    },
+    {
+     "id": "fr_saoul_adj",
+     "box": [
+      790,
+      215,
+      165,
+      105
+     ]
+    },
+    {
+     "id": "fr_ivrogne_adj",
+     "box": [
+      760,
+      350,
+      220,
+      310
+     ]
+    },
+    {
+     "id": "fr_tabagisme_noun",
+     "box": [
+      1025,
+      256,
+      255,
+      294
+     ]
+    }
+   ]
+  },
+  "bateau_pirate": {
+   "name": "Le bateau pirate · The pirate ship",
+   "room_id": "R_pirate_ship_01",
+   "image": "musee/bateau_pirate.jpg",
+   "alt": "The main deck of a life-size wooden pirate ship standing in the museum's glass-roofed ship hall on a family dress-up day; there are no swords or cannons. High in the crow's nest at the upper left a person in a giant carrot costume keeps a lookout with cupped hands. A laughing pirate holds up his boot with a brass compass stuck to the sole. At the front left two dress-up children gaze at a shiny red toy car on a stack of cargo crates and sacks, and a sailor kneels at an open deck hatch, calling down into the dark hold. In the middle a helmsman in a tricorn hat steers at the big wooden wheel, and a smiling mother in a headscarf hugs the tall mast. On the raised deck at the right a dashing privateer in a plumed hat points out ahead, and two mischievous bandits grin and wave from the ship's little barred brig. A pirate kid opens a loot sack full of giant colorful buttons, a girl blows soap bubbles out of a round brass porthole, and a little rat in a red bandana sits on a barrel holding one big green pea. Door: the open doorway at the top of the gangway on the left, back to the harbor tavern.",
+   "nameplate": [
+    62,
+    4.5
+   ],
+   "backTo": "taverne",
+   "doors": [
+    {
+     "to": "taverne",
+     "label": "La taverne",
+     "hint": "the open doorway at the top of the gangway on the left, back to the harbor tavern",
+     "hit": [
+      10,
+      125,
+      160,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vigie_noun",
+     "box": [
+      388,
+      0,
+      106,
+      112
+     ]
+    },
+    {
+     "id": "fr_boussole_noun",
+     "box": [
+      238,
+      195,
+      255,
+      150
+     ]
+    },
+    {
+     "id": "fr_cargaison_noun",
+     "box": [
+      144,
+      406,
+      300,
+      314
+     ]
+    },
+    {
+     "id": "fr_cale_noun",
+     "box": [
+      455,
+      350,
+      120,
+      315
+     ]
+    },
+    {
+     "id": "fr_gouvernail_noun",
+     "box": [
+      580,
+      140,
+      220,
+      325
+     ]
+    },
+    {
+     "id": "fr_mat_noun",
+     "box": [
+      800,
+      230,
+      120,
+      250
+     ]
+    },
+    {
+     "id": "fr_corsaire_noun",
+     "box": [
+      920,
+      60,
+      165,
+      271
+     ]
+    },
+    {
+     "id": "fr_brigand_noun",
+     "box": [
+      1090,
+      180,
+      180,
+      120
+     ]
+    },
+    {
+     "id": "fr_hublot_noun",
+     "box": [
+      1131,
+      369,
+      149,
+      155
+     ]
+    },
+    {
+     "id": "fr_pirate_noun",
+     "box": [
+      1040,
+      525,
+      150,
+      195
+     ]
+    },
+    {
+     "id": "fr_butin_noun",
+     "box": [
+      681,
+      485,
+      330,
+      235
+     ]
+    }
+   ]
+  },
+  "hospice": {
+   "name": "L'hospice d'autrefois · The old hospital ward",
+   "room_id": "R_text_medical",
+   "image": "musee/hospice.jpg",
+   "alt": "A museum's reconstructed old hospital ward and bath-cure room with white tiled walls, tall windows and a pale tiled floor. At the back left a row of iron beds holds sniffly patients with thermometers and handkerchiefs while a nurse in a white cap brings a bowl of green pea soup. In front, a little girl on a stool holds a plush bunny whose cut tummy shows colorful play-dough stuffing, and a boy pulls back a white curtain to find a patch of wall oozing thick green goo. In the middle a happy mother sits on a green couch with her newborn baby beside a smiling mime in a red beret. On the right a big museum diorama shows a murky green river flowing down a hillside, carrying cartoon locusts on leaf rafts, and a man in an old striped bathing suit leaps out of a steamy steam room into an icy plunge pool. Doors: white with a round window at the left, back to the medicine gallery; plain gray at the back right, to the word corridor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "medecine",
+   "doors": [
+    {
+     "to": "medecine",
+     "label": "La médecine",
+     "hint": "the white door with the round window at the left, back to the medicine gallery",
+     "hit": [
+      6,
+      12,
+      125,
+      130
+     ]
+    },
+    {
+     "to": "mots_deuil",
+     "label": "Couloir des mots 2",
+     "hint": "the plain gray door at the back right, to the word corridor",
+     "hit": [
+      1062,
+      25,
+      100,
+      137
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_epidemie_noun",
+     "box": [
+      0,
+      148,
+      545,
+      152
+     ]
+    },
+    {
+     "id": "fr_plaie_noun",
+     "box": [
+      100,
+      412,
+      181,
+      275
+     ]
+    },
+    {
+     "id": "fr_secretion_noun",
+     "box": [
+      300,
+      305,
+      312,
+      410
+     ]
+    },
+    {
+     "id": "fr_accoucher_verb",
+     "box": [
+      569,
+      130,
+      319,
+      170
+     ]
+    },
+    {
+     "id": "fr_fleau_noun",
+     "box": [
+      615,
+      305,
+      435,
+      415
+     ]
+    },
+    {
+     "id": "fr_recul_noun",
+     "box": [
+      1056,
+      205,
+      224,
+      370
      ]
     }
    ]
