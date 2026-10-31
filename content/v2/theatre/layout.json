@@ -1,0 +1,1335 @@
+{
+ "building": "theatre",
+ "building_id": "B45_theatre",
+ "sector_id": "S14_culture",
+ "name": "Théâtre & Cinéma",
+ "main": "theatre",
+ "roomList": [
+  {
+   "key": "theatre",
+   "short": "Le foyer"
+  },
+  {
+   "key": "salle",
+   "short": "La salle"
+  },
+  {
+   "key": "scene",
+   "short": "La scène"
+  },
+  {
+   "key": "coulisses",
+   "short": "Les coulisses"
+  },
+  {
+   "key": "loge",
+   "short": "La loge"
+  },
+  {
+   "key": "danse",
+   "short": "La répétition"
+  },
+  {
+   "key": "cinema",
+   "short": "Le cinéma"
+  },
+  {
+   "key": "cabine",
+   "short": "La cabine"
+  },
+  {
+   "key": "tele",
+   "short": "Le studio télé"
+  },
+  {
+   "key": "tournage",
+   "short": "Le tournage"
+  }
+ ],
+ "planned": {
+  "theatre": {
+   "vocabRoom": "R_theatre_01",
+   "only": [
+    "fr_theatre_noun",
+    "fr_spectacle_noun",
+    "fr_vestiaire_noun",
+    "fr_celebrite_noun",
+    "fr_photographie_noun",
+    "fr_genial_adj",
+    "fr_merveilleux_adj",
+    "fr_reserver_verb",
+    "fr_attendre_verb"
+   ]
+  },
+  "salle": {
+   "vocabRoom": "R_theatre_01",
+   "only": [
+    "fr_public_noun",
+    "fr_spectateur_noun",
+    "fr_assistance_noun",
+    "fr_audience_noun",
+    "fr_drole_adj",
+    "fr_rire_verb",
+    "fr_pleurer_verb",
+    "fr_placer_verb"
+   ]
+  },
+  "scene": {
+   "vocabRoom": "R_theatre_01",
+   "only": [
+    "fr_scene_noun",
+    "fr_comedie_noun",
+    "fr_acteur_noun",
+    "fr_drame_noun",
+    "fr_sorcier_noun",
+    "fr_theatral_adj",
+    "fr_mysterieux_adj",
+    "fr_feindre_verb",
+    "fr_surgir_verb",
+    "fr_reciter_verb"
+   ]
+  },
+  "coulisses": {
+   "vocabRoom": "R_theatre_03",
+   "only": [
+    "fr_coulisse_noun",
+    "fr_participant_noun",
+    "fr_panorama_noun",
+    "fr_volet_noun",
+    "fr_curieux_adj",
+    "fr_confus_adj",
+    "fr_accrocher_verb",
+    "fr_rougir_verb"
+   ]
+  },
+  "loge": {
+   "vocabRoom": "R_theatre_02",
+   "only": [
+    "fr_loge_noun",
+    "fr_jongleur_noun",
+    "fr_bizarre_adj",
+    "fr_fou_adj",
+    "fr_maquiller_verb",
+    "fr_poudrer_verb",
+    "fr_coiffer_verb",
+    "fr_costumer_verb"
+   ]
+  },
+  "danse": {
+   "vocabRoom": "R_theatre_02",
+   "only": [
+    "fr_danse_noun",
+    "fr_repetition_noun",
+    "fr_audition_noun",
+    "fr_danseur_noun",
+    "fr_ballet_noun",
+    "fr_fatigant_adj",
+    "fr_tourner_verb",
+    "fr_repeter_verb",
+    "fr_entonner_verb"
+   ]
+  },
+  "cinema": {
+   "vocabRoom": "R_cinema_02",
+   "only": [
+    "fr_image_noun",
+    "fr_rangee_noun",
+    "fr_cinema_noun",
+    "fr_cine_noun",
+    "fr_film_noun",
+    "fr_ecran_noun",
+    "fr_muet_adj",
+    "fr_eteindre_verb"
+   ]
+  },
+  "cabine": {
+   "vocabRoom": "R_cinema_02",
+   "only": [
+    "fr_projecteur_noun",
+    "fr_metrage_noun",
+    "fr_magnetoscope_noun",
+    "fr_technique_adj",
+    "fr_automatique_adj",
+    "fr_projeter_verb",
+    "fr_allumer_verb",
+    "fr_enrouler_verb"
+   ]
+  },
+  "tele": {
+   "vocabRoom": "R_cinema_01",
+   "only": [
+    "fr_tele_noun",
+    "fr_serie_noun",
+    "fr_pub_noun",
+    "fr_camera_noun",
+    "fr_feuilleton_noun",
+    "fr_documentaire_noun",
+    "fr_animateur_noun",
+    "fr_sourire_verb"
+   ]
+  },
+  "tournage": {
+   "vocabRoom": "R_cinema_03",
+   "only": [
+    "fr_cascade_noun",
+    "fr_realisateur_noun",
+    "fr_scenario_noun",
+    "fr_western_noun",
+    "fr_cineaste_noun",
+    "fr_artificiel_adj",
+    "fr_crier_verb",
+    "fr_frissonner_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "theatre": {
+   "name": "Le foyer du théâtre · The theatre lobby",
+   "room_id": "R_theatre_01",
+   "image": "theatre/theatre.jpg",
+   "alt": "The theatre lobby on opening night, painted in ink and gouache: under a crystal chandelier on a red carpet, a celebrity in sunglasses sweeps in with a stick of celery and a wedge of brie below a framed photograph of a giraffe; a boy in a genie costume gives a thumbs up while a little girl gasps near a lace bridal veil on a costume dummy; Monsieur Verbe in a red beret hands out tickets on a stingray-shaped tray at the box-office window and Monsieur Verbe in a purple beret waits on a red tandem bicycle checking his watch; at the counter a man pushes up his giant round spectacles, the cloakroom man holds up a torn waistcoat, and a tea trolley carries a little model theatre. The tall wooden front doors on the far left lead out to the boulevard, the red padded doors beside them open into the auditorium, the narrow dark-red door by the staircase leads backstage, the green porthole doors open into the cinema and the black door under the red lamp leads to the TV studio.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     5,
+     120,
+     95,
+     325
+    ],
+    "label": "Boulevard des Loisirs"
+   },
+   "doors": [
+    {
+     "to": "salle",
+     "label": "La salle",
+     "hint": "the red padded doors into the auditorium",
+     "hit": [
+      150,
+      120,
+      104,
+      300
+     ]
+    },
+    {
+     "to": "coulisses",
+     "label": "Les coulisses",
+     "hint": "the narrow dark-red door by the staircase, backstage",
+     "hit": [
+      448,
+      150,
+      64,
+      135
+     ]
+    },
+    {
+     "to": "cinema",
+     "label": "Le cinéma",
+     "hint": "the green porthole doors into the cinema",
+     "hit": [
+      1042,
+      110,
+      110,
+      330
+     ]
+    },
+    {
+     "to": "tele",
+     "label": "Le studio télé",
+     "hint": "the black door under the red lamp, to the TV studio",
+     "hit": [
+      1175,
+      120,
+      100,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_photographie_noun",
+     "box": [
+      275,
+      62,
+      110,
+      184
+     ]
+    },
+    {
+     "id": "fr_celebrite_noun",
+     "box": [
+      255,
+      248,
+      160,
+      182
+     ]
+    },
+    {
+     "id": "fr_genial_adj",
+     "box": [
+      422,
+      288,
+      130,
+      150
+     ]
+    },
+    {
+     "id": "fr_merveilleux_adj",
+     "box": [
+      526,
+      490,
+      170,
+      225
+     ]
+    },
+    {
+     "id": "fr_reserver_verb",
+     "box": [
+      706,
+      106,
+      94,
+      104
+     ]
+    },
+    {
+     "id": "fr_attendre_verb",
+     "box": [
+      556,
+      213,
+      242,
+      257
+     ]
+    },
+    {
+     "id": "fr_spectacle_noun",
+     "box": [
+      801,
+      197,
+      65,
+      145
+     ],
+     "labelAt": [
+      872,
+      166
+     ]
+    },
+    {
+     "id": "fr_vestiaire_noun",
+     "box": [
+      868,
+      200,
+      150,
+      192
+     ]
+    },
+    {
+     "id": "fr_theatre_noun",
+     "box": [
+      846,
+      421,
+      192,
+      292
+     ]
+    }
+   ]
+  },
+  "salle": {
+   "name": "La salle de spectacle · The auditorium",
+   "room_id": "R_theatre_01",
+   "image": "theatre/salle.jpg",
+   "alt": "The theatre auditorium during the play, painted in ink and gouache and seen from the front by the stage: on the left a lady yawns hugely behind her hand while a girl stares at a line of ants marching along the wooden rail in front of her; Monsieur Verbe in a red beret weeps big tears onto a shiny disc, and above him usher Monsieur Verbe in a red beret shines his torch for a bald man holding up his arm in a white plaster cast; in the aisle Monsieur Verbe in a gold beret has toppled onto his rear laughing; a spectator with opera glasses has a buttered baked potato on a napkin on his knees, a boy balances a bread roll on his nose, and a bleak man sits alone on an old wooden church pew. The red padded studded doors on the left lead back to the foyer and the little wooden steps on the right go up onto the stage.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "theatre",
+   "doors": [
+    {
+     "to": "theatre",
+     "label": "Le foyer",
+     "hint": "the red padded doors back to the foyer",
+     "hit": [
+      30,
+      45,
+      150,
+      330
+     ]
+    },
+    {
+     "to": "scene",
+     "label": "La scène",
+     "hint": "the wooden steps up onto the stage",
+     "hit": [
+      1000,
+      448,
+      275,
+      267
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_audience_noun",
+     "box": [
+      275,
+      180,
+      160,
+      210
+     ]
+    },
+    {
+     "id": "fr_pleurer_verb",
+     "box": [
+      436,
+      230,
+      155,
+      160
+     ]
+    },
+    {
+     "id": "fr_placer_verb",
+     "box": [
+      488,
+      78,
+      276,
+      118
+     ]
+    },
+    {
+     "id": "fr_assistance_noun",
+     "box": [
+      283,
+      396,
+      270,
+      205
+     ]
+    },
+    {
+     "id": "fr_rire_verb",
+     "box": [
+      570,
+      412,
+      208,
+      293
+     ]
+    },
+    {
+     "id": "fr_spectateur_noun",
+     "box": [
+      722,
+      198,
+      190,
+      212
+     ]
+    },
+    {
+     "id": "fr_drole_adj",
+     "box": [
+      798,
+      422,
+      192,
+      298
+     ]
+    },
+    {
+     "id": "fr_public_noun",
+     "box": [
+      1075,
+      193,
+      182,
+      232
+     ]
+    }
+   ]
+  },
+  "scene": {
+   "name": "Sur la scène · On stage",
+   "room_id": "R_theatre_01",
+   "image": "theatre/scene.jpg",
+   "alt": "On the theatre stage mid-performance, painted in ink and gouache and seen from the front edge of the stage: on the left an actress in a red polka-dot dress pulls a face as she combs her hair with a giant comb; behind her a hammy actor in a sailor suit flings a fishing trawl net over his head in front of a painted canvas backdrop of the river Seine with its stone bridges; Monsieur Verbe in a gold beret swoons in a fake faint, fanning himself with a big paper fan; Monsieur Verbe in a red beret recites from a very long curling paper receipt; Monsieur Verbe in a green beret shoots up out of a trapdoor in a burst of glitter beside a little terrier in the stage mist; on the right a tragic actor in black beats a big bass drum, an actor in a gold crown leads a pantomime yak on a rope, and a sorcerer in a starry hat stirs a bubbling green potion in a china saucer. Wooden steps at the front left go down into the auditorium, and a gap in the black wing curtains on the right leads backstage.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "salle",
+   "doors": [
+    {
+     "to": "salle",
+     "label": "La salle",
+     "hint": "the wooden steps down into the auditorium",
+     "hit": [
+      0,
+      400,
+      264,
+      320
+     ]
+    },
+    {
+     "to": "coulisses",
+     "label": "Les coulisses",
+     "hint": "the gap in the wing curtains, backstage",
+     "hit": [
+      1060,
+      80,
+      120,
+      480
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_scene_noun",
+     "box": [
+      488,
+      95,
+      176,
+      140
+     ]
+    },
+    {
+     "id": "fr_comedie_noun",
+     "box": [
+      268,
+      275,
+      140,
+      310
+     ]
+    },
+    {
+     "id": "fr_theatral_adj",
+     "box": [
+      335,
+      80,
+      150,
+      190
+     ]
+    },
+    {
+     "id": "fr_feindre_verb",
+     "box": [
+      410,
+      272,
+      150,
+      188
+     ]
+    },
+    {
+     "id": "fr_reciter_verb",
+     "box": [
+      562,
+      236,
+      136,
+      226
+     ]
+    },
+    {
+     "id": "fr_surgir_verb",
+     "box": [
+      425,
+      463,
+      190,
+      194
+     ]
+    },
+    {
+     "id": "fr_mysterieux_adj",
+     "box": [
+      618,
+      540,
+      80,
+      90
+     ]
+    },
+    {
+     "id": "fr_acteur_noun",
+     "box": [
+      700,
+      325,
+      176,
+      290
+     ]
+    },
+    {
+     "id": "fr_drame_noun",
+     "box": [
+      762,
+      180,
+      178,
+      128
+     ]
+    },
+    {
+     "id": "fr_sorcier_noun",
+     "box": [
+      878,
+      310,
+      142,
+      320
+     ]
+    }
+   ]
+  },
+  "coulisses": {
+   "name": "Les coulisses · Backstage",
+   "room_id": "R_theatre_03",
+   "image": "theatre/coulisses.jpg",
+   "alt": "Backstage behind the theatre stage, painted in ink and gouache: black walls, a rope rail with sandbags and a big green prop dragon head on a stool. On the left a plain dark-red door with a push bar leads back to the foyer, and a gap of warm golden light between the black curtains leads out onto the stage. A stagehand girl waits in the wings holding a white goat on a sparkly leash; a boy in a yellow jumper sniffs a steaming pot of curry on the props table; Monsieur Verbe in a red beret hangs a colourful crochet curtain on a hook; Monsieur Verbe in a green beret blushes bright red as a toy kangaroo kisses him; a puzzled stagehand scratches his head holding a stack of traffic cones; a stagehand pushes an upright piano in front of a painted mountain backdrop; a volleyball is stuck in the blue shutter of a scenery house; a man in a polka-dot party hat holds a frying pan. On the right, a cream door with a gold star leads to the dressing room and a wooden door with a round window leads to the rehearsal studio.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "theatre",
+   "doors": [
+    {
+     "to": "theatre",
+     "label": "Le foyer",
+     "hint": "the dark-red door with the push bar, back to the foyer",
+     "hit": [
+      18,
+      175,
+      130,
+      350
+     ]
+    },
+    {
+     "to": "scene",
+     "label": "La scène",
+     "hint": "the gap of light between the curtains, onto the stage",
+     "hit": [
+      172,
+      40,
+      100,
+      440
+     ]
+    },
+    {
+     "to": "loge",
+     "label": "La loge",
+     "hint": "the cream door with the gold star",
+     "hit": [
+      1025,
+      175,
+      97,
+      337
+     ]
+    },
+    {
+     "to": "danse",
+     "label": "La répétition",
+     "hint": "the wooden door with the round window",
+     "hit": [
+      1145,
+      185,
+      117,
+      375
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_coulisse_noun",
+     "box": [
+      290,
+      240,
+      120,
+      280
+     ]
+    },
+    {
+     "id": "fr_participant_noun",
+     "box": [
+      765,
+      385,
+      205,
+      335
+     ]
+    },
+    {
+     "id": "fr_panorama_noun",
+     "box": [
+      790,
+      180,
+      210,
+      200
+     ]
+    },
+    {
+     "id": "fr_volet_noun",
+     "box": [
+      850,
+      92,
+      140,
+      86
+     ]
+    },
+    {
+     "id": "fr_curieux_adj",
+     "box": [
+      430,
+      300,
+      150,
+      133
+     ]
+    },
+    {
+     "id": "fr_confus_adj",
+     "box": [
+      515,
+      435,
+      155,
+      285
+     ]
+    },
+    {
+     "id": "fr_accrocher_verb",
+     "box": [
+      605,
+      55,
+      180,
+      200
+     ]
+    },
+    {
+     "id": "fr_rougir_verb",
+     "box": [
+      600,
+      262,
+      160,
+      170
+     ]
+    }
+   ]
+  },
+  "loge": {
+   "name": "La loge des artistes · The dressing room",
+   "room_id": "R_theatre_02",
+   "image": "theatre/loge.jpg",
+   "alt": "The actors' dressing room, painted in ink and gouache: pink-and-cream striped walls, a long wooden make-up counter under three mirrors ringed with round bulbs, a costume rail, a pink sofa and a coat stand with a feathered hat. On the left a cream door with a gold star leads back to the backstage. An actress in blue at the counter pops a lozenge from a little tin; Monsieur Verbe in a red beret with a big brass key tucked in it paints his face with a brush; another powders the nose of a white poodle in a frilly collar on a stool; another pins up a seated actress's hair bun with a yellow toy duck on top; a striped bee costume with a jewelled tsar crown hangs on the rail; a boy in a pink feather boa does a wild kung fu kick; a juggler in a red waistcoat juggles white glue bottles; and Monsieur Verbe stands dressed in a lettuce-leaf costume with a tomato on his red beret.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "backTo": "coulisses",
+   "doors": [
+    {
+     "to": "coulisses",
+     "label": "Les coulisses",
+     "hint": "the cream door with the gold star, back to backstage",
+     "hit": [
+      22,
+      38,
+      173,
+      407
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_loge_noun",
+     "box": [
+      228,
+      120,
+      190,
+      160
+     ]
+    },
+    {
+     "id": "fr_maquiller_verb",
+     "box": [
+      420,
+      110,
+      160,
+      175
+     ]
+    },
+    {
+     "id": "fr_poudrer_verb",
+     "box": [
+      285,
+      288,
+      275,
+      370
+     ]
+    },
+    {
+     "id": "fr_bizarre_adj",
+     "box": [
+      598,
+      82,
+      100,
+      298
+     ]
+    },
+    {
+     "id": "fr_coiffer_verb",
+     "box": [
+      700,
+      100,
+      132,
+      150
+     ]
+    },
+    {
+     "id": "fr_jongleur_noun",
+     "box": [
+      848,
+      18,
+      170,
+      232
+     ]
+    },
+    {
+     "id": "fr_costumer_verb",
+     "box": [
+      834,
+      252,
+      228,
+      430
+     ]
+    },
+    {
+     "id": "fr_fou_adj",
+     "box": [
+      562,
+      412,
+      270,
+      300
+     ]
+    }
+   ]
+  },
+  "danse": {
+   "name": "La salle de répétition · The rehearsal studio",
+   "room_id": "R_theatre_02",
+   "image": "theatre/danse.jpg",
+   "alt": "The theatre's rehearsal studio, painted in ink and gouache: pale blue walls, a pale maple floor, a long wall mirror with wooden barres, an upright piano with an owl metronome and shelves of rolled mats. On the left a pale wooden door with a round window leads back to the backstage. A girl in a lilac leotard rehearses at the barre while a grey sea lion claps along; Monsieur Verbe in a red beret spins holding a big purple turnip; another repeats a step while a green parrot on his hand copies him; another sings beside the piano en pointe in black ballet shoes; a girl in a teal leotard dances with a giant pink donut round her waist; a tired girl in a blue tracksuit slumps against a fat tiger plush; a boy in a navy T-shirt and grey tights leaps beside a big green toy dinosaur; a fluffy sheep in a pink tutu dances ballet; and a nervous girl in a yellow dress auditions holding up a pink seashell before a judge at a table.",
+   "nameplate": [
+    74.5,
+    4.5
+   ],
+   "backTo": "coulisses",
+   "doors": [
+    {
+     "to": "coulisses",
+     "label": "Les coulisses",
+     "hint": "the wooden door with the round window, back to backstage",
+     "hit": [
+      48,
+      35,
+      145,
+      280
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_repetition_noun",
+     "box": [
+      292,
+      115,
+      222,
+      185
+     ]
+    },
+    {
+     "id": "fr_tourner_verb",
+     "box": [
+      520,
+      15,
+      105,
+      288
+     ]
+    },
+    {
+     "id": "fr_repeter_verb",
+     "box": [
+      672,
+      55,
+      165,
+      250
+     ]
+    },
+    {
+     "id": "fr_entonner_verb",
+     "box": [
+      880,
+      70,
+      112,
+      240
+     ]
+    },
+    {
+     "id": "fr_danse_noun",
+     "box": [
+      300,
+      301,
+      180,
+      182
+     ]
+    },
+    {
+     "id": "fr_fatigant_adj",
+     "box": [
+      545,
+      306,
+      225,
+      186
+     ]
+    },
+    {
+     "id": "fr_danseur_noun",
+     "box": [
+      788,
+      312,
+      232,
+      392
+     ]
+    },
+    {
+     "id": "fr_ballet_noun",
+     "box": [
+      624,
+      494,
+      160,
+      216
+     ]
+    },
+    {
+     "id": "fr_audition_noun",
+     "box": [
+      335,
+      494,
+      270,
+      226
+     ]
+    }
+   ]
+  },
+  "cinema": {
+   "name": "La salle de cinéma · The cinema",
+   "room_id": "R_cinema_02",
+   "image": "theatre/cinema.jpg",
+   "alt": "The theatre's cinema hall, painted in ink and gouache: tiered rows of deep blue velvet seats, dark blue walls with little gold star lamps, a projector beam from a small window at the back and a big glowing screen on the right. On the left a pair of green padded double doors with brass portholes leads back to the theatre foyer; a narrow iron staircase climbs to a small riveted door, the projection booth. Monsieur Verbe in a gold beret presses the light switch beside a blank clock whose hands point to ten; a freckled boy holds a finger to his lips while his grey kitten mews; a girl in a red pinafore holds up a card of mahjong tiles; a park ranger in a wide hat sits in the near row; a bald man munches a big cinnamon bun; a little boy hugs a neighing hobby horse; a bearded man holds a potted elm tree on his lap; and on the screen a white crane flies over a lake.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "backTo": "theatre",
+   "doors": [
+    {
+     "to": "theatre",
+     "label": "Le foyer",
+     "hint": "the green padded double doors, back to the foyer",
+     "hit": [
+      22,
+      62,
+      272,
+      395
+     ]
+    },
+    {
+     "to": "cabine",
+     "label": "La cabine",
+     "hint": "the little metal door up the iron stairs, to the projection booth",
+     "hit": [
+      722,
+      35,
+      80,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_eteindre_verb",
+     "box": [
+      338,
+      106,
+      216,
+      175
+     ]
+    },
+    {
+     "id": "fr_muet_adj",
+     "box": [
+      556,
+      169,
+      144,
+      199
+     ]
+    },
+    {
+     "id": "fr_image_noun",
+     "box": [
+      319,
+      281,
+      160,
+      294
+     ]
+    },
+    {
+     "id": "fr_rangee_noun",
+     "box": [
+      482,
+      369,
+      190,
+      351
+     ]
+    },
+    {
+     "id": "fr_cinema_noun",
+     "box": [
+      700,
+      294,
+      165,
+      118
+     ]
+    },
+    {
+     "id": "fr_cine_noun",
+     "box": [
+      688,
+      413,
+      218,
+      287
+     ]
+    },
+    {
+     "id": "fr_film_noun",
+     "box": [
+      907,
+      269,
+      195,
+      431
+     ]
+    },
+    {
+     "id": "fr_ecran_noun",
+     "box": [
+      944,
+      25,
+      336,
+      243
+     ]
+    }
+   ]
+  },
+  "cabine": {
+   "name": "La cabine de projection · The projection booth",
+   "room_id": "R_cinema_02",
+   "image": "theatre/cabine.jpg",
+   "alt": "The projection booth high at the back of the cinema, painted in ink and gouache: green-painted walls with riveted metal strips, a wooden ceiling and shelves of film reels. On the left a grey riveted metal door leads back down the iron stairs to the cinema hall. Monsieur Verbe in a red beret pulls the chain of a lamp made from a shiny aluminium kettle; a second Monsieur Verbe winds a film strip onto a reel round a wooden ruler; a boy technician on a teak crate mends a tangle of cables; a red wind-up toy car rolls along the shelf; a toy policeman holds a red magnet to an old video recorder; a third Monsieur Verbe shines a beam from the nose of a toy jet out through the little window; an old film projector wears a tweed jacket; and round film cans are stacked on a striped mattress.",
+   "nameplate": [
+    73,
+    4.5
+   ],
+   "backTo": "cinema",
+   "doors": [
+    {
+     "to": "cinema",
+     "label": "Le cinéma",
+     "hint": "the grey riveted metal door, back down the iron stairs to the cinema hall",
+     "hit": [
+      25,
+      52,
+      238,
+      541
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_allumer_verb",
+     "box": [
+      294,
+      19,
+      206,
+      300
+     ]
+    },
+    {
+     "id": "fr_automatique_adj",
+     "box": [
+      502,
+      200,
+      112,
+      72
+     ]
+    },
+    {
+     "id": "fr_enrouler_verb",
+     "box": [
+      275,
+      319,
+      250,
+      365
+     ]
+    },
+    {
+     "id": "fr_technique_adj",
+     "box": [
+      538,
+      288,
+      156,
+      259
+     ]
+    },
+    {
+     "id": "fr_projeter_verb",
+     "box": [
+      694,
+      188,
+      209,
+      118
+     ]
+    },
+    {
+     "id": "fr_projecteur_noun",
+     "box": [
+      785,
+      306,
+      196,
+      218
+     ]
+    },
+    {
+     "id": "fr_magnetoscope_noun",
+     "box": [
+      526,
+      548,
+      237,
+      150
+     ]
+    },
+    {
+     "id": "fr_metrage_noun",
+     "box": [
+      765,
+      525,
+      241,
+      150
+     ]
+    }
+   ]
+  },
+  "tele": {
+   "name": "Le studio de télé · The TV studio",
+   "room_id": "R_cinema_01",
+   "image": "theatre/tele.jpg",
+   "alt": "The theatre's TV studio, painted in ink and gouache: matt black walls, a lighting grid of black lamps, a grey floor with thick cables and a talk-show set with a curved teal desk and an orange sofa. On the left a heavy black studio door under a red lamp leads back to the theatre foyer; on the right a huge grey sliding sound-stage door leads to the film set. A studio TV shows a hen laying an egg; a camerawoman films with a toy camel on her camera; a girl on the audience bench eats cereal while watching a series; a girl in an advert holds up a beagle puppy and a tin of dog food; Monsieur Verbe in a gold beret beams a huge smile while holding a lemon; the host in a sparkly jacket cuddles a plush koala; a wall monitor shows boats at a harbour dock; and a grey-haired man watching a soap opera holds a huge ball of tin foil.",
+   "nameplate": [
+    55,
+    4.5
+   ],
+   "backTo": "theatre",
+   "doors": [
+    {
+     "to": "theatre",
+     "label": "Le foyer",
+     "hint": "the heavy black studio door under the red lamp, back to the foyer",
+     "hit": [
+      12,
+      106,
+      182,
+      376
+     ]
+    },
+    {
+     "to": "tournage",
+     "label": "Le tournage",
+     "hint": "the huge grey sliding sound-stage door, to the film set",
+     "hit": [
+      1056,
+      56,
+      195,
+      426
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tele_noun",
+     "box": [
+      272,
+      19,
+      180,
+      131
+     ]
+    },
+    {
+     "id": "fr_camera_noun",
+     "box": [
+      453,
+      106,
+      146,
+      293
+     ]
+    },
+    {
+     "id": "fr_serie_noun",
+     "box": [
+      269,
+      244,
+      162,
+      155
+     ]
+    },
+    {
+     "id": "fr_pub_noun",
+     "box": [
+      288,
+      400,
+      262,
+      320
+     ]
+    },
+    {
+     "id": "fr_sourire_verb",
+     "box": [
+      600,
+      160,
+      160,
+      233
+     ]
+    },
+    {
+     "id": "fr_documentaire_noun",
+     "box": [
+      762,
+      62,
+      258,
+      131
+     ]
+    },
+    {
+     "id": "fr_animateur_noun",
+     "box": [
+      788,
+      194,
+      200,
+      199
+     ]
+    },
+    {
+     "id": "fr_feuilleton_noun",
+     "box": [
+      761,
+      394,
+      283,
+      326
+     ]
+    }
+   ]
+  },
+  "tournage": {
+   "name": "Le plateau de tournage · The film set",
+   "room_id": "R_cinema_03",
+   "image": "theatre/tournage.jpg",
+   "alt": "The film set on the theatre's sound stage, painted in ink and gouache: matt black studio walls, a lighting grid and big white film lights on stands over a snowy wild-west set with a wooden saloon front, a fence and hay bales. On the left a huge grey sliding sound-stage door leads back to the TV studio. A stuntwoman in a cowgirl outfit tumbles out of a wooden cask onto a blue crash mat; Monsieur Verbe in a red beret shivers in the fake snow hugging a green frisbee; another Monsieur Verbe in a red beret shouts through a megaphone holding a jar of cream; a filmmaker with a bird's nest on her hat frames the shot; a boy pushes a snow machine shaped like a big silver fish that blows fake snow; a cowboy actor has a white tern standing on his hat; the director in his folding chair holds a blank clapperboard with a green lizard on his knee; and the script lies on a stool under a singing yellow canary. A little snowman wears a cowboy hat.",
+   "nameplate": [
+    62,
+    4.5
+   ],
+   "backTo": "tele",
+   "doors": [
+    {
+     "to": "tele",
+     "label": "Le studio télé",
+     "hint": "the huge grey sliding sound-stage door, back to the TV studio",
+     "hit": [
+      15,
+      25,
+      262,
+      375
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cascade_noun",
+     "box": [
+      244,
+      419,
+      341,
+      294
+     ]
+    },
+    {
+     "id": "fr_frissonner_verb",
+     "box": [
+      300,
+      206,
+      125,
+      212
+     ]
+    },
+    {
+     "id": "fr_crier_verb",
+     "box": [
+      460,
+      188,
+      128,
+      230
+     ]
+    },
+    {
+     "id": "fr_cineaste_noun",
+     "box": [
+      600,
+      156,
+      110,
+      133
+     ]
+    },
+    {
+     "id": "fr_artificiel_adj",
+     "box": [
+      619,
+      290,
+      148,
+      185
+     ]
+    },
+    {
+     "id": "fr_western_noun",
+     "box": [
+      819,
+      150,
+      131,
+      209
+     ]
+    },
+    {
+     "id": "fr_realisateur_noun",
+     "box": [
+      768,
+      360,
+      219,
+      360
+     ]
+    },
+    {
+     "id": "fr_scenario_noun",
+     "box": [
+      604,
+      531,
+      122,
+      189
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -4,7 +4,8 @@ description: >-
   Use together with the Memory palace builder skill whenever painting,
   installing, reviewing or shipping any memory palace space: mandatory per-item
   and per-space gates that must all pass before a space counts as done. A
-  one-page gate checklist; procedures live in reference/*.md, read when relevant.
+  one-page gate checklist; procedures live in reference/*.md, read when
+  relevant.
 ---
 # Memory palace release gates
 
@@ -19,7 +20,9 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 3. Judge each OCR FLAG by eye; scene text that makes sense may stay, and OCR never auto-rejects.
 - 4. Run the project's gate scripts (the canonical copies in scripts/qa/); a non-zero exit blocks release.
 - 5. Review ONE contact sheet per room (`tools/contact_sheet.py`), opening full-size crops only where a tile raises doubt.
+- 6. Open a 2x crop of every hotspot box and confirm the hook's sound-clue details are painted inside the box (section I).
 - A checker that disagrees with the viewer is a blocker: port the viewer's geometry and re-run after any viewer change.
+- A doubt you would list in your report is a FAIL to fix before packing, not a note to ship with.
 
 ## A. Every item and exit crop, at 256 px or more with the headword and hook under it (reference/item-gates.md)
 - 1. Hook match: the figure shows exactly the hook scene; check the sound-clue object first.
@@ -43,6 +46,15 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 13. No look-alike spaces: run a similarity measure, then compare the flagged pairs by eye.
 - 14. One style per building or street, matching its exterior.
 - 15. Color: natural neutral daylight, matching the palette sheet; a whole-room amber or orange cast fails.
+
+## I. Navigation sense and hook crops (added Oct 2026 from user reports)
+- 16. Physical layout makes sense: draw the building or area as a floor plan or walk before painting. Interiors connect by real doors in walls; outdoor scenes connect by paths, steps, gates or footbridges at the scene edge, never by huts, sheds or freestanding doors in open ground.
+- 17. Shared scenery is consistent across a building or area: the same pond, river, bridge, sky and season wherever it appears, and each scene links to its real neighbours, not only back to a hub.
+- 18. Doors and exits are big enough to read at 900 px width (roughly 80 px tall or more at 1280) and look like a way through.
+- 19. Back returns to the space the visitor came from; a room with two entrances shows both ways out.
+- 20. No two hooks in the same building share the same picture or object (for example two hooks both drawn as a walnut, or two spore/mushroom hooks); pick a distinct sound-alike instead.
+- 21. A hotspot box frames its own hook figure and does not cut through an unrelated prop; the hook's props sit wholly inside its box.
+- 22. The intended object must read as itself at 2x (a ball must look like a ball, not a nut); if it could be named as something else, repaint it.
 
 ## Text in the image (builder reference/text-and-labels.md)
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.
