@@ -12,7 +12,7 @@ Served at `/french/`. `/french/v2/` redirects here and keeps the hash.
   `#/quartier/<slug>` = painted sector map (`map/<slug>.jpg`) with every building and `ST_` verb street.
   Which buildings are live comes from `data/live.js` (written by `scripts/v2/build_extras.py`); a building
   missing from it shows as "bientôt", so the map makes no request per planned building. A main
-  room's exit leads to its sector map. Back (gate 19) always goes straight outside, never to the previous
+  room's exit leads to its sector map. Back (gate 19) always goes straight outside (a second '⌂ Hub' button next to it jumps to the building's or area's hub room; hidden in the hub itself), never to the previous
   room: from any room of a building to its sector map; from a side room of an `ST_` street to that street
   (and from the street to its sector map); a zoom close-up closes to its own room. Painted doors move between rooms.
   Adding a building never touches the shared shell — see `content/v2/README.md`.

@@ -28,7 +28,7 @@ var $=function(s,e){return (e||document).querySelector(s)};
  '#app.roomsdrop #scroller{top:36px}'+ // keep the painting clear of the dropped room list so it never hides labels
  '.strip-left{display:flex;align-items:center}';
  document.head.appendChild(st) })();
-var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
+var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), hub=$('#hub'), app=$('#app');
 var curTense='present';
 var backKey=null; // Back target (gate 19): zoom -> its room; street side room -> the street; otherwise straight outside to the map
 stage.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('.doorway'))return; stage.querySelectorAll('.doorway.armed').forEach(function(o){o.classList.remove('armed')}) });
@@ -278,7 +278,7 @@ function drawMap(img,alt,label,live,soon,H){
 }
 function renderMap(){
   view='map'; curSector=null; document.title='Le Village · French vocabulary memory village';
-  back.hidden=true; rooms.hidden=true;
+  back.hidden=true; hub.hidden=true; rooms.hidden=true;
   var W=MAP.world, live=[];
   W.sectors.forEach(function(w){ var n=liveIn(w.slug).length;
     live.push({href:sectorHref(w.slug),name:w.name,en:w.en,icon:w.icon,poly:w.poly,pin:!!w.poly,rect:w.rect,tag:w.tag,door:w.door,aria:'Open the map of '+w.name+(n?' ('+n+' to visit)':''),nodoor:!n,
@@ -289,7 +289,7 @@ function renderMap(){
 var curSector=null;
 function renderSector(slug){
   var S=MAP.sectors[slug]; view='sector'; curSector=slug; document.title=S.name+' · Le Village';
-  back.hidden=false; rooms.hidden=true; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
+  back.hidden=false; hub.hidden=true; rooms.hidden=true; $('#backLabel').textContent='Le village'; back.title='Back to the village map';
   var live=[], soon=[], here={};
   liveIn(slug).forEach(function(id){ var e=homeOf(id).entry; if(!e||here[e.id||e.building_id])return; here[e.id||e.building_id]=1;
     live.push({href:'#/'+id,name:e.name,icon:e.icon,rect:e.rect,tag:e.tag,door:e.door,small:e.street?'rue des verbes':'',aria:'Enter '+e.name}) });
@@ -315,6 +315,8 @@ function renderRooms(bld,key){
 function renderRoom(bld,key){
   B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
   back.hidden=false; renderRooms(bld,key);
+  // ⌂ Hub (gate 19): a second strip button that jumps to the first room / hub of this building or area; hidden in the hub itself
+  var HK=D.main||bld; hub.hidden=(key===HK); hub.href=roomHref(bld,HK); hub.title=D.rooms[HK].name; hub.setAttribute('aria-label','Hub: '+D.rooms[HK].name);
   // gate 19: Back goes straight outside, never to the previous room. A zoom close-up closes to its own room;
   // a side room of a street (ST_ buildings) goes out to that street; every other room goes to the map it stands on.
   backKey=R.parent||((/^ST_/.test(D.building_id||'')&&key!==D.main)?D.main:null);
