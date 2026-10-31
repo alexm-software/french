@@ -48,6 +48,42 @@
   {
    "key": "hospice",
    "short": "L'hospice"
+  },
+  {
+   "key": "peinture",
+   "short": "La galerie de peinture"
+  },
+  {
+   "key": "sculpture",
+   "short": "Les sculptures"
+  },
+  {
+   "key": "vernissage",
+   "short": "Le vernissage"
+  },
+  {
+   "key": "chateau",
+   "short": "La maquette du château"
+  },
+  {
+   "key": "chevaliers",
+   "short": "Les chevaliers"
+  },
+  {
+   "key": "noblesse",
+   "short": "Les nobles"
+  },
+  {
+   "key": "trone",
+   "short": "La salle du trône"
+  },
+  {
+   "key": "assemblee",
+   "short": "L'assemblée"
+  },
+  {
+   "key": "dirigeants",
+   "short": "Les dirigeants"
   }
  ],
  "planned": {
@@ -221,6 +257,155 @@
     "fr_fleau_noun",
     "fr_recul_noun"
    ]
+  },
+  "peinture": {
+   "vocabRoom": "R_art_01",
+   "only": [
+    "fr_toile_noun",
+    "fr_peinture_noun",
+    "fr_peintre_noun",
+    "fr_modele_noun",
+    "fr_cadre_noun",
+    "fr_motif_noun",
+    "fr_portrait_noun",
+    "fr_tapisserie_noun",
+    "fr_mural_adj",
+    "fr_fresque_noun",
+    "fr_encadrement_noun",
+    "fr_retouche_noun"
+   ]
+  },
+  "sculpture": {
+   "vocabRoom": "R_art_02",
+   "only": [
+    "fr_sculpture_noun",
+    "fr_sculpteur_noun",
+    "fr_socle_noun",
+    "fr_artisan_noun",
+    "fr_mosaique_noun",
+    "fr_artistique_adj",
+    "fr_artifice_noun",
+    "fr_unite_noun",
+    "fr_academie_noun",
+    "fr_beaux_arts_noun",
+    "fr_dessinateur_noun",
+    "fr_nu_noun",
+    "fr_archeologue_noun"
+   ]
+  },
+  "vernissage": {
+   "vocabRoom": "R_art_03",
+   "only": [
+    "fr_vernissage_noun",
+    "fr_expo_noun",
+    "fr_exhibition_noun",
+    "fr_catalogue_noun",
+    "fr_conservateur_noun",
+    "fr_simulacre_noun",
+    "fr_creativite_noun",
+    "fr_design_noun",
+    "fr_elaboration_noun",
+    "fr_mediatheque_noun",
+    "fr_posterite_noun",
+    "fr_imagerie_noun",
+    "fr_conservatoire_noun"
+   ]
+  },
+  "chateau": {
+   "vocabRoom": "R_heraldry_01",
+   "only": [
+    "fr_chateau_noun",
+    "fr_forteresse_noun",
+    "fr_rempart_noun",
+    "fr_donjon_noun",
+    "fr_bastion_noun",
+    "fr_oubliette_noun",
+    "fr_sentinelle_noun",
+    "fr_defense_noun",
+    "fr_bloc_noun",
+    "fr_blocage_noun",
+    "fr_tresor_noun",
+    "fr_carrosse_noun"
+   ]
+  },
+  "chevaliers": {
+   "vocabRoom": "R_heraldry_02",
+   "only": [
+    "fr_chevalier_noun",
+    "fr_ecuyer_noun",
+    "fr_ecu_noun",
+    "fr_etendard_noun",
+    "fr_embleme_noun",
+    "fr_pique_noun",
+    "fr_sabre_noun",
+    "fr_fourreau_noun",
+    "fr_mousquetaire_noun",
+    "fr_duel_noun",
+    "fr_croisade_noun",
+    "fr_protecteur_noun",
+    "fr_enchantement_noun"
+   ]
+  },
+  "noblesse": {
+   "vocabRoom": "R_heraldry_01",
+   "only": [
+    "fr_baron_noun",
+    "fr_comte_noun",
+    "fr_vicomte_noun",
+    "fr_senechal_noun",
+    "fr_seigneurie_noun",
+    "fr_noblesse_noun",
+    "fr_entourage_noun",
+    "fr_valet_noun",
+    "fr_couronne_noun"
+   ]
+  },
+  "trone": {
+   "vocabRoom": "R_abs_power_01",
+   "only": [
+    "fr_role_noun",
+    "fr_controle_noun",
+    "fr_organisation_noun",
+    "fr_pouvoir_noun",
+    "fr_autorite_noun",
+    "fr_puissance_noun",
+    "fr_institution_noun",
+    "fr_cooperation_noun",
+    "fr_privilege_noun",
+    "fr_reglement_noun"
+   ]
+  },
+  "assemblee": {
+   "vocabRoom": "R_abs_power_02",
+   "only": [
+    "fr_comite_noun",
+    "fr_discipline_noun",
+    "fr_autorisation_noun",
+    "fr_mandat_noun",
+    "fr_discretion_noun",
+    "fr_collaboration_noun",
+    "fr_delegation_noun",
+    "fr_interdiction_noun",
+    "fr_dependance_noun",
+    "fr_federation_noun"
+   ]
+  },
+  "dirigeants": {
+   "vocabRoom": "R_abs_power_03",
+   "only": [
+    "fr_ambition_noun",
+    "fr_possession_noun",
+    "fr_administration_noun",
+    "fr_influence_noun",
+    "fr_critique_noun_m",
+    "fr_initiative_noun",
+    "fr_regne_noun",
+    "fr_maitrise_noun",
+    "fr_dirigeant_noun",
+    "fr_delegue_noun",
+    "fr_leader_noun",
+    "fr_hierarchie_noun"
+   ]
   }
  },
  "rooms": {
@@ -274,6 +459,17 @@
       245,
       85,
       315
+     ]
+    },
+    {
+     "to": "peinture",
+     "label": "La galerie de peinture",
+     "hint": "the grand staircase behind the statue, up to the first-floor painting gallery",
+     "hit": [
+      598,
+      238,
+      112,
+      105
      ]
     }
    ],
@@ -1680,6 +1876,1277 @@
       205,
       224,
       370
+     ]
+    }
+   ]
+  },
+  "peinture": {
+   "name": "La galerie de peinture · The painting gallery",
+   "room_id": "R_art_01",
+   "image": "musee/peinture.jpg",
+   "alt": "The museum's first-floor painting gallery, seen from the near left: pale gray-blue walls, gilt-framed paintings and an oak parquet floor, with the top of the grand white staircase at the near left. In front a painter dries her hands on a red-and-white striped towel hung over her blank canvas, and a chef proudly holds up his frying pan beside a still-life painting of a frying pan. At the back left a young restorer dabs the mustache of a gentleman in an old portrait with a tiny brush, a gray-haired lady in a red dress and tap shoes tap-dances under a huge unicorn tapestry beside a giant paint tube used as a bench, and a restorer on a low scaffold cleans an arched fresco of swallows. In the middle a boy in a blue smock paints a still life of a pantry shelf of jam jars, and a boy points up at a rally-car race painted straight onto the wall. On the right a waiter pours orange juice onto his tray for the lady in a big portrait, a man sits posing with a model sailing ship and a gardener pushes an old reel mower over a striped exhibit lawn. At the front right a bearded man holds a frame round a giant ace of hearts, and a framer with a drum at his hip taps a frame corner with a drumstick. Doors: the staircase down at the near left, a white double door on the left wall, a cream glass door at the back and an iron-studded oak door on the right.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "musee",
+   "doors": [
+    {
+     "to": "musee",
+     "label": "Le grand hall",
+     "hint": "the grand staircase at the near left, down to the museum's great hall",
+     "hit": [
+      0,
+      262,
+      76,
+      250
+     ]
+    },
+    {
+     "to": "sculpture",
+     "label": "Les sculptures",
+     "hint": "the white double door on the left wall, to the sculpture gallery",
+     "hit": [
+      12,
+      80,
+      125,
+      160
+     ]
+    },
+    {
+     "to": "vernissage",
+     "label": "Le vernissage",
+     "hint": "the cream glass double door at the back, to the opening-night exhibition",
+     "hit": [
+      638,
+      115,
+      92,
+      180
+     ]
+    },
+    {
+     "to": "chateau",
+     "label": "La maquette du château",
+     "hint": "the iron-studded oak door on the right, to the castle wing",
+     "hit": [
+      1192,
+      90,
+      86,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_toile_noun",
+     "box": [
+      80,
+      420,
+      290,
+      232
+     ]
+    },
+    {
+     "id": "fr_peinture_noun",
+     "box": [
+      375,
+      392,
+      192,
+      310
+     ]
+    },
+    {
+     "id": "fr_retouche_noun",
+     "box": [
+      140,
+      222,
+      172,
+      190
+     ]
+    },
+    {
+     "id": "fr_tapisserie_noun",
+     "box": [
+      318,
+      196,
+      122,
+      190
+     ],
+     "labelAt": [
+      385,
+      330
+     ]
+    },
+    {
+     "id": "fr_fresque_noun",
+     "box": [
+      445,
+      58,
+      175,
+      237
+     ]
+    },
+    {
+     "id": "fr_peintre_noun",
+     "box": [
+      570,
+      325,
+      168,
+      247
+     ]
+    },
+    {
+     "id": "fr_mural_adj",
+     "box": [
+      740,
+      100,
+      175,
+      245
+     ]
+    },
+    {
+     "id": "fr_portrait_noun",
+     "box": [
+      925,
+      58,
+      215,
+      217
+     ]
+    },
+    {
+     "id": "fr_modele_noun",
+     "box": [
+      1015,
+      278,
+      125,
+      124
+     ]
+    },
+    {
+     "id": "fr_motif_noun",
+     "box": [
+      1145,
+      255,
+      130,
+      175
+     ]
+    },
+    {
+     "id": "fr_cadre_noun",
+     "box": [
+      752,
+      425,
+      250,
+      257
+     ]
+    },
+    {
+     "id": "fr_encadrement_noun",
+     "box": [
+      1008,
+      432,
+      270,
+      288
+     ]
+    }
+   ]
+  },
+  "sculpture": {
+   "name": "La galerie des sculptures · The sculpture gallery",
+   "room_id": "R_art_02",
+   "image": "musee/sculpture.jpg",
+   "alt": "The museum's sculpture gallery under a big skylight, seen from the near left: white walls, a pale travertine floor with an inlaid fish mosaic and white marble statues on plinths. At the left a schoolgirl sketches a big marble horse with a pigeon on its head, an academician in a gold-embroidered coat and bicorne shows her laurel wreath, and a grandma knits one patchwork blanket over two children on a bench. In the middle a girl kneeling on the mosaic squeals at a mouse, an artist carves swirls into a teak chair and an archaeologist brushes the dust off an old wooden clog. At the right a sculptor chisels a stone turtle, an attendant pulls a giant striped sock over a plinth, a young man unveils a plaster sculpture of bare feet and a silver living statue stands frozen on a box. At the front right a draftsman draws a daisy, and at a striped fine-arts stall a craftsman pours colored sand into bottles. A white door on the left wall leads back to the painting gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "peinture",
+   "doors": [
+    {
+     "to": "peinture",
+     "label": "La galerie de peinture",
+     "hint": "the white door on the left wall, back to the painting gallery",
+     "hit": [
+      15,
+      55,
+      125,
+      250
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sculpture_noun",
+     "box": [
+      150,
+      58,
+      195,
+      262
+     ]
+    },
+    {
+     "id": "fr_academie_noun",
+     "box": [
+      348,
+      100,
+      122,
+      235
+     ]
+    },
+    {
+     "id": "fr_unite_noun",
+     "box": [
+      35,
+      336,
+      375,
+      264
+     ]
+    },
+    {
+     "id": "fr_mosaique_noun",
+     "box": [
+      410,
+      448,
+      245,
+      222
+     ]
+    },
+    {
+     "id": "fr_archeologue_noun",
+     "box": [
+      480,
+      290,
+      225,
+      155
+     ]
+    },
+    {
+     "id": "fr_artistique_adj",
+     "box": [
+      545,
+      140,
+      140,
+      130
+     ]
+    },
+    {
+     "id": "fr_sculpteur_noun",
+     "box": [
+      720,
+      110,
+      165,
+      190
+     ]
+    },
+    {
+     "id": "fr_socle_noun",
+     "box": [
+      890,
+      90,
+      160,
+      150
+     ]
+    },
+    {
+     "id": "fr_nu_noun",
+     "box": [
+      885,
+      245,
+      215,
+      235
+     ]
+    },
+    {
+     "id": "fr_artifice_noun",
+     "box": [
+      725,
+      300,
+      150,
+      370
+     ]
+    },
+    {
+     "id": "fr_beaux_arts_noun",
+     "box": [
+      1075,
+      15,
+      200,
+      205
+     ]
+    },
+    {
+     "id": "fr_artisan_noun",
+     "box": [
+      1110,
+      222,
+      160,
+      138
+     ]
+    },
+    {
+     "id": "fr_dessinateur_noun",
+     "box": [
+      905,
+      480,
+      370,
+      230
+     ]
+    }
+   ]
+  },
+  "vernissage": {
+   "name": "Le vernissage · The opening night",
+   "room_id": "R_art_03",
+   "image": "musee/vernissage.jpg",
+   "alt": "The museum's modern temporary exhibition hall on its opening night, seen from the near left: white walls, pale gray partitions, a polished concrete floor and spotlights on tracks, with a glass greenhouse nook of palms at the right. At the left a girl in a yellow dress points at a model of a world expo with a Ferris wheel, a man leans on a glass case of decorated eggs, a child wears a funny costume made from a crate and an old TV, and a woman in a lab coat draws up a big plan. At the back a boy wears headphones at the media-library screen, a grandpa and a girl put a rolled poster into a time capsule, and a board of old picture prints hangs on a partition. At the right a man brushes varnish onto a landscape painting, the young curator serves cake from a cake stand, a farmer holds open a catalog of cows, a see-through glass statue of a mule stands in its case, a boy shows off a sleek red scooter, and two music students play violin and cello by the greenhouse. A cream glass door on the left wall leads back to the painting gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "peinture",
+   "doors": [
+    {
+     "to": "peinture",
+     "label": "La galerie de peinture",
+     "hint": "the cream glass door on the left wall, back to the painting gallery",
+     "hit": [
+      20,
+      65,
+      175,
+      125
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_elaboration_noun",
+     "box": [
+      115,
+      195,
+      173,
+      205
+     ]
+    },
+    {
+     "id": "fr_mediatheque_noun",
+     "box": [
+      290,
+      140,
+      118,
+      160
+     ]
+    },
+    {
+     "id": "fr_posterite_noun",
+     "box": [
+      430,
+      190,
+      180,
+      175
+     ]
+    },
+    {
+     "id": "fr_imagerie_noun",
+     "box": [
+      520,
+      88,
+      200,
+      100
+     ]
+    },
+    {
+     "id": "fr_expo_noun",
+     "box": [
+      10,
+      402,
+      340,
+      143
+     ]
+    },
+    {
+     "id": "fr_exhibition_noun",
+     "box": [
+      140,
+      548,
+      318,
+      152
+     ]
+    },
+    {
+     "id": "fr_creativite_noun",
+     "box": [
+      460,
+      368,
+      120,
+      277
+     ]
+    },
+    {
+     "id": "fr_simulacre_noun",
+     "box": [
+      632,
+      330,
+      150,
+      270
+     ]
+    },
+    {
+     "id": "fr_design_noun",
+     "box": [
+      785,
+      350,
+      160,
+      355
+     ]
+    },
+    {
+     "id": "fr_conservateur_noun",
+     "box": [
+      820,
+      208,
+      140,
+      122
+     ]
+    },
+    {
+     "id": "fr_vernissage_noun",
+     "box": [
+      880,
+      90,
+      230,
+      115
+     ]
+    },
+    {
+     "id": "fr_catalogue_noun",
+     "box": [
+      962,
+      225,
+      128,
+      160
+     ]
+    },
+    {
+     "id": "fr_conservatoire_noun",
+     "box": [
+      1000,
+      388,
+      275,
+      280
+     ]
+    }
+   ]
+  },
+  "chateau": {
+   "name": "La maquette du château · The castle model hall",
+   "room_id": "R_heraldry_01",
+   "image": "musee/chateau.jpg",
+   "alt": "The museum's castle model hall, seen from the near left: pale honey-gray stone walls, gray flagstones and iron ring chandeliers, with a big model of a medieval castle on a long oak table. At the left a guard stands to attention in a striped sentry box, a girl with a long golden braid leans over the model's fortress wall, a boy sets out a little white picket fence, and a boy finds a fluffy blue toy yeti on the rim of a round stone pit. By the model's tall keep a mother wags her finger at her little boy, who sets a woolly toy ram on the rampart wall. At the back a girl shines a yellow flashlight so a huge castle shadow falls on the wall, and a boy rests his double bass by the model's corner bastion. In front a workman and a little girl push a big stone block on a cart, a wooden block is jammed in the open door of a canary's birdcage, a girl opens a treasure chest of gold coins on a wooden plinth, and a man polishes an old gilded carriage covered in pink roses. An oak door with iron studs on the left wall leads back to the painting gallery, a pointed stone archway at the back leads to the knights' hall, and a red-and-gold door at the back right leads to the throne room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "peinture",
+   "doors": [
+    {
+     "to": "peinture",
+     "label": "La galerie de peinture",
+     "hint": "the oak door with iron studs on the left wall, back to the painting gallery",
+     "hit": [
+      15,
+      135,
+      115,
+      235
+     ]
+    },
+    {
+     "to": "chevaliers",
+     "label": "Les chevaliers",
+     "hint": "the pointed stone archway at the back, to the knights' hall",
+     "hit": [
+      300,
+      60,
+      145,
+      200
+     ]
+    },
+    {
+     "to": "trone",
+     "label": "La salle du trône",
+     "hint": "the red-and-gold arched door at the back right, to the throne room",
+     "hit": [
+      785,
+      70,
+      105,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sentinelle_noun",
+     "box": [
+      150,
+      122,
+      128,
+      250
+     ]
+    },
+    {
+     "id": "fr_forteresse_noun",
+     "box": [
+      285,
+      282,
+      140,
+      218
+     ]
+    },
+    {
+     "id": "fr_oubliette_noun",
+     "box": [
+      10,
+      372,
+      272,
+      228
+     ]
+    },
+    {
+     "id": "fr_defense_noun",
+     "box": [
+      285,
+      502,
+      160,
+      193
+     ]
+    },
+    {
+     "id": "fr_blocage_noun",
+     "box": [
+      600,
+      452,
+      110,
+      188
+     ]
+    },
+    {
+     "id": "fr_bloc_noun",
+     "box": [
+      745,
+      420,
+      180,
+      280
+     ]
+    },
+    {
+     "id": "fr_donjon_noun",
+     "box": [
+      545,
+      150,
+      225,
+      135
+     ]
+    },
+    {
+     "id": "fr_rempart_noun",
+     "box": [
+      685,
+      287,
+      120,
+      133
+     ]
+    },
+    {
+     "id": "fr_chateau_noun",
+     "box": [
+      905,
+      60,
+      175,
+      170
+     ]
+    },
+    {
+     "id": "fr_bastion_noun",
+     "box": [
+      930,
+      232,
+      150,
+      268
+     ]
+    },
+    {
+     "id": "fr_carrosse_noun",
+     "box": [
+      1085,
+      130,
+      190,
+      270
+     ]
+    },
+    {
+     "id": "fr_tresor_noun",
+     "box": [
+      1085,
+      415,
+      190,
+      253
+     ]
+    }
+   ]
+  },
+  "chevaliers": {
+   "name": "La salle des chevaliers · The knights' hall",
+   "room_id": "R_heraldry_02",
+   "image": "musee/chevaliers.jpg",
+   "alt": "The castle's knights' hall, seen from the near left: pale stone walls hung with red, blue and gold heraldic banners, iron ring chandeliers, gray flagstones and a long red carpet down the middle. On the left a black crow perches on an old crusader's helmet on a wooden stand, and a girl in a red sweater peeks round a tall glass case holding a long pike; behind them stands an empty oak feasting table with pewter plates and a green dragon pitcher. Right of the carpet two riders on a tandem bicycle carry a green standard under a round blue emblem with a white lamb, and a knight in armor holds a garden shovel and raises a fist. Two children juggle clubs, a bodyguard in sunglasses stands beside a little girl in a yellow dress, and a storyteller dressed as Merlin chants with raised hands for two boys. A man in a green sweater holds a pool cue under a painted coat of arms, beside a glass cabinet of daggers in leather scabbards. In front a young squire holds up a big iron key with a helmet under his arm, a low glass case holds a plush saber-toothed tiger and a curved saber, and a musketeer hugs a plush moose. An oak door on the left wall leads back to the castle model hall, and a carved walnut door at the back right leads to the nobles' portrait gallery.",
+   "nameplate": [
+    32,
+    4.5
+   ],
+   "backTo": "chateau",
+   "doors": [
+    {
+     "to": "chateau",
+     "label": "La maquette du château",
+     "hint": "the oak door on the left wall, back to the castle model hall",
+     "hit": [
+      25,
+      105,
+      85,
+      195
+     ]
+    },
+    {
+     "to": "noblesse",
+     "label": "Les nobles",
+     "hint": "the carved walnut door at the back right, to the nobles' portrait gallery",
+     "hit": [
+      1052,
+      22,
+      86,
+      114
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_croisade_noun",
+     "box": [
+      55,
+      465,
+      100,
+      245
+     ]
+    },
+    {
+     "id": "fr_pique_noun",
+     "box": [
+      188,
+      218,
+      207,
+      480
+     ]
+    },
+    {
+     "id": "fr_etendard_noun",
+     "box": [
+      680,
+      106,
+      225,
+      140
+     ]
+    },
+    {
+     "id": "fr_embleme_noun",
+     "box": [
+      738,
+      0,
+      92,
+      105
+     ]
+    },
+    {
+     "id": "fr_chevalier_noun",
+     "box": [
+      928,
+      100,
+      122,
+      185
+     ]
+    },
+    {
+     "id": "fr_ecu_noun",
+     "box": [
+      1050,
+      138,
+      90,
+      157
+     ]
+    },
+    {
+     "id": "fr_fourreau_noun",
+     "box": [
+      1142,
+      100,
+      133,
+      198
+     ]
+    },
+    {
+     "id": "fr_protecteur_noun",
+     "box": [
+      843,
+      288,
+      145,
+      237
+     ]
+    },
+    {
+     "id": "fr_duel_noun",
+     "box": [
+      735,
+      258,
+      105,
+      285
+     ]
+    },
+    {
+     "id": "fr_enchantement_noun",
+     "box": [
+      990,
+      300,
+      190,
+      238
+     ]
+    },
+    {
+     "id": "fr_ecuyer_noun",
+     "box": [
+      740,
+      545,
+      112,
+      175
+     ]
+    },
+    {
+     "id": "fr_sabre_noun",
+     "box": [
+      856,
+      568,
+      210,
+      152
+     ]
+    },
+    {
+     "id": "fr_mousquetaire_noun",
+     "box": [
+      1072,
+      540,
+      170,
+      180
+     ]
+    }
+   ]
+  },
+  "noblesse": {
+   "name": "La galerie des nobles · The nobles' gallery",
+   "room_id": "R_heraldry_01",
+   "image": "musee/noblesse.jpg",
+   "alt": "The nobles' portrait gallery of the castle wing, seen from the near left: honey-colored walnut paneling, rows of gilt-framed portraits (one of a dog in a ruff), a white marble fireplace, crystal chandeliers and a herringbone parquet floor. On the left an elderly lady in a medieval headdress points proudly at a painted map of fields and a manor on an easel, a duke in a powdered wig sneezes into his lace handkerchief, and a boy pushes a baby in a navy baby carriage up to a golden crown in a glass case. In the middle a lady in a huge pink hooped gown arrives with her entourage, two little girls carrying her long train. On the right an old steward wrapped in a woolly gray shawl checks his big ledger, a young viscount in a green sash points at a painting of a V of wild geese, a baron in a red cloak pushes a wheelbarrow of apples, a bearded count in an ermine cape counts beads on an abacus, and a valet in green livery does a dancing step holding a coat on a hanger. A carved walnut door on the left wall leads back to the knights' hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "chevaliers",
+   "doors": [
+    {
+     "to": "chevaliers",
+     "label": "Les chevaliers",
+     "hint": "the carved walnut door on the left wall, back to the knights' hall",
+     "hit": [
+      45,
+      140,
+      85,
+      255
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_seigneurie_noun",
+     "box": [
+      132,
+      228,
+      168,
+      200
+     ]
+    },
+    {
+     "id": "fr_couronne_noun",
+     "box": [
+      120,
+      430,
+      355,
+      290
+     ]
+    },
+    {
+     "id": "fr_noblesse_noun",
+     "box": [
+      378,
+      205,
+      145,
+      223
+     ]
+    },
+    {
+     "id": "fr_entourage_noun",
+     "box": [
+      535,
+      180,
+      355,
+      232
+     ]
+    },
+    {
+     "id": "fr_senechal_noun",
+     "box": [
+      895,
+      205,
+      150,
+      167
+     ]
+    },
+    {
+     "id": "fr_vicomte_noun",
+     "box": [
+      1045,
+      190,
+      220,
+      168
+     ]
+    },
+    {
+     "id": "fr_baron_noun",
+     "box": [
+      655,
+      418,
+      205,
+      302
+     ]
+    },
+    {
+     "id": "fr_comte_noun",
+     "box": [
+      862,
+      414,
+      173,
+      306
+     ]
+    },
+    {
+     "id": "fr_valet_noun",
+     "box": [
+      1036,
+      374,
+      244,
+      331
+     ]
+    }
+   ]
+  },
+  "trone": {
+   "name": "La salle du trône · The throne room",
+   "room_id": "R_abs_power_01",
+   "image": "musee/trone.jpg",
+   "alt": "The grand throne room of the castle wing, seen from the near left: red damask walls, white marble columns, crystal chandeliers and a polished marble floor, with a gilded throne on red-carpeted steps at the back. On the left an organist plays a little pipe organ beside trays of neatly sorted music, a traffic cop raises his hand to stop a boy in a red pedal car, an architect points proudly at a white model of a domed building, two opera singers carry a long bench while singing, and a strongman lifts a barbell with a giant green pea on each end. On the right an actor in a toga rehearses on the throne with a script and a bread roll beside a tiny toy throne for the museum mouse, a toddler in a lightning-bolt costume and red cape flexes his arms, a girl in a gold dress sits on a cushioned stone ledge seat, a troll costume ticket checker grins over two tickets, and a man wriggles on his back under the velvet rope while a guard points at a blank rules board. A blue door with a laurel wreath on the back wall leads to the old assembly chamber, a red door beside it leads back to the castle model hall, and a green door with a gold star on the right leads to the leaders' gallery.",
+   "nameplate": [
+    39,
+    4.5
+   ],
+   "backTo": "chateau",
+   "doors": [
+    {
+     "to": "assemblee",
+     "label": "L'assemblée",
+     "hint": "the blue door with the laurel wreath on the back wall, to the old assembly chamber",
+     "hit": [
+      372,
+      110,
+      100,
+      135
+     ]
+    },
+    {
+     "to": "chateau",
+     "label": "La maquette du château",
+     "hint": "the red door with the laurel wreath beside the throne steps, back to the castle model hall",
+     "hit": [
+      578,
+      95,
+      80,
+      190
+     ]
+    },
+    {
+     "to": "dirigeants",
+     "label": "Les dirigeants",
+     "hint": "the green door with the gold star on the right, to the leaders' gallery",
+     "hit": [
+      1205,
+      105,
+      45,
+      210
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_organisation_noun",
+     "box": [
+      5,
+      10,
+      205,
+      400
+     ]
+    },
+    {
+     "id": "fr_autorite_noun",
+     "box": [
+      212,
+      247,
+      340,
+      108
+     ]
+    },
+    {
+     "id": "fr_institution_noun",
+     "box": [
+      0,
+      412,
+      275,
+      308
+     ]
+    },
+    {
+     "id": "fr_cooperation_noun",
+     "box": [
+      278,
+      358,
+      180,
+      282
+     ]
+    },
+    {
+     "id": "fr_puissance_noun",
+     "box": [
+      460,
+      420,
+      188,
+      300
+     ]
+    },
+    {
+     "id": "fr_role_noun",
+     "box": [
+      805,
+      40,
+      165,
+      255
+     ]
+    },
+    {
+     "id": "fr_pouvoir_noun",
+     "box": [
+      872,
+      318,
+      122,
+      168
+     ]
+    },
+    {
+     "id": "fr_privilege_noun",
+     "box": [
+      1060,
+      200,
+      143,
+      175
+     ]
+    },
+    {
+     "id": "fr_controle_noun",
+     "box": [
+      650,
+      452,
+      212,
+      268
+     ]
+    },
+    {
+     "id": "fr_reglement_noun",
+     "box": [
+      866,
+      488,
+      414,
+      232
+     ]
+    }
+   ]
+  },
+  "assemblee": {
+   "name": "La salle de l'assemblée · The assembly chamber",
+   "room_id": "R_abs_power_02",
+   "image": "musee/assemblee.jpg",
+   "alt": "The old assembly chamber of the castle wing, seen from the near left: curved tiers of blue velvet benches, dark oak paneling, a blue-and-white painted dome and a pale wooden floor, with a giant wooden gavel on the speaker's desk. On the left a girl balances a red flying disc on her head and a toy plane on her hand by the blue door, three boys in blue sashes arrive with a gift basket of fruit, a couple dance with the girl leaning far back, and a man holds up a bunch of colorful feathers. In front two children fit together a giant jigsaw, a girl with a finger on her lips clutches a huge orange crayon, a bearded author signs a slip with a feather quill for a waiting boy, and a librarian at a lectern raises a hand to stop a boy touching a giant dictionary. On the right a committee of three sits at a round table under a model comet hanging on a wire, and a gray-haired dad kneels to hand his son a rolled scroll with a red seal. The blue door on the left leads back to the throne room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "trone",
+   "doors": [
+    {
+     "to": "trone",
+     "label": "La salle du trône",
+     "hint": "the blue door on the left wall, back to the throne room",
+     "hit": [
+      30,
+      105,
+      95,
+      72
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_discipline_noun",
+     "box": [
+      0,
+      178,
+      140,
+      108
+     ]
+    },
+    {
+     "id": "fr_delegation_noun",
+     "box": [
+      160,
+      135,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_dependance_noun",
+     "box": [
+      302,
+      150,
+      138,
+      208
+     ]
+    },
+    {
+     "id": "fr_federation_noun",
+     "box": [
+      440,
+      88,
+      105,
+      150
+     ]
+    },
+    {
+     "id": "fr_collaboration_noun",
+     "box": [
+      0,
+      288,
+      248,
+      188
+     ]
+    },
+    {
+     "id": "fr_discretion_noun",
+     "box": [
+      5,
+      478,
+      125,
+      242
+     ]
+    },
+    {
+     "id": "fr_autorisation_noun",
+     "box": [
+      250,
+      360,
+      195,
+      360
+     ]
+    },
+    {
+     "id": "fr_interdiction_noun",
+     "box": [
+      455,
+      240,
+      240,
+      415
+     ]
+    },
+    {
+     "id": "fr_comite_noun",
+     "box": [
+      730,
+      85,
+      260,
+      270
+     ]
+    },
+    {
+     "id": "fr_mandat_noun",
+     "box": [
+      705,
+      357,
+      325,
+      363
+     ]
+    }
+   ]
+  },
+  "dirigeants": {
+   "name": "La galerie des dirigeants · The leaders' gallery",
+   "room_id": "R_abs_power_03",
+   "image": "musee/dirigeants.jpg",
+   "alt": "The leaders' gallery of the castle wing, seen from the near left: forest-green walls with white stucco, tall oak bookcases with a rolling library ladder, potted topiary trees and a big topiary bush clipped into a king's chair, on a black-and-white checkerboard marble floor under brass globe lamps. On the left a girl in a bee costume climbs a climbing wall toward a gold star, four acrobats in red leotards form a human pyramid with the top girl cheering, and a gardener clips round topiary balls with shears. In front a man in a patchwork coat plays a flute, a girl in yellow raises her hand high, two little cowboys hug a big gold trophy cup, and a clerk stamps forms at his desk. On the right a girl on the library ladder points the way, a man in a deer-antler hat strides ahead pointing, a critic frowns at an open book, a bare-headed king in a fur-trimmed cape holds his scepter under a toy rain cloud dripping into a bucket, and a delegate with a name badge carries a huge deli sandwich. The green door on the left wall leads back to the throne room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "trone",
+   "doors": [
+    {
+     "to": "trone",
+     "label": "La salle du trône",
+     "hint": "the green door on the left wall, back to the throne room",
+     "hit": [
+      20,
+      95,
+      120,
+      215
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ambition_noun",
+     "box": [
+      178,
+      28,
+      92,
+      218
+     ]
+    },
+    {
+     "id": "fr_hierarchie_noun",
+     "box": [
+      272,
+      68,
+      138,
+      302
+     ]
+    },
+    {
+     "id": "fr_maitrise_noun",
+     "box": [
+      412,
+      150,
+      175,
+      225
+     ]
+    },
+    {
+     "id": "fr_influence_noun",
+     "box": [
+      15,
+      318,
+      180,
+      390
+     ]
+    },
+    {
+     "id": "fr_initiative_noun",
+     "box": [
+      196,
+      372,
+      92,
+      298
+     ]
+    },
+    {
+     "id": "fr_possession_noun",
+     "box": [
+      290,
+      395,
+      178,
+      255
+     ]
+    },
+    {
+     "id": "fr_administration_noun",
+     "box": [
+      470,
+      376,
+      190,
+      344
+     ]
+    },
+    {
+     "id": "fr_leader_noun",
+     "box": [
+      752,
+      95,
+      128,
+      275
+     ]
+    },
+    {
+     "id": "fr_dirigeant_noun",
+     "box": [
+      882,
+      56,
+      148,
+      316
+     ]
+    },
+    {
+     "id": "fr_critique_noun_m",
+     "box": [
+      1034,
+      148,
+      140,
+      220
+     ]
+    },
+    {
+     "id": "fr_regne_noun",
+     "box": [
+      695,
+      375,
+      268,
+      345
+     ]
+    },
+    {
+     "id": "fr_delegue_noun",
+     "box": [
+      966,
+      374,
+      214,
+      346
      ]
     }
    ]
