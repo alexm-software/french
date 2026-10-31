@@ -24,6 +24,34 @@
   {
    "key": "doctrines",
    "short": "Les doctrines"
+  },
+  {
+   "key": "litterature",
+   "short": "La littérature"
+  },
+  {
+   "key": "ecriture",
+   "short": "L'écriture"
+  },
+  {
+   "key": "poetes",
+   "short": "Les poètes"
+  },
+  {
+   "key": "redaction",
+   "short": "La rédaction"
+  },
+  {
+   "key": "mythologie",
+   "short": "La mythologie"
+  },
+  {
+   "key": "romans",
+   "short": "Les romans"
+  },
+  {
+   "key": "histoire",
+   "short": "L'histoire"
   }
  ],
  "planned": {
@@ -102,6 +130,100 @@
     "fr_realisme_noun",
     "fr_humanisme_noun"
    ]
+  },
+  "litterature": {
+   "vocabRoom": "R_literature_01",
+   "only": [
+    "fr_histoire_noun",
+    "fr_litterature_noun",
+    "fr_lecture_noun",
+    "fr_legende_noun",
+    "fr_poesie_noun",
+    "fr_auteur_noun",
+    "fr_roman_noun",
+    "fr_texte_noun",
+    "fr_ecrivain_noun"
+   ]
+  },
+  "ecriture": {
+   "vocabRoom": "R_literature_02",
+   "only": [
+    "fr_ecriture_noun",
+    "fr_representation_noun",
+    "fr_section_noun",
+    "fr_inspiration_noun",
+    "fr_chapitre_noun",
+    "fr_traite_noun",
+    "fr_editeur_noun",
+    "fr_recueil_noun",
+    "fr_ecrit_noun"
+   ]
+  },
+  "poetes": {
+   "vocabRoom": "R_literature_02",
+   "only": [
+    "fr_fiction_noun",
+    "fr_prose_noun",
+    "fr_rime_noun",
+    "fr_poete_noun",
+    "fr_poetique_adj",
+    "fr_litteraire_adj",
+    "fr_poeme_noun",
+    "fr_romancier_noun",
+    "fr_best_seller_noun"
+   ]
+  },
+  "redaction": {
+   "vocabRoom": "R_literature_03",
+   "only": [
+    "fr_annales_noun",
+    "fr_epopee_noun",
+    "fr_redacteur_noun",
+    "fr_createur_noun",
+    "fr_fondateur_noun",
+    "fr_pseudonyme_noun",
+    "fr_tome_noun"
+   ]
+  },
+  "mythologie": {
+   "vocabRoom": "R_literature_04",
+   "only": [
+    "fr_deesse_noun",
+    "fr_divinite_noun",
+    "fr_mythologie_noun",
+    "fr_mythe_noun",
+    "fr_protagoniste_noun",
+    "fr_faune_noun_m",
+    "fr_philtre_noun",
+    "fr_conteur_noun"
+   ]
+  },
+  "romans": {
+   "vocabRoom": "R_literature_01",
+   "only": [
+    "fr_intrigue_noun",
+    "fr_chronique_noun",
+    "fr_trame_noun",
+    "fr_science_fiction_noun",
+    "fr_personnage_noun",
+    "fr_caractere_noun",
+    "fr_conte_noun",
+    "fr_mystere_noun"
+   ]
+  },
+  "histoire": {
+   "vocabRoom": "R_history_01",
+   "only": [
+    "fr_origine_noun",
+    "fr_reine_noun",
+    "fr_princesse_noun",
+    "fr_historique_adj",
+    "fr_prince_noun",
+    "fr_roi_noun",
+    "fr_palais_noun",
+    "fr_royaume_noun",
+    "fr_siecle_noun"
+   ]
   }
  },
  "rooms": {
@@ -133,6 +255,28 @@
       25,
       95,
       200
+     ]
+    },
+    {
+     "to": "litterature",
+     "label": "La littérature",
+     "hint": "the green door with the quill up on the gallery, to the literature seminar",
+     "hit": [
+      475,
+      60,
+      82,
+      175
+     ]
+    },
+    {
+     "to": "histoire",
+     "label": "L'histoire",
+     "hint": "the oak door with the crown up on the gallery, to the history room",
+     "hit": [
+      610,
+      90,
+      71,
+      150
      ]
     }
    ],
@@ -736,6 +880,781 @@
       215,
       123,
       115
+     ]
+    }
+   ]
+  },
+  "litterature": {
+   "name": "La salle de littérature · The literature room",
+   "room_id": "R_literature_01",
+   "image": "humanites/litterature.jpg",
+   "alt": "The literature seminar room of the Faculté des Lettres on an autumn afternoon, seen from the near right: cream walls, a honey oak floor, tall oak bookcases, a tall window on the left onto the red-brick campus, and a white marble fireplace with a gilt mirror and a plaster bust wearing a paper crown. On the left a grandmother in a blue shawl reads to two children with a big brass compass on her lap, a ginger cat lies with her kittens in a crate of old books, and at the back a tour guide with a red flag reads aloud to two boys beside a plaster knight whose broken foot lies on the floor. In the middle a girl in green on a footstool recites, holding up a posy, and an otter in a waistcoat sits at the long table opposite a smiling woman. On the right a Roman soldier reads a thick novel in an armchair, a cowboy reads a long scroll, and a writer types inside the open back of a cream toy van. The green door with the quill on the left leads back to the library, the plum door with the heart leads to the novels parlour and the navy door with the ink pot on the right leads to the writing workshop.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "humanites",
+   "doors": [
+    {
+     "to": "humanites",
+     "label": "La bibliothèque",
+     "hint": "the dark-green door with the quill on the left, back to the library",
+     "hit": [
+      82,
+      70,
+      100,
+      250
+     ]
+    },
+    {
+     "to": "romans",
+     "label": "Les romans",
+     "hint": "the plum-red door with the heart on the back wall, to the novels parlour",
+     "hit": [
+      962,
+      75,
+      36,
+      155
+     ]
+    },
+    {
+     "to": "ecriture",
+     "label": "L'écriture",
+     "hint": "the navy-blue door with the ink pot on the right, to the writing workshop",
+     "hit": [
+      1148,
+      65,
+      55,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_histoire_noun",
+     "box": [
+      77,
+      330,
+      195,
+      215
+     ]
+    },
+    {
+     "id": "fr_litterature_noun",
+     "box": [
+      282,
+      465,
+      253,
+      205
+     ]
+    },
+    {
+     "id": "fr_lecture_noun",
+     "box": [
+      345,
+      135,
+      95,
+      275
+     ]
+    },
+    {
+     "id": "fr_legende_noun",
+     "box": [
+      442,
+      82,
+      96,
+      185
+     ]
+    },
+    {
+     "id": "fr_poesie_noun",
+     "box": [
+      570,
+      385,
+      130,
+      260
+     ]
+    },
+    {
+     "id": "fr_auteur_noun",
+     "box": [
+      495,
+      268,
+      72,
+      170
+     ]
+    },
+    {
+     "id": "fr_roman_noun",
+     "box": [
+      800,
+      235,
+      175,
+      230
+     ]
+    },
+    {
+     "id": "fr_texte_noun",
+     "box": [
+      1000,
+      145,
+      140,
+      270
+     ]
+    },
+    {
+     "id": "fr_ecrivain_noun",
+     "box": [
+      880,
+      470,
+      323,
+      207
+     ]
+    }
+   ]
+  },
+  "ecriture": {
+   "name": "L'atelier d'écriture · The writing workshop",
+   "room_id": "R_literature_02",
+   "image": "humanites/ecriture.jpg",
+   "alt": "The writing workshop of the Faculté des Lettres on a busy day, seen from the near right: whitewashed brick walls, tall arched windows onto the red-brick town, sheets of paper drying on lines and a big black printing press with a red wheel at the back. On the left a green furry creature writes with a giant quill, children watch a knight and a dragon in a red puppet theatre, a pigtailed girl pulls an orange into segments, and a young woman with a pencil watches a line of big ants march along her desk. A goose glares at a pot of quills. On the right a shah in a jewelled turban reads to a boy, two diplomats in powdered wigs shake hands over a tea tray, a little girl on an old wooden chair writes at a small desk, a bald editor in a green eyeshade crosses out a page with a red pencil, and a bearded man leans back in fright as a paper spring snake pops out of his book. The navy door with the ink pot on the left leads back to the literature room and the lilac door with the lyre on the right leads to the poets' corner.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "litterature",
+   "doors": [
+    {
+     "to": "litterature",
+     "label": "La littérature",
+     "hint": "the navy door with the ink pot on the left, back to the literature room",
+     "hit": [
+      77,
+      60,
+      65,
+      220
+     ]
+    },
+    {
+     "to": "poetes",
+     "label": "Les poètes",
+     "hint": "the lilac door with the lyre at the back right, to the poets' corner",
+     "hit": [
+      1125,
+      70,
+      78,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ecriture_noun",
+     "box": [
+      77,
+      290,
+      145,
+      210
+     ]
+    },
+    {
+     "id": "fr_representation_noun",
+     "box": [
+      150,
+      115,
+      265,
+      170
+     ]
+    },
+    {
+     "id": "fr_section_noun",
+     "box": [
+      240,
+      455,
+      160,
+      190
+     ]
+    },
+    {
+     "id": "fr_inspiration_noun",
+     "box": [
+      420,
+      268,
+      210,
+      192
+     ]
+    },
+    {
+     "id": "fr_chapitre_noun",
+     "box": [
+      740,
+      262,
+      125,
+      240
+     ]
+    },
+    {
+     "id": "fr_traite_noun",
+     "box": [
+      870,
+      150,
+      250,
+      175
+     ]
+    },
+    {
+     "id": "fr_editeur_noun",
+     "box": [
+      885,
+      450,
+      145,
+      227
+     ]
+    },
+    {
+     "id": "fr_recueil_noun",
+     "box": [
+      1035,
+      330,
+      168,
+      225
+     ]
+    },
+    {
+     "id": "fr_ecrit_noun",
+     "box": [
+      645,
+      420,
+      92,
+      200
+     ]
+    }
+   ]
+  },
+  "poetes": {
+   "name": "Le coin des poètes · The poets' corner",
+   "room_id": "R_literature_02",
+   "image": "humanites/poetes.jpg",
+   "alt": "A glass-roofed poets' café with white wrought-iron arches, a spiral staircase, a chequered floor and a little wooden stage where a plump poet in a beret recites; a black cat in a beret applauds from a stool.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "ecriture",
+   "doors": [
+    {
+     "to": "ecriture",
+     "label": "L'écriture",
+     "hint": "the lilac door with the lyre on the left, back to the writing workshop",
+     "hit": [
+      77,
+      90,
+      43,
+      300
+     ]
+    },
+    {
+     "to": "redaction",
+     "label": "La rédaction",
+     "hint": "the grey door with the typewriter at the back right, to the newsroom",
+     "hit": [
+      1165,
+      100,
+      38,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fiction_noun",
+     "box": [
+      77,
+      455,
+      318,
+      222
+     ]
+    },
+    {
+     "id": "fr_prose_noun",
+     "box": [
+      120,
+      200,
+      120,
+      185
+     ]
+    },
+    {
+     "id": "fr_rime_noun",
+     "box": [
+      255,
+      265,
+      130,
+      190
+     ]
+    },
+    {
+     "id": "fr_poete_noun",
+     "box": [
+      400,
+      300,
+      165,
+      340
+     ]
+    },
+    {
+     "id": "fr_poetique_adj",
+     "box": [
+      770,
+      165,
+      140,
+      175
+     ]
+    },
+    {
+     "id": "fr_litteraire_adj",
+     "box": [
+      575,
+      240,
+      190,
+      165
+     ]
+    },
+    {
+     "id": "fr_poeme_noun",
+     "box": [
+      1000,
+      190,
+      160,
+      210
+     ]
+    },
+    {
+     "id": "fr_romancier_noun",
+     "box": [
+      1010,
+      410,
+      193,
+      267
+     ]
+    },
+    {
+     "id": "fr_best_seller_noun",
+     "box": [
+      800,
+      345,
+      200,
+      210
+     ]
+    }
+   ]
+  },
+  "redaction": {
+   "name": "La salle de rédaction · The editorial room",
+   "room_id": "R_literature_03",
+   "image": "humanites/redaction.jpg",
+   "alt": "An old-fashioned editorial room with brass pneumatic pipes, oak desks and typewriters, bookcases with a pigeon nest, and stacks of newspaper bundles; a knight with a poppy shield tells a story by the grey door.",
+   "nameplate": [
+    24,
+    4
+   ],
+   "backTo": "poetes",
+   "doors": [
+    {
+     "to": "poetes",
+     "label": "Les poètes",
+     "hint": "the grey door with the typewriter on the left, back to the poets' corner",
+     "hit": [
+      130,
+      90,
+      140,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_annales_noun",
+     "box": [
+      510,
+      55,
+      190,
+      253
+     ]
+    },
+    {
+     "id": "fr_epopee_noun",
+     "box": [
+      77,
+      280,
+      200,
+      397
+     ]
+    },
+    {
+     "id": "fr_redacteur_noun",
+     "box": [
+      725,
+      320,
+      195,
+      200
+     ]
+    },
+    {
+     "id": "fr_createur_noun",
+     "box": [
+      1010,
+      275,
+      193,
+      150
+     ]
+    },
+    {
+     "id": "fr_fondateur_noun",
+     "box": [
+      945,
+      110,
+      155,
+      160
+     ]
+    },
+    {
+     "id": "fr_pseudonyme_noun",
+     "box": [
+      925,
+      430,
+      278,
+      210
+     ]
+    },
+    {
+     "id": "fr_tome_noun",
+     "box": [
+      565,
+      530,
+      270,
+      147
+     ]
+    }
+   ]
+  },
+  "mythologie": {
+   "name": "La salle des mythes · The mythology hall",
+   "room_id": "R_literature_04",
+   "image": "humanites/mythologie.jpg",
+   "alt": "A white marble hall of myths with Greek columns, a blue-and-white mosaic floor and a fountain topped by a bronze winged horse; an owl perches on a column and a goddess holds a torch by the laurel door.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "romans",
+   "doors": [
+    {
+     "to": "romans",
+     "label": "Les romans",
+     "hint": "the white door with the laurel wreath on the left, back to the novels parlour",
+     "hit": [
+      95,
+      75,
+      115,
+      110
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_deesse_noun",
+     "box": [
+      77,
+      190,
+      150,
+      430
+     ]
+    },
+    {
+     "id": "fr_divinite_noun",
+     "box": [
+      232,
+      420,
+      215,
+      257
+     ]
+    },
+    {
+     "id": "fr_mythologie_noun",
+     "box": [
+      370,
+      240,
+      150,
+      175
+     ]
+    },
+    {
+     "id": "fr_mythe_noun",
+     "box": [
+      555,
+      225,
+      265,
+      400
+     ]
+    },
+    {
+     "id": "fr_protagoniste_noun",
+     "box": [
+      1105,
+      60,
+      98,
+      330
+     ]
+    },
+    {
+     "id": "fr_faune_noun_m",
+     "box": [
+      1070,
+      395,
+      133,
+      165
+     ]
+    },
+    {
+     "id": "fr_philtre_noun",
+     "box": [
+      825,
+      390,
+      240,
+      287
+     ]
+    },
+    {
+     "id": "fr_conteur_noun",
+     "box": [
+      920,
+      170,
+      180,
+      215
+     ]
+    }
+   ]
+  },
+  "romans": {
+   "name": "Le salon des romans · The novels parlour",
+   "room_id": "R_literature_01",
+   "image": "humanites/romans.jpg",
+   "alt": "The novels parlour of the Faculté des Lettres on a rainy afternoon, seen from the near left: cream walls, a red patterned carpet, green velvet sofas, a tall potted palm and a big bay window with green curtains onto the misty campus garden and its fountain. On the left two ladies in feathered hats whisper beside the palm, a lady in a deerstalker writes at a little desk beside a big black crow, and a girl in a silver space helmet sits at a candlelit table with a tin robot; at the back a man weaves at a loom topped by two toy trams. On the right an old man in an Elizabethan ruff flies out of a giant book, a boy in a red pedal car punches the air, a vampire count with a candle tells a tale to three children on the sofa, and a man in a trench coat and fedora peers over a big newspaper. A parrot by the window wears a tiny deerstalker. The plum door with the heart on the left leads back to the literature room and the white door with the laurel wreath on the right leads to the mythology hall.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "litterature",
+   "doors": [
+    {
+     "to": "litterature",
+     "label": "La littérature",
+     "hint": "the plum-red door with the heart on the left, back to the literature room",
+     "hit": [
+      100,
+      60,
+      110,
+      270
+     ]
+    },
+    {
+     "to": "mythologie",
+     "label": "La mythologie",
+     "hint": "the white door with the laurel wreath at the back right, to the mythology hall",
+     "hit": [
+      1168,
+      60,
+      35,
+      225
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_intrigue_noun",
+     "box": [
+      215,
+      95,
+      235,
+      245
+     ]
+    },
+    {
+     "id": "fr_chronique_noun",
+     "box": [
+      77,
+      345,
+      290,
+      245
+     ]
+    },
+    {
+     "id": "fr_trame_noun",
+     "box": [
+      450,
+      140,
+      185,
+      280
+     ]
+    },
+    {
+     "id": "fr_science_fiction_noun",
+     "box": [
+      380,
+      430,
+      240,
+      245
+     ]
+    },
+    {
+     "id": "fr_personnage_noun",
+     "box": [
+      930,
+      70,
+      235,
+      220
+     ]
+    },
+    {
+     "id": "fr_caractere_noun",
+     "box": [
+      645,
+      375,
+      235,
+      250
+     ]
+    },
+    {
+     "id": "fr_conte_noun",
+     "box": [
+      900,
+      292,
+      303,
+      183
+     ]
+    },
+    {
+     "id": "fr_mystere_noun",
+     "box": [
+      900,
+      480,
+      303,
+      197
+     ]
+    }
+   ]
+  },
+  "histoire": {
+   "name": "La salle d'histoire · The history hall",
+   "room_id": "R_history_01",
+   "image": "humanites/histoire.jpg",
+   "alt": "An oak-panelled history hall with tapestries, a globe and a stone castle gateway with a raised portcullis; a knight's armour stands on a plinth and a red carpet runs across the floor.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "humanites",
+   "doors": [
+    {
+     "to": "humanites",
+     "label": "La bibliothèque",
+     "hint": "the oak door with the crown on the left, back to the library",
+     "hit": [
+      110,
+      75,
+      100,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_origine_noun",
+     "box": [
+      230,
+      290,
+      148,
+      135
+     ]
+    },
+    {
+     "id": "fr_reine_noun",
+     "box": [
+      77,
+      240,
+      150,
+      437
+     ]
+    },
+    {
+     "id": "fr_princesse_noun",
+     "box": [
+      380,
+      140,
+      130,
+      280
+     ]
+    },
+    {
+     "id": "fr_historique_adj",
+     "box": [
+      306,
+      430,
+      429,
+      247
+     ]
+    },
+    {
+     "id": "fr_prince_noun",
+     "box": [
+      985,
+      120,
+      175,
+      205
+     ]
+    },
+    {
+     "id": "fr_roi_noun",
+     "box": [
+      955,
+      330,
+      248,
+      310
+     ]
+    },
+    {
+     "id": "fr_palais_noun",
+     "box": [
+      745,
+      350,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_royaume_noun",
+     "box": [
+      812,
+      140,
+      140,
+      205
+     ]
+    },
+    {
+     "id": "fr_siecle_noun",
+     "box": [
+      605,
+      235,
+      85,
+      190
      ]
     }
    ]
