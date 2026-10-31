@@ -51,12 +51,13 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 16. Physical layout makes sense: draw the building or area as a floor plan or walk before painting. Interiors connect by real doors in walls; outdoor scenes connect by paths, steps, gates or footbridges at the scene edge, never by huts, sheds or freestanding doors in open ground.
 - 17. Shared scenery is consistent across a building or area: the same pond, river, bridge, sky and season wherever it appears, and each scene links to its real neighbours, not only back to a hub.
 - 18. Doors and exits are big enough to read at 900 px width (roughly 80 px tall or more at 1280) and look like a way through.
-- 19. Back returns to the space the visitor came from; a room with two entrances shows both ways out.
+- 19. In any room, Back goes straight outside to the street or map the building stands on, never to the previous room; moving between rooms is by painted doors only, and a room with two entrances shows both doors.
 - 20. No two hooks in the same building share the same picture or object (for example two hooks both drawn as a walnut, or two spore/mushroom hooks); pick a distinct sound-alike instead.
 - 21. A hotspot box frames its own hook figure and does not cut through an unrelated prop; the hook's props sit wholly inside its box.
 - 22. The intended object must read as itself at 2x (a ball must look like a ball, not a nut); if it could be named as something else, repaint it.
 - 23. Compose each room as an angled, layered scene (foreground, middle, back) around one named situation before assigning boxes; a frontal view with figures standing in one or two rows along the wall and floor fails, even when every hook is right.
 - 24. Each room is ONE generated painting (a square-centre generation plus one outpaint, or a crop-edit of that painting). Never paste cut-out or green-screen figure sprites onto a background plate, and never draw marks with code; sprite rooms look like stickers on an empty set and fail even when every other gate passes.
+- 25. No grid of hook figures: spread the figures over at least three depths (foreground, middle, back), with box bottoms at varied heights. If more than three boxes share a baseline (box bottoms within about 40 px) or the boxes form two horizontal bands, the room fails. Check the box overlay, not just the painting.
 
 ## Text in the image (builder reference/text-and-labels.md)
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.

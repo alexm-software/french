@@ -30,7 +30,7 @@ var $=function(s,e){return (e||document).querySelector(s)};
  document.head.appendChild(st) })();
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), app=$('#app');
 var curTense='present';
-var trail=[], backKey=null; // in-building door trail for Back (gate 19)
+var backKey=null; // Back target (gate 19): zoom -> its room; street side room -> the street; otherwise straight outside to the map
 stage.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('.doorway'))return; stage.querySelectorAll('.doorway.armed').forEach(function(o){o.classList.remove('armed')}) });
 var rooms=document.createElement('nav'); rooms.id='rooms'; rooms.setAttribute('aria-label','Rooms in this building'); rooms.hidden=true;
 back.parentNode.appendChild(rooms);
@@ -315,12 +315,9 @@ function renderRooms(bld,key){
 function renderRoom(bld,key){
   B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
   back.hidden=false; renderRooms(bld,key);
-  var tp=trail[trail.length-1];
-  if(!tp||tp.b!==bld) trail=[{b:bld,k:key}];
-  else if(tp.k!==key){ var pv=trail[trail.length-2]; if(pv&&pv.k===key) trail.pop(); else trail.push({b:bld,k:key}); if(trail.length>60) trail.shift(); }
-  var pk=trail.length>1?trail[trail.length-2].k:null;
-  // Back returns where the visitor came from when that room is a door neighbour (gate 19); else the static backTo
-  backKey=R.parent||((pk&&(R.doors||[]).some(function(d){return d.to===pk&&!d.building}))?pk:null)||R.backTo;
+  // gate 19: Back goes straight outside, never to the previous room. A zoom close-up closes to its own room;
+  // a side room of a street (ST_ buildings) goes out to that street; every other room goes to the map it stands on.
+  backKey=R.parent||((/^ST_/.test(D.building_id||'')&&key!==D.main)?D.main:null);
   var BT=backKey;
   if(BT){ $('#backLabel').textContent=D.rooms[BT].name; back.title='Back to '+D.rooms[BT].name; }
   else { var H=homeOf(bld), S=H.slug&&MAP.sectors[H.slug]; $('#backLabel').textContent=S?S.name:'Le village'; back.title='Back to the map of '+(S?S.name:'the village'); }
@@ -475,7 +472,6 @@ document.addEventListener('keydown',function(e){
 function route(){ closeCard(); API.onView.forEach(function(f){ try{f()}catch(e){} }); delete scroller.dataset.centred; stage.classList.remove('hl'); $('#hl').setAttribute('aria-pressed','false');
   var q=location.hash.split('?'), wq=(q[1]||'').match(/(?:^|&)w=([A-Za-z0-9_]+)/), want=wq&&wq[1];
   var m=q[0].match(/^#\/([a-z0-9_]+)(?:\/([a-z0-9_]+))?$/), bld=m&&m[1];
-  if(!bld||bld==='quartier'||!REG[bld]) trail=[];
   if(bld==='quartier'){ if(m[2]&&MAP.sectors[m[2]]) renderSector(m[2]); else location.replace('#/'); return }
   if(!bld||!REG[bld]){ renderMap(); return }
   loadData(bld,function(ok){
