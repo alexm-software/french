@@ -55,6 +55,8 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - 20. No two hooks in the same building share the same picture or object (for example two hooks both drawn as a walnut, or two spore/mushroom hooks); pick a distinct sound-alike instead.
 - 21. A hotspot box frames its own hook figure and does not cut through an unrelated prop; the hook's props sit wholly inside its box.
 - 22. The intended object must read as itself at 2x (a ball must look like a ball, not a nut); if it could be named as something else, repaint it.
+- 23. Compose each room as an angled, layered scene (foreground, middle, back) around one named situation before assigning boxes; a frontal view with figures standing in one or two rows along the wall and floor fails, even when every hook is right.
+- 24. Each room is ONE generated painting (a square-centre generation plus one outpaint, or a crop-edit of that painting). Never paste cut-out or green-screen figure sprites onto a background plate, and never draw marks with code; sprite rooms look like stickers on an empty set and fail even when every other gate passes.
 
 ## Text in the image (builder reference/text-and-labels.md)
 - Natural scene text that makes sense passes (shop sign, book spine, poster), if it covers no item and can't be read as a label.
