@@ -80,6 +80,18 @@
   {
    "key": "sens",
    "short": "Le cabinet des sens"
+  },
+  {
+   "key": "lumieres",
+   "short": "Les lumières"
+  },
+  {
+   "key": "sons",
+   "short": "Les sons"
+  },
+  {
+   "key": "parfums",
+   "short": "Les parfums"
   }
  ],
  "planned": {
@@ -397,6 +409,55 @@
     "fr_regard_noun",
     "fr_ecoute_noun",
     "fr_emission_noun"
+   ]
+  },
+  "lumieres": {
+   "vocabRoom": "R_abs_senses_02",
+   "only": [
+    "fr_lueur_noun",
+    "fr_obscurite_noun",
+    "fr_clarte_noun",
+    "fr_luminosite_noun",
+    "fr_eclairage_noun",
+    "fr_neant_noun",
+    "fr_laser_noun",
+    "fr_allumage_noun",
+    "fr_spectre_noun",
+    "fr_lumineux_adj",
+    "fr_eblouissant_adj",
+    "fr_etincelant_adj",
+    "fr_brillant_adj"
+   ]
+  },
+  "sons": {
+   "vocabRoom": "R_abs_senses_03",
+   "only": [
+    "fr_touche_noun",
+    "fr_vacarme_noun",
+    "fr_sifflement_noun",
+    "fr_claquement_noun",
+    "fr_grincement_noun",
+    "fr_chuchotement_noun",
+    "fr_tapage_noun",
+    "fr_sonore_adj",
+    "fr_sourd_adj",
+    "fr_vocal_adj",
+    "fr_monotone_adj"
+   ]
+  },
+  "parfums": {
+   "vocabRoom": "R_abs_senses_03",
+   "only": [
+    "fr_fragrance_noun",
+    "fr_subtilite_noun",
+    "fr_odorat_noun",
+    "fr_effluve_noun",
+    "fr_degout_noun",
+    "fr_savoureux_adj",
+    "fr_amer_adj",
+    "fr_exotique_adj",
+    "fr_desagreable_adj",
+    "fr_suave_adj"
    ]
   }
  },
@@ -2876,7 +2937,7 @@
    "name": "La salle des guildes · The guild hall",
    "room_id": "R_abs_power_05",
    "image": "musee/guildes.jpg",
-   "alt": "The bright old guild hall of the museum, seen from the near left: whitewashed walls under dark timber beams, colorful guild banners with a hammer, a loaf, a wooden spoon, a key and scissors, long workbenches and a small pipe organ. At the back left four ice-cream vendors stand at their carts under one big striped awning, a girl drops a coin into a donation box shaped like a pine tree, and five craftsmen in leather aprons pose arm in arm for a group photo. In the middle an elegant lady in a powdered wig shows off her gold bracelet, two guild brothers in brown hooded robes link arms, a boy knocks down a long row of dominoes, a man with a clipboard presses a key of the little organ, and an old guild master hands a golden hammer to a small apprentice with a lollipop. At the right four boys dressed alike wear orange cone hats. In front a boy builds a clay castle in a big tub, a girl hands out popcorn to a crowd of children, and a man blows a whistle and raises a yellow flag to gather them. A heavy oak door on the left wall leads back to the charter hall.",
+   "alt": "The bright old guild hall of the museum, seen from the near left: whitewashed walls under dark timber beams, colorful guild banners with a hammer, a loaf, a wooden spoon, a key and scissors, long workbenches and a small pipe organ. At the back left four ice-cream vendors stand at their carts under one big striped awning, a girl drops a coin into a donation box shaped like a pine tree, and four craftsmen in leather aprons pose arm in arm for a group photo. In the middle an elegant lady in a powdered wig shows off her gold bracelet, two guild brothers in brown hooded robes link arms, a boy knocks down a long row of dominoes, a man with a clipboard presses a key of the little organ, and a gray-bearded old guild master hands a big golden hammer to a small apprentice sucking a red lollipop. At the right four boys dressed alike wear orange cone hats. In front a boy builds a clay castle in a big tub, a girl hands out popcorn to a crowd of children, and a man blows a whistle and raises a yellow flag to gather them. An arched oak door with iron hinges on the left wall leads back to the charter hall.",
    "nameplate": [
     50,
     4.5
@@ -2886,12 +2947,12 @@
     {
      "to": "chartes",
      "label": "Les chartes",
-     "hint": "the heavy oak door on the left wall, back to the charter hall",
+     "hint": "the arched oak door on the left wall, back to the charter hall",
      "hit": [
-      12,
-      88,
+      15,
+      70,
       100,
-      160
+      180
      ]
     }
    ],
@@ -2918,10 +2979,10 @@
     {
      "id": "fr_groupement_noun",
      "box": [
-      690,
-      125,
-      440,
-      162
+      750,
+      160,
+      385,
+      128
      ]
     },
     {
@@ -3028,6 +3089,39 @@
       85,
       165
      ]
+    },
+    {
+     "to": "lumieres",
+     "label": "Les lumières",
+     "hint": "the black door with the light-bulb sign on the back wall, to the cabinet of lights",
+     "hit": [
+      504,
+      154,
+      86,
+      118
+     ]
+    },
+    {
+     "to": "sons",
+     "label": "Les sons",
+     "hint": "the blue door with the ear sign on the back wall, to the cabinet of sounds",
+     "hit": [
+      679,
+      154,
+      80,
+      160
+     ]
+    },
+    {
+     "to": "parfums",
+     "label": "Les parfums",
+     "hint": "the lilac door with the flower on the right wall, to the cabinet of scents",
+     "hit": [
+      1177,
+      127,
+      82,
+      150
+     ]
     }
    ],
    "zooms": [],
@@ -3129,6 +3223,393 @@
       281,
       135,
       439
+     ]
+    }
+   ]
+  },
+  "lumieres": {
+   "name": "Le cabinet des lumières · The cabinet of lights",
+   "room_id": "R_abs_senses_02",
+   "image": "musee/lumieres.jpg",
+   "alt": "The cabinet of lights behind the cabinet of the senses, seen from the near left: deep midnight-blue walls with painted golden stars, a big golden crescent moon lamp, a lightbulb-shaped paper lantern and a mirror disco ball hanging from the ceiling. On the left a black door, a fisherman dangling a glowing lure over a round aquarium where a goldfish swims, a girl in green pulling aside the curtain of a pitch-dark booth where only two raccoon eyes glow, a girl holding up a glass teapot of clear tea in a beam of light, and a boy turning the brass dial of a tall glowing lamp while an owl on it squints. In the middle a glowing blue jellyfish in a big glass jar, a girl shielding her eyes from a dazzling diamond on a velvet cushion, and a gray-haired tin seller polishing a sparkling pot on her cart. On the right a stagehand aims a big spotlight, a boy peers into a wooden chest whose black empty inside holds one pink neon tube, a girl points a laser pointer at the wall while a gray cat leaps for the red dot, a little wizard pulls a lever that lights a string of bulbs, and a child in a bedsheet ghost costume holds up a prism beside a fan of rainbow light.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sens",
+   "doors": [
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the black door on the left wall, back to the cabinet of the senses",
+     "hit": [
+      25,
+      110,
+      125,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_lueur_noun",
+     "box": [
+      20,
+      285,
+      190,
+      250
+     ]
+    },
+    {
+     "id": "fr_obscurite_noun",
+     "box": [
+      215,
+      175,
+      140,
+      220
+     ]
+    },
+    {
+     "id": "fr_clarte_noun",
+     "box": [
+      368,
+      225,
+      160,
+      170
+     ]
+    },
+    {
+     "id": "fr_luminosite_noun",
+     "box": [
+      212,
+      400,
+      250,
+      315
+     ]
+    },
+    {
+     "id": "fr_lumineux_adj",
+     "box": [
+      530,
+      200,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_eblouissant_adj",
+     "box": [
+      550,
+      385,
+      160,
+      175
+     ]
+    },
+    {
+     "id": "fr_etincelant_adj",
+     "box": [
+      712,
+      395,
+      225,
+      320
+     ]
+    },
+    {
+     "id": "fr_brillant_adj",
+     "box": [
+      400,
+      50,
+      115,
+      135
+     ]
+    },
+    {
+     "id": "fr_eclairage_noun",
+     "box": [
+      700,
+      110,
+      160,
+      270
+     ]
+    },
+    {
+     "id": "fr_neant_noun",
+     "box": [
+      862,
+      225,
+      170,
+      165
+     ]
+    },
+    {
+     "id": "fr_laser_noun",
+     "box": [
+      1035,
+      110,
+      205,
+      180
+     ]
+    },
+    {
+     "id": "fr_allumage_noun",
+     "box": [
+      1110,
+      295,
+      160,
+      110
+     ]
+    },
+    {
+     "id": "fr_spectre_noun",
+     "box": [
+      990,
+      405,
+      290,
+      315
+     ]
+    }
+   ]
+  },
+  "sons": {
+   "name": "Le cabinet des sons · The cabinet of sounds",
+   "room_id": "R_abs_senses_03",
+   "image": "musee/sons.jpg",
+   "alt": "The cabinet of sounds behind the cabinet of the senses, seen from the near left: sunny yellow walls with painted sound-wave stripes and gray foam sound panels, a giant brass gramophone horn on the back wall. On the left a blue door and a girl in a yellow sweater pressing one key of a small white toy piano. In the middle a man lounging open-mouthed on a bench under the gramophone horn, a gray-haired grandpa watching his grandson sign to him, a rooster crowing on a wooden post, and a little silver robot tapping a xylophone. On the right a boy pushing a roaring vacuum cleaner beside a red toy car with flashing alarm lights, a boy jumping with a tissue and a whistling toy steam engine, a flamenco dancer clacking castanets, a grandma wincing in a creaky rocking chair, two children whispering inside a giant old boot, and a boy tap dancing on a wooden board.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sens",
+   "doors": [
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the blue door on the left wall, back to the cabinet of the senses",
+     "hit": [
+      20,
+      90,
+      145,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_touche_noun",
+     "box": [
+      30,
+      290,
+      245,
+      225
+     ]
+    },
+    {
+     "id": "fr_sonore_adj",
+     "box": [
+      350,
+      35,
+      195,
+      150
+     ]
+    },
+    {
+     "id": "fr_sourd_adj",
+     "box": [
+      440,
+      200,
+      190,
+      150
+     ]
+    },
+    {
+     "id": "fr_vocal_adj",
+     "box": [
+      560,
+      80,
+      140,
+      118
+     ]
+    },
+    {
+     "id": "fr_monotone_adj",
+     "box": [
+      530,
+      355,
+      180,
+      170
+     ]
+    },
+    {
+     "id": "fr_vacarme_noun",
+     "box": [
+      720,
+      290,
+      280,
+      165
+     ]
+    },
+    {
+     "id": "fr_sifflement_noun",
+     "box": [
+      815,
+      100,
+      185,
+      185
+     ]
+    },
+    {
+     "id": "fr_claquement_noun",
+     "box": [
+      1000,
+      85,
+      125,
+      290
+     ]
+    },
+    {
+     "id": "fr_grincement_noun",
+     "box": [
+      1128,
+      200,
+      145,
+      215
+     ]
+    },
+    {
+     "id": "fr_tapage_noun",
+     "box": [
+      1050,
+      420,
+      215,
+      290
+     ]
+    },
+    {
+     "id": "fr_chuchotement_noun",
+     "box": [
+      750,
+      455,
+      240,
+      250
+     ]
+    }
+   ]
+  },
+  "parfums": {
+   "name": "Le cabinet des parfums · The cabinet of scents",
+   "room_id": "R_abs_senses_03",
+   "image": "musee/parfums.jpg",
+   "alt": "The cabinet of scents behind the cabinet of the senses, seen from the near left: sage-green walls hung with bunches of dried lavender and herbs, tall shelves of colorful perfume bottles and a big copper perfume still. On the left a lilac door with a painted flower, a lady spraying mist from a glass perfume bottle, and a perfume maker in a lab coat letting one drop fall from a dropper into a tiny vial. In the middle a girl tasting a spoonful of stew with her eyes closed, a mayor in a tricolor sash biting a lemon, a green parrot on a basket of pineapple, mango and dragon fruit, a boy shrugging and a girl pinching her nose at a pot of boiled cabbage, and a gentleman in a velvet jacket sniffing a white gardenia. On the right a pink pig sniffing a basket where a little rat peeks out, a smiling baker holding up a steaming pie, and a boy pinching his nose at a sneaker dripping green goo.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sens",
+   "doors": [
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the lilac door with the flower on the left wall, back to the cabinet of the senses",
+     "hit": [
+      15,
+      85,
+      100,
+      280
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fragrance_noun",
+     "box": [
+      115,
+      200,
+      230,
+      180
+     ]
+    },
+    {
+     "id": "fr_subtilite_noun",
+     "box": [
+      50,
+      385,
+      330,
+      335
+     ]
+    },
+    {
+     "id": "fr_savoureux_adj",
+     "box": [
+      395,
+      235,
+      145,
+      155
+     ]
+    },
+    {
+     "id": "fr_desagreable_adj",
+     "box": [
+      385,
+      395,
+      300,
+      325
+     ]
+    },
+    {
+     "id": "fr_amer_adj",
+     "box": [
+      545,
+      125,
+      140,
+      170
+     ]
+    },
+    {
+     "id": "fr_exotique_adj",
+     "box": [
+      695,
+      175,
+      180,
+      190
+     ]
+    },
+    {
+     "id": "fr_suave_adj",
+     "box": [
+      700,
+      385,
+      170,
+      335
+     ]
+    },
+    {
+     "id": "fr_odorat_noun",
+     "box": [
+      880,
+      290,
+      210,
+      165
+     ]
+    },
+    {
+     "id": "fr_effluve_noun",
+     "box": [
+      965,
+      145,
+      215,
+      140
+     ]
+    },
+    {
+     "id": "fr_degout_noun",
+     "box": [
+      1095,
+      375,
+      180,
+      345
      ]
     }
    ]
