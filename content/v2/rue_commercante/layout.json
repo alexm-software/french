@@ -52,6 +52,10 @@
   {
    "key": "parfumerie",
    "short": "La parfumerie"
+  },
+  {
+   "key": "taverne",
+   "short": "La taverne"
   }
  ],
  "planned": {
@@ -352,6 +356,18 @@
     "fr_glamour_noun",
     "fr_joaillier_noun"
    ]
+  },
+  "taverne": {
+   "vocabRoom": "R_tavern_01",
+   "only": [
+    "fr_ivre_adj",
+    "fr_saoul_adj",
+    "fr_ivrogne_adj",
+    "fr_tabagisme_noun",
+    "fr_bagarre_noun",
+    "fr_gifle_noun",
+    "fr_corrida_noun"
+   ]
   }
  },
  "rooms": {
@@ -363,12 +379,23 @@
     "box": [
      0,
      20,
-     170,
+     116,
      240
     ],
     "label": "Place du Marché"
    },
    "doors": [
+    {
+     "to": "taverne",
+     "label": "la taverne",
+     "hint": "Go through the narrow dark-red door under the ship lantern to the pub",
+     "hit": [
+      150,
+      182,
+      44,
+      86
+     ]
+    },
     {
      "to": "magasin",
      "label": "le magasin général",
@@ -604,7 +631,7 @@
    ],
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
-   "alt": "La rue Commerçante: a cobbled shopping street lined with tall shop fronts under striped awnings, each with a door in its own color, red, orange, yellow, lime green, dark green, teal, sky blue, navy blue, purple, pink and white; an archway on the left opens onto the market square. Children line up with a tabby cat, a boy films with an old camera, a man in a top hat swaps a hat for a dove, a girl writes at a desk, a stack of books, a rosette and a gold trophy, and a boy carries a crate of red apples.",
+   "alt": "La rue Commerçante: a cobbled shopping street lined with tall shop fronts under striped awnings, each with a door in its own color, red, orange, yellow, lime green, dark green, teal, sky blue, navy blue, purple, pink and white; an archway on the left opens onto the market square, and beside it a narrow dark-green pub front under a brass ship lantern and a ship's-wheel sign has its own dark-red door. Children line up with a tabby cat, a boy films with an old camera, a man in a top hat swaps a hat for a dove, a girl writes at a desk, a stack of books, a rosette and a gold trophy, and a boy carries a crate of red apples.",
    "nameplate": [
     50,
     10
@@ -2950,6 +2977,98 @@
    "building_id": "B07_rue_commercante",
    "sector_id": "S03_market",
    "alt": "Close-up of the big open blue-and-brass steamer trunk in the sunny perfumery: a man in a top hat sips his tea and admires the black lace mantilla on a mannequin, a fashion designer pins a dress form, an enchanter holds his top hat upside down as a shiny golden tuba bursts out of it in a puff of sparkles, a seahorse shows off a blue sapphire in its glass bowl, a smiling man looks splendid in a long striped boubou, a lady in pearls and a spotted gown strikes a glamorous pose, and a jeweler at a tiny workbench cheers as he holds up a finished gold ring."
+  },
+  "taverne": {
+   "name": "La taverne",
+   "room_id": "R_tavern_01",
+   "image": "rue_commercante/taverne.jpg",
+   "alt": "La taverne, a sea-themed old pub on the shopping street, with timber beams, whitewashed walls, fishing nets, a ship's wheel and hanging ship lanterns; pewter mugs stand untouched on a shelf behind the bar and nobody is drinking. By the red door on the left a laughing young woman gives her grinning boyfriend a playful cartoon slap, little stars bursting, while he holds a bunch of flowers. In front of them a comic dust cloud of a scuffle rolls around a big duffel bag, a laughing sailor in a red bandana in the middle of it, nobody hurt. On a table two little cartoon bulls in red boxing gloves spar on a giant apple core. In the middle a tipsy rosy-nosed sailor dances with a potted fir tree, and at the bar a tipsy old fisherman dozes with his nose in his soup. In front, a red-nosed old cook weeps as he peels a big sack of onions. On the right a white-bearded old man with a cold, unlit pipe in his teeth holds a brass tuba; there is no smoke. A wide window at the back right looks out on the shopping street. Door: red wood on the left wall, back out to the shopping street.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "rue_commercante",
+   "doors": [
+    {
+     "to": "rue_commercante",
+     "label": "la rue Commerçante",
+     "hint": "Go back out through the red door to the shopping street",
+     "hit": [
+      31,
+      94,
+      110,
+      310
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_gifle_noun",
+     "box": [
+      144,
+      188,
+      300,
+      215
+     ]
+    },
+    {
+     "id": "fr_bagarre_noun",
+     "box": [
+      0,
+      410,
+      537,
+      310
+     ]
+    },
+    {
+     "id": "fr_corrida_noun",
+     "box": [
+      445,
+      165,
+      135,
+      170
+     ]
+    },
+    {
+     "id": "fr_ivre_adj",
+     "box": [
+      583,
+      88,
+      172,
+      355
+     ]
+    },
+    {
+     "id": "fr_saoul_adj",
+     "box": [
+      790,
+      215,
+      165,
+      105
+     ]
+    },
+    {
+     "id": "fr_ivrogne_adj",
+     "box": [
+      760,
+      350,
+      220,
+      310
+     ]
+    },
+    {
+     "id": "fr_tabagisme_noun",
+     "box": [
+      1025,
+      256,
+      255,
+      294
+     ]
+    }
+   ],
+   "building_id": "B07_rue_commercante",
+   "sector_id": "S03_market"
   }
  }
 }
