@@ -1,654 +1,985 @@
 {
- "building": "conservatoire",
- "building_id": "B46_conservatoire",
- "sector_id": "S14_culture",
- "name": "Conservatoire",
- "main": "conservatoire",
- "roomList": [
-  {
-   "key": "conservatoire",
-   "short": "Le hall"
+  "building": "conservatoire",
+  "building_id": "B46_conservatoire",
+  "sector_id": "S14_culture",
+  "name": "Conservatoire",
+  "main": "conservatoire",
+  "roomList": [
+    {
+      "key": "conservatoire",
+      "short": "Le hall"
+    },
+    {
+      "key": "orchestre",
+      "short": "L'orchestre"
+    },
+    {
+      "key": "cordes",
+      "short": "Les cordes"
+    },
+    {
+      "key": "vents",
+      "short": "Les vents"
+    },
+    {
+      "key": "percussions",
+      "short": "Les cuivres et les percussions"
+    },
+    {
+      "key": "chorale",
+      "short": "La chorale"
+    },
+    {
+      "key": "studio",
+      "short": "Le studio"
+    },
+    {
+      "key": "piano",
+      "short": "La classe de piano"
+    }
+  ],
+  "planned": {
+    "conservatoire": {
+      "vocabRoom": "R_music_01",
+      "only": [
+        "fr_musique_noun",
+        "fr_discotheque_noun",
+        "fr_chanson_noun",
+        "fr_idole_noun",
+        "fr_disque_noun",
+        "fr_concert_noun",
+        "fr_clip_noun",
+        "fr_musical_adj",
+        "fr_siffler_verb"
+      ]
+    },
+    "orchestre": {
+      "vocabRoom": "R_music_02",
+      "only": [
+        "fr_flute_noun",
+        "fr_trompette_noun_f",
+        "fr_melodie_noun",
+        "fr_cadence_noun",
+        "fr_orchestre_noun",
+        "fr_instrument_noun",
+        "fr_compositeur_noun",
+        "fr_tambour_noun",
+        "fr_jouer_verb"
+      ]
+    },
+    "cordes": {
+      "vocabRoom": "R_music_05",
+      "only": [
+        "fr_violon_noun",
+        "fr_alto_noun",
+        "fr_violoncelle_noun",
+        "fr_archet_noun",
+        "fr_chef_d_orchestre_noun",
+        "fr_contrebasse_noun",
+        "fr_harpe_noun",
+        "fr_baguette_noun_2"
+      ]
+    },
+    "vents": {
+      "vocabRoom": "R_music_06",
+      "only": [
+        "fr_clarinette_noun",
+        "fr_hautbois_noun",
+        "fr_basson_noun",
+        "fr_saxophone_noun",
+        "fr_cor_noun"
+      ]
+    },
+    "percussions": {
+      "vocabRoom": "R_music_07",
+      "only": [
+        "fr_timbale_noun",
+        "fr_cymbale_noun",
+        "fr_xylophone_noun",
+        "fr_triangle_noun",
+        "fr_trombone_noun",
+        "fr_tuba_noun"
+      ]
+    },
+    "chorale": {
+      "vocabRoom": "R_music_03",
+      "only": [
+        "fr_chorale_noun",
+        "fr_cantatrice_noun",
+        "fr_diva_noun",
+        "fr_gamme_noun",
+        "fr_chant_noun",
+        "fr_chanteur_noun",
+        "fr_refrain_noun",
+        "fr_chanter_verb"
+      ]
+    },
+    "studio": {
+      "vocabRoom": "R_music_04",
+      "only": [
+        "fr_guitare_noun",
+        "fr_rock_noun",
+        "fr_jazz_noun",
+        "fr_samba_noun",
+        "fr_rythme_noun",
+        "fr_harmonica_noun",
+        "fr_guitariste_noun",
+        "fr_vibrer_verb"
+      ]
+    },
+    "piano": {
+      "vocabRoom": "R_music_04",
+      "only": [
+        "fr_sonorite_noun",
+        "fr_piano_noun",
+        "fr_prodige_noun",
+        "fr_repertoire_noun",
+        "fr_accompagnement_noun",
+        "fr_tempo_noun",
+        "fr_pianiste_noun",
+        "fr_pianoter_verb"
+      ]
+    }
   },
-  {
-   "key": "orchestre",
-   "short": "L'orchestre"
-  },
-  {
-   "key": "chorale",
-   "short": "La chorale"
-  },
-  {
-   "key": "studio",
-   "short": "Le studio"
-  },
-  {
-   "key": "piano",
-   "short": "La classe de piano"
+  "rooms": {
+    "conservatoire": {
+      "name": "Le hall du conservatoire · The conservatory hall",
+      "room_id": "R_music_01",
+      "image": "conservatoire/conservatoire.jpg",
+      "alt": "The round entrance hall of the conservatory on open day, seen from the near left and slightly above under a frosted glass dome, with a frieze of music notes along the pale walls and a big golden lyre inlaid in the stone floor. At the back a red-haired technician in blue overalls stands on a stepladder in front of the tall record shelves, fixing a mirrored disco ball with a screwdriver, a lady dressed as a Greek muse with a laurel crown sings one long note with a hand cupped by her mouth, and a white-bearded busker in a green vest plays a little concertina beside a potted palm. On the left a pop idol in a sparkly silver jacket signs a big rag doll, and a girl in a yellow dress turns the handle of a wooden music box while her gray kitten mews and a white mouse squeaks. In the middle Monsieur Verbe in a red beret whistles at a tall souffle on a little table, and on the right a boy in sunglasses and a red hoodie dances holding up a giant silver paper clip while a phone on a tripod films him. In front an old sailor and his little son sing a shanty on a wooden crate, and a man in a brown cardigan listens to a record spinning on his record player. The dark oak doors at the near end of the left wall lead out to the boulevard, the cream lyre doors further along the left wall open into the orchestra hall, the honey-wood door with piano keys in the back wall leads to the piano class, and the blue door up a few steps at the far right goes down to the studio.",
+      "nameplate": [
+        38,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          40,
+          60,
+          170,
+          330
+        ],
+        "label": "Boulevard des Loisirs"
+      },
+      "doors": [
+        {
+          "to": "orchestre",
+          "label": "L'orchestre",
+          "hint": "the cream lyre doors in the left wall, to the orchestra hall",
+          "hit": [
+            262,
+            90,
+            115,
+            230
+          ]
+        },
+        {
+          "to": "piano",
+          "label": "La classe de piano",
+          "hint": "the honey-wood door with piano keys in the back wall, to the piano class",
+          "hit": [
+            925,
+            112,
+            95,
+            105
+          ]
+        },
+        {
+          "to": "studio",
+          "label": "Le studio",
+          "hint": "the blue door up a few steps at the far right, to the studio",
+          "hit": [
+            1140,
+            100,
+            105,
+            250
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_discotheque_noun",
+          "box": [
+            531,
+            81,
+            100,
+            244
+          ]
+        },
+        {
+          "id": "fr_idole_noun",
+          "box": [
+            385,
+            181,
+            134,
+            300
+          ]
+        },
+        {
+          "id": "fr_musique_noun",
+          "box": [
+            262,
+            330,
+            120,
+            222
+          ]
+        },
+        {
+          "id": "fr_chanson_noun",
+          "box": [
+            77,
+            394,
+            184,
+            283
+          ]
+        },
+        {
+          "id": "fr_musical_adj",
+          "box": [
+            712,
+            175,
+            110,
+            170
+          ]
+        },
+        {
+          "id": "fr_concert_noun",
+          "box": [
+            1022,
+            169,
+            112,
+            229
+          ]
+        },
+        {
+          "id": "fr_clip_noun",
+          "box": [
+            862,
+            225,
+            158,
+            170
+          ]
+        },
+        {
+          "id": "fr_disque_noun",
+          "box": [
+            1000,
+            400,
+            203,
+            277
+          ]
+        },
+        {
+          "id": "fr_siffler_verb",
+          "box": [
+            590,
+            350,
+            220,
+            290
+          ]
+        }
+      ]
+    },
+    "orchestre": {
+      "name": "La salle d'orchestre · The orchestra hall",
+      "room_id": "R_music_02",
+      "image": "conservatoire/orchestre.jpg",
+      "alt": "The orchestra rehearsal hall of the conservatory, seen from the near left and slightly above: light wooden paneled walls, a clean white back wall with golden music notes and a pale plank floor with music stands among the players. On the left a lady with a silver bun plays a big cello with her eyes closed, a freckled girl in blue plays a silver flute while a blank sheet flies off her stand, a little girl in a red marching jacket marches in step pulling a bouncing wind-up toy car, and in front a woman in a red jacket blows a brass trumpet while her puppy covers its ears. Monsieur Verbe in a red beret plays a big triangle with a blue jay perched on top. In the middle of the back wall a walnut porthole door with a golden lyre leads to the string room. On the right a big plush orca sits on a wooden chest by the back wall, an old composer with round glasses and a white ponytail sits on a green compost bin holding his quill and a blank sheet, a scowling man in a tan coat bangs a big red drum, and a man in a gray suit carries a teetering stack of black instrument cases. The cream lyre doors in the left wall lead back to the conservatory hall and the pale-blue door with the wreath at the right of the back wall goes to the choir room.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "conservatoire",
+      "doors": [
+        {
+          "to": "conservatoire",
+          "label": "Le hall",
+          "hint": "the cream lyre doors, back to the conservatory hall",
+          "hit": [
+            40,
+            70,
+            180,
+            158
+          ]
+        },
+        {
+          "to": "cordes",
+          "label": "Les cordes",
+          "hint": "the walnut porthole door with a lyre, to the string room",
+          "hit": [
+            530,
+            145,
+            115,
+            220
+          ]
+        },
+        {
+          "to": "chorale",
+          "label": "La chorale",
+          "hint": "the pale-blue door with the wreath, to the choir room",
+          "hit": [
+            1150,
+            112,
+            100,
+            180
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_melodie_noun",
+          "box": [
+            78,
+            231,
+            165,
+            164
+          ]
+        },
+        {
+          "id": "fr_flute_noun",
+          "box": [
+            244,
+            194,
+            144,
+            180
+          ]
+        },
+        {
+          "id": "fr_cadence_noun",
+          "box": [
+            319,
+            376,
+            300,
+            301
+          ]
+        },
+        {
+          "id": "fr_trompette_noun_f",
+          "box": [
+            77,
+            398,
+            210,
+            279
+          ]
+        },
+        {
+          "id": "fr_jouer_verb",
+          "box": [
+            656,
+            138,
+            156,
+            331
+          ]
+        },
+        {
+          "id": "fr_orchestre_noun",
+          "box": [
+            820,
+            206,
+            135,
+            119
+          ]
+        },
+        {
+          "id": "fr_compositeur_noun",
+          "box": [
+            958,
+            144,
+            186,
+            156
+          ]
+        },
+        {
+          "id": "fr_tambour_noun",
+          "box": [
+            1006,
+            306,
+            197,
+            254
+          ]
+        },
+        {
+          "id": "fr_instrument_noun",
+          "box": [
+            813,
+            350,
+            187,
+            327
+          ]
+        }
+      ]
+    },
+    "chorale": {
+      "name": "La salle de chant · The choir room",
+      "room_id": "R_music_03",
+      "image": "conservatoire/chorale.jpg",
+      "alt": "The choir room of the music conservatoire seen from the near left and slightly above: pale-blue plaster walls with white moldings, a big painted coral-reef mural full of fish on the back wall, light oak choir risers in front of it and a light oak floor running away at an angle, with blue choir robes hanging on pegs shaped like music notes on the right wall. Up on the risers four children in blue robes sing, and beside them an opera singer lady in a long purple gown sings with her arms wide while the two small potted trees at her sides shake from her voice. Monsieur Verbe in a red beret sings with his mouth wide open, holding a bale of hay over his head. On the right a cheerful round man in a red polka-dot vest and a white frilly ruff waves a lace fan, and a tall gray-bearded choirmaster wrapped in a plaid shawl sings a slow chant with his hands together. In the middle a girl in an orange pinafore stands on a staircase of colored blocks blowing a big pink bubble of gum. In front a diva in a red gown and pink feather boa poses in a snorkel mask and yellow flippers, and a singer in a sequined jacket belts out a song while spinning a big globe. The pale-blue door with the wreath in the left wall leads back to the orchestra hall.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "orchestre",
+      "doors": [
+        {
+          "to": "orchestre",
+          "label": "L'orchestre",
+          "hint": "the pale-blue door with the wreath, back to the orchestra hall",
+          "hit": [
+            12,
+            140,
+            125,
+            370
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_chorale_noun",
+          "box": [
+            212,
+            175,
+            292,
+            130
+          ]
+        },
+        {
+          "id": "fr_cantatrice_noun",
+          "box": [
+            506,
+            88,
+            230,
+            215
+          ]
+        },
+        {
+          "id": "fr_chanter_verb",
+          "box": [
+            745,
+            168,
+            95,
+            260
+          ]
+        },
+        {
+          "id": "fr_refrain_noun",
+          "box": [
+            842,
+            269,
+            236,
+            156
+          ]
+        },
+        {
+          "id": "fr_gamme_noun",
+          "box": [
+            438,
+            310,
+            187,
+            302
+          ]
+        },
+        {
+          "id": "fr_diva_noun",
+          "box": [
+            200,
+            312,
+            236,
+            365
+          ]
+        },
+        {
+          "id": "fr_chanteur_noun",
+          "box": [
+            681,
+            431,
+            357,
+            246
+          ]
+        },
+        {
+          "id": "fr_chant_noun",
+          "box": [
+            1080,
+            188,
+            123,
+            387
+          ]
+        }
+      ]
+    },
+    "studio": {
+      "name": "Le studio de répétition · The band rehearsal studio",
+      "room_id": "R_music_04",
+      "image": "conservatoire/studio.jpg",
+      "alt": "The basement rehearsal studio of the conservatory on jam night, seen from the near left and slightly above: red brick vaults, gray foam panels on the back wall, a low wooden stage with black amplifiers along the right, a big yellow sun painted on the end wall, and a worn red rug with coiled cables on the gray concrete floor. Up on the stage a man in sunglasses and a pork-pie hat plays a golden saxophone while a samba dancer in a green-and-yellow frilled dress shakes two maracas under the painted sun. In the middle a curly-haired granny in a studded leather jacket and big headphones sits on a big gray boulder, head-banging with both fists in the air. At the back on the left Monsieur Verbe in a red beret shakes on top of a big black loudspeaker while a little gray donkey brays beside it. In front a young woman with a black bob kneels in a black puddle of tar playing a red electric guitar, a long-haired guitarist with a huge shiny wristwatch strums an acoustic guitar cross-legged on the rug, a boy in a green T-shirt drums with two wooden spoons on a stack of paper reams, and a cowboy on a saddle plays the harmonica. A little cactus wearing headphones sits in the corner. The dark-blue door at the top of the steps in the left wall leads back up to the conservatory hall.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "conservatoire",
+      "doors": [
+        {
+          "to": "conservatoire",
+          "label": "Le hall",
+          "hint": "the dark-blue door at the top of the steps in the left wall, back up to the conservatory hall",
+          "hit": [
+            15,
+            80,
+            125,
+            260
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_guitare_noun",
+          "box": [
+            169,
+            369,
+            191,
+            151
+          ]
+        },
+        {
+          "id": "fr_guitariste_noun",
+          "box": [
+            362,
+            406,
+            288,
+            204
+          ]
+        },
+        {
+          "id": "fr_vibrer_verb",
+          "box": [
+            300,
+            100,
+            219,
+            262
+          ]
+        },
+        {
+          "id": "fr_rock_noun",
+          "box": [
+            581,
+            188,
+            169,
+            212
+          ]
+        },
+        {
+          "id": "fr_jazz_noun",
+          "box": [
+            869,
+            138,
+            137,
+            187
+          ]
+        },
+        {
+          "id": "fr_samba_noun",
+          "box": [
+            1006,
+            156,
+            150,
+            231
+          ]
+        },
+        {
+          "id": "fr_rythme_noun",
+          "box": [
+            751,
+            388,
+            192,
+            237
+          ]
+        },
+        {
+          "id": "fr_harmonica_noun",
+          "box": [
+            944,
+            389,
+            259,
+            288
+          ]
+        }
+      ]
+    },
+    "piano": {
+      "name": "La classe de piano · The piano room",
+      "room_id": "R_music_04",
+      "image": "conservatoire/piano.jpg",
+      "alt": "The piano classroom of the conservatory seen from high up at an angle from the near-left: pale-green walls lined with tall shelves of music books, herringbone light-oak parquet, and a two-step light-wood stage along the back. At the back Monsieur Verbe sits at a little round table drumming his fingers beside an empty teacup. Up on the stage a small boy with a bowl haircut plays the violin balancing a blue-and-white china dish on his head, a gray-haired businessman in a suit with a badge on a lanyard plucks a tall double bass, and a young rapper in a cap and hoodie puts one more book on top of a tall tower of song books. On the parquet in front, nearest the door, a lady kneels striking a bronze gong, her hair standing straight up from the deep sound; beside her a pianist in a lilac dress plays an upright piano with a little nest of eggs on top; in the middle a tortoise taps its foot beside a big wooden metronome on a stool; and at the front right a toddler in a yellow romper bangs the keys of a big black grand piano while an old teacher in round glasses clutches his cheeks. A plant pot shaped like a bass clef stands by the tea table. The wooden door with a round window, under a painted piano keyboard in the left wall at the near end, leads back to the conservatory hall.",
+      "nameplate": [
+        30,
+        8
+      ],
+      "backTo": "conservatoire",
+      "doors": [
+        {
+          "to": "conservatoire",
+          "label": "Le hall",
+          "hint": "the honey-wood door under the piano-keys border, back to the conservatory hall",
+          "hit": [
+            26,
+            104,
+            144,
+            226
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_sonorite_noun",
+          "box": [
+            77,
+            332,
+            223,
+            288
+          ]
+        },
+        {
+          "id": "fr_pianoter_verb",
+          "box": [
+            300,
+            204,
+            166,
+            236
+          ]
+        },
+        {
+          "id": "fr_pianiste_noun",
+          "box": [
+            302,
+            446,
+            338,
+            231
+          ]
+        },
+        {
+          "id": "fr_prodige_noun",
+          "box": [
+            684,
+            88,
+            118,
+            206
+          ]
+        },
+        {
+          "id": "fr_accompagnement_noun",
+          "box": [
+            842,
+            44,
+            134,
+            258
+          ]
+        },
+        {
+          "id": "fr_repertoire_noun",
+          "box": [
+            990,
+            74,
+            176,
+            252
+          ]
+        },
+        {
+          "id": "fr_tempo_noun",
+          "box": [
+            642,
+            364,
+            188,
+            182
+          ]
+        },
+        {
+          "id": "fr_piano_noun",
+          "box": [
+            832,
+            336,
+            371,
+            341
+          ]
+        }
+      ]
+    },
+    "cordes": {
+      "name": "La salle des cordes · The string room",
+      "room_id": "R_music_05",
+      "image": "conservatoire/cordes.jpg",
+      "alt": "The string-section room of the conservatory, seen from the near left and slightly above: sage-green upper walls, honey wainscoting and a herringbone wood floor. On the left a lady in green plays a golden harp beside a clapping seal, and in front a woman in orange plays a tall double bass next to a bucket with a leaping bass fish. In the middle a schoolgirl holds a conductor's baton and a long baguette loaf, and a chef in a tall white hat stands on a wooden podium waving a wire whisk. On the right a man in a black suit sits on a striped lawn chair on a little grass platform playing a violin; an archer boy in green aims a violin bow at an apple; a barefoot bearded man plays a viola showing all his toes; and a young man in blue sits on a stepladder playing a cello. The round walnut porthole door on the left wall leads back to the orchestra hall, and the open ochre door with a brass horn ornament on the right wall goes to the woodwind room.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "orchestre",
+      "doors": [
+        {
+          "to": "orchestre",
+          "label": "L'orchestre",
+          "hint": "the round walnut porthole door, back to the orchestra hall",
+          "hit": [
+            16,
+            62,
+            103,
+            256
+          ]
+        },
+        {
+          "to": "vents",
+          "label": "Les vents",
+          "hint": "the open ochre door with the brass horn, to the woodwind room",
+          "hit": [
+            1076,
+            62,
+            132,
+            246
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_harpe_noun",
+          "box": [
+            154,
+            62,
+            256,
+            256
+          ]
+        },
+        {
+          "id": "fr_contrebasse_noun",
+          "box": [
+            41,
+            322,
+            369,
+            385
+          ]
+        },
+        {
+          "id": "fr_baguette_noun_2",
+          "box": [
+            414,
+            140,
+            131,
+            352
+          ]
+        },
+        {
+          "id": "fr_chef_d_orchestre_noun",
+          "box": [
+            549,
+            62,
+            212,
+            305
+          ]
+        },
+        {
+          "id": "fr_archet_noun",
+          "box": [
+            580,
+            371,
+            216,
+            326
+          ]
+        },
+        {
+          "id": "fr_violon_noun",
+          "box": [
+            766,
+            62,
+            268,
+            204
+          ]
+        },
+        {
+          "id": "fr_alto_noun",
+          "box": [
+            836,
+            270,
+            212,
+            362
+          ]
+        },
+        {
+          "id": "fr_violoncelle_noun",
+          "box": [
+            1052,
+            326,
+            190,
+            383
+          ]
+        }
+      ]
+    },
+    "vents": {
+      "name": "La salle des vents · The woodwind room",
+      "room_id": "R_music_06",
+      "image": "conservatoire/vents.jpg",
+      "alt": "The woodwind room of the conservatory, seen from the near left and slightly above: lavender walls, a raised wooden stage and a blue-gray floor. On the left a girl in a blue dress plays a black clarinet while her brother in green holds a butterfly net reaching for a yellow butterfly. On the stage a man with a green boa snake coiled around him plays an oboe, and a bearded man on a stool plays a bassoon beside a little white lamb. In front a girl stands inside a burlap sack playing a silver saxophone, and a boy in a green sweater plays a French horn while holding up an apple core. The sage-green door on the left wall leads back to the string room, and the cherry-red door with a brass drum ornament on the back wall goes to the percussion room.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "cordes",
+      "doors": [
+        {
+          "to": "cordes",
+          "label": "Les cordes",
+          "hint": "the sage-green door, back to the string room",
+          "hit": [
+            55,
+            80,
+            115,
+            280
+          ]
+        },
+        {
+          "to": "percussions",
+          "label": "Les cuivres et les percussions",
+          "hint": "the cherry-red door with the brass drum, to brass and percussion",
+          "hit": [
+            480,
+            62,
+            160,
+            218
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_clarinette_noun",
+          "box": [
+            185,
+            300,
+            400,
+            360
+          ]
+        },
+        {
+          "id": "fr_hautbois_noun",
+          "box": [
+            720,
+            70,
+            180,
+            250
+          ]
+        },
+        {
+          "id": "fr_basson_noun",
+          "box": [
+            920,
+            62,
+            280,
+            273
+          ]
+        },
+        {
+          "id": "fr_saxophone_noun",
+          "box": [
+            700,
+            350,
+            200,
+            210
+          ]
+        },
+        {
+          "id": "fr_cor_noun",
+          "box": [
+            970,
+            340,
+            260,
+            360
+          ]
+        }
+      ]
+    },
+    "percussions": {
+      "name": "Les cuivres et les percussions · Brass and percussion",
+      "room_id": "R_music_07",
+      "image": "conservatoire/percussions.jpg",
+      "alt": "The percussion-and-brass room of the conservatory, seen from the near left and slightly above: yellow walls, a raised wooden stage and a honey wood floor. On the left a girl with flying pigtails crashes a brass cymbal, and on the stage a woman in a patterned headwrap beats a copper kettledrum with a stick tipped with a big orange ball. A boy in green plays a wooden xylophone with two lollipop mallets, and a boy in a blue cap rings a metal triangle hanging from a potted tree. In front a girl in a red jacket plays a trombone with a cartoon bone resting on the slide, and a bearded man in a tuxedo sits in a clawfoot bathtub playing a big tuba. The lavender door on the left wall leads back to the woodwind room.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "backTo": "vents",
+      "doors": [
+        {
+          "to": "vents",
+          "label": "Les vents",
+          "hint": "the lavender door, back to the woodwind room",
+          "hit": [
+            35,
+            62,
+            160,
+            288
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_cymbale_noun",
+          "box": [
+            205,
+            200,
+            240,
+            285
+          ]
+        },
+        {
+          "id": "fr_timbale_noun",
+          "box": [
+            450,
+            62,
+            230,
+            293
+          ]
+        },
+        {
+          "id": "fr_xylophone_noun",
+          "box": [
+            735,
+            70,
+            220,
+            285
+          ]
+        },
+        {
+          "id": "fr_triangle_noun",
+          "box": [
+            965,
+            62,
+            265,
+            278
+          ]
+        },
+        {
+          "id": "fr_trombone_noun",
+          "box": [
+            475,
+            360,
+            350,
+            320
+          ]
+        },
+        {
+          "id": "fr_tuba_noun",
+          "box": [
+            850,
+            365,
+            380,
+            340
+          ]
+        }
+      ]
+    }
   }
- ],
- "planned": {
-  "conservatoire": {
-   "vocabRoom": "R_music_01",
-   "only": [
-    "fr_musique_noun",
-    "fr_discotheque_noun",
-    "fr_chanson_noun",
-    "fr_idole_noun",
-    "fr_disque_noun",
-    "fr_concert_noun",
-    "fr_clip_noun",
-    "fr_musical_adj",
-    "fr_siffler_verb"
-   ]
-  },
-  "orchestre": {
-   "vocabRoom": "R_music_02",
-   "only": [
-    "fr_flute_noun",
-    "fr_trompette_noun_f",
-    "fr_melodie_noun",
-    "fr_cadence_noun",
-    "fr_orchestre_noun",
-    "fr_instrument_noun",
-    "fr_compositeur_noun",
-    "fr_tambour_noun",
-    "fr_jouer_verb"
-   ]
-  },
-  "chorale": {
-   "vocabRoom": "R_music_03",
-   "only": [
-    "fr_chorale_noun",
-    "fr_cantatrice_noun",
-    "fr_diva_noun",
-    "fr_gamme_noun",
-    "fr_chant_noun",
-    "fr_chanteur_noun",
-    "fr_refrain_noun",
-    "fr_chanter_verb"
-   ]
-  },
-  "studio": {
-   "vocabRoom": "R_music_04",
-   "only": [
-    "fr_guitare_noun",
-    "fr_rock_noun",
-    "fr_jazz_noun",
-    "fr_samba_noun",
-    "fr_rythme_noun",
-    "fr_harmonica_noun",
-    "fr_guitariste_noun",
-    "fr_vibrer_verb"
-   ]
-  },
-  "piano": {
-   "vocabRoom": "R_music_04",
-   "only": [
-    "fr_sonorite_noun",
-    "fr_piano_noun",
-    "fr_prodige_noun",
-    "fr_repertoire_noun",
-    "fr_accompagnement_noun",
-    "fr_tempo_noun",
-    "fr_pianiste_noun",
-    "fr_pianoter_verb"
-   ]
-  }
- },
- "rooms": {
-  "conservatoire": {
-   "name": "Le hall du conservatoire · The conservatory hall",
-   "room_id": "R_music_01",
-   "image": "conservatoire/conservatoire.jpg",
-   "alt": "The round entrance hall of the conservatory on open day, seen from the near left and slightly above under a frosted glass dome, with a frieze of music notes along the pale walls and a big golden lyre inlaid in the stone floor. At the back a red-haired technician in blue overalls stands on a stepladder in front of the tall record shelves, fixing a mirrored disco ball with a screwdriver, a lady dressed as a Greek muse with a laurel crown sings one long note with a hand cupped by her mouth, and a white-bearded busker in a green vest plays a little concertina beside a potted palm. On the left a pop idol in a sparkly silver jacket signs a big rag doll, and a girl in a yellow dress turns the handle of a wooden music box while her gray kitten mews and a white mouse squeaks. In the middle Monsieur Verbe in a red beret whistles at a tall souffle on a little table, and on the right a boy in sunglasses and a red hoodie dances holding up a giant silver paper clip while a phone on a tripod films him. In front an old sailor and his little son sing a shanty on a wooden crate, and a man in a brown cardigan listens to a record spinning on his record player. The dark oak doors at the near end of the left wall lead out to the boulevard, the cream lyre doors further along the left wall open into the orchestra hall, the honey-wood door with piano keys in the back wall leads to the piano class, and the blue door up a few steps at the far right goes down to the studio.",
-   "nameplate": [
-    38,
-    4.5
-   ],
-   "mapExit": {
-    "box": [
-     40,
-     60,
-     170,
-     330
-    ],
-    "label": "Boulevard des Loisirs"
-   },
-   "doors": [
-    {
-     "to": "orchestre",
-     "label": "L'orchestre",
-     "hint": "the cream lyre doors in the left wall, to the orchestra hall",
-     "hit": [
-      262,
-      90,
-      115,
-      230
-     ]
-    },
-    {
-     "to": "piano",
-     "label": "La classe de piano",
-     "hint": "the honey-wood door with piano keys in the back wall, to the piano class",
-     "hit": [
-      925,
-      112,
-      95,
-      105
-     ]
-    },
-    {
-     "to": "studio",
-     "label": "Le studio",
-     "hint": "the blue door up a few steps at the far right, to the studio",
-     "hit": [
-      1140,
-      100,
-      105,
-      250
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_discotheque_noun",
-     "box": [
-      531,
-      81,
-      100,
-      244
-     ]
-    },
-    {
-     "id": "fr_idole_noun",
-     "box": [
-      385,
-      181,
-      134,
-      300
-     ]
-    },
-    {
-     "id": "fr_musique_noun",
-     "box": [
-      262,
-      330,
-      120,
-      222
-     ]
-    },
-    {
-     "id": "fr_chanson_noun",
-     "box": [
-      77,
-      394,
-      184,
-      283
-     ]
-    },
-    {
-     "id": "fr_musical_adj",
-     "box": [
-      712,
-      175,
-      110,
-      170
-     ]
-    },
-    {
-     "id": "fr_concert_noun",
-     "box": [
-      1022,
-      169,
-      112,
-      229
-     ]
-    },
-    {
-     "id": "fr_clip_noun",
-     "box": [
-      862,
-      225,
-      158,
-      170
-     ]
-    },
-    {
-     "id": "fr_disque_noun",
-     "box": [
-      1000,
-      400,
-      203,
-      277
-     ]
-    },
-    {
-     "id": "fr_siffler_verb",
-     "box": [
-      590,
-      350,
-      220,
-      290
-     ]
-    }
-   ]
-  },
-  "orchestre": {
-   "name": "La salle d'orchestre · The orchestra hall",
-   "room_id": "R_music_02",
-   "image": "conservatoire/orchestre.jpg",
-   "alt": "The orchestra rehearsal hall of the conservatory, seen from the near left and slightly above: light wooden paneled walls, a clean white back wall with golden music notes and a pale plank floor with music stands among the players. On a round wooden podium in the middle the conductor beats time with his baton. On the left a lady with a silver bun plays a big cello with her eyes closed, a freckled girl in blue plays a silver flute while a blank sheet flies off her stand, a little girl in a red marching jacket marches in step pulling a bouncing wind-up toy car, and in front a woman in a red jacket blows a brass trumpet while her puppy covers its ears. Monsieur Verbe in a red beret plays a big triangle with a blue jay perched on top. On the right a big plush orca sits on a wooden chest by the back wall, an old composer with round glasses and a white ponytail sits on a green compost bin holding his quill and a blank sheet, a scowling man in a tan coat bangs a big red drum, and a man in a gray suit carries a teetering stack of black instrument cases. The cream lyre doors in the left wall lead back to the conservatory hall and the pale-blue door with the wreath at the right of the back wall goes to the choir room.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "conservatoire",
-   "doors": [
-    {
-     "to": "conservatoire",
-     "label": "Le hall",
-     "hint": "the cream lyre doors, back to the conservatory hall",
-     "hit": [
-      40,
-      70,
-      180,
-      158
-     ]
-    },
-    {
-     "to": "chorale",
-     "label": "La chorale",
-     "hint": "the pale-blue door with the wreath, to the choir room",
-     "hit": [
-      1150,
-      112,
-      100,
-      180
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_melodie_noun",
-     "box": [
-      78,
-      231,
-      165,
-      164
-     ]
-    },
-    {
-     "id": "fr_flute_noun",
-     "box": [
-      244,
-      194,
-      144,
-      180
-     ]
-    },
-    {
-     "id": "fr_cadence_noun",
-     "box": [
-      319,
-      376,
-      300,
-      301
-     ]
-    },
-    {
-     "id": "fr_trompette_noun_f",
-     "box": [
-      77,
-      398,
-      210,
-      279
-     ]
-    },
-    {
-     "id": "fr_jouer_verb",
-     "box": [
-      656,
-      138,
-      156,
-      331
-     ]
-    },
-    {
-     "id": "fr_orchestre_noun",
-     "box": [
-      820,
-      206,
-      135,
-      119
-     ]
-    },
-    {
-     "id": "fr_compositeur_noun",
-     "box": [
-      958,
-      144,
-      186,
-      156
-     ]
-    },
-    {
-     "id": "fr_tambour_noun",
-     "box": [
-      1006,
-      306,
-      197,
-      254
-     ]
-    },
-    {
-     "id": "fr_instrument_noun",
-     "box": [
-      813,
-      350,
-      187,
-      327
-     ]
-    }
-   ]
-  },
-  "chorale": {
-   "name": "La salle de chant · The choir room",
-   "room_id": "R_music_03",
-   "image": "conservatoire/chorale.jpg",
-   "alt": "The choir room of the music conservatoire seen from the near left and slightly above: pale-blue plaster walls with white moldings, a big painted coral-reef mural full of fish on the back wall, light oak choir risers in front of it and a light oak floor running away at an angle, with blue choir robes hanging on pegs shaped like music notes on the right wall. Up on the risers four children in blue robes sing, and beside them an opera singer lady in a long purple gown sings with her arms wide while the two small potted trees at her sides shake from her voice. Monsieur Verbe in a red beret sings with his mouth wide open, holding a bale of hay over his head. On the right a cheerful round man in a red polka-dot vest and a white frilly ruff waves a lace fan, and a tall gray-bearded choirmaster wrapped in a plaid shawl sings a slow chant with his hands together. In the middle a girl in an orange pinafore stands on a staircase of colored blocks blowing a big pink bubble of gum. In front a diva in a red gown and pink feather boa poses in a snorkel mask and yellow flippers, and a singer in a sequined jacket belts out a song while spinning a big globe. The pale-blue door with the wreath in the left wall leads back to the orchestra hall.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "orchestre",
-   "doors": [
-    {
-     "to": "orchestre",
-     "label": "L'orchestre",
-     "hint": "the pale-blue door with the wreath, back to the orchestra hall",
-     "hit": [
-      12,
-      140,
-      125,
-      370
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_chorale_noun",
-     "box": [
-      212,
-      175,
-      292,
-      130
-     ]
-    },
-    {
-     "id": "fr_cantatrice_noun",
-     "box": [
-      506,
-      88,
-      230,
-      215
-     ]
-    },
-    {
-     "id": "fr_chanter_verb",
-     "box": [
-      745,
-      168,
-      95,
-      260
-     ]
-    },
-    {
-     "id": "fr_refrain_noun",
-     "box": [
-      842,
-      269,
-      236,
-      156
-     ]
-    },
-    {
-     "id": "fr_gamme_noun",
-     "box": [
-      438,
-      310,
-      187,
-      302
-     ]
-    },
-    {
-     "id": "fr_diva_noun",
-     "box": [
-      200,
-      312,
-      236,
-      365
-     ]
-    },
-    {
-     "id": "fr_chanteur_noun",
-     "box": [
-      681,
-      431,
-      357,
-      246
-     ]
-    },
-    {
-     "id": "fr_chant_noun",
-     "box": [
-      1080,
-      188,
-      123,
-      387
-     ]
-    }
-   ]
-  },
-  "studio": {
-   "name": "Le studio de répétition · The band rehearsal studio",
-   "room_id": "R_music_04",
-   "image": "conservatoire/studio.jpg",
-   "alt": "The basement rehearsal studio of the conservatory on jam night, seen from the near left and slightly above: red brick vaults, gray foam panels on the back wall, a low wooden stage with black amplifiers along the right, a big yellow sun painted on the end wall, and a worn red rug with coiled cables on the gray concrete floor. Up on the stage a man in sunglasses and a pork-pie hat plays a golden saxophone while a samba dancer in a green-and-yellow frilled dress shakes two maracas under the painted sun. In the middle a curly-haired granny in a studded leather jacket and big headphones sits on a big gray boulder, head-banging with both fists in the air. At the back on the left Monsieur Verbe in a red beret shakes on top of a big black loudspeaker while a little gray donkey brays beside it. In front a young woman with a black bob kneels in a black puddle of tar playing a red electric guitar, a long-haired guitarist with a huge shiny wristwatch strums an acoustic guitar cross-legged on the rug, a boy in a green T-shirt drums with two wooden spoons on a stack of paper reams, and a cowboy on a saddle plays the harmonica. A little cactus wearing headphones sits in the corner. The dark-blue door at the top of the steps in the left wall leads back up to the conservatory hall.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "conservatoire",
-   "doors": [
-    {
-     "to": "conservatoire",
-     "label": "Le hall",
-     "hint": "the dark-blue door at the top of the steps in the left wall, back up to the conservatory hall",
-     "hit": [
-      15,
-      80,
-      125,
-      260
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_guitare_noun",
-     "box": [
-      169,
-      369,
-      191,
-      151
-     ]
-    },
-    {
-     "id": "fr_guitariste_noun",
-     "box": [
-      362,
-      406,
-      288,
-      204
-     ]
-    },
-    {
-     "id": "fr_vibrer_verb",
-     "box": [
-      300,
-      100,
-      219,
-      262
-     ]
-    },
-    {
-     "id": "fr_rock_noun",
-     "box": [
-      581,
-      188,
-      169,
-      212
-     ]
-    },
-    {
-     "id": "fr_jazz_noun",
-     "box": [
-      869,
-      138,
-      137,
-      187
-     ]
-    },
-    {
-     "id": "fr_samba_noun",
-     "box": [
-      1006,
-      156,
-      150,
-      231
-     ]
-    },
-    {
-     "id": "fr_rythme_noun",
-     "box": [
-      751,
-      388,
-      192,
-      237
-     ]
-    },
-    {
-     "id": "fr_harmonica_noun",
-     "box": [
-      944,
-      389,
-      259,
-      288
-     ]
-    }
-   ]
-  },
-  "piano": {
-   "name": "La classe de piano · The piano room",
-   "room_id": "R_music_04",
-   "image": "conservatoire/piano.jpg",
-   "alt": "The piano classroom of the conservatory seen from high up at an angle from the near-left: pale-green walls lined with tall shelves of music books, herringbone light-oak parquet, and a two-step light-wood stage along the back. At the back Monsieur Verbe sits at a little round table drumming his fingers beside an empty teacup. Up on the stage a small boy with a bowl haircut plays the violin balancing a blue-and-white china dish on his head, a gray-haired businessman in a suit with a badge on a lanyard plucks a tall double bass, and a young rapper in a cap and hoodie puts one more book on top of a tall tower of song books. On the parquet in front, nearest the door, a lady kneels striking a bronze gong, her hair standing straight up from the deep sound; beside her a pianist in a lilac dress plays an upright piano with a little nest of eggs on top; in the middle a tortoise taps its foot beside a big wooden metronome on a stool; and at the front right a toddler in a yellow romper bangs the keys of a big black grand piano while an old teacher in round glasses clutches his cheeks. A plant pot shaped like a bass clef stands by the tea table. The wooden door with a round window, under a painted piano keyboard in the left wall at the near end, leads back to the conservatory hall.",
-   "nameplate": [
-    30,
-    8
-   ],
-   "backTo": "conservatoire",
-   "doors": [
-    {
-     "to": "conservatoire",
-     "label": "Le hall",
-     "hint": "the honey-wood door under the piano-keys border, back to the conservatory hall",
-     "hit": [
-      26,
-      104,
-      144,
-      226
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_sonorite_noun",
-     "box": [
-      77,
-      332,
-      223,
-      288
-     ]
-    },
-    {
-     "id": "fr_pianoter_verb",
-     "box": [
-      300,
-      204,
-      166,
-      236
-     ]
-    },
-    {
-     "id": "fr_pianiste_noun",
-     "box": [
-      302,
-      446,
-      338,
-      231
-     ]
-    },
-    {
-     "id": "fr_prodige_noun",
-     "box": [
-      684,
-      88,
-      118,
-      206
-     ]
-    },
-    {
-     "id": "fr_accompagnement_noun",
-     "box": [
-      842,
-      44,
-      134,
-      258
-     ]
-    },
-    {
-     "id": "fr_repertoire_noun",
-     "box": [
-      990,
-      74,
-      176,
-      252
-     ]
-    },
-    {
-     "id": "fr_tempo_noun",
-     "box": [
-      642,
-      364,
-      188,
-      182
-     ]
-    },
-    {
-     "id": "fr_piano_noun",
-     "box": [
-      832,
-      336,
-      371,
-      341
-     ]
-    }
-   ]
-  }
- }
 }
