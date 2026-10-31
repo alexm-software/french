@@ -1,5 +1,9 @@
 # Skills changelog
 
+## 31 October 2026
+- **Gate 23, angled layered scenes.** Each room is composed as an angled, layered scene (foreground, middle, back) around one named situation; a frontal one- or two-row lineup fails.
+- **Gate 24, one generated painting.** Each room is ONE generated painting (square-centre generation plus one outpaint, or a crop-edit of that painting); no cut-out or green-screen sprites on a background plate and no code-drawn marks.
+
 ## 29 October 2026
 - **Room cap 15.** `room_max` in `skills/limits.json` is now 15 (was 12), owner decision for the verb migration. Rooms are not split just to stay under 12; zooms stay 4-6. Verb-street side rooms are kept as homes for leftover verbs with no natural room.
 - **Hook-crop gate.** For every repainted room, crop each item's hotspot at 2x and confirm every concrete detail its hook names is painted inside the box; fix mismatches before packing.

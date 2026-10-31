@@ -1,0 +1,674 @@
+{
+ "building": "jeux",
+ "building_id": "B48_jeux",
+ "sector_id": "S14_culture",
+ "name": "Salle de jeux & fêtes",
+ "main": "jeux",
+ "roomList": [
+  {
+   "key": "jeux",
+   "short": "Les jeux"
+  },
+  {
+   "key": "loto",
+   "short": "Le loto"
+  },
+  {
+   "key": "fete",
+   "short": "L'anniversaire"
+  },
+  {
+   "key": "noce",
+   "short": "La noce"
+  },
+  {
+   "key": "carnaval",
+   "short": "Le carnaval"
+  }
+ ],
+ "planned": {
+  "jeux": {
+   "vocabRoom": "R_games_01",
+   "only": [
+    "fr_chance_noun",
+    "fr_strategie_noun",
+    "fr_jeu_noun",
+    "fr_hasard_noun",
+    "fr_as_noun",
+    "fr_atout_noun",
+    "fr_pion_noun",
+    "fr_tricher_verb",
+    "fr_distribuer_verb"
+   ]
+  },
+  "loto": {
+   "vocabRoom": "R_games_02",
+   "only": [
+    "fr_loterie_noun",
+    "fr_fortune_noun",
+    "fr_combinaison_noun",
+    "fr_quille_noun",
+    "fr_loto_noun",
+    "fr_pari_noun",
+    "fr_loisir_noun",
+    "fr_domino_noun",
+    "fr_piocher_verb"
+   ]
+  },
+  "fete": {
+   "vocabRoom": "R_celebrations_01",
+   "only": [
+    "fr_invitation_noun",
+    "fr_decoration_noun",
+    "fr_felicitation_noun",
+    "fr_tradition_noun",
+    "fr_festivite_noun",
+    "fr_anniversaire_noun",
+    "fr_decor_noun",
+    "fr_emballer_verb"
+   ]
+  },
+  "noce": {
+   "vocabRoom": "R_celebrations_02",
+   "only": [
+    "fr_noce_noun",
+    "fr_fiancailles_noun",
+    "fr_ceremonie_noun",
+    "fr_mariage_noun",
+    "fr_marie_noun",
+    "fr_fiance_noun",
+    "fr_bal_noun",
+    "fr_hommage_noun",
+    "fr_feter_verb"
+   ]
+  },
+  "carnaval": {
+   "vocabRoom": "R_celebrations_02",
+   "only": [
+    "fr_acclamation_noun",
+    "fr_celebration_noun",
+    "fr_carnaval_noun",
+    "fr_defile_noun",
+    "fr_char_noun",
+    "fr_fetard_noun",
+    "fr_talent_noun",
+    "fr_amuser_verb",
+    "fr_danser_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "jeux": {
+   "name": "La salle de jeux · The games room",
+   "room_id": "R_games_01",
+   "image": "jeux/jeux.jpg",
+   "alt": "The games room of the games house seen from high up at an angle: a black-and-white checkerboard floor, cream walls painted with big black dice-pip dots and tall shelves of board games. At the back left a girl in a green dress kisses a four-leaf clover beside two big white dice on a little table, and Monsieur Verbe stands on a red-and-white ring buoy holding out a fan of cards. At the back right a grandpa sighs over a board game while his grandson cheers with both fists up, and beside them a man dressed as a czar in a fur crown, eyes shut, draws a ticket from a black top hat. In the foreground a grey-haired lady sips lemonade through a long straw over her chessboard, Monsieur Verbe stands by a little potted tree with a finger to his lips and a card at his sleeve, and a farmer in a red bandana shoves a big wooden pawn across the floor. At a round green card table on the right a man with a curly moustache presses down a card with one red heart, facing a lady in turquoise with a golden-star card who toots a party horn. The checkerboard front doors on the left wall lead out to the Boulevard des Loisirs; the narrow purple door in the middle of the back wall leads to the lotto hall, and the red double door on the right to the party room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     28,
+     60,
+     124,
+     240
+    ],
+    "label": "Boulevard des Loisirs"
+   },
+   "doors": [
+    {
+     "to": "loto",
+     "label": "Le loto",
+     "hint": "the narrow purple door in the middle of the back wall, to the lotto hall",
+     "hit": [
+      584,
+      58,
+      72,
+      190
+     ]
+    },
+    {
+     "to": "fete",
+     "label": "L'anniversaire",
+     "hint": "the red double door on the back wall at right, to the party room",
+     "hit": [
+      1122,
+      65,
+      128,
+      270
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_chance_noun",
+     "box": [
+      168,
+      170,
+      217,
+      196
+     ]
+    },
+    {
+     "id": "fr_distribuer_verb",
+     "box": [
+      432,
+      102,
+      146,
+      290
+     ]
+    },
+    {
+     "id": "fr_jeu_noun",
+     "box": [
+      662,
+      92,
+      248,
+      190
+     ]
+    },
+    {
+     "id": "fr_hasard_noun",
+     "box": [
+      916,
+      140,
+      200,
+      260
+     ]
+    },
+    {
+     "id": "fr_strategie_noun",
+     "box": [
+      77,
+      372,
+      223,
+      305
+     ]
+    },
+    {
+     "id": "fr_tricher_verb",
+     "box": [
+      304,
+      400,
+      296,
+      277
+     ]
+    },
+    {
+     "id": "fr_pion_noun",
+     "box": [
+      622,
+      286,
+      226,
+      270
+     ]
+    },
+    {
+     "id": "fr_as_noun",
+     "box": [
+      852,
+      404,
+      176,
+      273
+     ]
+    },
+    {
+     "id": "fr_atout_noun",
+     "box": [
+      1032,
+      410,
+      171,
+      267
+     ]
+    }
+   ]
+  },
+  "loto": {
+   "name": "La soirée loto · Lotto night",
+   "room_id": "R_games_02",
+   "image": "jeux/loto.jpg",
+   "alt": "The lotto hall of the games house seen from high up at an angle: deep purple walls with small gold dots, gold bunting, gilt mirrors and wall lamps, a pale wooden plank floor with a purple rug, stacks of game boxes along the walls, and a low wooden stage with a purple front along the back wall. Up on the stage a lady in a purple dress turns a big wire lottery drum full of coloured balls with a hamster sitting on top, and Monsieur Verbe in his red beret digs into a heap of wooden game tiles with a toy pickaxe. At the back right two moustached men in flat caps shake hands on a bet across a little table with a model Eiffel Tower on it, and a grandma in a pink cardigan dances on tiptoe holding up a bingo card. At the players' table a red-haired lady in a gold dress hugs a sack spilling gold coins as musical notes float up, and on the right a kneeling boy watches a line of black dominoes topple toward a small vase of flowers. In the foreground a girl in a blue tracksuit has just rolled a wooden ball at a row of skittles, one of them a giant wooden key; a beekeeper kneels turning the dial of a small black safe with a big bee on top while her little son cheers; and an old man lies back in a striped deckchair with a green lizard on his knee. The closed purple door with gold dots at the left end of the back wall leads back to the games room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "jeux",
+   "doors": [
+    {
+     "to": "jeux",
+     "label": "Les jeux",
+     "hint": "the closed purple door with gold dots at the left end of the back wall, back to the games room",
+     "hit": [
+      24,
+      92,
+      104,
+      246
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_loterie_noun",
+     "box": [
+      210,
+      58,
+      270,
+      207
+     ]
+    },
+    {
+     "id": "fr_piocher_verb",
+     "box": [
+      508,
+      96,
+      160,
+      164
+     ]
+    },
+    {
+     "id": "fr_pari_noun",
+     "box": [
+      794,
+      134,
+      216,
+      166
+     ]
+    },
+    {
+     "id": "fr_loto_noun",
+     "box": [
+      1024,
+      150,
+      170,
+      236
+     ]
+    },
+    {
+     "id": "fr_fortune_noun",
+     "box": [
+      404,
+      268,
+      160,
+      152
+     ]
+    },
+    {
+     "id": "fr_domino_noun",
+     "box": [
+      676,
+      306,
+      270,
+      170
+     ]
+    },
+    {
+     "id": "fr_quille_noun",
+     "box": [
+      77,
+      378,
+      322,
+      299
+     ]
+    },
+    {
+     "id": "fr_combinaison_noun",
+     "box": [
+      444,
+      424,
+      228,
+      253
+     ]
+    },
+    {
+     "id": "fr_loisir_noun",
+     "box": [
+      952,
+      392,
+      251,
+      285
+     ]
+    }
+   ]
+  },
+  "fete": {
+   "name": "La fête d'anniversaire · The birthday party",
+   "room_id": "R_celebrations_01",
+   "image": "jeux/fete.jpg",
+   "alt": "The party room of the games house seen from high up at an angle: a pink flowered wallpaper wall on the left receding to a mint back wall with a big painted rainbow, white floorboards, balloons, fairy lights, bunting, framed pictures and a sideboard. At the back left a red-haired girl on a stepladder holds up a string of red paper hearts, and beside her a grandma with a white bun stirs a big glass bowl of pink punch with a giant wooden spoon. Three children in ivy crowns dance in a conga line, hands on each other's shoulders. In front, a girl in yellow throws confetti and shakes hands with a little birthday boy wearing a rosette, and a girl in a pink dress on a stool opens a golden envelope with a grey pigeon at her feet. In the middle Monsieur Verbe sits on a hay bale tying a gold ribbon round a present in shiny blue paper. At the long table little Annie blows out five candles on her cake as her uncle reads aloud from a sheet, and on the right a designer in a purple headscarf sets a giant wooden apple core on a white plinth. The red double door in the pink left wall leads back to the games room; the white door with a flower garland in the back wall leads to the wedding hall, and the yellow porthole door at the right end to the carnival courtyard.",
+   "nameplate": [
+    53,
+    4.5
+   ],
+   "backTo": "jeux",
+   "doors": [
+    {
+     "to": "jeux",
+     "label": "Les jeux",
+     "hint": "the red double door in the pink left wall, back to the games room",
+     "hit": [
+      26,
+      122,
+      132,
+      298
+     ]
+    },
+    {
+     "to": "noce",
+     "label": "La noce",
+     "hint": "the white door with a flower garland in the back wall, to the wedding hall",
+     "hit": [
+      1018,
+      100,
+      100,
+      226
+     ]
+    },
+    {
+     "to": "carnaval",
+     "label": "Le carnaval",
+     "hint": "the yellow porthole door at the right end of the back wall, out to the carnival courtyard",
+     "hit": [
+      1168,
+      112,
+      100,
+      214
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_decoration_noun",
+     "box": [
+      368,
+      60,
+      118,
+      190
+     ]
+    },
+    {
+     "id": "fr_tradition_noun",
+     "box": [
+      490,
+      140,
+      146,
+      220
+     ]
+    },
+    {
+     "id": "fr_festivite_noun",
+     "box": [
+      186,
+      254,
+      278,
+      166
+     ]
+    },
+    {
+     "id": "fr_felicitation_noun",
+     "box": [
+      77,
+      426,
+      248,
+      251
+     ]
+    },
+    {
+     "id": "fr_invitation_noun",
+     "box": [
+      372,
+      426,
+      150,
+      244
+     ]
+    },
+    {
+     "id": "fr_emballer_verb",
+     "box": [
+      548,
+      366,
+      164,
+      284
+     ]
+    },
+    {
+     "id": "fr_anniversaire_noun",
+     "box": [
+      716,
+      224,
+      284,
+      236
+     ]
+    },
+    {
+     "id": "fr_decor_noun",
+     "box": [
+      1004,
+      330,
+      199,
+      347
+     ]
+    }
+   ]
+  },
+  "noce": {
+   "name": "La noce · The wedding party",
+   "room_id": "R_celebrations_02",
+   "image": "jeux/noce.jpg",
+   "alt": "The wedding reception hall of the games house seen from high up at an angle: ivory walls with gold trim and golden sconces, swags of white fabric drapes and bunches of white flowers, potted white roses, gold chairs and a honey herringbone parquet dance floor. At the back a lady officiant in a green robe rings a little silver bell at a flower-covered lectern, and a young woman in a pink gown shows off her sparkly engagement ring to her friend in green, who clasps her hands dreamily. Beside a tiered wedding cake, the groom in a grey morning suit waves under a big white flower arch, and an old man in a tweed suit bows deeply before a portrait of a smiling white-haired grandmother on an easel. In the middle a guest dressed as a maharaja in a jewelled turban and gold coat throws red rose petals, beside a nervous young man in a blue suit fanning his face with a paper fan. In front a little girl in a yellow dress leads a small white pony with a big yellow bow tied on its nose, Monsieur Verbe in a red beret and little fairy wings cheers and waves a crescent-moon wand, and a waltzing couple in tails and a pale blue ball gown hold up a big striped beach ball. The white door with a flower garland at the left end of the back wall leads back to the birthday party room.",
+   "nameplate": [
+    32,
+    4.5
+   ],
+   "backTo": "fete",
+   "doors": [
+    {
+     "to": "fete",
+     "label": "L'anniversaire",
+     "hint": "the white door with a flower garland at the left end of the back wall, back to the birthday party",
+     "hit": [
+      58,
+      80,
+      140,
+      262
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ceremonie_noun",
+     "box": [
+      292,
+      88,
+      156,
+      258
+     ]
+    },
+    {
+     "id": "fr_fiancailles_noun",
+     "box": [
+      452,
+      84,
+      222,
+      290
+     ]
+    },
+    {
+     "id": "fr_noce_noun",
+     "box": [
+      144,
+      352,
+      256,
+      292
+     ]
+    },
+    {
+     "id": "fr_feter_verb",
+     "box": [
+      434,
+      396,
+      224,
+      281
+     ]
+    },
+    {
+     "id": "fr_marie_noun",
+     "box": [
+      740,
+      58,
+      136,
+      226
+     ]
+    },
+    {
+     "id": "fr_hommage_noun",
+     "box": [
+      1004,
+      84,
+      199,
+      166
+     ]
+    },
+    {
+     "id": "fr_mariage_noun",
+     "box": [
+      880,
+      212,
+      120,
+      170
+     ]
+    },
+    {
+     "id": "fr_fiance_noun",
+     "box": [
+      1046,
+      254,
+      140,
+      292
+     ]
+    },
+    {
+     "id": "fr_bal_noun",
+     "box": [
+      752,
+      386,
+      288,
+      291
+     ]
+    }
+   ]
+  },
+  "carnaval": {
+   "name": "Le carnaval · The carnival",
+   "room_id": "R_celebrations_02",
+   "image": "jeux/carnaval.jpg",
+   "alt": "The open-air carnival courtyard behind the games house, seen from high up at an angle from the near left: a black-and-white checkerboard wall runs away to the right under a balustraded stone terrace with a flight of steps at the far end, bunting crosses a blue sky, and a striped carnival pole with ribbons stands beside the steps. At the back along the checkerboard wall a lady in an orange dress claps two big clam shells like cymbals, Monsieur Verbe dances a jig on an upturned crate, a tall lady in a red polka-dot dress juggles oranges on a unicycle, and a young man pulls a cart carrying a float shaped like a smiling blue shark. On the cobbles in front, a bald grandpa in a purple cardigan waves with a bunch of balloons, a second Monsieur Verbe makes kitten paws for a giggling toddler on a bench shaped like a giant smiling banana, and a chef heads the parade holding up a platter with a big fish fillet, followed by a man in a padded yellow star costume shaking a maraca, while further back on the right a woman in a pink feathered carnival costume waves from a little red toy car. The yellow door with a round porthole in the checkerboard wall at the near left leads back to the birthday party room.",
+   "nameplate": [
+    30,
+    5
+   ],
+   "backTo": "fete",
+   "doors": [
+    {
+     "to": "fete",
+     "label": "L'anniversaire",
+     "hint": "the yellow porthole door in the checkerboard wall at the near left, back to the birthday party",
+     "hit": [
+      20,
+      144,
+      116,
+      206
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_acclamation_noun",
+     "box": [
+      136,
+      168,
+      172,
+      182
+     ]
+    },
+    {
+     "id": "fr_celebration_noun",
+     "box": [
+      77,
+      352,
+      190,
+      325
+     ]
+    },
+    {
+     "id": "fr_danser_verb",
+     "box": [
+      326,
+      132,
+      164,
+      220
+     ]
+    },
+    {
+     "id": "fr_amuser_verb",
+     "box": [
+      270,
+      354,
+      326,
+      323
+     ]
+    },
+    {
+     "id": "fr_talent_noun",
+     "box": [
+      556,
+      58,
+      180,
+      294
+     ]
+    },
+    {
+     "id": "fr_char_noun",
+     "box": [
+      742,
+      144,
+      280,
+      216
+     ]
+    },
+    {
+     "id": "fr_defile_noun",
+     "box": [
+      642,
+      367,
+      178,
+      310
+     ]
+    },
+    {
+     "id": "fr_fetard_noun",
+     "box": [
+      856,
+      380,
+      166,
+      297
+     ]
+    },
+    {
+     "id": "fr_carnaval_noun",
+     "box": [
+      1024,
+      196,
+      179,
+      310
+     ]
+    }
+   ]
+  }
+ }
+}
