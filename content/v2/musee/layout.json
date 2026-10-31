@@ -100,6 +100,30 @@
   {
    "key": "optique",
    "short": "La vue"
+  },
+  {
+   "key": "voix",
+   "short": "Les voix"
+  },
+  {
+   "key": "fete",
+   "short": "La fête"
+  },
+  {
+   "key": "matieres",
+   "short": "Les matières"
+  },
+  {
+   "key": "labo",
+   "short": "Le laboratoire"
+  },
+  {
+   "key": "couleurs",
+   "short": "Les couleurs"
+  },
+  {
+   "key": "caracteres",
+   "short": "Les caractères"
   }
  ],
  "planned": {
@@ -496,6 +520,90 @@
     "fr_flou_adj",
     "fr_argente_adj",
     "fr_eloignement_noun"
+   ]
+  },
+  "voix": {
+   "vocabRoom": "R_adj_senses_09",
+   "only": [
+    "fr_criard_adj",
+    "fr_grincant_adj",
+    "fr_criant_adj",
+    "fr_volubile_adj",
+    "fr_audiovisuel_adj",
+    "fr_harmonieux_adj",
+    "fr_tremblant_adj",
+    "fr_unanime_adj",
+    "fr_aigu_adj"
+   ]
+  },
+  "fete": {
+   "vocabRoom": "R_adj_senses_06",
+   "only": [
+    "fr_cool_adj",
+    "fr_decontracte_adj",
+    "fr_festif_adj",
+    "fr_sensationnel_adj",
+    "fr_turbulent_adj",
+    "fr_chaotique_adj",
+    "fr_brouillon_adj",
+    "fr_actif_adj"
+   ]
+  },
+  "matieres": {
+   "vocabRoom": "R_adj_senses_03",
+   "only": [
+    "fr_raide_adj",
+    "fr_lisse_adj",
+    "fr_grossier_adj",
+    "fr_palpable_adj",
+    "fr_tangible_adj",
+    "fr_osseux_adj",
+    "fr_fourni_adj",
+    "fr_rudimentaire_adj"
+   ]
+  },
+  "labo": {
+   "vocabRoom": "R_adj_senses_08",
+   "only": [
+    "fr_glacial_adj",
+    "fr_thermique_adj",
+    "fr_atmospherique_adj",
+    "fr_carbonique_adj",
+    "fr_effervescent_adj",
+    "fr_synthetique_adj",
+    "fr_homogene_adj",
+    "fr_diffus_adj",
+    "fr_fonctionnel_adj",
+    "fr_physiologique_adj"
+   ]
+  },
+  "couleurs": {
+   "vocabRoom": "R_adj_senses_04",
+   "only": [
+    "fr_fonce_adj",
+    "fr_eclatant_adj",
+    "fr_changeant_adj",
+    "fr_vague_adj",
+    "fr_superficiel_adj",
+    "fr_marginal_adj",
+    "fr_momentane_adj",
+    "fr_ravissant_adj",
+    "fr_fastueux_adj",
+    "fr_precieux_adj",
+    "fr_complementaire_adj"
+   ]
+  },
+  "caracteres": {
+   "vocabRoom": "R_adj_senses_06",
+   "only": [
+    "fr_severe_adj",
+    "fr_impitoyable_adj",
+    "fr_implacable_adj",
+    "fr_odieux_adj",
+    "fr_regardant_adj",
+    "fr_mondain_adj",
+    "fr_grotesque_adj",
+    "fr_veritable_adj"
    ]
   }
  },
@@ -3428,7 +3536,7 @@
    "name": "Le cabinet des sons · The cabinet of sounds",
    "room_id": "R_abs_senses_03",
    "image": "musee/sons.jpg",
-   "alt": "The cabinet of sounds behind the cabinet of the senses, seen from the near left: sunny yellow walls with painted sound-wave stripes and gray foam sound panels, a giant brass gramophone horn on the back wall. On the left a blue door and a girl in a yellow sweater pressing one key of a small white toy piano. In the middle a man lounging open-mouthed on a bench under the gramophone horn, a gray-haired grandpa watching his grandson sign to him, a rooster crowing on a wooden post, and a little silver robot tapping a xylophone. On the right a boy pushing a roaring vacuum cleaner beside a red toy car with flashing alarm lights, a boy jumping with a tissue and a whistling toy steam engine, a flamenco dancer clacking castanets, a grandma wincing in a creaky rocking chair, two children whispering inside a giant old boot, and a boy tap dancing on a wooden board.",
+   "alt": "The cabinet of sounds behind the cabinet of the senses, seen from the near left: sunny yellow walls with painted sound-wave stripes and gray foam sound panels, a giant brass gramophone horn on the back wall. On the left a blue door and a girl in a yellow sweater pressing one key of a small white toy piano. In the middle a man lounging open-mouthed on a bench under the gramophone horn, a gray-haired grandpa watching his grandson sign to him, a rooster crowing on a wooden post, and a little silver robot tapping a xylophone. An orange door with a painted flower in the back wall behind a boy pushing a roaring vacuum cleaner beside a red toy car with flashing alarm lights, a boy jumping with a tissue and a whistling toy steam engine, a flamenco dancer clacking castanets, a grandma wincing in a creaky rocking chair below a red door with a brass music note in the right wall, two children whispering inside a giant old boot, and a boy tap dancing on a wooden board.",
    "nameplate": [
     50,
     4.5
@@ -3440,10 +3548,32 @@
      "label": "Le cabinet des sens",
      "hint": "the blue door on the left wall, back to the cabinet of the senses",
      "hit": [
-      20,
+      15,
+      88,
+      150,
+      200
+     ]
+    },
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "the orange door with the painted flower in the back wall, to the party room",
+     "hit": [
+      712,
+      115,
+      98,
+      110
+     ]
+    },
+    {
+     "to": "voix",
+     "label": "Les voix",
+     "hint": "the red door with the brass music note in the right wall, to the cabinet of voices",
+     "hit": [
+      1152,
       90,
-      145,
-      190
+      118,
+      130
      ]
     }
    ],
@@ -3453,7 +3583,7 @@
      "id": "fr_touche_noun",
      "box": [
       30,
-      290,
+      295,
       245,
       225
      ]
@@ -3461,46 +3591,46 @@
     {
      "id": "fr_sonore_adj",
      "box": [
-      350,
-      35,
-      195,
+      355,
+      38,
+      170,
       150
      ]
     },
     {
      "id": "fr_sourd_adj",
      "box": [
-      440,
+      455,
       200,
-      190,
+      165,
       150
      ]
     },
     {
      "id": "fr_vocal_adj",
      "box": [
-      560,
-      80,
-      140,
-      118
+      555,
+      85,
+      130,
+      112
      ]
     },
     {
      "id": "fr_monotone_adj",
      "box": [
-      530,
-      355,
-      180,
-      170
+      537,
+      370,
+      160,
+      180
      ]
     },
     {
      "id": "fr_vacarme_noun",
      "box": [
-      720,
-      290,
-      280,
-      165
+      700,
+      300,
+      300,
+      155
      ]
     },
     {
@@ -3515,35 +3645,35 @@
     {
      "id": "fr_claquement_noun",
      "box": [
-      1000,
+      1005,
       85,
-      125,
-      290
+      120,
+      215
      ]
     },
     {
      "id": "fr_grincement_noun",
      "box": [
       1128,
-      200,
+      232,
       145,
-      215
+      190
      ]
     },
     {
      "id": "fr_tapage_noun",
      "box": [
       1050,
-      420,
+      425,
       215,
-      290
+      288
      ]
     },
     {
      "id": "fr_chuchotement_noun",
      "box": [
       750,
-      455,
+      460,
       240,
       250
      ]
@@ -3682,7 +3812,7 @@
    "name": "Le cabinet du toucher · The cabinet of touch",
    "room_id": "R_abs_senses_02",
    "image": "musee/toucher.jpg",
-   "alt": "The cabinet of touch beside the cabinet of scents, seen from the near left: terracotta walls hung with dried herbs, a giant bronze open hand, a big knitted glove and shelves of fabric rolls. On the left a honey-wood door with a painted flower, a girl touching a glowing purple plasma ball, a girl holding up a huge cotton cloud on a stick, and a boy touching a mimosa plant whose leaves fold up. In the middle a boy rubbing sandpaper on a wooden block, a boy sinking into a cow-print beanbag, a girl touching a spiky cactus, a boy with sticky tape stuck from his collar to his fingers, a girl sitting on a wet floor after sliding in her socks beside a yellow cone, and a boy in a knit hat touching an ice swan. On the right a father holding a baby who grips his sweater, and a blindfolded boy holding up a pinecone from a wooden feely box.",
+   "alt": "The cabinet of touch beside the cabinet of scents, seen from the near left: terracotta walls hung with dried herbs, a giant bronze open hand, a big knitted glove, a sky-blue door with a painted flower in the back wall and a green door with a painted flower in the right wall. On the left a honey-wood door with a painted flower, a girl touching a glowing purple plasma ball, a girl holding up a huge cotton cloud on a stick, and a boy touching a mimosa plant whose leaves fold up. In the middle a boy rubbing sandpaper on a wooden block, a boy sinking into a cow-print beanbag, a girl touching a spiky cactus, a boy with sticky tape stuck from his collar to his fingers, a girl sitting on a wet floor after sliding in her socks beside a yellow cone, and a boy in a knit hat touching an ice swan. On the right a father holding a baby who grips his sweater, and a blindfolded boy holding up a pinecone from a wooden feely box.",
    "nameplate": [
     50,
     4.5
@@ -3699,6 +3829,28 @@
       90,
       300
      ]
+    },
+    {
+     "to": "labo",
+     "label": "Le laboratoire",
+     "hint": "the sky-blue door with the painted flower in the back wall, to the senses lab",
+     "hit": [
+      712,
+      95,
+      125,
+      80
+     ]
+    },
+    {
+     "to": "matieres",
+     "label": "Les matières",
+     "hint": "the green door with the painted flower in the right wall, to the cabinet of textures",
+     "hit": [
+      1192,
+      65,
+      82,
+      270
+     ]
     }
    ],
    "zooms": [],
@@ -3707,18 +3859,18 @@
      "id": "fr_sensation_noun",
      "box": [
       110,
-      215,
-      180,
-      200
+      220,
+      190,
+      190
      ]
     },
     {
      "id": "fr_legerete_noun",
      "box": [
-      240,
-      50,
-      190,
-      160
+      225,
+      52,
+      215,
+      155
      ]
     },
     {
@@ -3726,14 +3878,14 @@
      "box": [
       30,
       420,
-      295,
-      270
+      290,
+      295
      ]
     },
     {
      "id": "fr_rude_adj",
      "box": [
-      425,
+      430,
       212,
       125,
       190
@@ -3743,7 +3895,7 @@
      "id": "fr_mou_adj",
      "box": [
       330,
-      425,
+      430,
       245,
       270
      ]
@@ -3753,35 +3905,35 @@
      "box": [
       632,
       180,
-      180,
-      145
+      175,
+      150
      ]
     },
     {
      "id": "fr_collant_adj",
      "box": [
-      578,
-      330,
-      140,
-      225
+      580,
+      335,
+      145,
+      220
      ]
     },
     {
      "id": "fr_glissant_adj",
      "box": [
-      722,
-      438,
-      240,
+      728,
+      440,
+      235,
       255
      ]
     },
     {
      "id": "fr_glace_adj",
      "box": [
-      820,
+      815,
       200,
-      140,
-      215
+      160,
+      210
      ]
     },
     {
@@ -3789,7 +3941,7 @@
      "box": [
       1000,
       150,
-      190,
+      188,
       250
      ]
     },
@@ -3808,7 +3960,7 @@
    "name": "Le cabinet de la vue · The cabinet of sight",
    "room_id": "R_abs_senses_03",
    "image": "musee/optique.jpg",
-   "alt": "The cabinet of sight: pale sky-blue walls hung with optical illusions, a giant painted eye and a huge magnifying glass; an artist snips a black paper silhouette, a boy studies a vase-or-two-faces picture, a crossing guard in a hi-vis vest, a meditating girl with a golden glow, a boy squinting at an eye chart with his glasses in his hand, a tango dancer in a silvery dress, and a man walking away down a painted road.",
+   "alt": "The cabinet of sight: pale sky-blue walls hung with optical illusions, a giant painted eye and a huge magnifying glass; an artist snips a black paper silhouette, a boy studies a vase-or-two-faces picture, a crossing guard in a hi-vis vest, a meditating girl with a golden glow, a boy squinting at an eye chart with his glasses in his hand, a tango dancer in a silvery dress, a man with a backpack heading off toward a big picture of a long road, a lilac door with a painted flower in the back wall and a dark wooden door with a painted flower in the right wall.",
    "nameplate": [
     50,
     4.5
@@ -3824,6 +3976,28 @@
       115,
       135,
       225
+     ]
+    },
+    {
+     "to": "couleurs",
+     "label": "Les couleurs",
+     "hint": "the lilac door with the painted flower in the back wall, to the cabinet of colors",
+     "hit": [
+      948,
+      162,
+      62,
+      198
+     ]
+    },
+    {
+     "to": "caracteres",
+     "label": "Les caractères",
+     "hint": "the dark wooden door with the painted flower in the right wall, to the gallery of characters",
+     "hit": [
+      1185,
+      160,
+      88,
+      235
      ]
     }
    ],
@@ -3879,16 +4053,16 @@
      "box": [
       830,
       195,
-      125,
+      114,
       310
      ]
     },
     {
      "id": "fr_eloignement_noun",
      "box": [
-      980,
+      1015,
       170,
-      165,
+      135,
       290
      ]
     },
@@ -3908,6 +4082,654 @@
       85,
       185,
       105
+     ]
+    }
+   ]
+  },
+  "voix": {
+   "name": "Le cabinet des voix · The cabinet of voices",
+   "room_id": "R_adj_senses_09",
+   "image": "musee/voix.jpg",
+   "alt": "The cabinet of voices off the sound room: a dark blue recording hall with sound panels, a big gramophone, choir robes on hooks and stacked drums. By the red door with a brass music-note ornament on the left, a boy pushes a cart with a loudspeaker and a film projector, a choir in blue robes all raise their hands, three singers share a song beside a grandpa with a harmonica, a town crier in a clashing striped coat rings his bell, a grinning carpenter saws a squeaky plank, and a boy shouts at crayon scribbles on a white board. In front a baby squeals in a stroller as her mother covers her ears, a chatty girl holds a volleyball, and a nervous boy trembles at a microphone.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sons",
+   "doors": [
+    {
+     "to": "sons",
+     "label": "Les sons",
+     "hint": "the red door with the brass music-note ornament on the left wall, back to the sound room",
+     "hit": [
+      18,
+      75,
+      142,
+      340
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_audiovisuel_adj",
+     "box": [
+      318,
+      262,
+      140,
+      232
+     ]
+    },
+    {
+     "id": "fr_criard_adj",
+     "box": [
+      460,
+      245,
+      170,
+      250
+     ]
+    },
+    {
+     "id": "fr_grincant_adj",
+     "box": [
+      640,
+      255,
+      165,
+      240
+     ]
+    },
+    {
+     "id": "fr_criant_adj",
+     "box": [
+      808,
+      285,
+      170,
+      220
+     ]
+    },
+    {
+     "id": "fr_unanime_adj",
+     "box": [
+      330,
+      95,
+      290,
+      145
+     ]
+    },
+    {
+     "id": "fr_harmonieux_adj",
+     "box": [
+      635,
+      110,
+      240,
+      140
+     ]
+    },
+    {
+     "id": "fr_aigu_adj",
+     "box": [
+      350,
+      500,
+      240,
+      215
+     ]
+    },
+    {
+     "id": "fr_volubile_adj",
+     "box": [
+      612,
+      500,
+      190,
+      215
+     ]
+    },
+    {
+     "id": "fr_tremblant_adj",
+     "box": [
+      806,
+      510,
+      150,
+      205
+     ]
+    }
+   ]
+  },
+  "fete": {
+   "name": "La salle des fêtes · The party room",
+   "room_id": "R_adj_senses_06",
+   "image": "musee/fete.jpg",
+   "alt": "The party room off the sound room: a white hall with a checkered floor, paper lanterns, garlands, streamers, a little curtained stage and piles of presents. By the red door with a brass music-note ornament on the left, a boy in sunglasses rides a skateboard, a wild boy bounces on a pogo stick, a grandma jumps rope, and a magician pulls a white rabbit from his top hat. In the middle a tower of folding chairs has toppled into a heap with a puppy on top while a boy sweeps confetti everywhere with a broom; a girl in a party hat blows a party horn by the birthday cake, and a relaxed man lounges in a striped deck chair, tie undone.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sons",
+   "doors": [
+    {
+     "to": "sons",
+     "label": "Les sons",
+     "hint": "the red door with the brass music-note ornament on the left wall, back to the sound room",
+     "hit": [
+      18,
+      140,
+      125,
+      340
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cool_adj",
+     "box": [
+      345,
+      235,
+      120,
+      225
+     ]
+    },
+    {
+     "id": "fr_turbulent_adj",
+     "box": [
+      470,
+      180,
+      105,
+      205
+     ]
+    },
+    {
+     "id": "fr_actif_adj",
+     "box": [
+      640,
+      150,
+      120,
+      225
+     ]
+    },
+    {
+     "id": "fr_sensationnel_adj",
+     "box": [
+      765,
+      205,
+      150,
+      170
+     ]
+    },
+    {
+     "id": "fr_chaotique_adj",
+     "box": [
+      500,
+      385,
+      165,
+      130
+     ]
+    },
+    {
+     "id": "fr_brouillon_adj",
+     "box": [
+      668,
+      385,
+      105,
+      190
+     ]
+    },
+    {
+     "id": "fr_decontracte_adj",
+     "box": [
+      340,
+      520,
+      300,
+      195
+     ]
+    },
+    {
+     "id": "fr_festif_adj",
+     "box": [
+      775,
+      380,
+      120,
+      190
+     ]
+    }
+   ]
+  },
+  "matieres": {
+   "name": "Le cabinet des matières · The cabinet of textures",
+   "room_id": "R_adj_senses_03",
+   "image": "musee/matieres.jpg",
+   "alt": "The cabinet of textures off the touch room: a cozy wooden workshop with shelves of yarn balls, thread spools and rough rocks, a weaving loom and a patterned rug. By the honey-wood door with a painted flower on the left wall, a girl with poker-straight red hair smooths it down beside a laughing man with a huge bushy beard; a girl holds up a tangerine, a caveman-costumed boy rolls a stone wheel, a young grocer opens a burlap sack of potatoes, a girl strokes a sleek gray greyhound on a red leash, a boy points at an x-ray of a bony hand on a lightbox, and a boy holds out a smooth pebble.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "toucher",
+   "doors": [
+    {
+     "to": "toucher",
+     "label": "Le toucher",
+     "hint": "the honey-wood door with the painted flower on the left wall, back to the touch room",
+     "hit": [
+      22,
+      85,
+      185,
+      355
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_raide_adj",
+     "box": [
+      320,
+      235,
+      128,
+      200
+     ]
+    },
+    {
+     "id": "fr_fourni_adj",
+     "box": [
+      450,
+      140,
+      135,
+      155
+     ]
+    },
+    {
+     "id": "fr_tangible_adj",
+     "box": [
+      505,
+      300,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_rudimentaire_adj",
+     "box": [
+      390,
+      445,
+      160,
+      270
+     ]
+    },
+    {
+     "id": "fr_grossier_adj",
+     "box": [
+      628,
+      250,
+      145,
+      280
+     ]
+    },
+    {
+     "id": "fr_lisse_adj",
+     "box": [
+      600,
+      540,
+      250,
+      175
+     ]
+    },
+    {
+     "id": "fr_palpable_adj",
+     "box": [
+      838,
+      340,
+      112,
+      195
+     ]
+    },
+    {
+     "id": "fr_osseux_adj",
+     "box": [
+      780,
+      190,
+      170,
+      145
+     ]
+    }
+   ]
+  },
+  "labo": {
+   "name": "Le laboratoire des sens · The senses lab",
+   "room_id": "R_adj_senses_08",
+   "image": "musee/labo.jpg",
+   "alt": "The senses lab off the touch room: a bright white laboratory with blue cabinets, glass flasks, hanging lamps and big windows. By the wooden door with a framed flower picture on the left wall, a scientist holds a big white weather balloon, a man in goggles lifts the lid of a fogging dry-ice box, a man leans over a puffing aroma diffuser and a doctor shows a see-through anatomy model. A girl watches a tablet fizz in a glass of water, a boy holds a purple fleece jacket beside a woolly sheep, a girl stirs a paint pot into one smooth green, a robot arm hands a boy a cup, a girl aims a thermal camera, and a boy in a scarf shivers by an icy glacier model with a penguin.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "toucher",
+   "doors": [
+    {
+     "to": "toucher",
+     "label": "Le toucher",
+     "hint": "the wooden door with the framed flower picture on the left wall, back to the touch room",
+     "hit": [
+      20,
+      92,
+      120,
+      345
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_atmospherique_adj",
+     "box": [
+      330,
+      55,
+      130,
+      245
+     ]
+    },
+    {
+     "id": "fr_carbonique_adj",
+     "box": [
+      470,
+      125,
+      150,
+      190
+     ]
+    },
+    {
+     "id": "fr_effervescent_adj",
+     "box": [
+      380,
+      330,
+      110,
+      145
+     ]
+    },
+    {
+     "id": "fr_synthetique_adj",
+     "box": [
+      508,
+      322,
+      235,
+      198
+     ]
+    },
+    {
+     "id": "fr_physiologique_adj",
+     "box": [
+      790,
+      140,
+      150,
+      190
+     ]
+    },
+    {
+     "id": "fr_diffus_adj",
+     "box": [
+      655,
+      140,
+      130,
+      175
+     ]
+    },
+    {
+     "id": "fr_homogene_adj",
+     "box": [
+      745,
+      390,
+      150,
+      185
+     ]
+    },
+    {
+     "id": "fr_fonctionnel_adj",
+     "box": [
+      775,
+      582,
+      190,
+      133
+     ]
+    },
+    {
+     "id": "fr_thermique_adj",
+     "box": [
+      552,
+      535,
+      170,
+      180
+     ]
+    },
+    {
+     "id": "fr_glacial_adj",
+     "box": [
+      330,
+      522,
+      215,
+      193
+     ]
+    }
+   ]
+  },
+  "couleurs": {
+   "name": "Le cabinet des couleurs · The cabinet of colors",
+   "room_id": "R_adj_senses_04",
+   "image": "musee/couleurs.jpg",
+   "alt": "The cabinet of colors off the optics room: a bright white gallery with color-chart paintings, a big color wheel and a potted plant. By the silver-gray door with a painted blue flower on the left wall, a painter paints a dark brown fawn, a girl watches a chameleon change color, a man squints at a misty painting, a boy in a red superhero cape checks a toy car for scratches, a golden egg rests in a velvet nest, a girl draws in her sketchbook, a little golden carriage with two white horses shines on a plinth, a boy beside a giant soap bubble, a girl twirls in a flowered dress before a gilded mirror, a girl holds an orange beside a blue ball, and a boy shades his eyes from a gleaming chocolate éclair.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "optique",
+   "doors": [
+    {
+     "to": "optique",
+     "label": "La vue",
+     "hint": "the silver-gray door with the painted blue flower on the left wall, back to the optics room",
+     "hit": [
+      35,
+      75,
+      85,
+      320
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fonce_adj",
+     "box": [
+      400,
+      470,
+      160,
+      215
+     ]
+    },
+    {
+     "id": "fr_vague_adj",
+     "box": [
+      300,
+      140,
+      215,
+      155
+     ]
+    },
+    {
+     "id": "fr_changeant_adj",
+     "box": [
+      382,
+      305,
+      105,
+      110
+     ]
+    },
+    {
+     "id": "fr_superficiel_adj",
+     "box": [
+      490,
+      345,
+      155,
+      115
+     ]
+    },
+    {
+     "id": "fr_precieux_adj",
+     "box": [
+      598,
+      250,
+      100,
+      95
+     ]
+    },
+    {
+     "id": "fr_fastueux_adj",
+     "box": [
+      612,
+      88,
+      200,
+      150
+     ]
+    },
+    {
+     "id": "fr_marginal_adj",
+     "box": [
+      665,
+      348,
+      112,
+      205
+     ]
+    },
+    {
+     "id": "fr_momentane_adj",
+     "box": [
+      700,
+      240,
+      138,
+      105
+     ]
+    },
+    {
+     "id": "fr_ravissant_adj",
+     "box": [
+      840,
+      140,
+      112,
+      215
+     ]
+    },
+    {
+     "id": "fr_eclatant_adj",
+     "box": [
+      690,
+      560,
+      180,
+      140
+     ]
+    },
+    {
+     "id": "fr_complementaire_adj",
+     "box": [
+      800,
+      360,
+      192,
+      195
+     ]
+    }
+   ]
+  },
+  "caracteres": {
+   "name": "La galerie des caractères · The gallery of characters",
+   "room_id": "R_adj_senses_06",
+   "image": "musee/caracteres.jpg",
+   "alt": "The gallery of characters off the optics room: a deep green portrait gallery with gilt-framed paintings, a red velvet rope on brass posts and a glowing moon lamp. By the dark wooden door with a small painted flower on the left wall, a stern headmaster folds his arms, a boy in a red imp costume holds a cookie jar out of a little girl's reach, a puppy tugs a black cable against a laughing man, a lady puts her hand on her cheek as a smug boy cuts in front, a stingy man clutches his coin purse beside a donation box, an elegant lady in a silver gown dances under the moon lamp, a goofy stone head grins on a pedestal, and an appraiser studies an antique table with a loupe.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "optique",
+   "doors": [
+    {
+     "to": "optique",
+     "label": "La vue",
+     "hint": "the dark wooden door with the small painted flower on the left wall, back to the optics room",
+     "hit": [
+      5,
+      135,
+      90,
+      310
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_severe_adj",
+     "box": [
+      322,
+      370,
+      128,
+      320
+     ]
+    },
+    {
+     "id": "fr_impitoyable_adj",
+     "box": [
+      452,
+      390,
+      128,
+      280
+     ]
+    },
+    {
+     "id": "fr_implacable_adj",
+     "box": [
+      640,
+      520,
+      165,
+      185
+     ]
+    },
+    {
+     "id": "fr_odieux_adj",
+     "box": [
+      300,
+      205,
+      170,
+      160
+     ]
+    },
+    {
+     "id": "fr_regardant_adj",
+     "box": [
+      472,
+      205,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_mondain_adj",
+     "box": [
+      605,
+      170,
+      115,
+      270
+     ]
+    },
+    {
+     "id": "fr_grotesque_adj",
+     "box": [
+      728,
+      210,
+      85,
+      190
+     ]
+    },
+    {
+     "id": "fr_veritable_adj",
+     "box": [
+      818,
+      215,
+      155,
+      215
      ]
     }
    ]
