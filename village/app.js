@@ -313,7 +313,7 @@ function renderRooms(bld,key){
     return '<a href="'+roomHref(bld,r.key)+'"'+(on?' aria-current="page"':'')+'>'+esc(r.short)+'</a>' }).join('<span class="dot" aria-hidden="true">·</span>');
 }
 function renderRoom(bld,key){
-  B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; document.title=R.name+(key!==bld?' · '+D.rooms[bld].name:'')+' · Le Village';
+  B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; var HK0=D.main||bld, HR0=D.rooms[HK0]||D.rooms[bld]; document.title=R.name+((key!==bld&&key!==HK0&&HR0)?' · '+HR0.name:'')+' · Le Village';
   back.hidden=false; renderRooms(bld,key);
   // ⌂ Hub (gate 19): a second strip button that jumps to the first room / hub of this building or area; hidden in the hub itself
   var HK=D.main||bld; hub.hidden=(key===HK); hub.href=roomHref(bld,HK); hub.title=D.rooms[HK].name; hub.setAttribute('aria-label','Hub: '+D.rooms[HK].name);
