@@ -1,0 +1,536 @@
+{
+ "_note": "v2 hooks for the Musée des Beaux-Arts et d'Histoire (B44_musee), built Oct 31 2026 (batch 5, t347u): painted words carry an English sound-alike hook painted gently in their room (weapons only as objects in museum display cases, death only through objects); the remaining mature words are wall text only (\"plaque\": true, a blank plaque, nothing drawn). Words moved between planned rooms are listed in data/source/relocations.tsv.",
+ "fr_musee_noun": {
+  "hook": "\"mew-ZAY\": a grey cat sitting beside a glass case with a little scale model of the museum MEWS and says 'ZAY!': MEW-ZAY",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a grey cat with a white chest sitting beside a small glass case holding a cream scale model of the columned museum, mouth open mewing, a guard with dark brown skin smiling at it."
+ },
+ "fr_art_noun": {
+  "hook": "\"AHR\": a man dressed as a pirate admires a big painting and growls 'ARR!': AHR = ARR",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a jolly man with ruddy skin dressed as a pirate with an eye patch and tricorn hat admiring a big framed landscape painting on an easel stand, fist raised happily."
+ },
+ "fr_culture_noun": {
+  "hook": "\"kewl-TEWR\": a COOL TOUR guide in sunglasses leads his group: kewl-TEWR = COOL-TOUR",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a tour guide with brown skin in sunglasses and a blue blazer holding up a folded umbrella for his group of visitors."
+ },
+ "fr_oeuvre_noun_f": {
+  "hook": "\"UHVR\": a young cleaner HOOVERS the floor in front of the great masterpiece: UHVR = (h)OOVER",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a young cleaner with olive skin in blue overalls pushing an upright vacuum cleaner in front of a huge gilt-framed landscape masterpiece on a low stand."
+ },
+ "fr_collection_noun": {
+  "hook": "\"koh-lehk-SYOHN\": a granny proudly COLLECTS shells: she points to her collection in a cabinet: COLLECT-SHUN",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a granny with pale skin and white hair pointing at a glass cabinet filled with a colourful collection of seashells."
+ },
+ "fr_exposition_noun": {
+  "hook": "\"ehk-spoh-zee-SYOHN\": an old-fashioned photographer EXPOSES a photo of the exhibition with a big wooden camera: EXPOSE-ition",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a photographer with pale skin in a green cardigan looking through a big wooden bellows camera on a tripod on the balcony, photographing the exhibition."
+ },
+ "fr_galerie_noun": {
+  "hook": "\"gah-luh-REE\": a GAL on the upper GALLERY balcony waves her scarf: GAL-uh-REE",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a young woman with light brown skin in a yellow dress waving a red scarf over the balustrade of the upper gallery balcony."
+ },
+ "fr_monument_noun": {
+  "hook": "\"moh-new-MAHN\": a man MOANS as he carries a model of a stone monument: MOAN-YOU-MAN = moh-new-MAHN",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): a man with pale skin in a tweed waistcoat puffing as he carries a tall white stone obelisk monument model in his arms."
+ },
+ "fr_artiste_noun": {
+  "hook": "\"ahr-TEEST\": the artist at her easel holds up a steaming cup of TEA: ahr-TEA-st",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): an artist with dark brown skin in a flowered smock at her easel, holding a steaming tea cup on a saucer."
+ },
+ "fr_tuer_verb": {
+  "hook": "\"TWAY\": Monsieur Verbe is passing the time (tuer le temps), turning his big hourglass TWO WAYS, up and down: TWAY",
+  "why": "English sound-alike painted in musee/musee (Oct 31 2026 build): Monsieur Verbe (red beret) sitting on a museum bench, turning a big wooden hourglass upside down, bored and whistling. Moved from the planned room R_text_crime_02 (not yet built) into this room. Example replaced: the painting shows the idiom tuer le temps (to pass the time); the v1 example used a blocked word.",
+  "ex": [
+   "Il tue le temps en regardant les tableaux.",
+   "He passes the time looking at the paintings."
+  ]
+ },
+ "fr_blessure_noun": {
+  "hook": "\"blay-SEWR\": a girl puts a plaster on her teddy's little wound, saying 'BLESS, SURE!': blay-SEWR",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a little girl with brown skin in a toy nurse's apron sticking a big plaster on her teddy bear's paw. Moved from the planned room R_text_medical (not yet built) into this room."
+ },
+ "fr_blesse_noun": {
+  "hook": "\"blay-SAY\": the 'injured' rag doll rides on a toy stretcher and a boy says 'BLESS, SAY!': blay-SAY",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): two boys carrying a smiling rag doll with a bandaged knee and an arm sling on a small toy stretcher, one boy with pale skin, one with dark brown skin. Moved from the planned room R_text_medical (not yet built) into this room."
+ },
+ "fr_maladie_noun": {
+  "hook": "\"mah-lah-DEE\": a girl tends 'MY LADY', her poorly doll tucked in a little bed with a thermometer: mah-lah-DEE",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a girl with light brown skin in a green top tending a toy bed where a doll lies tucked in with a thermometer in its mouth and a hot-water bottle. Moved from the planned room R_text_medical (not yet built) into this room."
+ },
+ "fr_mort_noun_f": {
+  "hook": "\"MOR\": the toy robot's battery is dead, so a girl asks for MORE batteries: MOR = MORE",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a girl with pale skin and red pigtails holding up a dead AA battery and a new one beside her stopped toy robot with its battery hatch open. Moved from the planned room R_text_death (not yet built) into this room. Example replaced (t347u): death shown only through things (the painting shows a dead toy battery).",
+  "ex": [
+   "Le froid a causé la mort des fleurs du jardin.",
+   "The cold caused the death of the garden flowers."
+  ]
+ },
+ "fr_dessin_noun": {
+  "hook": "\"day-SAN\": a boy draws a sunny DAY on the SAND: day-SAN",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a boy with dark brown skin at a table holding up a crayon drawing of a sunny beach with sand and a yellow sun. Moved from the planned room R_art_01 (not yet built) into this room."
+ },
+ "fr_pinceau_noun": {
+  "hook": "\"pan-SOH\": a boy dips his fat paintbrush into a PAN of blue paint: PAN-SO",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a boy with pale skin in an apron dipping a fat paintbrush into a frying pan full of blue paint."
+ },
+ "fr_illustration_noun": {
+  "hook": "\"ee-lews-trah-SYOHN\": Like English 'illustration': a lady illustrator shows children a huge picture-book illustration of a whale: ee-lews-trah-SYOHN",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a lady illustrator with dark brown skin and glasses holding open a huge picture book showing a bright whale illustration."
+ },
+ "fr_animation_noun": {
+  "hook": "\"ah-nee-mah-SYOHN\": Like English 'animation': a girl spins a zoetrope drum and the little painted horse inside gallops: ah-nee-mah-SYOHN",
+  "why": "English sound-alike painted in musee/atelier (Oct 31 2026 build): a girl with pale skin and black bob hair spinning a round zoetrope drum, little painted galloping horses inside."
+ },
+ "fr_crime_noun": {
+  "hook": "\"KREEM\": a detective studies the scene of the crime: the empty jewel cushion is smeared with whipped CREAM fingerprints: KREEM",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a detective with pale skin in a deerstalker hat bending over an open glass case with an empty red velvet jewel cushion smeared with white cream, looking through a big magnifying glass."
+ },
+ "fr_criminel_noun": {
+  "hook": "\"kree-mee-NEHL\": the waxwork of the storybook gentleman-criminal holds up a CREAMY lolly and rings a little bell (KNELL): kree-mee-NEHL = CREAMY-NELL",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a waxwork figure of a gentleman criminal in a black eye mask, top hat, black gloves and cape, holding a creamy ice lolly and a little brass bell, standing on a low plinth behind a velvet rope."
+ },
+ "fr_voleur_noun": {
+  "hook": "\"voh-LUHR\": a cartoon burglar tiptoes off with a little painting, a fishing LURE swinging from his rod: voh-LURE",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a grinning burglar with tan skin in a black eye mask, bandana and black polo shirt tiptoeing away with a small framed painting under his arm and a fishing rod with a big green lure."
+ },
+ "fr_assassin_noun": {
+  "hook": "\"ah-sah-SAN\": the waxwork villain from an old mystery novel stands empty-handed in a glass case, his boots dusted with SAND: ah-sah-SAN = AH, SAND",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a waxwork of a storybook villain in a long black cloak and wide-brimmed hat standing empty-handed inside a tall glass case, a little heap of sand at his boots."
+ },
+ "fr_prison_noun": {
+  "hook": "\"pree-ZOHN\": a cheerful lady poses behind the bars of the old prison-cell exhibit holding up her PRIZE rosette: pree-ZOHN = PRIZE-ON",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a cheerful lady with pale skin in a black dress and a bobbing antenna headband posing behind the iron bars of an old prison-cell exhibit, holding up a big blue prize rosette, a friend in the cell taking her photo."
+ },
+ "fr_empoisonner_verb": {
+  "hook": "\"ahn-pwah-zoh-NAY\": Monsieur Verbe plays the fairy-tale witch at the puppet theatre, dipping a shiny apple into a bubbling green pot, and a toy pony shakes its head: NAY! ahn-pwah-zoh-NAY",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): Monsieur Verbe (red beret) in a little striped puppet-theatre booth dipping a shiny red apple into a bubbling green cauldron, a toy hobby-horse pony beside him and a little girl in a purple witch hat helping. Example replaced (t347u): matches the fairy-tale puppet show in the painting, nobody harmed.",
+  "ex": [
+   "Dans le conte, la sorcière empoisonne la pomme.",
+   "In the fairy tale, the witch poisons the apple."
+  ]
+ },
+ "fr_assaut_noun": {
+  "hook": "\"ah-SOH\": a jolly tourist rushes to storm the gift-shop postcard racks, crying 'AH, SO many postcards!': ah-SOH",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a jolly man with ruddy skin in a Hawaiian shirt rushing at the gift-shop racks of framed postcards, grinning. Example replaced (t347u): no soldiers or fighting; the painting shows tourists storming the gift shop.",
+  "ex": [
+   "Les touristes prennent la boutique d'assaut.",
+   "The tourists storm the gift shop."
+  ]
+ },
+ "fr_otage_noun": {
+  "hook": "\"oh-TAHZH\": the guard's little dog holds a girl's teddy 'hostage' under its paw; she offers a biscuit and laughs 'OH, TOSH!': oh-TAHZH",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a small white dog with a teddy bear under its paw, a little girl with dark brown skin offering it a biscuit. Moved from the planned room R_text_crime_03 (not yet built) into this room."
+ },
+ "fr_hostilite_noun": {
+  "hook": "\"os-tee-lee-TAY\": two old ladies frown at each other and tug the last cup of TEA: hostili-TEA",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): two old ladies, one pale with a lilac hat and one with brown skin and a green hat, frowning comically at each other across a café table, both tugging the saucer of the one teacup. Moved from the planned room R_text_crime_03 (not yet built) into this room."
+ },
+ "fr_heroine_noun": {
+  "hook": "\"ay-ro-EEN\": Like English 'heroine': a young woman dressed as the brave storybook heroine raises her lantern: ay-ro-EEN = HERO-EEN",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a smiling young woman with olive skin in a green dress and red cape holding up a lantern and a magnifying glass. Moved from the planned room R_text_crime_03 (not yet built) into this room."
+ },
+ "fr_explosif_adj": {
+  "hook": "\"ehk-sploh-ZEEF\": an explosive burst of confetti from a giant party popper when the case is solved, and a girl claps: ehk-sploh-ZEEF",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a giant pink-and-yellow striped cardboard party popper on a table bursting upward in an explosive shower of coloured confetti, a girl with dark brown skin in a yellow jumper clapping. Moved from the planned room R_text_crime_03 (not yet built) into this room."
+ },
+ "fr_enfer_noun": {
+  "hook": "\"ahn-FEHR\": Like 'INFERNO': a man clutches his cheeks as if it were hot beside a fat old book with a flame-red cover on a lectern: ahn-FEHR",
+  "why": "English sound-alike painted in musee/enquete (Oct 31 2026 build): a man with light brown skin and a bow tie pressing his hands to his hot cheeks beside a fat antique book with a red flame-pattern cover on a wooden lectern. Moved from the planned room R_text_death (not yet built) into this room."
+ },
+ "fr_arme_noun": {
+  "hook": "\"AHRM\": a lady links ARMS with her friend in front of the big case of old weapons: AHRM = ARM",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a lady with tan skin in a blue coat arm in arm with her grey-haired friend in a plum coat, in front of a tall glass case of crossed antique weapons. Moved from the planned room R_text_crime_01 (not yet built) into this room. Example replaced (t347u): weapons appear only as objects in a museum display case.",
+  "ex": [
+   "Cette vieille arme est exposée dans une vitrine du musée.",
+   "This old weapon is displayed in a museum case."
+  ]
+ },
+ "fr_fusil_noun": {
+  "hook": "\"few-ZEE\": a museum guard dozes (a FEW ZZZ's) on his stool beside the old rifle in its case: few-ZEE",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a museum guard with brown skin dozing on a stool beside a glass case holding an antique long rifle lying on a stand. Moved from the planned room R_text_crime_01 (not yet built) into this room. Example replaced (t347u): weapons appear only as objects in a museum display case.",
+  "ex": [
+   "Le vieux fusil est rangé derrière la vitre.",
+   "The old rifle is kept behind the glass."
+  ]
+ },
+ "fr_pistolet_noun": {
+  "hook": "\"peas-toh-LEH\": a man gives a PEACE sign beside the case with the antique pistol: peas-toh-LEH",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a man with pale skin and a green cardigan giving a peace sign beside a small glass case holding an antique flintlock pistol on velvet. Moved from the planned room R_text_crime_01 (not yet built) into this room. Example replaced (t347u): weapons appear only as objects in a museum display case.",
+  "say": "peas-toh-LEH",
+  "ex": [
+   "Ce pistolet ancien est exposé dans une vitrine.",
+   "This antique pistol is shown in a display case."
+  ]
+ },
+ "fr_hache_noun": {
+  "hook": "\"AHSH\": a forester holds a sprig of ASH tree leaves up to the case with the old axe: AHSH = ASH",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a forester lady with olive skin in a green jacket holding a sprig of ash leaves up to a glass case with an old axe on a stand. Moved from the planned room R_text_crime_01 (not yet built) into this room."
+ },
+ "fr_lance_noun": {
+  "hook": "\"LAHNS\": a lady reads from her guidebook about Sir LANCElot's long lance in the tall case: LAHNS",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a lady with dark brown skin reading a guidebook beside a tall narrow glass case holding a long striped jousting lance. Moved from the planned room R_text_crime_01 (not yet built) into this room."
+ },
+ "fr_bombe_noun": {
+  "hook": "\"BOHNB\": a lady offers a BONBON beside the case with a round antique bomb with an unlit fuse: BOHNB = BON(bon)",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a lady with pale skin and a bun offering a sweet from a paper bag, beside a glass case holding a black round antique bomb with a short unlit fuse. Moved from the planned room R_text_crime_01 (not yet built) into this room. Example replaced (t347u): shown only as a harmless museum object.",
+  "ex": [
+   "La vieille bombe, vide et sans danger, est exposée au musée.",
+   "The old bomb, empty and harmless, is on show at the museum."
+  ]
+ },
+ "fr_epee_noun": {
+  "hook": "\"ay-PAY\": a lady PAYS the guard for an audio guide in front of the case with the long sword: ay-PAY = A PAY",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a lady with light brown skin handing coins to a guard by a glass case holding a long shining sword on a stand."
+ },
+ "fr_poignard_noun": {
+  "hook": "\"pwah-NYAHR\": an old gentleman POINTS with a YARDstick at the little dagger in its case: pwah-NYAHR = POINT-YARD",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): an old gentleman with dark brown skin pointing with a wooden yardstick at a small glass case holding a jewelled dagger on velvet."
+ },
+ "fr_arc_noun": {
+  "hook": "\"AHRK\": a man holds up a toy Noah's ARK beside the case with the old wooden bow: AHRK = ARK",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a man with tan skin holding a small wooden toy Noah's ark beside a glass case with a long wooden bow and arrows on a rack."
+ },
+ "fr_bouclier_noun": {
+  "hook": "\"boo-klee-YAY\": a man holds up the little CLAY shield he moulded beside the big round shield on its stand: 'BOO, CLAY, YAY!'",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a potter in a brown apron holding up a little clay shield beside a big round painted wooden shield on a stand behind glass."
+ },
+ "fr_armure_noun": {
+  "hook": "\"ahr-MEWR\": a cat MEWS up at the empty suit of armour on its plinth: ahr-MEWR = ARMOUR-MEW",
+  "why": "English sound-alike painted in musee/armes (Oct 31 2026 build): a ginger cat sitting and mewing up at a shining empty suit of armour standing on a plinth behind a rope."
+ },
+ "fr_pathologie_noun": {
+  "hook": "\"pah-toh-loh-ZHEE\": a scientist peers into a giant antique brass microscope while her old PA beside her says 'GEE!': pah-toh-loh-ZHEE",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a scientist lady with brown skin in a white coat peering into a giant brass microscope, her white-haired old father in a white coat just beside her."
+ },
+ "fr_pathologique_adj": {
+  "hook": "\"pah-toh-loh-ZHEEK\": a Pinocchio puppet with a ridiculously long nose, a pathological liar, gives a CHEEKY grin: pah-toh-loh-ZHEEK",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a wooden Pinocchio puppet with a very long nose and a cheeky grin standing in a glass case."
+ },
+ "fr_cholera_noun": {
+  "hook": "\"koh-lay-RAH\": a Victorian doctor with a big white COLLAR grips the curved iron pipe of the old black water pump and cries 'RAH!': koh-lay-RAH = COLLAR-RAH",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a Victorian doctor with pale skin, a top hat and a big white collar gripping the curved iron pipe of an old black street water pump."
+ },
+ "fr_tuberculose_noun": {
+  "hook": "\"tew-behr-kew-LOHZ\": a nurse holds up a giant TUBE of medicine by an old sanatorium chair with a tartan blanket: TUBE-er-cue-LOSE",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a nurse with tan skin in an old-fashioned nurse's cap and apron holding up a giant plain white tube beside an old wooden reclining chair with a tartan blanket."
+ },
+ "fr_sang_noun": {
+  "hook": "\"SAHN\": a boy lifts a giant model of a red blood cell up like the SUN: SAHN = SUN",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a boy with dark brown skin lifting a big shiny red blood-cell model (a red disc dimpled in the middle) over his head."
+ },
+ "fr_cancer_noun": {
+  "hook": "\"kahn-SEHR\": the word comes from the crab: a man shows a big toy CRAB in a glass case and asks 'CAN, SIR?': kahn-SEHR",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a man with pale skin and a beard in a white coat showing a big red toy crab in a glass case under a star chart of the crab constellation."
+ },
+ "fr_infection_noun": {
+  "hook": "\"an-fehk-SYOHN\": a girl sprays a giant green plush germ with disinfectant: IN-FECTION",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a girl with olive skin in a lab coat spraying a giant fluffy green plush microbe with a spray bottle."
+ },
+ "fr_contagion_noun": {
+  "hook": "\"kohn-tah-ZHYOHN\": a yawn is contagious: a girl with an ice-cream CONE yawns and her friends yawn too: CONE-tah-ZHYOHN",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a girl with light brown skin holding an ice-cream cone and yawning widely, two friends beside her yawning too."
+ },
+ "fr_diabete_noun": {
+  "hook": "\"dyah-BEHT\": a cheerful boy's blood-sugar meter DIAL BEEPS beside a bowl of sugar cubes: dyah-BEHT",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a cheerful boy with tan skin sitting on a bench reading a small grey blood-sugar meter, a bowl of sugar cubes beside him."
+ },
+ "fr_alcoolisme_noun": {
+  "hook": "\"ahl-koh-LEEZM\": AL walks his COLLIE on a LEASH past the health case with an empty old bottle and a glass of water: ahl-koh-LEEZM",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a boy with brown skin walking a collie on a red lead past a glass health-display case holding one empty old bottle and a glass of clear water."
+ },
+ "fr_famine_noun": {
+  "hook": "\"fah-MEEN\": Like English 'famine': a farm lady in the history display shows an empty wooden bowl beside an empty grain bin: fah-MEEN",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a farm lady with pale skin and a headscarf holding an empty wooden bowl beside an empty grain bin with dry wheat stalks."
+ },
+ "fr_mortalite_noun": {
+  "hook": "\"mor-tah-lee-TAY\": a girl pours MORE TEA beside an old hourglass whose sand has all run out: MORE-TAL-ee-TEA",
+  "why": "English sound-alike painted in musee/medecine (Oct 31 2026 build): a girl with dark brown skin pouring more tea beside a big antique hourglass whose sand has all run to the bottom."
+ },
+ "fr_bagarre_noun": {
+  "hook": "BAGARRE (\"bah-GAHR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_abus_noun": {
+  "hook": "ABUS (\"ah-BEW\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_corrida_noun": {
+  "hook": "CORRIDA (\"koh-ree-DAH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_gifle_noun": {
+  "hook": "GIFLE (\"ZHEEFL\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_injure_noun": {
+  "hook": "INJURE (\"an-ZHEWR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_recul_noun": {
+  "hook": "RECUL (\"ruh-KEWL\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_meurtre_noun": {
+  "hook": "MEURTRE (\"MUHRTR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_revolver_noun": {
+  "hook": "REVOLVER (\"ray-vol-VEHR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_tueur_noun": {
+  "hook": "TUEUR (\"TWUHR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room. English example reworded (plaque word): the v1 translation used a blocked word; the French is unchanged.",
+  "ex": [
+   "La police recherche le tueur depuis un mois.",
+   "The police have been looking for the murderer for a month."
+  ]
+ },
+ "fr_assassinat_noun": {
+  "hook": "ASSASSINAT (\"ah-sah-see-NAH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_execution_noun": {
+  "hook": "EXÉCUTION (\"ehg-zay-kew-SYOHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_meurtrier_noun": {
+  "hook": "MEURTRIER (\"muhr-tree-YAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_terroriste_noun": {
+  "hook": "TERRORISTE (\"teh-roh-REEST\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_mutiler_verb": {
+  "hook": "MUTILER (\"mew-tee-LAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Moved from the planned room R_text_crime_02 (not yet built) into this room."
+ },
+ "fr_affut_noun": {
+  "hook": "AFFÛT (\"ah-FEW\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_brigand_noun": {
+  "hook": "BRIGAND (\"bree-GAHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_brutalite_noun": {
+  "hook": "BRUTALITÉ (\"brew-tah-lee-TAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_cambriolage_noun": {
+  "hook": "CAMBRIOLAGE (\"kahn-bree-yoh-LAHZH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_criminalite_noun": {
+  "hook": "CRIMINALITÉ (\"kree-mee-nah-lee-TAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_fleau_noun": {
+  "hook": "FLÉAU (\"flay-OH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_prostitue_noun": {
+  "hook": "PROSTITUÉ (\"pros-tee-TWAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_penal_adj": {
+  "hook": "PÉNAL (\"pay-NAHL\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_terrorisme_noun": {
+  "hook": "TERRORISME (\"teh-roh-REEZM\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_traumatisme_noun": {
+  "hook": "TRAUMATISME (\"troh-mah-TEEZM\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_carceral_adj": {
+  "hook": "CARCÉRAL (\"kahr-say-RAHL\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_racket_noun": {
+  "hook": "RACKET (\"rah-KEHT\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_scelerat_noun": {
+  "hook": "SCÉLÉRAT (\"say-lay-RAH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_stupefiant_noun": {
+  "hook": "STUPÉFIANT (\"stew-pay-FYAHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_sexe_noun": {
+  "hook": "SEXE (\"SEHKS\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_accoucher_verb": {
+  "hook": "ACCOUCHER (\"ah-koo-SHAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_ivre_adj": {
+  "hook": "IVRE (\"EEVR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Usage note reworded (plaque word): the v1 note used a blocked word; the meaning is unchanged.",
+  "note": "Refers to being intoxicated by alcohol; an adult word."
+ },
+ "fr_plaie_noun": {
+  "hook": "PLAIE (\"PLEH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_sanglant_adj": {
+  "hook": "SANGLANT (\"sahn-GLAHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_saoul_adj": {
+  "hook": "SAOUL (\"SOO\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. Usage note reworded (plaque word): the v1 note used a blocked word; the meaning is unchanged. English example reworded (plaque word): the v1 translation used a blocked word; the French is unchanged.",
+  "note": "Refers to being intoxicated by alcohol; an informal adult word.",
+  "ex": [
+   "Il ne faut jamais conduire quand on est saoul.",
+   "You should never drive when you're intoxicated."
+  ]
+ },
+ "fr_epidemie_noun": {
+  "hook": "ÉPIDÉMIE (\"ay-pea-day-MEE\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque.",
+  "say": "ay-pea-day-MEE"
+ },
+ "fr_avortement_noun": {
+  "hook": "AVORTEMENT (\"ah-vor-tuh-MAHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_sanguin_adj": {
+  "hook": "SANGUIN (\"sahn-GAN\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_ivrogne_adj": {
+  "hook": "IVROGNE (\"ee-VRONY\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. English example reworded (plaque word): the v1 translation used a blocked word; the French is unchanged.",
+  "ex": [
+   "Dans la chanson, un vieux marin ivrogne chante faux.",
+   "In the song, an old tipsy sailor sings out of tune."
+  ]
+ },
+ "fr_secretion_noun": {
+  "hook": "SÉCRÉTION (\"say-kray-SYOHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_tabagisme_noun": {
+  "hook": "TABAGISME (\"tah-bah-ZHEEZM\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. English example reworded (plaque word): the v1 translation used a blocked word; the French is unchanged.",
+  "ex": [
+   "La campagne lutte contre le tabagisme.",
+   "The campaign fights nicotine addiction."
+  ]
+ },
+ "fr_mort_noun_m": {
+  "hook": "MORT (\"MOR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_cadavre_noun": {
+  "hook": "CADAVRE (\"kah-DAHVR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_noyer_verb": {
+  "hook": "NOYER (\"nwah-YAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_bourreau_noun": {
+  "hook": "BOURREAU (\"boo-ROH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_deuil_noun": {
+  "hook": "DEUIL (\"DUHY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_deces_noun": {
+  "hook": "DÉCÈS (\"day-SEH\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_mourant_adj": {
+  "hook": "MOURANT (\"moo-RAHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_suicider_verb": {
+  "hook": "SUICIDER (\"swee-see-DAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque. English example reworded (plaque word): the v1 translation used a blocked word; the French is unchanged.",
+  "ex": [
+   "Si quelqu'un parle de se suicider, il faut l'écouter et l'aider.",
+   "If someone talks about ending their life, you must listen and help."
+  ]
+ },
+ "fr_supplice_noun": {
+  "hook": "SUPPLICE (\"sew-PLEES\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_torture_noun": {
+  "hook": "TORTURE (\"tor-TEWR\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_decomposition_noun": {
+  "hook": "DÉCOMPOSITION (\"day-kohn-poh-zee-SYOHN\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_perir_verb": {
+  "hook": "PÉRIR (\"pay-REER\") is a wall-text word: nothing is painted; the small blank PLAQUE on a low wooden lectern in the middle of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ },
+ "fr_charnier_noun": {
+  "hook": "CHARNIER (\"shahr-NYAY\") is a wall-text word: nothing is painted; the small blank PLAQUE on the wall of the word corridor stands for it.",
+  "plaque": true,
+  "why": "Museum plaque word (t347u: mature word, wall text only): nothing is depicted; the painting shows only a small blank plaque, so the hook describes the plaque."
+ }
+}

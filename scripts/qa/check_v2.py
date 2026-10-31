@@ -33,6 +33,10 @@ Static rules (per building/room):
     data/hooks/qa/two_hooks_ok.tsv (each copy describes its own painting)
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
+  * cache busting (gate 27): village/sw.js serves every GET network-first (the cache is only the offline fallback) and
+    declares its cache name V='village-vN'; extras.js registers it with updateViaCache 'none'. --cache-base REF (a
+    commit or tree, e.g. the deploy base; required at pack time): if any existing image/card under village/ was
+    modified since REF, sw.js's V must differ from REF's, so returning visitors drop their old caches
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
 overlap, every route renders with no JS error, Back goes straight outside (gate 19: sector map, or the street for an
 ST_ side room; zoom -> its room), verb cards have no
@@ -62,6 +66,11 @@ TABAC_NOUNS = {"fr_tabac_noun"}
 # the headword, so the generic smoke pattern is skipped on the example (ex) only; hook/scene/note/en are still checked
 # with every BLOCK pattern plus TOBACCO, so the hook must not use the English word.
 TUXEDO_NOUNS = {"fr_smoking_noun"}
+# "tuer" (fr_tuer_verb, gloss "to kill") is painted only as the idiom "tuer le temps" (passing the time with an
+# hourglass, t347u batch 5): the generic kill pattern is skipped on the gloss (en) only; hook/scene/note/ex are still
+# checked with every BLOCK pattern, so the hook and example must not use the English word.
+KILL_GLOSS = {"fr_tuer_verb"}
+KILL = BLOCK[12]
 TOBACCO = r"\b(smoking|smokers?|smokes? (a|his|her|their)\b|cigar\w*|tobacc\w*|pipe ?smoke|puff(s|ing)? on|light(s|ing)? up)\b"
 ROOMS_JSON = {r["id"]: r for r in json.loads((ROOT / "data" / "source" / "rooms.json").read_text(encoding="utf-8"))["rooms"]}
 LIMITS = json.loads((ROOT / "skills" / "limits.json").read_text(encoding="utf-8"))
@@ -244,8 +253,12 @@ def check_building(bld, errs, warns, places=None):
             smoke_noun = it["id"] in SMOKE_NOUNS and not it.get("verb") and it.get("en", "").strip().lower() == "smoke"
             tabac_noun = it["id"] in TABAC_NOUNS and not it.get("verb") and "tobacco" in (it.get("en") or "").strip().lower()
             tux_noun = it["id"] in TUXEDO_NOUNS and not it.get("verb") and "tuxedo" in (it.get("en") or "").lower()
+            kill_gloss = it["id"] in KILL_GLOSS and it.get("verb") and not plaque
             for pat in BLOCK:
                 if smoke_noun and pat == SMOKE: continue
+                if kill_gloss and pat == KILL:
+                    if re.search(pat, depict + " " + " ".join(it.get("ex") or []), re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
+                    continue
                 if tux_noun and pat == SMOKE:
                     if re.search(pat, text[:len(text) - len(" ".join(it.get("ex") or []))], re.I): E(f"{tag}: content flag /{pat}/ in {it['fr']}")
                     if re.search(TOBACCO, depict, re.I): E(f"{tag}: content flag /{TOBACCO}/ (smoking) in {it['fr']}")
@@ -359,7 +372,10 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                 await pg.wait_for_function("document.getElementById('stage').dataset.probed==='1'", timeout=8000)
             except Exception:
                 errs.append(f"map @{vw}: building discovery never finished (stage.dataset.probed)")
-            await pg.wait_for_timeout(400)
+            await pg.wait_for_timeout(1100)  # first-visit help opens at 0.9 s on an untouched map: close it as a visitor would
+            if not await pg.evaluate("document.getElementById('cardWrap').hidden"):
+                await pg.keyboard.press("Escape"); await pg.wait_for_timeout(200)
+                if not await pg.evaluate("document.getElementById('cardWrap').hidden"): errs.append(f"map @{vw}: first-visit help does not close with Esc")
             WH = M["world"].get("h", 720)
             wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
             if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
@@ -532,6 +548,42 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
         await b.close()
 
 
+IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg")
+
+
+def sw_version(text):
+    m = re.search(r"\bV\s*=\s*['\"]([^'\"]+)['\"]", text)
+    return m.group(1) if m else None
+
+
+def cache_gates(errs, base=None):
+    """Gate 27: a repainted image or card can never reach a returning visitor from a stale cache."""
+    sw = (V2 / "sw.js").read_text(encoding="utf-8")
+    if not sw_version(sw): errs.append("cache: village/sw.js has no V='<cache name>'")
+    i = sw.find("addEventListener('fetch'")
+    body = sw[i:] if i >= 0 else ""
+    if i < 0 or "fetch(r" not in body or ("caches.match" in body and body.index("caches.match") < body.index("fetch(r")) \
+            or re.search(r"caches\.match\([^;]*?\bfetch\(", body):  # cache hit first, network only on a miss = stale repaints
+        errs.append("cache: village/sw.js must answer every GET network-first (fetch first, cache only as the offline fallback)")
+    if "skipWaiting" not in sw or "clients.claim" not in sw:
+        errs.append("cache: village/sw.js must skipWaiting() on install and clients.claim() on activate")
+    ex = (V2 / "extras.js").read_text(encoding="utf-8")
+    if "updateViaCache" not in ex:
+        errs.append("cache: extras.js must register sw.js with {updateViaCache:'none'}")
+    if base is None: return
+    import subprocess
+    git = lambda *a: subprocess.run(["git", "-C", str(ROOT), *a], capture_output=True, text=True)
+    d = git("diff", "--name-status", "--no-renames", base, "--", "village")
+    if d.returncode: errs.append(f"cache: --cache-base {base}: {d.stderr.strip()}"); return
+    mod = [ln.split("\t", 1)[1] for ln in d.stdout.splitlines() if ln.startswith("M\t") and ln.lower().endswith(IMG_EXT)]
+    old = git("show", f"{base}:village/sw.js")
+    oldv = sw_version(old.stdout) if old.returncode == 0 else None
+    if mod and oldv is not None and oldv == sw_version(sw):
+        errs.append(f"cache: {len(mod)} existing image(s)/card(s) changed since {base} (e.g. {mod[0]}) "
+                    f"but village/sw.js still has V='{oldv}': bump the cache version")
+    print(f"cache: {len(mod)} changed existing image(s) since {base}; sw V {oldv} -> {sw_version(sw)}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("buildings", nargs="*")
@@ -541,6 +593,7 @@ def main():
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")
     ap.add_argument("--placement", action="store_true", help="PLACE lines (word tied to its room only by a shared English gloss word) count as failures")
+    ap.add_argument("--cache-base", metavar="REF", help="gate 27 at pack time: fail if an existing image/card changed since REF (commit or tree) without a sw.js cache-version bump")
     ap.add_argument("-v", "--verbose", action="store_true", help="print each building's word counts")
     a = ap.parse_args()
     blds = a.buildings or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
@@ -564,6 +617,7 @@ def main():
         nb += 1; nw += sum(c.values())
         if a.verbose: print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     site_gates(blds, errs)
+    cache_gates(errs, a.cache_base)
     print(f"{nb} buildings, {nw} words checked")
     if a.browser:
         import asyncio

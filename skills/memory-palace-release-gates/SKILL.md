@@ -99,5 +99,6 @@ A space is NOT done until every gate passes, and the checker must actually look 
 - Make one combined pack per batch of rooms; the deploy reports once, when live.
 - User-reported, P0 and P1 fixes still ship as small hotfixes in the next window.
 - Rebuild cards and data after every repaint, in the same pack.
+- Gate 27, cache busting (pack-time rule): a repaint or rebuilt card that keeps its filename must reach returning visitors. `village/sw.js` answers every GET network-first (cache = offline fallback only), uses skipWaiting/clients.claim, and extras.js registers it with updateViaCache 'none'. If any existing image or card changed since the deploy base, bump `V='village-vN'` in sw.js in the same pack. Before packing run `python3 scripts/qa/check_v2.py --strict --placement --cache-base <base commit or tree>`; a cache FAIL blocks the pack.
 - Check ownership before painting; regenerate shared data from the merged layout.
 - Keep each tarball under 25 MB with no screenshots; account for removals (plan-only words, sparse rooms) at every stop.
