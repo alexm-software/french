@@ -22,3 +22,9 @@
 * ⌂ Hub button (gate 19, Oct 31): a second strip button next to Back jumps to the first room / hub of the current
   building or verb street (tooltip = hub room name), hidden in the hub itself and on the maps. back_check.py and
   check_v2 --browser assert it.
+* Offline cache (gate 27): `sw.js` is now network-first for every file, images and cards included (the cache is only
+  the offline fallback), cache version bumped to `village-v3` so returning visitors' old caches are deleted on
+  activate; the new worker takes over at once (skipWaiting/clients.claim; registered with updateViaCache 'none';
+  the page reloads once if a new worker replaces an older one). Fixes returning visitors seeing old paintings that
+  were repainted under the same filename (e.g. the kiosque titre waiter with three arms). `check_v2.py` checks the
+  worker always, and with `--cache-base REF` fails a pack whose changed images keep the old cache version.

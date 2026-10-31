@@ -263,6 +263,15 @@ document.addEventListener('keydown',function(e){
 });
 
 // ---------- first visit, offline ----------
-if(!load('village.seenHelp',0)) setTimeout(function(){ if(cardWrap.hidden) help() },900);
-if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')) navigator.serviceWorker.register('sw.js').catch(function(){});
+// first-visit help: only if the visitor is still on the village map and has not clicked, tapped or typed yet
+// (it used to pop up 0.9 s after load over whatever page they had already opened and swallow their next click)
+if(!load('village.seenHelp',0)){ var helpT=setTimeout(function(){ if(cardWrap.hidden&&(location.hash==='#/'||location.hash===''||location.hash==='#')) help() },900);
+  var noHelp=function(){ clearTimeout(helpT); ['pointerdown','keydown','hashchange'].forEach(function(ev){ window.removeEventListener(ev,noHelp,true) }) };
+  ['pointerdown','keydown','hashchange'].forEach(function(ev){ window.addEventListener(ev,noHelp,true) }) }
+// service worker: check for a new sw.js on every load; when a new one takes over a page that an older one
+// controlled (a returning visitor after a deploy), reload once so paintings already on screen are not stale
+if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){
+  var hadSW=!!navigator.serviceWorker.controller, swReloaded=false;
+  navigator.serviceWorker.addEventListener('controllerchange',function(){ if(hadSW&&!swReloaded){ swReloaded=true; location.reload() } });
+  navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(function(reg){ reg.update() }).catch(function(){}) }
 })();
