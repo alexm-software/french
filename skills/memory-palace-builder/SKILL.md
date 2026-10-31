@@ -23,6 +23,7 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 | Move a word | reference/moving-words.md; language skill reference/placement-and-senses.md |
 | Map or navigation | reference/maps-and-navigation.md |
 | Site code or cards | reference/site-ui.md; language skill reference/cards-and-site.md |
+| Recorded audio, voices (ElevenLabs) | reference/audio.md (planned, not deployed: do not bulk-record until the owner says so) |
 
 ## Set up once (reference/setup-and-style.md)
 - Fix subject, levels, setting, style slider (1-5), art style (ask), site look (ask and mock up), output.
@@ -92,6 +93,13 @@ A one-page checklist for building an explorable memory palace. Each line is one 
 - A highlight toggle shows clickable areas; doors carry badges; zooms carry a magnifier badge.
 - Every space has a back control; navigation is walking; the top bar stays minimal.
 - Cards are lean and show every option; a site guide explains the placement conventions.
+
+## Recorded audio (reference/audio.md), planned, not deployed
+- The site stays static: mp3s in `village/audio/`, listed in `village/audio/index.js`; 🔊 falls back to the browser voice when a text has no recording.
+- One file per line or sentence (the page highlights them), in the speaker's voice from `data/source/voices.json`; the narrator reads everything else.
+- Record exactly the site's text; `akey()` in `village/app.js` and `scripts/audio/build_audio.py` must stay identical.
+- Bulk recording is `scripts/audio/build_audio.py`, staged by kind with a character budget, in GitHub Actions or on the owner's computer; the cloud workspace cannot reach ElevenLabs.
+- In the connector: one design round or generation per need, never a retry; choose takes yourself by what can be measured, and say why.
 
 ## Safety and copyright (reference/sensitive-content.md, reference/copyright.md)
 - Content suits all ages; mature words appear as text plaques only; sacred content is shown reverently.
