@@ -11,3 +11,7 @@
 * Le camping (B30_camping, S09): camping 14, tentes 14, souche 8 = 36 words.
 * check_v2: narrow content exemption for the noun « la fumée » (fr_fumee_noun, gloss "smoke" = campfire
   smoke); its hook/scene/note must still pass a smoking/tobacco pattern; "tobacc" added to the blocklist.
+* Back button (gate 19, user report Oct 31): Back now always goes straight outside - to the sector map from any room
+  of a building, to the street from a side room of an `ST_` verb street - and never to the previous room. Replaces
+  8012885f ("Back returns the way you came"); a zoom close-up still closes to its own room. Painted doors are the way
+  between rooms. check_v2 --browser and tools/reachability.py follow the same rule.

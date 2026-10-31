@@ -12,7 +12,7 @@ Edge kinds
   mapexit  the painted way out to the sector map (mapExit.box)    - painted
   zoom     a zoom badge into a close-up                           - painted
   zoomback Back button of a close-up (zooms have no painted exit by design)
-  backbtn  Back button of a room (backTo / sector map)            - UI only, not painted
+  backbtn  Back button of a room (street for street side rooms / sector map; gate 19)            - UI only, not painted
   tab      the roomList tab bar                                   - UI only, not painted
 
 A space FAILS when
@@ -109,7 +109,8 @@ def main():
             if R.get('mapExit'):
                 slug = home(bld); t = R['mapExit'].get('href') or ('#/quartier/' + slug if slug else W)
                 E[n].append((t, 'mapexit', R['mapExit'].get('label', '')))
-            BT = R.get('parent') or R.get('backTo')
+            # gate 19: Back goes straight outside (zoom -> its room; street side room -> the street; else the map)
+            BT = R.get('parent') or (D['main'] if str(D.get('building_id', '')).startswith('ST_') and key != D['main'] else None)
             if BT and BT in D['rooms']:
                 E[n].append((href(bld, BT), 'zoomback' if R.get('parent') else 'backbtn', 'Back'))
             elif not BT:

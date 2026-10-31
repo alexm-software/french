@@ -12,11 +12,13 @@ Served at `/french/`. `/french/v2/` redirects here and keeps the hash.
   `#/quartier/<slug>` = painted sector map (`map/<slug>.jpg`) with every building and `ST_` verb street.
   Which buildings are live comes from `data/live.js` (written by `scripts/v2/build_extras.py`); a building
   missing from it shows as "bientôt", so the map makes no request per planned building. A main
-  room's exit and Back lead to its sector map.
+  room's exit leads to its sector map. Back (gate 19) always goes straight outside, never to the previous
+  room: from any room of a building to its sector map; from a side room of an `ST_` street to that street
+  (and from the street to its sector map); a zoom close-up closes to its own room. Painted doors move between rooms.
   Adding a building never touches the shared shell — see `content/v2/README.md`.
 * Rules checked by `scripts/qa/check_v2.py [--browser]`: no overlapping hotspots/labels/doors, F left / M right,
-  articles on labels (adjectives: none, center band), painted exit in every main room, painted door for every passage, Back from a sub-room
-  goes to the main room, zoom objects visible in their parent, 7-tense verb cards without sideways scroll,
+  articles on labels (adjectives: none, center band), painted exit in every main room, painted door for every passage, Back goes straight outside
+  (sector map, or the street for a street's side room; zoom -> its room), zoom objects visible in their parent, 7-tense verb cards without sideways scroll,
   content blocklist, planned word coverage.
 
 * `extras.js` adds search, recall mode, "Find it", spaced review (progress in localStorage), a level filter,

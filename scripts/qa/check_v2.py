@@ -34,7 +34,8 @@ Static rules (per building/room):
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
-overlap, every route renders with no JS error, Back goes to the right place, verb cards have no
+overlap, every route renders with no JS error, Back goes straight outside (gate 19: sector map, or the street for an
+ST_ side room; zoom -> its room), verb cards have no
 sideways scroll. Screenshots go to --shots.
 """
 import argparse, json, re, sys
@@ -284,11 +285,16 @@ def check_building(bld, errs, warns, places=None):
                 if k2 != main and rooms.get(k2, {}).get("backTo", main) == main and not any(d["to"] == k2 for d in R.get("doors", [])): E(f"{tag}: no painted door to sub-room {k2}")
         else:
             if key not in keys_in_list: E(f"{tag}: room not in roomList")
-            # a sub-room is entered from main, or from another listed sub-room (nested, e.g. maths -> recre);
-            # Back goes to the room it was entered from, and both rooms need a real painted door.
+            # a sub-room is entered from main, or from another listed sub-room (nested, e.g. maths -> recre, or a
+            # chain kiosque -> redaction -> standard -> radio); backTo records that "entered from" room, which must
+            # lead back to main through listed rooms, and both rooms need a real painted door. Back itself no longer
+            # uses backTo (gate 19: Back goes straight outside), so any chain depth is fine.
             bt = R.get("backTo")
-            if bt != main and (bt not in keys_in_list or rooms.get(bt, {}).get("backTo") != main):
-                E(f"{tag}: Back goes to {bt}, should be {main} (or a sub-room of {main})")
+            chain, cur = set(), bt
+            while cur != main and cur in keys_in_list and cur not in chain:
+                chain.add(cur); cur = rooms.get(cur, {}).get("backTo")
+            if cur != main:
+                E(f"{tag}: entered from {bt}, which does not lead back to {main} through listed rooms")
             elif bt != main and not any(d["to"] == key for d in rooms[bt].get("doors", [])):
                 E(f"{tag}: {bt} has no painted door to sub-room {key}")
             if not any(d["to"] == bt for d in R.get("doors", [])): E(f"{tag}: no painted door back to {bt}")
@@ -480,7 +486,8 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                     await pg.click("#back")
                     await pg.wait_for_timeout(300)
                     home = "#/quartier/" + map_home(M, bld, D)[0]
-                    bt = R.get("parent") or R.get("backTo")
+                    # gate 19: Back never returns to the previous room - zoom -> its room, street side room -> the street, else the map
+                    bt = R.get("parent") or (D["main"] if str(D.get("building_id", "")).startswith("ST_") and key != D["main"] else None)
                     want = f"#/{bld}/{bt}" if bt and bt != D["main"] else (f"#/{bld}" if bt else home)
                     got = await pg.evaluate("location.hash")
                     if got != want: errs.append(f"{bld}/{key}: Back went to {got}, expected {want}")
