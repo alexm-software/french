@@ -34,22 +34,6 @@
    "short": "Couloir des mots 2"
   },
   {
-   "key": "tribunal",
-   "short": "Le tribunal"
-  },
-  {
-   "key": "taverne",
-   "short": "La taverne"
-  },
-  {
-   "key": "bateau_pirate",
-   "short": "Le bateau pirate"
-  },
-  {
-   "key": "hospice",
-   "short": "L'hospice"
-  },
-  {
    "key": "peinture",
    "short": "La galerie de peinture"
   },
@@ -84,6 +68,18 @@
   {
    "key": "dirigeants",
    "short": "Les dirigeants"
+  },
+  {
+   "key": "chartes",
+   "short": "Les chartes"
+  },
+  {
+   "key": "guildes",
+   "short": "Les guildes"
+  },
+  {
+   "key": "sens",
+   "short": "Le cabinet des sens"
   }
  ],
  "planned": {
@@ -203,59 +199,6 @@
     "fr_traumatisme_noun",
     "fr_sexe_noun",
     "fr_avortement_noun"
-   ]
-  },
-  "tribunal": {
-   "vocabRoom": "R_text_crime_03",
-   "only": [
-    "fr_injure_noun",
-    "fr_penal_adj",
-    "fr_criminalite_noun",
-    "fr_racket_noun",
-    "fr_scelerat_noun",
-    "fr_cambriolage_noun",
-    "fr_revolver_noun",
-    "fr_brutalite_noun",
-    "fr_affut_noun"
-   ]
-  },
-  "taverne": {
-   "vocabRoom": "R_tavern_01",
-   "only": [
-    "fr_ivre_adj",
-    "fr_saoul_adj",
-    "fr_ivrogne_adj",
-    "fr_tabagisme_noun",
-    "fr_bagarre_noun",
-    "fr_gifle_noun",
-    "fr_corrida_noun"
-   ]
-  },
-  "bateau_pirate": {
-   "vocabRoom": "R_pirate_ship_01",
-   "only": [
-    "fr_brigand_noun",
-    "fr_pirate_noun",
-    "fr_corsaire_noun",
-    "fr_gouvernail_noun",
-    "fr_butin_noun",
-    "fr_mat_noun",
-    "fr_hublot_noun",
-    "fr_boussole_noun",
-    "fr_vigie_noun",
-    "fr_cargaison_noun",
-    "fr_cale_noun"
-   ]
-  },
-  "hospice": {
-   "vocabRoom": "R_text_medical",
-   "only": [
-    "fr_plaie_noun",
-    "fr_epidemie_noun",
-    "fr_accoucher_verb",
-    "fr_secretion_noun",
-    "fr_fleau_noun",
-    "fr_recul_noun"
    ]
   },
   "peinture": {
@@ -405,6 +348,55 @@
     "fr_delegue_noun",
     "fr_leader_noun",
     "fr_hierarchie_noun"
+   ]
+  },
+  "chartes": {
+   "vocabRoom": "R_abs_power_04",
+   "only": [
+    "fr_autonomie_noun",
+    "fr_hegemonie_noun",
+    "fr_manipulation_noun",
+    "fr_retenue_noun",
+    "fr_repression_noun",
+    "fr_sanction_noun",
+    "fr_inhibition_noun",
+    "fr_legitimite_noun",
+    "fr_perturbation_noun",
+    "fr_possesseur_noun",
+    "fr_tutelle_noun"
+   ]
+  },
+  "guildes": {
+   "vocabRoom": "R_abs_power_05",
+   "only": [
+    "fr_confederation_noun",
+    "fr_contribution_noun",
+    "fr_domination_noun",
+    "fr_groupement_noun",
+    "fr_implication_noun",
+    "fr_organisateur_noun",
+    "fr_successeur_noun",
+    "fr_aristocratie_noun",
+    "fr_conformisme_noun",
+    "fr_confrerie_noun",
+    "fr_popularite_noun",
+    "fr_regroupement_noun"
+   ]
+  },
+  "sens": {
+   "vocabRoom": "R_abs_senses_01",
+   "only": [
+    "fr_bruit_noun",
+    "fr_lumiere_noun",
+    "fr_odeur_noun",
+    "fr_ombre_noun",
+    "fr_silence_noun",
+    "fr_vue_noun",
+    "fr_geste_noun",
+    "fr_presence_noun",
+    "fr_regard_noun",
+    "fr_ecoute_noun",
+    "fr_emission_noun"
    ]
   }
  },
@@ -953,7 +945,7 @@
    "name": "La galerie de la médecine · The history-of-medicine gallery",
    "room_id": "R_text_medical",
    "image": "musee/medecine.jpg",
-   "alt": "The museum's history-of-medicine gallery, seen from the near left: white and pale teal tiles, honey-wood apothecary cabinets, milk-glass ceiling globes and glass cases. At the back left a scientist peers into a giant brass microscope while her white-haired father in a white coat chats with a friend; a nurse in an old-fashioned cap holds up a giant plain white tube by a sanatorium chair with a plaid blanket; in front a girl in a lab coat sprays a giant green plush germ. In the middle a girl with an ice-cream cone yawns and her two friends yawn too, a farm lady in a headscarf shows an empty wooden bowl beside an empty grain bin of dry wheat stalks, and at the back a girl pours more tea beside a big hourglass whose sand has all run out. In the center a mischievous long-nosed Pinocchio puppet stands in a glass case, and a cheerful boy on a bench reads a small gray blood-sugar meter beside a bowl of sugar cubes. On the right a Victorian doctor in a top hat and big white collar grips the curved iron pipe of an old black water pump, a boy lifts a giant red blood-cell model over his head, a bearded man in a white coat shows a red crab in a case under a star chart, and a boy walks his collie on a red lead past a case holding an empty old bottle and a glass of water. Doors: slate-blue on the left wall, back to the museum hall; plain gray at the back right, to the health wall-text room.",
+   "alt": "The museum's history-of-medicine gallery, seen from the near left: white and pale teal tiles, honey-wood apothecary cabinets, milk-glass ceiling globes and glass cases. At the back left a scientist peers into a giant brass microscope while her white-haired father in a white coat chats with a friend; a nurse in an old-fashioned cap holds up a giant plain white tube by a sanatorium chair with a plaid blanket; in front a girl in a lab coat sprays a giant green plush germ. In the middle a girl with an ice-cream cone yawns and her two friends yawn too, a farm lady in a headscarf shows an empty wooden bowl beside an empty grain bin of dry wheat stalks, and at the back a girl pours more tea beside a big hourglass whose sand has all run out. In the center a mischievous long-nosed Pinocchio puppet stands in a glass case, and a cheerful boy on a bench reads a small gray blood-sugar meter beside a bowl of sugar cubes. On the right a Victorian doctor in a top hat and big white collar grips the curved iron pipe of an old black water pump, a boy lifts a giant red blood-cell model over his head, a bearded man in a white coat shows a red crab in a case under a star chart, and a boy walks his collie on a red leash past a case holding an empty old bottle and a glass of water. Doors: slate-blue on the left wall, back to the museum hall; plain gray at the back right, to the second word corridor.",
    "nameplate": [
     50,
     4.5
@@ -972,9 +964,9 @@
      ]
     },
     {
-     "to": "hospice",
-     "label": "L'hospice",
-     "hint": "the plain gray door at the back right, to the old hospital ward",
+     "to": "mots_deuil",
+     "label": "Couloir des mots 2",
+     "hint": "the plain gray door at the back right, to the second word corridor",
      "hit": [
       988,
       56,
@@ -1099,7 +1091,7 @@
    "name": "Le couloir des mots (1) · Word corridor 1 (text only)",
    "room_id": "R_text_crime_01",
    "image": "musee/mots_delits.jpg",
-   "alt": "A quiet, plain word corridor of the museum seen straight down its length: pale gray walls, pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights along both walls, five on the left and eight on the right; two low wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted fern stands on a bench against the back wall. Doors: plain gray on the left wall, back to the detective-story gallery; plain gray at the back, to the storybook courtroom.",
+   "alt": "A quiet, plain word corridor of the museum seen straight down its length: pale gray walls, pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights along both walls, five on the left and eight on the right; two low wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted fern stands on a bench against the back wall. Doors: plain gray on the left wall, back to the detective-story gallery; plain gray at the back, on to the second word corridor.",
    "nameplate": [
     50,
     4.5
@@ -1118,9 +1110,9 @@
      ]
     },
     {
-     "to": "tribunal",
-     "label": "Le tribunal",
-     "hint": "the plain gray door at the back, to the storybook courtroom",
+     "to": "mots_deuil",
+     "label": "Couloir des mots 2",
+     "hint": "the plain gray door at the back, on to the second word corridor",
      "hit": [
       716,
       237,
@@ -1284,17 +1276,17 @@
    "name": "Le couloir des mots (2) · Word corridor 2 (text only)",
    "room_id": "R_text_death",
    "image": "musee/mots_deuil.jpg",
-   "alt": "The quiet second room of the museum word corridor, softly lit by a round skylight: pale gray walls with a dark-blue baseboard and a pale oak plank floor. Small blank cream plaques with brass screws hang at different heights: two on the left wall, four in a zigzag on the back wall and seven along the right wall; two wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A wooden bench stands under the back wall and a potted olive tree in the back right corner. Door: plain gray on the left wall, back to the old hospital ward.",
+   "alt": "The quiet second room of the museum word corridor, softly lit by a round skylight: pale gray walls with a dark-blue baseboard and a pale oak plank floor. Small blank cream plaques with brass screws hang at different heights: two on the left wall, four in a zigzag on the back wall and seven along the right wall; two wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A wooden bench stands under the back wall and a potted olive tree in the back right corner. Door: plain gray on the left wall, to the history-of-medicine gallery.",
    "nameplate": [
     50,
     4.5
    ],
-   "backTo": "hospice",
+   "backTo": "medecine",
    "doors": [
     {
-     "to": "hospice",
-     "label": "L'hospice",
-     "hint": "the plain gray door on the left wall, back to the old hospital ward",
+     "to": "medecine",
+     "label": "La médecine",
+     "hint": "the plain gray door on the left wall, to the history-of-medicine gallery",
      "hit": [
       260,
       162,
@@ -1438,444 +1430,6 @@
       210,
       80,
       90
-     ]
-    }
-   ]
-  },
-  "tribunal": {
-   "name": "Le tribunal des romans · The storybook courtroom",
-   "room_id": "R_text_crime_03",
-   "image": "musee/tribunal.jpg",
-   "alt": "A museum's reconstructed old courtroom on a family mock-trial day, dark wood paneling and a green-and-cream tiled floor under brass lamps. A smiling white-haired judge sits at the raised bench at the back. In the jury box at the back left a lady juror in a feathered hat wags her finger at a startled lawyer in a white wig. On a bench a cartoon criminal in a striped shirt and eye mask sips tea from a tin mug, and in the left foreground a big hairy brute looks sheepish over a china teapot and a smashed cup. In the middle a grinning jailbird signs a paper with an enormous feather quill pen. On the right a mafioso in a pinstripe suit poses with a tennis racket, a stalk of celery in a black mask and striped shirt sits in the dock, and a masked burglar tiptoes off with a giant wedge of brie. A small antique revolver lies on a turning stand in a glass case at the right, and three spectators on the upper balcony peer through opera glasses. Doors: plain gray on the left wall, back to the word corridor; red wood with a ship lantern at the back right, to the harbor tavern.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "mots_delits",
-   "doors": [
-    {
-     "to": "mots_delits",
-     "label": "Couloir des mots 1",
-     "hint": "the plain gray door on the left wall, back to the word corridor",
-     "hit": [
-      31,
-      118,
-      100,
-      262
-     ]
-    },
-    {
-     "to": "taverne",
-     "label": "La taverne",
-     "hint": "the red wooden door with the ship lantern at the back right, to the harbor tavern",
-     "hit": [
-      1082,
-      200,
-      60,
-      135
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_injure_noun",
-     "box": [
-      160,
-      100,
-      196,
-      215
-     ]
-    },
-    {
-     "id": "fr_criminalite_noun",
-     "box": [
-      325,
-      325,
-      125,
-      245
-     ]
-    },
-    {
-     "id": "fr_brutalite_noun",
-     "box": [
-      15,
-      385,
-      305,
-      315
-     ]
-    },
-    {
-     "id": "fr_penal_adj",
-     "box": [
-      470,
-      280,
-      265,
-      420
-     ]
-    },
-    {
-     "id": "fr_racket_noun",
-     "box": [
-      737,
-      150,
-      157,
-      230
-     ]
-    },
-    {
-     "id": "fr_scelerat_noun",
-     "box": [
-      906,
-      143,
-      94,
-      182
-     ]
-    },
-    {
-     "id": "fr_cambriolage_noun",
-     "box": [
-      775,
-      385,
-      325,
-      335
-     ]
-    },
-    {
-     "id": "fr_revolver_noun",
-     "box": [
-      1118,
-      340,
-      157,
-      125
-     ]
-    },
-    {
-     "id": "fr_affut_noun",
-     "box": [
-      1018,
-      0,
-      262,
-      78
-     ]
-    }
-   ]
-  },
-  "taverne": {
-   "name": "La taverne du port · The harbor tavern",
-   "room_id": "R_tavern_01",
-   "image": "musee/taverne.jpg",
-   "alt": "A museum's life-size reconstructed harbor tavern with timber beams, whitewashed walls, fishing nets, a ship's wheel and hanging ship lanterns; pewter mugs stand untouched on a shelf behind the bar and nobody is drinking. By the red door on the left a laughing young woman gives her grinning boyfriend a playful cartoon slap, little stars bursting, while he holds a bunch of flowers. In front of them a comic dust cloud of a scuffle rolls around a big duffel bag, a laughing sailor in a red bandana in the middle of it, nobody hurt. On a table two little cartoon bulls in red boxing gloves spar on a giant apple core. In the middle a tipsy rosy-nosed sailor dances with a potted fir tree, and at the bar a tipsy old fisherman dozes with his nose in his soup. In front, a red-nosed old cook weeps as he peels a big sack of onions. On the right a white-bearded old man with a cold, unlit pipe in his teeth holds a brass tuba; there is no smoke. Doors: red wood on the left wall, back to the courtroom; an open archway at the back right with a gangway up to the pirate ship.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "tribunal",
-   "doors": [
-    {
-     "to": "tribunal",
-     "label": "Le tribunal",
-     "hint": "the red wooden door on the left wall, back to the storybook courtroom",
-     "hit": [
-      31,
-      94,
-      110,
-      310
-     ]
-    },
-    {
-     "to": "bateau_pirate",
-     "label": "Le bateau pirate",
-     "hint": "the open archway and gangway at the back right, up to the pirate ship",
-     "hit": [
-      1035,
-      60,
-      175,
-      190
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_gifle_noun",
-     "box": [
-      144,
-      188,
-      300,
-      215
-     ]
-    },
-    {
-     "id": "fr_bagarre_noun",
-     "box": [
-      0,
-      410,
-      537,
-      310
-     ]
-    },
-    {
-     "id": "fr_corrida_noun",
-     "box": [
-      445,
-      165,
-      135,
-      170
-     ]
-    },
-    {
-     "id": "fr_ivre_adj",
-     "box": [
-      583,
-      88,
-      172,
-      355
-     ]
-    },
-    {
-     "id": "fr_saoul_adj",
-     "box": [
-      790,
-      215,
-      165,
-      105
-     ]
-    },
-    {
-     "id": "fr_ivrogne_adj",
-     "box": [
-      760,
-      350,
-      220,
-      310
-     ]
-    },
-    {
-     "id": "fr_tabagisme_noun",
-     "box": [
-      1025,
-      256,
-      255,
-      294
-     ]
-    }
-   ]
-  },
-  "bateau_pirate": {
-   "name": "Le bateau pirate · The pirate ship",
-   "room_id": "R_pirate_ship_01",
-   "image": "musee/bateau_pirate.jpg",
-   "alt": "The main deck of a life-size wooden pirate ship standing in the museum's glass-roofed ship hall on a family dress-up day; there are no swords or cannons. High in the crow's nest at the upper left a person in a giant carrot costume keeps a lookout with cupped hands. A laughing pirate holds up his boot with a brass compass stuck to the sole. At the front left two dress-up children gaze at a shiny red toy car on a stack of cargo crates and sacks, and a sailor kneels at an open deck hatch, calling down into the dark hold. In the middle a helmsman in a tricorn hat steers at the big wooden wheel, and a smiling mother in a headscarf hugs the tall mast. On the raised deck at the right a dashing privateer in a plumed hat points out ahead, and two mischievous bandits grin and wave from the ship's little barred brig. A pirate kid opens a loot sack full of giant colorful buttons, a girl blows soap bubbles out of a round brass porthole, and a little rat in a red bandana sits on a barrel holding one big green pea. Door: the open doorway at the top of the gangway on the left, back to the harbor tavern.",
-   "nameplate": [
-    62,
-    4.5
-   ],
-   "backTo": "taverne",
-   "doors": [
-    {
-     "to": "taverne",
-     "label": "La taverne",
-     "hint": "the open doorway at the top of the gangway on the left, back to the harbor tavern",
-     "hit": [
-      10,
-      125,
-      160,
-      240
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_vigie_noun",
-     "box": [
-      388,
-      0,
-      106,
-      112
-     ]
-    },
-    {
-     "id": "fr_boussole_noun",
-     "box": [
-      238,
-      195,
-      255,
-      150
-     ]
-    },
-    {
-     "id": "fr_cargaison_noun",
-     "box": [
-      144,
-      406,
-      300,
-      314
-     ]
-    },
-    {
-     "id": "fr_cale_noun",
-     "box": [
-      455,
-      350,
-      120,
-      315
-     ]
-    },
-    {
-     "id": "fr_gouvernail_noun",
-     "box": [
-      580,
-      140,
-      220,
-      325
-     ]
-    },
-    {
-     "id": "fr_mat_noun",
-     "box": [
-      800,
-      230,
-      120,
-      250
-     ]
-    },
-    {
-     "id": "fr_corsaire_noun",
-     "box": [
-      920,
-      60,
-      165,
-      271
-     ]
-    },
-    {
-     "id": "fr_brigand_noun",
-     "box": [
-      1090,
-      180,
-      180,
-      120
-     ]
-    },
-    {
-     "id": "fr_hublot_noun",
-     "box": [
-      1131,
-      369,
-      149,
-      155
-     ]
-    },
-    {
-     "id": "fr_pirate_noun",
-     "box": [
-      1040,
-      525,
-      150,
-      195
-     ]
-    },
-    {
-     "id": "fr_butin_noun",
-     "box": [
-      681,
-      485,
-      330,
-      235
-     ]
-    }
-   ]
-  },
-  "hospice": {
-   "name": "L'hospice d'autrefois · The old hospital ward",
-   "room_id": "R_text_medical",
-   "image": "musee/hospice.jpg",
-   "alt": "A museum's reconstructed old hospital ward and bath-cure room with white tiled walls, tall windows and a pale tiled floor. At the back left a row of iron beds holds sniffly patients with thermometers and handkerchiefs while a nurse in a white cap brings a bowl of green pea soup. In front, a little girl on a stool holds a plush bunny whose cut tummy shows colorful play-dough stuffing, and a boy pulls back a white curtain to find a patch of wall oozing thick green goo. In the middle a happy mother sits on a green couch with her newborn baby beside a smiling mime in a red beret. On the right a big museum diorama shows a murky green river flowing down a hillside, carrying cartoon locusts on leaf rafts, and a man in an old striped bathing suit leaps out of a steamy steam room into an icy plunge pool. Doors: white with a round window at the left, back to the medicine gallery; plain gray at the back right, to the word corridor.",
-   "nameplate": [
-    50,
-    4.5
-   ],
-   "backTo": "medecine",
-   "doors": [
-    {
-     "to": "medecine",
-     "label": "La médecine",
-     "hint": "the white door with the round window at the left, back to the medicine gallery",
-     "hit": [
-      6,
-      12,
-      125,
-      130
-     ]
-    },
-    {
-     "to": "mots_deuil",
-     "label": "Couloir des mots 2",
-     "hint": "the plain gray door at the back right, to the word corridor",
-     "hit": [
-      1062,
-      25,
-      100,
-      137
-     ]
-    }
-   ],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_epidemie_noun",
-     "box": [
-      0,
-      148,
-      545,
-      152
-     ]
-    },
-    {
-     "id": "fr_plaie_noun",
-     "box": [
-      100,
-      412,
-      181,
-      275
-     ]
-    },
-    {
-     "id": "fr_secretion_noun",
-     "box": [
-      300,
-      305,
-      312,
-      410
-     ]
-    },
-    {
-     "id": "fr_accoucher_verb",
-     "box": [
-      569,
-      130,
-      319,
-      170
-     ]
-    },
-    {
-     "id": "fr_fleau_noun",
-     "box": [
-      615,
-      305,
-      435,
-      415
-     ]
-    },
-    {
-     "id": "fr_recul_noun",
-     "box": [
-      1056,
-      205,
-      224,
-      370
      ]
     }
    ]
@@ -2200,7 +1754,7 @@
    "name": "Le vernissage · The opening night",
    "room_id": "R_art_03",
    "image": "musee/vernissage.jpg",
-   "alt": "The museum's modern temporary exhibition hall on its opening night, seen from the near left: white walls, pale gray partitions, a polished concrete floor and spotlights on tracks, with a glass greenhouse nook of palms at the right. At the left a girl in a yellow dress points at a model of a world expo with a Ferris wheel, a man leans on a glass case of decorated eggs, a child wears a funny costume made from a crate and an old TV, and a woman in a lab coat draws up a big plan. At the back a boy wears headphones at the media-library screen, a grandpa and a girl put a rolled poster into a time capsule, and a board of old picture prints hangs on a partition. At the right a man brushes varnish onto a landscape painting, the young curator serves cake from a cake stand, a farmer holds open a catalog of cows, a see-through glass statue of a mule stands in its case, a boy shows off a sleek red scooter, and two music students play violin and cello by the greenhouse. A cream glass door on the left wall leads back to the painting gallery.",
+   "alt": "The museum's modern temporary exhibition hall on its opening night, seen from the near left: white walls, pale gray partitions, a polished concrete floor and spotlights on tracks, with a glass greenhouse nook of palms at the right. At the left a girl in a yellow dress points at a model of a world expo with a Ferris wheel, a man leans on a glass case of decorated eggs, a child wears a funny costume made from a crate and an old TV, and a woman in a lab coat draws up a big plan. At the back a boy wears headphones at the media-library screen, a grandpa and a girl put a rolled poster into a time capsule, and a board of old picture prints hangs on a partition. At the right a man brushes varnish onto a landscape painting, the young curator serves cake from a cake stand, a farmer holds open a catalog of cows, a see-through glass statue of a mule stands in its case, a boy shows off a sleek red scooter, and two music students play violin and cello by the greenhouse. A cream glass door on the left wall leads back to the painting gallery, and a pale green door with a painted eye at the back right leads to the cabinet of the senses.",
    "nameplate": [
     50,
     4.5
@@ -2216,6 +1770,17 @@
       65,
       175,
       125
+     ]
+    },
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the pale green door with a painted eye at the back right, to the cabinet of the senses",
+     "hit": [
+      1150,
+      76,
+      78,
+      118
      ]
     }
    ],
@@ -2903,7 +2468,7 @@
    "name": "La salle de l'assemblée · The assembly chamber",
    "room_id": "R_abs_power_02",
    "image": "musee/assemblee.jpg",
-   "alt": "The old assembly chamber of the castle wing, seen from the near left: curved tiers of blue velvet benches, dark oak paneling, a blue-and-white painted dome and a pale wooden floor, with a giant wooden gavel on the speaker's desk. On the left a girl balances a red flying disc on her head and a toy plane on her hand by the blue door, three boys in blue sashes arrive with a gift basket of fruit, a couple dance with the girl leaning far back, and a man holds up a bunch of colorful feathers. In front two children fit together a giant jigsaw, a girl with a finger on her lips clutches a huge orange crayon, a bearded author signs a slip with a feather quill for a waiting boy, and a librarian at a lectern raises a hand to stop a boy touching a giant dictionary. On the right a committee of three sits at a round table under a model comet hanging on a wire, and a gray-haired dad kneels to hand his son a rolled scroll with a red seal. The blue door on the left leads back to the throne room.",
+   "alt": "The old assembly chamber of the castle wing, seen from the near left: curved tiers of blue velvet benches, dark oak paneling, a blue-and-white painted dome and a pale wooden floor, with a giant wooden gavel on the speaker's desk. On the left a girl balances a red flying disc on her head and a toy plane on her hand by the blue door, three boys in blue sashes arrive with a gift basket of fruit, a couple dance with the girl leaning far back, and a man holds up a bunch of colorful feathers. In front two children fit together a giant jigsaw, a girl with a finger on her lips clutches a huge orange crayon, a bearded author signs a slip with a feather quill for a waiting boy, and a librarian at a lectern raises a hand to stop a boy touching a giant dictionary. On the right a committee of three sits at a round table under a model comet hanging on a wire, and a gray-haired dad kneels to hand his son a rolled scroll with a red seal. The blue door on the left leads back to the throne room, and a dark blue door in the paneling above the top bench at the right leads to the charter hall.",
    "nameplate": [
     50,
     4.5
@@ -2919,6 +2484,17 @@
       105,
       95,
       72
+     ]
+    },
+    {
+     "to": "chartes",
+     "label": "Les chartes",
+     "hint": "the dark blue door in the paneling above the top bench, to the charter hall",
+     "hit": [
+      1108,
+      38,
+      56,
+      116
      ]
     }
    ],
@@ -3147,6 +2723,412 @@
       374,
       214,
       346
+     ]
+    }
+   ]
+  },
+  "chartes": {
+   "name": "La salle des chartes · The charter hall",
+   "room_id": "R_abs_power_04",
+   "image": "musee/chartes.jpg",
+   "alt": "The old charter hall of the museum's castle wing, seen from the near left: dark oak paneling, a high window throwing a beam of light, a giant parchment charter with a red wax seal on the back wall and glass cases of charters. At the back left a puppeteer works four puppets on strings for small children, a queen holds up a sealed charter while her team sips tea, and a man in the window's light presses down the lid of a jack-in-the-box with a clown peeking out. In the middle a referee shows a yellow card to a sulking boy, a boy in a paper crown covers the board-game map with his pieces, and a shy boy hides behind a young woman near a glass beehive. In front a grandma tells two children a story, a girl in yellow keeps her hands behind her back before a new red bike, a ginger cat rides a robot vacuum scattering papers, and a boy cheers as an empty red toy car drives itself around its track. At the right a man in a top hat hugs his treasure chest and holds up its golden key. A dark blue door on the near left wall leads back to the assembly chamber, and a heavy oak double door on the right wall leads to the guild hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "assemblee",
+   "doors": [
+    {
+     "to": "assemblee",
+     "label": "L'assemblée",
+     "hint": "the dark blue door on the near left wall, back to the assembly chamber",
+     "hit": [
+      10,
+      185,
+      80,
+      150
+     ]
+    },
+    {
+     "to": "guildes",
+     "label": "Les guildes",
+     "hint": "the heavy oak double door on the right wall, to the guild hall",
+     "hit": [
+      880,
+      272,
+      105,
+      210
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_manipulation_noun",
+     "box": [
+      100,
+      195,
+      135,
+      138
+     ]
+    },
+    {
+     "id": "fr_legitimite_noun",
+     "box": [
+      245,
+      205,
+      165,
+      140
+     ]
+    },
+    {
+     "id": "fr_repression_noun",
+     "box": [
+      440,
+      185,
+      140,
+      165
+     ]
+    },
+    {
+     "id": "fr_sanction_noun",
+     "box": [
+      20,
+      340,
+      170,
+      145
+     ]
+    },
+    {
+     "id": "fr_hegemonie_noun",
+     "box": [
+      205,
+      355,
+      185,
+      145
+     ]
+    },
+    {
+     "id": "fr_inhibition_noun",
+     "box": [
+      392,
+      355,
+      180,
+      145
+     ],
+     "labelAt": [
+      482,
+      357
+     ]
+    },
+    {
+     "id": "fr_tutelle_noun",
+     "box": [
+      0,
+      490,
+      160,
+      230
+     ]
+    },
+    {
+     "id": "fr_retenue_noun",
+     "box": [
+      162,
+      510,
+      140,
+      205
+     ]
+    },
+    {
+     "id": "fr_perturbation_noun",
+     "box": [
+      304,
+      525,
+      120,
+      130
+     ],
+     "labelAt": [
+      392,
+      504
+     ]
+    },
+    {
+     "id": "fr_autonomie_noun",
+     "box": [
+      426,
+      540,
+      272,
+      165
+     ]
+    },
+    {
+     "id": "fr_possesseur_noun",
+     "box": [
+      700,
+      365,
+      150,
+      355
+     ]
+    }
+   ]
+  },
+  "guildes": {
+   "name": "La salle des guildes · The guild hall",
+   "room_id": "R_abs_power_05",
+   "image": "musee/guildes.jpg",
+   "alt": "The bright old guild hall of the museum, seen from the near left: whitewashed walls under dark timber beams, colorful guild banners with a hammer, a loaf, a wooden spoon, a key and scissors, long workbenches and a small pipe organ. At the back left four ice-cream vendors stand at their carts under one big striped awning, a girl drops a coin into a donation box shaped like a pine tree, and five craftsmen in leather aprons pose arm in arm for a group photo. In the middle an elegant lady in a powdered wig shows off her gold bracelet, two guild brothers in brown hooded robes link arms, a boy knocks down a long row of dominoes, a man with a clipboard presses a key of the little organ, and an old guild master hands a golden hammer to a small apprentice with a lollipop. At the right four boys dressed alike wear orange cone hats. In front a boy builds a clay castle in a big tub, a girl hands out popcorn to a crowd of children, and a man blows a whistle and raises a yellow flag to gather them. A heavy oak door on the left wall leads back to the charter hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "chartes",
+   "doors": [
+    {
+     "to": "chartes",
+     "label": "Les chartes",
+     "hint": "the heavy oak door on the left wall, back to the charter hall",
+     "hit": [
+      12,
+      88,
+      100,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_confederation_noun",
+     "box": [
+      120,
+      72,
+      350,
+      175
+     ]
+    },
+    {
+     "id": "fr_contribution_noun",
+     "box": [
+      472,
+      80,
+      165,
+      240
+     ]
+    },
+    {
+     "id": "fr_groupement_noun",
+     "box": [
+      690,
+      125,
+      440,
+      162
+     ]
+    },
+    {
+     "id": "fr_aristocratie_noun",
+     "box": [
+      35,
+      255,
+      140,
+      240
+     ]
+    },
+    {
+     "id": "fr_confrerie_noun",
+     "box": [
+      180,
+      318,
+      148,
+      170
+     ]
+    },
+    {
+     "id": "fr_domination_noun",
+     "box": [
+      330,
+      322,
+      322,
+      180
+     ]
+    },
+    {
+     "id": "fr_organisateur_noun",
+     "box": [
+      655,
+      300,
+      170,
+      260
+     ]
+    },
+    {
+     "id": "fr_successeur_noun",
+     "box": [
+      828,
+      292,
+      200,
+      168
+     ]
+    },
+    {
+     "id": "fr_conformisme_noun",
+     "box": [
+      1032,
+      318,
+      248,
+      140
+     ]
+    },
+    {
+     "id": "fr_implication_noun",
+     "box": [
+      30,
+      500,
+      265,
+      195
+     ]
+    },
+    {
+     "id": "fr_popularite_noun",
+     "box": [
+      300,
+      505,
+      300,
+      215
+     ]
+    },
+    {
+     "id": "fr_regroupement_noun",
+     "box": [
+      985,
+      463,
+      295,
+      257
+     ]
+    }
+   ]
+  },
+  "sens": {
+   "name": "Le cabinet des sens · The cabinet of the senses",
+   "room_id": "R_abs_senses_01",
+   "image": "musee/sens.jpg",
+   "alt": "The cabinet of the senses, a playful hands-on gallery of the museum with soft pale-green walls, a white column and a pale wood floor, seen from the near left. High on the back wall hang five big painted symbols of the senses: an eye, an ear, a nose, a hand and a mouth. At the left a weaver works at a big wooden loom glowing in a beam of light, a boy looks through a brass telescope, and a boy pinches his nose at a smelly cheese under a glass dome. In the middle a girl stands under a huge red umbrella beside its round shadow, a girl on a pile of presents raises her hand, a girl in headphones speaks into a microphone at a little radio desk, and a girl listens through a brass ear trumpet to a black coot bird. At the right a jester points with a big gesture, a girl covers her ears beside a steaming copper pot, a museum guard puts a finger to his lips behind a low glass case holding an old knight's lance, and a ceremonial guard in a red tunic and tall bearskin hat stares straight ahead. A white door on the left wall leads back to the exhibition hall; closed black, blue and lilac doors with little signs lead to cabinets not yet open.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "vernissage",
+   "doors": [
+    {
+     "to": "vernissage",
+     "label": "Le vernissage",
+     "hint": "the white door on the left wall, back to the exhibition hall",
+     "hit": [
+      12,
+      118,
+      85,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_lumiere_noun",
+     "box": [
+      125,
+      144,
+      222,
+      145
+     ]
+    },
+    {
+     "id": "fr_presence_noun",
+     "box": [
+      350,
+      144,
+      122,
+      128
+     ]
+    },
+    {
+     "id": "fr_vue_noun",
+     "box": [
+      38,
+      290,
+      180,
+      138
+     ]
+    },
+    {
+     "id": "fr_odeur_noun",
+     "box": [
+      38,
+      435,
+      215,
+      280
+     ]
+    },
+    {
+     "id": "fr_ombre_noun",
+     "box": [
+      258,
+      394,
+      250,
+      322
+     ]
+    },
+    {
+     "id": "fr_emission_noun",
+     "box": [
+      425,
+      275,
+      206,
+      115
+     ]
+    },
+    {
+     "id": "fr_ecoute_noun",
+     "box": [
+      530,
+      456,
+      190,
+      262
+     ]
+    },
+    {
+     "id": "fr_geste_noun",
+     "box": [
+      762,
+      144,
+      155,
+      170
+     ]
+    },
+    {
+     "id": "fr_bruit_noun",
+     "box": [
+      920,
+      180,
+      200,
+      138
+     ]
+    },
+    {
+     "id": "fr_silence_noun",
+     "box": [
+      795,
+      322,
+      325,
+      266
+     ]
+    },
+    {
+     "id": "fr_regard_noun",
+     "box": [
+      1125,
+      281,
+      135,
+      439
      ]
     }
    ]

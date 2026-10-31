@@ -10,6 +10,10 @@
   {
    "key": "jetee",
    "short": "La jetée"
+  },
+  {
+   "key": "bateau_pirate",
+   "short": "Le bateau pirate"
   }
  ],
  "building_id": "B24_port",
@@ -60,13 +64,29 @@
     "fr_container_noun",
     "fr_nautique_adj"
    ]
+  },
+  "bateau_pirate": {
+   "vocabRoom": "R_pirate_ship_01",
+   "only": [
+    "fr_brigand_noun",
+    "fr_pirate_noun",
+    "fr_corsaire_noun",
+    "fr_gouvernail_noun",
+    "fr_butin_noun",
+    "fr_mat_noun",
+    "fr_hublot_noun",
+    "fr_boussole_noun",
+    "fr_vigie_noun",
+    "fr_cargaison_noun",
+    "fr_cale_noun"
+   ]
   }
  },
  "rooms": {
   "port": {
    "name": "Le port de pêche",
    "image": "port/port.jpg",
-   "alt": "A sunny fishing harbor: a notice board with the village map, a fleet of little boats, an orange-striped sailing dinghy, a dog and a duck by a rowing boat, the white-bearded captain saluting the seagulls, a sea turtle and a crab, a shed with a busy luggage rack, a seagull on a bollard, a bat in a sailor hat steering a red boat by its tiller at the stern, a steamship, a lighthouse, a walrus with a basket of sardines by his kiosk, a mouse in a tiny boat in a puddle, a boy hauling a net with a seal in it, a fishing crew with their cabin boy and a little ferry with a student on board.",
+   "alt": "A sunny fishing harbor: a notice board with the village map, a fleet of little boats, an orange-striped sailing dinghy, a dog and a duck by a rowing boat, the white-bearded captain saluting the seagulls, a sea turtle and a crab, a shed with a busy luggage rack, its blue double doors open onto a pirate ship moored in a glass-roofed boat shed, a seagull on a bollard, a bat in a sailor hat steering a red boat by its tiller at the stern, a steamship, a lighthouse, a walrus with a basket of sardines by his kiosk, a mouse in a tiny boat in a puddle, a boy hauling a net with a seal in it, a fishing crew with their cabin boy and a little ferry with a student on board.",
    "nameplate": [
     50,
     4.5
@@ -90,6 +110,17 @@
       98,
       80,
       85
+     ]
+    },
+    {
+     "to": "bateau_pirate",
+     "label": "Le bateau pirate",
+     "hint": "Go through the open blue doors of the harbor shed to the pirate ship",
+     "hit": [
+      378,
+      92,
+      130,
+      136
      ]
     }
    ],
@@ -491,6 +522,132 @@
       340,
       155,
       290
+     ]
+    }
+   ]
+  },
+  "bateau_pirate": {
+   "name": "Le bateau pirate",
+   "room_id": "R_pirate_ship_01",
+   "image": "port/bateau_pirate.jpg",
+   "alt": "The main deck of a life-size wooden pirate ship moored in the harbor's glass-roofed boat shed on a family dress-up day; there are no swords or cannons. High in the crow's nest at the upper left a person in a giant carrot costume keeps a lookout with cupped hands. A laughing pirate holds up his boot with a brass compass stuck to the sole. At the front left two dress-up children gaze at a shiny red toy car on a stack of cargo crates and sacks, and a sailor kneels at an open deck hatch, calling down into the dark hold. In the middle a helmsman in a tricorn hat steers at the big wooden wheel, and a smiling mother in a headscarf hugs the tall mast. On the raised deck at the right a dashing privateer in a plumed hat points out ahead, and two mischievous bandits grin and wave from the ship's little barred brig. A pirate kid opens a loot sack full of giant colorful buttons, a girl blows soap bubbles out of a round brass porthole, and a little rat in a red bandana sits on a barrel holding one big green pea. Door: the open doorway at the top of the gangway on the left, back out to the sunny harbor quay.",
+   "nameplate": [
+    62,
+    4.5
+   ],
+   "backTo": "port",
+   "doors": [
+    {
+     "to": "port",
+     "label": "Le port",
+     "hint": "Go back down the gangway and out through the doorway to the harbor",
+     "hit": [
+      10,
+      125,
+      160,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vigie_noun",
+     "box": [
+      388,
+      0,
+      106,
+      112
+     ]
+    },
+    {
+     "id": "fr_boussole_noun",
+     "box": [
+      238,
+      195,
+      255,
+      150
+     ]
+    },
+    {
+     "id": "fr_cargaison_noun",
+     "box": [
+      144,
+      406,
+      300,
+      314
+     ]
+    },
+    {
+     "id": "fr_cale_noun",
+     "box": [
+      455,
+      350,
+      120,
+      315
+     ]
+    },
+    {
+     "id": "fr_gouvernail_noun",
+     "box": [
+      580,
+      140,
+      220,
+      325
+     ]
+    },
+    {
+     "id": "fr_mat_noun",
+     "box": [
+      800,
+      230,
+      120,
+      250
+     ]
+    },
+    {
+     "id": "fr_corsaire_noun",
+     "box": [
+      920,
+      60,
+      165,
+      271
+     ]
+    },
+    {
+     "id": "fr_brigand_noun",
+     "box": [
+      1090,
+      180,
+      180,
+      120
+     ]
+    },
+    {
+     "id": "fr_hublot_noun",
+     "box": [
+      1131,
+      369,
+      149,
+      155
+     ]
+    },
+    {
+     "id": "fr_pirate_noun",
+     "box": [
+      1040,
+      525,
+      150,
+      195
+     ]
+    },
+    {
+     "id": "fr_butin_noun",
+     "box": [
+      681,
+      485,
+      330,
+      235
      ]
     }
    ]
