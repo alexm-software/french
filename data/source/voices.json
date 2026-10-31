@@ -1,0 +1,92 @@
+{
+  "_about": "ElevenLabs voices for the recorded audio (scripts/audio/build_audio.py). 'n' is the narrator: words, examples, expressions, listening passages, prayers. Every other key is a speaker name from the conversations (data/talk cast). A speaker missing here is read by the narrator. Changing a voice id makes new files for that speaker; delete the old ones with --prune.",
+  "model": "eleven_multilingual_v2",
+  "output_format": "mp3_22050_32",
+  "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "voices": {
+    "n": {
+      "id": "xgJyhAugJB6JKenNlaNw",
+      "name": "Antinéa",
+      "note": "narrator; clear standard French, female"
+    },
+    "Léa": {
+      "id": "L9J8xZmPSCimnHB0LjN1",
+      "name": "Cheyenne",
+      "note": "9-year-old girl; youngest-sounding female voice found"
+    },
+    "Inès": {
+      "id": "DmA5Za3LKQf1NQcbHfdZ",
+      "name": "Emilie"
+    },
+    "Tom": {
+      "id": "XEHPbuQ6nC1GvZLB0Ry9",
+      "name": "Roaninho",
+      "note": "young male"
+    },
+    "Maman": {
+      "id": "vbVMaJ70odxzaByBKoz4",
+      "name": "Le Village – Maman (Claire)",
+      "note": "designed voice: about forty, warm, relaxed"
+    },
+    "Papa": {
+      "id": "uNeQenZP9ilcQMhCHlP8",
+      "name": "Le Village – Papa (Marc)",
+      "note": "designed voice: early forties, calm, good-humored"
+    },
+    "Papi Henri": {
+      "id": "jbo2bM3sjEM1VuwZTQuJ",
+      "name": "Régis"
+    },
+    "Mme Roux": {
+      "id": "QGfpyFuk3rtPv4pRSQwp",
+      "name": "Sara"
+    },
+    "M. Roux": {
+      "id": "3r8pRm4HfmSf9lO6MOMl",
+      "name": "Aziz"
+    },
+    "Karim": {
+      "id": "VBVQNiyLCHKfd6fHFFeA",
+      "name": "Le Village – Karim (serveur)",
+      "note": "designed voice: young café waiter, warm and upbeat"
+    },
+    "Mme Petit": {
+      "id": "5OnMHwgTFgvPVwE8jP6B",
+      "name": "Anaïs"
+    },
+    "Père Antoine": {
+      "id": "6DEjyaHWnTHsvXM5Byys",
+      "name": "Hugo"
+    },
+    "Mme Lefort": {
+      "id": "mlIQEcTmPRMIHZApujDD",
+      "name": "Geneviève"
+    },
+    "M. Blanc": {
+      "id": "M8xXPW1xIZVqZLxYby5T",
+      "name": "Jean"
+    },
+    "Julien": {
+      "id": "vp2FCFmQCE4NzuQj9QNe",
+      "name": "Dorian"
+    },
+    "Sophie": {
+      "id": "uOw88F5bjqRiVuZLhXEA",
+      "name": "Victoria"
+    },
+    "L'employée": {
+      "id": "5Q0FrInkyFrvgLdTJVIQ",
+      "name": "Rania"
+    },
+    "Le touriste": {
+      "id": "iP95p4xoKVk53GoZ742B",
+      "name": "Chris",
+      "note": "American English voice: the tourist speaks English with a little French"
+    }
+  }
+}

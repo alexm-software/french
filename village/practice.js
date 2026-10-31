@@ -23,16 +23,16 @@ function itemById(bld,id){ var D=(window.VILLAGE_DATA||{})[bld]; if(!D) return n
 var synth=window.speechSynthesis, queue=null;
 function frVoices(){ if(!synth) return []; var v=synth.getVoices().filter(function(x){return /^fr/i.test(x.lang)});
   v.sort(function(a,b){ return (/^fr[-_]FR/i.test(b.lang)?1:0)-(/^fr[-_]FR/i.test(a.lang)?1:0) }); return v }
-function canSpeak(){ return !!synth&&V.hasVoice() }
-function stopSpeech(){ queue=null; if(synth) synth.cancel() }
-function speakOne(text,voice,rate,done){ if(!synth){ if(done) done(); return }
+function canSpeak(){ return V.hasVoice() }
+function stopSpeech(){ queue=null; V.stopAudio(); if(synth) synth.cancel() }
+function speakOne(text,voice,rate,done,who){ if(V.play(text,who||'n',rate,done)) return; if(!synth){ if(done) done(); return }
   var u=new SpeechSynthesisUtterance(text); u.lang='fr-FR'; if(voice) u.voice=voice; u.rate=rate||V.rate||0.85;
   u.onend=function(){ if(done) done() }; u.onerror=function(){ if(done) done() }; synth.speak(u) }
 // parts: [{text, who}], onPart(i) before each part, onEnd()
 function speakSeq(parts,onPart,onEnd,rate){ stopSpeech(); var q={k:0}; queue=q; var vs=frVoices(), who={}, n=0;
   function voiceFor(w){ if(!vs.length) return null; if(!(w in who)) who[w]=vs[(n++)%vs.length]; return who[w] }
   (function next(){ if(queue!==q) return; if(q.k>=parts.length){ queue=null; if(onEnd) onEnd(); return }
-    var p=parts[q.k]; if(onPart) onPart(q.k); q.k++; speakOne(p.text,voiceFor(p.who||''),rate,function(){ setTimeout(next,p.pause||250) }) })() }
+    var p=parts[q.k]; if(onPart) onPart(q.k); q.k++; speakOne(p.text,voiceFor(p.who||''),rate,function(){ setTimeout(next,p.pause||250) },p.who) })() }
 function sentences(t){ return (t.match(/[^.!?…]+[.!?…]+["»”]?\s*|[^.!?…]+$/g)||[t]).map(function(s){return s.trim()}).filter(Boolean) }
 V.onView.push(stopSpeech);
 

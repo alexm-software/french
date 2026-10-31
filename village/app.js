@@ -300,7 +300,8 @@ function renderSector(slug){
 var R=null, B=null, curKey=null;
 // small API for extras.js (search, recall, review, help, dialogues): hooks run after a room or a card renders
 var API=window.Village={onCard:[],onRoom:[],onView:[],openCard:function(it,from){openCard(it,from)},closeCard:function(){closeCard()},
-  speak:function(t){speak(t)},headword:function(it){return headword(it)},hasVoice:function(){return hasVoice()},
+  speak:function(t){speak(t)},play:function(t,who,rate,done){return play(t,who,rate,done)},stopAudio:function(){stopAudio()},hasAudio:function(t,who){return !!audioFor(t,who)},
+  headword:function(it){return headword(it)},hasVoice:function(){return hasVoice()},
   here:function(){return {view:view,bld:B,key:curKey,room:R}},roomHref:function(b,k){return roomHref(b,k)},
   loadData:function(b,cb){loadData(b,cb)},stage:function(){return stage}};
 function roomHref(bld,key){ return key===bld?'#/'+bld:'#/'+bld+'/'+key }
@@ -364,13 +365,37 @@ function renderRoom(bld,key){
   API.onRoom.forEach(function(f){ try{f(bld,key,R)}catch(e){console.error(e)} });
 }
 function headword(it){ if(it.verb||it.adj||it.adv) return it.fr; var a=it.art; return a==="l'"? "l'"+it.fr : a+' '+it.fr }
+// ---------- recorded audio: audio/index.js (scripts/audio/build_audio.py) lists the texts recorded per voice ----------
+// A text is found by a hash of its whitespace-normalized form; the same hash is computed in build_audio.py (akey).
+var AUD=null, player=null;
+function fnv(b,h){ for(var i=0;i<b.length;i++){ h^=b[i]; h=Math.imul(h,16777619)>>>0 } return h>>>0 }
+function hex8(n){ return ('0000000'+n.toString(16)).slice(-8) }
+function akey(t){ var b=new TextEncoder().encode(String(t).trim().replace(/\s+/g,' ')); return (hex8(fnv(b,2166136261))+hex8(fnv(b,84696351))).slice(0,12) }
+function loadAudio(){ if(!window.TextEncoder) return; var s=document.createElement('script'); s.src='audio/index.js'; s.async=true;
+  s.onload=function(){ var M=window.V2_AUDIO; if(!M||!M.h) return; var m={}, n=0;
+    Object.keys(M.h).forEach(function(sl){ var str=M.h[sl]; for(var i=0;i+12<=str.length;i+=12){ var k=str.substr(i,12); (m[k]=m[k]||[]).push(sl); n++ } });
+    if(n){ AUD={map:m,roles:M.r||{}}; document.documentElement.classList.add('has-audio') } };
+  document.head.appendChild(s) }
+// the file for this text in this speaker's voice, else the narrator's, else any voice that recorded it
+function audioFor(t,who){ if(!AUD||!t) return null; var k=akey(t), s=AUD.map[k]; if(!s) return null; var want=AUD.roles[who||'n']||'n';
+  return 'audio/'+(s.indexOf(want)>=0?want:s.indexOf('n')>=0?'n':s[0])+'/'+k+'.mp3' }
+function stopAudio(){ if(player){ var a=player; player=null; a.onended=a.onerror=null; a.pause() } }
+// plays the recording and returns true, or returns false (no recording: the caller uses the browser voice)
+function play(t,who,rate,done){ var src=audioFor(t,who); if(!src) return false; stopAudio(); if('speechSynthesis' in window) speechSynthesis.cancel();
+  var a=new Audio(src), fin=false; player=a; a.playbackRate=Math.min(2,Math.max(0.5,(rate||API.rate||0.85)/0.85));
+  function end(){ if(fin) return; fin=true; if(player===a) player=null; if(done) done() }
+  function fail(){ if(fin||player!==a) return; player=null; fin=true; tts(t,rate,done) }
+  a.onended=end; a.onerror=fail; var p=a.play(); if(p&&p.catch) p.catch(fail); return true }
+setTimeout(loadAudio,0);
 // ---------- speech (browser built-in, French voice) ----------
 var frVoice=null;
 function pickVoice(){ if(!('speechSynthesis' in window))return; var v=speechSynthesis.getVoices();
   frVoice=v.filter(function(x){return /^fr[-_]FR/i.test(x.lang)})[0]||v.filter(function(x){return /^fr/i.test(x.lang)})[0]||null }
 if('speechSynthesis' in window){pickVoice(); speechSynthesis.onvoiceschanged=pickVoice}
-function hasVoice(){ if(!('speechSynthesis' in window))return false; var v=speechSynthesis.getVoices(); return !v.length||!!frVoice }
-function speak(t){ if(!('speechSynthesis' in window))return; speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='fr-FR'; if(frVoice)u.voice=frVoice; u.rate=API.rate||0.85; speechSynthesis.speak(u) }
+function hasVoice(){ if(AUD) return true; if(!('speechSynthesis' in window))return false; var v=speechSynthesis.getVoices(); return !v.length||!!frVoice }
+function tts(t,rate,done){ if(!('speechSynthesis' in window)){ if(done) done(); return } speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='fr-FR'; if(frVoice)u.voice=frVoice; u.rate=rate||API.rate||0.85;
+  if(done){ u.onend=function(){done()}; u.onerror=function(){done()} } speechSynthesis.speak(u) }
+function speak(t){ if(play(t,'n')) return; tts(t) }
 var BERET={red:'#d8322f',green:'#3c8a3a',purple:'#7b3fa0',gold:'#e8b32a'};
 var GROUP={red:'-er verb: red beret',green:'-ir verb: green beret',purple:'-re verb: purple beret',gold:'irregular verb: gold beret'};
 function beretSvg(c){return '<svg viewBox="0 0 34 22" aria-hidden="true"><ellipse cx="17" cy="13" rx="15" ry="7.5" fill="'+c+'" stroke="#2b1d14" stroke-width="2"/><path d="M15 6 q2 -5 4 0" fill="'+c+'" stroke="#2b1d14" stroke-width="2"/><path d="M5 15 q12 5 24 0" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="2"/></svg>'}
@@ -437,7 +462,7 @@ function conjCell(v){ var p=String(v).split(' / '); if(p.length<2)return esc(v);
   var stem=function(x){return x.replace(/e?s?$/,'')}; // "est allé / est allée": a gender ending, not an alternative
   if(p.every(function(x){return stem(x)===stem(p[0])}))return esc(v);
   return esc(p[0])+'<span class="altform"> / '+esc(p.slice(1).join(' / '))+'</span>' }
-function closeCard(){ if(cardWrap.hidden)return; cardWrap.hidden=true; if('speechSynthesis' in window)speechSynthesis.cancel(); if(lastFocus&&lastFocus.focus)lastFocus.focus() }
+function closeCard(){ if(cardWrap.hidden)return; cardWrap.hidden=true; stopAudio(); if('speechSynthesis' in window)speechSynthesis.cancel(); if(lastFocus&&lastFocus.focus)lastFocus.focus() }
 function revealTab(b){ var tl=b.parentNode, x=b.offsetLeft-tl.offsetLeft, w=tl.clientWidth;
   if(x<tl.scrollLeft+8||x+b.offsetWidth>tl.scrollLeft+w-8) tl.scrollLeft=Math.max(0,x-(w-b.offsetWidth)/2) }
 function selectTense(key,focus){ curTense=key; card.querySelectorAll('.tab').forEach(function(b){var on=b.dataset.tense===key; b.setAttribute('aria-selected',on); b.tabIndex=on?0:-1; if(on){ if(focus)b.focus({preventScroll:true}); revealTab(b) }});

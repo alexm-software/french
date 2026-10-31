@@ -1,0 +1,2 @@
+// Built by scripts/audio/build_audio.py: which texts have a recording, per voice (12-character text hashes).
+window.V2_AUDIO={"r":{"n":"n","Léa":"lea","Inès":"ines","Tom":"tom","Maman":"maman","Papa":"papa","Papi Henri":"papi-henri","Mme Roux":"mme-roux","M. Roux":"m-roux","Karim":"karim","Mme Petit":"mme-petit","Père Antoine":"pere-antoine","Mme Lefort":"mme-lefort","M. Blanc":"m-blanc","Julien":"julien","Sophie":"sophie","L'employée":"l-employee","Le touriste":"le-touriste"},"h":{}};
