@@ -30,7 +30,10 @@
     "fr_ocean_noun",
     "fr_flot_noun",
     "fr_sable_noun",
-    "fr_rivage_noun"
+    "fr_rivage_noun",
+    "fr_debarquer_verb",
+    "fr_sombrer_verb",
+    "fr_chavirer_verb"
    ]
   },
   "cap": {
@@ -55,7 +58,8 @@
     "fr_parasol_noun",
     "fr_surf_noun",
     "fr_golfe_noun",
-    "fr_coquillage_noun"
+    "fr_coquillage_noun",
+    "fr_atterrir_verb"
    ]
   }
  },
@@ -64,7 +68,7 @@
    "name": "La plage",
    "room_id": "R_beach_01",
    "image": "plage/plage.jpg",
-   "alt": "A sunny beach painted in ink and gouache: a whale in a pink tutu leaping, an eel coiled round a palm island, a white mare galloping through the waves, a mermaid on a rock singing with a little wren on her finger, a dog digging on the stone seawall, an ice-cream cart among sandcastles, a girl in yellow by her sandcastle, a blue vase sunk in gray mud, a girl gasping at a huge curling wave, rubber ducks bobbing down a stream, two crabs squabbling over a sandcastle, an empty sea cave, a boy peering at a small blank brass-framed plaque in a glass case; on the headland a lighthouse, a diver and a dolphin. Wooden steps at the bottom left lead back to the valley and a sandy path at the bottom right leads to the dunes.",
+   "alt": "A sunny beach painted in ink and gouache: a whale in a pink tutu leaping, an eel coiled round a palm island, a white mare galloping through the waves, a mermaid on a rock singing with a little wren on her finger, a dog digging on the stone seawall, an ice-cream cart among sandcastles, a girl in yellow by her sandcastle, a blue vase sunk in gray mud, a girl gasping at a huge curling wave, rubber ducks bobbing down a stream, two crabs squabbling over a sandcastle, Monsieur Verbe in a red beret kneeling by a tide pool where his toy boat sinks beside a floating sombrero, Monsieur Verbe in a red beret stepping off a rowing boat while a little dog barks, Monsieur Verbe in a red beret soaked and shivering in a capsizing rowboat, an empty sea cave, a boy peering at a small blank brass-framed plaque in a glass case; on the headland a lighthouse, a diver and a dolphin. Wooden steps at the bottom left lead back to the valley and a sandy path at the bottom right leads to the dunes.",
    "nameplate": [
     50,
     4.5
@@ -173,7 +177,7 @@
      ],
      "labelAt": [
       512,
-      468
+      465
      ]
     },
     {
@@ -206,19 +210,46 @@
     {
      "id": "fr_sable_noun",
      "box": [
-      670,
+      676,
       510,
-      210,
+      204,
       105
      ]
     },
     {
      "id": "fr_rivage_noun",
      "box": [
-      1020,
+      1080,
       400,
-      240,
+      180,
       170
+     ]
+    },
+    {
+     "id": "fr_debarquer_verb",
+     "box": [
+      882,
+      425,
+      195,
+      160
+     ]
+    },
+    {
+     "id": "fr_sombrer_verb",
+     "box": [
+      500,
+      496,
+      174,
+      181
+     ]
+    },
+    {
+     "id": "fr_chavirer_verb",
+     "box": [
+      461,
+      330,
+      131,
+      118
      ]
     }
    ],
@@ -305,7 +336,7 @@
    "room_id": "R_beach_02",
    "image": "plage/dunes.jpg",
    "backTo": "plage",
-   "alt": "The far end of the beach among the sand dunes, painted in ink and gouache: a girl in a sunhat sand-boarding down a dune on a red surfboard, a swimmer diving into the sea, an empty sailboat drifting toward a reef, an oasis with a palm where camels wait their turn and a wild rabbit drinks, a camel staring at a mirage of a lemonade pool, a boy under a striped parasol beside a sun in sunglasses, a boy surfing with a seagull on his head, a golf ball splashing into the gulf, and cookie-shaped seashells with crabs nibbling them; a sandy roped path at the bottom left leads back to the beach.",
+   "alt": "The far end of the beach among the sand dunes, painted in ink and gouache: a girl in a sunhat sand-boarding down a dune on a red surfboard, a swimmer diving into the sea, an empty sailboat drifting toward a reef, an oasis with a palm where camels wait their turn and a wild rabbit drinks, a camel staring at a mirage of a lemonade pool, a boy under a striped parasol beside a sun in sunglasses, a boy surfing with a seagull on his head, a golf ball splashing into the gulf, cookie-shaped seashells with crabs nibbling them, and Monsieur Verbe in a green beret landing on the sand from a big jump beside a little terrier; a sandy roped path at the bottom left leads back to the beach.",
    "nameplate": [
     50,
     4.5
@@ -359,9 +390,9 @@
     {
      "id": "fr_oasis_noun",
      "box": [
-      465,
+      487,
       365,
-      240,
+      218,
       225
      ]
     },
@@ -412,6 +443,15 @@
      "labelAt": [
       1012,
       672
+     ]
+    },
+    {
+     "id": "fr_atterrir_verb",
+     "box": [
+      301,
+      392,
+      182,
+      215
      ]
     }
    ],

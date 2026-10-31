@@ -30,11 +30,9 @@
   "st_ciel": {
    "vocabRoom": "ST_nature_seg001",
    "only": [
-    "fr_voler_verb",
     "fr_pleuvoir_verb",
     "fr_planter_verb",
     "fr_couler_verb",
-    "fr_chasser_verb",
     "fr_bruler_verb"
    ]
   },
@@ -43,7 +41,6 @@
    "only": [
     "fr_luire_verb",
     "fr_briller_verb",
-    "fr_illuminer_verb",
     "fr_ensoleiller_verb",
     "fr_rallumer_verb",
     "fr_eclaircir_verb"
@@ -64,7 +61,6 @@
    "vocabRoom": "ST_nature_seg004",
    "only": [
     "fr_fleurir_verb",
-    "fr_recolter_verb",
     "fr_tacher_verb_2",
     "fr_mouiller_verb",
     "fr_planer_verb",
@@ -88,7 +84,7 @@
    "name": "Allée des Averses",
    "room_id": "ST_nature_seg001",
    "image": "st_ciel/st_ciel.jpg",
-   "alt": "A path winding through green park fields under a huge rainbow, with a wooden fence, a stream, a cabbage patch and a picnic table, and four little round painted doors in the distance: yellow in a grassy mound, green in a hedge, red in a haystack, blue in a stone wall. Monsieur Verbe flaps his arms and flies with the swallows; stands under his umbrella as a little cloud rains on him, in a gold beret; plants a sapling; watches his paper boat float down the stream; chases the crows off the cabbages with a dish towel; and snatches his hand back from a steaming pie. The circus tent at the top left leads back to the park.",
+   "alt": "A path winding through green park fields under a huge rainbow, with swallows in the sky, a wooden fence, a stream, a cabbage patch and a picnic table, and four little round painted doors in the distance: yellow in a grassy mound, green in a hedge, red in a haystack, blue in a stone wall. Monsieur Verbe stands under his umbrella as a little cloud rains on him, in a gold beret; plants a sapling; watches his paper boat float down the stream; and snatches his hand back from a steaming pie. The circus tent at the top left leads back to the park.",
    "nameplate": [
     50,
     4.5
@@ -151,15 +147,6 @@
    "zooms": [],
    "items": [
     {
-     "id": "fr_voler_verb",
-     "box": [
-      77,
-      45,
-      190,
-      415
-     ]
-    },
-    {
      "id": "fr_pleuvoir_verb",
      "box": [
       275,
@@ -187,15 +174,6 @@
      ]
     },
     {
-     "id": "fr_chasser_verb",
-     "box": [
-      865,
-      325,
-      190,
-      345
-     ]
-    },
-    {
      "id": "fr_bruler_verb",
      "box": [
       1060,
@@ -211,7 +189,7 @@
    "room_id": "ST_nature_seg002",
    "image": "st_ciel/soleil.jpg",
    "backTo": "st_ciel",
-   "alt": "A sunny corner of the park fields under a smiling sun, with a whitewashed cottage with blue shutters, a blossom tree, an old street lamp and a dark hollow under the hedge: Monsieur Verbe peers into the hollow at a black cat's gleaming eyes in a gold beret; beams up at the sun in his sunglasses; hangs glowing lanterns on the little tree; flings open the shutters to the sunshine; pulls the chain to relight the street lamp; and sponges the last gray cloud out of the sky in a green beret. The round yellow door in the grassy mound leads back.",
+   "alt": "A sunny corner of the park fields under a smiling sun, with a whitewashed cottage with blue shutters, a blossom tree, an old street lamp and a dark hollow under the hedge: Monsieur Verbe peers into the hollow at a black cat's gleaming eyes in a gold beret; beams up at the sun in his sunglasses; flings open the shutters to the sunshine; pulls the chain to relight the street lamp; and sponges the last gray cloud out of the sky in a green beret. The round yellow door in the grassy mound leads back.",
    "nameplate": [
     50,
     4.5
@@ -245,17 +223,8 @@
      "box": [
       381,
       368,
-      113,
+      142,
       265
-     ]
-    },
-    {
-     "id": "fr_illuminer_verb",
-     "box": [
-      500,
-      245,
-      225,
-      380
      ]
     },
     {
@@ -373,7 +342,7 @@
    "room_id": "ST_nature_seg004",
    "image": "st_ciel/moissons.jpg",
    "backTo": "st_ciel",
-   "alt": "A golden harvest field at the edge of the park, with hay bales, a tomato patch, a sprinkler, an eagle gliding overhead and autumn leaves drifting: Monsieur Verbe gapes at a flower box bursting into bloom in a green beret; picks ripe tomatoes into his basket; stares at a coffee stain on his white apron; stands dripping in the sprinkler's spray; spreads his arms to glide like the eagle; and leafs through a big book on a hay bale as leaves flutter out. The round red door in the haystack leads back.",
+   "alt": "A golden harvest field at the edge of the park, with hay bales, a tomato patch, a sprinkler, an eagle gliding overhead and autumn leaves drifting: Monsieur Verbe gapes at a flower box bursting into bloom in a green beret; stares at a coffee stain on his white apron; stands dripping in the sprinkler's spray; spreads his arms to glide like the eagle; and leafs through a big book on a hay bale as leaves flutter out. The round red door in the haystack leads back.",
    "nameplate": [
     50,
     4.5
@@ -400,15 +369,6 @@
       256,
       125,
       300
-     ]
-    },
-    {
-     "id": "fr_recolter_verb",
-     "box": [
-      380,
-      395,
-      185,
-      280
      ]
     },
     {

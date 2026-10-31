@@ -11,13 +11,37 @@
    "short": "La salle"
   },
   {
+   "key": "bar",
+   "short": "Le bar"
+  },
+  {
    "key": "terrasse",
    "short": "La terrasse"
   }
  ],
  "planned": {
   "cafe": {
-   "v1": "cafe/cafe"
+   "v1": "cafe/cafe",
+   "only": [
+    "fr_table_noun",
+    "fr_chaise_noun",
+    "fr_carte_noun",
+    "fr_addition_noun",
+    "fr_commander_verb",
+    "fr_serveur_noun",
+    "fr_pourboire_noun"
+   ]
+  },
+  "bar": {
+   "v1": "cafe/cafe",
+   "only": [
+    "fr_boisson_noun",
+    "fr_boire_verb",
+    "fr_asseoir_verb",
+    "fr_the_noun",
+    "fr_jus_noun",
+    "fr_sandwich_noun"
+   ]
   },
   "comptoir": {
    "v1": "cafe/comptoir",
@@ -42,17 +66,17 @@
   "cafe": {
    "name": "La salle du café · Café Room",
    "image": "cafe/cafe.jpg",
-   "alt": "Inside the village café, painted in ink and gouache: a tabby cat dancing on a little round table, grandma sunk laughing into a huge pink chair cushion, a go-kart carrying the menu, a green boa holding up a pink lemonade, Monsieur Verbe in a red beret raising a finger to order, Monsieur Verbe in a blue beret gulping a glass of water, Monsieur Verbe in a gold beret sitting down with a hand mirror, the bill curling across the floor, a little boy kneeling on the floor biting a giant sandwich that pours out sand, the waiter swerving with two plates of croissants, a baby giraffe on four legs sipping orange juice through a curly straw from a glass on a stool, a poor boar in patched overalls catching a coin in his cup, a ginger cat by a cup of tea on the counter and shelves of treats; a door on the left leads out to the village and the open double door at the back leads to the terrace.",
+   "alt": "Inside the village café's dining room, painted in ink and gouache: a tabby cat dancing on a little round marble table beside grandma laughing in her chair, a little girl driving a red go-kart carrying the menu, an old waiter writing a bill that curls down toward the floor, Monsieur Verbe in a red beret raising a finger to order, the young waiter swerving with two plates of croissants and a boar in patched overalls dropping a coin into his cup; the glazed door on the left leads out to the village, the open double door at the back leads to the terrace and the stone archway on the right leads to the bar.",
    "nameplate": [
     50,
     4.5
    ],
    "mapExit": {
     "box": [
-     0,
-     90,
-     44,
-     420
+     95,
+     20,
+     230,
+     215
     ],
     "label": "Le village"
    },
@@ -62,10 +86,110 @@
      "label": "La terrasse",
      "hint": "Out through the open double door to the terrace",
      "hit": [
-      958,
+      610,
       70,
-      114,
-      320
+      170,
+      150
+     ]
+    },
+    {
+     "to": "bar",
+     "label": "Le bar",
+     "hint": "Through the stone archway to the bar",
+     "hit": [
+      1100,
+      30,
+      170,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_table_noun",
+     "box": [
+      180,
+      290,
+      140,
+      200
+     ]
+    },
+    {
+     "id": "fr_chaise_noun",
+     "box": [
+      77,
+      240,
+      100,
+      400
+     ]
+    },
+    {
+     "id": "fr_carte_noun",
+     "box": [
+      335,
+      470,
+      245,
+      207
+     ]
+    },
+    {
+     "id": "fr_addition_noun",
+     "box": [
+      330,
+      120,
+      100,
+      340
+     ]
+    },
+    {
+     "id": "fr_commander_verb",
+     "box": [
+      585,
+      230,
+      200,
+      300
+     ]
+    },
+    {
+     "id": "fr_serveur_noun",
+     "box": [
+      790,
+      150,
+      190,
+      380
+     ]
+    },
+    {
+     "id": "fr_pourboire_noun",
+     "box": [
+      985,
+      370,
+      215,
+      300
+     ]
+    }
+   ]
+  },
+  "bar": {
+   "name": "Le bar du café · Café Bar",
+   "image": "cafe/bar.jpg",
+   "backTo": "cafe",
+   "alt": "The café's zinc bar counter, painted in ink and gouache: a green boa singing with a pink lemonade, Monsieur Verbe in a gold beret gulping a huge glass of water, Monsieur Verbe in a gold beret sitting down on the last free chair and admiring himself in a hand mirror, a ginger cat on the counter by a cup of tea, a little boy kneeling on the floor biting a giant sandwich that pours out sand and a baby giraffe leaning over a tall glass of orange juice with a straw standing on the counter, with the café's treat shelves on the wall above the counter; the stone archway on the left leads back to the dining room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "cafe",
+     "label": "La salle",
+     "hint": "Back through the stone archway to the dining room",
+     "hit": [
+      90,
+      30,
+      180,
+      190
      ]
     }
    ],
@@ -73,159 +197,72 @@
     {
      "to": "comptoir",
      "label": "Les étagères",
-     "hint": "Look closely at the shelves behind the counter",
+     "hint": "Look closely at the shelves above the bar counter",
      "at": [
-      1186,
-      150
+      940,
+      60
      ],
      "obj": [
-      1094,
-      16,
-      186,
-      250
+      520,
+      30,
+      450,
+      200
      ]
     }
    ],
    "items": [
     {
-     "id": "fr_table_noun",
-     "box": [
-      47,
-      258,
-      140,
-      282
-     ]
-    },
-    {
-     "id": "fr_chaise_noun",
-     "box": [
-      190,
-      270,
-      210,
-      268
-     ]
-    },
-    {
-     "id": "fr_carte_noun",
-     "box": [
-      40,
-      548,
-      296,
-      160
-     ],
-     "labelAt": [
-      188,
-      680
-     ]
-    },
-    {
      "id": "fr_boisson_noun",
      "box": [
-      404,
-      440,
-      140,
-      258
-     ],
-     "labelAt": [
-      474,
-      680
-     ]
-    },
-    {
-     "id": "fr_commander_verb",
-     "box": [
-      425,
+      77,
+      235,
       190,
-      110,
-      180
+      440
      ]
     },
     {
      "id": "fr_boire_verb",
      "box": [
-      538,
-      226,
-      104,
-      142
-     ]
-    },
-    {
-     "id": "fr_addition_noun",
-     "box": [
-      546,
-      372,
-      70,
-      104
+      275,
+      140,
+      235,
+      235
      ]
     },
     {
      "id": "fr_asseoir_verb",
      "box": [
-      646,
-      196,
-      124,
-      284
-     ],
-     "labelAt": [
-      704,
-      440
-     ]
-    },
-    {
-     "id": "fr_sandwich_noun",
-     "box": [
-      600,
-      480,
-      180,
-      170
-     ],
-     "labelAt": [
-      738,
-      566
-     ]
-    },
-    {
-     "id": "fr_serveur_noun",
-     "box": [
-      774,
-      140,
-      180,
-      260
-     ]
-    },
-    {
-     "id": "fr_jus_noun",
-     "box": [
-      810,
-      404,
-      188,
-      300
-     ],
-     "labelAt": [
-      904,
-      680
-     ]
-    },
-    {
-     "id": "fr_pourboire_noun",
-     "box": [
-      1004,
-      420,
-      190,
-      295
-     ],
-     "labelAt": [
-      1099,
-      680
+      515,
+      235,
+      172,
+      435
      ]
     },
     {
      "id": "fr_the_noun",
      "box": [
-      1076,
-      272,
+      712,
+      270,
       150,
-      134
+      130
+     ]
+    },
+    {
+     "id": "fr_jus_noun",
+     "box": [
+      872,
+      240,
+      326,
+      190
+     ]
+    },
+    {
+     "id": "fr_sandwich_noun",
+     "box": [
+      690,
+      440,
+      195,
+      237
      ]
     }
    ]
@@ -233,8 +270,8 @@
   "comptoir": {
    "name": "Les étagères · Counter Shelves",
    "image": "cafe/comptoir.jpg",
-   "parent": "cafe",
-   "alt": "A close-up of the shelves behind the café counter, painted in ink and gouache: a laughing little boy in an apron tossing a cup of coffee into the air, a napkin folded into a swan beside a little bell, a sleepy man in a striped nightcap hugging a cup of black coffee, a croissant under a glowing crescent moon, three scoops of ice cream in a tall glass, a kitten asleep in a breakfast bowl and a glass of water shading its eyes.",
+   "parent": "bar",
+   "alt": "A close-up of the shelves above the café bar counter, painted in ink and gouache: a laughing little boy in an apron tossing a cup of coffee into the air, a napkin folded into a swan beside a little bell, a sleepy man in a striped nightcap hugging a cup of black coffee, a croissant under a glowing crescent moon, three scoops of ice cream in a tall glass, a kitten asleep in a breakfast bowl and a glass of water shading its eyes.",
    "doors": [],
    "zooms": [],
    "items": [

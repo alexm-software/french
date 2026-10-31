@@ -659,7 +659,7 @@ L = json.loads(r'''{
       "name": "Le porte-bagages",
       "image": "monde/bagages.jpg",
       "parent": "cartes",
-      "alt": "Close-up of the toy shelf: a girl doll with a flower posing on an X on a chart, a blue-and-white vase on a stone base, two child dolls pulling a rope opposite ways, a ladybird between the points of brass dividers, a mouse putting down a wedge of cheese, three ducklings in a line and a snail inside a ring of sand.",
+      "alt": "Close-up of the toy shelf: a girl doll with a flower posing on an X on a chart, a blue-and-white vase on a stone base, two child dolls pulling a rope opposite ways, a ladybird between the points of brass dividers, a little toy doll kneeling to put down one marble beside a bag of marbles, three ducklings in a line and a snail inside a ring of sand.",
       "doors": [],
       "zooms": [],
       "items": [

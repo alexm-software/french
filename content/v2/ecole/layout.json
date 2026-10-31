@@ -5,6 +5,10 @@
  "roomList": [
   {
    "key": "ecole",
+   "short": "Le couloir"
+  },
+  {
+   "key": "classe",
    "short": "L'école"
   },
   {
@@ -50,22 +54,134 @@
  ],
  "rooms": {
   "ecole": {
-   "name": "L'école : la salle de classe · School: the Classroom",
-   "image": "ecole/ecole.jpg",
-   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table with the alphabet chalked on it, a goldfish pinning a card to the notice board, a globe with blue Jell-O, a young doe with a sack on her back and an exercise book folded into a kayak; an open green door on the left leads to the school garden, a half-open wooden door at the back shows the red curtains of the school theater and a teal door on the right leads to the math classroom.",
+   "name": "Le couloir · School Hallway",
+   "image": "ecole/couloir.jpg",
+   "alt": "The school hallway painted in ink and gouache, a warm wooden floor under a big wall clock: on the left a girl in a purple dress kisses her teddy bear while holding a tall shepherd's crook bent like a question mark; a girl kneels at a little easel blackboard and chalks her name beside a toy giraffe; a surprised boy points at a big moth nibbling a hole in an open dictionary on a lectern; a boy reads the newspaper while his friend tickles him. Children walk between the open doors: the blue door shows the classroom with its blackboard and globe, the double doors show the theater's red curtains and stage, the brown door shows the library's bookshelves, the teal door shows the math class with its shapes and abacus, and the blue door on the right shows the canteen's tables; the big front door on the left opens onto the village square with its fountain, and the glass door on the right opens onto the sunny playground.",
    "nameplate": [
-    66.5,
-    5
+    28,
+    4
    ],
    "mapExit": {
     "box": [
-     0,
-     40,
-     148,
-     410
+     25,
+     105,
+     135,
+     380
     ],
     "label": "Le village"
    },
+   "doors": [
+    {
+     "to": "classe",
+     "label": "L'école",
+     "hint": "Through the blue door to the classroom",
+     "hit": [
+      380,
+      130,
+      105,
+      250
+     ]
+    },
+    {
+     "to": "theatre",
+     "label": "Le théâtre de l'école",
+     "hint": "Through the double doors to the school theater",
+     "hit": [
+      578,
+      120,
+      118,
+      210
+     ]
+    },
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "Through the brown door to the school library",
+     "hit": [
+      765,
+      150,
+      95,
+      225
+     ]
+    },
+    {
+     "to": "maths",
+     "label": "La classe de maths",
+     "hint": "Through the teal door to the math classroom",
+     "hit": [
+      890,
+      130,
+      85,
+      240
+     ]
+    },
+    {
+     "to": "cantine",
+     "label": "La cantine",
+     "hint": "Through the blue door to the school canteen",
+     "hit": [
+      1056,
+      155,
+      75,
+      220
+     ]
+    },
+    {
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Out through the glass door to the playground",
+     "hit": [
+      1145,
+      110,
+      135,
+      370
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_question_noun",
+     "box": [
+      165,
+      345,
+      140,
+      345
+     ]
+    },
+    {
+     "id": "fr_orthographe_noun",
+     "box": [
+      350,
+      425,
+      275,
+      260
+     ]
+    },
+    {
+     "id": "fr_mot_noun",
+     "box": [
+      700,
+      410,
+      212,
+      290
+     ]
+    },
+    {
+     "id": "fr_article_noun",
+     "box": [
+      916,
+      380,
+      225,
+      310
+     ]
+    }
+   ]
+  },
+  "classe": {
+   "name": "L'école : la salle de classe · School: the Classroom",
+   "image": "ecole/ecole.jpg",
+   "alt": "The village classroom painted in ink and gouache: the teacher reads standing on a blue mattress, a crayfish holds chalk, a sun in glasses gives a lesson at an easel, Monsieur Verbe listens to a white dove, reads with a prawn and bursts through a finish ribbon, a chalkboard on its own table with the alphabet chalked on it, a goldfish pinning a card to the notice board, a globe with blue Jell-O, a young doe with a sack on her back and an exercise book folded into a kayak; an open green door on the left leads back to the school hallway, its clock, coat pegs and red and blue doors showing through, a half-open wooden door at the back shows the red curtains of the school theater and a teal door on the right leads to the math classroom.",
    "doors": [
     {
      "to": "maths",
@@ -90,9 +206,9 @@
      ]
     },
     {
-     "to": "jardin",
-     "label": "Le jardin de l'école",
-     "hint": "Through the open green door to the school garden",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the open green door to the hallway",
      "hit": [
       10,
       40,
@@ -264,12 +380,13 @@
       95
      ]
     }
-   ]
+   ],
+   "backTo": "ecole"
   },
   "trousse": {
    "name": "La trousse · Pencil Case",
    "image": "ecole/trousse.jpg",
-   "parent": "ecole",
+   "parent": "classe",
    "alt": "Close-up of the desk with the open blue pencil case: a ruler with a crown and red cape, a collie puppy with its paw stuck to a glue bottle, a pink eraser in a silver gum wrapper, a pencil in a rainbow crayon wrapper and scissors riding a tiny wooden seesaw.",
    "doors": [],
    "zooms": [],
@@ -325,12 +442,12 @@
    "name": "La classe de maths · Math Class",
    "image": "ecole/maths.jpg",
    "backTo": "ecole",
-   "alt": "The math classroom painted in ink and gouache: a pyramid peering through a spyglass, a star wrapped in a towel, a ball in a blue bowl on a stool, a red arrow in a target with a lightning flash, Monsieur Verbe adding a giraffe to a toy zoo, dividing a pizza in goggles and flippers and measuring a tall sunflower, the teacher's desk in front, an orange hoop, a musical triangle, a smiling ice cube, a big abacus with a toy bull on top and a blue square driving a red toy car; the open door on the left leads back to the classroom and the open garden door at the back leads out to the playground.",
+   "alt": "The math classroom painted in ink and gouache: a pyramid peering through a spyglass, a star wrapped in a towel, a ball in a blue bowl on a stool, a red arrow in a target with a lightning flash, Monsieur Verbe adding a giraffe to a toy zoo, dividing a pizza in goggles and flippers and measuring a tall sunflower, the teacher's desk in front, an orange hoop, a musical triangle, a smiling ice cube, a big abacus with a toy bull on top and a blue square driving a red toy car; the open door on the left leads back to the classroom and the open door at the back leads to the school hallway.",
    "doors": [
     {
-     "to": "ecole",
+     "to": "classe",
      "label": "L'école",
-     "hint": "Back through the door to the classroom",
+     "hint": "Through the door to the classroom",
      "hit": [
       215,
       45,
@@ -339,9 +456,9 @@
      ]
     },
     {
-     "to": "recre",
-     "label": "La cour de récré",
-     "hint": "Go out through the garden door to the playground",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the door at the back to the hallway",
      "hit": [
       604,
       40,
@@ -561,18 +678,73 @@
   "recre": {
    "name": "La cour de récré · Playground",
    "image": "ecole/recre.jpg",
-   "backTo": "maths",
-   "alt": "The sunny school playground painted in ink and gouache: twins in yellow dresses shrugging, a girl juggling six balls by a red see-saw, a farmer boy carrying eight sheaves of wheat on a pole (four on each side), a van with twenty crates in five rows of four, a tennis girl with seven balls in a row by her tipped-over basket, a toy boat sunk in a pond with five ducks, a mother cat with three kittens, a boy throwing three beanbags at a hoop, a boy pushing away a stack of nine pancakes, a girl holding up ten fingers, and in the bottom-left corner a little school fair with two striped stalls, a tombola wheel and a family walking up; the green door on the left leads back to the math class.",
+   "backTo": "ecole",
+   "alt": "The sunny school playground painted in ink and gouache: twins in yellow dresses shrugging, a girl juggling six balls by a red see-saw, a farmer boy carrying eight sheaves of wheat, a van with twenty crates, a tennis girl with seven balls in a row by her basket, a toy boat sunk in a pond with five ducks, a mother cat with three kittens, a boy throwing three beanbags at a hoop, a boy pushing away a stack of nine pancakes, a girl holding up ten fingers, and in the bottom-left corner a little school fair with two striped stalls and a tombola wheel; the green door in the school building on the left shows the hallway and its clock, the green door beside it opens onto the sports field and its red track, a doorway under the bunting leads to the fête courtyard, a white garden gate opens onto the vegetable garden, the covered yard's timber roof stands on the right and a wooden gate in the fence at the bottom right leads to the farmyard.",
    "doors": [
     {
-     "to": "maths",
-     "label": "La classe de maths",
-     "hint": "Back through the green door to the math class",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the school door to the hallway",
+     "hit": [
+      30,
+      130,
+      165,
+      235
+     ]
+    },
+    {
+     "to": "terrain",
+     "label": "Le terrain de sport",
+     "hint": "Through the green door to the sports field",
      "hit": [
       244,
       135,
       109,
       202
+     ]
+    },
+    {
+     "to": "fete",
+     "label": "La fête de l'école",
+     "hint": "Through the gateway to the school fête",
+     "hit": [
+      882,
+      130,
+      62,
+      135
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin de l'école",
+     "hint": "Through the garden gate to the school garden",
+     "hit": [
+      946,
+      205,
+      170,
+      165
+     ]
+    },
+    {
+     "to": "preau",
+     "label": "Le préau",
+     "hint": "Over to the covered yard",
+     "hit": [
+      1125,
+      140,
+      155,
+      190
+     ]
+    },
+    {
+     "to": "basse_cour",
+     "label": "La basse-cour",
+     "hint": "Through the gap in the fence to the farmyard",
+     "hit": [
+      1165,
+      440,
+      115,
+      215
      ]
     }
    ],
@@ -633,10 +805,10 @@
     {
      "id": "fr_sept_num",
      "box": [
-      744,
-      188,
-      170,
-      144
+      745,
+      185,
+      135,
+      146
      ]
     },
     {
@@ -690,20 +862,8 @@
    "name": "La kermesse · School Fair",
    "image": "ecole/kermesse.jpg",
    "parent": "recre",
-   "alt": "The school fair painted in ink and gouache: families stroll between three striped stalls; an empty nest sits on the blue book stall roof, which holds nineteen books (ten above, nine below); a plush cat with a lit torch sits on the red candy stall roof, with eighteen wrapped candies in three rows of six beside an empty jar; the orange stall has a big oozing cheese and twelve slices; in front are a pyramid of fifteen cans, a tray of fifteen dice with two more stacked on top, and thirteen trays standing in a row; at the front a foosball game with eleven little players, a green parrot on its perch, a tombola wheel, a girl running with a windmill and spilled popcorn; the green door on the left leads back to the playground.",
-   "doors": [
-    {
-     "to": "recre",
-     "label": "La cour de récré",
-     "hint": "Back through the green door to the playground",
-     "hit": [
-      200,
-      115,
-      110,
-      190
-     ]
-    }
-   ],
+   "alt": "The school fair painted in ink and gouache: families stroll between three striped stalls; an empty nest sits on the blue book stall roof, which holds nineteen books (ten above, nine below); a plush cat with a lit torch sits on the red candy stall roof, with eighteen wrapped candies in three rows of six beside an empty jar; the orange stall has a big oozing cheese and twelve slices; in front are a pyramid of fifteen cans, a tray of fifteen dice with two more stacked on top, and thirteen trays standing in a row; at the front a foosball game with eleven little players, a green parrot on its perch, a tombola wheel, a girl running with a windmill and spilled popcorn; the green door of the school building stands open on the left.",
+   "doors": [],
    "zooms": [],
    "items": [
     {
@@ -791,9 +951,9 @@
      "id": "fr_seize_num",
      "box": [
       800,
-      505,
-      107,
-      172
+      465,
+      110,
+      160
      ]
     }
    ]
@@ -802,50 +962,28 @@
    "name": "Le théâtre de l'école · School Theater",
    "image": "ecole/theatre.jpg",
    "backTo": "ecole",
-   "alt": "The school theater painted in ink and gouache: under bunting and spotlights a little diva in pink sings la-la-la, a boy lugs a big sack over his shoulder, a girl in a grass skirt wears many flower leis and a striped strongman lifts a huge iron weight; in front of the stage a child dressed as the Wizard of Oz in a green robe points to a row of little painted doors, a mime holds up one finger, a girl in pink holds up one giant wooden spoon and a boy hugs his teddy; a model village with a river, boats and a cathedral sits on a table on the left, rows of chairs face the stage, costumes hang on a rail the open door on the right leads back to the classroom and the open garden door on the left, by the bookcase, looks out onto the sports field and its red running track; an arch on the far left opens onto the school library's bookshelves and an arch on the far right onto the fête courtyard with its maypole and bunting.",
+   "alt": "The school's salle des fêtes painted in ink and gouache, an enclosed hall with a wooden stage framed by a proscenium arch, red velvet curtains, spotlights and bunting, and a painted village street as the backdrop: on stage a little diva in pink sings la-la-la, a boy lugs a big sack over his shoulder, a girl wears many flower leis and a sturdy boy heaves a huge iron weight over his head; in front of the stage a child dressed as the Wizard of Oz in a green robe points to a row of little painted doors, a boy holds up one finger, a girl in pink holds up one giant wooden spoon and a boy hugs his teddy; a model village with a river, boats and a cathedral sits on a table on the left and rows of wooden chairs face the stage; the green side door on the left opens onto the classroom, a wooden door on the right stands ajar on the library's bookshelves, and the blue glass double door on the far right leads back to the school hallway.",
    "doors": [
     {
-     "to": "ecole",
+     "to": "classe",
      "label": "L'école",
-     "hint": "Back through the open door to the classroom",
+     "hint": "Through the side door on the left to the classroom",
      "hit": [
-      920,
-      150,
-      72,
-      255
-     ]
-    },
-    {
-     "to": "terrain",
-     "label": "Le terrain de sport",
-     "hint": "Through the open garden door to the sports field",
-     "hit": [
-      186,
-      110,
+      20,
       100,
-      225
+      165,
+      320
      ]
     },
     {
-     "to": "bibliotheque",
-     "label": "La bibliothèque",
-     "hint": "Through the arch on the left to the school library",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the double doors to the hallway",
      "hit": [
-      50,
-      130,
-      120,
-      240
-     ]
-    },
-    {
-     "to": "fete",
-     "label": "La fête de l'école",
-     "hint": "Through the arch on the right to the school fête",
-     "hit": [
-      1048,
-      130,
-      100,
-      240
+      1068,
+      95,
+      190,
+      460
      ]
     }
    ],
@@ -855,14 +993,14 @@
      "label": "la maquette",
      "hint": "Look closely at the model village on the table",
      "at": [
-      300,
-      560
+      317,
+      487
      ],
      "obj": [
-      128,
-      386,
-      345,
-      240
+      120,
+      375,
+      395,
+      225
      ]
     }
    ],
@@ -871,72 +1009,72 @@
      "id": "fr_la_det",
      "box": [
       352,
-      200,
+      175,
       92,
-      206
+      232
      ]
     },
     {
      "id": "fr_le_det",
      "box": [
       448,
-      232,
-      92,
-      150
+      231,
+      94,
+      141
      ]
     },
     {
      "id": "fr_les_det",
      "box": [
-      572,
+      575,
       200,
-      66,
-      135
+      75,
+      172
      ]
     },
     {
      "id": "fr_aux_det",
      "box": [
-      480,
-      384,
-      158,
-      170
+      475,
+      375,
+      175,
+      190
      ]
     },
     {
      "id": "fr_un_det",
      "box": [
-      640,
-      295,
-      58,
-      240
+      659,
+      330,
+      80,
+      220
      ]
     },
     {
      "id": "fr_ton_det",
      "box": [
-      700,
-      140,
-      72,
-      130
+      691,
+      130,
+      70,
+      195
      ]
     },
     {
      "id": "fr_une_det",
      "box": [
-      744,
-      272,
-      84,
-      265
+      762,
+      275,
+      72,
+      275
      ]
     },
     {
      "id": "fr_mon_det",
      "box": [
-      832,
-      362,
-      84,
-      190
+      836,
+      375,
+      74,
+      205
      ]
     }
    ]
@@ -945,62 +1083,62 @@
    "name": "La maquette · The Model Village",
    "image": "ecole/maquette.jpg",
    "parent": "theatre",
-   "alt": "Close-up of the model village on the theater table: two boys hold up their shiny fishing lures, a boy pushes his toy sailing ship along the river, a rowing boat waits with its oar, a little girl points at the model cathedral, a girl holds a bunch of daisies and a boy catches dew drops from a big leaf in his cup; tiny houses, a bridge, a street lamp and trees all around.",
+   "alt": "Close-up of the model village on its wooden table in the school theater, framed by heavy red stage curtains with gold tassels and a row of bunting: two boys hold up their shiny fishing lures, a little girl points at the model cathedral while holding a bunch of daisies, and a boy catches dew drops from a big leaf in his cup; a child's hand reaches in to push the toy sailing ship along the model river, and a little rowing boat waits with its oar; tiny houses, a stone bridge, a street lamp and little trees all around.",
    "doors": [],
    "zooms": [],
    "items": [
     {
      "id": "fr_leur_det",
      "box": [
-      545,
-      145,
-      224,
-      200
+      338,
+      172,
+      295,
+      140
      ]
     },
     {
      "id": "fr_notre_det",
      "box": [
-      788,
-      225,
-      88,
-      150
+      560,
+      318,
+      170,
+      172
      ]
     },
     {
      "id": "fr_son_det",
      "box": [
-      440,
-      348,
-      160,
-      140
+      500,
+      500,
+      145,
+      170
      ]
     },
     {
      "id": "fr_au_det",
      "box": [
-      319,
-      490,
-      170,
-      90
+      648,
+      590,
+      125,
+      65
      ]
     },
     {
      "id": "fr_des_det",
      "box": [
-      668,
-      415,
-      112,
-      230
+      690,
+      215,
+      100,
+      100
      ]
     },
     {
      "id": "fr_du_det",
      "box": [
-      812,
-      378,
-      138,
-      278
+      808,
+      120,
+      135,
+      200
      ]
     }
    ]
@@ -1008,13 +1146,13 @@
   "terrain": {
    "name": "Le terrain de sport · Sports Field",
    "image": "ecole/terrain.jpg",
-   "backTo": "theatre",
-   "alt": "The school sports field painted in ink and gouache, ringed by a red running track: a big white van with twenty footballs on its roof rack in two rows of ten; a red toy train pulling three wagons, each heaped with ten yellow balls; a girl at a wooden table laid with four rows of ten carrots, a big black ant on the grass in front of it; a wooden boat on a round pond carrying five crates of ten red apples, an ant on top of its mast; a white swan at the back corner of a sandpit laid with six rows of ten white shells; a ginger cat beside four little white vans, each with twenty orange balls on its roof rack in four rows of five; children watching and playing; the white garden gate on the left leads back to the school theater.",
+   "backTo": "recre",
+   "alt": "The school sports field painted in ink and gouache, ringed by a red running track: a big white van with twenty footballs on its roof rack in two rows of ten; a red toy train pulling three wagons, each heaped with ten yellow balls; a girl at a wooden table laid with four rows of ten carrots, a big black ant on the grass in front of it; a wooden boat on a round pond carrying five crates of ten red apples, an ant on top of its mast; a white swan at the back corner of a sandpit laid with six rows of ten white shells; a ginger cat beside four little white vans, each with twenty orange balls on its roof rack in four rows of five; children watching and playing; the white garden gate on the left stands half open onto the sandy school playground with its chalk hopscotch.",
    "doors": [
     {
-     "to": "theatre",
-     "label": "Le théâtre",
-     "hint": "Back through the garden door to the theater",
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Back through the garden gate to the playground",
      "hit": [
       0,
       180,
@@ -1084,51 +1222,18 @@
   "jardin": {
    "name": "Le jardin de l'école · School Garden",
    "image": "ecole/jardin.jpg",
-   "backTo": "ecole",
-   "alt": "The school garden painted in ink and gouache, a green lawn criss-crossed by brick paths: a moustached chef waves from the door of his little red-roofed hut; a girl in orange overalls hides among three palms in wicker baskets; an old golfer in a flat cap putts his ball through a wire hoop on a putting green; a boy in board shorts stands on a wooden crate beside his surfboard; a girl dances inside her red hula hoop; a man in a brown suit stands in front of a blue sofa; a girl in a yellow raincoat runs to her kneeling grandpa; a girl drives a red pedal car; a boy in striped pajamas sits under a little table that holds his bowl of soup; flowers everywhere; the open green door on the left leads back into the classroom and a small canteen with a blue door stands on the right; a wooden gate beside the chef's hut leads to the farmyard and a little gate under the pergola behind the golfer leads to the covered yard.",
+   "backTo": "recre",
+   "alt": "The school garden painted in ink and gouache, a green lawn criss-crossed by brick paths: a moustached chef waves from the door of his little red-roofed hut; a girl in orange overalls hides among three palms in wicker baskets; an old golfer in a flat cap putts his ball through a wire hoop on a putting green; a boy in board shorts stands on a wooden crate beside his surfboard; a girl dances inside her red hula hoop; a man in a brown suit stands in front of a blue sofa; a girl in a yellow raincoat runs to her kneeling grandpa; a girl drives a red pedal car; a boy in striped pajamas sits under a little table that holds his bowl of soup; flowers everywhere; the open green door on the left leads back to the playground, its chalk hopscotch showing through, and a small cottage with an open blue door stands on the right.",
    "doors": [
     {
-     "to": "ecole",
-     "label": "L'école",
-     "hint": "Back through the green door into the classroom",
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Back through the green door to the playground",
      "hit": [
       25,
       100,
       230,
       275
-     ]
-    },
-    {
-     "to": "cantine",
-     "label": "La cantine",
-     "hint": "Through the blue door to the school canteen",
-     "hit": [
-      1045,
-      150,
-      180,
-      240
-     ]
-    },
-    {
-     "to": "basse_cour",
-     "label": "La basse-cour",
-     "hint": "Through the wooden gate by the chef's hut to the farmyard",
-     "hit": [
-      290,
-      165,
-      140,
-      100
-     ]
-    },
-    {
-     "to": "preau",
-     "label": "Le préau",
-     "hint": "Through the little gate behind the golfer to the covered yard",
-     "hit": [
-      956,
-      150,
-      80,
-      120
      ]
     }
    ],
@@ -1220,13 +1325,13 @@
   "cantine": {
    "name": "La cantine · School Canteen",
    "image": "ecole/cantine.jpg",
-   "backTo": "jardin",
-   "alt": "The school canteen painted in ink and gouache, wooden floorboards and a big red woven rug: a butler in a tailcoat bows and steps aside so two grannies get the best view from the window; a girl switches on a glowing standing lamp; a boy at an easel paints a portrait of himself, a little mirror beside him; a girl rings a big brass hand bell; two friends at a little table share one bowl, each slurping an end of one long noodle; a boy holds up his wooden toy horse with a thumbs-up; a man with shaving suds on his cheeks shaves himself at a mirror and washbasin; a little girl holds out a teddy bear to you; long tables, benches and pans on the dresser; the open blue door on the left leads back to the school garden.",
+   "backTo": "ecole",
+   "alt": "The school canteen painted in ink and gouache, wooden floorboards and a big red woven rug: a butler in a tailcoat bows and steps aside so two grannies get the best view from the window; a girl switches on a glowing standing lamp; a boy at an easel paints a portrait of himself, a little mirror beside him; a girl rings a big brass hand bell; two friends at a little table share one bowl, each slurping an end of one long noodle; a boy holds up his wooden toy horse with a thumbs-up; a man with shaving suds on his cheeks shaves himself at a mirror and washbasin; a little girl holds out a teddy bear to you; long tables, benches and pans on the dresser; the open blue door on the left leads back to the school hallway, its clock, red door and coat pegs showing through.",
    "doors": [
     {
-     "to": "jardin",
-     "label": "Le jardin de l'école",
-     "hint": "Back through the blue door to the school garden",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the open door to the hallway",
      "hit": [
       72,
       12,
@@ -1314,13 +1419,13 @@
   "preau": {
    "name": "Le préau · Covered Yard",
    "image": "ecole/preau.jpg",
-   "backTo": "jardin",
-   "alt": "The school's covered yard on a pouring wet afternoon, painted in ink and gouache: under the timber roof a grandpa in a flat cap sits on a plump red cushion with a little soccer player beside him and a cobweb by his ball; a girl reaches up to swing the gold pendulum of the post clock while two friends lean against the post; the caretaker vacuums and mops a puddle beside a barefoot boy whose shoes lie on the dry floor; the snack cart with its milk churn and cups waits by the back wall. Out in the rain, people hurry in from a blue van under umbrellas, a man with an umbrella in front and a little boy in green running between them; a small green garden gate on the left leads back to the school garden.",
+   "backTo": "recre",
+   "alt": "The school's covered yard on a pouring wet afternoon, painted in ink and gouache: under the timber roof a grandpa in a flat cap sits on a plump red cushion with a little soccer player beside him and a cobweb by his ball; a girl reaches up to swing the gold pendulum of the post clock while two friends, side by side, lean against the post and the wall beside it; the caretaker vacuums and mops a puddle beside a barefoot boy whose shoes lie on the dry floor; the snack cart with its milk churn and cups waits by the back wall. Out in the rain, people hurry in from a blue van under umbrellas, a man with an umbrella in front and a little boy in green running between them; a small green gate on the left leads back to the playground, its wet sand and chalk hopscotch showing beyond it.",
    "doors": [
     {
-     "to": "jardin",
-     "label": "Le jardin de l'école",
-     "hint": "Back through the little green gate to the school garden",
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Back through the little green gate to the playground",
      "hit": [
       434,
       420,
@@ -1395,10 +1500,10 @@
     {
      "id": "fr_contre_prep",
      "box": [
-      684,
-      235,
-      72,
-      140
+      682,
+      238,
+      100,
+      138
      ]
     },
     {
@@ -1424,13 +1529,13 @@
   "basse_cour": {
    "name": "La basse-cour · Farmyard",
    "image": "ecole/basse_cour.jpg",
-   "backTo": "jardin",
-   "alt": "The school farmyard at morning feeding and milking time, painted in ink and gouache: a whitewashed barn wall with an open garden gate on the left, the big wooden barn at the back and a hen house on stilts with a ramp on the right. A milkmaid milks a brown-and-white cow that turns to moo while a farm boy holds up a milk pitcher and points at himself; a farmer's wife kneels by an open cellar hatch and points at a sack of potatoes as a girl leans in; a straw-hatted grandpa with a saw hands his bucket to little Louie in a red sweater; a boy runs up lifting an eel from his water bucket; a boy pushes a barrow heaped far too high with turnips while a girl shades her eyes and points over to the hen house.",
+   "backTo": "recre",
+   "alt": "The school farmyard at morning feeding and milking time, painted in ink and gouache: a whitewashed barn wall with an open gateway on the left that shows the sandy school playground, the big wooden barn at the back and a hen house on stilts with a ramp on the right. A milkmaid milks a brown-and-white cow that turns to moo while a farm boy holds up a milk pitcher and points at himself; a farmer's wife kneels by an open cellar hatch and points at a sack of potatoes as a girl leans in; a straw-hatted grandpa with a saw hands his bucket to little Louie in a red sweater; a boy runs up lifting an eel from his water bucket; a boy pushes a barrow heaped far too high with turnips while a girl shades her eyes and points over to the hen house.",
    "doors": [
     {
-     "to": "jardin",
-     "label": "Le jardin de l'école",
-     "hint": "Back through the open gateway to the school garden",
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Back through the open gateway to the playground",
      "hit": [
       70,
       110,
@@ -1580,18 +1685,18 @@
   "bibliotheque": {
    "name": "La bibliothèque · Library",
    "image": "ecole/bibliotheque.jpg",
-   "backTo": "theatre",
-   "alt": "The school library at book-choosing hour, painted in ink and gouache from a high view of the whole room: tall pale-wood bookcases line the walls, lamps hang from the white ceiling and cool daylight pours through the tall window on the left; a boy and his sister press their noses to a kelp aquarium where a seahorse hides, while a little girl runs up holding a plush koala; a girl on the rolling library ladder looks along the shelves with a little brown owl perched on top; on the round green rug two boys kneel over a heap of model-kit pieces and an open craft book, one throwing up his hands, and beside them a boy holds up his picture book; at her desk the librarian holds up a big golden key while a boy reads, a boy beside her turns out his empty pockets, and at the little side table a girl combs jelly beans into rows next to the guessing jar; floor cushions and an empty book cart stand on the oak floor, and an open arched door shows the red curtains and seats of the school theater.",
+   "backTo": "ecole",
+   "alt": "The school library at book-choosing hour, painted in warm ink and gouache at eye level: tall wooden bookcases full of books line the walls and daylight pours through the tall arched window on the left; a boy presses his nose to a kelp aquarium where a seahorse hides, and two little girls hug a plush koala; a boy climbs the rolling library ladder while a little brown owl perches on top of the bookcase above him; on the round green rug two boys kneel over a heap of model-kit pieces and an open craft book, one throwing up his hands, and beside them a boy in a green sweater holds up his picture book; at her desk the librarian holds up a big golden key, a boy in front of her turns out his empty pockets, and at the little side table a girl combs jelly beans into rows next to the guessing jar; floor cushions lie on the oak floor, and the open arched door behind the librarian shows the school hallway with its clock, coat pegs and a red door.",
    "doors": [
     {
-     "to": "theatre",
-     "label": "Le théâtre de l'école",
-     "hint": "Back through the open door to the school theater",
+     "to": "ecole",
+     "label": "Le couloir",
+     "hint": "Back through the arched door to the school hallway",
      "hit": [
-      828,
-      162,
-      82,
-      130
+      880,
+      40,
+      110,
+      200
      ]
     }
    ],
@@ -1600,77 +1705,73 @@
     {
      "id": "fr_ou_adv",
      "box": [
-      570,
-      170,
-      60,
-      145
+      705,
+      10,
+      75,
+      80
      ]
     },
     {
      "id": "fr_quel_pron",
      "box": [
-      378,
-      300,
-      112,
-      98
+      335,
+      215,
+      130,
+      140
      ]
     },
     {
      "id": "fr_quoi_pron",
      "box": [
-      452,
-      400,
-      85,
-      148
+      490,
+      215,
+      100,
+      190
      ]
     },
     {
      "id": "fr_comment_adv",
      "box": [
-      562,
-      405,
-      135,
-      155
+      290,
+      410,
+      300,
+      200
      ]
     },
     {
      "id": "fr_lequel_pron",
      "box": [
-      700,
-      418,
-      78,
-      112
+      600,
+      370,
+      95,
+      250
      ]
     },
     {
      "id": "fr_qui_pron",
      "box": [
-      756,
-      236,
-      64,
-      150
+      805,
+      250,
+      120,
+      160
      ]
     },
     {
      "id": "fr_pourquoi_adv",
      "box": [
-      830,
-      298,
-      52,
-      88
-     ],
-     "labelAt": [
-      938,
-      330
+      700,
+      455,
+      112,
+      260
      ]
     },
     {
      "id": "fr_combien_adv",
      "box": [
-      840,
-      388,
-      86,
-      95
+      818,
+      560,
+      95,
+      125
      ]
     }
    ]
@@ -1678,18 +1779,18 @@
   "fete": {
    "name": "La fête de l'école · School Fête",
    "image": "ecole/fete.jpg",
-   "backTo": "theatre",
-   "alt": "The school fête painted in ink and gouache in a sunny courtyard under bunting, a natural crowd scene: on the left a cake table where children and a cook serve from a wooden cart; a granny on a bench fans herself while a small boy and his dad read picture comics side by side in the same pose; children dance round a tall white maypole with ribbons, one girl reaching up to it; a girl swings on a rope swing from the big plane tree; in the foreground a little boy holds out a huge gold prize cup to show a girl who hugs a plush quokka; a little further back a girl offers a gray pony hay and a carrot while her friend, seen from behind, holds a tin-can telephone to her ear, and a smiling busker in patches fiddles for the pony beside his empty hat; an open door at the back shows the red curtains of the school theater.",
+   "backTo": "recre",
+   "alt": "The school fête painted in ink and gouache in a sunny courtyard under bunting, a natural crowd scene: on the left a cake table where children and a cook serve from a wooden cart; a granny on a bench fans herself while a small boy and his dad read picture comics side by side in the same pose; children dance round a tall white maypole with ribbons, one girl reaching up to it; a girl swings on a rope swing from the big plane tree; in the foreground a little boy holds out a huge gold prize cup to show a girl who hugs a plush quokka; a little further back a girl offers a gray pony hay and a carrot while her friend, seen from behind, holds a tin-can telephone to her ear, and a smiling busker in patches fiddles for the pony beside his empty hat; the open wooden door at the back leads back to the playground, glimpsed through the gap beside it with a tree and a chalk hopscotch.",
    "doors": [
     {
-     "to": "theatre",
-     "label": "Le théâtre de l'école",
-     "hint": "Back through the open door to the school theater",
+     "to": "recre",
+     "label": "La cour de récré",
+     "hint": "Back through the open doorway to the playground",
      "hit": [
       752,
-      48,
-      56,
-      148
+      40,
+      58,
+      160
      ]
     }
    ],
@@ -1807,7 +1908,7 @@
    "name": "La table des gâteaux · Cake Table",
    "image": "ecole/gateaux.jpg",
    "parent": "fete",
-   "alt": "Close-up of the fête's cake table on the lawn under bunting: a boy with a bandaged knee sits at the end, a girl whisks batter in a big bowl, a mom holds a cookie jar high above a boy and his toy blocks, a red lobster snaps its claws beside a ringing alarm clock, a little ant in a baker's toque stands by a slice of cake and a boy in stripes points across from the chocolate cake.",
+   "alt": "Close-up of the fête's cake table on the lawn under bunting: a boy with a bandaged knee sits at the end, a girl whisks batter in a big bowl, a girl in yellow holds a cookie jar high above a boy and his toy blocks, a red lobster snaps its claws beside a ringing alarm clock, a little ant in a baker's toque stands by a slice of cake and a boy in stripes points across from the chocolate cake.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -1870,7 +1971,7 @@
   "tableau": {
    "name": "Le tableau · The Alphabet Blackboard",
    "image": "ecole/tableau.jpg",
-   "parent": "ecole",
+   "parent": "classe",
    "alt": "Close-up of the classroom blackboard in its wooden frame: the 26 letters of the alphabet, A to Z, written in white chalk in five neat rows, with a felt eraser and two sticks of chalk on the ledge.",
    "doors": [],
    "zooms": [],
@@ -2145,7 +2246,7 @@
    "name": "Le goûter · Snack Cart",
    "image": "ecole/gouter.jpg",
    "parent": "preau",
-   "alt": "Close-up of the covered yard's green snack cart at snack time while the rain pours past the roof edge: the moustached dinner man pours orange juice right up to the brim of a boy's cup, a girl pours cocoa from a pitcher for her granny, who waits on a low stool, a girl holds out two slices of bread and jam, and a small boy peeks out from behind the big silver dairy churn on the cart.",
+   "alt": "Close-up of the covered yard's grey snack cart at snack time while the rain pours past the roof edge: the moustached dinner man pours orange juice right up to the brim of a boy's cup, a girl pours cocoa from a pitcher for her granny, who waits on a low stool, a girl holds out two slices of bread and jam, and a small boy peeks out from behind the big silver dairy churn on the cart.",
    "doors": [],
    "zooms": [],
    "items": [
@@ -2190,6 +2291,14 @@
  },
  "planned": {
   "ecole": {
+   "only": [
+    "fr_question_noun",
+    "fr_orthographe_noun",
+    "fr_mot_noun",
+    "fr_article_noun"
+   ]
+  },
+  "classe": {
    "v1": "ecole/ecole"
   },
   "trousse": {

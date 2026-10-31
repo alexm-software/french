@@ -63,7 +63,8 @@
     "fr_feuillage_noun",
     "fr_champignon_noun",
     "fr_palmier_noun",
-    "fr_olivier_noun"
+    "fr_olivier_noun",
+    "fr_bondir_verb"
    ]
   },
   "souche": {
@@ -148,7 +149,10 @@
     "fr_poule_noun",
     "fr_oiseau_noun",
     "fr_canard_noun",
-    "fr_bouge_noun"
+    "fr_bouge_noun",
+    "fr_voler_verb",
+    "fr_percher_verb",
+    "fr_pieger_verb"
    ]
   },
   "soucheoiseaux": {
@@ -186,7 +190,9 @@
     "fr_pou_noun",
     "fr_ver_noun",
     "fr_moustique_noun",
-    "fr_scarabee_noun"
+    "fr_scarabee_noun",
+    "fr_metamorphoser_verb",
+    "fr_ramper_verb"
    ]
   },
   "soucheinsectes": {
@@ -398,7 +404,7 @@
    "room_id": "R_forest_02",
    "image": "foret/arbres.jpg",
    "backTo": "foret",
-   "alt": "A grove of great trees. Left half: a hiker admiring a fawn, a squirrel and mushrooms, a shiny silver leaf crinkly as tin foil lying on the grass, and a moose lying happily on a soft bed of moss. Right half: a great tree bending its branches into an arbor over a children's picnic, a mighty oak dropping acorns with a chain swing, a chameleon hidden in the foliage, a mushroom wearing a champion's medal, a palm tree dropping a coconut onto a crab's sunhat, and an ancient olive tree with a sleepy owl in its hollow. In the middle stands an old tree stump covered in tiny things to look at closer. The hollow-tree arch at the top left leads back to the forest glade.",
+   "alt": "A grove of great trees. Left half: a hiker admiring a fawn, a squirrel and mushrooms, a shiny silver leaf crinkly as tin foil lying on the grass, a moose lying happily on a soft bed of moss, and Monsieur Verbe in a green beret leaping side by side with a young deer. Right half: a great tree bending its branches into an arbor over a children's picnic, a mighty oak dropping acorns with a chain swing, a chameleon hidden in the foliage, a mushroom wearing a champion's medal, a palm tree dropping a coconut onto a crab's sunhat, and an ancient olive tree with a sleepy owl in its hollow. In the middle stands an old tree stump covered in tiny things to look at closer. The hollow-tree arch at the top left leads back to the forest glade.",
    "nameplate": [
     50,
     95
@@ -517,6 +523,15 @@
       330,
       190,
       330
+     ]
+    },
+    {
+     "id": "fr_bondir_verb",
+     "box": [
+      468,
+      100,
+      154,
+      155
      ]
     }
    ],
@@ -1121,10 +1136,10 @@
    "room_id": "R_birds_01",
    "image": "foret/oiseaux.jpg",
    "backTo": "foret",
-   "alt": "A birdsong clearing. Left half: a tiny elf riding a bird's wing, a peacock dropping a feather that a robin uses as a quill, and a hen paddling in a little pool beside her eggs. Right half: a bird singing on a zoo gate, a robin in the grass, a duck dipping its head into a watering can, a wren on a rock in a stream, a tiny hovel where a mouse dances, and an old tree stump with tiny things to look at closer. The birdhouse arch at the top left leads back to the glade; the blue swan arch at the top right leads to the lake.",
+   "alt": "A birdsong clearing. Left half: a tiny elf riding a bird's wing, a peacock dropping a feather that a robin uses as a quill, a hen paddling in a little pool beside her eggs, Monsieur Verbe in a red beret flying through the air, arms spread like wings, among a flock of swallows, and Monsieur Verbe in a red beret perched on a fence post beside a robin. Right half: Monsieur Verbe in a red beret propping up a basket trap baited with a pie for a blue jay, a bird singing on a zoo gate, a robin in the grass, a duck dipping its head into a watering can, a wren on a rock in a stream, a tiny hovel where a mouse dances, and an old tree stump with tiny things to look at closer. The birdhouse arch at the top left leads back to the glade; the blue swan arch at the top right leads to the lake.",
    "nameplate": [
-    13.8,
-    59.2
+    62,
+    93
    ],
    "doors": [
     {
@@ -1228,6 +1243,33 @@
       350,
       270,
       300
+     ]
+    },
+    {
+     "id": "fr_voler_verb",
+     "box": [
+      228,
+      200,
+      197,
+      225
+     ]
+    },
+    {
+     "id": "fr_percher_verb",
+     "box": [
+      60,
+      340,
+      160,
+      330
+     ]
+    },
+    {
+     "id": "fr_pieger_verb",
+     "box": [
+      756,
+      175,
+      246,
+      240
      ]
     }
    ],
@@ -1389,9 +1431,9 @@
    "room_id": "R_insects",
    "image": "foret/insectes.jpg",
    "backTo": "foret",
-   "alt": "A flowery meadow full of insects. Left half: a fly landing on a cross-eyed moose's nose, a flea in a puce jacket hopping onto a computer chip, an ant carrying a cookie crumb, a bee carrying honey pots over yellow flowers, and an old tree stump with tiny things to look at closer. Right half: a snail carrying a cargo of packages, an insect orchestra with a grasshopper violinist and a beetle drummer, a butterfly on a papillon dog's ear, a nurse combing a louse out with a giant comb, a worm waving from an apple, a mosquito with a mustache near a man asleep in a hammock, and a scarab beetle pushing a ball of mud. The flower arch at the top left leads back to the glade.",
+   "alt": "A flowery meadow full of insects. Left half: a fly landing on a cross-eyed moose's nose, a flea in a puce jacket hopping onto a computer chip, an ant carrying a cookie crumb, Monsieur Verbe in a red beret kneeling to watch a blue morpho butterfly climb out of its green chrysalis, Monsieur Verbe in a red beret crawling up a bark ramp behind a snail, a bee carrying honey pots over yellow flowers, and an old tree stump with tiny things to look at closer. Right half: a snail carrying a cargo of packages, an insect orchestra with a grasshopper violinist and a beetle drummer, a butterfly on a papillon dog's ear, a nurse combing a louse out with a giant comb, a worm waving from an apple, a mosquito with a mustache near a man asleep in a hammock, and a scarab beetle pushing a ball of mud. The flower arch at the top left leads back to the glade.",
    "nameplate": [
-    55.3,
+    57.0,
     95.8
    ],
    "doors": [
@@ -1438,9 +1480,9 @@
      "id": "fr_puce_noun",
      "box": [
       170,
-      362,
-      195,
-      140
+      322,
+      202,
+      180
      ]
     },
     {
@@ -1461,8 +1503,8 @@
      "box": [
       518,
       365,
-      142,
-      160
+      194,
+      138
      ]
     },
     {
@@ -1538,6 +1580,24 @@
      "labelAt": [
       1070,
       680
+     ]
+    },
+    {
+     "id": "fr_metamorphoser_verb",
+     "box": [
+      512,
+      505,
+      215,
+      156
+     ]
+    },
+    {
+     "id": "fr_ramper_verb",
+     "box": [
+      730,
+      440,
+      188,
+      221
      ]
     }
    ],
