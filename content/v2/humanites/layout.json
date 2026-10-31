@@ -1,0 +1,744 @@
+{
+ "building": "humanites",
+ "building_id": "B34_humanites",
+ "sector_id": "S10_university",
+ "name": "Faculté des Lettres",
+ "main": "bibliotheque",
+ "roomList": [
+  {
+   "key": "bibliotheque",
+   "short": "La bibliothèque"
+  },
+  {
+   "key": "philosophie",
+   "short": "La philosophie"
+  },
+  {
+   "key": "logique",
+   "short": "La logique"
+  },
+  {
+   "key": "ethique",
+   "short": "L'éthique"
+  },
+  {
+   "key": "doctrines",
+   "short": "Les doctrines"
+  }
+ ],
+ "planned": {
+  "bibliotheque": {
+   "vocabRoom": "R_abs_mind_01",
+   "only": [
+    "fr_memoire_noun_f",
+    "fr_idee_noun",
+    "fr_connaissance_noun",
+    "fr_attention_noun",
+    "fr_explication_noun",
+    "fr_souvenir_noun",
+    "fr_avis_noun",
+    "fr_secret_noun",
+    "fr_doute_noun"
+   ]
+  },
+  "philosophie": {
+   "vocabRoom": "R_philosophy_01",
+   "only": [
+    "fr_merveille_noun",
+    "fr_raison_noun",
+    "fr_verite_noun",
+    "fr_realite_noun",
+    "fr_pensee_noun",
+    "fr_conscience_noun",
+    "fr_conseil_noun",
+    "fr_principe_noun"
+   ]
+  },
+  "logique": {
+   "vocabRoom": "R_philosophy_02",
+   "only": [
+    "fr_these_noun",
+    "fr_theorie_noun",
+    "fr_notion_noun",
+    "fr_reflexion_noun",
+    "fr_intuition_noun",
+    "fr_deduction_noun",
+    "fr_logique_noun",
+    "fr_philosophe_noun",
+    "fr_raisonnement_noun",
+    "fr_concept_noun",
+    "fr_theme_noun"
+   ]
+  },
+  "ethique": {
+   "vocabRoom": "R_philosophy_02",
+   "only": [
+    "fr_sagesse_noun",
+    "fr_moralite_noun",
+    "fr_morale_noun",
+    "fr_excuse_noun",
+    "fr_objection_noun",
+    "fr_justesse_noun",
+    "fr_realisation_noun",
+    "fr_philosophie_noun",
+    "fr_mensonge_noun",
+    "fr_menteur_noun",
+    "fr_gre_noun"
+   ]
+  },
+  "doctrines": {
+   "vocabRoom": "R_philosophy_03",
+   "only": [
+    "fr_ideologie_noun",
+    "fr_decision_noun",
+    "fr_idealiste_noun",
+    "fr_ethique_adj",
+    "fr_philosophique_adj",
+    "fr_paradoxe_noun",
+    "fr_emerveillement_noun",
+    "fr_cynisme_noun",
+    "fr_dogme_noun",
+    "fr_manifeste_noun",
+    "fr_realisme_noun",
+    "fr_humanisme_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "bibliotheque": {
+   "name": "La bibliothèque · The library",
+   "room_id": "R_abs_mind_01",
+   "image": "humanites/bibliotheque.jpg",
+   "alt": "The double-height reading room of the faculty library under a round skylight, seen from the near left: tall oak bookcases, a wrought-iron gallery with a spiral staircase, long reading tables with green lamps and a marble poet bust. On the left a forgetful librarian is covered in yellow memo notes, a white-haired connoisseur in a bow tie savours an old book, a girl leaps up in a beam of sunlight with a sudden idea, and a porter's trolley tips a huge heap of books onto the floor while children at the table sit up. In front a boy with cookie crumbs on his chin pleads beside an empty cookie jar. On the right an old sailor holds a pink conch shell to his ear, a surfer with a surfboard raises an eyebrow, a man at the tall window looks through binoculars, and a lady in teal listens to a red crayfish whispering on her shoulder. The glass entrance doors on the left lead out to the campus; on the gallery the cream laurel door leads to philosophy, the green quill door to literature, the crown door to history, the blue door to linguistics and the lilac door to psychology, and the spiral staircase climbs to the upper gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     10,
+     80,
+     165,
+     280
+    ],
+    "label": "Campus"
+   },
+   "doors": [
+    {
+     "to": "philosophie",
+     "label": "La philosophie",
+     "hint": "the cream door with the laurel wreath up on the gallery, to the philosophy room",
+     "hit": [
+      331,
+      25,
+      95,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_memoire_noun_f",
+     "box": [
+      77,
+      370,
+      83,
+      307
+     ]
+    },
+    {
+     "id": "fr_idee_noun",
+     "box": [
+      315,
+      280,
+      110,
+      155
+     ]
+    },
+    {
+     "id": "fr_connaissance_noun",
+     "box": [
+      192,
+      388,
+      122,
+      135
+     ]
+    },
+    {
+     "id": "fr_attention_noun",
+     "box": [
+      530,
+      315,
+      175,
+      235
+     ]
+    },
+    {
+     "id": "fr_explication_noun",
+     "box": [
+      346,
+      437,
+      180,
+      240
+     ]
+    },
+    {
+     "id": "fr_souvenir_noun",
+     "box": [
+      720,
+      372,
+      190,
+      305
+     ]
+    },
+    {
+     "id": "fr_avis_noun",
+     "box": [
+      1084,
+      292,
+      105,
+      100
+     ]
+    },
+    {
+     "id": "fr_secret_noun",
+     "box": [
+      1105,
+      400,
+      98,
+      195
+     ]
+    },
+    {
+     "id": "fr_doute_noun",
+     "box": [
+      915,
+      350,
+      165,
+      260
+     ]
+    }
+   ]
+  },
+  "philosophie": {
+   "name": "La salle de philosophie · The philosophy room",
+   "room_id": "R_philosophy_01",
+   "image": "humanites/philosophie.jpg",
+   "alt": "The philosophy seminar room of the Faculté des Lettres on a cool morning, seen from the near right and slightly above: cream walls, honey oak floor, tall windows on the left onto the red-brick campus and a shooting star, and a blank slate chalkboard under a brass plate. On the left a brown mare in a white lace veil gazes out of the window, a boy in a yellow sweater at a front desk stares at a little green lizard on his book, a white-bearded professor holds out a red box of raisins and a judge in a black robe swears with a mug of strong tea. A St Bernard stands by the table with a little angel on his back reading a science book, and in front a girl with her eyes closed thinks beside a pot of purple pansies. On the right a brown owl on the table advises three elders in dark suits, and a young prince in a gold crown and red cape raises his palm. The tall oak double doors on the back wall open into the library, and the pale-green door with a question mark on the far right leads to the logic room.",
+   "nameplate": [
+    59,
+    8.5
+   ],
+   "backTo": "bibliotheque",
+   "doors": [
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "the tall oak double doors on the back wall, back to the library",
+     "hit": [
+      930,
+      45,
+      220,
+      160
+     ]
+    },
+    {
+     "to": "logique",
+     "label": "La logique",
+     "hint": "the pale-green door with the question mark at the far right, to the logic room",
+     "hit": [
+      1188,
+      140,
+      80,
+      235
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_merveille_noun",
+     "box": [
+      80,
+      210,
+      140,
+      210
+     ]
+    },
+    {
+     "id": "fr_raison_noun",
+     "box": [
+      300,
+      325,
+      185,
+      135
+     ]
+    },
+    {
+     "id": "fr_verite_noun",
+     "box": [
+      300,
+      130,
+      165,
+      190
+     ]
+    },
+    {
+     "id": "fr_realite_noun",
+     "box": [
+      80,
+      462,
+      265,
+      215
+     ]
+    },
+    {
+     "id": "fr_pensee_noun",
+     "box": [
+      365,
+      462,
+      255,
+      215
+     ]
+    },
+    {
+     "id": "fr_conscience_noun",
+     "box": [
+      488,
+      150,
+      177,
+      255
+     ]
+    },
+    {
+     "id": "fr_conseil_noun",
+     "box": [
+      875,
+      215,
+      160,
+      190
+     ]
+    },
+    {
+     "id": "fr_principe_noun",
+     "box": [
+      1042,
+      378,
+      161,
+      192
+     ]
+    }
+   ]
+  },
+  "logique": {
+   "name": "La salle de logique · The logic room",
+   "room_id": "R_philosophy_02",
+   "image": "humanites/logique.jpg",
+   "alt": "The logic tutorial room of the Faculté des Lettres in afternoon light, seen from the near left: cream walls, tiled floor, tall windows on the left onto the red-brick campus and a bare autumn tree, and a long wall of dark green chalkboards covered in blank arrow-and-circle diagrams with a rolling ladder and a stuffed crow in a mortarboard on top. On the left a scholar in a green cardigan stacks teacups into a wobbling tower, a little girl in a swimsuit holds a bucket and spade, and a woman in a plaid shirt kneels by a pyramid of logs with a mouse on top. Behind them three boys wheel a gigantic book in a wheelbarrow, a girl in a red coat looks into a sunlit gilt mirror, and a lady in blue lifts her sandwich away from a line of ants. In the middle a girl detective with a magnifying glass inspects the muddy boot of a crowned duke, and an old philosopher in a toga reclines on a green sofa. On the right a young man lays raisins in arrows on a table, a bald man arranges traffic cones and a lion tamer shows a lion cub on a stool. The pale-green door on the left leads back to philosophy and the white door with balance scales at the back right leads to the ethics room.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "philosophie",
+   "doors": [
+    {
+     "to": "philosophie",
+     "label": "La philosophie",
+     "hint": "the pale-green door with the question mark on the left, back to the philosophy room",
+     "hit": [
+      178,
+      40,
+      40,
+      240
+     ]
+    },
+    {
+     "to": "ethique",
+     "label": "L'éthique",
+     "hint": "the white door with the balance scales at the back right, to the ethics room",
+     "hit": [
+      1150,
+      75,
+      53,
+      215
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_these_noun",
+     "box": [
+      305,
+      315,
+      165,
+      115
+     ]
+    },
+    {
+     "id": "fr_theorie_noun",
+     "box": [
+      77,
+      300,
+      95,
+      260
+     ]
+    },
+    {
+     "id": "fr_notion_noun",
+     "box": [
+      178,
+      375,
+      75,
+      205
+     ]
+    },
+    {
+     "id": "fr_reflexion_noun",
+     "box": [
+      235,
+      75,
+      80,
+      215
+     ]
+    },
+    {
+     "id": "fr_intuition_noun",
+     "box": [
+      400,
+      155,
+      130,
+      150
+     ]
+    },
+    {
+     "id": "fr_deduction_noun",
+     "box": [
+      490,
+      460,
+      240,
+      215
+     ]
+    },
+    {
+     "id": "fr_logique_noun",
+     "box": [
+      290,
+      465,
+      195,
+      212
+     ]
+    },
+    {
+     "id": "fr_philosophe_noun",
+     "box": [
+      640,
+      225,
+      140,
+      185
+     ]
+    },
+    {
+     "id": "fr_raisonnement_noun",
+     "box": [
+      790,
+      265,
+      215,
+      150
+     ]
+    },
+    {
+     "id": "fr_concept_noun",
+     "box": [
+      870,
+      480,
+      210,
+      197
+     ]
+    },
+    {
+     "id": "fr_theme_noun",
+     "box": [
+      1105,
+      300,
+      98,
+      330
+     ]
+    }
+   ]
+  },
+  "ethique": {
+   "name": "La salle d'éthique · The ethics room",
+   "room_id": "R_philosophy_02",
+   "image": "humanites/ethique.jpg",
+   "alt": "The ethics debating room of the Faculté des Lettres on a rainy day, seen from the front of the benches: cream walls, a marble floor, tiered oak benches in a half-circle, a tall window on the left, a big painted mural of a tortoise racing a hare on the back wall and a brass balance scale on a marble pedestal in the middle. On the left a wise old woman in a grey shawl holds up a bunch of sage, a child leaps up beside a popping jack-in-the-box, and in front a woman in an apron hands out morel mushrooms from a basket while a boy hides skewers of marshmallows. On the back benches a girl holds a latte, a runner lifts a relay baton, a girl compares two equal glasses of orange juice, and another girl reaches for a tray of filo pastries. By the pedestal a boy holds a dripping sponge over a puddle. On the right a smug man in a gown has an enormous long nose, a grey donkey trots between the benches and a potted fern wears a judge's wig. The white door with balance scales on the left leads back to the logic room and the dark-red door at the back right leads to the doctrines room.",
+   "nameplate": [
+    62,
+    4
+   ],
+   "backTo": "logique",
+   "doors": [
+    {
+     "to": "logique",
+     "label": "La logique",
+     "hint": "the white door with the balance scales on the left, back to the logic room",
+     "hit": [
+      80,
+      60,
+      100,
+      330
+     ]
+    },
+    {
+     "to": "doctrines",
+     "label": "Les doctrines",
+     "hint": "the dark-red door with the scroll at the back right, to the doctrines room",
+     "hit": [
+      1130,
+      100,
+      73,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sagesse_noun",
+     "box": [
+      185,
+      170,
+      105,
+      230
+     ]
+    },
+    {
+     "id": "fr_moralite_noun",
+     "box": [
+      372,
+      190,
+      68,
+      100
+     ]
+    },
+    {
+     "id": "fr_morale_noun",
+     "box": [
+      77,
+      420,
+      165,
+      257
+     ]
+    },
+    {
+     "id": "fr_excuse_noun",
+     "box": [
+      380,
+      440,
+      150,
+      237
+     ]
+    },
+    {
+     "id": "fr_objection_noun",
+     "box": [
+      290,
+      290,
+      85,
+      185
+     ]
+    },
+    {
+     "id": "fr_justesse_noun",
+     "box": [
+      595,
+      180,
+      78,
+      92
+     ]
+    },
+    {
+     "id": "fr_realisation_noun",
+     "box": [
+      455,
+      120,
+      100,
+      200
+     ]
+    },
+    {
+     "id": "fr_philosophie_noun",
+     "box": [
+      425,
+      330,
+      130,
+      105
+     ]
+    },
+    {
+     "id": "fr_mensonge_noun",
+     "box": [
+      598,
+      300,
+      100,
+      300
+     ]
+    },
+    {
+     "id": "fr_menteur_noun",
+     "box": [
+      790,
+      320,
+      215,
+      357
+     ]
+    },
+    {
+     "id": "fr_gre_noun",
+     "box": [
+      1010,
+      300,
+      190,
+      210
+     ]
+    }
+   ]
+  },
+  "doctrines": {
+   "name": "La salle des doctrines · The doctrines room",
+   "room_id": "R_philosophy_03",
+   "image": "humanites/doctrines.jpg",
+   "alt": "The doctrines lecture hall of the Faculté des Lettres on a bright day, seen from the near right: cream walls with gilt-framed landscape paintings, a tiled floor, tall arched windows on the left onto a sunny lawn with a fountain, and a raised wooden platform with a lectern and a huge globe with a pigeon on top. On the left a woman films two boys waving identical blue flags with an old video camera, and in front a girl in a yellow dress plucks daisy petals beside a two-way signpost. Behind her a young woman in a beret unrolls a long scroll, a bearded man on the platform steps gazes at a fig, and a carpenter kneels to plant a teak sapling, his saw on the floor. On the platform two ducks share a bucket of water, a kind man helps a child up, and a young man reads a long scroll beside a feast table full of diners. On the right a man gapes in wonder at a white pony in a lace veil, a sour old man rolls his eyes at a sneezer, a mother dog lectures three puppies, and a man in a flat cap pulls a stingray in a wheeled tank. The dark-red door with a carved scroll on the far right leads back to the ethics room.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "ethique",
+   "doors": [
+    {
+     "to": "ethique",
+     "label": "L'éthique",
+     "hint": "the dark-red door with the scroll on the right, back to the ethics room",
+     "hit": [
+      1135,
+      45,
+      68,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_ideologie_noun",
+     "box": [
+      77,
+      190,
+      250,
+      250
+     ]
+    },
+    {
+     "id": "fr_decision_noun",
+     "box": [
+      110,
+      450,
+      265,
+      227
+     ]
+    },
+    {
+     "id": "fr_idealiste_noun",
+     "box": [
+      385,
+      195,
+      75,
+      210
+     ]
+    },
+    {
+     "id": "fr_ethique_adj",
+     "box": [
+      400,
+      410,
+      230,
+      267
+     ]
+    },
+    {
+     "id": "fr_philosophique_adj",
+     "box": [
+      480,
+      205,
+      125,
+      190
+     ]
+    },
+    {
+     "id": "fr_paradoxe_noun",
+     "box": [
+      640,
+      330,
+      110,
+      100
+     ]
+    },
+    {
+     "id": "fr_emerveillement_noun",
+     "box": [
+      670,
+      435,
+      330,
+      195
+     ]
+    },
+    {
+     "id": "fr_cynisme_noun",
+     "box": [
+      1085,
+      260,
+      118,
+      110
+     ]
+    },
+    {
+     "id": "fr_dogme_noun",
+     "box": [
+      1015,
+      375,
+      135,
+      115
+     ]
+    },
+    {
+     "id": "fr_manifeste_noun",
+     "box": [
+      878,
+      90,
+      192,
+      205
+     ]
+    },
+    {
+     "id": "fr_realisme_noun",
+     "box": [
+      1005,
+      500,
+      198,
+      177
+     ]
+    },
+    {
+     "id": "fr_humanisme_noun",
+     "box": [
+      752,
+      215,
+      123,
+      115
+     ]
+    }
+   ]
+  }
+ }
+}
