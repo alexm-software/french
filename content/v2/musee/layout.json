@@ -92,6 +92,14 @@
   {
    "key": "parfums",
    "short": "Les parfums"
+  },
+  {
+   "key": "toucher",
+   "short": "Le toucher"
+  },
+  {
+   "key": "optique",
+   "short": "La vue"
   }
  ],
  "planned": {
@@ -458,6 +466,36 @@
     "fr_exotique_adj",
     "fr_desagreable_adj",
     "fr_suave_adj"
+   ]
+  },
+  "toucher": {
+   "vocabRoom": "R_abs_senses_02",
+   "only": [
+    "fr_sensation_noun",
+    "fr_legerete_noun",
+    "fr_sensibilite_noun",
+    "fr_rude_adj",
+    "fr_mou_adj",
+    "fr_pointu_adj",
+    "fr_collant_adj",
+    "fr_glissant_adj",
+    "fr_glace_adj",
+    "fr_toucher_noun",
+    "fr_instinct_noun"
+   ]
+  },
+  "optique": {
+   "vocabRoom": "R_abs_senses_03",
+   "only": [
+    "fr_silhouette_noun",
+    "fr_perception_noun",
+    "fr_visibilite_noun",
+    "fr_aura_noun",
+    "fr_subtil_adj",
+    "fr_attentif_adj",
+    "fr_flou_adj",
+    "fr_argente_adj",
+    "fr_eloignement_noun"
    ]
   }
  },
@@ -3231,7 +3269,7 @@
    "name": "Le cabinet des lumières · The cabinet of lights",
    "room_id": "R_abs_senses_02",
    "image": "musee/lumieres.jpg",
-   "alt": "The cabinet of lights behind the cabinet of the senses, seen from the near left: deep midnight-blue walls with painted golden stars, a big golden crescent moon lamp, a lightbulb-shaped paper lantern and a mirror disco ball hanging from the ceiling. On the left a black door, a fisherman dangling a glowing lure over a round aquarium where a goldfish swims, a girl in green pulling aside the curtain of a pitch-dark booth where only two raccoon eyes glow, a girl holding up a glass teapot of clear tea in a beam of light, and a boy turning the brass dial of a tall glowing lamp while an owl on it squints. In the middle a glowing blue jellyfish in a big glass jar, a girl shielding her eyes from a dazzling diamond on a velvet cushion, and a gray-haired tin seller polishing a sparkling pot on her cart. On the right a stagehand aims a big spotlight, a boy peers into a wooden chest whose black empty inside holds one pink neon tube, a girl points a laser pointer at the wall while a gray cat leaps for the red dot, a little wizard pulls a lever that lights a string of bulbs, and a child in a bedsheet ghost costume holds up a prism beside a fan of rainbow light.",
+   "alt": "The cabinet of lights behind the cabinet of the senses, seen from the near left: deep midnight-blue walls with painted golden stars, a big golden crescent moon lamp, a lightbulb-shaped paper lantern and a mirror disco ball hanging from the ceiling. On the left a black door, a fisherman dangling a glowing lure over a round aquarium where a goldfish swims, a girl in green pulling aside the curtain of a pitch-dark booth where only two raccoon eyes glow, a girl holding up a glass teapot of clear tea in a beam of light, and a boy turning the brass dial of a tall glowing lamp while an owl on it squints. In the middle a silver-gray door with a painted eye in the back wall, a glowing blue jellyfish in a big glass jar, a girl shielding her eyes from a dazzling diamond on a velvet cushion, and a gray-haired tin seller polishing a sparkling pot on her cart. On the right a stagehand aims a big spotlight, a boy peers into a wooden chest whose black empty inside holds one pink neon tube, a girl points a laser pointer at the wall while a gray cat leaps for the red dot, a little wizard pulls a lever that lights a string of bulbs, and a child in a bedsheet ghost costume holds up a prism beside a fan of rainbow light.",
    "nameplate": [
     50,
     4.5
@@ -3247,6 +3285,17 @@
       110,
       125,
       170
+     ]
+    },
+    {
+     "to": "optique",
+     "label": "La vue",
+     "hint": "the silver-gray door with the painted eye on the back wall, to the cabinet of sight",
+     "hit": [
+      532,
+      190,
+      50,
+      160
      ]
     }
    ],
@@ -3291,10 +3340,14 @@
     {
      "id": "fr_lumineux_adj",
      "box": [
-      530,
-      200,
+      586,
+      222,
       100,
-      180
+      140
+     ],
+     "labelAt": [
+      645,
+      198
      ]
     },
     {
@@ -3327,9 +3380,9 @@
     {
      "id": "fr_eclairage_noun",
      "box": [
-      700,
+      712,
       110,
-      160,
+      150,
       270
      ]
     },
@@ -3501,7 +3554,7 @@
    "name": "Le cabinet des parfums · The cabinet of scents",
    "room_id": "R_abs_senses_03",
    "image": "musee/parfums.jpg",
-   "alt": "The cabinet of scents behind the cabinet of the senses, seen from the near left: sage-green walls hung with bunches of dried lavender and herbs, tall shelves of colorful perfume bottles and a big copper perfume still. On the left a lilac door with a painted flower, a lady spraying mist from a glass perfume bottle, and a perfume maker in a lab coat letting one drop fall from a dropper into a tiny vial. In the middle a girl tasting a spoonful of stew with her eyes closed, a mayor in a tricolor sash biting a lemon, a green parrot on a basket of pineapple, mango and dragon fruit, a boy shrugging and a girl pinching her nose at a pot of boiled cabbage, and a gentleman in a velvet jacket sniffing a white gardenia. On the right a pink pig sniffing a basket where a little rat peeks out, a smiling baker holding up a steaming pie, and a boy pinching his nose at a sneaker dripping green goo.",
+   "alt": "The cabinet of scents behind the cabinet of the senses, seen from the near left: sage-green walls hung with bunches of dried lavender and herbs, tall shelves of colorful perfume bottles and a big copper perfume still. On the left a lilac door with a painted flower, a lady spraying mist from a glass perfume bottle, and a perfume maker in a lab coat letting one drop fall from a dropper into a tiny vial. In the middle a girl tasting a spoonful of stew with her eyes closed, a mayor in a tricolor sash biting a lemon, a green parrot on a basket of pineapple, mango and dragon fruit, a boy shrugging and a girl pinching her nose at a pot of boiled cabbage, and a gentleman in a velvet jacket sniffing a white gardenia. On the right a pink pig sniffing a basket where a little rat peeks out, a smiling baker holding up a steaming pie, and a boy pinching his nose at a sneaker dripping green goo; behind him a honey-wood door with a painted hand.",
    "nameplate": [
     50,
     4.5
@@ -3517,6 +3570,17 @@
       85,
       100,
       280
+     ]
+    },
+    {
+     "to": "toucher",
+     "label": "Le toucher",
+     "hint": "the honey-wood door with the painted hand on the right wall, to the cabinet of touch",
+     "hit": [
+      1185,
+      55,
+      80,
+      300
      ]
     }
    ],
@@ -3610,6 +3674,240 @@
       375,
       180,
       345
+     ]
+    }
+   ]
+  },
+  "toucher": {
+   "name": "Le cabinet du toucher · The cabinet of touch",
+   "room_id": "R_abs_senses_02",
+   "image": "musee/toucher.jpg",
+   "alt": "The cabinet of touch beside the cabinet of scents, seen from the near left: terracotta walls hung with dried herbs, a giant bronze open hand, a big knitted glove and shelves of fabric rolls. On the left a honey-wood door with a painted flower, a girl touching a glowing purple plasma ball, a girl holding up a huge cotton cloud on a stick, and a boy touching a mimosa plant whose leaves fold up. In the middle a boy rubbing sandpaper on a wooden block, a boy sinking into a cow-print beanbag, a girl touching a spiky cactus, a boy with sticky tape stuck from his collar to his fingers, a girl sitting on a wet floor after sliding in her socks beside a yellow cone, and a boy in a knit hat touching an ice swan. On the right a father holding a baby who grips his sweater, and a blindfolded boy holding up a pinecone from a wooden feely box.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "parfums",
+   "doors": [
+    {
+     "to": "parfums",
+     "label": "Les parfums",
+     "hint": "the honey-wood door with the flower on the left wall, back to the cabinet of scents",
+     "hit": [
+      18,
+      85,
+      90,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sensation_noun",
+     "box": [
+      110,
+      215,
+      180,
+      200
+     ]
+    },
+    {
+     "id": "fr_legerete_noun",
+     "box": [
+      240,
+      50,
+      190,
+      160
+     ]
+    },
+    {
+     "id": "fr_sensibilite_noun",
+     "box": [
+      30,
+      420,
+      295,
+      270
+     ]
+    },
+    {
+     "id": "fr_rude_adj",
+     "box": [
+      425,
+      212,
+      125,
+      190
+     ]
+    },
+    {
+     "id": "fr_mou_adj",
+     "box": [
+      330,
+      425,
+      245,
+      270
+     ]
+    },
+    {
+     "id": "fr_pointu_adj",
+     "box": [
+      632,
+      180,
+      180,
+      145
+     ]
+    },
+    {
+     "id": "fr_collant_adj",
+     "box": [
+      578,
+      330,
+      140,
+      225
+     ]
+    },
+    {
+     "id": "fr_glissant_adj",
+     "box": [
+      722,
+      438,
+      240,
+      255
+     ]
+    },
+    {
+     "id": "fr_glace_adj",
+     "box": [
+      820,
+      200,
+      140,
+      215
+     ]
+    },
+    {
+     "id": "fr_instinct_noun",
+     "box": [
+      1000,
+      150,
+      190,
+      250
+     ]
+    },
+    {
+     "id": "fr_toucher_noun",
+     "box": [
+      985,
+      405,
+      270,
+      290
+     ]
+    }
+   ]
+  },
+  "optique": {
+   "name": "Le cabinet de la vue · The cabinet of sight",
+   "room_id": "R_abs_senses_03",
+   "image": "musee/optique.jpg",
+   "alt": "The cabinet of sight: pale sky-blue walls hung with optical illusions, a giant painted eye and a huge magnifying glass; an artist snips a black paper silhouette, a boy studies a vase-or-two-faces picture, a crossing guard in a hi-vis vest, a meditating girl with a golden glow, a boy squinting at an eye chart with his glasses in his hand, a tango dancer in a silvery dress, and a man walking away down a painted road.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "lumieres",
+   "doors": [
+    {
+     "to": "lumieres",
+     "label": "Les lumières",
+     "hint": "the silver-gray door with the painted light bulb on the left wall, back to the cabinet of lights",
+     "hit": [
+      20,
+      115,
+      135,
+      225
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_silhouette_noun",
+     "box": [
+      10,
+      345,
+      320,
+      375
+     ]
+    },
+    {
+     "id": "fr_perception_noun",
+     "box": [
+      180,
+      160,
+      240,
+      180
+     ]
+    },
+    {
+     "id": "fr_visibilite_noun",
+     "box": [
+      420,
+      110,
+      165,
+      285
+     ]
+    },
+    {
+     "id": "fr_aura_noun",
+     "box": [
+      478,
+      400,
+      165,
+      265
+     ]
+    },
+    {
+     "id": "fr_flou_adj",
+     "box": [
+      650,
+      215,
+      180,
+      340
+     ]
+    },
+    {
+     "id": "fr_argente_adj",
+     "box": [
+      830,
+      195,
+      125,
+      310
+     ]
+    },
+    {
+     "id": "fr_eloignement_noun",
+     "box": [
+      980,
+      170,
+      165,
+      290
+     ]
+    },
+    {
+     "id": "fr_subtil_adj",
+     "box": [
+      592,
+      72,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_attentif_adj",
+     "box": [
+      750,
+      85,
+      185,
+      105
      ]
     }
    ]
