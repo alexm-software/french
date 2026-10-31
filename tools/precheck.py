@@ -33,7 +33,7 @@ GROW = 3   # check_v2 --strict: "touching" = closer than this (px)
 LIMITS = json.loads((Path(__file__).resolve().parents[1] / "skills" / "limits.json").read_text(encoding="utf-8"))
 EDGE = LIMITS["label_edge_px"]   # check_v2 --strict: min clear gap label <-> scene edge (px)
 BAND = LIMITS["centre_band"]     # adjectives and adverbs
-PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOUR", "SETTING", "SITUATION", "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING",
+PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOR", "SETTING", "SITUATION", "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING",
                    "DOORS AND EXITS", "GROUNDING AND ANATOMY", "FIGURES", "TEXT", "CONTENT", "VARIETY", "AVOID")
 DETACH = 12  # build_v2 places labels 4 px off their box; farther than this = detached (manual labelAt?)
 FONT = None

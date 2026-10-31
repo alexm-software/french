@@ -1,1544 +1,1739 @@
 {
-  "building": "cabinet",
-  "building_id": "B17_cabinet",
-  "sector_id": "S07_health",
-  "name": "Cabinet médical",
-  "main": "cabinet",
-  "roomList": [
-    {
-      "key": "cabinet",
-      "short": "Le cabinet médical"
-    },
-    {
-      "key": "visage",
-      "short": "La salle du visage"
-    },
-    {
-      "key": "mains",
-      "short": "L'atelier des mains"
-    },
-    {
-      "key": "organes",
-      "short": "La salle des organes"
-    },
-    {
-      "key": "combles",
-      "short": "Les combles"
-    },
-    {
-      "key": "docteur",
-      "short": "La salle d'attente"
-    },
-    {
-      "key": "bureau",
-      "short": "Le bureau du docteur"
-    }
-  ],
-  "planned": {
-    "cabinet": {
-      "vocabRoom": "R_body_02",
-      "only": [
-        "fr_main_noun",
-        "fr_jambe_noun",
-        "fr_epaule_noun",
-        "fr_poitrine_noun",
-        "fr_gorge_noun",
-        "fr_corps_noun",
-        "fr_pied_noun",
-        "fr_bras_noun",
-        "fr_doigt_noun",
-        "fr_dos_noun",
-        "fr_coeur_noun",
-        "fr_ventre_noun",
-        "fr_souffle_noun",
-        "fr_genou_noun",
-        "fr_poing_noun"
-      ]
-    },
-    "visage": {
-      "vocabRoom": "R_body_01",
-      "only": [
-        "fr_tete_noun",
-        "fr_joue_noun",
-        "fr_bouche_noun",
-        "fr_oreille_noun",
-        "fr_langue_noun",
-        "fr_figure_noun",
-        "fr_peau_noun",
-        "fr_face_noun",
-        "fr_levre_noun",
-        "fr_visage_noun",
-        "fr_cheveu_noun",
-        "fr_nez_noun",
-        "fr_oeil_noun",
-        "fr_front_noun",
-        "fr_cou_noun",
-        "fr_poil_noun"
-      ]
-    },
-    "mains": {
-      "vocabRoom": "R_body_03",
-      "only": [
-        "fr_nuque_noun",
-        "fr_paume_noun",
-        "fr_cheville_noun",
-        "fr_tempe_noun",
-        "fr_os_noun",
-        "fr_ongle_noun",
-        "fr_coude_noun",
-        "fr_nerf_noun",
-        "fr_pouce_noun",
-        "fr_index_noun"
-      ]
-    },
-    "organes": {
-      "vocabRoom": "R_body_04",
-      "only": [
-        "fr_haleine_noun",
-        "fr_moustache_noun",
-        "fr_barbe_noun",
-        "fr_veine_noun",
-        "fr_narine_noun",
-        "fr_cuisse_noun",
-        "fr_machoire_noun",
-        "fr_pommette_noun",
-        "fr_crane_noun",
-        "fr_menton_noun",
-        "fr_foie_noun",
-        "fr_muscle_noun",
-        "fr_estomac_noun",
-        "fr_rein_noun",
-        "fr_organe_noun",
-        "fr_poumon_noun",
-        "fr_buste_noun",
-        "fr_squelette_noun"
-      ]
-    },
-    "combles": {
-      "vocabRoom": "R_body_05",
-      "only": [
-        "fr_manchette_noun",
-        "fr_artere_noun",
-        "fr_natte_noun",
-        "fr_rubrique_noun",
-        "fr_reticence_noun",
-        "fr_entrailles_noun",
-        "fr_facette_noun",
-        "fr_avant_bras_noun",
-        "fr_intestin_noun",
-        "fr_complement_noun",
-        "fr_lifting_noun"
-      ]
-    },
-    "docteur": {
-      "vocabRoom": "R_doctor_01",
-      "only": [
-        "fr_cicatrice_noun",
-        "fr_sante_noun",
-        "fr_douleur_noun",
-        "fr_toux_noun",
-        "fr_coupure_noun",
-        "fr_fatigue_noun",
-        "fr_fievre_noun",
-        "fr_grippe_noun",
-        "fr_medical_adj",
-        "fr_docteur_noun",
-        "fr_vertige_noun",
-        "fr_virus_noun",
-        "fr_soulagement_noun"
-      ]
-    },
-    "plateau": {
-      "vocabRoom": "R_doctor_01",
-      "only": [
-        "fr_nausee_noun",
-        "fr_irruption_noun",
-        "fr_consultation_noun",
-        "fr_symptome_noun",
-        "fr_rhume_noun",
-        "fr_vaccin_noun"
-      ]
-    },
-    "bureau": {
-      "vocabRoom": "R_doctor_02",
-      "only": [
-        "fr_schizophrenie_noun",
-        "fr_defaillance_noun",
-        "fr_vaccination_noun",
-        "fr_sanitaire_adj",
-        "fr_diagnostic_noun",
-        "fr_pronostic_noun",
-        "fr_refroidissement_noun"
-      ]
-    }
+ "building": "cabinet",
+ "building_id": "B17_cabinet",
+ "sector_id": "S07_health",
+ "name": "Cabinet médical",
+ "main": "cabinet",
+ "roomList": [
+  {
+   "key": "cabinet",
+   "short": "Le cabinet médical"
   },
-  "rooms": {
-    "cabinet": {
-      "name": "Le cabinet médical",
-      "room_id": "R_body_02",
-      "image": "cabinet/cabinet.jpg",
-      "alt": "The bright first floor of the doctor's house, a body-and-fitness room with a gym floor on the left and a little indoor pool on the right, painted in ink and gouache: a man in a green tracksuit waves a giant yellow foam hand, a girl stretches her leg on a bench beside an open jar of apricot jam and a curious bee, a sailor rolls his shoulders with a parrot perched on one, a dad lies on a mat while a toy train chugs across his chest, a pelican with a flower puffs out its throat pouch, a giant apple core stretches like a gymnast, a physio gasps at the apple pie by her bare foot, a strongman curls a brass kettlebell, a gnome lifeguard wags his finger from a tall chair, a baker carries a lump of dough on his back, a scruffy dog hugs a heart-shaped pool ring, a plump man floats belly-up over a bubbling jet, a swimmer puffs out her cheeks beside a round soufflé on the poolside, a gnu bends down on its front knees to drink at the pool edge, and a giant chess pawn in goggles raises a tiny fist. Six colored doors lead off: blue, yellow and red on the first floor, green, purple and white up the stairs on the balcony; the open glass front door on the far left leads out to the map.",
-      "nameplate": [
-        36,
-        93
-      ],
-      "mapExit": {
-        "box": [
-          0,
-          40,
-          148,
-          150
-        ],
-        "label": "Quartier de la Santé"
-      },
-      "doors": [
-        {
-          "to": "visage",
-          "label": "La salle du visage",
-          "hint": "Go through the blue door on the first floor",
-          "hit": [
-            278,
-            164,
-            58,
-            108
-          ]
-        },
-        {
-          "to": "docteur",
-          "label": "La salle d'attente",
-          "hint": "Go through the yellow door to the doctor's waiting room",
-          "hit": [
-            375,
-            164,
-            62,
-            108
-          ]
-        },
-        {
-          "to": "bureau",
-          "label": "Le bureau du docteur",
-          "hint": "Go through the red door and up the stairs to the doctor's study",
-          "hit": [
-            481,
-            164,
-            62,
-            108
-          ]
-        },
-        {
-          "to": "mains",
-          "label": "L'atelier des mains",
-          "hint": "Climb the stairs to the green door on the balcony",
-          "hit": [
-            305,
-            8,
-            62,
-            68
-          ]
-        },
-        {
-          "to": "organes",
-          "label": "La salle des organes",
-          "hint": "Climb the stairs to the purple door on the balcony",
-          "hit": [
-            462,
-            8,
-            62,
-            68
-          ]
-        },
-        {
-          "to": "combles",
-          "label": "Les combles",
-          "hint": "Climb the stairs to the white door at the top",
-          "hit": [
-            630,
-            8,
-            62,
-            68
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_main_noun",
-          "box": [
-            154,
-            100,
-            94,
-            110
-          ]
-        },
-        {
-          "id": "fr_jambe_noun",
-          "box": [
-            190,
-            280,
-            180,
-            155
-          ],
-          "labelAt": [
-            280,
-            400
-          ]
-        },
-        {
-          "id": "fr_epaule_noun",
-          "box": [
-            395,
-            278,
-            135,
-            150
-          ]
-        },
-        {
-          "id": "fr_poitrine_noun",
-          "box": [
-            258,
-            445,
-            280,
-            140
-          ]
-        },
-        {
-          "id": "fr_gorge_noun",
-          "box": [
-            0,
-            445,
-            210,
-            225
-          ]
-        },
-        {
-          "id": "fr_corps_noun",
-          "box": [
-            710,
-            188,
-            86,
-            140
-          ]
-        },
-        {
-          "id": "fr_pied_noun",
-          "box": [
-            800,
-            115,
-            108,
-            230
-          ]
-        },
-        {
-          "id": "fr_bras_noun",
-          "box": [
-            912,
-            78,
-            121,
-            250
-          ]
-        },
-        {
-          "id": "fr_doigt_noun",
-          "box": [
-            1062,
-            15,
-            95,
-            112
-          ]
-        },
-        {
-          "id": "fr_dos_noun",
-          "box": [
-            1112,
-            203,
-            155,
-            170
-          ]
-        },
-        {
-          "id": "fr_coeur_noun",
-          "box": [
-            750,
-            367,
-            125,
-            86
-          ],
-          "labelAt": [
-            812,
-            418
-          ]
-        },
-        {
-          "id": "fr_ventre_noun",
-          "box": [
-            925,
-            380,
-            195,
-            108
-          ]
-        },
-        {
-          "id": "fr_souffle_noun",
-          "box": [
-            826,
-            475,
-            94,
-            100
-          ],
-          "labelAt": [
-            873,
-            540
-          ]
-        },
-        {
-          "id": "fr_genou_noun",
-          "box": [
-            950,
-            494,
-            205,
-            156
-          ]
-        },
-        {
-          "id": "fr_poing_noun",
-          "box": [
-            1162,
-            506,
-            107,
-            188
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "visage": {
-      "name": "La salle du visage",
-      "room_id": "R_body_01",
-      "image": "cabinet/visage.jpg",
-      "backTo": "cabinet",
-      "alt": "A crowded, cozy examination room for faces, painted in ink and gouache: a robot built of bright blocks clicks its last block onto its head, a zoo keeper in khaki gets a kiss on the cheek from a llama, a bush is clipped into a giant smiling mouth, a stingray watches from its tank beside a baby elephant with one huge floppy ear, a frog on a blue dentist's chair stretches out a long tongue holding a pink shell, a figure skater twirls in a tall gold mirror, a boy peels a potato in one long ribbon of skin, a toddler in a high chair scrunches up her face and wails, a big lever with a red knob makes a jester puppet's red lips grin, a border guard compares a visa photo with a boy's face in front of the blue door, an attendant points a buzzing shaver at the one hair on a giant egg, a pony neighs so hard that a man's paper hat blows off, a boy in a pirate hat peers through a spyglass with one eye, a cross boy frowns as a ladybird slides down his forehead, a wooden cuckoo boings out on a long springy neck, and a fluffy little creature clings to the wall. The blue door leads back to the cabinet.",
-      "nameplate": [
-        11.8,
-        10.5
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the blue door to the cabinet",
-          "hit": [
-            735,
-            5,
-            225,
-            62
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_tete_noun",
-          "box": [
-            20,
-            165,
-            130,
-            190
-          ]
-        },
-        {
-          "id": "fr_joue_noun",
-          "box": [
-            302,
-            15,
-            163,
-            190
-          ],
-          "labelAt": [
-            383,
-            170
-          ]
-        },
-        {
-          "id": "fr_bouche_noun",
-          "box": [
-            470,
-            70,
-            218,
-            195
-          ],
-          "labelAt": [
-            579,
-            230
-          ]
-        },
-        {
-          "id": "fr_oreille_noun",
-          "box": [
-            152,
-            105,
-            148,
-            165
-          ]
-        },
-        {
-          "id": "fr_langue_noun",
-          "box": [
-            471,
-            273,
-            180,
-            170
-          ]
-        },
-        {
-          "id": "fr_figure_noun",
-          "box": [
-            212,
-            278,
-            132,
-            345
-          ]
-        },
-        {
-          "id": "fr_peau_noun",
-          "box": [
-            30,
-            360,
-            175,
-            310
-          ]
-        },
-        {
-          "id": "fr_face_noun",
-          "box": [
-            350,
-            410,
-            115,
-            240
-          ]
-        },
-        {
-          "id": "fr_levre_noun",
-          "box": [
-            515,
-            451,
-            170,
-            170
-          ]
-        },
-        {
-          "id": "fr_visage_noun",
-          "box": [
-            745,
-            75,
-            200,
-            200
-          ]
-        },
-        {
-          "id": "fr_cheveu_noun",
-          "box": [
-            770,
-            320,
-            268,
-            182
-          ]
-        },
-        {
-          "id": "fr_nez_noun",
-          "box": [
-            1044,
-            250,
-            226,
-            160
-          ]
-        },
-        {
-          "id": "fr_oeil_noun",
-          "box": [
-            1080,
-            414,
-            150,
-            88
-          ]
-        },
-        {
-          "id": "fr_front_noun",
-          "box": [
-            940,
-            508,
-            205,
-            212
-          ],
-          "labelAt": [
-            870,
-            640
-          ]
-        },
-        {
-          "id": "fr_cou_noun",
-          "box": [
-            1045,
-            40,
-            100,
-            204
-          ],
-          "labelAt": [
-            1095,
-            208
-          ]
-        },
-        {
-          "id": "fr_poil_noun",
-          "box": [
-            1155,
-            70,
-            115,
-            135
-          ],
-          "labelAt": [
-            1212,
-            172
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "mains": {
-      "name": "L'atelier des mains",
-      "room_id": "R_body_03",
-      "image": "cabinet/mains.jpg",
-      "backTo": "cabinet",
-      "alt": "A busy attic workshop for hands and heads, painted in ink and gouache: a girl touches the nape of her neck where a raindrop from the skylight has landed, a girl balances a pomegranate on her palm, a girl rubs her ankle beside a toy car, a boy holds an ice pack to his temple, an ostrich carries a bone, a mouse walks a tightrope near the ceiling, Puss in Boots gives a thumbs-up, an old carpenter leans on his elbow beside a dove, a manicurist files a girl's nail, and a sailor boy points his index finger at a model ship. The green door leads back to the cabinet.",
-      "nameplate": [
-        60.15,
-        10.5
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the green door to the cabinet",
-          "hit": [
-            520,
-            62,
-            85,
-            58
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_nuque_noun",
-          "box": [
-            47,
-            125,
-            122,
-            170
-          ]
-        },
-        {
-          "id": "fr_paume_noun",
-          "box": [
-            398,
-            272,
-            115,
-            215
-          ],
-          "labelAt": [
-            455,
-            452
-          ]
-        },
-        {
-          "id": "fr_cheville_noun",
-          "box": [
-            30,
-            455,
-            210,
-            250
-          ],
-          "labelAt": [
-            135,
-            462
-          ]
-        },
-        {
-          "id": "fr_tempe_noun",
-          "box": [
-            250,
-            445,
-            145,
-            190
-          ]
-        },
-        {
-          "id": "fr_os_noun",
-          "box": [
-            633,
-            150,
-            227,
-            350
-          ],
-          "labelAt": [
-            746,
-            465
-          ]
-        },
-        {
-          "id": "fr_ongle_noun",
-          "box": [
-            866,
-            273,
-            196,
-            192
-          ]
-        },
-        {
-          "id": "fr_coude_noun",
-          "box": [
-            935,
-            115,
-            130,
-            150
-          ],
-          "labelAt": [
-            1000,
-            232
-          ]
-        },
-        {
-          "id": "fr_nerf_noun",
-          "box": [
-            932,
-            15,
-            85,
-            85
-          ],
-          "labelAt": [
-            974,
-            66
-          ]
-        },
-        {
-          "id": "fr_pouce_noun",
-          "box": [
-            1100,
-            15,
-            135,
-            160
-          ]
-        },
-        {
-          "id": "fr_index_noun",
-          "box": [
-            872,
-            480,
-            240,
-            230
-          ],
-          "labelAt": [
-            992,
-            488
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "organes": {
-      "name": "La salle des organes",
-      "room_id": "R_body_04",
-      "image": "cabinet/organes.jpg",
-      "backTo": "cabinet",
-      "alt": "A cheerful anatomy room full of figures, painted in ink and gouache: a little dragon's warm breath melts a lane through icicles on the window, a barber trims an old man's enormous beard, a vain bodybuilder admires a vein on his flexed arm, a moose twirls its huge mustache, a horse sniffs a nectarine, a cheerleader waves a red pom-pom, a dancer pats her thigh holding a quiche, a mother crocodile opens her jaw under a garden shower, a toy crane lowers a dinosaur skull into a glass case, a circus juggler juts out his chin under an iron ball, a stout man plays a tuba with a plush liver in its bell, a ginger kitten flexes a tiny muscle, a mother hippo pats her stomach while her baby calls, a mouse plays a pipe organ with heart and lung pipes, a puma with two pink balloons, a girl runs off hugging a plush kidney, two mice boost a marble bust onto its pedestal, and a teaching skeleton in sunglasses waves. The purple door leads back to the cabinet.",
-      "nameplate": [
-        61.1,
-        7.4
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the purple door to the cabinet",
-          "hit": [
-            8,
-            15,
-            150,
-            140
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_haleine_noun",
-          "box": [
-            190,
-            15,
-            160,
-            170
-          ],
-          "labelAt": [
-            270,
-            150
-          ]
-        },
-        {
-          "id": "fr_moustache_noun",
-          "box": [
-            390,
-            20,
-            220,
-            175
-          ],
-          "labelAt": [
-            500,
-            160
-          ]
-        },
-        {
-          "id": "fr_barbe_noun",
-          "box": [
-            100,
-            192,
-            228,
-            218
-          ],
-          "labelAt": [
-            214,
-            375
-          ]
-        },
-        {
-          "id": "fr_veine_noun",
-          "box": [
-            335,
-            200,
-            150,
-            190
-          ],
-          "labelAt": [
-            410,
-            355
-          ]
-        },
-        {
-          "id": "fr_narine_noun",
-          "box": [
-            492,
-            200,
-            140,
-            190
-          ],
-          "labelAt": [
-            562,
-            355
-          ]
-        },
-        {
-          "id": "fr_cuisse_noun",
-          "box": [
-            15,
-            420,
-            170,
-            250
-          ]
-        },
-        {
-          "id": "fr_machoire_noun",
-          "box": [
-            190,
-            445,
-            232,
-            240
-          ],
-          "labelAt": [
-            300,
-            452
-          ]
-        },
-        {
-          "id": "fr_pommette_noun",
-          "box": [
-            446,
-            400,
-            134,
-            280
-          ],
-          "labelAt": [
-            513,
-            407
-          ]
-        },
-        {
-          "id": "fr_crane_noun",
-          "box": [
-            672,
-            102,
-            220,
-            108
-          ]
-        },
-        {
-          "id": "fr_menton_noun",
-          "box": [
-            650,
-            216,
-            140,
-            165
-          ],
-          "labelAt": [
-            720,
-            345
-          ]
-        },
-        {
-          "id": "fr_foie_noun",
-          "box": [
-            655,
-            386,
-            178,
-            138
-          ],
-          "labelAt": [
-            744,
-            490
-          ]
-        },
-        {
-          "id": "fr_muscle_noun",
-          "box": [
-            625,
-            530,
-            125,
-            165
-          ],
-          "labelAt": [
-            688,
-            537
-          ]
-        },
-        {
-          "id": "fr_estomac_noun",
-          "box": [
-            850,
-            216,
-            175,
-            204
-          ],
-          "labelAt": [
-            937,
-            385
-          ]
-        },
-        {
-          "id": "fr_rein_noun",
-          "box": [
-            840,
-            505,
-            105,
-            190
-          ],
-          "labelAt": [
-            892,
-            512
-          ]
-        },
-        {
-          "id": "fr_organe_noun",
-          "box": [
-            950,
-            40,
-            150,
-            170
-          ],
-          "labelAt": [
-            1025,
-            177
-          ]
-        },
-        {
-          "id": "fr_poumon_noun",
-          "box": [
-            1117,
-            8,
-            158,
-            280
-          ],
-          "labelAt": [
-            1196,
-            250
-          ]
-        },
-        {
-          "id": "fr_buste_noun",
-          "box": [
-            950,
-            426,
-            138,
-            264
-          ],
-          "labelAt": [
-            1019,
-            433
-          ]
-        },
-        {
-          "id": "fr_squelette_noun",
-          "box": [
-            1095,
-            295,
-            180,
-            365
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "combles": {
-      "name": "Les combles",
-      "room_id": "R_body_05",
-      "image": "cabinet/combles.jpg",
-      "backTo": "cabinet",
-      "alt": "The wooden attic at the top of the doctor's house, painted in ink and gouache: an old lecturer points with his shirt cuff and gold cufflink showing, a red spiral water slide with a marble whooshing down it, a girl with a long braid tied in a ribbon, a boy sorting red bricks into piles with blank tags, a grandma with her tea and a shy tortoise turning away, a silver tray of soft plush organs, a fairy setting a big diamond in a ring, a lumberjack balancing a toy van along his forearm, an ant in a sun hat hiking along a coiled garden hose, a jigsaw finished by a little man-shaped piece, and a sculptor smoothing a clay bust's cheeks upward. The white door leads back down to the cabinet.",
-      "nameplate": [
-        90.6,
-        10.5
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the white door to the cabinet",
-          "hit": [
-            640,
-            70,
-            135,
-            330
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_manchette_noun",
-          "box": [
-            30,
-            30,
-            200,
-            200
-          ],
-          "labelAt": [
-            130,
-            198
-          ]
-        },
-        {
-          "id": "fr_artere_noun",
-          "box": [
-            300,
-            15,
-            170,
-            215
-          ],
-          "labelAt": [
-            385,
-            196
-          ]
-        },
-        {
-          "id": "fr_natte_noun",
-          "box": [
-            210,
-            236,
-            120,
-            138
-          ],
-          "labelAt": [
-            270,
-            340
-          ]
-        },
-        {
-          "id": "fr_rubrique_noun",
-          "box": [
-            347,
-            258,
-            285,
-            200
-          ],
-          "labelAt": [
-            490,
-            420
-          ]
-        },
-        {
-          "id": "fr_reticence_noun",
-          "box": [
-            4,
-            380,
-            325,
-            148
-          ],
-          "labelAt": [
-            166,
-            490
-          ]
-        },
-        {
-          "id": "fr_entrailles_noun",
-          "box": [
-            40,
-            535,
-            375,
-            155
-          ],
-          "labelAt": [
-            228,
-            542
-          ]
-        },
-        {
-          "id": "fr_facette_noun",
-          "box": [
-            422,
-            470,
-            180,
-            180
-          ]
-        },
-        {
-          "id": "fr_avant_bras_noun",
-          "box": [
-            782,
-            90,
-            260,
-            300
-          ]
-        },
-        {
-          "id": "fr_intestin_noun",
-          "box": [
-            655,
-            410,
-            295,
-            180
-          ]
-        },
-        {
-          "id": "fr_complement_noun",
-          "box": [
-            1050,
-            565,
-            95,
-            110
-          ]
-        },
-        {
-          "id": "fr_lifting_noun",
-          "box": [
-            1045,
-            200,
-            230,
-            340
-          ],
-          "labelAt": [
-            1160,
-            500
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "docteur": {
-      "name": "La salle d'attente",
-      "room_id": "R_doctor_01",
-      "image": "cabinet/docteur.jpg",
-      "backTo": "cabinet",
-      "alt": "The doctor's busy, gentle waiting room, painted in ink and gouache: an old explorer by the window shows a pale old scar on his forearm next to a drooping little potted tree, a rosy grandma raises her cup of tea, a young angler hops holding his sore toe, a girl covers a cough while a toucan looks on, a boy pours water from a pitcher over a tiny cut with a Band-Aid ready, a tiger cub sleeps across two chairs, a feverish boy with a thermometer sits in a tub of ice, a sneezing girl in a scarf clutches a hot-water bottle, Dr. Cal finds a hamster asleep in his medical bag, a kind woman doctor listens to a boy's chest while her cat purrs, a goat clutches the top of a step-ladder with spinning eyes, a grumpy green virus puppet hovers by the yellow door, and Sue lifts a sack of potatoes off a large man's back. On the back wall a long examination tray holds a seasick sailor boy, kittens, a giraffe, a mouse, a boy in a blanket and a girl with a star sticker. The yellow door leads back to the cabinet.",
-      "nameplate": [
-        27.5,
-        10.5
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the yellow door to the cabinet",
-          "hit": [
-            1172,
-            40,
-            95,
-            250
-          ]
-        }
-      ],
-      "zooms": [
-        {
-          "to": "plateau",
-          "label": "le plateau d'examen",
-          "hint": "Look closer at the examination tray on the back wall",
-          "at": [
-            690,
-            200
-          ],
-          "obj": [
-            400,
-            0,
-            580,
-            326
-          ]
-        }
-      ],
-      "items": [
-        {
-          "id": "fr_cicatrice_noun",
-          "box": [
-            0,
-            8,
-            195,
-            190
-          ],
-          "labelAt": [
-            98,
-            160
-          ]
-        },
-        {
-          "id": "fr_sante_noun",
-          "box": [
-            62,
-            204,
-            160,
-            150
-          ],
-          "labelAt": [
-            142,
-            320
-          ]
-        },
-        {
-          "id": "fr_douleur_noun",
-          "box": [
-            258,
-            258,
-            132,
-            190
-          ],
-          "labelAt": [
-            324,
-            415
-          ]
-        },
-        {
-          "id": "fr_toux_noun",
-          "box": [
-            400,
-            258,
-            134,
-            190
-          ],
-          "labelAt": [
-            467,
-            415
-          ]
-        },
-        {
-          "id": "fr_coupure_noun",
-          "box": [
-            0,
-            365,
-            235,
-            175
-          ],
-          "labelAt": [
-            118,
-            505
-          ]
-        },
-        {
-          "id": "fr_fatigue_noun",
-          "box": [
-            45,
-            545,
-            240,
-            145
-          ],
-          "labelAt": [
-            165,
-            552
-          ]
-        },
-        {
-          "id": "fr_fievre_noun",
-          "box": [
-            290,
-            455,
-            205,
-            265
-          ],
-          "labelAt": [
-            392,
-            462
-          ]
-        },
-        {
-          "id": "fr_grippe_noun",
-          "box": [
-            528,
-            470,
-            122,
-            230
-          ]
-        },
-        {
-          "id": "fr_medical_adj",
-          "box": [
-            540,
-            235,
-            192,
-            200
-          ],
-          "labelAt": [
-            636,
-            400
-          ]
-        },
-        {
-          "id": "fr_docteur_noun",
-          "box": [
-            740,
-            365,
-            175,
-            300
-          ],
-          "labelAt": [
-            827,
-            630
-          ]
-        },
-        {
-          "id": "fr_vertige_noun",
-          "box": [
-            935,
-            15,
-            115,
-            280
-          ],
-          "labelAt": [
-            992,
-            262
-          ]
-        },
-        {
-          "id": "fr_virus_noun",
-          "box": [
-            1056,
-            180,
-            108,
-            110
-          ],
-          "labelAt": [
-            1110,
-            258
-          ]
-        },
-        {
-          "id": "fr_soulagement_noun",
-          "box": [
-            960,
-            300,
-            315,
-            400
-          ],
-          "labelAt": [
-            1117,
-            310
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "plateau": {
-      "name": "Le plateau d'examen",
-      "room_id": "R_doctor_01_z1",
-      "image": "cabinet/plateau.jpg",
-      "parent": "docteur",
-      "alt": "Close-up of the long white examination tray on the waiting-room wall: a seasick sailor boy in a captain's cap pinches his nose, a basket of kittens bursts into sneezes, a giraffe sticks out a sore tongue for the doctor, a little mouse looks something up in a huge blue book, a boy with a cold sits wrapped in a patchwork blanket among crumpled tissues, and a brave little girl shows off the gold star sticker on her sleeve.",
-      "doors": [],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_nausee_noun",
-          "box": [
-            56,
-            94,
-            200,
-            425
-          ]
-        },
-        {
-          "id": "fr_irruption_noun",
-          "box": [
-            262,
-            160,
-            270,
-            365
-          ]
-        },
-        {
-          "id": "fr_consultation_noun",
-          "box": [
-            535,
-            40,
-            135,
-            310
-          ],
-          "labelAt": [
-            602,
-            62
-          ]
-        },
-        {
-          "id": "fr_symptome_noun",
-          "box": [
-            672,
-            240,
-            170,
-            275
-          ]
-        },
-        {
-          "id": "fr_rhume_noun",
-          "box": [
-            850,
-            180,
-            200,
-            345
-          ]
-        },
-        {
-          "id": "fr_vaccin_noun",
-          "box": [
-            1055,
-            200,
-            215,
-            460
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    },
-    "bureau": {
-      "name": "Le bureau du docteur",
-      "room_id": "R_doctor_02",
-      "image": "cabinet/bureau.jpg",
-      "backTo": "cabinet",
-      "alt": "The doctor's quiet study upstairs, painted in ink and gouache: a tired runner faints onto the sofa while a friend fans her, a blank picture frame hangs on the wall, a blank sheet waits on an easel, a grandpa shows his grandson the star sticker from his vaccination, the doctor's cat creeps along the bookshelf checking for dust, the doctor points at an X-ray of an anteater's long nose while the anteater waits, a nurse smiles at a pigeon in a basket, and Roy in his paper crown judges a soup-cooling contest beside a snowman. The red door leads back down to the cabinet.",
-      "nameplate": [
-        57.5,
-        94
-      ],
-      "doors": [
-        {
-          "to": "cabinet",
-          "label": "Le cabinet médical",
-          "hint": "Go back through the red door to the cabinet",
-          "hit": [
-            805,
-            25,
-            140,
-            165
-          ]
-        }
-      ],
-      "zooms": [],
-      "items": [
-        {
-          "id": "fr_schizophrenie_noun",
-          "box": [
-            200,
-            15,
-            240,
-            190
-          ]
-        },
-        {
-          "id": "fr_defaillance_noun",
-          "box": [
-            20,
-            212,
-            225,
-            298
-          ]
-        },
-        {
-          "id": "fr_vaccination_noun",
-          "box": [
-            250,
-            400,
-            310,
-            320
-          ],
-          "labelAt": [
-            405,
-            408
-          ]
-        },
-        {
-          "id": "fr_sanitaire_adj",
-          "box": [
-            555,
-            60,
-            180,
-            125
-          ]
-        },
-        {
-          "id": "fr_diagnostic_noun",
-          "box": [
-            618,
-            235,
-            300,
-            240
-          ]
-        },
-        {
-          "id": "fr_pronostic_noun",
-          "box": [
-            925,
-            195,
-            200,
-            320
-          ],
-          "labelAt": [
-            1025,
-            478
-          ]
-        },
-        {
-          "id": "fr_refroidissement_noun",
-          "box": [
-            1130,
-            240,
-            150,
-            480
-          ],
-          "labelAt": [
-            1170,
-            525
-          ]
-        }
-      ],
-      "building_id": "B17_cabinet",
-      "sector_id": "S07_health"
-    }
+  {
+   "key": "visage",
+   "short": "La salle du visage"
+  },
+  {
+   "key": "grimaces",
+   "short": "La salle des grimaces"
+  },
+  {
+   "key": "mains",
+   "short": "L'atelier des mains"
+  },
+  {
+   "key": "organes",
+   "short": "La salle des organes"
+  },
+  {
+   "key": "barbier",
+   "short": "Le coin du barbier"
+  },
+  {
+   "key": "os",
+   "short": "La salle des os"
+  },
+  {
+   "key": "combles",
+   "short": "Les combles"
+  },
+  {
+   "key": "docteur",
+   "short": "La salle d'attente"
+  },
+  {
+   "key": "bureau",
+   "short": "Le bureau du docteur"
   }
+ ],
+ "planned": {
+  "cabinet": {
+   "vocabRoom": "R_body_02",
+   "only": [
+    "fr_main_noun",
+    "fr_jambe_noun",
+    "fr_epaule_noun",
+    "fr_poitrine_noun",
+    "fr_gorge_noun",
+    "fr_corps_noun",
+    "fr_pied_noun",
+    "fr_bras_noun",
+    "fr_doigt_noun",
+    "fr_dos_noun",
+    "fr_coeur_noun",
+    "fr_ventre_noun",
+    "fr_souffle_noun",
+    "fr_genou_noun",
+    "fr_poing_noun"
+   ]
+  },
+  "visage": {
+   "vocabRoom": "R_body_01",
+   "only": [
+    "fr_tete_noun",
+    "fr_oreille_noun",
+    "fr_figure_noun",
+    "fr_peau_noun",
+    "fr_cou_noun",
+    "fr_visage_noun",
+    "fr_nez_noun",
+    "fr_oeil_noun"
+   ]
+  },
+  "grimaces": {
+   "vocabRoom": "R_body_01",
+   "only": [
+    "fr_joue_noun",
+    "fr_bouche_noun",
+    "fr_langue_noun",
+    "fr_face_noun",
+    "fr_levre_noun",
+    "fr_poil_noun",
+    "fr_front_noun",
+    "fr_cheveu_noun"
+   ]
+  },
+  "mains": {
+   "vocabRoom": "R_body_03",
+   "only": [
+    "fr_nuque_noun",
+    "fr_paume_noun",
+    "fr_cheville_noun",
+    "fr_tempe_noun",
+    "fr_os_noun",
+    "fr_ongle_noun",
+    "fr_coude_noun",
+    "fr_nerf_noun",
+    "fr_pouce_noun",
+    "fr_index_noun"
+   ]
+  },
+  "organes": {
+   "vocabRoom": "R_body_04",
+   "only": [
+    "fr_haleine_noun",
+    "fr_cuisse_noun",
+    "fr_poumon_noun",
+    "fr_foie_noun",
+    "fr_estomac_noun",
+    "fr_organe_noun"
+   ]
+  },
+  "barbier": {
+   "vocabRoom": "R_body_04",
+   "only": [
+    "fr_barbe_noun",
+    "fr_moustache_noun",
+    "fr_machoire_noun",
+    "fr_pommette_noun",
+    "fr_menton_noun",
+    "fr_rein_noun"
+   ]
+  },
+  "os": {
+   "vocabRoom": "R_body_04",
+   "only": [
+    "fr_veine_noun",
+    "fr_narine_noun",
+    "fr_crane_noun",
+    "fr_squelette_noun",
+    "fr_muscle_noun",
+    "fr_buste_noun"
+   ]
+  },
+  "combles": {
+   "vocabRoom": "R_body_05",
+   "only": [
+    "fr_manchette_noun",
+    "fr_artere_noun",
+    "fr_natte_noun",
+    "fr_rubrique_noun",
+    "fr_reticence_noun",
+    "fr_entrailles_noun",
+    "fr_facette_noun",
+    "fr_avant_bras_noun",
+    "fr_intestin_noun",
+    "fr_complement_noun",
+    "fr_lifting_noun"
+   ]
+  },
+  "docteur": {
+   "vocabRoom": "R_doctor_01",
+   "only": [
+    "fr_cicatrice_noun",
+    "fr_sante_noun",
+    "fr_douleur_noun",
+    "fr_toux_noun",
+    "fr_coupure_noun",
+    "fr_fatigue_noun",
+    "fr_fievre_noun",
+    "fr_grippe_noun",
+    "fr_medical_adj",
+    "fr_docteur_noun",
+    "fr_vertige_noun",
+    "fr_virus_noun",
+    "fr_soulagement_noun"
+   ]
+  },
+  "plateau": {
+   "vocabRoom": "R_doctor_01",
+   "only": [
+    "fr_nausee_noun",
+    "fr_irruption_noun",
+    "fr_consultation_noun",
+    "fr_symptome_noun",
+    "fr_rhume_noun",
+    "fr_vaccin_noun"
+   ]
+  },
+  "bureau": {
+   "vocabRoom": "R_doctor_02",
+   "only": [
+    "fr_schizophrenie_noun",
+    "fr_defaillance_noun",
+    "fr_vaccination_noun",
+    "fr_sanitaire_adj",
+    "fr_diagnostic_noun",
+    "fr_pronostic_noun",
+    "fr_refroidissement_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "cabinet": {
+   "name": "Le cabinet médical",
+   "room_id": "R_body_02",
+   "image": "cabinet/cabinet.jpg",
+   "alt": "The bright first floor of the doctor's house, a body-and-fitness room with a gym floor on the left and a little indoor pool on the right, painted in ink and gouache: a man in a green tracksuit waves a giant yellow foam hand, a girl stretches her leg on a bench beside an open jar of apricot jam and a curious bee, a sailor rolls his shoulders with a parrot perched on one, a dad lies on a mat while a toy train chugs across his chest, a pelican with a flower puffs out its throat pouch, a giant apple core stretches like a gymnast, a physio gasps at the apple pie by her bare foot, a strongman curls a brass kettlebell, a gnome lifeguard wags his finger from a tall chair, a baker carries a lump of dough on his back, a scruffy dog sits in a heart-shaped pool ring, its red curly hair styled into a big heart with a comb in it, a plump man floats belly-up over a bubbling jet, a swimmer puffs out her cheeks beside a round soufflé on the poolside, a gnu bends down on its front knees to drink at the pool edge, and a giant chess pawn in goggles raises a tiny fist. Six colored doors lead off: blue, yellow and red on the first floor, green, purple and white up the stairs on the balcony; the open glass front door on the far left leads out to the map.",
+   "nameplate": [
+    36,
+    93
+   ],
+   "mapExit": {
+    "box": [
+     0,
+     40,
+     148,
+     150
+    ],
+    "label": "Quartier de la Santé"
+   },
+   "doors": [
+    {
+     "to": "visage",
+     "label": "La salle du visage",
+     "hint": "Go through the blue door on the first floor",
+     "hit": [
+      278,
+      164,
+      58,
+      108
+     ]
+    },
+    {
+     "to": "docteur",
+     "label": "La salle d'attente",
+     "hint": "Go through the yellow door to the doctor's waiting room",
+     "hit": [
+      375,
+      164,
+      62,
+      108
+     ]
+    },
+    {
+     "to": "bureau",
+     "label": "Le bureau du docteur",
+     "hint": "Go through the red door and up the stairs to the doctor's study",
+     "hit": [
+      481,
+      164,
+      62,
+      108
+     ]
+    },
+    {
+     "to": "mains",
+     "label": "L'atelier des mains",
+     "hint": "Climb the stairs to the green door on the balcony",
+     "hit": [
+      305,
+      8,
+      62,
+      68
+     ]
+    },
+    {
+     "to": "organes",
+     "label": "La salle des organes",
+     "hint": "Climb the stairs to the purple door on the balcony",
+     "hit": [
+      462,
+      8,
+      62,
+      68
+     ]
+    },
+    {
+     "to": "combles",
+     "label": "Les combles",
+     "hint": "Climb the stairs to the white door at the top",
+     "hit": [
+      630,
+      8,
+      62,
+      68
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_main_noun",
+     "box": [
+      154,
+      100,
+      94,
+      110
+     ]
+    },
+    {
+     "id": "fr_jambe_noun",
+     "box": [
+      190,
+      280,
+      180,
+      155
+     ],
+     "labelAt": [
+      280,
+      400
+     ]
+    },
+    {
+     "id": "fr_epaule_noun",
+     "box": [
+      395,
+      278,
+      135,
+      150
+     ]
+    },
+    {
+     "id": "fr_poitrine_noun",
+     "box": [
+      258,
+      445,
+      280,
+      140
+     ]
+    },
+    {
+     "id": "fr_gorge_noun",
+     "box": [
+      0,
+      445,
+      210,
+      225
+     ]
+    },
+    {
+     "id": "fr_corps_noun",
+     "box": [
+      694,
+      170,
+      100,
+      160
+     ]
+    },
+    {
+     "id": "fr_pied_noun",
+     "box": [
+      800,
+      115,
+      108,
+      230
+     ]
+    },
+    {
+     "id": "fr_bras_noun",
+     "box": [
+      912,
+      78,
+      121,
+      250
+     ]
+    },
+    {
+     "id": "fr_doigt_noun",
+     "box": [
+      1062,
+      15,
+      95,
+      112
+     ]
+    },
+    {
+     "id": "fr_dos_noun",
+     "box": [
+      1112,
+      203,
+      155,
+      170
+     ]
+    },
+    {
+     "id": "fr_coeur_noun",
+     "box": [
+      746,
+      345,
+      138,
+      128
+     ]
+    },
+    {
+     "id": "fr_ventre_noun",
+     "box": [
+      925,
+      380,
+      195,
+      108
+     ]
+    },
+    {
+     "id": "fr_souffle_noun",
+     "box": [
+      826,
+      475,
+      94,
+      100
+     ],
+     "labelAt": [
+      873,
+      540
+     ]
+    },
+    {
+     "id": "fr_genou_noun",
+     "box": [
+      950,
+      494,
+      205,
+      156
+     ]
+    },
+    {
+     "id": "fr_poing_noun",
+     "box": [
+      1162,
+      506,
+      107,
+      188
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "visage": {
+   "name": "La salle du visage",
+   "room_id": "R_body_01",
+   "image": "cabinet/visage.jpg",
+   "backTo": "cabinet",
+   "alt": "A cheerful face clinic in the doctor's house, painted in ink and gouache: pale yellow walls, a wooden floor and a round rug in the middle. On the left a robot whose head is built of bright blocks drops its last block in, a grandpa in an armchair cups his ear, a figure skater admires her face in a standing mirror, and a boy peels a potato in one long ribbon of skin. On the right a wooden cuckoo boings out of its clock on a springy neck, a border guard compares a passport photo with a traveller's face nose to nose, a pony neighs so hard that a man's paper hat flies off, and a boy in a pirate hat peers through a spyglass. The purple door on the left leads back to the cabinet; the green door on the right leads to the funny-faces room.",
+   "nameplate": [
+    48.6,
+    4
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the purple door to the cabinet",
+     "hit": [
+      60,
+      60,
+      210,
+      540
+     ]
+    },
+    {
+     "to": "grimaces",
+     "label": "La salle des grimaces",
+     "hint": "Go through the green door to the funny-faces room",
+     "hit": [
+      1025,
+      60,
+      190,
+      540
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tete_noun",
+     "box": [
+      320,
+      43,
+      150,
+      155
+     ],
+     "labelAt": [
+      395,
+      45
+     ]
+    },
+    {
+     "id": "fr_oreille_noun",
+     "box": [
+      290,
+      205,
+      175,
+      110
+     ],
+     "labelAt": [
+      377,
+      207
+     ]
+    },
+    {
+     "id": "fr_figure_noun",
+     "box": [
+      295,
+      322,
+      265,
+      165
+     ],
+     "labelAt": [
+      427,
+      324
+     ]
+    },
+    {
+     "id": "fr_peau_noun",
+     "box": [
+      365,
+      495,
+      180,
+      180
+     ],
+     "labelAt": [
+      455,
+      497
+     ]
+    },
+    {
+     "id": "fr_cou_noun",
+     "box": [
+      775,
+      43,
+      215,
+      150
+     ],
+     "labelAt": [
+      882,
+      45
+     ]
+    },
+    {
+     "id": "fr_visage_noun",
+     "box": [
+      745,
+      200,
+      255,
+      150
+     ],
+     "labelAt": [
+      872,
+      202
+     ]
+    },
+    {
+     "id": "fr_nez_noun",
+     "box": [
+      730,
+      357,
+      270,
+      175
+     ],
+     "labelAt": [
+      865,
+      359
+     ]
+    },
+    {
+     "id": "fr_oeil_noun",
+     "box": [
+      730,
+      540,
+      230,
+      137
+     ],
+     "labelAt": [
+      845,
+      542
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "grimaces": {
+   "name": "La salle des grimaces",
+   "room_id": "R_body_01_b",
+   "image": "cabinet/grimaces.jpg",
+   "backTo": "visage",
+   "alt": "The funny-faces room next to the face clinic, painted in ink and gouache with mint-green walls and a wooden floor. A zoo keeper in khaki gets a kiss on the cheek from a llama, a potted bush is clipped into a giant smiling mouth, a frog in an examination chair stretches its long tongue to hold a pink shell up to a baby elephant, a toddler in a high chair scrunches up her face, and a lever with a red knob on a jack-in-the-box makes a jester's red lips grin. On a pillar a furry little creature clings to the wall, a boy frowns with a ladybird in his hair, and an attendant points a buzzing shaver at the one hair on a giant egg. A coat stand, a potted plant and a rug fill the right; the wooden door on the left leads back to the face clinic.",
+   "nameplate": [
+    86,
+    4
+   ],
+   "doors": [
+    {
+     "to": "visage",
+     "label": "La salle du visage",
+     "hint": "Go back through the wooden door to the face clinic",
+     "hit": [
+      25,
+      30,
+      165,
+      445
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_joue_noun",
+     "box": [
+      230,
+      43,
+      285,
+      140
+     ],
+     "labelAt": [
+      372,
+      45
+     ]
+    },
+    {
+     "id": "fr_bouche_noun",
+     "box": [
+      250,
+      215,
+      140,
+      140
+     ],
+     "labelAt": [
+      320,
+      217
+     ]
+    },
+    {
+     "id": "fr_langue_noun",
+     "box": [
+      400,
+      190,
+      290,
+      225
+     ],
+     "labelAt": [
+      545,
+      192
+     ]
+    },
+    {
+     "id": "fr_face_noun",
+     "box": [
+      285,
+      425,
+      180,
+      250
+     ],
+     "labelAt": [
+      375,
+      427
+     ]
+    },
+    {
+     "id": "fr_levre_noun",
+     "box": [
+      490,
+      470,
+      160,
+      190
+     ],
+     "labelAt": [
+      570,
+      472
+     ]
+    },
+    {
+     "id": "fr_poil_noun",
+     "box": [
+      765,
+      43,
+      160,
+      160
+     ],
+     "labelAt": [
+      845,
+      45
+     ]
+    },
+    {
+     "id": "fr_front_noun",
+     "box": [
+      770,
+      215,
+      150,
+      175
+     ],
+     "labelAt": [
+      845,
+      217
+     ]
+    },
+    {
+     "id": "fr_cheveu_noun",
+     "box": [
+      745,
+      400,
+      230,
+      275
+     ],
+     "labelAt": [
+      860,
+      402
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "mains": {
+   "name": "L'atelier des mains",
+   "room_id": "R_body_03",
+   "image": "cabinet/mains.jpg",
+   "backTo": "cabinet",
+   "alt": "A busy attic workshop for hands and heads, painted in ink and gouache: a girl touches the nape of her neck where a raindrop from the skylight has landed, a girl balances a pomegranate on her palm, a girl rubs her ankle beside a toy car, a boy holds an ice pack to his temple, an ostrich carries a bone, a mouse walks a tightrope near the ceiling, Puss in Boots gives a thumbs-up, an old carpenter leans on his elbow beside a dove, a manicurist files a girl's nail, and a sailor boy points his index finger at a model ship. The green door leads back to the cabinet.",
+   "nameplate": [
+    60.15,
+    10.5
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the green door to the cabinet",
+     "hit": [
+      520,
+      62,
+      85,
+      58
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_nuque_noun",
+     "box": [
+      47,
+      125,
+      122,
+      170
+     ]
+    },
+    {
+     "id": "fr_paume_noun",
+     "box": [
+      398,
+      272,
+      115,
+      215
+     ],
+     "labelAt": [
+      455,
+      452
+     ]
+    },
+    {
+     "id": "fr_cheville_noun",
+     "box": [
+      30,
+      455,
+      210,
+      250
+     ],
+     "labelAt": [
+      135,
+      462
+     ]
+    },
+    {
+     "id": "fr_tempe_noun",
+     "box": [
+      250,
+      445,
+      145,
+      190
+     ]
+    },
+    {
+     "id": "fr_os_noun",
+     "box": [
+      633,
+      150,
+      227,
+      350
+     ],
+     "labelAt": [
+      746,
+      465
+     ]
+    },
+    {
+     "id": "fr_ongle_noun",
+     "box": [
+      866,
+      273,
+      196,
+      192
+     ]
+    },
+    {
+     "id": "fr_coude_noun",
+     "box": [
+      935,
+      115,
+      130,
+      150
+     ],
+     "labelAt": [
+      1000,
+      232
+     ]
+    },
+    {
+     "id": "fr_nerf_noun",
+     "box": [
+      932,
+      15,
+      85,
+      85
+     ],
+     "labelAt": [
+      974,
+      66
+     ]
+    },
+    {
+     "id": "fr_pouce_noun",
+     "box": [
+      1100,
+      15,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_index_noun",
+     "box": [
+      872,
+      480,
+      240,
+      230
+     ],
+     "labelAt": [
+      992,
+      488
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "organes": {
+   "name": "La salle des organes",
+   "room_id": "R_body_04",
+   "image": "cabinet/organes.jpg",
+   "backTo": "cabinet",
+   "alt": "A cheerful lavender anatomy classroom at eye level, painted in ink and gouache. On the left a purple door leads back to the cabinet, beside a coat stand. A little green dragon on a stool breathes warmly and melts a lane through the icicles on a frosted window, and a waiter backs through swinging half-doors balancing a quiche on his raised thigh. A puma takes a huge breath under two pink balloons it has blown up, a stout man plays a tuba with a plush liver toy sitting in its bell, and a mother hippo pats her round tummy while her baby calls for more. On the right a mouse plays a little pipe organ whose pipes are a heart and two lungs, in front of an orange door; a teal door stands beside it.",
+   "nameplate": [
+    61.1,
+    7.4
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the purple door to the cabinet",
+     "hit": [
+      10,
+      140,
+      145,
+      415
+     ]
+    },
+    {
+     "to": "barbier",
+     "label": "Le coin du barbier",
+     "hint": "Go through the orange door to the barber's corner",
+     "hit": [
+      1035,
+      150,
+      68,
+      100
+     ]
+    },
+    {
+     "to": "os",
+     "label": "La salle des os",
+     "hint": "Go through the teal door to the bones room",
+     "hit": [
+      1160,
+      150,
+      100,
+      410
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_haleine_noun",
+     "box": [
+      285,
+      125,
+      225,
+      285
+     ],
+     "labelAt": [
+      397,
+      127
+     ]
+    },
+    {
+     "id": "fr_cuisse_noun",
+     "box": [
+      320,
+      420,
+      195,
+      190
+     ],
+     "labelAt": [
+      417,
+      422
+     ]
+    },
+    {
+     "id": "fr_poumon_noun",
+     "box": [
+      650,
+      130,
+      95,
+      300
+     ],
+     "labelAt": [
+      697,
+      132
+     ]
+    },
+    {
+     "id": "fr_foie_noun",
+     "box": [
+      748,
+      255,
+      150,
+      230
+     ],
+     "labelAt": [
+      823,
+      257
+     ]
+    },
+    {
+     "id": "fr_estomac_noun",
+     "box": [
+      705,
+      495,
+      255,
+      180
+     ],
+     "labelAt": [
+      832,
+      497
+     ]
+    },
+    {
+     "id": "fr_organe_noun",
+     "box": [
+      964,
+      262,
+      126,
+      300
+     ],
+     "labelAt": [
+      1027,
+      264
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "barbier": {
+   "name": "Le coin du barbier · Barber's Corner",
+   "room_id": "R_body_04_b",
+   "image": "cabinet/barbier.jpg",
+   "backTo": "organes",
+   "alt": "A cosy barber's corner with orange and cream walls and a checkered floor, painted in ink and gouache. A barber with comb and scissors trims an old man's enormous curly beard in a green barber's chair, a moose in a blue coat proudly twirls its huge curly mustache, and a mother crocodile opens her huge jaw under a shower to rinse her teeth. A cheerleader with rosy cheeks waves a red pom-pom, a juggler in a striped leotard juts out his chin under an iron ball, and a girl runs off hugging a pink bean-shaped plush kidney. On the right a lavender door leads back to the anatomy classroom, beside a hat stand and a bench.",
+   "nameplate": [
+    40,
+    5
+   ],
+   "doors": [
+    {
+     "to": "organes",
+     "label": "La salle des organes",
+     "hint": "Back through the lavender door to the anatomy classroom",
+     "hit": [
+      895,
+      90,
+      200,
+      430
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_barbe_noun",
+     "box": [
+      255,
+      245,
+      195,
+      265
+     ],
+     "labelAt": [
+      352,
+      247
+     ]
+    },
+    {
+     "id": "fr_moustache_noun",
+     "box": [
+      405,
+      95,
+      175,
+      140
+     ],
+     "labelAt": [
+      492,
+      97
+     ]
+    },
+    {
+     "id": "fr_machoire_noun",
+     "box": [
+      330,
+      515,
+      230,
+      160
+     ],
+     "labelAt": [
+      445,
+      517
+     ]
+    },
+    {
+     "id": "fr_pommette_noun",
+     "box": [
+      505,
+      250,
+      140,
+      180
+     ],
+     "labelAt": [
+      575,
+      252
+     ]
+    },
+    {
+     "id": "fr_menton_noun",
+     "box": [
+      650,
+      95,
+      120,
+      250
+     ],
+     "labelAt": [
+      710,
+      97
+     ]
+    },
+    {
+     "id": "fr_rein_noun",
+     "box": [
+      775,
+      345,
+      110,
+      190
+     ],
+     "labelAt": [
+      830,
+      347
+     ]
+    }
+   ]
+  },
+  "os": {
+   "name": "La salle des os · Bones Room",
+   "room_id": "R_body_04_c",
+   "image": "cabinet/os.jpg",
+   "backTo": "organes",
+   "alt": "A pale-teal bones-and-muscles teaching room with a wooden floor, painted in ink and gouache. On the left a lavender door leads back to the anatomy classroom. A vain strongman in a striped leotard flexes his arm and admires a blue vein on it, and a horse flares a nostril to sniff a nectarine held up to it. A little yellow toy crane lowers a dinosaur fossil skull into a glass case of bones, a teaching skeleton in sunglasses and a striped scarf waves hello, a ginger kitten in a striped leotard flexes a tiny muscle, and two mice push a marble bust in a woolly hat onto its pedestal. A cabinet of bone models and a chart stand on the right.",
+   "nameplate": [
+    30,
+    5
+   ],
+   "doors": [
+    {
+     "to": "organes",
+     "label": "La salle des organes",
+     "hint": "Back through the lavender door to the anatomy classroom",
+     "hit": [
+      35,
+      105,
+      195,
+      500
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_veine_noun",
+     "box": [
+      300,
+      120,
+      185,
+      250
+     ],
+     "labelAt": [
+      392,
+      122
+     ]
+    },
+    {
+     "id": "fr_narine_noun",
+     "box": [
+      490,
+      270,
+      105,
+      130
+     ],
+     "labelAt": [
+      542,
+      272
+     ]
+    },
+    {
+     "id": "fr_crane_noun",
+     "box": [
+      650,
+      45,
+      220,
+      240
+     ],
+     "labelAt": [
+      760,
+      47
+     ]
+    },
+    {
+     "id": "fr_squelette_noun",
+     "box": [
+      880,
+      200,
+      135,
+      250
+     ],
+     "labelAt": [
+      947,
+      202
+     ]
+    },
+    {
+     "id": "fr_muscle_noun",
+     "box": [
+      650,
+      460,
+      115,
+      210
+     ],
+     "labelAt": [
+      707,
+      462
+     ]
+    },
+    {
+     "id": "fr_buste_noun",
+     "box": [
+      770,
+      460,
+      160,
+      215
+     ],
+     "labelAt": [
+      850,
+      462
+     ]
+    }
+   ]
+  },
+  "combles": {
+   "name": "Les combles",
+   "room_id": "R_body_05",
+   "image": "cabinet/combles.jpg",
+   "backTo": "cabinet",
+   "alt": "The wooden attic at the top of the doctor's house, painted in ink and gouache: an old lecturer points with his shirt cuff and gold cufflink showing, a red spiral water slide with a marble whooshing down it, a girl with a long braid tied in a ribbon, a boy sorting red bricks into piles with blank tags, a grandma with her tea and a shy tortoise turning away, a silver tray of soft plush organs, a fairy setting a big diamond in a ring, a lumberjack balancing a toy van along his forearm, an ant in a sun hat hiking along a coiled garden hose, a jigsaw finished by a little man-shaped piece, and a sculptor smoothing a clay bust's cheeks upward. The white door leads back down to the cabinet.",
+   "nameplate": [
+    90.6,
+    10.5
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the white door to the cabinet",
+     "hit": [
+      640,
+      70,
+      135,
+      330
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_manchette_noun",
+     "box": [
+      30,
+      30,
+      200,
+      200
+     ],
+     "labelAt": [
+      130,
+      198
+     ]
+    },
+    {
+     "id": "fr_artere_noun",
+     "box": [
+      300,
+      15,
+      170,
+      215
+     ],
+     "labelAt": [
+      385,
+      196
+     ]
+    },
+    {
+     "id": "fr_natte_noun",
+     "box": [
+      210,
+      236,
+      120,
+      138
+     ],
+     "labelAt": [
+      270,
+      340
+     ]
+    },
+    {
+     "id": "fr_rubrique_noun",
+     "box": [
+      347,
+      258,
+      285,
+      200
+     ],
+     "labelAt": [
+      490,
+      420
+     ]
+    },
+    {
+     "id": "fr_reticence_noun",
+     "box": [
+      4,
+      380,
+      325,
+      148
+     ],
+     "labelAt": [
+      166,
+      490
+     ]
+    },
+    {
+     "id": "fr_entrailles_noun",
+     "box": [
+      40,
+      535,
+      375,
+      155
+     ],
+     "labelAt": [
+      228,
+      542
+     ]
+    },
+    {
+     "id": "fr_facette_noun",
+     "box": [
+      422,
+      470,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_avant_bras_noun",
+     "box": [
+      782,
+      90,
+      260,
+      300
+     ]
+    },
+    {
+     "id": "fr_intestin_noun",
+     "box": [
+      655,
+      410,
+      295,
+      180
+     ]
+    },
+    {
+     "id": "fr_complement_noun",
+     "box": [
+      1050,
+      565,
+      95,
+      110
+     ]
+    },
+    {
+     "id": "fr_lifting_noun",
+     "box": [
+      1045,
+      200,
+      230,
+      340
+     ],
+     "labelAt": [
+      1160,
+      500
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "docteur": {
+   "name": "La salle d'attente",
+   "room_id": "R_doctor_01",
+   "image": "cabinet/docteur.jpg",
+   "backTo": "cabinet",
+   "alt": "The doctor's busy, gentle waiting room, painted in ink and gouache: an old explorer by the window shows a pale old scar on his forearm next to a drooping little potted tree, a rosy grandma raises her cup of tea, a young angler hops holding his sore toe, a girl covers a cough while a toucan looks on, a boy pours water from a pitcher over a tiny cut with a Band-Aid ready, a tiger cub sleeps across two chairs, a feverish boy with a thermometer sits in a tub of ice, a sneezing girl in a scarf clutches a hot-water bottle, Dr. Cal finds a hamster asleep in his medical bag, a kind woman doctor listens to a boy's chest while her cat purrs, a goat clutches the top of a step-ladder with spinning eyes, a grumpy green virus puppet hovers by the yellow door, and Sue lifts a sack of potatoes off a large man's back. On the back wall a long examination tray holds a seasick sailor boy, kittens, a giraffe, a mouse, a boy in a blanket and a girl with a star sticker. The yellow door leads back to the cabinet.",
+   "nameplate": [
+    27.5,
+    10.5
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the yellow door to the cabinet",
+     "hit": [
+      1172,
+      40,
+      95,
+      250
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "plateau",
+     "label": "le plateau d'examen",
+     "hint": "Look closer at the examination tray on the back wall",
+     "at": [
+      690,
+      200
+     ],
+     "obj": [
+      400,
+      0,
+      580,
+      326
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_cicatrice_noun",
+     "box": [
+      0,
+      8,
+      195,
+      190
+     ],
+     "labelAt": [
+      98,
+      160
+     ]
+    },
+    {
+     "id": "fr_sante_noun",
+     "box": [
+      62,
+      204,
+      160,
+      150
+     ],
+     "labelAt": [
+      142,
+      320
+     ]
+    },
+    {
+     "id": "fr_douleur_noun",
+     "box": [
+      258,
+      258,
+      132,
+      190
+     ],
+     "labelAt": [
+      324,
+      415
+     ]
+    },
+    {
+     "id": "fr_toux_noun",
+     "box": [
+      400,
+      258,
+      134,
+      190
+     ],
+     "labelAt": [
+      467,
+      415
+     ]
+    },
+    {
+     "id": "fr_coupure_noun",
+     "box": [
+      0,
+      365,
+      235,
+      175
+     ],
+     "labelAt": [
+      118,
+      505
+     ]
+    },
+    {
+     "id": "fr_fatigue_noun",
+     "box": [
+      45,
+      545,
+      240,
+      145
+     ],
+     "labelAt": [
+      165,
+      552
+     ]
+    },
+    {
+     "id": "fr_fievre_noun",
+     "box": [
+      290,
+      455,
+      205,
+      265
+     ],
+     "labelAt": [
+      392,
+      462
+     ]
+    },
+    {
+     "id": "fr_grippe_noun",
+     "box": [
+      528,
+      470,
+      122,
+      230
+     ]
+    },
+    {
+     "id": "fr_medical_adj",
+     "box": [
+      540,
+      235,
+      192,
+      200
+     ],
+     "labelAt": [
+      636,
+      400
+     ]
+    },
+    {
+     "id": "fr_docteur_noun",
+     "box": [
+      740,
+      365,
+      175,
+      300
+     ],
+     "labelAt": [
+      827,
+      630
+     ]
+    },
+    {
+     "id": "fr_vertige_noun",
+     "box": [
+      935,
+      15,
+      115,
+      280
+     ],
+     "labelAt": [
+      992,
+      262
+     ]
+    },
+    {
+     "id": "fr_virus_noun",
+     "box": [
+      1056,
+      180,
+      108,
+      110
+     ],
+     "labelAt": [
+      1110,
+      258
+     ]
+    },
+    {
+     "id": "fr_soulagement_noun",
+     "box": [
+      960,
+      300,
+      315,
+      400
+     ],
+     "labelAt": [
+      1117,
+      310
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "plateau": {
+   "name": "Le plateau d'examen",
+   "room_id": "R_doctor_01_z1",
+   "image": "cabinet/plateau.jpg",
+   "parent": "docteur",
+   "alt": "Close-up of the long white examination tray on the waiting-room wall: a seasick sailor boy in a captain's cap pinches his nose, a basket of kittens bursts into sneezes, a giraffe sticks out a sore tongue for the doctor, a little mouse looks something up in a huge blue book, a boy with a cold sits wrapped in a patchwork blanket among crumpled tissues, and a brave little girl shows off the gold star sticker on her sleeve.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_nausee_noun",
+     "box": [
+      56,
+      94,
+      200,
+      425
+     ]
+    },
+    {
+     "id": "fr_irruption_noun",
+     "box": [
+      262,
+      160,
+      270,
+      365
+     ]
+    },
+    {
+     "id": "fr_consultation_noun",
+     "box": [
+      535,
+      40,
+      135,
+      310
+     ],
+     "labelAt": [
+      602,
+      62
+     ]
+    },
+    {
+     "id": "fr_symptome_noun",
+     "box": [
+      672,
+      240,
+      170,
+      275
+     ]
+    },
+    {
+     "id": "fr_rhume_noun",
+     "box": [
+      850,
+      180,
+      200,
+      345
+     ]
+    },
+    {
+     "id": "fr_vaccin_noun",
+     "box": [
+      1055,
+      200,
+      215,
+      460
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  },
+  "bureau": {
+   "name": "Le bureau du docteur",
+   "room_id": "R_doctor_02",
+   "image": "cabinet/bureau.jpg",
+   "backTo": "cabinet",
+   "alt": "The doctor's quiet study upstairs, painted in ink and gouache: a tired runner faints onto the sofa while a friend fans her, a blank picture frame hangs on the wall, a blank sheet waits on an easel, a grandpa shows his grandson the star sticker from his vaccination, the doctor's cat creeps along the bookshelf checking for dust, the doctor points at an X-ray of an anteater's long nose while the anteater waits, a nurse smiles at a pigeon in a basket, and Roy in his paper crown judges a soup-cooling contest beside a snowman. The red door leads back down to the cabinet.",
+   "nameplate": [
+    57.5,
+    94
+   ],
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet médical",
+     "hint": "Go back through the red door to the cabinet",
+     "hit": [
+      805,
+      25,
+      140,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_schizophrenie_noun",
+     "box": [
+      200,
+      15,
+      240,
+      190
+     ]
+    },
+    {
+     "id": "fr_defaillance_noun",
+     "box": [
+      20,
+      212,
+      225,
+      298
+     ]
+    },
+    {
+     "id": "fr_vaccination_noun",
+     "box": [
+      250,
+      400,
+      310,
+      320
+     ],
+     "labelAt": [
+      405,
+      408
+     ]
+    },
+    {
+     "id": "fr_sanitaire_adj",
+     "box": [
+      555,
+      60,
+      180,
+      125
+     ]
+    },
+    {
+     "id": "fr_diagnostic_noun",
+     "box": [
+      618,
+      235,
+      300,
+      240
+     ]
+    },
+    {
+     "id": "fr_pronostic_noun",
+     "box": [
+      925,
+      195,
+      200,
+      320
+     ],
+     "labelAt": [
+      1025,
+      478
+     ]
+    },
+    {
+     "id": "fr_refroidissement_noun",
+     "box": [
+      1130,
+      240,
+      150,
+      480
+     ],
+     "labelAt": [
+      1170,
+      525
+     ]
+    }
+   ],
+   "building_id": "B17_cabinet",
+   "sector_id": "S07_health"
+  }
+ }
 }

@@ -26,9 +26,7 @@
   "st_trouvailles": {
    "vocabRoom": "ST_possession_seg001",
    "only": [
-    "fr_trouver_verb",
     "fr_retrouver_verb",
-    "fr_rechercher_verb",
     "fr_situer_verb",
     "fr_fonder_verb",
     "fr_decouvrir_verb"
@@ -37,11 +35,9 @@
   "cadeaux": {
    "vocabRoom": "ST_possession_seg002",
    "only": [
-    "fr_chercher_verb",
     "fr_offrir_verb",
     "fr_accepter_verb",
     "fr_obtenir_verb",
-    "fr_recevoir_verb",
     "fr_avoir_verb"
    ]
   },
@@ -49,11 +45,9 @@
    "vocabRoom": "ST_possession_seg003",
    "only": [
     "fr_tenir_verb",
-    "fr_envoyer_verb",
     "fr_reserver_verb",
     "fr_posseder_verb",
-    "fr_conserver_verb",
-    "fr_garder_verb"
+    "fr_conserver_verb"
    ]
   },
   "troc": {
@@ -72,7 +66,7 @@
   "st_trouvailles": {
    "name": "Rue des Trouvailles",
    "image": "st_trouvailles/st_trouvailles.jpg",
-   "alt": "Inside a sunny glass-roofed arcade of honey stone with a colorful mosaic floor, potted plants and little shop fronts. Monsieur Verbe picks up a gold coin from the floor; hugs his little lost dog; holds his lantern high, searching; points to a spot on a big wall map; holds up the big golden key of the little shop he has just founded; and, in a gold beret, pulls the cloth off a bronze horse statue by the stairs. The big stone archway on the left leads out to the sunny village square. The narrow arched passage in the middle, the glazed shop doors under the red board and the stone stairway on the right lead on.",
+   "alt": "Inside a sunny glass-roofed arcade of honey stone with a colorful mosaic floor, potted plants and little shop fronts. Monsieur Verbe hugs his little lost dog; points to a spot on a big wall map; holds up the big golden key of the little shop he has just founded; and, in a gold beret, pulls the cloth off a bronze horse statue by the stairs. The big stone archway on the left leads out to the sunny village square. The narrow arched passage in the middle, the glazed shop doors under the red board and the stone stairway on the right lead on.",
    "nameplate": [
     50,
     4.5
@@ -124,30 +118,12 @@
    "zooms": [],
    "items": [
     {
-     "id": "fr_trouver_verb",
-     "box": [
-      56,
-      400,
-      182,
-      250
-     ]
-    },
-    {
      "id": "fr_retrouver_verb",
      "box": [
       306,
       394,
       150,
       244
-     ]
-    },
-    {
-     "id": "fr_rechercher_verb",
-     "box": [
-      462,
-      300,
-      125,
-      262
      ]
     },
     {
@@ -184,7 +160,7 @@
    "name": "Allée des Cadeaux",
    "image": "st_trouvailles/cadeaux.jpg",
    "backTo": "st_trouvailles",
-   "alt": "A cozy little gift shop in the arcade with shelves of wrapped presents and a small skylight. Monsieur Verbe crawls with a magnifying glass looking for his lost gold button; kneels to offer a present with a red ribbon in a gold beret; nods behind the counter holding up the coin he has accepted; climbs a step-stool to take down a golden trophy in a gold beret; catches a package from the wooden package chute in a gold beret; and shows off his toy box with a drum, a trumpet and tin soldiers in a gold beret. The stone archway on the left leads back to the arcade; the open glazed door on the right leads to the next shop.",
+   "alt": "A cozy little gift shop in the arcade with shelves of wrapped presents, a small skylight and a round wooden package chute in the wall. Monsieur Verbe kneels to offer a present with a red ribbon in a gold beret; nods behind the counter holding up the coin he has accepted; climbs a step-stool to take down a golden trophy in a gold beret; and shows off his toy box with a drum, a trumpet and tin soldiers in a gold beret. The stone archway on the left leads back to the arcade; the open glazed door on the right leads to the next shop.",
    "nameplate": [
     50,
     4.5
@@ -216,15 +192,6 @@
    "zooms": [],
    "items": [
     {
-     "id": "fr_chercher_verb",
-     "box": [
-      25,
-      388,
-      300,
-      290
-     ]
-    },
-    {
      "id": "fr_offrir_verb",
      "box": [
       330,
@@ -245,19 +212,10 @@
     {
      "id": "fr_obtenir_verb",
      "box": [
-      640,
+      612,
       75,
-      130,
-      280
-     ]
-    },
-    {
-     "id": "fr_recevoir_verb",
-     "box": [
-      772,
-      260,
-      240,
-      330
+      226,
+      490
      ]
     },
     {
@@ -276,7 +234,7 @@
    "name": "Rue des Coffres",
    "image": "st_trouvailles/coffres.jpg",
    "backTo": "st_trouvailles",
-   "alt": "A cozy keepsake shop full of wooden treasure chests, hatboxes and jars of jam, with a little café table. Monsieur Verbe carries a wobbly tower of hatboxes in a gold beret; launches a paper-airplane letter in a gold beret; sits at the café table propping up a blank card; jingles a big ring of iron keys; lines up his jars of jam; and sits on a treasure chest with folded arms, guarding it. The open glazed door on the left leads back to the arcade.",
+   "alt": "A cozy keepsake shop full of wooden treasure chests, hatboxes and jars of jam, with a little café table. Monsieur Verbe carries a wobbly tower of hatboxes in a gold beret; sits at the café table propping up a blank card; jingles a big ring of iron keys; and lines up his jars of jam. The open glazed door on the left leads back to the arcade.",
    "nameplate": [
     50,
     4.5
@@ -306,15 +264,6 @@
      ]
     },
     {
-     "id": "fr_envoyer_verb",
-     "box": [
-      288,
-      205,
-      200,
-      427
-     ]
-    },
-    {
      "id": "fr_reserver_verb",
      "box": [
       505,
@@ -339,15 +288,6 @@
       288,
       170,
       360
-     ]
-    },
-    {
-     "id": "fr_garder_verb",
-     "box": [
-      1040,
-      240,
-      235,
-      430
      ]
     }
    ],

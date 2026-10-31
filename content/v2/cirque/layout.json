@@ -15,8 +15,16 @@
    "short": "Les clowns"
   },
   {
+   "key": "sages",
+   "short": "Les clowns sages"
+  },
+  {
    "key": "menagerie",
    "short": "La ménagerie"
+  },
+  {
+   "key": "dresseur",
+   "short": "La tente du dresseur"
   },
   {
    "key": "trapezes",
@@ -29,6 +37,14 @@
   {
    "key": "magie",
    "short": "La magie"
+  },
+  {
+   "key": "volontaire",
+   "short": "Le volontaire"
+  },
+  {
+   "key": "quete",
+   "short": "La quête"
   },
   {
    "key": "surprises",
@@ -72,17 +88,22 @@
    "vocabRoom": "R_adv_manner_02",
    "only": [
     "fr_librement_adv",
-    "fr_soigneusement_adv",
     "fr_violemment_adv",
     "fr_vivement_adv",
     "fr_volontiers_adv",
-    "fr_attentivement_adv",
-    "fr_discretement_adv",
-    "fr_durement_adv",
-    "fr_gentiment_adv",
     "fr_joyeusement_adv",
+    "fr_durement_adv"
+   ]
+  },
+  "sages": {
+   "vocabRoom": "R_adv_manner_02",
+   "only": [
+    "fr_soigneusement_adv",
     "fr_progressivement_adv",
-    "fr_silencieusement_adv"
+    "fr_attentivement_adv",
+    "fr_silencieusement_adv",
+    "fr_discretement_adv",
+    "fr_gentiment_adv"
    ]
   },
   "clowns_malle": {
@@ -100,17 +121,22 @@
    "vocabRoom": "R_adv_manner_03",
    "only": [
     "fr_difficilement_adv",
-    "fr_largement_adv",
     "fr_terriblement_adv",
-    "fr_forcement_adv",
-    "fr_automatiquement_adv",
-    "fr_brutalement_adv",
-    "fr_desesperement_adv",
     "fr_gravement_adv",
-    "fr_personnellement_adv",
-    "fr_physiquement_adv",
+    "fr_desesperement_adv",
+    "fr_physiquement_adv"
+   ]
+  },
+  "dresseur": {
+   "vocabRoom": "R_adv_manner_03",
+   "only": [
     "fr_premierement_adv",
-    "fr_principalement_adv"
+    "fr_brutalement_adv",
+    "fr_principalement_adv",
+    "fr_automatiquement_adv",
+    "fr_largement_adv",
+    "fr_forcement_adv",
+    "fr_personnellement_adv"
    ]
   },
   "menagerie_armoire": {
@@ -167,22 +193,32 @@
   "magie": {
    "vocabRoom": "R_adv_manner_06",
    "only": [
+    "fr_artificiellement_adv",
+    "fr_scientifiquement_adv",
+    "fr_intentionnellement_adv",
+    "fr_systematiquement_adv",
+    "fr_consciencieusement_adv",
+    "fr_stratageme_noun"
+   ]
+  },
+  "volontaire": {
+   "vocabRoom": "R_adv_manner_06",
+   "only": [
+    "fr_volontairement_adv",
+    "fr_consciemment_adv",
+    "fr_ouvertement_adv",
+    "fr_indirectement_adv",
+    "fr_individuellement_adv"
+   ]
+  },
+  "quete": {
+   "vocabRoom": "R_adv_manner_06",
+   "only": [
     "fr_aisement_adv",
     "fr_gratuitement_adv",
-    "fr_ouvertement_adv",
     "fr_pele_mele_adv",
-    "fr_systematiquement_adv",
     "fr_typiquement_adv",
-    "fr_volontairement_adv",
-    "fr_artificiellement_adv",
-    "fr_consciemment_adv",
-    "fr_consciencieusement_adv",
-    "fr_financierement_adv",
-    "fr_indirectement_adv",
-    "fr_individuellement_adv",
-    "fr_intentionnellement_adv",
-    "fr_scientifiquement_adv",
-    "fr_stratageme_noun"
+    "fr_financierement_adv"
    ]
   },
   "surprises": {
@@ -213,15 +249,15 @@
    "image": "cirque/cirque.jpg",
    "alt": "Inside the red-and-white striped big top, painted in ink and gouache, under bunting and string lights, with a Ferris wheel in the park outside the open tent flap at the far left. High up a ringmistress cracks her whip as a little flower meadow bursts from the sawdust, a girl on one leg balances a strawberry parfait and a poodle hugs a black boot. On the red pedestal a strongman lifts a dewy rose gently, another lifts a baby elephant, a seal claps and a clown's teapot lid pops off on a drum. In the ring a clown zips by on a unicycle, a vet rushes to a seal, a clown's shopping bags burst and a blindfolded clown walks into a cream pie. At the ring's edge a clown springs out of a trapdoor, a little ghost makes the crowd jump up, a lion naps in a wooden boat, clowns climb aboard a red wagon and a troupe squeezes into a tiny striped car. A red-curtained arch with a clown sign on the left and a green-curtained arch on the right lead to other rooms, with curtained doorways on the balconies above; a striped ticket booth stands at the right.",
    "nameplate": [
-    84,
-    94
+    82,
+    93
    ],
    "mapExit": {
     "box": [
-     20,
-     160,
-     180,
-     265
+     19,
+     158,
+     177,
+     261
     ],
     "label": "Parc des Curiosités"
    },
@@ -231,10 +267,10 @@
      "label": "Les clowns",
      "hint": "Go through the red-curtained archway under the clown-face sign",
      "hit": [
-      262,
-      244,
-      75,
-      175
+      257,
+      241,
+      74,
+      172
      ]
     },
     {
@@ -242,10 +278,10 @@
      "label": "La ménagerie",
      "hint": "Go through the green-curtained archway",
      "hit": [
-      988,
-      244,
-      88,
-      185
+      960,
+      232,
+      50,
+      176
      ]
     },
     {
@@ -253,10 +289,10 @@
      "label": "Les trapèzes",
      "hint": "Go through the red curtain on the left balcony",
      "hit": [
-      285,
-      94,
-      77,
-      87
+      280,
+      92,
+      76,
+      86
      ]
     },
     {
@@ -264,10 +300,10 @@
      "label": "La parade",
      "hint": "Go through the blue curtain on the right balcony",
      "hit": [
-      915,
-      100,
-      78,
-      75
+      899,
+      98,
+      77,
+      74
      ]
     },
     {
@@ -275,10 +311,10 @@
      "label": "La magie",
      "hint": "Go through the yellow curtain on the right balcony",
      "hit": [
-      997,
-      100,
-      78,
-      75
+      980,
+      99,
+      77,
+      74
      ]
     },
     {
@@ -299,14 +335,14 @@
      "label": "le guichet",
      "hint": "Look closer at the ticket booth",
      "at": [
-      1180,
-      360
+      1145,
+      385
      ],
      "obj": [
-      1080,
-      338,
-      197,
-      111
+      1012,
+      314,
+      266,
+      150
      ]
     }
    ],
@@ -314,149 +350,153 @@
     {
      "id": "fr_immediatement_adv",
      "box": [
-      531,
-      50,
-      100,
-      205
+      521,
+      49,
+      99,
+      202
      ]
     },
     {
      "id": "fr_parfaitement_adv",
      "box": [
-      655,
-      43,
-      85,
-      100
+      644,
+      42,
+      84,
+      99
      ]
     },
     {
      "id": "fr_particulierement_adv",
      "box": [
-      712,
-      150,
-      52,
-      100
+      700,
+      147,
+      51,
+      99
      ]
     },
     {
      "id": "fr_doucement_adv",
      "box": [
-      456,
-      206,
-      74,
-      160
+      448,
+      203,
+      73,
+      158
      ]
     },
     {
      "id": "fr_facilement_adv",
      "box": [
-      638,
-      250,
-      100,
-      108
+      626,
+      247,
+      99,
+      106
+     ],
+     "labelAt": [
+      680,
+      286
      ]
     },
     {
      "id": "fr_naturellement_adv",
      "box": [
-      544,
-      294,
-      81,
-      78
+      534,
+      290,
+      80,
+      77
      ],
      "labelAt": [
-      595,
-      378
+      585,
+      373
      ]
     },
     {
      "id": "fr_brusquement_adv",
      "box": [
-      768,
-      215,
-      100,
-      140
+      755,
+      212,
+      99,
+      138
      ]
     },
     {
      "id": "fr_rapidement_adv",
      "box": [
-      338,
-      319,
-      110,
-      140
+      332,
+      315,
+      108,
+      138
      ]
     },
     {
      "id": "fr_vite_adv",
      "box": [
-      525,
-      412,
-      150,
-      45
+      516,
+      407,
+      148,
+      44
      ]
     },
     {
      "id": "fr_mal_adv",
      "box": [
-      681,
-      362,
-      115,
-      135
+      668,
+      358,
+      113,
+      133
      ]
     },
     {
      "id": "fr_directement_adv",
      "box": [
-      800,
-      362,
-      175,
-      135
+      786,
+      358,
+      172,
+      133
      ]
     },
     {
      "id": "fr_soudain_adv",
      "box": [
-      452,
-      460,
-      120,
-      125
+      444,
+      455,
+      118,
+      123
      ]
     },
     {
      "id": "fr_debout_adv",
      "box": [
-      669,
-      525,
-      81,
-      112
+      657,
+      520,
+      80,
+      110
      ]
     },
     {
      "id": "fr_tranquillement_adv",
      "box": [
-      756,
-      500,
-      213,
-      131
+      743,
+      495,
+      210,
+      129
      ]
     },
     {
      "id": "fr_d_abord_adv",
      "box": [
-      330,
-      470,
-      118,
-      160
+      327,
+      466,
+      116,
+      158
      ]
     },
     {
      "id": "fr_ensemble_adv",
      "box": [
-      475,
-      588,
-      113,
-      87
+      467,
+      582,
+      111,
+      86
      ]
     }
    ]
@@ -531,7 +571,7 @@
    "room_id": "R_adv_manner_02",
    "image": "cirque/clowns.jpg",
    "backTo": "cirque",
-   "alt": "The clowns' practice ring inside the red-and-white striped big top, painted in ink and gouache under strings of lights, seen from the edge of the sawdust ring. At the back a man in a toga juggles freely above a brass balance, a swan balances an egg on its head and a clown saws at his viola so violently that his hat flies off. A girl waves a red flag, a seal raises its flipper with a ball on its nose while a clown holds up a hoop, and a puppy watches from the door of a little striped tent. In the ring a white-faced mime tiptoes silently, three seals balance beach balls and a gray elephant edges along a low rope. At the front a polka-dot clown hides a cream pie behind his back while the ringmaster looks away, a coach in a tracksuit blows his whistle at a clown doing press-ups and a kind clown holds his umbrella over a granny with a cane. A big open steamer trunk spills costumes and props on the right. The red-curtained doorway on the left leads back to the big ring.",
+   "alt": "The wild clowns' practice ring inside the big top, painted in ink and gouache under red-and-cream striped canvas, bunting and strings of little lights. At the back of a red-rimmed sawdust ring a man in a white toga juggles balls above a brass balance scale, a clown saws at his viola so hard his hat flies off, and another clown holds up a hoop. In the ring a seal raises its flipper to volunteer and three seals balance striped beach balls on their noses, while a girl in a blue dress waves a red flag and cheers. In front, a stern coach in a tracksuit blows his whistle as two trainees do press-ups, among a cheering crowd. On the left a red-velvet curtained doorway leads back to the big ring and a blue-curtained doorway leads to the careful clowns; on the right stands a big open costume trunk spilling scarves and wool.",
    "nameplate": [
     16,
     5
@@ -542,10 +582,21 @@
      "label": "Le Chapiteau du Cirque",
      "hint": "Go back through the red-curtained doorway to the big ring",
      "hit": [
-      80,
-      150,
-      215,
-      225
+      15,
+      95,
+      165,
+      285
+     ]
+    },
+    {
+     "to": "sages",
+     "label": "Les clowns sages",
+     "hint": "Through the blue-curtained doorway to the careful clowns",
+     "hit": [
+      190,
+      125,
+      90,
+      250
      ]
     }
    ],
@@ -555,14 +606,14 @@
      "label": "la malle",
      "hint": "Look closer at the costume trunk",
      "at": [
-      1100,
-      300
+      1135,
+      350
      ],
      "obj": [
-      905,
-      184,
-      371,
-      209
+      1020,
+      255,
+      230,
+      200
      ]
     }
    ],
@@ -570,157 +621,184 @@
     {
      "id": "fr_librement_adv",
      "box": [
-      431,
-      52,
-      131,
-      150
+      445,
+      45,
+      165,
+      250
      ],
      "labelAt": [
-      496,
-      54
-     ]
-    },
-    {
-     "id": "fr_soigneusement_adv",
-     "box": [
-      566,
-      56,
-      60,
-      144
-     ],
-     "labelAt": [
-      596,
-      10
+      527,
+      47
      ]
     },
     {
      "id": "fr_violemment_adv",
      "box": [
-      662,
-      48,
-      94,
-      150
+      700,
+      110,
+      125,
+      165
      ],
      "labelAt": [
-      709,
-      50
+      762,
+      112
      ]
     },
     {
      "id": "fr_vivement_adv",
      "box": [
       362,
-      250,
-      88,
-      132
+      300,
+      105,
+      245
      ],
      "labelAt": [
-      406,
-      218
+      414,
+      302
      ]
     },
     {
      "id": "fr_volontiers_adv",
      "box": [
-      531,
-      206,
-      150,
-      150
-     ],
-     "labelAt": [
-      606,
-      208
-     ]
-    },
-    {
-     "id": "fr_attentivement_adv",
-     "box": [
-      760,
-      106,
-      140,
-      210
-     ],
-     "labelAt": [
-      818,
-      283
-     ]
-    },
-    {
-     "id": "fr_discretement_adv",
-     "box": [
-      325,
-      422,
-      186,
-      240
-     ],
-     "labelAt": [
-      418,
-      665
-     ]
-    },
-    {
-     "id": "fr_durement_adv",
-     "box": [
-      556,
-      504,
-      194,
-      173
-     ],
-     "labelAt": [
-      653,
-      680
-     ]
-    },
-    {
-     "id": "fr_gentiment_adv",
-     "box": [
-      762,
       490,
-      138,
-      187
+      300,
+      110,
+      140
      ],
      "labelAt": [
-      831,
-      680
+      545,
+      302
      ]
     },
     {
      "id": "fr_joyeusement_adv",
      "box": [
-      514,
-      375,
-      200,
-      125
+      672,
+      285,
+      225,
+      185
      ],
      "labelAt": [
-      614,
-      377
+      784,
+      287
+     ]
+    },
+    {
+     "id": "fr_durement_adv",
+     "box": [
+      470,
+      472,
+      335,
+      203
+     ],
+     "labelAt": [
+      637,
+      474
+     ]
+    }
+   ]
+  },
+  "sages": {
+   "name": "Les clowns sages · Careful Clowns",
+   "room_id": "R_adv_manner_02_b",
+   "image": "cirque/sages.jpg",
+   "backTo": "clowns",
+   "alt": "The careful clowns' quiet ring inside the big top, painted in ink and gouache under blue-and-cream striped canvas and strings of little lights, a crowd of spectators on benches all round. On the left a blue-curtained doorway leads back to the wild clowns. At the back a puppy watches attentively from the door of a little striped tent and a grey elephant edges step by step along a low rope. In the middle a white swan carefully balances an egg on its head and a white-faced mime in black tiptoes silently, finger to lips. In front, a ringmaster in a red coat and top hat, a polka-dot clown, and an old clown with a cane strolling under a rainbow umbrella. Coiled ropes and a bench stand on the right.",
+   "nameplate": [
+    26,
+    5
+   ],
+   "doors": [
+    {
+     "to": "clowns",
+     "label": "Les clowns",
+     "hint": "Back through the blue-curtained doorway to the wild clowns",
+     "hit": [
+      65,
+      140,
+      230,
+      295
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_soigneusement_adv",
+     "box": [
+      470,
+      300,
+      80,
+      148
+     ],
+     "labelAt": [
+      455,
+      302
      ]
     },
     {
      "id": "fr_progressivement_adv",
      "box": [
-      718,
-      320,
-      112,
-      165
+      690,
+      145,
+      140,
+      215
      ],
      "labelAt": [
-      784,
-      322
+      760,
+      147
+     ]
+    },
+    {
+     "id": "fr_attentivement_adv",
+     "box": [
+      480,
+      110,
+      160,
+      185
+     ],
+     "labelAt": [
+      560,
+      112
      ]
     },
     {
      "id": "fr_silencieusement_adv",
      "box": [
-      455,
-      315,
-      55,
-      100
+      590,
+      310,
+      88,
+      140
      ],
      "labelAt": [
-      425,
-      386
+      652,
+      372
+     ]
+    },
+    {
+     "id": "fr_discretement_adv",
+     "box": [
+      378,
+      378,
+      86,
+      252
+     ],
+     "labelAt": [
+      392,
+      382
+     ]
+    },
+    {
+     "id": "fr_gentiment_adv",
+     "box": [
+      685,
+      412,
+      125,
+      216
+     ],
+     "labelAt": [
+      747,
+      414
      ]
     }
    ]
@@ -819,10 +897,10 @@
    "room_id": "R_adv_manner_03",
    "image": "cirque/menagerie.jpg",
    "backTo": "cirque",
-   "alt": "The circus menagerie, a straw-floored animal tent with red-and-white striped canvas and low wooden pens, painted in ink and gouache and seen from above the aisle. At the back an elephant squeezes with difficulty through a little hoop held by a keeper, the curtains of a lion's pen swing open as the lion sneezes, and a lion walks first along a red carpet. In the middle a keeper stands soaked beside a seal splashing in a tub, a huge hippo overflows a tiny bathtub, a monkey juggles plates terribly as they smash, and a vet hurries to a giraffe with a bandaged neck. At the front a bear bashes a drum, a clown searches with a lantern while the seal beside him wears his red nose, a keeper hands each penguin its own balloon, a monkey with a fizzy lemonade does handstands and a prince and his poodle sit side by side in the little ticket booth. On the right a painted wardrobe stands wide open with animals spilling out of it. The red-curtained doorway on the left leads back to the big ring.",
+   "alt": "The circus menagerie, a straw-floored animal tent with red-and-white striped canvas and low wooden pens, painted in ink and gouache at eye level. At the back an elephant squeezes with difficulty through a little hoop held by a keeper, a monkey juggles plates terribly as they smash around him, and a vet with a black bag hurries to a giraffe with a bandaged neck. In front a clown in a patched coat searches with a lantern while the seal beside him wears his red nose, and a sea lion hugs a big jar of fizzy lemonade. On the right a painted wardrobe stands wide open with animals spilling out of it: a parrot with a candy jar on top, a sloth in a hammock, a cat by a goldfish bowl, a bee on a unicycle, a monkey and a little red toy train. On the left a red-curtained doorway leads back to the big ring, and below it a blue-and-white curtained doorway leads to the trainer's tent.",
    "nameplate": [
-    16,
-    5
+    33,
+    4
    ],
    "doors": [
     {
@@ -830,10 +908,21 @@
      "label": "Le Chapiteau du Cirque",
      "hint": "Go back through the red-curtained doorway to the big ring",
      "hit": [
-      230,
-      105,
-      105,
-      200
+      40,
+      100,
+      180,
+      250
+     ]
+    },
+    {
+     "to": "dresseur",
+     "label": "La tente du dresseur",
+     "hint": "Go through the blue-and-white curtained doorway to the trainer's tent",
+     "hit": [
+      30,
+      365,
+      195,
+      235
      ]
     }
    ],
@@ -843,14 +932,14 @@
      "label": "l'armoire",
      "hint": "Look closer at the animal wardrobe",
      "at": [
-      1060,
-      410
+      1070,
+      400
      ],
      "obj": [
-      915,
-      62,
-      288,
-      590
+      935,
+      60,
+      268,
+      610
      ]
     }
    ],
@@ -858,157 +947,184 @@
     {
      "id": "fr_difficilement_adv",
      "box": [
-      425,
-      94,
-      156,
-      156
+      282,
+      100,
+      280,
+      240
      ],
      "labelAt": [
-      503,
-      96
-     ]
-    },
-    {
-     "id": "fr_largement_adv",
-     "box": [
-      503,
-      265,
-      123,
-      120
-     ],
-     "labelAt": [
-      565,
-      352
+      422,
+      102
      ]
     },
     {
      "id": "fr_terriblement_adv",
      "box": [
-      630,
-      225,
-      83,
-      160
+      572,
+      200,
+      130,
+      265
      ],
      "labelAt": [
-      590,
-      390
-     ]
-    },
-    {
-     "id": "fr_forcement_adv",
-     "box": [
-      338,
-      275,
-      160,
-      150
-     ],
-     "labelAt": [
-      418,
-      277
-     ]
-    },
-    {
-     "id": "fr_automatiquement_adv",
-     "box": [
-      590,
-      70,
-      100,
-      140
-     ],
-     "labelAt": [
-      640,
-      38
-     ]
-    },
-    {
-     "id": "fr_brutalement_adv",
-     "box": [
-      356,
-      481,
-      138,
-      169
-     ],
-     "labelAt": [
-      415,
-      449
-     ]
-    },
-    {
-     "id": "fr_desesperement_adv",
-     "box": [
-      497,
-      450,
-      110,
-      206
-     ],
-     "labelAt": [
-      462,
-      659
+      637,
+      202
      ]
     },
     {
      "id": "fr_gravement_adv",
      "box": [
-      716,
-      225,
-      165,
-      160
+      710,
+      45,
+      195,
+      330
      ],
      "labelAt": [
-      800,
-      352
+      807,
+      47
      ]
     },
     {
-     "id": "fr_personnellement_adv",
+     "id": "fr_desesperement_adv",
      "box": [
-      612,
-      430,
-      85,
-      245
+      250,
+      372,
+      315,
+      288
      ],
      "labelAt": [
-      654,
-      678
+      407,
+      374
      ]
     },
     {
      "id": "fr_physiquement_adv",
      "box": [
-      702,
-      432,
-      80,
-      103
+      680,
+      470,
+      215,
+      190
      ],
      "labelAt": [
-      748,
-      390
+      787,
+      472
      ]
-    },
+    }
+   ]
+  },
+  "dresseur": {
+   "name": "La tente du dresseur",
+   "room_id": "R_adv_manner_03_b",
+   "image": "cirque/dresseur.jpg",
+   "backTo": "menagerie",
+   "alt": "The trainer's tent behind the menagerie, painted in ink and gouache under blue-and-white striped canvas with string lights, a red carpet running across the straw. A lion walks first along the red carpet, a bear bashes a big drum, a prince and his poodle sit side by side in a little ticket booth, and a sneezing lion makes the red curtains of his pen swing open. A huge hippo overflows a tiny bathtub, a keeper stands soaked beside a seal splashing in a tub, and a keeper with a name badge hands balloons to three penguins. Hay bales and a bucket stand on the right; the blue-curtained doorway on the left leads back to the menagerie.",
+   "nameplate": [
+    16,
+    5
+   ],
+   "doors": [
+    {
+     "to": "menagerie",
+     "label": "La ménagerie",
+     "hint": "Go back through the blue curtains to the menagerie",
+     "hit": [
+      80,
+      75,
+      195,
+      260
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
     {
      "id": "fr_premierement_adv",
      "box": [
-      700,
-      94,
+      384,
+      280,
       150,
-      125
+      160
      ],
      "labelAt": [
-      775,
-      96
+      454,
+      282
+     ]
+    },
+    {
+     "id": "fr_brutalement_adv",
+     "box": [
+      478,
+      130,
+      147,
+      145
+     ],
+     "labelAt": [
+      551,
+      132
      ]
     },
     {
      "id": "fr_principalement_adv",
      "box": [
-      788,
-      430,
-      125,
-      245
+      655,
+      140,
+      85,
+      100
+     ],
+     "labelAt": [
+      690,
+      76
+     ]
+    },
+    {
+     "id": "fr_automatiquement_adv",
+     "box": [
+      740,
+      110,
+      180,
+      220
      ],
      "labelAt": [
       850,
-      678
+      112
+     ]
+    },
+    {
+     "id": "fr_largement_adv",
+     "box": [
+      540,
+      275,
+      200,
+      165
+     ],
+     "labelAt": [
+      640,
+      285
+     ]
+    },
+    {
+     "id": "fr_forcement_adv",
+     "box": [
+      300,
+      447,
+      305,
+      228
+     ],
+     "labelAt": [
+      452,
+      449
+     ]
+    },
+    {
+     "id": "fr_personnellement_adv",
+     "box": [
+      745,
+      337,
+      215,
+      318
+     ],
+     "labelAt": [
+      852,
+      339
      ]
     }
    ]
@@ -1551,7 +1667,7 @@
    "room_id": "R_adv_manner_06",
    "image": "cirque/magie.jpg",
    "backTo": "cirque",
-   "alt": "The magic show inside the big top, seen from the sawdust in front of a round wooden stage with blue star-spangled curtains under red-and-white striped canvas, painted in ink and gouache. On stage under the spotlights: a rabbit hopping into a magician's top hat, an easy-going strongman holding up a grand piano on one finger, two white poodles bowing in turn in the spotlight, a cat yawning wide open, a lion whose fake mane slips to reveal a tabby cat, a cat carefully gripping a trapeze bar and a monkey in a lab coat measuring a trampoline. On the sawdust: clowns tumbling pell-mell out of a tiny red car, a clown slipping on banana peels, a beach ball bouncing off the stage to bop a clown on the nose, a clown tripping over his own big shoe on purpose, a seal working through a crate of balls, a clown handing out free balloons while a giraffe helps itself, a pig filling a piggy bank with coins and an ant sweeping sawdust with a tiny broom. The red-curtained doorway on the left leads back to the ring; a magician's draped prop table and a stack of benches stand on the right. On the right, a magician in a top hat shows off an empty golden birdcage while secretly lifting the blue tablecloth, where a white dove hides in a hidden drawer.",
+   "alt": "The magic show inside the big top, seen from the sawdust in front of a round wooden stage under purple-and-cream striped canvas, painted in ink and gouache. On stage: a lion whose fake mane slips to reveal a sheepish tabby cat, and a monkey in a lab coat measuring a trampoline with a measuring stick. On the sawdust: a clown tripping over his own big shoe on purpose, grinning and waving; a seal working through a wooden box of coloured balls, one after another; and an ant sweeping sawdust with a tiny broom. On the right, a magician in a top hat shows off an empty golden birdcage while secretly lifting a blue tablecloth, where a white dove hides in a hidden drawer. Three curtained doorways: red on the far left back to the ring, purple on the left to the volunteer corner, green on the far right to the collection corner.",
    "nameplate": [
     88,
     95
@@ -1562,10 +1678,225 @@
      "label": "Le Chapiteau du Cirque",
      "hint": "Go back through the red-curtained doorway to the ring",
      "hit": [
-      55,
+      20,
+      110,
+      170,
+      230
+     ]
+    },
+    {
+     "to": "volontaire",
+     "label": "Le volontaire",
+     "hint": "Through the purple-curtained doorway to the volunteer corner",
+     "hit": [
+      225,
       150,
-      180,
-      265
+      150,
+      200
+     ]
+    },
+    {
+     "to": "quete",
+     "label": "La quête",
+     "hint": "Through the green-curtained doorway to the collection corner",
+     "hit": [
+      1135,
+      150,
+      130,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_artificiellement_adv",
+     "box": [
+      410,
+      185,
+      215,
+      205
+     ],
+     "labelAt": [
+      517,
+      187
+     ]
+    },
+    {
+     "id": "fr_scientifiquement_adv",
+     "box": [
+      640,
+      185,
+      225,
+      195
+     ],
+     "labelAt": [
+      752,
+      187
+     ]
+    },
+    {
+     "id": "fr_intentionnellement_adv",
+     "box": [
+      330,
+      400,
+      128,
+      180
+     ],
+     "labelAt": [
+      394,
+      582
+     ]
+    },
+    {
+     "id": "fr_systematiquement_adv",
+     "box": [
+      500,
+      430,
+      210,
+      240
+     ],
+     "labelAt": [
+      605,
+      432
+     ]
+    },
+    {
+     "id": "fr_consciencieusement_adv",
+     "box": [
+      790,
+      492,
+      150,
+      178
+     ],
+     "labelAt": [
+      865,
+      494
+     ]
+    },
+    {
+     "id": "fr_stratageme_noun",
+     "box": [
+      900,
+      140,
+      230,
+      345
+     ]
+    }
+   ]
+  },
+  "volontaire": {
+   "name": "Le volontaire · The Volunteer",
+   "room_id": "R_adv_manner_06_b",
+   "image": "cirque/volontaire.jpg",
+   "backTo": "magie",
+   "alt": "The volunteer corner of the magic tent, painted in ink and gouache under purple-and-cream striped canvas and strings of warm lights. On the left a purple-curtained doorway leads back to the magic show. On a low round stage a white rabbit hops of its own accord into a magician's top hat, a tabby cat grips a trapeze bar with wide-open eyes, and a ginger cat yawns wide open on a purple cushion. On the sawdust a faint dotted trail curves round a wooden post to a startled clown's nose, and three white poodles bow one after another, each in its own pool of spotlight. A star-painted folding screen, a spare top hat and a stool with a deck of cards stand on the right.",
+   "nameplate": [
+    24,
+    5
+   ],
+   "doors": [
+    {
+     "to": "magie",
+     "label": "La magie",
+     "hint": "Back through the purple-curtained doorway to the magic show",
+     "hit": [
+      40,
+      120,
+      215,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_volontairement_adv",
+     "box": [
+      385,
+      190,
+      178,
+      255
+     ],
+     "labelAt": [
+      474,
+      192
+     ]
+    },
+    {
+     "id": "fr_consciemment_adv",
+     "box": [
+      585,
+      85,
+      100,
+      170
+     ],
+     "labelAt": [
+      635,
+      87
+     ]
+    },
+    {
+     "id": "fr_ouvertement_adv",
+     "box": [
+      660,
+      275,
+      165,
+      112
+     ],
+     "labelAt": [
+      742,
+      277
+     ]
+    },
+    {
+     "id": "fr_indirectement_adv",
+     "box": [
+      400,
+      452,
+      200,
+      215
+     ],
+     "labelAt": [
+      500,
+      454
+     ]
+    },
+    {
+     "id": "fr_individuellement_adv",
+     "box": [
+      620,
+      395,
+      350,
+      250
+     ],
+     "labelAt": [
+      795,
+      397
+     ]
+    }
+   ]
+  },
+  "quete": {
+   "name": "La quête · The Collection",
+   "room_id": "R_adv_manner_06_c",
+   "image": "cirque/quete.jpg",
+   "backTo": "magie",
+   "alt": "The collection corner of the circus tent, painted in ink and gouache under green-and-cream striped canvas and strings of warm lights. On the left a green-curtained doorway leads back to the magic show. On a long wooden stage-table a strongman, whistling, balances a grand piano on one fingertip beside a big jar of coins, a clown hands out free balloons and a giraffe leans in to take one, among a cheering crowd of clowns. In front, clowns tumble pell-mell out of a tiny red car, a clown slips on banana peels, and a pig drops a coin into a blue piggy bank beside little stacks of coins. A coat on a peg rail and folding chairs stand on the right.",
+   "nameplate": [
+    18,
+    3.5
+   ],
+   "doors": [
+    {
+     "to": "magie",
+     "label": "La magie",
+     "hint": "Back through the green-curtained doorway to the magic show",
+     "hit": [
+      25,
+      130,
+      220,
+      350
      ]
     }
    ],
@@ -1574,205 +1905,66 @@
     {
      "id": "fr_aisement_adv",
      "box": [
-      560,
-      48,
-      125,
-      170
+      466,
+      45,
+      176,
+      272
      ],
      "labelAt": [
-      622,
-      16
+      554,
+      47
      ]
     },
     {
      "id": "fr_gratuitement_adv",
      "box": [
-      706,
-      400,
-      184,
-      107
+      645,
+      45,
+      315,
+      270
      ],
      "labelAt": [
-      798,
-      402
-     ]
-    },
-    {
-     "id": "fr_ouvertement_adv",
-     "box": [
-      606,
-      285,
-      55,
-      90
-     ],
-     "labelAt": [
-      628,
-      378
+      802,
+      47
      ]
     },
     {
      "id": "fr_pele_mele_adv",
      "box": [
-      335,
-      602,
-      122,
-      75
+      405,
+      365,
+      222,
+      250
      ],
      "labelAt": [
-      396,
-      604
-     ]
-    },
-    {
-     "id": "fr_systematiquement_adv",
-     "box": [
-      575,
-      515,
-      165,
-      162
-     ],
-     "labelAt": [
-      645,
-      516
+      516,
+      367
      ]
     },
     {
      "id": "fr_typiquement_adv",
      "box": [
-      338,
-      405,
-      115,
+      628,
+      320,
+      197,
       195
      ],
      "labelAt": [
-      396,
-      373
-     ]
-    },
-    {
-     "id": "fr_volontairement_adv",
-     "box": [
-      385,
-      62,
-      140,
-      165
-     ],
-     "labelAt": [
-      455,
-      30
-     ]
-    },
-    {
-     "id": "fr_artificiellement_adv",
-     "box": [
-      662,
-      235,
-      93,
-      130
-     ],
-     "labelAt": [
-      708,
-      236
-     ]
-    },
-    {
-     "id": "fr_consciemment_adv",
-     "box": [
-      742,
-      90,
-      75,
-      140
-     ],
-     "labelAt": [
-      780,
-      58
-     ]
-    },
-    {
-     "id": "fr_consciencieusement_adv",
-     "box": [
-      855,
-      580,
-      65,
-      97
-     ],
-     "labelAt": [
-      888,
-      682
+      726,
+      322
      ]
     },
     {
      "id": "fr_financierement_adv",
      "box": [
-      750,
-      535,
-      103,
-      142
-     ],
-     "labelAt": [
-      832,
-      537
-     ]
-    },
-    {
-     "id": "fr_indirectement_adv",
-     "box": [
-      510,
-      414,
-      135,
-      96
-     ],
-     "labelAt": [
-      578,
-      416
-     ]
-    },
-    {
-     "id": "fr_individuellement_adv",
-     "box": [
-      462,
-      262,
-      140,
-      105
-     ],
-     "labelAt": [
-      532,
-      233
-     ]
-    },
-    {
-     "id": "fr_intentionnellement_adv",
-     "box": [
-      462,
-      552,
-      110,
-      125
-     ],
-     "labelAt": [
+      640,
       517,
-      682
-     ]
-    },
-    {
-     "id": "fr_scientifiquement_adv",
-     "box": [
-      798,
-      232,
-      97,
-      130
+      170,
+      158
      ],
      "labelAt": [
-      850,
-      365
-     ]
-    },
-    {
-     "id": "fr_stratageme_noun",
-     "box": [
-      1000,
-      228,
-      203,
-      232
+      725,
+      675
      ]
     }
    ]

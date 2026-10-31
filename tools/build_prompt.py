@@ -101,7 +101,7 @@ def build(M):
         "{refs}": v("refs"),
         "{building's exterior | sector}": P.get("look") or "building's exterior",
         "{walls, floor, roof, wood/stone, palette}": v("materials"),
-        "{time of day / light / dominant colour}": v("set_apart", "time of day / light / dominant colour"),
+        "{time of day / light / dominant color}": v("set_apart", "time of day / light / dominant color"),
         "{place}": v("place"),
         "{landmark}": v("landmark"),
         "{playful architectural feature}": v("whimsy", "playful architectural feature"),

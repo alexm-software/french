@@ -1,6 +1,8 @@
 # Skills changelog
 
 ## 29 October 2026
+- **Room cap 15.** `room_max` in `skills/limits.json` is now 15 (was 12), owner decision for the verb migration. Rooms are not split just to stay under 12; zooms stay 4-6. Verb-street side rooms are kept as homes for leftover verbs with no natural room.
+- **Hook-crop gate.** For every repainted room, crop each item's hotspot at 2x and confirm every concrete detail its hook names is painted inside the box; fix mismatches before packing.
 - **Asset-per-word pipeline deleted.** Removed release gates E (per-word assets) and G99 (sprites drawn to fit), the B70/B72 empty-background and per-asset alternatives, the sprite line of the prompt template and the feathered-paste compositing rule. F is now a final-scene check for integrated paintings (G83: no seams or pasted patches). Local fixes edit a region with the whole painting as context; otherwise repaint the room.
 - **Copyright gate for quoted texts** (builder reference/copyright.md, release gates, language skill): dated public-domain edition or our own translation, recorded source and usage, named in CREDITS.md, and `tools/copyright_check.py` on every pull request.
 

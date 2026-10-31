@@ -51,7 +51,9 @@
     "fr_primitif_adj",
     "fr_veuf_adj",
     "fr_orphelin_adj",
-    "fr_mouvant_adj"
+    "fr_mouvant_adj",
+    "fr_chiner_verb",
+    "fr_garder_verb"
    ]
   },
   "vitrine": {
@@ -86,7 +88,9 @@
     "fr_preparatoire_adj",
     "fr_consecutif_adj",
     "fr_architectural_adj",
-    "fr_initiatique_adj"
+    "fr_initiatique_adj",
+    "fr_rechercher_verb",
+    "fr_chercher_verb"
    ]
   },
   "casier": {
@@ -123,7 +127,8 @@
     "fr_archaique_adj",
     "fr_feodal_adj",
     "fr_artisanal_adj",
-    "fr_fossile_adj"
+    "fr_fossile_adj",
+    "fr_trouver_verb"
    ]
   },
   "cabinet": {
@@ -299,7 +304,7 @@
    "room_id": "R_adj_time_02",
    "image": "brocante/souvenirs.jpg",
    "backTo": "brocante",
-   "alt": "Inside a blue-and-white striped keepsake tent under the market hall's glass roof on a rainy day, seen from above, villagers crowd round a big round table. A granny pours tea from a plain brown teapot, a carpenter has just sawn a little stool where a ray of light falls, a girl opens a book of pressed flowers and an artist polishes a swirly modern silver sculpture. On the table a curving row of dominoes topples and a boy clicks a Newton's cradle. In front, a girl unpacks nesting dolls one after another, a man rolls a round stone wheel, a boy shakes a jar of shifting sand with an ant inside, a lone white swan sighs in a puddle and an odd striped sock falls into a laundry basket. The red door on the left leads back to the flea market; on the right a glass-fronted display cabinet stands on a side table.",
+   "alt": "Inside a blue-and-white striped keepsake tent under the market hall's glass roof on a rainy day, seen from above, villagers crowd round a big round table. A granny pours tea from a plain brown teapot, a carpenter has just sawn a little stool where a ray of light falls, a girl opens a book of pressed flowers and an artist polishes a swirly modern silver sculpture. On the table a curving row of dominoes topples and a boy clicks a Newton's cradle. In front, a girl unpacks nesting dolls one after another, a man rolls a round stone wheel, a boy shakes a jar of shifting sand with an ant inside, a lone white swan sighs in a puddle and an odd striped sock falls into a laundry basket. At the front left Monsieur Verbe in a red beret holds up a shiny brass lamp from a junk crate; at the front right Monsieur Verbe in a red beret sits on a stool hugging a glass dome over a tiny fenced garden. The red door on the left leads back to the flea market; on the right a glass-fronted display cabinet stands on a side table.",
    "nameplate": [
     50,
     4.5
@@ -313,7 +318,7 @@
       128,
       258,
       100,
-      250
+      215
      ]
     }
    ],
@@ -432,6 +437,24 @@
       485,
       60,
       125
+     ]
+    },
+    {
+     "id": "fr_chiner_verb",
+     "box": [
+      12,
+      478,
+      205,
+      199
+     ]
+    },
+    {
+     "id": "fr_garder_verb",
+     "box": [
+      1035,
+      442,
+      180,
+      235
      ]
     }
    ]
@@ -572,7 +595,7 @@
    "room_id": "R_adj_time_04",
    "image": "brocante/grenier.jpg",
    "backTo": "brocante",
-   "alt": "A sunlit storage loft high under the market hall's glass roof, seen from above. On a round rug the family hunts for treasure: a mother holds up a baby's first shoes, three teddies hold a meeting, grandpa studies a book through a magnifying glass, a boy lifts a golden key into the sunbeam beside a little domed temple model on the open trunk, a girl checks a barometer under a dripping rain cloud, a boy stirs green soup, jars stand sorted by color, a boy labels an empty jar, a toddler winds up a tin ant, a girl whisks batter, a sketch stands on an easel and three toy ducks waddle in a row. A blue door is on the left; a pigeonhole rack stands on a side table at the right.",
+   "alt": "A sunlit storage loft high under the market hall's glass roof, seen from above. On a round rug the family hunts for treasure: a mother holds up a baby's first shoes, three teddies hold a meeting, grandpa studies a book through a magnifying glass, a boy lifts a golden key into the sunbeam beside a little domed temple model on the open trunk, a girl checks a barometer under a dripping rain cloud, a boy stirs green soup, jars stand sorted by color, a boy labels an empty jar, a toddler winds up a tin ant, a girl whisks batter, a sketch stands on an easel and three toy ducks waddle in a row. On the left Monsieur Verbe in a red beret peeks round a tall wooden chair holding up his lantern; at the bottom right Monsieur Verbe in a red beret searches the floor with a magnifying glass beside a pair of shears and a lost button. A blue door is on the left; a pigeonhole rack stands on a side table at the right.",
    "nameplate": [
     24,
     4.5
@@ -696,6 +719,10 @@
       525,
       52,
       55
+     ],
+     "labelAt": [
+      879,
+      529
      ]
     },
     {
@@ -723,6 +750,24 @@
       122,
       40,
       70
+     ]
+    },
+    {
+     "id": "fr_rechercher_verb",
+     "box": [
+      132,
+      302,
+      210,
+      292
+     ]
+    },
+    {
+     "id": "fr_chercher_verb",
+     "box": [
+      950,
+      420,
+      275,
+      245
      ]
     }
    ]
@@ -893,7 +938,7 @@
    "room_id": "R_adj_time_06",
    "image": "brocante/fouilles.jpg",
    "backTo": "brocante",
-   "alt": "Looking straight down on a sandy dig pit opened in the cobbled floor of the market hall. A bearded digger brushes a green dragon, a chest lid is lifted on gold coins, a wooden ark and a toy castle wait at the top, a little bonsai grows beside a butter churn, a girl turns a handmade clay pitcher, a toddler holds up a spiral fossil, a toy dinosaur and a tray of pottery shards lie in the sand, a girl brushes wild flowers growing in a denim pouch, a toy unicorn rises from the sand and a gold bar rests on a curly gilded mirror. A green door is at the top left; a small curiosity cabinet stands on a side table at the right.",
+   "alt": "Looking straight down on a sandy dig pit opened in the cobbled floor of the market hall. A bearded digger brushes a green dragon, a chest lid is lifted on gold coins, a wooden ark and a toy castle wait at the top, a little bonsai grows beside a butter churn, a girl turns a handmade clay pitcher, a toddler holds up a spiral fossil, a toy dinosaur and a tray of pottery shards lie in the sand, a girl brushes wild flowers growing in a denim pouch, a toy unicorn rises from the sand and a gold bar rests on a curly gilded mirror. At the left Monsieur Verbe in a red beret jumps for joy with a big gold coin he has just dug up with his trowel. A green door is at the top left; a small curiosity cabinet stands on a side table at the right.",
    "nameplate": [
     70,
     95
@@ -1044,6 +1089,15 @@
       360,
       46,
       46
+     ]
+    },
+    {
+     "id": "fr_trouver_verb",
+     "box": [
+      125,
+      248,
+      175,
+      370
      ]
     }
    ]
