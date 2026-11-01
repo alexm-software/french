@@ -76,6 +76,30 @@
   {
    "key": "linguistique",
    "short": "La linguistique"
+  },
+  {
+   "key": "langues",
+   "short": "Les langues"
+  },
+  {
+   "key": "vocabulaire",
+   "short": "Le vocabulaire"
+  },
+  {
+   "key": "grammaire",
+   "short": "La grammaire"
+  },
+  {
+   "key": "phonetique",
+   "short": "La phonétique"
+  },
+  {
+   "key": "psychologie",
+   "short": "La psychologie"
+  },
+  {
+   "key": "cabinet",
+   "short": "Le cabinet"
   }
  ],
  "planned": {
@@ -338,6 +362,94 @@
     "fr_genre_noun",
     "fr_signe_noun"
    ]
+  },
+  "langues": {
+   "vocabRoom": "R_linguistics_02",
+   "only": [
+    "fr_parole_noun",
+    "fr_traduction_noun",
+    "fr_anglais_adj",
+    "fr_interprete_noun",
+    "fr_francophone_adj",
+    "fr_creole_noun",
+    "fr_latin_noun",
+    "fr_portugais_noun",
+    "fr_arabe_noun",
+    "fr_turc_noun"
+   ]
+  },
+  "vocabulaire": {
+   "vocabRoom": "R_linguistics_02",
+   "only": [
+    "fr_formulation_noun",
+    "fr_extension_noun",
+    "fr_ambiguite_noun",
+    "fr_supposition_noun",
+    "fr_linguistique_adj",
+    "fr_reflechi_adj",
+    "fr_vocabulaire_noun",
+    "fr_dictionnaire_noun",
+    "fr_langage_noun",
+    "fr_contexte_noun",
+    "fr_moyen_noun"
+   ]
+  },
+  "grammaire": {
+   "vocabRoom": "R_linguistics_03",
+   "only": [
+    "fr_grammaire_noun",
+    "fr_parenthese_noun",
+    "fr_allegorie_noun",
+    "fr_modalite_noun",
+    "fr_formalite_noun",
+    "fr_linguiste_noun",
+    "fr_imperatif_noun",
+    "fr_paragraphe_noun",
+    "fr_euphemisme_noun",
+    "fr_calembour_noun"
+   ]
+  },
+  "phonetique": {
+   "vocabRoom": "R_linguistics_03",
+   "only": [
+    "fr_prononciation_noun",
+    "fr_contraction_noun",
+    "fr_syllabe_noun",
+    "fr_tonalite_noun",
+    "fr_dialecte_noun",
+    "fr_parler_noun"
+   ]
+  },
+  "psychologie": {
+   "vocabRoom": "R_social_science_01",
+   "only": [
+    "fr_habitude_noun",
+    "fr_personnalite_noun",
+    "fr_psychologie_noun",
+    "fr_caracteristique_noun",
+    "fr_imagination_noun",
+    "fr_psychologue_noun",
+    "fr_psychologique_adj",
+    "fr_mental_adj",
+    "fr_comportement_noun",
+    "fr_phenomene_noun",
+    "fr_propos_noun"
+   ]
+  },
+  "cabinet": {
+   "vocabRoom": "R_social_science_01",
+   "only": [
+    "fr_therapie_noun",
+    "fr_anecdote_noun",
+    "fr_intention_noun",
+    "fr_conduite_noun",
+    "fr_tendance_noun",
+    "fr_motivation_noun",
+    "fr_sociologue_noun",
+    "fr_dessein_noun",
+    "fr_cliche_noun",
+    "fr_prejuge_noun"
+   ]
   }
  },
  "rooms": {
@@ -402,6 +514,17 @@
       97,
       65,
       155
+     ]
+    },
+    {
+     "to": "psychologie",
+     "label": "La psychologie",
+     "hint": "the lilac door at the top right of the gallery, to the psychology room",
+     "hit": [
+      955,
+      47,
+      79,
+      189
      ]
     }
    ],
@@ -2436,6 +2559,17 @@
       70,
       75
      ]
+    },
+    {
+     "to": "langues",
+     "label": "Les langues",
+     "hint": "the teal door with the globe at the far right, to the languages room",
+     "hit": [
+      1110,
+      35,
+      90,
+      160
+     ]
     }
    ],
    "zooms": [],
@@ -2537,6 +2671,734 @@
       446,
       225,
       194
+     ]
+    }
+   ]
+  },
+  "langues": {
+   "name": "La salle des langues · The languages room",
+   "room_id": "R_linguistics_02",
+   "image": "humanites/langues.jpg",
+   "alt": "A sunny sky-blue languages room with a giant wooden globe, a lemon tree with a caught kite, round tables, a toy-boat basin and a Roman bust, a plum door with a carved book at the back left and a teal door with a globe at the back right.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "linguistique",
+   "doors": [
+    {
+     "to": "linguistique",
+     "label": "La linguistique",
+     "hint": "the teal door with the globe at the back right, back to the linguistics room",
+     "hit": [
+      1110,
+      32,
+      95,
+      130
+     ]
+    },
+    {
+     "to": "vocabulaire",
+     "label": "Le vocabulaire",
+     "hint": "the plum door with the carved dictionary at the back left, to the vocabulary room",
+     "hit": [
+      272,
+      50,
+      80,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_parole_noun",
+     "box": [
+      5,
+      215,
+      165,
+      150
+     ]
+    },
+    {
+     "id": "fr_traduction_noun",
+     "box": [
+      100,
+      370,
+      350,
+      250
+     ]
+    },
+    {
+     "id": "fr_anglais_adj",
+     "box": [
+      330,
+      218,
+      220,
+      150
+     ]
+    },
+    {
+     "id": "fr_interprete_noun",
+     "box": [
+      588,
+      138,
+      338,
+      232
+     ]
+    },
+    {
+     "id": "fr_francophone_adj",
+     "box": [
+      505,
+      500,
+      300,
+      215
+     ]
+    },
+    {
+     "id": "fr_creole_noun",
+     "box": [
+      512,
+      375,
+      375,
+      120
+     ]
+    },
+    {
+     "id": "fr_latin_noun",
+     "box": [
+      1058,
+      168,
+      215,
+      250
+     ]
+    },
+    {
+     "id": "fr_portugais_noun",
+     "box": [
+      928,
+      268,
+      122,
+      170
+     ]
+    },
+    {
+     "id": "fr_arabe_noun",
+     "box": [
+      925,
+      445,
+      340,
+      270
+     ]
+    },
+    {
+     "id": "fr_turc_noun",
+     "box": [
+      938,
+      94,
+      118,
+      155
+     ]
+    }
+   ]
+  },
+  "vocabulaire": {
+   "name": "La salle du vocabulaire · The vocabulary room",
+   "room_id": "R_linguistics_02",
+   "image": "humanites/vocabulaire.jpg",
+   "alt": "A tall plum and cream word room with bookshelves, a library ladder, a giant open book on a lectern, a green rug, a mouse in glasses on a shelf, snowy quad windows on the left, a plum door with a carved book at the back left and a green door with a carved quill at the back right.",
+   "nameplate": [
+    28,
+    3.5
+   ],
+   "backTo": "langues",
+   "doors": [
+    {
+     "to": "langues",
+     "label": "Les langues",
+     "hint": "the plum door with the carved book at the back left, back to the languages room",
+     "hit": [
+      272,
+      50,
+      75,
+      150
+     ]
+    },
+    {
+     "to": "grammaire",
+     "label": "La grammaire",
+     "hint": "the green door with the carved quill at the back right, to the grammar room",
+     "hit": [
+      1105,
+      30,
+      100,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_formulation_noun",
+     "box": [
+      10,
+      430,
+      380,
+      270
+     ]
+    },
+    {
+     "id": "fr_extension_noun",
+     "box": [
+      272,
+      205,
+      120,
+      215
+     ]
+    },
+    {
+     "id": "fr_ambiguite_noun",
+     "box": [
+      15,
+      150,
+      255,
+      245
+     ]
+    },
+    {
+     "id": "fr_supposition_noun",
+     "box": [
+      395,
+      310,
+      130,
+      270
+     ]
+    },
+    {
+     "id": "fr_linguistique_adj",
+     "box": [
+      528,
+      465,
+      200,
+      150
+     ]
+    },
+    {
+     "id": "fr_reflechi_adj",
+     "box": [
+      605,
+      65,
+      160,
+      270
+     ]
+    },
+    {
+     "id": "fr_vocabulaire_noun",
+     "box": [
+      765,
+      125,
+      130,
+      255
+     ]
+    },
+    {
+     "id": "fr_dictionnaire_noun",
+     "box": [
+      825,
+      5,
+      245,
+      115
+     ]
+    },
+    {
+     "id": "fr_langage_noun",
+     "box": [
+      810,
+      525,
+      450,
+      190
+     ]
+    },
+    {
+     "id": "fr_contexte_noun",
+     "box": [
+      1050,
+      225,
+      215,
+      255
+     ]
+    },
+    {
+     "id": "fr_moyen_noun",
+     "box": [
+      895,
+      285,
+      150,
+      240
+     ]
+    }
+   ]
+  },
+  "grammaire": {
+   "name": "La salle de grammaire · The grammar room",
+   "room_id": "R_linguistics_03",
+   "image": "humanites/grammaire.jpg",
+   "alt": "A green-and-cream grammar classroom with blank chalkboards, pushed-aside wooden desks, a checkered floor, a rope swing, a big brass bell, a hedgehog in a graduation cap, autumn orchard windows on the right, a yellow door at the back left and a green door with a carved quill at the back right.",
+   "nameplate": [
+    33,
+    3.5
+   ],
+   "backTo": "vocabulaire",
+   "doors": [
+    {
+     "to": "vocabulaire",
+     "label": "Le vocabulaire",
+     "hint": "the green door with the carved quill at the back right, back to the vocabulary room",
+     "hit": [
+      1012,
+      80,
+      65,
+      180
+     ]
+    },
+    {
+     "to": "phonetique",
+     "label": "La phonétique",
+     "hint": "the mustard-yellow door at the back left, to the phonetics room",
+     "hit": [
+      425,
+      95,
+      155,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_grammaire_noun",
+     "box": [
+      90,
+      105,
+      150,
+      195
+     ]
+    },
+    {
+     "id": "fr_parenthese_noun",
+     "box": [
+      20,
+      395,
+      290,
+      235
+     ]
+    },
+    {
+     "id": "fr_allegorie_noun",
+     "box": [
+      242,
+      205,
+      178,
+      188
+     ]
+    },
+    {
+     "id": "fr_modalite_noun",
+     "box": [
+      505,
+      250,
+      135,
+      275
+     ]
+    },
+    {
+     "id": "fr_formalite_noun",
+     "box": [
+      320,
+      530,
+      300,
+      185
+     ]
+    },
+    {
+     "id": "fr_linguiste_noun",
+     "box": [
+      642,
+      215,
+      85,
+      200
+     ]
+    },
+    {
+     "id": "fr_imperatif_noun",
+     "box": [
+      730,
+      345,
+      230,
+      195
+     ]
+    },
+    {
+     "id": "fr_paragraphe_noun",
+     "box": [
+      800,
+      15,
+      190,
+      325
+     ]
+    },
+    {
+     "id": "fr_euphemisme_noun",
+     "box": [
+      1080,
+      210,
+      190,
+      230
+     ]
+    },
+    {
+     "id": "fr_calembour_noun",
+     "box": [
+      780,
+      545,
+      470,
+      135
+     ]
+    }
+   ]
+  },
+  "phonetique": {
+   "name": "La salle de phonétique · The phonetics room",
+   "room_id": "R_linguistics_03",
+   "image": "humanites/phonetique.jpg",
+   "alt": "A mustard-and-white striped sound lab with tuning forks on workbenches, wall speakers, a giant brass gramophone, a frog in headphones, round porthole windows onto a rainy harbor, and a mustard-yellow door at the back left.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "grammaire",
+   "doors": [
+    {
+     "to": "grammaire",
+     "label": "La grammaire",
+     "hint": "the mustard-yellow door at the back left, back to the grammar room",
+     "hit": [
+      425,
+      85,
+      95,
+      155
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_prononciation_noun",
+     "box": [
+      10,
+      230,
+      250,
+      180
+     ]
+    },
+    {
+     "id": "fr_contraction_noun",
+     "box": [
+      135,
+      442,
+      422,
+      273
+     ]
+    },
+    {
+     "id": "fr_syllabe_noun",
+     "box": [
+      310,
+      245,
+      175,
+      165
+     ]
+    },
+    {
+     "id": "fr_tonalite_noun",
+     "box": [
+      560,
+      260,
+      155,
+      178
+     ]
+    },
+    {
+     "id": "fr_dialecte_noun",
+     "box": [
+      1000,
+      205,
+      265,
+      170
+     ]
+    },
+    {
+     "id": "fr_parler_noun",
+     "box": [
+      740,
+      380,
+      520,
+      335
+     ]
+    }
+   ]
+  },
+  "psychologie": {
+   "name": "La salle de psychologie · The psychology room",
+   "room_id": "R_social_science_01",
+   "image": "humanites/psychologie.jpg",
+   "alt": "A lilac-and-sage psychology room with a teal velvet couch, a giant pink brain model on a plinth, a goldfish bowl, a big abacus, a little soccer goal, cherry-blossom windows on the right, a lilac door with a carved brain at the back left and a sky-blue door at the back right.",
+   "nameplate": [
+    28,
+    3.5
+   ],
+   "backTo": "humanites",
+   "doors": [
+    {
+     "to": "humanites",
+     "label": "La bibliothèque",
+     "hint": "the lilac door with the carved knot at the back left, back to the library",
+     "hit": [
+      270,
+      50,
+      100,
+      160
+     ]
+    },
+    {
+     "to": "cabinet",
+     "label": "Le cabinet",
+     "hint": "the sky-blue door with the carved armchair at the back right, to the counseling office",
+     "hit": [
+      855,
+      30,
+      60,
+      250
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_habitude_noun",
+     "box": [
+      5,
+      140,
+      220,
+      145
+     ]
+    },
+    {
+     "id": "fr_personnalite_noun",
+     "box": [
+      5,
+      295,
+      172,
+      355
+     ]
+    },
+    {
+     "id": "fr_psychologie_noun",
+     "box": [
+      230,
+      250,
+      345,
+      190
+     ]
+    },
+    {
+     "id": "fr_caracteristique_noun",
+     "box": [
+      375,
+      110,
+      125,
+      140
+     ]
+    },
+    {
+     "id": "fr_imagination_noun",
+     "box": [
+      180,
+      465,
+      210,
+      235
+     ]
+    },
+    {
+     "id": "fr_psychologue_noun",
+     "box": [
+      690,
+      310,
+      210,
+      250
+     ]
+    },
+    {
+     "id": "fr_psychologique_adj",
+     "box": [
+      395,
+      445,
+      290,
+      255
+     ]
+    },
+    {
+     "id": "fr_mental_adj",
+     "box": [
+      590,
+      50,
+      165,
+      255
+     ]
+    },
+    {
+     "id": "fr_comportement_noun",
+     "box": [
+      940,
+      40,
+      168,
+      375
+     ]
+    },
+    {
+     "id": "fr_phenomene_noun",
+     "box": [
+      1168,
+      200,
+      112,
+      215
+     ]
+    },
+    {
+     "id": "fr_propos_noun",
+     "box": [
+      905,
+      420,
+      375,
+      295
+     ]
+    }
+   ]
+  },
+  "cabinet": {
+   "name": "Le cabinet · The counseling office",
+   "room_id": "R_social_science_01",
+   "image": "humanites/cabinet.jpg",
+   "alt": "A sky-blue counseling room with a rag rug, a stone fireplace, a sand table, rocking chair, lake windows on the left, a coral-red door at the back and a sky-blue door at the back right.",
+   "nameplate": [
+    74,
+    3.5
+   ],
+   "backTo": "psychologie",
+   "doors": [
+    {
+     "to": "psychologie",
+     "label": "La psychologie",
+     "hint": "the sky-blue door with the carved armchair at the back right, back to the psychology room",
+     "hit": [
+      1050,
+      55,
+      65,
+      175
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_therapie_noun",
+     "box": [
+      165,
+      130,
+      210,
+      225
+     ]
+    },
+    {
+     "id": "fr_anecdote_noun",
+     "box": [
+      130,
+      360,
+      245,
+      340
+     ]
+    },
+    {
+     "id": "fr_intention_noun",
+     "box": [
+      300,
+      48,
+      330,
+      82
+     ]
+    },
+    {
+     "id": "fr_conduite_noun",
+     "box": [
+      380,
+      385,
+      300,
+      110
+     ]
+    },
+    {
+     "id": "fr_tendance_noun",
+     "box": [
+      455,
+      200,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_motivation_noun",
+     "box": [
+      460,
+      500,
+      350,
+      200
+     ]
+    },
+    {
+     "id": "fr_sociologue_noun",
+     "box": [
+      690,
+      210,
+      190,
+      230
+     ]
+    },
+    {
+     "id": "fr_dessein_noun",
+     "box": [
+      880,
+      320,
+      370,
+      150
+     ]
+    },
+    {
+     "id": "fr_cliche_noun",
+     "box": [
+      1045,
+      235,
+      215,
+      80
+     ]
+    },
+    {
+     "id": "fr_prejuge_noun",
+     "box": [
+      905,
+      480,
+      345,
+      140
      ]
     }
    ]
