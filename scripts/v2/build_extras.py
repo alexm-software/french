@@ -9,8 +9,11 @@
   village/data/talk/<building>.js  window.V2_TALK[building] = {"building/room": [dialogue, ...]}, with
                              village/data/talk/index.js (V2_TALK_INDEX: the cast and a count per room): the village
                              dialogues (data/source/village_dialogues.json) plus every written conversation in
-                             data/source/conversations.json, each placed in the live room that holds most of its
-                             words (at least 2). Every line carries "spans" [[start, end, word id], ...] marking the
+                             data/source/conversations.json. A conversation with a "room" pin ("building/room") goes
+                             to that room ("room": null keeps it out of every room); an unpinned one goes to the live
+                             room that holds most of its words, and only if that room holds at least MIN_SHARED (3) of
+                             them, so building a new room cannot pull it away on two shared words. A pin to a room that
+                             no longer exists falls back to the same rule. Every line carries "spans" [[start, end, word id], ...] marking the
                              room's words (any form: plural, feminine, conjugated) so the site can link them to cards.
   village/data/listening.js  window.V2_LISTENING = [passage, ...] from data/source/listening.json (paragraphs to
                              listen to, with comprehension questions), each with the room it belongs to.
@@ -26,6 +29,7 @@ DATA = ROOT / "village" / "data"
 SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js"}  # (talk/ is a subfolder, so not globbed)
 # Village dialogues whose original room was folded into another when the church was repainted
 REHOME = {"eglise/clocher": "eglise/parvis", "eglise/paroisse": "eglise/eglise", "eglise/bricolage": "eglise/eglise"}
+MIN_SHARED = 3  # an unpinned dialogue needs this many of its words in a room to be placed there (scripts/qa/dialogue_check.py)
 LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"]
 PRAYER_ORDER = ["P_signe_croix", "P_notre_pere", "P_ave", "P_gloria_patri", "P_credo", "P_credo_nicee", "P_acte_contrition", "P_confiteor", "P_ange_gardien",
                 "P_angelus", "P_regina_caeli", "P_salve_regina", "P_sub_tuum", "P_memorare", "P_saint_michel", "P_actes_foi", "P_actes_esperance",
@@ -120,10 +124,10 @@ def main():
         lv = sorted((vocab.get(w, {}).get("cefr") or "A1" for w in used), key=LEVELS.index)
         return lv[len(lv) * 3 // 4] if lv else ""
 
-    def best_room(used):
+    def best_room(used, need=2):
         w = set(used)
         sc = sorted(((len(w & ids[k]), -len(rooms[k]["items"]), k) for k in rooms), reverse=True)
-        return sc[0][2] if sc and sc[0][0] >= 2 else None
+        return sc[0][2] if sc and sc[0][0] >= need else None
 
     def pack(x, key, used):
         words = room_words(key, used)
@@ -136,7 +140,7 @@ def main():
         key = REHOME.get(f'{x["building"]}/{x["room"]}', f'{x["building"]}/{x["room"]}')
         used = list(x.get("target_words") or []) + list(x.get("also_uses") or [])
         if key not in rooms:
-            key = best_room(used)
+            key = best_room(used, MIN_SHARED)
         if key:
             by.setdefault(key, []).append(pack(x, key, used))
     conv = json.loads((ROOT / "data" / "source" / "conversations.json").read_text(encoding="utf-8"))["conversations"]
@@ -145,7 +149,11 @@ def main():
         if x.get("status") != "written" or not x.get("lines"):
             continue
         used = x.get("used_words") or x.get("target_words") or []
-        key = best_room(used)
+        if "room" in x and x["room"] is None:
+            continue
+        key = REHOME.get(x.get("room") or "", x.get("room"))
+        if key not in rooms:
+            key = best_room(used, MIN_SHARED)
         if key:
             by.setdefault(key, []).append(pack(x, key, used)); placed += 1
     for key in by:
