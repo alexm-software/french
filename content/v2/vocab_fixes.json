@@ -1,311 +1,316 @@
 {
- "_note": "Article/gender corrections applied by scripts/v2/build_v2.py to every building (data/source/vocab.jsonl is never edited). A building's content/v2/<bld>/hooks.json may override an entry. Keys: art (le/la/l'), g (m/f/mf). Also say/f_say (respelling) and hook text overrides, e.g. no respelling syllable that reads as \"pee\"/\"poo\". Also fr (headword shown on the label and card) for phrase-only words, e.g. \"en avoir marre\".",
- "fr_hammam_noun": {
-  "art": "le",
-  "why": "Aspirate h: le hammam, not l'hammam."
- },
- "fr_hors_d_oeuvre_noun": {
-  "art": "le",
-  "why": "Aspirate h: le hors-d'œuvre, not l'hors-d'œuvre."
- },
- "fr_container_noun": {
-  "art": "le",
-  "g": "m",
-  "why": "Masculine: le container (vocab.jsonl has it as feminine)."
- },
- "fr_pilotage_noun": {
-  "say": "pea-loh-TAHZH",
-  "why": "Respelling \"pee-loh-TAHZH\" reads as pee/poo; same sound respelled \"pea-loh-TAHZH\"."
- },
- "fr_pilote_noun": {
-  "say": "pea-LOT",
-  "why": "Respelling \"pee-LOT\" reads as pee/poo; same sound respelled \"pea-LOT\"."
- },
- "fr_capital_adj": {
-  "say": "kah-pea-TAHL",
-  "why": "Respelling \"kah-pee-TAHL\" reads as pee/poo; same sound respelled \"kah-pea-TAHL\"."
- },
- "fr_capitalisme_noun": {
-  "say": "kah-pea-tah-LEEZM",
-  "why": "Respelling \"kah-pee-tah-LEEZM\" reads as pee/poo; same sound respelled \"kah-pea-tah-LEEZM\"."
- },
- "fr_pouce_noun": {
-  "say": "POUSS",
-  "why": "Respelling \"POOS\" reads as pee/poo; same sound respelled \"POUSS\". Hook respelling updated to match.",
-  "hook": "PUSS (\"POUSS\") in Boots, feathered hat and all, gives a big THUMBS-UP from the top of a tool chest."
- },
- "fr_poumon_noun": {
-  "say": "pou-MOHN",
-  "why": "Respelling \"poo-MOHN\" reads as pee/poo; same sound respelled \"pou-MOHN\"."
- },
- "fr_pourboire_noun": {
-  "say": "pour-BWAHR",
-  "why": "Respelling \"poor-BWAHR\" reads as pee/poo; same sound respelled \"pour-BWAHR\". Hook respelling updated to match.",
-  "hook": "A POOR BOAR (pour-BWAHR) in patched overalls beams as a coin drops into his cup: a TIP!"
- },
- "fr_camping_noun": {
-  "say": "kahn-PING",
-  "why": "Respelling \"kahn-PEENG\" reads as pee/poo; same sound respelled \"kahn-PING\"."
- },
- "fr_rapidement_adv": {
-  "say": "rah-pea-duh-MAHN",
-  "why": "Respelling \"rah-pee-duh-MAHN\" reads as pee/poo; same sound respelled \"rah-pea-duh-MAHN\"."
- },
- "fr_typiquement_adv": {
-  "say": "tee-pea-kuh-MAHN",
-  "why": "Respelling \"tee-pee-kuh-MAHN\" reads as pee/poo; same sound respelled \"tee-pea-kuh-MAHN\"."
- },
- "fr_pire_adj": {
-  "say": "PIER",
-  "why": "Respelling \"PEER\" reads as pee/poo; same sound respelled \"PIER\"."
- },
- "fr_typique_adj": {
-  "say": "tee-PEAK",
-  "why": "Respelling \"tee-PEEK\" reads as pee/poo; same sound respelled \"tee-PEAK\"."
- },
- "fr_epouvantable_adj": {
-  "say": "ay-pou-vahn-TAHBL",
-  "why": "Respelling \"ay-poo-vahn-TAHBL\" reads as pee/poo; same sound respelled \"ay-pou-vahn-TAHBL\"."
- },
- "fr_pyramide_noun": {
-  "say": "pea-rah-MEED",
-  "why": "Respelling \"pee-rah-MEED\" reads as pee/poo; same sound respelled \"pea-rah-MEED\"."
- },
- "fr_poulet_noun": {
-  "say": "pou-LEH",
-  "why": "Respelling \"poo-LEH\" reads as pee/poo; same sound respelled \"pou-LEH\"."
- },
- "fr_champignon_noun": {
-  "say": "shahn-pea-NYOHN",
-  "why": "Respelling \"shahn-pee-NYOHN\" reads as pee/poo; same sound respelled \"shahn-pea-NYOHN\"."
- },
- "fr_vampire_noun": {
-  "say": "vahn-PIER",
-  "why": "Respelling \"vahn-PEER\" reads as pee/poo; same sound respelled \"vahn-PIER\". Hook respelling updated to match.",
-  "hook": "Like English 'vampire', said vahn-PIER: a VAMPIRE in a high collar peers out of a black van window at dusk, sunglasses on."
- },
- "fr_pic_noun": {
-  "say": "PEAK",
-  "why": "Respelling \"PEEK\" reads as pee/poo; same sound respelled \"PEAK\"."
- },
- "fr_poule_noun": {
-  "say": "POUL",
-  "why": "Respelling \"POOL\" reads as pee/poo; same sound respelled \"POUL\"."
- },
- "fr_pigeon_noun": {
-  "say": "pea-ZHOHN",
-  "why": "Respelling \"pee-ZHOHN\" reads as pee/poo; same sound respelled \"pea-ZHOHN\"."
- },
- "fr_poussin_noun": {
-  "say": "pou-SAN",
-  "why": "Respelling \"poo-SAN\" reads as pee/poo; same sound respelled \"pou-SAN\"."
- },
- "fr_papillon_noun": {
-  "say": "pah-pea-YOHN",
-  "why": "Respelling \"pah-pee-YOHN\" reads as pee/poo; same sound respelled \"pah-pea-YOHN\"."
- },
- "fr_pou_noun": {
-  "say": "POU",
-  "why": "Respelling \"POO\" reads as pee/poo; same sound respelled \"POU\"."
- },
- "fr_epileptique_adj": {
-  "say": "ay-pea-lehp-TEEK",
-  "why": "Respelling \"ay-pee-lehp-TEEK\" reads as pee/poo; same sound respelled \"ay-pea-lehp-TEEK\"."
- },
- "fr_hopital_noun": {
-  "say": "oh-pea-TAHL",
-  "why": "Respelling \"oh-pee-TAHL\" reads as pee/poo; same sound respelled \"oh-pea-TAHL\"."
- },
- "fr_piqure_noun": {
-  "say": "pea-KEWR",
-  "why": "Respelling \"pee-KEWR\" reads as pee/poo; same sound respelled \"pea-KEWR\"."
- },
- "fr_hospitalite_noun": {
-  "say": "os-pea-tah-lee-TAY",
-  "why": "Respelling \"os-pee-tah-lee-TAY\" reads as pee/poo; same sound respelled \"os-pea-tah-lee-TAY\"."
- },
- "fr_poubelle_noun": {
-  "say": "pou-BEHL",
-  "why": "Respelling \"poo-BEHL\" reads as pee/poo; same sound respelled \"pou-BEHL\"."
- },
- "fr_capitale_noun": {
-  "say": "kah-pea-TAHL",
-  "why": "Respelling \"kah-pee-TAHL\" reads as pee/poo; same sound respelled \"kah-pea-TAHL\"."
- },
- "fr_pivot_noun": {
-  "say": "pea-VOH",
-  "why": "Respelling \"pee-VOH\" reads as pee/poo; same sound respelled \"pea-VOH\"."
- },
- "fr_pique_noun": {
-  "say": "PEAK",
-  "why": "Respelling \"PEEK\" reads as pee/poo; same sound respelled \"PEAK\"."
- },
- "fr_alpiniste_noun": {
-  "say": "ahl-pea-NEEST",
-  "why": "Respelling \"ahl-pee-NEEST\" reads as pee/poo; same sound respelled \"ahl-pea-NEEST\"."
- },
- "fr_pilule_noun": {
-  "say": "pea-LEWL",
-  "why": "Respelling \"pee-LEWL\" reads as pee/poo; same sound respelled \"pea-LEWL\"."
- },
- "fr_capitaine_noun": {
-  "say": "kah-pea-TEHN",
-  "why": "Respelling \"kah-pee-TEHN\" reads as pee/poo; same sound respelled \"kah-pea-TEHN\"."
- },
- "fr_pirogue_noun": {
-  "say": "pea-ROG",
-  "why": "Respelling \"pee-ROG\" reads as pee/poo; same sound respelled \"pea-ROG\"."
- },
- "fr_pousse_noun": {
-  "say": "POUSS",
-  "why": "Respelling \"POOS\" reads as pee/poo; same sound respelled \"POUSS\"."
- },
- "fr_epicier_noun": {
-  "say": "ay-pea-SYAY",
-  "why": "Respelling \"ay-pee-SYAY\" reads as pee/poo; same sound respelled \"ay-pea-SYAY\"."
- },
- "fr_marre_adv": {
-  "fr": "en avoir marre",
-  "en": "(en avoir marre) to be fed up",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_guere_adv": {
-  "fr": "ne… guère",
-  "en": "(ne… guère) hardly, barely",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_clin_noun": {
-  "fr": "clin d'œil",
-  "en": "a wink (un clin d'œil)",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_tombee_noun": {
-  "fr": "tombée de la nuit",
-  "en": "nightfall (la tombée de la nuit)",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_metteur_noun": {
-  "fr": "metteur en scène",
-  "en": "director (un metteur en scène, film or theater)",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_par_ci_adv": {
-  "fr": "par-ci, par-là",
-  "en": "here and there (par-ci, par-là)",
-  "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
- },
- "fr_aviation_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_argent_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_sante_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_faim_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_hygiene_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_or_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_petrole_noun": {
-  "plural": null,
-  "why": "Usually no plural (uncountable)."
- },
- "fr_ping_pong_noun": {
-  "plural": null,
-  "why": "No plural."
- },
- "fr_sud_ouest_noun": {
-  "plural": null,
-  "why": "No plural."
- },
- "fr_sud_est_noun": {
-  "plural": null,
-  "why": "No plural."
- },
- "fr_rez_de_chaussee_noun": {
-  "plural": "les rez-de-chaussée",
-  "why": "Invariable compound: les rez-de-chaussée."
- },
- "fr_prie_dieu_noun": {
-  "plural": "les prie-dieu",
-  "why": "Invariable compound in traditional spelling: les prie-dieu."
- },
- "fr_os_noun": {
-  "plural": "les os (said \"lay ZOH\": the s goes silent)",
-  "why": "The plural sounds different."
- },
- "fr_boeuf_noun": {
-  "plural": "les bœufs (said \"lay BUH\": the f goes silent)",
-  "why": "The plural sounds different."
- },
- "fr_verre_noun": {
-  "ex": [
-   "Je voudrais un verre d'eau, s'il vous plaît.",
-   "I'd like a glass of water, please."
-  ],
-  "why": "Example used 'un verre de jus'."
- },
- "fr_quete_noun": {
-  "ex": [
-   "La quête passe pendant la messe.",
-   "The collection plate goes round during Mass."
-  ],
-  "why": "Example used the 'quest' sense; the church room teaches the collection."
- },
- "fr_bise_noun": {
-  "ex": [
-   "La bise souffle fort en hiver.",
-   "The north wind blows hard in winter."
-  ],
-  "why": "The weather room teaches the north wind, not the kiss."
- },
- "fr_debit_noun": {
-  "ex": [
-   "Le débit apparaît sur mon relevé de compte.",
-   "The debit shows on my bank statement."
-  ],
-  "why": "The bank room teaches the debit, not a river's flow."
- },
- "fr_serviette_noun": {
-  "ex": [
-   "Je prends une serviette pour me sécher.",
-   "I take a towel to dry myself."
-  ],
-  "why": "The bathroom card is the towel; the example was about a napkin."
- },
- "fr_caisse_noun": {
-  "ex": [
-   "Les vieux jouets sont dans une caisse au grenier.",
-   "The old toys are in a crate in the attic."
-  ],
-  "why": "The attic card is the crate; the example was about the till."
- },
- "fr_therapie_noun": {
-  "say": "tay-rah-PEA",
-  "why": "Respelling \"tay-rah-PEE\" reads as pee/poo; same sound respelled \"tay-rah-PEA\"."
- },
- "fr_rapidite_noun": {
-  "say": "rah-pea-dee-TAY",
-  "why": "Respelling \"rah-pee-dee-TAY\" reads as pee/poo; same sound respelled \"rah-pea-dee-TAY\"."
- },
- "fr_pile_noun": {
-  "say": "PEAL",
-  "why": "Respelling \"PEEL\" reads as pee/poo; same sound respelled \"PEAL\"."
- },
- "fr_opinion_noun": {
-  "say": "oh-pea-NYOHN",
-  "why": "Respelling \"oh-pee-NYOHN\" reads as pee/poo; same sound respelled \"oh-pea-NYOHN\"."
- }
+  "_note": "Article/gender corrections applied by scripts/v2/build_v2.py to every building (data/source/vocab.jsonl is never edited). A building's content/v2/<bld>/hooks.json may override an entry. Keys: art (le/la/l'), g (m/f/mf). Also say/f_say (respelling) and hook text overrides, e.g. no respelling syllable that reads as \"pee\"/\"poo\". Also fr (headword shown on the label and card) for phrase-only words, e.g. \"en avoir marre\".",
+  "fr_hammam_noun": {
+    "art": "le",
+    "why": "Aspirate h: le hammam, not l'hammam."
+  },
+  "fr_hors_d_oeuvre_noun": {
+    "art": "le",
+    "why": "Aspirate h: le hors-d'œuvre, not l'hors-d'œuvre."
+  },
+  "fr_container_noun": {
+    "art": "le",
+    "g": "m",
+    "why": "Masculine: le container (vocab.jsonl has it as feminine)."
+  },
+  "fr_pilotage_noun": {
+    "say": "pea-loh-TAHZH",
+    "why": "Respelling \"pee-loh-TAHZH\" reads as pee/poo; same sound respelled \"pea-loh-TAHZH\"."
+  },
+  "fr_pilote_noun": {
+    "say": "pea-LOT",
+    "why": "Respelling \"pee-LOT\" reads as pee/poo; same sound respelled \"pea-LOT\"."
+  },
+  "fr_capital_adj": {
+    "say": "kah-pea-TAHL",
+    "why": "Respelling \"kah-pee-TAHL\" reads as pee/poo; same sound respelled \"kah-pea-TAHL\"."
+  },
+  "fr_capitalisme_noun": {
+    "say": "kah-pea-tah-LEEZM",
+    "why": "Respelling \"kah-pee-tah-LEEZM\" reads as pee/poo; same sound respelled \"kah-pea-tah-LEEZM\"."
+  },
+  "fr_pouce_noun": {
+    "say": "POUSS",
+    "why": "Respelling \"POOS\" reads as pee/poo; same sound respelled \"POUSS\". Hook respelling updated to match.",
+    "hook": "PUSS (\"POUSS\") in Boots, feathered hat and all, gives a big THUMBS-UP from the top of a tool chest."
+  },
+  "fr_poumon_noun": {
+    "say": "pou-MOHN",
+    "why": "Respelling \"poo-MOHN\" reads as pee/poo; same sound respelled \"pou-MOHN\"."
+  },
+  "fr_pourboire_noun": {
+    "say": "pour-BWAHR",
+    "why": "Respelling \"poor-BWAHR\" reads as pee/poo; same sound respelled \"pour-BWAHR\". Hook respelling updated to match.",
+    "hook": "A POOR BOAR (pour-BWAHR) in patched overalls beams as a coin drops into his cup: a TIP!"
+  },
+  "fr_camping_noun": {
+    "say": "kahn-PING",
+    "why": "Respelling \"kahn-PEENG\" reads as pee/poo; same sound respelled \"kahn-PING\"."
+  },
+  "fr_rapidement_adv": {
+    "say": "rah-pea-duh-MAHN",
+    "why": "Respelling \"rah-pee-duh-MAHN\" reads as pee/poo; same sound respelled \"rah-pea-duh-MAHN\"."
+  },
+  "fr_typiquement_adv": {
+    "say": "tee-pea-kuh-MAHN",
+    "why": "Respelling \"tee-pee-kuh-MAHN\" reads as pee/poo; same sound respelled \"tee-pea-kuh-MAHN\"."
+  },
+  "fr_pire_adj": {
+    "say": "PIER",
+    "why": "Respelling \"PEER\" reads as pee/poo; same sound respelled \"PIER\"."
+  },
+  "fr_typique_adj": {
+    "say": "tee-PEAK",
+    "why": "Respelling \"tee-PEEK\" reads as pee/poo; same sound respelled \"tee-PEAK\"."
+  },
+  "fr_epouvantable_adj": {
+    "say": "ay-pou-vahn-TAHBL",
+    "why": "Respelling \"ay-poo-vahn-TAHBL\" reads as pee/poo; same sound respelled \"ay-pou-vahn-TAHBL\"."
+  },
+  "fr_pyramide_noun": {
+    "say": "pea-rah-MEED",
+    "why": "Respelling \"pee-rah-MEED\" reads as pee/poo; same sound respelled \"pea-rah-MEED\"."
+  },
+  "fr_poulet_noun": {
+    "say": "pou-LEH",
+    "why": "Respelling \"poo-LEH\" reads as pee/poo; same sound respelled \"pou-LEH\"."
+  },
+  "fr_champignon_noun": {
+    "say": "shahn-pea-NYOHN",
+    "why": "Respelling \"shahn-pee-NYOHN\" reads as pee/poo; same sound respelled \"shahn-pea-NYOHN\"."
+  },
+  "fr_vampire_noun": {
+    "say": "vahn-PIER",
+    "why": "Respelling \"vahn-PEER\" reads as pee/poo; same sound respelled \"vahn-PIER\". Hook respelling updated to match.",
+    "hook": "Like English 'vampire', said vahn-PIER: a VAMPIRE in a high collar peers out of a black van window at dusk, sunglasses on."
+  },
+  "fr_pic_noun": {
+    "say": "PEAK",
+    "why": "Respelling \"PEEK\" reads as pee/poo; same sound respelled \"PEAK\"."
+  },
+  "fr_poule_noun": {
+    "say": "POUL",
+    "why": "Respelling \"POOL\" reads as pee/poo; same sound respelled \"POUL\"."
+  },
+  "fr_pigeon_noun": {
+    "say": "pea-ZHOHN",
+    "why": "Respelling \"pee-ZHOHN\" reads as pee/poo; same sound respelled \"pea-ZHOHN\"."
+  },
+  "fr_poussin_noun": {
+    "say": "pou-SAN",
+    "why": "Respelling \"poo-SAN\" reads as pee/poo; same sound respelled \"pou-SAN\"."
+  },
+  "fr_papillon_noun": {
+    "say": "pah-pea-YOHN",
+    "why": "Respelling \"pah-pee-YOHN\" reads as pee/poo; same sound respelled \"pah-pea-YOHN\"."
+  },
+  "fr_pou_noun": {
+    "say": "POU",
+    "why": "Respelling \"POO\" reads as pee/poo; same sound respelled \"POU\"."
+  },
+  "fr_epileptique_adj": {
+    "say": "ay-pea-lehp-TEEK",
+    "why": "Respelling \"ay-pee-lehp-TEEK\" reads as pee/poo; same sound respelled \"ay-pea-lehp-TEEK\"."
+  },
+  "fr_hopital_noun": {
+    "say": "oh-pea-TAHL",
+    "why": "Respelling \"oh-pee-TAHL\" reads as pee/poo; same sound respelled \"oh-pea-TAHL\"."
+  },
+  "fr_piqure_noun": {
+    "say": "pea-KEWR",
+    "why": "Respelling \"pee-KEWR\" reads as pee/poo; same sound respelled \"pea-KEWR\"."
+  },
+  "fr_hospitalite_noun": {
+    "say": "os-pea-tah-lee-TAY",
+    "why": "Respelling \"os-pee-tah-lee-TAY\" reads as pee/poo; same sound respelled \"os-pea-tah-lee-TAY\"."
+  },
+  "fr_poubelle_noun": {
+    "say": "pou-BEHL",
+    "why": "Respelling \"poo-BEHL\" reads as pee/poo; same sound respelled \"pou-BEHL\"."
+  },
+  "fr_capitale_noun": {
+    "say": "kah-pea-TAHL",
+    "why": "Respelling \"kah-pee-TAHL\" reads as pee/poo; same sound respelled \"kah-pea-TAHL\"."
+  },
+  "fr_pivot_noun": {
+    "say": "pea-VOH",
+    "why": "Respelling \"pee-VOH\" reads as pee/poo; same sound respelled \"pea-VOH\"."
+  },
+  "fr_pique_noun": {
+    "say": "PEAK",
+    "why": "Respelling \"PEEK\" reads as pee/poo; same sound respelled \"PEAK\"."
+  },
+  "fr_alpiniste_noun": {
+    "say": "ahl-pea-NEEST",
+    "why": "Respelling \"ahl-pee-NEEST\" reads as pee/poo; same sound respelled \"ahl-pea-NEEST\"."
+  },
+  "fr_pilule_noun": {
+    "say": "pea-LEWL",
+    "why": "Respelling \"pee-LEWL\" reads as pee/poo; same sound respelled \"pea-LEWL\"."
+  },
+  "fr_capitaine_noun": {
+    "say": "kah-pea-TEHN",
+    "why": "Respelling \"kah-pee-TEHN\" reads as pee/poo; same sound respelled \"kah-pea-TEHN\"."
+  },
+  "fr_pirogue_noun": {
+    "say": "pea-ROG",
+    "why": "Respelling \"pee-ROG\" reads as pee/poo; same sound respelled \"pea-ROG\"."
+  },
+  "fr_pousse_noun": {
+    "say": "POUSS",
+    "why": "Respelling \"POOS\" reads as pee/poo; same sound respelled \"POUSS\"."
+  },
+  "fr_epicier_noun": {
+    "say": "ay-pea-SYAY",
+    "why": "Respelling \"ay-pee-SYAY\" reads as pee/poo; same sound respelled \"ay-pea-SYAY\"."
+  },
+  "fr_marre_adv": {
+    "fr": "en avoir marre",
+    "en": "(en avoir marre) to be fed up",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_guere_adv": {
+    "fr": "ne… guère",
+    "en": "(ne… guère) hardly, barely",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_clin_noun": {
+    "fr": "clin d'œil",
+    "en": "a wink (un clin d'œil)",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_tombee_noun": {
+    "fr": "tombée de la nuit",
+    "en": "nightfall (la tombée de la nuit)",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_metteur_noun": {
+    "fr": "metteur en scène",
+    "en": "director (un metteur en scène, film or theater)",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_par_ci_adv": {
+    "fr": "par-ci, par-là",
+    "en": "here and there (par-ci, par-là)",
+    "why": "RECS 1.4: a phrase-only word is taught and shown as its phrase."
+  },
+  "fr_aviation_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_argent_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_sante_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_faim_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_hygiene_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_or_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_petrole_noun": {
+    "plural": null,
+    "why": "Usually no plural (uncountable)."
+  },
+  "fr_ping_pong_noun": {
+    "plural": null,
+    "why": "No plural."
+  },
+  "fr_sud_ouest_noun": {
+    "plural": null,
+    "why": "No plural."
+  },
+  "fr_sud_est_noun": {
+    "plural": null,
+    "why": "No plural."
+  },
+  "fr_rez_de_chaussee_noun": {
+    "plural": "les rez-de-chaussée",
+    "why": "Invariable compound: les rez-de-chaussée."
+  },
+  "fr_prie_dieu_noun": {
+    "plural": "les prie-dieu",
+    "why": "Invariable compound in traditional spelling: les prie-dieu."
+  },
+  "fr_os_noun": {
+    "plural": "les os (said \"lay ZOH\": the s goes silent)",
+    "why": "The plural sounds different."
+  },
+  "fr_boeuf_noun": {
+    "plural": "les bœufs (said \"lay BUH\": the f goes silent)",
+    "why": "The plural sounds different."
+  },
+  "fr_verre_noun": {
+    "ex": [
+      "Je voudrais un verre d'eau, s'il vous plaît.",
+      "I'd like a glass of water, please."
+    ],
+    "why": "Example used 'un verre de jus'."
+  },
+  "fr_quete_noun": {
+    "ex": [
+      "La quête passe pendant la messe.",
+      "The collection plate goes round during Mass."
+    ],
+    "why": "Example used the 'quest' sense; the church room teaches the collection."
+  },
+  "fr_bise_noun": {
+    "ex": [
+      "La bise souffle fort en hiver.",
+      "The north wind blows hard in winter."
+    ],
+    "why": "The weather room teaches the north wind, not the kiss."
+  },
+  "fr_debit_noun": {
+    "ex": [
+      "Le débit apparaît sur mon relevé de compte.",
+      "The debit shows on my bank statement."
+    ],
+    "why": "The bank room teaches the debit, not a river's flow."
+  },
+  "fr_serviette_noun": {
+    "ex": [
+      "Je prends une serviette pour me sécher.",
+      "I take a towel to dry myself."
+    ],
+    "why": "The bathroom card is the towel; the example was about a napkin."
+  },
+  "fr_caisse_noun": {
+    "ex": [
+      "Les vieux jouets sont dans une caisse au grenier.",
+      "The old toys are in a crate in the attic."
+    ],
+    "why": "The attic card is the crate; the example was about the till."
+  },
+  "fr_therapie_noun": {
+    "say": "tay-rah-PEA",
+    "why": "Respelling \"tay-rah-PEE\" reads as pee/poo; same sound respelled \"tay-rah-PEA\"."
+  },
+  "fr_rapidite_noun": {
+    "say": "rah-pea-dee-TAY",
+    "why": "Respelling \"rah-pee-dee-TAY\" reads as pee/poo; same sound respelled \"rah-pea-dee-TAY\"."
+  },
+  "fr_pile_noun": {
+    "say": "PEAL",
+    "why": "Respelling \"PEEL\" reads as pee/poo; same sound respelled \"PEAL\"."
+  },
+  "fr_opinion_noun": {
+    "say": "oh-pea-NYOHN",
+    "why": "Respelling \"oh-pee-NYOHN\" reads as pee/poo; same sound respelled \"oh-pea-NYOHN\"."
+  },
+  "fr_epiphanie_noun": {
+    "say": "ay-pih-fah-NEE",
+    "hook": "Reverent: like \"Epiphany\", said ay-pih-fah-NEE: three paper crowns and a cake for EPIPHANY, the kings' feast.",
+    "why": "eglise4: avoid pee syllable in respelling (age-appropriate rule 101)"
+  }
 }

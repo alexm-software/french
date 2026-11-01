@@ -1,0 +1,17 @@
+pack	eglise4	2026-11-01	Presbytère B41 (36) + Concorde B43 (21) + nef overflow + vouer; sw v36
+building	presbytere	B41_presbytere	3 rooms	36 words	calendar/catechism/catechism_z1 (room key presbytere=main)
+building	concorde	B43_concorde	2 rooms	21 words	concorde + faiths_z1
+move	fr_paroisse_noun	eglise/eglise	eglise/salle	nef overflow; room_size_ok allowlist removed
+move	fr_chemin_de_croix_noun	eglise/eglise	eglise/chapelle	nef overflow
+fix	fr_vouer_verb	eglise/saints	calf-slice paint-out	saints_vouer_v3
+rehome	fr_jeuner_verb	ST_faith	R_ch_calendar	Monsieur Verbe
+rehome	fr_commemorer_verb	ST_faith	R_ch_calendar	Monsieur Verbe
+rehome	fr_psalmodier_verb	ST_faith	R_ch_catechism	Monsieur Verbe
+say	fr_epiphanie_noun	ay-pih-fah-NEE	rule 101
+dialogue	V_presbytere_presbytere_01	presbytere/presbytere	13 targets
+dialogue	V_presbytere_catechism_01	presbytere/catechism	15 targets
+dialogue	V_presbytere_catechism_z1_01	presbytere/catechism_z1	11 targets
+dialogue	V_concorde_concorde_01	concorde/concorde	15 targets
+dialogue	V_concorde_faiths_z1_01	concorde/faiths_z1	6 targets
+dialogue	V_eglise_chapelle_01	eglise/chapelle	12 targets
+dialogue	V_eglise_salle_01	eglise/salle	+paroisse

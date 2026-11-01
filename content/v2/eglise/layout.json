@@ -136,15 +136,6 @@
      ]
     },
     {
-     "id": "fr_paroisse_noun",
-     "box": [
-      150,
-      214,
-      80,
-      120
-     ]
-    },
-    {
      "id": "fr_chaire_noun",
      "box": [
       312,
@@ -249,19 +240,6 @@
       44,
       50,
       232
-     ]
-    },
-    {
-     "id": "fr_chemin_de_croix_noun",
-     "box": [
-      1088,
-      150,
-      62,
-      150
-     ],
-     "labelAt": [
-      1172,
-      117
      ]
     },
     {
@@ -796,6 +774,15 @@
       44,
       69,
       214
+     ]
+    },
+    {
+     "id": "fr_chemin_de_croix_noun",
+     "box": [
+      1050,
+      40,
+      85,
+      160
      ]
     }
    ]
@@ -1953,6 +1940,15 @@
       230,
       235
      ]
+    },
+    {
+     "id": "fr_paroisse_noun",
+     "box": [
+      110,
+      20,
+      100,
+      120
+     ]
     }
    ]
   },
@@ -2198,7 +2194,24 @@
  },
  "planned": {
   "eglise": {
-   "vocabRoom": "R_ch_nave"
+   "vocabRoom": "R_ch_nave",
+   "only": [
+    "fr_banc_noun",
+    "fr_statue_noun",
+    "fr_bougie_noun",
+    "fr_quete_noun",
+    "fr_cortege_noun",
+    "fr_fidele_noun",
+    "fr_cierge_noun",
+    "fr_chandelle_noun",
+    "fr_procession_noun",
+    "fr_paroissien_noun",
+    "fr_chaire_noun",
+    "fr_nef_noun",
+    "fr_vitrail_noun",
+    "fr_prie_dieu_noun",
+    "fr_transept_noun"
+   ]
   },
   "parvis": {
    "vocabRoom": "R_ch_parvis"
@@ -2227,7 +2240,21 @@
    ]
   },
   "chapelle": {
-   "vocabRoom": "R_ch_lady_chapel"
+   "vocabRoom": "R_ch_lady_chapel",
+   "only": [
+    "fr_notre_dame_noun",
+    "fr_vierge_noun",
+    "fr_chapelet_noun",
+    "fr_devotion_noun",
+    "fr_rosaire_noun",
+    "fr_angelus_noun",
+    "fr_annonciation_noun",
+    "fr_assomption_noun",
+    "fr_scapulaire_noun",
+    "fr_magnificat_noun",
+    "fr_marial_adj",
+    "fr_chemin_de_croix_noun"
+   ]
   },
   "sanctuaire": {
    "vocabRoom": "R_ch_altar_02",
@@ -2356,7 +2383,8 @@
     "fr_communier_verb",
     "fr_sacrement_noun",
     "fr_catholicisme_noun",
-    "fr_filleul_noun"
+    "fr_filleul_noun",
+    "fr_paroisse_noun"
    ]
   },
   "saints": {

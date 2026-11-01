@@ -1,0 +1,525 @@
+{
+ "building": "presbytere",
+ "building_id": "B41_presbytere",
+ "sector_id": "S11_church",
+ "v1_room_id": "R_ch_calendar",
+ "name": "Presbytère & salle paroissiale",
+ "main": "presbytere",
+ "roomList": [
+  {
+   "key": "presbytere",
+   "short": "Le calendrier liturgique"
+  },
+  {
+   "key": "catechism",
+   "short": "Le catéchisme"
+  }
+ ],
+ "planned": {
+  "catechism": {
+   "vocabRoom": "R_ch_catechism",
+   "only": [
+    "fr_dieu_noun",
+    "fr_grace_noun",
+    "fr_ame_noun",
+    "fr_diable_noun",
+    "fr_ange_noun",
+    "fr_croix_noun",
+    "fr_paradis_noun",
+    "fr_foi_noun",
+    "fr_priere_noun",
+    "fr_esperance_noun",
+    "fr_sauveur_noun",
+    "fr_catechisme_noun",
+    "fr_tentation_noun",
+    "fr_demon_noun",
+    "fr_psalmodier_verb"
+   ]
+  },
+  "catechism_z1": {
+   "vocabRoom": "R_ch_catechism_z1",
+   "only": [
+    "fr_heresie_noun",
+    "fr_doctrine_noun",
+    "fr_providence_noun",
+    "fr_trinite_noun",
+    "fr_incarnation_noun",
+    "fr_oraison_noun",
+    "fr_redemption_noun",
+    "fr_catechese_noun",
+    "fr_messie_noun",
+    "fr_redempteur_noun",
+    "fr_resurrection_noun"
+   ]
+  },
+  "presbytere": {
+   "vocabRoom": "R_ch_calendar",
+   "only": [
+    "fr_noel_noun",
+    "fr_paques_noun",
+    "fr_toussaint_noun",
+    "fr_careme_noun",
+    "fr_epiphanie_noun",
+    "fr_avent_noun",
+    "fr_pentecote_noun",
+    "fr_rameaux_noun",
+    "fr_nativite_noun",
+    "fr_octave_noun",
+    "fr_neuvaine_noun",
+    "fr_jeuner_verb",
+    "fr_commemorer_verb"
+   ]
+  }
+ },
+ "rooms": {
+  "catechism": {
+   "name": "Le catéchisme · Catechism room",
+   "room_id": "R_ch_catechism",
+   "image": "presbytere/catechism.jpg",
+   "alt": "A catechism classroom with a priest at a desk, Monsieur Verbe chanting, children at prayer, a devil poster, a paradise garden corner, and a glowing book of grace.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "backTo": "presbytere",
+   "doors": [
+    {
+     "to": "presbytere",
+     "label": "Le calendrier",
+     "hint": "Back to the liturgical calendar hall",
+     "hit": [
+      40,
+      140,
+      100,
+      260
+     ]
+    }
+   ],
+   "zooms": [
+    {
+     "to": "catechism_z1",
+     "label": "la crédence",
+     "hint": "Look closer at the doctrine credence",
+     "at": [
+      200,
+      100
+     ],
+     "obj": [
+      160,
+      60,
+      120,
+      100
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_dieu_noun",
+     "box": [
+      700,
+      40,
+      140,
+      120
+     ]
+    },
+    {
+     "id": "fr_ange_noun",
+     "box": [
+      920,
+      80,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_diable_noun",
+     "box": [
+      1050,
+      100,
+      130,
+      150
+     ]
+    },
+    {
+     "id": "fr_croix_noun",
+     "box": [
+      280,
+      160,
+      70,
+      110
+     ]
+    },
+    {
+     "id": "fr_catechisme_noun",
+     "box": [
+      780,
+      160,
+      110,
+      130
+     ]
+    },
+    {
+     "id": "fr_psalmodier_verb",
+     "box": [
+      500,
+      140,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_ame_noun",
+     "box": [
+      380,
+      220,
+      90,
+      130
+     ]
+    },
+    {
+     "id": "fr_sauveur_noun",
+     "box": [
+      640,
+      200,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_demon_noun",
+     "box": [
+      1080,
+      260,
+      110,
+      130
+     ]
+    },
+    {
+     "id": "fr_esperance_noun",
+     "box": [
+      160,
+      300,
+      90,
+      110
+     ]
+    },
+    {
+     "id": "fr_priere_noun",
+     "box": [
+      160,
+      430,
+      90,
+      110
+     ]
+    },
+    {
+     "id": "fr_grace_noun",
+     "box": [
+      280,
+      380,
+      120,
+      100
+     ]
+    },
+    {
+     "id": "fr_foi_noun",
+     "box": [
+      280,
+      500,
+      90,
+      110
+     ]
+    },
+    {
+     "id": "fr_tentation_noun",
+     "box": [
+      420,
+      520,
+      110,
+      90
+     ]
+    },
+    {
+     "id": "fr_paradis_noun",
+     "box": [
+      1080,
+      520,
+      140,
+      160
+     ]
+    }
+   ],
+   "building_id": "B41_presbytere",
+   "sector_id": "S11_church",
+   "text": "vocab"
+  },
+  "catechism_z1": {
+   "name": "La crédence du catéchisme · Catechism credence",
+   "room_id": "R_ch_catechism_z1",
+   "image": "presbytere/catechism_z1.jpg",
+   "parent": "catechism",
+   "alt": "Close-up of the catechism credence: doctrine scroll, Trinity emblem, incarnation crib, oraison beads, redemption cross, Messiah star, Redeemer plaque, Resurrection empty tomb, catechesis booklet, providence eye, heresy stamped paper.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_heresie_noun",
+     "box": [
+      40,
+      60,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_doctrine_noun",
+     "box": [
+      170,
+      100,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_providence_noun",
+     "box": [
+      300,
+      140,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_trinite_noun",
+     "box": [
+      40,
+      220,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_incarnation_noun",
+     "box": [
+      170,
+      260,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_messie_noun",
+     "box": [
+      700,
+      180,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_oraison_noun",
+     "box": [
+      300,
+      320,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_redempteur_noun",
+     "box": [
+      900,
+      280,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_redemption_noun",
+     "box": [
+      40,
+      420,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_catechese_noun",
+     "box": [
+      170,
+      500,
+      110,
+      130
+     ]
+    },
+    {
+     "id": "fr_resurrection_noun",
+     "box": [
+      300,
+      560,
+      110,
+      130
+     ]
+    }
+   ],
+   "building_id": "B41_presbytere",
+   "sector_id": "S11_church",
+   "text": "vocab"
+  },
+  "presbytere": {
+   "name": "Le presbytère · Liturgical calendar hall",
+   "room_id": "R_ch_calendar",
+   "image": "presbytere/calendar.jpg",
+   "alt": "A stone parish hall with a wooden liturgical calendar wheel, Advent wreath, Easter basket, Epiphany crowns, a row of nine novena candles, a ram for Palm Sunday, monks for All Saints, and Monsieur Verbe mimes fasting and commemorating.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     1185,
+     610,
+     85,
+     90
+    ],
+    "label": "Le village · The village"
+   },
+   "doors": [
+    {
+     "to": "catechism",
+     "label": "Le catéchisme",
+     "hint": "Through the wooden door into the catechism room",
+     "hit": [
+      40,
+      140,
+      120,
+      280
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_paques_noun",
+     "box": [
+      40,
+      420,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_epiphanie_noun",
+     "box": [
+      200,
+      360,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_octave_noun",
+     "box": [
+      180,
+      140,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_neuvaine_noun",
+     "box": [
+      220,
+      560,
+      200,
+      70
+     ]
+    },
+    {
+     "id": "fr_toussaint_noun",
+     "box": [
+      360,
+      80,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_nativite_noun",
+     "box": [
+      360,
+      280,
+      120,
+      110
+     ]
+    },
+    {
+     "id": "fr_pentecote_noun",
+     "box": [
+      40,
+      40,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_jeuner_verb",
+     "box": [
+      520,
+      300,
+      100,
+      180
+     ]
+    },
+    {
+     "id": "fr_commemorer_verb",
+     "box": [
+      640,
+      260,
+      110,
+      200
+     ]
+    },
+    {
+     "id": "fr_noel_noun",
+     "box": [
+      780,
+      200,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_careme_noun",
+     "box": [
+      780,
+      420,
+      120,
+      100
+     ]
+    },
+    {
+     "id": "fr_avent_noun",
+     "box": [
+      960,
+      560,
+      140,
+      110
+     ]
+    },
+    {
+     "id": "fr_rameaux_noun",
+     "box": [
+      1100,
+      360,
+      120,
+      160
+     ]
+    }
+   ],
+   "building_id": "B41_presbytere",
+   "sector_id": "S11_church",
+   "text": "vocab"
+  }
+ }
+}
