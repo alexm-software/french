@@ -18,13 +18,29 @@
   {
    "key": "archives",
    "short": "Les archives"
+  },
+  {
+   "key": "honneur",
+   "short": "Le salon d'honneur"
+  },
+  {
+   "key": "papiers",
+   "short": "Les papiers"
+  },
+  {
+   "key": "vote",
+   "short": "Les élections"
+  },
+  {
+   "key": "fetes",
+   "short": "La salle des fêtes"
   }
  ],
  "rooms": {
   "mairie": {
    "name": "La mairie · Town Hall",
    "image": "mairie/mairie.jpg",
-   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green trash can with a bell, three eels waiting in line with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolor sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village a blue door on the right leads to the post office and a teal double door in the back wall opens onto the council chamber; behind the horse a half-open teal door shows the archive drawers.",
+   "alt": "The village town hall painted in ink and gouache: a yellow dress with an address tag on a coat stand, a framed photo of a smiling toe, a green trash can with a bell, three eels waiting in line with a ticket, an ID card driving a red go-kart, Monsieur Verbe waiting beside a sun-tanned dragon in sunglasses, signing at a lectern with a quill and writing on a long scroll, the mayor mare in a tricolor sash with golden scissors, a flag draped over a stool, a donkey in glasses at his desk, a girl in a yellow raincoat showing a passport at a rainy window, a boy with a bouquet and a pocket watch and a gnome with a name badge; the open front door on the left leads to the village a blue door on the right leads to the post office and a teal double door in the back wall opens onto the council chamber; beside the clock a half-open burgundy door shows the chandelier of the reception hall; behind the horse a half-open teal door shows the archive drawers.",
    "nameplate": [
     50,
     4.5
@@ -70,6 +86,17 @@
       30,
       100,
       78
+     ]
+    },
+    {
+     "to": "honneur",
+     "label": "Le salon d'honneur",
+     "hint": "Through the half-open burgundy door beside the clock to the reception hall",
+     "hit": [
+      700,
+      40,
+      95,
+      138
      ]
     }
    ],
@@ -1390,6 +1417,384 @@
      ]
     }
    ]
+  },
+  "honneur": {
+   "name": "Le salon d'honneur · The reception hall",
+   "room_id": "R_politics_01",
+   "image": "mairie/honneur.jpg",
+   "alt": "The town hall's grand reception hall under a crystal chandelier with a sparrow on it: a bride and groom cut their wedding cake among rose petals, Monsieur Verbe in a red beret with an accordion on his chest holds out a gold key with a red bow, a gray-haired minister sips pink punch through a mini straw by the buffet, a blushing president lifts a gold trophy cup, a deputy in a tricolor sash putts a golf ball on a little green mat, a waiter brings a tray of gray ice-cream cones to the delegates, and a boy walks his fingers up the mini staircase of a model ministry. The burgundy double door on the left leads back to the lobby, the pale-green door at the back left to the paperwork office and the navy-blue door at the back right to the polling hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "mairie",
+   "doors": [
+    {
+     "to": "mairie",
+     "label": "La mairie",
+     "hint": "The burgundy double door on the left, back to the town hall lobby",
+     "hit": [
+      15,
+      45,
+      225,
+      185
+     ]
+    },
+    {
+     "to": "papiers",
+     "label": "Les papiers",
+     "hint": "The pale-green door at the back left, to the paperwork office",
+     "hit": [
+      298,
+      110,
+      150,
+      82
+     ]
+    },
+    {
+     "to": "vote",
+     "label": "Les élections",
+     "hint": "The navy-blue door at the back right, to the polling hall",
+     "hit": [
+      850,
+      135,
+      72,
+      195
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_mairie_noun",
+     "box": [
+      20,
+      235,
+      320,
+      450
+     ]
+    },
+    {
+     "id": "fr_accorder_verb",
+     "box": [
+      345,
+      195,
+      185,
+      300
+     ]
+    },
+    {
+     "id": "fr_ministre_noun",
+     "box": [
+      540,
+      225,
+      75,
+      130
+     ],
+     "labelAt": [
+      612,
+      359
+     ]
+    },
+    {
+     "id": "fr_president_noun",
+     "box": [
+      745,
+      170,
+      100,
+      235
+     ]
+    },
+    {
+     "id": "fr_depute_noun",
+     "box": [
+      690,
+      410,
+      285,
+      305
+     ]
+    },
+    {
+     "id": "fr_ministere_noun",
+     "box": [
+      1000,
+      405,
+      275,
+      250
+     ]
+    },
+    {
+     "id": "fr_congres_noun",
+     "box": [
+      935,
+      200,
+      235,
+      200
+     ]
+    }
+   ]
+  },
+  "papiers": {
+   "name": "Le bureau des papiers · The paperwork office",
+   "room_id": "R_admin_01",
+   "image": "mairie/papiers.jpg",
+   "alt": "The town hall's paperwork office with tall windows on the village square: a tour guide with a yellow pennant signs at a lectern while two tourists in sun hats wave goodbye, a man with an armful of papers marches with high knees, a young doe nibbles the file a clerk holds over the counter, a doctor points a billiard cue at the cork notice board, a gray-haired lady sews a ribbon onto a document while a clerk presses a brass seal into red wax, and a freckled boy with a curly perm in pink rollers holds up his pink permit. The pale-green door on the right leads back to the reception hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "honneur",
+   "doors": [
+    {
+     "to": "honneur",
+     "label": "Le salon d'honneur",
+     "hint": "The pale-green door on the right, back to the reception hall",
+     "hit": [
+      1110,
+      20,
+      165,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_signature_noun",
+     "box": [
+      30,
+      130,
+      225,
+      300
+     ]
+    },
+    {
+     "id": "fr_demarche_noun",
+     "box": [
+      262,
+      175,
+      225,
+      385
+     ]
+    },
+    {
+     "id": "fr_dossier_noun",
+     "box": [
+      640,
+      200,
+      230,
+      180
+     ]
+    },
+    {
+     "id": "fr_sceau_noun",
+     "box": [
+      640,
+      385,
+      440,
+      330
+     ]
+    },
+    {
+     "id": "fr_document_noun",
+     "box": [
+      875,
+      85,
+      190,
+      300
+     ]
+    },
+    {
+     "id": "fr_permis_noun",
+     "box": [
+      1085,
+      330,
+      195,
+      385
+     ]
+    }
+   ]
+  },
+  "vote": {
+   "name": "La salle des élections · The polling hall",
+   "room_id": "R_politics_03",
+   "image": "mairie/vote.jpg",
+   "alt": "The town hall's polling hall on election day, with three voting booths with blue curtains: a cook pushes a cart of copper pans under a blank placard, two band musicians play under a long blank banner, Monsieur Verbe in a red beret drops his envelope into the clear ballot box holding a teacup, an elderly voter lectures a bored teenager, a supporter with a rosette waves a giant wedge of parmesan, and two friends lift the newly elected man onto their shoulders. A dog with a tricolor bow waits politely. The navy-blue door on the left leads back to the reception hall and the yellow double door at the back right to the village hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "honneur",
+   "doors": [
+    {
+     "to": "honneur",
+     "label": "Le salon d'honneur",
+     "hint": "The navy-blue door on the left, back to the reception hall",
+     "hit": [
+      5,
+      200,
+      68,
+      280
+     ]
+    },
+    {
+     "to": "fetes",
+     "label": "La salle des fêtes",
+     "hint": "The yellow double door on the right, to the village hall",
+     "hit": [
+      1036,
+      205,
+      56,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pancarte_noun",
+     "box": [
+      75,
+      160,
+      200,
+      500
+     ]
+    },
+    {
+     "id": "fr_banderole_noun",
+     "box": [
+      280,
+      195,
+      145,
+      300
+     ]
+    },
+    {
+     "id": "fr_voter_verb",
+     "box": [
+      430,
+      260,
+      265,
+      325
+     ]
+    },
+    {
+     "id": "fr_partisan_noun",
+     "box": [
+      908,
+      180,
+      125,
+      460
+     ]
+    },
+    {
+     "id": "fr_electeur_noun",
+     "box": [
+      745,
+      295,
+      160,
+      275
+     ]
+    },
+    {
+     "id": "fr_elu_noun",
+     "box": [
+      1095,
+      80,
+      183,
+      560
+     ]
+    }
+   ]
+  },
+  "fetes": {
+   "name": "La salle des fêtes · The village hall",
+   "room_id": "R_adj_relation_06",
+   "image": "mairie/fetes.jpg",
+   "alt": "The town hall's village hall decorated with bunting for the fair: a man pays at the ticket table while the cashier yawns over her cash tin, a beekeeper lady rents a table stacked with honey jars, a proud fireman with a medal stands before the stage, an old man in a blue paisley shirt dozes in a folding chair on the stage, a volunteer in a green apron keeps a beach ball going with two children, and a strongman carries a whole upright piano across the hall. The yellow double door on the left leads back to the polling hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "vote",
+   "doors": [
+    {
+     "to": "vote",
+     "label": "Les élections",
+     "hint": "The yellow double door on the left, back to the polling hall",
+     "hit": [
+      55,
+      80,
+      200,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_payant_adj",
+     "box": [
+      340,
+      375,
+      215,
+      300
+     ]
+    },
+    {
+     "id": "fr_rentable_adj",
+     "box": [
+      310,
+      180,
+      195,
+      190
+     ]
+    },
+    {
+     "id": "fr_benevole_adj",
+     "box": [
+      798,
+      100,
+      147,
+      280
+     ]
+    },
+    {
+     "id": "fr_fierement_adv",
+     "box": [
+      565,
+      160,
+      115,
+      260
+     ],
+     "labelAt": [
+      618,
+      424
+     ]
+    },
+    {
+     "id": "fr_paisiblement_adv",
+     "box": [
+      682,
+      165,
+      95,
+      125
+     ],
+     "labelAt": [
+      720,
+      126
+     ]
+    },
+    {
+     "id": "fr_carrement_adv",
+     "box": [
+      680,
+      385,
+      345,
+      330
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -1504,6 +1909,51 @@
     "fr_inegalite_noun",
     "fr_participation_noun",
     "fr_pauvrete_noun"
+   ]
+  },
+  "honneur": {
+   "vocabRoom": "R_politics_01",
+   "only": [
+    "fr_mairie_noun",
+    "fr_accorder_verb",
+    "fr_ministre_noun",
+    "fr_president_noun",
+    "fr_depute_noun",
+    "fr_ministere_noun",
+    "fr_congres_noun"
+   ]
+  },
+  "papiers": {
+   "vocabRoom": "R_admin_01",
+   "only": [
+    "fr_signature_noun",
+    "fr_demarche_noun",
+    "fr_dossier_noun",
+    "fr_sceau_noun",
+    "fr_document_noun",
+    "fr_permis_noun"
+   ]
+  },
+  "vote": {
+   "vocabRoom": "R_politics_03",
+   "only": [
+    "fr_pancarte_noun",
+    "fr_banderole_noun",
+    "fr_voter_verb",
+    "fr_partisan_noun",
+    "fr_electeur_noun",
+    "fr_elu_noun"
+   ]
+  },
+  "fetes": {
+   "vocabRoom": "R_adj_relation_06",
+   "only": [
+    "fr_payant_adj",
+    "fr_rentable_adj",
+    "fr_benevole_adj",
+    "fr_fierement_adv",
+    "fr_paisiblement_adv",
+    "fr_carrement_adv"
    ]
   }
  },
