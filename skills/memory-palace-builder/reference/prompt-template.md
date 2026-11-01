@@ -138,3 +138,9 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - Keep every door opening and its threshold clear of furniture and figures, including kneeling, crouching or sitting ones in front of the door.
 - When a hub gains a door to a new room, place the door on clear wall away from every item box and move the item, never shrink the door below a ~120 px click target.
 - Leave a label-height strip (about 35 px) of clear space below small high props, between their neighbours' boxes and the next figure, or plan a labelAt spot there before painting.
+- When a word is rehomed into a finished room, crop-edit it onto an unhooked prop or an empty slot in its band, keep its box clear of every box, label and door, and re-run grid_check and the strict label check on that room.
+- Send a non-square crop to the image model squared (padded to 1:1) and resize the result back to the exact crop size before pasting, so the edit stays aligned with the rest of the painting.
+- When strict label checks fail in a dense room, trim each box to its hook figure or prop and set labelAt by hand on clear floor or wall, never over another hotspot, door or the nameplate; leave a label-height strip below small high props when painting.
+- Sound-alike respellings never land on English toilet words (pee, poo, wee): pick a real word that sounds the same (PEA, PEAK, PEEK) and paint that.
+- After any edit changes what is painted (a figure moved, a prop swapped), rewrite the hook, the shown text, the alt and the room's dialogue lines to name exactly what the final painting shows.
+- To fix a gate 25 baseline, grow or trim a box only over its own hook figure (never onto a neighbour) so no 40 px window holds four bottoms; when you touch an already built room, run grid_check on it too and fix any failure it had on main.
