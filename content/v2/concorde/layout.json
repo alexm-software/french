@@ -1,0 +1,294 @@
+{
+ "building": "concorde",
+ "building_id": "B43_concorde",
+ "sector_id": "S12_faiths",
+ "v1_room_id": "R_faiths",
+ "name": "Maisons de prière",
+ "main": "concorde",
+ "roomList": [
+  {
+   "key": "concorde",
+   "short": "La Concorde"
+  }
+ ],
+ "planned": {
+  "concorde": {
+   "vocabRoom": "R_faiths",
+   "only": [
+    "fr_religion_noun",
+    "fr_juif_adj",
+    "fr_temple_noun",
+    "fr_pasteur_noun",
+    "fr_culte_noun",
+    "fr_musulman_adj",
+    "fr_orthodoxe_adj",
+    "fr_protestant_noun",
+    "fr_ramadan_noun",
+    "fr_rabbin_noun",
+    "fr_synagogue_noun",
+    "fr_torah_noun",
+    "fr_pagode_noun",
+    "fr_kippa_noun",
+    "fr_chretien_adj"
+   ]
+  },
+  "faiths_z1": {
+   "vocabRoom": "R_faiths_z1",
+   "only": [
+    "fr_christianisme_noun",
+    "fr_shabbat_noun",
+    "fr_coran_noun",
+    "fr_minaret_noun",
+    "fr_imam_noun",
+    "fr_islam_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "concorde": {
+   "name": "La Concorde · Places of worship",
+   "room_id": "R_faiths",
+   "image": "concorde/concorde.jpg",
+   "alt": "A respectful hall of many faiths: synagogue, Protestant temple, mosque hints, Orthodox corner, pagoda, kippa, Torah, and people of several traditions gathered in peace.",
+   "nameplate": [
+    40,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     1185,
+     610,
+     85,
+     90
+    ],
+    "label": "Le village · The village"
+   },
+   "doors": [],
+   "zooms": [
+    {
+     "to": "faiths_z1",
+     "label": "le lutrin",
+     "hint": "Look closer at the bookstand of scriptures",
+     "at": [
+      1180,
+      650
+     ],
+     "obj": [
+      1120,
+      600,
+      120,
+      100
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "fr_religion_noun",
+     "box": [
+      40,
+      30,
+      140,
+      90
+     ]
+    },
+    {
+     "id": "fr_rabbin_noun",
+     "box": [
+      980,
+      40,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_synagogue_noun",
+     "box": [
+      40,
+      140,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_pasteur_noun",
+     "box": [
+      840,
+      100,
+      110,
+      150
+     ]
+    },
+    {
+     "id": "fr_kippa_noun",
+     "box": [
+      200,
+      160,
+      80,
+      80
+     ]
+    },
+    {
+     "id": "fr_juif_adj",
+     "box": [
+      360,
+      160,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_torah_noun",
+     "box": [
+      200,
+      260,
+      100,
+      110
+     ]
+    },
+    {
+     "id": "fr_musulman_adj",
+     "box": [
+      680,
+      180,
+      120,
+      150
+     ]
+    },
+    {
+     "id": "fr_orthodoxe_adj",
+     "box": [
+      360,
+      340,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_culte_noun",
+     "box": [
+      840,
+      300,
+      110,
+      110
+     ]
+    },
+    {
+     "id": "fr_chretien_adj",
+     "box": [
+      520,
+      360,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_temple_noun",
+     "box": [
+      700,
+      380,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_pagode_noun",
+     "box": [
+      40,
+      480,
+      140,
+      150
+     ]
+    },
+    {
+     "id": "fr_protestant_noun",
+     "box": [
+      980,
+      420,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_ramadan_noun",
+     "box": [
+      840,
+      560,
+      110,
+      110
+     ]
+    }
+   ],
+   "building_id": "B43_concorde",
+   "sector_id": "S12_faiths",
+   "text": "vocab"
+  },
+  "faiths_z1": {
+   "name": "Le lutrin · Bookstand of scriptures",
+   "room_id": "R_faiths_z1",
+   "image": "concorde/faiths_z1.jpg",
+   "parent": "concorde",
+   "alt": "Close-up of a bookstand: Christianity volume, Shabbat candles, open Quran, minaret model, imam portrait plaque, Islam calligraphy medallion.",
+   "doors": [],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_christianisme_noun",
+     "box": [
+      700,
+      80,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_shabbat_noun",
+     "box": [
+      880,
+      80,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_coran_noun",
+     "box": [
+      700,
+      300,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_minaret_noun",
+     "box": [
+      880,
+      300,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_imam_noun",
+     "box": [
+      700,
+      500,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_islam_noun",
+     "box": [
+      880,
+      500,
+      140,
+      140
+     ]
+    }
+   ],
+   "building_id": "B43_concorde",
+   "sector_id": "S12_faiths",
+   "text": "vocab"
+  }
+ }
+}
