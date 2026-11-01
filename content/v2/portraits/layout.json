@@ -112,6 +112,30 @@
   {
    "key": "tente",
    "short": "La tente des gâteaux"
+  },
+  {
+   "key": "salon",
+   "short": "Le salon de thé"
+  },
+  {
+   "key": "anniversaire",
+   "short": "L'anniversaire"
+  },
+  {
+   "key": "jeux",
+   "short": "La salle de jeux"
+  },
+  {
+   "key": "studio",
+   "short": "Le studio photo"
+  },
+  {
+   "key": "gym",
+   "short": "La salle de gym"
+  },
+  {
+   "key": "serre",
+   "short": "La serre"
   }
  ],
  "planned": {
@@ -452,6 +476,70 @@
     "fr_incomparable_adj",
     "fr_craquant_adj",
     "fr_comparable_adj"
+   ]
+  },
+  "salon": {
+   "vocabRoom": "R_character_06",
+   "only": [
+    "fr_milady_noun",
+    "fr_snob_adj",
+    "fr_arrogant_adj",
+    "fr_meprisant_adj",
+    "fr_malhonnete_adj",
+    "fr_distant_adj",
+    "fr_bohemien_noun"
+   ]
+  },
+  "anniversaire": {
+   "vocabRoom": "R_character_08",
+   "only": [
+    "fr_maternite_noun",
+    "fr_omnipresent_adj",
+    "fr_inegal_adj",
+    "fr_audacieux_adj",
+    "fr_impulsif_adj",
+    "fr_infantile_adj",
+    "fr_attachant_adj"
+   ]
+  },
+  "jeux": {
+   "vocabRoom": "R_character_03",
+   "only": [
+    "fr_anomalie_noun",
+    "fr_inhabituel_adj",
+    "fr_rauque_adj",
+    "fr_eraille_adj",
+    "fr_obsessionnel_adj",
+    "fr_astucieux_adj"
+   ]
+  },
+  "studio": {
+   "vocabRoom": "R_appearance_05",
+   "only": [
+    "fr_instantane_adj",
+    "fr_realiste_adj",
+    "fr_eleve_adj",
+    "fr_monte_adj",
+    "fr_pop_adj"
+   ]
+  },
+  "gym": {
+   "vocabRoom": "R_appearance_07",
+   "only": [
+    "fr_frele_adj",
+    "fr_musculaire_adj",
+    "fr_vertical_adj",
+    "fr_parallele_adj",
+    "fr_compact_adj",
+    "fr_tic_noun"
+   ]
+  },
+  "serre": {
+   "vocabRoom": "R_appearance_07",
+   "only": [
+    "fr_fertile_adj",
+    "fr_dense_adj",
+    "fr_ambulant_adj"
    ]
   }
  },
@@ -3213,7 +3301,7 @@
    "name": "Le salon de musique · The music room",
    "room_id": "R_character_08",
    "image": "portraits/musique.jpg",
-   "alt": "A sunny pale-blue music room with white wainscoting, a parquet floor and a tall bay window onto apple trees. A tiny girl on a tall stack of cushions plays the black grand piano; a boy holds his violin upside down at a music stand; a stern teacher with a gray bun holds up a metronome; a boy in an explorer hat climbs a golden harp; a girl in yellow flings her arms wide and sings as papers fly; a boy crashes the cymbals at a drum kit; a girl polishes a trumpet beside a heap of cloths; a canary sings in a brass cage on the bookcase. A green door with a golden lyre leads back to the red picture gallery.",
+   "alt": "A sunny pale-blue music room with white wainscoting, a parquet floor and a tall window onto apple trees. A tiny girl on a tall stack of cushions plays the black grand piano; a boy holds his violin upside down at a music stand; a stern teacher with a gray bun holds up a metronome; a boy in an explorer hat climbs a golden harp; a girl in yellow flings her arms wide and sings as papers fly; a boy plays a drum kit; a girl polishes a trumpet beside a heap of cloths. A green door with a golden lyre leads back to the red picture gallery, and a pink door with a gold teapot stands open onto a pink tea salon with a chandelier.",
    "nameplate": [
     50,
     4.5
@@ -3229,6 +3317,17 @@
       15,
       88,
       480
+     ]
+    },
+    {
+     "to": "salon",
+     "label": "Le salon de thé",
+     "hint": "the pink door with the gold teapot, to the tea salon",
+     "hit": [
+      1020,
+      40,
+      228,
+      320
      ]
     }
    ],
@@ -3264,10 +3363,10 @@
     {
      "id": "fr_aventureux_adj",
      "box": [
-      702,
-      100,
-      140,
-      238
+      700,
+      190,
+      120,
+      150
      ]
     },
     {
@@ -3340,6 +3439,529 @@
       118,
       282,
       278
+     ]
+    }
+   ]
+  },
+  "salon": {
+   "name": "Le salon de thé · The tea salon",
+   "room_id": "R_character_06",
+   "image": "portraits/salon.jpg",
+   "alt": "An elegant pink-striped tea salon with a crystal chandelier, little tea tables and a marble fireplace under a gilt mirror. A butler in tails bows to a grand old lady in lilac with a silver tea tray; a man with a monocle sniffs at his biscuits, pinky raised; a plump man in a purple waistcoat holds up a gilt portrait of himself; a lady in a feathered hat holds up a giant gold rosette over a small blue ribbon; a boy hiding under the tablecloth nets pink marshmallows off a cake stand; a man on the window seat watches through a brass telescope; a long-haired painter in sandals paints at an easel; a white poodle sleeps on a velvet footstool. A pink door with a gold teapot leads back to the blue music room, a yellow door with a red balloon opens onto a birthday party, and a black door with a silver camera opens onto a photo studio.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "musique",
+   "doors": [
+    {
+     "to": "musique",
+     "label": "Le salon de musique",
+     "hint": "the pink door with the gold teapot, back to the music room",
+     "hit": [
+      5,
+      50,
+      255,
+      185
+     ]
+    },
+    {
+     "to": "anniversaire",
+     "label": "L'anniversaire",
+     "hint": "the yellow door with the red balloon, to the birthday party",
+     "hit": [
+      330,
+      75,
+      105,
+      160
+     ]
+    },
+    {
+     "to": "studio",
+     "label": "Le studio photo",
+     "hint": "the black door with the silver camera, to the photo studio",
+     "hit": [
+      1035,
+      56,
+      235,
+      160
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_milady_noun",
+     "box": [
+      81,
+      240,
+      320,
+      330
+     ]
+    },
+    {
+     "id": "fr_snob_adj",
+     "box": [
+      440,
+      180,
+      125,
+      140
+     ]
+    },
+    {
+     "id": "fr_arrogant_adj",
+     "box": [
+      413,
+      320,
+      245,
+      390
+     ]
+    },
+    {
+     "id": "fr_meprisant_adj",
+     "box": [
+      625,
+      150,
+      135,
+      168
+     ]
+    },
+    {
+     "id": "fr_malhonnete_adj",
+     "box": [
+      694,
+      512,
+      144,
+      188
+     ]
+    },
+    {
+     "id": "fr_distant_adj",
+     "box": [
+      762,
+      244,
+      112,
+      186
+     ]
+    },
+    {
+     "id": "fr_bohemien_noun",
+     "box": [
+      1035,
+      225,
+      215,
+      370
+     ]
+    }
+   ]
+  },
+  "anniversaire": {
+   "name": "L'anniversaire · The birthday party",
+   "room_id": "R_character_08",
+   "image": "portraits/anniversaire.jpg",
+   "alt": "A sunny sky-blue playroom with painted clouds, streamers and balloons. A young mother rocks a newborn baby in a rocking chair; a birthday girl in a paper crown sits among a huge pile of presents; a big dad on a seesaw lifts a tiny laughing girl high in the air; a ginger cat licks the frosting of the birthday cake; a grown man in a tie lies on the rug kicking and wailing in a tantrum; a fluffy puppy hugs a boy's ankle; a boy in a striped shirt rips the paper off a present, shreds flying. A yellow door with a red balloon leads back to the pink tea salon, and a mint-green door with a chess knight opens onto a game room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "salon",
+   "doors": [
+    {
+     "to": "salon",
+     "label": "Le salon de thé",
+     "hint": "the yellow door with the red balloon, back to the tea salon",
+     "hit": [
+      12,
+      12,
+      100,
+      420
+     ]
+    },
+    {
+     "to": "jeux",
+     "label": "La salle de jeux",
+     "hint": "the green door with the chess knight, to the game room",
+     "hit": [
+      1105,
+      30,
+      100,
+      425
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_maternite_noun",
+     "box": [
+      125,
+      195,
+      230,
+      180
+     ]
+    },
+    {
+     "id": "fr_omnipresent_adj",
+     "box": [
+      250,
+      385,
+      345,
+      315
+     ]
+    },
+    {
+     "id": "fr_inegal_adj",
+     "box": [
+      500,
+      105,
+      340,
+      160
+     ]
+    },
+    {
+     "id": "fr_audacieux_adj",
+     "box": [
+      478,
+      322,
+      100,
+      58
+     ]
+    },
+    {
+     "id": "fr_impulsif_adj",
+     "box": [
+      806,
+      545,
+      160,
+      165
+     ]
+    },
+    {
+     "id": "fr_infantile_adj",
+     "box": [
+      656,
+      405,
+      250,
+      140
+     ]
+    },
+    {
+     "id": "fr_attachant_adj",
+     "box": [
+      756,
+      270,
+      150,
+      133
+     ]
+    }
+   ]
+  },
+  "jeux": {
+   "name": "La salle de jeux · The game room",
+   "room_id": "R_character_03",
+   "image": "portraits/jeux.jpg",
+   "alt": "A cozy wood-paneled game room with a red sofa, a wall of family photos and a glowing jukebox with a parrot on top. A girl in pigtails holds up a bright blue banana by a bowl of yellow ones; a bee wrapped in a fluffy pink towel sits on the windowsill; a white-haired grandpa clutches his throat as he croaks into a karaoke microphone; a girl cheers with red pompoms, hand on her throat; a boy in glasses lines up dominoes with a ruler; a girl grins as she makes her chess move while her brother stares. A mint-green door with a chess knight leads back to the birthday playroom.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "anniversaire",
+   "doors": [
+    {
+     "to": "anniversaire",
+     "label": "L'anniversaire",
+     "hint": "the green door with the chess knight, back to the birthday party",
+     "hit": [
+      30,
+      12,
+      225,
+      330
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_anomalie_noun",
+     "box": [
+      40,
+      350,
+      215,
+      200
+     ]
+    },
+    {
+     "id": "fr_inhabituel_adj",
+     "box": [
+      480,
+      130,
+      90,
+      110
+     ]
+    },
+    {
+     "id": "fr_rauque_adj",
+     "box": [
+      312,
+      245,
+      225,
+      465
+     ]
+    },
+    {
+     "id": "fr_eraille_adj",
+     "box": [
+      600,
+      150,
+      200,
+      168
+     ]
+    },
+    {
+     "id": "fr_obsessionnel_adj",
+     "box": [
+      594,
+      320,
+      220,
+      270
+     ]
+    },
+    {
+     "id": "fr_astucieux_adj",
+     "box": [
+      815,
+      312,
+      160,
+      190
+     ]
+    }
+   ]
+  },
+  "studio": {
+   "name": "Le studio photo · The photo studio",
+   "room_id": "R_appearance_05",
+   "image": "portraits/studio.jpg",
+   "alt": "A bright white photo studio under a skylight, with umbrella lamps, a gray paper backdrop and pop-art portraits on the walls. A girl watches a photo slide out of her instant camera; a painter holds up a lifelike fish painting that a tabby cat stretches up to sniff; a photographer in a bow tie aims down from high on a stepladder; an assistant in a cap mounts an old camera on a tripod; a teenager in headphones pops a pink bubblegum bubble by a pop-art portrait; a dachshund poses on a velvet stool; a boy holds up a horseshoe magnet that pulls paper clips. A black door with a silver camera leads back to the tea salon, and a navy door with white stripes opens onto a gym.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "salon",
+   "doors": [
+    {
+     "to": "salon",
+     "label": "Le salon de thé",
+     "hint": "the black door with the silver camera, back to the tea salon",
+     "hit": [
+      20,
+      62,
+      108,
+      580
+     ]
+    },
+    {
+     "to": "gym",
+     "label": "La salle de gym",
+     "hint": "the navy door with white stripes, to the gym",
+     "hit": [
+      1125,
+      165,
+      80,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_instantane_adj",
+     "box": [
+      340,
+      385,
+      112,
+      115
+     ]
+    },
+    {
+     "id": "fr_realiste_adj",
+     "box": [
+      425,
+      288,
+      120,
+      95
+     ]
+    },
+    {
+     "id": "fr_eleve_adj",
+     "box": [
+      470,
+      90,
+      85,
+      195
+     ]
+    },
+    {
+     "id": "fr_monte_adj",
+     "box": [
+      556,
+      290,
+      145,
+      302
+     ]
+    },
+    {
+     "id": "fr_pop_adj",
+     "box": [
+      762,
+      262,
+      225,
+      218
+     ]
+    }
+   ]
+  },
+  "gym": {
+   "name": "La salle de gym · The gym",
+   "room_id": "R_appearance_07",
+   "image": "portraits/gym.jpg",
+   "alt": "A bright old-fashioned gym with a honey wooden floor, climbing ropes, wall bars and blue mats. A strongman in a striped leotard lifts a barbell with a laughing grandma sitting on each end; a frail old man in a gray tracksuit wobbles with tiny pink dumbbells; a girl in red climbs straight up a rope; a gymnast does a handstand on the parallel bars; a boy zips up a small stuffed gym bag on a mat; a coach with a whistle stands under the big wall clock, one eye twitching; a hamster in a sweatband runs in its wheel. A navy door with white stripes leads back to the photo studio, and green-framed glass doors open onto the conservatory.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "studio",
+   "doors": [
+    {
+     "to": "studio",
+     "label": "Le studio photo",
+     "hint": "the navy door with white stripes, back to the photo studio",
+     "hit": [
+      40,
+      180,
+      80,
+      300
+     ]
+    },
+    {
+     "to": "serre",
+     "label": "La serre",
+     "hint": "the glass doors, to the conservatory",
+     "hit": [
+      1100,
+      160,
+      175,
+      340
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_frele_adj",
+     "box": [
+      444,
+      281,
+      150,
+      310
+     ]
+    },
+    {
+     "id": "fr_musculaire_adj",
+     "box": [
+      330,
+      60,
+      235,
+      215
+     ]
+    },
+    {
+     "id": "fr_vertical_adj",
+     "box": [
+      570,
+      115,
+      80,
+      165
+     ]
+    },
+    {
+     "id": "fr_parallele_adj",
+     "box": [
+      660,
+      180,
+      180,
+      270
+     ]
+    },
+    {
+     "id": "fr_compact_adj",
+     "box": [
+      710,
+      456,
+      235,
+      255
+     ]
+    },
+    {
+     "id": "fr_tic_noun",
+     "box": [
+      950,
+      75,
+      145,
+      510
+     ]
+    }
+   ]
+  },
+  "serre": {
+   "name": "La serre · The conservatory",
+   "room_id": "R_appearance_07",
+   "image": "portraits/serre.jpg",
+   "alt": "A sunlit glass conservatory with white iron frames, a brick floor, palms, ferns and terracotta pots around a little fountain with a frog on its rim. A gardener in green overalls lifts a giant orange pumpkin from the vegetable bed; a boy peeks out through a thick wall of ferns; a big tortoise ambles along the brick path with a flowerpot on its shell; a girl in a sun hat munches a carrot on the potting bench. Green-framed glass doors lead back to the gym.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "gym",
+   "doors": [
+    {
+     "to": "gym",
+     "label": "La salle de gym",
+     "hint": "the glass doors, back to the gym",
+     "hit": [
+      5,
+      10,
+      250,
+      600
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fertile_adj",
+     "box": [
+      388,
+      244,
+      170,
+      275
+     ]
+    },
+    {
+     "id": "fr_dense_adj",
+     "box": [
+      640,
+      270,
+      110,
+      120
+     ]
+    },
+    {
+     "id": "fr_ambulant_adj",
+     "box": [
+      570,
+      440,
+      255,
+      265
      ]
     }
    ]
