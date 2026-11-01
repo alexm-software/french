@@ -21,6 +21,14 @@
   {
    "key": "bal_costume",
    "short": "Le bal costumé"
+  },
+  {
+   "key": "cour_chateau",
+   "short": "La cour du château"
+  },
+  {
+   "key": "grande_salle",
+   "short": "La grande salle"
   }
  ],
  "rooms": {
@@ -166,7 +174,7 @@
    "name": "La vallée des géants · The valley of giants",
    "room_id": "R_giants_valley",
    "image": "contes/vallee_geants.jpg",
-   "alt": "A sunny valley of giants in ink and watercolor: on the left a mossy rock arch leads back to the enchanted forest beside a waterfall; a red-and-gold phoenix glides across the sky and a griffin rests on a high crag; a kindly bearded giant sits on a boulder with a blue jay on his thumb; a mossy troll stands waist-deep in the stream by a stone footbridge and waves; a friendly ogre with small tusks sits on a log reading a picture book to three mice; and in front a green dragon wearing a daisy chain sleeps smiling on the grass.",
+   "alt": "A sunny valley of giants in ink and watercolor: on the left a mossy rock arch leads back to the enchanted forest beside a waterfall, and below it, in the meadow at the bottom left, a stone castle gateway stands open on a glimpse of the castle courtyard; a red-and-gold phoenix glides across the sky and a griffin rests on a high crag; a kindly bearded giant sits on a boulder with a blue jay on his thumb; a mossy troll stands waist-deep in the stream by a stone footbridge and waves; a friendly ogre with small tusks sits on a log reading a picture book to three mice; and in front a green dragon wearing a daisy chain sleeps smiling on the grass.",
    "nameplate": [
     42,
     4.5
@@ -181,6 +189,17 @@
       95,
       185,
       240
+     ]
+    },
+    {
+     "to": "cour_chateau",
+     "label": "La cour du château",
+     "hint": "Through the stone castle gateway in the meadow into the castle courtyard",
+     "hit": [
+      8,
+      380,
+      240,
+      160
      ]
     }
    ],
@@ -435,6 +454,224 @@
     }
    ],
    "backTo": "contes"
+  },
+  "cour_chateau": {
+   "name": "La cour du château · The castle courtyard",
+   "room_id": "R_castle_courtyard",
+   "image": "contes/cour_chateau.jpg",
+   "alt": "The sunny inner courtyard of a fairy-tale castle in ink and watercolor, with pale stone towers under pointed blue roofs: on the left a tall arched gateway stands open onto the valley of giants and its waterfall; at the back the keep's big oak double door stands open at the top of wide steps, showing the great hall inside. Monsieur Verbe the mime plays fairy-tale tricks all over the courtyard: in a red beret he hands a little golden harp to baby twins singing in their cradle; in a gold beret he holds an umbrella over a young queen who peers into a crystal ball with a tiny rain cloud inside; in another gold beret he shakes his fist from his lawnmower at a deer munching the roses; in a green beret he balances a silver tray with a pigeon on it while he listens in on a princess whispering a secret; in a red beret he blows a trick trumpet that shoots a paper streamer at a startled herald; in a red beret he sweeps his hands apart as a pie appears in sparkles on a little table; in a gold beret he varnishes an old treasure chest until it looks new; in a red beret, his own beret dripping wet, he sprinkles a goose with a watering can by the birdbath; and in front, in a red beret, he kneels to offer a glass slipper on a velvet cushion to a girl in a blue dress.",
+   "nameplate": [
+    30,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "vallee_geants",
+     "label": "La vallée des géants",
+     "hint": "Back out through the arched castle gateway to the valley of giants",
+     "hit": [
+      45,
+      60,
+      150,
+      250
+     ]
+    },
+    {
+     "to": "grande_salle",
+     "label": "La grande salle",
+     "hint": "Up the steps and through the open keep door into the great hall",
+     "hit": [
+      615,
+      50,
+      135,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_douer_verb",
+     "box": [
+      300,
+      160,
+      272,
+      144
+     ]
+    },
+    {
+     "id": "fr_redevenir_verb",
+     "box": [
+      1010,
+      364,
+      212,
+      226
+     ]
+    },
+    {
+     "id": "fr_materialiser_verb",
+     "box": [
+      510,
+      305,
+      232,
+      187
+     ]
+    },
+    {
+     "id": "fr_tromper_verb",
+     "box": [
+      20,
+      375,
+      248,
+      340
+     ]
+    },
+    {
+     "id": "fr_trahir_verb",
+     "box": [
+      272,
+      314,
+      208,
+      180
+     ]
+    },
+    {
+     "id": "fr_predire_verb",
+     "box": [
+      752,
+      110,
+      248,
+      275
+     ]
+    },
+    {
+     "id": "fr_venger_verb",
+     "box": [
+      790,
+      400,
+      216,
+      310
+     ]
+    },
+    {
+     "id": "fr_destiner_verb",
+     "box": [
+      290,
+      496,
+      382,
+      219
+     ]
+    },
+    {
+     "id": "fr_maudire_verb",
+     "box": [
+      1003,
+      155,
+      252,
+      207
+     ]
+    }
+   ],
+   "backTo": "vallee_geants"
+  },
+  "grande_salle": {
+   "name": "La grande salle · The great hall",
+   "room_id": "R_castle_hall",
+   "image": "contes/grande_salle.jpg",
+   "alt": "The great hall of a fairy-tale castle in ink and watercolor, with red and blue banners and a big stone fireplace shaped like a little castle: on the left a tall arched oak door stands open onto the sunny castle courtyard. Monsieur Verbe the mime acts out tales all round the hall: in a gold beret he draws back a red curtain to peek at a white peacock fanning its tail; in another gold beret he holds a wrapped blue present to his ear, eyes closed; in a red beret at the open window he raises his arms to a puffy cloud with a cheeky face that blows his scarf; in a green beret he sprinkles green dust on a pear in the fruit bowl and it grows green fur; by the fire, in a gold beret, he opens a big storybook and a little sailing ship sails out on a blue wave; in a red beret, with a lace tablecloth over his head, he plays a pretend ghost beside his smiling auntie, who knits in her armchair; on the rug, in a red beret, he winds a golden music box for a little crowd of spellbound hedgehogs; and in front, in a red beret, joke glasses and a fake nose, he tiptoes past a sleeping dog to the cookie jar.",
+   "nameplate": [
+    30,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "cour_chateau",
+     "label": "La cour du château",
+     "hint": "Back out through the arched oak door to the castle courtyard",
+     "hit": [
+      70,
+      60,
+      245,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_enchanter_verb",
+     "box": [
+      688,
+      471,
+      357,
+      232
+     ]
+    },
+    {
+     "id": "fr_pressentir_verb",
+     "box": [
+      318,
+      280,
+      112,
+      252
+     ]
+    },
+    {
+     "id": "fr_pervertir_verb",
+     "box": [
+      515,
+      295,
+      172,
+      280
+     ]
+    },
+    {
+     "id": "fr_advenir_verb",
+     "box": [
+      688,
+      292,
+      165,
+      178
+     ]
+    },
+    {
+     "id": "fr_entrevoir_verb",
+     "box": [
+      432,
+      108,
+      173,
+      186
+     ]
+    },
+    {
+     "id": "fr_hanter_verb",
+     "box": [
+      856,
+      256,
+      264,
+      214
+     ]
+    },
+    {
+     "id": "fr_ruser_verb",
+     "box": [
+      105,
+      415,
+      213,
+      285
+     ]
+    },
+    {
+     "id": "fr_invoquer_verb",
+     "box": [
+      1020,
+      85,
+      165,
+      170
+     ]
+    }
+   ],
+   "backTo": "cour_chateau"
   }
  },
  "planned": {
@@ -486,6 +723,33 @@
     "fr_loup_garou_noun",
     "fr_gobelin_noun",
     "fr_monstre_noun"
+   ]
+  },
+  "cour_chateau": {
+   "vocabRoom": "R_castle_courtyard",
+   "only": [
+    "fr_douer_verb",
+    "fr_redevenir_verb",
+    "fr_materialiser_verb",
+    "fr_tromper_verb",
+    "fr_trahir_verb",
+    "fr_predire_verb",
+    "fr_venger_verb",
+    "fr_destiner_verb",
+    "fr_maudire_verb"
+   ]
+  },
+  "grande_salle": {
+   "vocabRoom": "R_castle_hall",
+   "only": [
+    "fr_enchanter_verb",
+    "fr_pressentir_verb",
+    "fr_pervertir_verb",
+    "fr_advenir_verb",
+    "fr_entrevoir_verb",
+    "fr_hanter_verb",
+    "fr_ruser_verb",
+    "fr_invoquer_verb"
    ]
   }
  }
