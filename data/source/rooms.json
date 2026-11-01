@@ -1822,12 +1822,12 @@
       "words": [
         "fr_regulier_adj",
         "fr_grandeur_noun",
-        "fr_geant_noun",
         "fr_tonne_noun",
         "fr_foudre_noun_m",
         "fr_carre_adj",
         "fr_epaisseur_noun",
-        "fr_resolution_noun"
+        "fr_resolution_noun",
+        "fr_contour_noun"
       ],
       "item_count": 8,
       "total_items_incl_zooms": 12,
@@ -3762,7 +3762,6 @@
         "fr_plante_noun",
         "fr_bouquet_noun",
         "fr_vase_noun_m",
-        "fr_fee_noun",
         "fr_vegetal_adj",
         "fr_lis_noun",
         "fr_rosier_noun",
@@ -3770,10 +3769,10 @@
         "fr_stand_noun",
         "fr_colporteur_noun"
       ],
-      "item_count": 11,
-      "total_items_incl_zooms": 19,
+      "item_count": 10,
+      "total_items_incl_zooms": 18,
       "side_counts": {
-        "left": 4,
+        "left": 3,
         "right": 6,
         "n/a": 1
       }
@@ -9629,7 +9628,6 @@
         "fr_creature_noun",
         "fr_singe_noun",
         "fr_lion_noun",
-        "fr_dragon_noun",
         "fr_jungle_noun",
         "fr_tigre_noun",
         "fr_faune_noun_f",
@@ -9637,10 +9635,10 @@
         "fr_savane_noun",
         "fr_safari_noun"
       ],
-      "item_count": 14,
-      "total_items_incl_zooms": 26,
+      "item_count": 13,
+      "total_items_incl_zooms": 25,
       "side_counts": {
-        "right": 8,
+        "right": 7,
         "left": 6
       }
     },
@@ -9941,7 +9939,6 @@
         "fr_ocean_noun",
         "fr_flot_noun",
         "fr_vase_noun_f",
-        "fr_sirene_noun",
         "fr_maree_noun",
         "fr_baleine_noun",
         "fr_digue_noun",
@@ -9952,10 +9949,10 @@
         "fr_sombrer_verb",
         "fr_chavirer_verb"
       ],
-      "item_count": 17,
-      "total_items_incl_zooms": 20,
+      "item_count": 16,
+      "total_items_incl_zooms": 19,
       "side_counts": {
-        "left": 8,
+        "left": 7,
         "right": 6
       }
     },
@@ -10511,7 +10508,6 @@
       ],
       "base_room": "R_sky",
       "words": [
-        "fr_nain_noun",
         "fr_orbite_noun",
         "fr_lancement_noun",
         "fr_pole_noun",
@@ -10521,10 +10517,10 @@
         "fr_astronome_noun",
         "fr_phase_noun"
       ],
-      "item_count": 9,
-      "total_items_incl_zooms": 9,
+      "item_count": 8,
+      "total_items_incl_zooms": 8,
       "side_counts": {
-        "right": 4,
+        "right": 3,
         "left": 2,
         "n/a": 2,
         "center": 1
@@ -10865,14 +10861,13 @@
         "fr_mythe_noun",
         "fr_chronique_noun",
         "fr_redacteur_noun",
-        "fr_ogre_noun",
         "fr_faune_noun_m",
         "fr_fondateur_noun"
       ],
-      "item_count": 13,
-      "total_items_incl_zooms": 13,
+      "item_count": 12,
+      "total_items_incl_zooms": 12,
       "side_counts": {
-        "right": 10,
+        "right": 9,
         "left": 3
       }
     },
@@ -38117,6 +38112,74 @@
         "n/a": 1
       },
       "parent_room_id": "R_faiths"
+    },
+    {
+      "id": "R_enchanted_forest",
+      "name": "La forêt enchantée · The enchanted forest",
+      "type": "theme",
+      "setting": "Enchanted forest clearing of Le pays des contes, entered from the Parc des Curiosités: pond, mossy rocks, giant toadstools, bluebells and an old tree; a rock arch leads to the valley of giants.",
+      "kind": "full",
+      "sector_id": "S16_park",
+      "building_id": "B69_contes",
+      "links_back_to_sector": "S16_park",
+      "cefr_band": "B2",
+      "mean_level": 4.67,
+      "related_rooms": [
+        "R_giants_valley"
+      ],
+      "conversation_ids": [
+        "V_contes_contes_01"
+      ],
+      "base_room": "R_enchanted_forest",
+      "words": [
+        "fr_fee_noun",
+        "fr_licorne_noun",
+        "fr_sirene_noun",
+        "fr_centaure_noun",
+        "fr_elfe_noun",
+        "fr_farfadet_noun",
+        "fr_gnome_noun",
+        "fr_lutin_noun",
+        "fr_nain_noun"
+      ],
+      "item_count": 9,
+      "total_items_incl_zooms": 9,
+      "side_counts": {
+        "left": 3,
+        "right": 6
+      }
+    },
+    {
+      "id": "R_giants_valley",
+      "name": "La vallée des géants · The valley of giants",
+      "type": "theme",
+      "setting": "Valley of giants of Le pays des contes: waterfall, crags, stream with a stone footbridge, boulders and meadow; rock arch back to the enchanted forest.",
+      "kind": "full",
+      "sector_id": "S16_park",
+      "building_id": "B69_contes",
+      "links_back_to_sector": "S16_park",
+      "cefr_band": "B2",
+      "mean_level": 4.33,
+      "related_rooms": [
+        "R_enchanted_forest"
+      ],
+      "conversation_ids": [
+        "V_contes_vallee_geants_01"
+      ],
+      "base_room": "R_giants_valley",
+      "words": [
+        "fr_phenix_noun",
+        "fr_griffon_noun",
+        "fr_geant_noun",
+        "fr_troll_noun",
+        "fr_ogre_noun",
+        "fr_dragon_noun"
+      ],
+      "item_count": 6,
+      "total_items_incl_zooms": 6,
+      "side_counts": {
+        "right": 6
+      }
     }
   ],
   "planned_rooms_2026_10_31": {
