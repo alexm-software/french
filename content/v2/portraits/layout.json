@@ -24,6 +24,30 @@
   {
    "key": "courage",
    "short": "Le courage"
+  },
+  {
+   "key": "palier",
+   "short": "Le palier"
+  },
+  {
+   "key": "coiffure",
+   "short": "La coiffure"
+  },
+  {
+   "key": "cartes",
+   "short": "Les cartes"
+  },
+  {
+   "key": "tresors",
+   "short": "Les trésors"
+  },
+  {
+   "key": "attente",
+   "short": "L'attente"
+  },
+  {
+   "key": "salle",
+   "short": "La salle à manger"
   }
  ],
  "planned": {
@@ -103,6 +127,82 @@
     "fr_courageux_adj",
     "fr_feminin_adj"
    ]
+  },
+  "palier": {
+   "vocabRoom": "R_people_03",
+   "only": [
+    "fr_humanite_noun",
+    "fr_quinzaine_noun",
+    "fr_vieillesse_noun",
+    "fr_aveugle_noun",
+    "fr_mome_noun",
+    "fr_aine_noun",
+    "fr_vieillard_noun",
+    "fr_gentleman_noun",
+    "fr_sieur_noun"
+   ]
+  },
+  "coiffure": {
+   "vocabRoom": "R_appearance_03",
+   "only": [
+    "fr_meche_noun",
+    "fr_roux_adj",
+    "fr_chauve_adj",
+    "fr_ras_adj",
+    "fr_barbu_adj",
+    "fr_boucle_adj",
+    "fr_comique_adj",
+    "fr_teint_noun"
+   ]
+  },
+  "cartes": {
+   "vocabRoom": "R_appearance_02",
+   "only": [
+    "fr_canadien_adj",
+    "fr_londonien_adj",
+    "fr_maghrebin_adj",
+    "fr_originaire_adj",
+    "fr_issu_adj",
+    "fr_gitan_noun"
+   ]
+  },
+  "tresors": {
+   "vocabRoom": "R_appearance_04",
+   "only": [
+    "fr_dore_adj",
+    "fr_fabuleux_adj",
+    "fr_impressionnant_adj",
+    "fr_spectaculaire_adj",
+    "fr_visible_adj",
+    "fr_semblable_adj",
+    "fr_etonnant_adj"
+   ]
+  },
+  "attente": {
+   "vocabRoom": "R_character_02",
+   "only": [
+    "fr_impatient_adj",
+    "fr_presse_adj",
+    "fr_paresseux_adj",
+    "fr_hesitant_adj",
+    "fr_desespere_adj",
+    "fr_maladroit_adj",
+    "fr_avide_adj",
+    "fr_ambitieux_adj"
+   ]
+  },
+  "salle": {
+   "vocabRoom": "R_character_04",
+   "only": [
+    "fr_admirable_adj",
+    "fr_aimable_adj",
+    "fr_chaleureux_adj",
+    "fr_honnete_adj",
+    "fr_sincere_adj",
+    "fr_amical_adj",
+    "fr_authentique_adj",
+    "fr_raisonnable_adj"
+   ]
   }
  },
  "rooms": {
@@ -156,6 +256,17 @@
       150,
       100,
       190
+     ]
+    },
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "the grand staircase, up to the landing",
+     "hit": [
+      1020,
+      8,
+      255,
+      120
      ]
     }
    ],
@@ -766,6 +877,657 @@
       75,
       165,
       365
+     ]
+    }
+   ]
+  },
+  "palier": {
+   "name": "Le palier · The upstairs landing",
+   "room_id": "R_people_03",
+   "image": "portraits/palier.jpg",
+   "alt": "The sunny upstairs landing on family reunion day: at the top of the staircase a girl stitches a quilt of many hands holding the globe, a girl balances a stack of tin cans on her head, a granny rocks in her chair with a brass horn, a blind man with a white cane and guide dog plays a bugle, a little kid in a big apron pushes a doll buggy, an older brother gives a piggyback, an old man holds up a long scarf, a gentleman in a bowler hat offers his umbrella and a footman bows with a tray.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "portraits",
+   "doors": [
+    {
+     "to": "portraits",
+     "label": "Le hall",
+     "hint": "the staircase, down to the entrance hall",
+     "hit": [
+      0,
+      175,
+      105,
+      285
+     ]
+    },
+    {
+     "to": "coiffure",
+     "label": "La coiffure",
+     "hint": "the teal door with the scissors, to the hair salon",
+     "hit": [
+      178,
+      60,
+      95,
+      290
+     ]
+    },
+    {
+     "to": "cartes",
+     "label": "Les cartes",
+     "hint": "the navy door with the compass rose, to the map room",
+     "hit": [
+      505,
+      120,
+      52,
+      95
+     ]
+    },
+    {
+     "to": "tresors",
+     "label": "Les trésors",
+     "hint": "the red door with the treasure chest, to the treasure room",
+     "hit": [
+      708,
+      120,
+      90,
+      195
+     ]
+    },
+    {
+     "to": "salle",
+     "label": "La salle à manger",
+     "hint": "the yellow door with the soup tureen, to the dining room",
+     "hit": [
+      1080,
+      60,
+      48,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_humanite_noun",
+     "box": [
+      110,
+      400,
+      315,
+      270
+     ]
+    },
+    {
+     "id": "fr_quinzaine_noun",
+     "box": [
+      312,
+      138,
+      100,
+      258
+     ]
+    },
+    {
+     "id": "fr_vieillesse_noun",
+     "box": [
+      430,
+      215,
+      125,
+      245
+     ],
+     "labelAt": [
+      492,
+      300
+     ]
+    },
+    {
+     "id": "fr_aveugle_noun",
+     "box": [
+      575,
+      180,
+      88,
+      330
+     ]
+    },
+    {
+     "id": "fr_mome_noun",
+     "box": [
+      665,
+      320,
+      90,
+      240
+     ]
+    },
+    {
+     "id": "fr_aine_noun",
+     "box": [
+      760,
+      320,
+      170,
+      360
+     ]
+    },
+    {
+     "id": "fr_vieillard_noun",
+     "box": [
+      800,
+      120,
+      165,
+      195
+     ]
+    },
+    {
+     "id": "fr_gentleman_noun",
+     "box": [
+      970,
+      165,
+      105,
+      240
+     ]
+    },
+    {
+     "id": "fr_sieur_noun",
+     "box": [
+      1000,
+      410,
+      175,
+      250
+     ]
+    }
+   ]
+  },
+  "coiffure": {
+   "name": "Le salon de coiffure · The hair salon",
+   "room_id": "R_appearance_03",
+   "image": "portraits/coiffure.jpg",
+   "alt": "A tiled hair salon on Saturday morning: a woman has a lock pulled through her mesh cap, a red kangaroo sits in a barber chair, a bald man playfully shoves the barber, a boy cheers his new buzz cut, a bluebird pops out of a bushy beard, a curly girl sculpts a blue clay head, a boy laughs at a comic under the hood dryer, a grandma with purple hair waves, and a beautician matches a man's complexion with a powder palette.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "palier",
+   "doors": [
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "the teal door with the scissors, back to the landing",
+     "hit": [
+      0,
+      20,
+      140,
+      620
+     ]
+    },
+    {
+     "to": "attente",
+     "label": "L'attente",
+     "hint": "the green door with the hourglass, to the waiting room",
+     "hit": [
+      1085,
+      60,
+      190,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_meche_noun",
+     "box": [
+      150,
+      300,
+      215,
+      320
+     ]
+    },
+    {
+     "id": "fr_roux_adj",
+     "box": [
+      435,
+      230,
+      88,
+      260
+     ]
+    },
+    {
+     "id": "fr_chauve_adj",
+     "box": [
+      525,
+      185,
+      110,
+      175
+     ]
+    },
+    {
+     "id": "fr_ras_adj",
+     "box": [
+      575,
+      380,
+      220,
+      270
+     ]
+    },
+    {
+     "id": "fr_barbu_adj",
+     "box": [
+      800,
+      360,
+      120,
+      240
+     ]
+    },
+    {
+     "id": "fr_boucle_adj",
+     "box": [
+      705,
+      180,
+      130,
+      150
+     ]
+    },
+    {
+     "id": "fr_comique_adj",
+     "box": [
+      850,
+      175,
+      90,
+      160
+     ]
+    },
+    {
+     "id": "fr_teint_noun",
+     "box": [
+      930,
+      395,
+      250,
+      300
+     ]
+    }
+   ]
+  },
+  "cartes": {
+   "name": "La salle des cartes · The map room",
+   "room_id": "R_appearance_02",
+   "image": "portraits/cartes.jpg",
+   "alt": "A cozy map room on a family geography afternoon: a girl catches a paper plane in a butterfly net by the globe, a woman pours maple syrup on pancakes, a boy yawns by a little Big Ben model, a mother in a gray headband points at North Africa on the wall map, a girl holds a toy balloon rising from a map pin, a grandpa sews a family-tree quilt, and a smiling man spreads postcards across the map table while a cat sleeps among rolled maps.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "palier",
+   "doors": [
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "the navy door with the compass rose, back to the landing",
+     "hit": [
+      0,
+      20,
+      110,
+      470
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_canadien_adj",
+     "box": [
+      320,
+      290,
+      200,
+      385
+     ]
+    },
+    {
+     "id": "fr_londonien_adj",
+     "box": [
+      362,
+      105,
+      115,
+      180
+     ]
+    },
+    {
+     "id": "fr_maghrebin_adj",
+     "box": [
+      520,
+      100,
+      110,
+      200
+     ],
+     "labelAt": [
+      576,
+      150
+     ]
+    },
+    {
+     "id": "fr_originaire_adj",
+     "box": [
+      642,
+      70,
+      140,
+      330
+     ]
+    },
+    {
+     "id": "fr_issu_adj",
+     "box": [
+      790,
+      170,
+      105,
+      360
+     ]
+    },
+    {
+     "id": "fr_gitan_noun",
+     "box": [
+      900,
+      290,
+      235,
+      330
+     ]
+    }
+   ]
+  },
+  "tresors": {
+   "name": "La salle des trésors · The treasure room",
+   "room_id": "R_appearance_04",
+   "image": "portraits/tresors.jpg",
+   "alt": "A red treasure room on open day: a golden doe stands in a ray of light, a little dragon flies out of a storybook, a tiny ant lifts a golden trophy, giant spectacles float over a pedestal, a pink chameleon sits on a green plant, two jelly blobs look alike, a girl plays a glass harp, and visitors, twin boys with balloons and a seal with a jigsaw watch from the right.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "palier",
+   "doors": [
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "the red door with the treasure chest, back to the landing",
+     "hit": [
+      155,
+      70,
+      140,
+      355
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_dore_adj",
+     "box": [
+      378,
+      170,
+      120,
+      190
+     ],
+     "labelAt": [
+      438,
+      176
+     ]
+    },
+    {
+     "id": "fr_fabuleux_adj",
+     "box": [
+      300,
+      430,
+      190,
+      225
+     ]
+    },
+    {
+     "id": "fr_impressionnant_adj",
+     "box": [
+      500,
+      245,
+      58,
+      145
+     ],
+     "labelAt": [
+      440,
+      395
+     ]
+    },
+    {
+     "id": "fr_spectaculaire_adj",
+     "box": [
+      565,
+      288,
+      140,
+      200
+     ]
+    },
+    {
+     "id": "fr_visible_adj",
+     "box": [
+      730,
+      235,
+      85,
+      90
+     ]
+    },
+    {
+     "id": "fr_semblable_adj",
+     "box": [
+      648,
+      495,
+      130,
+      90
+     ]
+    },
+    {
+     "id": "fr_etonnant_adj",
+     "box": [
+      781,
+      330,
+      190,
+      226
+     ]
+    }
+   ]
+  },
+  "attente": {
+   "name": "La salle d'attente · The waiting room",
+   "room_id": "R_character_02",
+   "image": "portraits/attente.jpg",
+   "alt": "The salon's yellow waiting room on a busy Saturday: a bored boy slumps in an armchair, a man checks his watch, a lady gulps orange juice on the run, a sloth sleeps on the coat rack, a little boy reaches toward a shaggy sheepdog, a messy-haired man kneels and begs, a clumsy boy knocks over a magazine stack, a girl devours a magazine, another climbs to the top shelf, a boy raises his hand and a tortoise in a scarf waits on a chair.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "coiffure",
+   "doors": [
+    {
+     "to": "coiffure",
+     "label": "La coiffure",
+     "hint": "the green door with the hourglass, back to the hair salon",
+     "hit": [
+      50,
+      50,
+      225,
+      430
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_impatient_adj",
+     "box": [
+      319,
+      145,
+      133,
+      345
+     ]
+    },
+    {
+     "id": "fr_presse_adj",
+     "box": [
+      455,
+      150,
+      95,
+      255
+     ]
+    },
+    {
+     "id": "fr_paresseux_adj",
+     "box": [
+      570,
+      105,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_hesitant_adj",
+     "box": [
+      555,
+      280,
+      120,
+      135
+     ]
+    },
+    {
+     "id": "fr_desespere_adj",
+     "box": [
+      690,
+      185,
+      122,
+      235
+     ]
+    },
+    {
+     "id": "fr_maladroit_adj",
+     "box": [
+      540,
+      420,
+      260,
+      255
+     ]
+    },
+    {
+     "id": "fr_avide_adj",
+     "box": [
+      815,
+      305,
+      160,
+      200
+     ]
+    },
+    {
+     "id": "fr_ambitieux_adj",
+     "box": [
+      830,
+      58,
+      100,
+      207
+     ]
+    }
+   ]
+  },
+  "salle": {
+   "name": "La salle à manger · The dining room",
+   "room_id": "R_character_04",
+   "image": "portraits/salle.jpg",
+   "alt": "A warm green dining room at Sunday lunch: a boy hands his slice of pie to his sister, a girl holds out a marble, a grandma wraps a guest in a shawl, a boy hands back a wallet, another holds his hand on his heart, a boy waves a friend over, a grandpa shows his antique gramophone, another pours lemonade, a girl hugs a raccoon, an old man reads by the fire and a cat sits at the table with a napkin.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "palier",
+   "doors": [
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "the yellow door with the soup tureen, back to the landing",
+     "hit": [
+      95,
+      30,
+      125,
+      480
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_admirable_adj",
+     "box": [
+      325,
+      382,
+      175,
+      85
+     ]
+    },
+    {
+     "id": "fr_aimable_adj",
+     "box": [
+      358,
+      232,
+      112,
+      145
+     ]
+    },
+    {
+     "id": "fr_chaleureux_adj",
+     "box": [
+      480,
+      170,
+      150,
+      200
+     ]
+    },
+    {
+     "id": "fr_honnete_adj",
+     "box": [
+      545,
+      375,
+      145,
+      250
+     ]
+    },
+    {
+     "id": "fr_sincere_adj",
+     "box": [
+      655,
+      225,
+      62,
+      120
+     ],
+     "labelAt": [
+      686,
+      305
+     ]
+    },
+    {
+     "id": "fr_amical_adj",
+     "box": [
+      740,
+      255,
+      80,
+      175
+     ]
+    },
+    {
+     "id": "fr_authentique_adj",
+     "box": [
+      720,
+      95,
+      200,
+      150
+     ]
+    },
+    {
+     "id": "fr_raisonnable_adj",
+     "box": [
+      820,
+      250,
+      150,
+      175
      ]
     }
    ]
