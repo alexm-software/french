@@ -111,3 +111,15 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - Never run a crop or paste script while a GenerateImage edit of the same painting is in flight; finish one edit before cutting the next crop.
 - A pose edit can lift a figure into a door opening: ask for the lower pose explicitly (seated, kneeling) and check the head stays below the threshold line.
 - Inherited vocab examples can trip content flags: run check_v2 content on every new word and override the example sentence when it flags.
+
+- When an edit mask stops above a door or frame base, check the strip just below the crop at 4x for frame remnants; extend the mask or run a second small cleanup edit.
+- To move a figure, use two edits: erase it in one (clean plate), then add it in the new spot anchored "directly beside <named neighbor>"; a single "move it" edit leaves ghosts or drops it.
+- When a figure must fit between neighbors above and below it, ask for a low pose (kneeling or seated) so it stays inside its slot.
+- Keep paste masks clear of crop edges wherever the edit shifted content, and check every seam at 3-4x.
+- Name plain filler furniture for the outer strips of the room (for example "a tall bookcase against the right wall, nobody at it"), so the model does not push hook figures there.
+- Before sending a prompt, remove contradictory placement sentences: each figure gets exactly one position.
+- A room with many large foreground figures defeats percentage placement: split it into two rooms or cut figures before painting, instead of rerolling.
+- A door to a room not built in the same pack is painted out (wall or furniture), never shipped as a dead door; restore the door when the room is built.
+- In crowded rows, leave a label-wide gap (about 170 px for long words) between neighboring hotspots, or plan a labelAt spot on clear floor before painting.
+- Small retouches that copy the painting's own pixels (no image model) are recorded like edits, with source and target rects, and flagged in the report.
+- Run grid_check (gate 25) on the planned boxes in the LAYOUT MAP before the first GenerateImage call: at most three box bottoms per 40 px baseline, bottoms in back, middle and front depths, and no empty 150 px middle; a shelf or counter of hook props, or a front row of tables, is a grid even when each group is lively.
