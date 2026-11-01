@@ -156,6 +156,22 @@
   {
    "key": "infirmerie",
    "short": "L'infirmerie"
+  },
+  {
+   "key": "classe",
+   "short": "La classe"
+  },
+  {
+   "key": "cour",
+   "short": "La cour"
+  },
+  {
+   "key": "sejour",
+   "short": "Le séjour"
+  },
+  {
+   "key": "bains",
+   "short": "La salle de bains"
   }
  ],
  "planned": {
@@ -618,6 +634,54 @@
     "fr_infectieux_adj",
     "fr_insensible_adj",
     "fr_digital_adj"
+   ]
+  },
+  "classe": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_detestable_adj",
+    "fr_lucide_adj",
+    "fr_proportionnel_adj",
+    "fr_oblique_adj",
+    "fr_indirect_adj",
+    "fr_passionnel_adj"
+   ]
+  },
+  "cour": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_reciproque_adj",
+    "fr_aspirant_adj",
+    "fr_moral_adj",
+    "fr_demographique_adj",
+    "fr_humaniste_adj",
+    "fr_meprisable_adj",
+    "fr_feminisme_noun"
+   ]
+  },
+  "sejour": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_etrangete_noun",
+    "fr_natalite_noun",
+    "fr_esthetique_adj",
+    "fr_individuel_adj",
+    "fr_enclin_adj",
+    "fr_soi_disant_adj",
+    "fr_individualisme_noun",
+    "fr_preneur_noun"
+   ]
+  },
+  "bains": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_masculin_adj",
+    "fr_saillant_adj",
+    "fr_immediat_adj",
+    "fr_affectif_adj",
+    "fr_dependant_adj",
+    "fr_inadapte_adj",
+    "fr_effectif_noun"
    ]
   }
  },
@@ -4462,7 +4526,7 @@
    "name": "L'infirmerie · The nurse's room",
    "room_id": "R_appearance_07",
    "image": "portraits/infirmerie.jpg",
-   "alt": "A bright mint-green nurse's room with two white beds with checked blankets, a bandage cabinet, a skeleton model and a big window onto the garden. A nurse points at the skeleton's knee; a young helper takes a seated grandpa's blood pressure; a golden retriever rests its chin on a girl's blanket; a boy sneezes into a tissue; a girl tickles her brother's plaster cast with a feather while he reads on; a boy behind the bed proudly holds up a bandaged finger; a teddy bear with a bandaged paw sits on the windowsill. A white door with a porthole and a green cross leads back to the library.",
+   "alt": "A bright mint-green nurse's room with two white beds with checked blankets, a bandage cabinet, a skeleton model and a weighing scale. A nurse points at the skeleton's knee; a young helper takes a seated grandpa's blood pressure; a golden retriever rests its chin on a girl's blanket; a boy sneezes into a tissue; a girl tickles her brother's plaster cast with a feather while he reads on; a boy behind the bed proudly holds up a bandaged finger; a teddy bear with a bandaged paw sits on a wall shelf. A white door with a porthole and a green cross leads back to the library, and a sky-blue glazed door with a yellow pencil opens onto a schoolroom.",
    "nameplate": [
     50,
     4.5
@@ -4478,6 +4542,17 @@
       30,
       145,
       540
+     ]
+    },
+    {
+     "to": "classe",
+     "label": "La classe",
+     "hint": "the blue glazed door, to the schoolroom",
+     "hit": [
+      962,
+      30,
+      88,
+      330
      ]
     }
    ],
@@ -4539,6 +4614,399 @@
       195,
       85,
       165
+     ]
+    }
+   ]
+  },
+  "classe": {
+   "name": "La salle de classe · The schoolroom",
+   "room_id": "R_character_05",
+   "image": "portraits/classe.jpg",
+   "alt": "A sunny old-fashioned schoolroom with cream walls, a big green blackboard, wooden desks, a nature table and tall windows onto a chestnut tree. A boy scowls at his test paper, clutching his hair; a girl in big round glasses studies a giant seed on the nature table; the teacher holds up a small and a large slice of pizza of the same shape; a teary girl chalks a huge L on the blackboard; a boy peeks over a wall of books through a bent periscope; a boy pours water down a leaky slanted ramp into a bucket; a hamster runs in its wheel. A sky-blue glazed door with a yellow pencil leads back to the nurse's room, and red glazed doors open onto the schoolyard.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "infirmerie",
+   "doors": [
+    {
+     "to": "infirmerie",
+     "label": "L'infirmerie",
+     "hint": "the blue glazed door, back to the nurse's room",
+     "hit": [
+      8,
+      15,
+      200,
+      560
+     ]
+    },
+    {
+     "to": "cour",
+     "label": "La cour",
+     "hint": "the red glazed doors, to the schoolyard",
+     "hit": [
+      1210,
+      40,
+      62,
+      520
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_detestable_adj",
+     "box": [
+      255,
+      400,
+      290,
+      300
+     ]
+    },
+    {
+     "id": "fr_lucide_adj",
+     "box": [
+      285,
+      220,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_proportionnel_adj",
+     "box": [
+      415,
+      100,
+      250,
+      115
+     ]
+    },
+    {
+     "id": "fr_oblique_adj",
+     "box": [
+      800,
+      420,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_indirect_adj",
+     "box": [
+      652,
+      258,
+      145,
+      200
+     ]
+    },
+    {
+     "id": "fr_passionnel_adj",
+     "box": [
+      665,
+      85,
+      170,
+      170
+     ]
+    }
+   ]
+  },
+  "cour": {
+   "name": "La cour de récréation · The schoolyard",
+   "room_id": "R_character_05",
+   "image": "portraits/cour.jpg",
+   "alt": "A sunny walled schoolyard with red-brick walls, a big chestnut tree and green hills beyond. Two kids ride a red seesaw with a robin on it; a teen swings up on a long spear planted in the sandpit; a painter in white overalls paints a mural of a boy helping an old lady with her grocery bags; a kind white-haired scholar reads to two children in a giant twig nest; a mixed crew in yellow hard hats, with a man in a wheelchair, pulls down an old wooden shed; a boy sneaks a bite of a giant prize apple while a little girl waves to her friends; a woman in a red polka-dot bandana flexes her arm as two girls flex with her. Red glazed doors lead back to the schoolroom, and a yellow cottage door with a round window opens onto a family den.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "classe",
+   "doors": [
+    {
+     "to": "classe",
+     "label": "La classe",
+     "hint": "the red glazed doors, back to the schoolroom",
+     "hit": [
+      10,
+      50,
+      180,
+      360
+     ]
+    },
+    {
+     "to": "sejour",
+     "label": "Le séjour",
+     "hint": "the yellow cottage door, to the family den",
+     "hit": [
+      1110,
+      160,
+      85,
+      105
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_reciproque_adj",
+     "box": [
+      200,
+      380,
+      368,
+      220
+     ]
+    },
+    {
+     "id": "fr_aspirant_adj",
+     "box": [
+      335,
+      180,
+      110,
+      200
+     ]
+    },
+    {
+     "id": "fr_moral_adj",
+     "box": [
+      445,
+      160,
+      110,
+      215
+     ]
+    },
+    {
+     "id": "fr_demographique_adj",
+     "box": [
+      738,
+      190,
+      290,
+      270
+     ]
+    },
+    {
+     "id": "fr_humaniste_adj",
+     "box": [
+      570,
+      295,
+      165,
+      165
+     ]
+    },
+    {
+     "id": "fr_meprisable_adj",
+     "box": [
+      665,
+      462,
+      300,
+      248
+     ]
+    },
+    {
+     "id": "fr_feminisme_noun",
+     "box": [
+      1030,
+      272,
+      180,
+      428
+     ]
+    }
+   ]
+  },
+  "sejour": {
+   "name": "Le séjour · The family den",
+   "room_id": "R_character_05",
+   "image": "portraits/sejour.jpg",
+   "alt": "A cozy cottage den with leafy wallpaper, a big green sofa, a braided rug, a tall bookcase with a cat asleep on top and a window onto the garden. A girl with her hair on end sips a tea giving off purple steam; an aunt counts the three babies in a wooden playpen on her fingers; a young woman frames her vase of flowers with her fingers; a soybean in a trench coat, fedora and sunglasses sneaks past the sofa; grandpa, dad and a little boy doze on the sofa leaning on each other; a boy reaches up for the single video tape on an empty shelf; a girl kneels praying over a catalog with a red bike, a piggy bank beside her; a teen reads alone in his own armchair with his own lamp and bowl of popcorn. A yellow door with a round window leads back to the schoolyard, and a lavender door with a seashell opens onto a bathroom.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "cour",
+   "doors": [
+    {
+     "to": "cour",
+     "label": "La cour",
+     "hint": "the yellow cottage door, back to the schoolyard",
+     "hit": [
+      40,
+      40,
+      230,
+      160
+     ]
+    },
+    {
+     "to": "bains",
+     "label": "La salle de bains",
+     "hint": "the lavender door with the seashell, to the bathroom",
+     "hit": [
+      1045,
+      50,
+      105,
+      230
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_etrangete_noun",
+     "box": [
+      235,
+      205,
+      155,
+      150
+     ]
+    },
+    {
+     "id": "fr_natalite_noun",
+     "box": [
+      15,
+      240,
+      215,
+      420
+     ]
+    },
+    {
+     "id": "fr_esthetique_adj",
+     "box": [
+      345,
+      90,
+      190,
+      113
+     ]
+    },
+    {
+     "id": "fr_individuel_adj",
+     "box": [
+      855,
+      160,
+      80,
+      70
+     ]
+    },
+    {
+     "id": "fr_enclin_adj",
+     "box": [
+      578,
+      228,
+      262,
+      190
+     ]
+    },
+    {
+     "id": "fr_soi_disant_adj",
+     "box": [
+      408,
+      290,
+      168,
+      230
+     ]
+    },
+    {
+     "id": "fr_individualisme_noun",
+     "box": [
+      1000,
+      285,
+      265,
+      375
+     ]
+    },
+    {
+     "id": "fr_preneur_noun",
+     "box": [
+      745,
+      425,
+      250,
+      280
+     ]
+    }
+   ]
+  },
+  "bains": {
+   "name": "La salle de bains · The bathroom",
+   "room_id": "R_character_05",
+   "image": "portraits/bains.jpg",
+   "alt": "A bright family bathroom with white and sky-blue tiles, a washbasin, a claw-foot tub and a frosted window. A bearded man in a plaid robe relaxes in a green face mask with cucumber slices on his eyes; above him a big ant in a sailor cap steers a little sailboat jutting out of the wall; a mom holds up a toddler on a step stool so he can reach the tap; a girl with wild hair demands the hairbrush from a man meditating in the tub; a tearful boy stares at his teeth in a hand mirror; a teen frowns at the big plug that will not fit the socket; three kids grin with dazzling teeth, one holding up the toothpaste. A lavender door with a seashell leads back to the family den.",
+   "nameplate": [
+    75,
+    4.5
+   ],
+   "backTo": "sejour",
+   "doors": [
+    {
+     "to": "sejour",
+     "label": "Le séjour",
+     "hint": "the lavender door with the seashell, back to the family den",
+     "hit": [
+      10,
+      20,
+      170,
+      560
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_masculin_adj",
+     "box": [
+      300,
+      105,
+      170,
+      270
+     ]
+    },
+    {
+     "id": "fr_saillant_adj",
+     "box": [
+      470,
+      20,
+      120,
+      165
+     ]
+    },
+    {
+     "id": "fr_immediat_adj",
+     "box": [
+      722,
+      160,
+      250,
+      310
+     ]
+    },
+    {
+     "id": "fr_affectif_adj",
+     "box": [
+      430,
+      380,
+      215,
+      215
+     ]
+    },
+    {
+     "id": "fr_dependant_adj",
+     "box": [
+      560,
+      190,
+      160,
+      188
+     ]
+    },
+    {
+     "id": "fr_inadapte_adj",
+     "box": [
+      810,
+      472,
+      150,
+      178
+     ]
+    },
+    {
+     "id": "fr_effectif_noun",
+     "box": [
+      990,
+      310,
+      280,
+      400
      ]
     }
    ]
