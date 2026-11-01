@@ -1,294 +1,483 @@
 {
- "building": "concorde",
- "building_id": "B43_concorde",
- "sector_id": "S12_faiths",
- "v1_room_id": "R_faiths",
- "name": "Maisons de prière",
- "main": "concorde",
- "roomList": [
-  {
-   "key": "concorde",
-   "short": "La Concorde"
-  }
- ],
- "planned": {
-  "concorde": {
-   "vocabRoom": "R_faiths",
-   "only": [
-    "fr_religion_noun",
-    "fr_juif_adj",
-    "fr_temple_noun",
-    "fr_pasteur_noun",
-    "fr_culte_noun",
-    "fr_musulman_adj",
-    "fr_orthodoxe_adj",
-    "fr_protestant_noun",
-    "fr_ramadan_noun",
-    "fr_rabbin_noun",
-    "fr_synagogue_noun",
-    "fr_torah_noun",
-    "fr_pagode_noun",
-    "fr_kippa_noun",
-    "fr_chretien_adj"
-   ]
+  "building": "concorde",
+  "building_id": "B43_concorde",
+  "sector_id": "S12_faiths",
+  "v1_room_id": "R_faiths",
+  "name": "Maisons de prière",
+  "main": "concorde",
+  "roomList": [
+    {
+      "key": "concorde",
+      "short": "La Concorde"
+    },
+    {
+      "key": "synagogue",
+      "short": "La synagogue"
+    },
+    {
+      "key": "mosquee",
+      "short": "La mosquée"
+    }
+  ],
+  "planned": {
+    "concorde": {
+      "vocabRoom": "R_faiths",
+      "only": [
+        "fr_religion_noun",
+        "fr_pagode_noun",
+        "fr_chretien_adj",
+        "fr_orthodoxe_adj",
+        "fr_temple_noun",
+        "fr_pasteur_noun",
+        "fr_protestant_noun",
+        "fr_culte_noun",
+        "fr_christianisme_noun"
+      ]
+    },
+    "synagogue": {
+      "vocabRoom": "R_synagogue",
+      "only": [
+        "fr_synagogue_noun",
+        "fr_kippa_noun",
+        "fr_torah_noun",
+        "fr_mezouza_noun",
+        "fr_menorah_noun",
+        "fr_etoile_de_david_noun",
+        "fr_juif_adj",
+        "fr_rabbin_noun",
+        "fr_talmud_noun",
+        "fr_tallit_noun",
+        "fr_shofar_noun",
+        "fr_shabbat_noun"
+      ]
+    },
+    "mosquee": {
+      "vocabRoom": "R_mosque",
+      "only": [
+        "fr_mosquee_noun",
+        "fr_musulman_adj",
+        "fr_hallal_adj",
+        "fr_islam_noun",
+        "fr_coran_noun",
+        "fr_imam_noun",
+        "fr_minaret_noun",
+        "fr_mihrab_noun",
+        "fr_minbar_noun",
+        "fr_muezzin_noun",
+        "fr_tapis_de_priere_noun",
+        "fr_ramadan_noun"
+      ]
+    }
   },
-  "faiths_z1": {
-   "vocabRoom": "R_faiths_z1",
-   "only": [
-    "fr_christianisme_noun",
-    "fr_shabbat_noun",
-    "fr_coran_noun",
-    "fr_minaret_noun",
-    "fr_imam_noun",
-    "fr_islam_noun"
-   ]
+  "rooms": {
+    "concorde": {
+      "name": "La Concorde · Courtyard of many faiths",
+      "room_id": "R_faiths",
+      "image": "concorde/concorde.jpg",
+      "alt": "A sunny shared courtyard of many faiths: olive tree and dove, a Star-of-David synagogue door, a tiled mosque door, a small pagoda beside an Orthodox church with onion domes, and an outdoor Protestant service before a white chapel.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          1185,
+          610,
+          85,
+          90
+        ],
+        "label": "Le village · The village"
+      },
+      "doors": [
+        {
+          "to": "synagogue",
+          "label": "La synagogue",
+          "hint": "Through the open door under the Star of David into the synagogue",
+          "hit": [
+            58,
+            250,
+            150,
+            330
+          ]
+        },
+        {
+          "to": "mosquee",
+          "label": "La mosquée",
+          "hint": "Through the arched tiled door into the mosque",
+          "hit": [
+            1115,
+            248,
+            150,
+            320
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_religion_noun",
+          "box": [
+            215,
+            398,
+            150,
+            289
+          ]
+        },
+        {
+          "id": "fr_pagode_noun",
+          "box": [
+            287,
+            90,
+            168,
+            302
+          ]
+        },
+        {
+          "id": "fr_chretien_adj",
+          "box": [
+            485,
+            430,
+            152,
+            212
+          ]
+        },
+        {
+          "id": "fr_orthodoxe_adj",
+          "box": [
+            460,
+            56,
+            100,
+            150
+          ]
+        },
+        {
+          "id": "fr_temple_noun",
+          "box": [
+            900,
+            120,
+            170,
+            220
+          ]
+        },
+        {
+          "id": "fr_pasteur_noun",
+          "box": [
+            883,
+            342,
+            72,
+            195
+          ]
+        },
+        {
+          "id": "fr_protestant_noun",
+          "box": [
+            982,
+            355,
+            70,
+            190
+          ]
+        },
+        {
+          "id": "fr_culte_noun",
+          "box": [
+            712,
+            550,
+            383,
+            145
+          ]
+        },
+        {
+          "id": "fr_christianisme_noun",
+          "box": [
+            750,
+            405,
+            115,
+            62
+          ]
+        }
+      ]
+    },
+    "synagogue": {
+      "name": "La synagogue · The synagogue",
+      "room_id": "R_synagogue",
+      "image": "concorde/synagogue.jpg",
+      "alt": "A respectful synagogue sanctuary: a boy reads the Torah at the bimah, an elderly rabbi studies the Talmud by the window, a framed picture of a synagogue on the wall, with menorah, mezuzah, Shabbat candles, tallit and shofar; door back to the courtyard.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "concorde",
+          "label": "La Concorde",
+          "hint": "Back through the oak door to the courtyard",
+          "hit": [
+            58,
+            95,
+            140,
+            360
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_synagogue_noun",
+          "box": [
+            430,
+            80,
+            74,
+            96
+          ]
+        },
+        {
+          "id": "fr_kippa_noun",
+          "box": [
+            68,
+            543,
+            85,
+            50
+          ]
+        },
+        {
+          "id": "fr_torah_noun",
+          "box": [
+            450,
+            274,
+            152,
+            44
+          ]
+        },
+        {
+          "id": "fr_mezouza_noun",
+          "box": [
+            236,
+            210,
+            32,
+            66
+          ],
+          "labelAt": [
+            268,
+            177
+          ]
+        },
+        {
+          "id": "fr_menorah_noun",
+          "box": [
+            305,
+            226,
+            98,
+            128
+          ]
+        },
+        {
+          "id": "fr_etoile_de_david_noun",
+          "box": [
+            496,
+            358,
+            50,
+            58
+          ]
+        },
+        {
+          "id": "fr_juif_adj",
+          "box": [
+            685,
+            305,
+            280,
+            98
+          ]
+        },
+        {
+          "id": "fr_rabbin_noun",
+          "box": [
+            1092,
+            296,
+            142,
+            214
+          ]
+        },
+        {
+          "id": "fr_talmud_noun",
+          "box": [
+            975,
+            398,
+            115,
+            68
+          ]
+        },
+        {
+          "id": "fr_tallit_noun",
+          "box": [
+            838,
+            520,
+            212,
+            180
+          ]
+        },
+        {
+          "id": "fr_shofar_noun",
+          "box": [
+            1105,
+            540,
+            163,
+            70
+          ]
+        },
+        {
+          "id": "fr_shabbat_noun",
+          "box": [
+            727,
+            404,
+            150,
+            70
+          ]
+        }
+      ],
+      "backTo": "concorde"
+    },
+    "mosquee": {
+      "name": "La mosquée · The mosque",
+      "room_id": "R_mosque",
+      "image": "concorde/mosquee.jpg",
+      "alt": "A respectful mosque prayer hall with mihrab, minbar, a rolled prayer rug, Qur’an stand, a muezzin at the window with a minaret beyond, and dates set out for Ramadan; door back to the courtyard.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "concorde",
+          "label": "La Concorde",
+          "hint": "Back through the arched door to the courtyard",
+          "hit": [
+            208,
+            150,
+            185,
+            255
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_mosquee_noun",
+          "box": [
+            416,
+            248,
+            76,
+            108
+          ]
+        },
+        {
+          "id": "fr_musulman_adj",
+          "box": [
+            318,
+            412,
+            158,
+            250
+          ]
+        },
+        {
+          "id": "fr_hallal_adj",
+          "box": [
+            530,
+            476,
+            165,
+            70
+          ]
+        },
+        {
+          "id": "fr_islam_noun",
+          "box": [
+            1088,
+            265,
+            162,
+            167
+          ]
+        },
+        {
+          "id": "fr_coran_noun",
+          "box": [
+            1082,
+            490,
+            150,
+            185
+          ]
+        },
+        {
+          "id": "fr_imam_noun",
+          "box": [
+            762,
+            266,
+            90,
+            264
+          ]
+        },
+        {
+          "id": "fr_minaret_noun",
+          "box": [
+            1093,
+            42,
+            34,
+            150
+          ]
+        },
+        {
+          "id": "fr_mihrab_noun",
+          "box": [
+            728,
+            90,
+            140,
+            170
+          ]
+        },
+        {
+          "id": "fr_minbar_noun",
+          "box": [
+            856,
+            278,
+            120,
+            312
+          ],
+          "labelAt": [
+            916,
+            440
+          ]
+        },
+        {
+          "id": "fr_muezzin_noun",
+          "box": [
+            996,
+            108,
+            90,
+            138
+          ]
+        },
+        {
+          "id": "fr_tapis_de_priere_noun",
+          "box": [
+            978,
+            405,
+            82,
+            197
+          ],
+          "labelAt": [
+            965,
+            606
+          ]
+        },
+        {
+          "id": "fr_ramadan_noun",
+          "box": [
+            722,
+            585,
+            125,
+            65
+          ]
+        }
+      ],
+      "backTo": "concorde"
+    }
   }
- },
- "rooms": {
-  "concorde": {
-   "name": "La Concorde · Places of worship",
-   "room_id": "R_faiths",
-   "image": "concorde/concorde.jpg",
-   "alt": "A respectful hall of many faiths: synagogue, Protestant temple, mosque hints, Orthodox corner, pagoda, kippa, Torah, and people of several traditions gathered in peace.",
-   "nameplate": [
-    40,
-    4.5
-   ],
-   "mapExit": {
-    "box": [
-     1185,
-     610,
-     85,
-     90
-    ],
-    "label": "Le village · The village"
-   },
-   "doors": [],
-   "zooms": [
-    {
-     "to": "faiths_z1",
-     "label": "le lutrin",
-     "hint": "Look closer at the bookstand of scriptures",
-     "at": [
-      1180,
-      650
-     ],
-     "obj": [
-      1120,
-      600,
-      120,
-      100
-     ]
-    }
-   ],
-   "items": [
-    {
-     "id": "fr_religion_noun",
-     "box": [
-      40,
-      30,
-      140,
-      90
-     ]
-    },
-    {
-     "id": "fr_rabbin_noun",
-     "box": [
-      980,
-      40,
-      110,
-      140
-     ]
-    },
-    {
-     "id": "fr_synagogue_noun",
-     "box": [
-      40,
-      140,
-      140,
-      140
-     ]
-    },
-    {
-     "id": "fr_pasteur_noun",
-     "box": [
-      840,
-      100,
-      110,
-      150
-     ]
-    },
-    {
-     "id": "fr_kippa_noun",
-     "box": [
-      200,
-      160,
-      80,
-      80
-     ]
-    },
-    {
-     "id": "fr_juif_adj",
-     "box": [
-      360,
-      160,
-      120,
-      140
-     ]
-    },
-    {
-     "id": "fr_torah_noun",
-     "box": [
-      200,
-      260,
-      100,
-      110
-     ]
-    },
-    {
-     "id": "fr_musulman_adj",
-     "box": [
-      680,
-      180,
-      120,
-      150
-     ]
-    },
-    {
-     "id": "fr_orthodoxe_adj",
-     "box": [
-      360,
-      340,
-      120,
-      140
-     ]
-    },
-    {
-     "id": "fr_culte_noun",
-     "box": [
-      840,
-      300,
-      110,
-      110
-     ]
-    },
-    {
-     "id": "fr_chretien_adj",
-     "box": [
-      520,
-      360,
-      120,
-      140
-     ]
-    },
-    {
-     "id": "fr_temple_noun",
-     "box": [
-      700,
-      380,
-      120,
-      140
-     ]
-    },
-    {
-     "id": "fr_pagode_noun",
-     "box": [
-      40,
-      480,
-      140,
-      150
-     ]
-    },
-    {
-     "id": "fr_protestant_noun",
-     "box": [
-      980,
-      420,
-      110,
-      140
-     ]
-    },
-    {
-     "id": "fr_ramadan_noun",
-     "box": [
-      840,
-      560,
-      110,
-      110
-     ]
-    }
-   ],
-   "building_id": "B43_concorde",
-   "sector_id": "S12_faiths",
-   "text": "vocab"
-  },
-  "faiths_z1": {
-   "name": "Le lutrin · Bookstand of scriptures",
-   "room_id": "R_faiths_z1",
-   "image": "concorde/faiths_z1.jpg",
-   "parent": "concorde",
-   "alt": "Close-up of a bookstand: Christianity volume, Shabbat candles, open Quran, minaret model, imam portrait plaque, Islam calligraphy medallion.",
-   "doors": [],
-   "zooms": [],
-   "items": [
-    {
-     "id": "fr_christianisme_noun",
-     "box": [
-      700,
-      80,
-      140,
-      160
-     ]
-    },
-    {
-     "id": "fr_shabbat_noun",
-     "box": [
-      880,
-      80,
-      140,
-      160
-     ]
-    },
-    {
-     "id": "fr_coran_noun",
-     "box": [
-      700,
-      300,
-      140,
-      160
-     ]
-    },
-    {
-     "id": "fr_minaret_noun",
-     "box": [
-      880,
-      300,
-      140,
-      160
-     ]
-    },
-    {
-     "id": "fr_imam_noun",
-     "box": [
-      700,
-      500,
-      140,
-      140
-     ]
-    },
-    {
-     "id": "fr_islam_noun",
-     "box": [
-      880,
-      500,
-      140,
-      140
-     ]
-    }
-   ],
-   "building_id": "B43_concorde",
-   "sector_id": "S12_faiths",
-   "text": "vocab"
-  }
- }
 }
