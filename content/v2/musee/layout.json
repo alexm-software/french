@@ -124,6 +124,26 @@
   {
    "key": "caracteres",
    "short": "Les caractères"
+  },
+  {
+   "key": "mysteres",
+   "short": "Les mystères"
+  },
+  {
+   "key": "saveurs",
+   "short": "Les saveurs"
+  },
+  {
+   "key": "jardin",
+   "short": "Le jardin d'hiver"
+  },
+  {
+   "key": "emotions",
+   "short": "Les émotions"
+  },
+  {
+   "key": "classe",
+   "short": "L'atelier"
   }
  ],
  "planned": {
@@ -604,6 +624,77 @@
     "fr_mondain_adj",
     "fr_grotesque_adj",
     "fr_veritable_adj"
+   ]
+  },
+  "mysteres": {
+   "vocabRoom": "R_adj_senses_07",
+   "only": [
+    "fr_nocturne_adj",
+    "fr_mystique_adj",
+    "fr_surnaturel_adj",
+    "fr_maudit_adj",
+    "fr_mortel_adj",
+    "fr_furtif_adj",
+    "fr_morne_adj",
+    "fr_melancolique_adj",
+    "fr_indescriptible_adj",
+    "fr_vertigineux_adj",
+    "fr_gothique_adj"
+   ]
+  },
+  "saveurs": {
+   "vocabRoom": "R_adj_senses_02",
+   "only": [
+    "fr_agreable_adj",
+    "fr_preferable_adj",
+    "fr_favori_adj",
+    "fr_desireux_adj",
+    "fr_allergique_adj",
+    "fr_triple_adj",
+    "fr_brulant_adj",
+    "fr_special_adj",
+    "fr_stimulation_noun"
+   ]
+  },
+  "jardin": {
+   "vocabRoom": "R_adj_senses_05",
+   "only": [
+    "fr_naissant_adj",
+    "fr_florissant_adj",
+    "fr_pur_adj",
+    "fr_terrestre_adj",
+    "fr_tranquille_adj",
+    "fr_mur_adj",
+    "fr_naturel_adj",
+    "fr_grele_adj"
+   ]
+  },
+  "emotions": {
+   "vocabRoom": "R_adj_senses_05",
+   "only": [
+    "fr_emu_adj",
+    "fr_emotif_adj",
+    "fr_sensible_adj",
+    "fr_capricieux_adj",
+    "fr_hardi_adj",
+    "fr_enviable_adj",
+    "fr_penible_adj",
+    "fr_expressif_adj",
+    "fr_hautain_adj"
+   ]
+  },
+  "classe": {
+   "vocabRoom": "R_adj_senses_08",
+   "only": [
+    "fr_didactique_adj",
+    "fr_coherent_adj",
+    "fr_incontestable_adj",
+    "fr_terminal_adj",
+    "fr_ardu_adj",
+    "fr_conscient_adj",
+    "fr_assis_adj",
+    "fr_civil_adj",
+    "fr_phonetique_adj"
    ]
   }
  },
@@ -3218,7 +3309,7 @@
    "name": "Le cabinet des sens · The cabinet of the senses",
    "room_id": "R_abs_senses_01",
    "image": "musee/sens.jpg",
-   "alt": "The cabinet of the senses, a playful hands-on gallery of the museum with soft pale-green walls, a white column and a pale wood floor, seen from the near left. High on the back wall hang five big painted symbols of the senses: an eye, an ear, a nose, a hand and a mouth. At the left a weaver works at a big wooden loom glowing in a beam of light, a boy looks through a brass telescope, and a boy pinches his nose at a smelly cheese under a glass dome. In the middle a girl stands under a huge red umbrella beside its round shadow, a girl on a pile of presents raises her hand, a girl in headphones speaks into a microphone at a little radio desk, and a girl listens through a brass ear trumpet to a black coot bird. At the right a jester points with a big gesture, a girl covers her ears beside a steaming copper pot, a museum guard puts a finger to his lips behind a low glass case holding an old knight's lance, and a ceremonial guard in a red tunic and tall bearskin hat stares straight ahead. A white door on the left wall leads back to the exhibition hall; closed black, blue and lilac doors with little signs lead to cabinets not yet open.",
+   "alt": "The cabinet of the senses, a playful hands-on gallery of the museum with soft pale-green walls, a white column and a pale wood floor, seen from the near left. High on the back wall hang five big painted symbols of the senses: an eye, an ear, a nose, a hand and a mouth. At the left a weaver works at a big wooden loom glowing in a beam of light, a boy looks through a brass telescope, and a boy pinches his nose at a smelly cheese under a glass dome. In the middle a girl stands under a huge red umbrella beside its round shadow, a girl on a pile of presents raises her hand, a girl in headphones speaks into a microphone at a little radio desk, and a girl listens through a brass ear trumpet to a black coot bird. At the right a jester points with a big gesture, a girl covers her ears beside a steaming copper pot, a museum guard puts a finger to his lips behind a low glass case holding an old knight's lance, and a ceremonial guard in a red tunic and tall bearskin hat stares straight ahead. A white door on the left wall leads back to the exhibition hall; on the back wall a black door with a light-bulb sign leads to the cabinet of lights and a blue door with an ear sign to the cabinet of sounds, and a lilac door with a flower on the right wall leads to the cabinet of scents. Also on the back wall, a sunflower-yellow door with a painted flower leads to the cabinet of feelings, and a teal door with a painted flower leads to the museum classroom.",
    "nameplate": [
     50,
     4.5
@@ -3230,10 +3321,10 @@
      "label": "Le vernissage",
      "hint": "the white door on the left wall, back to the exhibition hall",
      "hit": [
-      12,
-      118,
-      85,
-      165
+      10,
+      119,
+      84,
+      170
      ]
     },
     {
@@ -3241,10 +3332,10 @@
      "label": "Les lumières",
      "hint": "the black door with the light-bulb sign on the back wall, to the cabinet of lights",
      "hit": [
-      504,
-      154,
-      86,
-      118
+      500,
+      150,
+      94,
+      125
      ]
     },
     {
@@ -3252,10 +3343,10 @@
      "label": "Les sons",
      "hint": "the blue door with the ear sign on the back wall, to the cabinet of sounds",
      "hit": [
-      679,
-      154,
-      80,
-      160
+      675,
+      150,
+      90,
+      172
      ]
     },
     {
@@ -3268,6 +3359,28 @@
       82,
       150
      ]
+    },
+    {
+     "to": "emotions",
+     "label": "Les émotions",
+     "hint": "the sunflower-yellow door with the painted flower on the back wall, behind the girl on the presents, to the cabinet of feelings",
+     "hit": [
+      338,
+      150,
+      90,
+      120
+     ]
+    },
+    {
+     "to": "classe",
+     "label": "L'atelier",
+     "hint": "the teal door with the painted flower on the back wall, behind the girl covering her ears, to the museum classroom",
+     "hit": [
+      975,
+      150,
+      75,
+      80
+     ]
     }
    ],
    "zooms": [],
@@ -3275,37 +3388,37 @@
     {
      "id": "fr_lumiere_noun",
      "box": [
-      125,
+      122,
       144,
-      222,
+      212,
       145
      ]
     },
     {
      "id": "fr_presence_noun",
      "box": [
-      350,
-      144,
-      122,
-      128
+      430,
+      185,
+      68,
+      88
      ]
     },
     {
      "id": "fr_vue_noun",
      "box": [
-      38,
-      290,
-      180,
-      138
+      37,
+      294,
+      182,
+      135
      ]
     },
     {
      "id": "fr_odeur_noun",
      "box": [
-      38,
-      435,
+      37,
+      431,
       215,
-      280
+      289
      ]
     },
     {
@@ -3313,61 +3426,61 @@
      "box": [
       258,
       394,
-      250,
-      322
+      210,
+      326
      ]
     },
     {
      "id": "fr_emission_noun",
      "box": [
-      425,
-      275,
-      206,
-      115
+      431,
+      318,
+      200,
+      72
      ]
     },
     {
      "id": "fr_ecoute_noun",
      "box": [
-      530,
+      470,
       456,
       190,
-      262
+      264
      ]
     },
     {
      "id": "fr_geste_noun",
      "box": [
-      762,
+      768,
       144,
-      155,
+      175,
       170
      ]
     },
     {
      "id": "fr_bruit_noun",
      "box": [
-      920,
-      180,
-      200,
-      138
+      945,
+      235,
+      184,
+      120
      ]
     },
     {
      "id": "fr_silence_noun",
      "box": [
-      795,
-      322,
-      325,
-      266
+      800,
+      319,
+      138,
+      140
      ]
     },
     {
      "id": "fr_regard_noun",
      "box": [
-      1125,
+      1131,
       281,
-      135,
+      131,
       439
      ]
     }
@@ -3377,7 +3490,7 @@
    "name": "Le cabinet des lumières · The cabinet of lights",
    "room_id": "R_abs_senses_02",
    "image": "musee/lumieres.jpg",
-   "alt": "The cabinet of lights behind the cabinet of the senses, seen from the near left: deep midnight-blue walls with painted golden stars, a big golden crescent moon lamp, a lightbulb-shaped paper lantern and a mirror disco ball hanging from the ceiling. On the left a black door, a fisherman dangling a glowing lure over a round aquarium where a goldfish swims, a girl in green pulling aside the curtain of a pitch-dark booth where only two raccoon eyes glow, a girl holding up a glass teapot of clear tea in a beam of light, and a boy turning the brass dial of a tall glowing lamp while an owl on it squints. In the middle a silver-gray door with a painted eye in the back wall, a glowing blue jellyfish in a big glass jar, a girl shielding her eyes from a dazzling diamond on a velvet cushion, and a gray-haired tin seller polishing a sparkling pot on her cart. On the right a stagehand aims a big spotlight, a boy peers into a wooden chest whose black empty inside holds one pink neon tube, a girl points a laser pointer at the wall while a gray cat leaps for the red dot, a little wizard pulls a lever that lights a string of bulbs, and a child in a bedsheet ghost costume holds up a prism beside a fan of rainbow light.",
+   "alt": "The cabinet of lights behind the cabinet of the senses, seen from the near left: deep midnight-blue walls with painted golden stars, a big golden crescent moon lamp, a lightbulb-shaped paper lantern and a mirror disco ball hanging from the ceiling. On the left a black door, a fisherman dangling a glowing lure over a round aquarium where a goldfish swims, a girl in green pulling aside the curtain of a pitch-dark booth where only two raccoon eyes glow, a girl holding up a glass teapot of clear tea in a beam of light, and a boy turning the brass dial of a tall glowing lamp while an owl on it squints. In the middle a silver-gray door with a painted eye in the back wall, a glowing blue jellyfish in a big glass jar, a girl shielding her eyes from a dazzling diamond on a velvet cushion, and a gray-haired tin seller polishing a sparkling pot on her cart. On the right a stagehand aims a big spotlight, a boy peers into a wooden chest whose black empty inside holds one pink neon tube, a girl points a laser pointer at the wall while a gray cat leaps for the red dot, a little wizard pulls a lever that lights a string of bulbs, and a child in a bedsheet ghost costume holds up a prism beside a fan of rainbow light. On the back wall at the right, a midnight-blue door with a painted flower leads to the cabinet of mysteries.",
    "nameplate": [
     50,
     4.5
@@ -3389,9 +3502,9 @@
      "label": "Le cabinet des sens",
      "hint": "the black door on the left wall, back to the cabinet of the senses",
      "hit": [
-      25,
-      110,
-      125,
+      22,
+      108,
+      128,
       170
      ]
     },
@@ -3400,10 +3513,21 @@
      "label": "La vue",
      "hint": "the silver-gray door with the painted eye on the back wall, to the cabinet of sight",
      "hit": [
-      532,
-      190,
-      50,
-      160
+      490,
+      135,
+      98,
+      200
+     ]
+    },
+    {
+     "to": "mysteres",
+     "label": "Les mystères",
+     "hint": "the midnight-blue door with the painted flower on the back wall at the right, behind the open chest, to the cabinet of mysteries",
+     "hit": [
+      1065,
+      106,
+      100,
+      105
      ]
     }
    ],
@@ -3412,46 +3536,46 @@
     {
      "id": "fr_lueur_noun",
      "box": [
-      20,
+      22,
       285,
-      190,
-      250
+      210,
+      252
      ]
     },
     {
      "id": "fr_obscurite_noun",
      "box": [
-      215,
+      235,
       175,
-      140,
-      220
+      115,
+      240
      ]
     },
     {
      "id": "fr_clarte_noun",
      "box": [
-      368,
+      375,
       225,
-      160,
-      170
+      106,
+      175
      ]
     },
     {
      "id": "fr_luminosite_noun",
      "box": [
-      212,
-      400,
-      250,
-      315
+      235,
+      420,
+      230,
+      300
      ]
     },
     {
      "id": "fr_lumineux_adj",
      "box": [
-      586,
-      222,
-      100,
-      140
+      598,
+      225,
+      68,
+      138
      ],
      "labelAt": [
       645,
@@ -3461,18 +3585,18 @@
     {
      "id": "fr_eblouissant_adj",
      "box": [
-      550,
-      385,
-      160,
-      175
+      500,
+      420,
+      210,
+      140
      ]
     },
     {
      "id": "fr_etincelant_adj",
      "box": [
       712,
-      395,
-      225,
+      400,
+      165,
       320
      ]
     },
@@ -3480,54 +3604,54 @@
      "id": "fr_brillant_adj",
      "box": [
       400,
-      50,
-      115,
-      135
+      56,
+      88,
+      125
      ]
     },
     {
      "id": "fr_eclairage_noun",
      "box": [
-      712,
+      708,
       110,
-      150,
-      270
+      167,
+      190
      ]
     },
     {
      "id": "fr_neant_noun",
      "box": [
-      862,
-      225,
-      170,
-      165
+      880,
+      235,
+      145,
+      160
      ]
     },
     {
      "id": "fr_laser_noun",
      "box": [
-      1035,
-      110,
-      205,
-      180
+      1025,
+      215,
+      90,
+      120
      ]
     },
     {
      "id": "fr_allumage_noun",
      "box": [
-      1110,
-      295,
-      160,
-      110
+      1120,
+      255,
+      140,
+      165
      ]
     },
     {
      "id": "fr_spectre_noun",
      "box": [
-      990,
-      405,
-      290,
-      315
+      988,
+      425,
+      292,
+      295
      ]
     }
    ]
@@ -3684,7 +3808,7 @@
    "name": "Le cabinet des parfums · The cabinet of scents",
    "room_id": "R_abs_senses_03",
    "image": "musee/parfums.jpg",
-   "alt": "The cabinet of scents behind the cabinet of the senses, seen from the near left: sage-green walls hung with bunches of dried lavender and herbs, tall shelves of colorful perfume bottles and a big copper perfume still. On the left a lilac door with a painted flower, a lady spraying mist from a glass perfume bottle, and a perfume maker in a lab coat letting one drop fall from a dropper into a tiny vial. In the middle a girl tasting a spoonful of stew with her eyes closed, a mayor in a tricolor sash biting a lemon, a green parrot on a basket of pineapple, mango and dragon fruit, a boy shrugging and a girl pinching her nose at a pot of boiled cabbage, and a gentleman in a velvet jacket sniffing a white gardenia. On the right a pink pig sniffing a basket where a little rat peeks out, a smiling baker holding up a steaming pie, and a boy pinching his nose at a sneaker dripping green goo; behind him a honey-wood door with a painted hand.",
+   "alt": "The cabinet of scents behind the cabinet of the senses, seen from the near left: sage-green walls hung with bunches of dried lavender and herbs, tall shelves of colorful perfume bottles and a big copper perfume still. On the left a lilac door with a painted flower, a lady spraying mist from a glass perfume bottle, and a perfume maker in a lab coat letting one drop fall from a dropper into a tiny vial. In the middle a girl tasting a spoonful of stew with her eyes closed, a mayor in a tricolor sash biting a lemon, a green parrot on a basket of pineapple, mango and dragon fruit, a boy shrugging and a girl pinching her nose at a pot of boiled cabbage, and a gentleman in a velvet jacket sniffing a white gardenia. On the right a pink pig sniffing a basket where a little rat peeks out, a smiling baker holding up a steaming pie, and a boy pinching his nose at a sneaker dripping green goo; behind him a honey-wood door with a painted hand. On the back wall, a cherry-red door with a painted flower beside the copper still leads to the cabinet of tastes, and a mint-green door with a painted flower behind the baker leads to the winter garden.",
    "nameplate": [
     50,
     4.5
@@ -3696,10 +3820,10 @@
      "label": "Le cabinet des sens",
      "hint": "the lilac door with the flower on the left wall, back to the cabinet of the senses",
      "hit": [
-      15,
+      12,
       85,
-      100,
-      280
+      105,
+      290
      ]
     },
     {
@@ -3712,6 +3836,28 @@
       80,
       300
      ]
+    },
+    {
+     "to": "saveurs",
+     "label": "Les saveurs",
+     "hint": "the cherry-red door with the painted flower on the back wall, beside the copper still, to the cabinet of tastes",
+     "hit": [
+      500,
+      78,
+      58,
+      150
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin d'hiver",
+     "hint": "the mint-green door with the painted flower on the back wall, behind the baker, to the winter garden",
+     "hit": [
+      946,
+      69,
+      110,
+      100
+     ]
     }
    ],
    "zooms": [],
@@ -3719,90 +3865,90 @@
     {
      "id": "fr_fragrance_noun",
      "box": [
-      115,
+      119,
       200,
-      230,
-      180
+      218,
+      175
      ]
     },
     {
      "id": "fr_subtilite_noun",
      "box": [
       50,
-      385,
+      382,
       330,
-      335
+      338
      ]
     },
     {
      "id": "fr_savoureux_adj",
      "box": [
-      395,
-      235,
-      145,
-      155
+      400,
+      232,
+      155,
+      175
      ]
     },
     {
      "id": "fr_desagreable_adj",
      "box": [
-      385,
-      395,
+      381,
+      410,
       300,
-      325
+      310
      ]
     },
     {
      "id": "fr_amer_adj",
      "box": [
-      545,
+      565,
       125,
-      140,
-      170
+      130,
+      160
      ]
     },
     {
      "id": "fr_exotique_adj",
      "box": [
-      695,
-      175,
-      180,
-      190
+      697,
+      169,
+      178,
+      194
      ]
     },
     {
      "id": "fr_suave_adj",
      "box": [
       700,
-      385,
-      170,
-      335
+      382,
+      175,
+      338
      ]
     },
     {
      "id": "fr_odorat_noun",
      "box": [
-      880,
+      878,
       290,
-      210,
-      165
+      165,
+      180
      ]
     },
     {
      "id": "fr_effluve_noun",
      "box": [
-      965,
-      145,
-      215,
-      140
+      960,
+      180,
+      222,
+      105
      ]
     },
     {
      "id": "fr_degout_noun",
      "box": [
-      1095,
+      1048,
       375,
-      180,
+      222,
       345
      ]
     }
@@ -4198,7 +4344,7 @@
    "name": "La salle des fêtes · The party room",
    "room_id": "R_adj_senses_06",
    "image": "musee/fete.jpg",
-   "alt": "The party room off the sound room: a white hall with a checkered floor, paper lanterns, garlands, streamers, a little curtained stage and piles of presents. By the red door with a brass music-note ornament on the left, a boy in sunglasses rides a skateboard, a wild boy bounces on a pogo stick, a grandma jumps rope, and a magician pulls a white rabbit from his top hat. In the middle a tower of folding chairs has toppled into a heap with a puppy on top while a boy sweeps confetti everywhere with a broom; a girl in a party hat blows a party horn by the birthday cake, and a relaxed man lounges in a striped deck chair, tie undone.",
+   "alt": "The party room off the sound room: a white hall with a checkered floor, paper lanterns, garlands, streamers, a little curtained stage and piles of presents. By the orange door with a painted flower on the left, a boy in sunglasses rides a skateboard, a wild boy bounces on a pogo stick, a grandma jumps rope, and a magician pulls a white rabbit from his top hat. In the middle a tower of folding chairs has toppled into a heap with a puppy on top while a boy sweeps confetti everywhere with a broom; a girl in a party hat blows a party horn by the birthday cake, and a relaxed man lounges in a striped deck chair, tie undone.",
    "nameplate": [
     50,
     4.5
@@ -4208,7 +4354,7 @@
     {
      "to": "sons",
      "label": "Les sons",
-     "hint": "the red door with the brass music-note ornament on the left wall, back to the sound room",
+     "hint": "the orange door with the painted flower on the left wall, back to the sound room",
      "hit": [
       18,
       140,
@@ -4730,6 +4876,555 @@
       215,
       155,
       215
+     ]
+    }
+   ]
+  },
+  "mysteres": {
+   "name": "Le cabinet des mystères · The cabinet of mysteries",
+   "room_id": "R_adj_senses_07",
+   "image": "musee/mysteres.jpg",
+   "alt": "The cabinet of mysteries off the lights room: a moonlit indigo room with bookshelves, candles and a tall arched window. By the midnight-blue door with a painted flower on the left wall, a bat hangs from a branch, a girl peers into a misty crystal ball, a boy holds a glowing orb, a moody pirate frowns at a treasure chest under a little rain cloud, a poison-dart frog sits in its terrarium, a fox tiptoes off with a sausage, a glum man stands under his umbrella, a sad collie rests its chin on a melon, a boy gapes at a swirling painting, a girl clings to the top of a tall ladder, and a man admires a model Gothic cathedral.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "lumieres",
+   "doors": [
+    {
+     "to": "lumieres",
+     "label": "Les lumières",
+     "hint": "the midnight-blue door with the painted flower on the left wall, back to the lights room",
+     "hit": [
+      30,
+      160,
+      140,
+      390
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_nocturne_adj",
+     "box": [
+      350,
+      50,
+      90,
+      150
+     ]
+    },
+    {
+     "id": "fr_mystique_adj",
+     "box": [
+      406,
+      238,
+      144,
+      180
+     ]
+    },
+    {
+     "id": "fr_surnaturel_adj",
+     "box": [
+      575,
+      250,
+      112,
+      170
+     ]
+    },
+    {
+     "id": "fr_maudit_adj",
+     "box": [
+      695,
+      200,
+      122,
+      200
+     ]
+    },
+    {
+     "id": "fr_mortel_adj",
+     "box": [
+      822,
+      232,
+      98,
+      160
+     ]
+    },
+    {
+     "id": "fr_furtif_adj",
+     "box": [
+      318,
+      575,
+      150,
+      145
+     ]
+    },
+    {
+     "id": "fr_morne_adj",
+     "box": [
+      400,
+      420,
+      68,
+      150
+     ]
+    },
+    {
+     "id": "fr_melancolique_adj",
+     "box": [
+      470,
+      560,
+      172,
+      140
+     ]
+    },
+    {
+     "id": "fr_indescriptible_adj",
+     "box": [
+      645,
+      425,
+      100,
+      290
+     ]
+    },
+    {
+     "id": "fr_vertigineux_adj",
+     "box": [
+      662,
+      20,
+      100,
+      175
+     ]
+    },
+    {
+     "id": "fr_gothique_adj",
+     "box": [
+      750,
+      410,
+      140,
+      250
+     ]
+    }
+   ]
+  },
+  "saveurs": {
+   "name": "Le cabinet des saveurs · The cabinet of tastes",
+   "room_id": "R_adj_senses_02",
+   "image": "musee/saveurs.jpg",
+   "alt": "The tasting kitchen off the scents room: a cozy kitchen with copper pans, a pastry case and a checkered floor. By the cherry-red door with a painted flower on the left wall, a baby taps a busy board, an old couple nod over warm cookies, a boy points at a strawberry cake, a boy holds up his strawberry ice-cream cone, a boy presses his nose to the cream-puff case, a girl sneezes near a bowl of peanuts, a toddler holds a triple-decker sandwich, a cook stirs a steaming pot, and a girl carries a birthday cake with one candle.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "parfums",
+   "doors": [
+    {
+     "to": "parfums",
+     "label": "Les parfums",
+     "hint": "the cherry-red door with the painted flower on the left wall, back to the scents room",
+     "hit": [
+      88,
+      25,
+      195,
+      425
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_stimulation_noun",
+     "box": [
+      300,
+      455,
+      230,
+      260
+     ]
+    },
+    {
+     "id": "fr_agreable_adj",
+     "box": [
+      300,
+      95,
+      175,
+      150
+     ]
+    },
+    {
+     "id": "fr_preferable_adj",
+     "box": [
+      405,
+      250,
+      125,
+      190
+     ]
+    },
+    {
+     "id": "fr_favori_adj",
+     "box": [
+      525,
+      130,
+      90,
+      115
+     ]
+    },
+    {
+     "id": "fr_desireux_adj",
+     "box": [
+      620,
+      190,
+      125,
+      135
+     ]
+    },
+    {
+     "id": "fr_allergique_adj",
+     "box": [
+      532,
+      330,
+      112,
+      270
+     ]
+    },
+    {
+     "id": "fr_triple_adj",
+     "box": [
+      692,
+      412,
+      95,
+      300
+     ]
+    },
+    {
+     "id": "fr_brulant_adj",
+     "box": [
+      800,
+      60,
+      170,
+      240
+     ]
+    },
+    {
+     "id": "fr_special_adj",
+     "box": [
+      790,
+      310,
+      175,
+      375
+     ]
+    }
+   ]
+  },
+  "jardin": {
+   "name": "Le jardin d'hiver · The winter garden",
+   "room_id": "R_adj_senses_05",
+   "image": "musee/jardin.jpg",
+   "alt": "The winter garden off the scents room: a glass conservatory full of palms, flower beds, a pond and a stone fountain. By the mint-green door with a painted flower in the brick wall on the left, a girl watches a bird by its nest and a blue egg, a florist holds an armful of flowers, a girl cups clear water from the fountain, a boy spins a big globe, a calm old man sits by the pond where a turtle rests, a kitten mews up at a ripe red pear, a girl bites a fresh apple, and a lanky boy lifts a golden cup.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "parfums",
+   "doors": [
+    {
+     "to": "parfums",
+     "label": "Les parfums",
+     "hint": "the mint-green door with the painted flower in the brick wall on the left, back to the scents room",
+     "hit": [
+      68,
+      175,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_naissant_adj",
+     "box": [
+      300,
+      105,
+      200,
+      150
+     ]
+    },
+    {
+     "id": "fr_florissant_adj",
+     "box": [
+      569,
+      56,
+      169,
+      238
+     ]
+    },
+    {
+     "id": "fr_pur_adj",
+     "box": [
+      750,
+      94,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_terrestre_adj",
+     "box": [
+      300,
+      262,
+      225,
+      188
+     ]
+    },
+    {
+     "id": "fr_tranquille_adj",
+     "box": [
+      680,
+      298,
+      212,
+      150
+     ]
+    },
+    {
+     "id": "fr_mur_adj",
+     "box": [
+      312,
+      525,
+      180,
+      170
+     ]
+    },
+    {
+     "id": "fr_naturel_adj",
+     "box": [
+      550,
+      481,
+      150,
+      239
+     ]
+    },
+    {
+     "id": "fr_grele_adj",
+     "box": [
+      800,
+      450,
+      100,
+      270
+     ]
+    }
+   ]
+  },
+  "emotions": {
+   "name": "Le cabinet des émotions · The cabinet of feelings",
+   "room_id": "R_adj_senses_05",
+   "image": "musee/emotions.jpg",
+   "alt": "The cabinet of feelings off the senses room: a peach room with a climbing wall and a little stage with red curtains. By the sunflower-yellow door with a painted flower on the left wall, an emu nuzzles a girl who wipes a happy tear, a boy cries happy tears over a puppy drawing, a princess sits wide awake on a stack of mattresses, a toddler turns away from her toys with arms crossed, a boy climbs the rock wall, a girl holds a huge bunch of balloons, a goat nibbles an envelope, an opera singer flings out her arms on stage, and a lady in a sun hat lifts her nose in the air.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sens",
+   "doors": [
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the sunflower-yellow door with the painted flower on the left wall, back to the senses room",
+     "hit": [
+      19,
+      175,
+      156,
+      312
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_emu_adj",
+     "box": [
+      300,
+      395,
+      220,
+      200
+     ]
+    },
+    {
+     "id": "fr_emotif_adj",
+     "box": [
+      525,
+      525,
+      145,
+      195
+     ]
+    },
+    {
+     "id": "fr_sensible_adj",
+     "box": [
+      525,
+      206,
+      268,
+      310
+     ]
+    },
+    {
+     "id": "fr_capricieux_adj",
+     "box": [
+      725,
+      520,
+      115,
+      190
+     ]
+    },
+    {
+     "id": "fr_hardi_adj",
+     "box": [
+      330,
+      70,
+      120,
+      225
+     ]
+    },
+    {
+     "id": "fr_enviable_adj",
+     "box": [
+      480,
+      30,
+      150,
+      175
+     ]
+    },
+    {
+     "id": "fr_penible_adj",
+     "box": [
+      842,
+      450,
+      105,
+      150
+     ]
+    },
+    {
+     "id": "fr_expressif_adj",
+     "box": [
+      755,
+      100,
+      92,
+      100
+     ]
+    },
+    {
+     "id": "fr_hautain_adj",
+     "box": [
+      848,
+      155,
+      94,
+      290
+     ]
+    }
+   ]
+  },
+  "classe": {
+   "name": "L'atelier pédagogique · The museum classroom",
+   "room_id": "R_adj_senses_08",
+   "image": "musee/classe.jpg",
+   "alt": "The teaching workshop off the senses room: a bright classroom with a chalkboard, low tables, bookshelves and a toy train track. By the teal door with a painted flower on the left wall, a teacher acts out a volcano eruption, a boy fits the last jigsaw piece, a girl breaks the finish ribbon, a toy train pulls into its last station, a boy pushes a foam boulder up a ramp, a girl sits up wide awake by a ringing alarm clock, a toddler sits proudly on a chair, two kids in pedal cars wave each other on, and a girl sounds out vowels into an old telephone with a hand mirror.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "sens",
+   "doors": [
+    {
+     "to": "sens",
+     "label": "Le cabinet des sens",
+     "hint": "the teal door with the painted flower on the left wall, back to the senses room",
+     "hit": [
+      119,
+      50,
+      125,
+      256
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_didactique_adj",
+     "box": [
+      325,
+      69,
+      262,
+      145
+     ]
+    },
+    {
+     "id": "fr_coherent_adj",
+     "box": [
+      281,
+      219,
+      231,
+      193
+     ]
+    },
+    {
+     "id": "fr_incontestable_adj",
+     "box": [
+      606,
+      100,
+      169,
+      205
+     ]
+    },
+    {
+     "id": "fr_terminal_adj",
+     "box": [
+      550,
+      310,
+      165,
+      125
+     ]
+    },
+    {
+     "id": "fr_ardu_adj",
+     "box": [
+      780,
+      160,
+      195,
+      140
+     ]
+    },
+    {
+     "id": "fr_conscient_adj",
+     "box": [
+      800,
+      302,
+      190,
+      190
+     ]
+    },
+    {
+     "id": "fr_assis_adj",
+     "box": [
+      330,
+      444,
+      130,
+      256
+     ]
+    },
+    {
+     "id": "fr_civil_adj",
+     "box": [
+      475,
+      440,
+      313,
+      255
+     ]
+    },
+    {
+     "id": "fr_phonetique_adj",
+     "box": [
+      800,
+      495,
+      190,
+      225
      ]
     }
    ]
