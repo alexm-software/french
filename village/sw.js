@@ -5,7 +5,7 @@
 // only the offline fallback.
 // Bump V whenever a deploy changes an existing image/card (check_v2.py --cache-base enforces this at pack time):
 // the new worker deletes every older cache on activate and takes over open pages at once.
-var V='village-v12', SHELL=['./','index.html','app.js','extras.js','practice.js','style.css','icons.js','data/map.js','data/live.js','manifest.webmanifest','icon.svg'];
+var V='village-v13', SHELL=['./','index.html','app.js','extras.js','practice.js','style.css','icons.js','data/map.js','data/live.js','manifest.webmanifest','icon.svg'];
 self.addEventListener('install',function(e){ e.waitUntil(caches.open(V).then(function(c){return c.addAll(SHELL.map(function(u){return new Request(u,{cache:'reload'})}))}).then(function(){return self.skipWaiting()})) });
 self.addEventListener('activate',function(e){ e.waitUntil(caches.keys().then(function(k){return Promise.all(k.filter(function(n){return n!==V}).map(function(n){return caches.delete(n)}))}).then(function(){return self.clients.claim()})) });
 self.addEventListener('fetch',function(e){ var r=e.request; if(r.method!=='GET'||new URL(r.url).origin!==location.origin) return;
