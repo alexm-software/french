@@ -13038,7 +13038,7 @@
       "id": "R_faiths",
       "name": "La Concorde · Courtyard of many faiths",
       "type": "theme",
-      "setting": "Shared limestone courtyard of Maisons de prière with an olive tree; doors open to the synagogue and the mosque; Protestant chapel, Orthodox domes, and a pagoda stay as courtyard landmarks.",
+      "setting": "Shared limestone courtyard of Maisons de prière with an olive tree; doors open to the synagogue, the mosque, the Protestant temple, the Orthodox church and the pagoda.",
       "kind": "full",
       "sector_id": "S12_faiths",
       "building_id": "B43_concorde",
@@ -13048,7 +13048,10 @@
       "mean_level": 4.5,
       "related_rooms": [
         "R_synagogue",
-        "R_mosque"
+        "R_mosque",
+        "R_temple",
+        "R_orthodox",
+        "R_pagoda"
       ],
       "conversation_ids": [
         "V_concorde_concorde_01"
@@ -37917,7 +37920,10 @@
       "mean_level": 4.5,
       "related_rooms": [
         "R_faiths",
-        "R_mosque"
+        "R_mosque",
+        "R_temple",
+        "R_orthodox",
+        "R_pagoda"
       ],
       "conversation_ids": [
         "V_concorde_synagogue_01"
@@ -37959,7 +37965,10 @@
       "mean_level": 4.5,
       "related_rooms": [
         "R_faiths",
-        "R_synagogue"
+        "R_synagogue",
+        "R_temple",
+        "R_orthodox",
+        "R_pagoda"
       ],
       "conversation_ids": [
         "V_concorde_mosquee_01"
@@ -37985,6 +37994,127 @@
         "left": 1,
         "right": 9,
         "n/a": 2
+      },
+      "parent_room_id": "R_faiths"
+    },
+    {
+      "id": "R_temple",
+      "name": "Le temple · The Protestant temple",
+      "type": "theme",
+      "setting": "Protestant temple of Maisons de prière: bare white walls, wooden pulpit, Huguenot cross, communion table with bread and cup, lectern Bible, pews and harmonium; door back to the courtyard.",
+      "kind": "full",
+      "sector_id": "S12_faiths",
+      "building_id": "B43_concorde",
+      "links_back_to_sector": "S12_faiths",
+      "cefr_band": "B2",
+      "mean_level": 4.67,
+      "related_rooms": [
+        "R_faiths",
+        "R_orthodox",
+        "R_pagoda"
+      ],
+      "conversation_ids": [
+        "V_concorde_temple_01"
+      ],
+      "base_room": "R_temple",
+      "words": [
+        "fr_croix_huguenote_noun",
+        "fr_pasteure_noun",
+        "fr_louange_noun",
+        "fr_cene_noun",
+        "fr_depouille_adj",
+        "fr_recueilli_adj",
+        "fr_pupitre_noun",
+        "fr_verset_noun",
+        "fr_harmonium_noun"
+      ],
+      "item_count": 9,
+      "total_items_incl_zooms": 9,
+      "side_counts": {
+        "left": 4,
+        "right": 3,
+        "n/a": 2
+      },
+      "parent_room_id": "R_faiths"
+    },
+    {
+      "id": "R_orthodox",
+      "name": "L'église orthodoxe · Orthodox church",
+      "type": "theme",
+      "setting": "Orthodox church of Maisons de prière: gilded iconostasis, Byzantine mosaic arch, three-bar cross, vigil lamp, icon stand, chant lectern, candle stand and blessed bread; door back to the courtyard.",
+      "kind": "full",
+      "sector_id": "S12_faiths",
+      "building_id": "B43_concorde",
+      "links_back_to_sector": "S12_faiths",
+      "cefr_band": "C1",
+      "mean_level": 5.22,
+      "related_rooms": [
+        "R_faiths",
+        "R_temple",
+        "R_pagoda"
+      ],
+      "conversation_ids": [
+        "V_concorde_orthodoxe_01"
+      ],
+      "base_room": "R_orthodox",
+      "words": [
+        "fr_croix_orthodoxe_noun",
+        "fr_veilleuse_noun",
+        "fr_veneration_noun",
+        "fr_iconostase_noun",
+        "fr_byzantin_adj",
+        "fr_lutrin_noun",
+        "fr_chantre_noun",
+        "fr_pain_benit_noun",
+        "fr_candelabre_noun"
+      ],
+      "item_count": 9,
+      "total_items_incl_zooms": 9,
+      "side_counts": {
+        "left": 4,
+        "right": 4,
+        "n/a": 1
+      },
+      "parent_room_id": "R_faiths"
+    },
+    {
+      "id": "R_pagoda",
+      "name": "La pagode · The pagoda",
+      "type": "theme",
+      "setting": "Buddhist pagoda hall of Maisons de prière: golden Buddha altar under the Buddhist flag, dharma wheel, lotus bowl, incense urn, meditation cushion, sutra table and bronze gong; door back to the courtyard.",
+      "kind": "full",
+      "sector_id": "S12_faiths",
+      "building_id": "B43_concorde",
+      "links_back_to_sector": "S12_faiths",
+      "cefr_band": "B2",
+      "mean_level": 4.1,
+      "related_rooms": [
+        "R_faiths",
+        "R_temple",
+        "R_orthodox"
+      ],
+      "conversation_ids": [
+        "V_concorde_pagode_01"
+      ],
+      "base_room": "R_pagoda",
+      "words": [
+        "fr_roue_du_dharma_noun",
+        "fr_fleur_de_lotus_noun",
+        "fr_meditation_noun",
+        "fr_baguette_d_encens_noun",
+        "fr_bouddhiste_adj",
+        "fr_bouddhisme_noun",
+        "fr_bouddha_noun",
+        "fr_bonze_noun",
+        "fr_sutra_noun",
+        "fr_gong_noun"
+      ],
+      "item_count": 10,
+      "total_items_incl_zooms": 10,
+      "side_counts": {
+        "left": 4,
+        "right": 5,
+        "n/a": 1
       },
       "parent_room_id": "R_faiths"
     }

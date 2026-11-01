@@ -17,6 +17,18 @@
     {
       "key": "mosquee",
       "short": "La mosquée"
+    },
+    {
+      "key": "temple",
+      "short": "Le temple"
+    },
+    {
+      "key": "orthodoxe",
+      "short": "L'église orthodoxe"
+    },
+    {
+      "key": "pagode",
+      "short": "La pagode"
     }
   ],
   "planned": {
@@ -67,6 +79,49 @@
         "fr_tapis_de_priere_noun",
         "fr_ramadan_noun"
       ]
+    },
+    "temple": {
+      "vocabRoom": "R_temple",
+      "only": [
+        "fr_croix_huguenote_noun",
+        "fr_pasteure_noun",
+        "fr_louange_noun",
+        "fr_cene_noun",
+        "fr_depouille_adj",
+        "fr_recueilli_adj",
+        "fr_pupitre_noun",
+        "fr_verset_noun",
+        "fr_harmonium_noun"
+      ]
+    },
+    "orthodoxe": {
+      "vocabRoom": "R_orthodox",
+      "only": [
+        "fr_croix_orthodoxe_noun",
+        "fr_veilleuse_noun",
+        "fr_veneration_noun",
+        "fr_iconostase_noun",
+        "fr_byzantin_adj",
+        "fr_lutrin_noun",
+        "fr_chantre_noun",
+        "fr_pain_benit_noun",
+        "fr_candelabre_noun"
+      ]
+    },
+    "pagode": {
+      "vocabRoom": "R_pagoda",
+      "only": [
+        "fr_roue_du_dharma_noun",
+        "fr_fleur_de_lotus_noun",
+        "fr_meditation_noun",
+        "fr_baguette_d_encens_noun",
+        "fr_bouddhiste_adj",
+        "fr_bouddhisme_noun",
+        "fr_bouddha_noun",
+        "fr_bonze_noun",
+        "fr_sutra_noun",
+        "fr_gong_noun"
+      ]
     }
   },
   "rooms": {
@@ -74,7 +129,7 @@
       "name": "La Concorde · Courtyard of many faiths",
       "room_id": "R_faiths",
       "image": "concorde/concorde.jpg",
-      "alt": "A sunny shared courtyard of many faiths: olive tree and dove, a Star-of-David synagogue door, a tiled mosque door, a small pagoda beside an Orthodox church with onion domes, and an outdoor Protestant service before a white chapel.",
+      "alt": "A sunny shared courtyard of many faiths: olive tree and dove, a Star-of-David synagogue door, a tiled mosque door, a small pagoda with bells beside an arcade under the Orthodox church's onion domes, and an outdoor Protestant service before a white chapel.",
       "nameplate": [
         40,
         4.5
@@ -110,6 +165,39 @@
             150,
             320
           ]
+        },
+        {
+          "to": "temple",
+          "label": "Le temple",
+          "hint": "Through the arched wooden door of the white chapel into the Protestant temple",
+          "hit": [
+            958,
+            300,
+            46,
+            52
+          ]
+        },
+        {
+          "to": "orthodoxe",
+          "label": "L'église orthodoxe",
+          "hint": "Through the arcade under the golden domes into the Orthodox church",
+          "hit": [
+            458,
+            300,
+            82,
+            78
+          ]
+        },
+        {
+          "to": "pagode",
+          "label": "La pagode",
+          "hint": "Between the pillars under the bells into the pagoda hall",
+          "hit": [
+            330,
+            354,
+            72,
+            42
+          ]
         }
       ],
       "zooms": [],
@@ -129,7 +217,7 @@
             287,
             90,
             168,
-            302
+            262
           ]
         },
         {
@@ -156,7 +244,7 @@
             900,
             120,
             170,
-            220
+            176
           ]
         },
         {
@@ -474,6 +562,355 @@
             585,
             125,
             65
+          ]
+        }
+      ],
+      "backTo": "concorde"
+    },
+    "temple": {
+      "name": "Le temple · The Protestant temple",
+      "room_id": "R_temple",
+      "image": "concorde/temple.jpg",
+      "alt": "A bare, whitewashed Protestant temple: a woman pastor preaches from the wooden pulpit under a Huguenot cross, two women sing from hymnbooks, bread and cup wait on the communion table, an older woman prays in a pew, a boy copies a verse from his Bible, a Bible lies open on the lectern and an old man plays the harmonium; arched door back to the courtyard.",
+      "nameplate": [
+        78.44,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "concorde",
+          "label": "La Concorde",
+          "hint": "Back through the arched doorway to the courtyard",
+          "hit": [
+            1020,
+            60,
+            160,
+            295
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_croix_huguenote_noun",
+          "box": [
+            55,
+            14,
+            168,
+            241
+          ]
+        },
+        {
+          "id": "fr_pasteure_noun",
+          "box": [
+            341,
+            118,
+            132,
+            132
+          ]
+        },
+        {
+          "id": "fr_louange_noun",
+          "box": [
+            16,
+            289,
+            293,
+            400
+          ]
+        },
+        {
+          "id": "fr_cene_noun",
+          "box": [
+            497,
+            397,
+            108,
+            42
+          ]
+        },
+        {
+          "id": "fr_depouille_adj",
+          "box": [
+            626,
+            0,
+            102,
+            245
+          ]
+        },
+        {
+          "id": "fr_recueilli_adj",
+          "box": [
+            670,
+            370,
+            170,
+            194
+          ]
+        },
+        {
+          "id": "fr_pupitre_noun",
+          "box": [
+            799,
+            322,
+            123,
+            46
+          ]
+        },
+        {
+          "id": "fr_verset_noun",
+          "box": [
+            822,
+            566,
+            127,
+            93
+          ]
+        },
+        {
+          "id": "fr_harmonium_noun",
+          "box": [
+            1020,
+            498,
+            118,
+            104
+          ]
+        }
+      ],
+      "backTo": "concorde"
+    },
+    "orthodoxe": {
+      "name": "L'église orthodoxe · Orthodox church",
+      "room_id": "R_orthodox",
+      "image": "concorde/orthodoxe.jpg",
+      "alt": "A quiet Orthodox church under a golden Byzantine arch: a gilded iconostasis with small icons of saints, a woman kisses an icon in veneration beside a three-bar Orthodox cross and a red vigil lamp, a big chant book on a carved lectern, a lay cantor in a grey jacket sings, a boy takes blessed bread and a girl lights a candle on the brass candle stand; open door back to the courtyard.",
+      "nameplate": [
+        77.81,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "concorde",
+          "label": "La Concorde",
+          "hint": "Back through the open door to the sunny courtyard",
+          "hit": [
+            1003,
+            165,
+            108,
+            225
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_croix_orthodoxe_noun",
+          "box": [
+            7,
+            21,
+            158,
+            637
+          ],
+          "labelAt": [
+            110,
+            200
+          ]
+        },
+        {
+          "id": "fr_veilleuse_noun",
+          "box": [
+            218,
+            40,
+            70,
+            212
+          ],
+          "labelAt": [
+            240.5,
+            250
+          ]
+        },
+        {
+          "id": "fr_veneration_noun",
+          "box": [
+            166,
+            288,
+            292,
+            432
+          ]
+        },
+        {
+          "id": "fr_iconostase_noun",
+          "box": [
+            316,
+            112,
+            428,
+            172
+          ]
+        },
+        {
+          "id": "fr_byzantin_adj",
+          "box": [
+            316,
+            0,
+            396,
+            108
+          ]
+        },
+        {
+          "id": "fr_lutrin_noun",
+          "box": [
+            622,
+            378,
+            188,
+            306
+          ]
+        },
+        {
+          "id": "fr_chantre_noun",
+          "box": [
+            812,
+            208,
+            156,
+            207
+          ]
+        },
+        {
+          "id": "fr_pain_benit_noun",
+          "box": [
+            922,
+            548,
+            120,
+            90
+          ]
+        },
+        {
+          "id": "fr_candelabre_noun",
+          "box": [
+            1009,
+            398,
+            149,
+            148
+          ]
+        }
+      ],
+      "backTo": "concorde"
+    },
+    "pagode": {
+      "name": "La pagode · The pagoda",
+      "room_id": "R_pagoda",
+      "image": "concorde/pagode.jpg",
+      "alt": "A calm Buddhist pagoda hall: a golden dharma wheel on the wall, a lotus flower floating in a bowl, a woman meditating on a cushion, incense sticks smoking in a bronze urn, a couple bringing oranges toward the golden Buddha under the Buddhist flag, an open sutra on a red table and a monk striking the bronze gong; open door back to the courtyard.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "concorde",
+          "label": "La Concorde",
+          "hint": "Back through the open wooden door to the courtyard",
+          "hit": [
+            70,
+            200,
+            140,
+            300
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_roue_du_dharma_noun",
+          "box": [
+            68,
+            14,
+            150,
+            160
+          ]
+        },
+        {
+          "id": "fr_fleur_de_lotus_noun",
+          "box": [
+            84,
+            535,
+            74,
+            80
+          ]
+        },
+        {
+          "id": "fr_meditation_noun",
+          "box": [
+            232,
+            373,
+            206,
+            317
+          ]
+        },
+        {
+          "id": "fr_baguette_d_encens_noun",
+          "box": [
+            460,
+            418,
+            64,
+            95
+          ],
+          "labelAt": [
+            560,
+            618
+          ]
+        },
+        {
+          "id": "fr_bouddhiste_adj",
+          "box": [
+            590,
+            277,
+            186,
+            330
+          ],
+          "labelAt": [
+            619,
+            240
+          ]
+        },
+        {
+          "id": "fr_bouddhisme_noun",
+          "box": [
+            804,
+            86,
+            229,
+            105
+          ]
+        },
+        {
+          "id": "fr_bouddha_noun",
+          "box": [
+            822,
+            195,
+            128,
+            182
+          ]
+        },
+        {
+          "id": "fr_bonze_noun",
+          "box": [
+            967,
+            268,
+            150,
+            298
+          ]
+        },
+        {
+          "id": "fr_sutra_noun",
+          "box": [
+            854,
+            570,
+            245,
+            86
+          ]
+        },
+        {
+          "id": "fr_gong_noun",
+          "box": [
+            1136,
+            336,
+            100,
+            166
           ]
         }
       ],
