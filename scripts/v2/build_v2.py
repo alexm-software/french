@@ -233,7 +233,7 @@ def _pron_label(pr):
 # other persons empty (None) but still lists "ils/elles pleuvent" and "il/elle"; the card shows only "il".
 # Defective verbs (bruire, frire, clore) also have None cells: those persons are simply left out, and a
 # tense with no forms at all (no imperative) says so instead of showing an empty table.
-IMPERSONAL = {"pleuvoir", "falloir", "neiger", "grêler", "bruiner", "venter", "tonner", "pleuvasser",
+IMPERSONAL = {"pleuvoir", "advenir", "falloir", "neiger", "grêler", "bruiner", "venter", "tonner", "pleuvasser",
               "pleuviner", "brouillasser"}
 
 
