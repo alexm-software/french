@@ -100,6 +100,26 @@
   {
    "key": "cabinet",
    "short": "Le cabinet"
+  },
+  {
+   "key": "sociologie",
+   "short": "La sociologie"
+  },
+  {
+   "key": "galerie",
+   "short": "La galerie"
+  },
+  {
+   "key": "etude",
+   "short": "L'étude"
+  },
+  {
+   "key": "ressources",
+   "short": "Les ressources"
+  },
+  {
+   "key": "comprehension",
+   "short": "La compréhension"
   }
  ],
  "planned": {
@@ -450,6 +470,80 @@
     "fr_cliche_noun",
     "fr_prejuge_noun"
    ]
+  },
+  "sociologie": {
+   "vocabRoom": "R_social_science_02",
+   "only": [
+    "fr_sociologie_noun",
+    "fr_anthropologie_noun",
+    "fr_cohorte_noun",
+    "fr_mentalite_noun",
+    "fr_posture_noun",
+    "fr_sociologique_adj",
+    "fr_stereotype_noun",
+    "fr_egoisme_noun",
+    "fr_penseur_noun",
+    "fr_renforcement_noun"
+   ]
+  },
+  "galerie": {
+   "vocabRoom": "R_abs_mind_02",
+   "only": [
+    "fr_capacite_noun",
+    "fr_intelligence_noun",
+    "fr_competence_noun",
+    "fr_aptitude_noun",
+    "fr_performance_noun",
+    "fr_rapidite_noun",
+    "fr_savoir_faire_noun",
+    "fr_savoir_noun",
+    "fr_expert_noun",
+    "fr_esprit_noun"
+   ]
+  },
+  "etude": {
+   "vocabRoom": "R_social_science_02",
+   "only": [
+    "fr_cervelle_noun",
+    "fr_inconscience_noun",
+    "fr_predilection_noun",
+    "fr_pile_noun",
+    "fr_utilite_noun",
+    "fr_psychanalyste_noun",
+    "fr_cerveau_noun",
+    "fr_cortex_noun",
+    "fr_automatisme_noun",
+    "fr_oubli_noun",
+    "fr_memoire_noun_m"
+   ]
+  },
+  "ressources": {
+   "vocabRoom": "R_abs_mind_03",
+   "only": [
+    "fr_critique_noun_f",
+    "fr_evidence_noun",
+    "fr_suggestion_noun",
+    "fr_contingence_noun",
+    "fr_variante_noun",
+    "fr_opinion_noun",
+    "fr_renseignement_noun",
+    "fr_sentiment_noun",
+    "fr_romanesque_noun",
+    "fr_disciple_noun"
+   ]
+  },
+  "comprehension": {
+   "vocabRoom": "R_abs_mind_03",
+   "only": [
+    "fr_comprehension_noun",
+    "fr_conception_noun",
+    "fr_confusion_noun",
+    "fr_croyance_noun",
+    "fr_ignorance_noun",
+    "fr_pertinence_noun",
+    "fr_repercussion_noun",
+    "fr_malentendu_noun"
+   ]
   }
  },
  "rooms": {
@@ -525,6 +619,17 @@
       47,
       79,
       189
+     ]
+    },
+    {
+     "to": "galerie",
+     "label": "La galerie",
+     "hint": "the spiral staircase, up to the upper gallery",
+     "hit": [
+      760,
+      210,
+      120,
+      150
      ]
     }
    ],
@@ -3307,6 +3412,17 @@
       65,
       175
      ]
+    },
+    {
+     "to": "sociologie",
+     "label": "La sociologie",
+     "hint": "the coral-red door with the carved ring of figures at the back left, to the sociology room",
+     "hit": [
+      715,
+      65,
+      55,
+      140
+     ]
     }
    ],
    "zooms": [],
@@ -3399,6 +3515,615 @@
       480,
       345,
       140
+     ]
+    }
+   ]
+  },
+  "sociologie": {
+   "name": "La salle de sociologie · The sociology room",
+   "room_id": "R_social_science_02",
+   "image": "humanites/sociologie.jpg",
+   "alt": "A coral-pink sociology hall with a big model-town table, wooden bleachers, a patchwork quilt, a goose in a scarf, arched windows onto a town square on the right and a blue door beside a fireplace at the back.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "cabinet",
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet",
+     "hint": "the sky-blue door with the carved fireplace at the back left, back to the counseling office",
+     "hit": [
+      455,
+      75,
+      70,
+      145
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sociologie_noun",
+     "box": [
+      10,
+      240,
+      285,
+      185
+     ]
+    },
+    {
+     "id": "fr_anthropologie_noun",
+     "box": [
+      45,
+      50,
+      240,
+      105
+     ]
+    },
+    {
+     "id": "fr_cohorte_noun",
+     "box": [
+      5,
+      160,
+      290,
+      80
+     ]
+    },
+    {
+     "id": "fr_mentalite_noun",
+     "box": [
+      300,
+      225,
+      220,
+      105
+     ]
+    },
+    {
+     "id": "fr_posture_noun",
+     "box": [
+      70,
+      460,
+      320,
+      180
+     ]
+    },
+    {
+     "id": "fr_sociologique_adj",
+     "box": [
+      640,
+      330,
+      190,
+      140
+     ]
+    },
+    {
+     "id": "fr_stereotype_noun",
+     "box": [
+      850,
+      245,
+      180,
+      125
+     ]
+    },
+    {
+     "id": "fr_egoisme_noun",
+     "box": [
+      955,
+      505,
+      165,
+      210
+     ]
+    },
+    {
+     "id": "fr_penseur_noun",
+     "box": [
+      1080,
+      345,
+      195,
+      150
+     ]
+    },
+    {
+     "id": "fr_renforcement_noun",
+     "box": [
+      1035,
+      220,
+      240,
+      115
+     ]
+    }
+   ]
+  },
+  "galerie": {
+   "name": "La galerie · The upper gallery",
+   "room_id": "R_abs_mind_02",
+   "image": "humanites/galerie.jpg",
+   "alt": "A library's upper gallery with curving bookcases, a brass armillary sphere, a round window onto a red-brick bell tower, a spiral staircase at the near left, a mint-green door at the back left and a mustard-yellow door at the back right.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "humanites",
+   "doors": [
+    {
+     "to": "humanites",
+     "label": "La bibliothèque",
+     "hint": "the spiral staircase at the near left, back down to the library",
+     "hit": [
+      200,
+      440,
+      200,
+      270
+     ]
+    },
+    {
+     "to": "etude",
+     "label": "L'étude",
+     "hint": "the mint-green door with the carved brain at the back left, to the study",
+     "hit": [
+      365,
+      75,
+      75,
+      165
+     ]
+    },
+    {
+     "to": "ressources",
+     "label": "Les ressources",
+     "hint": "the mustard-yellow door with the carved open book at the back right, to the resource center",
+     "hit": [
+      945,
+      75,
+      75,
+      195
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_capacite_noun",
+     "box": [
+      15,
+      460,
+      175,
+      200
+     ]
+    },
+    {
+     "id": "fr_intelligence_noun",
+     "box": [
+      50,
+      110,
+      145,
+      190
+     ]
+    },
+    {
+     "id": "fr_competence_noun",
+     "box": [
+      330,
+      265,
+      130,
+      165
+     ]
+    },
+    {
+     "id": "fr_aptitude_noun",
+     "box": [
+      465,
+      150,
+      110,
+      150
+     ]
+    },
+    {
+     "id": "fr_performance_noun",
+     "box": [
+      450,
+      505,
+      185,
+      190
+     ]
+    },
+    {
+     "id": "fr_rapidite_noun",
+     "box": [
+      515,
+      335,
+      110,
+      160
+     ]
+    },
+    {
+     "id": "fr_savoir_faire_noun",
+     "box": [
+      915,
+      465,
+      195,
+      235
+     ]
+    },
+    {
+     "id": "fr_savoir_noun",
+     "box": [
+      1030,
+      175,
+      130,
+      175
+     ]
+    },
+    {
+     "id": "fr_expert_noun",
+     "box": [
+      760,
+      280,
+      265,
+      180
+     ]
+    },
+    {
+     "id": "fr_esprit_noun",
+     "box": [
+      1125,
+      355,
+      140,
+      205
+     ]
+    }
+   ]
+  },
+  "etude": {
+   "name": "Le cabinet d'étude · The brain study",
+   "room_id": "R_social_science_02",
+   "image": "humanites/etude.jpg",
+   "alt": "A dusty-rose study with a sofa-sized pink brain model, a green velvet couch, a bay window onto a fountain garden, a dog asleep in a paper basket and a mint-green door at the back left.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "galerie",
+   "doors": [
+    {
+     "to": "galerie",
+     "label": "La galerie",
+     "hint": "the mint-green door on the left wall, back to the library gallery",
+     "hit": [
+      300,
+      70,
+      45,
+      195
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cervelle_noun",
+     "box": [
+      20,
+      380,
+      365,
+      290
+     ]
+    },
+    {
+     "id": "fr_inconscience_noun",
+     "box": [
+      225,
+      285,
+      170,
+      90
+     ]
+    },
+    {
+     "id": "fr_predilection_noun",
+     "box": [
+      190,
+      190,
+      95,
+      90
+     ]
+    },
+    {
+     "id": "fr_pile_noun",
+     "box": [
+      400,
+      515,
+      280,
+      185
+     ]
+    },
+    {
+     "id": "fr_utilite_noun",
+     "box": [
+      460,
+      295,
+      180,
+      210
+     ]
+    },
+    {
+     "id": "fr_psychanalyste_noun",
+     "box": [
+      755,
+      240,
+      105,
+      170
+     ]
+    },
+    {
+     "id": "fr_cerveau_noun",
+     "box": [
+      935,
+      160,
+      125,
+      100
+     ]
+    },
+    {
+     "id": "fr_cortex_noun",
+     "box": [
+      860,
+      375,
+      135,
+      140
+     ]
+    },
+    {
+     "id": "fr_automatisme_noun",
+     "box": [
+      745,
+      520,
+      320,
+      175
+     ]
+    },
+    {
+     "id": "fr_oubli_noun",
+     "box": [
+      1000,
+      275,
+      155,
+      135
+     ]
+    },
+    {
+     "id": "fr_memoire_noun_m",
+     "box": [
+      1075,
+      415,
+      200,
+      215
+     ]
+    }
+   ]
+  },
+  "ressources": {
+   "name": "Le centre de ressources · The resource center",
+   "room_id": "R_abs_mind_03",
+   "image": "humanites/ressources.jpg",
+   "alt": "A pale-blue resource center with a giant card-catalog cabinet, a skylight, a wall map, giant toy ants on a rug, a mustard-yellow door on the left and a lavender door with a carved puzzle piece on the right.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "galerie",
+   "doors": [
+    {
+     "to": "galerie",
+     "label": "La galerie",
+     "hint": "the mustard-yellow door on the left wall, back to the library gallery",
+     "hit": [
+      20,
+      70,
+      120,
+      190
+     ]
+    },
+    {
+     "to": "comprehension",
+     "label": "La compréhension",
+     "hint": "the lavender door with the carved puzzle piece on the right wall, to the understanding room",
+     "hit": [
+      1170,
+      70,
+      95,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_critique_noun_f",
+     "box": [
+      15,
+      430,
+      305,
+      270
+     ]
+    },
+    {
+     "id": "fr_evidence_noun",
+     "box": [
+      5,
+      280,
+      250,
+      120
+     ]
+    },
+    {
+     "id": "fr_suggestion_noun",
+     "box": [
+      300,
+      290,
+      165,
+      140
+     ]
+    },
+    {
+     "id": "fr_contingence_noun",
+     "box": [
+      445,
+      150,
+      120,
+      135
+     ]
+    },
+    {
+     "id": "fr_variante_noun",
+     "box": [
+      390,
+      515,
+      400,
+      185
+     ]
+    },
+    {
+     "id": "fr_opinion_noun",
+     "box": [
+      565,
+      320,
+      78,
+      130
+     ]
+    },
+    {
+     "id": "fr_renseignement_noun",
+     "box": [
+      830,
+      180,
+      270,
+      185
+     ]
+    },
+    {
+     "id": "fr_sentiment_noun",
+     "box": [
+      930,
+      375,
+      215,
+      230
+     ]
+    },
+    {
+     "id": "fr_romanesque_noun",
+     "box": [
+      1150,
+      280,
+      125,
+      190
+     ]
+    },
+    {
+     "id": "fr_disciple_noun",
+     "box": [
+      645,
+      300,
+      140,
+      175
+     ]
+    }
+   ]
+  },
+  "comprehension": {
+   "name": "La salle de la compréhension · The understanding room",
+   "room_id": "R_abs_mind_03",
+   "image": "humanites/comprehension.jpg",
+   "alt": "A lavender puzzle room with a giant floor jigsaw, a mezzanine, beanbags, an easel, tall arched windows onto a lawn with kites and a lavender door on the right.",
+   "nameplate": [
+    50,
+    3.5
+   ],
+   "backTo": "ressources",
+   "doors": [
+    {
+     "to": "ressources",
+     "label": "Les ressources",
+     "hint": "the lavender door on the right wall, back to the resource center",
+     "hit": [
+      1100,
+      120,
+      70,
+      175
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_comprehension_noun",
+     "box": [
+      270,
+      440,
+      225,
+      240
+     ]
+    },
+    {
+     "id": "fr_conception_noun",
+     "box": [
+      100,
+      220,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_confusion_noun",
+     "box": [
+      535,
+      265,
+      80,
+      170
+     ]
+    },
+    {
+     "id": "fr_croyance_noun",
+     "box": [
+      335,
+      170,
+      195,
+      130
+     ]
+    },
+    {
+     "id": "fr_ignorance_noun",
+     "box": [
+      5,
+      420,
+      255,
+      280
+     ]
+    },
+    {
+     "id": "fr_pertinence_noun",
+     "box": [
+      570,
+      460,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_repercussion_noun",
+     "box": [
+      330,
+      305,
+      190,
+      130
+     ]
+    },
+    {
+     "id": "fr_malentendu_noun",
+     "box": [
+      895,
+      310,
+      370,
+      255
      ]
     }
    ]
