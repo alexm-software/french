@@ -13,6 +13,14 @@
   {
    "key": "vallee_geants",
    "short": "La vallée des géants"
+  },
+  {
+   "key": "tour_sorcier",
+   "short": "La tour du sorcier"
+  },
+  {
+   "key": "bal_costume",
+   "short": "Le bal costumé"
   }
  ],
  "rooms": {
@@ -20,7 +28,7 @@
    "name": "La forêt enchantée · The enchanted forest",
    "room_id": "R_enchanted_forest",
    "image": "contes/contes.jpg",
-   "alt": "An enchanted forest clearing painted in ink and watercolor: on the left an open black iron gate leads back to the park; a red-haired mermaid with a green tail sits on a mossy rock in the pond, a tiny fairy in a pink petal dress flies above it waving a star-tipped wand, and a white unicorn licks a big ear of corn on a tree stump; in the middle a mossy rock arch opens onto a valley with a waterfall and a stone bridge; a young centaur leaps past carrying a basket of red apples, an elf plays a flute high in a tree, a gnome in a tall red hat pushes a wheelbarrow of mushrooms, an imp in sunglasses suns himself on a red toadstool strumming a lute, a sprite with a yellow farfalle bow tie swings on a bluebell, and a bearded dwarf with a lantern bites into a big round naan.",
+   "alt": "An enchanted forest clearing painted in ink and watercolor: on the left an open black iron gate leads back to the park and, beside it, the arched door of a little stone wizard's tower stands open on a spiral stair; a red-haired mermaid with a green tail sits on a mossy rock in the pond, a tiny fairy in a pink petal dress flies low over the lily pads waving a star-tipped wand, and a white unicorn licks a big ear of corn on a tree stump; in the middle a mossy rock arch opens onto a valley with a waterfall and a stone bridge; a young centaur leaps past carrying a basket of red apples, an elf plays a flute high in an old oak whose round wooden door stands open on a party lit by lanterns, a gnome in a tall red hat pushes a wheelbarrow of mushrooms, an imp in sunglasses suns himself on a red toadstool strumming a lute, a sprite with a yellow farfalle bow tie swings on a bluebell, and a bearded dwarf with a lantern bites into a big round naan.",
    "nameplate": [
     50,
     4.5
@@ -45,6 +53,28 @@
       150,
       250
      ]
+    },
+    {
+     "to": "tour_sorcier",
+     "label": "La tour du sorcier",
+     "hint": "Through the open arched door into the wizard's tower",
+     "hit": [
+      298,
+      92,
+      126,
+      172
+     ]
+    },
+    {
+     "to": "bal_costume",
+     "label": "Le bal costumé",
+     "hint": "Through the round door in the old oak to the costume ball",
+     "hit": [
+      955,
+      268,
+      125,
+      150
+     ]
     }
    ],
    "zooms": [],
@@ -52,10 +82,10 @@
     {
      "id": "fr_fee_noun",
      "box": [
-      283,
-      117,
-      121,
-      150
+      268,
+      520,
+      136,
+      144
      ]
     },
     {
@@ -212,6 +242,199 @@
     }
    ],
    "backTo": "contes"
+  },
+  "tour_sorcier": {
+   "name": "La tour du sorcier · The wizard's tower",
+   "room_id": "R_wizard_tower",
+   "image": "contes/tour_sorcier.jpg",
+   "alt": "The round stone study at the bottom of a wizard's tower, painted in ink and watercolor under a starry blue ceiling: on the left a tall arched wooden door stands open onto the sunny enchanted forest; a young witch in a purple pointed hat sweeps the plank floor with a straw broom while her black cat trots beside it; a pink potion fizzes with heart-shaped bubbles in a round glass flask on a little table by the window; a spiral stone stair climbs to a wooden landing where a magician in a top hat and red waistcoat holds up a white rabbit next to a grinning spell book on a lectern blowing a kiss; in the middle a toy drone hovers over a big black cauldron bubbling green on a log fire; an old white-bearded wizard in a starry blue robe throws up his arms and cheers; and on the right an enchanter in a green velvet robe plays a golden tuba whose swirl of sparkles sorts the teacups onto a high wooden ledge.",
+   "nameplate": [
+    30,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "contes",
+     "label": "La forêt enchantée",
+     "hint": "Back out through the arched tower door to the enchanted forest",
+     "hit": [
+      30,
+      100,
+      170,
+      460
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_sorciere_noun",
+     "box": [
+      224,
+      221,
+      240,
+      354
+     ]
+    },
+    {
+     "id": "fr_potion_noun",
+     "box": [
+      517,
+      244,
+      93,
+      183
+     ]
+    },
+    {
+     "id": "fr_sortilege_noun",
+     "box": [
+      1000,
+      8,
+      252,
+      276
+     ]
+    },
+    {
+     "id": "fr_grimoire_noun",
+     "box": [
+      873,
+      96,
+      102,
+      150
+     ],
+     "labelAt": [
+      925,
+      253
+     ]
+    },
+    {
+     "id": "fr_magicien_noun",
+     "box": [
+      746,
+      8,
+      125,
+      240
+     ]
+    },
+    {
+     "id": "fr_chaudron_noun",
+     "box": [
+      640,
+      398,
+      210,
+      302
+     ]
+    },
+    {
+     "id": "fr_sorcier_noun",
+     "box": [
+      853,
+      286,
+      173,
+      360
+     ]
+    },
+    {
+     "id": "fr_enchanteur_noun",
+     "box": [
+      1028,
+      322,
+      224,
+      360
+     ]
+    }
+   ],
+   "backTo": "contes"
+  },
+  "bal_costume": {
+   "name": "Le bal costumé · The costume ball",
+   "room_id": "R_costume_ball",
+   "image": "contes/bal_costume.jpg",
+   "alt": "A costume party inside a great hollow oak, painted in ink and watercolor under bunting and paper lanterns: on the left a round wooden door stands open onto the sunny enchanted forest beside a table with a birthday cake; a kneeling mother in a purple dress hugs her little girl dressed as a mummy in white bandages; on a raised wooden stage a child vampire in a high-collared cape peers out of a short cardboard van, a child in a white ghost sheet sits on a purple cushion reading a big book and fanning herself with a paper fan, and a child orc with green face paint flexes his arms; on the dance floor a boy in a grey werewolf costume hops with both feet in the air, a boy goblin with pointy ears is about to gobble a slice of cake from his plate, and a fluffy purple monster with googly eyes dances.",
+   "nameplate": [
+    35,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "contes",
+     "label": "La forêt enchantée",
+     "hint": "Back out through the round oak door to the enchanted forest",
+     "hit": [
+      40,
+      110,
+      138,
+      372
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_momie_noun",
+     "box": [
+      430,
+      244,
+      195,
+      271
+     ]
+    },
+    {
+     "id": "fr_vampire_noun",
+     "box": [
+      716,
+      148,
+      172,
+      180
+     ]
+    },
+    {
+     "id": "fr_fantome_noun",
+     "box": [
+      895,
+      198,
+      168,
+      170
+     ]
+    },
+    {
+     "id": "fr_orc_noun",
+     "box": [
+      1065,
+      148,
+      187,
+      228
+     ]
+    },
+    {
+     "id": "fr_loup_garou_noun",
+     "box": [
+      635,
+      371,
+      192,
+      246
+     ]
+    },
+    {
+     "id": "fr_gobelin_noun",
+     "box": [
+      846,
+      395,
+      124,
+      242
+     ]
+    },
+    {
+     "id": "fr_monstre_noun",
+     "box": [
+      984,
+      414,
+      213,
+      262
+     ]
+    }
+   ],
+   "backTo": "contes"
   }
  },
  "planned": {
@@ -238,6 +461,31 @@
     "fr_troll_noun",
     "fr_ogre_noun",
     "fr_dragon_noun"
+   ]
+  },
+  "tour_sorcier": {
+   "vocabRoom": "R_wizard_tower",
+   "only": [
+    "fr_sorciere_noun",
+    "fr_potion_noun",
+    "fr_sortilege_noun",
+    "fr_grimoire_noun",
+    "fr_magicien_noun",
+    "fr_chaudron_noun",
+    "fr_sorcier_noun",
+    "fr_enchanteur_noun"
+   ]
+  },
+  "bal_costume": {
+   "vocabRoom": "R_costume_ball",
+   "only": [
+    "fr_momie_noun",
+    "fr_vampire_noun",
+    "fr_fantome_noun",
+    "fr_orc_noun",
+    "fr_loup_garou_noun",
+    "fr_gobelin_noun",
+    "fr_monstre_noun"
    ]
   }
  }
