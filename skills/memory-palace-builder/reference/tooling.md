@@ -1,16 +1,11 @@
 # Tooling and token economy
 
-Read when setting up scripts, data edits, worker split or review loops.
+Use `room_context.py` for a target brief and `unbuilt.py --repo .` for live IDs. Do not repeatedly clone main, print entire building payloads, load all skill references, or paste generated prompts into chat. `build_prompt.py --write --output` stores the exact prompt and prints a short summary; `--check` detects drift.
 
-## Save tokens with tooling
+One building plan + one manifest per room is the reusable context. Keep IDs, final hooks, geometry, references and decisions in those files, not repeated prose. Checkpoint only base commit, touched files, completed checks, next action and blockers. Avoid launching a new worker for each tiny revision; if work is delegated, give a bounded task and the manifest, not every audit ever written.
 
-- Store content in data files and generate pages from templates rather than hand-writing each room. <!-- B79 -->
-- Write small scripts for: validating data (missing fields, duplicates, room size limits, placement rules), checking text fits signs (measure text against sign boxes), checking links (every room reachable and links back), and building the site. <!-- B80 -->
-- Batch-generate items from the data file and only hand-review the flagged ones. <!-- B81 -->
-- **Cheap checks before eyes.** Run the automated checks first (`tools/precheck.py`: OCR text flags, label/box overlap and contact, manifest counts), fix every FAIL, then review visually from ONE downscaled contact sheet per room (`tools/contact_sheet.py`) and open full-size crops only where the sheet raises a doubt. See the release-gates reference/tools-and-logs.md. <!-- N3 -->
-- **Reuse one worker per workstream.** Keep one worker (helper agent) per workstream, such as one building's repaint, the hooks merge or the deploy pack, and give it the next task in that stream instead of starting a fresh worker that has to re-read the skills, data and history. <!-- N7 -->
+Cheap structural checks precede image calls. See `planning.md`; quality checks after painting are in `validation.md`. One contact sheet summarizes the room, but required 2× anatomy/count/hook inspection still applies. `zoom_sheet.py` builds actual parent-crop/zoom pairs with image hashes; a pending record is not a pass.
 
-## Data edits
+Generate whole scenes with shared style references. Reduce prompt/context repetition and retries, never visual coherence by generating the background separately from its figures. Each retry names a diagnosed failure and accepted details to preserve. Stop after two unsuccessful edits to revisit the plan.
 
-- **Units and overlap.** Know which files store boxes in px and which in %. A wrong-unit edit silently moves a hotspot. After every box edit, re-run the placement and pairwise-overlap check. <!-- B226 -->
-- **Tooling hygiene.** Use a new filename for every view crop, because image reads can be cached by path. Build the pack from the uncommitted working tree before committing, and pass building lists in the form the packer expects (here comma-separated). An empty pack means the order or the list format was wrong. Supersede it with a new READY line; don't edit history. <!-- B237 -->
+Use unique review output paths per revision. Layout boxes are pixels, built `box` values are percentages and `boxPx` values are pixels. Rebuild generated data from authoritative layout; never hand-fix generated payloads. Run placement after geometry changes. Reuse existing scripts and render geometry rather than inventing a second implementation.

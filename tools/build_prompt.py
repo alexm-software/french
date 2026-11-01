@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
-"""build_prompt.py - write the painting prompt from an item manifest, so nobody re-types the template.
+"""Compile a validated room/zoom manifest into the canonical painting prompt.
 
-  python3 tools/build_prompt.py manifest.json             # print the prompt; exit 1 if a field is still empty
-  python3 tools/build_prompt.py manifest.json --write     # also store it as the manifest's prompt_text
-  python3 tools/build_prompt.py manifest.json --check     # exit 1 if prompt_text differs from the generated text
+python tools/build_prompt.py manifest.json --write --output /tmp/room-prompt.txt
+python tools/build_prompt.py manifest.json --check
 
-The template is the ```text block in skills/memory-palace-builder/reference/prompt-template.md, read at run
-time, so a template edit reaches every prompt. The facts come from the manifest (tools/manifest_template.json):
-items, interactions, siblings, used_motifs, doors, text_in_image and the "prompt" object (camera, light,
-landmark...). Spacing numbers come from skills/limits.json. Any field the manifest leaves empty stays as
-{field} in the output and is listed on stderr. A manifest may add free text to the end of any section with
-"prompt_extra": {"SECTION NAME": "text"}; --check allows those additions.
+Invalid input never writes output or prompt_text. --write prints only a summary;
+without --write/--output print the prompt. prompt_extra maps known section names
+into additional room-specific instructions. Empty siblings/motifs lists are valid.
 """
 import argparse, json, re, sys
+from plan_check import validate_manifest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,7 +27,7 @@ def template():
 def build(M):
     P = M.get("prompt") or {}
     kind = P.get("kind", "room")
-    items = [it for it in M.get("items", []) if not str(it.get("id", "")).startswith("fr_example")]
+    items = M.get("items", [])
     missing = []
 
     def v(key, label=None):
@@ -44,24 +41,25 @@ def build(M):
         f = lambda k: it.get(k) if it.get(k) not in (None, "") else (missing.append(f"{it.get('id')}.{k}") or "{" + k + "}")
         cnt = it.get("count")
         where = ", ".join(x for x in (it.get("side"), it.get("zone"), it.get("depth")) if x) or f("zone")
-        s = (f"{n}. {f('word')} = {f('gloss')}: hook object {f('hook_object')}; shown as {f('shown')}; "
+        s = (f"{n}. {f('word')} = {f('gloss')}: chosen hook {f('hook')}; literal cue {f('hook_object')}; shown as {f('shown')}; "
              f"pose/action {f('pose_action')}; count {cnt if cnt not in (None, '') else '-'}; at {where}; "
-             f"interacts with {f('interacts_with')}")
+             f"interacts with {f('interacts_with')}; planned pixel envelope {it.get('box_hint')}")
         if it.get("pos") == "verb":
-            s += f"; where it acts: {f('verb_acts_on')}"
+            s += f"; beret {BERET.get(it.get('beret'), 'INVALID')}; where it acts: {f('verb_acts_on')}"
         return s + "."
 
     out = []
     for line in template().splitlines():
+        if line.startswith("DOORS AND EXITS:") and kind == "zoom" and not M.get("doors"):
+            line = f"DOORS AND EXITS: no painted passage in this close-up. Existing viewer Back returns to {P.get('parent')}. Do not invent a door, portal or painted back arrow. Preserve the parent's surrounding surfaces."
         if line.startswith("[zoom only]"):
             if kind != "zoom": continue
             line = line[len("[zoom only] "):]
+            c = M.get("continuity", {})
+            line += f" Parent reference {c.get('parent_image')}, pixel crop {c.get('parent_box')}; preserve: " + "; ".join(c.get("preserve", [])) + "."
         if line.startswith("[repaint only]"):
             if not M.get("repaint_rows"): continue
             line = line[len("[repaint only] "):]
-        if line.startswith("[sprite / paint-back only]"):
-            if kind != "sprite": continue
-            line = line[len("[sprite / paint-back only] "):]
         if line.startswith("{n}. "):
             out += [item_line(i + 1, it) for i, it in enumerate(items)]
             continue
@@ -94,8 +92,6 @@ def build(M):
         "{parent room}": v("parent", "parent room") if kind == "zoom" else "",
         "{object/spot}": v("spot", "object/spot") if kind == "zoom" else "",
         "{rows}": "; ".join(M.get("repaint_rows") or []),
-        "{surface}": v("surface") if kind == "sprite" else "",
-        "{px}": v("px") if kind == "sprite" else "",
         "{direction}": v("light_from", "direction"),
         "{3: respectful, slightly realistic painterly with cartoony elements}": P.get("style_slider") or "3: respectful, slightly realistic painterly with cartoony elements",
         "{refs}": v("refs"),
@@ -107,7 +103,7 @@ def build(M):
         "{playful architectural feature}": v("whimsy", "playful architectural feature"),
         "{named situation, e.g. feeding time in the school farmyard}": M.get("scene_situation") or (missing.append("scene_situation") or "{scene_situation}"),
         "{group 1: who, doing what with whom}; {group 2: ...}; {group 3: ...}": gtxt,
-        "{sibling rooms and how they look}": "; ".join(M.get("siblings") or []) or (missing.append("siblings") or "{siblings}"),
+        "{sibling rooms and how they look}": "; ".join(M.get("siblings") or []) or "none yet",
         "{N (10 or fewer; zooms 4-6)}": str(len(items)),
         "{alphabet, number list, article table | none}": P.get("reference_board") or "none",
         "{count list}": ", ".join(counts) or "none",
@@ -137,22 +133,36 @@ def main():
     ap.add_argument("manifest")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--output", help="write the prompt to a file instead of stdout")
     a = ap.parse_args()
     p = Path(a.manifest)
     M = json.loads(p.read_text(encoding="utf-8"))
+    fail, warn = validate_manifest(M)
+    for message in warn:
+        print("WARN " + message, file=sys.stderr)
+    if fail:
+        for message in fail:
+            print("FAIL " + message, file=sys.stderr)
+        return 1
     t, missing, left = build(M)
-    if a.check:
-        same = re.sub(r"\s+", " ", M.get("prompt_text") or "").strip() == re.sub(r"\s+", " ", t).strip()
-        print("prompt_text matches the manifest" if same else "prompt_text differs from the text generated from the manifest: run with --write")
-        sys.exit(0 if same and not left else 1)
-    print(t)
     if missing or left:
-        print(f"\nunfilled: {', '.join(missing or left)}", file=sys.stderr)
+        print("unfilled: " + ", ".join(missing + left), file=sys.stderr)
+        return 1
+    if a.check:
+        same = M.get("prompt_text") == t
+        print("prompt_text matches the manifest" if same else "prompt_text is stale: run with --write")
+        return 0 if same else 1
     if a.write:
         M["prompt_text"] = t
         p.write_text(json.dumps(M, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    sys.exit(1 if left else 0)
+        print(f"Stored prompt_text ({len(t)} characters); manifest valid")
+    if a.output:
+        Path(a.output).write_text(t + "\n", encoding="utf-8")
+        print(f"Wrote prompt: {a.output}")
+    elif not a.write:
+        print(t)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

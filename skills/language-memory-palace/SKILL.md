@@ -1,5 +1,5 @@
 ---
-name: Language memory palace
+name: language-memory-palace
 description: >-
   Use when building a memory palace for learning a foreign language's vocabulary
   and grammar; load together with the Memory palace builder skill. A one-page
@@ -23,7 +23,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 
 ## Representation spec before any painting (reference/representation.md)
 - Write a short spec covering each word class, each grammatical feature and its single visual channel, reference props, rare words and sensitive words.
-- Show the user a drawn sample of each device and get sign-off before bulk painting.
+- Reuse this village's approved devices. For a new language/project, agree on one representative sample before bulk painting; do not repeat setup approvals for existing French rooms.
 - Check the devices against each other for clashes, and put each device's meaning on the card.
 - Gender: feminine clearly left, masculine clearly right (neuter in the middle), with no physical divider; zooms too.
 - Adjectives and adverbs sit in the 30-70% center band; opposites may face each other.
@@ -31,7 +31,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 
 ## Verbs (reference/verbs.md)
 - Choose one recurring, culturally fitting verb marker; each verb feature gets its own visual channel on it.
-- Get sign-off on the marker before painting, and record it in the plan (French build: the Monsieur Verbe mime).
+- French uses Monsieur Verbe: red -er, green -ir, purple -re, gold irregular beret; reflexives hold a hand mirror. Keep each verb action visible at human scale.
 - Verbs live in themed rooms, acting on that room's nouns at human scale.
 - Verbs are spread through the scene, never bunched in one zone or lined along an edge.
 - Verb streets only where they truly make sense; a repaint brings fitting street verbs back into its rooms.
@@ -43,7 +43,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 - Use only English the learner knows: no etymology and no other target-language word (except one certainly known).
 - A cognate counts only if it looks AND sounds close; it still gets a twist or stays plain, with any false friend noted.
 - No template or meta wording on cards; both the sound cue and the meaning are painted.
-- Get sign-off on a sample room before bulk writing; audit every hook aloud against its respelling.
+- Audit new hooks aloud against IPA/respelling before art. Preserve user-selected hooks; plain depiction is better than a strained pun.
 - Replace vulgar auto-glosses, and add an age-appropriate usage_warning to such words.
 - One hook per word everywhere; reject forced puns (wrong vowel, more than 2 chunks, pun beside the meaning).
 

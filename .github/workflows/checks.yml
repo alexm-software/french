@@ -21,6 +21,8 @@ jobs:
         run: python scripts/qa/check_v2.py --strict --placement
       - name: Quoted texts have a public-domain or own source
         run: python tools/copyright_check.py
+      - name: Room planning and prompt regression fixtures
+        run: python -m unittest discover -s tools/tests -v
       - name: Every path the skills name exists
         run: python tools/skills_paths.py
       - name: Hook lint (report only)

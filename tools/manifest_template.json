@@ -1,82 +1,51 @@
 {
-  "_help": "Planning gate: fill this BEFORE painting, check it against the skill checklists, generate prompt_text with tools/build_prompt.py manifest.json --write (it fills builder reference/prompt-template.md from these fields), then paint. precheck.py --manifest FAILS a manifest missing scene_situation, interactions, siblings, used_motifs or prompt_text. Keys starting with _ are ignored.",
+  "_help": "Complete small worked example, not the target inventory. Replace facts with the assigned words and resolved hooks. Validate before generating. Pixel boxes are planning envelopes, fitted to final art later.",
   "building": "ecole",
   "room": "cantine",
-  "room_id": "R_pronouns_02",
-  "setting": "School canteen at lunch: long tables, a rug, a serving counter at the back.",
-  "theme_fit": "Every word below is something a person does or meets in this place (placement by gloss, not by the English word).",
+  "coordinate_space": "1280x720-px",
+  "setting": "School canteen at lunch",
+  "theme_fit": "Both concepts participate in lunch service.",
+  "scene_situation": "Children share soup while a mime takes his lunch from the server.",
   "prompt": {
-    "_rule": "facts tools/build_prompt.py puts into the template; kind is room, zoom or sprite",
     "kind": "room",
     "room_name": "La cantine",
     "camera": "eye-level three-quarter from the doorway",
-    "light_from": "tall windows on the left",
-    "refs": "ecole/ecole, ecole/jardin",
-    "look": "building's exterior",
-    "materials": "cream plaster walls, oak floorboards, red tiled roof seen through the windows",
-    "set_apart": "bright midday light, red rug as the dominant color",
+    "light_from": "left windows",
+    "refs": "ecole/ecole, ecole/jardin (attach these paintings)",
+    "look": "school exterior",
+    "materials": "cream plaster, oak floor and blue doors",
+    "set_apart": "clear midday light, blue checked tablecloth",
     "place": "school canteen",
-    "landmark": "the long serving counter with a steaming soup pot",
-    "whimsy": "a hatch to the kitchen shaped like a big smiling mouth",
-    "beyond": "the garden beds through the blue door; the village path off the left edge",
-    "sign_plates": "none",
-    "differ": "low camera at child height, lunch queue as the focal action, midday light",
-    "reference_board": "none",
-    "parent": "",
-    "spot": "",
-    "surface": "",
-    "px": ""
+    "landmark": "long serving counter",
+    "whimsy": "arched serving hatch shaped like a smiling mouth",
+    "differ": "low camera, diagonal queue and blue tablecloth",
+    "reference_board": "none"
   },
-  "scene_situation": "Lunch service in the school canteen: children queue at the counter, share tables and pass dishes.",
+  "siblings": [],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "map",
+      "where": "left edge",
+      "painted_as": "open doorway onto the village path"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
   "interactions": [
     {
       "who": [
         "fr_nous_pron",
-        "fr_vous_pron"
+        "background: server"
       ],
-      "doing": "two pairs share one long table; the vous pair hands bread across to the nous children"
+      "doing": "the server passes a bowl of noodles to the children"
     },
     {
       "who": [
         "fr_manger_verb",
-        "background: dinner lady"
+        "background: server"
       ],
-      "doing": "Monsieur Verbe takes his tray from the dinner lady at the counter and bites his sandwich"
-    }
-  ],
-  "_interactions_rule": "small groups of 2-4 doing one thing together; every word belongs to a group (precheck WARNs on a word in no group). 'background: ...' marks unlabeled scenery figures (natural-scene gate).",
-  "siblings": [
-    "ecole/jardin: garden from a high angle, green, digging in beds",
-    "ecole/theatre: stage from the stalls, warm stage lights"
-  ],
-  "used_motifs": [
-    "duck (ecole/basse_cour)",
-    "red toy car (ecole/preau)"
-  ],
-  "doors": [
-    {
-      "to": "jardin",
-      "where": "top-left blue door, x 72-282, y 12-297",
-      "painted_as": "open blue door onto the garden"
-    },
-    {
-      "to": "map",
-      "where": "left edge, mid-height",
-      "painted_as": "clear path off the left edge"
-    }
-  ],
-  "zooms": [
-    {
-      "to": "",
-      "words": [],
-      "_rule": "no one-object zooms: a zoom with fewer than about 4 words is folded into a fuller scene"
-    }
-  ],
-  "text_in_image": [
-    {
-      "text": "CANTINE",
-      "where": "sign over the counter",
-      "why": "a real canteen would have this sign; it names the place, not a word being taught"
+      "doing": "the server hands a sandwich to the mime, who bites it"
     }
   ],
   "items": [
@@ -85,49 +54,46 @@
       "word": "nous",
       "pos": "pron",
       "gloss": "we, us",
-      "hook": "the mnemonic sentence the card will show, verbatim",
-      "shown": "two children sharing one big bowl of soup with two straws",
-      "pose_action": "both sip at the same moment, heads touching",
+      "hook": "We share NOODLES from one big bowl.",
+      "hook_object": "noodles shared by two children",
+      "shown": "two children sharing noodles",
+      "pose_action": "both slurp from the bowl",
       "count": 2,
-      "verb_acts_on": "",
       "sensitive": "none",
       "side": "center",
-      "zone": "center table on the rug",
+      "zone": "central table",
+      "depth": "middle",
       "box_hint": [
-        560,
-        380,
+        480,
+        280,
         200,
         140
       ],
-      "hook_object": "two NOODLES slurped from one bowl",
-      "interacts_with": "the vous pair passing bread"
+      "interacts_with": "server passing the bowl"
     },
     {
       "id": "fr_manger_verb",
       "word": "manger",
       "pos": "verb",
       "gloss": "to eat",
-      "hook": "...",
-      "shown": "the house verb figure",
-      "pose_action": "mid-bite into a sandwich, cheeks full",
+      "hook": "A mime takes a big bite of his sandwich: to eat (plain depiction, no sound cue).",
+      "hook_object": "sandwich being eaten",
+      "shown": "mime taking a bite of a sandwich",
+      "pose_action": "mime bites the sandwich",
       "count": null,
-      "verb_acts_on": "on the sandwich at the long right table, human scale, inside the scene",
       "sensitive": "none",
       "side": "any",
-      "zone": "right long table",
-      "hook_object": "a big sandwich",
-      "interacts_with": "the dinner lady at the counter",
-      "beret": "er"
-    },
-    {
-      "_example": "a sensitive word: say exactly how it is treated (plaque only / mild depiction / omitted with note)",
-      "id": "fr_example_noun",
-      "word": "la ...",
-      "shown": "blank museum-style plaque only",
-      "pose_action": "none (plaque)",
-      "count": null,
-      "sensitive": "plaque: nothing depicted"
+      "zone": "right of the counter",
+      "depth": "front",
+      "box_hint": [
+        810,
+        430,
+        240,
+        190
+      ],
+      "interacts_with": "server handing the sandwich",
+      "beret": "er",
+      "verb_acts_on": "sandwich in his hand; dog beside him"
     }
-  ],
-  "prompt_text": "Generated by tools/build_prompt.py manifest.json --write; do not type it by hand."
+  ]
 }

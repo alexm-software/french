@@ -33,8 +33,6 @@ GROW = 3   # check_v2 --strict: "touching" = closer than this (px)
 LIMITS = json.loads((Path(__file__).resolve().parents[1] / "skills" / "limits.json").read_text(encoding="utf-8"))
 EDGE = LIMITS["label_edge_px"]   # check_v2 --strict: min clear gap label <-> scene edge (px)
 BAND = LIMITS["centre_band"]     # adjectives and adverbs
-PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOR", "SETTING", "SITUATION", "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING",
-                   "DOORS AND EXITS", "GROUNDING AND ANATOMY", "FIGURES", "TEXT", "CONTENT", "VARIETY", "AVOID")
 DETACH = 12  # build_v2 places labels 4 px off their box; farther than this = detached (manual labelAt?)
 FONT = None
 for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]:
@@ -75,7 +73,10 @@ def gap(a, b):  # px between two rects (0 if they touch/overlap)
 
 def load_payload(p):  # check_v2.load_payload
     s = Path(p).read_text(encoding="utf-8")
-    return json.loads(s[s.index("]=") + 2:].rstrip().rstrip(";"))
+    match = re.search(r'\]\s*=\s*(\{)', s)
+    if not match:
+        raise ValueError(f"not a building payload: {p}")
+    return json.loads(s[match.start(1):].rstrip().rstrip(";"))
 
 
 def vocab_of(js):
@@ -238,51 +239,18 @@ def main():
             for i in ids:
                 if i not in ent: F.append(f"manifest: {i} is in the room but not in the manifest")
             for i in ent:
-                if i not in ids: Wn.append(f"manifest: {i} is in the manifest but not live in this room (new word, or moved?)")
+                if i not in ids: F.append(f"manifest: {i} is missing from built room data; rebuild the planned inventory before release")
             if len(M.get("doors", [])) < len(R.get("doors", [])) + (1 if R.get("mapExit") else 0):
                 F.append(f"manifest: lists {len(M.get('doors', []))} doors/exits, room has {len(R.get('doors', []))} doors" + (" + mapExit" if R.get("mapExit") else ""))
-        elif not M.get("doors"):
-            F.append("manifest: no doors/exits listed")
-        for i, e in ent.items():
-            pos = V.get(i, {}).get("pos") or e.get("pos", "")
-            for k in ("word", "shown", "pose_action", "sensitive"):
-                if not str(e.get(k, "")).strip(): F.append(f"manifest: {i} has no '{k}'")
-            if (pos == "num" or e.get("count") is not None) and not isinstance(e.get("count"), int):
-                F.append(f"manifest: {i} needs an exact integer 'count'")
-            if pos == "verb" and not str(e.get("verb_acts_on", "")).strip():
-                F.append(f"manifest: verb {i} has no 'verb_acts_on' (who acts on what, where)")
-        for z in M.get("zooms", []):
-            if not str(z.get("to", "")).strip() and not z.get("words"): continue   # empty template row
-            if len(z.get("words", [])) <= 1: F.append(f"manifest: zoom {z.get('to')} has {len(z.get('words', []))} word(s): fold it")
-        # prompt gate (builder reference/prompt-template.md): the prompt is built from the template, every field filled
-        sit = str(M.get("scene_situation", "")).strip()
-        if not sit: F.append("manifest: no 'scene_situation' (the one named everyday situation everyone takes part in)")
-        grp = M.get("interactions")
-        if not isinstance(grp, list) or not grp:
-            F.append("manifest: no 'interactions' (small interacting groups: who does what with whom)")
-        else:
-            inq = set()
-            for g in grp:
-                who = g.get("who", []) if isinstance(g, dict) else []
-                if len(who) < 2 or not str(g.get("doing", "")).strip():
-                    F.append(f"manifest: interaction {who or g} needs 2+ 'who' and a 'doing'")
-                inq.update(who)
-            for i, e in ent.items():
-                if i and i not in inq and "plaque" not in str(e.get("sensitive", "")) + str(e.get("shown", "")):
-                    Wn.append(f"manifest: {i} is in no interaction group (isolated figure? natural-scene gate)")
-        for k in ("siblings", "used_motifs"):
-            if k not in M: F.append(f"manifest: no '{k}' (list sibling rooms / motifs already used; [] if none)")
-        pt = str(M.get("prompt_text", ""))
-        if not pt.strip(): F.append("manifest: no 'prompt_text' (the filled prompt-template text actually sent)")
-        else:
-            miss = [h for h in PROMPT_SECTIONS if h + ":" not in pt]
-            if miss: F.append("manifest: prompt_text lacks template section(s): " + ", ".join(miss))
-            left = re.findall(r"\{[^{}\n]{1,60}\}", pt)
-            if left: F.append(f"manifest: prompt_text has {len(left)} unfilled field(s), e.g. {left[0]}")
-            for i, e in ent.items():
-                w = str(e.get("word", "")).strip()
-                if w and w.lower() not in pt.lower(): F.append(f"manifest: prompt_text does not list item {w}")
-            if sit and sit.lower()[:40] not in pt.lower(): Wn.append("manifest: prompt_text does not quote scene_situation")
+        from plan_check import validate_manifest
+        from build_prompt import build
+        failures, warnings = validate_manifest(M, require_prompt=True)
+        F.extend("manifest: " + f for f in failures)
+        Wn.extend("manifest: " + w for w in warnings)
+        if not failures:
+            expected, missing, left = build(M)
+            if missing or left or M.get("prompt_text") != expected:
+                F.append("manifest: prompt_text is stale; run build_prompt.py --write")
         notes.append(f"manifest: {len(ent)} entries checked")
 
     for n in notes: print("  ok   ", n)

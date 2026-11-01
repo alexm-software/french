@@ -24,7 +24,7 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 2. Sign, label and in-image text: see text-and-labels.md (natural scene text may stay).
 3. Copyright: see copyright.md.
 4. Every mnemonic actually works: say the sound-alike aloud, confirm it resembles the target, and confirm the picture also points to the meaning. Reject weak ones and redesign. <!-- B60 -->
-5. Placement rules are obeyed (correct side, tint, prop) and positions match between the world map, sector view, and room. <!-- B61 -->
+5. Placement rules are obeyed (correct side, band, prop) and positions match between the world map, sector view, and room. <!-- B61 -->
 6. Room density is within the target range; overflow goes to a new room or zoom spot. <!-- B62 -->
 7-8. Age-appropriate, reverent content: see sensitive-content.md.
 
@@ -36,7 +36,7 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 - Make sure the mnemonic action is actually visible, not just implied (e.g. "fracture" needs a bandaged jaw, not just a surprised face). <!-- B203 -->
 - Make every figure unique: vary characters (ages, professions, animals, fantasy figures that fit the hook), poses, scale, and actions. A row of the same person in the same pose (e.g. chef after chef at a counter) is unmemorable and must be repainted. <!-- B204 -->
 - Buildings need whimsy too. Plain realistic houses are forgettable, so give each building a memorable, playful shape or feature tied to what it holds (a house shaped like a pot, a crooked tower, a door like a giant loaf), while the scene still reads as a natural place. <!-- B205 -->
-- Balance natural against efficient. Every non-item element is wasted space, so add only enough setting to make the place believable and fill the rest with items. <!-- B206 -->
+- Balance natural against efficient. Architecture, negative space and shared activity make a place memorable. Give hooks enough separation and depth; do not fill every empty patch with another word. <!-- B206 -->
 - Props are hooks too. Don't add decorative ornaments, like a teapot or cheese on a rooftop, that don't stand for an item. <!-- B207 -->
 - Zoomed-in sub-spaces follow the same placement rules (e.g. gender sides) as their parent room. <!-- B208 -->
 - Sign text and signs never covering items: see text-and-labels.md.

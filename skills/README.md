@@ -1,11 +1,10 @@
-# Skills
+# Memory palace skills
 
-The memory palace build skills, kept in sync with the bot. Start with each `SKILL.md`: it is a one-page checklist with a task router at the top saying which reference files a task needs.
+Start with `memory-palace-builder/SKILL.md`; read only the references selected by its task router. Add `language-memory-palace/SKILL.md` for French conventions and `memory-palace-release-gates/SKILL.md` for acceptance and shipping.
 
-- `memory-palace-builder/`: building any memory palace (planning, prompts, composition, labels, hooks, maps, site).
-- `language-memory-palace/`: the language layer (levels, representation, verbs, hooks, placement, cards).
-- `memory-palace-release-gates/`: the gates a room must pass before it ships.
-- `limits.json`: the room-size and spacing numbers; the skills quote it and the scripts read it.
-- `CHANGELOG.md`: what changed in the skills, and the incident history that used to sit inside the rules.
+- Builder owns plan → compiled prompt → integrated painting → integration.
+- Language owns vocabulary, sense, pronunciation, mnemonic and verb conventions.
+- Release gates own mechanical/visual evidence and acceptance.
+- `limits.json` is the canonical density/spacing configuration; do not copy competing limits into documents.
 
-The generated audit tables (`PROMPT_AUDIT.md`, which traces each prompt line to a gate, and `COVERAGE.md`, which traces each rule to its file) are in `docs/skills-history/`, so reading the skills folder does not load them.
+Use `tools/room_context.py` instead of reading whole generated building payloads, and run `tools/plan_check.py` before image generation. `tools/README.md` lists the commands. Whole-scene painting is mandatory; reduce tokens through bounded context, compiled prompts and early checks.

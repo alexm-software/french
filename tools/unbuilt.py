@@ -35,7 +35,10 @@ def sync(dest, url, branch):
 
 def load_payload(p):
     s = p.read_text(encoding="utf-8")
-    return json.loads(s[s.index("]=") + 2:].rstrip().rstrip(";"))
+    match = re.search(r'\]\s*=\s*(\{)', s)
+    if not match:
+        raise ValueError(f"not a building payload: {p}")
+    return json.loads(s[match.start(1):].rstrip().rstrip(";"))
 
 
 def live_ids(repo):

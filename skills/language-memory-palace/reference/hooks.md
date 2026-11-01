@@ -9,13 +9,13 @@ Each word is drawn as something that, said aloud in the learner's native languag
 ## Hook quality bar (language)
 
 - The sound-alike must be a real word or phrase in the learner's language that sounds like the target word said aloud, at least the stressed or first syllable, and it must appear in the scene. Write the meaning in CAPS and the pronunciation in brackets. <!-- L22 -->
-- Examples (French to English) of weak hooks: soif shown as just a thirsty camel, with no sound link; froidement as "fried man", which is too far from the real sound. A better one: soif as a thirsty camel SWADDLED in wet towels. <!-- L23 -->
+- Do not label a meaning-only picture as a sound hook. Do not invent a better-sounding respelling to justify a pun. A plain depiction is an honest fallback; an approximate first-syllable cue must be described as partial and retain the correct pronunciation on the card.
 - Never use the meaning as the sound-alike. 'cook' for cuisinier or 'cat' for chat (said SHAH) link nothing to the French sound. Derive the sound-alike from the pronunciation (IPA or respelling) and check it out loud. <!-- L24 -->
 - Cognates count only when the word both looks AND sounds close (sauce, soupe). Write them plainly ("Same as English 'sauce', said SOHS") with one vivid image that fits the room, and note any pronunciation trap. Words that look alike but sound different (frite, said FREET) still need a sound cue. Mark false friends explicitly on the card. <!-- L25 -->
 - Cognates still need a playful, memorable twist, ideally one that encodes the target-language pronunciation where it differs. A flat "like English X: someone uses X" line is not a mnemonic. Paint the twist. <!-- L26 -->
 - Never drop a word for lack of a perfect hook; a plain, appealing depiction of the item is fine. <!-- L27 -->
 - No template or meta wording on cards ("Picture the plain object", "label glowing"). Every hook is a specific scene, and both the sound cue and the meaning are visibly painted. <!-- L28 -->
-- Before bulk generation, write and get sign-off on a sample room of hooks. After generation, audit by reading each hook aloud against its respelling. Never trust a generator's own strength rating. <!-- L29 -->
+- Reuse approved village devices and user decisions. For a new bulk hook style, check a representative room first. Audit new hooks aloud against IPA/respelling; a generator's strength rating is not evidence.
 
 ## Vulgar senses and usage warnings
 
@@ -24,7 +24,7 @@ Each word is drawn as something that, said aloud in the learner's native languag
 
 ## Hook lessons
 
-- Build each hook from an English sound-alike of the whole word, then paint it literally: talus is a tall loo, rocher is rowing through snow, grandir is a grand deer, abaisser is the letters A, B and C (ah-bay-say) being lowered, vieillir is an old man cheering "yay, a year". <!-- L110 -->
+- Prefer a familiar English cue that matches the real sound; a recognizable partial cue can work when it is vivid and honestly explained. Preserve user-selected scenes (for example, jupe: Jupiter wearing a skirt; accès: an axe opening something). Paint the actual figure/action named by the hook. Do not replace Jupiter with a generic planet or the opening action with an idle axe.
 - Never lean on another word in the same language (piéger cannot be shown with a piège) or on knowing the target language. <!-- L111 -->
 - For abstract or quantity words, show the meaning and the sound together (le grain is a microscope on a tiny grain beside wheat). <!-- L112 -->
 - **Use only English the learner knows.** No Latin or word-history hooks, and no obscure English ("chandler"). A French word the learner has certainly met already is fine as a helper. <!-- L124 -->

@@ -10,7 +10,7 @@ screenshot of the live room when one exists (--shots DIR, check_v2 names it <bld
 Below: one 256 px tile per item = the card crop (square max(w,h)*1.18 around the box, as build_v2 cuts it) with
 the word and its hook, then one tile per exit (door hit box / mapExit box, with its destination), so gate A
 (>= 256 px crops of every item and exit box, headword + hook under each) is read from the sheet.
-Open a full-size crop only where a tile raises doubt. Output: <out>/<bld>_<key>_sheet.jpg (new name per run
+Also perform required 2x hook/count/anatomy inspection; thumbnails do not replace it. Output: <out>/<bld>_<key>_sheet.jpg (new name per run
 with --tag, because image viewers may cache by path).
 """
 import argparse, json, sys, textwrap

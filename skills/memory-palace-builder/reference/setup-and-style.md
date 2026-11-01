@@ -1,5 +1,7 @@
 # Setup, art style and color
 
+For an existing building, reuse approved references and devices; setup questions apply only to a new project or a requested style change.
+
 Read when starting a palace, choosing the art pipeline, or checking color and style.
 
 ## Settings to fix up front
