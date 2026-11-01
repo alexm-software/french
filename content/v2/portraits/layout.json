@@ -582,7 +582,8 @@
     "fr_bienveillant_adj",
     "fr_malin_adj",
     "fr_honteux_adj",
-    "fr_judicieux_adj"
+    "fr_judicieux_adj",
+    "fr_mutuel_adj"
    ]
   },
   "bibliotheque": {
@@ -592,7 +593,8 @@
     "fr_inferieur_adj",
     "fr_angoissant_adj",
     "fr_immateriel_adj",
-    "fr_formel_adj"
+    "fr_formel_adj",
+    "fr_sabbatique_adj"
    ]
   },
   "boutique": {
@@ -603,7 +605,8 @@
     "fr_orgueilleux_adj",
     "fr_attractif_adj",
     "fr_identifiable_adj",
-    "fr_modique_adj"
+    "fr_modique_adj",
+    "fr_privilegie_adj"
    ]
   },
   "infirmerie": {
@@ -613,7 +616,8 @@
     "fr_arteriel_adj",
     "fr_therapeutique_adj",
     "fr_infectieux_adj",
-    "fr_insensible_adj"
+    "fr_insensible_adj",
+    "fr_digital_adj"
    ]
   }
  },
@@ -4180,7 +4184,7 @@
    "name": "La cuisine · The kitchen",
    "room_id": "R_character_06",
    "image": "portraits/cuisine.jpg",
-   "alt": "A cosy country kitchen with a blue-and-white tiled wall, copper pans over a cream range, a dresser of blue plates and a long wooden table. A round cook in a chef's hat flings his arms wide in welcome; a kind granny heaps baked beans onto a yawning boy's plate; a girl stands on a big watermelon to reach the cookie jar; a boy with chocolate round his mouth hangs his head as his aunt stands over him, hands on hips; a cook in a red headscarf tastes the soup at the range before salting it; two kittens doze in a basket. A red stable door leads back to the sunny terrace.",
+   "alt": "A cosy country kitchen with a blue-and-white tiled wall, copper pans over a cream range, a dresser of blue plates and a long wooden table. A round cook in a chef's hat flings his arms wide in welcome; a kind granny heaps baked beans onto a yawning boy's plate; a girl stands on a big watermelon to reach the cookie jar; a boy with chocolate round his mouth hangs his head as his aunt stands over him, hands on hips; a cook in a red headscarf tastes the soup at the range before salting it; under the table two kittens lick each other's ears in a wicker basket; logs are stacked by the wall. A red stable door leads back to the sunny terrace.",
    "nameplate": [
     50,
     4.5
@@ -4234,7 +4238,7 @@
       680,
       190,
       148,
-      440
+      405
      ]
     },
     {
@@ -4243,7 +4247,16 @@
       830,
       185,
       128,
-      170
+      255
+     ]
+    },
+    {
+     "id": "fr_mutuel_adj",
+     "box": [
+      690,
+      600,
+      205,
+      110
      ]
     }
    ]
@@ -4252,7 +4265,7 @@
    "name": "La bibliothèque · The library",
    "room_id": "R_character_09",
    "image": "portraits/bibliotheque.jpg",
-   "alt": "A tall dark-wood library with shelves to the ceiling, a rolling ladder with a dozing owl, a big globe, a green reading lamp and a tall arched window. A child in a white astronaut helmet reaches up for a red model rocket; a small boy sits on the rug pulling books from the lowest shelf; a boy in a leather armchair reads a dark book with his hair on end; a friendly see-through ghost glides out of the bookshelf; a librarian in a black tailcoat holds out a book on a silver tray; a bearded man in a sun hat lounges in a hammock. A dark-oak door with a carved book leads back to the terrace, a white door with a porthole and a green cross opens onto a nurse's room, and a turquoise shop door with a brass bell opens onto a gift shop.",
+   "alt": "A tall dark-wood library with shelves to the ceiling, a rolling ladder with a dozing owl, a big globe, a green reading lamp and a tall arched window. A child in a white astronaut helmet reaches up for a red model rocket; a small boy sits on the rug pulling books from the lowest shelf; a boy in a leather armchair reads a dark book with his hair on end; a friendly see-through ghost glides out of the bookshelf; a librarian in a black tailcoat holds out a book on a silver tray; a bearded man in a sun hat and sunglasses lounges in a striped deckchair beside him, a travel suitcase near the globe. A dark-oak door with a carved book leads back to the terrace, a white door with a porthole and a green cross opens onto a nurse's room, and a turquoise shop door with a brass bell opens onto a gift shop.",
    "nameplate": [
     50,
     4.5
@@ -4335,9 +4348,18 @@
      "id": "fr_formel_adj",
      "box": [
       630,
-      180,
-      120,
-      290
+      175,
+      73,
+      295
+     ]
+    },
+    {
+     "id": "fr_sabbatique_adj",
+     "box": [
+      705,
+      280,
+      125,
+      190
      ]
     }
    ]
@@ -4346,7 +4368,7 @@
    "name": "La boutique · The gift shop",
    "room_id": "R_character_07",
    "image": "portraits/boutique.jpg",
-   "alt": "A bright little museum gift shop with white shelves of snow globes and tote bags, a tall mirror, an umbrella stand and a wooden counter with a brass cash register and a goldfish in a crown. A woman in a flowered hat loaded with shopping bags tosses banknotes in the air; a boy holds up an Eiffel Tower snow globe; a peacock fans its tail before the mirror; a boy pulls a trail of paper clips with a big red magnet; a girl holds up a red polka-dot umbrella beside a stand of black ones; a shopkeeper fans a white cat on a velvet cushion; a small boy hands over one coin at the counter. A turquoise shop door with a brass bell leads back to the library.",
+   "alt": "A bright little museum gift shop with white shelves of snow globes and tote bags, a tall mirror, an umbrella stand and a wooden counter with a brass cash register and a goldfish in a crown. A woman in a flowered hat loaded with shopping bags tosses banknotes in the air; a boy holds up an Eiffel Tower snow globe; a peacock fans its tail before the mirror; a boy pulls a trail of paper clips with a big red magnet; a girl holds up a red polka-dot umbrella beside a brass stand of black ones; a white cat in a tiny crown lounges on a velvet cushion on a gilded stool; a smiling shopkeeper waves a paper fan; a small boy hands over one coin at the counter. A turquoise shop door with a brass bell leads back to the library.",
    "nameplate": [
     50,
     4.5
@@ -4389,9 +4411,9 @@
      "id": "fr_orgueilleux_adj",
      "box": [
       688,
-      105,
-      95,
-      150
+      120,
+      55,
+      180
      ]
     },
     {
@@ -4407,18 +4429,31 @@
      "id": "fr_identifiable_adj",
      "box": [
       745,
-      262,
-      82,
-      178
+      205,
+      72,
+      250
+     ],
+     "labelAt": [
+      822,
+      175
      ]
     },
     {
      "id": "fr_modique_adj",
      "box": [
-      828,
-      425,
-      125,
-      280
+      818,
+      330,
+      132,
+      300
+     ]
+    },
+    {
+     "id": "fr_privilegie_adj",
+     "box": [
+      700,
+      478,
+      115,
+      100
      ]
     }
    ]
@@ -4427,7 +4462,7 @@
    "name": "L'infirmerie · The nurse's room",
    "room_id": "R_appearance_07",
    "image": "portraits/infirmerie.jpg",
-   "alt": "A bright mint-green nurse's room with two white beds with checked blankets, a bandage cabinet, a skeleton model and a big window onto the garden. A nurse points at the skeleton's knee; a young helper takes a seated grandpa's blood pressure; a golden retriever rests its chin on a girl's blanket; a boy sneezes into a tissue as a girl leans away; a girl tickles her brother's plaster cast with a feather while he reads on; a boy holds up a bandaged finger; a teddy bear with a bandaged paw sits on the windowsill. A white door with a porthole and a green cross leads back to the library.",
+   "alt": "A bright mint-green nurse's room with two white beds with checked blankets, a bandage cabinet, a skeleton model and a big window onto the garden. A nurse points at the skeleton's knee; a young helper takes a seated grandpa's blood pressure; a golden retriever rests its chin on a girl's blanket; a boy sneezes into a tissue; a girl tickles her brother's plaster cast with a feather while he reads on; a boy behind the bed proudly holds up a bandaged finger; a teddy bear with a bandaged paw sits on the windowsill. A white door with a porthole and a green cross leads back to the library.",
    "nameplate": [
     50,
     4.5
@@ -4484,7 +4519,7 @@
      "box": [
       738,
       135,
-      95,
+      88,
       170
      ]
     },
@@ -4495,6 +4530,15 @@
       365,
       250,
       210
+     ]
+    },
+    {
+     "id": "fr_digital_adj",
+     "box": [
+      830,
+      195,
+      85,
+      165
      ]
     }
    ]
