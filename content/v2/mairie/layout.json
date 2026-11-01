@@ -102,6 +102,18 @@
   {
    "key": "inauguration",
    "short": "La salle des cérémonies"
+  },
+  {
+   "key": "environnement",
+   "short": "L'urbanisme"
+  },
+  {
+   "key": "budget",
+   "short": "Le bureau du budget"
+  },
+  {
+   "key": "solidarite",
+   "short": "Le centre social"
   }
  ],
  "rooms": {
@@ -4014,7 +4026,7 @@
    "name": "La salle des cérémonies · The ceremonial hall",
    "room_id": "R_politics_03",
    "image": "mairie/inauguration.jpg",
-   "alt": "La salle des cérémonies: the ceremonial hall of a French village town hall: cream walls with gilded moldings, a herringbone parquet floor, tall mirrors in gilded frames on the back wall. mayor in a sash cutting a ribbon; woman ringing a bell from a tall gilded chair; little girl climbing red steps onto a stage; man announcing a name, young woman standing up in surprise; model of a domed public building on a stand; white bust of Marianne on a pedestal; drummer boy marching with a determined face; huge five-tier cake standing on the floor; famous actress holding up her own portrait; butler in white gloves bowing stiffly with a tray; man in a smaller copy of the gilded chair; white-haired senator with a cane. The white arched door on the left, back to the civics classroom.",
+   "alt": "La salle des cérémonies: the ceremonial hall of a French village town hall: cream walls with gilded moldings, a herringbone parquet floor, tall mirrors in gilded frames on the back wall. mayor in a sash cutting a ribbon; woman ringing a bell from a tall gilded chair; little girl climbing red steps onto a stage; man announcing a name, young woman standing up in surprise; model of a domed public building on a stand; white bust of Marianne on a pedestal; drummer boy marching with a determined face; huge five-tier cake standing on the floor; famous actress holding up her own portrait; butler in white gloves bowing stiffly with a tray; man in a smaller copy of the gilded chair; white-haired senator with a cane. The white arched door on the left, back to the civics classroom. The mint-green arched door on the right leads to the town planning office.",
    "nameplate": [
     50,
     4.5
@@ -4030,6 +4042,17 @@
       20,
       240,
       420
+     ]
+    },
+    {
+     "to": "environnement",
+     "label": "L'urbanisme",
+     "hint": "The mint-green arched door on the right, to the town planning office",
+     "hit": [
+      1095,
+      68,
+      173,
+      404
      ]
     }
    ],
@@ -4060,10 +4083,10 @@
     {
      "id": "fr_accession_noun",
      "box": [
-      244,
       280,
-      66,
-      115
+      308,
+      34,
+      94
      ],
      "labelAt": [
       172,
@@ -4161,6 +4184,511 @@
       185,
       87,
       290
+     ]
+    }
+   ]
+  },
+  "environnement": {
+   "name": "Le service de l'urbanisme · The town planning office",
+   "room_id": "R_adj_relation_06",
+   "image": "mairie/environnement.jpg",
+   "alt": "L'urbanisme: the town planning office of a French village town hall: pale blue walls, a light oak plank floor, a big window in the back wall with a view of green hills. four villagers of all ages standing together arm in arm; a man giving way with raised palms to a woman planting a toy tree; a toy farm with a red barn, haystacks and cows on green felt; a model of gray tower blocks and busy streets; tiny model house alone on an island in a bowl; a model wind turbine and a small solar panel; green bicycle with a basket of vegetables; town cleaner in an orange vest with a green broom; four potted trees, each taller than the last; a red pin in the exact center of a round village model; jigsaw map of France on an easel; young man in a wheelchair rolling up a ramp; man holding up a model of his house and his keys. The mint-green arched door on the left, back to the ceremonial hall. The mustard-yellow door on the right, to the budget office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "inauguration",
+   "doors": [
+    {
+     "to": "inauguration",
+     "label": "La salle des cérémonies",
+     "hint": "The mint-green arched door on the left, back to the ceremonial hall",
+     "hit": [
+      0,
+      18,
+      214,
+      427
+     ]
+    },
+    {
+     "to": "budget",
+     "label": "Le bureau du budget",
+     "hint": "The mustard-yellow door on the right, to the budget office",
+     "hit": [
+      1018,
+      30,
+      260,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_collectivite_noun",
+     "box": [
+      160,
+      449,
+      124,
+      241
+     ]
+    },
+    {
+     "id": "fr_concession_noun",
+     "box": [
+      262,
+      247,
+      216,
+      193
+     ]
+    },
+    {
+     "id": "fr_rural_adj",
+     "box": [
+      479,
+      395,
+      187,
+      180
+     ]
+    },
+    {
+     "id": "fr_urbain_adj",
+     "box": [
+      829,
+      334,
+      91,
+      174
+     ]
+    },
+    {
+     "id": "fr_isole_adj",
+     "box": [
+      479,
+      258,
+      117,
+      135
+     ]
+    },
+    {
+     "id": "fr_renouvelable_adj",
+     "box": [
+      414,
+      48,
+      94,
+      196
+     ]
+    },
+    {
+     "id": "fr_ecologique_adj",
+     "box": [
+      668,
+      405,
+      144,
+      138
+     ]
+    },
+    {
+     "id": "fr_municipal_adj",
+     "box": [
+      672,
+      208,
+      124,
+      195
+     ]
+    },
+    {
+     "id": "fr_progressif_adj",
+     "box": [
+      519,
+      44,
+      206,
+      162
+     ]
+    },
+    {
+     "id": "fr_central_adj",
+     "box": [
+      800,
+      165,
+      145,
+      168
+     ]
+    },
+    {
+     "id": "fr_departemental_adj",
+     "box": [
+      748,
+      546,
+      128,
+      115
+     ]
+    },
+    {
+     "id": "fr_accessible_adj",
+     "box": [
+      325,
+      482,
+      150,
+      231
+     ]
+    },
+    {
+     "id": "fr_resident_noun",
+     "box": [
+      880,
+      512,
+      150,
+      200
+     ]
+    }
+   ]
+  },
+  "budget": {
+   "name": "Le bureau du budget · The budget office",
+   "room_id": "R_adj_relation_09",
+   "image": "mairie/budget.jpg",
+   "alt": "Le bureau du budget: the budget and finance office of a French village town hall: dark walnut wood paneled walls, a dark green and cream patterned carpet over a dark wood floor, a long wooden counter on the left, a tall clear window in the back wall. woman paying a clerk at the counter; businessman stacking towers of gold coins; farmer cheering on an old telephone, a land deed by his knee; girl with an overflowing cash box at a lemonade stand; shocked man paying for a teacup with a wheelbarrow of banknotes; coot bird wearing a diamond necklace on a cushion; jeweled crown in a glass case; grandfather showing a girl a tray of old coins; woman spinning a big globe; jolly man filling a jar of candies to the brim; window cleaner outside the tall window; two people planning a move at a checkerboard; adviser whispering to a seated treasurer; grandson signing a ledger for his grandmother. The mustard-yellow door on the left, back to the town planning office. The brick-red door on the right, to the community help center.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "environnement",
+   "doors": [
+    {
+     "to": "environnement",
+     "label": "L'urbanisme",
+     "hint": "The mustard-yellow door on the left, back to the town planning office",
+     "hit": [
+      126,
+      78,
+      192,
+      252
+     ]
+    },
+    {
+     "to": "solidarite",
+     "label": "Le centre social",
+     "hint": "The brick-red door on the right, to the community help center",
+     "hit": [
+      960,
+      76,
+      198,
+      369
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_transaction_noun",
+     "box": [
+      238,
+      332,
+      190,
+      280
+     ]
+    },
+    {
+     "id": "fr_capitaliste_adj",
+     "box": [
+      820,
+      180,
+      114,
+      120
+     ]
+    },
+    {
+     "id": "fr_foncier_adj",
+     "box": [
+      702,
+      330,
+      134,
+      116
+     ]
+    },
+    {
+     "id": "fr_lucratif_adj",
+     "box": [
+      604,
+      492,
+      169,
+      186
+     ]
+    },
+    {
+     "id": "fr_exorbitant_adj",
+     "box": [
+      795,
+      447,
+      176,
+      196
+     ]
+    },
+    {
+     "id": "fr_couteux_adj",
+     "box": [
+      490,
+      331,
+      113,
+      137
+     ]
+    },
+    {
+     "id": "fr_inestimable_adj",
+     "box": [
+      605,
+      296,
+      88,
+      130
+     ]
+    },
+    {
+     "id": "fr_enrichissant_adj",
+     "box": [
+      840,
+      340,
+      101,
+      92
+     ],
+     "labelAt": [
+      1046,
+      450
+     ]
+    },
+    {
+     "id": "fr_global_adj",
+     "box": [
+      522,
+      122,
+      110,
+      174
+     ]
+    },
+    {
+     "id": "fr_pleinement_adv",
+     "box": [
+      436,
+      473,
+      128,
+      197
+     ]
+    },
+    {
+     "id": "fr_externe_adj",
+     "box": [
+      650,
+      62,
+      68,
+      104
+     ]
+    },
+    {
+     "id": "fr_strategique_adj",
+     "box": [
+      687,
+      167,
+      130,
+      98
+     ]
+    },
+    {
+     "id": "fr_consultatif_adj",
+     "box": [
+      380,
+      118,
+      140,
+      188
+     ]
+    },
+    {
+     "id": "fr_mandataire_noun",
+     "box": [
+      990,
+      484,
+      201,
+      216
+     ]
+    }
+   ]
+  },
+  "solidarite": {
+   "name": "Le centre social · The community help center",
+   "room_id": "R_society_03",
+   "image": "mairie/solidarite.jpg",
+   "alt": "Le centre social: the community help center of a French village town hall: warm terracotta plaster walls, a red tiled floor, long trestle tables, a cork board on the back wall, tall windows in the back wall. woman counting her last coins; woman pointing firmly at a red toy van, claiming it; girl painting a perfect dream town; man signing a woman's clipboard petition; cook welcoming a young woman in a new apron; three children carrying one table together; volunteer stacking aid boxes and blankets; boy holding a raincoat and swimming goggles; cook ladling soup from a huge shared pot; man ironing a shirt; old man hugging a painting of his native village; delegate speaking at a lectern; boy on crutches carrying a shopping bag for the soup kitchen; marcher with a blank placard and a toy ant; two sheep curtsying politely. The brick-red door on the left, back to the budget office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "budget",
+   "doors": [
+    {
+     "to": "budget",
+     "label": "Le bureau du budget",
+     "hint": "The brick-red door on the left, back to the budget office",
+     "hit": [
+      108,
+      24,
+      192,
+      270
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_precarite_noun",
+     "box": [
+      118,
+      300,
+      162,
+      225
+     ]
+    },
+    {
+     "id": "fr_revendication_noun",
+     "box": [
+      302,
+      72,
+      130,
+      138
+     ],
+     "labelAt": [
+      400,
+      176
+     ]
+    },
+    {
+     "id": "fr_utopie_noun",
+     "box": [
+      335,
+      211,
+      170,
+      141
+     ]
+    },
+    {
+     "id": "fr_petition_noun",
+     "box": [
+      440,
+      62,
+      122,
+      98
+     ]
+    },
+    {
+     "id": "fr_reinsertion_noun",
+     "box": [
+      284,
+      355,
+      156,
+      285
+     ]
+    },
+    {
+     "id": "fr_collectif_adj",
+     "box": [
+      688,
+      385,
+      270,
+      187
+     ]
+    },
+    {
+     "id": "fr_humanitaire_adj",
+     "box": [
+      578,
+      70,
+      144,
+      90
+     ]
+    },
+    {
+     "id": "fr_eventuellement_adv",
+     "box": [
+      614,
+      222,
+      131,
+      138
+     ],
+     "labelAt": [
+      702,
+      203
+     ]
+    },
+    {
+     "id": "fr_communautaire_adj",
+     "box": [
+      733,
+      62,
+      123,
+      130
+     ],
+     "labelAt": [
+      703,
+      166
+     ]
+    },
+    {
+     "id": "fr_domestique_adj",
+     "box": [
+      752,
+      238,
+      148,
+      142
+     ]
+    },
+    {
+     "id": "fr_natal_adj",
+     "box": [
+      528,
+      362,
+      127,
+      238
+     ]
+    },
+    {
+     "id": "fr_representatif_adj",
+     "box": [
+      858,
+      60,
+      66,
+      168
+     ],
+     "labelAt": [
+      935,
+      60
+     ]
+    },
+    {
+     "id": "fr_solidaire_adj",
+     "box": [
+      538,
+      197,
+      74,
+      138
+     ],
+     "labelAt": [
+      550,
+      166
+     ]
+    },
+    {
+     "id": "fr_manifestant_noun",
+     "box": [
+      962,
+      284,
+      133,
+      306
+     ]
+    },
+    {
+     "id": "fr_us_noun",
+     "box": [
+      931,
+      170,
+      131,
+      104
      ]
     }
    ]
@@ -4587,6 +5115,63 @@
     "fr_formellement_adv",
     "fr_vice_president_noun",
     "fr_senateur_noun"
+   ]
+  },
+  "environnement": {
+   "vocabRoom": "R_adj_relation_06",
+   "only": [
+    "fr_collectivite_noun",
+    "fr_concession_noun",
+    "fr_rural_adj",
+    "fr_urbain_adj",
+    "fr_isole_adj",
+    "fr_renouvelable_adj",
+    "fr_ecologique_adj",
+    "fr_municipal_adj",
+    "fr_progressif_adj",
+    "fr_central_adj",
+    "fr_departemental_adj",
+    "fr_accessible_adj",
+    "fr_resident_noun"
+   ]
+  },
+  "budget": {
+   "vocabRoom": "R_adj_relation_09",
+   "only": [
+    "fr_transaction_noun",
+    "fr_capitaliste_adj",
+    "fr_foncier_adj",
+    "fr_lucratif_adj",
+    "fr_exorbitant_adj",
+    "fr_couteux_adj",
+    "fr_inestimable_adj",
+    "fr_enrichissant_adj",
+    "fr_global_adj",
+    "fr_pleinement_adv",
+    "fr_externe_adj",
+    "fr_strategique_adj",
+    "fr_consultatif_adj",
+    "fr_mandataire_noun"
+   ]
+  },
+  "solidarite": {
+   "vocabRoom": "R_society_03",
+   "only": [
+    "fr_precarite_noun",
+    "fr_revendication_noun",
+    "fr_utopie_noun",
+    "fr_petition_noun",
+    "fr_reinsertion_noun",
+    "fr_collectif_adj",
+    "fr_humanitaire_adj",
+    "fr_eventuellement_adv",
+    "fr_communautaire_adj",
+    "fr_domestique_adj",
+    "fr_natal_adj",
+    "fr_representatif_adj",
+    "fr_solidaire_adj",
+    "fr_manifestant_noun",
+    "fr_us_noun"
    ]
   }
  },
