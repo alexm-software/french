@@ -56,6 +56,26 @@
   {
    "key": "antiquite",
    "short": "L'Antiquité"
+  },
+  {
+   "key": "cour",
+   "short": "La cour"
+  },
+  {
+   "key": "epoques",
+   "short": "Les époques"
+  },
+  {
+   "key": "revolutions",
+   "short": "Les révolutions"
+  },
+  {
+   "key": "archives",
+   "short": "Les archives"
+  },
+  {
+   "key": "linguistique",
+   "short": "La linguistique"
   }
  ],
  "planned": {
@@ -243,6 +263,81 @@
     "fr_cesar_noun",
     "fr_vestige_noun"
    ]
+  },
+  "cour": {
+   "vocabRoom": "R_history_02",
+   "only": [
+    "fr_majeste_noun",
+    "fr_monarchie_noun",
+    "fr_imperatrice_noun",
+    "fr_instabilite_noun",
+    "fr_duc_noun",
+    "fr_pair_noun",
+    "fr_tsar_noun",
+    "fr_edit_noun"
+   ]
+  },
+  "epoques": {
+   "vocabRoom": "R_history_03",
+   "only": [
+    "fr_prehistoire_noun",
+    "fr_renaissance_noun",
+    "fr_modernite_noun",
+    "fr_medieval_adj",
+    "fr_pionnier_noun",
+    "fr_demi_siecle_noun",
+    "fr_antan_noun",
+    "fr_historien_noun",
+    "fr_bourgeois_noun"
+   ]
+  },
+  "revolutions": {
+   "vocabRoom": "R_history_03",
+   "only": [
+    "fr_revolution_noun",
+    "fr_rebellion_noun",
+    "fr_liberation_noun",
+    "fr_insurrection_noun",
+    "fr_tyrannie_noun",
+    "fr_revolutionnaire_adj",
+    "fr_complot_noun",
+    "fr_avenement_noun",
+    "fr_tyran_noun",
+    "fr_regime_noun",
+    "fr_exil_noun",
+    "fr_fanatique_noun"
+   ]
+  },
+  "archives": {
+   "vocabRoom": "R_history_03",
+   "only": [
+    "fr_archeologie_noun",
+    "fr_encyclopedie_noun",
+    "fr_reconstitution_noun",
+    "fr_guillotine_noun",
+    "fr_abolition_noun",
+    "fr_esclave_noun",
+    "fr_patrimoine_noun",
+    "fr_narrateur_noun",
+    "fr_sultan_noun",
+    "fr_folklore_noun"
+   ]
+  },
+  "linguistique": {
+   "vocabRoom": "R_linguistics_01",
+   "only": [
+    "fr_correction_noun",
+    "fr_signification_noun",
+    "fr_definition_noun",
+    "fr_interpretation_noun",
+    "fr_version_noun",
+    "fr_argument_noun",
+    "fr_terme_noun",
+    "fr_pretexte_noun",
+    "fr_biais_noun",
+    "fr_genre_noun",
+    "fr_signe_noun"
+   ]
   }
  },
  "rooms": {
@@ -296,6 +391,17 @@
       90,
       71,
       150
+     ]
+    },
+    {
+     "to": "linguistique",
+     "label": "La linguistique",
+     "hint": "the blue door up on the gallery, to the linguistics room",
+     "hit": [
+      785,
+      97,
+      65,
+      155
      ]
     }
    ],
@@ -1602,6 +1708,17 @@
       40,
       80
      ]
+    },
+    {
+     "to": "epoques",
+     "label": "Les époques",
+     "hint": "the green door with the hourglass on the right, to the ages room",
+     "hit": [
+      1165,
+      75,
+      38,
+      240
+     ]
     }
    ],
    "zooms": [],
@@ -1802,6 +1919,624 @@
       375,
       108,
       302
+     ]
+    }
+   ]
+  },
+  "cour": {
+   "name": "La cour royale · The royal court",
+   "room_id": "R_history_02",
+   "image": "humanites/cour.jpg",
+   "alt": "A grand palace hall with a black-and-white checkerboard floor, gilded mirrors and a red carpet leading up red steps to an empty golden throne under a red canopy; a tufted red ottoman holds an orange tree and tall windows look onto formal gardens.",
+   "nameplate": [
+    60,
+    4
+   ],
+   "backTo": "epoques",
+   "doors": [
+    {
+     "to": "epoques",
+     "label": "Les époques",
+     "hint": "the cream-and-gold door with the hourglass at the back, to the ages hall",
+     "hit": [
+      520,
+      72,
+      95,
+      233
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_majeste_noun",
+     "box": [
+      10,
+      265,
+      168,
+      230
+     ]
+    },
+    {
+     "id": "fr_monarchie_noun",
+     "box": [
+      180,
+      412,
+      160,
+      300
+     ]
+    },
+    {
+     "id": "fr_imperatrice_noun",
+     "box": [
+      188,
+      138,
+      160,
+      240
+     ]
+    },
+    {
+     "id": "fr_instabilite_noun",
+     "box": [
+      360,
+      50,
+      158,
+      255
+     ]
+    },
+    {
+     "id": "fr_duc_noun",
+     "box": [
+      802,
+      80,
+      175,
+      270
+     ]
+    },
+    {
+     "id": "fr_pair_noun",
+     "box": [
+      880,
+      355,
+      385,
+      365
+     ]
+    },
+    {
+     "id": "fr_tsar_noun",
+     "box": [
+      1050,
+      30,
+      170,
+      320
+     ]
+    },
+    {
+     "id": "fr_edit_noun",
+     "box": [
+      618,
+      318,
+      182,
+      262
+     ]
+    }
+   ]
+  },
+  "epoques": {
+   "name": "La salle des époques · The ages hall",
+   "room_id": "R_history_03",
+   "image": "humanites/epoques.jpg",
+   "alt": "A long bright white timeline gallery with a brass strip in the floor, a rocky cave nook, a modern egg chair, a giant brass hourglass on a stone pedestal and tall windows onto a sunny campus lawn; a cat rides a robot vacuum along the timeline.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "histoire",
+   "doors": [
+    {
+     "to": "histoire",
+     "label": "L'histoire",
+     "hint": "the green door with the hourglass on the left, back to the history hall",
+     "hit": [
+      235,
+      95,
+      55,
+      180
+     ]
+    },
+    {
+     "to": "cour",
+     "label": "La cour",
+     "hint": "the cream-and-gold door with the crown at the far end, to the royal court",
+     "hit": [
+      600,
+      100,
+      120,
+      130
+     ]
+    },
+    {
+     "to": "revolutions",
+     "label": "Les révolutions",
+     "hint": "the blue door with the torch on the right, to the revolutions room",
+     "hit": [
+      822,
+      140,
+      40,
+      120
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_prehistoire_noun",
+     "box": [
+      20,
+      110,
+      170,
+      230
+     ]
+    },
+    {
+     "id": "fr_renaissance_noun",
+     "box": [
+      15,
+      405,
+      445,
+      315
+     ]
+    },
+    {
+     "id": "fr_modernite_noun",
+     "box": [
+      300,
+      165,
+      130,
+      235
+     ]
+    },
+    {
+     "id": "fr_medieval_adj",
+     "box": [
+      430,
+      190,
+      135,
+      200
+     ]
+    },
+    {
+     "id": "fr_pionnier_noun",
+     "box": [
+      662,
+      452,
+      200,
+      178
+     ]
+    },
+    {
+     "id": "fr_demi_siecle_noun",
+     "box": [
+      725,
+      125,
+      95,
+      275
+     ]
+    },
+    {
+     "id": "fr_antan_noun",
+     "box": [
+      865,
+      150,
+      125,
+      337
+     ]
+    },
+    {
+     "id": "fr_historien_noun",
+     "box": [
+      1000,
+      50,
+      125,
+      285
+     ]
+    },
+    {
+     "id": "fr_bourgeois_noun",
+     "box": [
+      1000,
+      340,
+      270,
+      380
+     ]
+    }
+   ]
+  },
+  "revolutions": {
+   "name": "La salle des révolutions · The revolutions hall",
+   "room_id": "R_history_03",
+   "image": "humanites/revolutions.jpg",
+   "alt": "A tall cream history-club hall with an arched window onto the campus, a red door with a brass key ajar onto archive shelves, cardboard scenery flats along the walls, folding chairs, a wooden loft, and a big round wooden revolving stage with a brass crank where a tabby cat sleeps.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "epoques",
+   "doors": [
+    {
+     "to": "epoques",
+     "label": "Les époques",
+     "hint": "the white door with the hourglass on the left, back to the ages hall",
+     "hit": [
+      75,
+      30,
+      120,
+      225
+     ]
+    },
+    {
+     "to": "archives",
+     "label": "Les archives",
+     "hint": "the red door with the brass key at the back, to the archives",
+     "hit": [
+      600,
+      70,
+      150,
+      180
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_revolution_noun",
+     "box": [
+      135,
+      450,
+      195,
+      262
+     ]
+    },
+    {
+     "id": "fr_rebellion_noun",
+     "box": [
+      15,
+      262,
+      175,
+      138
+     ]
+    },
+    {
+     "id": "fr_liberation_noun",
+     "box": [
+      312,
+      70,
+      160,
+      170
+     ]
+    },
+    {
+     "id": "fr_insurrection_noun",
+     "box": [
+      245,
+      290,
+      180,
+      155
+     ]
+    },
+    {
+     "id": "fr_tyrannie_noun",
+     "box": [
+      430,
+      245,
+      120,
+      275
+     ]
+    },
+    {
+     "id": "fr_revolutionnaire_adj",
+     "box": [
+      555,
+      255,
+      205,
+      195
+     ]
+    },
+    {
+     "id": "fr_complot_noun",
+     "box": [
+      1110,
+      125,
+      160,
+      135
+     ]
+    },
+    {
+     "id": "fr_avenement_noun",
+     "box": [
+      845,
+      150,
+      185,
+      160
+     ]
+    },
+    {
+     "id": "fr_tyran_noun",
+     "box": [
+      1050,
+      265,
+      215,
+      190
+     ]
+    },
+    {
+     "id": "fr_regime_noun",
+     "box": [
+      985,
+      460,
+      225,
+      255
+     ]
+    },
+    {
+     "id": "fr_exil_noun",
+     "box": [
+      785,
+      345,
+      195,
+      180
+     ]
+    },
+    {
+     "id": "fr_fanatique_noun",
+     "box": [
+      856,
+      12,
+      78,
+      122
+     ]
+    }
+   ]
+  },
+  "archives": {
+   "name": "Les archives · The archives",
+   "room_id": "R_history_03",
+   "image": "humanites/archives.jpg",
+   "alt": "A bright museum archives hall with tall windows onto a rainy courtyard fountain, a big wooden map chest with a dog asleep in an open drawer, a stone memorial alcove with a blank bronze plaque, a painted family tree with oval portraits, and a blue door with a torch at the far right.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "revolutions",
+   "doors": [
+    {
+     "to": "revolutions",
+     "label": "Les révolutions",
+     "hint": "the blue door with the torch at the far right, back to the revolutions hall",
+     "hit": [
+      1095,
+      40,
+      100,
+      105
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_archeologie_noun",
+     "box": [
+      10,
+      275,
+      220,
+      205
+     ]
+    },
+    {
+     "id": "fr_encyclopedie_noun",
+     "box": [
+      310,
+      272,
+      115,
+      190
+     ]
+    },
+    {
+     "id": "fr_reconstitution_noun",
+     "box": [
+      125,
+      115,
+      240,
+      155
+     ]
+    },
+    {
+     "id": "fr_guillotine_noun",
+     "box": [
+      235,
+      465,
+      355,
+      250
+     ]
+    },
+    {
+     "id": "fr_abolition_noun",
+     "box": [
+      482,
+      130,
+      90,
+      210
+     ]
+    },
+    {
+     "id": "fr_esclave_noun",
+     "box": [
+      574,
+      180,
+      158,
+      95
+     ]
+    },
+    {
+     "id": "fr_patrimoine_noun",
+     "box": [
+      760,
+      20,
+      250,
+      150
+     ]
+    },
+    {
+     "id": "fr_narrateur_noun",
+     "box": [
+      915,
+      172,
+      185,
+      230
+     ]
+    },
+    {
+     "id": "fr_sultan_noun",
+     "box": [
+      1030,
+      415,
+      240,
+      300
+     ]
+    },
+    {
+     "id": "fr_folklore_noun",
+     "box": [
+      1105,
+      150,
+      170,
+      220
+     ]
+    }
+   ]
+  },
+  "linguistique": {
+   "name": "La salle de linguistique · The linguistics room",
+   "room_id": "R_linguistics_01",
+   "image": "humanites/linguistique.jpg",
+   "alt": "A pale-yellow language lab with listening booths, a big brass gramophone horn, a blank map, a wooden staircase up to a gallery, a ginger cat in headphones on a snack cart, an oak door with a carved book at the back left and a teal door with a globe at the right.",
+   "nameplate": [
+    40,
+    4
+   ],
+   "backTo": "humanites",
+   "doors": [
+    {
+     "to": "humanites",
+     "label": "La bibliothèque",
+     "hint": "the oak door with the open book at the back left, back to the library",
+     "hit": [
+      278,
+      55,
+      70,
+      75
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_correction_noun",
+     "box": [
+      10,
+      490,
+      455,
+      225
+     ]
+    },
+    {
+     "id": "fr_signification_noun",
+     "box": [
+      510,
+      445,
+      165,
+      170
+     ]
+    },
+    {
+     "id": "fr_definition_noun",
+     "box": [
+      270,
+      342,
+      185,
+      145
+     ]
+    },
+    {
+     "id": "fr_interpretation_noun",
+     "box": [
+      185,
+      135,
+      140,
+      180
+     ]
+    },
+    {
+     "id": "fr_version_noun",
+     "box": [
+      360,
+      200,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_argument_noun",
+     "box": [
+      990,
+      235,
+      130,
+      185
+     ]
+    },
+    {
+     "id": "fr_terme_noun",
+     "box": [
+      1125,
+      200,
+      145,
+      215
+     ]
+    },
+    {
+     "id": "fr_pretexte_noun",
+     "box": [
+      1010,
+      425,
+      230,
+      290
+     ]
+    },
+    {
+     "id": "fr_biais_noun",
+     "box": [
+      930,
+      8,
+      95,
+      125
+     ]
+    },
+    {
+     "id": "fr_genre_noun",
+     "box": [
+      665,
+      325,
+      225,
+      118
+     ]
+    },
+    {
+     "id": "fr_signe_noun",
+     "box": [
+      780,
+      446,
+      225,
+      194
      ]
     }
    ]
