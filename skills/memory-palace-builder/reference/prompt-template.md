@@ -93,3 +93,10 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - When an edit moves or rescales figures that must stay, paste a clean-plate edit (the background without them) and restore the figures from the base with a keep-polygon. Keep the dark-keep zones tight, so no halo appears and no edge is lost.
 - For small crop-edits, add "Keep the exact same framing, scale and camera position: do not zoom, crop or move anything." Verify alignment by mapping two or three landmarks (scale = output size / crop size). Reject a reframed result instead of trying to fit it.
 - Inspect every new crop or result under a new view filename, because viewers cache by path.
+
+- When a liturgical cross must be patriarchal (two bars), name "patriarchal Cross of Lorraine with two horizontal bars, upper shorter" in the prompt and verify both bars at 2x on every cross in the crop before accepting; a single-bar Latin or Greek cross is a reject when the double-bar was required.
+- Soft paste feathers on limb silhouettes against flat walls are defects: after any paste near a figure edge, check the silhouette at 2x for gray bleed into the wall and restore a clean opaque edge before packing.
+- Bright remnant strips left by earlier clones or masks (a wall patch lighter than its neighbors) must be matched to local wall tone by cloning from adjacent clean wall, then checked at 2x so no lighter band remains.
+- Leaf or foliage tips painted muddy olive-brown when the hook needs fresh green are defects: boost tip green (raise G, ease R) or repaint tips, and verify tip G>R at 2x before accepting.
+
+- Respellings must stay age-appropriate in every reading, not only as whole tokens: reject a respelling if any syllable or hyphen chunk can be read as pee/piss/poo (or crude look-alikes such as "pist" → piss). Prefer a clean override (e.g. trappiste: trah-PEAST, never TRA-pist). Extend the pee/poo check to these substring and sound-alike cases before install.

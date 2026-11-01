@@ -1,0 +1,763 @@
+{
+  "building": "abbaye",
+  "building_id": "B40_abbaye",
+  "sector_id": "S11_church",
+  "v1_room_id": "R_ab_cloister",
+  "name": "Abbaye Saint-Benoît",
+  "main": "abbaye",
+  "roomList": [
+    {
+      "key": "abbaye",
+      "short": "Le cloître"
+    },
+    {
+      "key": "scriptorium",
+      "short": "Le scriptorium"
+    },
+    {
+      "key": "choir",
+      "short": "Le chœur des moines"
+    },
+    {
+      "key": "refectory",
+      "short": "Le réfectoire"
+    }
+  ],
+  "planned": {
+    "scriptorium": {
+      "vocabRoom": "R_ab_scriptorium",
+      "only": [
+        "fr_bible_noun",
+        "fr_prophete_noun",
+        "fr_evangile_noun",
+        "fr_sermon_noun",
+        "fr_apotre_noun",
+        "fr_psaume_noun",
+        "fr_breviaire_noun",
+        "fr_evangeliaire_noun",
+        "fr_psautier_noun"
+      ]
+    },
+    "choir": {
+      "vocabRoom": "R_ab_choir",
+      "only": [
+        "fr_office_noun_m",
+        "fr_amen_intj",
+        "fr_hymne_noun_f",
+        "fr_alleluia_intj",
+        "fr_cantique_noun",
+        "fr_vigile_noun",
+        "fr_vepres_noun",
+        "fr_gregorien_adj",
+        "fr_hosanna_intj",
+        "fr_complies_noun",
+        "fr_laudes_noun",
+        "fr_matines_noun"
+      ]
+    },
+    "refectory": {
+      "vocabRoom": "R_ab_refectory",
+      "only": [
+        "fr_charite_noun",
+        "fr_aumone_noun",
+        "fr_refectoire_noun",
+        "fr_jeune_noun",
+        "fr_ermitage_noun",
+        "fr_benedicite_noun"
+      ]
+    },
+    "cloister_z1": {
+      "vocabRoom": "R_ab_cloister_z1",
+      "only": [
+        "fr_franciscain_adj",
+        "fr_chartreux_adj",
+        "fr_dominicain_adj",
+        "fr_benedictin_adj",
+        "fr_trappiste_adj",
+        "fr_cistercien_adj"
+      ]
+    },
+    "cloister_z2": {
+      "vocabRoom": "R_ab_cloister_z2",
+      "only": [
+        "fr_carmelite_noun",
+        "fr_moniale_noun",
+        "fr_abbesse_noun",
+        "fr_ermite_noun",
+        "fr_chanoine_noun",
+        "fr_prieur_noun"
+      ]
+    },
+    "abbaye": {
+      "vocabRoom": "R_ab_cloister",
+      "only": [
+        "fr_moine_noun",
+        "fr_religieux_adj",
+        "fr_abbe_noun",
+        "fr_vocation_noun",
+        "fr_couvent_noun",
+        "fr_monastere_noun",
+        "fr_abbaye_noun",
+        "fr_religieuse_noun",
+        "fr_cloitre_noun",
+        "fr_novice_noun",
+        "fr_pelerinage_noun"
+      ]
+    }
+  },
+  "rooms": {
+    "scriptorium": {
+      "name": "Le scriptorium · The scriptorium",
+      "room_id": "R_ab_scriptorium",
+      "image": "abbaye/scriptorium.jpg",
+      "alt": "A Benedictine scriptorium with oak copyists' desks under brass lamps: an open Bible on a lectern at left, scrolls and Gospel books, a tray of twelve apostle discs, a breviary, an ornate Book of the Gospels and a psalter; a cat sleeps under a desk; the left door opens onto the sunny cloister garth.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "abbaye",
+          "label": "Le cloître",
+          "hint": "Back through the oak door to the cloister",
+          "hit": [
+            10,
+            140,
+            120,
+            300
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_bible_noun",
+          "box": [
+            160,
+            300,
+            140,
+            200
+          ]
+        },
+        {
+          "id": "fr_prophete_noun",
+          "box": [
+            700,
+            300,
+            90,
+            70
+          ]
+        },
+        {
+          "id": "fr_evangile_noun",
+          "box": [
+            820,
+            280,
+            90,
+            90
+          ]
+        },
+        {
+          "id": "fr_sermon_noun",
+          "box": [
+            740,
+            390,
+            90,
+            70
+          ]
+        },
+        {
+          "id": "fr_apotre_noun",
+          "box": [
+            680,
+            500,
+            130,
+            80
+          ]
+        },
+        {
+          "id": "fr_psaume_noun",
+          "box": [
+            930,
+            300,
+            100,
+            90
+          ]
+        },
+        {
+          "id": "fr_breviaire_noun",
+          "box": [
+            850,
+            560,
+            90,
+            80
+          ]
+        },
+        {
+          "id": "fr_evangeliaire_noun",
+          "box": [
+            1050,
+            320,
+            120,
+            120
+          ]
+        },
+        {
+          "id": "fr_psautier_noun",
+          "box": [
+            1130,
+            500,
+            110,
+            100
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church",
+      "backTo": "abbaye"
+    },
+    "choir": {
+      "name": "Le chœur des moines · The monks' choir",
+      "room_id": "R_ab_choir",
+      "image": "abbaye/choir.jpg",
+      "alt": "The dark-oak monks' choir with stalls and a central lectern: hymn book, vigil candle, Vespers clock and censer, Compline checklist, Lauds hand-bell, Matins moon-book, a blank Amen cartouche, Alleluia banner, Hosanna palm card, Gregorian chant sheet, canticle scroll and office schedule; a west stone arch opens onto the sunny cloister garth.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "abbaye",
+          "label": "Le cloître",
+          "hint": "Through the west arch back to the cloister",
+          "hit": [
+            40,
+            90,
+            150,
+            190
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_complies_noun",
+          "box": [
+            50,
+            300,
+            70,
+            80
+          ]
+        },
+        {
+          "id": "fr_hymne_noun_f",
+          "box": [
+            200,
+            320,
+            100,
+            70
+          ]
+        },
+        {
+          "id": "fr_vigile_noun",
+          "box": [
+            320,
+            220,
+            45,
+            100
+          ]
+        },
+        {
+          "id": "fr_vepres_noun",
+          "box": [
+            360,
+            360,
+            85,
+            120
+          ]
+        },
+        {
+          "id": "fr_laudes_noun",
+          "box": [
+            90,
+            560,
+            70,
+            70
+          ]
+        },
+        {
+          "id": "fr_matines_noun",
+          "box": [
+            180,
+            560,
+            100,
+            80
+          ]
+        },
+        {
+          "id": "fr_amen_intj",
+          "box": [
+            460,
+            260,
+            70,
+            70
+          ]
+        },
+        {
+          "id": "fr_alleluia_intj",
+          "box": [
+            540,
+            120,
+            130,
+            80
+          ]
+        },
+        {
+          "id": "fr_hosanna_intj",
+          "box": [
+            600,
+            450,
+            70,
+            90
+          ]
+        },
+        {
+          "id": "fr_gregorien_adj",
+          "box": [
+            720,
+            380,
+            100,
+            140
+          ]
+        },
+        {
+          "id": "fr_cantique_noun",
+          "box": [
+            920,
+            550,
+            140,
+            80
+          ]
+        },
+        {
+          "id": "fr_office_noun_m",
+          "box": [
+            1110,
+            280,
+            120,
+            220
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church",
+      "backTo": "abbaye"
+    },
+    "refectory": {
+      "name": "Le réfectoire · The refectory",
+      "room_id": "R_ab_refectory",
+      "image": "abbaye/refectory.jpg",
+      "alt": "The abbey refectory with a long oak table: a charity box and alms box on the left sideboard under hanging herbs; the long table stretches right with empty plates for the fast, a June calendar with sun and leaf, a tiny hermitage model on a shelf, and a blank grace card by a bread basket; double doors open onto the sunny cloister garth.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "abbaye",
+          "label": "Le cloître",
+          "hint": "Through the double doors back to the cloister",
+          "hit": [
+            300,
+            80,
+            240,
+            280
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_charite_noun",
+          "box": [
+            60,
+            330,
+            110,
+            90
+          ]
+        },
+        {
+          "id": "fr_aumone_noun",
+          "box": [
+            80,
+            480,
+            110,
+            140
+          ]
+        },
+        {
+          "id": "fr_refectoire_noun",
+          "box": [
+            720,
+            360,
+            260,
+            160
+          ]
+        },
+        {
+          "id": "fr_jeune_noun",
+          "box": [
+            920,
+            140,
+            90,
+            100
+          ]
+        },
+        {
+          "id": "fr_ermitage_noun",
+          "box": [
+            1060,
+            120,
+            110,
+            90
+          ]
+        },
+        {
+          "id": "fr_benedicite_noun",
+          "box": [
+            1100,
+            500,
+            90,
+            120
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church",
+      "backTo": "abbaye"
+    },
+    "cloister_z1": {
+      "name": "La crédence du cloître · Cloister credence",
+      "room_id": "R_ab_cloister_z1",
+      "image": "abbaye/cloister_z1.jpg",
+      "parent": "abbaye",
+      "alt": "Close-up of the cloister credence table: Franciscan cord with three knots, Carthusian mountain card, Dominican black-and-white shield pin, Benedictine medal, Trappist coaster by a water jug, and a folded white Cistercian cowl.",
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_franciscain_adj",
+          "box": [
+            384,
+            300,
+            100,
+            140
+          ]
+        },
+        {
+          "id": "fr_chartreux_adj",
+          "box": [
+            500,
+            450,
+            90,
+            140
+          ]
+        },
+        {
+          "id": "fr_dominicain_adj",
+          "box": [
+            560,
+            240,
+            70,
+            100
+          ]
+        },
+        {
+          "id": "fr_benedictin_adj",
+          "box": [
+            650,
+            340,
+            75,
+            90
+          ]
+        },
+        {
+          "id": "fr_trappiste_adj",
+          "box": [
+            740,
+            200,
+            90,
+            120
+          ]
+        },
+        {
+          "id": "fr_cistercien_adj",
+          "box": [
+            840,
+            400,
+            100,
+            200
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church"
+    },
+    "cloister_z2": {
+      "name": "La niche du cloître · Cloister niche",
+      "room_id": "R_ab_cloister_z2",
+      "image": "abbaye/cloister_z2.jpg",
+      "parent": "abbaye",
+      "alt": "Close-up of the cloister side niche: a Carmelite nun, a praying cloistered nun and the abbess on the left; a hermit with a wooden bowl, a canon with a rule book and the prior with a staff of office on the right.",
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_carmelite_noun",
+          "box": [
+            60,
+            120,
+            140,
+            280
+          ]
+        },
+        {
+          "id": "fr_moniale_noun",
+          "box": [
+            230,
+            160,
+            120,
+            340
+          ]
+        },
+        {
+          "id": "fr_abbesse_noun",
+          "box": [
+            380,
+            140,
+            130,
+            360
+          ]
+        },
+        {
+          "id": "fr_ermite_noun",
+          "box": [
+            660,
+            200,
+            140,
+            420
+          ]
+        },
+        {
+          "id": "fr_chanoine_noun",
+          "box": [
+            830,
+            180,
+            130,
+            400
+          ]
+        },
+        {
+          "id": "fr_prieur_noun",
+          "box": [
+            1020,
+            200,
+            160,
+            440
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church"
+    },
+    "abbaye": {
+      "name": "Le cloître · The cloister",
+      "room_id": "R_ab_cloister",
+      "image": "abbaye/cloister.jpg",
+      "alt": "A sunlit Benedictine cloister garth: a nun tends rosemary on the left arcade bench beside a brass vocation bell, abbey postcard and vocation pamphlet; a religious medal hangs by a wooden door; the frog fountain sits in the grass; a novice with a broom stands near the center; on the right a monk with a staff and an abbot blessing stand by two architectural models (monastery and convent) and a pilgrimage map with a scallop shell; arches open to the scriptorium on the left and the refectory on the right.",
+      "nameplate": [
+        40,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          1185,
+          610,
+          85,
+          90
+        ],
+        "label": "Le village · The village"
+      },
+      "doors": [
+        {
+          "to": "scriptorium",
+          "label": "Le scriptorium",
+          "hint": "Through the left arcade arch into the scriptorium",
+          "hit": [
+            30,
+            90,
+            150,
+            140
+          ]
+        },
+        {
+          "to": "choir",
+          "label": "Le chœur",
+          "hint": "Through the back arcade toward the monks' choir",
+          "hit": [
+            500,
+            90,
+            110,
+            100
+          ]
+        },
+        {
+          "to": "refectory",
+          "label": "Le réfectoire",
+          "hint": "Through the open door into the refectory",
+          "hit": [
+            640,
+            200,
+            70,
+            140
+          ]
+        }
+      ],
+      "zooms": [
+        {
+          "to": "cloister_z1",
+          "label": "la crédence",
+          "hint": "Look closer at the orders' signs on the cloister credence",
+          "at": [
+            560,
+            640
+          ],
+          "obj": [
+            500,
+            600,
+            130,
+            80
+          ]
+        },
+        {
+          "to": "cloister_z2",
+          "label": "la niche",
+          "hint": "Look closer at the people in the side niche",
+          "at": [
+            140,
+            160
+          ],
+          "obj": [
+            90,
+            100,
+            100,
+            120
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "fr_religieuse_noun",
+          "box": [
+            90,
+            280,
+            110,
+            250
+          ]
+        },
+        {
+          "id": "fr_vocation_noun",
+          "box": [
+            180,
+            560,
+            80,
+            70
+          ]
+        },
+        {
+          "id": "fr_abbaye_noun",
+          "box": [
+            40,
+            540,
+            100,
+            80
+          ]
+        },
+        {
+          "id": "fr_religieux_adj",
+          "box": [
+            380,
+            200,
+            70,
+            80
+          ]
+        },
+        {
+          "id": "fr_novice_noun",
+          "box": [
+            500,
+            280,
+            110,
+            260
+          ]
+        },
+        {
+          "id": "fr_cloitre_noun",
+          "box": [
+            720,
+            500,
+            90,
+            100
+          ]
+        },
+        {
+          "id": "fr_moine_noun",
+          "box": [
+            800,
+            160,
+            100,
+            240
+          ]
+        },
+        {
+          "id": "fr_abbe_noun",
+          "box": [
+            980,
+            160,
+            110,
+            260
+          ]
+        },
+        {
+          "id": "fr_couvent_noun",
+          "box": [
+            1000,
+            500,
+            85,
+            75
+          ]
+        },
+        {
+          "id": "fr_monastere_noun",
+          "box": [
+            1120,
+            450,
+            110,
+            100
+          ]
+        },
+        {
+          "id": "fr_pelerinage_noun",
+          "box": [
+            860,
+            580,
+            130,
+            80
+          ]
+        }
+      ],
+      "building_id": "B40_abbaye",
+      "sector_id": "S11_church"
+    }
+  }
+}
