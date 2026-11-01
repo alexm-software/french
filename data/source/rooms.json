@@ -12311,6 +12311,43 @@
       }
     },
     {
+      "id": "R_ch_choir",
+      "name": "Choir (Mass and music)",
+      "type": "theme",
+      "setting": "The choir (chancel) of Église paroissiale Notre-Dame.",
+      "kind": "full",
+      "sector_id": "S11_church",
+      "building_id": "B39_eglise",
+      "links_back_to_sector": "S11_church",
+      "cefr_band": "B2",
+      "mean_level": 4.5,
+      "related_rooms": [
+        "R_ch_nave",
+        "R_ch_altar_02"
+      ],
+      "conversation_ids": [],
+      "base_room": "R_ch_choir",
+      "item_count": 11,
+      "total_items_incl_zooms": 0,
+      "side_counts": {
+        "left": 5,
+        "right": 6
+      },
+      "words": [
+        "fr_choeur_noun",
+        "fr_orgue_noun",
+        "fr_laic_noun",
+        "fr_liturgie_noun",
+        "fr_consecration_noun",
+        "fr_offrande_noun",
+        "fr_encenser_verb",
+        "fr_liturgique_adj",
+        "fr_glorifier_verb",
+        "fr_exhorter_verb",
+        "fr_offertoire_noun"
+      ]
+    },
+    {
       "id": "R_ch_altar_02",
       "name": "Sanctuary & altar (the Mass) [upstairs] · Holy Communion, altar, liturgical",
       "type": "theme",
@@ -12349,18 +12386,26 @@
         "fr_messe_noun",
         "fr_autel_noun",
         "fr_communion_noun",
-        "fr_offrande_noun",
-        "fr_sanctuaire_noun",
         "fr_crucifix_noun",
         "fr_hostie_noun",
-        "fr_eucharistie_noun",
         "fr_missel_noun",
         "fr_homelie_noun",
         "fr_tabernacle_noun",
         "fr_lectionnaire_noun",
-        "fr_calice_noun"
+        "fr_calice_noun",
+        "fr_patene_noun",
+        "fr_custode_noun",
+        "fr_eucharistique_adj",
+        "fr_consacrer_verb",
+        "fr_culpabiliser_verb",
+        "fr_sanctifier_verb",
+        "fr_proner_verb",
+        "fr_convertir_verb",
+        "fr_retable_noun",
+        "fr_ciboire_noun",
+        "fr_ambon_noun"
       ],
-      "item_count": 13,
+      "item_count": 21,
       "total_items_incl_zooms": 26,
       "side_counts": {
         "left": 5,
@@ -12492,9 +12537,15 @@
         "fr_catechumene_noun",
         "fr_chreme_noun",
         "fr_fonts_baptismaux_noun",
-        "fr_celebrer_verb"
+        "fr_celebrer_verb",
+        "fr_eucharistie_noun",
+        "fr_baptiser_verb",
+        "fr_communier_verb",
+        "fr_benir_verb",
+        "fr_initier_verb",
+        "fr_catholicisme_noun"
       ],
-      "item_count": 12,
+      "item_count": 18,
       "total_items_incl_zooms": 11,
       "side_counts": {
         "right": 7,
@@ -12529,16 +12580,12 @@
         "fr_peche_noun_2",
         "fr_confession_noun",
         "fr_reconciliation_noun",
-        "fr_misericorde_noun",
         "fr_repentir_noun",
-        "fr_absolution_noun",
         "fr_confessionnal_noun",
-        "fr_penitence_noun",
         "fr_contrition_noun",
-        "fr_merci_noun_f",
         "fr_pardonner_verb"
       ],
-      "item_count": 12,
+      "item_count": 8,
       "total_items_incl_zooms": 11,
       "side_counts": {
         "left": 8,
@@ -12578,14 +12625,21 @@
         "fr_benediction_noun",
         "fr_crypte_noun",
         "fr_bienheureux_adj",
-        "fr_purgatoire_noun",
         "fr_canonisation_noun",
         "fr_beatification_noun",
         "fr_reliquaire_noun",
         "fr_prier_verb",
-        "fr_honorer_verb"
+        "fr_honorer_verb",
+        "fr_archange_noun",
+        "fr_pelerin_noun",
+        "fr_venerer_verb",
+        "fr_vouer_verb",
+        "fr_precher_verb",
+        "fr_sanctuaire_noun",
+        "fr_aspirer_verb",
+        "fr_archeveque_noun"
       ],
-      "item_count": 14,
+      "item_count": 21,
       "total_items_incl_zooms": 13,
       "side_counts": {
         "right": 4,
@@ -12610,7 +12664,7 @@
       ],
       "conversation_ids": [],
       "base_room": "R_ch_cemetery",
-      "item_count": 6,
+      "item_count": 13,
       "total_items_incl_zooms": 0,
       "side_counts": {
         "left": 3,
@@ -12622,7 +12676,14 @@
         "fr_epitaphe_noun",
         "fr_tombe_noun",
         "fr_cimetiere_noun",
-        "fr_calvaire_noun"
+        "fr_calvaire_noun",
+        "fr_funerailles_noun",
+        "fr_obseques_noun",
+        "fr_cercueil_noun",
+        "fr_enterrement_noun",
+        "fr_corbillard_noun",
+        "fr_recueillir_verb",
+        "fr_diacre_noun"
       ]
     },
     {
@@ -12651,9 +12712,18 @@
       "base_room": "R_ch_mercy",
       "words": [
         "fr_divin_adj",
-        "fr_misericordieux_adj"
+        "fr_misericordieux_adj",
+        "fr_merci_noun_f",
+        "fr_misericorde_noun",
+        "fr_absolution_noun",
+        "fr_penitence_noun",
+        "fr_absoudre_verb",
+        "fr_adorer_verb",
+        "fr_ostensoir_noun",
+        "fr_confesser_verb",
+        "fr_purgatoire_noun"
       ],
-      "item_count": 2,
+      "item_count": 11,
       "total_items_incl_zooms": 2,
       "side_counts": {
         "n/a": 2
@@ -21093,11 +21163,10 @@
         "fr_instituer_verb",
         "fr_idealiser_verb",
         "fr_populariser_verb",
-        "fr_exhorter_verb",
         "fr_adjurer_verb",
         "fr_scander_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -22492,11 +22561,10 @@
       "words": [
         "fr_marmonner_verb",
         "fr_gemir_verb",
-        "fr_initier_verb",
         "fr_gronder_verb",
         "fr_communiquer_verb"
       ],
-      "item_count": 5,
+      "item_count": 4,
       "side_counts": {
         "n/a": 6
       },
@@ -23083,14 +23151,13 @@
       ],
       "base_room": "ST_communication",
       "words": [
-        "fr_proner_verb",
         "fr_empieter_verb",
         "fr_brailler_verb",
         "fr_crisser_verb",
         "fr_enoncer_verb",
         "fr_stipuler_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -23648,11 +23715,10 @@
         "fr_rigoler_verb",
         "fr_marrer_verb",
         "fr_offenser_verb",
-        "fr_aspirer_verb",
         "fr_attarder_verb",
         "fr_enrichir_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -23758,14 +23824,12 @@
       ],
       "base_room": "ST_emotion",
       "words": [
-        "fr_culpabiliser_verb",
         "fr_maltraiter_verb",
         "fr_malmener_verb",
-        "fr_absoudre_verb",
         "fr_leser_verb",
         "fr_pervertir_verb"
       ],
-      "item_count": 6,
+      "item_count": 4,
       "side_counts": {
         "n/a": 6
       },
@@ -28381,14 +28445,13 @@
       ],
       "base_room": "ST_social",
       "words": [
-        "fr_vouer_verb",
         "fr_seduire_verb",
         "fr_contracter_verb",
         "fr_consulter_verb",
         "fr_frequenter_verb",
         "fr_deshonorer_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -28459,12 +28522,11 @@
       "words": [
         "fr_correspondre_verb",
         "fr_qualifier_verb",
-        "fr_recueillir_verb",
         "fr_appliquer_verb",
         "fr_cueillir_verb",
         "fr_surnommer_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -28984,11 +29046,8 @@
         "C_ST_faith_seg001"
       ],
       "base_room": "ST_faith",
-      "words": [
-        "fr_consacrer_verb",
-        "fr_adorer_verb"
-      ],
-      "item_count": 2,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
         "n/a": 5
       },
@@ -29018,13 +29077,8 @@
         "C_ST_faith_seg002"
       ],
       "base_room": "ST_faith",
-      "words": [
-        "fr_confesser_verb",
-        "fr_benir_verb",
-        "fr_baptiser_verb",
-        "fr_convertir_verb"
-      ],
-      "item_count": 4,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
         "n/a": 5
       },
@@ -29057,11 +29111,9 @@
       "words": [
         "fr_jeuner_verb",
         "fr_commemorer_verb",
-        "fr_precher_verb",
-        "fr_glorifier_verb",
         "fr_psalmodier_verb"
       ],
-      "item_count": 5,
+      "item_count": 3,
       "side_counts": {
         "n/a": 5
       },
@@ -29090,13 +29142,8 @@
         "C_ST_faith_seg004"
       ],
       "base_room": "ST_faith",
-      "words": [
-        "fr_communier_verb",
-        "fr_encenser_verb",
-        "fr_sanctifier_verb",
-        "fr_venerer_verb"
-      ],
-      "item_count": 4,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
         "n/a": 4
       },
@@ -35772,15 +35819,8 @@
         "R_ch_altar_02"
       ],
       "base_room": "R_ch_altar",
-      "words": [
-        "fr_catholicisme_noun",
-        "fr_ostensoir_noun",
-        "fr_retable_noun",
-        "fr_ciboire_noun",
-        "fr_offertoire_noun",
-        "fr_ambon_noun"
-      ],
-      "item_count": 6,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
         "right": 9
       }
@@ -35807,15 +35847,8 @@
         "R_ch_altar_02"
       ],
       "base_room": "R_ch_altar",
-      "words": [
-        "fr_liturgie_noun",
-        "fr_consecration_noun",
-        "fr_patene_noun",
-        "fr_custode_noun",
-        "fr_liturgique_adj",
-        "fr_eucharistique_adj"
-      ],
-      "item_count": 6,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
         "left": 5,
         "n/a": 2

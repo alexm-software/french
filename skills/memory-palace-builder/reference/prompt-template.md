@@ -61,3 +61,35 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - An edit mask that touches the frame edge runs to the edge. Rects in a union mask overlap, so no strip of the old painting is left between them.
 - Edits must not introduce artifacts: compare every pasted edit with its base at 2x and fix seams, tone shifts, dents and remnants before packing.
 - Record as you go: every crop box, mask, feather, base, result and sent prompt, rejected tries included, goes into the manifests.
+- A door is painted at real door scale: a doorway taller than the grown-ups beside it, standing on the floor, with a leaf hung in the opening. An arch high in a wall, a niche, a flight of steps or a small picture of a door is not a door. Paint both sides with the same frame, leaf and hinge description, and name the destination room's signature features for each glimpse.
+- Verb beret colors are stated explicitly in the prompt for every mime (red for -er, green for -ir, purple for -re, gold for irregular), with gold described as metallic and contrasted against yellow, mustard and brown. After painting, check every mime's beret against its verb's group before accepting.
+- A mnemonic must be painted exactly as the hook says. Name the key animal or object unambiguously with its telltale features and negatives (a lamb: thick curly white wool, no horns, no beard). Check at 2x that a stranger would name it the same way, and keep the hook, the alt text and the dialogue naming the same thing.
+- The hook object stays fully visible. No figure, prop or label may cover it. When adding, moving or resizing a figure, name the nearby hook props in the prompt and state that they stay clear.
+- Check the gender bands and the label distances on every version, not only at the end: feminine box centres at or below 45%, masculine at or above 55%, adjectives and epicene words between 30% and 70%, and every label beside its own box.
+- One idea per hook across the whole village. Before writing or keeping a hook, search all hooks.json files for its key object or pun. If another word already uses it, give the newer word a distinct hook and repaint to match.
+- Solemn words (death, funerals, grief) get a hook only when it is vivid, literal and respectful. Otherwise give them a calm plain picture of the thing itself and put them on the hook form with their glosses. Never use a weak tag or a false etymology as a hook.
+- An object that appears in more than one room (a hearse, a door, a person) is painted the same way and in a consistent place in each, and every alt text mentions it.
+- A new vocabulary entry carries the full schema (gloss, IPA, respelling with the pee/poo check, CEFR, examples, related words). It goes in the room whose situation it fits, gets a picture of the word itself, and is added to that room's pinned dialogue.
+- Write material colors in lowercase prose. Capitalized color words get painted as text, so add "nothing written on" the object.
+- State the exact number of costumed figures (mimes), and describe every other figure as plainly not one of them: a normal face, no stripes, no beret.
+- Costume markers belong only to the figures that carry a hook. Say who wears them and that nobody else does.
+- Once a version is close, prefer a small edit to a full repaint, because repaints drift boxes, bands and details.
+- Count every counted hook detail (candles, steps, figures) in a 2x crop before accepting a version.
+- To add a hook figure to a crowd, transform one distinct existing figure instead of adding a new one, and name the neighbors that must stay unchanged.
+- Identify an edit target by a unique position plus a unique appearance, never by role alone.
+- Describe zones in running prose, never as headed sections. Headings get painted as separate panels.
+- Limit an edit to one or two changes. More changes make the model drop or alter details elsewhere.
+- Give each similar figure a distinct prop and posture. If a figure still fails after two tries, move its word to another room rather than forcing it.
+- After every edit, re-check every hook in the room, not only the edited one. Edits can delete or alter neighbors.
+- Check face paint and beret color against the manifest on every version.
+- In every edit prompt, name the nearby props that must stay visible, especially hook props next to the edited figure.
+- Doors and glimpses are fixed in the first painting. Big landmarks (doors, arches, windows) rarely move or rescale through edits, so state their scale and position up front.
+- Run the pee/poo respelling check on every new word before install. Use a say override rather than a respelling that contains them.
+- Dialogue wording must not trip the content filters. Describe objects plainly (a censer, not smoke) and run dialogue_check after every dialogue edit.
+- After adding or moving doors or items, re-run strict placement on the whole building. Use labelAt when no automatic label spot is clear.
+- Run grid_check right after any box tuning, before the strict build.
+- Write dialogue and alt-text details from the room's hooks.json and the final painting, never from memory, and update them whenever a painting changes.
+- Union masks are drawn as one shape and then eroded or feathered, so no seam or strip of the old painting survives where rects meet.
+- When an edit moves or rescales figures that must stay, paste a clean-plate edit (the background without them) and restore the figures from the base with a keep-polygon. Keep the dark-keep zones tight, so no halo appears and no edge is lost.
+- For small crop-edits, add "Keep the exact same framing, scale and camera position: do not zoom, crop or move anything." Verify alignment by mapping two or three landmarks (scale = output size / crop size). Reject a reframed result instead of trying to fit it.
+- Inspect every new crop or result under a new view filename, because viewers cache by path.

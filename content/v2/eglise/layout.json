@@ -41,13 +41,37 @@
   {
    "key": "cimetiere",
    "short": "Le cimetière"
+  },
+  {
+   "key": "choeur",
+   "short": "Le chœur"
+  },
+  {
+   "key": "tresor",
+   "short": "Le trésor"
+  },
+  {
+   "key": "misericorde",
+   "short": "La Miséricorde"
+  },
+  {
+   "key": "salle",
+   "short": "La salle paroissiale"
+  },
+  {
+   "key": "saints",
+   "short": "La chapelle des saints"
+  },
+  {
+   "key": "portail",
+   "short": "Le portail"
   }
  ],
  "rooms": {
   "eglise": {
    "name": "L'église : la nef · Church: the Nave",
    "image": "eglise/eglise.jpg",
-   "alt": "Inside the village church, painted in ink and gouache: a model ship hangs over the nave, a carved pulpit, a statue with a pigeon, a little knight with a quest map beside the collection plate, a mother duck leading candle-carrying ducklings, a dancing candle, a wedding party in the aisle, an old parishioner arranging sunflowers, a stained-glass window and pews; a door on the left opens onto the sunny square and an open side door on the right leads back to the village lane.",
+   "alt": "Inside the village church, painted in ink and gouache: a model ship hangs over the nave, a carved pulpit, a statue with a pigeon, a little knight with a quest map beside the collection plate, a mother duck leading candle-carrying ducklings, a dancing candle, a wedding party in the aisle, an old parishioner arranging sunflowers, a stained-glass window and pews; a door on the left opens onto the sunny square and an open side door on the right leads back to the village lane. In the apse behind the wedding party a tall oak door stands open on the choir, with its organ pipes and green banner.",
    "nameplate": [
     54.5,
     4.4
@@ -82,6 +106,17 @@
       240,
       52,
       160
+     ]
+    },
+    {
+     "to": "choeur",
+     "label": "Le chœur",
+     "hint": "Through the tall open oak door in the apse behind the wedding party, into the choir",
+     "hit": [
+      605,
+      180,
+      140,
+      88
      ]
     }
    ],
@@ -125,6 +160,10 @@
       128,
       64,
       112
+     ],
+     "labelAt": [
+      520,
+      248
      ]
     },
     {
@@ -901,7 +940,7 @@
    "room_id": "R_ch_crypt",
    "image": "eglise/crypte.jpg",
    "backTo": "sanctuaire",
-   "alt": "A low vaulted crypt with thick stone pillars on Heritage Day. A boy in a yellow sweater stands at the foot of the stone steps, a guide in green points to an old wooden staff in a lit niche, and a faded fresco shows a saint in blue holding a white lamb. Père Antoine raises his hand to bless an old couple. In the middle a mime in a red beret kneels with folded hands to pray under a red hanging lamp, and a second mime lays white flowers before a small gilded reliquary on a stone altar. On the right two visitors admire a carved young saint holding a palm branch on a pillar, and a tiny mouse peeks out at its foot. The stone steps on the left lead back up to the sanctuary.",
+   "alt": "A low vaulted crypt with thick stone pillars on Heritage Day. A boy in a yellow sweater stands at the foot of the stone steps, a guide in green points to an old wooden staff in a lit niche, and a faded fresco shows a saint in blue holding a white lamb. Père Antoine raises his hand to bless an old couple. In the middle a mime in a red beret kneels with folded hands to pray under a red hanging lamp, and a second mime lays white flowers before a small gilded reliquary on a stone altar. In front of them lies the low stone tomb of an archbishop, his carved figure asleep with miter and folded hands. On the right two visitors admire a carved young saint holding a palm branch on a pillar, and a tiny mouse peeks out at its foot. The stone steps on the left lead back up to the sanctuary.",
    "doors": [
     {
      "to": "sanctuaire",
@@ -1005,6 +1044,16 @@
       230,
       115,
       295
+     ]
+    },
+    {
+     "id": "fr_archeveque_noun",
+     "text": "vocab",
+     "box": [
+      682,
+      553,
+      300,
+      124
      ]
     }
    ]
@@ -1128,7 +1177,7 @@
    "room_id": "R_ch_baptistery",
    "image": "eglise/baptistere.jpg",
    "backTo": "confessionnal",
-   "alt": "A round baptistery on a happy baptism day. On the left the godmother laughs under a dripping yellow umbrella, and a mime in a red beret tosses pink and blue sugared almonds to two delighted children. In the middle Père Antoine pours water from a silver jug into the big stone font, and a ginger cat sniffs a silver jar on a little table. On the right a grandfather holds a baby in a white christening gown who waves a yellow bath sponge, and the godfather runs in out of breath with a tall white candle. The arch on the left goes back to the side aisle with the confessional; the open arch on the right leads out to the churchyard.",
+   "alt": "A round baptistery on a happy baptism day. On the left the godmother laughs under a dripping yellow umbrella, and a mime in a red beret tosses pink and blue sugared almonds to two delighted children. In the middle Père Antoine pours water from a silver jug into the big stone font, and a ginger cat sniffs a silver jar on a little table. On the right a grandfather holds a baby in a white christening gown who waves a yellow bath sponge, and the godfather runs in out of breath with a tall white candle. The arch on the left goes back to the side aisle with the confessional; the open arch on the right leads out to the churchyard. The round domed room itself, with its little dove window above the font, is the baptistery.",
    "doors": [
     {
      "to": "confessionnal",
@@ -1214,6 +1263,16 @@
       150,
       310
      ]
+    },
+    {
+     "id": "fr_baptistere_noun",
+     "text": "vocab",
+     "box": [
+      610,
+      15,
+      300,
+      180
+     ]
     }
    ]
   },
@@ -1222,7 +1281,7 @@
    "room_id": "R_ch_cemetery",
    "image": "eglise/cimetiere.jpg",
    "backTo": "baptistere",
-   "alt": "A calm, sunny churchyard beside the church with tall cypress trees and green hills beyond. A woman in a blue cardigan plants fresh flowers on a grave next to a watering can with a robin on it. A stonemason brushes moss off a gray headstone while a girl traces its face with her finger and her grandfather looks on; an old man rests on a bench in the sun. A small ivy-covered family vault with a boy beside it stands at the back, a gardener rakes the gravel between the rows, and a tall plain stone cross on stepped pedestal stands by the gate. The side door in the church wall on the left leads back to the baptistery, and the iron gate at the back right leads out to the village.",
+   "alt": "A calm, sunny churchyard beside the church with tall cypress trees and green hills beyond. A woman in a blue cardigan plants fresh flowers on a grave next to a watering can with a robin on it. A stonemason brushes moss off a gray headstone while a girl traces its face with her finger and her grandfather looks on; an old man rests on a bench in the sun. A small ivy-covered family vault with a boy beside it stands at the back, a gardener rakes the gravel between the rows, and a tall plain stone cross on stepped pedestal stands by the gate. The side door in the church wall on the left leads back to the baptistery, and the open iron gate at the back right, with a dark hearse parked quietly beyond it, leads on to the quiet corner by the churchyard gate, and from there out to the village.",
    "doors": [
     {
      "to": "baptistere",
@@ -1233,6 +1292,17 @@
       215,
       210,
       200
+     ]
+    },
+    {
+     "to": "portail",
+     "label": "Le portail",
+     "hint": "Through the iron gate at the back right, to the quiet corner by the churchyard gate",
+     "hit": [
+      930,
+      235,
+      160,
+      120
      ]
     }
    ],
@@ -1298,13 +1368,829 @@
       290
      ]
     }
+   ]
+  },
+  "choeur": {
+   "name": "Le chœur · The choir",
+   "room_id": "R_ch_choir",
+   "image": "eglise/choeur.jpg",
+   "backTo": "eglise",
+   "alt": "The choir of the village church during Sunday Mass. On the left a gray-haired cantor leads the singing from her booklet, the priest in a green chasuble raises the host above the altar as a server rings a little bell, and a girl in a yellow cardigan carries a basket of bread and apples. In the middle a mime in a red beret swings a smoking censer, a woman stands by a tall green banner, a second mime urges the choir on and a third flings his arms up singing. On the right singers in white robes sing in the oak stalls under the big pipe organ, an older man carries a gold plate of wafers and a man in a gray sweater waits at a reading stand. A mouse peeks out by the stalls. A tall oak door behind the cantor stands open on the candle-lit pews of the nave, the small arch on the left leads to the candle-lit Mercy chapel, and the oak door on the right opens into the treasury.",
+   "doors": [
+    {
+     "to": "eglise",
+     "label": "La nef",
+     "hint": "Through the tall open oak door on the left, behind the cantor, back to the nave",
+     "hit": [
+      138,
+      125,
+      120,
+      128
+     ]
+    },
+    {
+     "to": "misericorde",
+     "label": "La Miséricorde",
+     "hint": "The small stone arch on the left, to the Mercy chapel",
+     "hit": [
+      0,
+      150,
+      90,
+      300
+     ]
+    },
+    {
+     "to": "tresor",
+     "label": "Le trésor",
+     "hint": "The heavy oak door on the right, to the treasury",
+     "hit": [
+      1155,
+      190,
+      120,
+      330
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_liturgie_noun",
+     "text": "vocab",
+     "box": [
+      100,
+      256,
+      135,
+      262
+     ]
+    },
+    {
+     "id": "fr_consecration_noun",
+     "text": "vocab",
+     "box": [
+      262,
+      175,
+      190,
+      270
+     ]
+    },
+    {
+     "id": "fr_offrande_noun",
+     "text": "vocab",
+     "box": [
+      238,
+      455,
+      170,
+      262
+     ]
+    },
+    {
+     "id": "fr_encenser_verb",
+     "text": "vocab",
+     "box": [
+      455,
+      262,
+      135,
+      295
+     ]
+    },
+    {
+     "id": "fr_liturgique_adj",
+     "text": "vocab",
+     "box": [
+      644,
+      112,
+      88,
+      250
+     ]
+    },
+    {
+     "id": "fr_exhorter_verb",
+     "text": "vocab",
+     "box": [
+      738,
+      222,
+      70,
+      150
+     ]
+    },
+    {
+     "id": "fr_glorifier_verb",
+     "text": "vocab",
+     "box": [
+      632,
+      385,
+      170,
+      330
+     ]
+    },
+    {
+     "id": "fr_offertoire_noun",
+     "text": "vocab",
+     "box": [
+      812,
+      352,
+      125,
+      300
+     ]
+    },
+    {
+     "id": "fr_choeur_noun",
+     "text": "vocab",
+     "box": [
+      815,
+      225,
+      290,
+      118
+     ]
+    },
+    {
+     "id": "fr_laic_noun",
+     "text": "vocab",
+     "box": [
+      1010,
+      372,
+      140,
+      340
+     ]
+    },
+    {
+     "id": "fr_orgue_noun",
+     "text": "vocab",
+     "box": [
+      912,
+      45,
+      185,
+      170
+     ]
+    }
+   ]
+  },
+  "tresor": {
+   "name": "Le trésor · The treasury",
+   "room_id": "R_ch_altar_02",
+   "image": "eglise/tresor.jpg",
+   "backTo": "choeur",
+   "alt": "The church treasury on restoration day. On the left a woman pats a gold plate dry, a nun closes a tiny gold box, a mime in a green beret turns a crate into a bookshelf, another gives two thumbs up beside a little white angel, and a third covers his mouth guiltily. In the middle a mime paints gold on the halo of a wooden king statue, a restorer on a ladder paints the carved altarpiece, an old woman embroiders a white banner with wheat, grapes and a chalice, and a cat sleeps in a basket. On the right a mime polishes a carved reading stand, a jeweler holds up a gold lidded cup and a bookbinder works on a big red book beside an old chest. The oak door on the left goes back to the choir and the blue door on the right opens into the parish hall.",
+   "doors": [
+    {
+     "to": "choeur",
+     "label": "Le chœur",
+     "hint": "The heavy oak door on the left, back to the choir",
+     "hit": [
+      0,
+      40,
+      220,
+      150
+     ]
+    },
+    {
+     "to": "salle",
+     "label": "La salle paroissiale",
+     "hint": "The light-blue door at the back right, to the parish hall",
+     "hit": [
+      1110,
+      70,
+      165,
+      140
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_patene_noun",
+     "text": "vocab",
+     "box": [
+      60,
+      200,
+      130,
+      200
+     ]
+    },
+    {
+     "id": "fr_custode_noun",
+     "text": "vocab",
+     "box": [
+      195,
+      225,
+      112,
+      150
+     ]
+    },
+    {
+     "id": "fr_culpabiliser_verb",
+     "text": "vocab",
+     "box": [
+      312,
+      200,
+      112,
+      145
+     ]
+    },
+    {
+     "id": "fr_proner_verb",
+     "text": "vocab",
+     "box": [
+      232,
+      390,
+      170,
+      285
+     ]
+    },
+    {
+     "id": "fr_convertir_verb",
+     "text": "vocab",
+     "box": [
+      30,
+      410,
+      195,
+      300
+     ]
+    },
+    {
+     "id": "fr_sanctifier_verb",
+     "text": "vocab",
+     "box": [
+      425,
+      275,
+      230,
+      310
+     ]
+    },
+    {
+     "id": "fr_retable_noun",
+     "text": "vocab",
+     "box": [
+      628,
+      20,
+      152,
+      230
+     ]
+    },
+    {
+     "id": "fr_consacrer_verb",
+     "text": "vocab",
+     "box": [
+      780,
+      150,
+      80,
+      280
+     ]
+    },
+    {
+     "id": "fr_ambon_noun",
+     "text": "vocab",
+     "box": [
+      865,
+      260,
+      88,
+      180
+     ]
+    },
+    {
+     "id": "fr_eucharistique_adj",
+     "text": "vocab",
+     "box": [
+      680,
+      500,
+      190,
+      165
+     ]
+    },
+    {
+     "id": "fr_ciboire_noun",
+     "text": "vocab",
+     "box": [
+      958,
+      220,
+      148,
+      170
+     ]
+    },
+    {
+     "id": "fr_missel_noun",
+     "text": "vocab",
+     "box": [
+      925,
+      515,
+      250,
+      145
+     ]
+    }
+   ]
+  },
+  "misericorde": {
+   "name": "La chapelle de la Miséricorde · The Mercy chapel",
+   "room_id": "R_ch_mercy",
+   "image": "eglise/misericorde.jpg",
+   "backTo": "choeur",
+   "alt": "A small candle-lit chapel in the evening. On the left a girl shields a candle flame, a priest in a purple stole raises his hand over a kneeling man under a painting of a shepherd freeing a little white lamb from the brambles, and an old man wraps his red scarf around a tired young man and gives him a sandwich. A woman in a headscarf prays in a pew. On the right a mime in a red beret kneels before a golden sunburst monstrance under a glowing round window, a mime in a shiny gold beret scrubs a slate clean, an old woman lights candles at a side altar, and a mime with cookie crumbs on his face holds an empty cookie tin. The arch on the left opens toward the saints' chapel and the arch on the right goes back to the choir.",
+   "doors": [
+    {
+     "to": "choeur",
+     "label": "Le chœur",
+     "hint": "The stone arch on the right, back to the choir",
+     "hit": [
+      1100,
+      60,
+      175,
+      235
+     ]
+    },
+    {
+     "to": "saints",
+     "label": "La chapelle des saints",
+     "hint": "The low arched door on the left, to the saints' chapel",
+     "hit": [
+      0,
+      55,
+      150,
+      260
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_merci_noun_f",
+     "text": "vocab",
+     "box": [
+      45,
+      330,
+      130,
+      270
+     ]
+    },
+    {
+     "id": "fr_misericorde_noun",
+     "text": "vocab",
+     "box": [
+      285,
+      12,
+      290,
+      245
+     ]
+    },
+    {
+     "id": "fr_absolution_noun",
+     "text": "vocab",
+     "box": [
+      215,
+      262,
+      285,
+      168
+     ]
+    },
+    {
+     "id": "fr_misericordieux_adj",
+     "text": "vocab",
+     "box": [
+      305,
+      445,
+      210,
+      270
+     ]
+    },
+    {
+     "id": "fr_penitence_noun",
+     "text": "vocab",
+     "box": [
+      515,
+      320,
+      122,
+      255
+     ]
+    },
+    {
+     "id": "fr_adorer_verb",
+     "text": "vocab",
+     "box": [
+      655,
+      230,
+      115,
+      170
+     ]
+    },
+    {
+     "id": "fr_ostensoir_noun",
+     "text": "vocab",
+     "box": [
+      778,
+      115,
+      100,
+      190
+     ]
+    },
+    {
+     "id": "fr_divin_adj",
+     "text": "vocab",
+     "box": [
+      815,
+      8,
+      110,
+      100
+     ]
+    },
+    {
+     "id": "fr_absoudre_verb",
+     "text": "vocab",
+     "box": [
+      720,
+      405,
+      245,
+      312
+     ]
+    },
+    {
+     "id": "fr_purgatoire_noun",
+     "text": "vocab",
+     "box": [
+      882,
+      215,
+      100,
+      185
+     ]
+    },
+    {
+     "id": "fr_confesser_verb",
+     "text": "vocab",
+     "box": [
+      1000,
+      300,
+      215,
+      415
+     ]
+    }
+   ]
+  },
+  "salle": {
+   "name": "La salle paroissiale · The parish hall",
+   "room_id": "R_ch_baptistery",
+   "image": "eglise/salle.jpg",
+   "backTo": "tresor",
+   "alt": "The bright parish hall on a Saturday. On the left a girl points at a poster of bread and a chalice, an old priest rests his hand on a smiling boy holding a little bottle of oil, and a teenage girl holds a white candle with her sponsor's hand on her shoulder. In the middle a mime in a red beret pours water over a baby doll in a basin, a young man studies at a back table, and a mime in a green beret blesses the snack table. On the right a mime helps a little boy ring a hand bell, another holds a piece of bread in his cupped hands, a banner shows seven candles, a big globe stands by a tray of red church models, and a little boy rides a hobby horse beside his godmother in a red coat. A goldfish swims on the windowsill. The oak door on the left goes back to the treasury.",
+   "doors": [
+    {
+     "to": "tresor",
+     "label": "Le trésor",
+     "hint": "The heavy oak door on the left, back to the treasury",
+     "hit": [
+      0,
+      30,
+      105,
+      235
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_eucharistie_noun",
+     "text": "vocab",
+     "box": [
+      170,
+      170,
+      140,
+      165
+     ]
+    },
+    {
+     "id": "fr_onction_noun",
+     "text": "vocab",
+     "box": [
+      30,
+      345,
+      320,
+      275
+     ]
+    },
+    {
+     "id": "fr_confirmation_noun",
+     "text": "vocab",
+     "box": [
+      365,
+      150,
+      140,
+      160
+     ]
+    },
+    {
+     "id": "fr_catechumene_noun",
+     "text": "vocab",
+     "box": [
+      535,
+      220,
+      130,
+      120
+     ]
+    },
+    {
+     "id": "fr_baptiser_verb",
+     "text": "vocab",
+     "box": [
+      360,
+      345,
+      280,
+      355
+     ]
+    },
+    {
+     "id": "fr_initier_verb",
+     "text": "vocab",
+     "box": [
+      670,
+      375,
+      225,
+      345
+     ]
+    },
+    {
+     "id": "fr_benir_verb",
+     "text": "vocab",
+     "box": [
+      750,
+      145,
+      150,
+      215
+     ]
+    },
+    {
+     "id": "fr_communier_verb",
+     "text": "vocab",
+     "box": [
+      905,
+      225,
+      120,
+      250
+     ]
+    },
+    {
+     "id": "fr_sacrement_noun",
+     "text": "vocab",
+     "box": [
+      905,
+      35,
+      125,
+      185
+     ]
+    },
+    {
+     "id": "fr_catholicisme_noun",
+     "text": "vocab",
+     "box": [
+      1030,
+      265,
+      110,
+      150
+     ]
+    },
+    {
+     "id": "fr_filleul_noun",
+     "text": "vocab",
+     "box": [
+      910,
+      480,
+      230,
+      235
+     ]
+    }
+   ]
+  },
+  "saints": {
+   "name": "La chapelle des saints · The saints' chapel",
+   "room_id": "R_ch_crypt",
+   "image": "eglise/saints.jpg",
+   "backTo": "misericorde",
+   "alt": "A bright saints' chapel on pilgrimage day, full of red roses. On the left an old painting shows a crowd under a banner of a young priest, and a tapestry shows the bearded gardener monk with a golden halo; a pilgrim with a scallop shell stands by the door and a mime in a red beret vacuums up rose petals. In the middle one mime hangs a silver heart on a wall of hearts, another preaches with a finger raised, standing on a wooden crate, a tiny old nun beside the crate holds out a rose, and a third mime bows with his hand on his heart. On the right an old man smells a rose with a blissful smile, the monk's statue stands in a flowered niche shrine, a pilgrim arrives with a staff, and a stained-glass window shows an archangel. The arched door on the left goes back to the Mercy chapel.",
+   "doors": [
+    {
+     "to": "misericorde",
+     "label": "La Miséricorde",
+     "hint": "The low arched door on the left, back to the Mercy chapel",
+     "hit": [
+      0,
+      70,
+      140,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_beatification_noun",
+     "text": "vocab",
+     "box": [
+      240,
+      15,
+      208,
+      250
+     ]
+    },
+    {
+     "id": "fr_canonisation_noun",
+     "text": "vocab",
+     "box": [
+      195,
+      272,
+      232,
+      288
+     ]
+    },
+    {
+     "id": "fr_aspirer_verb",
+     "text": "vocab",
+     "box": [
+      430,
+      275,
+      100,
+      150
+     ]
+    },
+    {
+     "id": "fr_venerer_verb",
+     "text": "vocab",
+     "box": [
+      497,
+      440,
+      140,
+      275
+     ]
+    },
+    {
+     "id": "fr_vouer_verb",
+     "text": "vocab",
+     "box": [
+      540,
+      225,
+      90,
+      200
+     ]
+    },
+    {
+     "id": "fr_precher_verb",
+     "text": "vocab",
+     "box": [
+      640,
+      225,
+      75,
+      360
+     ]
+    },
+    {
+     "id": "fr_saint_adj",
+     "text": "vocab",
+     "box": [
+      716,
+      335,
+      90,
+      210
+     ]
+    },
+    {
+     "id": "fr_bienheureux_adj",
+     "text": "vocab",
+     "box": [
+      808,
+      445,
+      122,
+      275
+     ]
+    },
+    {
+     "id": "fr_sanctuaire_noun",
+     "text": "vocab",
+     "box": [
+      770,
+      25,
+      165,
+      305
+     ]
+    },
+    {
+     "id": "fr_pelerin_noun",
+     "text": "vocab",
+     "box": [
+      940,
+      235,
+      130,
+      290
+     ]
+    },
+    {
+     "id": "fr_archange_noun",
+     "text": "vocab",
+     "box": [
+      1075,
+      15,
+      130,
+      290
+     ]
+    }
+   ]
+  },
+  "portail": {
+   "name": "Le portail du cimetière · The churchyard gate",
+   "room_id": "R_ch_cemetery",
+   "image": "eglise/portail.jpg",
+   "backTo": "cimetiere",
+   "alt": "A calm, sunny afternoon at the far end of the churchyard. On the left a small table holds an open book and white lilies, and a few adults in dark clothes stand quietly holding white flowers; white doves sit on the low wall. In the middle a mime in a shiny gold beret gathers fallen lilies into a bouquet. On the right a grave site is covered with a green cloth and ringed with flower wreaths, a closed wooden casket covered in white roses rests on a wheeled stand, a young deacon in a white alb reads from an open book by the gatepost, and a dark hearse waits with its back door open by the open iron gate. The gravel path on the left goes back through the churchyard, and the gate on the right leads out to the village.",
+   "doors": [
+    {
+     "to": "cimetiere",
+     "label": "Le cimetière",
+     "hint": "The gravel path on the left, back through the churchyard",
+     "hit": [
+      0,
+      190,
+      62,
+      230
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_obseques_noun",
+     "text": "vocab",
+     "box": [
+      62,
+      200,
+      138,
+      175
+     ],
+     "labelAt": [
+      134,
+      157
+     ]
+    },
+    {
+     "id": "fr_funerailles_noun",
+     "text": "vocab",
+     "box": [
+      208,
+      180,
+      245,
+      270
+     ]
+    },
+    {
+     "id": "fr_recueillir_verb",
+     "text": "vocab",
+     "box": [
+      470,
+      355,
+      225,
+      320
+     ]
+    },
+    {
+     "id": "fr_enterrement_noun",
+     "text": "vocab",
+     "box": [
+      700,
+      235,
+      158,
+      160
+     ]
+    },
+    {
+     "id": "fr_cercueil_noun",
+     "text": "vocab",
+     "box": [
+      755,
+      434,
+      395,
+      251
+     ]
+    },
+    {
+     "id": "fr_corbillard_noun",
+     "text": "vocab",
+     "box": [
+      1015,
+      220,
+      250,
+      195
+     ]
+    },
+    {
+     "id": "fr_diacre_noun",
+     "text": "vocab",
+     "box": [
+      858,
+      214,
+      82,
+      218
+     ]
+    }
    ],
    "mapExit": {
     "box": [
-     930,
-     235,
-     160,
-     120
+     940,
+     80,
+     125,
+     135
     ],
     "label": "Le village"
    }
@@ -1368,7 +2254,8 @@
     "fr_prier_verb",
     "fr_honorer_verb",
     "fr_reliquaire_noun",
-    "fr_martyr_noun"
+    "fr_martyr_noun",
+    "fr_archeveque_noun"
    ]
   },
   "confessionnal": {
@@ -1392,7 +2279,8 @@
     "fr_fonts_baptismaux_noun",
     "fr_chreme_noun",
     "fr_bapteme_noun",
-    "fr_parrain_noun"
+    "fr_parrain_noun",
+    "fr_baptistere_noun"
    ]
   },
   "cimetiere": {
@@ -1404,6 +2292,99 @@
     "fr_cimetiere_noun",
     "fr_caveau_noun",
     "fr_calvaire_noun"
+   ]
+  },
+  "choeur": {
+   "vocabRoom": "R_ch_choir",
+   "only": [
+    "fr_liturgie_noun",
+    "fr_consecration_noun",
+    "fr_offrande_noun",
+    "fr_encenser_verb",
+    "fr_liturgique_adj",
+    "fr_exhorter_verb",
+    "fr_glorifier_verb",
+    "fr_offertoire_noun",
+    "fr_choeur_noun",
+    "fr_laic_noun",
+    "fr_orgue_noun"
+   ]
+  },
+  "tresor": {
+   "vocabRoom": "R_ch_altar_02",
+   "only": [
+    "fr_patene_noun",
+    "fr_custode_noun",
+    "fr_culpabiliser_verb",
+    "fr_proner_verb",
+    "fr_convertir_verb",
+    "fr_sanctifier_verb",
+    "fr_retable_noun",
+    "fr_consacrer_verb",
+    "fr_ambon_noun",
+    "fr_eucharistique_adj",
+    "fr_ciboire_noun",
+    "fr_missel_noun"
+   ]
+  },
+  "misericorde": {
+   "vocabRoom": "R_ch_mercy",
+   "only": [
+    "fr_merci_noun_f",
+    "fr_misericorde_noun",
+    "fr_absolution_noun",
+    "fr_misericordieux_adj",
+    "fr_penitence_noun",
+    "fr_adorer_verb",
+    "fr_ostensoir_noun",
+    "fr_divin_adj",
+    "fr_absoudre_verb",
+    "fr_purgatoire_noun",
+    "fr_confesser_verb"
+   ]
+  },
+  "salle": {
+   "vocabRoom": "R_ch_baptistery",
+   "only": [
+    "fr_eucharistie_noun",
+    "fr_onction_noun",
+    "fr_confirmation_noun",
+    "fr_catechumene_noun",
+    "fr_baptiser_verb",
+    "fr_initier_verb",
+    "fr_benir_verb",
+    "fr_communier_verb",
+    "fr_sacrement_noun",
+    "fr_catholicisme_noun",
+    "fr_filleul_noun"
+   ]
+  },
+  "saints": {
+   "vocabRoom": "R_ch_crypt",
+   "only": [
+    "fr_beatification_noun",
+    "fr_canonisation_noun",
+    "fr_aspirer_verb",
+    "fr_venerer_verb",
+    "fr_vouer_verb",
+    "fr_precher_verb",
+    "fr_saint_adj",
+    "fr_bienheureux_adj",
+    "fr_sanctuaire_noun",
+    "fr_pelerin_noun",
+    "fr_archange_noun"
+   ]
+  },
+  "portail": {
+   "vocabRoom": "R_ch_cemetery",
+   "only": [
+    "fr_obseques_noun",
+    "fr_funerailles_noun",
+    "fr_recueillir_verb",
+    "fr_enterrement_noun",
+    "fr_cercueil_noun",
+    "fr_corbillard_noun",
+    "fr_diacre_noun"
    ]
   }
  }
