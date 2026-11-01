@@ -9675,16 +9675,15 @@
         "fr_mepris_noun",
         "fr_ours_noun",
         "fr_proie_noun",
-        "fr_vampire_noun",
         "fr_fourrure_noun",
         "fr_griffe_noun",
         "fr_gibier_noun"
       ],
-      "item_count": 12,
-      "total_items_incl_zooms": 18,
+      "item_count": 11,
+      "total_items_incl_zooms": 17,
       "side_counts": {
         "left": 4,
-        "right": 8
+        "right": 7
       }
     },
     {
@@ -10768,7 +10767,6 @@
         "fr_lecture_noun",
         "fr_texte_noun",
         "fr_memoire_noun_m",
-        "fr_fantome_noun",
         "fr_caractere_noun",
         "fr_mystere_noun",
         "fr_legende_noun",
@@ -10777,11 +10775,11 @@
         "fr_conte_noun",
         "fr_auteur_noun"
       ],
-      "item_count": 15,
-      "total_items_incl_zooms": 15,
+      "item_count": 14,
+      "total_items_incl_zooms": 14,
       "side_counts": {
         "left": 5,
-        "right": 9,
+        "right": 8,
         "center": 1
       }
     },
@@ -14343,7 +14341,6 @@
       "small_objects": true,
       "base_room": "R_theatre",
       "words": [
-        "fr_sorcier_noun",
         "fr_drame_noun",
         "fr_repetition_noun",
         "fr_comedien_noun",
@@ -14366,10 +14363,10 @@
         "fr_repeter_verb",
         "fr_entonner_verb"
       ],
-      "item_count": 22,
-      "total_items_incl_zooms": 15,
+      "item_count": 21,
+      "total_items_incl_zooms": 14,
       "side_counts": {
-        "right": 6,
+        "right": 5,
         "left": 8,
         "center": 1
       }
@@ -16156,7 +16153,6 @@
       ],
       "base_room": "R_emo_fear",
       "words": [
-        "fr_monstre_noun",
         "fr_haine_noun",
         "fr_fuite_noun",
         "fr_rage_noun",
@@ -16167,10 +16163,10 @@
         "fr_querelle_noun",
         "fr_manie_noun"
       ],
-      "item_count": 10,
-      "total_items_incl_zooms": 16,
+      "item_count": 9,
+      "total_items_incl_zooms": 15,
       "side_counts": {
-        "right": 2,
+        "right": 1,
         "left": 8
       }
     },
@@ -31960,17 +31956,16 @@
       "base_room": "R_boutique",
       "words": [
         "fr_mantille_noun",
-        "fr_enchanteur_noun",
         "fr_saphir_noun",
         "fr_boubou_noun",
         "fr_glamour_noun",
         "fr_joaillier_noun",
         "fr_styliste_noun"
       ],
-      "item_count": 7,
+      "item_count": 6,
       "side_counts": {
         "left": 1,
-        "right": 5,
+        "right": 4,
         "center": 1
       }
     },
@@ -33009,15 +33004,14 @@
       "base_room": "R_occupations",
       "words": [
         "fr_psychiatre_noun",
-        "fr_magicien_noun",
         "fr_nourrice_noun",
         "fr_bourgeoisie_noun",
         "fr_epicier_noun"
       ],
-      "item_count": 5,
+      "item_count": 4,
       "side_counts": {
         "center": 1,
-        "right": 2,
+        "right": 1,
         "left": 2
       }
     },
@@ -38125,7 +38119,9 @@
       "cefr_band": "B2",
       "mean_level": 4.67,
       "related_rooms": [
-        "R_giants_valley"
+        "R_giants_valley",
+        "R_wizard_tower",
+        "R_costume_ball"
       ],
       "conversation_ids": [
         "V_contes_contes_01"
@@ -38178,6 +38174,77 @@
       "item_count": 6,
       "total_items_incl_zooms": 6,
       "side_counts": {
+        "right": 6
+      }
+    },
+    {
+      "id": "R_wizard_tower",
+      "name": "La tour du sorcier · The wizard's tower",
+      "type": "theme",
+      "setting": "Round stone study at the foot of a wizard's tower in Le pays des contes: plank floor, a spiral stone stair to a wooden landing, a tall window, a log-fire cauldron and a high ledge of teacups; the arched door leads back to the enchanted forest.",
+      "kind": "full",
+      "sector_id": "S16_park",
+      "building_id": "B69_contes",
+      "links_back_to_sector": "S16_park",
+      "cefr_band": "B2",
+      "mean_level": 4.12,
+      "related_rooms": [
+        "R_enchanted_forest",
+        "R_costume_ball"
+      ],
+      "conversation_ids": [
+        "V_contes_tour_sorcier_01"
+      ],
+      "base_room": "R_wizard_tower",
+      "words": [
+        "fr_sorciere_noun",
+        "fr_potion_noun",
+        "fr_sortilege_noun",
+        "fr_grimoire_noun",
+        "fr_magicien_noun",
+        "fr_chaudron_noun",
+        "fr_sorcier_noun",
+        "fr_enchanteur_noun"
+      ],
+      "item_count": 8,
+      "total_items_incl_zooms": 8,
+      "side_counts": {
+        "left": 2,
+        "right": 6
+      }
+    },
+    {
+      "id": "R_costume_ball",
+      "name": "Le bal costumé · The costume ball",
+      "type": "theme",
+      "setting": "Costume ball inside a hollow oak in Le pays des contes: wooden dance floor, a raised wooden stage, bunting, paper lanterns and a cake table; the round door leads back to the enchanted forest.",
+      "kind": "full",
+      "sector_id": "S16_park",
+      "building_id": "B69_contes",
+      "links_back_to_sector": "S16_park",
+      "cefr_band": "B2",
+      "mean_level": 4.0,
+      "related_rooms": [
+        "R_enchanted_forest",
+        "R_wizard_tower"
+      ],
+      "conversation_ids": [
+        "V_contes_bal_costume_01"
+      ],
+      "base_room": "R_costume_ball",
+      "words": [
+        "fr_momie_noun",
+        "fr_vampire_noun",
+        "fr_fantome_noun",
+        "fr_orc_noun",
+        "fr_loup_garou_noun",
+        "fr_gobelin_noun",
+        "fr_monstre_noun"
+      ],
+      "item_count": 7,
+      "total_items_incl_zooms": 7,
+      "side_counts": {
+        "left": 1,
         "right": 6
       }
     }

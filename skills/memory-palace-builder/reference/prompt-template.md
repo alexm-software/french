@@ -132,3 +132,9 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - When removing a figure changes what a room's hook points at, rewrite the hook and the alt to describe what is now painted, then re-check the hook against the painting.
 - Base scene prompts use every template section heading (ITEMS, PLACEMENT AND SPACING, DOORS AND EXITS, FIGURES, VARIETY included) and name each item by its French word as well as the English, even when the scene will later be built by composites.
 - When a room loses or gains a hotspot, re-check the nameplate rect against every hotspot and the image edges, and move the nameplate onto clear wall or sky rather than trimming a box.
+- Never compose hook figures or props as two rows of cells: stagger them over back, middle and front depths so box bottoms spread with no empty band of 150 px or more, and check this on the planned boxes before painting.
+- To shrink or move an existing figure, erase it completely with a "remove completely, clean plate" edit and composite the original silhouette back at the new size or spot with its own contact shadow; edits that ask to shorten, tint or remove only part of a figure are ignored by the image model.
+- Put small hook props on middle-depth furniture (shelf, lectern, high table) at a planned height, not on low floor tables that fall into the front row or behind a figure.
+- Keep every door opening and its threshold clear of furniture and figures, including kneeling, crouching or sitting ones in front of the door.
+- When a hub gains a door to a new room, place the door on clear wall away from every item box and move the item, never shrink the door below a ~120 px click target.
+- Leave a label-height strip (about 35 px) of clear space below small high props, between their neighbours' boxes and the next figure, or plan a labelAt spot there before painting.
