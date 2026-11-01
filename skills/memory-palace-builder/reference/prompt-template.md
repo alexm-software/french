@@ -100,3 +100,13 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - Leaf or foliage tips painted muddy olive-brown when the hook needs fresh green are defects: boost tip green (raise G, ease R) or repaint tips, and verify tip G>R at 2x before accepting.
 
 - Respellings must stay age-appropriate in every reading, not only as whole tokens: reject a respelling if any syllable or hyphen chunk can be read as pee/piss/poo (or crude look-alikes such as "pist" → piss). Prefer a clean override (e.g. trappiste: trah-PEAST, never TRA-pist). Extend the pee/poo check to these substring and sound-alike cases before install.
+
+- Hotspots are non-overlapping boxes on the hook itself (the object or gesture that carries the sound-alike), not on the whole figure; set them by hand from a zoomed view and check the bottoms with grid_check before building.
+- Do not let an automatic box solver place hotspots: it shrinks boxes off the hook. Set boxes by hand and move a crowded label with a layout labelAt instead.
+- Crop-edits zoom in on tight crops: use a crop at least twice the size of the change and say 'same size, same place' for every kept figure.
+- Audit every door at zoom on the final painting (opening, frame and threshold clear of figures and props), not only after the first generation.
+- A replace-figure edit can erase bystanders inside the crop: check every figure's extent before choosing paste rects, and paste only the changed figure.
+- Paste seams on a checkered or patterned floor need a cleanup edit; compare the pattern at 2x across every seam.
+- Never run a crop or paste script while a GenerateImage edit of the same painting is in flight; finish one edit before cutting the next crop.
+- A pose edit can lift a figure into a door opening: ask for the lower pose explicitly (seated, kneeling) and check the head stays below the threshold line.
+- Inherited vocab examples can trip content flags: run check_v2 content on every new word and override the example sentence when it flags.

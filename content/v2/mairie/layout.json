@@ -78,6 +78,30 @@
   {
    "key": "nations",
    "short": "Le buffet des délégations"
+  },
+  {
+   "key": "visas",
+   "short": "Le service des visas"
+  },
+  {
+   "key": "cabinet",
+   "short": "Le cabinet du maire"
+  },
+  {
+   "key": "presse",
+   "short": "La salle de presse"
+  },
+  {
+   "key": "electoral",
+   "short": "La salle du dépouillement"
+  },
+  {
+   "key": "institutions",
+   "short": "La salle d'éducation civique"
+  },
+  {
+   "key": "inauguration",
+   "short": "La salle des cérémonies"
   }
  ],
  "rooms": {
@@ -845,7 +869,7 @@
    "name": "Les archives · Town Archives",
    "image": "mairie/archives.jpg",
    "backTo": "mairie",
-   "alt": "The town archives painted in ink and gouache: a young man waves a small black-red-gold flag, a cool archivist in sunglasses shows two children a lute and a lace fan, a baker leans in through the window with a basket of baguettes, a man pins picture postcards on a globe, an archivist opens Russian nesting dolls as the smallest vanishes in a puff, a girl files windmill postcards into a drawer, a woman opens a big book tied with a blue-white-red ribbon, a waffle carries a tiny black-yellow-red flag, a young man in a navy coat holds an Eiffel Tower postcard, a gondolier in a straw boater sings with a rolled map, a spaniel dances with hand bells and a traveler carries a sticker-covered suitcase; the teal door on the left leads back to the town hall and the arched doorway on the right looks into the map room.",
+   "alt": "The town archives painted in ink and gouache: a young man waves a small black-red-gold flag, a cool archivist in sunglasses shows two children a lute and a lace fan, a baker leans in through the window with a basket of baguettes, a man pins picture postcards on a globe, an archivist opens Russian nesting dolls as the smallest vanishes in a puff, a girl files windmill postcards into a drawer, a woman opens a big book tied with a blue-white-red ribbon, a waffle carries a tiny black-yellow-red flag, a young man in a navy coat holds an Eiffel Tower postcard, a gondolier in a straw boater sings with a rolled map, a spaniel dances with hand bells and a traveler carries a sticker-covered suitcase; the teal door on the left leads back to the town hall and the teal arched door on the right leads to the visa office.",
    "doors": [
     {
      "to": "mairie",
@@ -856,6 +880,17 @@
       40,
       180,
       320
+     ]
+    },
+    {
+     "to": "visas",
+     "label": "Le service des visas",
+     "hint": "The teal arched door on the right, to the visa office",
+     "hit": [
+      1022,
+      35,
+      190,
+      350
      ]
     }
    ],
@@ -3220,6 +3255,915 @@
      ]
     }
    ]
+  },
+  "visas": {
+   "name": "Le service des visas · The visa and passport office",
+   "room_id": "R_admin_02",
+   "image": "mairie/visas.jpg",
+   "alt": "Le service des visas: the visa and passport office of a French village town hall: pale sky-blue plaster walls with white moldings, a black-and-white checkered floor, a long walnut counter with three glass service windows across the back wall, a red-and-white striped barrier arm across a gap at the right end of the counter. clerk checking an ID card photo; traveler kneeling and waving a white handkerchief; woman on a Union Jack suitcase; man with a gold title belt holding up his passport; two diplomats shaking hands; stonemason chiseling a blank stone tablet; backpacker with a boomerang; guard pointing at yellow footprints on the floor; envoy bowing with a sealed letter; consul at his window with a small foreign flag; woman holding up a visa page; old man filling in an endlessly long form; guard lifting a barrier for a man with a pass. The teal arched door on the left, back to the archives. The walnut door on the right, to the mayor's office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "archives",
+   "doors": [
+    {
+     "to": "archives",
+     "label": "Les archives",
+     "hint": "The teal arched door on the left, back to the archives",
+     "hit": [
+      10,
+      40,
+      155,
+      400
+     ]
+    },
+    {
+     "to": "cabinet",
+     "label": "Le cabinet du maire",
+     "hint": "The walnut door on the right, to the mayor's office",
+     "hit": [
+      1020,
+      40,
+      230,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_identification_noun",
+     "box": [
+      195,
+      275,
+      140,
+      127
+     ]
+    },
+    {
+     "id": "fr_soumission_noun",
+     "box": [
+      60,
+      455,
+      160,
+      235
+     ]
+    },
+    {
+     "id": "fr_britannique_adj",
+     "box": [
+      540,
+      270,
+      72,
+      155
+     ],
+     "labelAt": [
+      566,
+      430
+     ]
+    },
+    {
+     "id": "fr_titulaire_adj",
+     "box": [
+      348,
+      195,
+      87,
+      135
+     ]
+    },
+    {
+     "id": "fr_diplomatique_adj",
+     "box": [
+      445,
+      195,
+      90,
+      165
+     ]
+    },
+    {
+     "id": "fr_permanent_adj",
+     "box": [
+      775,
+      285,
+      120,
+      95
+     ]
+    },
+    {
+     "id": "fr_australien_adj",
+     "box": [
+      640,
+      300,
+      65,
+      205
+     ]
+    },
+    {
+     "id": "fr_obligatoirement_adv",
+     "box": [
+      395,
+      365,
+      97,
+      235
+     ]
+    },
+    {
+     "id": "fr_envoye_noun",
+     "box": [
+      720,
+      385,
+      110,
+      255
+     ]
+    },
+    {
+     "id": "fr_consulat_noun",
+     "box": [
+      806,
+      185,
+      74,
+      95
+     ]
+    },
+    {
+     "id": "fr_visa_noun",
+     "box": [
+      710,
+      200,
+      55,
+      170
+     ]
+    },
+    {
+     "id": "fr_formulaire_noun",
+     "box": [
+      1040,
+      445,
+      210,
+      195
+     ]
+    },
+    {
+     "id": "fr_laissez_passer_noun",
+     "box": [
+      905,
+      195,
+      107,
+      275
+     ],
+     "labelAt": [
+      926,
+      384
+     ]
+    }
+   ]
+  },
+  "cabinet": {
+   "name": "Le cabinet du maire · The mayor's office",
+   "room_id": "R_politics_02",
+   "image": "mairie/cabinet.jpg",
+   "alt": "Le cabinet du maire: the mayor's office in a French village town hall: warm dark walnut wall paneling, a dark green carpet, a big carved walnut desk with a green leather top in the middle back, a tall window with heavy green velvet curtains in the back wall, a French tricolor flag on a pole in the back corner, low bookshelves. aide polishing a bust of Marianne; councilwoman tracing the village boundary on a framed map; secretary sealing a folder with a finger on her lips; aide explaining a clear picture diagram on an easel; boss in an executive chair signing at the desk; aide creeping quietly with a coffee tray; intern pushing an internal mail cart; minister hugging a red portfolio; farmer firmly refusing a giant pen; bank governor holding up a sheet of banknotes; framed painting of ministers around a table; old man whispering a secret to his friend. The walnut door on the left, back to the visa office. The navy-blue door on the right, to the press room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "visas",
+   "doors": [
+    {
+     "to": "visas",
+     "label": "Le service des visas",
+     "hint": "The walnut door on the left, back to the visa office",
+     "hit": [
+      0,
+      50,
+      180,
+      430
+     ]
+    },
+    {
+     "to": "presse",
+     "label": "La salle de presse",
+     "hint": "The navy-blue door on the right, to the press room",
+     "hit": [
+      1040,
+      30,
+      230,
+      440
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_republique_noun",
+     "box": [
+      30,
+      485,
+      260,
+      220
+     ]
+    },
+    {
+     "id": "fr_municipalite_noun",
+     "box": [
+      264,
+      146,
+      137,
+      174
+     ]
+    },
+    {
+     "id": "fr_confidentiel_adj",
+     "box": [
+      349,
+      456,
+      142,
+      139
+     ]
+    },
+    {
+     "id": "fr_explicitement_adv",
+     "box": [
+      722,
+      207,
+      146,
+      141
+     ]
+    },
+    {
+     "id": "fr_executif_adj",
+     "box": [
+      584,
+      264,
+      107,
+      107
+     ]
+    },
+    {
+     "id": "fr_discret_adj",
+     "box": [
+      509,
+      214,
+      72,
+      142
+     ]
+    },
+    {
+     "id": "fr_interne_adj",
+     "box": [
+      518,
+      455,
+      190,
+      210
+     ]
+    },
+    {
+     "id": "fr_ministeriel_adj",
+     "box": [
+      405,
+      242,
+      95,
+      210
+     ]
+    },
+    {
+     "id": "fr_categoriquement_adv",
+     "box": [
+      712,
+      352,
+      108,
+      338
+     ]
+    },
+    {
+     "id": "fr_gouverneur_noun",
+     "box": [
+      1088,
+      498,
+      186,
+      210
+     ]
+    },
+    {
+     "id": "fr_gouvernement_noun",
+     "box": [
+      852,
+      62,
+      151,
+      141
+     ]
+    },
+    {
+     "id": "fr_confident_noun",
+     "box": [
+      924,
+      232,
+      112,
+      192
+     ]
+    }
+   ]
+  },
+  "presse": {
+   "name": "La salle de presse · The press room",
+   "room_id": "R_adv_logic_04",
+   "image": "mairie/presse.jpg",
+   "alt": "La salle de presse: the press room of a French village town hall: pale gray walls, a deep blue curtain hanging behind a small wooden podium on a low stage at the left, rows of folding chairs with reporters, camera tripods, a light honey-oak floor. spokeswoman reading a statement at the podium; forest of microphones and a TV camera; technician untangling a knot of cables; man hiding behind a newspaper; man shushing through a giant megaphone; reporter unveiling a never-seen photo; reporter with a magnifying glass at a muddy puppy; ad man unrolling an advertising poster; drenched weatherman holding a sunny forecast; reporter in fake nose glasses; woman giving two thumbs up; photographer comparing a tall and a wide frame. The navy-blue door on the left, back to the mayor's office. The olive-green door on the right, to the counting room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "cabinet",
+   "doors": [
+    {
+     "to": "cabinet",
+     "label": "Le cabinet du maire",
+     "hint": "The navy-blue door on the left, back to the mayor's office",
+     "hit": [
+      10,
+      40,
+      260,
+      420
+     ]
+    },
+    {
+     "to": "electoral",
+     "label": "La salle du dépouillement",
+     "hint": "The olive-green door on the right, to the counting room",
+     "hit": [
+      1040,
+      40,
+      210,
+      440
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_declaration_noun",
+     "box": [
+      288,
+      131,
+      93,
+      188
+     ]
+    },
+    {
+     "id": "fr_mediatique_adj",
+     "box": [
+      388,
+      160,
+      112,
+      175
+     ]
+    },
+    {
+     "id": "fr_techniquement_adv",
+     "box": [
+      362,
+      522,
+      126,
+      140
+     ]
+    },
+    {
+     "id": "fr_anonyme_adj",
+     "box": [
+      350,
+      372,
+      128,
+      146
+     ]
+    },
+    {
+     "id": "fr_paradoxalement_adv",
+     "box": [
+      655,
+      140,
+      120,
+      108
+     ]
+    },
+    {
+     "id": "fr_inedit_adj",
+     "box": [
+      790,
+      170,
+      200,
+      115
+     ],
+     "labelAt": [
+      890,
+      137
+     ]
+    },
+    {
+     "id": "fr_vraisemblablement_adv",
+     "box": [
+      550,
+      402,
+      190,
+      210
+     ]
+    },
+    {
+     "id": "fr_publicitaire_adj",
+     "box": [
+      512,
+      180,
+      128,
+      195
+     ]
+    },
+    {
+     "id": "fr_ironiquement_adv",
+     "box": [
+      784,
+      290,
+      116,
+      130
+     ],
+     "labelAt": [
+      831,
+      388
+     ]
+    },
+    {
+     "id": "fr_faussement_adv",
+     "box": [
+      660,
+      255,
+      65,
+      115
+     ],
+     "labelAt": [
+      712,
+      337
+     ]
+    },
+    {
+     "id": "fr_positivement_adv",
+     "box": [
+      830,
+      425,
+      132,
+      255
+     ]
+    },
+    {
+     "id": "fr_format_noun",
+     "box": [
+      1088,
+      500,
+      187,
+      210
+     ]
+    }
+   ]
+  },
+  "electoral": {
+   "name": "La salle du dépouillement · The ballot-counting room",
+   "room_id": "R_politics_05",
+   "image": "mairie/electoral.jpg",
+   "alt": "La salle du dépouillement: the ballot-counting room of a French village town hall on election night: sage-green walls, a plain light wooden plank floor, two long bare trestle tables where volunteers count envelopes, a big clear plastic ballot box on the middle table. three councilors raising their hands together; clerk sorting envelopes into three baskets; woman in a leg cast holding up her signed proxy form; girl painting with three primary-color pots; volunteers tipping out the ballot box; teller holding up two fingers; two men in red and blue ties talking politics; twin boys with balloons matching their shirts; balance with two equal piles of envelopes; boy holding up his voter card; two neighbors shaking hands. The olive-green door on the left, back to the press room. The brick-red door on the right, to the civics classroom.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "presse",
+   "doors": [
+    {
+     "to": "presse",
+     "label": "La salle de presse",
+     "hint": "The olive-green door on the left, back to the press room",
+     "hit": [
+      30,
+      30,
+      230,
+      370
+     ]
+    },
+    {
+     "to": "institutions",
+     "label": "La salle d'éducation civique",
+     "hint": "The brick-red door on the right, to the civics classroom",
+     "hit": [
+      1010,
+      20,
+      240,
+      420
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_unanimite_noun",
+     "box": [
+      60,
+      425,
+      315,
+      275
+     ]
+    },
+    {
+     "id": "fr_categorie_noun",
+     "box": [
+      285,
+      115,
+      197,
+      183
+     ]
+    },
+    {
+     "id": "fr_procuration_noun",
+     "box": [
+      515,
+      210,
+      120,
+      210
+     ]
+    },
+    {
+     "id": "fr_primaire_adj",
+     "box": [
+      300,
+      305,
+      182,
+      115
+     ]
+    },
+    {
+     "id": "fr_electoral_adj",
+     "box": [
+      703,
+      113,
+      185,
+      202
+     ]
+    },
+    {
+     "id": "fr_deuxiemement_adv",
+     "box": [
+      545,
+      115,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_politiquement_adv",
+     "box": [
+      652,
+      315,
+      170,
+      185
+     ]
+    },
+    {
+     "id": "fr_respectivement_adv",
+     "box": [
+      500,
+      440,
+      148,
+      275
+     ]
+    },
+    {
+     "id": "fr_equivalent_noun",
+     "box": [
+      735,
+      505,
+      215,
+      210
+     ]
+    },
+    {
+     "id": "fr_citoyen_noun",
+     "box": [
+      828,
+      355,
+      100,
+      145
+     ]
+    },
+    {
+     "id": "fr_concitoyen_noun",
+     "box": [
+      955,
+      445,
+      175,
+      195
+     ]
+    }
+   ]
+  },
+  "institutions": {
+   "name": "La salle d'éducation civique · The civics classroom",
+   "room_id": "R_adj_relation_10",
+   "image": "mairie/institutions.jpg",
+   "alt": "La salle d'éducation civique: the civics classroom of a French village town hall, where visiting schoolchildren learn how the Republic works: pale yellow walls, a big dark green chalkboard on the back wall, rows of wooden school desks with chairs, a light wooden plank floor. boy in a paper general's hat barking orders; teacher stacking thick red law books; girl unrolling a sealed parchment charter; librarian holding up the big blue-white-red Constitution book; girl at a lectern reading out a new law; finished jigsaw map of colored regions on the floor; boy filling a half-circle model parliament; strict teacher raising a ruler; two children by their crashed paper plane under a chalk flight path; girl pointing at the base block of her block tower; three workers sharing out loaves of bread; boy dressed as a king on a carved chair. The dark red arched door on the left, back to the ballot-counting room. The white-and-gold door on the right, to the ceremonial hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "electoral",
+   "doors": [
+    {
+     "to": "electoral",
+     "label": "La salle du dépouillement",
+     "hint": "The dark red arched door on the left, back to the ballot-counting room",
+     "hit": [
+      0,
+      30,
+      250,
+      425
+     ]
+    },
+    {
+     "to": "inauguration",
+     "label": "La salle des cérémonies",
+     "hint": "The white-and-gold door on the right, to the ceremonial hall",
+     "hit": [
+      1040,
+      30,
+      230,
+      390
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_dictature_noun",
+     "box": [
+      12,
+      462,
+      106,
+      158
+     ]
+    },
+    {
+     "id": "fr_legislation_noun",
+     "box": [
+      258,
+      223,
+      134,
+      174
+     ]
+    },
+    {
+     "id": "fr_charte_noun",
+     "box": [
+      409,
+      291,
+      90,
+      168
+     ]
+    },
+    {
+     "id": "fr_constitutionnel_adj",
+     "box": [
+      578,
+      282,
+      84,
+      144
+     ]
+    },
+    {
+     "id": "fr_legislatif_adj",
+     "box": [
+      442,
+      137,
+      91,
+      151
+     ]
+    },
+    {
+     "id": "fr_federal_adj",
+     "box": [
+      811,
+      351,
+      148,
+      86
+     ]
+    },
+    {
+     "id": "fr_parlementaire_adj",
+     "box": [
+      538,
+      480,
+      160,
+      180
+     ]
+    },
+    {
+     "id": "fr_autoritaire_adj",
+     "box": [
+      701,
+      356,
+      108,
+      128
+     ],
+     "labelAt": [
+      765,
+      441
+     ]
+    },
+    {
+     "id": "fr_theoriquement_adv",
+     "box": [
+      666,
+      158,
+      94,
+      177
+     ]
+    },
+    {
+     "id": "fr_fondamentalement_adv",
+     "box": [
+      781,
+      487,
+      178,
+      198
+     ]
+    },
+    {
+     "id": "fr_socialisme_noun",
+     "box": [
+      782,
+      135,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_gouvernant_noun",
+     "box": [
+      1080,
+      448,
+      190,
+      210
+     ]
+    }
+   ]
+  },
+  "inauguration": {
+   "name": "La salle des cérémonies · The ceremonial hall",
+   "room_id": "R_politics_03",
+   "image": "mairie/inauguration.jpg",
+   "alt": "La salle des cérémonies: the ceremonial hall of a French village town hall: cream walls with gilded moldings, a herringbone parquet floor, tall mirrors in gilded frames on the back wall. mayor in a sash cutting a ribbon; woman ringing a bell from a tall gilded chair; little girl climbing red steps onto a stage; man announcing a name, young woman standing up in surprise; model of a domed public building on a stand; white bust of Marianne on a pedestal; drummer boy marching with a determined face; huge five-tier cake standing on the floor; famous actress holding up her own portrait; butler in white gloves bowing stiffly with a tray; man in a smaller copy of the gilded chair; white-haired senator with a cane. The white arched door on the left, back to the civics classroom.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "institutions",
+   "doors": [
+    {
+     "to": "institutions",
+     "label": "La salle d'éducation civique",
+     "hint": "The white arched door on the left, back to the civics classroom",
+     "hit": [
+      0,
+      20,
+      240,
+      420
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_inauguration_noun",
+     "box": [
+      245,
+      460,
+      150,
+      240
+     ]
+    },
+    {
+     "id": "fr_presidence_noun",
+     "box": [
+      315,
+      200,
+      73,
+      218
+     ],
+     "labelAt": [
+      318.5,
+      165
+     ]
+    },
+    {
+     "id": "fr_accession_noun",
+     "box": [
+      244,
+      280,
+      66,
+      135
+     ],
+     "labelAt": [
+      309,
+      425
+     ]
+    },
+    {
+     "id": "fr_nomination_noun",
+     "box": [
+      397,
+      175,
+      73,
+      125
+     ],
+     "labelAt": [
+      474,
+      143
+     ]
+    },
+    {
+     "id": "fr_institutionnel_adj",
+     "box": [
+      475,
+      220,
+      95,
+      125
+     ]
+    },
+    {
+     "id": "fr_republicain_adj",
+     "box": [
+      764,
+      138,
+      51,
+      124
+     ]
+    },
+    {
+     "id": "fr_resolument_adv",
+     "box": [
+      400,
+      350,
+      122,
+      202
+     ]
+    },
+    {
+     "id": "fr_grandiose_adj",
+     "box": [
+      575,
+      280,
+      101,
+      210
+     ]
+    },
+    {
+     "id": "fr_prestigieux_adj",
+     "box": [
+      681,
+      183,
+      74,
+      162
+     ],
+     "labelAt": [
+      695,
+      150
+     ]
+    },
+    {
+     "id": "fr_formellement_adv",
+     "box": [
+      820,
+      184,
+      85,
+      121
+     ],
+     "labelAt": [
+      895,
+      151
+     ]
+    },
+    {
+     "id": "fr_vice_president_noun",
+     "box": [
+      712,
+      350,
+      188,
+      290
+     ]
+    },
+    {
+     "id": "fr_senateur_noun",
+     "box": [
+      918,
+      185,
+      87,
+      290
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -3541,6 +4485,108 @@
     "fr_territorial_adj",
     "fr_suisse_adj",
     "fr_quebecois_adj"
+   ]
+  },
+  "visas": {
+   "vocabRoom": "R_admin_02",
+   "only": [
+    "fr_identification_noun",
+    "fr_soumission_noun",
+    "fr_britannique_adj",
+    "fr_titulaire_adj",
+    "fr_diplomatique_adj",
+    "fr_permanent_adj",
+    "fr_australien_adj",
+    "fr_obligatoirement_adv",
+    "fr_envoye_noun",
+    "fr_consulat_noun",
+    "fr_visa_noun",
+    "fr_formulaire_noun",
+    "fr_laissez_passer_noun"
+   ]
+  },
+  "cabinet": {
+   "vocabRoom": "R_politics_02",
+   "only": [
+    "fr_republique_noun",
+    "fr_municipalite_noun",
+    "fr_confidentiel_adj",
+    "fr_explicitement_adv",
+    "fr_executif_adj",
+    "fr_discret_adj",
+    "fr_interne_adj",
+    "fr_ministeriel_adj",
+    "fr_categoriquement_adv",
+    "fr_gouverneur_noun",
+    "fr_gouvernement_noun",
+    "fr_confident_noun"
+   ]
+  },
+  "presse": {
+   "vocabRoom": "R_adv_logic_04",
+   "only": [
+    "fr_declaration_noun",
+    "fr_mediatique_adj",
+    "fr_techniquement_adv",
+    "fr_anonyme_adj",
+    "fr_paradoxalement_adv",
+    "fr_inedit_adj",
+    "fr_vraisemblablement_adv",
+    "fr_publicitaire_adj",
+    "fr_ironiquement_adv",
+    "fr_faussement_adv",
+    "fr_positivement_adv",
+    "fr_format_noun"
+   ]
+  },
+  "electoral": {
+   "vocabRoom": "R_politics_05",
+   "only": [
+    "fr_unanimite_noun",
+    "fr_categorie_noun",
+    "fr_procuration_noun",
+    "fr_primaire_adj",
+    "fr_electoral_adj",
+    "fr_deuxiemement_adv",
+    "fr_politiquement_adv",
+    "fr_respectivement_adv",
+    "fr_equivalent_noun",
+    "fr_citoyen_noun",
+    "fr_concitoyen_noun"
+   ]
+  },
+  "institutions": {
+   "vocabRoom": "R_adj_relation_10",
+   "only": [
+    "fr_dictature_noun",
+    "fr_legislation_noun",
+    "fr_charte_noun",
+    "fr_constitutionnel_adj",
+    "fr_legislatif_adj",
+    "fr_federal_adj",
+    "fr_parlementaire_adj",
+    "fr_autoritaire_adj",
+    "fr_theoriquement_adv",
+    "fr_fondamentalement_adv",
+    "fr_socialisme_noun",
+    "fr_gouvernant_noun"
+   ]
+  },
+  "inauguration": {
+   "vocabRoom": "R_politics_03",
+   "only": [
+    "fr_inauguration_noun",
+    "fr_presidence_noun",
+    "fr_accession_noun",
+    "fr_nomination_noun",
+    "fr_institutionnel_adj",
+    "fr_republicain_adj",
+    "fr_resolument_adv",
+    "fr_grandiose_adj",
+    "fr_prestigieux_adj",
+    "fr_formellement_adv",
+    "fr_vice_president_noun",
+    "fr_senateur_noun"
    ]
   }
  },
