@@ -34,6 +34,22 @@
   {
    "key": "fetes",
    "short": "La salle des fêtes"
+  },
+  {
+   "key": "polyvalente",
+   "short": "La salle polyvalente"
+  },
+  {
+   "key": "jumelage",
+   "short": "Le jumelage"
+  },
+  {
+   "key": "etatcivil",
+   "short": "L'état civil"
+  },
+  {
+   "key": "finances",
+   "short": "Les finances"
   }
  ],
  "rooms": {
@@ -1422,7 +1438,7 @@
    "name": "Le salon d'honneur · The reception hall",
    "room_id": "R_politics_01",
    "image": "mairie/honneur.jpg",
-   "alt": "The town hall's grand reception hall under a crystal chandelier with a sparrow on it: a bride and groom cut their wedding cake among rose petals, Monsieur Verbe in a red beret with an accordion on his chest holds out a gold key with a red bow, a gray-haired minister sips pink punch through a mini straw by the buffet, a blushing president lifts a gold trophy cup, a deputy in a tricolor sash putts a golf ball on a little green mat, a waiter brings a tray of gray ice-cream cones to the delegates, and a boy walks his fingers up the mini staircase of a model ministry. The burgundy double door on the left leads back to the lobby, the pale-green door at the back left to the paperwork office and the navy-blue door at the back right to the polling hall.",
+   "alt": "The town hall's grand reception hall under a crystal chandelier with a sparrow on it: a bride and groom cut their wedding cake among rose petals, Monsieur Verbe in a red beret with an accordion on his chest holds out a gold key with a red bow, a gray-haired minister sips pink punch through a mini straw by the buffet, Monsieur Verbe in a red beret holds a clarinet high and makes an announcement, a blushing president lifts a gold trophy cup, a deputy in a tricolor sash putts a golf ball on a little green mat, a waiter brings a tray of gray ice-cream cones to the delegates, and a boy walks his fingers up the mini staircase of a model ministry. The burgundy double door on the left leads back to the lobby, the pale-green door at the back left to the paperwork office and the navy-blue door at the back right to the polling hall.",
    "nameplate": [
     50,
     4.5
@@ -1531,6 +1547,15 @@
       235,
       200
      ]
+    },
+    {
+     "id": "fr_declarer_verb",
+     "box": [
+      532,
+      395,
+      158,
+      325
+     ]
     }
    ]
   },
@@ -1538,7 +1563,7 @@
    "name": "Le bureau des papiers · The paperwork office",
    "room_id": "R_admin_01",
    "image": "mairie/papiers.jpg",
-   "alt": "The town hall's paperwork office with tall windows on the village square: a tour guide with a yellow pennant signs at a lectern while two tourists in sun hats wave goodbye, a man with an armful of papers marches with high knees, a young doe nibbles the file a clerk holds over the counter, a doctor points a billiard cue at the cork notice board, a gray-haired lady sews a ribbon onto a document while a clerk presses a brass seal into red wax, and a freckled boy with a curly perm in pink rollers holds up his pink permit. The pale-green door on the right leads back to the reception hall.",
+   "alt": "The town hall's paperwork office with tall windows on the village square: a tour guide with a yellow pennant signs at a lectern while two tourists in sun hats wave goodbye, a man with an armful of papers marches with high knees, Monsieur Verbe in a red beret draws a big green check on a postcard of a sunny valley, a young doe nibbles the file a clerk holds over the counter, a doctor points a billiard cue at the cork notice board, a gray-haired lady sews a ribbon onto a document while a clerk presses a brass seal into red wax, and a freckled boy with a curly perm in pink rollers holds up his pink permit. The pale-green door on the right leads back to the reception hall.",
    "nameplate": [
     50,
     4.5
@@ -1612,6 +1637,15 @@
       195,
       385
      ]
+    },
+    {
+     "id": "fr_valider_verb",
+     "box": [
+      492,
+      285,
+      148,
+      290
+     ]
     }
    ]
   },
@@ -1619,7 +1653,7 @@
    "name": "La salle des élections · The polling hall",
    "room_id": "R_politics_03",
    "image": "mairie/vote.jpg",
-   "alt": "The town hall's polling hall on election day, with three voting booths with blue curtains: a cook pushes a cart of copper pans under a blank placard, two band musicians play under a long blank banner, Monsieur Verbe in a red beret drops his envelope into the clear ballot box holding a teacup, an elderly voter lectures a bored teenager, a supporter with a rosette waves a giant wedge of parmesan, and two friends lift the newly elected man onto their shoulders. A dog with a tricolor bow waits politely. The navy-blue door on the left leads back to the reception hall and the yellow double door at the back right to the village hall.",
+   "alt": "The town hall's polling hall on election day, with three voting booths with blue curtains: a cook pushes a cart of copper pans under a blank placard, two band musicians play under a long blank banner, Monsieur Verbe in a gold beret sits on top of the booths leering at his ballot, a campaign poster shows a grinning candidate pulling a candy cane from a top hat, Monsieur Verbe in a red beret drops his envelope into the clear ballot box holding a teacup, an elderly voter lectures a bored teenager, a supporter with a rosette waves a giant wedge of parmesan, and two friends lift the newly elected man onto their shoulders. A dog with a tricolor bow waits politely. The navy-blue door on the left leads back to the reception hall and the yellow double door at the back right to the village hall.",
    "nameplate": [
     50,
     4.5
@@ -1704,6 +1738,24 @@
       183,
       560
      ]
+    },
+    {
+     "id": "fr_elire_verb",
+     "box": [
+      645,
+      75,
+      165,
+      160
+     ]
+    },
+    {
+     "id": "fr_candidat_noun",
+     "box": [
+      934,
+      58,
+      112,
+      120
+     ]
     }
    ]
   },
@@ -1711,7 +1763,7 @@
    "name": "La salle des fêtes · The village hall",
    "room_id": "R_adj_relation_06",
    "image": "mairie/fetes.jpg",
-   "alt": "The town hall's village hall decorated with bunting for the fair: a man pays at the ticket table while the cashier yawns over her cash tin, a beekeeper lady rents a table stacked with honey jars, a proud fireman with a medal stands before the stage, an old man in a blue paisley shirt dozes in a folding chair on the stage, a volunteer in a green apron keeps a beach ball going with two children, and a strongman carries a whole upright piano across the hall. The yellow double door on the left leads back to the polling hall.",
+   "alt": "The town hall's village hall decorated with bunting for the fair: a man pays at the ticket table while the cashier yawns over her cash tin, a beekeeper lady rents a table stacked with honey jars, a proud fireman with a medal stands before the stage, an old man in a blue paisley shirt dozes in a folding chair on the stage, a volunteer in a green apron keeps a beach ball going with two children, and a strongman carries a whole upright piano across the hall. The yellow double door on the left leads back to the polling hall and the lilac door in the right wall, beside the big window, to the rehearsal room.",
    "nameplate": [
     50,
     4.5
@@ -1727,6 +1779,17 @@
       80,
       200,
       240
+     ]
+    },
+    {
+     "to": "polyvalente",
+     "label": "La salle polyvalente",
+     "hint": "The lilac door in the back right wall, to the rehearsal room",
+     "hit": [
+      965,
+      60,
+      85,
+      290
      ]
     }
    ],
@@ -1792,6 +1855,390 @@
       385,
       345,
       330
+     ]
+    }
+   ]
+  },
+  "polyvalente": {
+   "name": "La salle polyvalente · The rehearsal room",
+   "room_id": "R_adv_logic_03",
+   "image": "mairie/polyvalente.jpg",
+   "alt": "The town hall's rehearsal room with a low stage and a gray curtain: a mailman with a green parrot on his shoulder brings a parcel, Monsieur Verbe in a red beret beckons his shy sister with a ukulele out from behind the curtain, a stagehand in overalls lines up a gold crown, a brass lantern and a toy rocking horse on a shelf, a little boy offers his sister a big lemon and she crosses her arms, a round man in a red sweater carries a long table on his head, and a lanky helper is hung all over with tote bags, one handle in his teeth. The lilac door on the left leads back to the village hall, the sky-blue door beside it to the twin-towns hall and the olive-green door on the right to the registry office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "fetes",
+   "doors": [
+    {
+     "to": "fetes",
+     "label": "La salle des fêtes",
+     "hint": "The lilac door on the left, back to the village hall",
+     "hit": [
+      30,
+      70,
+      150,
+      330
+     ]
+    },
+    {
+     "to": "jumelage",
+     "label": "Le jumelage",
+     "hint": "The sky-blue door at the back left, to the twin-towns hall",
+     "hit": [
+      220,
+      110,
+      105,
+      230
+     ]
+    },
+    {
+     "to": "etatcivil",
+     "label": "L'état civil",
+     "hint": "The olive-green door on the right, to the registry office",
+     "hit": [
+      1010,
+      110,
+      95,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_apparemment_adv",
+     "box": [
+      340,
+      145,
+      150,
+      205
+     ]
+    },
+    {
+     "id": "fr_nullement_adv",
+     "box": [
+      306,
+      356,
+      252,
+      334
+     ]
+    },
+    {
+     "id": "fr_insister_verb",
+     "box": [
+      500,
+      140,
+      250,
+      150
+     ]
+    },
+    {
+     "id": "fr_proprement_adv",
+     "box": [
+      752,
+      150,
+      158,
+      160
+     ]
+    },
+    {
+     "id": "fr_veritablement_adv",
+     "box": [
+      560,
+      320,
+      225,
+      400
+     ]
+    },
+    {
+     "id": "fr_totalement_adv",
+     "box": [
+      790,
+      312,
+      208,
+      348
+     ]
+    }
+   ]
+  },
+  "jumelage": {
+   "name": "La salle du jumelage · The twin-towns hall",
+   "room_id": "R_adj_relation_08",
+   "image": "mairie/jumelage.jpg",
+   "alt": "The town hall's twin-towns hall under strings of colorful flags, with a big painted map of Europe: a baker in a black hat and lace collar holds up a huge caramel flan, a cow in a flower garland poses on a red rug for a photographer, a polite astronaut bows, a ginger cat naps on a green cushion on a little table, Monsieur Verbe in a red beret shakes maracas and leads a samba line of guests, and a lion mascot in a yellow jersey dances. In the near left corner a big bass fish sits in a washtub holding up its passport while a clerk stamps it. A hedgehog sniffs a grape by the coat stand. The sky-blue double door on the right leads back to the rehearsal room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "polyvalente",
+   "doors": [
+    {
+     "to": "polyvalente",
+     "label": "La salle polyvalente",
+     "hint": "The sky-blue door on the right, back to the rehearsal room",
+     "hit": [
+      1135,
+      100,
+      120,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_catalan_adj",
+     "box": [
+      305,
+      525,
+      180,
+      90
+     ]
+    },
+    {
+     "id": "fr_flamand_adj",
+     "box": [
+      330,
+      270,
+      135,
+      150
+     ]
+    },
+    {
+     "id": "fr_rassembler_verb",
+     "box": [
+      600,
+      465,
+      140,
+      250
+     ]
+    },
+    {
+     "id": "fr_bresilien_adj",
+     "box": [
+      772,
+      420,
+      140,
+      265
+     ]
+    },
+    {
+     "id": "fr_fameux_adj",
+     "box": [
+      470,
+      305,
+      128,
+      175
+     ]
+    },
+    {
+     "id": "fr_cosmopolite_adj",
+     "box": [
+      662,
+      330,
+      108,
+      130
+     ]
+    },
+    {
+     "id": "fr_ambassade_noun",
+     "box": [
+      12,
+      440,
+      208,
+      278
+     ]
+    }
+   ]
+  },
+  "etatcivil": {
+   "name": "Le bureau de l'état civil · The registry office",
+   "room_id": "R_admin_01",
+   "image": "mairie/etatcivil.jpg",
+   "alt": "The town hall's registry office with a long wooden counter and a checkered floor: a surprised man holds up a white form card with a silver fish flopping on it, a round boy shows his ant farm to an old clerk, a jester yawns at the manager's desk piled with papers, Monsieur Verbe in a red beret gives a thumbs-up to a red toy car on a little lift, a clerk polishes a brass bell, a boy plays ping-pong with a rubber stamp, and by the window a white marble statue points at a little tally scoreboard on the wall. The olive-green door on the left leads back to the rehearsal room and the dark-red door to the finance office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "polyvalente",
+   "doors": [
+    {
+     "to": "polyvalente",
+     "label": "La salle polyvalente",
+     "hint": "The olive-green door on the left, back to the rehearsal room",
+     "hit": [
+      10,
+      30,
+      200,
+      195
+     ]
+    },
+    {
+     "to": "finances",
+     "label": "Les finances",
+     "hint": "The dark-red door at the back left, to the finance office",
+     "hit": [
+      305,
+      80,
+      150,
+      150
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fiche_noun",
+     "box": [
+      35,
+      240,
+      340,
+      205
+     ]
+    },
+    {
+     "id": "fr_licence_noun",
+     "box": [
+      30,
+      450,
+      355,
+      260
+     ]
+    },
+    {
+     "id": "fr_gestion_noun",
+     "box": [
+      440,
+      240,
+      195,
+      260
+     ]
+    },
+    {
+     "id": "fr_autoriser_verb",
+     "box": [
+      640,
+      210,
+      285,
+      430
+     ]
+    },
+    {
+     "id": "fr_label_noun",
+     "box": [
+      930,
+      185,
+      165,
+      160
+     ]
+    },
+    {
+     "id": "fr_tampon_noun",
+     "box": [
+      1010,
+      375,
+      240,
+      330
+     ]
+    },
+    {
+     "id": "fr_statut_noun",
+     "box": [
+      1095,
+      80,
+      180,
+      265
+     ]
+    }
+   ]
+  },
+  "finances": {
+   "name": "Le bureau des finances · The finance office",
+   "room_id": "R_adj_relation_09",
+   "image": "mairie/finances.jpg",
+   "alt": "The town hall's finance office with an old safe and a window onto the village church: two farmers present a giant golden pear on a red cushion, a scruffy terrier runs off with a banknote while the treasurer lunges after it, an owl on the safe has a cupcake with one candle, Monsieur Verbe in a red beret holds out his hand to a seagull holding his clam on the windowsill, a boy cheers at a model mining town on a table, a brass balance scale on the desk holds one kitten in each level pan, and a grandmother pours coins from a jug into a glass jar. The dark-red door on the right leads back to the registry office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "etatcivil",
+   "doors": [
+    {
+     "to": "etatcivil",
+     "label": "L'état civil",
+     "hint": "The dark-red door on the right, back to the registry office",
+     "hit": [
+      1120,
+      30,
+      150,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_monetaire_adj",
+     "box": [
+      400,
+      485,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_prospere_adj",
+     "box": [
+      340,
+      56,
+      215,
+      199
+     ]
+    },
+    {
+     "id": "fr_reclamer_verb",
+     "box": [
+      680,
+      195,
+      330,
+      195
+     ]
+    },
+    {
+     "id": "fr_minier_adj",
+     "box": [
+      700,
+      395,
+      280,
+      125
+     ]
+    },
+    {
+     "id": "fr_annuel_adj",
+     "box": [
+      618,
+      65,
+      145,
+      125
+     ]
+    },
+    {
+     "id": "fr_apport_noun",
+     "box": [
+      1015,
+      245,
+      200,
+      375
+     ]
+    },
+    {
+     "id": "fr_equite_noun",
+     "box": [
+      148,
+      222,
+      160,
+      162
      ]
     }
    ]
@@ -1920,7 +2367,8 @@
     "fr_president_noun",
     "fr_depute_noun",
     "fr_ministere_noun",
-    "fr_congres_noun"
+    "fr_congres_noun",
+    "fr_declarer_verb"
    ]
   },
   "papiers": {
@@ -1931,7 +2379,8 @@
     "fr_dossier_noun",
     "fr_sceau_noun",
     "fr_document_noun",
-    "fr_permis_noun"
+    "fr_permis_noun",
+    "fr_valider_verb"
    ]
   },
   "vote": {
@@ -1942,7 +2391,9 @@
     "fr_voter_verb",
     "fr_partisan_noun",
     "fr_electeur_noun",
-    "fr_elu_noun"
+    "fr_elu_noun",
+    "fr_elire_verb",
+    "fr_candidat_noun"
    ]
   },
   "fetes": {
@@ -1954,6 +2405,53 @@
     "fr_fierement_adv",
     "fr_paisiblement_adv",
     "fr_carrement_adv"
+   ]
+  },
+  "polyvalente": {
+   "vocabRoom": "R_adv_logic_03",
+   "only": [
+    "fr_apparemment_adv",
+    "fr_nullement_adv",
+    "fr_insister_verb",
+    "fr_proprement_adv",
+    "fr_veritablement_adv",
+    "fr_totalement_adv"
+   ]
+  },
+  "jumelage": {
+   "vocabRoom": "R_adj_relation_08",
+   "only": [
+    "fr_catalan_adj",
+    "fr_flamand_adj",
+    "fr_rassembler_verb",
+    "fr_bresilien_adj",
+    "fr_fameux_adj",
+    "fr_cosmopolite_adj",
+    "fr_ambassade_noun"
+   ]
+  },
+  "etatcivil": {
+   "vocabRoom": "R_admin_01",
+   "only": [
+    "fr_fiche_noun",
+    "fr_licence_noun",
+    "fr_gestion_noun",
+    "fr_autoriser_verb",
+    "fr_label_noun",
+    "fr_tampon_noun",
+    "fr_statut_noun"
+   ]
+  },
+  "finances": {
+   "vocabRoom": "R_adj_relation_09",
+   "only": [
+    "fr_monetaire_adj",
+    "fr_prospere_adj",
+    "fr_reclamer_verb",
+    "fr_minier_adj",
+    "fr_annuel_adj",
+    "fr_apport_noun",
+    "fr_equite_noun"
    ]
   }
  },
