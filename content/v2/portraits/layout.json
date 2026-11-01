@@ -88,6 +88,30 @@
   {
    "key": "chapelle",
    "short": "La chapelle"
+  },
+  {
+   "key": "jardin",
+   "short": "Le jardin"
+  },
+  {
+   "key": "bal",
+   "short": "La salle de bal"
+  },
+  {
+   "key": "galerie",
+   "short": "La galerie"
+  },
+  {
+   "key": "concours",
+   "short": "Le concours"
+  },
+  {
+   "key": "musique",
+   "short": "Le salon de musique"
+  },
+  {
+   "key": "tente",
+   "short": "La tente des gâteaux"
   }
  ],
  "planned": {
@@ -360,6 +384,74 @@
     "fr_tolerant_adj",
     "fr_gentilhomme_noun",
     "fr_nouveau_ne_noun"
+   ]
+  },
+  "jardin": {
+   "vocabRoom": "R_people_04",
+   "only": [
+    "fr_brute_noun",
+    "fr_grossesse_noun",
+    "fr_cohue_noun",
+    "fr_lady_noun",
+    "fr_citadin_noun",
+    "fr_ado_noun",
+    "fr_indulgent_adj",
+    "fr_copieux_adj",
+    "fr_senior_noun",
+    "fr_tireur_noun"
+   ]
+  },
+  "bal": {
+   "vocabRoom": "R_character_06",
+   "only": [
+    "fr_galant_adj",
+    "fr_extravagant_adj",
+    "fr_vaniteux_adj",
+    "fr_imprudent_adj",
+    "fr_suppliant_adj",
+    "fr_hagard_adj",
+    "fr_fortune_adj"
+   ]
+  },
+  "galerie": {
+   "vocabRoom": "R_appearance_06",
+   "only": [
+    "fr_pittoresque_adj",
+    "fr_illustre_adj",
+    "fr_reconnaissable_adj",
+    "fr_luxueux_adj",
+    "fr_livide_adj",
+    "fr_irascible_adj"
+   ]
+  },
+  "concours": {
+   "vocabRoom": "R_character_03",
+   "only": [
+    "fr_tetu_adj",
+    "fr_egoiste_adj",
+    "fr_enthousiaste_adj",
+    "fr_prompt_adj",
+    "fr_indifferent_adj",
+    "fr_passif_adj"
+   ]
+  },
+  "musique": {
+   "vocabRoom": "R_character_08",
+   "only": [
+    "fr_precoce_adj",
+    "fr_inexperimente_adj",
+    "fr_intransigeant_adj",
+    "fr_aventureux_adj",
+    "fr_spontane_adj"
+   ]
+  },
+  "tente": {
+   "vocabRoom": "R_appearance_06",
+   "only": [
+    "fr_convivial_adj",
+    "fr_incomparable_adj",
+    "fr_craquant_adj",
+    "fr_comparable_adj"
    ]
   }
  },
@@ -1602,7 +1694,7 @@
    "name": "La salle à manger · The dining room",
    "room_id": "R_character_04",
    "image": "portraits/salle.jpg",
-   "alt": "A warm green dining room at Sunday lunch: a boy hands his slice of pie to his sister, a girl holds out a marble, a grandma wraps a guest in a shawl, a boy hands back a wallet, another holds his hand on his heart, a boy waves a friend over, a grandpa shows his antique gramophone, another pours lemonade, a girl hugs a raccoon, an old man reads by the fire and a cat sits at the table with a napkin.",
+   "alt": "A warm green dining room at Sunday lunch: a boy hands his slice of pie to his sister, a girl holds out a marble, a grandma wraps a guest in a shawl, a boy hands back a wallet, another holds his hand on his heart, a boy waves a friend over, a grandpa shows his antique gramophone, another pours lemonade, a girl hugs a raccoon, an old man reads by the fire and a cat sits at the table with a napkin. A yellow door with a soup tureen leads back to the landing; tall open French doors under an ivy garland lead out to the garden party.",
    "nameplate": [
     50,
     4.5
@@ -1618,6 +1710,17 @@
       30,
       125,
       480
+     ]
+    },
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "the open French doors under the ivy garland, out to the garden party",
+     "hit": [
+      985,
+      40,
+      170,
+      240
      ]
     }
    ],
@@ -2678,6 +2781,565 @@
       465,
       125,
       180
+     ]
+    }
+   ]
+  },
+  "jardin": {
+   "name": "Le jardin · The garden party",
+   "room_id": "R_people_04",
+   "image": "portraits/jardin.jpg",
+   "alt": "A sunny back-garden family party with a red-and-white striped tent, bunting and apple trees. A bulldog hides from a butterfly behind a flower pot; a little boy pats his pregnant mother's tummy on a bench; a crush of sheep and a cow push through the hedge; a lady in a flowered hat goes cross-eyed at a ladybug on her nose; a man in a city suit steps into a muddy puddle; a teen in headphones kneads dough; grandma slips a toddler a cupcake; grandpa carries a mountain of sausages; another grandpa hops in a sack race; a big uncle pulls a fraying tug-of-war rope; a hen in a paper party hat sits on a wheelbarrow. Open French doors lead back to the dining room, a blue gate with a rosette leads to the pet show and stone steps rise to the ballroom's glass doors.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "salle",
+   "doors": [
+    {
+     "to": "salle",
+     "label": "La salle à manger",
+     "hint": "the French doors under the ivy garland, back to the dining room",
+     "hit": [
+      25,
+      45,
+      195,
+      185
+     ]
+    },
+    {
+     "to": "bal",
+     "label": "La salle de bal",
+     "hint": "the stone steps and glass doors, up to the ballroom",
+     "hit": [
+      1100,
+      68,
+      100,
+      167
+     ]
+    },
+    {
+     "to": "concours",
+     "label": "Le concours",
+     "hint": "the blue garden gate with the rosette, to the pet show",
+     "hit": [
+      590,
+      158,
+      172,
+      88
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_brute_noun",
+     "box": [
+      25,
+      485,
+      240,
+      172
+     ]
+    },
+    {
+     "id": "fr_grossesse_noun",
+     "box": [
+      90,
+      238,
+      155,
+      217
+     ]
+    },
+    {
+     "id": "fr_cohue_noun",
+     "box": [
+      378,
+      172,
+      134,
+      76
+     ]
+    },
+    {
+     "id": "fr_lady_noun",
+     "box": [
+      250,
+      150,
+      125,
+      322
+     ]
+    },
+    {
+     "id": "fr_citadin_noun",
+     "box": [
+      412,
+      252,
+      134,
+      340
+     ]
+    },
+    {
+     "id": "fr_ado_noun",
+     "box": [
+      585,
+      255,
+      108,
+      152
+     ]
+    },
+    {
+     "id": "fr_indulgent_adj",
+     "box": [
+      548,
+      418,
+      143,
+      294
+     ]
+    },
+    {
+     "id": "fr_copieux_adj",
+     "box": [
+      694,
+      280,
+      176,
+      214
+     ]
+    },
+    {
+     "id": "fr_senior_noun",
+     "box": [
+      888,
+      292,
+      150,
+      250
+     ]
+    },
+    {
+     "id": "fr_tireur_noun",
+     "box": [
+      1060,
+      262,
+      150,
+      240
+     ]
+    }
+   ]
+  },
+  "bal": {
+   "name": "La salle de bal · The ballroom",
+   "room_id": "R_character_06",
+   "image": "portraits/bal.jpg",
+   "alt": "A grand cream-and-gold ballroom with a crystal chandelier, gilt mirrors, a parquet floor and a little band by a grand piano. A boy spreads his jacket over a puddle of spilled pink punch for a girl in pink; a lady waltzes in a huge blue hat topped by a splashing fountain and a toy sailboat; a man twirls his mustache at his own reflection in a gilt mirror; a boy in a sailor suit swings from the chandelier; a little girl in lilac kneels and pleads with her father, who checks his pocket watch; a wild-haired violinist plays on; a rich old man pours gold coins into a top hat; a waiter brings a platter of prawns; a little dog in a bow tie dances on its hind legs. Tall arched glass doors lead back down to the garden; white double doors with gilt panels lead on to the picture gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "jardin",
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "the arched glass doors, back down to the garden",
+     "hit": [
+      112,
+      10,
+      190,
+      185
+     ]
+    },
+    {
+     "to": "galerie",
+     "label": "La galerie",
+     "hint": "the white doors with gilt frames, to the picture gallery",
+     "hit": [
+      1100,
+      50,
+      122,
+      235
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_galant_adj",
+     "box": [
+      356,
+      400,
+      190,
+      295
+     ]
+    },
+    {
+     "id": "fr_extravagant_adj",
+     "box": [
+      476,
+      125,
+      108,
+      270
+     ]
+    },
+    {
+     "id": "fr_vaniteux_adj",
+     "box": [
+      366,
+      192,
+      108,
+      203
+     ]
+    },
+    {
+     "id": "fr_imprudent_adj",
+     "box": [
+      587,
+      120,
+      122,
+      128
+     ]
+    },
+    {
+     "id": "fr_suppliant_adj",
+     "box": [
+      700,
+      465,
+      165,
+      230
+     ]
+    },
+    {
+     "id": "fr_hagard_adj",
+     "box": [
+      838,
+      140,
+      92,
+      125
+     ]
+    },
+    {
+     "id": "fr_fortune_adj",
+     "box": [
+      700,
+      268,
+      190,
+      190
+     ]
+    }
+   ]
+  },
+  "galerie": {
+   "name": "La galerie de tableaux · The picture gallery",
+   "room_id": "R_appearance_06",
+   "image": "portraits/galerie.jpg",
+   "alt": "A long picture gallery with deep red walls, gilt-framed paintings, marble busts, a velvet rope and a glass skylight. A girl at an easel copies a windmill-village landscape; a boy on a step stool polishes the marble bust of a bearded scholar; an old man with a curly white mustache stands beside a portrait of himself as a young man, which tips off the wall toward a visitor whose face goes pale; a guard flaps his cap at a pigeon; a white cat sleeps on a red velvet sofa; a big portrait of a gray cat watches two children; a puppy hugs a laughing girl's ankle. White double doors with gilt panels lead back to the ballroom; a green door with a golden lyre leads on to the music room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "bal",
+   "doors": [
+    {
+     "to": "bal",
+     "label": "La salle de bal",
+     "hint": "the white doors with gilt frames, back to the ballroom",
+     "hit": [
+      30,
+      30,
+      170,
+      340
+     ]
+    },
+    {
+     "to": "musique",
+     "label": "Le salon de musique",
+     "hint": "the green door with the golden lyre, to the music room",
+     "hit": [
+      1168,
+      110,
+      72,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pittoresque_adj",
+     "box": [
+      300,
+      58,
+      168,
+      172
+     ]
+    },
+    {
+     "id": "fr_illustre_adj",
+     "box": [
+      369,
+      236,
+      138,
+      204
+     ]
+    },
+    {
+     "id": "fr_reconnaissable_adj",
+     "box": [
+      512,
+      80,
+      273,
+      178
+     ]
+    },
+    {
+     "id": "fr_luxueux_adj",
+     "box": [
+      470,
+      445,
+      320,
+      240
+     ]
+    },
+    {
+     "id": "fr_livide_adj",
+     "box": [
+      625,
+      262,
+      140,
+      178
+     ]
+    },
+    {
+     "id": "fr_irascible_adj",
+     "box": [
+      812,
+      178,
+      140,
+      162
+     ]
+    }
+   ]
+  },
+  "concours": {
+   "name": "Le concours d'animaux · The pet show",
+   "room_id": "R_character_03",
+   "image": "portraits/concours.jpg",
+   "alt": "A village pet show on a sunny lawn inside a white picket ring hung with rosettes, with bunting, straw bales and hills and a church tower beyond. A little gray pony plants its hooves and refuses the pink tutu a girl holds out; a spotted dog sprawls on a heap of tennis balls while a dachshund and a poodle look on; a golden puppy leaps for joy; a girl raises a prawn and a terrier springs up for it while a boy holds its leash; a basset hound lies flat by the fence; on the judges' table a gray cat yawns as a judge pins on its blue rosette; a rooster crows on a rock by the tent and a goose in a rosette struts by. A yellow-and-white striped bake-sale tent stands open at the right. An open blue garden gate with a blue-and-gold rosette leads back to the garden party.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "jardin",
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "the blue garden gate with the rosette, back to the garden party",
+     "hit": [
+      50,
+      300,
+      210,
+      345
+     ]
+    },
+    {
+     "to": "tente",
+     "label": "La tente des gâteaux",
+     "hint": "the striped tent with its flaps tied open, to the bake sale",
+     "hit": [
+      1085,
+      150,
+      175,
+      215
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tetu_adj",
+     "box": [
+      269,
+      244,
+      325,
+      196
+     ]
+    },
+    {
+     "id": "fr_egoiste_adj",
+     "box": [
+      469,
+      450,
+      232,
+      162
+     ]
+    },
+    {
+     "id": "fr_enthousiaste_adj",
+     "box": [
+      622,
+      256,
+      118,
+      106
+     ]
+    },
+    {
+     "id": "fr_prompt_adj",
+     "box": [
+      744,
+      319,
+      186,
+      175
+     ]
+    },
+    {
+     "id": "fr_indifferent_adj",
+     "box": [
+      506,
+      81,
+      179,
+      150
+     ]
+    },
+    {
+     "id": "fr_passif_adj",
+     "box": [
+      769,
+      226,
+      137,
+      92
+     ]
+    }
+   ]
+  },
+  "musique": {
+   "name": "Le salon de musique · The music room",
+   "room_id": "R_character_08",
+   "image": "portraits/musique.jpg",
+   "alt": "A sunny pale-blue music room with white wainscoting, a parquet floor and a tall bay window onto apple trees. A tiny girl on a tall stack of cushions plays the black grand piano; a boy holds his violin upside down at a music stand; a stern teacher with a gray bun holds up a metronome; a boy in an explorer hat climbs a golden harp; a girl in yellow flings her arms wide and sings as papers fly; a boy crashes the cymbals at a drum kit; a girl polishes a trumpet beside a heap of cloths; a canary sings in a brass cage on the bookcase. A green door with a golden lyre leads back to the red picture gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "galerie",
+   "doors": [
+    {
+     "to": "galerie",
+     "label": "La galerie",
+     "hint": "the green door with the golden lyre, back to the picture gallery",
+     "hit": [
+      10,
+      15,
+      88,
+      480
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_precoce_adj",
+     "box": [
+      258,
+      140,
+      262,
+      385
+     ]
+    },
+    {
+     "id": "fr_inexperimente_adj",
+     "box": [
+      522,
+      294,
+      178,
+      337
+     ]
+    },
+    {
+     "id": "fr_intransigeant_adj",
+     "box": [
+      581,
+      158,
+      118,
+      132
+     ]
+    },
+    {
+     "id": "fr_aventureux_adj",
+     "box": [
+      702,
+      100,
+      140,
+      238
+     ]
+    },
+    {
+     "id": "fr_spontane_adj",
+     "box": [
+      737,
+      344,
+      250,
+      312
+     ]
+    }
+   ]
+  },
+  "tente": {
+   "name": "La tente des gâteaux · The bake-sale tent",
+   "room_id": "R_appearance_06",
+   "image": "portraits/tente.jpg",
+   "alt": "Inside a yellow-and-white striped bake-sale tent with bunting, long white-clothed tables of cakes, pies, cupcakes and cookies, and grass underfoot. A smiling boy in an apron cuts a big chocolate cake; a red squirrel makes off with a pink cupcake; a towering rainbow layer cake wears a gold rosette; a girl in a red dress crunches a big cookie; a judge in a straw hat peers through a magnifying glass at two identical cherry pies; a man waves a napkin at bees while ladies sip tea; a hedgehog peeks out from under a table. The open tent flaps lead back to the pet show, where a rooster stands on a gray rock.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "concours",
+   "doors": [
+    {
+     "to": "concours",
+     "label": "Le concours",
+     "hint": "the open tent flaps, back to the pet show",
+     "hit": [
+      12,
+      80,
+      138,
+      290
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_convivial_adj",
+     "box": [
+      297,
+      125,
+      253,
+      322
+     ]
+    },
+    {
+     "id": "fr_incomparable_adj",
+     "box": [
+      552,
+      170,
+      190,
+      226
+     ]
+    },
+    {
+     "id": "fr_craquant_adj",
+     "box": [
+      660,
+      400,
+      222,
+      312
+     ]
+    },
+    {
+     "id": "fr_comparable_adj",
+     "box": [
+      745,
+      118,
+      282,
+      278
      ]
     }
    ]
