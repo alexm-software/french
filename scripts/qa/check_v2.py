@@ -33,6 +33,9 @@ Static rules (per building/room):
     data/hooks/qa/two_hooks_ok.tsv (each copy describes its own painting)
   * --browser: the sector maps discover buildings at runtime; the union of live links over all
     sector maps == village/data/<bld>.js files; the main room's exit and Back go to its sector map
+  * dialogues (scripts/qa/dialogue_check.py): an unpinned dialogue needs at least 3 of its words in its room; pins must
+    name live rooms; no adult/medical words in children's rooms; drinking/smoking words only in dialogues listed with a
+    reason in data/hooks/qa/dialogue_content_ok.tsv
   * cache busting (gate 27): village/sw.js serves every GET network-first (the cache is only the offline fallback) and
     declares its cache name V='village-vN'; extras.js registers it with updateViaCache 'none'. --cache-base REF (a
     commit or tree, e.g. the deploy base; required at pack time): if any existing image/card under village/ was
@@ -47,6 +50,7 @@ from pathlib import Path
 from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import placement
+import dialogue_check
 
 ROOT = Path(__file__).resolve().parents[2]
 V2 = ROOT / "village"
@@ -617,6 +621,7 @@ def main():
         nb += 1; nw += sum(c.values())
         if a.verbose: print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     site_gates(blds, errs)
+    print(f"dialogues: {dialogue_check.check(errs, warns)} placed dialogues checked")
     cache_gates(errs, a.cache_base)
     print(f"{nb} buildings, {nw} words checked")
     if a.browser:
