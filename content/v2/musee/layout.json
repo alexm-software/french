@@ -144,6 +144,10 @@
   {
    "key": "classe",
    "short": "L'atelier"
+  },
+  {
+   "key": "cantine",
+   "short": "La cantine"
   }
  ],
  "planned": {
@@ -695,6 +699,18 @@
     "fr_assis_adj",
     "fr_civil_adj",
     "fr_phonetique_adj"
+   ]
+  },
+  "cantine": {
+   "vocabRoom": "R_adj_senses_07",
+   "only": [
+    "fr_pudique_adj",
+    "fr_indicible_adj",
+    "fr_lancinant_adj",
+    "fr_synonyme_adj",
+    "fr_ludique_adj",
+    "fr_calcaire_adj",
+    "fr_charnel_adj"
    ]
   }
  },
@@ -5325,7 +5341,7 @@
    "name": "L'atelier pédagogique · The museum classroom",
    "room_id": "R_adj_senses_08",
    "image": "musee/classe.jpg",
-   "alt": "The teaching workshop off the senses room: a bright classroom with a chalkboard, low tables, bookshelves and a toy train track. By the teal door with a painted flower on the left wall, a teacher acts out a volcano eruption, a boy fits the last jigsaw piece, a girl breaks the finish ribbon, a toy train pulls into its last station, a boy pushes a foam boulder up a ramp, a girl sits up wide awake by a ringing alarm clock, a toddler sits proudly on a chair, two kids in pedal cars wave each other on, and a girl sounds out vowels into an old telephone with a hand mirror.",
+   "alt": "The teaching workshop off the senses room: a bright classroom with a chalkboard, low tables and a toy train track, and a sunny-yellow door with a painted red apple on the right wall leading to the lunchroom. By the teal door with a painted flower on the left wall, a teacher acts out a volcano eruption, a boy fits the last jigsaw piece, a girl breaks the finish ribbon, a toy train pulls into its last station, a boy pushes a foam boulder up a ramp, a girl sits up wide awake by a ringing alarm clock, a toddler sits proudly on a chair, two kids in pedal cars wave each other on, and a girl sounds out vowels into an old telephone with a hand mirror.",
    "nameplate": [
     50,
     4.5
@@ -5341,6 +5357,17 @@
       50,
       125,
       256
+     ]
+    },
+    {
+     "to": "cantine",
+     "label": "La cantine",
+     "hint": "the sunny-yellow door with the painted red apple on the right wall, to the field-trip lunchroom",
+     "hit": [
+      1040,
+      60,
+      128,
+      262
      ]
     }
    ],
@@ -5425,6 +5452,96 @@
       495,
       190,
       225
+     ]
+    }
+   ]
+  },
+  "cantine": {
+   "name": "La cantine des scolaires · The field-trip lunchroom",
+   "room_id": "R_adj_senses_07",
+   "image": "musee/cantine.jpg",
+   "alt": "The field-trip lunchroom through the yellow apple door of the museum classroom: white brick vaults, oak tables, a tray cart and an arched window. A blushing girl on a step stool hides a pudding cup behind her back, a girl gapes at a model of the U.S. Capitol, Sir Lancelot winces at his red throbbing thumb, a teacher points at FAST and QUICK on the blackboard, a chaperone named Lou fans out a deck of cards, milk spills over a limestone block, and a boy happily smudges charcoal up his arm.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "classe",
+   "doors": [
+    {
+     "to": "classe",
+     "label": "L'atelier",
+     "hint": "the sunny-yellow door with the painted red apple on the left wall, back to the museum classroom",
+     "hit": [
+      126,
+      72,
+      122,
+      325
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pudique_adj",
+     "box": [
+      430,
+      82,
+      85,
+      146
+     ]
+    },
+    {
+     "id": "fr_indicible_adj",
+     "box": [
+      252,
+      232,
+      266,
+      208
+     ]
+    },
+    {
+     "id": "fr_lancinant_adj",
+     "box": [
+      520,
+      105,
+      140,
+      255
+     ]
+    },
+    {
+     "id": "fr_synonyme_adj",
+     "box": [
+      690,
+      95,
+      270,
+      172
+     ]
+    },
+    {
+     "id": "fr_ludique_adj",
+     "box": [
+      690,
+      272,
+      175,
+      208
+     ]
+    },
+    {
+     "id": "fr_calcaire_adj",
+     "box": [
+      720,
+      483,
+      272,
+      193
+     ]
+    },
+    {
+     "id": "fr_charnel_adj",
+     "box": [
+      372,
+      444,
+      250,
+      232
      ]
     }
    ]
