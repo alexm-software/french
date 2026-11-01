@@ -1,5 +1,8 @@
 # Skills changelog
 
+## 1 November 2026
+- **Accumulated failure rules** (builder reference/prompt-template.md): door glimpses show the planned destination, door pairs match on both sides, doors stand on the floor, door edits remove what is in the way completely, no text or people in glimpses, dropped words' figures are painted out, figures stay clear of doors, edge masks run to the edge and union masks overlap, edits are checked at 2x, and every mask and prompt is recorded.
+
 ## 31 October 2026
 - **Gate 23, angled layered scenes.** Each room is composed as an angled, layered scene (foreground, middle, back) around one named situation; a frontal one- or two-row lineup fails.
 - **Gate 24, one generated painting.** Each room is ONE generated painting (square-centre generation plus one outpaint, or a crop-edit of that painting); no cut-out or green-screen sprites on a background plate and no code-drawn marks.

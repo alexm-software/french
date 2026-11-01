@@ -50,6 +50,34 @@
   {
    "key": "finances",
    "short": "Les finances"
+  },
+  {
+   "key": "guichets",
+   "short": "Le service population"
+  },
+  {
+   "key": "parlement",
+   "short": "Le parlement des jeunes"
+  },
+  {
+   "key": "debats",
+   "short": "La salle des débats"
+  },
+  {
+   "key": "commission",
+   "short": "La commission d'urbanisme"
+  },
+  {
+   "key": "associations",
+   "short": "La maison des associations"
+  },
+  {
+   "key": "expo",
+   "short": "L'exposition"
+  },
+  {
+   "key": "nations",
+   "short": "Le buffet des délégations"
   }
  ],
  "rooms": {
@@ -1563,7 +1591,7 @@
    "name": "Le bureau des papiers · The paperwork office",
    "room_id": "R_admin_01",
    "image": "mairie/papiers.jpg",
-   "alt": "The town hall's paperwork office with tall windows on the village square: a tour guide with a yellow pennant signs at a lectern while two tourists in sun hats wave goodbye, a man with an armful of papers marches with high knees, Monsieur Verbe in a red beret draws a big green check on a postcard of a sunny valley, a young doe nibbles the file a clerk holds over the counter, a doctor points a billiard cue at the cork notice board, a gray-haired lady sews a ribbon onto a document while a clerk presses a brass seal into red wax, and a freckled boy with a curly perm in pink rollers holds up his pink permit. The pale-green door on the right leads back to the reception hall.",
+   "alt": "The town hall's paperwork office with tall windows on the village square: a tour guide with a yellow pennant signs at a lectern while two tourists in sun hats wave goodbye, a man with an armful of papers marches with high knees, Monsieur Verbe in a red beret draws a big green check on a postcard of a sunny valley, a young doe nibbles the file a clerk holds over the counter, a doctor points a billiard cue at the cork notice board, a gray-haired lady sews a ribbon onto a document while a clerk presses a brass seal into red wax, and a freckled boy with a curly perm in pink rollers holds up his pink permit. The pale-green door on the right leads back to the reception hall, and the forest-green door at the far right leads to the youth parliament.",
    "nameplate": [
     50,
     4.5
@@ -1575,10 +1603,21 @@
      "label": "Le salon d'honneur",
      "hint": "The pale-green door on the right, back to the reception hall",
      "hit": [
-      1110,
+      1105,
       20,
-      165,
-      300
+      55,
+      305
+     ]
+    },
+    {
+     "to": "parlement",
+     "label": "Le parlement des jeunes",
+     "hint": "The forest-green door at the far right, to the youth parliament",
+     "hit": [
+      1170,
+      40,
+      105,
+      285
      ]
     }
    ],
@@ -1921,7 +1960,7 @@
       306,
       356,
       252,
-      334
+      214
      ]
     },
     {
@@ -1948,7 +1987,7 @@
       560,
       320,
       225,
-      400
+      120
      ]
     },
     {
@@ -1957,7 +1996,7 @@
       790,
       312,
       208,
-      348
+      290
      ]
     }
    ]
@@ -1966,7 +2005,7 @@
    "name": "La salle du jumelage · The twin-towns hall",
    "room_id": "R_adj_relation_08",
    "image": "mairie/jumelage.jpg",
-   "alt": "The town hall's twin-towns hall under strings of colorful flags, with a big painted map of Europe: a baker in a black hat and lace collar holds up a huge caramel flan, a cow in a flower garland poses on a red rug for a photographer, a polite astronaut bows, a ginger cat naps on a green cushion on a little table, Monsieur Verbe in a red beret shakes maracas and leads a samba line of guests, and a lion mascot in a yellow jersey dances. In the near left corner a big bass fish sits in a washtub holding up its passport while a clerk stamps it. A hedgehog sniffs a grape by the coat stand. The sky-blue double door on the right leads back to the rehearsal room.",
+   "alt": "The town hall's twin-towns hall under strings of colorful flags, with a big painted map of Europe: a baker in a black hat and lace collar holds up a huge caramel flan, a cow in a flower garland poses on a red rug for a photographer, a polite astronaut bows, a ginger cat naps on a green cushion on a little table, Monsieur Verbe in a red beret shakes maracas and leads a samba line of guests, and a lion mascot in a yellow jersey dances. In the near left corner a big bass fish sits in a washtub holding up its passport while a clerk stamps it. A hedgehog sniffs a grape by the coat stand. A plum door at the back leads to the delegations' lunch. The sky-blue double door on the right leads back to the rehearsal room.",
    "nameplate": [
     50,
     4.5
@@ -1982,6 +2021,17 @@
       100,
       120,
       300
+     ]
+    },
+    {
+     "to": "nations",
+     "label": "Le buffet des délégations",
+     "hint": "The plum door at the back, to the delegations' lunch",
+     "hit": [
+      940,
+      115,
+      130,
+      290
      ]
     }
    ],
@@ -2242,6 +2292,934 @@
      ]
     }
    ]
+  },
+  "guichets": {
+   "name": "Le service population · The registration office",
+   "room_id": "R_admin_01",
+   "image": "mairie/guichets.jpg",
+   "alt": "Le service population: the registration and records office of a French village town hall: a long honey-oak service counter with three open service windows across the back, tall gray steel filing cabinets along the right wall, a waiting bench, an old-fashioned photo booth with a red curtain in the left back corner, cream plaster walls. travel-agency lady flying a toy plane over a map; clerk puzzled by identical twins; clerk steadying a teetering tower of forms; mime giving a firm handshake; mime summoning a convoy of toy trucks; snail crawling along a spiral district map; boy placing the last piece in a jigsaw map of France; fisherman hooking a file out of a drawer; mom with a baby holding a birth certificate; town crier reading a scroll. The mustard-yellow door on the left, back to the town exhibition.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "expo",
+   "doors": [
+    {
+     "to": "expo",
+     "label": "L'exposition",
+     "hint": "The mustard-yellow door on the left, back to the town exhibition",
+     "hit": [
+      8,
+      90,
+      110,
+      280
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_agence_noun",
+     "box": [
+      150,
+      530,
+      110,
+      80
+     ]
+    },
+    {
+     "id": "fr_identite_noun",
+     "box": [
+      330,
+      260,
+      130,
+      90
+     ]
+    },
+    {
+     "id": "fr_administratif_adj",
+     "box": [
+      550,
+      90,
+      90,
+      120
+     ]
+    },
+    {
+     "id": "fr_confirmer_verb",
+     "box": [
+      580,
+      290,
+      80,
+      80
+     ]
+    },
+    {
+     "id": "fr_convoquer_verb",
+     "box": [
+      770,
+      300,
+      90,
+      80
+     ]
+    },
+    {
+     "id": "fr_arrondissement_noun",
+     "box": [
+      1000,
+      60,
+      160,
+      130
+     ]
+    },
+    {
+     "id": "fr_departement_noun",
+     "box": [
+      960,
+      580,
+      140,
+      90
+     ]
+    },
+    {
+     "id": "fr_fichier_noun",
+     "box": [
+      1040,
+      300,
+      130,
+      120
+     ]
+    },
+    {
+     "id": "fr_certificat_noun",
+     "box": [
+      862,
+      385,
+      76,
+      90
+     ]
+    },
+    {
+     "id": "fr_decret_noun",
+     "box": [
+      800,
+      110,
+      100,
+      110
+     ]
+    }
+   ]
+  },
+  "parlement": {
+   "name": "Le parlement des jeunes · The youth parliament",
+   "room_id": "R_politics_03",
+   "image": "mairie/parlement.jpg",
+   "alt": "Le parlement des jeunes: the youth parliament chamber of a French village town hall: curved tiers of honey-oak benches in a half-circle around a raised president's desk, a tall carved president's chair, a big painting of a domed parliament building on the back wall, cream plaster walls, deep blue carpet. teacher pointing at a Greek temple poster; teller sorting ballots into two piles; three teens folding their arms and shaking heads; two pupils carrying a huge book on a cushion; girl climbing into the tall president's chair; girl pointing at a painting of a domed parliament; teens holding up green voting cards; party members with orange rosettes and balloons; classmates pushing forward their representative; children dropping beads into two jars; courier setting down a red dispatch box; mime applauding and nodding approval. The forest-green door on the left, back to the papers office. The walnut door at the back left, to the debate room. The cherry-red door on the right, to the clubs' hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "papiers",
+   "doors": [
+    {
+     "to": "papiers",
+     "label": "Les papiers",
+     "hint": "The forest-green door on the left, back to the papers office",
+     "hit": [
+      10,
+      128,
+      140,
+      200
+     ]
+    },
+    {
+     "to": "debats",
+     "label": "La salle des débats",
+     "hint": "The walnut door at the back left, to the debate room",
+     "hit": [
+      352,
+      148,
+      130,
+      150
+     ]
+    },
+    {
+     "to": "associations",
+     "label": "La maison des associations",
+     "hint": "The cherry-red door on the right, to the clubs' hall",
+     "hit": [
+      1150,
+      130,
+      70,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_democratie_noun",
+     "box": [
+      215,
+      150,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_election_noun",
+     "box": [
+      450,
+      580,
+      130,
+      90
+     ]
+    },
+    {
+     "id": "fr_opposition_noun",
+     "box": [
+      230,
+      320,
+      170,
+      75
+     ]
+    },
+    {
+     "id": "fr_constitution_noun",
+     "box": [
+      130,
+      480,
+      150,
+      110
+     ]
+    },
+    {
+     "id": "fr_presidentiel_adj",
+     "box": [
+      650,
+      110,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_parlement_noun",
+     "box": [
+      1000,
+      60,
+      130,
+      160
+     ]
+    },
+    {
+     "id": "fr_vote_noun",
+     "box": [
+      890,
+      240,
+      250,
+      90
+     ]
+    },
+    {
+     "id": "fr_parti_noun",
+     "box": [
+      860,
+      350,
+      300,
+      110
+     ]
+    },
+    {
+     "id": "fr_representant_noun",
+     "box": [
+      1030,
+      520,
+      120,
+      140
+     ]
+    },
+    {
+     "id": "fr_democratique_adj",
+     "box": [
+      650,
+      440,
+      170,
+      100
+     ]
+    },
+    {
+     "id": "fr_gouvernemental_adj",
+     "box": [
+      740,
+      300,
+      100,
+      70
+     ]
+    },
+    {
+     "id": "fr_approuver_verb",
+     "box": [
+      490,
+      230,
+      90,
+      100
+     ]
+    }
+   ]
+  },
+  "debats": {
+   "name": "La salle des débats · The debate room",
+   "room_id": "R_adv_logic_03",
+   "image": "mairie/debats.jpg",
+   "alt": "La salle des débats: the long, wide citizens' debate room of a French village town hall: one big round worn red rug in the middle of the room with a ring of mismatched wooden chairs and one standing microphone, where everyone gathers; at the far left, tall honey-oak bookcases with a rolling library ladder; at the far right, a tall window and a big brass floor lamp; wide empty floorboards between the rug and the side walls, cream plaster walls. woman holding a clear glass up to the light; man at the microphone waving a hot dog; boy pinching himself in disbelief; lady raising an eyebrow at a man and his dog in headphones; woman holding up a tiny bottle of rose essence; boy returning a found wallet; man wearing enormous fake ears; official blowing a whistle, arm raised; girl cradling a white dove; mime pleading with a grumpy old man; mime wagging his finger at a nodding deer. The walnut door on the left, back to the youth parliament. The slate-gray door at the back right, to the planning committee.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "parlement",
+   "doors": [
+    {
+     "to": "parlement",
+     "label": "Le parlement des jeunes",
+     "hint": "The walnut door on the left, back to the youth parliament",
+     "hit": [
+      30,
+      60,
+      180,
+      410
+     ]
+    },
+    {
+     "to": "commission",
+     "label": "La commission d'urbanisme",
+     "hint": "The slate-gray door at the back right, to the planning committee",
+     "hit": [
+      1030,
+      60,
+      220,
+      420
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_clairement_adv",
+     "box": [
+      380,
+      370,
+      60,
+      70
+     ]
+    },
+    {
+     "id": "fr_franchement_adv",
+     "box": [
+      440,
+      210,
+      110,
+      90
+     ]
+    },
+    {
+     "id": "fr_reellement_adv",
+     "box": [
+      480,
+      320,
+      70,
+      60
+     ]
+    },
+    {
+     "id": "fr_serieusement_adv",
+     "box": [
+      600,
+      240,
+      110,
+      90
+     ]
+    },
+    {
+     "id": "fr_essentiellement_adv",
+     "box": [
+      805,
+      215,
+      70,
+      70
+     ]
+    },
+    {
+     "id": "fr_honnetement_adv",
+     "box": [
+      780,
+      460,
+      130,
+      140
+     ]
+    },
+    {
+     "id": "fr_litteralement_adv",
+     "box": [
+      500,
+      390,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_officiellement_adv",
+     "box": [
+      720,
+      170,
+      80,
+      110
+     ]
+    },
+    {
+     "id": "fr_purement_adv",
+     "box": [
+      350,
+      290,
+      70,
+      60
+     ]
+    },
+    {
+     "id": "fr_persuader_verb",
+     "box": [
+      830,
+      330,
+      70,
+      90
+     ]
+    },
+    {
+     "id": "fr_contredire_verb",
+     "box": [
+      610,
+      370,
+      80,
+      90
+     ]
+    }
+   ]
+  },
+  "commission": {
+   "name": "La commission d'urbanisme · The planning committee",
+   "room_id": "R_adv_logic_02",
+   "image": "mairie/commission.jpg",
+   "alt": "La commission d'urbanisme: the planning committee room of a French village town hall: a long table covered with a green cloth where three committee members sit at the back, one long cluster of low trestle tables with residents' cardboard and balsa-wood building models in the middle of the room, where everyone gathers; tall windows on the left wall with empty floor in front of them; rolled plans in a basket, pale sage-green walls, a herringbone oak floor. grandpa refusing a foosball table; mime retorting with a raised finger; two brothers pulling a model house opposite ways; man squinting at a blurry drawing; woman checking a model roof with a spirit level; girl peering into a model house window; woman pushing a toy ice-cream van, singing; man hammering a model down for good; pony moaning but carrying rolled plans; builder putting on a hard hat; inspector measuring a model fence. The slate-gray door on the right, back to the debate room.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "debats",
+   "doors": [
+    {
+     "to": "debats",
+     "label": "La salle des débats",
+     "hint": "The slate-gray door on the right, back to the debate room",
+     "hit": [
+      1090,
+      100,
+      100,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_refus_noun",
+     "box": [
+      895,
+      320,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_retorquer_verb",
+     "box": [
+      690,
+      190,
+      70,
+      80
+     ]
+    },
+    {
+     "id": "fr_contrairement_adv",
+     "box": [
+      350,
+      320,
+      90,
+      80
+     ]
+    },
+    {
+     "id": "fr_vaguement_adv",
+     "box": [
+      380,
+      170,
+      90,
+      100
+     ]
+    },
+    {
+     "id": "fr_correctement_adv",
+     "box": [
+      600,
+      300,
+      80,
+      80
+     ]
+    },
+    {
+     "id": "fr_curieusement_adv",
+     "box": [
+      360,
+      500,
+      80,
+      100
+     ]
+    },
+    {
+     "id": "fr_dorenavant_adv",
+     "box": [
+      450,
+      450,
+      110,
+      130
+     ]
+    },
+    {
+     "id": "fr_definitivement_adv",
+     "box": [
+      520,
+      300,
+      70,
+      70
+     ]
+    },
+    {
+     "id": "fr_neanmoins_adv",
+     "box": [
+      775,
+      330,
+      90,
+      90
+     ]
+    },
+    {
+     "id": "fr_necessairement_adv",
+     "box": [
+      830,
+      210,
+      70,
+      70
+     ]
+    },
+    {
+     "id": "fr_strictement_adv",
+     "box": [
+      680,
+      430,
+      85,
+      90
+     ]
+    }
+   ]
+  },
+  "associations": {
+   "name": "La maison des associations · The clubs' hall",
+   "room_id": "R_society_04",
+   "image": "mairie/associations.jpg",
+   "alt": "La maison des associations: the clubs' hall of a French village town hall on club fair day: club tables with plain colored tablecloths along the walls, a big coffee urn, a climbing-club practice wall with colored holds in the back corner, butter-yellow walls, a pale oak floor. tall teen ducking under a height bar; three dancing couples, each a woman and a man; chatty lady pouring coffee for a laughing crowd; girl riding off as dad holds the training wheels; brother carrying his little brother piggyback; new citizen taking an oath, family clapping; hooded man tiptoeing from a donation box; grandpa nodding yes to his grandson; grocer lifting a barrier at his fruit stall; teen volunteer sweeping the floor; teacher leading a line of small pupils; mime with a sticker stuck to his glove. The cherry-red door on the left, back to the youth parliament. The turquoise door at the back right, to the exhibition.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "parlement",
+   "doors": [
+    {
+     "to": "parlement",
+     "label": "Le parlement des jeunes",
+     "hint": "The cherry-red door on the left, back to the youth parliament",
+     "hit": [
+      15,
+      50,
+      140,
+      340
+     ]
+    },
+    {
+     "to": "expo",
+     "label": "L'exposition",
+     "hint": "The turquoise door at the back right, to the exhibition",
+     "hit": [
+      860,
+      110,
+      130,
+      170
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_restriction_noun",
+     "box": [
+      220,
+      90,
+      170,
+      90
+     ]
+    },
+    {
+     "id": "fr_parite_noun",
+     "box": [
+      320,
+      180,
+      140,
+      110
+     ]
+    },
+    {
+     "id": "fr_sociabilite_noun",
+     "box": [
+      500,
+      250,
+      100,
+      105
+     ]
+    },
+    {
+     "id": "fr_emancipation_noun",
+     "box": [
+      200,
+      280,
+      120,
+      130
+     ]
+    },
+    {
+     "id": "fr_fraternite_noun",
+     "box": [
+      470,
+      130,
+      80,
+      110
+     ]
+    },
+    {
+     "id": "fr_citoyennete_noun",
+     "box": [
+      78,
+      500,
+      100,
+      110
+     ]
+    },
+    {
+     "id": "fr_anonymat_noun",
+     "box": [
+      995,
+      195,
+      100,
+      115
+     ]
+    },
+    {
+     "id": "fr_assentiment_noun",
+     "box": [
+      1100,
+      280,
+      120,
+      110
+     ]
+    },
+    {
+     "id": "fr_liberalisme_noun",
+     "box": [
+      990,
+      480,
+      150,
+      130
+     ]
+    },
+    {
+     "id": "fr_civique_adj",
+     "box": [
+      620,
+      420,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_communal_adj",
+     "box": [
+      770,
+      190,
+      88,
+      80
+     ]
+    },
+    {
+     "id": "fr_adherer_verb",
+     "box": [
+      790,
+      330,
+      100,
+      100
+     ]
+    }
+   ]
+  },
+  "expo": {
+   "name": "L'exposition · The town exhibition",
+   "room_id": "R_adj_relation_07",
+   "image": "mairie/expo.jpg",
+   "alt": "L'exposition: the exhibition room of a French village town hall set up for a 'People and history' exhibition: one long glass display case running across the middle of the room with easels and a potted tropical palm beside it, where everyone gathers; empty display cases and empty easels along the far left and far right walls; pale gray walls, a polished stone floor. believer coloring with a giant crayon; grandma and granddaughter flexing arms; boy pointing at a flock of swallows; man fanning himself under a banana palm; scientist studying an old clay pot; aristocrat with a lorgnette; medieval man laying a foundation stone; student reading under a bearded marble bust; child peeking out of a yurt; guide pointing at a painting of a residential street. The turquoise door on the left, back to the clubs' hall. The mustard-yellow door on the right, to the registration office.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "associations",
+   "doors": [
+    {
+     "to": "associations",
+     "label": "La maison des associations",
+     "hint": "The turquoise door on the left, back to the clubs' hall",
+     "hit": [
+      30,
+      100,
+      230,
+      400
+     ]
+    },
+    {
+     "to": "guichets",
+     "label": "Le service population",
+     "hint": "The mustard-yellow door on the right, to the registration office",
+     "hit": [
+      1120,
+      160,
+      155,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_croyant_adj",
+     "box": [
+      430,
+      500,
+      130,
+      120
+     ]
+    },
+    {
+     "id": "fr_feministe_adj",
+     "box": [
+      530,
+      300,
+      90,
+      90
+     ]
+    },
+    {
+     "id": "fr_migrateur_adj",
+     "box": [
+      600,
+      70,
+      135,
+      95
+     ]
+    },
+    {
+     "id": "fr_tropical_adj",
+     "box": [
+      800,
+      440,
+      100,
+      100
+     ]
+    },
+    {
+     "id": "fr_anthropologique_adj",
+     "box": [
+      700,
+      330,
+      100,
+      80
+     ]
+    },
+    {
+     "id": "fr_aristocratique_adj",
+     "box": [
+      855,
+      180,
+      75,
+      90
+     ]
+    },
+    {
+     "id": "fr_fonde_adj",
+     "box": [
+      410,
+      320,
+      100,
+      90
+     ]
+    },
+    {
+     "id": "fr_marxiste_adj",
+     "box": [
+      490,
+      160,
+      70,
+      90
+     ]
+    },
+    {
+     "id": "fr_nomade_adj",
+     "box": [
+      580,
+      460,
+      110,
+      100
+     ]
+    },
+    {
+     "id": "fr_residentiel_adj",
+     "box": [
+      740,
+      140,
+      110,
+      90
+     ]
+    }
+   ]
+  },
+  "nations": {
+   "name": "Le buffet des délégations · The delegations' lunch",
+   "room_id": "R_adj_relation_08",
+   "image": "mairie/nations.jpg",
+   "alt": "Le buffet des délégations: the long dining room of a French village town hall set for a lunch with visiting delegations from many countries: one big round table with a white tablecloth and dishes from everywhere in the middle of the room, where everyone gathers; a carved wooden sideboard against the far left wall; tall windows on the far right wall; wide empty parquet between the table and the side walls, plum-red walls. chef carrying an island-shaped chestnut cake; guest assembling a flat-pack chair; kangaroo handing a man cabbage rolls; waiter with a croissant breakfast tray; businesswoman wearing many wristwatches; boy watching a toy subway train; girl laying out the parts of a sandwich; goose hissing at a guest; guests dipping bread in fondue; woman pouring maple syrup on pancakes. The plum door on the left, back to the twin-towns hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "jumelage",
+   "doors": [
+    {
+     "to": "jumelage",
+     "label": "Le jumelage",
+     "hint": "The plum door on the left, back to the twin-towns hall",
+     "hit": [
+      40,
+      40,
+      220,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_corse_adj",
+     "box": [
+      345,
+      190,
+      80,
+      70
+     ]
+    },
+    {
+     "id": "fr_scandinave_adj",
+     "box": [
+      420,
+      520,
+      140,
+      130
+     ]
+    },
+    {
+     "id": "fr_roumain_adj",
+     "box": [
+      600,
+      170,
+      90,
+      90
+     ]
+    },
+    {
+     "id": "fr_continental_adj",
+     "box": [
+      700,
+      200,
+      100,
+      110
+     ]
+    },
+    {
+     "id": "fr_multinational_adj",
+     "box": [
+      490,
+      130,
+      80,
+      90
+     ]
+    },
+    {
+     "id": "fr_metropolitain_adj",
+     "box": [
+      810,
+      300,
+      90,
+      80
+     ]
+    },
+    {
+     "id": "fr_constituant_adj",
+     "box": [
+      785,
+      555,
+      110,
+      80
+     ]
+    },
+    {
+     "id": "fr_territorial_adj",
+     "box": [
+      480,
+      280,
+      80,
+      80
+     ]
+    },
+    {
+     "id": "fr_suisse_adj",
+     "box": [
+      650,
+      420,
+      90,
+      80
+     ]
+    },
+    {
+     "id": "fr_quebecois_adj",
+     "box": [
+      395,
+      340,
+      85,
+      80
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -2452,6 +3430,117 @@
     "fr_annuel_adj",
     "fr_apport_noun",
     "fr_equite_noun"
+   ]
+  },
+  "guichets": {
+   "vocabRoom": "R_admin_01",
+   "only": [
+    "fr_agence_noun",
+    "fr_identite_noun",
+    "fr_administratif_adj",
+    "fr_confirmer_verb",
+    "fr_convoquer_verb",
+    "fr_arrondissement_noun",
+    "fr_departement_noun",
+    "fr_fichier_noun",
+    "fr_certificat_noun",
+    "fr_decret_noun"
+   ]
+  },
+  "parlement": {
+   "vocabRoom": "R_politics_03",
+   "only": [
+    "fr_democratie_noun",
+    "fr_election_noun",
+    "fr_opposition_noun",
+    "fr_constitution_noun",
+    "fr_presidentiel_adj",
+    "fr_parlement_noun",
+    "fr_vote_noun",
+    "fr_parti_noun",
+    "fr_representant_noun",
+    "fr_democratique_adj",
+    "fr_gouvernemental_adj",
+    "fr_approuver_verb"
+   ]
+  },
+  "debats": {
+   "vocabRoom": "R_adv_logic_03",
+   "only": [
+    "fr_clairement_adv",
+    "fr_franchement_adv",
+    "fr_reellement_adv",
+    "fr_serieusement_adv",
+    "fr_essentiellement_adv",
+    "fr_honnetement_adv",
+    "fr_litteralement_adv",
+    "fr_officiellement_adv",
+    "fr_purement_adv",
+    "fr_persuader_verb",
+    "fr_contredire_verb"
+   ]
+  },
+  "commission": {
+   "vocabRoom": "R_adv_logic_02",
+   "only": [
+    "fr_refus_noun",
+    "fr_retorquer_verb",
+    "fr_contrairement_adv",
+    "fr_vaguement_adv",
+    "fr_correctement_adv",
+    "fr_curieusement_adv",
+    "fr_dorenavant_adv",
+    "fr_definitivement_adv",
+    "fr_neanmoins_adv",
+    "fr_necessairement_adv",
+    "fr_strictement_adv"
+   ]
+  },
+  "associations": {
+   "vocabRoom": "R_society_04",
+   "only": [
+    "fr_restriction_noun",
+    "fr_parite_noun",
+    "fr_sociabilite_noun",
+    "fr_emancipation_noun",
+    "fr_fraternite_noun",
+    "fr_citoyennete_noun",
+    "fr_anonymat_noun",
+    "fr_assentiment_noun",
+    "fr_liberalisme_noun",
+    "fr_civique_adj",
+    "fr_communal_adj",
+    "fr_adherer_verb"
+   ]
+  },
+  "expo": {
+   "vocabRoom": "R_adj_relation_07",
+   "only": [
+    "fr_croyant_adj",
+    "fr_feministe_adj",
+    "fr_migrateur_adj",
+    "fr_tropical_adj",
+    "fr_anthropologique_adj",
+    "fr_aristocratique_adj",
+    "fr_fonde_adj",
+    "fr_marxiste_adj",
+    "fr_nomade_adj",
+    "fr_residentiel_adj"
+   ]
+  },
+  "nations": {
+   "vocabRoom": "R_adj_relation_08",
+   "only": [
+    "fr_corse_adj",
+    "fr_scandinave_adj",
+    "fr_roumain_adj",
+    "fr_continental_adj",
+    "fr_multinational_adj",
+    "fr_metropolitain_adj",
+    "fr_constituant_adj",
+    "fr_territorial_adj",
+    "fr_suisse_adj",
+    "fr_quebecois_adj"
    ]
   }
  },

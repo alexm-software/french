@@ -46,3 +46,18 @@ AVOID: lineup, row of figures, grid, evenly spaced, everyone facing the camera, 
 **Fields to fill, all required:** camera, refs, materials, light, landmark, the named situation, the groups and their interactions, siblings, N, one line per item, the verb beret colors, plaque words, doors, text_in_image, sign plates, used motifs. The manifest holds the same facts as `scene_situation`, `interactions`, `siblings`, `used_motifs` and `prompt_text`.
 
 **Before sending:** read the filled prompt against the manifest. Check that the item lines match exactly, the counts match `count`, every door is listed, and the scene text matches `text_in_image`. Then check it against the labels-off storybook test: would someone who has never seen the word list describe this as one believable moment?
+
+## Accumulated failure rules
+
+General rules learned from fixes. Each states a principle, not a case; check every new painting and every edit against all of them before packing.
+
+- A door glimpse shows its destination room as planned and as painted: look up in the room plan where the door leads, then name that room's walls, floor, seating, furniture and colors in the prompt. Never a generic or invented room.
+- A door pair matches on both sides: the same leaf count (single or double), leaf color, paneling, style and open state. Pass the other side's door as a reference image when painting or editing either side.
+- Doors stand on the floor: the frame, the opening and the threshold run down to the baseboard line. A door may be partly hidden behind figures, but never floats above furniture or ends in mid-wall.
+- A door edit removes everything in its way completely (furniture, remnants, shadows), and keeps every other door in the crop exactly as it was, including its open or closed state and its glimpse.
+- Glimpses through doors and windows carry no digits, text, signs or people.
+- No unexplained figures: when a word is dropped, its painted figure is painted out in the same pack, or the word gets a new fitting hook and spot. A figure with no word and no role in the situation is a defect.
+- New or moved figures stay clear of door leaves and openings: name the door in the prompt and state that it stays completely clear.
+- An edit mask that touches the frame edge runs to the edge. Rects in a union mask overlap, so no strip of the old painting is left between them.
+- Edits must not introduce artifacts: compare every pasted edit with its base at 2x and fix seams, tone shifts, dents and remnants before packing.
+- Record as you go: every crop box, mask, feather, base, result and sent prompt, rejected tries included, goes into the manifests.
