@@ -123,3 +123,12 @@ General rules learned from fixes. Each states a principle, not a case; check eve
 - In crowded rows, leave a label-wide gap (about 170 px for long words) between neighboring hotspots, or plan a labelAt spot on clear floor before painting.
 - Small retouches that copy the painting's own pixels (no image model) are recorded like edits, with source and target rects, and flagged in the report.
 - Run grid_check (gate 25) on the planned boxes in the LAYOUT MAP before the first GenerateImage call: at most three box bottoms per 40 px baseline, bottoms in back, middle and front depths, and no empty 150 px middle; a shelf or counter of hook props, or a front row of tables, is a grid even when each group is lively.
+- A centaur is a human torso rising where the horse's neck and head would be: one body, four horse legs, no rider, no saddle, no separate horse head. Name this anatomy in the prompt for any hybrid creature (mermaid tail from the waist, griffin eagle front and lion back).
+- Keep every held prop inside the figure's own silhouette and leave clear ground between neighbouring figures, so props never bridge two hotspots.
+- Give every hook figure an explicit x/y percent box in the prompt; feminine items at centre x <= 45%, masculine items at centre x >= 55%, adjectives near the centre.
+- To move, resize or sink a figure, erase it to a clean plate and composite a separately painted figure; never ask an edit for a pose or depth change of an existing figure.
+- To add a creature to a finished painting, send the crop plus a reference cut-out of the creature in the same style, and name the exact spot by its neighbours.
+- Plan box bottoms for grid_check (baselines, depths, no empty middle) when writing the layout, before the first generation.
+- When removing a figure changes what a room's hook points at, rewrite the hook and the alt to describe what is now painted, then re-check the hook against the painting.
+- Base scene prompts use every template section heading (ITEMS, PLACEMENT AND SPACING, DOORS AND EXITS, FIGURES, VARIETY included) and name each item by its French word as well as the English, even when the scene will later be built by composites.
+- When a room loses or gains a hotspot, re-check the nameplate rect against every hotspot and the image edges, and move the nameplate onto clear wall or sky rather than trimming a box.

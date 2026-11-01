@@ -1,0 +1,244 @@
+{
+ "building": "contes",
+ "building_id": "B69_contes",
+ "sector_id": "S16_park",
+ "v1_room_id": "R_enchanted_forest",
+ "name": "Le pays des contes",
+ "main": "contes",
+ "roomList": [
+  {
+   "key": "contes",
+   "short": "La forêt enchantée"
+  },
+  {
+   "key": "vallee_geants",
+   "short": "La vallée des géants"
+  }
+ ],
+ "rooms": {
+  "contes": {
+   "name": "La forêt enchantée · The enchanted forest",
+   "room_id": "R_enchanted_forest",
+   "image": "contes/contes.jpg",
+   "alt": "An enchanted forest clearing painted in ink and watercolor: on the left an open black iron gate leads back to the park; a red-haired mermaid with a green tail sits on a mossy rock in the pond, a tiny fairy in a pink petal dress flies above it waving a star-tipped wand, and a white unicorn licks a big ear of corn on a tree stump; in the middle a mossy rock arch opens onto a valley with a waterfall and a stone bridge; a young centaur leaps past carrying a basket of red apples, an elf plays a flute high in a tree, a gnome in a tall red hat pushes a wheelbarrow of mushrooms, an imp in sunglasses suns himself on a red toadstool strumming a lute, a sprite with a yellow farfalle bow tie swings on a bluebell, and a bearded dwarf with a lantern bites into a big round naan.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "mapExit": {
+    "box": [
+     60,
+     136,
+     122,
+     252
+    ],
+    "label": "Parc des Curiosités"
+   },
+   "doors": [
+    {
+     "to": "vallee_geants",
+     "label": "La vallée des géants",
+     "hint": "Through the mossy rock arch to the valley of giants",
+     "hit": [
+      540,
+      150,
+      150,
+      250
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_fee_noun",
+     "box": [
+      283,
+      117,
+      121,
+      150
+     ]
+    },
+    {
+     "id": "fr_licorne_noun",
+     "box": [
+      231,
+      277,
+      304,
+      226
+     ]
+    },
+    {
+     "id": "fr_sirene_noun",
+     "box": [
+      50,
+      391,
+      175,
+      318
+     ]
+    },
+    {
+     "id": "fr_centaure_noun",
+     "box": [
+      699,
+      197,
+      188,
+      199
+     ]
+    },
+    {
+     "id": "fr_elfe_noun",
+     "box": [
+      914,
+      99,
+      116,
+      168
+     ]
+    },
+    {
+     "id": "fr_farfadet_noun",
+     "box": [
+      1104,
+      42,
+      147,
+      150
+     ]
+    },
+    {
+     "id": "fr_gnome_noun",
+     "box": [
+      623,
+      404,
+      235,
+      289
+     ]
+    },
+    {
+     "id": "fr_lutin_noun",
+     "box": [
+      870,
+      428,
+      164,
+      162
+     ]
+    },
+    {
+     "id": "fr_nain_noun",
+     "box": [
+      1043,
+      420,
+      237,
+      266
+     ]
+    }
+   ]
+  },
+  "vallee_geants": {
+   "name": "La vallée des géants · The valley of giants",
+   "room_id": "R_giants_valley",
+   "image": "contes/vallee_geants.jpg",
+   "alt": "A sunny valley of giants in ink and watercolor: on the left a mossy rock arch leads back to the enchanted forest beside a waterfall; a red-and-gold phoenix glides across the sky and a griffin rests on a high crag; a kindly bearded giant sits on a boulder with a blue jay on his thumb; a mossy troll stands waist-deep in the stream by a stone footbridge and waves; a friendly ogre with small tusks sits on a log reading a picture book to three mice; and in front a green dragon wearing a daisy chain sleeps smiling on the grass.",
+   "nameplate": [
+    42,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "contes",
+     "label": "La forêt enchantée",
+     "hint": "Back through the mossy rock arch to the enchanted forest",
+     "hit": [
+      30,
+      95,
+      185,
+      240
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_phenix_noun",
+     "box": [
+      866,
+      1,
+      138,
+      143
+     ]
+    },
+    {
+     "id": "fr_griffon_noun",
+     "box": [
+      1009,
+      3,
+      224,
+      198
+     ]
+    },
+    {
+     "id": "fr_geant_noun",
+     "box": [
+      699,
+      148,
+      220,
+      244
+     ]
+    },
+    {
+     "id": "fr_troll_noun",
+     "box": [
+      731,
+      409,
+      186,
+      129
+     ]
+    },
+    {
+     "id": "fr_ogre_noun",
+     "box": [
+      944,
+      343,
+      326,
+      362
+     ]
+    },
+    {
+     "id": "fr_dragon_noun",
+     "box": [
+      563,
+      578,
+      302,
+      142
+     ]
+    }
+   ],
+   "backTo": "contes"
+  }
+ },
+ "planned": {
+  "contes": {
+   "vocabRoom": "R_enchanted_forest",
+   "only": [
+    "fr_fee_noun",
+    "fr_licorne_noun",
+    "fr_sirene_noun",
+    "fr_centaure_noun",
+    "fr_elfe_noun",
+    "fr_farfadet_noun",
+    "fr_gnome_noun",
+    "fr_lutin_noun",
+    "fr_nain_noun"
+   ]
+  },
+  "vallee_geants": {
+   "vocabRoom": "R_giants_valley",
+   "only": [
+    "fr_phenix_noun",
+    "fr_griffon_noun",
+    "fr_geant_noun",
+    "fr_troll_noun",
+    "fr_ogre_noun",
+    "fr_dragon_noun"
+   ]
+  }
+ }
+}
