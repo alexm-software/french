@@ -64,6 +64,22 @@
   {
    "key": "garde",
    "short": "La garde-robe"
+  },
+  {
+   "key": "repetition",
+   "short": "La répétition"
+  },
+  {
+   "key": "timbres",
+   "short": "Les timbres"
+  },
+  {
+   "key": "noces",
+   "short": "Les noces"
+  },
+  {
+   "key": "club",
+   "short": "Le club"
   }
  ],
  "planned": {
@@ -264,6 +280,54 @@
     "fr_moche_adj",
     "fr_glorieux_adj",
     "fr_maigre_adj"
+   ]
+  },
+  "repetition": {
+   "vocabRoom": "R_character_02",
+   "only": [
+    "fr_physique_adj",
+    "fr_volontaire_adj",
+    "fr_cordial_adj",
+    "fr_mediocre_adj",
+    "fr_derisoire_adj",
+    "fr_pressant_adj",
+    "fr_indigne_adj"
+   ]
+  },
+  "timbres": {
+   "vocabRoom": "R_appearance_07",
+   "only": [
+    "fr_suedois_adj",
+    "fr_irlandais_adj",
+    "fr_malais_adj",
+    "fr_gaulois_adj",
+    "fr_mexicain_adj",
+    "fr_normand_adj",
+    "fr_brusque_adj",
+    "fr_multicolore_adj"
+   ]
+  },
+  "noces": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_noble_adj",
+    "fr_matrimonial_adj",
+    "fr_irresistible_adj",
+    "fr_honorable_adj",
+    "fr_humble_adj",
+    "fr_loyal_adj"
+   ]
+  },
+  "club": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_habilete_noun",
+    "fr_bavard_adj",
+    "fr_guerrier_adj",
+    "fr_hostile_adj",
+    "fr_modeste_adj",
+    "fr_scandaleux_adj",
+    "fr_prudent_adj"
    ]
   }
  },
@@ -1822,7 +1886,7 @@
    "name": "Le salon de thé · The tea room",
    "room_id": "R_character_04",
    "image": "portraits/the.jpg",
-   "alt": "A cosy pale-blue tea room with lace tables and a cake counter: a man piles whipped cream on a girl's hot chocolate, a lady in pearls sips tea, a girl cuts a cake with a ruler, a blue jay pecks a boy's scone, a man taps a barometer pointing to the sun, a waitress balances a tray of cups, two men shake hands by a jug of red cordial, and a mouse nibbles a sugar cube.",
+   "alt": "A cozy pale-blue tea room with lace tables and a cake counter: a man piles whipped cream on a girl's hot chocolate, a lady in pearls sips tea, a girl cuts a cake with a ruler, a blue jay pecks a boy's scone, a man taps a barometer pointing to the sun, a waitress balances a tray of cups, two men shake hands by a jug of red cordial, and a mouse nibbles a sugar cube.",
    "nameplate": [
     50,
     4.5
@@ -1903,7 +1967,7 @@
    "name": "La garde-robe · The dressing room",
    "room_id": "R_appearance_04",
    "image": "portraits/garde.jpg",
-   "alt": "A rose-striped dressing room with clothes rails, hat boxes and a three-panel mirror: twin girls in matching yellow polka-dot dresses, a mannequin in a half-sewn jacket, a chubby boy with two éclairs and a plate of pastries, a scowling boy in an ugly snowman sweater, a girl in a golden cape and medal on a stool, a skinny greyhound in a knitted coat growling, and a cat asleep in a hat box.",
+   "alt": "A rose-striped dressing room with clothes rails and hat boxes: twin girls in matching yellow polka-dot dresses, a mannequin in a half-sewn jacket, a chubby boy with two éclairs and a plate of pastries, a scowling boy in an ugly snowman sweater, a girl in a golden cape and medal on a stool, a skinny grayhound in a knitted coat growling, a cat asleep in a hat box, and a mauve door with gold stars open onto a rehearsal stage.",
    "nameplate": [
     50,
     4.5
@@ -1919,6 +1983,17 @@
       10,
       108,
       600
+     ]
+    },
+    {
+     "to": "repetition",
+     "label": "La répétition",
+     "hint": "the mauve door with the gold stars, to the rehearsal room",
+     "hit": [
+      1025,
+      45,
+      215,
+      480
      ]
     }
    ],
@@ -1976,6 +2051,399 @@
       430,
       240,
       235
+     ]
+    }
+   ]
+  },
+  "repetition": {
+   "name": "La salle de répétition · The rehearsal room",
+   "room_id": "R_character_02",
+   "image": "portraits/repetition.jpg",
+   "alt": "A theater rehearsal room with red velvet curtains and a painted castle backdrop: a girl in overalls reaches up to a big tear in the curtain, a magician pulls a striped sock from his top hat, a boy knight holds up a floppy cheese stick, a boy-king in a paper crown sulks in a shabby prop rowboat, a stage manager in a headset presses the red button on the clock, a girl in a red tracksuit stretches by a fizzing soda bottle, a smiling lady chats on a rotary phone, a child kneels by a kitten in a basket, and a mouse in a tutu stands on the piano.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "garde",
+   "doors": [
+    {
+     "to": "garde",
+     "label": "La garde-robe",
+     "hint": "the mauve door with the gold stars, back to the dressing room",
+     "hit": [
+      18,
+      30,
+      160,
+      450
+     ]
+    },
+    {
+     "to": "timbres",
+     "label": "Les timbres",
+     "hint": "the teal door with the postage stamp, to the stamp room",
+     "hit": [
+      1035,
+      56,
+      120,
+      425
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_physique_adj",
+     "box": [
+      360,
+      355,
+      200,
+      276
+     ]
+    },
+    {
+     "id": "fr_volontaire_adj",
+     "box": [
+      345,
+      95,
+      100,
+      205
+     ]
+    },
+    {
+     "id": "fr_cordial_adj",
+     "box": [
+      600,
+      350,
+      195,
+      228
+     ]
+    },
+    {
+     "id": "fr_mediocre_adj",
+     "box": [
+      459,
+      142,
+      121,
+      208
+     ]
+    },
+    {
+     "id": "fr_derisoire_adj",
+     "box": [
+      596,
+      157,
+      104,
+      190
+     ]
+    },
+    {
+     "id": "fr_pressant_adj",
+     "box": [
+      815,
+      76,
+      150,
+      319
+     ]
+    },
+    {
+     "id": "fr_indigne_adj",
+     "box": [
+      702,
+      215,
+      110,
+      120
+     ]
+    }
+   ]
+  },
+  "timbres": {
+   "name": "Le cabinet des timbres · The stamp room",
+   "room_id": "R_appearance_07",
+   "image": "portraits/timbres.jpg",
+   "alt": "A pale green stamp club room with a big framed world map and a round oak table covered with stamp albums and magnifying glasses. A boy in a yellow sweater waves a Swedish flag and sings; a girl holds a pot of shamrocks by an Irish flag; a mother spreads a batik cloth by a Malaysian flag; a girl unrolls an old map of Gaul with round huts; a boy holds a can with a cactus by a Mexican flag; a girl holds up a patchwork quilt; a farmer shows a cheese box and a toy cow by the red Normandy flag with two gold lions; a gruff clerk stamps an envelope at the counter, where a pigeon holds a postcard. A teal door with a crown stamp opens onto the rehearsal room; a white door with silver bells opens onto a wedding hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "repetition",
+   "doors": [
+    {
+     "to": "repetition",
+     "label": "La répétition",
+     "hint": "the teal door with the postage stamp, back to the rehearsal room",
+     "hit": [
+      70,
+      20,
+      125,
+      420
+     ]
+    },
+    {
+     "to": "noces",
+     "label": "Les noces",
+     "hint": "the white door with the silver bell, to the wedding hall",
+     "hit": [
+      1170,
+      40,
+      102,
+      430
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_suedois_adj",
+     "box": [
+      328,
+      160,
+      122,
+      209
+     ]
+    },
+    {
+     "id": "fr_irlandais_adj",
+     "box": [
+      452,
+      228,
+      135,
+      140
+     ]
+    },
+    {
+     "id": "fr_malais_adj",
+     "box": [
+      250,
+      370,
+      310,
+      262
+     ]
+    },
+    {
+     "id": "fr_gaulois_adj",
+     "box": [
+      590,
+      238,
+      170,
+      193
+     ]
+    },
+    {
+     "id": "fr_mexicain_adj",
+     "box": [
+      765,
+      262,
+      165,
+      96
+     ]
+    },
+    {
+     "id": "fr_normand_adj",
+     "box": [
+      768,
+      480,
+      250,
+      100
+     ]
+    },
+    {
+     "id": "fr_brusque_adj",
+     "box": [
+      594,
+      110,
+      150,
+      128
+     ]
+    },
+    {
+     "id": "fr_multicolore_adj",
+     "box": [
+      828,
+      360,
+      130,
+      118
+     ]
+    }
+   ]
+  },
+  "noces": {
+   "name": "La salle des noces · The wedding hall",
+   "room_id": "R_character_05",
+   "image": "portraits/noces.jpg",
+   "alt": "A cream town-hall wedding room with a black-and-white checkered floor and a white flower arch topped by two doves. A bride and groom hold hands under the arch; a stately grandfather in a blue sash watches; a boy hands a lost wallet back to a grateful gentleman; a girl in pink reaches toward a chocolate fountain on the lemonade table; a gardener bows with his cap in hand; an old couple claps side by side. A flower girl carries the rings, a grandmother sits on a bench, an uncle holds an umbrella under a dripping skylight and an old white horse in a flower crown looks in at the window. A white door with silver bells opens onto the stamp room; a green double door with a white chess knight leads on.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "timbres",
+   "doors": [
+    {
+     "to": "timbres",
+     "label": "Les timbres",
+     "hint": "the white door with the silver bells, back to the stamp room",
+     "hit": [
+      55,
+      80,
+      145,
+      300
+     ]
+    },
+    {
+     "to": "club",
+     "label": "Le club",
+     "hint": "the green door with the chess knight, to the games club",
+     "hit": [
+      1043,
+      68,
+      170,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_noble_adj",
+     "box": [
+      397,
+      85,
+      93,
+      288
+     ]
+    },
+    {
+     "id": "fr_matrimonial_adj",
+     "box": [
+      506,
+      106,
+      163,
+      134
+     ]
+    },
+    {
+     "id": "fr_irresistible_adj",
+     "box": [
+      716,
+      345,
+      265,
+      362
+     ]
+    },
+    {
+     "id": "fr_honorable_adj",
+     "box": [
+      500,
+      242,
+      215,
+      336
+     ]
+    },
+    {
+     "id": "fr_humble_adj",
+     "box": [
+      716,
+      140,
+      80,
+      203
+     ]
+    },
+    {
+     "id": "fr_loyal_adj",
+     "box": [
+      797,
+      115,
+      122,
+      226
+     ]
+    }
+   ]
+  },
+  "club": {
+   "name": "Le club de jeux · The games club",
+   "room_id": "R_character_05",
+   "image": "portraits/club.jpg",
+   "alt": "A blue games club room with shelves of board games, beanbags, a round window and a ping-pong table. A girl stacks a tall domino tower; a green parrot chatters on its perch above a bored boy; a boy pushes tin soldiers and toy cannons across a play mat; a hedgehog bristles at a wind-up robot; a girl who won the board game smiles shyly while two boys clap; a boy at a card table has a card sliding out of his sleeve while friends gasp; a boy in a helmet and knee pads plays ping-pong; a boy in yellow juggles three balls. A green double door with white chess knights opens onto the wedding hall.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "noces",
+   "doors": [
+    {
+     "to": "noces",
+     "label": "Les noces",
+     "hint": "the green door with the chess knight, back to the wedding hall",
+     "hit": [
+      30,
+      8,
+      230,
+      330
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_habilete_noun",
+     "box": [
+      140,
+      345,
+      320,
+      280
+     ]
+    },
+    {
+     "id": "fr_bavard_adj",
+     "box": [
+      330,
+      80,
+      140,
+      258
+     ]
+    },
+    {
+     "id": "fr_guerrier_adj",
+     "box": [
+      470,
+      295,
+      290,
+      257
+     ]
+    },
+    {
+     "id": "fr_hostile_adj",
+     "box": [
+      658,
+      555,
+      215,
+      118
+     ]
+    },
+    {
+     "id": "fr_modeste_adj",
+     "box": [
+      506,
+      140,
+      244,
+      130
+     ]
+    },
+    {
+     "id": "fr_scandaleux_adj",
+     "box": [
+      765,
+      312,
+      165,
+      170
+     ]
+    },
+    {
+     "id": "fr_prudent_adj",
+     "box": [
+      840,
+      97,
+      110,
+      190
      ]
     }
    ]
