@@ -26,6 +26,13 @@ var $=function(s,e){return (e||document).querySelector(s)};
  '#rooms .dot{padding:0 1px}'+
  '#app.roomsdrop #rooms{position:absolute;left:8px;top:calc(var(--h) + 6px);margin:0;z-index:6;background:rgba(43,69,73,.88);border:1px solid rgba(0,0,0,.35);border-radius:999px;padding:1px 3px;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.3)}'+
  '#app.roomsdrop #scroller{top:36px}'+ // keep the painting clear of the dropped room list so it never hides labels
+ // many rooms: the dropped list scrolls sideways (touch, wheel, trackpad) with a thin scrollbar and faded edges where more rooms hide
+ '#app.roomsdrop #rooms{max-width:calc(100% - 16px);overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(251,245,230,.45) transparent}'+
+ '#rooms::-webkit-scrollbar{height:4px}#rooms::-webkit-scrollbar-thumb{background:rgba(251,245,230,.45);border-radius:2px}#rooms::-webkit-scrollbar-track{background:transparent}'+
+ '#app.roomsdrop #rooms.rscroll{border-radius:12px}'+
+ '#app.roomsdrop #rooms.fl{-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px);mask-image:linear-gradient(90deg,transparent,#000 28px)}'+
+ '#app.roomsdrop #rooms.fr{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}'+
+ '#app.roomsdrop #rooms.fl.fr{-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent)}'+
  '.strip-left{display:flex;align-items:center}';
  document.head.appendChild(st) })();
 var stage=$('#stage'), scroller=$('#scroller'), blur=$('#blur'), back=$('#back'), hub=$('#hub'), app=$('#app');
@@ -34,6 +41,16 @@ var backKey=null; // Back target (gate 19): zoom -> its room; street side room -
 stage.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('.doorway'))return; stage.querySelectorAll('.doorway.armed').forEach(function(o){o.classList.remove('armed')}) });
 var rooms=document.createElement('nav'); rooms.id='rooms'; rooms.setAttribute('aria-label','Rooms in this building'); rooms.hidden=true;
 back.parentNode.appendChild(rooms);
+var revealPending=false; // set when the room list is rebuilt: bring the current room's tab into view once it is placed
+function roomsEdges(){ var o=rooms.scrollWidth>rooms.clientWidth+1, m=rooms.scrollWidth-rooms.clientWidth-2;
+  rooms.classList.toggle('rscroll',o); rooms.classList.toggle('fl',o&&rooms.scrollLeft>2); rooms.classList.toggle('fr',o&&rooms.scrollLeft<m) }
+function revealRoom(){ var a=rooms.querySelector('a[aria-current]');
+  if(a&&rooms.scrollWidth>rooms.clientWidth+1){ var r=rooms.getBoundingClientRect(), b=a.getBoundingClientRect(); rooms.scrollLeft+=(b.left+b.width/2)-(r.left+r.width/2) }
+  roomsEdges() }
+rooms.addEventListener('scroll',roomsEdges,{passive:true});
+rooms.addEventListener('wheel',function(e){ // desktop mouse wheel scrolls the room list sideways
+  if(e.ctrlKey||rooms.scrollWidth<=rooms.clientWidth+1||Math.abs(e.deltaX)>=Math.abs(e.deltaY))return;
+  rooms.scrollLeft+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?rooms.clientWidth:1); e.preventDefault() },{passive:false});
 // ---------- label mode: 'always' (default) or 'hover' (show on hover / first tap) ----------
 var LKEY='village.labelMode', labelMode='always', lastPointer='mouse', armed=-1;
 try{ if(localStorage.getItem(LKEY)==='hover') labelMode='hover' }catch(e){}
@@ -53,9 +70,11 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp
 function pct(v){return v+'%'}
 // ---------- layout: aspect-locked 16:9 stage, contain-fit; portrait phones pan sideways ----------
 function placeRooms(){
-  app.classList.remove('roomsdrop'); if(rooms.hidden)return;
+  var sl=rooms.scrollLeft; app.classList.remove('roomsdrop'); scroller.style.top=''; if(rooms.hidden)return;
   var strip=$('#strip'), t=$('#title'), side=(strip.clientWidth-t.offsetWidth)/2-14, need=back.offsetWidth+8+rooms.offsetWidth;
   app.classList.toggle('roomsdrop',need>side);
+  if(revealPending){ revealPending=false; revealRoom() } else { rooms.scrollLeft=sl; roomsEdges() } // a resize keeps the user's scroll
+  var sb=app.classList.contains('roomsdrop')?rooms.offsetHeight-rooms.clientHeight-2:0; if(sb>0)scroller.style.top=(36+sb)+'px'; // a classic (non-overlay) scrollbar: keep the painting clear of it too
 }
 function fit(){
   placeRooms();
@@ -311,6 +330,7 @@ function renderRooms(bld,key){
   if(rooms.hidden){ rooms.innerHTML=''; return }
   rooms.innerHTML=L.map(function(r){ var on=r.key===key;
     return '<a href="'+roomHref(bld,r.key)+'"'+(on?' aria-current="page"':'')+'>'+esc(r.short)+'</a>' }).join('<span class="dot" aria-hidden="true">·</span>');
+  revealPending=true;
 }
 function renderRoom(bld,key){
   B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; var HK0=D.main||bld, HR0=D.rooms[HK0]||D.rooms[bld]; document.title=R.name+((key!==bld&&key!==HK0&&HR0)?' · '+HR0.name:'')+' · Le Village';
