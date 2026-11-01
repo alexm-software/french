@@ -48,6 +48,22 @@
   {
    "key": "salle",
    "short": "La salle à manger"
+  },
+  {
+   "key": "voyages",
+   "short": "Les voyages"
+  },
+  {
+   "key": "veranda",
+   "short": "La véranda"
+  },
+  {
+   "key": "the",
+   "short": "Le salon de thé"
+  },
+  {
+   "key": "garde",
+   "short": "La garde-robe"
   }
  ],
  "planned": {
@@ -202,6 +218,52 @@
     "fr_amical_adj",
     "fr_authentique_adj",
     "fr_raisonnable_adj"
+   ]
+  },
+  "voyages": {
+   "vocabRoom": "R_appearance_02",
+   "only": [
+    "fr_japonais_adj",
+    "fr_indien_adj",
+    "fr_basque_adj",
+    "fr_breton_adj",
+    "fr_provencal_adj",
+    "fr_mauve_adj"
+   ]
+  },
+  "veranda": {
+   "vocabRoom": "R_people_03",
+   "only": [
+    "fr_adolescence_noun",
+    "fr_gosse_noun",
+    "fr_reconnaissant_adj",
+    "fr_ennuyeux_adj",
+    "fr_habituel_adj",
+    "fr_vivant_noun",
+    "fr_bienvenu_noun",
+    "fr_male_noun"
+   ]
+  },
+  "the": {
+   "vocabRoom": "R_character_04",
+   "only": [
+    "fr_genereux_adj",
+    "fr_respectable_adj",
+    "fr_equitable_adj",
+    "fr_oblige_adj",
+    "fr_favorable_adj",
+    "fr_professionnel_adj"
+   ]
+  },
+  "garde": {
+   "vocabRoom": "R_appearance_04",
+   "only": [
+    "fr_identique_adj",
+    "fr_partiel_adj",
+    "fr_gourmand_adj",
+    "fr_moche_adj",
+    "fr_glorieux_adj",
+    "fr_maigre_adj"
    ]
   }
  },
@@ -1236,7 +1298,7 @@
    "name": "La salle des trésors · The treasure room",
    "room_id": "R_appearance_04",
    "image": "portraits/tresors.jpg",
-   "alt": "A red treasure room on open day: a golden doe stands in a ray of light, a little dragon flies out of a storybook, a tiny ant lifts a golden trophy, giant spectacles float over a pedestal, a pink chameleon sits on a green plant, two jelly blobs look alike, a girl plays a glass harp, and visitors, twin boys with balloons and a seal with a jigsaw watch from the right.",
+   "alt": "A red treasure room on open day: a golden doe stands in a ray of light, a little dragon flies out of a storybook, a tiny ant lifts a golden trophy, giant spectacles float over a pedestal, a pink chameleon sits on a green plant, two jelly blobs look alike, a girl plays a glass harp while a family watches, a seal holds a jigsaw piece, and a sky-blue door with a compass rose opens onto a sunny travel lounge.",
    "nameplate": [
     50,
     4.5
@@ -1252,6 +1314,17 @@
       70,
       140,
       355
+     ]
+    },
+    {
+     "to": "voyages",
+     "label": "Les voyages",
+     "hint": "the sky-blue door with the compass rose, to the travel lounge",
+     "hit": [
+      981,
+      48,
+      270,
+      400
      ]
     }
    ],
@@ -1528,6 +1601,381 @@
       250,
       150,
       175
+     ]
+    }
+   ]
+  },
+  "voyages": {
+   "name": "Le salon des voyages · The travel lounge",
+   "room_id": "R_appearance_02",
+   "image": "portraits/voyages.jpg",
+   "alt": "A sunny ochre travel lounge with old maps and suitcases: a girl opens a bento box by a flag of Japan, a woman pours tea by a flag of India, a boy holds a pelota ball and wicker glove, a man carries a tower of crêpes near a black-and-white Breton flag, a girl in a mauve dress hugs lavender beside a toy van full of lavender, a boy kicks a ball past a crowing rooster, and a tortoise with a backpack crosses the rug.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "tresors",
+   "doors": [
+    {
+     "to": "tresors",
+     "label": "Les trésors",
+     "hint": "the sky-blue door with the compass rose, back to the treasure room",
+     "hit": [
+      8,
+      10,
+      88,
+      420
+     ]
+    },
+    {
+     "to": "veranda",
+     "label": "La véranda",
+     "hint": "the green glass door with the fern, to the veranda",
+     "hit": [
+      312,
+      8,
+      205,
+      205
+     ]
+    },
+    {
+     "to": "garde",
+     "label": "La garde-robe",
+     "hint": "the pink door with the coat hanger, to the dressing room",
+     "hit": [
+      1100,
+      38,
+      82,
+      375
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_japonais_adj",
+     "box": [
+      319,
+      294,
+      143,
+      268
+     ]
+    },
+    {
+     "id": "fr_indien_adj",
+     "box": [
+      466,
+      220,
+      154,
+      230
+     ]
+    },
+    {
+     "id": "fr_basque_adj",
+     "box": [
+      625,
+      169,
+      120,
+      145
+     ]
+    },
+    {
+     "id": "fr_breton_adj",
+     "box": [
+      750,
+      62,
+      238,
+      238
+     ]
+    },
+    {
+     "id": "fr_provencal_adj",
+     "box": [
+      750,
+      506,
+      145,
+      113
+     ]
+    },
+    {
+     "id": "fr_mauve_adj",
+     "box": [
+      780,
+      305,
+      180,
+      195
+     ]
+    }
+   ]
+  },
+  "veranda": {
+   "name": "La véranda · The glass veranda",
+   "room_id": "R_people_03",
+   "image": "portraits/veranda.jpg",
+   "alt": "A sunny glass veranda with ferns and a lemon tree: a teenage girl with headphones sits on a hanging swing, a small kid plays ghost under a sheet, a girl hugs a raccoon, a boy yawns at a dull slideshow, a grandpa rests in his wicker armchair with cocoa, a jolly man eats cream cake, a man in a striped sweater opens the garden door with open arms, and a peacock fans his tail beside a peahen.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "voyages",
+   "doors": [
+    {
+     "to": "voyages",
+     "label": "Les voyages",
+     "hint": "the green glass door with the fern, back to the travel lounge",
+     "hit": [
+      106,
+      38,
+      106,
+      510
+     ]
+    },
+    {
+     "to": "the",
+     "label": "Le salon de thé",
+     "hint": "the white door with the blue teacup, to the tea room",
+     "hit": [
+      413,
+      106,
+      40,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_adolescence_noun",
+     "box": [
+      240,
+      218,
+      160,
+      185
+     ]
+    },
+    {
+     "id": "fr_gosse_noun",
+     "box": [
+      314,
+      410,
+      144,
+      252
+     ]
+    },
+    {
+     "id": "fr_reconnaissant_adj",
+     "box": [
+      481,
+      244,
+      112,
+      136
+     ]
+    },
+    {
+     "id": "fr_ennuyeux_adj",
+     "box": [
+      462,
+      385,
+      150,
+      225
+     ]
+    },
+    {
+     "id": "fr_habituel_adj",
+     "box": [
+      616,
+      310,
+      260,
+      225
+     ]
+    },
+    {
+     "id": "fr_vivant_noun",
+     "box": [
+      632,
+      180,
+      170,
+      125
+     ]
+    },
+    {
+     "id": "fr_bienvenu_noun",
+     "box": [
+      878,
+      162,
+      200,
+      210
+     ]
+    },
+    {
+     "id": "fr_male_noun",
+     "box": [
+      880,
+      378,
+      300,
+      280
+     ]
+    }
+   ]
+  },
+  "the": {
+   "name": "Le salon de thé · The tea room",
+   "room_id": "R_character_04",
+   "image": "portraits/the.jpg",
+   "alt": "A cosy pale-blue tea room with lace tables and a cake counter: a man piles whipped cream on a girl's hot chocolate, a lady in pearls sips tea, a girl cuts a cake with a ruler, a blue jay pecks a boy's scone, a man taps a barometer pointing to the sun, a waitress balances a tray of cups, two men shake hands by a jug of red cordial, and a mouse nibbles a sugar cube.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "veranda",
+   "doors": [
+    {
+     "to": "veranda",
+     "label": "La véranda",
+     "hint": "the white door with the blue teacup, back to the veranda",
+     "hit": [
+      5,
+      10,
+      95,
+      510
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_genereux_adj",
+     "box": [
+      270,
+      240,
+      232,
+      300
+     ]
+    },
+    {
+     "id": "fr_respectable_adj",
+     "box": [
+      506,
+      169,
+      100,
+      200
+     ]
+    },
+    {
+     "id": "fr_equitable_adj",
+     "box": [
+      610,
+      256,
+      190,
+      184
+     ]
+    },
+    {
+     "id": "fr_oblige_adj",
+     "box": [
+      681,
+      445,
+      325,
+      200
+     ]
+    },
+    {
+     "id": "fr_favorable_adj",
+     "box": [
+      650,
+      62,
+      165,
+      190
+     ]
+    },
+    {
+     "id": "fr_professionnel_adj",
+     "box": [
+      818,
+      100,
+      152,
+      337
+     ]
+    }
+   ]
+  },
+  "garde": {
+   "name": "La garde-robe · The dressing room",
+   "room_id": "R_appearance_04",
+   "image": "portraits/garde.jpg",
+   "alt": "A rose-striped dressing room with clothes rails, hat boxes and a three-panel mirror: twin girls in matching yellow polka-dot dresses, a mannequin in a half-sewn jacket, a chubby boy with two éclairs and a plate of pastries, a scowling boy in an ugly snowman sweater, a girl in a golden cape and medal on a stool, a skinny greyhound in a knitted coat growling, and a cat asleep in a hat box.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "voyages",
+   "doors": [
+    {
+     "to": "voyages",
+     "label": "Les voyages",
+     "hint": "the pink door with the coat hanger, back to the travel lounge",
+     "hit": [
+      18,
+      10,
+      108,
+      600
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_identique_adj",
+     "box": [
+      331,
+      300,
+      113,
+      305
+     ]
+    },
+    {
+     "id": "fr_partiel_adj",
+     "box": [
+      400,
+      150,
+      115,
+      70
+     ]
+    },
+    {
+     "id": "fr_gourmand_adj",
+     "box": [
+      448,
+      231,
+      170,
+      274
+     ]
+    },
+    {
+     "id": "fr_moche_adj",
+     "box": [
+      622,
+      230,
+      110,
+      195
+     ]
+    },
+    {
+     "id": "fr_glorieux_adj",
+     "box": [
+      735,
+      75,
+      165,
+      325
+     ]
+    },
+    {
+     "id": "fr_maigre_adj",
+     "box": [
+      662,
+      430,
+      240,
+      235
      ]
     }
    ]
