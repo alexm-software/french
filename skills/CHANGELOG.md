@@ -1,6 +1,7 @@
 # Skills changelog
 
 ## 1 November 2026
+- **More accumulated failure rules** (builder reference/prompt-template.md, from MAIRIE4): hotspots sit on the hook itself, set by hand (no auto solver; use labelAt for crowded labels) and pass grid_check before the build; crop-edits use wide crops and say "same size, same place"; doors are audited at zoom on the final painting; replace-figure edits are checked for erased bystanders; patterned-floor paste seams get a cleanup edit; no crop or paste while an edit of the same painting is in flight; pose edits ask for a low pose and keep heads below door thresholds; inherited vocab examples are run through the content check and overridden when they flag.
 - **Accumulated failure rules** (builder reference/prompt-template.md): door glimpses show the planned destination, door pairs match on both sides, doors stand on the floor, door edits remove what is in the way completely, no text or people in glimpses, dropped words' figures are painted out, figures stay clear of doors, edge masks run to the edge and union masks overlap, edits are checked at 2x, and every mask and prompt is recorded.
 
 ## 31 October 2026
