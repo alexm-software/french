@@ -13036,49 +13036,41 @@
     },
     {
       "id": "R_faiths",
-      "name": "Places of worship of other faiths",
+      "name": "La Concorde · Courtyard of many faiths",
       "type": "theme",
-      "setting": "Places of worship of other faiths inside Maisons de prière.",
+      "setting": "Shared limestone courtyard of Maisons de prière with an olive tree; doors open to the synagogue and the mosque; Protestant chapel, Orthodox domes, and a pagoda stay as courtyard landmarks.",
       "kind": "full",
       "sector_id": "S12_faiths",
       "building_id": "B43_concorde",
       "links_back_to_sector": "S12_faiths",
-      "zoom_ids": [
-        "R_faiths_z1"
-      ],
+      "zoom_ids": [],
       "cefr_band": "B2",
       "mean_level": 4.5,
       "related_rooms": [
-        "R_ch_catechism",
-        "R_ch_hierarchy"
+        "R_synagogue",
+        "R_mosque"
       ],
       "conversation_ids": [
-        "C_R_faiths"
+        "V_concorde_concorde_01"
       ],
       "base_room": "R_faiths",
       "words": [
         "fr_religion_noun",
-        "fr_juif_adj",
         "fr_temple_noun",
-        "fr_pasteur_noun",
+        "fr_chretien_adj",
         "fr_culte_noun",
-        "fr_musulman_adj",
         "fr_orthodoxe_adj",
+        "fr_pasteur_noun",
         "fr_protestant_noun",
-        "fr_ramadan_noun",
-        "fr_rabbin_noun",
-        "fr_synagogue_noun",
-        "fr_torah_noun",
-        "fr_pagode_noun",
-        "fr_kippa_noun",
-        "fr_chretien_adj"
+        "fr_christianisme_noun",
+        "fr_pagode_noun"
       ],
-      "item_count": 15,
-      "total_items_incl_zooms": 21,
+      "item_count": 9,
+      "total_items_incl_zooms": 9,
       "side_counts": {
-        "left": 5,
-        "n/a": 4,
-        "right": 6
+        "left": 2,
+        "right": 5,
+        "n/a": 2
       }
     },
     {
@@ -36010,8 +36002,8 @@
       "id": "R_faiths_z1",
       "name": "Places of worship of other faiths — bookstand (right)",
       "type": "zoom",
-      "setting": "A bookstand on the right wall of 'Places of worship of other faiths' (Maisons de prière); zoom in to see its items.",
-      "kind": "zoom",
+      "setting": "(retired) former bookstand zoom; words rehomed to synagogue and mosque in faiths1.",
+      "kind": "retired_zoom",
       "sector_id": "S12_faiths",
       "building_id": "B43_concorde",
       "links_back_to_sector": "S12_faiths",
@@ -36028,18 +36020,15 @@
         "R_faiths"
       ],
       "base_room": "R_faiths",
-      "words": [
-        "fr_christianisme_noun",
-        "fr_shabbat_noun",
-        "fr_coran_noun",
-        "fr_minaret_noun",
-        "fr_imam_noun",
-        "fr_islam_noun"
-      ],
-      "item_count": 6,
+      "words": [],
+      "item_count": 0,
       "side_counts": {
-        "right": 6
-      }
+        "left": 0,
+        "right": 0,
+        "n/a": 0
+      },
+      "total_items_incl_zooms": 0,
+      "conversation_ids": []
     },
     {
       "id": "R_text_medical_z1",
@@ -37914,6 +37903,90 @@
         "left": 2,
         "right": 4
       }
+    },
+    {
+      "id": "R_synagogue",
+      "name": "La synagogue · The synagogue",
+      "type": "theme",
+      "setting": "Synagogue sanctuary of Maisons de prière: bimah, ark, Torah, menorah, mezuzah, Star of David, Shabbat candles, tallit, shofar, Talmud; door back to the courtyard.",
+      "kind": "full",
+      "sector_id": "S12_faiths",
+      "building_id": "B43_concorde",
+      "links_back_to_sector": "S12_faiths",
+      "cefr_band": "B2",
+      "mean_level": 4.5,
+      "related_rooms": [
+        "R_faiths",
+        "R_mosque"
+      ],
+      "conversation_ids": [
+        "V_concorde_synagogue_01"
+      ],
+      "base_room": "R_synagogue",
+      "words": [
+        "fr_juif_adj",
+        "fr_rabbin_noun",
+        "fr_shabbat_noun",
+        "fr_synagogue_noun",
+        "fr_torah_noun",
+        "fr_kippa_noun",
+        "fr_mezouza_noun",
+        "fr_menorah_noun",
+        "fr_talmud_noun",
+        "fr_tallit_noun",
+        "fr_shofar_noun",
+        "fr_etoile_de_david_noun"
+      ],
+      "item_count": 12,
+      "total_items_incl_zooms": 12,
+      "side_counts": {
+        "left": 6,
+        "right": 5,
+        "n/a": 1
+      },
+      "parent_room_id": "R_faiths"
+    },
+    {
+      "id": "R_mosque",
+      "name": "La mosquée · The mosque",
+      "type": "theme",
+      "setting": "Mosque prayer hall of Maisons de prière: mihrab, minbar, prayer carpets, Qur’an stand, minaret glimpse, muezzin, imam, dates for Ramadan; door back to the courtyard.",
+      "kind": "full",
+      "sector_id": "S12_faiths",
+      "building_id": "B43_concorde",
+      "links_back_to_sector": "S12_faiths",
+      "cefr_band": "B2",
+      "mean_level": 4.5,
+      "related_rooms": [
+        "R_faiths",
+        "R_synagogue"
+      ],
+      "conversation_ids": [
+        "V_concorde_mosquee_01"
+      ],
+      "base_room": "R_mosque",
+      "words": [
+        "fr_musulman_adj",
+        "fr_ramadan_noun",
+        "fr_coran_noun",
+        "fr_imam_noun",
+        "fr_minaret_noun",
+        "fr_islam_noun",
+        "fr_mosquee_noun",
+        "fr_mihrab_noun",
+        "fr_minbar_noun",
+        "fr_tapis_de_priere_noun",
+        "fr_muezzin_noun",
+        "fr_hallal_adj"
+      ],
+      "item_count": 12,
+      "total_items_incl_zooms": 12,
+      "side_counts": {
+        "left": 1,
+        "right": 9,
+        "n/a": 2
+      },
+      "parent_room_id": "R_faiths"
     }
   ],
   "planned_rooms_2026_10_31": {

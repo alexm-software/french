@@ -1,3545 +1,3547 @@
 {
- "buildings": [
-  {
-   "id": "B01_fontaine",
-   "name": "Fontaine des Salutations (greeting fountain)",
-   "type": "site",
-   "sector_id": "S01_beginner",
-   "rooms": [
-    "R_farewell",
-    "R_exclaim_01",
-    "R_greet",
-    "R_polite",
-    "R_exclaim_02",
-    "R_exclaim_03"
-   ],
-   "mean_level": 2.36
-  },
-  {
-   "id": "B02_ecole",
-   "name": "Petite École (first schoolhouse)",
-   "type": "building",
-   "sector_id": "S01_beginner",
-   "rooms": [
-    "R_alphabet_01",
-    "R_alphabet_02",
-    "R_articles",
-    "R_grammar_verbs",
-    "R_numbers1",
-    "R_prepositions_01",
-    "R_pronouns_01",
-    "R_questions",
-    "R_prepositions_02",
-    "R_pronouns_02",
-    "R_grammar_basic",
-    "R_numbers2",
-    "R_conjunctions",
-    "R_grammar_general",
-    "R_pronouns_03",
-    "R_prepositions_03"
-   ],
-   "mean_level": 1.6
-  },
-  {
-   "id": "B03_horloge",
-   "name": "Tour de l'Horloge (clock & calendar tower)",
-   "type": "building",
-   "sector_id": "S01_beginner",
-   "rooms": [
-    "R_time_clock_01",
-    "R_adv_time_01",
-    "R_abs_time_01",
-    "R_time_days_01",
-    "R_time_days_02",
-    "R_adv_time_02",
-    "R_time_clock_02",
-    "R_abs_time_02",
-    "R_adv_time_03"
-   ],
-   "mean_level": 2.85
-  },
-  {
-   "id": "B04_atelier_couleurs",
-   "name": "Atelier des Couleurs & Formes (colors and shapes)",
-   "type": "building",
-   "sector_id": "S01_beginner",
-   "rooms": [
-    "R_colors_01",
-    "R_shapes_03",
-    "R_shapes_02",
-    "R_colors_02"
-   ],
-   "mean_level": 3.11
-  },
-  {
-   "id": "B05_maison",
-   "name": "La Maison familiale",
-   "type": "building",
-   "sector_id": "S02_home",
-   "rooms": [
-    "R_family_01",
-    "R_entrance_01",
-    "R_wardrobe_01",
-    "R_attic",
-    "R_dining",
-    "R_bedroom_01",
-    "R_living",
-    "R_wardrobe_03",
-    "R_garage",
-    "R_wardrobe_02",
-    "R_entrance_03",
-    "R_entrance_02",
-    "R_bathroom",
-    "R_kitchen_02",
-    "R_pets",
-    "R_bedroom_02",
-    "R_kitchen_01",
-    "R_garden",
-    "R_playroom",
-    "R_family_02",
-    "R_laundry_01",
-    "R_entrance_04",
-    "R_wardrobe_04"
-   ],
-   "mean_level": 3.37
-  },
-  {
-   "id": "B06_marche",
-   "name": "Marché couvert (covered market)",
-   "type": "building",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_bakery_01",
-    "R_grocery_01",
-    "R_butcher_01",
-    "R_fruits_01",
-    "R_grocery_02",
-    "R_vegetables",
-    "R_butcher_02",
-    "R_bakery_02",
-    "R_fruits_02"
-   ],
-   "mean_level": 4.12
-  },
-  {
-   "id": "B07_rue_commercante",
-   "name": "Rue Commerçante (shopping street)",
-   "type": "building",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_shop_general_01",
-    "R_bookshop_01",
-    "R_boutique_02",
-    "R_hardware_02",
-    "R_boutique_01",
-    "R_shop_general_02",
-    "R_shop_general_03",
-    "R_hardware_01",
-    "R_florist",
-    "R_bookshop_02",
-    "R_boutique_03",
-    "R_shop_general_04"
-   ],
-   "mean_level": 3.77
-  },
-  {
-   "id": "B59_brocante",
-   "name": "Brocante (antiques & second-hand market)",
-   "type": "site",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_adj_time_01",
-    "R_adj_time_02",
-    "R_adj_time_03",
-    "R_adj_time_06",
-    "R_adj_time_07",
-    "R_adj_time_04",
-    "R_adj_time_05"
-   ],
-   "mean_level": 4.39
-  },
-  {
-   "id": "B60_balance",
-   "name": "Halle aux Poids (weighing hall)",
-   "type": "building",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_adv_degree_01",
-    "R_abs_quantity_01",
-    "R_abs_quantity_02",
-    "R_abs_quantity_03",
-    "R_adv_degree_02",
-    "R_abs_quantity_04",
-    "R_adv_degree_03"
-   ],
-   "mean_level": 3.45
-  },
-  {
-   "id": "B61_reparation",
-   "name": "Atelier de Réparation (repair café)",
-   "type": "building",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_adj_state_03",
-    "R_adj_state_04",
-    "R_adj_state_02",
-    "R_adj_state_05"
-   ],
-   "mean_level": 4.08
-  },
-  {
-   "id": "B62_couture",
-   "name": "Maison de Couture (fashion house)",
-   "type": "building",
-   "sector_id": "S03_market",
-   "rooms": [
-    "R_abs_beauty_02",
-    "R_abs_beauty_01",
-    "R_abs_beauty_03"
-   ],
-   "mean_level": 3.87
-  },
-  {
-   "id": "B08_cafe",
-   "name": "Café de la Place",
-   "type": "building",
-   "sector_id": "S04_cafes",
-   "rooms": [
-    "R_cafe_01",
-    "R_cafe_02"
-   ],
-   "mean_level": 3.75,
-   "name_fr": "Café de la Place"
-  },
-  {
-   "id": "B09_restaurant",
-   "name": "Restaurant Le Bon Goût",
-   "type": "building",
-   "sector_id": "S04_cafes",
-   "rooms": [
-    "R_resto_kitchen_01",
-    "R_resto_room",
-    "R_wine_01",
-    "R_resto_kitchen_02"
-   ],
-   "mean_level": 4.0,
-   "name_fr": "Restaurant Le Bon Goût"
-  },
-  {
-   "id": "B10_banque",
-   "name": "Banque du Village",
-   "type": "building",
-   "sector_id": "S05_bank",
-   "rooms": [
-    "R_bank_counter_01",
-    "R_bank_economy_02",
-    "R_bank_economy_01",
-    "R_bank_counter_02",
-    "R_bank_counter_03",
-    "R_bank_economy_04",
-    "R_bank_economy_03"
-   ],
-   "mean_level": 4.06
-  },
-  {
-   "id": "B11_bureaux",
-   "name": "Les Bureaux (office building)",
-   "type": "building",
-   "sector_id": "S05_bank",
-   "rooms": [
-    "R_office_01",
-    "R_occupations_01",
-    "R_occupations_02",
-    "R_occupations_03",
-    "R_office_02",
-    "R_occupations_04",
-    "R_office_03",
-    "R_occupations_05"
-   ],
-   "mean_level": 3.75
-  },
-  {
-   "id": "B12_zone_artisanale",
-   "name": "Zone artisanale (workshops, industry & energy)",
-   "type": "building",
-   "sector_id": "S05_bank",
-   "rooms": [
-    "R_abs_work_01",
-    "R_industry_01",
-    "R_energy_01",
-    "R_abs_work_02",
-    "R_energy_02",
-    "R_industry_02"
-   ],
-   "mean_level": 3.83
-  },
-  {
-   "id": "B13_mairie",
-   "name": "Hôtel de Ville",
-   "type": "building",
-   "sector_id": "S06_townhall",
-   "rooms": [
-    "R_adv_logic_01",
-    "R_adj_relation_01",
-    "R_adj_relation_02",
-    "R_politics_01",
-    "R_society_02",
-    "R_admin_01",
-    "R_adv_logic_03",
-    "R_adj_relation_04",
-    "R_politics_02",
-    "R_politics_03",
-    "R_adj_relation_05",
-    "R_adj_relation_06",
-    "R_adv_logic_02",
-    "R_adj_relation_03",
-    "R_admin_02",
-    "R_politics_05",
-    "R_adv_logic_05",
-    "R_politics_04",
-    "R_society_03",
-    "R_society_04",
-    "R_adj_relation_10",
-    "R_adv_logic_04",
-    "R_adj_relation_07",
-    "R_adj_relation_09",
-    "R_adj_relation_08"
-   ],
-   "mean_level": 4.03
-  },
-  {
-   "id": "B14_tribunal",
-   "name": "Palais de Justice",
-   "type": "building",
-   "sector_id": "S06_townhall",
-   "rooms": [
-    "R_police_01",
-    "R_adj_logic_03",
-    "R_court_01",
-    "R_court_02",
-    "R_abs_moral_02",
-    "R_adj_logic_02",
-    "R_abs_moral_03",
-    "R_police_02",
-    "R_police_03",
-    "R_abs_moral_05",
-    "R_adj_logic_05",
-    "R_court_03",
-    "R_police_04",
-    "R_adj_logic_04",
-    "R_abs_moral_04"
-   ],
-   "mean_level": 4.02
-  },
-  {
-   "id": "B15_poste",
-   "name": "La Poste",
-   "type": "building",
-   "sector_id": "S06_townhall",
-   "rooms": [
-    "R_post_01"
-   ],
-   "mean_level": 4.0
-  },
-  {
-   "id": "B16_caserne",
-   "name": "Monument aux morts & caserne (military history)",
-   "type": "site",
-   "sector_id": "S06_townhall",
-   "rooms": [
-    "R_military_01",
-    "R_military_02",
-    "R_military_03",
-    "R_military_04"
-   ],
-   "mean_level": 3.64
-  },
-  {
-   "id": "B63_pompiers",
-   "name": "Caserne des Pompiers (fire station)",
-   "type": "building",
-   "sector_id": "S06_townhall",
-   "rooms": [
-    "R_abs_problem_01",
-    "R_abs_problem_02",
-    "R_abs_problem_03",
-    "R_abs_problem_04"
-   ],
-   "mean_level": 3.55
-  },
-  {
-   "id": "B17_cabinet",
-   "name": "Cabinet médical",
-   "type": "building",
-   "sector_id": "S07_health",
-   "rooms": [
-    "R_doctor_01_z2",
-    "R_body_02",
-    "R_body_01",
-    "R_body_04",
-    "R_doctor_01",
-    "R_body_03_z1",
-    "R_body_03",
-    "R_body_05",
-    "R_doctor_02"
-   ],
-   "mean_level": 3.47
-  },
-  {
-   "id": "B18_pharmacie",
-   "name": "Pharmacie",
-   "type": "building",
-   "sector_id": "S07_health",
-   "rooms": [
-    "R_pharmacy"
-   ],
-   "mean_level": 4.29
-  },
-  {
-   "id": "B19_hopital",
-   "name": "Hôpital",
-   "type": "building",
-   "sector_id": "S07_health",
-   "rooms": [
-    "R_hospital_01",
-    "R_dentist_01",
-    "R_dentist_02",
-    "R_hospital_02"
-   ],
-   "mean_level": 4.33
-  },
-  {
-   "id": "B20_gare",
-   "name": "Gare SNCF",
-   "type": "building",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_abs_relation",
-    "R_station_01",
-    "R_station_02"
-   ],
-   "mean_level": 3.8
-  },
-  {
-   "id": "B21_aeroport",
-   "name": "Aéroport",
-   "type": "building",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_airport"
-   ],
-   "mean_level": 3.68
-  },
-  {
-   "id": "B22_hotel",
-   "name": "Hôtel des Voyageurs",
-   "type": "building",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_hotel_01",
-    "R_hotel_02",
-    "R_hotel_03"
-   ],
-   "mean_level": 3.52
-  },
-  {
-   "id": "B23_route",
-   "name": "La Route & garage auto",
-   "type": "site",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_road_01",
-    "R_road_02",
-    "R_road_03",
-    "R_road_04"
-   ],
-   "mean_level": 3.46
-  },
-  {
-   "id": "B24_port",
-   "name": "Port de pêche (harbor)",
-   "type": "site",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_harbour_01",
-    "R_harbour_02"
-   ],
-   "mean_level": 4.18
-  },
-  {
-   "id": "B25_monde",
-   "name": "Office de tourisme (map of the world)",
-   "type": "building",
-   "sector_id": "S08_travel",
-   "rooms": [
-    "R_abs_space_01",
-    "R_world_01",
-    "R_world_02",
-    "R_abs_space_02",
-    "R_world_03"
-   ],
-   "mean_level": 3.31
-  },
-  {
-   "id": "B26_montagne",
-   "name": "Station de ski & montagne",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_mountain_01",
-    "R_mountain_02",
-    "R_mountain_03"
-   ],
-   "mean_level": 3.59
-  },
-  {
-   "id": "B27_foret",
-   "name": "Forêt",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_forest_01",
-    "R_birds_01",
-    "R_wildlife_02",
-    "R_wildlife_01",
-    "R_forest_02",
-    "R_insects",
-    "R_birds_02"
-   ],
-   "mean_level": 3.85
-  },
-  {
-   "id": "B28_riviere",
-   "name": "Rivière & lac",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_river_02",
-    "R_river_01"
-   ],
-   "mean_level": 3.46
-  },
-  {
-   "id": "B29_plage",
-   "name": "Plage",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_beach_01",
-    "R_beach_02"
-   ],
-   "mean_level": 4.17
-  },
-  {
-   "id": "B30_camping",
-   "name": "Camping",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_camping_01",
-    "R_camping_02"
-   ],
-   "mean_level": 3.53
-  },
-  {
-   "id": "B31_ferme",
-   "name": "Ferme",
-   "type": "building",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_farm_animals_01",
-    "R_fields_01",
-    "R_farm_animals_02",
-    "R_fields_02",
-    "R_farm_animals_03"
-   ],
-   "mean_level": 4.13
-  },
-  {
-   "id": "B32_ciel",
-   "name": "Observatoire & météo (sky)",
-   "type": "site",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_weather_01",
-    "R_sky_02",
-    "R_sky_01",
-    "R_weather_02",
-    "R_sky_03"
-   ],
-   "mean_level": 3.82
-  },
-  {
-   "id": "B64_serre",
-   "name": "Grande Serre (greenhouse)",
-   "type": "building",
-   "sector_id": "S09_nature",
-   "rooms": [
-    "R_abs_change_01",
-    "R_abs_change_02"
-   ],
-   "mean_level": 4.36
-  },
-  {
-   "id": "B33_lycee",
-   "name": "Lycée (school)",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_school_01",
-    "R_school_02",
-    "R_school_03"
-   ],
-   "mean_level": 3.38
-  },
-  {
-   "id": "B34_humanites",
-   "name": "Faculté des Lettres (humanities)",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_abs_mind_01",
-    "R_philosophy_01",
-    "R_literature_01",
-    "R_history_01",
-    "R_linguistics_01",
-    "R_social_science_01",
-    "R_linguistics_02",
-    "R_literature_02",
-    "R_history_02",
-    "R_philosophy_02",
-    "R_literature_03",
-    "R_abs_mind_02",
-    "R_abs_mind_03",
-    "R_philosophy_03",
-    "R_history_03",
-    "R_literature_04",
-    "R_social_science_02",
-    "R_linguistics_03"
-   ],
-   "mean_level": 3.65
-  },
-  {
-   "id": "B35_sciences",
-   "name": "Faculté des Sciences",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_abs_study_02",
-    "R_physics_01",
-    "R_chemistry_01",
-    "R_geology",
-    "R_biology",
-    "R_chemistry_02",
-    "R_abs_study_03",
-    "R_physics_02"
-   ],
-   "mean_level": 4.33
-  },
-  {
-   "id": "B36_maths",
-   "name": "Institut de Mathématiques",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_measures_01",
-    "R_math_01",
-    "R_measures_03",
-    "R_math_02"
-   ],
-   "mean_level": 3.56
-  },
-  {
-   "id": "B37_informatique",
-   "name": "École d'Informatique",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_computing_01",
-    "R_computing_02"
-   ],
-   "mean_level": 4.21
-  },
-  {
-   "id": "B38_ingenierie",
-   "name": "École d'Ingénieurs",
-   "type": "building",
-   "sector_id": "S10_university",
-   "rooms": [
-    "R_engineering"
-   ],
-   "mean_level": 4.0
-  },
-  {
-   "id": "B39_eglise",
-   "name": "Église paroissiale Notre-Dame",
-   "type": "building",
-   "sector_id": "S11_church",
-   "rooms": [
-    "R_ch_parvis",
-    "R_ch_mercy",
-    "R_ch_nave",
-    "R_ch_crypt",
-    "R_ch_confessional",
-    "R_ch_lady_chapel",
-    "R_ch_altar_02",
-    "R_ch_baptistery",
-    "R_ch_sacristy"
-   ],
-   "mean_level": 4.57
-  },
-  {
-   "id": "B40_abbaye",
-   "name": "Abbaye Saint-Benoît",
-   "type": "building",
-   "sector_id": "S11_church",
-   "rooms": [
-    "R_ab_choir",
-    "R_ab_cloister",
-    "R_ab_scriptorium",
-    "R_ab_refectory"
-   ],
-   "mean_level": 5.0
-  },
-  {
-   "id": "B41_presbytere",
-   "name": "Presbytère & salle paroissiale",
-   "type": "building",
-   "sector_id": "S11_church",
-   "rooms": [
-    "R_ch_catechism",
-    "R_ch_calendar"
-   ],
-   "mean_level": 3.87
-  },
-  {
-   "id": "B42_cathedrale",
-   "name": "Cathédrale (the wider Church)",
-   "type": "building",
-   "sector_id": "S11_church",
-   "rooms": [
-    "R_ch_hierarchy"
-   ],
-   "mean_level": 4.95
-  },
-  {
-   "id": "B43_concorde",
-   "name": "Maisons de prière",
-   "type": "building",
-   "sector_id": "S12_faiths",
-   "rooms": [
-    "R_faiths"
-   ],
-   "mean_level": 4.5
-  },
-  {
-   "id": "B44_musee",
-   "name": "Musée des Beaux-Arts et d'Histoire",
-   "type": "building",
-   "sector_id": "S13_museum",
-   "rooms": [
-    "R_abs_senses_01",
-    "R_abs_power_01",
-    "R_art_01",
-    "R_adj_senses_02",
-    "R_text_crime_02",
-    "R_text_crime_01",
-    "R_heraldry_01",
-    "R_abs_power_03",
-    "R_abs_senses_02",
-    "R_art_02",
-    "R_adj_senses_03",
-    "R_adj_senses_04",
-    "R_adj_senses_05",
-    "R_abs_power_02",
-    "R_text_death",
-    "R_text_medical",
-    "R_text_crime_03",
-    "R_heraldry_02",
-    "R_abs_power_04",
-    "R_abs_power_05",
-    "R_adj_senses_07",
-    "R_adj_senses_09",
-    "R_art_03",
-    "R_abs_senses_03",
-    "R_adj_senses_06",
-    "R_adj_senses_08"
-   ],
-   "mean_level": 4.04
-  },
-  {
-   "id": "B45_theatre",
-   "name": "Théâtre & Cinéma",
-   "type": "building",
-   "sector_id": "S14_culture",
-   "rooms": [
-    "R_adj_mind_01",
-    "R_theatre_01",
-    "R_cinema_01",
-    "R_cinema_02",
-    "R_theatre_02",
-    "R_adj_mind_02",
-    "R_adj_mind_03",
-    "R_theatre_03",
-    "R_adj_mind_05",
-    "R_adj_mind_04",
-    "R_cinema_03"
-   ],
-   "mean_level": 3.8
-  },
-  {
-   "id": "B46_conservatoire",
-   "name": "Conservatoire (music school)",
-   "type": "building",
-   "sector_id": "S14_culture",
-   "rooms": [
-    "R_music_01",
-    "R_music_02",
-    "R_music_03",
-    "R_music_04"
-   ],
-   "mean_level": 3.6
-  },
-  {
-   "id": "B47_stade",
-   "name": "Stade & gymnase",
-   "type": "building",
-   "sector_id": "S14_culture",
-   "rooms": [
-    "R_abs_action_01",
-    "R_sports_01",
-    "R_abs_action_02",
-    "R_sports_03",
-    "R_sports_02",
-    "R_abs_action_03",
-    "R_sports_04"
-   ],
-   "mean_level": 3.52
-  },
-  {
-   "id": "B48_jeux",
-   "name": "Salle de jeux & fêtes",
-   "type": "building",
-   "sector_id": "S14_culture",
-   "rooms": [
-    "R_celebrations_01",
-    "R_games_01",
-    "R_celebrations_02",
-    "R_games_02"
-   ],
-   "mean_level": 3.65
-  },
-  {
-   "id": "B49_kiosque",
-   "name": "Kiosque à journaux (media)",
-   "type": "site",
-   "sector_id": "S14_culture",
-   "rooms": [
-    "R_media_01",
-    "R_abs_speech_01",
-    "R_abs_speech_02",
-    "R_media_02",
-    "R_abs_speech_03",
-    "R_media_03"
-   ],
-   "mean_level": 3.55
-  },
-  {
-   "id": "B50_pavillons",
-   "name": "Pavillons des émotions",
-   "type": "building",
-   "sector_id": "S15_feelings",
-   "rooms": [
-    "R_emo_love_01",
-    "R_emo_joy_01",
-    "R_emo_fear_02",
-    "R_emo_sad_01",
-    "R_emo_sad_02",
-    "R_emo_love_02",
-    "R_emo_joy_02",
-    "R_emo_love_03",
-    "R_emo_fear_03",
-    "R_emo_joy_03",
-    "R_emo_fear_05",
-    "R_emo_sad_03",
-    "R_emo_fear_04",
-    "R_emo_joy_04",
-    "R_emo_love_04"
-   ],
-   "mean_level": 3.83
-  },
-  {
-   "id": "B51_portraits",
-   "name": "Galerie des portraits (people & character)",
-   "type": "building",
-   "sector_id": "S15_feelings",
-   "rooms": [
-    "R_people_01",
-    "R_people_02",
-    "R_appearance_01",
-    "R_character_01",
-    "R_appearance_04",
-    "R_character_04",
-    "R_people_03",
-    "R_character_05",
-    "R_appearance_02",
-    "R_character_02",
-    "R_appearance_03",
-    "R_appearance_05",
-    "R_character_03",
-    "R_character_06",
-    "R_appearance_07",
-    "R_people_04",
-    "R_character_07",
-    "R_appearance_06",
-    "R_character_08",
-    "R_character_09"
-   ],
-   "mean_level": 3.85
-  },
-  {
-   "id": "B52_miroirs",
-   "name": "Palais des Glaces (hall of mirrors)",
-   "type": "building",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_adj_size_01",
-    "R_adj_size_02"
-   ],
-   "mean_level": 4.29
-  },
-  {
-   "id": "B53_hercule",
-   "name": "Tente de l'Hercule (strongman tent)",
-   "type": "building",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_adj_intensity_01",
-    "R_adj_intensity_04",
-    "R_adj_intensity_03",
-    "R_adj_intensity_02",
-    "R_adj_intensity_06",
-    "R_adj_intensity_05",
-    "R_adj_intensity_08",
-    "R_adj_intensity_07"
-   ],
-   "mean_level": 4.36
-  },
-  {
-   "id": "B54_concours",
-   "name": "Tente du Concours (show-judging tent)",
-   "type": "building",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_adj_quality_01",
-    "R_adj_quality_02",
-    "R_adj_quality_04",
-    "R_adj_quality_03",
-    "R_adj_quality_06",
-    "R_adj_quality_05",
-    "R_adj_quality_07",
-    "R_adj_quality_08"
-   ],
-   "mean_level": 4.01
-  },
-  {
-   "id": "B55_cirque",
-   "name": "Chapiteau du Cirque (circus big top)",
-   "type": "building",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_adv_manner_01",
-    "R_adv_manner_03",
-    "R_adv_manner_02",
-    "R_adv_manner_05",
-    "R_adv_manner_07",
-    "R_adv_manner_06",
-    "R_adv_manner_04"
-   ],
-   "mean_level": 4.33
-  },
-  {
-   "id": "B56_labyrinthe",
-   "name": "Labyrinthe de buis (hedge maze)",
-   "type": "site",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_adv_place_01",
-    "R_adv_place_02"
-   ],
-   "mean_level": 3.77
-  },
-  {
-   "id": "B57_pont",
-   "name": "Pont des Contraires (Opposites Bridge)",
-   "type": "site",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_opposites_01",
-    "R_opposites_05",
-    "R_opposites_02",
-    "R_opposites_04",
-    "R_opposites_03",
-    "R_opposites_06",
-    "R_opposites_07"
-   ],
-   "mean_level": 1.62
-  },
-  {
-   "id": "B58_proverbes",
-   "name": "Jardin des Proverbes (idiom garden)",
-   "type": "site",
-   "sector_id": "S16_park",
-   "rooms": [
-    "R_idioms_03",
-    "R_idioms_01",
-    "R_idioms_02",
-    "R_idioms_04",
-    "R_idioms_05"
-   ],
-   "mean_level": 3.75
-  },
-  {
-   "id": "ST_movement",
-   "name": "Rue du Mouvement",
-   "type": "verb_street",
-   "sector_id": "S08_travel",
-   "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
-   "architectural_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
-   "rooms": [
-    "ST_movement_seg013",
-    "ST_movement_seg018",
-    "ST_movement_seg015",
-    "ST_movement_seg012",
-    "ST_movement_seg016",
-    "ST_movement_seg014",
-    "ST_movement_seg017",
-    "ST_movement_seg011",
-    "ST_movement_seg019",
-    "ST_movement_seg022",
-    "ST_movement_seg020",
-    "ST_movement_seg021",
-    "ST_movement_seg023",
-    "ST_movement_seg024"
-   ],
-   "mean_level": 4.29,
-   "segments": [
-    "ST_movement_seg013",
-    "ST_movement_seg018",
-    "ST_movement_seg015",
-    "ST_movement_seg012",
-    "ST_movement_seg016",
-    "ST_movement_seg014",
-    "ST_movement_seg017",
-    "ST_movement_seg011",
-    "ST_movement_seg019",
-    "ST_movement_seg022",
-    "ST_movement_seg020",
-    "ST_movement_seg021",
-    "ST_movement_seg023",
-    "ST_movement_seg024"
-   ],
-   "verb_count": 81,
-   "segment_street_names": {
-    "ST_movement_seg011": {
-     "name_fr": "Place du Défilé",
-     "name_en": "Parade Square"
+  "buildings": [
+    {
+      "id": "B01_fontaine",
+      "name": "Fontaine des Salutations (greeting fountain)",
+      "type": "site",
+      "sector_id": "S01_beginner",
+      "rooms": [
+        "R_farewell",
+        "R_exclaim_01",
+        "R_greet",
+        "R_polite",
+        "R_exclaim_02",
+        "R_exclaim_03"
+      ],
+      "mean_level": 2.36
     },
-    "ST_movement_seg012": {
-     "name_fr": "Ruelle des Rebonds",
-     "name_en": "Bounces Lane"
+    {
+      "id": "B02_ecole",
+      "name": "Petite École (first schoolhouse)",
+      "type": "building",
+      "sector_id": "S01_beginner",
+      "rooms": [
+        "R_alphabet_01",
+        "R_alphabet_02",
+        "R_articles",
+        "R_grammar_verbs",
+        "R_numbers1",
+        "R_prepositions_01",
+        "R_pronouns_01",
+        "R_questions",
+        "R_prepositions_02",
+        "R_pronouns_02",
+        "R_grammar_basic",
+        "R_numbers2",
+        "R_conjunctions",
+        "R_grammar_general",
+        "R_pronouns_03",
+        "R_prepositions_03"
+      ],
+      "mean_level": 1.6
     },
-    "ST_movement_seg013": {
-     "name_fr": "Quai des Navigateurs",
-     "name_en": "Navigators' Quay"
+    {
+      "id": "B03_horloge",
+      "name": "Tour de l'Horloge (clock & calendar tower)",
+      "type": "building",
+      "sector_id": "S01_beginner",
+      "rooms": [
+        "R_time_clock_01",
+        "R_adv_time_01",
+        "R_abs_time_01",
+        "R_time_days_01",
+        "R_time_days_02",
+        "R_adv_time_02",
+        "R_time_clock_02",
+        "R_abs_time_02",
+        "R_adv_time_03"
+      ],
+      "mean_level": 2.85
     },
-    "ST_movement_seg014": {
-     "name_fr": "Chemin des Vagabonds",
-     "name_en": "Wanderers' Lane"
+    {
+      "id": "B04_atelier_couleurs",
+      "name": "Atelier des Couleurs & Formes (colors and shapes)",
+      "type": "building",
+      "sector_id": "S01_beginner",
+      "rooms": [
+        "R_colors_01",
+        "R_shapes_03",
+        "R_shapes_02",
+        "R_colors_02"
+      ],
+      "mean_level": 3.11
     },
-    "ST_movement_seg015": {
-     "name_fr": "Allée de la Balade",
-     "name_en": "Stroll Alley"
+    {
+      "id": "B05_maison",
+      "name": "La Maison familiale",
+      "type": "building",
+      "sector_id": "S02_home",
+      "rooms": [
+        "R_family_01",
+        "R_entrance_01",
+        "R_wardrobe_01",
+        "R_attic",
+        "R_dining",
+        "R_bedroom_01",
+        "R_living",
+        "R_wardrobe_03",
+        "R_garage",
+        "R_wardrobe_02",
+        "R_entrance_03",
+        "R_entrance_02",
+        "R_bathroom",
+        "R_kitchen_02",
+        "R_pets",
+        "R_bedroom_02",
+        "R_kitchen_01",
+        "R_garden",
+        "R_playroom",
+        "R_family_02",
+        "R_laundry_01",
+        "R_entrance_04",
+        "R_wardrobe_04"
+      ],
+      "mean_level": 3.37
     },
-    "ST_movement_seg016": {
-     "name_fr": "Chemin des Éclaireurs",
-     "name_en": "Scouts' Lane"
+    {
+      "id": "B06_marche",
+      "name": "Marché couvert (covered market)",
+      "type": "building",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_bakery_01",
+        "R_grocery_01",
+        "R_butcher_01",
+        "R_fruits_01",
+        "R_grocery_02",
+        "R_vegetables",
+        "R_butcher_02",
+        "R_bakery_02",
+        "R_fruits_02"
+      ],
+      "mean_level": 4.12
     },
-    "ST_movement_seg017": {
-     "name_fr": "Rue des Vacanciers",
-     "name_en": "Holidaymakers' Street"
+    {
+      "id": "B07_rue_commercante",
+      "name": "Rue Commerçante (shopping street)",
+      "type": "building",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_shop_general_01",
+        "R_bookshop_01",
+        "R_boutique_02",
+        "R_hardware_02",
+        "R_boutique_01",
+        "R_shop_general_02",
+        "R_shop_general_03",
+        "R_hardware_01",
+        "R_florist",
+        "R_bookshop_02",
+        "R_boutique_03",
+        "R_shop_general_04"
+      ],
+      "mean_level": 3.77
     },
-    "ST_movement_seg018": {
-     "name_fr": "Rue des Déménageurs",
-     "name_en": "Removal Men's Street"
+    {
+      "id": "B59_brocante",
+      "name": "Brocante (antiques & second-hand market)",
+      "type": "site",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_adj_time_01",
+        "R_adj_time_02",
+        "R_adj_time_03",
+        "R_adj_time_06",
+        "R_adj_time_07",
+        "R_adj_time_04",
+        "R_adj_time_05"
+      ],
+      "mean_level": 4.39
     },
-    "ST_movement_seg019": {
-     "name_fr": "Allée des Nouveaux-Voisins",
-     "name_en": "New-Neighbors Alley"
+    {
+      "id": "B60_balance",
+      "name": "Halle aux Poids (weighing hall)",
+      "type": "building",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_adv_degree_01",
+        "R_abs_quantity_01",
+        "R_abs_quantity_02",
+        "R_abs_quantity_03",
+        "R_adv_degree_02",
+        "R_abs_quantity_04",
+        "R_adv_degree_03"
+      ],
+      "mean_level": 3.45
     },
-    "ST_movement_seg020": {
-     "name_fr": "Ruelle des Lambins",
-     "name_en": "Dawdlers' Lane"
+    {
+      "id": "B61_reparation",
+      "name": "Atelier de Réparation (repair café)",
+      "type": "building",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_adj_state_03",
+        "R_adj_state_04",
+        "R_adj_state_02",
+        "R_adj_state_05"
+      ],
+      "mean_level": 4.08
     },
-    "ST_movement_seg021": {
-     "name_fr": "Quai des Ancres",
-     "name_en": "Anchors Quay"
+    {
+      "id": "B62_couture",
+      "name": "Maison de Couture (fashion house)",
+      "type": "building",
+      "sector_id": "S03_market",
+      "rooms": [
+        "R_abs_beauty_02",
+        "R_abs_beauty_01",
+        "R_abs_beauty_03"
+      ],
+      "mean_level": 3.87
     },
-    "ST_movement_seg022": {
-     "name_fr": "Allée des Cyclistes",
-     "name_en": "Cyclists' Alley"
+    {
+      "id": "B08_cafe",
+      "name": "Café de la Place",
+      "type": "building",
+      "sector_id": "S04_cafes",
+      "rooms": [
+        "R_cafe_01",
+        "R_cafe_02"
+      ],
+      "mean_level": 3.75,
+      "name_fr": "Café de la Place"
     },
-    "ST_movement_seg023": {
-     "name_fr": "Place des Parachutistes",
-     "name_en": "Parachutists' Square"
+    {
+      "id": "B09_restaurant",
+      "name": "Restaurant Le Bon Goût",
+      "type": "building",
+      "sector_id": "S04_cafes",
+      "rooms": [
+        "R_resto_kitchen_01",
+        "R_resto_room",
+        "R_wine_01",
+        "R_resto_kitchen_02"
+      ],
+      "mean_level": 4.0,
+      "name_fr": "Restaurant Le Bon Goût"
     },
-    "ST_movement_seg024": {
-     "name_fr": "Quai des Convois",
-     "name_en": "Convoys Quay"
+    {
+      "id": "B10_banque",
+      "name": "Banque du Village",
+      "type": "building",
+      "sector_id": "S05_bank",
+      "rooms": [
+        "R_bank_counter_01",
+        "R_bank_economy_02",
+        "R_bank_economy_01",
+        "R_bank_counter_02",
+        "R_bank_counter_03",
+        "R_bank_economy_04",
+        "R_bank_economy_03"
+      ],
+      "mean_level": 4.06
+    },
+    {
+      "id": "B11_bureaux",
+      "name": "Les Bureaux (office building)",
+      "type": "building",
+      "sector_id": "S05_bank",
+      "rooms": [
+        "R_office_01",
+        "R_occupations_01",
+        "R_occupations_02",
+        "R_occupations_03",
+        "R_office_02",
+        "R_occupations_04",
+        "R_office_03",
+        "R_occupations_05"
+      ],
+      "mean_level": 3.75
+    },
+    {
+      "id": "B12_zone_artisanale",
+      "name": "Zone artisanale (workshops, industry & energy)",
+      "type": "building",
+      "sector_id": "S05_bank",
+      "rooms": [
+        "R_abs_work_01",
+        "R_industry_01",
+        "R_energy_01",
+        "R_abs_work_02",
+        "R_energy_02",
+        "R_industry_02"
+      ],
+      "mean_level": 3.83
+    },
+    {
+      "id": "B13_mairie",
+      "name": "Hôtel de Ville",
+      "type": "building",
+      "sector_id": "S06_townhall",
+      "rooms": [
+        "R_adv_logic_01",
+        "R_adj_relation_01",
+        "R_adj_relation_02",
+        "R_politics_01",
+        "R_society_02",
+        "R_admin_01",
+        "R_adv_logic_03",
+        "R_adj_relation_04",
+        "R_politics_02",
+        "R_politics_03",
+        "R_adj_relation_05",
+        "R_adj_relation_06",
+        "R_adv_logic_02",
+        "R_adj_relation_03",
+        "R_admin_02",
+        "R_politics_05",
+        "R_adv_logic_05",
+        "R_politics_04",
+        "R_society_03",
+        "R_society_04",
+        "R_adj_relation_10",
+        "R_adv_logic_04",
+        "R_adj_relation_07",
+        "R_adj_relation_09",
+        "R_adj_relation_08"
+      ],
+      "mean_level": 4.03
+    },
+    {
+      "id": "B14_tribunal",
+      "name": "Palais de Justice",
+      "type": "building",
+      "sector_id": "S06_townhall",
+      "rooms": [
+        "R_police_01",
+        "R_adj_logic_03",
+        "R_court_01",
+        "R_court_02",
+        "R_abs_moral_02",
+        "R_adj_logic_02",
+        "R_abs_moral_03",
+        "R_police_02",
+        "R_police_03",
+        "R_abs_moral_05",
+        "R_adj_logic_05",
+        "R_court_03",
+        "R_police_04",
+        "R_adj_logic_04",
+        "R_abs_moral_04"
+      ],
+      "mean_level": 4.02
+    },
+    {
+      "id": "B15_poste",
+      "name": "La Poste",
+      "type": "building",
+      "sector_id": "S06_townhall",
+      "rooms": [
+        "R_post_01"
+      ],
+      "mean_level": 4.0
+    },
+    {
+      "id": "B16_caserne",
+      "name": "Monument aux morts & caserne (military history)",
+      "type": "site",
+      "sector_id": "S06_townhall",
+      "rooms": [
+        "R_military_01",
+        "R_military_02",
+        "R_military_03",
+        "R_military_04"
+      ],
+      "mean_level": 3.64
+    },
+    {
+      "id": "B63_pompiers",
+      "name": "Caserne des Pompiers (fire station)",
+      "type": "building",
+      "sector_id": "S06_townhall",
+      "rooms": [
+        "R_abs_problem_01",
+        "R_abs_problem_02",
+        "R_abs_problem_03",
+        "R_abs_problem_04"
+      ],
+      "mean_level": 3.55
+    },
+    {
+      "id": "B17_cabinet",
+      "name": "Cabinet médical",
+      "type": "building",
+      "sector_id": "S07_health",
+      "rooms": [
+        "R_doctor_01_z2",
+        "R_body_02",
+        "R_body_01",
+        "R_body_04",
+        "R_doctor_01",
+        "R_body_03_z1",
+        "R_body_03",
+        "R_body_05",
+        "R_doctor_02"
+      ],
+      "mean_level": 3.47
+    },
+    {
+      "id": "B18_pharmacie",
+      "name": "Pharmacie",
+      "type": "building",
+      "sector_id": "S07_health",
+      "rooms": [
+        "R_pharmacy"
+      ],
+      "mean_level": 4.29
+    },
+    {
+      "id": "B19_hopital",
+      "name": "Hôpital",
+      "type": "building",
+      "sector_id": "S07_health",
+      "rooms": [
+        "R_hospital_01",
+        "R_dentist_01",
+        "R_dentist_02",
+        "R_hospital_02"
+      ],
+      "mean_level": 4.33
+    },
+    {
+      "id": "B20_gare",
+      "name": "Gare SNCF",
+      "type": "building",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_abs_relation",
+        "R_station_01",
+        "R_station_02"
+      ],
+      "mean_level": 3.8
+    },
+    {
+      "id": "B21_aeroport",
+      "name": "Aéroport",
+      "type": "building",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_airport"
+      ],
+      "mean_level": 3.68
+    },
+    {
+      "id": "B22_hotel",
+      "name": "Hôtel des Voyageurs",
+      "type": "building",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_hotel_01",
+        "R_hotel_02",
+        "R_hotel_03"
+      ],
+      "mean_level": 3.52
+    },
+    {
+      "id": "B23_route",
+      "name": "La Route & garage auto",
+      "type": "site",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_road_01",
+        "R_road_02",
+        "R_road_03",
+        "R_road_04"
+      ],
+      "mean_level": 3.46
+    },
+    {
+      "id": "B24_port",
+      "name": "Port de pêche (harbor)",
+      "type": "site",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_harbour_01",
+        "R_harbour_02"
+      ],
+      "mean_level": 4.18
+    },
+    {
+      "id": "B25_monde",
+      "name": "Office de tourisme (map of the world)",
+      "type": "building",
+      "sector_id": "S08_travel",
+      "rooms": [
+        "R_abs_space_01",
+        "R_world_01",
+        "R_world_02",
+        "R_abs_space_02",
+        "R_world_03"
+      ],
+      "mean_level": 3.31
+    },
+    {
+      "id": "B26_montagne",
+      "name": "Station de ski & montagne",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_mountain_01",
+        "R_mountain_02",
+        "R_mountain_03"
+      ],
+      "mean_level": 3.59
+    },
+    {
+      "id": "B27_foret",
+      "name": "Forêt",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_forest_01",
+        "R_birds_01",
+        "R_wildlife_02",
+        "R_wildlife_01",
+        "R_forest_02",
+        "R_insects",
+        "R_birds_02"
+      ],
+      "mean_level": 3.85
+    },
+    {
+      "id": "B28_riviere",
+      "name": "Rivière & lac",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_river_02",
+        "R_river_01"
+      ],
+      "mean_level": 3.46
+    },
+    {
+      "id": "B29_plage",
+      "name": "Plage",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_beach_01",
+        "R_beach_02"
+      ],
+      "mean_level": 4.17
+    },
+    {
+      "id": "B30_camping",
+      "name": "Camping",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_camping_01",
+        "R_camping_02"
+      ],
+      "mean_level": 3.53
+    },
+    {
+      "id": "B31_ferme",
+      "name": "Ferme",
+      "type": "building",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_farm_animals_01",
+        "R_fields_01",
+        "R_farm_animals_02",
+        "R_fields_02",
+        "R_farm_animals_03"
+      ],
+      "mean_level": 4.13
+    },
+    {
+      "id": "B32_ciel",
+      "name": "Observatoire & météo (sky)",
+      "type": "site",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_weather_01",
+        "R_sky_02",
+        "R_sky_01",
+        "R_weather_02",
+        "R_sky_03"
+      ],
+      "mean_level": 3.82
+    },
+    {
+      "id": "B64_serre",
+      "name": "Grande Serre (greenhouse)",
+      "type": "building",
+      "sector_id": "S09_nature",
+      "rooms": [
+        "R_abs_change_01",
+        "R_abs_change_02"
+      ],
+      "mean_level": 4.36
+    },
+    {
+      "id": "B33_lycee",
+      "name": "Lycée (school)",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_school_01",
+        "R_school_02",
+        "R_school_03"
+      ],
+      "mean_level": 3.38
+    },
+    {
+      "id": "B34_humanites",
+      "name": "Faculté des Lettres (humanities)",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_abs_mind_01",
+        "R_philosophy_01",
+        "R_literature_01",
+        "R_history_01",
+        "R_linguistics_01",
+        "R_social_science_01",
+        "R_linguistics_02",
+        "R_literature_02",
+        "R_history_02",
+        "R_philosophy_02",
+        "R_literature_03",
+        "R_abs_mind_02",
+        "R_abs_mind_03",
+        "R_philosophy_03",
+        "R_history_03",
+        "R_literature_04",
+        "R_social_science_02",
+        "R_linguistics_03"
+      ],
+      "mean_level": 3.65
+    },
+    {
+      "id": "B35_sciences",
+      "name": "Faculté des Sciences",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_abs_study_02",
+        "R_physics_01",
+        "R_chemistry_01",
+        "R_geology",
+        "R_biology",
+        "R_chemistry_02",
+        "R_abs_study_03",
+        "R_physics_02"
+      ],
+      "mean_level": 4.33
+    },
+    {
+      "id": "B36_maths",
+      "name": "Institut de Mathématiques",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_measures_01",
+        "R_math_01",
+        "R_measures_03",
+        "R_math_02"
+      ],
+      "mean_level": 3.56
+    },
+    {
+      "id": "B37_informatique",
+      "name": "École d'Informatique",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_computing_01",
+        "R_computing_02"
+      ],
+      "mean_level": 4.21
+    },
+    {
+      "id": "B38_ingenierie",
+      "name": "École d'Ingénieurs",
+      "type": "building",
+      "sector_id": "S10_university",
+      "rooms": [
+        "R_engineering"
+      ],
+      "mean_level": 4.0
+    },
+    {
+      "id": "B39_eglise",
+      "name": "Église paroissiale Notre-Dame",
+      "type": "building",
+      "sector_id": "S11_church",
+      "rooms": [
+        "R_ch_parvis",
+        "R_ch_mercy",
+        "R_ch_nave",
+        "R_ch_crypt",
+        "R_ch_confessional",
+        "R_ch_lady_chapel",
+        "R_ch_altar_02",
+        "R_ch_baptistery",
+        "R_ch_sacristy"
+      ],
+      "mean_level": 4.57
+    },
+    {
+      "id": "B40_abbaye",
+      "name": "Abbaye Saint-Benoît",
+      "type": "building",
+      "sector_id": "S11_church",
+      "rooms": [
+        "R_ab_choir",
+        "R_ab_cloister",
+        "R_ab_scriptorium",
+        "R_ab_refectory"
+      ],
+      "mean_level": 5.0
+    },
+    {
+      "id": "B41_presbytere",
+      "name": "Presbytère & salle paroissiale",
+      "type": "building",
+      "sector_id": "S11_church",
+      "rooms": [
+        "R_ch_catechism",
+        "R_ch_calendar"
+      ],
+      "mean_level": 3.87
+    },
+    {
+      "id": "B42_cathedrale",
+      "name": "Cathédrale (the wider Church)",
+      "type": "building",
+      "sector_id": "S11_church",
+      "rooms": [
+        "R_ch_hierarchy"
+      ],
+      "mean_level": 4.95
+    },
+    {
+      "id": "B43_concorde",
+      "name": "Maisons de prière",
+      "type": "building",
+      "sector_id": "S12_faiths",
+      "rooms": [
+        "R_faiths",
+        "R_synagogue",
+        "R_mosque"
+      ],
+      "mean_level": 4.5
+    },
+    {
+      "id": "B44_musee",
+      "name": "Musée des Beaux-Arts et d'Histoire",
+      "type": "building",
+      "sector_id": "S13_museum",
+      "rooms": [
+        "R_abs_senses_01",
+        "R_abs_power_01",
+        "R_art_01",
+        "R_adj_senses_02",
+        "R_text_crime_02",
+        "R_text_crime_01",
+        "R_heraldry_01",
+        "R_abs_power_03",
+        "R_abs_senses_02",
+        "R_art_02",
+        "R_adj_senses_03",
+        "R_adj_senses_04",
+        "R_adj_senses_05",
+        "R_abs_power_02",
+        "R_text_death",
+        "R_text_medical",
+        "R_text_crime_03",
+        "R_heraldry_02",
+        "R_abs_power_04",
+        "R_abs_power_05",
+        "R_adj_senses_07",
+        "R_adj_senses_09",
+        "R_art_03",
+        "R_abs_senses_03",
+        "R_adj_senses_06",
+        "R_adj_senses_08"
+      ],
+      "mean_level": 4.04
+    },
+    {
+      "id": "B45_theatre",
+      "name": "Théâtre & Cinéma",
+      "type": "building",
+      "sector_id": "S14_culture",
+      "rooms": [
+        "R_adj_mind_01",
+        "R_theatre_01",
+        "R_cinema_01",
+        "R_cinema_02",
+        "R_theatre_02",
+        "R_adj_mind_02",
+        "R_adj_mind_03",
+        "R_theatre_03",
+        "R_adj_mind_05",
+        "R_adj_mind_04",
+        "R_cinema_03"
+      ],
+      "mean_level": 3.8
+    },
+    {
+      "id": "B46_conservatoire",
+      "name": "Conservatoire (music school)",
+      "type": "building",
+      "sector_id": "S14_culture",
+      "rooms": [
+        "R_music_01",
+        "R_music_02",
+        "R_music_03",
+        "R_music_04"
+      ],
+      "mean_level": 3.6
+    },
+    {
+      "id": "B47_stade",
+      "name": "Stade & gymnase",
+      "type": "building",
+      "sector_id": "S14_culture",
+      "rooms": [
+        "R_abs_action_01",
+        "R_sports_01",
+        "R_abs_action_02",
+        "R_sports_03",
+        "R_sports_02",
+        "R_abs_action_03",
+        "R_sports_04"
+      ],
+      "mean_level": 3.52
+    },
+    {
+      "id": "B48_jeux",
+      "name": "Salle de jeux & fêtes",
+      "type": "building",
+      "sector_id": "S14_culture",
+      "rooms": [
+        "R_celebrations_01",
+        "R_games_01",
+        "R_celebrations_02",
+        "R_games_02"
+      ],
+      "mean_level": 3.65
+    },
+    {
+      "id": "B49_kiosque",
+      "name": "Kiosque à journaux (media)",
+      "type": "site",
+      "sector_id": "S14_culture",
+      "rooms": [
+        "R_media_01",
+        "R_abs_speech_01",
+        "R_abs_speech_02",
+        "R_media_02",
+        "R_abs_speech_03",
+        "R_media_03"
+      ],
+      "mean_level": 3.55
+    },
+    {
+      "id": "B50_pavillons",
+      "name": "Pavillons des émotions",
+      "type": "building",
+      "sector_id": "S15_feelings",
+      "rooms": [
+        "R_emo_love_01",
+        "R_emo_joy_01",
+        "R_emo_fear_02",
+        "R_emo_sad_01",
+        "R_emo_sad_02",
+        "R_emo_love_02",
+        "R_emo_joy_02",
+        "R_emo_love_03",
+        "R_emo_fear_03",
+        "R_emo_joy_03",
+        "R_emo_fear_05",
+        "R_emo_sad_03",
+        "R_emo_fear_04",
+        "R_emo_joy_04",
+        "R_emo_love_04"
+      ],
+      "mean_level": 3.83
+    },
+    {
+      "id": "B51_portraits",
+      "name": "Galerie des portraits (people & character)",
+      "type": "building",
+      "sector_id": "S15_feelings",
+      "rooms": [
+        "R_people_01",
+        "R_people_02",
+        "R_appearance_01",
+        "R_character_01",
+        "R_appearance_04",
+        "R_character_04",
+        "R_people_03",
+        "R_character_05",
+        "R_appearance_02",
+        "R_character_02",
+        "R_appearance_03",
+        "R_appearance_05",
+        "R_character_03",
+        "R_character_06",
+        "R_appearance_07",
+        "R_people_04",
+        "R_character_07",
+        "R_appearance_06",
+        "R_character_08",
+        "R_character_09"
+      ],
+      "mean_level": 3.85
+    },
+    {
+      "id": "B52_miroirs",
+      "name": "Palais des Glaces (hall of mirrors)",
+      "type": "building",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_adj_size_01",
+        "R_adj_size_02"
+      ],
+      "mean_level": 4.29
+    },
+    {
+      "id": "B53_hercule",
+      "name": "Tente de l'Hercule (strongman tent)",
+      "type": "building",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_adj_intensity_01",
+        "R_adj_intensity_04",
+        "R_adj_intensity_03",
+        "R_adj_intensity_02",
+        "R_adj_intensity_06",
+        "R_adj_intensity_05",
+        "R_adj_intensity_08",
+        "R_adj_intensity_07"
+      ],
+      "mean_level": 4.36
+    },
+    {
+      "id": "B54_concours",
+      "name": "Tente du Concours (show-judging tent)",
+      "type": "building",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_adj_quality_01",
+        "R_adj_quality_02",
+        "R_adj_quality_04",
+        "R_adj_quality_03",
+        "R_adj_quality_06",
+        "R_adj_quality_05",
+        "R_adj_quality_07",
+        "R_adj_quality_08"
+      ],
+      "mean_level": 4.01
+    },
+    {
+      "id": "B55_cirque",
+      "name": "Chapiteau du Cirque (circus big top)",
+      "type": "building",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_adv_manner_01",
+        "R_adv_manner_03",
+        "R_adv_manner_02",
+        "R_adv_manner_05",
+        "R_adv_manner_07",
+        "R_adv_manner_06",
+        "R_adv_manner_04"
+      ],
+      "mean_level": 4.33
+    },
+    {
+      "id": "B56_labyrinthe",
+      "name": "Labyrinthe de buis (hedge maze)",
+      "type": "site",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_adv_place_01",
+        "R_adv_place_02"
+      ],
+      "mean_level": 3.77
+    },
+    {
+      "id": "B57_pont",
+      "name": "Pont des Contraires (Opposites Bridge)",
+      "type": "site",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_opposites_01",
+        "R_opposites_05",
+        "R_opposites_02",
+        "R_opposites_04",
+        "R_opposites_03",
+        "R_opposites_06",
+        "R_opposites_07"
+      ],
+      "mean_level": 1.62
+    },
+    {
+      "id": "B58_proverbes",
+      "name": "Jardin des Proverbes (idiom garden)",
+      "type": "site",
+      "sector_id": "S16_park",
+      "rooms": [
+        "R_idioms_03",
+        "R_idioms_01",
+        "R_idioms_02",
+        "R_idioms_04",
+        "R_idioms_05"
+      ],
+      "mean_level": 3.75
+    },
+    {
+      "id": "ST_movement",
+      "name": "Rue du Mouvement",
+      "type": "verb_street",
+      "sector_id": "S08_travel",
+      "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
+      "architectural_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
+      "rooms": [
+        "ST_movement_seg013",
+        "ST_movement_seg018",
+        "ST_movement_seg015",
+        "ST_movement_seg012",
+        "ST_movement_seg016",
+        "ST_movement_seg014",
+        "ST_movement_seg017",
+        "ST_movement_seg011",
+        "ST_movement_seg019",
+        "ST_movement_seg022",
+        "ST_movement_seg020",
+        "ST_movement_seg021",
+        "ST_movement_seg023",
+        "ST_movement_seg024"
+      ],
+      "mean_level": 4.29,
+      "segments": [
+        "ST_movement_seg013",
+        "ST_movement_seg018",
+        "ST_movement_seg015",
+        "ST_movement_seg012",
+        "ST_movement_seg016",
+        "ST_movement_seg014",
+        "ST_movement_seg017",
+        "ST_movement_seg011",
+        "ST_movement_seg019",
+        "ST_movement_seg022",
+        "ST_movement_seg020",
+        "ST_movement_seg021",
+        "ST_movement_seg023",
+        "ST_movement_seg024"
+      ],
+      "verb_count": 81,
+      "segment_street_names": {
+        "ST_movement_seg011": {
+          "name_fr": "Place du Défilé",
+          "name_en": "Parade Square"
+        },
+        "ST_movement_seg012": {
+          "name_fr": "Ruelle des Rebonds",
+          "name_en": "Bounces Lane"
+        },
+        "ST_movement_seg013": {
+          "name_fr": "Quai des Navigateurs",
+          "name_en": "Navigators' Quay"
+        },
+        "ST_movement_seg014": {
+          "name_fr": "Chemin des Vagabonds",
+          "name_en": "Wanderers' Lane"
+        },
+        "ST_movement_seg015": {
+          "name_fr": "Allée de la Balade",
+          "name_en": "Stroll Alley"
+        },
+        "ST_movement_seg016": {
+          "name_fr": "Chemin des Éclaireurs",
+          "name_en": "Scouts' Lane"
+        },
+        "ST_movement_seg017": {
+          "name_fr": "Rue des Vacanciers",
+          "name_en": "Holidaymakers' Street"
+        },
+        "ST_movement_seg018": {
+          "name_fr": "Rue des Déménageurs",
+          "name_en": "Removal Men's Street"
+        },
+        "ST_movement_seg019": {
+          "name_fr": "Allée des Nouveaux-Voisins",
+          "name_en": "New-Neighbors Alley"
+        },
+        "ST_movement_seg020": {
+          "name_fr": "Ruelle des Lambins",
+          "name_en": "Dawdlers' Lane"
+        },
+        "ST_movement_seg021": {
+          "name_fr": "Quai des Ancres",
+          "name_en": "Anchors Quay"
+        },
+        "ST_movement_seg022": {
+          "name_fr": "Allée des Cyclistes",
+          "name_en": "Cyclists' Alley"
+        },
+        "ST_movement_seg023": {
+          "name_fr": "Place des Parachutistes",
+          "name_en": "Parachutists' Square"
+        },
+        "ST_movement_seg024": {
+          "name_fr": "Quai des Convois",
+          "name_en": "Convoys Quay"
+        }
+      }
+    },
+    {
+      "id": "ST_communication",
+      "name": "Rue de la Parole",
+      "type": "verb_street",
+      "sector_id": "S14_culture",
+      "meaning_group": "speak say tell ask answer call write read explain shout discuss communicate",
+      "architectural_theme": "Belle Époque theaters and kiosks with posters and loudspeaker horns",
+      "rooms": [
+        "ST_communication_seg006",
+        "ST_communication_seg007",
+        "ST_communication_seg008",
+        "ST_communication_seg009",
+        "ST_communication_seg013",
+        "ST_communication_seg018",
+        "ST_communication_seg010",
+        "ST_communication_seg012",
+        "ST_communication_seg014",
+        "ST_communication_seg015",
+        "ST_communication_seg019",
+        "ST_communication_seg020",
+        "ST_communication_seg011",
+        "ST_communication_seg016",
+        "ST_communication_seg017",
+        "ST_communication_seg027",
+        "ST_communication_seg021",
+        "ST_communication_seg022",
+        "ST_communication_seg024",
+        "ST_communication_seg025",
+        "ST_communication_seg026",
+        "ST_communication_seg023"
+      ],
+      "mean_level": 3.83,
+      "segments": [
+        "ST_communication_seg006",
+        "ST_communication_seg007",
+        "ST_communication_seg008",
+        "ST_communication_seg009",
+        "ST_communication_seg013",
+        "ST_communication_seg018",
+        "ST_communication_seg010",
+        "ST_communication_seg012",
+        "ST_communication_seg014",
+        "ST_communication_seg015",
+        "ST_communication_seg019",
+        "ST_communication_seg020",
+        "ST_communication_seg011",
+        "ST_communication_seg016",
+        "ST_communication_seg017",
+        "ST_communication_seg027",
+        "ST_communication_seg021",
+        "ST_communication_seg022",
+        "ST_communication_seg024",
+        "ST_communication_seg025",
+        "ST_communication_seg026",
+        "ST_communication_seg023"
+      ],
+      "verb_count": 132,
+      "segment_street_names": {
+        "ST_communication_seg006": {
+          "name_fr": "Allée des Conteurs",
+          "name_en": "Storytellers' Alley"
+        },
+        "ST_communication_seg007": {
+          "name_fr": "Rue des Promesses",
+          "name_en": "Promises Street"
+        },
+        "ST_communication_seg008": {
+          "name_fr": "Impasse des Menteurs",
+          "name_en": "Fibbers' Close"
+        },
+        "ST_communication_seg009": {
+          "name_fr": "Ruelle des Excuses",
+          "name_en": "Excuses Lane"
+        },
+        "ST_communication_seg010": {
+          "name_fr": "Ruelle des Chuchotements",
+          "name_en": "Whispers Lane"
+        },
+        "ST_communication_seg011": {
+          "name_fr": "Passage des Échos",
+          "name_en": "Echoes Passage"
+        },
+        "ST_communication_seg012": {
+          "name_fr": "Rue des Imprimeurs",
+          "name_en": "Printers' Street"
+        },
+        "ST_communication_seg013": {
+          "name_fr": "Allée des Aboiements",
+          "name_en": "Barking Alley"
+        },
+        "ST_communication_seg014": {
+          "name_fr": "Place des Bavards",
+          "name_en": "Chatterboxes' Square"
+        },
+        "ST_communication_seg015": {
+          "name_fr": "Rue du Magnétophone",
+          "name_en": "Tape-Recorder Street"
+        },
+        "ST_communication_seg016": {
+          "name_fr": "Ruelle des Déchiffreurs",
+          "name_en": "Code-Breakers' Lane"
+        },
+        "ST_communication_seg017": {
+          "name_fr": "Quai des Rameurs",
+          "name_en": "Rowers' Quay"
+        },
+        "ST_communication_seg018": {
+          "name_fr": "Rue des Traducteurs",
+          "name_en": "Translators' Street"
+        },
+        "ST_communication_seg019": {
+          "name_fr": "Ruelle de l'Abécédaire",
+          "name_en": "ABC-Book Lane"
+        },
+        "ST_communication_seg020": {
+          "name_fr": "Rue des Correcteurs",
+          "name_en": "Proofreaders' Street"
+        },
+        "ST_communication_seg021": {
+          "name_fr": "Impasse des Déductions",
+          "name_en": "Deductions Close"
+        },
+        "ST_communication_seg022": {
+          "name_fr": "Place des Journalistes",
+          "name_en": "Journalists' Square"
+        },
+        "ST_communication_seg023": {
+          "name_fr": "Passage des Codes-Secrets",
+          "name_en": "Secret-Codes Passage"
+        },
+        "ST_communication_seg024": {
+          "name_fr": "Rue de la Ponctuation",
+          "name_en": "Punctuation Street"
+        },
+        "ST_communication_seg025": {
+          "name_fr": "Ruelle des Matous",
+          "name_en": "Tomcats' Lane"
+        },
+        "ST_communication_seg026": {
+          "name_fr": "Allée des Brailleurs",
+          "name_en": "Bawlers' Alley"
+        },
+        "ST_communication_seg027": {
+          "name_fr": "Place du Tutoiement",
+          "name_en": "Saying-\"Tu\" Square"
+        }
+      }
+    },
+    {
+      "id": "ST_routine",
+      "name": "Allée du Quotidien",
+      "type": "verb_street",
+      "sector_id": "S02_home",
+      "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
+      "architectural_theme": "Half-timbered Alsatian cottages with flower boxes",
+      "rooms": [
+        "ST_routine_seg002",
+        "ST_routine_seg001",
+        "ST_routine_seg003",
+        "ST_routine_seg004",
+        "ST_routine_seg007",
+        "ST_routine_seg005",
+        "ST_routine_seg006",
+        "ST_routine_seg009",
+        "ST_routine_seg008"
+      ],
+      "mean_level": 2.78,
+      "segments": [
+        "ST_routine_seg002",
+        "ST_routine_seg001",
+        "ST_routine_seg003",
+        "ST_routine_seg004",
+        "ST_routine_seg007",
+        "ST_routine_seg005",
+        "ST_routine_seg006",
+        "ST_routine_seg009",
+        "ST_routine_seg008"
+      ],
+      "verb_count": 54,
+      "segment_street_names": {
+        "ST_routine_seg001": {
+          "name_fr": "Rue du Marchand-de-Sable",
+          "name_en": "Sandman Street"
+        },
+        "ST_routine_seg002": {
+          "name_fr": "Rue des Lève-tôt",
+          "name_en": "Early Risers' Street"
+        },
+        "ST_routine_seg003": {
+          "name_fr": "Allée des Lavandières",
+          "name_en": "Washerwomen's Alley"
+        },
+        "ST_routine_seg004": {
+          "name_fr": "Ruelle des Brosses",
+          "name_en": "Brushes Lane"
+        },
+        "ST_routine_seg005": {
+          "name_fr": "Passage des Nœuds",
+          "name_en": "Knots Passage"
+        },
+        "ST_routine_seg006": {
+          "name_fr": "Rue des Balayeurs",
+          "name_en": "Sweepers' Street"
+        },
+        "ST_routine_seg007": {
+          "name_fr": "Allée du Fer-à-Repasser",
+          "name_en": "Clothes-Iron Alley"
+        },
+        "ST_routine_seg008": {
+          "name_fr": "Ruelle des Clowns",
+          "name_en": "Clowns' Lane"
+        },
+        "ST_routine_seg009": {
+          "name_fr": "Rue des Torchons",
+          "name_en": "Tea-Towels Street"
+        }
+      }
+    },
+    {
+      "id": "ST_cognition",
+      "name": "Avenue de la Pensée",
+      "type": "verb_street",
+      "sector_id": "S10_university",
+      "meaning_group": "think know understand learn remember forget believe imagine decide study",
+      "architectural_theme": "Neo-classical colonnades, domes and library towers",
+      "rooms": [
+        "ST_cognition_seg001",
+        "ST_cognition_seg002",
+        "ST_cognition_seg004",
+        "ST_cognition_seg005",
+        "ST_cognition_seg003",
+        "ST_cognition_seg006",
+        "ST_cognition_seg008",
+        "ST_cognition_seg010",
+        "ST_cognition_seg009",
+        "ST_cognition_seg007",
+        "ST_cognition_seg011",
+        "ST_cognition_seg013",
+        "ST_cognition_seg015",
+        "ST_cognition_seg012",
+        "ST_cognition_seg014"
+      ],
+      "mean_level": 3.2,
+      "segments": [
+        "ST_cognition_seg001",
+        "ST_cognition_seg002",
+        "ST_cognition_seg004",
+        "ST_cognition_seg005",
+        "ST_cognition_seg003",
+        "ST_cognition_seg006",
+        "ST_cognition_seg008",
+        "ST_cognition_seg010",
+        "ST_cognition_seg009",
+        "ST_cognition_seg007",
+        "ST_cognition_seg011",
+        "ST_cognition_seg013",
+        "ST_cognition_seg015",
+        "ST_cognition_seg012",
+        "ST_cognition_seg014"
+      ],
+      "verb_count": 89,
+      "segment_street_names": {
+        "ST_cognition_seg001": {
+          "name_fr": "Rue des Devinettes",
+          "name_en": "Riddles Street"
+        },
+        "ST_cognition_seg002": {
+          "name_fr": "Allée des Souvenirs",
+          "name_en": "Memories Alley"
+        },
+        "ST_cognition_seg003": {
+          "name_fr": "Impasse des Rêveurs",
+          "name_en": "Dreamers' Close"
+        },
+        "ST_cognition_seg004": {
+          "name_fr": "Rue des Apprentis",
+          "name_en": "Apprentices' Street"
+        },
+        "ST_cognition_seg005": {
+          "name_fr": "Chemin des Essais",
+          "name_en": "Tryouts Lane"
+        },
+        "ST_cognition_seg006": {
+          "name_fr": "Rue des Études",
+          "name_en": "Studies Street"
+        },
+        "ST_cognition_seg007": {
+          "name_fr": "Ruelle des Pile-ou-Face",
+          "name_en": "Heads-or-Tails Lane"
+        },
+        "ST_cognition_seg008": {
+          "name_fr": "Rue des Enquêteurs",
+          "name_en": "Investigators' Street"
+        },
+        "ST_cognition_seg009": {
+          "name_fr": "Allée des Imitateurs",
+          "name_en": "Copycats' Alley"
+        },
+        "ST_cognition_seg010": {
+          "name_fr": "Rue des Formules",
+          "name_en": "Formulas Street"
+        },
+        "ST_cognition_seg011": {
+          "name_fr": "Ruelle des Calculettes",
+          "name_en": "Calculators Lane"
+        },
+        "ST_cognition_seg012": {
+          "name_fr": "Chemin du Par-Cœur",
+          "name_en": "By-Heart Lane"
+        },
+        "ST_cognition_seg013": {
+          "name_fr": "Place des Diplômés",
+          "name_en": "Graduates' Square"
+        },
+        "ST_cognition_seg014": {
+          "name_fr": "Rue des Idéalistes",
+          "name_en": "Idealists' Street"
+        },
+        "ST_cognition_seg015": {
+          "name_fr": "Impasse des Chiffres",
+          "name_en": "Numbers Close"
+        }
+      }
+    },
+    {
+      "id": "ST_emotion",
+      "name": "Sentier des Sentiments",
+      "type": "verb_street",
+      "sector_id": "S15_feelings",
+      "meaning_group": "love hate like fear hope regret enjoy cry laugh feel worry",
+      "architectural_theme": "Pastel rococo pavilions with heart-shaped windows",
+      "rooms": [
+        "ST_emotion_seg005",
+        "ST_emotion_seg006",
+        "ST_emotion_seg002",
+        "ST_emotion_seg001",
+        "ST_emotion_seg004",
+        "ST_emotion_seg003",
+        "ST_emotion_seg007",
+        "ST_emotion_seg012",
+        "ST_emotion_seg010",
+        "ST_emotion_seg011",
+        "ST_emotion_seg013",
+        "ST_emotion_seg014",
+        "ST_emotion_seg008",
+        "ST_emotion_seg009",
+        "ST_emotion_seg015",
+        "ST_emotion_seg019",
+        "ST_emotion_seg018",
+        "ST_emotion_seg020",
+        "ST_emotion_seg016",
+        "ST_emotion_seg017"
+      ],
+      "mean_level": 3.35,
+      "segments": [
+        "ST_emotion_seg005",
+        "ST_emotion_seg006",
+        "ST_emotion_seg002",
+        "ST_emotion_seg001",
+        "ST_emotion_seg004",
+        "ST_emotion_seg003",
+        "ST_emotion_seg007",
+        "ST_emotion_seg012",
+        "ST_emotion_seg010",
+        "ST_emotion_seg011",
+        "ST_emotion_seg013",
+        "ST_emotion_seg014",
+        "ST_emotion_seg008",
+        "ST_emotion_seg009",
+        "ST_emotion_seg015",
+        "ST_emotion_seg019",
+        "ST_emotion_seg018",
+        "ST_emotion_seg020",
+        "ST_emotion_seg016",
+        "ST_emotion_seg017"
+      ],
+      "verb_count": 117,
+      "segment_street_names": {
+        "ST_emotion_seg001": {
+          "name_fr": "Rue des Inquiets",
+          "name_en": "Worriers' Street"
+        },
+        "ST_emotion_seg002": {
+          "name_fr": "Allée des Rires-et-Larmes",
+          "name_en": "Laughter-and-Tears Alley"
+        },
+        "ST_emotion_seg003": {
+          "name_fr": "Place des Applaudissements",
+          "name_en": "Applause Square"
+        },
+        "ST_emotion_seg004": {
+          "name_fr": "Rue du Sourire",
+          "name_en": "Smile Street"
+        },
+        "ST_emotion_seg005": {
+          "name_fr": "Allée des Amoureux",
+          "name_en": "Sweethearts' Alley"
+        },
+        "ST_emotion_seg006": {
+          "name_fr": "Rue des Admirateurs",
+          "name_en": "Admirers' Street"
+        },
+        "ST_emotion_seg007": {
+          "name_fr": "Ruelle des Frissons",
+          "name_en": "Shivers Lane"
+        },
+        "ST_emotion_seg008": {
+          "name_fr": "Impasse des Sourcils-Froncés",
+          "name_en": "Frowning-Brows Close"
+        },
+        "ST_emotion_seg009": {
+          "name_fr": "Passage des Méfiants",
+          "name_en": "Suspicious Folk's Passage"
+        },
+        "ST_emotion_seg010": {
+          "name_fr": "Rue des Consolations",
+          "name_en": "Comforts Street"
+        },
+        "ST_emotion_seg011": {
+          "name_fr": "Rue des Soucis",
+          "name_en": "Worries Street"
+        },
+        "ST_emotion_seg012": {
+          "name_fr": "Allée des Envieux",
+          "name_en": "Envious Folk's Alley"
+        },
+        "ST_emotion_seg013": {
+          "name_fr": "Ruelle des Bâillements",
+          "name_en": "Yawns Lane"
+        },
+        "ST_emotion_seg014": {
+          "name_fr": "Place des Rigolos",
+          "name_en": "Jokers' Square"
+        },
+        "ST_emotion_seg015": {
+          "name_fr": "Rue des Bienfaits",
+          "name_en": "Good Deeds Street"
+        },
+        "ST_emotion_seg016": {
+          "name_fr": "Chemin des Épouvantails",
+          "name_en": "Scarecrows' Lane"
+        },
+        "ST_emotion_seg017": {
+          "name_fr": "Impasse des Remords",
+          "name_en": "Regrets Close"
+        },
+        "ST_emotion_seg018": {
+          "name_fr": "Allée des Tracas",
+          "name_en": "Hassles Alley"
+        },
+        "ST_emotion_seg019": {
+          "name_fr": "Rue des Ronronnements",
+          "name_en": "Purring Street"
+        },
+        "ST_emotion_seg020": {
+          "name_fr": "Passage des Câlins",
+          "name_en": "Cuddles Passage"
+        }
+      }
+    },
+    {
+      "id": "ST_making",
+      "name": "Rue des Artisans",
+      "type": "verb_street",
+      "sector_id": "S05_bank",
+      "meaning_group": "make build repair create fix produce work manufacture paint construct",
+      "architectural_theme": "Brick workshops, cogs and chimneys (industrial steampunk)",
+      "rooms": [
+        "ST_making_seg002",
+        "ST_making_seg003",
+        "ST_making_seg001",
+        "ST_making_seg004",
+        "ST_making_seg005",
+        "ST_making_seg006",
+        "ST_making_seg007",
+        "ST_making_seg008",
+        "ST_making_seg009",
+        "ST_making_seg010",
+        "ST_making_seg013",
+        "ST_making_seg011",
+        "ST_making_seg012"
+      ],
+      "mean_level": 3.85,
+      "segments": [
+        "ST_making_seg002",
+        "ST_making_seg003",
+        "ST_making_seg001",
+        "ST_making_seg004",
+        "ST_making_seg005",
+        "ST_making_seg006",
+        "ST_making_seg007",
+        "ST_making_seg008",
+        "ST_making_seg009",
+        "ST_making_seg010",
+        "ST_making_seg013",
+        "ST_making_seg011",
+        "ST_making_seg012"
+      ],
+      "verb_count": 74,
+      "segment_street_names": {
+        "ST_making_seg001": {
+          "name_fr": "Rue des Réparateurs",
+          "name_en": "Repairers' Street"
+        },
+        "ST_making_seg002": {
+          "name_fr": "Allée des Inventeurs",
+          "name_en": "Inventors' Alley"
+        },
+        "ST_making_seg003": {
+          "name_fr": "Rue des Bâtisseurs",
+          "name_en": "Builders' Street"
+        },
+        "ST_making_seg004": {
+          "name_fr": "Rue des Fournisseurs",
+          "name_en": "Suppliers' Street"
+        },
+        "ST_making_seg005": {
+          "name_fr": "Passage des Vieux-Meubles",
+          "name_en": "Old-Furniture Passage"
+        },
+        "ST_making_seg006": {
+          "name_fr": "Rue des Photographes",
+          "name_en": "Photographers' Street"
+        },
+        "ST_making_seg007": {
+          "name_fr": "Ruelle des Perceurs",
+          "name_en": "Drillers' Lane"
+        },
+        "ST_making_seg008": {
+          "name_fr": "Rue des Sculpteurs",
+          "name_en": "Sculptors' Street"
+        },
+        "ST_making_seg009": {
+          "name_fr": "Allée des Tisserands",
+          "name_en": "Weavers' Alley"
+        },
+        "ST_making_seg010": {
+          "name_fr": "Rue des Chapeliers",
+          "name_en": "Hatters' Street"
+        },
+        "ST_making_seg011": {
+          "name_fr": "Rue des Paveurs",
+          "name_en": "Cobble-Layers' Street"
+        },
+        "ST_making_seg012": {
+          "name_fr": "Quai des Verriers",
+          "name_en": "Glassblowers' Quay"
+        },
+        "ST_making_seg013": {
+          "name_fr": "Impasse des Vitraux",
+          "name_en": "Stained-Glass Close"
+        }
+      }
+    },
+    {
+      "id": "ST_perception",
+      "name": "Galerie des Sens",
+      "type": "verb_street",
+      "sector_id": "S13_museum",
+      "meaning_group": "see look watch hear listen smell touch taste notice observe appear",
+      "architectural_theme": "Glass-and-mirror museum pavilions, giant eyes and ear trumpets",
+      "rooms": [
+        "ST_perception_seg001",
+        "ST_perception_seg002",
+        "ST_perception_seg003",
+        "ST_perception_seg004",
+        "ST_perception_seg005",
+        "ST_perception_seg007",
+        "ST_perception_seg006",
+        "ST_perception_seg009",
+        "ST_perception_seg010",
+        "ST_perception_seg008",
+        "ST_perception_seg011",
+        "ST_perception_seg013",
+        "ST_perception_seg012"
+      ],
+      "mean_level": 3.31,
+      "segments": [
+        "ST_perception_seg001",
+        "ST_perception_seg002",
+        "ST_perception_seg003",
+        "ST_perception_seg004",
+        "ST_perception_seg005",
+        "ST_perception_seg007",
+        "ST_perception_seg006",
+        "ST_perception_seg009",
+        "ST_perception_seg010",
+        "ST_perception_seg008",
+        "ST_perception_seg011",
+        "ST_perception_seg013",
+        "ST_perception_seg012"
+      ],
+      "verb_count": 74,
+      "segment_street_names": {
+        "ST_perception_seg001": {
+          "name_fr": "Rue des Surprises",
+          "name_en": "Surprises Street"
+        },
+        "ST_perception_seg002": {
+          "name_fr": "Allée des Curieux",
+          "name_en": "Nosy Folk's Alley"
+        },
+        "ST_perception_seg003": {
+          "name_fr": "Rue des Vitrines",
+          "name_en": "Shop-Windows Street"
+        },
+        "ST_perception_seg004": {
+          "name_fr": "Rue des Surveillants",
+          "name_en": "Watchers' Street"
+        },
+        "ST_perception_seg005": {
+          "name_fr": "Place des Témoins",
+          "name_en": "Witnesses' Square"
+        },
+        "ST_perception_seg006": {
+          "name_fr": "Ruelle des Soupçons",
+          "name_en": "Suspicions Lane"
+        },
+        "ST_perception_seg007": {
+          "name_fr": "Allée des Berceaux",
+          "name_en": "Cradles Alley"
+        },
+        "ST_perception_seg008": {
+          "name_fr": "Passage des Espions",
+          "name_en": "Spies' Passage"
+        },
+        "ST_perception_seg009": {
+          "name_fr": "Rue des Miroirs",
+          "name_en": "Mirrors Street"
+        },
+        "ST_perception_seg010": {
+          "name_fr": "Rue des Parfumeurs",
+          "name_en": "Perfumers' Street"
+        },
+        "ST_perception_seg011": {
+          "name_fr": "Impasse des Inspecteurs",
+          "name_en": "Inspectors' Close"
+        },
+        "ST_perception_seg012": {
+          "name_fr": "Allée des Étoiles",
+          "name_en": "Stars Alley"
+        },
+        "ST_perception_seg013": {
+          "name_fr": "Rue des Teinturiers",
+          "name_en": "Dyers' Street"
+        }
+      }
+    },
+    {
+      "id": "ST_possession",
+      "name": "Passage de l'Échange",
+      "type": "verb_street",
+      "sector_id": "S05_bank",
+      "meaning_group": "give take have keep receive send bring offer lose find hold get",
+      "architectural_theme": "Covered Parisian passages with mosaic floors",
+      "rooms": [
+        "ST_possession_seg002",
+        "ST_possession_seg003",
+        "ST_possession_seg001",
+        "ST_possession_seg005",
+        "ST_possession_seg006",
+        "ST_possession_seg004",
+        "ST_possession_seg007",
+        "ST_possession_seg011",
+        "ST_possession_seg008",
+        "ST_possession_seg009",
+        "ST_possession_seg012",
+        "ST_possession_seg010",
+        "ST_possession_seg015",
+        "ST_possession_seg013",
+        "ST_possession_seg014"
+      ],
+      "mean_level": 2.92,
+      "segments": [
+        "ST_possession_seg002",
+        "ST_possession_seg003",
+        "ST_possession_seg001",
+        "ST_possession_seg005",
+        "ST_possession_seg006",
+        "ST_possession_seg004",
+        "ST_possession_seg007",
+        "ST_possession_seg011",
+        "ST_possession_seg008",
+        "ST_possession_seg009",
+        "ST_possession_seg012",
+        "ST_possession_seg010",
+        "ST_possession_seg015",
+        "ST_possession_seg013",
+        "ST_possession_seg014"
+      ],
+      "verb_count": 86,
+      "segment_street_names": {
+        "ST_possession_seg001": {
+          "name_fr": "Rue des Trouvailles",
+          "name_en": "Lucky-Finds Street"
+        },
+        "ST_possession_seg002": {
+          "name_fr": "Allée des Cadeaux",
+          "name_en": "Presents Alley"
+        },
+        "ST_possession_seg003": {
+          "name_fr": "Rue des Coffres",
+          "name_en": "Treasure-Chests Street"
+        },
+        "ST_possession_seg004": {
+          "name_fr": "Place du Troc",
+          "name_en": "Swap-Shop Square"
+        },
+        "ST_possession_seg005": {
+          "name_fr": "Place des Bancs",
+          "name_en": "Benches Square"
+        },
+        "ST_possession_seg006": {
+          "name_fr": "Rue des Guichets",
+          "name_en": "Counters Street"
+        },
+        "ST_possession_seg007": {
+          "name_fr": "Rue des Envolées",
+          "name_en": "Take-Offs Street"
+        },
+        "ST_possession_seg008": {
+          "name_fr": "Impasse des Seaux-Vides",
+          "name_en": "Empty-Buckets Close"
+        },
+        "ST_possession_seg009": {
+          "name_fr": "Passage des Cages-Ouvertes",
+          "name_en": "Open-Cages Passage"
+        },
+        "ST_possession_seg010": {
+          "name_fr": "Rue des Collectionneurs",
+          "name_en": "Collectors' Street"
+        },
+        "ST_possession_seg011": {
+          "name_fr": "Rue des Pharmaciens",
+          "name_en": "Chemists' Street"
+        },
+        "ST_possession_seg012": {
+          "name_fr": "Ruelle des Facteurs",
+          "name_en": "Postmen's Lane"
+        },
+        "ST_possession_seg013": {
+          "name_fr": "Quai des Coups-de-Main",
+          "name_en": "Helping-Hands Quay"
+        },
+        "ST_possession_seg014": {
+          "name_fr": "Rue des Négociants",
+          "name_en": "Traders' Street"
+        },
+        "ST_possession_seg015": {
+          "name_fr": "Allée des Inventaires",
+          "name_en": "Stocktaking Alley"
+        }
+      }
+    },
+    {
+      "id": "ST_change",
+      "name": "Boulevard des Métamorphoses",
+      "type": "verb_street",
+      "sector_id": "S09_nature",
+      "meaning_group": "become change grow begin finish continue stop increase decrease transform",
+      "architectural_theme": "Art Deco skyscraper-towers that morph from bud to bloom",
+      "rooms": [
+        "ST_change_seg004",
+        "ST_change_seg003",
+        "ST_change_seg005",
+        "ST_change_seg002",
+        "ST_change_seg001",
+        "ST_change_seg006",
+        "ST_change_seg011",
+        "ST_change_seg007",
+        "ST_change_seg009",
+        "ST_change_seg008",
+        "ST_change_seg010",
+        "ST_change_seg012",
+        "ST_change_seg013",
+        "ST_change_seg014",
+        "ST_change_seg015",
+        "ST_change_seg018",
+        "ST_change_seg016",
+        "ST_change_seg017",
+        "ST_change_seg019"
+      ],
+      "mean_level": 3.6,
+      "segments": [
+        "ST_change_seg004",
+        "ST_change_seg003",
+        "ST_change_seg005",
+        "ST_change_seg002",
+        "ST_change_seg001",
+        "ST_change_seg006",
+        "ST_change_seg011",
+        "ST_change_seg007",
+        "ST_change_seg009",
+        "ST_change_seg008",
+        "ST_change_seg010",
+        "ST_change_seg012",
+        "ST_change_seg013",
+        "ST_change_seg014",
+        "ST_change_seg015",
+        "ST_change_seg018",
+        "ST_change_seg016",
+        "ST_change_seg017",
+        "ST_change_seg019"
+      ],
+      "verb_count": 111,
+      "segment_street_names": {
+        "ST_change_seg001": {
+          "name_fr": "Allée des Hauts-et-Bas",
+          "name_en": "Ups-and-Downs Alley"
+        },
+        "ST_change_seg002": {
+          "name_fr": "Rue des Transformistes",
+          "name_en": "Quick-Change Artists' Street"
+        },
+        "ST_change_seg003": {
+          "name_fr": "Place de la Réussite",
+          "name_en": "Success Square"
+        },
+        "ST_change_seg004": {
+          "name_fr": "Rue du Recommencement",
+          "name_en": "Starting-Over Street"
+        },
+        "ST_change_seg005": {
+          "name_fr": "Impasse du Point-Final",
+          "name_en": "Full-Stop Close"
+        },
+        "ST_change_seg006": {
+          "name_fr": "Place du Coup-d'Envoi",
+          "name_en": "Kick-Off Square"
+        },
+        "ST_change_seg007": {
+          "name_fr": "Allée du Progrès",
+          "name_en": "Progress Alley"
+        },
+        "ST_change_seg008": {
+          "name_fr": "Rue des Chrysalides",
+          "name_en": "Chrysalis Street"
+        },
+        "ST_change_seg009": {
+          "name_fr": "Rue des Démolisseurs",
+          "name_en": "Demolishers' Street"
+        },
+        "ST_change_seg010": {
+          "name_fr": "Chemin des Ralentis",
+          "name_en": "Slow-Motion Lane"
+        },
+        "ST_change_seg011": {
+          "name_fr": "Allée du Renouveau",
+          "name_en": "Renewal Alley"
+        },
+        "ST_change_seg012": {
+          "name_fr": "Passage des Étirements",
+          "name_en": "Stretches Passage"
+        },
+        "ST_change_seg013": {
+          "name_fr": "Quai des Loupes",
+          "name_en": "Magnifying-Glass Quay"
+        },
+        "ST_change_seg014": {
+          "name_fr": "Place des Novateurs",
+          "name_en": "Innovators' Square"
+        },
+        "ST_change_seg015": {
+          "name_fr": "Ruelle des Rénovateurs",
+          "name_en": "Renovators' Lane"
+        },
+        "ST_change_seg016": {
+          "name_fr": "Passage des Cristaux",
+          "name_en": "Crystals Passage"
+        },
+        "ST_change_seg017": {
+          "name_fr": "Allée des Porte-Voix",
+          "name_en": "Megaphones Alley"
+        },
+        "ST_change_seg018": {
+          "name_fr": "Quai des Chavirés",
+          "name_en": "Capsized Boats Quay"
+        },
+        "ST_change_seg019": {
+          "name_fr": "Ruelle du Pull-Rétréci",
+          "name_en": "Shrunken-Sweater Lane"
+        }
+      }
+    },
+    {
+      "id": "ST_social",
+      "name": "Place de la Rencontre",
+      "type": "verb_street",
+      "sector_id": "S06_townhall",
+      "meaning_group": "meet help invite visit share marry greet thank join welcome",
+      "architectural_theme": "Town-hall Renaissance façades with balconies and flags",
+      "rooms": [
+        "ST_social_seg002",
+        "ST_social_seg001",
+        "ST_social_seg003",
+        "ST_social_seg004",
+        "ST_social_seg007",
+        "ST_social_seg008",
+        "ST_social_seg005",
+        "ST_social_seg006",
+        "ST_social_seg009",
+        "ST_social_seg010",
+        "ST_social_seg011"
+      ],
+      "mean_level": 3.11,
+      "segments": [
+        "ST_social_seg002",
+        "ST_social_seg001",
+        "ST_social_seg003",
+        "ST_social_seg004",
+        "ST_social_seg007",
+        "ST_social_seg008",
+        "ST_social_seg005",
+        "ST_social_seg006",
+        "ST_social_seg009",
+        "ST_social_seg010",
+        "ST_social_seg011"
+      ],
+      "verb_count": 66,
+      "segment_street_names": {
+        "ST_social_seg001": {
+          "name_fr": "Rue des Invités",
+          "name_en": "Guests' Street"
+        },
+        "ST_social_seg002": {
+          "name_fr": "Allée de l'Accueil",
+          "name_en": "Welcome Alley"
+        },
+        "ST_social_seg003": {
+          "name_fr": "Place des Retrouvailles",
+          "name_en": "Reunions Square"
+        },
+        "ST_social_seg004": {
+          "name_fr": "Rue des Mariés",
+          "name_en": "Newlyweds' Street"
+        },
+        "ST_social_seg005": {
+          "name_fr": "Allée des Serments",
+          "name_en": "Vows Alley"
+        },
+        "ST_social_seg006": {
+          "name_fr": "Rue des Perfectionnistes",
+          "name_en": "Perfectionists' Street"
+        },
+        "ST_social_seg007": {
+          "name_fr": "Chemin des Cueilleurs",
+          "name_en": "Pickers' Lane"
+        },
+        "ST_social_seg008": {
+          "name_fr": "Rue des Équipiers",
+          "name_en": "Teammates' Street"
+        },
+        "ST_social_seg009": {
+          "name_fr": "Passage des Prises",
+          "name_en": "Plug-Sockets Passage"
+        },
+        "ST_social_seg010": {
+          "name_fr": "Allée des Lambris",
+          "name_en": "Wood-Paneling Alley"
+        },
+        "ST_social_seg011": {
+          "name_fr": "Rue des Colocataires",
+          "name_en": "Housemates' Street"
+        }
+      }
+    },
+    {
+      "id": "ST_body",
+      "name": "Rue de la Vitalité",
+      "type": "verb_street",
+      "sector_id": "S07_health",
+      "meaning_group": "breathe heal hurt rest cough swallow suffer recover live die",
+      "architectural_theme": "White spa-town villas with domes and fountains",
+      "rooms": [
+        "ST_body_seg002",
+        "ST_body_seg001",
+        "ST_body_seg003",
+        "ST_body_seg004",
+        "ST_body_seg005",
+        "ST_body_seg007",
+        "ST_body_seg008",
+        "ST_body_seg006",
+        "ST_body_seg009",
+        "ST_body_seg013",
+        "ST_body_seg010",
+        "ST_body_seg011",
+        "ST_body_seg012"
+      ],
+      "mean_level": 3.77,
+      "segments": [
+        "ST_body_seg002",
+        "ST_body_seg001",
+        "ST_body_seg003",
+        "ST_body_seg004",
+        "ST_body_seg005",
+        "ST_body_seg007",
+        "ST_body_seg008",
+        "ST_body_seg006",
+        "ST_body_seg009",
+        "ST_body_seg013",
+        "ST_body_seg010",
+        "ST_body_seg011",
+        "ST_body_seg012"
+      ],
+      "verb_count": 73,
+      "segment_street_names": {
+        "ST_body_seg001": {
+          "name_fr": "Rue du Grand-Souffle",
+          "name_en": "Big Breath Street"
+        },
+        "ST_body_seg002": {
+          "name_fr": "Allée du Coiffeur",
+          "name_en": "Hairdresser's Alley"
+        },
+        "ST_body_seg003": {
+          "name_fr": "Rue des Soigneurs",
+          "name_en": "Carers' Street"
+        },
+        "ST_body_seg004": {
+          "name_fr": "Ruelle des Avaleurs-de-Sabres",
+          "name_en": "Sword-Swallowers' Lane"
+        },
+        "ST_body_seg005": {
+          "name_fr": "Allée des Ballons",
+          "name_en": "Balloon Alley"
+        },
+        "ST_body_seg006": {
+          "name_fr": "Rue des Accrocs",
+          "name_en": "Rips-and-Tears Street"
+        },
+        "ST_body_seg007": {
+          "name_fr": "Rue du Soulagement",
+          "name_en": "Relief Street"
+        },
+        "ST_body_seg008": {
+          "name_fr": "Place de la Renaissance",
+          "name_en": "Rebirth Square"
+        },
+        "ST_body_seg009": {
+          "name_fr": "Quai des Enrhumés",
+          "name_en": "Sniffly Folk's Quay"
+        },
+        "ST_body_seg010": {
+          "name_fr": "Allée des Vaccins",
+          "name_en": "Vaccine Alley"
+        },
+        "ST_body_seg011": {
+          "name_fr": "Passage des Greffes",
+          "name_en": "Grafts Passage"
+        },
+        "ST_body_seg012": {
+          "name_fr": "Ruelle des Mouchoirs",
+          "name_en": "Hankies Lane"
+        },
+        "ST_body_seg013": {
+          "name_fr": "Impasse des Ventres-Creux",
+          "name_en": "Empty-Tummies Close"
+        }
+      }
+    },
+    {
+      "id": "ST_nature",
+      "name": "Chemin des Saisons",
+      "type": "verb_street",
+      "sector_id": "S09_nature",
+      "meaning_group": "grow bloom rain snow shine flow fly swim plant harvest",
+      "architectural_theme": "Hobbit-like turf-roof cabins and treehouses",
+      "rooms": [
+        "ST_nature_seg001",
+        "ST_nature_seg002",
+        "ST_nature_seg006",
+        "ST_nature_seg003",
+        "ST_nature_seg004",
+        "ST_nature_seg005",
+        "ST_nature_seg007",
+        "ST_nature_seg008",
+        "ST_nature_seg009"
+      ],
+      "mean_level": 3.84,
+      "segments": [
+        "ST_nature_seg001",
+        "ST_nature_seg002",
+        "ST_nature_seg006",
+        "ST_nature_seg003",
+        "ST_nature_seg004",
+        "ST_nature_seg005",
+        "ST_nature_seg007",
+        "ST_nature_seg008",
+        "ST_nature_seg009"
+      ],
+      "verb_count": 50,
+      "segment_street_names": {
+        "ST_nature_seg001": {
+          "name_fr": "Allée des Averses",
+          "name_en": "Rain-Showers Alley"
+        },
+        "ST_nature_seg002": {
+          "name_fr": "Rue Ensoleillée",
+          "name_en": "Sunny Street"
+        },
+        "ST_nature_seg003": {
+          "name_fr": "Chemin des Jardiniers",
+          "name_en": "Gardeners' Lane"
+        },
+        "ST_nature_seg004": {
+          "name_fr": "Rue des Moissonneurs",
+          "name_en": "Harvesters' Street"
+        },
+        "ST_nature_seg005": {
+          "name_fr": "Quai des Inondations",
+          "name_en": "Floods Quay"
+        },
+        "ST_nature_seg006": {
+          "name_fr": "Quai des Pêcheurs",
+          "name_en": "Fishermen's Quay"
+        },
+        "ST_nature_seg007": {
+          "name_fr": "Impasse des Glaçons",
+          "name_en": "Icicles Close"
+        },
+        "ST_nature_seg008": {
+          "name_fr": "Rue des Étincelles",
+          "name_en": "Sparkles Street"
+        },
+        "ST_nature_seg009": {
+          "name_fr": "Chemin des Graines",
+          "name_en": "Seeds Lane"
+        }
+      }
+    },
+    {
+      "id": "ST_conflict",
+      "name": "Rue des Remparts",
+      "type": "verb_street",
+      "sector_id": "S06_townhall",
+      "meaning_group": "fight attack defend win lose threaten protect escape resist",
+      "architectural_theme": "Medieval ramparts, watchtowers and drawbridges",
+      "rooms": [
+        "ST_conflict_seg002",
+        "ST_conflict_seg001",
+        "ST_conflict_seg004",
+        "ST_conflict_seg003",
+        "ST_conflict_seg005",
+        "ST_conflict_seg012",
+        "ST_conflict_seg007",
+        "ST_conflict_seg009",
+        "ST_conflict_seg010",
+        "ST_conflict_seg011",
+        "ST_conflict_seg015",
+        "ST_conflict_seg006",
+        "ST_conflict_seg008",
+        "ST_conflict_seg013",
+        "ST_conflict_seg014",
+        "ST_conflict_seg016",
+        "ST_conflict_seg020",
+        "ST_conflict_seg017",
+        "ST_conflict_seg018",
+        "ST_conflict_seg019",
+        "ST_conflict_seg021"
+      ],
+      "mean_level": 3.61,
+      "segments": [
+        "ST_conflict_seg002",
+        "ST_conflict_seg001",
+        "ST_conflict_seg004",
+        "ST_conflict_seg003",
+        "ST_conflict_seg005",
+        "ST_conflict_seg012",
+        "ST_conflict_seg007",
+        "ST_conflict_seg009",
+        "ST_conflict_seg010",
+        "ST_conflict_seg011",
+        "ST_conflict_seg015",
+        "ST_conflict_seg006",
+        "ST_conflict_seg008",
+        "ST_conflict_seg013",
+        "ST_conflict_seg014",
+        "ST_conflict_seg016",
+        "ST_conflict_seg020",
+        "ST_conflict_seg017",
+        "ST_conflict_seg018",
+        "ST_conflict_seg019",
+        "ST_conflict_seg021"
+      ],
+      "verb_count": 123,
+      "segment_street_names": {
+        "ST_conflict_seg001": {
+          "name_fr": "Chemin de la Grande-Évasion",
+          "name_en": "Great Escape Lane"
+        },
+        "ST_conflict_seg002": {
+          "name_fr": "Rue des Sauveteurs",
+          "name_en": "Rescuers' Street"
+        },
+        "ST_conflict_seg003": {
+          "name_fr": "Passage des Résistants",
+          "name_en": "Resisters' Passage"
+        },
+        "ST_conflict_seg004": {
+          "name_fr": "Place des Boucliers",
+          "name_en": "Shields Square"
+        },
+        "ST_conflict_seg005": {
+          "name_fr": "Ruelle des Cachettes",
+          "name_en": "Hiding-Places Lane"
+        },
+        "ST_conflict_seg006": {
+          "name_fr": "Impasse du Refuge",
+          "name_en": "Refuge Close"
+        },
+        "ST_conflict_seg007": {
+          "name_fr": "Place du Face-à-Face",
+          "name_en": "Face-Off Square"
+        },
+        "ST_conflict_seg008": {
+          "name_fr": "Chemin des Exilés",
+          "name_en": "Exiles' Lane"
+        },
+        "ST_conflict_seg009": {
+          "name_fr": "Ruelle des Détours",
+          "name_en": "Detours Lane"
+        },
+        "ST_conflict_seg010": {
+          "name_fr": "Place des Manifestants",
+          "name_en": "Protesters' Square"
+        },
+        "ST_conflict_seg011": {
+          "name_fr": "Rue des Pétards",
+          "name_en": "Firecrackers Street"
+        },
+        "ST_conflict_seg012": {
+          "name_fr": "Rue des Conquérants",
+          "name_en": "Conquerors' Street"
+        },
+        "ST_conflict_seg013": {
+          "name_fr": "Allée des Alliés",
+          "name_en": "Allies' Alley"
+        },
+        "ST_conflict_seg014": {
+          "name_fr": "Chemin des Archers",
+          "name_en": "Archers' Lane"
+        },
+        "ST_conflict_seg015": {
+          "name_fr": "Rue du Coup-de-Frein",
+          "name_en": "Slam-the-Brakes Street"
+        },
+        "ST_conflict_seg016": {
+          "name_fr": "Place des Médailles",
+          "name_en": "Medals Square"
+        },
+        "ST_conflict_seg017": {
+          "name_fr": "Rue des Rivaux",
+          "name_en": "Rivals' Street"
+        },
+        "ST_conflict_seg018": {
+          "name_fr": "Impasse du Drapeau-Blanc",
+          "name_en": "White-Flag Close"
+        },
+        "ST_conflict_seg019": {
+          "name_fr": "Rue des Marteaux",
+          "name_en": "Hammers Street"
+        },
+        "ST_conflict_seg020": {
+          "name_fr": "Ruelle des Ruses-Déjouées",
+          "name_en": "Foiled-Tricks Lane"
+        },
+        "ST_conflict_seg021": {
+          "name_fr": "Allée des Fourreaux",
+          "name_en": "Scabbards Alley"
+        }
+      }
+    },
+    {
+      "id": "ST_rule",
+      "name": "Cours de la Loi",
+      "type": "verb_street",
+      "sector_id": "S06_townhall",
+      "meaning_group": "allow forbid oblige obey decide govern judge vote organize manage",
+      "architectural_theme": "Haussmann limestone blocks with columns and seals",
+      "rooms": [
+        "ST_rule_seg001",
+        "ST_rule_seg002",
+        "ST_rule_seg003",
+        "ST_rule_seg004",
+        "ST_rule_seg006",
+        "ST_rule_seg007",
+        "ST_rule_seg010",
+        "ST_rule_seg005",
+        "ST_rule_seg008",
+        "ST_rule_seg009",
+        "ST_rule_seg011",
+        "ST_rule_seg014",
+        "ST_rule_seg016",
+        "ST_rule_seg013",
+        "ST_rule_seg015",
+        "ST_rule_seg012"
+      ],
+      "mean_level": 3.94,
+      "segments": [
+        "ST_rule_seg001",
+        "ST_rule_seg002",
+        "ST_rule_seg003",
+        "ST_rule_seg004",
+        "ST_rule_seg006",
+        "ST_rule_seg007",
+        "ST_rule_seg010",
+        "ST_rule_seg005",
+        "ST_rule_seg008",
+        "ST_rule_seg009",
+        "ST_rule_seg011",
+        "ST_rule_seg014",
+        "ST_rule_seg016",
+        "ST_rule_seg013",
+        "ST_rule_seg015",
+        "ST_rule_seg012"
+      ],
+      "verb_count": 96,
+      "segment_street_names": {
+        "ST_rule_seg001": {
+          "name_fr": "Rue des Interdits",
+          "name_en": "Forbidden-Things Street"
+        },
+        "ST_rule_seg002": {
+          "name_fr": "Place des Juges",
+          "name_en": "Judges' Square"
+        },
+        "ST_rule_seg003": {
+          "name_fr": "Allée du Gouverneur",
+          "name_en": "Governor's Alley"
+        },
+        "ST_rule_seg004": {
+          "name_fr": "Rue des Urnes",
+          "name_en": "Ballot-Boxes Street"
+        },
+        "ST_rule_seg005": {
+          "name_fr": "Passage des Marionnettes",
+          "name_en": "Puppets Passage"
+        },
+        "ST_rule_seg006": {
+          "name_fr": "Rue du Tri",
+          "name_en": "Sorting Street"
+        },
+        "ST_rule_seg007": {
+          "name_fr": "Rue des Bons-Conseils",
+          "name_en": "Good-Advice Street"
+        },
+        "ST_rule_seg008": {
+          "name_fr": "Ruelle des Avocats",
+          "name_en": "Lawyers' Lane"
+        },
+        "ST_rule_seg009": {
+          "name_fr": "Rue des Bornes",
+          "name_en": "Boundary-Stones Street"
+        },
+        "ST_rule_seg010": {
+          "name_fr": "Allée des Habitudes",
+          "name_en": "Habits Alley"
+        },
+        "ST_rule_seg011": {
+          "name_fr": "Impasse des Barrages",
+          "name_en": "Roadblocks Close"
+        },
+        "ST_rule_seg012": {
+          "name_fr": "Rue des Tampons",
+          "name_en": "Rubber-Stamps Street"
+        },
+        "ST_rule_seg013": {
+          "name_fr": "Rue des Dompteurs",
+          "name_en": "Animal-Tamers' Street"
+        },
+        "ST_rule_seg014": {
+          "name_fr": "Allée des Courtisans",
+          "name_en": "Courtiers' Alley"
+        },
+        "ST_rule_seg015": {
+          "name_fr": "Quai des Hélices",
+          "name_en": "Propellers Quay"
+        },
+        "ST_rule_seg016": {
+          "name_fr": "Place des Délégués",
+          "name_en": "Delegates' Square"
+        }
+      }
+    },
+    {
+      "id": "ST_existence",
+      "name": "Impasse de l'Être",
+      "type": "verb_street",
+      "sector_id": "S13_museum",
+      "meaning_group": "be exist seem remain happen belong depend consist lack matter",
+      "architectural_theme": "Surrealist Magritte-style houses with floating doors",
+      "rooms": [
+        "ST_existence_seg001",
+        "ST_existence_seg002",
+        "ST_existence_seg004",
+        "ST_existence_seg003",
+        "ST_existence_seg005",
+        "ST_existence_seg006",
+        "ST_existence_seg007",
+        "ST_existence_seg008",
+        "ST_existence_seg009",
+        "ST_existence_seg010",
+        "ST_existence_seg011",
+        "ST_existence_seg013",
+        "ST_existence_seg012",
+        "ST_existence_seg014"
+      ],
+      "mean_level": 3.5,
+      "segments": [
+        "ST_existence_seg001",
+        "ST_existence_seg002",
+        "ST_existence_seg004",
+        "ST_existence_seg003",
+        "ST_existence_seg005",
+        "ST_existence_seg006",
+        "ST_existence_seg007",
+        "ST_existence_seg008",
+        "ST_existence_seg009",
+        "ST_existence_seg010",
+        "ST_existence_seg011",
+        "ST_existence_seg013",
+        "ST_existence_seg012",
+        "ST_existence_seg014"
+      ],
+      "verb_count": 79,
+      "segment_street_names": {
+        "ST_existence_seg001": {
+          "name_fr": "Rue des Disparitions",
+          "name_en": "Vanishings Street"
+        },
+        "ST_existence_seg002": {
+          "name_fr": "Place des Nouveau-Nés",
+          "name_en": "Newborns' Square"
+        },
+        "ST_existence_seg003": {
+          "name_fr": "Ruelle des Confidences",
+          "name_en": "Secrets Lane"
+        },
+        "ST_existence_seg004": {
+          "name_fr": "Allée du Mérite",
+          "name_en": "Merit Alley"
+        },
+        "ST_existence_seg005": {
+          "name_fr": "Rue des Devoirs",
+          "name_en": "Duties Street"
+        },
+        "ST_existence_seg006": {
+          "name_fr": "Rue des Imprévus",
+          "name_en": "Surprises-in-Store Street"
+        },
+        "ST_existence_seg007": {
+          "name_fr": "Allée des Comparaisons",
+          "name_en": "Comparisons Alley"
+        },
+        "ST_existence_seg008": {
+          "name_fr": "Impasse des Égarés",
+          "name_en": "Lost Wanderers' Close"
+        },
+        "ST_existence_seg009": {
+          "name_fr": "Rue de la Patience",
+          "name_en": "Patience Street"
+        },
+        "ST_existence_seg010": {
+          "name_fr": "Rue des Bocaux",
+          "name_en": "Preserving-Jars Street"
+        },
+        "ST_existence_seg011": {
+          "name_fr": "Rue des Coïncidences",
+          "name_en": "Coincidences Street"
+        },
+        "ST_existence_seg012": {
+          "name_fr": "Place de l'Unité",
+          "name_en": "Unity Square"
+        },
+        "ST_existence_seg013": {
+          "name_fr": "Passage des Cadres",
+          "name_en": "Picture-Frames Passage"
+        },
+        "ST_existence_seg014": {
+          "name_fr": "Impasse des Poupées-Gigognes",
+          "name_en": "Nesting-Dolls Close"
+        }
+      }
+    },
+    {
+      "id": "ST_play",
+      "name": "Promenade des Loisirs",
+      "type": "verb_street",
+      "sector_id": "S14_culture",
+      "meaning_group": "play dance sing draw travel rest have fun swim paint relax",
+      "architectural_theme": "Seaside fairground and carousel pavilions",
+      "rooms": [
+        "ST_play_seg001",
+        "ST_play_seg002",
+        "ST_play_seg003",
+        "ST_play_seg004",
+        "ST_play_seg005",
+        "ST_play_seg006",
+        "ST_play_seg007",
+        "ST_play_seg008",
+        "ST_play_seg009"
+      ],
+      "mean_level": 3.77,
+      "segments": [
+        "ST_play_seg001",
+        "ST_play_seg002",
+        "ST_play_seg003",
+        "ST_play_seg004",
+        "ST_play_seg005",
+        "ST_play_seg006",
+        "ST_play_seg007",
+        "ST_play_seg008",
+        "ST_play_seg009"
+      ],
+      "verb_count": 49,
+      "segment_street_names": {
+        "ST_play_seg001": {
+          "name_fr": "Place des Danseurs",
+          "name_en": "Dancers' Square"
+        },
+        "ST_play_seg002": {
+          "name_fr": "Rue des Peintres",
+          "name_en": "Painters' Street"
+        },
+        "ST_play_seg003": {
+          "name_fr": "Quai des Plongeurs",
+          "name_en": "Divers' Quay"
+        },
+        "ST_play_seg004": {
+          "name_fr": "Allée des Déguisements",
+          "name_en": "Dressing-Up Alley"
+        },
+        "ST_play_seg005": {
+          "name_fr": "Quai des Embarquements",
+          "name_en": "Boarding Quay"
+        },
+        "ST_play_seg006": {
+          "name_fr": "Ruelle des Croquis",
+          "name_en": "Sketches Lane"
+        },
+        "ST_play_seg007": {
+          "name_fr": "Place de l'Orchestre",
+          "name_en": "Orchestra Square"
+        },
+        "ST_play_seg008": {
+          "name_fr": "Allée des Zèbres",
+          "name_en": "Zebras Alley"
+        },
+        "ST_play_seg009": {
+          "name_fr": "Quai des Surfeurs",
+          "name_en": "Surfers' Quay"
+        }
+      }
+    },
+    {
+      "id": "ST_faith",
+      "name": "Chemin des Pèlerins",
+      "type": "verb_street",
+      "sector_id": "S11_church",
+      "meaning_group": "pray bless adore worship confess baptize celebrate forgive fast",
+      "architectural_theme": "Romanesque stone oratories and wayside shrines (reverent, no whimsy on sacred objects)",
+      "rooms": [
+        "ST_faith_seg001",
+        "ST_faith_seg002",
+        "ST_faith_seg003",
+        "ST_faith_seg004"
+      ],
+      "mean_level": 4.14,
+      "segments": [
+        "ST_faith_seg001",
+        "ST_faith_seg002",
+        "ST_faith_seg003",
+        "ST_faith_seg004"
+      ],
+      "verb_count": 19,
+      "segment_street_names": {
+        "ST_faith_seg001": {
+          "name_fr": "Rue du Pardon",
+          "name_en": "Forgiveness Street"
+        },
+        "ST_faith_seg002": {
+          "name_fr": "Place du Baptistère",
+          "name_en": "Baptistery Square"
+        },
+        "ST_faith_seg003": {
+          "name_fr": "Allée des Psaumes",
+          "name_en": "Psalms Alley"
+        },
+        "ST_faith_seg004": {
+          "name_fr": "Chemin de l'Encens",
+          "name_en": "Incense Lane"
+        }
+      }
+    },
+    {
+      "id": "ST_habitudes",
+      "name": "Montée des Habitudes",
+      "name_fr": "Montée des Habitudes",
+      "name_en": "Habits Climb",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S02_home",
+      "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
+      "architectural_theme": "stepped alley climbing a hillside, stair landings per place — richer painterly realism 4; autumn, yellow/red leaves (neutral light, no amber grade)",
+      "art_style": "richer painterly realism 4",
+      "season": "autumn, yellow/red leaves (neutral light, no amber grade)",
+      "street_type": "stepped alley climbing a hillside, stair landings per place",
+      "edge": "chord",
+      "start": "S02_home",
+      "end": "S15_feelings",
+      "end_room": null,
+      "end_note": "S15 Jardin des Cœurs",
+      "theme_street_id": "ST_routine",
+      "theme_street_name": "Allée du Quotidien",
+      "theme_street_theme": "Half-timbered Alsatian cottages with flower boxes",
+      "places": [
+        "ST_routine_seg010",
+        "ST_routine_seg011",
+        "ST_routine_seg012",
+        "ST_routine_seg013",
+        "ST_routine_seg014"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_routine_seg010",
+        "ST_routine_seg011",
+        "ST_routine_seg012",
+        "ST_routine_seg013",
+        "ST_routine_seg014"
+      ],
+      "segments": [
+        "ST_routine_seg010",
+        "ST_routine_seg011",
+        "ST_routine_seg012",
+        "ST_routine_seg013",
+        "ST_routine_seg014"
+      ],
+      "verb_count": 30,
+      "mean_level": 3.63,
+      "segment_street_names": {
+        "ST_routine_seg010": {
+          "name_fr": "Rue des Vieilles-Baskets",
+          "name_en": "Old-Sneakers Street"
+        },
+        "ST_routine_seg011": {
+          "name_fr": "Ruelle des Chaussons",
+          "name_en": "Slippers Lane"
+        },
+        "ST_routine_seg012": {
+          "name_fr": "Allée des Hérons",
+          "name_en": "Herons Alley"
+        },
+        "ST_routine_seg013": {
+          "name_fr": "Rue des Affiches",
+          "name_en": "Posters Street"
+        },
+        "ST_routine_seg014": {
+          "name_fr": "Rue des Veilleurs-de-Nuit",
+          "name_en": "Night-Watchers' Street"
+        }
+      }
+    },
+    {
+      "id": "ST_bricoleurs",
+      "name": "Avenue des Petits Travaux",
+      "name_fr": "Avenue des Petits Travaux",
+      "name_en": "Odd-jobs Avenue",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S02_home",
+      "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
+      "architectural_theme": "tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer",
+      "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
+      "season": "high summer",
+      "street_type": "tree-lined avenue that opens into a country path",
+      "edge": "chord",
+      "start": "S02_home",
+      "end": "S09_nature",
+      "end_room": null,
+      "end_note": "S09 Vallée Verte",
+      "theme_street_id": "ST_routine",
+      "theme_street_name": "Allée du Quotidien",
+      "theme_street_theme": "Half-timbered Alsatian cottages with flower boxes",
+      "places": [
+        "ST_routine_seg015",
+        "ST_routine_seg016",
+        "ST_routine_seg017",
+        "ST_routine_seg018",
+        "ST_routine_seg019"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_routine_seg015",
+        "ST_routine_seg016",
+        "ST_routine_seg017",
+        "ST_routine_seg018",
+        "ST_routine_seg019"
+      ],
+      "segments": [
+        "ST_routine_seg015",
+        "ST_routine_seg016",
+        "ST_routine_seg017",
+        "ST_routine_seg018",
+        "ST_routine_seg019"
+      ],
+      "verb_count": 29,
+      "mean_level": 5.42,
+      "segment_street_names": {
+        "ST_routine_seg015": {
+          "name_fr": "Allée des Bricoleurs",
+          "name_en": "Do-It-Yourselfers' Alley"
+        },
+        "ST_routine_seg016": {
+          "name_fr": "Ruelle des Houppettes",
+          "name_en": "Powder-Puffs Lane"
+        },
+        "ST_routine_seg017": {
+          "name_fr": "Rue du Réveille-Matin",
+          "name_en": "Alarm-Clock Street"
+        },
+        "ST_routine_seg018": {
+          "name_fr": "Rue des Selliers",
+          "name_en": "Saddlers' Street"
+        },
+        "ST_routine_seg019": {
+          "name_fr": "Impasse des Rendormis",
+          "name_en": "Back-to-Sleep Close"
+        }
+      }
+    },
+    {
+      "id": "ST_poignees",
+      "name": "Chemin des Gestes",
+      "name_fr": "Chemin des Gestes",
+      "name_en": "Gestures Way",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S02_home",
+      "meaning_group": "push pull put place lift carry throw open close turn hang",
+      "architectural_theme": "cobbled lane under cherry trees — storybook 3 (beginner-adjacent); spring blossom",
+      "art_style": "storybook 3 (beginner-adjacent)",
+      "season": "spring blossom",
+      "street_type": "cobbled lane under cherry trees",
+      "edge": "loop",
+      "start": "S02_home",
+      "end": "S01_beginner",
+      "end_room": null,
+      "end_note": "S01 Place du Village",
+      "theme_street_id": "ST_control",
+      "theme_street_name": "Rue des Gestes",
+      "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
+      "places": [
+        "ST_control_seg001",
+        "ST_control_seg002",
+        "ST_control_seg003",
+        "ST_control_seg004"
+      ],
+      "place_count": 4,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_control_seg001",
+        "ST_control_seg002",
+        "ST_control_seg003",
+        "ST_control_seg004"
+      ],
+      "segments": [
+        "ST_control_seg001",
+        "ST_control_seg002",
+        "ST_control_seg003",
+        "ST_control_seg004"
+      ],
+      "verb_count": 24,
+      "mean_level": 1.63,
+      "segment_street_names": {
+        "ST_control_seg001": {
+          "name_fr": "Rue des Poignées-de-Main",
+          "name_en": "Handshakes Street"
+        },
+        "ST_control_seg002": {
+          "name_fr": "Rue des Crochets",
+          "name_en": "Hooks Street"
+        },
+        "ST_control_seg003": {
+          "name_fr": "Ruelle des Brouettes",
+          "name_en": "Wheelbarrows Lane"
+        },
+        "ST_control_seg004": {
+          "name_fr": "Place de l'Orgue-de-Barbarie",
+          "name_en": "Barrel-Organ Square"
+        }
+      }
+    },
+    {
+      "id": "ST_porteurs",
+      "name": "Rue des Débardeurs",
+      "name_fr": "Rue des Débardeurs",
+      "name_en": "Porters Street",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S03_market",
+      "meaning_group": "push pull put place lift carry throw open close turn hang",
+      "architectural_theme": "market street with crates and hand-carts — painterly realism 3.5; summer",
+      "art_style": "painterly realism 3.5",
+      "season": "summer",
+      "street_type": "market street with crates and hand-carts",
+      "edge": "spur",
+      "start": "S03_market",
+      "end": "B06_marche",
+      "end_room": null,
+      "end_note": "B06 marché (covered market side door)",
+      "theme_street_id": "ST_control",
+      "theme_street_name": "Rue des Gestes",
+      "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
+      "places": [
+        "ST_control_seg005",
+        "ST_control_seg006",
+        "ST_control_seg007",
+        "ST_control_seg008",
+        "ST_control_seg009"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_control_seg005",
+        "ST_control_seg006",
+        "ST_control_seg007",
+        "ST_control_seg008",
+        "ST_control_seg009"
+      ],
+      "segments": [
+        "ST_control_seg005",
+        "ST_control_seg006",
+        "ST_control_seg007",
+        "ST_control_seg008",
+        "ST_control_seg009"
+      ],
+      "verb_count": 30,
+      "mean_level": 2.5,
+      "segment_street_names": {
+        "ST_control_seg005": {
+          "name_fr": "Chemin de la Barrière",
+          "name_en": "Farm-Gate Lane"
+        },
+        "ST_control_seg006": {
+          "name_fr": "Allée des Porteurs",
+          "name_en": "Porters' Alley"
+        },
+        "ST_control_seg007": {
+          "name_fr": "Rue des Lanceurs",
+          "name_en": "Throwers' Street"
+        },
+        "ST_control_seg008": {
+          "name_fr": "Ruelle du Seau-Renversé",
+          "name_en": "Spilt-Pail Lane"
+        },
+        "ST_control_seg009": {
+          "name_fr": "Allée des Balançoires",
+          "name_en": "Swings Alley"
+        }
+      }
+    },
+    {
+      "id": "ST_campeur",
+      "name": "Sentier du Campeur",
+      "name_fr": "Sentier du Campeur",
+      "name_en": "Camper's Trail",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S09_nature",
+      "meaning_group": "push pull put place lift carry throw open close turn hang",
+      "architectural_theme": "hillside path between stone cottages — outdoor realism 4; autumn, misty morning",
+      "art_style": "outdoor realism 4",
+      "season": "autumn, misty morning",
+      "street_type": "hillside path between stone cottages",
+      "edge": "spur",
+      "start": "S09_nature",
+      "end": "B30_camping",
+      "end_room": null,
+      "end_note": "B30 camping gate",
+      "theme_street_id": "ST_control",
+      "theme_street_name": "Rue des Gestes",
+      "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
+      "places": [
+        "ST_control_seg010",
+        "ST_control_seg011",
+        "ST_control_seg012",
+        "ST_control_seg013",
+        "ST_control_seg014"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_control_seg010",
+        "ST_control_seg011",
+        "ST_control_seg012",
+        "ST_control_seg013",
+        "ST_control_seg014"
+      ],
+      "segments": [
+        "ST_control_seg010",
+        "ST_control_seg011",
+        "ST_control_seg012",
+        "ST_control_seg013",
+        "ST_control_seg014"
+      ],
+      "verb_count": 30,
+      "mean_level": 3.43,
+      "segment_street_names": {
+        "ST_control_seg010": {
+          "name_fr": "Quai du Débarquement",
+          "name_en": "Landing Quay"
+        },
+        "ST_control_seg011": {
+          "name_fr": "Rue des Bouchons",
+          "name_en": "Corks Street"
+        },
+        "ST_control_seg012": {
+          "name_fr": "Passage des Pinces-à-Linge",
+          "name_en": "Clothes-Pegs Passage"
+        },
+        "ST_control_seg013": {
+          "name_fr": "Chemin des Faucheurs",
+          "name_en": "Mowers' Lane"
+        },
+        "ST_control_seg014": {
+          "name_fr": "Allée de l'Écureuil",
+          "name_en": "Squirrel Alley"
+        }
+      }
+    },
+    {
+      "id": "ST_paquets",
+      "name": "Passage des Paquets",
+      "name_fr": "Passage des Paquets",
+      "name_en": "Packages Passage",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S02_home",
+      "meaning_group": "push pull put place lift carry throw open close turn hang",
+      "architectural_theme": "covered arcade passage with stacked packages — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas",
+      "art_style": "cartoony 2.5",
+      "season": "rainy day, wet reflective cobbles, umbrellas",
+      "street_type": "covered arcade passage with stacked packages",
+      "edge": "spur",
+      "start": "S02_home",
+      "end": "B05_maison",
+      "end_room": "R_garage",
+      "end_note": "B05 maison garage door",
+      "theme_street_id": "ST_control",
+      "theme_street_name": "Rue des Gestes",
+      "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
+      "places": [
+        "ST_control_seg015",
+        "ST_control_seg016",
+        "ST_control_seg017",
+        "ST_control_seg018"
+      ],
+      "place_count": 4,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_control_seg015",
+        "ST_control_seg016",
+        "ST_control_seg017",
+        "ST_control_seg018"
+      ],
+      "segments": [
+        "ST_control_seg015",
+        "ST_control_seg016",
+        "ST_control_seg017",
+        "ST_control_seg018"
+      ],
+      "verb_count": 24,
+      "mean_level": 4.79,
+      "segment_street_names": {
+        "ST_control_seg015": {
+          "name_fr": "Ruelle des Bousculades",
+          "name_en": "Jostling Lane"
+        },
+        "ST_control_seg016": {
+          "name_fr": "Rue de la Mise-en-Place",
+          "name_en": "Setting-Up Street"
+        },
+        "ST_control_seg017": {
+          "name_fr": "Impasse des Yeux-Écarquillés",
+          "name_en": "Wide-Eyes Close"
+        },
+        "ST_control_seg018": {
+          "name_fr": "Ruelle des Goélands",
+          "name_en": "Seagulls Lane"
+        }
+      }
+    },
+    {
+      "id": "ST_ecus",
+      "name": "Rue des Écus",
+      "name_fr": "Rue des Écus",
+      "name_en": "Coins Street",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S03_market",
+      "meaning_group": "buy sell pay cost spend owe borrow lend rent order deliver earn",
+      "architectural_theme": "covered stone arcade (keep current) — realism 4 (money = serious); clear frosty winter day",
+      "art_style": "realism 4 (money = serious)",
+      "season": "clear frosty winter day",
+      "street_type": "covered stone arcade (keep current)",
+      "edge": "chord",
+      "start": "S03_market",
+      "end": "S05_bank",
+      "end_room": null,
+      "end_note": "S05 Quai de la Banque",
+      "theme_street_id": "ST_commerce",
+      "theme_street_name": "Rue du Commerce",
+      "theme_street_theme": "Market arcades with striped awnings and shop signs",
+      "places": [
+        "ST_commerce_seg001",
+        "ST_commerce_seg002",
+        "ST_commerce_seg004",
+        "ST_commerce_seg003"
+      ],
+      "place_count": 4,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_commerce_seg001",
+        "ST_commerce_seg002",
+        "ST_commerce_seg004",
+        "ST_commerce_seg003"
+      ],
+      "segments": [
+        "ST_commerce_seg001",
+        "ST_commerce_seg002",
+        "ST_commerce_seg004",
+        "ST_commerce_seg003"
+      ],
+      "verb_count": 23,
+      "mean_level": 2.82,
+      "segment_street_names": {
+        "ST_commerce_seg001": {
+          "name_fr": "Rue des Acheteurs",
+          "name_en": "Shoppers' Street"
+        },
+        "ST_commerce_seg002": {
+          "name_fr": "Allée des Livreurs",
+          "name_en": "Delivery Drivers' Alley"
+        },
+        "ST_commerce_seg004": {
+          "name_fr": "Passage du Marchandage",
+          "name_en": "Haggling Passage"
+        },
+        "ST_commerce_seg003": {
+          "name_fr": "Ruelle des Tirelires",
+          "name_en": "Piggy-Bank Lane"
+        }
+      }
+    },
+    {
+      "id": "ST_brocante",
+      "name": "Passage de la Brocante",
+      "name_fr": "Passage de la Brocante",
+      "name_en": "Flea-market Passage",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S03_market",
+      "meaning_group": "buy sell pay cost spend owe borrow lend rent order deliver earn",
+      "architectural_theme": "market street with flea-market stalls — cartoony 2.5 flea-market whimsy; autumn leaves",
+      "art_style": "cartoony 2.5 flea-market whimsy",
+      "season": "autumn leaves",
+      "street_type": "market street with flea-market stalls",
+      "edge": "spur",
+      "start": "S03_market",
+      "end": "B59_brocante",
+      "end_room": null,
+      "end_note": "B59 brocante gate",
+      "theme_street_id": "ST_commerce",
+      "theme_street_name": "Rue du Commerce",
+      "theme_street_theme": "Market arcades with striped awnings and shop signs",
+      "places": [
+        "ST_commerce_seg005",
+        "ST_commerce_seg007",
+        "ST_commerce_seg008",
+        "ST_commerce_seg006"
+      ],
+      "place_count": 4,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_commerce_seg005",
+        "ST_commerce_seg007",
+        "ST_commerce_seg008",
+        "ST_commerce_seg006"
+      ],
+      "segments": [
+        "ST_commerce_seg005",
+        "ST_commerce_seg007",
+        "ST_commerce_seg008",
+        "ST_commerce_seg006"
+      ],
+      "verb_count": 20,
+      "mean_level": 5.05,
+      "segment_street_names": {
+        "ST_commerce_seg005": {
+          "name_fr": "Allée du Partage",
+          "name_en": "Sharing Alley"
+        },
+        "ST_commerce_seg007": {
+          "name_fr": "Rue de la Monnaie",
+          "name_en": "Mint Street"
+        },
+        "ST_commerce_seg008": {
+          "name_fr": "Impasse des Surcharges",
+          "name_en": "Overload Close"
+        },
+        "ST_commerce_seg006": {
+          "name_fr": "Quai des Entrepôts",
+          "name_en": "Warehouse Quay"
+        }
+      }
+    },
+    {
+      "id": "ST_gourmets",
+      "name": "Ruelle des Gourmets",
+      "name_fr": "Ruelle des Gourmets",
+      "name_en": "Gourmets Lane",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S04_cafes",
+      "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
+      "architectural_theme": "lane of café terraces — cartoony storybook 2.5 (keep the food-shaped houses); summer, neutral daylight (fix warm cast)",
+      "art_style": "cartoony storybook 2.5 (keep the food-shaped houses)",
+      "season": "summer, neutral daylight (fix warm cast)",
+      "street_type": "lane of café terraces",
+      "edge": "loop",
+      "start": "S04_cafes",
+      "end": "S03_market",
+      "end_room": null,
+      "end_note": "S03 Place du Marché",
+      "theme_street_id": "ST_cooking",
+      "theme_street_name": "Ruelle des Gourmets",
+      "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
+      "places": [
+        "ST_cooking_seg001",
+        "ST_cooking_seg002",
+        "ST_cooking_seg003"
+      ],
+      "place_count": 3,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_cooking_seg001",
+        "ST_cooking_seg002",
+        "ST_cooking_seg003"
+      ],
+      "segments": [
+        "ST_cooking_seg001",
+        "ST_cooking_seg002",
+        "ST_cooking_seg003"
+      ],
+      "verb_count": 26,
+      "mean_level": 3.46,
+      "segment_street_names": {
+        "ST_cooking_seg001": {
+          "name_fr": "Place du Grand-Festin",
+          "name_en": "Great-Feast Square"
+        },
+        "ST_cooking_seg002": {
+          "name_fr": "Allée du Pique-Nique",
+          "name_en": "Picnic Alley"
+        },
+        "ST_cooking_seg003": {
+          "name_fr": "Rue des Carafes",
+          "name_en": "Carafes Street"
+        }
+      }
+    },
+    {
+      "id": "ST_fourneaux",
+      "name": "Impasse des Fourneaux",
+      "name_fr": "Impasse des Fourneaux",
+      "name_en": "Stoves Close",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S04_cafes",
+      "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
+      "architectural_theme": "narrow alley with chimneys steaming — cartoony storybook 2.5 (same as S04); snowy winter (chill/freeze verbs)",
+      "art_style": "cartoony storybook 2.5 (same as S04)",
+      "season": "snowy winter (chill/freeze verbs)",
+      "street_type": "narrow alley with chimneys steaming",
+      "edge": "spur",
+      "start": "S04_cafes",
+      "end": "B09_restaurant",
+      "end_room": null,
+      "end_note": "B09 restaurant kitchen door",
+      "theme_street_id": "ST_cooking",
+      "theme_street_name": "Ruelle des Gourmets",
+      "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
+      "places": [
+        "ST_cooking_seg004",
+        "ST_cooking_seg005",
+        "ST_cooking_seg006",
+        "ST_cooking_seg007"
+      ],
+      "place_count": 4,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_cooking_seg004",
+        "ST_cooking_seg005",
+        "ST_cooking_seg006",
+        "ST_cooking_seg007"
+      ],
+      "segments": [
+        "ST_cooking_seg004",
+        "ST_cooking_seg005",
+        "ST_cooking_seg006",
+        "ST_cooking_seg007"
+      ],
+      "verb_count": 35,
+      "mean_level": 3.88,
+      "segment_street_names": {
+        "ST_cooking_seg004": {
+          "name_fr": "Ruelle des Épices",
+          "name_en": "Spice Lane"
+        },
+        "ST_cooking_seg005": {
+          "name_fr": "Chemin des Épluchures",
+          "name_en": "Peelings Lane"
+        },
+        "ST_cooking_seg006": {
+          "name_fr": "Rue des Sorbetières",
+          "name_en": "Ice-Cream Makers Street"
+        },
+        "ST_cooking_seg007": {
+          "name_fr": "Allée des Cuisiniers",
+          "name_en": "Cooks' Alley"
+        }
+      }
+    },
+    {
+      "id": "ST_appels",
+      "name": "Rue des Appels",
+      "name_fr": "Rue des Appels",
+      "name_en": "Calls Street",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S04_cafes",
+      "meaning_group": "speak say tell ask answer call write read explain shout discuss communicate",
+      "architectural_theme": "street of telephone kiosks — retro storybook 3; summer",
+      "art_style": "retro storybook 3",
+      "season": "summer",
+      "street_type": "street of telephone kiosks",
+      "edge": "chord",
+      "start": "S04_cafes",
+      "end": "S14_culture",
+      "end_room": null,
+      "end_note": "S14 Boulevard des Loisirs",
+      "theme_street_id": "ST_communication",
+      "theme_street_name": "Rue de la Parole",
+      "theme_street_theme": "Belle Époque theaters and kiosks with posters and loudspeaker horns",
+      "places": [
+        "ST_communication_seg001",
+        "ST_communication_seg002",
+        "ST_communication_seg003",
+        "ST_communication_seg004",
+        "ST_communication_seg005"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_communication_seg001",
+        "ST_communication_seg002",
+        "ST_communication_seg003",
+        "ST_communication_seg004",
+        "ST_communication_seg005"
+      ],
+      "segments": [
+        "ST_communication_seg001",
+        "ST_communication_seg002",
+        "ST_communication_seg003",
+        "ST_communication_seg004",
+        "ST_communication_seg005"
+      ],
+      "verb_count": 30,
+      "mean_level": 1.53,
+      "segment_street_names": {
+        "ST_communication_seg001": {
+          "name_fr": "Rue du Téléphone",
+          "name_en": "Telephone Street"
+        },
+        "ST_communication_seg002": {
+          "name_fr": "Passage des Panneaux",
+          "name_en": "Signposts Passage"
+        },
+        "ST_communication_seg003": {
+          "name_fr": "Rue des Déclarations",
+          "name_en": "Declarations Street"
+        },
+        "ST_communication_seg004": {
+          "name_fr": "Rue des Écrivains",
+          "name_en": "Writers' Street"
+        },
+        "ST_communication_seg005": {
+          "name_fr": "Place des Crieurs",
+          "name_en": "Town Criers' Square"
+        }
+      }
+    },
+    {
+      "id": "ST_pas",
+      "name": "Rue des Pas Perdus",
+      "name_fr": "Rue des Pas Perdus",
+      "name_en": "Lost Steps Street",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S04_cafes",
+      "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
+      "architectural_theme": "long tree-lined avenue — realism 3.5; autumn",
+      "art_style": "realism 3.5",
+      "season": "autumn",
+      "street_type": "long tree-lined avenue",
+      "edge": "loop",
+      "start": "S04_cafes",
+      "end": "S08_travel",
+      "end_room": null,
+      "end_note": "S08 Carrefour des Voyages",
+      "theme_street_id": "ST_movement",
+      "theme_street_name": "Rue du Mouvement",
+      "theme_street_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
+      "places": [
+        "ST_movement_seg001",
+        "ST_movement_seg002",
+        "ST_movement_seg003",
+        "ST_movement_seg004",
+        "ST_movement_seg005"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_movement_seg001",
+        "ST_movement_seg002",
+        "ST_movement_seg003",
+        "ST_movement_seg004",
+        "ST_movement_seg005"
+      ],
+      "segments": [
+        "ST_movement_seg001",
+        "ST_movement_seg002",
+        "ST_movement_seg003",
+        "ST_movement_seg004",
+        "ST_movement_seg005"
+      ],
+      "verb_count": 30,
+      "mean_level": 1.4,
+      "segment_street_names": {
+        "ST_movement_seg001": {
+          "name_fr": "Rue de la Traversée",
+          "name_en": "Crossing Street"
+        },
+        "ST_movement_seg002": {
+          "name_fr": "Quai des Voyageurs",
+          "name_en": "Travelers' Quay"
+        },
+        "ST_movement_seg003": {
+          "name_fr": "Allée des Promeneurs",
+          "name_en": "Walkers' Alley"
+        },
+        "ST_movement_seg004": {
+          "name_fr": "Rue des Coureurs",
+          "name_en": "Runners' Street"
+        },
+        "ST_movement_seg005": {
+          "name_fr": "Rue de la Descente",
+          "name_en": "Downhill Street"
+        }
+      }
+    },
+    {
+      "id": "ST_departs",
+      "name": "Boulevard des Départs",
+      "name_fr": "Boulevard des Départs",
+      "name_en": "Departures Boulevard",
+      "type": "verb_street",
+      "short_street": true,
+      "sector_id": "S08_travel",
+      "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
+      "architectural_theme": "wide boulevard — clean realism 4; bright summer",
+      "art_style": "clean realism 4",
+      "season": "bright summer",
+      "street_type": "wide boulevard",
+      "edge": "spur",
+      "start": "S08_travel",
+      "end": "B21_aeroport",
+      "end_room": null,
+      "end_note": "B21 aéroport",
+      "theme_street_id": "ST_movement",
+      "theme_street_name": "Rue du Mouvement",
+      "theme_street_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
+      "places": [
+        "ST_movement_seg006",
+        "ST_movement_seg007",
+        "ST_movement_seg008",
+        "ST_movement_seg009",
+        "ST_movement_seg010"
+      ],
+      "place_count": 5,
+      "data_only_rooms": [],
+      "rooms": [
+        "ST_movement_seg006",
+        "ST_movement_seg007",
+        "ST_movement_seg008",
+        "ST_movement_seg009",
+        "ST_movement_seg010"
+      ],
+      "segments": [
+        "ST_movement_seg006",
+        "ST_movement_seg007",
+        "ST_movement_seg008",
+        "ST_movement_seg009",
+        "ST_movement_seg010"
+      ],
+      "verb_count": 30,
+      "mean_level": 2.6,
+      "segment_street_names": {
+        "ST_movement_seg006": {
+          "name_fr": "Place des Départs",
+          "name_en": "Departures Square"
+        },
+        "ST_movement_seg007": {
+          "name_fr": "Quai des Retours",
+          "name_en": "Homecomings Quay"
+        },
+        "ST_movement_seg008": {
+          "name_fr": "Chemin des Grimpeurs",
+          "name_en": "Climbers' Lane"
+        },
+        "ST_movement_seg009": {
+          "name_fr": "Rue des Pressés",
+          "name_en": "Hurry-Up Street"
+        },
+        "ST_movement_seg010": {
+          "name_fr": "Allée des Galopins",
+          "name_en": "Little Rascals' Alley"
+        }
+      }
     }
-   }
-  },
-  {
-   "id": "ST_communication",
-   "name": "Rue de la Parole",
-   "type": "verb_street",
-   "sector_id": "S14_culture",
-   "meaning_group": "speak say tell ask answer call write read explain shout discuss communicate",
-   "architectural_theme": "Belle Époque theaters and kiosks with posters and loudspeaker horns",
-   "rooms": [
-    "ST_communication_seg006",
-    "ST_communication_seg007",
-    "ST_communication_seg008",
-    "ST_communication_seg009",
-    "ST_communication_seg013",
-    "ST_communication_seg018",
-    "ST_communication_seg010",
-    "ST_communication_seg012",
-    "ST_communication_seg014",
-    "ST_communication_seg015",
-    "ST_communication_seg019",
-    "ST_communication_seg020",
-    "ST_communication_seg011",
-    "ST_communication_seg016",
-    "ST_communication_seg017",
-    "ST_communication_seg027",
-    "ST_communication_seg021",
-    "ST_communication_seg022",
-    "ST_communication_seg024",
-    "ST_communication_seg025",
-    "ST_communication_seg026",
-    "ST_communication_seg023"
-   ],
-   "mean_level": 3.83,
-   "segments": [
-    "ST_communication_seg006",
-    "ST_communication_seg007",
-    "ST_communication_seg008",
-    "ST_communication_seg009",
-    "ST_communication_seg013",
-    "ST_communication_seg018",
-    "ST_communication_seg010",
-    "ST_communication_seg012",
-    "ST_communication_seg014",
-    "ST_communication_seg015",
-    "ST_communication_seg019",
-    "ST_communication_seg020",
-    "ST_communication_seg011",
-    "ST_communication_seg016",
-    "ST_communication_seg017",
-    "ST_communication_seg027",
-    "ST_communication_seg021",
-    "ST_communication_seg022",
-    "ST_communication_seg024",
-    "ST_communication_seg025",
-    "ST_communication_seg026",
-    "ST_communication_seg023"
-   ],
-   "verb_count": 132,
-   "segment_street_names": {
-    "ST_communication_seg006": {
-     "name_fr": "Allée des Conteurs",
-     "name_en": "Storytellers' Alley"
-    },
-    "ST_communication_seg007": {
-     "name_fr": "Rue des Promesses",
-     "name_en": "Promises Street"
-    },
-    "ST_communication_seg008": {
-     "name_fr": "Impasse des Menteurs",
-     "name_en": "Fibbers' Close"
-    },
-    "ST_communication_seg009": {
-     "name_fr": "Ruelle des Excuses",
-     "name_en": "Excuses Lane"
-    },
-    "ST_communication_seg010": {
-     "name_fr": "Ruelle des Chuchotements",
-     "name_en": "Whispers Lane"
-    },
-    "ST_communication_seg011": {
-     "name_fr": "Passage des Échos",
-     "name_en": "Echoes Passage"
-    },
-    "ST_communication_seg012": {
-     "name_fr": "Rue des Imprimeurs",
-     "name_en": "Printers' Street"
-    },
-    "ST_communication_seg013": {
-     "name_fr": "Allée des Aboiements",
-     "name_en": "Barking Alley"
-    },
-    "ST_communication_seg014": {
-     "name_fr": "Place des Bavards",
-     "name_en": "Chatterboxes' Square"
-    },
-    "ST_communication_seg015": {
-     "name_fr": "Rue du Magnétophone",
-     "name_en": "Tape-Recorder Street"
-    },
-    "ST_communication_seg016": {
-     "name_fr": "Ruelle des Déchiffreurs",
-     "name_en": "Code-Breakers' Lane"
-    },
-    "ST_communication_seg017": {
-     "name_fr": "Quai des Rameurs",
-     "name_en": "Rowers' Quay"
-    },
-    "ST_communication_seg018": {
-     "name_fr": "Rue des Traducteurs",
-     "name_en": "Translators' Street"
-    },
-    "ST_communication_seg019": {
-     "name_fr": "Ruelle de l'Abécédaire",
-     "name_en": "ABC-Book Lane"
-    },
-    "ST_communication_seg020": {
-     "name_fr": "Rue des Correcteurs",
-     "name_en": "Proofreaders' Street"
-    },
-    "ST_communication_seg021": {
-     "name_fr": "Impasse des Déductions",
-     "name_en": "Deductions Close"
-    },
-    "ST_communication_seg022": {
-     "name_fr": "Place des Journalistes",
-     "name_en": "Journalists' Square"
-    },
-    "ST_communication_seg023": {
-     "name_fr": "Passage des Codes-Secrets",
-     "name_en": "Secret-Codes Passage"
-    },
-    "ST_communication_seg024": {
-     "name_fr": "Rue de la Ponctuation",
-     "name_en": "Punctuation Street"
-    },
-    "ST_communication_seg025": {
-     "name_fr": "Ruelle des Matous",
-     "name_en": "Tomcats' Lane"
-    },
-    "ST_communication_seg026": {
-     "name_fr": "Allée des Brailleurs",
-     "name_en": "Bawlers' Alley"
-    },
-    "ST_communication_seg027": {
-     "name_fr": "Place du Tutoiement",
-     "name_en": "Saying-\"Tu\" Square"
-    }
-   }
-  },
-  {
-   "id": "ST_routine",
-   "name": "Allée du Quotidien",
-   "type": "verb_street",
-   "sector_id": "S02_home",
-   "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
-   "architectural_theme": "Half-timbered Alsatian cottages with flower boxes",
-   "rooms": [
-    "ST_routine_seg002",
-    "ST_routine_seg001",
-    "ST_routine_seg003",
-    "ST_routine_seg004",
-    "ST_routine_seg007",
-    "ST_routine_seg005",
-    "ST_routine_seg006",
-    "ST_routine_seg009",
-    "ST_routine_seg008"
-   ],
-   "mean_level": 2.78,
-   "segments": [
-    "ST_routine_seg002",
-    "ST_routine_seg001",
-    "ST_routine_seg003",
-    "ST_routine_seg004",
-    "ST_routine_seg007",
-    "ST_routine_seg005",
-    "ST_routine_seg006",
-    "ST_routine_seg009",
-    "ST_routine_seg008"
-   ],
-   "verb_count": 54,
-   "segment_street_names": {
-    "ST_routine_seg001": {
-     "name_fr": "Rue du Marchand-de-Sable",
-     "name_en": "Sandman Street"
-    },
-    "ST_routine_seg002": {
-     "name_fr": "Rue des Lève-tôt",
-     "name_en": "Early Risers' Street"
-    },
-    "ST_routine_seg003": {
-     "name_fr": "Allée des Lavandières",
-     "name_en": "Washerwomen's Alley"
-    },
-    "ST_routine_seg004": {
-     "name_fr": "Ruelle des Brosses",
-     "name_en": "Brushes Lane"
-    },
-    "ST_routine_seg005": {
-     "name_fr": "Passage des Nœuds",
-     "name_en": "Knots Passage"
-    },
-    "ST_routine_seg006": {
-     "name_fr": "Rue des Balayeurs",
-     "name_en": "Sweepers' Street"
-    },
-    "ST_routine_seg007": {
-     "name_fr": "Allée du Fer-à-Repasser",
-     "name_en": "Clothes-Iron Alley"
-    },
-    "ST_routine_seg008": {
-     "name_fr": "Ruelle des Clowns",
-     "name_en": "Clowns' Lane"
-    },
-    "ST_routine_seg009": {
-     "name_fr": "Rue des Torchons",
-     "name_en": "Tea-Towels Street"
-    }
-   }
-  },
-  {
-   "id": "ST_cognition",
-   "name": "Avenue de la Pensée",
-   "type": "verb_street",
-   "sector_id": "S10_university",
-   "meaning_group": "think know understand learn remember forget believe imagine decide study",
-   "architectural_theme": "Neo-classical colonnades, domes and library towers",
-   "rooms": [
-    "ST_cognition_seg001",
-    "ST_cognition_seg002",
-    "ST_cognition_seg004",
-    "ST_cognition_seg005",
-    "ST_cognition_seg003",
-    "ST_cognition_seg006",
-    "ST_cognition_seg008",
-    "ST_cognition_seg010",
-    "ST_cognition_seg009",
-    "ST_cognition_seg007",
-    "ST_cognition_seg011",
-    "ST_cognition_seg013",
-    "ST_cognition_seg015",
-    "ST_cognition_seg012",
-    "ST_cognition_seg014"
-   ],
-   "mean_level": 3.2,
-   "segments": [
-    "ST_cognition_seg001",
-    "ST_cognition_seg002",
-    "ST_cognition_seg004",
-    "ST_cognition_seg005",
-    "ST_cognition_seg003",
-    "ST_cognition_seg006",
-    "ST_cognition_seg008",
-    "ST_cognition_seg010",
-    "ST_cognition_seg009",
-    "ST_cognition_seg007",
-    "ST_cognition_seg011",
-    "ST_cognition_seg013",
-    "ST_cognition_seg015",
-    "ST_cognition_seg012",
-    "ST_cognition_seg014"
-   ],
-   "verb_count": 89,
-   "segment_street_names": {
-    "ST_cognition_seg001": {
-     "name_fr": "Rue des Devinettes",
-     "name_en": "Riddles Street"
-    },
-    "ST_cognition_seg002": {
-     "name_fr": "Allée des Souvenirs",
-     "name_en": "Memories Alley"
-    },
-    "ST_cognition_seg003": {
-     "name_fr": "Impasse des Rêveurs",
-     "name_en": "Dreamers' Close"
-    },
-    "ST_cognition_seg004": {
-     "name_fr": "Rue des Apprentis",
-     "name_en": "Apprentices' Street"
-    },
-    "ST_cognition_seg005": {
-     "name_fr": "Chemin des Essais",
-     "name_en": "Tryouts Lane"
-    },
-    "ST_cognition_seg006": {
-     "name_fr": "Rue des Études",
-     "name_en": "Studies Street"
-    },
-    "ST_cognition_seg007": {
-     "name_fr": "Ruelle des Pile-ou-Face",
-     "name_en": "Heads-or-Tails Lane"
-    },
-    "ST_cognition_seg008": {
-     "name_fr": "Rue des Enquêteurs",
-     "name_en": "Investigators' Street"
-    },
-    "ST_cognition_seg009": {
-     "name_fr": "Allée des Imitateurs",
-     "name_en": "Copycats' Alley"
-    },
-    "ST_cognition_seg010": {
-     "name_fr": "Rue des Formules",
-     "name_en": "Formulas Street"
-    },
-    "ST_cognition_seg011": {
-     "name_fr": "Ruelle des Calculettes",
-     "name_en": "Calculators Lane"
-    },
-    "ST_cognition_seg012": {
-     "name_fr": "Chemin du Par-Cœur",
-     "name_en": "By-Heart Lane"
-    },
-    "ST_cognition_seg013": {
-     "name_fr": "Place des Diplômés",
-     "name_en": "Graduates' Square"
-    },
-    "ST_cognition_seg014": {
-     "name_fr": "Rue des Idéalistes",
-     "name_en": "Idealists' Street"
-    },
-    "ST_cognition_seg015": {
-     "name_fr": "Impasse des Chiffres",
-     "name_en": "Numbers Close"
-    }
-   }
-  },
-  {
-   "id": "ST_emotion",
-   "name": "Sentier des Sentiments",
-   "type": "verb_street",
-   "sector_id": "S15_feelings",
-   "meaning_group": "love hate like fear hope regret enjoy cry laugh feel worry",
-   "architectural_theme": "Pastel rococo pavilions with heart-shaped windows",
-   "rooms": [
-    "ST_emotion_seg005",
-    "ST_emotion_seg006",
-    "ST_emotion_seg002",
-    "ST_emotion_seg001",
-    "ST_emotion_seg004",
-    "ST_emotion_seg003",
-    "ST_emotion_seg007",
-    "ST_emotion_seg012",
-    "ST_emotion_seg010",
-    "ST_emotion_seg011",
-    "ST_emotion_seg013",
-    "ST_emotion_seg014",
-    "ST_emotion_seg008",
-    "ST_emotion_seg009",
-    "ST_emotion_seg015",
-    "ST_emotion_seg019",
-    "ST_emotion_seg018",
-    "ST_emotion_seg020",
-    "ST_emotion_seg016",
-    "ST_emotion_seg017"
-   ],
-   "mean_level": 3.35,
-   "segments": [
-    "ST_emotion_seg005",
-    "ST_emotion_seg006",
-    "ST_emotion_seg002",
-    "ST_emotion_seg001",
-    "ST_emotion_seg004",
-    "ST_emotion_seg003",
-    "ST_emotion_seg007",
-    "ST_emotion_seg012",
-    "ST_emotion_seg010",
-    "ST_emotion_seg011",
-    "ST_emotion_seg013",
-    "ST_emotion_seg014",
-    "ST_emotion_seg008",
-    "ST_emotion_seg009",
-    "ST_emotion_seg015",
-    "ST_emotion_seg019",
-    "ST_emotion_seg018",
-    "ST_emotion_seg020",
-    "ST_emotion_seg016",
-    "ST_emotion_seg017"
-   ],
-   "verb_count": 117,
-   "segment_street_names": {
-    "ST_emotion_seg001": {
-     "name_fr": "Rue des Inquiets",
-     "name_en": "Worriers' Street"
-    },
-    "ST_emotion_seg002": {
-     "name_fr": "Allée des Rires-et-Larmes",
-     "name_en": "Laughter-and-Tears Alley"
-    },
-    "ST_emotion_seg003": {
-     "name_fr": "Place des Applaudissements",
-     "name_en": "Applause Square"
-    },
-    "ST_emotion_seg004": {
-     "name_fr": "Rue du Sourire",
-     "name_en": "Smile Street"
-    },
-    "ST_emotion_seg005": {
-     "name_fr": "Allée des Amoureux",
-     "name_en": "Sweethearts' Alley"
-    },
-    "ST_emotion_seg006": {
-     "name_fr": "Rue des Admirateurs",
-     "name_en": "Admirers' Street"
-    },
-    "ST_emotion_seg007": {
-     "name_fr": "Ruelle des Frissons",
-     "name_en": "Shivers Lane"
-    },
-    "ST_emotion_seg008": {
-     "name_fr": "Impasse des Sourcils-Froncés",
-     "name_en": "Frowning-Brows Close"
-    },
-    "ST_emotion_seg009": {
-     "name_fr": "Passage des Méfiants",
-     "name_en": "Suspicious Folk's Passage"
-    },
-    "ST_emotion_seg010": {
-     "name_fr": "Rue des Consolations",
-     "name_en": "Comforts Street"
-    },
-    "ST_emotion_seg011": {
-     "name_fr": "Rue des Soucis",
-     "name_en": "Worries Street"
-    },
-    "ST_emotion_seg012": {
-     "name_fr": "Allée des Envieux",
-     "name_en": "Envious Folk's Alley"
-    },
-    "ST_emotion_seg013": {
-     "name_fr": "Ruelle des Bâillements",
-     "name_en": "Yawns Lane"
-    },
-    "ST_emotion_seg014": {
-     "name_fr": "Place des Rigolos",
-     "name_en": "Jokers' Square"
-    },
-    "ST_emotion_seg015": {
-     "name_fr": "Rue des Bienfaits",
-     "name_en": "Good Deeds Street"
-    },
-    "ST_emotion_seg016": {
-     "name_fr": "Chemin des Épouvantails",
-     "name_en": "Scarecrows' Lane"
-    },
-    "ST_emotion_seg017": {
-     "name_fr": "Impasse des Remords",
-     "name_en": "Regrets Close"
-    },
-    "ST_emotion_seg018": {
-     "name_fr": "Allée des Tracas",
-     "name_en": "Hassles Alley"
-    },
-    "ST_emotion_seg019": {
-     "name_fr": "Rue des Ronronnements",
-     "name_en": "Purring Street"
-    },
-    "ST_emotion_seg020": {
-     "name_fr": "Passage des Câlins",
-     "name_en": "Cuddles Passage"
-    }
-   }
-  },
-  {
-   "id": "ST_making",
-   "name": "Rue des Artisans",
-   "type": "verb_street",
-   "sector_id": "S05_bank",
-   "meaning_group": "make build repair create fix produce work manufacture paint construct",
-   "architectural_theme": "Brick workshops, cogs and chimneys (industrial steampunk)",
-   "rooms": [
-    "ST_making_seg002",
-    "ST_making_seg003",
-    "ST_making_seg001",
-    "ST_making_seg004",
-    "ST_making_seg005",
-    "ST_making_seg006",
-    "ST_making_seg007",
-    "ST_making_seg008",
-    "ST_making_seg009",
-    "ST_making_seg010",
-    "ST_making_seg013",
-    "ST_making_seg011",
-    "ST_making_seg012"
-   ],
-   "mean_level": 3.85,
-   "segments": [
-    "ST_making_seg002",
-    "ST_making_seg003",
-    "ST_making_seg001",
-    "ST_making_seg004",
-    "ST_making_seg005",
-    "ST_making_seg006",
-    "ST_making_seg007",
-    "ST_making_seg008",
-    "ST_making_seg009",
-    "ST_making_seg010",
-    "ST_making_seg013",
-    "ST_making_seg011",
-    "ST_making_seg012"
-   ],
-   "verb_count": 74,
-   "segment_street_names": {
-    "ST_making_seg001": {
-     "name_fr": "Rue des Réparateurs",
-     "name_en": "Repairers' Street"
-    },
-    "ST_making_seg002": {
-     "name_fr": "Allée des Inventeurs",
-     "name_en": "Inventors' Alley"
-    },
-    "ST_making_seg003": {
-     "name_fr": "Rue des Bâtisseurs",
-     "name_en": "Builders' Street"
-    },
-    "ST_making_seg004": {
-     "name_fr": "Rue des Fournisseurs",
-     "name_en": "Suppliers' Street"
-    },
-    "ST_making_seg005": {
-     "name_fr": "Passage des Vieux-Meubles",
-     "name_en": "Old-Furniture Passage"
-    },
-    "ST_making_seg006": {
-     "name_fr": "Rue des Photographes",
-     "name_en": "Photographers' Street"
-    },
-    "ST_making_seg007": {
-     "name_fr": "Ruelle des Perceurs",
-     "name_en": "Drillers' Lane"
-    },
-    "ST_making_seg008": {
-     "name_fr": "Rue des Sculpteurs",
-     "name_en": "Sculptors' Street"
-    },
-    "ST_making_seg009": {
-     "name_fr": "Allée des Tisserands",
-     "name_en": "Weavers' Alley"
-    },
-    "ST_making_seg010": {
-     "name_fr": "Rue des Chapeliers",
-     "name_en": "Hatters' Street"
-    },
-    "ST_making_seg011": {
-     "name_fr": "Rue des Paveurs",
-     "name_en": "Cobble-Layers' Street"
-    },
-    "ST_making_seg012": {
-     "name_fr": "Quai des Verriers",
-     "name_en": "Glassblowers' Quay"
-    },
-    "ST_making_seg013": {
-     "name_fr": "Impasse des Vitraux",
-     "name_en": "Stained-Glass Close"
-    }
-   }
-  },
-  {
-   "id": "ST_perception",
-   "name": "Galerie des Sens",
-   "type": "verb_street",
-   "sector_id": "S13_museum",
-   "meaning_group": "see look watch hear listen smell touch taste notice observe appear",
-   "architectural_theme": "Glass-and-mirror museum pavilions, giant eyes and ear trumpets",
-   "rooms": [
-    "ST_perception_seg001",
-    "ST_perception_seg002",
-    "ST_perception_seg003",
-    "ST_perception_seg004",
-    "ST_perception_seg005",
-    "ST_perception_seg007",
-    "ST_perception_seg006",
-    "ST_perception_seg009",
-    "ST_perception_seg010",
-    "ST_perception_seg008",
-    "ST_perception_seg011",
-    "ST_perception_seg013",
-    "ST_perception_seg012"
-   ],
-   "mean_level": 3.31,
-   "segments": [
-    "ST_perception_seg001",
-    "ST_perception_seg002",
-    "ST_perception_seg003",
-    "ST_perception_seg004",
-    "ST_perception_seg005",
-    "ST_perception_seg007",
-    "ST_perception_seg006",
-    "ST_perception_seg009",
-    "ST_perception_seg010",
-    "ST_perception_seg008",
-    "ST_perception_seg011",
-    "ST_perception_seg013",
-    "ST_perception_seg012"
-   ],
-   "verb_count": 74,
-   "segment_street_names": {
-    "ST_perception_seg001": {
-     "name_fr": "Rue des Surprises",
-     "name_en": "Surprises Street"
-    },
-    "ST_perception_seg002": {
-     "name_fr": "Allée des Curieux",
-     "name_en": "Nosy Folk's Alley"
-    },
-    "ST_perception_seg003": {
-     "name_fr": "Rue des Vitrines",
-     "name_en": "Shop-Windows Street"
-    },
-    "ST_perception_seg004": {
-     "name_fr": "Rue des Surveillants",
-     "name_en": "Watchers' Street"
-    },
-    "ST_perception_seg005": {
-     "name_fr": "Place des Témoins",
-     "name_en": "Witnesses' Square"
-    },
-    "ST_perception_seg006": {
-     "name_fr": "Ruelle des Soupçons",
-     "name_en": "Suspicions Lane"
-    },
-    "ST_perception_seg007": {
-     "name_fr": "Allée des Berceaux",
-     "name_en": "Cradles Alley"
-    },
-    "ST_perception_seg008": {
-     "name_fr": "Passage des Espions",
-     "name_en": "Spies' Passage"
-    },
-    "ST_perception_seg009": {
-     "name_fr": "Rue des Miroirs",
-     "name_en": "Mirrors Street"
-    },
-    "ST_perception_seg010": {
-     "name_fr": "Rue des Parfumeurs",
-     "name_en": "Perfumers' Street"
-    },
-    "ST_perception_seg011": {
-     "name_fr": "Impasse des Inspecteurs",
-     "name_en": "Inspectors' Close"
-    },
-    "ST_perception_seg012": {
-     "name_fr": "Allée des Étoiles",
-     "name_en": "Stars Alley"
-    },
-    "ST_perception_seg013": {
-     "name_fr": "Rue des Teinturiers",
-     "name_en": "Dyers' Street"
-    }
-   }
-  },
-  {
-   "id": "ST_possession",
-   "name": "Passage de l'Échange",
-   "type": "verb_street",
-   "sector_id": "S05_bank",
-   "meaning_group": "give take have keep receive send bring offer lose find hold get",
-   "architectural_theme": "Covered Parisian passages with mosaic floors",
-   "rooms": [
-    "ST_possession_seg002",
-    "ST_possession_seg003",
-    "ST_possession_seg001",
-    "ST_possession_seg005",
-    "ST_possession_seg006",
-    "ST_possession_seg004",
-    "ST_possession_seg007",
-    "ST_possession_seg011",
-    "ST_possession_seg008",
-    "ST_possession_seg009",
-    "ST_possession_seg012",
-    "ST_possession_seg010",
-    "ST_possession_seg015",
-    "ST_possession_seg013",
-    "ST_possession_seg014"
-   ],
-   "mean_level": 2.92,
-   "segments": [
-    "ST_possession_seg002",
-    "ST_possession_seg003",
-    "ST_possession_seg001",
-    "ST_possession_seg005",
-    "ST_possession_seg006",
-    "ST_possession_seg004",
-    "ST_possession_seg007",
-    "ST_possession_seg011",
-    "ST_possession_seg008",
-    "ST_possession_seg009",
-    "ST_possession_seg012",
-    "ST_possession_seg010",
-    "ST_possession_seg015",
-    "ST_possession_seg013",
-    "ST_possession_seg014"
-   ],
-   "verb_count": 86,
-   "segment_street_names": {
-    "ST_possession_seg001": {
-     "name_fr": "Rue des Trouvailles",
-     "name_en": "Lucky-Finds Street"
-    },
-    "ST_possession_seg002": {
-     "name_fr": "Allée des Cadeaux",
-     "name_en": "Presents Alley"
-    },
-    "ST_possession_seg003": {
-     "name_fr": "Rue des Coffres",
-     "name_en": "Treasure-Chests Street"
-    },
-    "ST_possession_seg004": {
-     "name_fr": "Place du Troc",
-     "name_en": "Swap-Shop Square"
-    },
-    "ST_possession_seg005": {
-     "name_fr": "Place des Bancs",
-     "name_en": "Benches Square"
-    },
-    "ST_possession_seg006": {
-     "name_fr": "Rue des Guichets",
-     "name_en": "Counters Street"
-    },
-    "ST_possession_seg007": {
-     "name_fr": "Rue des Envolées",
-     "name_en": "Take-Offs Street"
-    },
-    "ST_possession_seg008": {
-     "name_fr": "Impasse des Seaux-Vides",
-     "name_en": "Empty-Buckets Close"
-    },
-    "ST_possession_seg009": {
-     "name_fr": "Passage des Cages-Ouvertes",
-     "name_en": "Open-Cages Passage"
-    },
-    "ST_possession_seg010": {
-     "name_fr": "Rue des Collectionneurs",
-     "name_en": "Collectors' Street"
-    },
-    "ST_possession_seg011": {
-     "name_fr": "Rue des Pharmaciens",
-     "name_en": "Chemists' Street"
-    },
-    "ST_possession_seg012": {
-     "name_fr": "Ruelle des Facteurs",
-     "name_en": "Postmen's Lane"
-    },
-    "ST_possession_seg013": {
-     "name_fr": "Quai des Coups-de-Main",
-     "name_en": "Helping-Hands Quay"
-    },
-    "ST_possession_seg014": {
-     "name_fr": "Rue des Négociants",
-     "name_en": "Traders' Street"
-    },
-    "ST_possession_seg015": {
-     "name_fr": "Allée des Inventaires",
-     "name_en": "Stocktaking Alley"
-    }
-   }
-  },
-  {
-   "id": "ST_change",
-   "name": "Boulevard des Métamorphoses",
-   "type": "verb_street",
-   "sector_id": "S09_nature",
-   "meaning_group": "become change grow begin finish continue stop increase decrease transform",
-   "architectural_theme": "Art Deco skyscraper-towers that morph from bud to bloom",
-   "rooms": [
-    "ST_change_seg004",
-    "ST_change_seg003",
-    "ST_change_seg005",
-    "ST_change_seg002",
-    "ST_change_seg001",
-    "ST_change_seg006",
-    "ST_change_seg011",
-    "ST_change_seg007",
-    "ST_change_seg009",
-    "ST_change_seg008",
-    "ST_change_seg010",
-    "ST_change_seg012",
-    "ST_change_seg013",
-    "ST_change_seg014",
-    "ST_change_seg015",
-    "ST_change_seg018",
-    "ST_change_seg016",
-    "ST_change_seg017",
-    "ST_change_seg019"
-   ],
-   "mean_level": 3.6,
-   "segments": [
-    "ST_change_seg004",
-    "ST_change_seg003",
-    "ST_change_seg005",
-    "ST_change_seg002",
-    "ST_change_seg001",
-    "ST_change_seg006",
-    "ST_change_seg011",
-    "ST_change_seg007",
-    "ST_change_seg009",
-    "ST_change_seg008",
-    "ST_change_seg010",
-    "ST_change_seg012",
-    "ST_change_seg013",
-    "ST_change_seg014",
-    "ST_change_seg015",
-    "ST_change_seg018",
-    "ST_change_seg016",
-    "ST_change_seg017",
-    "ST_change_seg019"
-   ],
-   "verb_count": 111,
-   "segment_street_names": {
-    "ST_change_seg001": {
-     "name_fr": "Allée des Hauts-et-Bas",
-     "name_en": "Ups-and-Downs Alley"
-    },
-    "ST_change_seg002": {
-     "name_fr": "Rue des Transformistes",
-     "name_en": "Quick-Change Artists' Street"
-    },
-    "ST_change_seg003": {
-     "name_fr": "Place de la Réussite",
-     "name_en": "Success Square"
-    },
-    "ST_change_seg004": {
-     "name_fr": "Rue du Recommencement",
-     "name_en": "Starting-Over Street"
-    },
-    "ST_change_seg005": {
-     "name_fr": "Impasse du Point-Final",
-     "name_en": "Full-Stop Close"
-    },
-    "ST_change_seg006": {
-     "name_fr": "Place du Coup-d'Envoi",
-     "name_en": "Kick-Off Square"
-    },
-    "ST_change_seg007": {
-     "name_fr": "Allée du Progrès",
-     "name_en": "Progress Alley"
-    },
-    "ST_change_seg008": {
-     "name_fr": "Rue des Chrysalides",
-     "name_en": "Chrysalis Street"
-    },
-    "ST_change_seg009": {
-     "name_fr": "Rue des Démolisseurs",
-     "name_en": "Demolishers' Street"
-    },
-    "ST_change_seg010": {
-     "name_fr": "Chemin des Ralentis",
-     "name_en": "Slow-Motion Lane"
-    },
-    "ST_change_seg011": {
-     "name_fr": "Allée du Renouveau",
-     "name_en": "Renewal Alley"
-    },
-    "ST_change_seg012": {
-     "name_fr": "Passage des Étirements",
-     "name_en": "Stretches Passage"
-    },
-    "ST_change_seg013": {
-     "name_fr": "Quai des Loupes",
-     "name_en": "Magnifying-Glass Quay"
-    },
-    "ST_change_seg014": {
-     "name_fr": "Place des Novateurs",
-     "name_en": "Innovators' Square"
-    },
-    "ST_change_seg015": {
-     "name_fr": "Ruelle des Rénovateurs",
-     "name_en": "Renovators' Lane"
-    },
-    "ST_change_seg016": {
-     "name_fr": "Passage des Cristaux",
-     "name_en": "Crystals Passage"
-    },
-    "ST_change_seg017": {
-     "name_fr": "Allée des Porte-Voix",
-     "name_en": "Megaphones Alley"
-    },
-    "ST_change_seg018": {
-     "name_fr": "Quai des Chavirés",
-     "name_en": "Capsized Boats Quay"
-    },
-    "ST_change_seg019": {
-     "name_fr": "Ruelle du Pull-Rétréci",
-     "name_en": "Shrunken-Sweater Lane"
-    }
-   }
-  },
-  {
-   "id": "ST_social",
-   "name": "Place de la Rencontre",
-   "type": "verb_street",
-   "sector_id": "S06_townhall",
-   "meaning_group": "meet help invite visit share marry greet thank join welcome",
-   "architectural_theme": "Town-hall Renaissance façades with balconies and flags",
-   "rooms": [
-    "ST_social_seg002",
-    "ST_social_seg001",
-    "ST_social_seg003",
-    "ST_social_seg004",
-    "ST_social_seg007",
-    "ST_social_seg008",
-    "ST_social_seg005",
-    "ST_social_seg006",
-    "ST_social_seg009",
-    "ST_social_seg010",
-    "ST_social_seg011"
-   ],
-   "mean_level": 3.11,
-   "segments": [
-    "ST_social_seg002",
-    "ST_social_seg001",
-    "ST_social_seg003",
-    "ST_social_seg004",
-    "ST_social_seg007",
-    "ST_social_seg008",
-    "ST_social_seg005",
-    "ST_social_seg006",
-    "ST_social_seg009",
-    "ST_social_seg010",
-    "ST_social_seg011"
-   ],
-   "verb_count": 66,
-   "segment_street_names": {
-    "ST_social_seg001": {
-     "name_fr": "Rue des Invités",
-     "name_en": "Guests' Street"
-    },
-    "ST_social_seg002": {
-     "name_fr": "Allée de l'Accueil",
-     "name_en": "Welcome Alley"
-    },
-    "ST_social_seg003": {
-     "name_fr": "Place des Retrouvailles",
-     "name_en": "Reunions Square"
-    },
-    "ST_social_seg004": {
-     "name_fr": "Rue des Mariés",
-     "name_en": "Newlyweds' Street"
-    },
-    "ST_social_seg005": {
-     "name_fr": "Allée des Serments",
-     "name_en": "Vows Alley"
-    },
-    "ST_social_seg006": {
-     "name_fr": "Rue des Perfectionnistes",
-     "name_en": "Perfectionists' Street"
-    },
-    "ST_social_seg007": {
-     "name_fr": "Chemin des Cueilleurs",
-     "name_en": "Pickers' Lane"
-    },
-    "ST_social_seg008": {
-     "name_fr": "Rue des Équipiers",
-     "name_en": "Teammates' Street"
-    },
-    "ST_social_seg009": {
-     "name_fr": "Passage des Prises",
-     "name_en": "Plug-Sockets Passage"
-    },
-    "ST_social_seg010": {
-     "name_fr": "Allée des Lambris",
-     "name_en": "Wood-Paneling Alley"
-    },
-    "ST_social_seg011": {
-     "name_fr": "Rue des Colocataires",
-     "name_en": "Housemates' Street"
-    }
-   }
-  },
-  {
-   "id": "ST_body",
-   "name": "Rue de la Vitalité",
-   "type": "verb_street",
-   "sector_id": "S07_health",
-   "meaning_group": "breathe heal hurt rest cough swallow suffer recover live die",
-   "architectural_theme": "White spa-town villas with domes and fountains",
-   "rooms": [
-    "ST_body_seg002",
-    "ST_body_seg001",
-    "ST_body_seg003",
-    "ST_body_seg004",
-    "ST_body_seg005",
-    "ST_body_seg007",
-    "ST_body_seg008",
-    "ST_body_seg006",
-    "ST_body_seg009",
-    "ST_body_seg013",
-    "ST_body_seg010",
-    "ST_body_seg011",
-    "ST_body_seg012"
-   ],
-   "mean_level": 3.77,
-   "segments": [
-    "ST_body_seg002",
-    "ST_body_seg001",
-    "ST_body_seg003",
-    "ST_body_seg004",
-    "ST_body_seg005",
-    "ST_body_seg007",
-    "ST_body_seg008",
-    "ST_body_seg006",
-    "ST_body_seg009",
-    "ST_body_seg013",
-    "ST_body_seg010",
-    "ST_body_seg011",
-    "ST_body_seg012"
-   ],
-   "verb_count": 73,
-   "segment_street_names": {
-    "ST_body_seg001": {
-     "name_fr": "Rue du Grand-Souffle",
-     "name_en": "Big Breath Street"
-    },
-    "ST_body_seg002": {
-     "name_fr": "Allée du Coiffeur",
-     "name_en": "Hairdresser's Alley"
-    },
-    "ST_body_seg003": {
-     "name_fr": "Rue des Soigneurs",
-     "name_en": "Carers' Street"
-    },
-    "ST_body_seg004": {
-     "name_fr": "Ruelle des Avaleurs-de-Sabres",
-     "name_en": "Sword-Swallowers' Lane"
-    },
-    "ST_body_seg005": {
-     "name_fr": "Allée des Ballons",
-     "name_en": "Balloon Alley"
-    },
-    "ST_body_seg006": {
-     "name_fr": "Rue des Accrocs",
-     "name_en": "Rips-and-Tears Street"
-    },
-    "ST_body_seg007": {
-     "name_fr": "Rue du Soulagement",
-     "name_en": "Relief Street"
-    },
-    "ST_body_seg008": {
-     "name_fr": "Place de la Renaissance",
-     "name_en": "Rebirth Square"
-    },
-    "ST_body_seg009": {
-     "name_fr": "Quai des Enrhumés",
-     "name_en": "Sniffly Folk's Quay"
-    },
-    "ST_body_seg010": {
-     "name_fr": "Allée des Vaccins",
-     "name_en": "Vaccine Alley"
-    },
-    "ST_body_seg011": {
-     "name_fr": "Passage des Greffes",
-     "name_en": "Grafts Passage"
-    },
-    "ST_body_seg012": {
-     "name_fr": "Ruelle des Mouchoirs",
-     "name_en": "Hankies Lane"
-    },
-    "ST_body_seg013": {
-     "name_fr": "Impasse des Ventres-Creux",
-     "name_en": "Empty-Tummies Close"
-    }
-   }
-  },
-  {
-   "id": "ST_nature",
-   "name": "Chemin des Saisons",
-   "type": "verb_street",
-   "sector_id": "S09_nature",
-   "meaning_group": "grow bloom rain snow shine flow fly swim plant harvest",
-   "architectural_theme": "Hobbit-like turf-roof cabins and treehouses",
-   "rooms": [
-    "ST_nature_seg001",
-    "ST_nature_seg002",
-    "ST_nature_seg006",
-    "ST_nature_seg003",
-    "ST_nature_seg004",
-    "ST_nature_seg005",
-    "ST_nature_seg007",
-    "ST_nature_seg008",
-    "ST_nature_seg009"
-   ],
-   "mean_level": 3.84,
-   "segments": [
-    "ST_nature_seg001",
-    "ST_nature_seg002",
-    "ST_nature_seg006",
-    "ST_nature_seg003",
-    "ST_nature_seg004",
-    "ST_nature_seg005",
-    "ST_nature_seg007",
-    "ST_nature_seg008",
-    "ST_nature_seg009"
-   ],
-   "verb_count": 50,
-   "segment_street_names": {
-    "ST_nature_seg001": {
-     "name_fr": "Allée des Averses",
-     "name_en": "Rain-Showers Alley"
-    },
-    "ST_nature_seg002": {
-     "name_fr": "Rue Ensoleillée",
-     "name_en": "Sunny Street"
-    },
-    "ST_nature_seg003": {
-     "name_fr": "Chemin des Jardiniers",
-     "name_en": "Gardeners' Lane"
-    },
-    "ST_nature_seg004": {
-     "name_fr": "Rue des Moissonneurs",
-     "name_en": "Harvesters' Street"
-    },
-    "ST_nature_seg005": {
-     "name_fr": "Quai des Inondations",
-     "name_en": "Floods Quay"
-    },
-    "ST_nature_seg006": {
-     "name_fr": "Quai des Pêcheurs",
-     "name_en": "Fishermen's Quay"
-    },
-    "ST_nature_seg007": {
-     "name_fr": "Impasse des Glaçons",
-     "name_en": "Icicles Close"
-    },
-    "ST_nature_seg008": {
-     "name_fr": "Rue des Étincelles",
-     "name_en": "Sparkles Street"
-    },
-    "ST_nature_seg009": {
-     "name_fr": "Chemin des Graines",
-     "name_en": "Seeds Lane"
-    }
-   }
-  },
-  {
-   "id": "ST_conflict",
-   "name": "Rue des Remparts",
-   "type": "verb_street",
-   "sector_id": "S06_townhall",
-   "meaning_group": "fight attack defend win lose threaten protect escape resist",
-   "architectural_theme": "Medieval ramparts, watchtowers and drawbridges",
-   "rooms": [
-    "ST_conflict_seg002",
-    "ST_conflict_seg001",
-    "ST_conflict_seg004",
-    "ST_conflict_seg003",
-    "ST_conflict_seg005",
-    "ST_conflict_seg012",
-    "ST_conflict_seg007",
-    "ST_conflict_seg009",
-    "ST_conflict_seg010",
-    "ST_conflict_seg011",
-    "ST_conflict_seg015",
-    "ST_conflict_seg006",
-    "ST_conflict_seg008",
-    "ST_conflict_seg013",
-    "ST_conflict_seg014",
-    "ST_conflict_seg016",
-    "ST_conflict_seg020",
-    "ST_conflict_seg017",
-    "ST_conflict_seg018",
-    "ST_conflict_seg019",
-    "ST_conflict_seg021"
-   ],
-   "mean_level": 3.61,
-   "segments": [
-    "ST_conflict_seg002",
-    "ST_conflict_seg001",
-    "ST_conflict_seg004",
-    "ST_conflict_seg003",
-    "ST_conflict_seg005",
-    "ST_conflict_seg012",
-    "ST_conflict_seg007",
-    "ST_conflict_seg009",
-    "ST_conflict_seg010",
-    "ST_conflict_seg011",
-    "ST_conflict_seg015",
-    "ST_conflict_seg006",
-    "ST_conflict_seg008",
-    "ST_conflict_seg013",
-    "ST_conflict_seg014",
-    "ST_conflict_seg016",
-    "ST_conflict_seg020",
-    "ST_conflict_seg017",
-    "ST_conflict_seg018",
-    "ST_conflict_seg019",
-    "ST_conflict_seg021"
-   ],
-   "verb_count": 123,
-   "segment_street_names": {
-    "ST_conflict_seg001": {
-     "name_fr": "Chemin de la Grande-Évasion",
-     "name_en": "Great Escape Lane"
-    },
-    "ST_conflict_seg002": {
-     "name_fr": "Rue des Sauveteurs",
-     "name_en": "Rescuers' Street"
-    },
-    "ST_conflict_seg003": {
-     "name_fr": "Passage des Résistants",
-     "name_en": "Resisters' Passage"
-    },
-    "ST_conflict_seg004": {
-     "name_fr": "Place des Boucliers",
-     "name_en": "Shields Square"
-    },
-    "ST_conflict_seg005": {
-     "name_fr": "Ruelle des Cachettes",
-     "name_en": "Hiding-Places Lane"
-    },
-    "ST_conflict_seg006": {
-     "name_fr": "Impasse du Refuge",
-     "name_en": "Refuge Close"
-    },
-    "ST_conflict_seg007": {
-     "name_fr": "Place du Face-à-Face",
-     "name_en": "Face-Off Square"
-    },
-    "ST_conflict_seg008": {
-     "name_fr": "Chemin des Exilés",
-     "name_en": "Exiles' Lane"
-    },
-    "ST_conflict_seg009": {
-     "name_fr": "Ruelle des Détours",
-     "name_en": "Detours Lane"
-    },
-    "ST_conflict_seg010": {
-     "name_fr": "Place des Manifestants",
-     "name_en": "Protesters' Square"
-    },
-    "ST_conflict_seg011": {
-     "name_fr": "Rue des Pétards",
-     "name_en": "Firecrackers Street"
-    },
-    "ST_conflict_seg012": {
-     "name_fr": "Rue des Conquérants",
-     "name_en": "Conquerors' Street"
-    },
-    "ST_conflict_seg013": {
-     "name_fr": "Allée des Alliés",
-     "name_en": "Allies' Alley"
-    },
-    "ST_conflict_seg014": {
-     "name_fr": "Chemin des Archers",
-     "name_en": "Archers' Lane"
-    },
-    "ST_conflict_seg015": {
-     "name_fr": "Rue du Coup-de-Frein",
-     "name_en": "Slam-the-Brakes Street"
-    },
-    "ST_conflict_seg016": {
-     "name_fr": "Place des Médailles",
-     "name_en": "Medals Square"
-    },
-    "ST_conflict_seg017": {
-     "name_fr": "Rue des Rivaux",
-     "name_en": "Rivals' Street"
-    },
-    "ST_conflict_seg018": {
-     "name_fr": "Impasse du Drapeau-Blanc",
-     "name_en": "White-Flag Close"
-    },
-    "ST_conflict_seg019": {
-     "name_fr": "Rue des Marteaux",
-     "name_en": "Hammers Street"
-    },
-    "ST_conflict_seg020": {
-     "name_fr": "Ruelle des Ruses-Déjouées",
-     "name_en": "Foiled-Tricks Lane"
-    },
-    "ST_conflict_seg021": {
-     "name_fr": "Allée des Fourreaux",
-     "name_en": "Scabbards Alley"
-    }
-   }
-  },
-  {
-   "id": "ST_rule",
-   "name": "Cours de la Loi",
-   "type": "verb_street",
-   "sector_id": "S06_townhall",
-   "meaning_group": "allow forbid oblige obey decide govern judge vote organize manage",
-   "architectural_theme": "Haussmann limestone blocks with columns and seals",
-   "rooms": [
-    "ST_rule_seg001",
-    "ST_rule_seg002",
-    "ST_rule_seg003",
-    "ST_rule_seg004",
-    "ST_rule_seg006",
-    "ST_rule_seg007",
-    "ST_rule_seg010",
-    "ST_rule_seg005",
-    "ST_rule_seg008",
-    "ST_rule_seg009",
-    "ST_rule_seg011",
-    "ST_rule_seg014",
-    "ST_rule_seg016",
-    "ST_rule_seg013",
-    "ST_rule_seg015",
-    "ST_rule_seg012"
-   ],
-   "mean_level": 3.94,
-   "segments": [
-    "ST_rule_seg001",
-    "ST_rule_seg002",
-    "ST_rule_seg003",
-    "ST_rule_seg004",
-    "ST_rule_seg006",
-    "ST_rule_seg007",
-    "ST_rule_seg010",
-    "ST_rule_seg005",
-    "ST_rule_seg008",
-    "ST_rule_seg009",
-    "ST_rule_seg011",
-    "ST_rule_seg014",
-    "ST_rule_seg016",
-    "ST_rule_seg013",
-    "ST_rule_seg015",
-    "ST_rule_seg012"
-   ],
-   "verb_count": 96,
-   "segment_street_names": {
-    "ST_rule_seg001": {
-     "name_fr": "Rue des Interdits",
-     "name_en": "Forbidden-Things Street"
-    },
-    "ST_rule_seg002": {
-     "name_fr": "Place des Juges",
-     "name_en": "Judges' Square"
-    },
-    "ST_rule_seg003": {
-     "name_fr": "Allée du Gouverneur",
-     "name_en": "Governor's Alley"
-    },
-    "ST_rule_seg004": {
-     "name_fr": "Rue des Urnes",
-     "name_en": "Ballot-Boxes Street"
-    },
-    "ST_rule_seg005": {
-     "name_fr": "Passage des Marionnettes",
-     "name_en": "Puppets Passage"
-    },
-    "ST_rule_seg006": {
-     "name_fr": "Rue du Tri",
-     "name_en": "Sorting Street"
-    },
-    "ST_rule_seg007": {
-     "name_fr": "Rue des Bons-Conseils",
-     "name_en": "Good-Advice Street"
-    },
-    "ST_rule_seg008": {
-     "name_fr": "Ruelle des Avocats",
-     "name_en": "Lawyers' Lane"
-    },
-    "ST_rule_seg009": {
-     "name_fr": "Rue des Bornes",
-     "name_en": "Boundary-Stones Street"
-    },
-    "ST_rule_seg010": {
-     "name_fr": "Allée des Habitudes",
-     "name_en": "Habits Alley"
-    },
-    "ST_rule_seg011": {
-     "name_fr": "Impasse des Barrages",
-     "name_en": "Roadblocks Close"
-    },
-    "ST_rule_seg012": {
-     "name_fr": "Rue des Tampons",
-     "name_en": "Rubber-Stamps Street"
-    },
-    "ST_rule_seg013": {
-     "name_fr": "Rue des Dompteurs",
-     "name_en": "Animal-Tamers' Street"
-    },
-    "ST_rule_seg014": {
-     "name_fr": "Allée des Courtisans",
-     "name_en": "Courtiers' Alley"
-    },
-    "ST_rule_seg015": {
-     "name_fr": "Quai des Hélices",
-     "name_en": "Propellers Quay"
-    },
-    "ST_rule_seg016": {
-     "name_fr": "Place des Délégués",
-     "name_en": "Delegates' Square"
-    }
-   }
-  },
-  {
-   "id": "ST_existence",
-   "name": "Impasse de l'Être",
-   "type": "verb_street",
-   "sector_id": "S13_museum",
-   "meaning_group": "be exist seem remain happen belong depend consist lack matter",
-   "architectural_theme": "Surrealist Magritte-style houses with floating doors",
-   "rooms": [
-    "ST_existence_seg001",
-    "ST_existence_seg002",
-    "ST_existence_seg004",
-    "ST_existence_seg003",
-    "ST_existence_seg005",
-    "ST_existence_seg006",
-    "ST_existence_seg007",
-    "ST_existence_seg008",
-    "ST_existence_seg009",
-    "ST_existence_seg010",
-    "ST_existence_seg011",
-    "ST_existence_seg013",
-    "ST_existence_seg012",
-    "ST_existence_seg014"
-   ],
-   "mean_level": 3.5,
-   "segments": [
-    "ST_existence_seg001",
-    "ST_existence_seg002",
-    "ST_existence_seg004",
-    "ST_existence_seg003",
-    "ST_existence_seg005",
-    "ST_existence_seg006",
-    "ST_existence_seg007",
-    "ST_existence_seg008",
-    "ST_existence_seg009",
-    "ST_existence_seg010",
-    "ST_existence_seg011",
-    "ST_existence_seg013",
-    "ST_existence_seg012",
-    "ST_existence_seg014"
-   ],
-   "verb_count": 79,
-   "segment_street_names": {
-    "ST_existence_seg001": {
-     "name_fr": "Rue des Disparitions",
-     "name_en": "Vanishings Street"
-    },
-    "ST_existence_seg002": {
-     "name_fr": "Place des Nouveau-Nés",
-     "name_en": "Newborns' Square"
-    },
-    "ST_existence_seg003": {
-     "name_fr": "Ruelle des Confidences",
-     "name_en": "Secrets Lane"
-    },
-    "ST_existence_seg004": {
-     "name_fr": "Allée du Mérite",
-     "name_en": "Merit Alley"
-    },
-    "ST_existence_seg005": {
-     "name_fr": "Rue des Devoirs",
-     "name_en": "Duties Street"
-    },
-    "ST_existence_seg006": {
-     "name_fr": "Rue des Imprévus",
-     "name_en": "Surprises-in-Store Street"
-    },
-    "ST_existence_seg007": {
-     "name_fr": "Allée des Comparaisons",
-     "name_en": "Comparisons Alley"
-    },
-    "ST_existence_seg008": {
-     "name_fr": "Impasse des Égarés",
-     "name_en": "Lost Wanderers' Close"
-    },
-    "ST_existence_seg009": {
-     "name_fr": "Rue de la Patience",
-     "name_en": "Patience Street"
-    },
-    "ST_existence_seg010": {
-     "name_fr": "Rue des Bocaux",
-     "name_en": "Preserving-Jars Street"
-    },
-    "ST_existence_seg011": {
-     "name_fr": "Rue des Coïncidences",
-     "name_en": "Coincidences Street"
-    },
-    "ST_existence_seg012": {
-     "name_fr": "Place de l'Unité",
-     "name_en": "Unity Square"
-    },
-    "ST_existence_seg013": {
-     "name_fr": "Passage des Cadres",
-     "name_en": "Picture-Frames Passage"
-    },
-    "ST_existence_seg014": {
-     "name_fr": "Impasse des Poupées-Gigognes",
-     "name_en": "Nesting-Dolls Close"
-    }
-   }
-  },
-  {
-   "id": "ST_play",
-   "name": "Promenade des Loisirs",
-   "type": "verb_street",
-   "sector_id": "S14_culture",
-   "meaning_group": "play dance sing draw travel rest have fun swim paint relax",
-   "architectural_theme": "Seaside fairground and carousel pavilions",
-   "rooms": [
-    "ST_play_seg001",
-    "ST_play_seg002",
-    "ST_play_seg003",
-    "ST_play_seg004",
-    "ST_play_seg005",
-    "ST_play_seg006",
-    "ST_play_seg007",
-    "ST_play_seg008",
-    "ST_play_seg009"
-   ],
-   "mean_level": 3.77,
-   "segments": [
-    "ST_play_seg001",
-    "ST_play_seg002",
-    "ST_play_seg003",
-    "ST_play_seg004",
-    "ST_play_seg005",
-    "ST_play_seg006",
-    "ST_play_seg007",
-    "ST_play_seg008",
-    "ST_play_seg009"
-   ],
-   "verb_count": 49,
-   "segment_street_names": {
-    "ST_play_seg001": {
-     "name_fr": "Place des Danseurs",
-     "name_en": "Dancers' Square"
-    },
-    "ST_play_seg002": {
-     "name_fr": "Rue des Peintres",
-     "name_en": "Painters' Street"
-    },
-    "ST_play_seg003": {
-     "name_fr": "Quai des Plongeurs",
-     "name_en": "Divers' Quay"
-    },
-    "ST_play_seg004": {
-     "name_fr": "Allée des Déguisements",
-     "name_en": "Dressing-Up Alley"
-    },
-    "ST_play_seg005": {
-     "name_fr": "Quai des Embarquements",
-     "name_en": "Boarding Quay"
-    },
-    "ST_play_seg006": {
-     "name_fr": "Ruelle des Croquis",
-     "name_en": "Sketches Lane"
-    },
-    "ST_play_seg007": {
-     "name_fr": "Place de l'Orchestre",
-     "name_en": "Orchestra Square"
-    },
-    "ST_play_seg008": {
-     "name_fr": "Allée des Zèbres",
-     "name_en": "Zebras Alley"
-    },
-    "ST_play_seg009": {
-     "name_fr": "Quai des Surfeurs",
-     "name_en": "Surfers' Quay"
-    }
-   }
-  },
-  {
-   "id": "ST_faith",
-   "name": "Chemin des Pèlerins",
-   "type": "verb_street",
-   "sector_id": "S11_church",
-   "meaning_group": "pray bless adore worship confess baptize celebrate forgive fast",
-   "architectural_theme": "Romanesque stone oratories and wayside shrines (reverent, no whimsy on sacred objects)",
-   "rooms": [
-    "ST_faith_seg001",
-    "ST_faith_seg002",
-    "ST_faith_seg003",
-    "ST_faith_seg004"
-   ],
-   "mean_level": 4.14,
-   "segments": [
-    "ST_faith_seg001",
-    "ST_faith_seg002",
-    "ST_faith_seg003",
-    "ST_faith_seg004"
-   ],
-   "verb_count": 19,
-   "segment_street_names": {
-    "ST_faith_seg001": {
-     "name_fr": "Rue du Pardon",
-     "name_en": "Forgiveness Street"
-    },
-    "ST_faith_seg002": {
-     "name_fr": "Place du Baptistère",
-     "name_en": "Baptistery Square"
-    },
-    "ST_faith_seg003": {
-     "name_fr": "Allée des Psaumes",
-     "name_en": "Psalms Alley"
-    },
-    "ST_faith_seg004": {
-     "name_fr": "Chemin de l'Encens",
-     "name_en": "Incense Lane"
-    }
-   }
-  },
-  {
-   "id": "ST_habitudes",
-   "name": "Montée des Habitudes",
-   "name_fr": "Montée des Habitudes",
-   "name_en": "Habits Climb",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S02_home",
-   "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
-   "architectural_theme": "stepped alley climbing a hillside, stair landings per place — richer painterly realism 4; autumn, yellow/red leaves (neutral light, no amber grade)",
-   "art_style": "richer painterly realism 4",
-   "season": "autumn, yellow/red leaves (neutral light, no amber grade)",
-   "street_type": "stepped alley climbing a hillside, stair landings per place",
-   "edge": "chord",
-   "start": "S02_home",
-   "end": "S15_feelings",
-   "end_room": null,
-   "end_note": "S15 Jardin des Cœurs",
-   "theme_street_id": "ST_routine",
-   "theme_street_name": "Allée du Quotidien",
-   "theme_street_theme": "Half-timbered Alsatian cottages with flower boxes",
-   "places": [
-    "ST_routine_seg010",
-    "ST_routine_seg011",
-    "ST_routine_seg012",
-    "ST_routine_seg013",
-    "ST_routine_seg014"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_routine_seg010",
-    "ST_routine_seg011",
-    "ST_routine_seg012",
-    "ST_routine_seg013",
-    "ST_routine_seg014"
-   ],
-   "segments": [
-    "ST_routine_seg010",
-    "ST_routine_seg011",
-    "ST_routine_seg012",
-    "ST_routine_seg013",
-    "ST_routine_seg014"
-   ],
-   "verb_count": 30,
-   "mean_level": 3.63,
-   "segment_street_names": {
-    "ST_routine_seg010": {
-     "name_fr": "Rue des Vieilles-Baskets",
-     "name_en": "Old-Sneakers Street"
-    },
-    "ST_routine_seg011": {
-     "name_fr": "Ruelle des Chaussons",
-     "name_en": "Slippers Lane"
-    },
-    "ST_routine_seg012": {
-     "name_fr": "Allée des Hérons",
-     "name_en": "Herons Alley"
-    },
-    "ST_routine_seg013": {
-     "name_fr": "Rue des Affiches",
-     "name_en": "Posters Street"
-    },
-    "ST_routine_seg014": {
-     "name_fr": "Rue des Veilleurs-de-Nuit",
-     "name_en": "Night-Watchers' Street"
-    }
-   }
-  },
-  {
-   "id": "ST_bricoleurs",
-   "name": "Avenue des Petits Travaux",
-   "name_fr": "Avenue des Petits Travaux",
-   "name_en": "Odd-jobs Avenue",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S02_home",
-   "meaning_group": "wake up get dressed wash sleep brush comb shave daily routine household chores",
-   "architectural_theme": "tree-lined avenue that opens into a country path — bright cartoony storybook 2.5 (gadgets, playful); high summer",
-   "art_style": "bright cartoony storybook 2.5 (gadgets, playful)",
-   "season": "high summer",
-   "street_type": "tree-lined avenue that opens into a country path",
-   "edge": "chord",
-   "start": "S02_home",
-   "end": "S09_nature",
-   "end_room": null,
-   "end_note": "S09 Vallée Verte",
-   "theme_street_id": "ST_routine",
-   "theme_street_name": "Allée du Quotidien",
-   "theme_street_theme": "Half-timbered Alsatian cottages with flower boxes",
-   "places": [
-    "ST_routine_seg015",
-    "ST_routine_seg016",
-    "ST_routine_seg017",
-    "ST_routine_seg018",
-    "ST_routine_seg019"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_routine_seg015",
-    "ST_routine_seg016",
-    "ST_routine_seg017",
-    "ST_routine_seg018",
-    "ST_routine_seg019"
-   ],
-   "segments": [
-    "ST_routine_seg015",
-    "ST_routine_seg016",
-    "ST_routine_seg017",
-    "ST_routine_seg018",
-    "ST_routine_seg019"
-   ],
-   "verb_count": 29,
-   "mean_level": 5.42,
-   "segment_street_names": {
-    "ST_routine_seg015": {
-     "name_fr": "Allée des Bricoleurs",
-     "name_en": "Do-It-Yourselfers' Alley"
-    },
-    "ST_routine_seg016": {
-     "name_fr": "Ruelle des Houppettes",
-     "name_en": "Powder-Puffs Lane"
-    },
-    "ST_routine_seg017": {
-     "name_fr": "Rue du Réveille-Matin",
-     "name_en": "Alarm-Clock Street"
-    },
-    "ST_routine_seg018": {
-     "name_fr": "Rue des Selliers",
-     "name_en": "Saddlers' Street"
-    },
-    "ST_routine_seg019": {
-     "name_fr": "Impasse des Rendormis",
-     "name_en": "Back-to-Sleep Close"
-    }
-   }
-  },
-  {
-   "id": "ST_poignees",
-   "name": "Chemin des Gestes",
-   "name_fr": "Chemin des Gestes",
-   "name_en": "Gestures Way",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S02_home",
-   "meaning_group": "push pull put place lift carry throw open close turn hang",
-   "architectural_theme": "cobbled lane under cherry trees — storybook 3 (beginner-adjacent); spring blossom",
-   "art_style": "storybook 3 (beginner-adjacent)",
-   "season": "spring blossom",
-   "street_type": "cobbled lane under cherry trees",
-   "edge": "loop",
-   "start": "S02_home",
-   "end": "S01_beginner",
-   "end_room": null,
-   "end_note": "S01 Place du Village",
-   "theme_street_id": "ST_control",
-   "theme_street_name": "Rue des Gestes",
-   "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
-   "places": [
-    "ST_control_seg001",
-    "ST_control_seg002",
-    "ST_control_seg003",
-    "ST_control_seg004"
-   ],
-   "place_count": 4,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_control_seg001",
-    "ST_control_seg002",
-    "ST_control_seg003",
-    "ST_control_seg004"
-   ],
-   "segments": [
-    "ST_control_seg001",
-    "ST_control_seg002",
-    "ST_control_seg003",
-    "ST_control_seg004"
-   ],
-   "verb_count": 24,
-   "mean_level": 1.63,
-   "segment_street_names": {
-    "ST_control_seg001": {
-     "name_fr": "Rue des Poignées-de-Main",
-     "name_en": "Handshakes Street"
-    },
-    "ST_control_seg002": {
-     "name_fr": "Rue des Crochets",
-     "name_en": "Hooks Street"
-    },
-    "ST_control_seg003": {
-     "name_fr": "Ruelle des Brouettes",
-     "name_en": "Wheelbarrows Lane"
-    },
-    "ST_control_seg004": {
-     "name_fr": "Place de l'Orgue-de-Barbarie",
-     "name_en": "Barrel-Organ Square"
-    }
-   }
-  },
-  {
-   "id": "ST_porteurs",
-   "name": "Rue des Débardeurs",
-   "name_fr": "Rue des Débardeurs",
-   "name_en": "Porters Street",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S03_market",
-   "meaning_group": "push pull put place lift carry throw open close turn hang",
-   "architectural_theme": "market street with crates and hand-carts — painterly realism 3.5; summer",
-   "art_style": "painterly realism 3.5",
-   "season": "summer",
-   "street_type": "market street with crates and hand-carts",
-   "edge": "spur",
-   "start": "S03_market",
-   "end": "B06_marche",
-   "end_room": null,
-   "end_note": "B06 marché (covered market side door)",
-   "theme_street_id": "ST_control",
-   "theme_street_name": "Rue des Gestes",
-   "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
-   "places": [
-    "ST_control_seg005",
-    "ST_control_seg006",
-    "ST_control_seg007",
-    "ST_control_seg008",
-    "ST_control_seg009"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_control_seg005",
-    "ST_control_seg006",
-    "ST_control_seg007",
-    "ST_control_seg008",
-    "ST_control_seg009"
-   ],
-   "segments": [
-    "ST_control_seg005",
-    "ST_control_seg006",
-    "ST_control_seg007",
-    "ST_control_seg008",
-    "ST_control_seg009"
-   ],
-   "verb_count": 30,
-   "mean_level": 2.5,
-   "segment_street_names": {
-    "ST_control_seg005": {
-     "name_fr": "Chemin de la Barrière",
-     "name_en": "Farm-Gate Lane"
-    },
-    "ST_control_seg006": {
-     "name_fr": "Allée des Porteurs",
-     "name_en": "Porters' Alley"
-    },
-    "ST_control_seg007": {
-     "name_fr": "Rue des Lanceurs",
-     "name_en": "Throwers' Street"
-    },
-    "ST_control_seg008": {
-     "name_fr": "Ruelle du Seau-Renversé",
-     "name_en": "Spilt-Pail Lane"
-    },
-    "ST_control_seg009": {
-     "name_fr": "Allée des Balançoires",
-     "name_en": "Swings Alley"
-    }
-   }
-  },
-  {
-   "id": "ST_campeur",
-   "name": "Sentier du Campeur",
-   "name_fr": "Sentier du Campeur",
-   "name_en": "Camper's Trail",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S09_nature",
-   "meaning_group": "push pull put place lift carry throw open close turn hang",
-   "architectural_theme": "hillside path between stone cottages — outdoor realism 4; autumn, misty morning",
-   "art_style": "outdoor realism 4",
-   "season": "autumn, misty morning",
-   "street_type": "hillside path between stone cottages",
-   "edge": "spur",
-   "start": "S09_nature",
-   "end": "B30_camping",
-   "end_room": null,
-   "end_note": "B30 camping gate",
-   "theme_street_id": "ST_control",
-   "theme_street_name": "Rue des Gestes",
-   "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
-   "places": [
-    "ST_control_seg010",
-    "ST_control_seg011",
-    "ST_control_seg012",
-    "ST_control_seg013",
-    "ST_control_seg014"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_control_seg010",
-    "ST_control_seg011",
-    "ST_control_seg012",
-    "ST_control_seg013",
-    "ST_control_seg014"
-   ],
-   "segments": [
-    "ST_control_seg010",
-    "ST_control_seg011",
-    "ST_control_seg012",
-    "ST_control_seg013",
-    "ST_control_seg014"
-   ],
-   "verb_count": 30,
-   "mean_level": 3.43,
-   "segment_street_names": {
-    "ST_control_seg010": {
-     "name_fr": "Quai du Débarquement",
-     "name_en": "Landing Quay"
-    },
-    "ST_control_seg011": {
-     "name_fr": "Rue des Bouchons",
-     "name_en": "Corks Street"
-    },
-    "ST_control_seg012": {
-     "name_fr": "Passage des Pinces-à-Linge",
-     "name_en": "Clothes-Pegs Passage"
-    },
-    "ST_control_seg013": {
-     "name_fr": "Chemin des Faucheurs",
-     "name_en": "Mowers' Lane"
-    },
-    "ST_control_seg014": {
-     "name_fr": "Allée de l'Écureuil",
-     "name_en": "Squirrel Alley"
-    }
-   }
-  },
-  {
-   "id": "ST_paquets",
-   "name": "Passage des Paquets",
-   "name_fr": "Passage des Paquets",
-   "name_en": "Packages Passage",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S02_home",
-   "meaning_group": "push pull put place lift carry throw open close turn hang",
-   "architectural_theme": "covered arcade passage with stacked packages — cartoony 2.5; rainy day, wet reflective cobbles, umbrellas",
-   "art_style": "cartoony 2.5",
-   "season": "rainy day, wet reflective cobbles, umbrellas",
-   "street_type": "covered arcade passage with stacked packages",
-   "edge": "spur",
-   "start": "S02_home",
-   "end": "B05_maison",
-   "end_room": "R_garage",
-   "end_note": "B05 maison garage door",
-   "theme_street_id": "ST_control",
-   "theme_street_name": "Rue des Gestes",
-   "theme_street_theme": "Gothic workshops with pulleys, levers and hoists",
-   "places": [
-    "ST_control_seg015",
-    "ST_control_seg016",
-    "ST_control_seg017",
-    "ST_control_seg018"
-   ],
-   "place_count": 4,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_control_seg015",
-    "ST_control_seg016",
-    "ST_control_seg017",
-    "ST_control_seg018"
-   ],
-   "segments": [
-    "ST_control_seg015",
-    "ST_control_seg016",
-    "ST_control_seg017",
-    "ST_control_seg018"
-   ],
-   "verb_count": 24,
-   "mean_level": 4.79,
-   "segment_street_names": {
-    "ST_control_seg015": {
-     "name_fr": "Ruelle des Bousculades",
-     "name_en": "Jostling Lane"
-    },
-    "ST_control_seg016": {
-     "name_fr": "Rue de la Mise-en-Place",
-     "name_en": "Setting-Up Street"
-    },
-    "ST_control_seg017": {
-     "name_fr": "Impasse des Yeux-Écarquillés",
-     "name_en": "Wide-Eyes Close"
-    },
-    "ST_control_seg018": {
-     "name_fr": "Ruelle des Goélands",
-     "name_en": "Seagulls Lane"
-    }
-   }
-  },
-  {
-   "id": "ST_ecus",
-   "name": "Rue des Écus",
-   "name_fr": "Rue des Écus",
-   "name_en": "Coins Street",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S03_market",
-   "meaning_group": "buy sell pay cost spend owe borrow lend rent order deliver earn",
-   "architectural_theme": "covered stone arcade (keep current) — realism 4 (money = serious); clear frosty winter day",
-   "art_style": "realism 4 (money = serious)",
-   "season": "clear frosty winter day",
-   "street_type": "covered stone arcade (keep current)",
-   "edge": "chord",
-   "start": "S03_market",
-   "end": "S05_bank",
-   "end_room": null,
-   "end_note": "S05 Quai de la Banque",
-   "theme_street_id": "ST_commerce",
-   "theme_street_name": "Rue du Commerce",
-   "theme_street_theme": "Market arcades with striped awnings and shop signs",
-   "places": [
-    "ST_commerce_seg001",
-    "ST_commerce_seg002",
-    "ST_commerce_seg004",
-    "ST_commerce_seg003"
-   ],
-   "place_count": 4,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_commerce_seg001",
-    "ST_commerce_seg002",
-    "ST_commerce_seg004",
-    "ST_commerce_seg003"
-   ],
-   "segments": [
-    "ST_commerce_seg001",
-    "ST_commerce_seg002",
-    "ST_commerce_seg004",
-    "ST_commerce_seg003"
-   ],
-   "verb_count": 23,
-   "mean_level": 2.82,
-   "segment_street_names": {
-    "ST_commerce_seg001": {
-     "name_fr": "Rue des Acheteurs",
-     "name_en": "Shoppers' Street"
-    },
-    "ST_commerce_seg002": {
-     "name_fr": "Allée des Livreurs",
-     "name_en": "Delivery Drivers' Alley"
-    },
-    "ST_commerce_seg004": {
-     "name_fr": "Passage du Marchandage",
-     "name_en": "Haggling Passage"
-    },
-    "ST_commerce_seg003": {
-     "name_fr": "Ruelle des Tirelires",
-     "name_en": "Piggy-Bank Lane"
-    }
-   }
-  },
-  {
-   "id": "ST_brocante",
-   "name": "Passage de la Brocante",
-   "name_fr": "Passage de la Brocante",
-   "name_en": "Flea-market Passage",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S03_market",
-   "meaning_group": "buy sell pay cost spend owe borrow lend rent order deliver earn",
-   "architectural_theme": "market street with flea-market stalls — cartoony 2.5 flea-market whimsy; autumn leaves",
-   "art_style": "cartoony 2.5 flea-market whimsy",
-   "season": "autumn leaves",
-   "street_type": "market street with flea-market stalls",
-   "edge": "spur",
-   "start": "S03_market",
-   "end": "B59_brocante",
-   "end_room": null,
-   "end_note": "B59 brocante gate",
-   "theme_street_id": "ST_commerce",
-   "theme_street_name": "Rue du Commerce",
-   "theme_street_theme": "Market arcades with striped awnings and shop signs",
-   "places": [
-    "ST_commerce_seg005",
-    "ST_commerce_seg007",
-    "ST_commerce_seg008",
-    "ST_commerce_seg006"
-   ],
-   "place_count": 4,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_commerce_seg005",
-    "ST_commerce_seg007",
-    "ST_commerce_seg008",
-    "ST_commerce_seg006"
-   ],
-   "segments": [
-    "ST_commerce_seg005",
-    "ST_commerce_seg007",
-    "ST_commerce_seg008",
-    "ST_commerce_seg006"
-   ],
-   "verb_count": 20,
-   "mean_level": 5.05,
-   "segment_street_names": {
-    "ST_commerce_seg005": {
-     "name_fr": "Allée du Partage",
-     "name_en": "Sharing Alley"
-    },
-    "ST_commerce_seg007": {
-     "name_fr": "Rue de la Monnaie",
-     "name_en": "Mint Street"
-    },
-    "ST_commerce_seg008": {
-     "name_fr": "Impasse des Surcharges",
-     "name_en": "Overload Close"
-    },
-    "ST_commerce_seg006": {
-     "name_fr": "Quai des Entrepôts",
-     "name_en": "Warehouse Quay"
-    }
-   }
-  },
-  {
-   "id": "ST_gourmets",
-   "name": "Ruelle des Gourmets",
-   "name_fr": "Ruelle des Gourmets",
-   "name_en": "Gourmets Lane",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S04_cafes",
-   "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
-   "architectural_theme": "lane of café terraces — cartoony storybook 2.5 (keep the food-shaped houses); summer, neutral daylight (fix warm cast)",
-   "art_style": "cartoony storybook 2.5 (keep the food-shaped houses)",
-   "season": "summer, neutral daylight (fix warm cast)",
-   "street_type": "lane of café terraces",
-   "edge": "loop",
-   "start": "S04_cafes",
-   "end": "S03_market",
-   "end_room": null,
-   "end_note": "S03 Place du Marché",
-   "theme_street_id": "ST_cooking",
-   "theme_street_name": "Ruelle des Gourmets",
-   "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
-   "places": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg002",
-    "ST_cooking_seg003"
-   ],
-   "place_count": 3,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg002",
-    "ST_cooking_seg003"
-   ],
-   "segments": [
-    "ST_cooking_seg001",
-    "ST_cooking_seg002",
-    "ST_cooking_seg003"
-   ],
-   "verb_count": 26,
-   "mean_level": 3.46,
-   "segment_street_names": {
-    "ST_cooking_seg001": {
-     "name_fr": "Place du Grand-Festin",
-     "name_en": "Great-Feast Square"
-    },
-    "ST_cooking_seg002": {
-     "name_fr": "Allée du Pique-Nique",
-     "name_en": "Picnic Alley"
-    },
-    "ST_cooking_seg003": {
-     "name_fr": "Rue des Carafes",
-     "name_en": "Carafes Street"
-    }
-   }
-  },
-  {
-   "id": "ST_fourneaux",
-   "name": "Impasse des Fourneaux",
-   "name_fr": "Impasse des Fourneaux",
-   "name_en": "Stoves Close",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S04_cafes",
-   "meaning_group": "cook bake boil fry cut taste eat drink serve peel stir",
-   "architectural_theme": "narrow alley with chimneys steaming — cartoony storybook 2.5 (same as S04); snowy winter (chill/freeze verbs)",
-   "art_style": "cartoony storybook 2.5 (same as S04)",
-   "season": "snowy winter (chill/freeze verbs)",
-   "street_type": "narrow alley with chimneys steaming",
-   "edge": "spur",
-   "start": "S04_cafes",
-   "end": "B09_restaurant",
-   "end_room": null,
-   "end_note": "B09 restaurant kitchen door",
-   "theme_street_id": "ST_cooking",
-   "theme_street_name": "Ruelle des Gourmets",
-   "theme_street_theme": "Bistro façades shaped like teapots, cakes and copper pans",
-   "places": [
-    "ST_cooking_seg004",
-    "ST_cooking_seg005",
-    "ST_cooking_seg006",
-    "ST_cooking_seg007"
-   ],
-   "place_count": 4,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_cooking_seg004",
-    "ST_cooking_seg005",
-    "ST_cooking_seg006",
-    "ST_cooking_seg007"
-   ],
-   "segments": [
-    "ST_cooking_seg004",
-    "ST_cooking_seg005",
-    "ST_cooking_seg006",
-    "ST_cooking_seg007"
-   ],
-   "verb_count": 35,
-   "mean_level": 3.88,
-   "segment_street_names": {
-    "ST_cooking_seg004": {
-     "name_fr": "Ruelle des Épices",
-     "name_en": "Spice Lane"
-    },
-    "ST_cooking_seg005": {
-     "name_fr": "Chemin des Épluchures",
-     "name_en": "Peelings Lane"
-    },
-    "ST_cooking_seg006": {
-     "name_fr": "Rue des Sorbetières",
-     "name_en": "Ice-Cream Makers Street"
-    },
-    "ST_cooking_seg007": {
-     "name_fr": "Allée des Cuisiniers",
-     "name_en": "Cooks' Alley"
-    }
-   }
-  },
-  {
-   "id": "ST_appels",
-   "name": "Rue des Appels",
-   "name_fr": "Rue des Appels",
-   "name_en": "Calls Street",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S04_cafes",
-   "meaning_group": "speak say tell ask answer call write read explain shout discuss communicate",
-   "architectural_theme": "street of telephone kiosks — retro storybook 3; summer",
-   "art_style": "retro storybook 3",
-   "season": "summer",
-   "street_type": "street of telephone kiosks",
-   "edge": "chord",
-   "start": "S04_cafes",
-   "end": "S14_culture",
-   "end_room": null,
-   "end_note": "S14 Boulevard des Loisirs",
-   "theme_street_id": "ST_communication",
-   "theme_street_name": "Rue de la Parole",
-   "theme_street_theme": "Belle Époque theaters and kiosks with posters and loudspeaker horns",
-   "places": [
-    "ST_communication_seg001",
-    "ST_communication_seg002",
-    "ST_communication_seg003",
-    "ST_communication_seg004",
-    "ST_communication_seg005"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_communication_seg001",
-    "ST_communication_seg002",
-    "ST_communication_seg003",
-    "ST_communication_seg004",
-    "ST_communication_seg005"
-   ],
-   "segments": [
-    "ST_communication_seg001",
-    "ST_communication_seg002",
-    "ST_communication_seg003",
-    "ST_communication_seg004",
-    "ST_communication_seg005"
-   ],
-   "verb_count": 30,
-   "mean_level": 1.53,
-   "segment_street_names": {
-    "ST_communication_seg001": {
-     "name_fr": "Rue du Téléphone",
-     "name_en": "Telephone Street"
-    },
-    "ST_communication_seg002": {
-     "name_fr": "Passage des Panneaux",
-     "name_en": "Signposts Passage"
-    },
-    "ST_communication_seg003": {
-     "name_fr": "Rue des Déclarations",
-     "name_en": "Declarations Street"
-    },
-    "ST_communication_seg004": {
-     "name_fr": "Rue des Écrivains",
-     "name_en": "Writers' Street"
-    },
-    "ST_communication_seg005": {
-     "name_fr": "Place des Crieurs",
-     "name_en": "Town Criers' Square"
-    }
-   }
-  },
-  {
-   "id": "ST_pas",
-   "name": "Rue des Pas Perdus",
-   "name_fr": "Rue des Pas Perdus",
-   "name_en": "Lost Steps Street",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S04_cafes",
-   "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
-   "architectural_theme": "long tree-lined avenue — realism 3.5; autumn",
-   "art_style": "realism 3.5",
-   "season": "autumn",
-   "street_type": "long tree-lined avenue",
-   "edge": "loop",
-   "start": "S04_cafes",
-   "end": "S08_travel",
-   "end_room": null,
-   "end_note": "S08 Carrefour des Voyages",
-   "theme_street_id": "ST_movement",
-   "theme_street_name": "Rue du Mouvement",
-   "theme_street_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
-   "places": [
-    "ST_movement_seg001",
-    "ST_movement_seg002",
-    "ST_movement_seg003",
-    "ST_movement_seg004",
-    "ST_movement_seg005"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_movement_seg001",
-    "ST_movement_seg002",
-    "ST_movement_seg003",
-    "ST_movement_seg004",
-    "ST_movement_seg005"
-   ],
-   "segments": [
-    "ST_movement_seg001",
-    "ST_movement_seg002",
-    "ST_movement_seg003",
-    "ST_movement_seg004",
-    "ST_movement_seg005"
-   ],
-   "verb_count": 30,
-   "mean_level": 1.4,
-   "segment_street_names": {
-    "ST_movement_seg001": {
-     "name_fr": "Rue de la Traversée",
-     "name_en": "Crossing Street"
-    },
-    "ST_movement_seg002": {
-     "name_fr": "Quai des Voyageurs",
-     "name_en": "Travelers' Quay"
-    },
-    "ST_movement_seg003": {
-     "name_fr": "Allée des Promeneurs",
-     "name_en": "Walkers' Alley"
-    },
-    "ST_movement_seg004": {
-     "name_fr": "Rue des Coureurs",
-     "name_en": "Runners' Street"
-    },
-    "ST_movement_seg005": {
-     "name_fr": "Rue de la Descente",
-     "name_en": "Downhill Street"
-    }
-   }
-  },
-  {
-   "id": "ST_departs",
-   "name": "Boulevard des Départs",
-   "name_fr": "Boulevard des Départs",
-   "name_en": "Departures Boulevard",
-   "type": "verb_street",
-   "short_street": true,
-   "sector_id": "S08_travel",
-   "meaning_group": "movement go come leave arrive enter exit run walk climb fall return cross move travel",
-   "architectural_theme": "wide boulevard — clean realism 4; bright summer",
-   "art_style": "clean realism 4",
-   "season": "bright summer",
-   "street_type": "wide boulevard",
-   "edge": "spur",
-   "start": "S08_travel",
-   "end": "B21_aeroport",
-   "end_room": null,
-   "end_note": "B21 aéroport",
-   "theme_street_id": "ST_movement",
-   "theme_street_name": "Rue du Mouvement",
-   "theme_street_theme": "Train-station Art Nouveau: green wrought iron, glass canopies, station clocks",
-   "places": [
-    "ST_movement_seg006",
-    "ST_movement_seg007",
-    "ST_movement_seg008",
-    "ST_movement_seg009",
-    "ST_movement_seg010"
-   ],
-   "place_count": 5,
-   "data_only_rooms": [],
-   "rooms": [
-    "ST_movement_seg006",
-    "ST_movement_seg007",
-    "ST_movement_seg008",
-    "ST_movement_seg009",
-    "ST_movement_seg010"
-   ],
-   "segments": [
-    "ST_movement_seg006",
-    "ST_movement_seg007",
-    "ST_movement_seg008",
-    "ST_movement_seg009",
-    "ST_movement_seg010"
-   ],
-   "verb_count": 30,
-   "mean_level": 2.6,
-   "segment_street_names": {
-    "ST_movement_seg006": {
-     "name_fr": "Place des Départs",
-     "name_en": "Departures Square"
-    },
-    "ST_movement_seg007": {
-     "name_fr": "Quai des Retours",
-     "name_en": "Homecomings Quay"
-    },
-    "ST_movement_seg008": {
-     "name_fr": "Chemin des Grimpeurs",
-     "name_en": "Climbers' Lane"
-    },
-    "ST_movement_seg009": {
-     "name_fr": "Rue des Pressés",
-     "name_en": "Hurry-Up Street"
-    },
-    "ST_movement_seg010": {
-     "name_fr": "Allée des Galopins",
-     "name_en": "Little Rascals' Alley"
-    }
-   }
-  }
- ]
+  ]
 }
