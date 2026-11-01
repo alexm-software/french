@@ -9427,7 +9427,6 @@
       ],
       "base_room": "R_mountain",
       "words": [
-        "fr_tombe_noun",
         "fr_rocher_noun",
         "fr_pente_noun",
         "fr_roche_noun",
@@ -9440,7 +9439,7 @@
         "fr_tirage_noun",
         "fr_torrent_noun"
       ],
-      "item_count": 12,
+      "item_count": 11,
       "total_items_incl_zooms": 19,
       "side_counts": {
         "left": 5,
@@ -12339,10 +12338,13 @@
         "fr_crucifix_noun",
         "fr_hostie_noun",
         "fr_eucharistie_noun",
-        "fr_calvaire_noun",
-        "fr_missel_noun"
+        "fr_missel_noun",
+        "fr_homelie_noun",
+        "fr_tabernacle_noun",
+        "fr_lectionnaire_noun",
+        "fr_calice_noun"
       ],
-      "item_count": 10,
+      "item_count": 13,
       "total_items_incl_zooms": 26,
       "side_counts": {
         "left": 5,
@@ -12473,9 +12475,10 @@
         "fr_baptistere_noun",
         "fr_catechumene_noun",
         "fr_chreme_noun",
-        "fr_fonts_baptismaux_noun"
+        "fr_fonts_baptismaux_noun",
+        "fr_celebrer_verb"
       ],
-      "item_count": 11,
+      "item_count": 12,
       "total_items_incl_zooms": 11,
       "side_counts": {
         "right": 7,
@@ -12516,9 +12519,10 @@
         "fr_confessionnal_noun",
         "fr_penitence_noun",
         "fr_contrition_noun",
-        "fr_merci_noun_f"
+        "fr_merci_noun_f",
+        "fr_pardonner_verb"
       ],
-      "item_count": 11,
+      "item_count": 12,
       "total_items_incl_zooms": 11,
       "side_counts": {
         "left": 8,
@@ -12550,7 +12554,6 @@
       ],
       "base_room": "R_ch_crypt",
       "words": [
-        "fr_cimetiere_noun",
         "fr_sainte_noun",
         "fr_eternel_adj",
         "fr_saint_adj",
@@ -12562,15 +12565,49 @@
         "fr_purgatoire_noun",
         "fr_canonisation_noun",
         "fr_beatification_noun",
-        "fr_reliquaire_noun"
+        "fr_reliquaire_noun",
+        "fr_prier_verb",
+        "fr_honorer_verb"
       ],
-      "item_count": 13,
+      "item_count": 14,
       "total_items_incl_zooms": 13,
       "side_counts": {
         "right": 4,
         "left": 6,
         "n/a": 3
       }
+    },
+    {
+      "id": "R_ch_cemetery",
+      "name": "Churchyard (graves and remembrance)",
+      "type": "theme",
+      "setting": "The churchyard beside Église paroissiale Notre-Dame.",
+      "kind": "full",
+      "sector_id": "S11_church",
+      "building_id": "B39_eglise",
+      "links_back_to_sector": "S11_church",
+      "cefr_band": "B2",
+      "mean_level": 4.5,
+      "related_rooms": [
+        "R_ch_crypt",
+        "R_ch_baptistery"
+      ],
+      "conversation_ids": [],
+      "base_room": "R_ch_cemetery",
+      "item_count": 6,
+      "total_items_incl_zooms": 0,
+      "side_counts": {
+        "left": 3,
+        "right": 3
+      },
+      "words": [
+        "fr_pierre_tombale_noun",
+        "fr_caveau_noun",
+        "fr_epitaphe_noun",
+        "fr_tombe_noun",
+        "fr_cimetiere_noun",
+        "fr_calvaire_noun"
+      ]
     },
     {
       "id": "R_ch_mercy",
@@ -23562,13 +23599,12 @@
       "base_room": "ST_emotion",
       "words": [
         "fr_ravir_verb",
-        "fr_honorer_verb",
         "fr_vanter_verb",
         "fr_soupirer_verb",
         "fr_bailler_verb",
         "fr_susciter_verb"
       ],
-      "item_count": 6,
+      "item_count": 5,
       "side_counts": {
         "n/a": 6
       },
@@ -28940,11 +28976,9 @@
       "base_room": "ST_faith",
       "words": [
         "fr_consacrer_verb",
-        "fr_adorer_verb",
-        "fr_pardonner_verb",
-        "fr_prier_verb"
+        "fr_adorer_verb"
       ],
-      "item_count": 4,
+      "item_count": 2,
       "side_counts": {
         "n/a": 5
       },
@@ -28975,13 +29009,12 @@
       ],
       "base_room": "ST_faith",
       "words": [
-        "fr_celebrer_verb",
         "fr_confesser_verb",
         "fr_benir_verb",
         "fr_baptiser_verb",
         "fr_convertir_verb"
       ],
-      "item_count": 5,
+      "item_count": 4,
       "side_counts": {
         "n/a": 5
       },
@@ -35742,17 +35775,14 @@
       ],
       "base_room": "R_ch_altar",
       "words": [
-        "fr_tabernacle_noun",
-        "fr_calice_noun",
         "fr_catholicisme_noun",
         "fr_ostensoir_noun",
         "fr_retable_noun",
         "fr_ciboire_noun",
         "fr_offertoire_noun",
-        "fr_ambon_noun",
-        "fr_lectionnaire_noun"
+        "fr_ambon_noun"
       ],
-      "item_count": 9,
+      "item_count": 6,
       "side_counts": {
         "right": 9
       }
@@ -35781,14 +35811,13 @@
       "base_room": "R_ch_altar",
       "words": [
         "fr_liturgie_noun",
-        "fr_homelie_noun",
         "fr_consecration_noun",
         "fr_patene_noun",
         "fr_custode_noun",
         "fr_liturgique_adj",
         "fr_eucharistique_adj"
       ],
-      "item_count": 7,
+      "item_count": 6,
       "side_counts": {
         "left": 5,
         "n/a": 2

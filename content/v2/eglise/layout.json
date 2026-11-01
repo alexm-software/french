@@ -21,6 +21,26 @@
   {
    "key": "chapelle",
    "short": "La chapelle"
+  },
+  {
+   "key": "sanctuaire",
+   "short": "Le sanctuaire"
+  },
+  {
+   "key": "crypte",
+   "short": "La crypte"
+  },
+  {
+   "key": "confessionnal",
+   "short": "Le bas-côté"
+  },
+  {
+   "key": "baptistere",
+   "short": "Le baptistère"
+  },
+  {
+   "key": "cimetiere",
+   "short": "Le cimetière"
   }
  ],
  "rooms": {
@@ -586,7 +606,7 @@
    "name": "La chapelle de la Vierge · Lady Chapel",
    "image": "eglise/chapelle.jpg",
    "backTo": "sacristie",
-   "alt": "A blue Lady Chapel with a white statue of the Virgin between two blue lily banners and branched candle stands. Children in white carry a sunflower garland past a girl in yellow lighting candles, three choirboys sing at a lectern, and in the pews an old woman counts her rosary beads while a family of three prays the rosary together. A stained-glass window shows the Annunciation, a framed picture of a cathedral hangs on the left wall, a brown scapular hangs on a hook and a tall window looks out on a church and fields. The archway on the left leads back to the sacristy; the wooden door on the right stays closed.",
+   "alt": "A blue Lady Chapel with a white statue of the Virgin between two blue lily banners and branched candle stands. Children in white carry a sunflower garland past a girl in yellow lighting candles, three choirboys sing at a lectern, and in the pews an old woman counts her rosary beads while a family of three prays the rosary together. A stained-glass window shows the Annunciation, a framed picture of a cathedral hangs on the left wall, a brown scapular hangs on a hook and a tall window looks out on a church and fields. The archway on the left leads back to the sacristy; the wooden door on the right opens into the sanctuary.",
    "doors": [
     {
      "to": "sacristie",
@@ -597,6 +617,17 @@
       50,
       168,
       540
+     ]
+    },
+    {
+     "to": "sanctuaire",
+     "label": "Le sanctuaire",
+     "hint": "The dark wooden door on the right, into the sanctuary",
+     "hit": [
+      1192,
+      110,
+      88,
+      470
      ]
     }
    ],
@@ -729,6 +760,554 @@
      ]
     }
    ]
+  },
+  "sanctuaire": {
+   "name": "Le sanctuaire · The sanctuary",
+   "room_id": "R_ch_altar_02",
+   "image": "eglise/sanctuaire.jpg",
+   "backTo": "chapelle",
+   "alt": "The sanctuary of the village church on a Saturday afternoon, getting ready for First Communion. On the left an altar server kneels among spilled blue hymnbooks, the gray-haired sacristan holds up a round white wafer beside a gold plate of wafers, a girl in a white Communion dress and veil twirls, and Père Antoine rehearses from his notes. In the middle a bellhop in red pushes a brass luggage cart of white lilies to the stone altar; behind it a woman dusts the gilded tabernacle. On the right a girl server polishes a gold chalice, a boy holds the tall processional cross and a young woman reads at the lectern from a big book. A rose window and blue lily banners hang above. The open door on the left goes back to the Lady Chapel, the stone steps at the front lead down to the crypt, and the arch on the right opens onto the side aisle with the confessional.",
+   "doors": [
+    {
+     "to": "chapelle",
+     "label": "La chapelle",
+     "hint": "The dark wooden door on the left, back to the Lady Chapel",
+     "hit": [
+      0,
+      40,
+      150,
+      420
+     ]
+    },
+    {
+     "to": "crypte",
+     "label": "La crypte",
+     "hint": "The stone steps going down at the front, to the crypt",
+     "hit": [
+      500,
+      500,
+      240,
+      220
+     ]
+    },
+    {
+     "to": "confessionnal",
+     "label": "Le bas-côté",
+     "hint": "The stone arch on the right, to the side aisle and the confessional",
+     "hit": [
+      1110,
+      30,
+      170,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_messe_noun",
+     "text": "vocab",
+     "box": [
+      25,
+      470,
+      315,
+      245
+     ]
+    },
+    {
+     "id": "fr_communion_noun",
+     "text": "vocab",
+     "box": [
+      345,
+      368,
+      125,
+      250
+     ]
+    },
+    {
+     "id": "fr_hostie_noun",
+     "text": "vocab",
+     "box": [
+      175,
+      240,
+      160,
+      185
+     ]
+    },
+    {
+     "id": "fr_homelie_noun",
+     "text": "vocab",
+     "box": [
+      380,
+      225,
+      130,
+      140
+     ]
+    },
+    {
+     "id": "fr_autel_noun",
+     "text": "vocab",
+     "box": [
+      600,
+      315,
+      200,
+      170
+     ]
+    },
+    {
+     "id": "fr_tabernacle_noun",
+     "text": "vocab",
+     "box": [
+      815,
+      225,
+      108,
+      145
+     ]
+    },
+    {
+     "id": "fr_crucifix_noun",
+     "text": "vocab",
+     "box": [
+      925,
+      160,
+      75,
+      500
+     ]
+    },
+    {
+     "id": "fr_lectionnaire_noun",
+     "text": "vocab",
+     "box": [
+      1005,
+      345,
+      195,
+      185
+     ]
+    },
+    {
+     "id": "fr_calice_noun",
+     "text": "vocab",
+     "box": [
+      805,
+      375,
+      118,
+      270
+     ]
+    }
+   ]
+  },
+  "crypte": {
+   "name": "La crypte · The crypt",
+   "room_id": "R_ch_crypt",
+   "image": "eglise/crypte.jpg",
+   "backTo": "sanctuaire",
+   "alt": "A low vaulted crypt with thick stone pillars on Heritage Day. A boy in a yellow sweater stands at the foot of the stone steps, a guide in green points to an old wooden staff in a lit niche, and a faded fresco shows a saint in blue holding a white lamb. Père Antoine raises his hand to bless an old couple. In the middle a mime in a red beret kneels with folded hands to pray under a red hanging lamp, and a second mime lays white flowers before a small gilded reliquary on a stone altar. On the right two visitors admire a carved young saint holding a palm branch on a pillar, and a tiny mouse peeks out at its foot. The stone steps on the left lead back up to the sanctuary.",
+   "doors": [
+    {
+     "to": "sanctuaire",
+     "label": "Le sanctuaire",
+     "hint": "The stone steps going up on the left, back to the sanctuary",
+     "hit": [
+      170,
+      500,
+      140,
+      110
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_crypte_noun",
+     "text": "vocab",
+     "box": [
+      55,
+      340,
+      110,
+      290
+     ]
+    },
+    {
+     "id": "fr_relique_noun",
+     "text": "vocab",
+     "box": [
+      55,
+      90,
+      45,
+      245
+     ]
+    },
+    {
+     "id": "fr_sainte_noun",
+     "text": "vocab",
+     "box": [
+      306,
+      15,
+      175,
+      195
+     ]
+    },
+    {
+     "id": "fr_benediction_noun",
+     "text": "vocab",
+     "box": [
+      365,
+      215,
+      215,
+      145
+     ]
+    },
+    {
+     "id": "fr_eternel_adj",
+     "text": "vocab",
+     "box": [
+      675,
+      60,
+      75,
+      210
+     ]
+    },
+    {
+     "id": "fr_prier_verb",
+     "text": "vocab",
+     "box": [
+      500,
+      365,
+      170,
+      310
+     ]
+    },
+    {
+     "id": "fr_honorer_verb",
+     "text": "vocab",
+     "box": [
+      705,
+      290,
+      145,
+      260
+     ]
+    },
+    {
+     "id": "fr_reliquaire_noun",
+     "text": "vocab",
+     "box": [
+      858,
+      256,
+      90,
+      150
+     ]
+    },
+    {
+     "id": "fr_martyr_noun",
+     "text": "vocab",
+     "box": [
+      1045,
+      230,
+      115,
+      295
+     ]
+    }
+   ]
+  },
+  "confessionnal": {
+   "name": "Le bas-côté · The side aisle",
+   "room_id": "R_ch_confessional",
+   "image": "eglise/confessionnal.jpg",
+   "backTo": "sanctuaire",
+   "alt": "A side aisle with wooden pews. A girl with chocolate on her face holds a chocolate bunny beside her grandmother, a woman wraps a shivering gray kitten in her red scarf, and two little brothers hug while their teacher smiles. A boy holds the pieces of a broken flowerpot as a mime in a red beret opens his arms to forgive him. A carved oak confessional with purple curtains stands against the wall, a painter on a stepladder retouches a small framed landscape, and a boy on a bench holds peaches from a basket next to a sleeping ginger cat. The arch at the back leads to the baptistery; the arch on the right goes back to the sanctuary.",
+   "doors": [
+    {
+     "to": "sanctuaire",
+     "label": "Le sanctuaire",
+     "hint": "The stone arch on the right, back to the sanctuary",
+     "hit": [
+      1175,
+      40,
+      105,
+      280
+     ]
+    },
+    {
+     "to": "baptistere",
+     "label": "Le baptistère",
+     "hint": "The low arch at the far end, to the baptistery",
+     "hit": [
+      318,
+      110,
+      110,
+      220
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pitie_noun",
+     "text": "vocab",
+     "box": [
+      10,
+      375,
+      275,
+      320
+     ]
+    },
+    {
+     "id": "fr_confession_noun",
+     "text": "vocab",
+     "box": [
+      72,
+      212,
+      95,
+      155
+     ]
+    },
+    {
+     "id": "fr_reconciliation_noun",
+     "text": "vocab",
+     "box": [
+      430,
+      230,
+      110,
+      140
+     ]
+    },
+    {
+     "id": "fr_contrition_noun",
+     "text": "vocab",
+     "box": [
+      375,
+      375,
+      195,
+      345
+     ]
+    },
+    {
+     "id": "fr_pardonner_verb",
+     "text": "vocab",
+     "box": [
+      590,
+      305,
+      225,
+      415
+     ]
+    },
+    {
+     "id": "fr_peche_noun_2",
+     "text": "vocab",
+     "box": [
+      920,
+      330,
+      250,
+      360
+     ]
+    },
+    {
+     "id": "fr_confessionnal_noun",
+     "text": "vocab",
+     "box": [
+      620,
+      105,
+      250,
+      195
+     ]
+    },
+    {
+     "id": "fr_repentir_noun",
+     "text": "vocab",
+     "box": [
+      875,
+      35,
+      160,
+      290
+     ]
+    }
+   ]
+  },
+  "baptistere": {
+   "name": "Le baptistère · The baptistery",
+   "room_id": "R_ch_baptistery",
+   "image": "eglise/baptistere.jpg",
+   "backTo": "confessionnal",
+   "alt": "A round baptistery on a happy baptism day. On the left the godmother laughs under a dripping yellow umbrella, and a mime in a red beret tosses pink and blue sugared almonds to two delighted children. In the middle Père Antoine pours water from a silver jug into the big stone font, and a ginger cat sniffs a silver jar on a little table. On the right a grandfather holds a baby in a white christening gown who waves a yellow bath sponge, and the godfather runs in out of breath with a tall white candle. The arch on the left goes back to the side aisle with the confessional; the open arch on the right leads out to the churchyard.",
+   "doors": [
+    {
+     "to": "confessionnal",
+     "label": "Le bas-côté",
+     "hint": "The low arch on the left, back to the side aisle",
+     "hit": [
+      0,
+      90,
+      130,
+      470
+     ]
+    },
+    {
+     "to": "cimetiere",
+     "label": "Le cimetière",
+     "hint": "The small open side door at the back right, out to the churchyard",
+     "hit": [
+      1110,
+      110,
+      140,
+      280
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_marraine_noun",
+     "text": "vocab",
+     "box": [
+      140,
+      120,
+      260,
+      505
+     ]
+    },
+    {
+     "id": "fr_celebrer_verb",
+     "text": "vocab",
+     "box": [
+      400,
+      140,
+      200,
+      490
+     ]
+    },
+    {
+     "id": "fr_fonts_baptismaux_noun",
+     "text": "vocab",
+     "box": [
+      606,
+      225,
+      210,
+      425
+     ]
+    },
+    {
+     "id": "fr_chreme_noun",
+     "text": "vocab",
+     "box": [
+      820,
+      470,
+      215,
+      130
+     ]
+    },
+    {
+     "id": "fr_bapteme_noun",
+     "text": "vocab",
+     "box": [
+      930,
+      240,
+      160,
+      225
+     ]
+    },
+    {
+     "id": "fr_parrain_noun",
+     "text": "vocab",
+     "box": [
+      1095,
+      395,
+      150,
+      310
+     ]
+    }
+   ]
+  },
+  "cimetiere": {
+   "name": "Le cimetière · The churchyard",
+   "room_id": "R_ch_cemetery",
+   "image": "eglise/cimetiere.jpg",
+   "backTo": "baptistere",
+   "alt": "A calm, sunny churchyard beside the church with tall cypress trees and green hills beyond. A woman in a blue cardigan plants fresh flowers on a grave next to a watering can with a robin on it. A stonemason brushes moss off a gray headstone while a girl traces its face with her finger and her grandfather looks on; an old man rests on a bench in the sun. A small ivy-covered family vault with a boy beside it stands at the back, a gardener rakes the gravel between the rows, and a tall plain stone cross on stepped pedestal stands by the gate. The side door in the church wall on the left leads back to the baptistery, and the iron gate at the back right leads out to the village.",
+   "doors": [
+    {
+     "to": "baptistere",
+     "label": "Le baptistère",
+     "hint": "The small side door in the church wall on the left, back to the baptistery",
+     "hit": [
+      30,
+      215,
+      210,
+      200
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tombe_noun",
+     "text": "vocab",
+     "box": [
+      120,
+      425,
+      180,
+      240
+     ]
+    },
+    {
+     "id": "fr_pierre_tombale_noun",
+     "text": "vocab",
+     "box": [
+      306,
+      356,
+      165,
+      130
+     ]
+    },
+    {
+     "id": "fr_epitaphe_noun",
+     "text": "vocab",
+     "box": [
+      472,
+      310,
+      75,
+      170
+     ]
+    },
+    {
+     "id": "fr_cimetiere_noun",
+     "text": "vocab",
+     "box": [
+      865,
+      360,
+      105,
+      145
+     ]
+    },
+    {
+     "id": "fr_caveau_noun",
+     "text": "vocab",
+     "box": [
+      700,
+      165,
+      140,
+      270
+     ]
+    },
+    {
+     "id": "fr_calvaire_noun",
+     "text": "vocab",
+     "box": [
+      1095,
+      155,
+      140,
+      290
+     ]
+    }
+   ],
+   "mapExit": {
+    "box": [
+     930,
+     235,
+     160,
+     120
+    ],
+    "label": "Le village"
+   }
   }
  },
  "planned": {
@@ -763,6 +1342,69 @@
   },
   "chapelle": {
    "vocabRoom": "R_ch_lady_chapel"
+  },
+  "sanctuaire": {
+   "vocabRoom": "R_ch_altar_02",
+   "only": [
+    "fr_messe_noun",
+    "fr_communion_noun",
+    "fr_hostie_noun",
+    "fr_homelie_noun",
+    "fr_autel_noun",
+    "fr_tabernacle_noun",
+    "fr_crucifix_noun",
+    "fr_lectionnaire_noun",
+    "fr_calice_noun"
+   ]
+  },
+  "crypte": {
+   "vocabRoom": "R_ch_crypt",
+   "only": [
+    "fr_crypte_noun",
+    "fr_relique_noun",
+    "fr_sainte_noun",
+    "fr_benediction_noun",
+    "fr_eternel_adj",
+    "fr_prier_verb",
+    "fr_honorer_verb",
+    "fr_reliquaire_noun",
+    "fr_martyr_noun"
+   ]
+  },
+  "confessionnal": {
+   "vocabRoom": "R_ch_confessional",
+   "only": [
+    "fr_pitie_noun",
+    "fr_confession_noun",
+    "fr_reconciliation_noun",
+    "fr_contrition_noun",
+    "fr_pardonner_verb",
+    "fr_peche_noun_2",
+    "fr_confessionnal_noun",
+    "fr_repentir_noun"
+   ]
+  },
+  "baptistere": {
+   "vocabRoom": "R_ch_baptistery",
+   "only": [
+    "fr_marraine_noun",
+    "fr_celebrer_verb",
+    "fr_fonts_baptismaux_noun",
+    "fr_chreme_noun",
+    "fr_bapteme_noun",
+    "fr_parrain_noun"
+   ]
+  },
+  "cimetiere": {
+   "vocabRoom": "R_ch_cemetery",
+   "only": [
+    "fr_tombe_noun",
+    "fr_pierre_tombale_noun",
+    "fr_epitaphe_noun",
+    "fr_cimetiere_noun",
+    "fr_caveau_noun",
+    "fr_calvaire_noun"
+   ]
   }
  }
 }
