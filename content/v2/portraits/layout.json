@@ -80,6 +80,14 @@
   {
    "key": "club",
    "short": "Le club"
+  },
+  {
+   "key": "atelier",
+   "short": "L'atelier"
+  },
+  {
+   "key": "chapelle",
+   "short": "La chapelle"
   }
  ],
  "planned": {
@@ -328,6 +336,30 @@
     "fr_modeste_adj",
     "fr_scandaleux_adj",
     "fr_prudent_adj"
+   ]
+  },
+  "atelier": {
+   "vocabRoom": "R_character_07",
+   "only": [
+    "fr_habile_adj",
+    "fr_adroit_adj",
+    "fr_methodique_adj",
+    "fr_malicieux_adj",
+    "fr_inseparable_adj",
+    "fr_volumineux_adj",
+    "fr_faineant_noun"
+   ]
+  },
+  "chapelle": {
+   "vocabRoom": "R_character_05",
+   "only": [
+    "fr_solennel_adj",
+    "fr_pieux_adj",
+    "fr_eloquent_adj",
+    "fr_sobre_adj",
+    "fr_tolerant_adj",
+    "fr_gentilhomme_noun",
+    "fr_nouveau_ne_noun"
    ]
   }
  },
@@ -2362,7 +2394,7 @@
    "name": "Le club de jeux · The games club",
    "room_id": "R_character_05",
    "image": "portraits/club.jpg",
-   "alt": "A blue games club room with shelves of board games, beanbags, a round window and a ping-pong table. A girl stacks a tall domino tower; a green parrot chatters on its perch above a bored boy; a boy pushes tin soldiers and toy cannons across a play mat; a hedgehog bristles at a wind-up robot; a girl who won the board game smiles shyly while two boys clap; a boy at a card table has a card sliding out of his sleeve while friends gasp; a boy in a helmet and knee pads plays ping-pong; a boy in yellow juggles three balls. A green double door with white chess knights opens onto the wedding hall.",
+   "alt": "A blue games club room with board games, beanbags, a round window and a ping-pong table. A girl stacks a tall domino tower; a green parrot chatters on its perch above a bored boy; a boy pushes tin soldiers and toy cannons across a play mat; a hedgehog bristles at a wind-up robot; a girl who won the board game smiles shyly while two boys clap; a boy at a card table has a card sliding out of his sleeve while friends gasp; a boy in a helmet and knee pads plays ping-pong; a boy in yellow juggles three balls. A green double door with white chess knights opens onto the wedding hall; a yellow door with a red hammer and a blue paintbrush leads on to the crafts workshop.",
    "nameplate": [
     50,
     4.5
@@ -2378,6 +2410,17 @@
       8,
       230,
       330
+     ]
+    },
+    {
+     "to": "atelier",
+     "label": "L'atelier",
+     "hint": "the yellow door with the hammer and paintbrush, to the crafts workshop",
+     "hit": [
+      1125,
+      12,
+      137,
+      288
      ]
     }
    ],
@@ -2440,10 +2483,201 @@
     {
      "id": "fr_prudent_adj",
      "box": [
-      840,
-      97,
-      110,
-      190
+      848,
+      95,
+      95,
+      192
+     ]
+    }
+   ]
+  },
+  "atelier": {
+   "name": "L'atelier des bricoleurs · The crafts workshop",
+   "room_id": "R_character_07",
+   "image": "portraits/atelier.jpg",
+   "alt": "A bright crafts workshop with whitewashed brick walls, a pegboard of tools and one long workbench down the middle under skylights. A girl in purple sands a little wooden sailboat; a boy slides a drawer into a small cabinet; a girl at the back sorts screws into a row of glass jars; a grinning boy dangles a big rubber spider over the bench; a girl in pink paints her carved wooden duck bright orange; two lovebirds snuggle in a hanging cage; a delivery man staggers under a huge parcel by a stack of boxes topped with a rocking horse; a teen pretends to sleep in a hammock by a leaning broom. A yellow door with a red hammer and a blue paintbrush leads back to the games club; a blue arched door with a golden music note leads on to the village chapel.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "club",
+   "doors": [
+    {
+     "to": "club",
+     "label": "Le club",
+     "hint": "the yellow door with the hammer and paintbrush, back to the games club",
+     "hit": [
+      18,
+      30,
+      180,
+      515
+     ]
+    },
+    {
+     "to": "chapelle",
+     "label": "La chapelle",
+     "hint": "the pale blue door with the golden music note, to the village chapel",
+     "hit": [
+      1116,
+      109,
+      126,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_habile_adj",
+     "box": [
+      575,
+      310,
+      205,
+      400
+     ]
+    },
+    {
+     "id": "fr_adroit_adj",
+     "box": [
+      330,
+      370,
+      150,
+      125
+     ]
+    },
+    {
+     "id": "fr_methodique_adj",
+     "box": [
+      385,
+      225,
+      95,
+      128
+     ]
+    },
+    {
+     "id": "fr_malicieux_adj",
+     "box": [
+      484,
+      240,
+      90,
+      213
+     ]
+    },
+    {
+     "id": "fr_inseparable_adj",
+     "box": [
+      608,
+      58,
+      121,
+      125
+     ]
+    },
+    {
+     "id": "fr_volumineux_adj",
+     "box": [
+      780,
+      116,
+      190,
+      187
+     ]
+    },
+    {
+     "id": "fr_faineant_noun",
+     "box": [
+      936,
+      398,
+      172,
+      187
+     ]
+    }
+   ]
+  },
+  "chapelle": {
+   "name": "La chapelle · The village chapel",
+   "room_id": "R_character_05",
+   "image": "portraits/chapelle.jpg",
+   "alt": "A small whitewashed village chapel with wooden pews, a lectern, tall clear windows onto green fields and a little pipe organ. Children in white robes sing on the left; a woman speaks warmly at the lectern; an old woman and a man in a plain gray coat sipping water sit in the front pews; a boy tiptoes down the aisle with a finger to his lips; an old man prays quietly in his pew; the organist lets a toddler press the keys; a gentleman in a top hat tucks in a newborn's blanket as the mother cradles the baby; a sparrow listens on the window latch. A blue door with a golden music note leads back to the crafts workshop.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "atelier",
+   "doors": [
+    {
+     "to": "atelier",
+     "label": "L'atelier",
+     "hint": "the pale blue door with the golden music note, back to the crafts workshop",
+     "hit": [
+      100,
+      75,
+      145,
+      360
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_solennel_adj",
+     "box": [
+      375,
+      180,
+      62,
+      172
+     ]
+    },
+    {
+     "id": "fr_pieux_adj",
+     "box": [
+      700,
+      290,
+      185,
+      270
+     ]
+    },
+    {
+     "id": "fr_eloquent_adj",
+     "box": [
+      490,
+      135,
+      130,
+      300
+     ]
+    },
+    {
+     "id": "fr_sobre_adj",
+     "box": [
+      300,
+      360,
+      185,
+      350
+     ]
+    },
+    {
+     "id": "fr_tolerant_adj",
+     "box": [
+      690,
+      150,
+      250,
+      135
+     ]
+    },
+    {
+     "id": "fr_gentilhomme_noun",
+     "box": [
+      890,
+      330,
+      150,
+      330
+     ]
+    },
+    {
+     "id": "fr_nouveau_ne_noun",
+     "box": [
+      1045,
+      465,
+      125,
+      180
      ]
     }
    ]
