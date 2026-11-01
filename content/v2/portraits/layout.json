@@ -136,6 +136,26 @@
   {
    "key": "serre",
    "short": "La serre"
+  },
+  {
+   "key": "terrasse",
+   "short": "La terrasse"
+  },
+  {
+   "key": "cuisine",
+   "short": "La cuisine"
+  },
+  {
+   "key": "bibliotheque",
+   "short": "La bibliothèque"
+  },
+  {
+   "key": "boutique",
+   "short": "La boutique"
+  },
+  {
+   "key": "infirmerie",
+   "short": "L'infirmerie"
   }
  ],
  "planned": {
@@ -422,7 +442,8 @@
     "fr_indulgent_adj",
     "fr_copieux_adj",
     "fr_senior_noun",
-    "fr_tireur_noun"
+    "fr_tireur_noun",
+    "fr_indemne_adj"
    ]
   },
   "bal": {
@@ -540,6 +561,59 @@
     "fr_fertile_adj",
     "fr_dense_adj",
     "fr_ambulant_adj"
+   ]
+  },
+  "terrasse": {
+   "vocabRoom": "R_people_04",
+   "only": [
+    "fr_maturite_noun",
+    "fr_adoptif_adj",
+    "fr_genetique_adj",
+    "fr_femelle_adj",
+    "fr_quinquagenaire_noun",
+    "fr_sain_adj",
+    "fr_vieillissement_noun"
+   ]
+  },
+  "cuisine": {
+   "vocabRoom": "R_character_06",
+   "only": [
+    "fr_accueillant_adj",
+    "fr_bienveillant_adj",
+    "fr_malin_adj",
+    "fr_honteux_adj",
+    "fr_judicieux_adj"
+   ]
+  },
+  "bibliotheque": {
+   "vocabRoom": "R_character_09",
+   "only": [
+    "fr_aspiration_noun",
+    "fr_inferieur_adj",
+    "fr_angoissant_adj",
+    "fr_immateriel_adj",
+    "fr_formel_adj"
+   ]
+  },
+  "boutique": {
+   "vocabRoom": "R_character_07",
+   "only": [
+    "fr_depensier_adj",
+    "fr_emblematique_adj",
+    "fr_orgueilleux_adj",
+    "fr_attractif_adj",
+    "fr_identifiable_adj",
+    "fr_modique_adj"
+   ]
+  },
+  "infirmerie": {
+   "vocabRoom": "R_appearance_07",
+   "only": [
+    "fr_anatomique_adj",
+    "fr_arteriel_adj",
+    "fr_therapeutique_adj",
+    "fr_infectieux_adj",
+    "fr_insensible_adj"
    ]
   }
  },
@@ -2877,7 +2951,7 @@
    "name": "Le jardin · The garden party",
    "room_id": "R_people_04",
    "image": "portraits/jardin.jpg",
-   "alt": "A sunny back-garden family party with a red-and-white striped tent, bunting and apple trees. A bulldog hides from a butterfly behind a flower pot; a little boy pats his pregnant mother's tummy on a bench; a crush of sheep and a cow push through the hedge; a lady in a flowered hat goes cross-eyed at a ladybug on her nose; a man in a city suit steps into a muddy puddle; a teen in headphones kneads dough; grandma slips a toddler a cupcake; grandpa carries a mountain of sausages; another grandpa hops in a sack race; a big uncle pulls a fraying tug-of-war rope; a hen in a paper party hat sits on a wheelbarrow. Open French doors lead back to the dining room, a blue gate with a rosette leads to the pet show and stone steps rise to the ballroom's glass doors.",
+   "alt": "A sunny back-garden family party with a red-and-white striped tent, bunting and apple trees. A bulldog hides from a butterfly behind a flower pot; a little boy pats his pregnant mother's tummy on a bench; a crush of sheep and a cow push through the hedge; a lady in a flowered hat goes cross-eyed at a ladybug on her nose; a man in a city suit steps into a muddy puddle; a teen in headphones kneads dough; a boy in blue jeans strides out through the thorny rose hedge without a scratch; grandma slips a toddler a cupcake; grandpa carries a mountain of sausages; another grandpa hops in a sack race; a big uncle pulls a fraying tug-of-war rope; a hen in a paper party hat sits on a wheelbarrow. Open French doors lead back to the dining room, a blue gate with a rosette leads to the pet show and stone steps rise to the ballroom's glass doors.",
    "nameplate": [
     50,
     4.5
@@ -2911,10 +2985,10 @@
      "label": "Le concours",
      "hint": "the blue garden gate with the rosette, to the pet show",
      "hit": [
-      590,
-      158,
-      172,
-      88
+      540,
+      160,
+      150,
+      90
      ]
     }
    ],
@@ -2968,10 +3042,10 @@
     {
      "id": "fr_ado_noun",
      "box": [
-      585,
-      255,
-      108,
-      152
+      590,
+      262,
+      102,
+      148
      ]
     },
     {
@@ -2987,9 +3061,9 @@
      "id": "fr_copieux_adj",
      "box": [
       694,
-      280,
+      318,
       176,
-      214
+      176
      ]
     },
     {
@@ -3008,6 +3082,19 @@
       262,
       150,
       240
+     ]
+    },
+    {
+     "id": "fr_indemne_adj",
+     "box": [
+      700,
+      195,
+      95,
+      120
+     ],
+     "labelAt": [
+      747,
+      182
      ]
     }
    ]
@@ -3916,7 +4003,7 @@
    "name": "La serre · The conservatory",
    "room_id": "R_appearance_07",
    "image": "portraits/serre.jpg",
-   "alt": "A sunlit glass conservatory with white iron frames, a brick floor, palms, ferns and terracotta pots around a little fountain with a frog on its rim. A gardener in green overalls lifts a giant orange pumpkin from the vegetable bed; a boy peeks out through a thick wall of ferns; a big tortoise ambles along the brick path with a flowerpot on its shell; a girl in a sun hat munches a carrot on the potting bench. Green-framed glass doors lead back to the gym.",
+   "alt": "A sunlit glass conservatory with white iron frames, a brick floor, palms, ferns and terracotta pots around a little fountain with a frog on its rim. A gardener in green overalls lifts a giant orange pumpkin from the vegetable bed; a boy peeks out through a thick wall of ferns; a big tortoise ambles along the brick path with a flowerpot on its shell. Green-framed glass doors lead back to the gym, and white French doors under a green-and-white striped awning open onto a sunny terrace with a lunch table.",
    "nameplate": [
     50,
     4.5
@@ -3932,6 +4019,17 @@
       10,
       250,
       600
+     ]
+    },
+    {
+     "to": "terrasse",
+     "label": "La terrasse",
+     "hint": "the white French doors under the striped awning, to the family terrace",
+     "hit": [
+      1012,
+      131,
+      258,
+      394
      ]
     }
    ],
@@ -3962,6 +4060,441 @@
       440,
       255,
       265
+     ]
+    }
+   ]
+  },
+  "terrasse": {
+   "name": "La terrasse · The family terrace",
+   "room_id": "R_people_04",
+   "image": "portraits/terrasse.jpg",
+   "alt": "A sunny flagstone terrace behind the house, with a long white-clothed lunch table under a plane tree, a stone balustrade with geraniums, a little round pool and rolling hills beyond. A teenage girl spoon-feeds a giggling baby in a high chair; a smiling mother and father swing their little son between them; a red-haired grandpa, dad and baby pose cheek to cheek; a mother duck leads five ducklings across the flagstones; a woman of about fifty dances the can-can in a red skirt; a girl in a straw hat bites an apple on the wall in the sun; a peacock fans its tail on the balustrade; a white-haired grandpa holds up an old photo of his young self. White French doors under a striped awning lead back to the conservatory, a red stable door opens into a kitchen and a dark-oak door with a carved book opens onto a library.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "serre",
+   "doors": [
+    {
+     "to": "serre",
+     "label": "La serre",
+     "hint": "the white French doors, back to the conservatory",
+     "hit": [
+      5,
+      40,
+      265,
+      255
+     ]
+    },
+    {
+     "to": "cuisine",
+     "label": "La cuisine",
+     "hint": "the red stable door, to the kitchen",
+     "hit": [
+      315,
+      120,
+      92,
+      305
+     ]
+    },
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "the dark-oak door with the carved book, to the library",
+     "hit": [
+      1205,
+      110,
+      65,
+      410
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_maturite_noun",
+     "box": [
+      38,
+      300,
+      212,
+      200
+     ]
+    },
+    {
+     "id": "fr_adoptif_adj",
+     "box": [
+      480,
+      300,
+      170,
+      230
+     ]
+    },
+    {
+     "id": "fr_genetique_adj",
+     "box": [
+      445,
+      175,
+      115,
+      120
+     ]
+    },
+    {
+     "id": "fr_femelle_adj",
+     "box": [
+      540,
+      543,
+      130,
+      120
+     ]
+    },
+    {
+     "id": "fr_quinquagenaire_noun",
+     "box": [
+      650,
+      225,
+      150,
+      310
+     ]
+    },
+    {
+     "id": "fr_sain_adj",
+     "box": [
+      806,
+      262,
+      75,
+      120
+     ]
+    },
+    {
+     "id": "fr_vieillissement_noun",
+     "box": [
+      1044,
+      219,
+      150,
+      394
+     ]
+    }
+   ]
+  },
+  "cuisine": {
+   "name": "La cuisine · The kitchen",
+   "room_id": "R_character_06",
+   "image": "portraits/cuisine.jpg",
+   "alt": "A cosy country kitchen with a blue-and-white tiled wall, copper pans over a cream range, a dresser of blue plates and a long wooden table. A round cook in a chef's hat flings his arms wide in welcome; a kind granny heaps baked beans onto a yawning boy's plate; a girl stands on a big watermelon to reach the cookie jar; a boy with chocolate round his mouth hangs his head as his aunt stands over him, hands on hips; a cook in a red headscarf tastes the soup at the range before salting it; two kittens doze in a basket. A red stable door leads back to the sunny terrace.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "terrasse",
+   "doors": [
+    {
+     "to": "terrasse",
+     "label": "La terrasse",
+     "hint": "the red stable door, back to the terrace",
+     "hit": [
+      5,
+      40,
+      245,
+      520
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_accueillant_adj",
+     "box": [
+      290,
+      160,
+      265,
+      125
+     ]
+    },
+    {
+     "id": "fr_bienveillant_adj",
+     "box": [
+      380,
+      290,
+      260,
+      250
+     ]
+    },
+    {
+     "id": "fr_malin_adj",
+     "box": [
+      560,
+      75,
+      118,
+      210
+     ]
+    },
+    {
+     "id": "fr_honteux_adj",
+     "box": [
+      680,
+      190,
+      148,
+      440
+     ]
+    },
+    {
+     "id": "fr_judicieux_adj",
+     "box": [
+      830,
+      185,
+      128,
+      170
+     ]
+    }
+   ]
+  },
+  "bibliotheque": {
+   "name": "La bibliothèque · The library",
+   "room_id": "R_character_09",
+   "image": "portraits/bibliotheque.jpg",
+   "alt": "A tall dark-wood library with shelves to the ceiling, a rolling ladder with a dozing owl, a big globe, a green reading lamp and a tall arched window. A child in a white astronaut helmet reaches up for a red model rocket; a small boy sits on the rug pulling books from the lowest shelf; a boy in a leather armchair reads a dark book with his hair on end; a friendly see-through ghost glides out of the bookshelf; a librarian in a black tailcoat holds out a book on a silver tray; a bearded man in a sun hat lounges in a hammock. A dark-oak door with a carved book leads back to the terrace, a white door with a porthole and a green cross opens onto a nurse's room, and a turquoise shop door with a brass bell opens onto a gift shop.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "terrasse",
+   "doors": [
+    {
+     "to": "terrasse",
+     "label": "La terrasse",
+     "hint": "the dark-oak door with the carved book, back to the terrace",
+     "hit": [
+      5,
+      60,
+      165,
+      560
+     ]
+    },
+    {
+     "to": "infirmerie",
+     "label": "L'infirmerie",
+     "hint": "the white door with the green cross, to the nurse's room",
+     "hit": [
+      557,
+      165,
+      65,
+      155
+     ]
+    },
+    {
+     "to": "boutique",
+     "label": "La boutique",
+     "hint": "the turquoise shop door with the bell, to the gift shop",
+     "hit": [
+      1125,
+      120,
+      100,
+      480
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_aspiration_noun",
+     "box": [
+      260,
+      195,
+      130,
+      240
+     ]
+    },
+    {
+     "id": "fr_inferieur_adj",
+     "box": [
+      335,
+      450,
+      160,
+      180
+     ]
+    },
+    {
+     "id": "fr_angoissant_adj",
+     "box": [
+      495,
+      325,
+      135,
+      195
+     ]
+    },
+    {
+     "id": "fr_immateriel_adj",
+     "box": [
+      435,
+      225,
+      85,
+      95
+     ]
+    },
+    {
+     "id": "fr_formel_adj",
+     "box": [
+      630,
+      180,
+      120,
+      290
+     ]
+    }
+   ]
+  },
+  "boutique": {
+   "name": "La boutique · The gift shop",
+   "room_id": "R_character_07",
+   "image": "portraits/boutique.jpg",
+   "alt": "A bright little museum gift shop with white shelves of snow globes and tote bags, a tall mirror, an umbrella stand and a wooden counter with a brass cash register and a goldfish in a crown. A woman in a flowered hat loaded with shopping bags tosses banknotes in the air; a boy holds up an Eiffel Tower snow globe; a peacock fans its tail before the mirror; a boy pulls a trail of paper clips with a big red magnet; a girl holds up a red polka-dot umbrella beside a stand of black ones; a shopkeeper fans a white cat on a velvet cushion; a small boy hands over one coin at the counter. A turquoise shop door with a brass bell leads back to the library.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "bibliotheque",
+   "doors": [
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "the turquoise shop door, back to the library",
+     "hit": [
+      8,
+      50,
+      150,
+      560
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_depensier_adj",
+     "box": [
+      355,
+      110,
+      215,
+      225
+     ]
+    },
+    {
+     "id": "fr_emblematique_adj",
+     "box": [
+      572,
+      215,
+      113,
+      120
+     ]
+    },
+    {
+     "id": "fr_orgueilleux_adj",
+     "box": [
+      688,
+      105,
+      95,
+      150
+     ]
+    },
+    {
+     "id": "fr_attractif_adj",
+     "box": [
+      400,
+      340,
+      290,
+      330
+     ]
+    },
+    {
+     "id": "fr_identifiable_adj",
+     "box": [
+      745,
+      262,
+      82,
+      178
+     ]
+    },
+    {
+     "id": "fr_modique_adj",
+     "box": [
+      828,
+      425,
+      125,
+      280
+     ]
+    }
+   ]
+  },
+  "infirmerie": {
+   "name": "L'infirmerie · The nurse's room",
+   "room_id": "R_appearance_07",
+   "image": "portraits/infirmerie.jpg",
+   "alt": "A bright mint-green nurse's room with two white beds with checked blankets, a bandage cabinet, a skeleton model and a big window onto the garden. A nurse points at the skeleton's knee; a young helper takes a seated grandpa's blood pressure; a golden retriever rests its chin on a girl's blanket; a boy sneezes into a tissue as a girl leans away; a girl tickles her brother's plaster cast with a feather while he reads on; a boy holds up a bandaged finger; a teddy bear with a bandaged paw sits on the windowsill. A white door with a porthole and a green cross leads back to the library.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "bibliotheque",
+   "doors": [
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "the white door with the green cross, back to the library",
+     "hit": [
+      10,
+      30,
+      145,
+      540
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_anatomique_adj",
+     "box": [
+      360,
+      62,
+      195,
+      233
+     ]
+    },
+    {
+     "id": "fr_arteriel_adj",
+     "box": [
+      390,
+      300,
+      230,
+      300
+     ]
+    },
+    {
+     "id": "fr_therapeutique_adj",
+     "box": [
+      590,
+      170,
+      145,
+      130
+     ],
+     "labelAt": [
+      640,
+      150
+     ]
+    },
+    {
+     "id": "fr_infectieux_adj",
+     "box": [
+      738,
+      135,
+      95,
+      170
+     ]
+    },
+    {
+     "id": "fr_insensible_adj",
+     "box": [
+      710,
+      365,
+      250,
+      210
      ]
     }
    ]
