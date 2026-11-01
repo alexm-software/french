@@ -15,7 +15,7 @@ World map, sector views, rooms, detail cards, a beginner/start area, an about pa
 - Add a toggle (also a key, e.g. H) that highlights all clickable areas, plus a hover effect and a pointing-hand cursor on every clickable area. Users can't otherwise tell what's clickable. <!-- B91 -->
 - Make every door, arch, stair and path visibly enterable even with highlights off: a small always-visible badge showing the walking direction, plus a hover glow and the destination name. Keep this cue distinct from the zoom icon. <!-- B92 -->
 - Mark every zoom-in spot with a small always-visible icon (e.g. a magnifying-glass badge) so learners know it opens a closer look at another little area. <!-- B93 -->
-- Every space has a back control to the space above it (room to building, building to sector, sector to village), so no view is a dead end. <!-- B94 -->
+- Ordinary-room Back goes outside to its sector/street; zoom Back goes to its parent. The separate ⌂ Hub goes to the building main and is hidden there. Painted doors connect ordinary rooms; avoid duplicate visible controls to the same destination.
 - Navigation is walking: click painted paths, doors, stairs, and arches, shown with subtle on-image arrows. Never make users pick the next space from a list or signpost menu. <!-- B95 -->
 - Rooms in the same building connect directly (stairs or doors painted in the room). Never force a trip outside to get between them. <!-- B96 -->
 - Label every building with its name (a painted sign with overlay text, plus a hover name on its door). <!-- B97 -->
@@ -30,4 +30,3 @@ World map, sector views, rooms, detail cards, a beginner/start area, an about pa
 ## Navigation pattern notes (from the gates rounds)
 
 - Prefer orientation cues that highlight an existing exit (a brief glow on the way you came in, progress dots along a short street) over new buttons, because they add no second control to any destination. <!-- G57 -->
-- Navigation pattern: the breadcrumb is the hierarchy control, painted exits show a hover or first-tap preview of the destination with its name, and an optional Plan panel shows the top-down plan with a you-are-here dot. <!-- G58 -->

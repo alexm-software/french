@@ -1,52 +1,32 @@
-# Planning: hierarchy, assignment, the unbuilt check and the item manifest
+# Planning before image generation
 
-Read before planning a sector, a building or a room, and before every paint job (the planning gate).
+## Resolve the building once
 
-## Hierarchy
+Use `tools/unbuilt.py --repo .` and `tools/room_context.py` in the existing checkout. Check ownership/claims before choosing a room. For new spaces, source assignments choose the inventory; live IDs may already be elsewhere, so reconcile before adding. For a repaint, current v2 layout and resolved hook overrides define the existing room. If older source rooms disagree, record that discrepancy rather than restoring stale inventory or silently moving live words. An authorized move updates both sources and live layout. Read only the target rows of `data/source/vocab.jsonl`, `data/source/rooms.json` and the relevant `content/v2/<bld>/hooks.json`/overrides. Never add easy-to-draw filler or silently move a word.
 
-World map, then sectors (districts), then sites (buildings or outdoor spots), then rooms, then zoom spots: desks, tables, shelves, cabinets, or altars modeled as first-class small rooms (type zoom, with a parent room, their own sign and theme, a position in the parent, and about 6 to 12 small items). Users zoom in and back out. They keep parent rooms uncluttered and reduce the number of full rooms; count them separately. Some map areas can open a site directly. Every room links back to its sector, and may link to related rooms. Sectors connect to each other both from the world map and from neighboring sectors. <!-- B22 -->
+Write the building plan in its existing layout: main entrance, sector/village link, rooms, actual neighboring doors, stairs, zoom parents and ways out. A small floor-plan sketch may help; do not invent a floor-plan image if a graph suffices. Ground-floor doors go outside; interiors fit the exterior; outdoor connections are paths/gates/bridges, not freestanding doors. Back/Hub behavior is in `site-ui.md`.
 
-- **No one-object zooms.** A zoom that shows a single object or word is not a room. Fold thin zooms (well under the ~6-word target, in practice fewer than about 4 words) into a fuller scene: the parent room or a sibling zoom with a real shared spot. precheck.py fails a 1-word zoom and warns under 4. <!-- N6 -->
+Read `skills/limits.json` for density and spacing. Target its room count; split overloaded plans before painting. Zooms hold a real cluster within their parent, normally zoom_min–zoom_max words; fold sparse zooms into the parent. Alphabet/reference boards are one coherent board, not one picture per symbol. Moving live words must also satisfy `moving-words.md`.
 
-## Build order (always in this sequence)
+## One manifest per room, complete before paint
 
-1. **Inventory**: list every item to memorize with its metadata (level, category, sub-category). Keep it in a machine-readable data file (JSON/YAML/CSV), not prose. <!-- B25 -->
-2. **Assign items to rooms** by theme, once, in the data file. Every later build takes each room's items from this assignment and never re-picks items ad hoc for being unused or easy to draw (see gate G in the release-gates skill). Set density targets per room type and record them (e.g. 8 to 12 or more for rooms of simple items, scaled by object size; 4 to 6 for rooms of complex items that carry lots of attached detail). Split a room or add zoom spots before it gets crowded. <!-- B26 -->
-3. **Group rooms into sectors** by common theme or real-life layout (e.g. a house holds kitchen, bedroom, bathroom). <!-- B27 -->
-4. **Lay out the world map**: place sectors, connect them, and define a starting point plus mostly-linear suggested paths that still allow free roaming. <!-- B28 -->
-5. **Design each room**, then run the room checks below before moving on. <!-- B29 -->
-6. **Build navigation, extras, and the site shell** (about page, quiz, audio, full screen). <!-- B30 -->
+Copy `tools/manifest_template.json` as a schema/example, then replace ALL example facts. Its two items demonstrate syntax, not recommended room density or production hooks. Resolve each ID's exact sense, pronunciation and final hook from current data. Never invent IPA or accept a strained pun to fill a field: a clear plain depiction is allowed. Preserve user-chosen hooks.
 
-## Run the unbuilt-by-word-id script first, every time
+Record: setting/theme fit; one named everyday situation; interaction groups (IDs or explicit `background:` roles); word/gloss/hook; literal sound-cue object AND meaning; visible action; count or null; gender/side, zone/depth; sensitive treatment; verb beret and action target. Each candidate `box_hint` is [x,y,width,height] in **1280×720 pixels**, declared by `coordinate_space`. These are composition envelopes; final boxes must fit the art. They must not overlap. Leave space for labels and exits. Every item belongs to an activity, not a lineup.
 
-- **First step of every build or repaint job:** run `tools/unbuilt.py` (fresh main, by word id) and read the target building's partial/unbuilt rooms before choosing what to paint. Never trust a remembered count or a room id alone. <!-- N5 -->
-- **"Unbuilt" is checked by word id.** Before building a planned room as new, search every live data file for its word ids. Room ids drift between the plan and the site, so a planned room can already be live under another name. <!-- G156 -->
+Also record every painted passage/exit with destination, location and design (doors=[] is valid for a doorless zoom; its existing viewer Back supplies return, never invent a portal to fill metadata); outgoing zooms with word IDs; intended natural scene text; siblings and used motifs ([] is valid for a new building). Read full sibling hooks only to resolve a suspected repeated motif, not entire card payloads.
 
-## Planning gate: write the item manifest, check it, only then paint
+For a zoom add `continuity`: `parent_image` (actual path), `parent_box` (pixel rectangle), `preserve` (a nonempty list of descriptions covering identity, orientation, materials/colors, relative contents, surroundings and placement conventions). Set prompt.kind=zoom and prompt.parent/spot. Attach the full parent AND its crop. New detail can explain an object; it must not replace its shape, facing, contents or gender side. If more space is needed, redesign the parent/zoom pair before painting.
 
-- **Manifest before paint.** Before any painting, write an item manifest for the room (`tools/manifest_template.json`): for each word its id and headword, what is shown, its pose or action, exact counts, where and on what each verb acts, the sensitive-word treatment, and the side/zone it occupies; plus the room's doors and exits (where each is painted and where it leads), zooms with their words, and any intended scene text. Check the manifest line by line against the builder, language and gates checklists (placement band and side, theme fit, one concept per object, label budget, adult/child separation, counts), fix it, and only then paint. The prompt is written from the manifest, and precheck.py --manifest checks the finished room against it. <!-- N2 -->
-- **Prompt from the template.** Every room or zoom painting prompt (and every repaint or paint-back prompt) is built from `reference/prompt-template.md` with every field filled from the manifest: the named situation, the interacting groups, one line per item, the siblings and motifs already used, doors, scene text. Store the exact text sent as the manifest's `prompt_text`, beside `scene_situation`, `interactions`, `siblings` and `used_motifs`; precheck.py --manifest fails a manifest missing any of them, a prompt missing a template section, an unfilled `{field}`, or an item the prompt never names. The template only prevents rework; every gate still applies strictly to the finished painting. <!-- N9 -->
+## Cheap stop before expensive generation
 
-## Encode meaning in placement, not only in images
+```sh
+python3 tools/plan_check.py --manifest /tmp/room-manifest.json
+python3 tools/plan_check.py --layout content/v2/<bld>/layout.json --room <key>
+python3 tools/build_prompt.py /tmp/room-manifest.json --write --output /tmp/room-prompt.txt
+python3 tools/build_prompt.py /tmp/room-manifest.json --check
+```
 
-Use fixed spatial rules so position itself carries information. Decide them once and apply everywhere, and show a legend on the about page. Examples: <!-- B33 -->
+Run the layout command when the draft exists; do not fabricate a live payload to use the tools. The manifest checker catches missing/duplicate fields, unknown interaction IDs, invalid counts/markers, box units/overlap/sides and missing zoom contracts. The layout checker catches broken targets, zoom backlinks and unreachable rooms. Neither proves phonetics, architectural plausibility or visual composition. Review those once before generation.
 
-- Left vs right side of the room for a binary category (e.g. grammatical gender). <!-- B34 -->
-- Do not tint the scene itself by category (it looked unnatural); if a color cue is wanted, apply it to the item's label or card text instead. <!-- B35 -->
-- Height (floor, table, shelf, ceiling) for frequency or level. <!-- B36 -->
-- A recurring prop for a property (e.g. a mirror for a reflexive form, a door plaque for associated rules). <!-- B37 -->
-- Distinct building types or streets for distinct item classes. <!-- B38 -->
-- Everything that belongs to one item stays together in one place (one building, one object). <!-- B39 -->
-
-## Side placement in paintings
-
-- A rough left/right split is enough. Use the scene's natural composition; a center pillar or other hard divider is optional, not required. <!-- B106 -->
-
-## Place fit
-
-- Don't leave a catch-all sector for abstract items. Give every room a concrete, drawable setting whose theme the items really fit, such as a courthouse, a fairground, or a clock tower, and flag low-fit items for review. When a room is short, leave it smaller rather than topping it up with items that don't belong. <!-- B113 -->
-- **Planned assignments are law.** Every space takes its words from the project's planned item-to-room assignment (the inventory's room id and the room list's theme). Never pick words because they are unused or easy to draw. If a planned room has no space yet, build that space; don't borrow its words. Words that leave a space go to a reserve file tagged with their planned room. (Once a parish hall got an umbrella, a coat and knitting words, and the plan already had a home for each of them.) <!-- G92 -->
-- **Every word suits the place.** A teacher reading the room's name would expect each item there. Furniture that isn't needed (a random table) is never a reason to hold unrelated items. <!-- G93 -->
-- **A close-up is a real spot where its objects belong:** a coat peg, a knitting basket, an easel, a vestment cupboard. It's never a generic table. <!-- G94 -->
-- **A close-up looks like the same place as its parent:** the same piece of furniture, walls, light and style, just closer. The object it zooms into is visible in the parent painting, and its hotspot opens the zoom. (Once a desk zoom looked like a desk in a different building, and a classroom had no desk until you zoomed in.) <!-- G95 -->
-- Placement by meaning, senses, homonyms and no-overflow rooms (language palaces): see the language skill, reference/placement-and-senses.md.
+Attach the actual approved exterior/style reference, a visually distinct sibling if useful, and any parent crop. Compile instead of manually retyping the template. Pilot one room and its zoom before batch work; independent visual review must confirm the devices and scene work. Continue autonomously within the user's existing authorization; ask only for genuinely missing decisions.

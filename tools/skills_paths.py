@@ -4,9 +4,7 @@
   python3 tools/skills_paths.py        # exit 1 and list the missing ones
 
 It checks backticked strings in skills/**/*.md that look like repo paths (contain a "/" or end in .py, .json,
-.md, .tsv, .jsonl). Placeholders such as <bld> or {room} and globs are skipped, and so are the
-paths of the legacy file (skills/memory-palace-builder/reference/legacy-composited.md), which describes
-tools that are not in this repo on purpose. A bare file name is found anywhere in the repo.
+.md, .tsv, .jsonl). Placeholders and globs are skipped. A bare file name is found anywhere in the repo.
 """
 import re, subprocess, sys
 from pathlib import Path
@@ -14,19 +12,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TICK = re.compile(r"`([^`\s]+)`")
 EXT = (".py", ".json", ".md", ".tsv", ".jsonl", ".js", ".yml")
-LEGACY = {"legacy-composited.md", "CHANGELOG.md"}
 # Written at run time by a tool or on another machine, so not in the repo
-GENERATED = {"manifest.json", "review.json", "precheck.json", "contact.png", "out.json", "m.json"}
+GENERATED = {"manifest.json", "review.json", "precheck.json", "contact.png", "out.json", "m.json", "continuity.json"}
 
 
 def main():
-    files = set(subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True).stdout.split())
+    files = set(subprocess.run(["git", "ls-files", "--cached", "--others", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout.split())
     names = {Path(f).name for f in files}
     dirs = {str(p) for f in files for p in Path(f).parents}
     missing = []
     for md in sorted((ROOT / "skills").rglob("*.md")):
-        if md.name in LEGACY:
-            continue
         for n, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
             for m in TICK.finditer(line):
                 t = m.group(1).rstrip(".,:;)").lstrip("(")
