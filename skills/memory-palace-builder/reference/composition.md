@@ -2,6 +2,21 @@
 
 Read when designing or reviewing a room's painting. Gate wording for scenes: release-gates reference/space-gates.md.
 
+## Composition checkpoint before finished detail
+
+Plan the whole building's room inventory, shared activities, landmarks, viewpoints and physical connections together; compare room summaries to prevent repeated layouts. Settle hooks and literal required props before allocating space.
+
+For each new or substantially recomposed room, inspect a rough integrated whole-scene draft at the final aspect ratio before requesting finished detail. Use one low-detail pass or the first generation as the composition candidate; do not require a separate paid sketch if that candidate already establishes the composition. Keep the draft and its short verdict with the manifest. A floor plan or box grid alone cannot demonstrate a believable shared activity.
+
+Judge the draft with labels hidden, then approximate label/control space:
+
+- One recognizable place and shared moment, with natural interaction, consistent perspective and foreground/middle/background; no lineup or isolated gag display.
+- Readable literal cue AND meaning for every item, large enough to recognize, grouped so one hotspot can contain each item/helper.
+- Correct sides/bands, breathing room, exits and label space without clipping or hiding key props.
+- Distinct composition from siblings, and parent/zoom identity and orientation that agree. Pilot the pair together.
+
+Resolve composition failures by changing the plan and draft, not by polishing detail or moving boxes off the figures. Draft acceptance covers composition only; counts, anatomy, color and hook fidelity still require finished-art review. A genuinely local repair can reuse a previously accepted composition if framing, item groups and exits stay fixed; recheck that assumption after the edit.
+
 ## Mnemonic images
 
 - **Natural scene first.** Compose the room as one named everyday situation with small interacting groups, varied facing and depth, clusters and open floor, never a lineup or grid of isolated hook figures each doing its own gag; with labels hidden it must read as a storybook moment. The prompt carries this via `reference/prompt-template.md` (SITUATION, COMPOSITION); the gate is release-gates reference/space-gates.md (natural-scene gate). <!-- N8 -->
@@ -43,4 +58,4 @@ Read when designing or reviewing a room's painting. Gate wording for scenes: rel
 
 ## Local edits and paint-backs
 
-- **Local edits in context.** Edit a region (a paint-back, a hook fix) with the whole painting as the input image and a mask, asking to change only that region and keep everything else. Never paste in a separately generated figure or object, and never use a low-frequency color correction. If the edit shows a seam or a light or brushwork mismatch, repaint the room. <!-- B233 -->
+- **Local edits in context.** Keep the accepted base. Identify the defect by appearance and position; list the nearby hooks, framing, exits, light and arrangement that must stay. Edit only one or two related features with the whole painting as context and a mask where supported. Never paste in a separate generated figure. Compare base/result for both the intended fix and collateral changes across the room; inspect edited boundaries and neighbors at 2×. A seam, framing drift, missing prop or damaged accepted hook fails the candidate. Keep the accepted base rather than automatically replacing it with the latest result. After two failed edits, revisit the hook/composition before another attempt; repaint if a local repair cannot preserve coherence.

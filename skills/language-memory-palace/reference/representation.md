@@ -1,5 +1,8 @@
 # Representation design and placement grammar
 
+For the existing French village, reuse approved devices and Monsieur Verbe conventions without repeating sample approvals. The setup/sign-off steps below apply to a new language/project or a requested change of device.
+
+
 Read before any room is painted (representation spec) and when checking sides and bands.
 
 ## Representation design (decide before painting anything)

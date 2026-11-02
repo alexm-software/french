@@ -4,9 +4,17 @@
 
 Use `tools/unbuilt.py --repo .` and `tools/room_context.py` in the existing checkout. Check ownership/claims before choosing a room. For new spaces, source assignments choose the inventory; live IDs may already be elsewhere, so reconcile before adding. For a repaint, current v2 layout and resolved hook overrides define the existing room. If older source rooms disagree, record that discrepancy rather than restoring stale inventory or silently moving live words. An authorized move updates both sources and live layout. Read only the target rows of `data/source/vocab.jsonl`, `data/source/rooms.json` and the relevant `content/v2/<bld>/hooks.json`/overrides. Never add easy-to-draw filler or silently move a word.
 
-Write the building plan in its existing layout: main entrance, sector/village link, rooms, actual neighboring doors, stairs, zoom parents and ways out. A small floor-plan sketch may help; do not invent a floor-plan image if a graph suffices. Ground-floor doors go outside; interiors fit the exterior; outdoor connections are paths/gates/bridges, not freestanding doors. Back/Hub behavior is in `site-ui.md`.
+For a new building or changed adjacency, complete `building-walkthrough.md` before painting: group the word rooms, draw per-floor blocks and actual connections, choose entrance/local hubs where useful, and walk all branches on paper. Record shared passage designs for both endpoint prompts. Reuse this one building plan for each room; do not invent architecture independently in separate prompts. Existing local repairs reuse accepted topology. Map levels follow `maps-and-navigation.md`; controls follow `site-ui.md`.
 
 Read `skills/limits.json` for density and spacing. Target its room count; split overloaded plans before painting. Zooms hold a real cluster within their parent, normally zoom_min–zoom_max words; fold sparse zooms into the parent. Alphabet/reference boards are one coherent board, not one picture per symbol. Moving live words must also satisfy `moving-words.md`.
+
+## Verify facts before composition
+
+Build a compact per-room list from current data: exact IDs/senses, chosen hooks, pronunciation, gender/side, verb group/beret, reflexive mirror and any required counts. Use the same precedence as `scripts/v2/build_v2.py`: its v1/vocab selection, global corrections and building overrides. Record source paths and unresolved discrepancies once; preserve user decisions. Do not infer a verb's marker from spelling or copy an older hook just because it is nearby.
+
+Use scripts to parse/filter/join the lists; return only the target inventory and findings to the model. Check unknown/duplicate IDs, missing or extra assigned words, existing live locations, room/building references and conflicting metadata. Explicitly account for intentional repeats or moves. Then review sense fit, sound cues and literal paintability; structural validity cannot establish those.
+
+The current tools are partial: `unbuilt.py` reports live coverage; `room_context.py` summarizes current data; `plan_check.py` checks internal manifest/layout structure. It does NOT cross-check word metadata against the canonical sources. Until a shared resolver/preflight exists, do that comparison explicitly and record it as manual, never claim it was automated. A valid beret code can still be wrong for its word.
 
 ## One manifest per room, complete before paint
 
@@ -29,4 +37,4 @@ python3 tools/build_prompt.py /tmp/room-manifest.json --check
 
 Run the layout command when the draft exists; do not fabricate a live payload to use the tools. The manifest checker catches missing/duplicate fields, unknown interaction IDs, invalid counts/markers, box units/overlap/sides and missing zoom contracts. The layout checker catches broken targets, zoom backlinks and unreachable rooms. Neither proves phonetics, architectural plausibility or visual composition. Review those once before generation.
 
-Attach the actual approved exterior/style reference, a visually distinct sibling if useful, and any parent crop. Compile instead of manually retyping the template. Pilot one room and its zoom before batch work; independent visual review must confirm the devices and scene work. Continue autonomously within the user's existing authorization; ask only for genuinely missing decisions.
+Before finished detail, follow the composition checkpoint in `composition.md`. Attach the approved exterior/style reference, a visually distinct sibling if useful, and any parent crop. Compile instead of manually retyping the template. Pilot one room and its zoom together before batch work; independent visual review must confirm the devices and scene work. Continue autonomously within the user's existing authorization; ask only for genuinely missing decisions.
