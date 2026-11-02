@@ -104,7 +104,7 @@ def build(M):
         "{named situation, e.g. feeding time in the school farmyard}": M.get("scene_situation") or (missing.append("scene_situation") or "{scene_situation}"),
         "{group 1: who, doing what with whom}; {group 2: ...}; {group 3: ...}": gtxt,
         "{sibling rooms and how they look}": "; ".join(M.get("siblings") or []) or "none yet",
-        "{N (10 or fewer; zooms 4-6)}": str(len(items)),
+        "{item_count}": str(len(items)),
         "{alphabet, number list, article table | none}": P.get("reference_board") or "none",
         "{count list}": ", ".join(counts) or "none",
         "{list or \"none\"}": ", ".join(plaques) or "none",

@@ -17,7 +17,7 @@ SITUATION: {named situation, e.g. feeding time in the school farmyard}. All hook
 
 COMPOSITION: interacting groups: {group 1: who, doing what with whom}; {group 2: ...}; {group 3: ...}. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: {sibling rooms and how they look}.
 
-ITEMS: exactly {N (10 or fewer; zooms 4-6)} concepts, each with its entire recognizable sound cue and meaning visible together:
+ITEMS: exactly {item_count} concepts, each with its entire recognizable sound cue and meaning visible together:
 {n}. {word}: {gloss}; {shown}; {pose}.
 Verbs: Monsieur Verbe, cheerful striped mime with suspenders and white gloves; berets {red -er | green -ir | purple -re | gold irregular}, as individually specified above. Pronominal verbs hold a mirror. Act on {noun} at human scale, distributed among nouns. Non-verbs have no mime costume.
 Exact visible counts: {count list}. Reference board: {alphabet, number list, article table | none}. Plaque-only words: {list or "none"}, depict nothing beyond a blank plaque.

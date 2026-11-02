@@ -1,0 +1,154 @@
+{
+  "building": "ferme",
+  "sector": "S09_nature",
+  "main": "ferme",
+  "kind": "existing outdoor farm cluster",
+  "spaces": [
+    {
+      "id": "ferme",
+      "role": "main courtyard hub",
+      "parent": null,
+      "image": "ferme/ferme.jpg"
+    },
+    {
+      "id": "souche",
+      "role": "zoom",
+      "parent": "ferme",
+      "image": "ferme/souche.jpg"
+    },
+    {
+      "id": "bassecour",
+      "role": "activity area",
+      "parent": null,
+      "image": "ferme/bassecour.jpg"
+    },
+    {
+      "id": "souchebasse",
+      "role": "zoom",
+      "parent": "bassecour",
+      "image": "ferme/souchebasse.jpg"
+    },
+    {
+      "id": "manege",
+      "role": "activity area",
+      "parent": null,
+      "image": "ferme/manege.jpg"
+    },
+    {
+      "id": "champs",
+      "role": "activity area",
+      "parent": null,
+      "image": "ferme/champs.jpg"
+    },
+    {
+      "id": "souchechamps",
+      "role": "zoom",
+      "parent": "champs",
+      "image": "ferme/souchechamps.jpg"
+    },
+    {
+      "id": "coteau",
+      "role": "activity area",
+      "parent": null,
+      "image": "ferme/coteau.jpg"
+    },
+    {
+      "id": "souchecoteau",
+      "role": "zoom",
+      "parent": "coteau",
+      "image": "ferme/souchecoteau.jpg"
+    }
+  ],
+  "passages": [
+    {
+      "from": "ferme",
+      "to": "bassecour",
+      "hit": [
+        215,
+        110,
+        190,
+        195
+      ],
+      "design": "Go in through the big red barn door to the farmyard"
+    },
+    {
+      "from": "ferme",
+      "to": "manege",
+      "hit": [
+        500,
+        175,
+        105,
+        70
+      ],
+      "design": "Go through the white paddock gate to the riding ring"
+    },
+    {
+      "from": "ferme",
+      "to": "champs",
+      "hit": [
+        660,
+        160,
+        180,
+        65
+      ],
+      "design": "Go through the wooden field gates to the fields"
+    },
+    {
+      "from": "ferme",
+      "to": "coteau",
+      "hit": [
+        1050,
+        95,
+        120,
+        105
+      ],
+      "design": "Walk up the hill and through the vine arch to the hillside vineyard"
+    },
+    {
+      "from": "bassecour",
+      "to": "ferme",
+      "hit": [
+        1045,
+        450,
+        235,
+        210
+      ],
+      "design": "Go back through the open white gate to the farm"
+    },
+    {
+      "from": "manege",
+      "to": "ferme",
+      "hit": [
+        10,
+        500,
+        195,
+        195
+      ],
+      "design": "Go back through the white gate to the farm"
+    },
+    {
+      "from": "champs",
+      "to": "ferme",
+      "hit": [
+        0,
+        488,
+        220,
+        217
+      ],
+      "design": "Go back through the wooden field gate to the farm"
+    },
+    {
+      "from": "coteau",
+      "to": "ferme",
+      "hit": [
+        0,
+        215,
+        300,
+        295
+      ],
+      "design": "Go back through the vine arch to the farm"
+    }
+  ],
+  "walk": "Valley → courtyard; farmyard, riding ring, fields, hillside and their stump zooms; return via existing passages and exit the white gate. Physical links first, shortcut controls separately.",
+  "invariant": "No new routes/floors or altered stump; gate/zoom geometry and existing word identities protected."
+}

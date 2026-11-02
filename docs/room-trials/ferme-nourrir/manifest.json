@@ -1,0 +1,361 @@
+{
+  "building": "ferme",
+  "room": "ferme",
+  "coordinate_space": "1280x720-px",
+  "setting": "The existing farm courtyard during feeding time, with its barn, paddock and field paths intact.",
+  "theme_fit": "Farm animals and a visible feeding action belong together; no standalone verb house.",
+  "scene_situation": "Farmers tend and feed the animals while riders arrive, the shepherd shares lunch and the newborn calf takes its first steps.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "La ferme",
+    "camera": "the exact existing wide three-quarter courtyard view; do not reframe",
+    "light_from": "the existing neutral daylight above left",
+    "refs": "village/ferme/ferme.jpg (edit target); village/ferme/souche.jpg (protected stump reference)",
+    "look": "existing farm cluster in the valley",
+    "materials": "red timber barn, white gates, green pasture, ochre paths and wooden stable",
+    "set_apart": "open-air farm courtyard with red barn, varied green pasture and pale daylight",
+    "place": "working livestock farm courtyard",
+    "landmark": "the central old tree stump and large red barn",
+    "whimsy": "the existing tiny livestock farm on the stump, kept exactly unchanged",
+    "differ": "the established wide farm arrival view, in contrast to hillside vines and barnyard"
+  },
+  "siblings": [
+    "farmyard: barn and poultry",
+    "riding ring: paddock",
+    "fields: crops and windmill",
+    "hillside: vineyard",
+    "stump: unchanged miniature livestock close-up"
+  ],
+  "used_motifs": [
+    "existing farm motifs are deliberately retained for this local repair"
+  ],
+  "doors": [
+    {
+      "to": "bassecour",
+      "where": "pixel doorway/gate [215, 110, 190, 195]",
+      "painted_as": "Go in through the big red barn door to the farmyard"
+    },
+    {
+      "to": "manege",
+      "where": "pixel doorway/gate [500, 175, 105, 70]",
+      "painted_as": "Go through the white paddock gate to the riding ring"
+    },
+    {
+      "to": "champs",
+      "where": "pixel doorway/gate [660, 160, 180, 65]",
+      "painted_as": "Go through the wooden field gates to the fields"
+    },
+    {
+      "to": "coteau",
+      "where": "pixel doorway/gate [1050, 95, 120, 105]",
+      "painted_as": "Walk up the hill and through the vine arch to the hillside vineyard"
+    },
+    {
+      "to": "map",
+      "where": "bottom-left white gate [60,522,190,170]",
+      "painted_as": "the existing white gate out to La vallée"
+    }
+  ],
+  "zooms": [
+    {
+      "to": "souche",
+      "words": [
+        "fr_porcelaine_noun",
+        "fr_selle_noun",
+        "fr_troupeau_noun",
+        "fr_relais_noun",
+        "fr_boeuf_noun"
+      ]
+    }
+  ],
+  "text_in_image": [],
+  "items": [
+    {
+      "id": "fr_corne_noun",
+      "word": "corne",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "horn",
+      "hook": "A rhino's HORN pokes up through a field of corn (\"KORN\").",
+      "hook_object": "horn emerging among corn stalks",
+      "shown": "rhino in corn, horn plainly visible",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "existing pixel envelope [40, 225, 160, 120]",
+      "depth": "back",
+      "box_hint": [
+        40,
+        225,
+        160,
+        120
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_mule_noun",
+      "word": "mule",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "mule",
+      "hook": "Like English 'mule', said MEWL: a stubborn MULE plants all four hooves and refuses to move, no matter how many carrots the farmer offers.",
+      "hook_object": "stubborn mule refusing offered carrots",
+      "shown": "mule with farmer offering carrots",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "existing pixel envelope [100, 348, 330, 170]",
+      "depth": "middle",
+      "box_hint": [
+        100,
+        348,
+        330,
+        170
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_cavalier_noun",
+      "word": "cavalier",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "rider, horseman",
+      "hook": "Like English 'cavalier', said kah-vah-LYAY: a dashing CAVALIER in a big feathered hat and a blue cape gallops past on his brown pony, a proud RIDER.",
+      "hook_object": "feather-hatted blue-caped rider on brown pony",
+      "shown": "cavalier riding past",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "existing pixel envelope [765, 228, 110, 86]",
+      "depth": "back",
+      "box_hint": [
+        765,
+        228,
+        110,
+        86
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_ane_noun",
+      "word": "âne",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "donkey",
+      "hook": "A DONKEY named ANNE (\"ahn\") trots across the farm with baskets on her back and a boy in a feathered hat riding her.",
+      "hook_object": "donkey named Anne carrying baskets and boy",
+      "shown": "donkey, baskets and green-hatted boy",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "existing pixel envelope [895, 190, 125, 125]",
+      "depth": "back",
+      "box_hint": [
+        895,
+        190,
+        125,
+        125
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_taureau_noun",
+      "word": "taureau",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "bull",
+      "hook": "Like English 'Taurus', said toh-ROH: a BULL lies in a ROW of daisies reading his horoscope book, covered in stars: TAURUS.",
+      "hook_object": "Taurus bull in daisies reading star-covered book",
+      "shown": "bull resting with horoscope book",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "existing pixel envelope [830, 315, 165, 120]",
+      "depth": "middle",
+      "box_hint": [
+        830,
+        315,
+        165,
+        120
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_cheval_noun",
+      "word": "cheval",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "horse",
+      "hook": "\"Shove, Al!\" (\"shuh-VAHL\"): Al leans on his stubborn HORSE and coaxes it into the stable, its tail swishing.",
+      "hook_object": "Al coaxing his horse into the stable",
+      "shown": "horse and encouraging farmer at stable",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "existing pixel envelope [1032, 260, 218, 225]",
+      "depth": "middle",
+      "box_hint": [
+        1032,
+        260,
+        218,
+        225
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_berger_noun",
+      "word": "berger",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "shepherd",
+      "hook": "A SHEPHERD with his crook sits on a hay bale and shares his burger (\"behr-ZHAY\") with a hungry white sheepdog.",
+      "hook_object": "shepherd sharing burger with white sheepdog",
+      "shown": "shepherd with burger, crook and sheepdog",
+      "pose_action": "Keep the existing pose and literal hook action unchanged.",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "existing pixel envelope [835, 440, 195, 230]",
+      "depth": "front",
+      "box_hint": [
+        835,
+        440,
+        195,
+        230
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_veau_noun",
+      "word": "veau",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "calf; veal",
+      "hook": "\"VOH\": the farmer crouches and shouts \"WHOA!\" as the wobbly newborn CALF takes its first steps. le veau = the calf.",
+      "hook_object": "farmer reacting WHOA to newborn calf steps",
+      "shown": "farmer encouraging wobbly calf, same identities",
+      "pose_action": "recompose this existing calf/farmer group into the right-side envelope, keeping the newborn calf and encouraging farmer recognizable",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "foreground just right of center; farmer and calf compact together, left of shepherd",
+      "depth": "front",
+      "box_hint": [
+        610,
+        465,
+        215,
+        215
+      ],
+      "interacts_with": "the existing farmer, animal or helper in this hook"
+    },
+    {
+      "id": "fr_nourrir_verb",
+      "word": "nourrir",
+      "pos": "verb",
+      "gloss": "to feed",
+      "hook": "Monsieur Verbe FEEDS a young lamb from a bottle, holding it gently at the mouth: nourrir (noo-REER), to feed. A plain literal depiction; no forced sound-alike.",
+      "hook_object": "a small lamb drinking visibly from the feeding bottle",
+      "shown": "adult striped-shirt mime in green beret kneeling to bottle-feed a small lamb",
+      "pose_action": "one hand supports the bottle at the lamb mouth; the other steadies its shoulder; both arms clearly attached",
+      "count": null,
+      "sensitive": "none",
+      "side": "any",
+      "zone": "empty grass between the exit gate and calf farmer, below the mule and left of the stump",
+      "depth": "front",
+      "box_hint": [
+        280,
+        520,
+        240,
+        165
+      ],
+      "interacts_with": "the lamb, with the existing calf farmer reacting nearby",
+      "beret": "ir",
+      "verb_acts_on": "bottle to lamb mouth; mime and lamb form one compact group"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_corne_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_mule_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_cavalier_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_ane_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_taureau_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_cheval_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_berger_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_veau_noun",
+        "background: the existing animal-tending helpers"
+      ],
+      "doing": "Preserve this existing tending/riding/resting interaction and every hook prop."
+    },
+    {
+      "who": [
+        "fr_nourrir_verb",
+        "fr_veau_noun"
+      ],
+      "doing": "The mime feeds a lamb beside the farmer encouraging the calf; shared animal-care activity."
+    }
+  ],
+  "prompt_extra": {
+    "IMAGE": "LOCAL EDIT CANDIDATE. Input image is the edit target. Exactly two related changes: add the one feeding-mime/lamb group at [280,520,240,165], and compact/reposition the existing calf plus encouraging farmer into [610,465,215,215] so their group center is clearly in the masculine right band. Preserve every other word group, passage, stump detail, camera, framing, light and 16:9 aspect.",
+    "COMPOSITION": "Use the existing accepted composition. The only addition occupies currently empty lower-left grass: right of the white exit gate, below the mule, left of the large stump and calf farmer. Do not move, obscure or redraw any existing word group. Do not add a nurse or hospital prop. The existing calf group is the one permitted move: position the farmer and calf compactly right of center, inside the given envelope, without overlap with the shepherd or the protected stump contents. Restore any old calf-group area naturally as grass; no duplicate farmer or calf.",
+    "ITEMS": "Exactly ONE mime in the entire room: the new green-beret feeding mime. Everyone else remains an ordinary farmer/rider. No speech bubbles.",
+    "DOORS AND EXITS": "All four existing passages and the white bottom-left exit remain completely unchanged. Preserve the entire central stump miniature and all its contents precisely; it is the parent of an existing zoom."
+  },
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, the exact existing wide three-quarter courtyard view; do not reframe, of ferme / La ferme. LOCAL EDIT CANDIDATE. Input image is the edit target. Exactly two related changes: add the one feeding-mime/lamb group at [280,520,240,165], and compact/reposition the existing calf plus encouraging farmer into [610,465,215,215] so their group center is clearly in the masculine right band. Preserve every other word group, passage, stump detail, camera, framing, light and 16:9 aspect.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/ferme/ferme.jpg (edit target); village/ferme/souche.jpg (protected stump reference), this existing farm cluster in the valley, and materials red timber barn, white gates, green pasture, ochre paths and wooden stable. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from the existing neutral daylight above left; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: open-air farm courtyard with red barn, varied green pasture and pale daylight.\n\nSETTING: working livestock farm courtyard; landmark the central old tree stump and large red barn; architectural whimsy the existing tiny livestock farm on the stump, kept exactly unchanged. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: Farmers tend and feed the animals while riders arrive, the shepherd shares lunch and the newborn calf takes its first steps.. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_corne_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_mule_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_cavalier_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_ane_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_taureau_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_cheval_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_berger_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_veau_noun, background: the existing animal-tending helpers: Preserve this existing tending/riding/resting interaction and every hook prop.; fr_nourrir_verb, fr_veau_noun: The mime feeds a lamb beside the farmer encouraging the calf; shared animal-care activity.. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: farmyard: barn and poultry; riding ring: paddock; fields: crops and windmill; hillside: vineyard; stump: unchanged miniature livestock close-up. Use the existing accepted composition. The only addition occupies currently empty lower-left grass: right of the white exit gate, below the mule, left of the large stump and calf farmer. Do not move, obscure or redraw any existing word group. Do not add a nurse or hospital prop. The existing calf group is the one permitted move: position the farmer and calf compactly right of center, inside the given envelope, without overlap with the shepherd or the protected stump contents. Restore any old calf-group area naturally as grass; no duplicate farmer or calf.\n\nITEMS: exactly 9 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. corne = horn: chosen hook A rhino's HORN pokes up through a field of corn (\"KORN\").; literal cue horn emerging among corn stalks; shown as rhino in corn, horn plainly visible; pose/action Keep the existing pose and literal hook action unchanged.; count -; at left, existing pixel envelope [40, 225, 160, 120], back; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [40, 225, 160, 120].\n2. mule = mule: chosen hook Like English 'mule', said MEWL: a stubborn MULE plants all four hooves and refuses to move, no matter how many carrots the farmer offers.; literal cue stubborn mule refusing offered carrots; shown as mule with farmer offering carrots; pose/action Keep the existing pose and literal hook action unchanged.; count -; at left, existing pixel envelope [100, 348, 330, 170], middle; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [100, 348, 330, 170].\n3. cavalier = rider, horseman: chosen hook Like English 'cavalier', said kah-vah-LYAY: a dashing CAVALIER in a big feathered hat and a blue cape gallops past on his brown pony, a proud RIDER.; literal cue feather-hatted blue-caped rider on brown pony; shown as cavalier riding past; pose/action Keep the existing pose and literal hook action unchanged.; count -; at right, existing pixel envelope [765, 228, 110, 86], back; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [765, 228, 110, 86].\n4. âne = donkey: chosen hook A DONKEY named ANNE (\"ahn\") trots across the farm with baskets on her back and a boy in a feathered hat riding her.; literal cue donkey named Anne carrying baskets and boy; shown as donkey, baskets and green-hatted boy; pose/action Keep the existing pose and literal hook action unchanged.; count -; at right, existing pixel envelope [895, 190, 125, 125], back; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [895, 190, 125, 125].\n5. taureau = bull: chosen hook Like English 'Taurus', said toh-ROH: a BULL lies in a ROW of daisies reading his horoscope book, covered in stars: TAURUS.; literal cue Taurus bull in daisies reading star-covered book; shown as bull resting with horoscope book; pose/action Keep the existing pose and literal hook action unchanged.; count -; at right, existing pixel envelope [830, 315, 165, 120], middle; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [830, 315, 165, 120].\n6. cheval = horse: chosen hook \"Shove, Al!\" (\"shuh-VAHL\"): Al leans on his stubborn HORSE and coaxes it into the stable, its tail swishing.; literal cue Al coaxing his horse into the stable; shown as horse and encouraging farmer at stable; pose/action Keep the existing pose and literal hook action unchanged.; count -; at right, existing pixel envelope [1032, 260, 218, 225], middle; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [1032, 260, 218, 225].\n7. berger = shepherd: chosen hook A SHEPHERD with his crook sits on a hay bale and shares his burger (\"behr-ZHAY\") with a hungry white sheepdog.; literal cue shepherd sharing burger with white sheepdog; shown as shepherd with burger, crook and sheepdog; pose/action Keep the existing pose and literal hook action unchanged.; count -; at right, existing pixel envelope [835, 440, 195, 230], front; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [835, 440, 195, 230].\n8. veau = calf; veal: chosen hook \"VOH\": the farmer crouches and shouts \"WHOA!\" as the wobbly newborn CALF takes its first steps. le veau = the calf.; literal cue farmer reacting WHOA to newborn calf steps; shown as farmer encouraging wobbly calf, same identities; pose/action recompose this existing calf/farmer group into the right-side envelope, keeping the newborn calf and encouraging farmer recognizable; count -; at right, foreground just right of center; farmer and calf compact together, left of shepherd, front; interacts with the existing farmer, animal or helper in this hook; planned pixel envelope [610, 465, 215, 215].\n9. nourrir = to feed: chosen hook Monsieur Verbe FEEDS a young lamb from a bottle, holding it gently at the mouth: nourrir (noo-REER), to feed. A plain literal depiction; no forced sound-alike.; literal cue a small lamb drinking visibly from the feeding bottle; shown as adult striped-shirt mime in green beret kneeling to bottle-feed a small lamb; pose/action one hand supports the bottle at the lamb mouth; the other steadies its shoulder; both arms clearly attached; count -; at any, empty grass between the exit gate and calf farmer, below the mule and left of the stump, front; interacts with the lamb, with the existing calf farmer reacting nearby; planned pixel envelope [280, 520, 240, 165]; beret green -ir; where it acts: bottle to lamb mouth; mime and lamb form one compact group.\nVerbs: Monsieur Verbe, cheerful striped mime with suspenders and white gloves; berets green -ir, as individually specified above. Pronominal verbs hold a mirror. Act on what its line above names at human scale, distributed among nouns. Non-verbs have no mime costume.\nExact visible counts: none. Reference board: none. Plaque-only words: none, depict nothing beyond a blank plaque. Exactly ONE mime in the entire room: the new green-beret feeding mime. Everyone else remains an ordinary farmer/rider. No speech bubbles.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to bassecour, pixel doorway/gate [215, 110, 190, 195], painted as Go in through the big red barn door to the farmyard; to manege, pixel doorway/gate [500, 175, 105, 70], painted as Go through the white paddock gate to the riding ring; to champs, pixel doorway/gate [660, 160, 180, 65], painted as Go through the wooden field gates to the fields; to coteau, pixel doorway/gate [1050, 95, 120, 105], painted as Walk up the hill and through the vine arch to the hillside vineyard; to map, bottom-left white gate [60,522,190,170], painted as the existing white gate out to La vallée. Clear floor-level thresholds at human scale; no props in openings. Beyond: bassecour, manege, champs, coteau, map. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths. All four existing passages and the white bottom-left exit remain completely unchanged. Preserve the entire central stump miniature and all its contents precisely; it is the parent of an existing zoom.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text none. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs existing farm motifs are deliberately retained for this local repair. This room differs by the established wide farm arrival view, in contrast to hillside vines and barnyard.\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures.",
+  "_manual_source_review": {
+    "base_commit": "10da19dc38252949b05041f277461dedf5853e38",
+    "noun_metadata": "current village/data/ferme.js and v2 layout; all eight IDs and hooks preserved",
+    "verb_metadata": "/nu.ʁiʁ/, noo-REER, regular group 2, green beret, no reflexive mirror",
+    "hook_decision": "NURSE cue rejected as unreliable; plain literal feeding action, no user hook changed",
+    "preflight_finding": "Existing calf box centered 53.8%; draft requested actual art repositioning into masculine right band, not a false box-only fix."
+  }
+}

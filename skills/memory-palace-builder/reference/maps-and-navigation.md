@@ -1,28 +1,40 @@
-# Overview and sector maps, navigation structure
+# Overview, regions and connected views
 
-Read when painting or reviewing any map level, exterior, door, stair or path.
+Read for map/exterior authoring or changes to physical routes. Use `building-walkthrough.md` for interior floor plans and hubs; `site-ui.md` owns current Back/Hub controls.
 
-## Map levels zoom, they don't change
+## Give each view a job
 
-Every map level is a zoom of the level above it. A district on the world map shows, in miniature, the same buildings in the same arrangement as the district map it opens, and a building's exterior on the district map matches its interiors. Paint the detailed level first, then derive the overview's patch from it, or repaint both together. Never paint them independently and hope they agree. <!-- B217 -->
+| View | Purpose | Must agree with |
+|---|---|---|
+| Village overview | Recognize regions and the roads/water connecting them | Every sector's footprint, buildings and landmarks |
+| Region/sector | Walk streets/paths, recognize buildings and choose entrances | Its overview miniature, adjacent sectors and building exteriors |
+| Building entrance/main room | Establish arrival, function and routes into the building | Exterior entrance, footprint, floors and interior plan |
+| Local hub/landing | Orient at an actual floor/wing junction where useful | Adjacent doors, stairs and room landmarks |
+| Activity room | Learn its vocabulary in a distinctive shared situation | Building plan, neighboring views, style and word manifest |
+| Zoom | Inspect a real local cluster more closely | The actual parent crop's object, orientation and contents |
 
-- **Maps agree at every level.** The overall village or palace map, each sector map and each building or floor plan describe the same layout. A building appears in the sector the village map puts it in, in the same position and with the same name and entrances. Rooms listed in a building's plan are the rooms you can actually walk into from that building, and the painted views match the maps (a door on the map is a door in the painting, and on the same side). <!-- B137 -->
-- **Overview consistency (merged).** Every district's sector map, building exteriors and interior establishing views match what the top-level overview map paints for that district (same landmarks, architecture, roof shapes, materials, colors, and water or terrain in the same places), and a building or street seen from the level above shows the landmarks visible inside, and vice versa. Repainting the overview means re-auditing the inner levels, and the other way round. <!-- G132 L128 G122 -->
-- Zoom-continuity gate: each district on the overview map is a zoomed-out miniature of the map you get when you click it, with the same key buildings and silhouettes, roughly the same relative positions, and the same water, paths and colors. Clicking must feel like zooming in. One generic landmark standing in for a cluster of different buildings (a single brick college for a six-building campus) fails. Check every district by putting its overview crop next to its sector map. At the same time, the overview stays one coherent painting: lanes, water, trees and light continue across district edges at a matching scale and perspective, so districts look connected and fit together, yet each district is distinguishable at a glance. A patchwork of pasted-in tiles fails. Map labels may carry a small symbol of the place's character (a graduation cap for a university). <!-- G131 -->
-- **Overview is one painting, never patches.** When a district on the overview doesn't match its sector map, repaint the whole overview in one pass from a layout guide built out of every sector map, then make only small feathered fixes. Local pasted-in patches look stuck on, with mismatched light, scale and hard edges, and they fail. Every building on a sector map must appear on the overview in the same arrangement. "Extra buildings sit off-patch" is a fail, not a pass. Small props may be dropped. Buildings may not. <!-- G154 -->
-- **Grow the map, don't squeeze.** Once the overview is approved, future expansions (new districts or areas) make room by widening or heightening the map canvas and extending its roads, water and countryside outward. Never fit new places into the existing painting by crowding, shrinking or moving the approved districts. Extend the overview with the same scale, perspective and style, and re-run the overview and road checks across the joins. <!-- G157 -->
-- **Roads look normal.** Roads on the overview and sector maps look like ordinary country and town roads seen from above: a clear hierarchy (one main road, narrower lanes, thin footpaths), gentle curves that follow the terrain, plain T and Y junctions, and roads that run into a district and become its streets or square. Every road leads somewhere real. Uniform swooping ribbons, decorative loops or rings around districts, blob junctions, long stretches hugging riverbanks, roads into water without a bridge, roads ending in a forest or field, and straight bands running up mountains (use switchbacks) all fail. Audit the painted image at 2x on every tile, not only the road graph. <!-- G158 -->
-- Exterior-character gate: on the overview and sector maps, every building's exterior shows its function at a glance through its silhouette, iconic features and props (an oven chimney and bread for a bakery, a steeple for a church). A generic house or box shape that could be any building fails, as does an exterior that looks like its neighbors'. <!-- G130 -->
+A hub is an ordinary physical scene with a navigation role, not a mandatory extra map layer. Do not force a small building through an empty lobby or force every interior trip back through its entrance.
 
-## Navigation structure
+## Author the structure before the views
 
-- **No disconnected areas.** Build the full navigation graph across the whole palace (village, sector, street, building, room, zoom spot) and confirm every place can be reached from the start and can get back to it. Report any orphan room, dead end with no way back, one-way link without a return, or sector reachable only through a hidden or unlabeled hotspot. <!-- B138 -->
-- **Consistent hierarchy.** Every room belongs to exactly one building, every building to exactly one sector, and every sector appears on the village map. IDs and names are unique and spelled the same in the data, maps, paintings, signs and site text, in every interface language. <!-- B139 -->
-- **Consistent conventions.** Placement scheme, sign style, direction cues and transitions (doors, stairs, paths) work the same way in every sector, so a learner who knows one area can read any other. Flag sectors that drift from the shared conventions. <!-- B140 -->
-- Every hotspot target exists. Every room is reachable from the start and can get back, and every space has a visible way back to its parent (a back control driven by the hierarchy, not only painted links). <!-- B146 -->
-- Click every hotspot, link, exit, door and stair, and confirm each lands on the right target. <!-- B176 -->
-- Navigation click areas cover the whole painted passage (the stretch of road ahead, the full doorway or arch), not just its text label, without overlapping item boxes. <!-- B177 -->
-- Links are physically plausible. You leave a room through doors, stairs or arches, never through windows or walls. Upper floors connect only by stairs, and only ground-floor doors lead outside. Windows can show a view but are never exits. <!-- B178 -->
-- Every painted transition matches where it really leads. Stairs drawn going up must lead to a higher floor, and stairs going down to a lower one (an upstairs room shows stairs going down). Cellar steps lead down, and doors and paths face the side the map puts their target on. Arrows and labels must say the same. <!-- B179 -->
-- Navigation is a natural step-by-step walk, with no list pickers. Rooms in the same building connect directly, and building names are shown. <!-- B180 -->
-- **Real doors to sub-rooms.** A sub-room is reached through a painted door, stair or archway, never a sign on a wall. Every building's main room has a painted way out (front door or porch) to the map, as well as Back. Back from a sub-room goes to its building's main room, and from a zoom to its parent. <!-- G102 -->
+1. Establish the region footprints, roads, terrain/water, building positions, silhouettes and entrances in one spatial plan. Every room belongs to one building and every building to one sector; stable IDs/names agree across plans, map labels, cards and translations.
+2. Group building vocabulary into room activities, then plan floors, neighbors, shared passages and optional hubs using `building-walkthrough.md`. Check the complete walk before painting individual rooms.
+3. Draft representative connected views: sector/exterior/entrance and main room/zoom. Fix topology and identity discrepancies before finished images.
+4. Paint detailed regions and connected interior scenes using the shared plan and references. Compose the overview from those approved region references in one integrated painting. Use rough maps as planning evidence; do not paint detailed levels independently and hope they match.
+5. Review every parent/child and adjacent pair, then browser-walk every branch. After a shared feature changes, review all views showing it.
+
+## Map continuity and expansion
+
+The overview is a zoomed-out view of the same world: same building count/arrangement, recognizable silhouettes, names, entrances, paths, waterways, terrain, season and materials. Minor props may disappear at distance; buildings may not. A generic college standing in for a multi-building campus fails. Building exteriors show their function and visually support the interior's scale and floors.
+
+Compare actual overview crops with sectors, exterior with arrival view, and zoom with parent crop. Keep the overview one coherent painting: continuous roads, water, scale, perspective and light across region boundaries. Do not assemble pasted tiles. Repaint inconsistent overview content as one integrated scene from the complete reference/layout guide; retain only coherent regional edits.
+
+Expand approved maps outward at the existing scale rather than squeezing, shrinking or shifting approved districts. Roads and water continue naturally through the extension. Roads have a clear main-road/lane/footpath hierarchy, natural T/Y junctions and terrain-following curves. Every route has a real destination; no decorative ribbon loops, roads into water without bridges, or straight roads up mountains. Inspect the painted routes, not only the graph.
+
+## Passage and reachability acceptance
+
+Check all targets exist and that every place is reachable from the village start and can return. The physical route must work without relying on Back/Hub shortcuts; an ordinary terminal room with an obvious return is valid. Match visible passage design, architectural position, floor and destination glimpse at both ends. Camera rotation can change a doorway's screen edge; the floor-plan relationship must remain consistent.
+
+Use real doors/arches/stairs inside and paths/gates/bridges outside. Only ground-floor entrances go outside; upper/cellar floors use stairs that point the correct way at both ends. Windows are views, never exits. Never draw a freestanding door in open ground to fake a route. Each region connects to the overview and real neighboring regions where paths meet.
+
+Click areas cover the painted passage, not just its label, and avoid word boxes. Cues must read with highlights off: destination name on hover/focus/first tap and a clear walking badge distinct from the zoom magnifier. Suppress duplicate visible controls to the same destination. A sign or room list is not a physical passage. Click every route in desktop/mobile/fullscreen and confirm arrival, return and destination cues against the plan.

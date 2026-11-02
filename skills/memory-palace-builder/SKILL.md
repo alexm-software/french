@@ -15,7 +15,8 @@ Build one integrated 1280×720 painting per room or zoom: architecture, objects,
 
 | Change | Read on demand |
 |---|---|
-| New building/room/zoom | `reference/planning.md`, `reference/composition.md`, `reference/prompt-template.md` |
+| New building or changed floors/connections | `reference/building-walkthrough.md`, `reference/maps-and-navigation.md`, then the room row below |
+| New room/zoom | `reference/planning.md`, `reference/composition.md`, `reference/prompt-template.md` |
 | Repaint or move words | above plus `reference/moving-words.md` |
 | Hook text | `reference/hooks.md`; language `reference/hooks.md` |
 | Labels/hotspots | `reference/text-and-labels.md` |
@@ -23,11 +24,13 @@ Build one integrated 1280×720 painting per room or zoom: architecture, objects,
 | New project, copyright, sensitive content | corresponding `reference/setup-and-style.md`, `reference/copyright.md`, `reference/sensitive-content.md` |
 | Validation/release | `reference/validation.md`; release-gates skill |
 
-## Plan → compile → paint → integrate
+## Verify facts → review composition → paint → integrate
 
-Follow `reference/planning.md`. Before paying for an image, record the building's physical connections and a room manifest using `tools/manifest_template.json`. Resolve the words, hooks, exact counts, verb markers, interaction groups, candidate boxes and all destinations. For a zoom, pin the actual parent image/crop and the features it must preserve.
+Start with `reference/building-walkthrough.md` for a new building: room word groups → footprint/floors → physical passages and optional hubs → view compositions. Overview and sectors follow `reference/maps-and-navigation.md`. Follow `reference/planning.md` for each word room's manifest using `tools/manifest_template.json`. Resolve the words, hooks, exact counts, verb markers, interaction groups, candidate boxes and all destinations. For a zoom, pin the actual parent image/crop and the features it must preserve.
 
-Run `python3 tools/plan_check.py --manifest <manifest>` and the layout check if drafted, then `python3 tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`. Fix FAILs before painting; warnings require judgment. Attach the real references. Work on one representative room first; once its composition and language devices pass, continue the building. Do not buy a batch of unreviewed paintings.
+Check the manifest against the actual resolved word data, not just its own fields (`reference/planning.md`). Run `python3 tools/plan_check.py --manifest <manifest>` and the draft layout check. For a new or substantially recomposed scene, review a rough whole-scene composition before requesting finished detail (`reference/composition.md`). A valid list or box diagram does not establish visual quality.
+
+Compile each draft/final request with `python3 tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`; record draft intent in `prompt_extra` and attach actual references. Fix FAILs first; warnings require judgment. Pilot one room and its zoom together, then review each finished painting immediately, scene first and details second (`reference/validation.md`). Do not batch unreviewed paintings or build cards/labels around rejected art.
 
 Fit boxes to the finished hooks; do not move boxes away from art to satisfy a checker. Rebuild data/cards with the repo's existing tools. Keep hooks, dialogue, alt text, cards and zoom miniatures consistent with the final painting. Release only after the gates appropriate to the changed files pass.
 

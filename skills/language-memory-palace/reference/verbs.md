@@ -1,5 +1,8 @@
 # Verbs and their representation
 
+For the existing French village, reuse approved devices and Monsieur Verbe conventions without repeating sample approvals. The setup/sign-off steps below apply to a new language/project or a requested change of device.
+
+
 Read before planning, painting or reviewing any verb, verb card or verb street.
 
 ## Choosing how verbs are represented (decide per language)
