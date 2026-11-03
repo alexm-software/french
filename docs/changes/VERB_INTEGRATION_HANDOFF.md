@@ -1,6 +1,6 @@
 # Verb integration handoff — 2026-11-01
 
-Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 existing ordinary rooms.** These are actual source assignments; live integrations remain pending. Read the per-word TSV before resuming other room work.
+Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 existing ordinary rooms.** These are actual source assignments. Nourrir is now integrated into ferme/ferme; all other rows retain their recorded status. Read the per-word TSV before resuming other room work.
 
 ## Files changed
 
@@ -24,7 +24,7 @@ No public painting, hotspot, card, dialogue, planned.only list or cache version 
 | couture/atelier | 12 → 13 | coudre |
 | ecole/bibliotheque | 8 → 9 | feuilleter |
 | ferme/coteau | 7 → 10 | planter, cultiver, germer |
-| ferme/ferme | 8 → 10 | nourrir, seller |
+| ferme/ferme | 9 → 10 | nourrir (integrated), seller (pending) |
 | garage/garage | 10 → 12 | clouer, bricoler |
 | gare/etage | 8 → 9 | transporter |
 | jeux/fete | 8 → 9 | offrir |
@@ -53,3 +53,8 @@ One farm/nourrir candidate was generated and independently rejected: the mime la
 ## Scope cautions
 
 The older source plan already differs from live v2 layouts outside this batch. Only these 25 IDs were reassigned; no wholesale reconciliation was attempted. Ordinary Back remains the outside shortcut; physical local hubs use real adjacent passages, not extra global Hub buttons. Circulation-only planning does not create a new runtime feature.
+
+
+## Farm retry — 2026-11-02
+
+Nourrir now appears in the main farm painting among the nouns, with its green beret and visible bottle-feeding action. Existing eight main words and all routes remain. Repaired the inherited stump miniature mismatch and actual group clearances; fitted full hook boxes, rebuilt cards/data/search/dialogue and bumped offline cache to v47. The original rejected trial remains historical. See retry-manifest.json, retry-independent-review.md and retry-review.json in docs/room-trials/ferme-nourrir/. Seller remains pending; no live donor was removed for nourrir.
