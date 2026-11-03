@@ -1,11 +1,19 @@
 # Tooling and token economy
 
-Use `room_context.py` for a target brief and `unbuilt.py --repo .` for live IDs. Do not repeatedly clone main, print entire building payloads, load all skill references, or paste generated prompts into chat. `build_prompt.py --write --output` stores the exact prompt and prints a short summary; `--check` detects drift.
+## Load once
 
-One building plan + one manifest per room is the reusable context. Keep IDs, final hooks, geometry, references and decisions in those files, not repeated prose. Checkpoint only base commit, touched files, completed checks, next action and blockers. Avoid launching a new worker for each tiny revision; if work is delegated, give a bounded task and the manifest, not every audit ever written.
+Use `room_context.py` for the target brief and `unbuilt.py --repo .` for live IDs. Reuse the checkout and fetch main once. Read target records, required references and affected dependencies; reserve whole-repo inventories for audits. Parse/filter large payloads in code. Print findings/counts, never full registries, commit responses, prompts or binary/base64 content.
 
-Cheap structural checks precede image calls. See `planning.md`; quality checks after painting are in `validation.md`. One contact sheet summarizes the room, but required 2× anatomy/count/hook inspection still applies. `zoom_sheet.py` builds actual parent-crop/zoom pairs with image hashes; a pending record is not a pass.
+Keep one building plan, room manifest and checkpoint (base, touched paths, accepted revision, blockers, next action). `build_prompt.py --write --output` saves the specification; `--check` detects drift. Save exact local-edit deltas separately, stating which specification fields they replace.
 
-Generate whole scenes with shared style references. Reduce prompt/context repetition and retries, never visual coherence by generating the background separately from its figures. Each retry names a diagnosed failure and accepted details to preserve. Stop after two unsuccessful edits to revisit the plan.
+## Choose working capabilities early
 
-Use unique review output paths per revision. Layout boxes are pixels, built `box` values are percentages and `boxPx` values are pixels. Rebuild generated data from authoritative layout; never hand-fix generated payloads. Run placement after geometry changes. Reuse existing scripts and render geometry rather than inventing a second implementation.
+Check required local executables/libraries once before expensive work. Establish a usable fallback or record the test limitation. A remote browser may not reach executor loopback; do not create extra deployments merely to test reachability.
+
+Prefer connected GitHub publishing tools when available. Do not retry command-line pushes with credentials known absent. Reuse one route; upload changed files only, create one tree/commit and PR, verify contents/CI, then merge under existing authorization. Load transfer bytes programmatically without printing them. Preserve concurrent work and obey approval policy; never route around a rejected action.
+
+## Reuse valid evidence
+
+Geometry precedes image calls and final review. Follow SKILL.md's retry rule. Reuse one reviewer/context, passing current paths, manifest and a short defect delta. Screen intermediate edits immediately; final acceptance still checks every required hook/count/anatomy detail at 2× and actual parent/zoom agreement.
+
+Use unique review paths per revision. Layout/`boxPx` coordinates are pixels; built `box` values are percentages. Rebuild with existing scripts, never hand-fix generated payloads or invent another geometry implementation. Run targeted iteration checks and global CI on the combined pack; reuse only results with unchanged inputs.
