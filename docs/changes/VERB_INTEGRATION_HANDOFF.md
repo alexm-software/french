@@ -48,7 +48,7 @@ Totals over target 10 require a composition decision before painting; none excee
 
 ## Trial result
 
-One farm/nourrir candidate was generated and independently rejected: the mime landed outside its planned region and conflicts with the mule hotspot; calf placement conflicts remain; protected details were redrawn; the existing stump parent/zoom already disagree. Feeding action and green beret read clearly. No live farm assets were changed. See docs/room-trials/ferme-nourrir/README.md, review.json, independent-review.md, exact manifest/prompt and original candidate PNG. Seller is assigned to this room but was not painted in the trial.
+One farm/nourrir candidate was generated and independently rejected: the mime landed outside its planned region and conflicts with the mule hotspot; calf placement conflicts remain; protected details were redrawn; the existing stump parent/zoom already disagree. Feeding action and green beret read clearly. No live farm assets were changed. See docs/room-trials/ferme-nourrir/README.md, review.json, independent-review.md, exact manifest/prompt and the historical candidate link in the trial README (the rejected PNG was removed from the current tree during unused-file cleanup). Seller is assigned to this room but was not painted in the trial.
 
 ## Scope cautions
 
