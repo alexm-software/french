@@ -138,7 +138,7 @@ def adj_from_vocab(w):
 # A vocab verb (pos "verb") becomes a v1-style verb card: Monsieur Verbe's beret colour from
 # verb_group/irregular (-er red, -ir green, regular -re purple, irregular gold), "reflexive"
 # (he holds a mirror), participles + auxiliary, and the 7 tenses of v1 cards built from the
-# conjugation cache data/cache/conjugations.json (filled by scripts/build_data.py / verbecc).
+# conjugation cache data/cache/conjugations.json (maintained separately; add missing tables there).
 CONJ = None
 TENSES = [("present", "Présent", "present"), ("pc", "Passé composé", "passe"),
           ("imparfait", "Imparfait", "imparfait"), ("futur", "Futur simple", "futur"),
@@ -155,7 +155,7 @@ def load_conj():
     return CONJ
 
 
-def _clean_pronominal(form):  # same as scripts/build_data.py clean_pronominal: drop "(de)" etc.
+def _clean_pronominal(form):  # drop "(de)" and other parenthetical annotations.
     text = re.sub(r"\s+", " ", (form or "").replace("’", "'")).strip()
     while True:
         nxt = re.sub(r"\s*\([^)]*\)", "", text).strip()
