@@ -362,7 +362,7 @@ async def map_label_edges(pg, where, errs):
         errs.append(f"{where}: map label crosses the 6% margin: {item}")
 
 
-async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_only=False):
+async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_only=False, rooms_only=False):
     from playwright.async_api import async_playwright
     shots.mkdir(parents=True, exist_ok=True)
     async with async_playwright() as p:
@@ -380,58 +380,59 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
             if not await pg.evaluate("document.getElementById('cardWrap').hidden"):
                 await pg.keyboard.press("Escape"); await pg.wait_for_timeout(200)
                 if not await pg.evaluate("document.getElementById('cardWrap').hidden"): errs.append(f"map @{vw}: first-visit help does not close with Esc")
-            WH = M["world"].get("h", 720)
-            wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
-            if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
-                errs.append(f"world map @{vw}: sector links {wl}")
-            # world signposts: inside the painting with a 6% margin, centred inside their own click polygon, touching nothing
-            pins = await pg.evaluate("""(()=>{const S=document.getElementById('stage').getBoundingClientRect();
-              return [...document.querySelectorAll('.tag.pin')].map(e=>{const r=e.getBoundingClientRect();
-                return {t:e.textContent,x0:(r.left-S.left)/S.width*1280,y0:(r.top-S.top)/S.height*%d,x1:(r.right-S.left)/S.width*1280,y1:(r.bottom-S.top)/S.height*%d}})})()""" % (WH, WH))
-            for k, p in enumerate(pins):  # tall world (world.h): same 43.2-unit top/bottom margin as a 720 painting
-                if p["x0"] < 76.8 or p["y0"] < 43.2 or p["x1"] > 1203.2 or p["y1"] > WH - 43.2:
-                    errs.append(f"world map @{vw}: label '{p['t']}' is within 6% of the painting edge")
-                for q in pins[k + 1:]:
-                    if p["x0"] < q["x1"] + 3 and q["x0"] < p["x1"] + 3 and p["y0"] < q["y1"] + 3 and q["y0"] < p["y1"] + 3:
-                        errs.append(f"world map @{vw}: label '{p['t']}' touches '{q['t']}'")
-            for w in M["world"]["sectors"]:
-                if w.get("poly") and not any(inside(w["tag"][0], w["tag"][1], r) for r in w["poly"]):
-                    errs.append(f"world map: {w['name']} label centre is outside its click area")
-            await pg.screenshot(path=str(shots / f"map_{vw}.png"))
-            if M["world"].get("h"):  # tall world: scroll to each district, click its painted area (not the label), Back must restore the scroll
-                await pg.screenshot(path=str(shots / f"map_{vw}_full.png"), full_page=False)
+            if not rooms_only:
+                WH = M["world"].get("h", 720)
+                wl = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href'))")
+                if sorted(wl) != sorted(f"#/quartier/{w['slug']}" for w in M["world"]["sectors"]):
+                    errs.append(f"world map @{vw}: sector links {wl}")
+                # world signposts: inside the painting with a 6% margin, centred inside their own click polygon, touching nothing
+                pins = await pg.evaluate("""(()=>{const S=document.getElementById('stage').getBoundingClientRect();
+                  return [...document.querySelectorAll('.tag.pin')].map(e=>{const r=e.getBoundingClientRect();
+                    return {t:e.textContent,x0:(r.left-S.left)/S.width*1280,y0:(r.top-S.top)/S.height*%d,x1:(r.right-S.left)/S.width*1280,y1:(r.bottom-S.top)/S.height*%d}})})()""" % (WH, WH))
+                for k, p in enumerate(pins):  # tall world (world.h): same 43.2-unit top/bottom margin as a 720 painting
+                    if p["x0"] < 76.8 or p["y0"] < 43.2 or p["x1"] > 1203.2 or p["y1"] > WH - 43.2:
+                        errs.append(f"world map @{vw}: label '{p['t']}' is within 6% of the painting edge")
+                    for q in pins[k + 1:]:
+                        if p["x0"] < q["x1"] + 3 and q["x0"] < p["x1"] + 3 and p["y0"] < q["y1"] + 3 and q["y0"] < p["y1"] + 3:
+                            errs.append(f"world map @{vw}: label '{p['t']}' touches '{q['t']}'")
                 for w in M["world"]["sectors"]:
-                    x, y = w["door"]
-                    st = await pg.evaluate(f"""(()=>{{const sc=document.getElementById('scroller'),S=document.getElementById('stage'),k=S.offsetWidth/1280;
-                      sc.scrollTop=Math.max(0,{y}*k-sc.clientHeight/2); sc.scrollLeft=Math.max(0,{x}*k-sc.clientWidth/2); return sc.scrollTop}})()""")
-                    await pg.wait_for_timeout(120)
-                    pt = await pg.evaluate(f"""(()=>{{const S=document.getElementById('stage').getBoundingClientRect(),k=S.width/1280;return [S.left+{x}*k,S.top+{y}*k]}})()""")
-                    await pg.mouse.click(pt[0], pt[1]); await pg.wait_for_timeout(250)
+                    if w.get("poly") and not any(inside(w["tag"][0], w["tag"][1], r) for r in w["poly"]):
+                        errs.append(f"world map: {w['name']} label centre is outside its click area")
+                await pg.screenshot(path=str(shots / f"map_{vw}.png"))
+                if M["world"].get("h"):  # tall world: scroll to each district, click its painted area (not the label), Back must restore the scroll
+                    await pg.screenshot(path=str(shots / f"map_{vw}_full.png"), full_page=False)
+                    for w in M["world"]["sectors"]:
+                        x, y = w["door"]
+                        st = await pg.evaluate(f"""(()=>{{const sc=document.getElementById('scroller'),S=document.getElementById('stage'),k=S.offsetWidth/1280;
+                          sc.scrollTop=Math.max(0,{y}*k-sc.clientHeight/2); sc.scrollLeft=Math.max(0,{x}*k-sc.clientWidth/2); return sc.scrollTop}})()""")
+                        await pg.wait_for_timeout(120)
+                        pt = await pg.evaluate(f"""(()=>{{const S=document.getElementById('stage').getBoundingClientRect(),k=S.width/1280;return [S.left+{x}*k,S.top+{y}*k]}})()""")
+                        await pg.mouse.click(pt[0], pt[1]); await pg.wait_for_timeout(250)
+                        if await pg.evaluate("location.hash") != f"#/quartier/{w['slug']}":
+                            errs.append(f"world map @{vw}: click on {w['slug']} area at {w['door']} went to {await pg.evaluate('location.hash')}"); await pg.goto(base + "#/"); continue
+                        await pg.click("#back"); await pg.wait_for_timeout(300)
+                        st2 = await pg.evaluate("document.getElementById('scroller').scrollTop")
+                        if abs(st2 - st) > 4: errs.append(f"world map @{vw}: scroll not restored after {w['slug']} ({st} -> {st2})")
+                live = []
+                for w in M["world"]["sectors"]:
+                    await pg.goto(base + f"#/quartier/{w['slug']}")
+                    await pg.wait_for_function("document.getElementById('stage').dataset.probed==='1'", timeout=8000)
+                    await pg.wait_for_timeout(250)
                     if await pg.evaluate("location.hash") != f"#/quartier/{w['slug']}":
-                        errs.append(f"world map @{vw}: click on {w['slug']} area at {w['door']} went to {await pg.evaluate('location.hash')}"); await pg.goto(base + "#/"); continue
-                    await pg.click("#back"); await pg.wait_for_timeout(300)
-                    st2 = await pg.evaluate("document.getElementById('scroller').scrollTop")
-                    if abs(st2 - st) > 4: errs.append(f"world map @{vw}: scroll not restored after {w['slug']} ({st} -> {st2})")
-            live = []
-            for w in M["world"]["sectors"]:
-                await pg.goto(base + f"#/quartier/{w['slug']}")
-                await pg.wait_for_function("document.getElementById('stage').dataset.probed==='1'", timeout=8000)
-                await pg.wait_for_timeout(250)
-                if await pg.evaluate("location.hash") != f"#/quartier/{w['slug']}":
-                    errs.append(f"sector {w['slug']}: route redirected"); continue
-                ln = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href').slice(2))")
-                nsoon = await pg.evaluate("document.querySelectorAll('.bld.soon').length")
-                S = M["sectors"][w["slug"]]
-                if len(ln) + nsoon != len(S["buildings"]) + len(S["streets"]):
-                    errs.append(f"sector {w['slug']} @{vw}: {len(ln)} live + {nsoon} soon != {len(S['buildings'])} buildings + {len(S['streets'])} streets")
-                live += ln
-                if ln or vw == 1400: await pg.screenshot(path=str(shots / f"sector_{w['slug']}_{vw}.png"))
-                await map_label_edges(pg, f"sector {w['slug']} @{vw}", errs)
-                await pg.click("#back"); await pg.wait_for_timeout(200)
-                if await pg.evaluate("location.hash") not in ("#/", ""): errs.append(f"sector {w['slug']}: Back does not go to the village map")
-            have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem not in ("map", "live", "index", "listening", "prayers"))
-            if sorted(live) != have:
-                errs.append(f"maps @{vw}: live buildings {sorted(live)} != data files {have}")
+                        errs.append(f"sector {w['slug']}: route redirected"); continue
+                    ln = await pg.evaluate("[...document.querySelectorAll('a.lnk')].map(a=>a.getAttribute('href').slice(2))")
+                    nsoon = await pg.evaluate("document.querySelectorAll('.bld.soon').length")
+                    S = M["sectors"][w["slug"]]
+                    if len(ln) + nsoon != len(S["buildings"]) + len(S["streets"]):
+                        errs.append(f"sector {w['slug']} @{vw}: {len(ln)} live + {nsoon} soon != {len(S['buildings'])} buildings + {len(S['streets'])} streets")
+                    live += ln
+                    if ln or vw == 1400: await pg.screenshot(path=str(shots / f"sector_{w['slug']}_{vw}.png"))
+                    await map_label_edges(pg, f"sector {w['slug']} @{vw}", errs)
+                    await pg.click("#back"); await pg.wait_for_timeout(200)
+                    if await pg.evaluate("location.hash") not in ("#/", ""): errs.append(f"sector {w['slug']}: Back does not go to the village map")
+                have = sorted(p.stem for p in (V2 / "data").glob("*.js") if p.stem not in ("map", "live", "index", "listening", "prayers"))
+                if sorted(live) != have:
+                    errs.append(f"maps @{vw}: live buildings {sorted(live)} != data files {have}")
             if maps_only:
                 for e in jserr: errs.append(f"JS error @{vw}: {e}")
                 await pg.close()
@@ -596,6 +597,7 @@ def main():
     ap.add_argument("--shots", default="/tmp/v2_shots")
     ap.add_argument("--strict", action="store_true", help="labels may not touch anything (3 px gap to other things, 8 px to the scene edge) and warnings count as failures")
     ap.add_argument("--maps-only", action="store_true", help="with --browser, check the world map and sector maps and skip room pages")
+    ap.add_argument("--rooms-only", action="store_true", help="with --browser, check only the named building room pages and skip the 16-sector map crawl")
     ap.add_argument("--placement", action="store_true", help="PLACE lines (word tied to its room only by a shared English gloss word) count as failures")
     ap.add_argument("--cache-base", metavar="REF", help="gate 27 at pack time: fail if an existing image/card changed since REF (commit or tree) without a sw.js cache-version bump")
     ap.add_argument("-v", "--verbose", action="store_true", help="print each building's word counts")
@@ -626,7 +628,7 @@ def main():
     print(f"{nb} buildings, {nw} words checked")
     if a.browser:
         import asyncio
-        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M, a.maps_only))
+        asyncio.run(browser_checks(blds, a.base, Path(a.shots), errs, a.strict, M, a.maps_only, a.rooms_only))
     if a.strict: errs += [f"(strict) {w}" for w in warns]; warns = []
     for w in warns: print("WARN", w)
     for p in places: print("PLACE", p)

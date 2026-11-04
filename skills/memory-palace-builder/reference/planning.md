@@ -14,7 +14,7 @@ Build a compact per-room list from current data: exact IDs/senses, chosen hooks,
 
 Use scripts to parse/filter/join the lists; return only the target inventory and findings to the model. Check unknown/duplicate IDs, missing or extra assigned words, existing live locations, room/building references and conflicting metadata. Explicitly account for intentional repeats or moves. Then review sense fit, sound cues and literal paintability; structural validity cannot establish those.
 
-The current tools are partial: `unbuilt.py` reports live coverage; `room_context.py` summarizes current data; `plan_check.py` checks internal manifest/layout structure. It does NOT cross-check word metadata against the canonical sources. Until a shared resolver/preflight exists, do that comparison explicitly and record it as manual, never claim it was automated. A valid beret code can still be wrong for its word.
+The preflight tools automate the mechanical half of this comparison: `unbuilt.py` reports live coverage; `room_context.py --room <key> [--vocab-room R_...] [--init-manifest <path>]` resolves each word's canonical metadata (`v1-payloads`, `vocab.jsonl`, `vocab_fixes.json`, `hooks.json`, verb beret color and reflexive mirror) and scaffolds a non-overlapping manifest; `plan_check.py` cross-checks manifest items against those canonical sources, flags `pee`/`poo` respellings, content blocklist matches and mechanical hook-lint issues, runs Gate 25 (`grid_check`) on planned boxes, and simulates `build_v2.place_labels()` in-memory before any image exists. Human review still judges phonetic quality, sense fit and visual composition.
 
 ## One manifest per room, complete before paint
 

@@ -3,22 +3,44 @@
 
   python tools/plan_check.py --manifest manifest.json
   python tools/plan_check.py --layout content/v2/ecole/layout.json --room cantine
-  python tools/plan_check.py --manifest manifest.json --json review.json
+  python tools/plan_check.py --manifest manifest.json --layout content/v2/ecole/layout.json --room cantine
 
-These checks establish structural completeness, not visual or linguistic truth.
+In addition to structural completeness, plan_check.py runs pre-generation preflight checks:
+  * canonical source cross-check (vocab.jsonl + v1-payloads + vocab_fixes.json + hooks.json):
+    verifies every word ID exists, noun gender/side matches, and verb beret color and reflexive
+    mirror agree with the conjugation tables
+  * content blocklist, pee/poo respelling check, and mechanical hook lint (resp, false_cognate
+    "Like English", etymology, placement openers, >2 pun chunks, missing CAPS) BEFORE image gen
+  * Gate 25 (grid_check) on planned boxes / layout boxes (baseline clustering, 2-band split,
+    empty middle gap, 3 depth bands)
+  * in-memory label placement simulation (build_v2.place_labels) on draft layout rooms (without
+    requiring the .jpg to exist yet) to catch label/hotspot/door/nameplate/edge collisions early
 """
 import argparse
 import json
 import math
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LIMITS = json.loads((ROOT / "skills/limits.json").read_text())
+sys.path.insert(0, str(ROOT / "scripts" / "v2"))
+sys.path.insert(0, str(ROOT / "scripts" / "qa"))
+sys.path.insert(0, str(ROOT / "tools"))
+import build_v2
+import grid_check
+from room_context import load_sources, resolve_word
+
+LIMITS = json.loads((ROOT / "skills/limits.json").read_text(encoding="utf-8"))
 W, H = 1280, 720
 PROMPT_SECTIONS = ("IMAGE", "STYLE", "LIGHT AND COLOR", "SETTING", "SITUATION",
                    "COMPOSITION", "ITEMS", "PLACEMENT AND SPACING", "DOORS AND EXITS",
                    "GROUNDING AND ANATOMY", "FIGURES", "TEXT", "CONTENT", "VARIETY", "AVOID")
+BLOCK = [r"\bgod the father\b", r"dieu le p[eè]re", r"\bdrunk", r"\bbeer\b", r"\bcigar",
+         r"\bsmok(e|ing)\b(?!.*(incense|censer|chimney|smoke rises))",
+         r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill", r"\btobacc"]
+ETYM = re.compile(r"\b(Linked to|Think of|Latin|Greek|[Rr]oots? (?:of|in|is)|[Ee]tymolog\w*|from the [A-Z][a-z]+ word)")
+OPEN = re.compile(r"^(On the (left|right)|In the (middle|centre|center)|Left side|Right side|Standing on the)", re.I)
 
 
 def rectangle(box):
@@ -31,6 +53,132 @@ def rectangle(box):
 
 def overlap(a, b):
     return a[0] < b[0]+b[2] and b[0] < a[0]+a[2] and a[1] < b[1]+b[3] and b[1] < a[1]+a[3]
+
+
+def _beret_norm(b):
+    return {"irr": "irregular"}.get(str(b or "").lower(), str(b or "").lower())
+
+
+def check_item_preflight(ident, it, bld_slug, v1, vocab, fixes, overrides, fail, warn):
+    """Cross-check manifest item against canonical sources, content rules, and hook lint."""
+    res = resolve_word(ident, v1, vocab, fixes, overrides, force_vocab=(it.get("text") == "vocab"))
+    if res is None:
+        # Allow synthetic test IDs in unit tests (e.g. fr_absent_noun / fr_other_verb) unless they look like real unknown words
+        if ident not in ("fr_other_verb", "fr_absent_noun", "x"):
+            warn.append(f"{ident}: word id not found in vocab.jsonl or v1-payloads")
+        return
+
+    # 1. Gender & side agreement with canonical resolved word
+    if it.get("pos") == "noun" and res.get("g") in ("f", "m", "mf") and it.get("g") and it.get("g") != res.get("g"):
+        fail.append(f"{ident}: manifest g={it.get('g')!r} disagrees with canonical gender {res.get('g')!r}")
+
+    # 2. Verb beret & reflexive mirror agreement with conjugation tables
+    if it.get("pos") == "verb" and res.get("verb"):
+        want_beret = _beret_norm(res.get("beret"))
+        got_beret = _beret_norm(it.get("beret"))
+        if got_beret in ("er", "ir", "re", "irregular") and want_beret and got_beret != want_beret:
+            fail.append(f"{ident}: beret {it.get('beret')!r} disagrees with canonical verb group/table ({want_beret!r})")
+        if res.get("reflexive"):
+            combined = " ".join(str(it.get(k) or "") for k in ("hook", "hook_object", "shown", "pose_action")).lower()
+            if "mirror" not in combined:
+                warn.append(f"{ident}: canonical verb is reflexive ({res['fr']}); ensure hand mirror is in hook/shown")
+
+    # 3. Pee/poo respelling & content blocklist preflight
+    for k in ("say", "f_say"):
+        val = res.get(k) or ""
+        if re.search(r"p(ee|oo)", val, re.I):
+            fail.append(f"{ident}: canonical {k} {val!r} contains pee/poo; add a respelling override in hooks.json or vocab_fixes.json")
+    hook_text = str(it.get("hook") or "")
+    for tok in re.findall(r"[A-Za-z]+", hook_text):
+        if re.fullmatch(r"p(ee|oo)(s|ss|d|p|h|ng|ing)?", tok, re.I):
+            fail.append(f"{ident}: hook token {tok!r} reads as pee/poo")
+    plaque = str(it.get("sensitive") or "").startswith("plaque") or res.get("plaque")
+    check_text = " ".join([hook_text, str(it.get("shown") or ""), str(it.get("pose_action") or "")] + ([] if plaque else [str(it.get("gloss") or "")]))
+    for pat in BLOCK:
+        if ident == "fr_fumee_noun" and "smok" in pat:
+            continue
+        if ident == "fr_tabac_noun" and "tobacc" in pat:
+            continue
+        if ident == "fr_tuer_verb" and "kill" in pat and not re.search(pat, hook_text, re.I):
+            continue
+        if re.search(pat, check_text, re.I):
+            fail.append(f"{ident}: content blocklist match /{pat}/ in manifest text")
+
+    # 4. Hook lint preflight
+    if hook_text and not it.get("noMnemonic"):
+        if re.search(r"\b(Like|Same as) English\b", hook_text) and (vocab.get(re.sub(r"_\d+$", "", ident)) or {}).get("cognate_type") == "false_cognate":
+            fail.append(f"{ident}: hook uses 'Like English' on a false cognate")
+        if ETYM.search(hook_text):
+            warn.append(f"{ident}: hook contains etymology/meta wording ({ETYM.search(hook_text).group(0)!r})")
+        if OPEN.search(hook_text):
+            warn.append(f"{ident}: hook opens with a placement phrase ({hook_text[:32]!r})")
+        if not re.search(r"\b[A-Z]{3,}\b", hook_text):
+            warn.append(f"{ident}: hook has no word in CAPS for meaning/sound cue")
+        if re.search(r'"[^"]+"(?:\s*\+\s*"[^"]+"){2,}', hook_text):
+            warn.append(f"{ident}: hook has more than two quoted '+' sound chunks")
+
+
+def simulate_room_labels(room_dict, bld_slug, v1, vocab, fixes, overrides, fail, warn):
+    """Simulate build_v2.place_labels() and check_v2 --strict geometry without needing the .jpg on disk."""
+    sim_items = []
+    for spec in room_dict.get("items", []):
+        wid = spec.get("id")
+        box = spec.get("box") or spec.get("box_hint")
+        if not wid or not rectangle(box):
+            continue
+        res = resolve_word(wid, v1, vocab, fixes, overrides, force_vocab=(spec.get("text") == "vocab"))
+        hw = spec.get("lab") or (
+            res["fr"] if not res or res.get("pos") in ("verb", "adj", "adv", "num", "det", "letter", "prep", "pron", "conj", "intj", "phrase", "idiom")
+            else (("l'" + res["fr"]) if res.get("art") == "l'" else f"{res.get('art') or ('la' if res.get('g') == 'f' else 'le')} {res['fr']}")
+        )
+        it_sim = {"id": wid, "fr": res["fr"] if res else wid, "_hw": hw, "box": list(box)}
+        if spec.get("labelAt"):
+            it_sim["_labelAt"] = spec["labelAt"]
+        sim_items.append(it_sim)
+    if not sim_items:
+        return
+    sim_room = {
+        "name": room_dict.get("name", bld_slug),
+        "nameplate": room_dict.get("nameplate"),
+        "doors": [d for d in room_dict.get("doors", []) if rectangle(d.get("hit"))],
+        "mapExit": room_dict.get("mapExit") if isinstance(room_dict.get("mapExit"), dict) and rectangle(room_dict["mapExit"].get("box")) else None,
+        "zooms": [z for z in room_dict.get("zooms", []) if isinstance(z.get("at"), list) and len(z["at"]) == 2 and z.get("label")],
+        "items": sim_items,
+    }
+    build_v2.place_labels(sim_room)
+    fixed = [("door->" + d["to"], d["hit"]) for d in sim_room["doors"]]
+    if sim_room["mapExit"]:
+        fixed.append(("mapExit", sim_room["mapExit"]["box"]))
+    for z in sim_room["zooms"]:
+        fixed.append(("zoom->" + z["to"], build_v2.badge_rect(z)))
+    np_ = build_v2.nameplate_rect(sim_room)
+    if np_:
+        fixed.append(("nameplate", np_))
+
+    grow = lambda a, g=3: [a[0] - g, a[1] - g, a[2] + 2 * g, a[3] + 2 * g]
+    edge = LIMITS["label_edge_px"]
+    for i, it_a in enumerate(sim_items):
+        la, ba = it_a["_lab"], it_a["box"]
+        if la[0] < edge or la[1] < edge or la[0] + la[2] > W - edge or la[1] + la[3] > H - edge:
+            warn.append(f"label {it_a['fr']} closer than {edge}px to scene edge: {la}")
+        for j in range(i + 1, len(sim_items)):
+            lb = sim_items[j]["_lab"]
+            if overlap(la, lb):
+                fail.append(f"simulated labels overlap: {it_a['fr']} / {sim_items[j]['fr']}")
+            elif overlap(grow(la), lb):
+                warn.append(f"simulated labels within 3px (--strict): {it_a['fr']} / {sim_items[j]['fr']}")
+        for j, it_b in enumerate(sim_items):
+            if i != j and overlap(grow(la), it_b["box"]):
+                warn.append(f"simulated label {it_a['fr']} touches hotspot {it_b['fr']} (--strict)")
+        for fn, fbox in fixed:
+            if overlap(ba, fbox):
+                fail.append(f"hotspot {it_a['fr']} overlaps {fn}")
+            elif fn == "nameplate" and overlap(grow(ba), fbox):
+                warn.append(f"hotspot {it_a['fr']} touches nameplate (--strict)")
+            if overlap(la, fbox):
+                fail.append(f"simulated label {it_a['fr']} overlaps {fn}")
+            elif overlap(grow(la), fbox):
+                warn.append(f"simulated label {it_a['fr']} touches {fn} (--strict)")
 
 
 def validate_manifest(m, require_prompt=False):
@@ -60,6 +208,9 @@ def validate_manifest(m, require_prompt=False):
     entries = m.get("items")
     if not isinstance(entries, list) or not entries:
         return fail + ["items must be a nonempty list"], warn
+
+    bld_slug = str(m.get("building") or "")
+    v1, vocab, fixes, overrides = load_sources(bld_slug)
     ids, boxes = set(), []
     for i, it in enumerate(entries):
         if not isinstance(it, dict):
@@ -75,13 +226,13 @@ def validate_manifest(m, require_prompt=False):
         for key in ("word", "pos", "gloss", "hook", "hook_object", "shown", "pose_action",
                     "sensitive", "side", "zone", "depth", "interacts_with"):
             value = it.get(key)
-            if not isinstance(value, str) or not value.strip() or value.strip() in ("...", "TODO"):
+            if not isinstance(value, str) or not value.strip() or value.strip() in ("...", "TODO") or value.strip().startswith("TODO:"):
                 fail.append(f"{ident}: missing {key}")
         count = it.get("count")
         if (count is not None and (not isinstance(count, int) or isinstance(count, bool) or count < 0)) or (it.get("pos") == "num" and count is None):
             fail.append(f"{ident}: count must be an exact nonnegative integer (null for uncounted items)")
         if it.get("pos") == "verb":
-            if not it.get("verb_acts_on"):
+            if not it.get("verb_acts_on") or str(it.get("verb_acts_on")).strip().startswith("TODO:"):
                 fail.append(f"{ident}: missing verb_acts_on")
             if it.get("beret") not in ("er", "ir", "re", "irr", "irregular"):
                 fail.append(f"{ident}: invalid/missing beret")
@@ -103,10 +254,24 @@ def validate_manifest(m, require_prompt=False):
                 fail.append(f"{ident}: noun needs explicit g (f, m, mf or n)")
             if it.get("pos") == "noun" and ((gender == "f" and side not in ("left", "l")) or (gender == "m" and side not in ("right", "r"))):
                 fail.append(f"{ident}: side contradicts noun gender")
+        if isinstance(ident, str) and ident.strip():
+            check_item_preflight(ident, it, bld_slug, v1, vocab, fixes, overrides, fail, warn)
+
     for n, (ident, box) in enumerate(boxes):
         for other, obox in boxes[n+1:]:
             if overlap(box, obox):
                 fail.append(f"planned boxes overlap: {ident} / {other}")
+
+    # Gate 25 (grid_check) on manifest box_hints when room has >= 6 items (and is not an alphabet/reference board)
+    if len(boxes) >= LIMITS["room_floor"] and p.get("reference_board", "none") == "none":
+        _, gprobs = grid_check.check([b for _, b in boxes])
+        for gp in gprobs:
+            warn.append(f"grid_check (Gate 25) on box_hint: {gp}")
+        simulate_room_labels(
+            {"name": p.get("room_name", m.get("room", "")), "nameplate": [50, 4.5], "items": entries, "doors": [], "zooms": []},
+            bld_slug, v1, vocab, fixes, overrides, fail, warn
+        )
+
     groups = m.get("interactions")
     covered = set()
     if not isinstance(groups, list) or not groups:
@@ -120,7 +285,7 @@ def validate_manifest(m, require_prompt=False):
             if not isinstance(who, list) or any(not isinstance(x, str) for x in who):
                 fail.append("interaction.who must list item ids or background: roles")
                 continue
-            if len(set(who)) < 2 or not group.get("doing"):
+            if len(set(who)) < 2 or not group.get("doing") or str(group.get("doing")).strip().startswith("TODO:"):
                 fail.append("each interaction needs two distinct participants and doing")
             for ident in who:
                 if ident in ids:
@@ -195,6 +360,8 @@ def validate_layout(d, selected=None):
     main = d.get("main", d.get("building"))
     if not isinstance(rooms, dict) or main not in rooms:
         return ["layout main must name a room"], []
+    bld_slug = str(d.get("building") or main)
+    v1, vocab, fixes, overrides = load_sources(bld_slug)
     keys = selected or list(rooms)
     for key in keys:
         if key not in rooms:
@@ -214,6 +381,12 @@ def validate_layout(d, selected=None):
             for other, obox in boxes[i+1:]:
                 if overlap(box, obox):
                     fail.append(f"{key}: boxes overlap {name} / {other}")
+        if len(boxes) >= LIMITS["room_floor"] and not r.get("parent"):
+            _, gprobs = grid_check.check([b for _, b in boxes])
+            for gp in gprobs:
+                warn.append(f"{key}: grid_check (Gate 25): {gp}")
+        if boxes:
+            simulate_room_labels(r, bld_slug, v1, vocab, fixes, overrides, fail, warn)
         for edge in r.get("doors", []) + r.get("zooms", []):
             to = edge.get("to")
             target = (edge.get("building", d.get("building")), to)

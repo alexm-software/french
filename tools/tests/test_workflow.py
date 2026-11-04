@@ -131,6 +131,39 @@ class Workflow(unittest.TestCase):
             d['rooms']['box']['parent'] = 'wrong'
             with self.assertRaises(ValueError): comparisons(d, root, root/'c')
 
+    def test_preflight_catches_wrong_verb_beret_and_gender_mismatch(self):
+        m = copy.deepcopy(self.m)
+        # fr_manger_verb is a regular -er verb (red beret = 'er'); setting 'ir' must fail source preflight
+        m['items'][1]['beret'] = 'ir'
+        fails, _ = validate_manifest(m)
+        self.assertTrue(any('disagrees with canonical verb group' in f for f in fails), fails)
+
+    def test_room_context_init_manifest_scaffolds_valid_nonoverlapping_boxes(self):
+        with tempfile.TemporaryDirectory() as t:
+            out = Path(t) / 'scaffold.json'
+            run = subprocess.run(
+                [sys.executable, str(TOOLS / 'room_context.py'), 'B63_pompiers', '--room', 'R_abs_problem_02', '--init-manifest', str(out)],
+                capture_output=True, text=True
+            )
+            self.assertEqual(run.returncode, 0, run.stderr)
+            sc = json.loads(out.read_text(encoding='utf-8'))
+            self.assertEqual(len(sc['items']), 12)
+            # Fill TODO placeholders and confirm 0 structural/preflight fails and 0 grid_check warnings
+            sc['setting'] = 'Fire station upstairs shelter room'
+            sc['scene_situation'] = 'Firefighters practice storm shelter and barrier drills'
+            for k in ('refs', 'materials', 'set_apart', 'landmark', 'whimsy', 'differ'):
+                sc['prompt'][k] = 'filled ' + k
+            for g in sc['interactions']:
+                g['doing'] = 'practicing together'
+            for it in sc['items']:
+                it['hook_object'] = 'cue prop'
+                it['shown'] = 'figure with prop'
+                it['pose_action'] = 'acting out hook'
+                it['interacts_with'] = 'partner'
+            fails, warns = validate_manifest(sc)
+            self.assertEqual(fails, [])
+            self.assertFalse(any('grid_check' in w for w in warns), warns)
+
 
 if __name__ == '__main__':
     unittest.main()

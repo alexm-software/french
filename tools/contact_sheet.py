@@ -3,6 +3,7 @@
 
   python3 contact_sheet.py --data village/data/ecole.js --room cantine [--room jardin | --all]
                            [--image other.jpg] [--shots DIR] [--precheck pre.json] [--out DIR] [--width 1400]
+                           [--grid] [--anatomy-2x] [--sync-manifest /tmp/manifest.json]
 
 Top row: the painting with hotspot boxes (green), label rects (yellow, word) and doors / mapExit / zoom badges
 (blue) drawn from the built data, plus precheck OCR flags (red) when --precheck is given; next to it the browser
@@ -10,8 +11,10 @@ screenshot of the live room when one exists (--shots DIR, check_v2 names it <bld
 Below: one 256 px tile per item = the card crop (square max(w,h)*1.18 around the box, as build_v2 cuts it) with
 the word and its hook, then one tile per exit (door hit box / mapExit box, with its destination), so gate A
 (>= 256 px crops of every item and exit box, headword + hook under each) is read from the sheet.
-Also perform required 2x hook/count/anatomy inspection; thumbnails do not replace it. Output: <out>/<bld>_<key>_sheet.jpg (new name per run
-with --tag, because image viewers may cache by path).
+Optional flags:
+  --grid           also write <bld>_<key>_grid.jpg with a 50px/100px labeled coordinate grid for 1-read box fitting
+  --anatomy-2x     also write 2x upscaled quadrant crops (<bld>_<key>_2x_q1..q4.jpg) for mandatory Gate 26 inspection
+  --sync-manifest  copy fitted boxPx from the built room data into the manifest's box_hint/zone and re-run build_prompt
 """
 import argparse, json, sys, textwrap
 from pathlib import Path
@@ -19,6 +22,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from precheck import load_payload, badge_rect, nameplate_rect, W, H  # same geometry as the checks
+import build_prompt
+
 
 def font(sz, bold=False):
     p = f"/usr/share/fonts/truetype/dejavu/DejaVuSans{'-Bold' if bold else ''}.ttf"
@@ -48,6 +53,60 @@ def overlay(img, R, flags):
         rect(fl["box"], (230, 30, 30), 3)
         d.text((fl["box"][0], fl["box"][1] + fl["box"][3] + 2), fl["text"], font=f, fill=(230, 30, 30))
     return im
+
+
+def write_grid(img, out_path):
+    """Write a 50px/100px coordinate grid over the 1280x720 painting for 1-pass box fitting."""
+    im = img.convert("RGB").copy()
+    dr = ImageDraw.Draw(im)
+    f = font(11, True)
+    for x in range(0, W, 50):
+        col = (255, 40, 40) if x % 100 == 0 else (80, 220, 255)
+        dr.line([(x, 0), (x, H)], fill=col, width=1)
+    for y in range(0, H, 50):
+        col = (255, 40, 40) if y % 100 == 0 else (80, 220, 255)
+        dr.line([(0, y), (W, y)], fill=col, width=1)
+    for x in range(0, W, 100):
+        for y in range(0, H, 100):
+            dr.rectangle([x, y, x + 46, y + 14], fill=(0, 0, 0))
+            dr.text((x + 2, y + 1), f"{x},{y}", font=f, fill=(255, 255, 180))
+    im.save(out_path, quality=90)
+    print(f"{out_path}  ({out_path.stat().st_size // 1024} KB)")
+
+
+def write_anatomy_2x(img, out_dir, prefix):
+    """Write four overlapping 2x upscaled quadrants covering the entire 1280x720 room for Gate 26."""
+    im = img.convert("RGB")
+    quads = [
+        ("q1_tl", (0, 0, 680, 400)),
+        ("q2_tr", (600, 0, 1280, 400)),
+        ("q3_bl", (0, 320, 680, 720)),
+        ("q4_br", (600, 320, 1280, 720)),
+    ]
+    for qname, (x0, y0, x1, y1) in quads:
+        crop = im.crop((x0, y0, x1, y1))
+        up = crop.resize((crop.width * 2, crop.height * 2), Image.LANCZOS)
+        p = out_dir / f"{prefix}_2x_{qname}.jpg"
+        up.save(p, quality=90)
+        print(f"{p}  ({p.stat().st_size // 1024} KB)")
+
+
+def sync_manifest_boxes(manifest_path, R):
+    """Sync fitted boxPx from built room data into manifest box_hint/zone and recompile prompt_text."""
+    p = Path(manifest_path)
+    M = json.loads(p.read_text(encoding="utf-8"))
+    by_id = {it["id"]: it["boxPx"] for it in R.get("items", []) if "boxPx" in it}
+    for it in M.get("items", []):
+        if it.get("id") in by_id:
+            b = by_id[it["id"]]
+            it["box_hint"] = b
+            z = str(it.get("zone") or "").split("[")[0].strip()
+            it["zone"] = f"{z} {b}".strip()
+    t, missing, left = build_prompt.build(M)
+    if not (missing or left):
+        M["prompt_text"] = t
+    p.write_text(json.dumps(M, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"synced {len(by_id)} fitted boxes into {p}")
 
 
 def card_crop(img, b):  # build_v2: square of max(w,h)*1.18 centred on the box, clamped to the scene
@@ -111,11 +170,15 @@ def main():
     ap.add_argument("--out", default=".")
     ap.add_argument("--tag", default="", help="suffix for the output name")
     ap.add_argument("--width", type=int, default=1400)
+    ap.add_argument("--grid", action="store_true", help="also write a 50px/100px coordinate grid image for box fitting")
+    ap.add_argument("--anatomy-2x", action="store_true", help="also write 2x upscaled quadrant crops for Gate 26 inspection")
+    ap.add_argument("--sync-manifest", metavar="PATH", help="sync fitted boxPx into manifest box_hint/zone and recompile prompt")
     a = ap.parse_args()
     D = load_payload(a.data)
     V2 = Path(a.data).resolve().parents[1]
     keys = list(D["rooms"]) if a.all else (a.room or [D["main"]])
-    Path(a.out).mkdir(parents=True, exist_ok=True)
+    out_dir = Path(a.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
     for key in keys:
         R = D["rooms"][key]
         img = Image.open(a.image if a.image else V2 / R["image"])
@@ -131,9 +194,16 @@ def main():
                     t = f[6:f.index("' conf")]
                     b = json.loads(f[f.index(" at [") + 4:f.index("]", f.index(" at [")) + 1])
                     flags.append(dict(text=t, box=b))
-        o = Path(a.out) / f"{D['building']}_{key}_sheet{a.tag}.jpg"
+        prefix = f"{D['building']}_{key}{a.tag}"
+        o = out_dir / f"{prefix}_sheet.jpg"
         sheet(D["building"], key, R, img, shot, flags, a.width).save(o, quality=85)
         print(f"{o}  ({o.stat().st_size // 1024} KB)")
+        if a.grid:
+            write_grid(img, out_dir / f"{prefix}_grid.jpg")
+        if a.anatomy_2x:
+            write_anatomy_2x(img, out_dir, prefix)
+        if a.sync_manifest and len(keys) == 1:
+            sync_manifest_boxes(a.sync_manifest, R)
 
 
 if __name__ == "__main__":
