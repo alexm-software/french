@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Print bounded room context instead of full card/conjugation payloads.
 
+For an id, gloss or room inventory without hooks, use tools/lookup.py.
+
 python tools/room_context.py ecole --room cantine --limit 20 --offset 0
 python tools/room_context.py B63_pompiers --room R_abs_problem_01 --init-manifest /tmp/manifest.json
 Selected room: exact IDs, hooks, pronunciation and boxes (for built rooms) or
