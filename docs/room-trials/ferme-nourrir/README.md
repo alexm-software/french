@@ -1,4 +1,4 @@
-# Farm feeding trial — rejected candidate, not live
+# Farm feeding trial and accepted retry
 
 Nourrir (to feed) is assigned to the farm main room. Seller is separately assigned but not part of this trial. The manifest preserves all eight existing farm words and existing physical routes.
 
@@ -11,3 +11,10 @@ One integrated built-in imagegen edit was generated with the actual parent and s
 manifest.json and prompt.txt retain the exact compiled request, walkthrough.json records the actual route contract, and the pre-cleanup snapshot linked above preserves the generated image evidence. The tool request prefixed the compiled text by identifying image 1 as the edit target and image 2 only as protected stump reference, asking for exactly two local changes and a 1280×720 full-scene result.
 
 All per-word assignments and donor/target rework are logged in docs/changes/VERB_INTEGRATION_HANDOFF.md and VERB_INTEGRATION_2026-11-01.tsv. This is a completed workflow trial with a rejected result, not an accepted room or completed live relocation.
+
+
+## Accepted retry — 2026-11-02
+
+The retry adds nourrir to the live farm layout while preserving the eight original word identities and all destinations. Six staged imagegen edits repaired stump continuity, added the feeding mime, simplified the arm pose, and corrected full-group clearances and the calf's masculine placement. Independent final-art and static geometry review passed. See retry-independent-review.md and retry-review.json for exact image hashes, checks and runtime-test limits; retry-manifest.json records the accepted inventory and measured boxes. The source assignment for seller is still pending.
+
+The original candidate described above remains rejected. Intermediate retry images are not stored in the repository; only the accepted production painting and crops are included.

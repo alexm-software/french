@@ -8,10 +8,10 @@ Build one integrated 1280×720 painting per room or zoom: architecture, objects,
 
 ## Start with the smallest useful context
 
-1. Read current task/user decisions and check the working tree and room ownership. Reuse the existing checkout; fetch main once, preserve concurrent work. Do not clone again per tool or room.
-2. Run `python3 tools/unbuilt.py --repo . --building <building_id>` before selecting inventory, and `python3 tools/room_context.py <building> --room <key>`. The latter prints target hooks/IPA and compact siblings; page planned words with `--offset`/`--limit`. Word IDs across the whole village establish whether something is live.
-3. Use source assignments for new inventory; for a repaint preserve current v2 room inventory and resolved hooks. Reconcile stale source/live differences before moving anything. Reuse the approved building look. Do not invent a new style or repeat setup questions for this French village. User decisions override older notes. The limits source is `skills/limits.json`; do not duplicate numeric limits in plans.
-4. Read only the row needed below, plus the language skill for French work. Release-gates owns acceptance rules; this skill owns the workflow.
+1. Reuse the checkout, fetch main once, check room ownership and preserve concurrent work.
+2. Run `python3 tools/unbuilt.py --repo . --building <building_id>` and `python3 tools/room_context.py <building> --room <key>`. Live IDs anywhere in the village count; page planned words only as needed.
+3. Use source assignments for new inventory and current v2 inventory/resolved hooks for repaints. Reconcile disagreements before moving words. Reuse approved style and user decisions; do not repeat setup questions.
+4. Read only the relevant row and language references. `skills/limits.json` owns numeric limits; release-gates owns acceptance, this skill owns execution.
 
 | Change | Read on demand |
 |---|---|
@@ -22,18 +22,21 @@ Build one integrated 1280×720 painting per room or zoom: architecture, objects,
 | Labels/hotspots | `reference/text-and-labels.md` |
 | Map/navigation | `reference/maps-and-navigation.md`, `reference/site-ui.md` |
 | New project, copyright, sensitive content | corresponding `reference/setup-and-style.md`, `reference/copyright.md`, `reference/sensitive-content.md` |
-| Validation/release | `reference/validation.md`; release-gates skill |
+| Validation/release | `reference/validation.md`, `reference/tooling.md`; release-gates skill |
 
-## Verify facts → review composition → paint → integrate
+## Plan → compose → review → integrate
 
-Start with `reference/building-walkthrough.md` for a new building: room word groups → footprint/floors → physical passages and optional hubs → view compositions. Overview and sectors follow `reference/maps-and-navigation.md`. Follow `reference/planning.md` for each word room's manifest using `tools/manifest_template.json`. Resolve the words, hooks, exact counts, verb markers, interaction groups, candidate boxes and all destinations. For a zoom, pin the actual parent image/crop and the features it must preserve.
+1. **One task brief.** Record base commit, target inventory, resolved hooks/verb markers, actual reference images, dependencies and the intended change. Use `reference/tooling.md` to choose an available build, browser and publishing route once. Fetch only the needed inputs.
+2. **Resolve the entire repair before painting.** Follow `reference/planning.md`; include inherited defects that block this room, parent/zoom disagreements and complete figure/helper envelopes. Compute all pairwise and passage/control intersections, side bands and label space. If the groups cannot fit, simplify poses or recompose now. A legacy hotspot or valid manifest is not proof of painted clearance.
+3. **Composition checkpoint.** For a new/recomposed scene, inspect one rough integrated draft or use the first candidate as the draft (`reference/composition.md`). Check the shared activity, depth, every group, passages and parent/zoom agreement before paying for detail. A genuinely local repair may reuse a verified composition.
+4. **Focused generation.** Compile the manifest with `python3 tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`. Use the whole-scene specification for composition; local edits use a short delta from that specification: target appearance, one related repair, visible landmarks, invariants and references. Save the exact submitted delta beside the manifest; do not send stale full-scene instructions that contradict it. Never assemble standalone figures.
+5. **Cheap screen, then final review.** Inspect each result immediately and reject obvious scene/placement/anatomy regressions. Measure actual full groups and run geometry before building the final review pack. Once it passes, make one contact sheet and parent/zoom comparison; obtain independent finished-art review under `reference/validation.md` and release-gates. Never fit dishonest boxes to rescue failed art.
+6. **Integrate once.** Rebuild accepted art, cards and data together. Update hooks, alt text, dialogue, navigation and cache version as needed. Run targeted checks during iteration; run existing global CI/release checks once on the combined change. Repeat checks only for changed inputs or unresolved failures. Publish through the working route using existing user authorization; report what actually passed.
 
-Check the manifest against the actual resolved word data, not just its own fields (`reference/planning.md`). Run `python3 tools/plan_check.py --manifest <manifest>` and the draft layout check. For a new or substantially recomposed scene, review a rough whole-scene composition before requesting finished detail (`reference/composition.md`). A valid list or box diagram does not establish visual quality.
-
-Compile each draft/final request with `python3 tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`; record draft intent in `prompt_extra` and attach actual references. Fix FAILs first; warnings require judgment. Pilot one room and its zoom together, then review each finished painting immediately, scene first and details second (`reference/validation.md`). Do not batch unreviewed paintings or build cards/labels around rejected art.
-
-Fit boxes to the finished hooks; do not move boxes away from art to satisfy a checker. Rebuild data/cards with the repo's existing tools. Keep hooks, dialogue, alt text, cards and zoom miniatures consistent with the final painting. Release only after the gates appropriate to the changed files pass.
+For changed buildings/floors, use `reference/building-walkthrough.md`; overview/sectors use `reference/maps-and-navigation.md`. Pilot one room and its zoom together before expanding the batch.
 
 ## Token and retry budget
 
-Keep one compact manifest and a short checkpoint (base commit, completed steps, changed paths, next action, blockers). Save tool output/review evidence in files; report counts and failures, not full payloads or repeated prompts. Do not read bundled JS, conjugation tables, historical audits or every reference by default. Reuse accepted facts and references; load a hook's overrides only when needed. After two failed image edits, diagnose the hook/layout instead of repeating the same request. Fold new lessons into the existing rule; do not append case histories. Efficiency comes from shorter context and earlier decisions while preserving whole-scene painting and visual review.
+Default to one composition candidate and one focused repair, not a succession of detail edits. After two failed finished-image edits of the same interaction/composition, write one diagnosis and revise its pose, space allocation or parent/zoom contract before generating again. Do not reset this rule by naming each hand, animal or position a separate defect. Continue the authorized task with the revised plan; never lower acceptance criteria to meet a call budget.
+
+Keep one manifest and a short checkpoint: base, changed paths, accepted revision, failures, next action. Load references on demand; process payloads and tool responses programmatically and print only findings/counts. Reuse unchanged evidence and the same review context. Fold lessons into the canonical rule rather than adding case histories.

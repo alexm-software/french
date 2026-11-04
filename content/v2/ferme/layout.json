@@ -37,7 +37,8 @@
     "fr_taureau_noun",
     "fr_cheval_noun",
     "fr_berger_noun",
-    "fr_veau_noun"
+    "fr_veau_noun",
+    "fr_nourrir_verb"
    ]
   },
   "souche": {
@@ -157,7 +158,7 @@
    "name": "La ferme",
    "room_id": "R_farm_animals_01",
    "image": "ferme/ferme.jpg",
-   "alt": "A sunny farm painted in ink and gouache: a rhino's horn poking up through a field of tall corn, a stubborn mule with baskets refusing the carrots a boy holds out, a count in a red cloak waving from the battlements of a castle on the hill, a dashing cavalier in a big feathered hat and blue cape galloping on a brown pony, a donkey trotting with a boy in a green hat on her back, a bull lying in a row of daisies reading a book covered in stars, a farmer coaxing his horse into its stable, a mother cow with her newborn calf and a shepherd on a hay bale sharing his burger with a white sheepdog beside a wooden fence. The red barn leads to the farmyard, the white paddock gate to the riding ring, the wooden field gates to the fields and the vine arch on the hill to the hillside vineyard; an old tree stump in the middle can be looked at closer, and the white gate at the bottom left leads out to the valley.",
+   "alt": "A sunny farm courtyard painted in ink and gouache during animal-care time: a rhino horn rises among the corn, a stubborn mule with baskets refuses a boy's carrots, a feather-hatted cavalier rides a brown pony, and a green-hatted boy rides a donkey. A bull reads a star-covered book among daisies, a farmer coaxes a horse toward its stable, and a shepherd shares a burger with his white sheepdog on a hay bale. In the foreground a green-beret striped mime kneels to bottle-feed a white lamb, while a straw-hatted farmer raises his hands as a wobbly brown calf takes its first steps. The central tree stump holds a porcelain teapot and wooden shelf, saddle on stand, three miniature cows, two children passing a relay baton, and an ox with a plow. The barn, paddock gate, field gates and vineyard arch lead to the other farm spaces; the white lower-left gate returns to the valley.",
    "nameplate": [
     44,
     5.5
@@ -199,9 +200,9 @@
      "label": "Les champs",
      "hint": "Go through the wooden field gates to the fields",
      "hit": [
-      660,
+      650,
       160,
-      180,
+      95,
       65
      ]
     },
@@ -238,78 +239,84 @@
     {
      "id": "fr_corne_noun",
      "box": [
-      40,
-      225,
-      160,
-      120
+      45,
+      207,
+      133,
+      105
      ]
     },
     {
      "id": "fr_mule_noun",
      "box": [
-      100,
-      348,
-      330,
-      170
+      118,
+      315,
+      292,
+      180
      ]
     },
     {
      "id": "fr_cavalier_noun",
      "box": [
-      765,
-      228,
-      110,
-      86
+      754,
+      168,
+      116,
+      121
      ]
     },
     {
      "id": "fr_ane_noun",
      "box": [
-      895,
-      190,
-      125,
-      125
+      885,
+      160,
+      115,
+      130
      ]
     },
     {
      "id": "fr_taureau_noun",
      "box": [
-      830,
-      315,
-      165,
-      120
+      827,
+      306,
+      154,
+      125
      ]
     },
     {
      "id": "fr_cheval_noun",
      "box": [
-      1032,
-      260,
-      218,
-      225
+      1044,
+      275,
+      224,
+      216
      ]
     },
     {
      "id": "fr_berger_noun",
      "box": [
-      835,
-      440,
-      195,
-      230
+      842,
+      442,
+      184,
+      207
      ]
     },
     {
      "id": "fr_veau_noun",
      "box": [
-      555,
-      460,
-      265,
-      230
-     ],
-     "labelAt": [
-      687,
-      648
+      611,
+      494,
+      208,
+      155
      ]
+    },
+    {
+     "id": "fr_nourrir_verb",
+     "box": [
+      256,
+      505,
+      181,
+      145
+     ],
+     "text": "vocab"
     }
    ],
    "building_id": "B31_ferme",
@@ -320,7 +327,7 @@
    "room_id": "R_farm_animals_01_z1",
    "image": "ferme/souche.jpg",
    "parent": "ferme",
-   "alt": "Close-up of the old tree stump in the middle of the farm: a porcelain teapot with a smiling face on a little wooden shelf, a leather saddle on its stand, a cavalry of fluffy pom-pom ponies charging to rescue a lost lamb, a small blank wooden board, a herd of cows marching in line, two children passing a relay baton and a strong ox pulling a plow.",
+   "alt": "Close-up of the old tree stump in the middle of the farm: a porcelain teapot in a small wooden shelf at left, a leather saddle on its stand, a herd of three brown-and-white cows, two children passing a relay baton, and a strong ox pulling a plow. The same five groups appear on the stump in the parent farm view.",
    "doors": [],
    "zooms": [],
    "items": [

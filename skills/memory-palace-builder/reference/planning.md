@@ -10,6 +10,8 @@ Read `skills/limits.json` for density and spacing. Target its room count; split 
 
 ## Verify facts before composition
 
+Measure the full painted item and every named helper before reserving adjacent space. Existing hotspot rectangles may clip a hat, limb or helper and can conceal a collision; use actual full-group envelopes, not those legacy rectangles, to plan clearances. Calculate pairwise intersections with other measured groups and passage/control rectangles before accepting clearance; an eye review alone can miss a few pixels of overlap. If multiple envelopes cannot fit, revise the composition before requesting another detail-only repair.
+
 Build a compact per-room list from current data: exact IDs/senses, chosen hooks, pronunciation, gender/side, verb group/beret, reflexive mirror and any required counts. Use the same precedence as `scripts/v2/build_v2.py`: its v1/vocab selection, global corrections and building overrides. Record source paths and unresolved discrepancies once; preserve user decisions. Do not infer a verb's marker from spelling or copy an older hook just because it is nearby.
 
 Use scripts to parse/filter/join the lists; return only the target inventory and findings to the model. Check unknown/duplicate IDs, missing or extra assigned words, existing live locations, room/building references and conflicting metadata. Explicitly account for intentional repeats or moves. Then review sense fit, sound cues and literal paintability; structural validity cannot establish those.
@@ -38,3 +40,4 @@ python3 tools/build_prompt.py /tmp/room-manifest.json --check
 Run the layout command when the draft exists; do not fabricate a live payload to use the tools. The manifest checker catches missing/duplicate fields, unknown interaction IDs, invalid counts/markers, box units/overlap/sides and missing zoom contracts. The layout checker catches broken targets, zoom backlinks and unreachable rooms. Neither proves phonetics, architectural plausibility or visual composition. Review those once before generation.
 
 Before finished detail, follow the composition checkpoint in `composition.md`. Attach the approved exterior/style reference, a visually distinct sibling if useful, and any parent crop. Compile instead of manually retyping the template. Pilot one room and its zoom together before batch work; independent visual review must confirm the devices and scene work. Continue autonomously within the user's existing authorization; ask only for genuinely missing decisions.
+
