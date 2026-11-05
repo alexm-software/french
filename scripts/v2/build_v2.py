@@ -64,6 +64,8 @@ from PIL import Image, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
 V2 = ROOT / "village"
+sys.path.insert(0, str(ROOT / "skills/memory-palace-builder/scripts"))
+from walkthrough import load_model
 W, H = 1280, 720
 FONT = None
 for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]:
@@ -590,6 +592,7 @@ def polish_verb(it):
 
 def build(bld, v1, vocab):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
+    walkthrough = load_model(ROOT, L)
     # v2 hook overrides (content/v2/<bld>/hooks.json): {word_id: {"hook": ..., "why": ...}}
     # used where the v1 hook breaks the content rules or does not match the painting; v1 data is never edited.
     hp = ROOT / "content" / "v2" / bld / "hooks.json"
@@ -694,6 +697,8 @@ def build(bld, v1, vocab):
             r2["mapExit"] = dict(r2["mapExit"], boxPx=b, box=[round(b[0] / 12.8, 4), round(b[1] / 7.2, 4), round(b[2] / 12.8, 4), round(b[3] / 7.2, 4)])
         out_rooms[key] = r2
     payload = {"building": bld, "name": L["name"], "main": L["main"], "roomList": L["roomList"], "rooms": out_rooms}
+    if walkthrough is not None:
+        payload["hubParents"] = walkthrough["hubParents"]
     # memory-palace registry fields: the map places the building on its sector map by these
     for k in ("building_id", "sector_id", "v1_room_id"):
         if L.get(k):

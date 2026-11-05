@@ -11,7 +11,9 @@ from PIL import Image
 TOOLS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TOOLS))
 from build_prompt import build
-from plan_check import validate_manifest, validate_layout
+from plan_check import simulate_room_labels, validate_manifest, validate_layout
+from contact_sheet import sync_manifest_boxes
+from walkthrough import covering_walk, read_json, validate as validate_walkthrough
 from precheck import load_payload
 from zoom_sheet import comparisons
 
@@ -19,6 +21,62 @@ from zoom_sheet import comparisons
 class Workflow(unittest.TestCase):
     def setUp(self):
         self.m = json.loads((TOOLS / 'manifest_template.json').read_text())
+
+    def test_unknown_word_is_a_geometry_diagnostic(self):
+        fail, warn = [], []
+        simulate_room_labels({"items": [{"id": "fr_missing_example", "box": [100, 100, 50, 50]}]},
+                             "ferme", {}, {}, {}, {}, fail, warn)
+        self.assertEqual(fail, ["unknown word ID: fr_missing_example"])
+
+    def test_sync_rejects_other_room_and_partial_boxes_without_writing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "manifest.json"
+            before = json.dumps(self.m)
+            path.write_text(before)
+            item = {"id": self.m["items"][0]["id"], "boxPx": [50, 70, 50, 50]}
+            with self.assertRaisesRegex(ValueError, "does not match"):
+                sync_manifest_boxes(path, {"items": [item]}, self.m["building"], "other")
+            with self.assertRaisesRegex(ValueError, "identical, unique"):
+                sync_manifest_boxes(path, {"items": [item]}, self.m["building"], self.m["room"])
+            self.assertEqual(path.read_text(), before)
+
+    def test_castle_walk_covers_passages_and_local_hub(self):
+        root = TOOLS.parent
+        folder = root / "content/v2/contes"
+        plan = read_json(folder / "walkthrough.json")
+        layout = read_json(folder / "layout.json")
+        maps = read_json(root / "content/v2/map.json")
+        model = validate_walkthrough(plan, layout, maps)
+        self.assertEqual(model["hubParents"]["grande_salle"], "cour_chateau")
+        self.assertEqual(model["nodes"]["sector:park"]["within"], "overview")
+        walk = covering_walk(layout, model)
+        self.assertEqual(walk[:3], ["overview", "sector:park", "contes/contes"])
+        self.assertEqual(walk[-3:], list(reversed(walk[:3])))
+        internal = {(a.split("/")[1], b.split("/")[1]) for a, b in zip(walk, walk[1:])
+                    if a.startswith("contes/") and b.startswith("contes/")}
+        self.assertEqual(internal, set(model["edges"]))
+        wrong_owner = copy.deepcopy(plan)
+        wrong_owner["places"]["tour_sorcier"]["within"] = "cour_chateau"
+        with self.assertRaisesRegex(ValueError, "no painted route"):
+            validate_walkthrough(wrong_owner, layout, maps)
+        wrong_owner["places"]["cour_chateau"]["within"] = "cour_chateau"
+        with self.assertRaisesRegex(ValueError, "ownership cycle"):
+            validate_walkthrough(wrong_owner, layout, maps)
+        layout["rooms"]["grande_salle"]["doors"].clear()
+        with self.assertRaisesRegex(ValueError, "missing doors"):
+            validate_walkthrough(plan, layout, maps)
+
+    def test_empty_hub_compiles_shared_passage_cues(self):
+        self.m.update(building="contes", room="cour_chateau", items=[], interactions=[])
+        self.m["prompt"]["kind"] = "hub"
+        self.m["doors"] = [{"to": "vallee_geants", "where": "left", "painted_as": "castle gate"},
+                           {"to": "grande_salle", "where": "back", "painted_as": "keep steps"}]
+        self.assertEqual(validate_manifest(self.m)[0], [])
+        prompt, missing, left = build(self.m)
+        self.assertFalse(missing or left)
+        self.assertIn("Circulation only", prompt)
+        self.assertIn("keep-steps", prompt)
+        self.assertIn("contes/grande_salle.jpg", prompt)
 
     def test_complete_example_and_first_building(self):
         self.assertEqual(validate_manifest(self.m)[0], [])

@@ -2,9 +2,9 @@
 
 ## Load once
 
-Use `room_context.py` (with `--init-manifest` for new rooms) for the resolved target brief and `unbuilt.py --repo . --building <id>` for live IDs. Reuse the checkout and fetch main once. Read target records, required references and affected dependencies; reserve whole-repo inventories for audits. Parse/filter large payloads in code rather than writing ad-hoc one-liner scripts per field. Print findings/counts, never full registries, commit responses, prompts or binary/base64 content.
+Use `room_context.py` (with `--compact` for generation and `--init-manifest` for new rooms) for the resolved target brief and `unbuilt.py --repo . --building <id>` for live IDs. Reuse the checkout and fetch main once. Read target records, required references and affected dependencies; reserve whole-repo inventories for audits. Parse/filter large payloads in code rather than writing ad-hoc one-liner scripts per field. Print findings/counts, never full registries, commit responses, prompts or binary/base64 content.
 
-Keep one building plan, room manifest and checkpoint (base, touched paths, accepted revision, blockers, next action). `build_prompt.py --write --output` saves the specification; `--check` detects drift. Save exact local-edit deltas separately, stating which specification fields they replace.
+Keep one building plan, room manifest and checkpoint (base, touched paths, accepted revision, blockers, next action). `build_prompt.py --layout --write --output` checks the linked plan and saves the specification; `--check` detects drift. Save exact local-edit deltas separately, stating which specification fields they replace.
 
 ## Choose working capabilities early
 
@@ -14,6 +14,6 @@ Prefer connected GitHub publishing tools when available. Do not retry command-li
 
 ## Reuse valid evidence
 
-Geometry and `plan_check.py` preflight (source metadata agreement, verb beret/mirror verification, respelling/content/hook lint, Gate 25 baseline distribution, and simulated label placement) precede image calls and final review. Follow SKILL.md's retry rule. Reuse one reviewer/context, passing current paths, manifest and a short defect delta. Screen intermediate edits immediately; `contact_sheet.py --grid --anatomy-2x --sync-manifest` produces the room overlay, coordinate grid, and 2× quadrant crops in one pass, and final acceptance still checks every required hook/count/anatomy detail at 2× and actual parent/zoom agreement (`zoom_sheet.py`).
+Check the walkthrough and compile the linked draft once. Use `contact_sheet.py --image --grid --anatomy-2x` to fit a candidate, then add `--layout` for measured labels, passage checks and a review packet with input hashes. Sync the manifest only for the same complete room. Reuse the reviewer and inspect required 2× details and actual parent/zoom pairs with `zoom_sheet.py`.
 
 Use unique review paths per revision. Layout/`boxPx` coordinates are pixels; built `box` values are percentages. Rebuild with existing scripts, never hand-fix generated payloads or invent another geometry implementation. Run targeted iteration checks (`check_v2.py --browser --rooms-only` for room iterations) and global CI on the combined pack; reuse only results with unchanged inputs.

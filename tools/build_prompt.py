@@ -9,7 +9,8 @@ without --write/--output print the prompt. prompt_extra maps known section names
 into additional room-specific instructions. Empty siblings/motifs lists are valid.
 """
 import argparse, json, re, sys
-from plan_check import validate_manifest
+from plan_check import validate_plan
+from walkthrough import read_json, room_brief, validate as validate_walkthrough
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,7 +25,7 @@ def template():
     return s.split("```text", 1)[1].split("```", 1)[0].strip("\n")
 
 
-def build(M):
+def build(M, layout=None):
     P = M.get("prompt") or {}
     kind = P.get("kind", "room")
     items = M.get("items", [])
@@ -61,7 +62,10 @@ def build(M):
             if not M.get("repaint_rows"): continue
             line = line[len("[repaint only] "):]
         if line.startswith("{n}. "):
-            out += [item_line(i + 1, it) for i, it in enumerate(items)]
+            if kind == "hub" and not items:
+                out.append("Circulation only. Keep the routes, thresholds and arrival landmarks legible; no vocabulary figures.")
+            else:
+                out += [item_line(i + 1, it) for i, it in enumerate(items)]
             continue
         if line.startswith("(repeat per item"):
             continue
@@ -76,7 +80,7 @@ def build(M):
     t = "\n".join(out)
 
     groups = M.get("interactions") or []
-    gtxt = "; ".join(f"{', '.join(g.get('who', []))}: {g.get('doing', '')}" for g in groups) or (missing.append("interactions") or "{interactions}")
+    gtxt = "; ".join(f"{', '.join(g.get('who', []))}: {g.get('doing', '')}" for g in groups) or ("circulation through the visible passages" if kind == "hub" and not items else (missing.append("interactions") or "{interactions}"))
     doors = M.get("doors") or []
     dtxt = "; ".join(f"to {d.get('to')}, {d.get('where')}, painted as {d.get('painted_as')}" for d in doors) or "none"
     texts = M.get("text_in_image") or []
@@ -124,6 +128,28 @@ def build(M):
         t = t.replace(a, b)
     for sec, extra in (M.get("prompt_extra") or {}).items():
         t = re.sub(rf"(^{re.escape(sec)}:.*?)(?=\n\n|\Z)", lambda m: m.group(1) + " " + extra, t, count=1, flags=re.S | re.M)
+    plan_path = ROOT / "content" / "v2" / M["building"] / "walkthrough.json"
+    if plan_path.is_file():
+        if layout is None:
+            layout = read_json(plan_path.with_name("layout.json"))
+        plan = read_json(plan_path)
+        model = validate_walkthrough(plan, layout, read_json(ROOT / "content/v2/map.json"))
+        brief = room_brief(M["room"], plan, layout, model)
+        cues = []
+        if "zoom_parent_image" not in brief:
+            for passage in brief["passages"]:
+                here, there = passage["here"], passage["there"]
+                direction = passage.get("direction")
+                travel = "one-way arrival" if direction and direction[1] == M["room"] else "painted passage"
+                cues.append(f"{passage['id']} ({travel}): {passage['appearance']}. Here: {here['where']}. "
+                            f"Other side: {there['where']}, arriving at {there['arrival']}. "
+                            f"Match reference {passage['neighbor_image']}.")
+            entrance = brief.get("sector_entrance")
+            if entrance:
+                cues.append(f"Sector threshold: {entrance['appearance']}. Arrival: {entrance['arrival']}.")
+        if cues:
+            t = re.sub(r"(^DOORS AND EXITS:.*?)(?=\n\n|\Z)",
+                       lambda match: match.group(1) + " Shared plan: " + " ".join(cues), t, count=1, flags=re.S | re.M)
     left = sorted(set(re.findall(r"\{[^{}\n]+\}", t)))
     return t, sorted(set(missing)), left
 
@@ -131,20 +157,28 @@ def build(M):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("manifest")
+    ap.add_argument("--layout", help="validate a matching draft layout with the manifest before compiling")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--output", help="write the prompt to a file instead of stdout")
     a = ap.parse_args()
     p = Path(a.manifest)
     M = json.loads(p.read_text(encoding="utf-8"))
-    fail, warn = validate_manifest(M)
+    try:
+        layout_path = Path(a.layout) if a.layout else ROOT / "content" / "v2" / M["building"] / "layout.json"
+        layout = read_json(layout_path) if a.layout or layout_path.with_name("walkthrough.json").is_file() else None
+        fail, warn = validate_plan(M, layout)
+        if not fail:
+            t, missing, left = build(M, layout)
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as error:
+        print(f"FAIL {error}", file=sys.stderr)
+        return 1
     for message in warn:
         print("WARN " + message, file=sys.stderr)
     if fail:
         for message in fail:
             print("FAIL " + message, file=sys.stderr)
         return 1
-    t, missing, left = build(M)
     if missing or left:
         print("unfilled: " + ", ".join(missing + left), file=sys.stderr)
         return 1

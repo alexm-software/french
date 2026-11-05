@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "qa"))
 sys.path.insert(0, str(ROOT / "tools"))
 import build_v2
 import grid_check
+from walkthrough import load_model
 from room_context import load_sources, resolve_word
 
 LIMITS = json.loads((ROOT / "skills/limits.json").read_text(encoding="utf-8"))
@@ -65,7 +66,7 @@ def check_item_preflight(ident, it, bld_slug, v1, vocab, fixes, overrides, fail,
     if res is None:
         # Allow synthetic test IDs in unit tests (e.g. fr_absent_noun / fr_other_verb) unless they look like real unknown words
         if ident not in ("fr_other_verb", "fr_absent_noun", "x"):
-            warn.append(f"{ident}: word id not found in vocab.jsonl or v1-payloads")
+            fail.append(f"{ident}: word id not found in vocab.jsonl or v1-payloads")
         return
 
     # 1. Gender & side agreement with canonical resolved word
@@ -122,21 +123,27 @@ def simulate_room_labels(room_dict, bld_slug, v1, vocab, fixes, overrides, fail,
     """Simulate build_v2.place_labels() and check_v2 --strict geometry without needing the .jpg on disk."""
     sim_items = []
     for spec in room_dict.get("items", []):
+        if not isinstance(spec, dict):
+            continue
         wid = spec.get("id")
         box = spec.get("box") or spec.get("box_hint")
-        if not wid or not rectangle(box):
+        if not isinstance(wid, str) or not wid or not rectangle(box):
             continue
         res = resolve_word(wid, v1, vocab, fixes, overrides, force_vocab=(spec.get("text") == "vocab"))
-        hw = spec.get("lab") or (
-            res["fr"] if not res or res.get("pos") in ("verb", "adj", "adv", "num", "det", "letter", "prep", "pron", "conj", "intj", "phrase", "idiom")
-            else (("l'" + res["fr"]) if res.get("art") == "l'" else f"{res.get('art') or ('la' if res.get('g') == 'f' else 'le')} {res['fr']}")
-        )
-        it_sim = {"id": wid, "fr": res["fr"] if res else wid, "_hw": hw, "box": list(box)}
+        if res is None:
+            fail.append(f"unknown word ID: {wid}")
+            continue
+        hw = spec.get("lab") or res["_headword"]
+        cx = (box[0] + box[2] / 2) / W
+        side = res["side"]
+        if (side == "left" and cx > .45) or (side == "right" and cx < .55):
+            fail.append(f"{wid}: draft box contradicts canonical side {side}")
+        if res["pos"] in ("adj", "adv") and not LIMITS["centre_band"][0] <= cx <= LIMITS["centre_band"][1]:
+            fail.append(f"{wid}: draft box outside center band")
+        it_sim = {"id": wid, "fr": res["fr"], "hook": res["hook"], "_hw": hw, "box": list(box)}
         if spec.get("labelAt"):
             it_sim["_labelAt"] = spec["labelAt"]
         sim_items.append(it_sim)
-    if not sim_items:
-        return
     sim_room = {
         "name": room_dict.get("name", bld_slug),
         "nameplate": room_dict.get("nameplate"),
@@ -145,7 +152,8 @@ def simulate_room_labels(room_dict, bld_slug, v1, vocab, fixes, overrides, fail,
         "zooms": [z for z in room_dict.get("zooms", []) if isinstance(z.get("at"), list) and len(z["at"]) == 2 and z.get("label")],
         "items": sim_items,
     }
-    build_v2.place_labels(sim_room)
+    if sim_items:
+        build_v2.place_labels(sim_room)
     fixed = [("door->" + d["to"], d["hit"]) for d in sim_room["doors"]]
     if sim_room["mapExit"]:
         fixed.append(("mapExit", sim_room["mapExit"]["box"]))
@@ -180,8 +188,12 @@ def simulate_room_labels(room_dict, bld_slug, v1, vocab, fixes, overrides, fail,
             elif overlap(grow(la), fbox):
                 warn.append(f"simulated label {it_a['fr']} touches {fn} (--strict)")
 
+    return dict(room_dict, items=[
+        dict(item, boxPx=item["box"], labelPx=item["_lab"]) for item in sim_items
+    ], mapExit=dict(sim_room["mapExit"], boxPx=sim_room["mapExit"]["box"]) if sim_room["mapExit"] else None)
 
-def validate_manifest(m, require_prompt=False):
+
+def validate_manifest(m, require_prompt=False, *, layout_geometry=False):
     fail, warn = [], []
     if not isinstance(m, dict):
         return ["manifest must be an object"], []
@@ -194,8 +206,8 @@ def validate_manifest(m, require_prompt=False):
     if not isinstance(p, dict):
         p = {}
         fail.append("prompt must be an object")
-    if p.get("kind") not in ("room", "zoom"):
-        fail.append("prompt.kind must be room or zoom")
+    if p.get("kind") not in ("room", "zoom", "hub"):
+        fail.append("prompt.kind must be room, zoom or hub")
     for key in ("room_name", "camera", "light_from", "materials", "set_apart", "place", "landmark", "whimsy", "differ"):
         if not isinstance(p.get(key), str) or not p[key].strip():
             fail.append(f"prompt.{key} must be nonempty text")
@@ -206,8 +218,8 @@ def validate_manifest(m, require_prompt=False):
     if not isinstance(extra, dict) or any(k not in PROMPT_SECTIONS or not isinstance(v, str) for k, v in extra.items()):
         fail.append("prompt_extra must map known section headings to text")
     entries = m.get("items")
-    if not isinstance(entries, list) or not entries:
-        return fail + ["items must be a nonempty list"], warn
+    if not isinstance(entries, list) or (not entries and p.get("kind") != "hub"):
+        return fail + ["items must be a list, nonempty except for a circulation hub"], warn
 
     bld_slug = str(m.get("building") or "")
     v1, vocab, fixes, overrides = load_sources(bld_slug)
@@ -259,11 +271,11 @@ def validate_manifest(m, require_prompt=False):
 
     for n, (ident, box) in enumerate(boxes):
         for other, obox in boxes[n+1:]:
-            if overlap(box, obox):
+            if not layout_geometry and overlap(box, obox):
                 fail.append(f"planned boxes overlap: {ident} / {other}")
 
     # Gate 25 (grid_check) on manifest box_hints when room has >= 6 items (and is not an alphabet/reference board)
-    if len(boxes) >= LIMITS["room_floor"] and p.get("reference_board", "none") == "none":
+    if not layout_geometry and len(boxes) >= LIMITS["room_floor"] and p.get("reference_board", "none") == "none":
         _, gprobs = grid_check.check([b for _, b in boxes])
         for gp in gprobs:
             warn.append(f"grid_check (Gate 25) on box_hint: {gp}")
@@ -274,8 +286,8 @@ def validate_manifest(m, require_prompt=False):
 
     groups = m.get("interactions")
     covered = set()
-    if not isinstance(groups, list) or not groups:
-        fail.append("interactions must be a nonempty list")
+    if not isinstance(groups, list) or (not groups and entries):
+        fail.append("interactions must be a list, nonempty for a teaching scene")
     else:
         for group in groups:
             if not isinstance(group, dict):
@@ -352,7 +364,7 @@ def validate_manifest(m, require_prompt=False):
     return fail, warn
 
 
-def validate_layout(d, selected=None):
+def validate_layout(d, selected=None, *, review_rooms=None):
     fail, warn = [], []
     if not isinstance(d, dict):
         return ["layout must be an object"], []
@@ -361,6 +373,11 @@ def validate_layout(d, selected=None):
     if not isinstance(rooms, dict) or main not in rooms:
         return ["layout main must name a room"], []
     bld_slug = str(d.get("building") or main)
+    if d.get("building"):
+        try:
+            load_model(ROOT, d)
+        except (OSError, ValueError, TypeError, KeyError, AttributeError) as error:
+            fail.append(f"invalid walkthrough: {error}")
     v1, vocab, fixes, overrides = load_sources(bld_slug)
     keys = selected or list(rooms)
     for key in keys:
@@ -385,8 +402,22 @@ def validate_layout(d, selected=None):
             _, gprobs = grid_check.check([b for _, b in boxes])
             for gp in gprobs:
                 warn.append(f"{key}: grid_check (Gate 25): {gp}")
-        if boxes:
-            simulate_room_labels(r, bld_slug, v1, vocab, fixes, overrides, fail, warn)
+        if review_rooms is not None:
+            for door in r.get("doors", []):
+                if not rectangle(door.get("hit")):
+                    fail.append(f"{key}: door {door.get('to')} needs a fitted hit box")
+            if r.get("mapExit") and not rectangle(r["mapExit"].get("box")):
+                fail.append(f"{key}: outside exit needs a fitted box")
+            for zoom in r.get("zooms", []):
+                at = zoom.get("at")
+                if not (isinstance(at, list) and len(at) == 2 and all(
+                        isinstance(x, (int, float)) and not isinstance(x, bool) for x in at)
+                        and 0 <= at[0] <= W and 0 <= at[1] <= H and zoom.get("label")):
+                    fail.append(f"{key}: zoom {zoom.get('to')} needs a fitted badge and label")
+        if boxes or review_rooms is not None:
+            review = simulate_room_labels(r, bld_slug, v1, vocab, fixes, overrides, fail, warn)
+            if review_rooms is not None:
+                review_rooms[key] = review
         for edge in r.get("doors", []) + r.get("zooms", []):
             to = edge.get("to")
             target = (edge.get("building", d.get("building")), to)
@@ -417,6 +448,59 @@ def validate_layout(d, selected=None):
     return fail, warn
 
 
+def linked_room_errors(manifest, layout, selected=None):
+    key = manifest.get("room")
+    rooms = layout.get("rooms", {})
+    room = rooms.get(key)
+    if manifest.get("building") != layout.get("building") or room is None:
+        return ["manifest building/room does not match draft layout"]
+    if selected and selected != [key]:
+        return ["select the manifest room when checking a linked plan"]
+
+    def boxes(items, field):
+        return {item["id"]: item.get(field) for item in items if isinstance(item, dict) and "id" in item}
+
+    failures = []
+    if boxes(manifest.get("items", []), "box_hint") != boxes(room.get("items", []), "box"):
+        failures.append("manifest and draft layout must agree on item IDs and boxes")
+    expected = {door.get("to") for door in room.get("doors", [])}
+    if room.get("mapExit"):
+        expected.add("map")
+    if expected != {door.get("to") for door in manifest.get("doors", [])}:
+        failures.append("manifest and draft layout must agree on passage destinations")
+    if {z.get("to") for z in room.get("zooms", [])} != {z.get("to") for z in manifest.get("zooms", [])}:
+        failures.append("manifest and draft layout must agree on zoom destinations")
+    prompt = manifest.get("prompt", {})
+    parent = room.get("parent")
+    if parent or prompt.get("kind") == "zoom":
+        if parent != prompt.get("parent"):
+            failures.append("manifest and draft layout must agree on the zoom parent")
+        else:
+            zoom = next((z for z in rooms.get(parent, {}).get("zooms", []) if z.get("to") == key), {})
+            if manifest.get("continuity", {}).get("parent_box") != zoom.get("obj"):
+                failures.append("manifest and draft layout must agree on the parent zoom crop")
+    return failures
+
+
+def validate_plan(manifest=None, layout=None, selected=None, require_prompt=False):
+    """Check one linked plan using the draft's actual controls and label geometry."""
+    fail, warn = [], []
+    if isinstance(manifest, dict) and isinstance(layout, dict):
+        fail = linked_room_errors(manifest, layout, selected)
+        if fail:
+            return fail, warn
+        selected = [manifest["room"]]
+    if manifest is not None:
+        f, w = validate_manifest(manifest, require_prompt, layout_geometry=layout is not None)
+        fail.extend(f)
+        warn.extend(w)
+    if layout is not None:
+        f, w = validate_layout(layout, selected, review_rooms={} if manifest is not None else None)
+        fail.extend(f)
+        warn.extend(w)
+    return list(dict.fromkeys(fail)), list(dict.fromkeys(warn))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--manifest")
@@ -427,15 +511,12 @@ def main():
     a = ap.parse_args()
     if not a.manifest and not a.layout:
         ap.error("supply --manifest and/or --layout")
-    fail, warn = [], []
-    for path, func in ((a.manifest, lambda d: validate_manifest(d, a.require_prompt)),
-                       (a.layout, lambda d: validate_layout(d, a.room))):
-        if path:
-            try:
-                f, w = func(json.loads(Path(path).read_text(encoding="utf-8")))
-                fail.extend(f); warn.extend(w)
-            except (OSError, ValueError, TypeError, KeyError, AttributeError) as e:
-                fail.append(f"{path}: {e}")
+    try:
+        manifest = json.loads(Path(a.manifest).read_text(encoding="utf-8")) if a.manifest else None
+        layout = json.loads(Path(a.layout).read_text(encoding="utf-8")) if a.layout else None
+        fail, warn = validate_plan(manifest, layout, a.room, a.require_prompt)
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as e:
+        fail, warn = [str(e)], []
     result = {"fail": fail, "warn": warn, "visual_review": "not_checked"}
     if a.json:
         Path(a.json).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

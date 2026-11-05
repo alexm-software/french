@@ -31,13 +31,9 @@ For a zoom add `continuity`: `parent_image` (actual path), `parent_box` (pixel r
 ## Cheap stop before expensive generation
 
 ```sh
-python3 tools/plan_check.py --manifest /tmp/room-manifest.json
-python3 tools/plan_check.py --layout content/v2/<bld>/layout.json --room <key>
-python3 tools/build_prompt.py /tmp/room-manifest.json --write --output /tmp/room-prompt.txt
-python3 tools/build_prompt.py /tmp/room-manifest.json --check
+python3 tools/build_prompt.py /tmp/room-manifest.json --layout content/v2/<bld>/layout.json --write --output /tmp/room-prompt.txt
 ```
 
-Run the layout command when the draft exists; do not fabricate a live payload to use the tools. The manifest checker catches missing/duplicate fields, unknown interaction IDs, invalid counts/markers, box units/overlap/sides and missing zoom contracts. The layout checker catches broken targets, zoom backlinks and unreachable rooms. Neither proves phonetics, architectural plausibility or visual composition. Review those once before generation.
+For early drafts without a layout, use `tools/plan_check.py --manifest <manifest>`. When the layout exists, use the combined compile command above; do not fabricate a live payload to use the tools. The manifest checker catches missing/duplicate fields, unknown interaction IDs, invalid counts/markers, box units/overlap/sides and missing zoom contracts. The layout checker catches broken targets, zoom backlinks and unreachable rooms. Neither proves phonetics, architectural plausibility or visual composition. Review those once before generation.
 
 Before finished detail, follow the composition checkpoint in `composition.md`. Attach the approved exterior/style reference, a visually distinct sibling if useful, and any parent crop. Compile instead of manually retyping the template. Pilot one room and its zoom together before batch work; independent visual review must confirm the devices and scene work. Continue autonomously within the user's existing authorization; ask only for genuinely missing decisions.
-
