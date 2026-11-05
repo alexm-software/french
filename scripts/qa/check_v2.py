@@ -54,6 +54,8 @@ import dialogue_check
 
 ROOT = Path(__file__).resolve().parents[2]
 V2 = ROOT / "village"
+sys.path.insert(0, str(ROOT / "skills/memory-palace-builder/scripts"))
+from walkthrough import load_model
 W, H = 1280, 720
 BLOCK = [r"\bgod the father\b", r"dieu le p[eè]re", r"\bdrunk", r"\bbeer\b", r"\bcigar", r"\bsmok(e|ing)\b(?!.*(incense|censer|chimney|smoke rises))",
          r"\bfart", r"\bpoo+\b", r"\bpee\b", r"\bbutt\b", r"\bvomit", r"\bsexy\b", r"\bkill", r"\btobacc"]
@@ -170,6 +172,19 @@ def check_building(bld, errs, warns, places=None):
     rooms = D["rooms"]
     keys_in_list = [r["key"] for r in D["roomList"]]
     E = lambda m: errs.append(f"{bld}: {m}")
+    model = None
+    try:
+        model = load_model(ROOT, L)
+        if model is not None:
+            if D.get("hubParents") != model["hubParents"]:
+                E("built hub ownership is stale; rebuild the building")
+            actual = {(key, door["to"]) for key, room in rooms.items() for door in room.get("doors", [])}
+            if actual != set(model["edges"]):
+                E("built physical passages differ from the walkthrough")
+        elif "hubParents" in D:
+            E("built hub ownership has no source walkthrough")
+    except (ValueError, KeyError, TypeError, AttributeError) as error:
+        E(f"invalid walkthrough: {error}")
     if main not in rooms or main not in keys_in_list:
         E(f"main room {main} missing")
     seen = {}
@@ -191,7 +206,7 @@ def check_building(bld, errs, warns, places=None):
             extra = [w for w in ids if w not in want]
             if miss: E(f"{tag}: missing planned words {miss}")
             if extra: E(f"{tag}: words not planned for this room {extra}")
-        else:
+        elif not (not ids and model and model["nodes"].get(f"{bld}/{key}", {}).get("kind") == "hub"):
             warns.append(f"{bld}/{tag}: no 'planned' list in layout.json; word coverage not checked")
         if places is not None:
             for wid, tok, en in placement.flags(L, key, R, ROOMS_JSON, PLACE_OK):
@@ -503,15 +518,19 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                             for z in ex["zoom"]:
                                 if inter(grow(p_), z): errs.append(f"{bld}/{key} @{vw}: nameplate touches a zoom badge")
                     await pg.screenshot(path=str(shots / f"{bld}_{key}_{vw}.png"))
-                    # gate 19: the ⌂ Hub button goes to the first room / hub of this building or area, hidden in the hub itself
+                    # Gate 19: an opted-in room points to its containing hub.
                     hb = await pg.evaluate("(()=>{const h=document.querySelector('#hub');return h?{v:!h.hidden&&h.offsetWidth>0,href:h.getAttribute('href'),t:h.title}:null})()")
-                    if hb is None: errs.append(f"{bld}/{key}: no ⌂ Hub button")
-                    elif key == D["main"]:
-                        if hb["v"]: errs.append(f"{bld}/{key}: ⌂ Hub shown in the hub itself")
-                    else:
-                        if not hb["v"]: errs.append(f"{bld}/{key}: ⌂ Hub button missing")
-                        if hb["href"] != f"#/{bld}": errs.append(f"{bld}/{key}: ⌂ Hub goes to {hb['href']}, expected #/{bld}")
-                        if hb["t"] != D["rooms"][D["main"]]["name"]: errs.append(f"{bld}/{key}: ⌂ Hub tooltip {hb['t']!r} is not the hub room name")
+                    parent = R.get("parent")
+                    hub_key = D.get("hubParents", {}).get(parent or key, D["main"])
+                    street_back = D["main"] if D.get("building_id", "").startswith("ST_") and key != D["main"] else None
+                    hidden = key == hub_key or ("hubParents" in D and hub_key == (parent or street_back))
+                    href = f"#/{bld}" if hub_key == bld else f"#/{bld}/{hub_key}"
+                    if hb is None:
+                        errs.append(f"{bld}/{key}: no ⌂ Hub button")
+                    elif hb["v"] == hidden:
+                        errs.append(f"{bld}/{key}: incorrect ⌂ Hub visibility")
+                    elif not hidden and (hb["href"] != href or hb["t"] != D["rooms"][hub_key]["name"]):
+                        errs.append(f"{bld}/{key}: ⌂ Hub should lead to {href} with the hub room name")
                     # back target
                     await pg.click("#back")
                     await pg.wait_for_timeout(300)

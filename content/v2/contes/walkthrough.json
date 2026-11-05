@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "Storybook castle marker on the park map leads to the black iron gate at the clearing edge",
+    "appearance": "Open black iron gate between the park path and wooded clearing",
+    "arrival": "Open clearing with a stone wizard's tower beside the gate"
+  },
+  "places": {
+    "contes": {"kind": "hub", "level": "forest clearing", "landmark": "Lily pond and stone wizard's tower", "camera": "From inside the clearing toward the tower, waterfall arch and old oak"},
+    "vallee_geants": {"kind": "room", "within": "contes", "level": "valley meadow", "landmark": "Waterfall and stone footbridge", "camera": "Across the stream with the forest arch and castle gateway on the left"},
+    "tour_sorcier": {"kind": "room", "within": "contes", "level": "tower ground floor", "landmark": "Spiral stone stair and potion table", "camera": "Into the round study with the forest entrance on the left"},
+    "bal_costume": {"kind": "room", "within": "contes", "level": "oak ground floor", "landmark": "Lanterns and raised costume stage", "camera": "Into the hollow oak with the round forest door on the left"},
+    "cour_chateau": {"kind": "hub", "within": "contes", "level": "castle courtyard", "landmark": "Pale towers with blue roofs and steps to the keep", "camera": "From the yard facing the keep with the valley gateway on the left"},
+    "grande_salle": {"kind": "room", "within": "cour_chateau", "level": "keep above courtyard steps", "landmark": "Castle-shaped fireplace and red and blue banners", "camera": "Into the hall with the courtyard door on the left"}
+  },
+  "passages": {
+    "waterfall-arch": {
+      "kind": "arch",
+      "appearance": "Mossy stone arch beside the waterfall",
+      "ends": [
+        {"place": "contes", "where": "Middle of clearing beyond pond", "arrival": "Wooded clearing and lily pond"},
+        {"place": "vallee_geants", "where": "Left beside waterfall", "arrival": "Sunny meadow, stream and stone footbridge"}
+      ]
+    },
+    "tower-door": {
+      "kind": "door",
+      "appearance": "Open arched wooden door set in the tower's stone wall",
+      "ends": [
+        {"place": "contes", "where": "Tower at left beside the park gate", "arrival": "Open forest clearing"},
+        {"place": "tour_sorcier", "where": "Left wall of the round study", "arrival": "Stone study and spiral stair"}
+      ]
+    },
+    "oak-door": {
+      "kind": "door",
+      "appearance": "Open round wooden door in the old oak trunk",
+      "ends": [
+        {"place": "contes", "where": "Old oak at right of clearing", "arrival": "Wooded clearing outside the oak"},
+        {"place": "bal_costume", "where": "Left of the party room near cake table", "arrival": "Costume stage, bunting and lanterns"}
+      ]
+    },
+    "castle-gate": {
+      "kind": "gate",
+      "appearance": "Open arched pale stone castle gateway",
+      "ends": [
+        {"place": "vallee_geants", "where": "Lower-left meadow", "arrival": "Valley stream and waterfall"},
+        {"place": "cour_chateau", "where": "Left side of courtyard", "arrival": "Blue-roofed towers and keep steps"}
+      ]
+    },
+    "keep-steps": {
+      "kind": "stairs",
+      "appearance": "Broad stone steps rising from courtyard to the arched oak keep door",
+      "ends": [
+        {"place": "cour_chateau", "where": "At back of yard, walk up the steps", "arrival": "Pale towers and sunny courtyard"},
+        {"place": "grande_salle", "where": "Left wall, oak door out and down to yard", "arrival": "Banners and castle-shaped fireplace"}
+      ]
+    }
+  }
+}

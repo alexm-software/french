@@ -9,6 +9,7 @@ unbuilt source rooms). Siblings: short alts. Without --room: building overview.
 """
 import argparse, json, re, sys
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 from unbuilt import live_ids, load_payload
 
@@ -20,9 +21,13 @@ STOP = set("THE AND WITH FOR FROM ONE TWO HIS HER ITS SAY SAID NOT BUT YOU ARE".
 BERET_CODE = {"red": "er", "green": "ir", "purple": "re", "gold": "irregular"}
 
 
+@lru_cache(maxsize=1)
+def shared_sources():
+    return build_v2.load_v1_items(), build_v2.load_vocab()
+
+
 def load_sources(bld_slug):
-    v1 = build_v2.load_v1_items()
-    vocab = build_v2.load_vocab()
+    v1, vocab = shared_sources()
     fp = ROOT / "content" / "v2" / "vocab_fixes.json"
     fixes = {k: v for k, v in json.loads(fp.read_text(encoding="utf-8")).items() if not k.startswith("_")} if fp.exists() else {}
     hp = ROOT / "content" / "v2" / bld_slug / "hooks.json"
@@ -63,6 +68,7 @@ def resolve_word(wid, v1, vocab, fixes, overrides, force_vocab=False):
     out = {
         "id": wid,
         "fr": it["fr"],
+        "_headword": build_v2.headword(it),
         "pos": raw_pos,
         "side": side,
         "en": it.get("en", ""),
@@ -231,7 +237,10 @@ def main():
     ap.add_argument("--init-manifest", metavar="PATH", help="write a pre-populated manifest JSON with resolved word facts and non-overlapping box_hints")
     ap.add_argument("--limit", type=int, default=20, help="max planned words per page")
     ap.add_argument("--offset", type=int, default=0)
+    ap.add_argument("--compact", action="store_true", help="emit one target record per word plus routes, without notes or sibling descriptions")
     a = ap.parse_args()
+    if a.compact and not a.room:
+        ap.error("--compact requires --room")
     if a.limit < 1 or a.offset < 0:
         ap.error("limit must be positive; offset must be nonnegative")
 
@@ -258,11 +267,14 @@ def main():
     live = set(live_map)
     v1, vocab, fixes, overrides = load_sources(bld_slug)
 
-    print(f"# {bld_slug} ({bid}): {len(D['rooms'])} rooms, main {D['main']}")
+    if not a.compact:
+        print(f"# {bld_slug} ({bid}): {len(D['rooms'])} rooms, main {D['main']}")
     motifs = Counter()
     siblings = []
     for key, R in D["rooms"].items():
         for it in R["items"]:
+            if a.compact:
+                break
             live.add(it["id"]); live.add(re.sub(r"_\d+$", "", it["id"]))
             h = it.get("hook") or ""
             say = set(re.findall(r"[A-Z]+", it.get("say") or ""))
@@ -272,7 +284,10 @@ def main():
         if a.room and key != a.room:
             sib_line = f"{key}: {len(R.get('items', []))} words; {(R.get('alt') or '')[:160]}"
             siblings.append(sib_line)
-            print("sibling " + sib_line)
+            if not a.compact:
+                print("sibling " + sib_line)
+            continue
+        if a.compact:
             continue
         side = lambda it: "C" if it.get("adj") or it.get("adv") else {"f": "L", "m": "R"}.get(it.get("g"), "C")
         words = ", ".join(f"{it.get('lab') or it['fr']}({side(it)}{',verb' if it.get('verb') else ''})" for it in R["items"])
@@ -298,7 +313,12 @@ def main():
                 break
 
     resolved_target = []
-    if (a.room and a.room not in D["rooms"]) or a.vocab_room or a.word:
+    if a.compact or (a.room and a.room not in D["rooms"]) or a.vocab_room or a.word:
+        current = {it["id"]: it for it in D["rooms"].get(a.room, {}).get("items", [])}
+        layout_path = ROOT / "content" / "v2" / bld_slug / "layout.json"
+        layout_rooms = json.loads(layout_path.read_text())["rooms"] if layout_path.exists() else {}
+        specs = {it["id"]: it for it in layout_rooms.get(a.room, {}).get("items", [])}
+        unknown = []
         want_ids = []
         if a.room and a.room in D["rooms"]:
             want_ids.extend(it["id"] for it in D["rooms"][a.room]["items"])
@@ -308,17 +328,27 @@ def main():
             if w_extra not in want_ids:
                 want_ids.append(w_extra)
         rm_title = rooms_src.get(src_room_id, {}).get("name", a.room or src_room_id or bld_slug)
-        print(f"\n## target resolved inventory ({src_room_id or a.room}: {len(want_ids)} words)")
-        for wid in want_ids:
-            res = resolve_word(wid, v1, vocab, fixes, overrides)
+        if not a.compact:
+            print(f"\n## target resolved inventory ({src_room_id or a.room}: {len(want_ids)} words)")
+        for wid in dict.fromkeys(want_ids):
+            res = resolve_word(wid, v1, vocab, fixes, overrides, force_vocab=specs.get(wid, {}).get("text") == "vocab")
             if not res:
-                print(f"UNKNOWN word id: {wid}")
+                unknown.append(wid)
+                if not a.compact:
+                    print(f"UNKNOWN word id: {wid}")
                 continue
             where_live = [f"{b}/{rk}" for b, rk in live_map.get(wid, [])]
             if where_live:
                 res["live_in"] = where_live
+            if wid in current and current[wid].get("boxPx"):
+                res["boxPx"] = current[wid]["boxPx"]
+            if specs.get(wid, {}).get("text") == "vocab":
+                res["text"] = "vocab"
             resolved_target.append(res)
-            print(json.dumps(res, ensure_ascii=False, separators=(",", ":")))
+            if not a.compact:
+                print(json.dumps({k: v for k, v in res.items() if not k.startswith("_")}, ensure_ascii=False, separators=(",", ":")))
+        if unknown:
+            ap.error("unknown word IDs: " + ", ".join(unknown))
 
     if a.init_manifest:
         if not resolved_target and a.room in D["rooms"]:
@@ -332,14 +362,24 @@ def main():
         rname = D["rooms"][a.room]["name"] if (a.room and a.room in D["rooms"]) else rooms_src.get(src_room_id, {}).get("name", rk)
         manifest = scaffold_manifest(bld_slug, bid, sector_id, rk, rname, resolved_target, siblings)
         Path(a.init_manifest).write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"\nwrote scaffold manifest: {a.init_manifest} ({len(resolved_target)} items)")
+        if not a.compact:
+            print(f"\nwrote scaffold manifest: {a.init_manifest} ({len(resolved_target)} items)")
+
+    if a.compact:
+        if a.room not in D["rooms"] and src_room_id not in rooms_src and not a.word:
+            ap.error("unknown room; provide --vocab-room or --word for a draft")
+        room = D["rooms"].get(a.room, {})
+        items = [{k: v for k, v in row.items() if not k.startswith("_")} for row in resolved_target]
+        print(json.dumps({"building": bld_slug, "room": a.room, "items": items,
+                          "doors": [d["to"] for d in room.get("doors", [])],
+                          "zooms": [z["to"] for z in room.get("zooms", [])],
+                          "outside": bool(room.get("mapExit"))}, ensure_ascii=False, separators=(",", ":")))
+        return
 
     print("\n## candidate motifs (capitalization heuristic; inspect hooks for actual reuse)")
     print(", ".join(f"{w.lower()}" + (f" x{n}" if n > 1 else "") for w, n in motifs.most_common(60)))
     plan = []
-    for l in (ROOT / "data" / "source" / "vocab.jsonl").read_text(encoding="utf-8").splitlines():
-        if not l.strip(): continue
-        r = json.loads(l)
+    for r in vocab.values():
         room = rooms_src.get(r.get("room_id") or "")
         if room and bid and room.get("building_id") == bid and r["id"] not in live:
             plan.append(f"{r['id']}: {r['lemma']} ({r.get('cefr', '')}, {room.get('name', room['id'])})")

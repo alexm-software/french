@@ -335,11 +335,14 @@ function renderRooms(bld,key){
 function renderRoom(bld,key){
   B=bld; curKey=key; var D=window.VILLAGE_DATA[bld]; R=D.rooms[key]; view=R.parent?'zoom':'room'; var HK0=D.main||bld, HR0=D.rooms[HK0]||D.rooms[bld]; document.title=R.name+((key!==bld&&key!==HK0&&HR0)?' · '+HR0.name:'')+' · Le Village';
   back.hidden=false; renderRooms(bld,key);
-  // ⌂ Hub (gate 19): a second strip button that jumps to the first room / hub of this building or area; hidden in the hub itself
-  var HK=D.main||bld; hub.hidden=(key===HK); hub.href=roomHref(bld,HK); hub.title=D.rooms[HK].name; hub.setAttribute('aria-label','Hub: '+D.rooms[HK].name);
   // gate 19: Back goes straight outside, never to the previous room. A zoom close-up closes to its own room;
   // a side room of a street (ST_ buildings) goes out to that street; every other room goes to the map it stands on.
   backKey=R.parent||((/^ST_/.test(D.building_id||'')&&key!==D.main)?D.main:null);
+  // Local hubs are ownership shortcuts. Painted doors still define the walk.
+  var HK=(D.hubParents||{})[R.parent||key]||D.main||bld;
+  hub.hidden=key===HK||!!(D.hubParents&&backKey===HK);
+  hub.href=roomHref(bld,HK); hub.title=D.rooms[HK].name;
+  hub.setAttribute('aria-label','Hub: '+D.rooms[HK].name);
   var BT=backKey;
   if(BT){ $('#backLabel').textContent=D.rooms[BT].name; back.title='Back to '+D.rooms[BT].name; }
   else { var H=homeOf(bld), S=H.slug&&MAP.sectors[H.slug]; $('#backLabel').textContent=S?S.name:'Le village'; back.title='Back to the map of '+(S?S.name:'the village'); }

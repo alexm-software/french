@@ -16,13 +16,15 @@ Optional flags:
   --anatomy-2x     also write 2x upscaled quadrant crops (<bld>_<key>_2x_q1..q4.jpg) for mandatory Gate 26 inspection
   --sync-manifest  copy fitted boxPx from the built room data into the manifest's box_hint/zone and re-run build_prompt
 """
-import argparse, json, sys, textwrap
+import argparse, hashlib, json, sys, tempfile, textwrap
 from pathlib import Path
+from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from precheck import load_payload, badge_rect, nameplate_rect, W, H  # same geometry as the checks
 import build_prompt
+from plan_check import linked_room_errors, rectangle, validate_layout, validate_manifest
 
 
 def font(sz, bold=False):
@@ -91,22 +93,40 @@ def write_anatomy_2x(img, out_dir, prefix):
         print(f"{p}  ({p.stat().st_size // 1024} KB)")
 
 
-def sync_manifest_boxes(manifest_path, R):
-    """Sync fitted boxPx from built room data into manifest box_hint/zone and recompile prompt_text."""
-    p = Path(manifest_path)
-    M = json.loads(p.read_text(encoding="utf-8"))
-    by_id = {it["id"]: it["boxPx"] for it in R.get("items", []) if "boxPx" in it}
-    for it in M.get("items", []):
-        if it.get("id") in by_id:
-            b = by_id[it["id"]]
-            it["box_hint"] = b
-            z = str(it.get("zone") or "").split("[")[0].strip()
-            it["zone"] = f"{z} {b}".strip()
-    t, missing, left = build_prompt.build(M)
-    if not (missing or left):
-        M["prompt_text"] = t
-    p.write_text(json.dumps(M, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"synced {len(by_id)} fitted boxes into {p}")
+def sync_manifest_boxes(manifest_path, room, building, key, layout=None):
+    """Apply only a complete, valid box update for the same room."""
+    path = Path(manifest_path)
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    if (manifest.get("building"), manifest.get("room")) != (building, key):
+        raise ValueError("manifest building/room does not match selected room")
+    items = room.get("items", [])
+    by_id = {item["id"]: item.get("boxPx") for item in items}
+    ids = [item["id"] for item in manifest["items"]]
+    if len(by_id) != len(items) or len(ids) != len(set(ids)) or set(ids) != set(by_id):
+        raise ValueError("manifest and selected room must have identical, unique item IDs")
+    if not all(rectangle(box) for box in by_id.values()):
+        raise ValueError("selected room contains invalid pixel boxes")
+    for item in manifest["items"]:
+        item["box_hint"] = by_id[item["id"]]
+    fail, _ = validate_manifest(manifest, layout_geometry=True)
+    if layout is not None:
+        fail.extend(linked_room_errors(manifest, layout))
+    if fail:
+        raise ValueError("manifest sync: " + "; ".join(fail))
+    prompt, missing, left = build_prompt.build(manifest, layout)
+    if missing or left:
+        raise ValueError("manifest sync has unfilled prompt fields: " + ", ".join(missing + left))
+    manifest["prompt_text"] = prompt
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent, delete=False) as temporary:
+        temp_path = Path(temporary.name)
+        try:
+            json.dump(manifest, temporary, ensure_ascii=False, indent=2)
+            temporary.write("\n")
+            temporary.close()
+            temp_path.replace(path)
+        finally:
+            temp_path.unlink(missing_ok=True)
+    print(f"synced {len(by_id)} fitted boxes into {path}")
 
 
 def card_crop(img, b):  # build_v2: square of max(w,h)*1.18 centred on the box, clamped to the scene
@@ -141,7 +161,7 @@ def sheet(bld, key, R, img, shot, flags, width):
         out.paste(s, (20 + half, 40))
         d.text((24 + half, 44 + s.height), Path(shot).name, font=font(12), fill=(90, 90, 90))
     else:
-        d.text((30 + half, 44), "no browser shot (pass --shots DIR); labels drawn from the built data. Hooks:", font=font(12), fill=(120, 120, 120))
+        d.text((30 + half, 44), "no browser shot (pass --shots DIR); labels drawn from the supplied geometry. Hooks:", font=font(12), fill=(120, 120, 120))
         yy = 64
         for it in R["items"]:
             for k, ln in enumerate(textwrap.wrap(f"{it['fr']}: {(it.get('hook') or '').strip()}", 98)[:3]):
@@ -161,7 +181,9 @@ def sheet(bld, key, R, img, shot, flags, width):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--data", required=True)
+    source = ap.add_mutually_exclusive_group()
+    source.add_argument("--data", help="generated building data")
+    source.add_argument("--layout", help="draft layout to review directly against --image")
     ap.add_argument("--room", action="append", help="room key (repeat); default: main room")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--image", help="painting to use instead of the live one (single room)")
@@ -174,14 +196,69 @@ def main():
     ap.add_argument("--anatomy-2x", action="store_true", help="also write 2x upscaled quadrant crops for Gate 26 inspection")
     ap.add_argument("--sync-manifest", metavar="PATH", help="sync fitted boxPx into manifest box_hint/zone and recompile prompt")
     a = ap.parse_args()
-    D = load_payload(a.data)
-    V2 = Path(a.data).resolve().parents[1]
-    keys = list(D["rooms"]) if a.all else (a.room or [D["main"]])
     out_dir = Path(a.out)
     out_dir.mkdir(parents=True, exist_ok=True)
+    if not a.data and not a.layout:
+        if not a.image or not (a.grid or a.anatomy_2x) or a.sync_manifest or a.room or a.all:
+            ap.error("image-only review requires --image with --grid and/or --anatomy-2x")
+        with Image.open(a.image) as img:
+            if img.size != (W, H):
+                ap.error(f"expected a {W}x{H} painting")
+            prefix = Path(a.image).stem + a.tag
+            if a.grid:
+                write_grid(img, out_dir / f"{prefix}_grid.jpg")
+            if a.anatomy_2x:
+                write_anatomy_2x(img, out_dir, prefix)
+        return 0
+    layout = None
+    candidate = None
+    if a.layout:
+        if not a.image or a.all or len(a.room or []) > 1:
+            ap.error("--layout requires --image and one room")
+        image_bytes = Path(a.image).read_bytes()
+        layout_bytes = Path(a.layout).read_bytes()
+        with Image.open(BytesIO(image_bytes)) as source_image:
+            if source_image.size != (W, H):
+                ap.error(f"expected a {W}x{H} painting")
+            candidate = source_image.convert("RGB")
+        layout = json.loads(layout_bytes)
+        keys = a.room or [layout["main"]]
+        review = {}
+        failures, warnings = validate_layout(layout, keys, review_rooms=review)
+        for level, messages in (("FAIL", failures), ("WARN", warnings)):
+            for message in messages:
+                print(level, message)
+        record = {"building": layout["building"], "room": keys[0], "fail": failures, "warn": warnings,
+                  "image_sha256": hashlib.sha256(image_bytes).hexdigest(),
+                  "layout_sha256": hashlib.sha256(layout_bytes).hexdigest(),
+                  "visual_review": "pending"}
+        (out_dir / f"{layout['building']}_{keys[0]}{a.tag}_review.json").write_text(
+            json.dumps(record, indent=2) + "\n", encoding="utf-8")
+        if failures:
+            return 1
+        D = dict(layout, rooms=review)
+    else:
+        D = load_payload(a.data)
+        V2 = Path(a.data).resolve().parents[1]
+        keys = list(D["rooms"]) if a.all else (a.room or [D["main"]])
+    if (a.image or a.sync_manifest or a.precheck) and len(keys) != 1:
+        ap.error("image override, manifest sync and OCR report require a single room")
+    if a.sync_manifest and a.data and a.image:
+        ap.error("use --layout to sync geometry for a replacement image")
     for key in keys:
         R = D["rooms"][key]
-        img = Image.open(a.image if a.image else V2 / R["image"])
+        if candidate is not None:
+            img = candidate
+        else:
+            with Image.open(a.image if a.image else V2 / R["image"]) as source_image:
+                img = source_image.convert("RGB")
+        if img.size != (W, H):
+            ap.error(f"expected a {W}x{H} painting")
+        if a.sync_manifest:
+            try:
+                sync_manifest_boxes(a.sync_manifest, R, D["building"], key, layout)
+            except (OSError, ValueError, KeyError) as e:
+                ap.error(str(e))
         shot = None
         if a.shots:
             c = sorted(Path(a.shots).glob(f"{D['building']}_{key}_*.png"))
@@ -202,9 +279,7 @@ def main():
             write_grid(img, out_dir / f"{prefix}_grid.jpg")
         if a.anatomy_2x:
             write_anatomy_2x(img, out_dir, prefix)
-        if a.sync_manifest and len(keys) == 1:
-            sync_manifest_boxes(a.sync_manifest, R)
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
