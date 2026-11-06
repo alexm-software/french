@@ -4,7 +4,7 @@ Python 3 and Pillow are required; precheck OCR also uses tesseract (eng+fra). Mi
 
 | Stage | Tool | Result |
 |---|---|---|
-| Inventory | `unbuilt.py --repo . --building <id>` | Source assignments compared with live word IDs across the village |
+| Inventory | `unbuilt.py --building <id>` | Planned words painted in the destination building; donor-only copies stay on the list. `--sync` reads public main |
 | Context & scaffold | `room_context.py <bld> --room <key> [--vocab-room R_...] [--init-manifest <manifest>] [--compact]` | Resolved word records (gender, IPA, say, hook, verb beret/mirror, live locations), short siblings, optional pre-populated manifest |
 | Plan | `manifest_template.json` | Complete small syntax example; replace all facts and use limits.json for production density |
 | Before images | `plan_check.py --manifest <manifest>` | Required fields, canonical source/beret/gender/respelling/content/hook-lint preflight, Gate 25 grid check, simulated label placement, zoom contract |

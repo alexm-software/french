@@ -2,7 +2,7 @@
 
 ## Load once
 
-Use `room_context.py` (with `--compact` for generation and `--init-manifest` for new rooms) for the resolved target brief and `unbuilt.py --repo . --building <id>` for live IDs. Reuse the checkout and fetch main once. Read target records, required references and affected dependencies; reserve whole-repo inventories for audits. Parse/filter large payloads in code rather than writing ad-hoc one-liner scripts per field. Print findings/counts, never full registries, commit responses, prompts or binary/base64 content.
+Use `room_context.py` (with `--compact` for generation and `--init-manifest` for new rooms) for the resolved target brief and `unbuilt.py --building <id>` for destination coverage. It reads this checkout; pass `--sync` only when the comparison must be a fresh public main. A room is not built while a planned word is painted only in another building. Reuse the checkout and fetch main once. Read target records, required references and affected dependencies; reserve whole-repo inventories for audits. Parse/filter large payloads in code rather than writing ad-hoc one-liner scripts per field. Print findings/counts, never full registries, commit responses, prompts or binary/base64 content.
 
 Keep one building plan, room manifest and checkpoint (base, touched paths, accepted revision, blockers, next action). `build_prompt.py --layout --write --output` checks the linked plan and saves the specification; `--check` detects drift. Save exact local-edit deltas separately, stating which specification fields they replace.
 

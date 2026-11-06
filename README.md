@@ -43,7 +43,7 @@ Text changes (a hook, a gloss, an example, a plural) go in `content/v2/<building
 
 ## Adding or repainting a room
 
-Follow the skills in `skills/`: run `tools/unbuilt.py`, write the item manifest, build the painting prompt from the template, paint, run `tools/precheck.py`, review one contact sheet per room, then add the room to `content/v2/<building>/layout.json` and rebuild. `content/v2/README.md` explains how a building goes live on the map.
+Follow the skills in `skills/`: run `tools/unbuilt.py` (a word still painted only in another building is not done), write the item manifest, build the painting prompt from the template, paint, run `tools/precheck.py`, review one contact sheet per room, then add the room to `content/v2/<building>/layout.json` and rebuild. `content/v2/README.md` explains how a building goes live on the map.
 
 ## Conjugations
 

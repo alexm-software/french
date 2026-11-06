@@ -9,7 +9,7 @@ Build one integrated 1280×720 painting per room or zoom: architecture, objects,
 ## Start with the smallest useful context
 
 1. Reuse the checkout, fetch main once, check room ownership and preserve concurrent work.
-2. Run `python3 tools/unbuilt.py --repo . --building <building_id>` and `python3 tools/room_context.py <building> --room <key> --compact`. Live IDs anywhere in the village count; page planned words only as needed.
+2. Run `python3 tools/unbuilt.py --building <building_id>` and `python3 tools/room_context.py <building> --room <key> --compact`. It reads this checkout. A planned word is integrated only when a live copy is in that building (or a layout that claims the source room). A copy that is still only on the donor street does not make the room built; page planned words only as needed.
 3. Use source assignments for new inventory and current v2 inventory/resolved hooks for repaints. Reconcile disagreements before moving words. Reuse approved style and user decisions; do not repeat setup questions.
 4. Read only the relevant row and language references. `skills/limits.json` owns numeric limits; release-gates owns acceptance, this skill owns execution.
 

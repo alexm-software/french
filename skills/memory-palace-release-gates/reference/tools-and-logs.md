@@ -2,7 +2,7 @@
 
 ## Before buying an image
 
-Use `tools/unbuilt.py --repo .` and `tools/room_context.py` on the existing checkout. Fill `tools/manifest_template.json`, run `tools/plan_check.py --manifest <manifest>`, and check the draft layout with `--layout <layout> --room <key>`. Compile using `tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`; `--check` rejects stale text. Warnings require judgment; structural FAILs stop generation. These tools do not verify language or visual quality.
+Use `tools/unbuilt.py` and `tools/room_context.py` on the existing checkout. `unbuilt.py` reads that checkout unless `--sync` is passed, and it does not count a donor-building copy as integrated. Fill `tools/manifest_template.json`, run `tools/plan_check.py --manifest <manifest>`, and check the draft layout with `--layout <layout> --room <key>`. Compile using `tools/build_prompt.py <manifest> --write --output /tmp/room-prompt.txt`; `--check` rejects stale text. Warnings require judgment; structural FAILs stop generation. These tools do not verify language or visual quality.
 
 ## After painting
 
