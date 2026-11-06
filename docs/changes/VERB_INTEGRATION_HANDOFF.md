@@ -12,7 +12,7 @@ Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 exis
 
 ## Live status
 
-No public painting, hotspot, card, dialogue, planned.only list or cache version was changed. Keep donor scenes intact until replacement art is accepted. unbuilt.py counting an ID live somewhere does not mean it has been integrated at its new destination. Do not install a half-painted move through a broad generated-data rebuild.
+No public painting, hotspot, card, dialogue, planned.only list or cache version was changed. Keep donor scenes intact until replacement art is accepted. `unbuilt.py` counts a word as integrated only when it is live in the planned building (or a layout that claims that source room). A copy that remains only on the donor street counts as `elsewhere` and does not mark the target room built; a copy in both places is `extra`. Do not install a half-painted move through a broad generated-data rebuild.
 
 ## Target worklist
 
