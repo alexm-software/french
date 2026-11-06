@@ -1,6 +1,6 @@
 # Verb integration handoff — 2026-11-01
 
-Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 existing ordinary rooms.** These are actual source assignments. Nourrir is now integrated into ferme/ferme; all other rows retain their recorded status. Read the per-word TSV before resuming other room work.
+Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 existing ordinary rooms.** These are actual source assignments. Integrated so far: nourrir and seller in ferme/ferme; coucher and dormir in maison/chambre; planter, cultiver, and germer in ferme/coteau. Every other row is still pending art. Read the per-word TSV before resuming other room work.
 
 ## Files changed
 
@@ -12,7 +12,7 @@ Base: `10da19dc38252949b05041f277461dedf5853e38`. **25 verbs assigned to 17 exis
 
 ## Live status
 
-No public painting, hotspot, card, dialogue, planned.only list or cache version was changed. Keep donor scenes intact until replacement art is accepted. `unbuilt.py` counts a word as integrated only when it is live in the planned building (or a layout that claims that source room). A copy that remains only on the donor street counts as `elsewhere` and does not mark the target room built; a copy in both places is `extra`. Do not install a half-painted move through a broad generated-data rebuild.
+Nourrir, seller, coucher, dormir, planter, cultiver, and germer are live in their destination paintings, with the donor figure removed in the same pack. The other assigned verbs stay on their donor streets until their own art is accepted. `unbuilt.py` counts a word as integrated only when it is live in the planned building (or a layout that claims that source room). A copy that remains only on the donor street counts as `elsewhere` and does not mark the target room built; a copy in both places is `extra`. Do not install a half-painted move through a broad generated-data rebuild.
 
 ## Target worklist
 
@@ -23,13 +23,13 @@ No public painting, hotspot, card, dialogue, planned.only list or cache version 
 | camping/camping | 9 → 10 | brûler |
 | couture/atelier | 12 → 13 | coudre |
 | ecole/bibliotheque | 8 → 9 | feuilleter |
-| ferme/coteau | 7 → 10 | planter, cultiver, germer |
-| ferme/ferme | 9 → 10 | nourrir (integrated), seller (pending) |
+| ferme/coteau | 7 → 10 | planter, cultiver, germer (integrated) |
+| ferme/ferme | 9 → 10 | nourrir (integrated), seller (integrated) |
 | garage/garage | 10 → 12 | clouer, bricoler |
 | gare/etage | 8 → 9 | transporter |
 | jeux/fete | 8 → 9 | offrir |
 | maison/bains | 11 → 13 | laver, doucher |
-| maison/chambre | 10 → 12 | coucher, dormir |
+| maison/chambre | 10 → 12 | coucher, dormir (integrated) |
 | maison/cuisine | 11 → 12 | cuisiner |
 | maison/dressing | 10 → 12 | habiller, chausser |
 | maison/jeux | 10 → 11 | ranger |
