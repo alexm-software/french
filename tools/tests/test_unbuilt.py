@@ -88,7 +88,9 @@ class UnbuiltDestination(unittest.TestCase):
             self.assertEqual(claims["R_garage"], {"garage"})
 
     def test_default_reads_this_checkout_and_flags_farm_donor(self):
-        # Integrating fr_seller_verb into ferme/ferme should update this fixture.
+        # fr_seller_verb is integrated in ferme/ferme, so R_farm_animals_01 no longer
+        # names st_bricoleurs/selliers. The live donor pin is the remaining elsewhere
+        # copy on R_farm_animals_03. Move that pin when that word is integrated too.
         run = subprocess.run([sys.executable, str(TOOLS / "unbuilt.py"), "--building", "B31_ferme"],
                              capture_output=True, text=True)
         self.assertEqual(run.returncode, 0, run.stderr)
@@ -99,9 +101,12 @@ class UnbuiltDestination(unittest.TestCase):
         total_plan = int(re.search(r"of ([\d,]+) planned", total).group(1).replace(",", ""))
         filter_plan = int(re.search(r"of (\d+)", filtered).group(1))
         self.assertGreater(total_plan, filter_plan)
-        line = next(l for l in run.stdout.splitlines() if "R_farm_animals_01" in l)
-        self.assertTrue(line.strip().startswith("partial"))
-        self.assertIn("st_bricoleurs/selliers", line)
+        animals = next(l for l in run.stdout.splitlines() if "R_farm_animals_01" in l)
+        self.assertTrue(animals.strip().startswith("partial"))
+        self.assertIn("elsewhere   0", animals)
+        self.assertNotIn("st_bricoleurs/selliers", animals)
+        donor = next(l for l in run.stdout.splitlines() if "R_farm_animals_03" in l)
+        self.assertIn("boulangerie/boucherie", donor)
 
 
 if __name__ == "__main__":
