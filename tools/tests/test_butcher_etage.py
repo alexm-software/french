@@ -1,4 +1,4 @@
-"""Geometry of the accepted upstairs butcher, using the viewer's label placer."""
+"""Candidate upstairs butcher, kept off the live 51-word shop."""
 import json
 import sys
 import unittest
@@ -84,6 +84,93 @@ class ButcherEtageGeometry(unittest.TestCase):
         self.assertTrue(hooks["fr_abattoir_noun"]["plaque"])
         self.assertIn("slices a ham", hooks["fr_charcutier_noun"]["hook"])
         self.assertNotIn("pale", hooks["fr_charcutier_noun"]["hook"])
+
+
+NINE = [
+    "fr_boucherie_noun", "fr_crevette_noun", "fr_huitre_noun", "fr_ecaille_noun",
+    "fr_abattoir_noun", "fr_steak_noun", "fr_charcutier_noun", "fr_requin_noun", "fr_mangeur_noun",
+]
+CANDIDATE = ROOT / "docs" / "room-trials" / "boucherie-surfaces" / "candidate"
+
+
+def live_payload():
+    text = (ROOT / "village" / "data" / "boulangerie.js").read_text(encoding="utf-8")
+    return json.loads(text[text.index("]=") + 2:].rstrip().rstrip(";"))
+
+
+class ButcherCandidateDataset(unittest.TestCase):
+    def test_production_baseline_excludes_the_nine(self):
+        payload = live_payload()
+        ids = [it["id"] for room in payload["rooms"].values() for it in room["items"]]
+        self.assertEqual(len(ids), 51)
+        self.assertEqual(set(ids) & set(NINE), set())
+        layout = json.loads((ROOT / "content" / "v2" / "boulangerie" / "layout.json").read_text(encoding="utf-8"))
+        self.assertNotIn("boucherie_etage", layout["rooms"])
+        self.assertEqual(layout["rooms"]["boucherie"]["doors"], [])
+        talks = (ROOT / "village" / "data" / "talk" / "boulangerie.js").read_text(encoding="utf-8")
+        self.assertNotIn("Au-dessus de la boucherie", talks)
+        source = json.loads((ROOT / "data" / "source" / "conversations.json").read_text(encoding="utf-8"))
+        row = next(x for x in source["conversations"] if x["id"] == "C_R_butcher_02")
+        self.assertEqual(row["title"], "Le plateau de fruits de mer")
+        self.assertNotIn("room", row)
+
+    def test_candidate_has_exactly_the_nine_words(self):
+        sys.path.insert(0, str(ROOT / "tools"))
+        from stage_butcher_candidate import build_candidate
+        built = build_candidate()
+        saved = json.loads((CANDIDATE / "room.json").read_text(encoding="utf-8"))
+        self.assertEqual(set(it["id"] for it in built["items"]), set(NINE))
+        self.assertEqual(len(built["items"]), 9)
+        self.assertEqual(built, saved)
+        for it in saved["items"]:
+            self.assertTrue(it.get("hook"))
+            self.assertTrue((CANDIDATE / "cards" / f"{it['id']}.webp").stat().st_size > 500)
+            self.assertEqual(it["cardSrc"], f"boulangerie/cards/{it['id']}.webp")
+
+    def test_abattoir_is_a_blank_plaque(self):
+        sys.path.insert(0, str(ROOT / "scripts" / "qa"))
+        import check_v2
+        room = json.loads((CANDIDATE / "room.json").read_text(encoding="utf-8"))
+        plaques = [it for it in room["items"] if it.get("plaque") is True]
+        self.assertEqual([it["id"] for it in plaques], ["fr_abattoir_noun"])
+        plaque = plaques[0]
+        self.assertIn("blank plaque", plaque["hook"])
+        self.assertIn("not drawn", plaque["hook"])
+        # The gloss may name the place. The plaque flag keeps that gloss out of the depiction check.
+        depict = " ".join(str(plaque.get(k) or "") for k in ("hook", "scene", "note"))
+        for pat in check_v2.BLOCK:
+            self.assertIsNone(__import__("re").search(pat, depict, __import__("re").I), pat)
+
+    def test_navigation_is_one_way_until_the_stair_exists(self):
+        room = json.loads((CANDIDATE / "room.json").read_text(encoding="utf-8"))
+        links = json.loads((CANDIDATE / "links.json").read_text(encoding="utf-8"))
+        self.assertEqual(room["backTo"], "boucherie")
+        self.assertEqual([d["to"] for d in room["doors"]], ["boucherie"])
+        self.assertEqual(room["doors"][0]["hit"], [590, 450, 150, 140])
+        self.assertEqual(room["doors"][0]["thumb"], "boulangerie/boucherie.jpg")
+        self.assertTrue(links["down"]["painted"])
+        self.assertFalse(links["up"]["painted"])
+        self.assertNotIn("boucherie-down-candidate", json.dumps(links))
+        dialogue = json.loads((CANDIDATE / "dialogue.json").read_text(encoding="utf-8"))
+        self.assertEqual(dialogue["room"], "boulangerie/boucherie_etage")
+        self.assertFalse(dialogue["pinned_in_production"])
+        text = " ".join(line["fr"] for line in dialogue["lines"])
+        lemmas = {
+            "fr_boucherie_noun": "boucherie",
+            "fr_crevette_noun": "crevette",
+            "fr_huitre_noun": "huître",
+            "fr_ecaille_noun": "écaille",
+            "fr_charcutier_noun": "charcutier",
+            "fr_steak_noun": "steak",
+            "fr_requin_noun": "requin",
+            "fr_mangeur_noun": "mangeur",
+            "fr_abattoir_noun": "abattoir",
+        }
+        used = [wid for wid, lemma in lemmas.items() if lemma in text]
+        self.assertGreaterEqual(len(used), 3)
+        self.assertNotIn("abattoir", text)
+        self.assertIn("charcutier", text)
+        self.assertEqual(links["passage"]["arrival_down"], "a counter worker in a striped apron and white cap, a different employee from the red-apron butcher")
 
 
 if __name__ == "__main__":

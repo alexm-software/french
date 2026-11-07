@@ -1,0 +1,28 @@
+{
+  "down": {
+    "from": "boucherie_etage",
+    "to": "boucherie",
+    "painted": true,
+    "image": "boulangerie/boucherie_etage.jpg",
+    "hit": [
+      590,
+      450,
+      150,
+      140
+    ],
+    "thumb": "boulangerie/boucherie.jpg"
+  },
+  "up": {
+    "from": "boucherie",
+    "to": "boucherie_etage",
+    "painted": false,
+    "reason": "No return stair is painted on the live shop. No hit is invented on open floor."
+  },
+  "passage": {
+    "kind": "stair",
+    "upstairs": "centre floor hatch, steps down",
+    "downstairs": "ceiling hatch behind the butcher, steps up",
+    "arrival_down": "a counter worker in a striped apron and white cap, a different employee from the red-apron butcher",
+    "arrival_up": "pale blue-grey wall and grey stone floor of the accepted upstairs room"
+  }
+}
