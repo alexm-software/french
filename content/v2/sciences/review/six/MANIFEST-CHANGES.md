@@ -1,0 +1,8 @@
+# sciences/hall — changes before the one fresh candidate
+Refs in order: 1 sciences-hall-planning-diagram.png (planning only); 2 sciences-faculty-crop.png = village/map/university.jpg crop [950,245,320,255] (B35_sciences rect, map.json), file sha fd1d0c93…, basewt de6bdf2a. Do NOT attach full university.jpg (red-brick lycée, docks/pier jetties, isometric), lycee.jpg, or the parked candidate.
+Prompt: sciences-hall-prompt-whole.txt verbatim. Envelopes: envelopes.json (check passes: centres F 16-31%, adj 49%, M 67/82%; edges >=80 px; min gap 30 px; labels clear; door hit [520,110,160,230]).
+1. Room = 6 words: pierre, terre, mine (F), minéral (adj), cristal, sol (M). Hooks unchanged; sol hook text adds the helper: "SOL sounds like sole: the geologist stands his boot's SOLE in a tray of dark SOIL, and one worm lifts its head." Geologist is inside the sol box.
+2. Requeue, not drop: fr_pendule_noun_m -> "Forces" room (its source R_physics_02); fr_creuset_noun -> "More rocks" room with minerai/filon (smelting; source R_geology / R_geology_z1). Update PLAN.md lists, dialogue-draft (drop their lines), tests expecting 8.
+3. Door: open glass doors at back CENTER (was back left); update manifest door 'where', walkthrough camera "toward the open campus doors at back center". Outside = gravel path + autumn trees (matches map surroundings).
+4. Interactions: one situation "geologist back from fieldwork": cart (terre + pierre in front), mine model back-left table, mineral table front-center, geologist + boot right, crystal behind him.
+Budget: one candidate. Repair only if exactly one group/margin is off and the rest passes; otherwise park.

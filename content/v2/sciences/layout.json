@@ -14,14 +14,12 @@
     "hall": {
       "vocabRoom": "R_geology",
       "only": [
-        "fr_pierre_noun",
-        "fr_terre_noun",
         "fr_mine_noun",
+        "fr_terre_noun",
+        "fr_pierre_noun",
         "fr_mineral_adj",
-        "fr_sol_noun",
         "fr_cristal_noun",
-        "fr_pendule_noun_m",
-        "fr_creuset_noun"
+        "fr_sol_noun"
       ]
     }
   },
@@ -30,17 +28,17 @@
       "name": "Le hall des roches · The Rock Hall",
       "room_id": "R_geology",
       "image": "sciences/hall.jpg",
-      "alt": "Draft alt, rewritten after the painting is inspected.",
+      "alt": "Draft until the six-word candidate is independently accepted.",
       "nameplate": [
         50,
         3.5
       ],
       "mapExit": {
         "box": [
-          40,
-          40,
-          210,
-          330
+          520,
+          110,
+          160,
+          230
         ],
         "label": "Campus"
       },
@@ -48,75 +46,57 @@
       "zooms": [],
       "items": [
         {
-          "id": "fr_pierre_noun",
+          "id": "fr_mine_noun",
           "box": [
-            300,
-            78,
+            130,
+            170,
             200,
-            168
+            130
           ]
         },
         {
           "id": "fr_terre_noun",
           "box": [
-            90,
-            468,
-            200,
-            168
+            310,
+            330,
+            165,
+            115
           ]
         },
         {
-          "id": "fr_mine_noun",
+          "id": "fr_pierre_noun",
           "box": [
-            318,
-            308,
-            196,
-            158
+            95,
+            480,
+            230,
+            160
           ]
         },
         {
           "id": "fr_mineral_adj",
           "box": [
-            548,
-            236,
-            156,
-            148
-          ]
-        },
-        {
-          "id": "fr_sol_noun",
-          "box": [
-            736,
-            368,
-            168,
-            148
+            555,
+            440,
+            150,
+            115
           ]
         },
         {
           "id": "fr_cristal_noun",
           "box": [
-            868,
-            70,
-            148,
-            196
+            790,
+            110,
+            130,
+            190
           ]
         },
         {
-          "id": "fr_pendule_noun_m",
+          "id": "fr_sol_noun",
           "box": [
-            1052,
-            248,
-            132,
-            360
-          ]
-        },
-        {
-          "id": "fr_creuset_noun",
-          "box": [
-            768,
-            536,
-            176,
-            124
+            930,
+            330,
+            240,
+            290
           ]
         }
       ]

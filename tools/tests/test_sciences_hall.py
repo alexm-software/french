@@ -44,16 +44,24 @@ def overlaps(a, b):
 
 
 class ScienceHallPilot(unittest.TestCase):
-    def test_plan_compiles_and_prompt_is_the_submitted_text(self):
-        manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
-        fail, _warn = validate_manifest(manifest, require_prompt=True)
-        self.assertEqual(fail, [])
+    def test_parked_prompt_stays_archived(self):
+        parked = json.loads((REVIEW / "parked-eight.manifest.json").read_text())
         submitted = (REVIEW / "submitted-prompt.txt").read_text()
-        self.assertEqual(submitted, manifest["prompt_text"])
+        self.assertEqual(submitted, parked["prompt_text"])
         digest = hashlib.sha256(submitted.encode()).hexdigest()
         self.assertEqual(digest, "2b6740d39c678d9f3abe45d6f36e124bbdbb2767275e8778ff5bf58096decb86")
+        fail, _warn = validate_manifest(parked, require_prompt=True)
+        self.assertEqual(fail, [])
 
-    def test_eight_words_are_real_and_not_already_live(self):
+    def test_six_word_prompt_is_the_reviewed_pack(self):
+        manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
+        pack = (REVIEW / "six/sciences-hall-prompt-whole.txt").read_text()
+        self.assertEqual(manifest["prompt_text"], pack)
+        self.assertEqual(hashlib.sha256(pack.encode()).hexdigest(),
+                         "bdd8e378d9614e9a04f680dc456970f5f3bb6cd391a4cd18cf014ab88082775c")
+        self.assertEqual(len(pack.split()), 288)
+
+    def test_six_words_are_real_and_not_already_live(self):
         manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
         vocab = {}
         for line in (ROOT / "data/source/vocab.jsonl").read_text().splitlines():
@@ -69,13 +77,18 @@ class ScienceHallPilot(unittest.TestCase):
             "fr_mineral_adj": "R_geology",
             "fr_sol_noun": "R_geology",
             "fr_cristal_noun": "R_geology",
-            "fr_creuset_noun": "R_geology",
-            "fr_pendule_noun_m": "R_physics_02",
         }
-        self.assertEqual(set(ids), set(sources))
+        self.assertEqual(ids, ["fr_mine_noun", "fr_terre_noun", "fr_pierre_noun", "fr_mineral_adj", "fr_cristal_noun", "fr_sol_noun"])
         for wid, room_id in sources.items():
             self.assertEqual(vocab[wid]["room_id"], room_id)
             self.assertEqual(live.get(wid, []), [])
+        self.assertEqual(vocab["fr_pendule_noun_m"]["room_id"], "R_physics_02")
+        self.assertEqual(vocab["fr_creuset_noun"]["room_id"], "R_geology")
+        plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
+        self.assertIn("fr_pendule_noun_m", plan)
+        self.assertIn("fr_creuset_noun", plan)
+        self.assertNotIn("fr_pendule_noun_m", ids)
+        self.assertNotIn("fr_creuset_noun", ids)
 
     def test_candidate_is_blocked_on_measured_boxes(self):
         measured = json.loads((REVIEW / "measurements.json").read_text())
@@ -102,10 +115,22 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertFalse((ROOT / "village/sciences/hall.jpg").exists())
 
     def test_parked_exit_omits_the_sector_image(self):
-        parked = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
+        parked = json.loads((REVIEW / "parked-eight.manifest.json").read_text())
         layout = json.loads((ROOT / "content/v2/sciences/layout.json").read_text())
-        fail, _warn = validate_plan(parked, layout)
-        self.assertEqual(fail, ["map exit requires the sector image in prompt.refs: village/map/university.jpg"])
+        self.assertEqual(
+            exit_identity_refs(parked, layout),
+            ["map exit requires the sector image in prompt.refs: village/map/university.jpg"])
+
+    def test_faculty_crop_matches_the_map_rectangle(self):
+        manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
+        layout = json.loads((ROOT / "content/v2/sciences/layout.json").read_text())
+        self.assertEqual(exit_identity_refs(manifest, layout), [])
+        self.assertEqual(validate_plan(manifest, layout)[0], [])
+        crop = dict(manifest["prompt"]["identity_crop"])
+        manifest["prompt"]["identity_crop"] = dict(crop, parent_sha256="0" * 64)
+        self.assertIn("parent_sha256", " ".join(exit_identity_refs(manifest, layout)))
+        manifest["prompt"]["identity_crop"] = dict(crop, rect=[0, 0, 320, 255])
+        self.assertIn("rect", " ".join(exit_identity_refs(manifest, layout)))
 
     def test_proposal_attaches_the_sector_image_and_keeps_slack(self):
         proposal = json.loads((ROOT / "content/v2/sciences/review/proposal.manifest.json").read_text())

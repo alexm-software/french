@@ -17,6 +17,7 @@ In addition to structural completeness, plan_check.py runs pre-generation prefli
     requiring the .jpg to exist yet) to catch label/hotspot/door/nameplate/edge collisions early
 """
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -510,19 +511,56 @@ def _sector_image(layout):
     return "village/" + image.lstrip("./")
 
 
-def exit_identity_refs(manifest, layout):
-    """Fail when a sector return does not name the real sector image, or a named image is missing.
+def _building_rect(layout):
+    building_id = layout.get("building_id") if isinstance(layout, dict) else None
+    if not building_id:
+        return None
+    try:
+        maps = json.loads((ROOT / "content/v2/map.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    for sector in (maps.get("sectors") or {}).values():
+        for building in sector.get("buildings") or []:
+            if building.get("building_id") == building_id and isinstance(building.get("rect"), list):
+                return building["rect"]
+    return None
 
-    This checks manifest paths against the repo. It does not accept or reject a painting.
+
+def _crop_matches_parent(parent, rect, crop_file):
+    try:
+        from PIL import Image, ImageChops
+    except ImportError:
+        return False
+    x, y, w, h = rect
+    with Image.open(parent) as source, Image.open(crop_file) as crop:
+        cut = source.convert("RGB").crop((x, y, x + w, y + h))
+        got = crop.convert("RGB")
+        if cut.size != got.size:
+            return False
+        return ImageChops.difference(cut, got).getbbox() is None
+
+
+def exit_identity_refs(manifest, layout):
+    """Fail when a sector return lacks a real parent image, or a named image is missing.
+
+    A full sector map in prompt.refs satisfies the check. A crop does too when its
+    provenance names that parent, the parent hash matches, the rectangle is the
+    building's map rect, and the crop's pixels are that rectangle. This does not
+    look at the room painting.
     """
     if not isinstance(manifest, dict) or not isinstance(layout, dict):
         return []
     fail = []
-    refs = (manifest.get("prompt") or {}).get("refs")
+    prompt = manifest.get("prompt") if isinstance(manifest.get("prompt"), dict) else {}
+    refs = prompt.get("refs")
     text = " ".join(refs) if isinstance(refs, list) else str(refs or "")
+    named = set()
     for token in _IMAGE_PATH.findall(text):
-        if _resolve_image(token) is None:
+        found = _resolve_image(token)
+        if found is None:
             fail.append(f"prompt.refs names a missing image: {token}")
+        else:
+            named.add(found)
     room = (layout.get("rooms") or {}).get(manifest.get("room"), {})
     doors = manifest.get("doors") if isinstance(manifest.get("doors"), list) else []
     returns_to_sector = any(isinstance(door, dict) and door.get("to") == "map" for door in doors) or bool(
@@ -530,15 +568,37 @@ def exit_identity_refs(manifest, layout):
     if not returns_to_sector:
         return fail
     need = _sector_image(layout)
-    if not need:
-        return fail
-    target = _resolve_image(need)
-    if target is None:
+    parent = _resolve_image(need) if need else None
+    if parent is None:
         fail.append(f"sector image missing on disk: {need}")
         return fail
-    named = {_resolve_image(token) for token in _IMAGE_PATH.findall(text)}
-    if target not in named:
+    if parent in named:
+        return fail
+    crop = prompt.get("identity_crop") if isinstance(prompt.get("identity_crop"), dict) else manifest.get("identity_crop")
+    if not isinstance(crop, dict):
         fail.append(f"map exit requires the sector image in prompt.refs: {need}")
+        return fail
+    crop_token = crop.get("file")
+    crop_path = _resolve_image(crop_token) if isinstance(crop_token, str) else None
+    if crop_path is None:
+        fail.append("identity crop file is missing")
+        return fail
+    if crop_path not in named:
+        fail.append(f"map exit crop must be named in prompt.refs: {crop_token}")
+    parent_token = crop.get("parent")
+    claimed_parent = _resolve_image(parent_token) if isinstance(parent_token, str) else None
+    if claimed_parent != parent:
+        fail.append(f"identity crop parent must be the sector image: {need}")
+    digest = crop.get("parent_sha256")
+    actual = hashlib.sha256(parent.read_bytes()).hexdigest() if parent.is_file() else ""
+    if digest != actual:
+        fail.append("identity crop parent_sha256 does not match the sector image")
+    rect = crop.get("rect")
+    map_rect = _building_rect(layout)
+    if rect != map_rect:
+        fail.append(f"identity crop rect {rect} disagrees with the sector map building rect {map_rect}")
+    elif not _crop_matches_parent(parent, rect, crop_path):
+        fail.append("identity crop pixels are not that rectangle of the sector image")
     return fail
 
 
