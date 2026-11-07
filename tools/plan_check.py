@@ -253,6 +253,9 @@ def validate_manifest(m, require_prompt=False, *, layout_geometry=False):
             fail.append(f"{ident}: box_hint must be an in-frame pixel rectangle")
         else:
             boxes.append((ident, box))
+            em = LIMITS["edge_margin"]
+            if box[0] < em * W or box[1] < em * H or box[0] + box[2] > W * (1 - em) or box[1] + box[3] > H * (1 - em):
+                fail.append(f"{ident}: box_hint crosses the {em:.0%} edge margin")
             cx = (box[0] + box[2]/2)/W
             side = str(it.get("side", "")).lower()
             if side not in ("left", "right", "center", "any", "l", "r", "c"):
