@@ -250,7 +250,8 @@
     "fr_pantalon_noun",
     "fr_manteau_noun",
     "fr_costume_noun",
-    "fr_vetement_noun"
+    "fr_vetement_noun",
+    "fr_habiller_verb"
    ]
   },
   "dressing_armoire": {
@@ -343,7 +344,8 @@
     "fr_savon_noun",
     "fr_robinet_noun",
     "fr_tabouret_noun",
-    "fr_carreau_noun"
+    "fr_carreau_noun",
+    "fr_laver_verb"
    ]
   },
   "bains_buanderie": {
@@ -407,7 +409,8 @@
     "fr_jouet_noun",
     "fr_jet_noun",
     "fr_ping_pong_noun",
-    "fr_billard_noun"
+    "fr_billard_noun",
+    "fr_ranger_verb"
    ]
   },
   "jeux_coffre_jouets": {
@@ -2070,7 +2073,7 @@
    "room_id": "R_wardrobe_01",
    "image": "maison/dressing.jpg",
    "backTo": "maison",
-   "alt": "The dressing room, painted in ink and gouache, with a folding screen, a tall carved wardrobe standing open and a window. A tin robot shows off a sparkly pink gown, a figure hides behind the screen, and a boy in a white shirt sneezes. A boy's hat flies off, a clown in polka-dot pants dances and a snowman wears a red coat. On the floor a shoe sits under a lamp, a boy pulls on a jacket, a frog sits in boots in a tub, a big trunk stands in the middle, a suit hangs on a stand and a man folds clothes beside a puppy and a kitten. The orange door on the left leads back to the hall.",
+   "alt": "The dressing room, painted in ink and gouache, with a folding screen, a tall carved wardrobe standing open and a window. A tin robot shows off a sparkly pink gown, a figure hides behind the screen, and a boy in a white shirt sneezes. A boy's hat flies off, a clown in polka-dot pants dances and a snowman wears a red coat. On the floor a shoe sits under a lamp, a boy pulls on a jacket, a frog sits in boots in a tub, a big trunk stands in the middle, a suit hangs on a stand and a man folds clothes beside a puppy and a kitten. The orange door on the left leads back to the hall. Monsieur Verbe sits on the floor in front of the trunk, red beret and hand mirror, pulling on a navy coat.",
    "nameplate": [
     40.8,
     8.6
@@ -2110,7 +2113,7 @@
      "hint": "Look closer at the trunk",
      "at": [
       640,
-      474
+      355
      ],
      "obj": [
       515,
@@ -2209,6 +2212,15 @@
       402,
       305,
       298
+     ]
+    },
+    {
+     "id": "fr_habiller_verb",
+     "box": [
+      528,
+      400,
+      270,
+      295
      ]
     }
    ],
@@ -2811,7 +2823,7 @@
    "room_id": "R_bathroom",
    "image": "maison/bains.jpg",
    "backTo": "maison",
-   "alt": "The bathroom, painted in ink and gouache, with blue-and-white tiles, a shower, a copper boiler in the alcove at the back and a claw-foot tub. A shaggy dog stands by the shower while a butler holds out a big fluffy towel, a poodle grooms a bulldog's ear in a bath with rubber ducks, and a boy splashes in a basin on a stool. A calf holds a handkerchief, a duckling stands on a bar of soap, a bearded man plays a banjo in the bubbles of the claw-foot tub, a robin perches on the faucet of a basin, four toy cars park in a row on a red-and-white tile mat and a ginger cat sits on a stool. The white door on the left leads back to the hall.",
+   "alt": "The bathroom, painted in ink and gouache, with blue-and-white tiles, a shower, a copper boiler in the alcove at the back and a claw-foot tub. A shaggy dog stands by the shower while a butler holds out a big fluffy towel, a poodle grooms a bulldog's ear in a bath with rubber ducks, and a boy splashes in a basin on a stool. A calf holds a handkerchief, a duckling stands on a bar of soap, a bearded man plays a banjo in the bubbles of the claw-foot tub, a robin perches on the faucet of a basin, four toy cars park in a row on a red-and-white tile mat and a ginger cat sits on a stool. The white door on the left leads back to the hall. Monsieur Verbe kneels at a small bowl, red beret and hand mirror, washing his hands. The soap bar sits on the floor beside him.",
    "nameplate": [
     82.5,
     5.3
@@ -2898,25 +2910,25 @@
       800,
       80,
       330,
-      250
+      248
      ]
     },
     {
      "id": "fr_mouchoir_noun",
      "box": [
       650,
-      306,
-      148,
-      190
+      308,
+      88,
+      188
      ]
     },
     {
      "id": "fr_savon_noun",
      "box": [
-      744,
-      505,
-      158,
-      190
+      600,
+      548,
+      90,
+      70
      ]
     },
     {
@@ -2944,6 +2956,15 @@
       630,
       240,
       85
+     ]
+    },
+    {
+     "id": "fr_laver_verb",
+     "box": [
+      755,
+      338,
+      195,
+      275
      ]
     }
    ],
@@ -3332,7 +3353,7 @@
    "room_id": "R_playroom",
    "image": "maison/jeux.jpg",
    "backTo": "maison",
-   "alt": "The playroom in the attic, painted in ink and gouache: big soap bubbles float, a bull and a puppy play with a ball, a boy plays guitar on a seesaw with a cat in sunglasses, and a girl hugs her doll. A mushroom hops along a chalk hopscotch grid, a girl runs with a balloon, a toy robot walks, a rocket trails a rainbow over the ping-pong table, and a boy lines up a shot at the pool table with a big bee on the tip of his cue while another boy watches. A wooden toy chest stands open against the wall with a cat, toys and a puzzle inside. The pink door on the left leads back to the hall.",
+   "alt": "The playroom in the attic, painted in ink and gouache: big soap bubbles float, a bull and a puppy play with a ball, a boy plays guitar on a seesaw with a cat in sunglasses, and a girl hugs her doll. A mushroom hops along a chalk hopscotch grid, a girl runs with a balloon, a toy robot walks, a rocket trails a rainbow over the ping-pong table, and a boy lines up a shot at the pool table with a big bee on the tip of his cue while another boy watches. A wooden toy chest stands open against the wall with a cat, toys and a puzzle inside. The pink door on the left leads back to the hall. Monsieur Verbe stands left of the hopscotch, red beret, holding a teddy and a red ball toward the toy chest.",
    "nameplate": [
     86,
     21
@@ -3383,7 +3404,7 @@
       162,
       12,
       203,
-      375
+      336
      ]
     },
     {
@@ -3391,7 +3412,7 @@
      "box": [
       142,
       400,
-      150,
+      132,
       275
      ]
     },
@@ -3401,16 +3422,16 @@
       372,
       175,
       230,
-      280
+      178
      ]
     },
     {
      "id": "fr_marelle_noun",
      "box": [
-      445,
-      460,
-      275,
-      205
+      500,
+      468,
+      220,
+      198
      ]
     },
     {
@@ -3455,6 +3476,15 @@
       732,
       405,
       400,
+      300
+     ]
+    },
+    {
+     "id": "fr_ranger_verb",
+     "box": [
+      282,
+      358,
+      190,
       300
      ]
     }
