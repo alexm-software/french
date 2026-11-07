@@ -23,7 +23,7 @@ Cloud agents seen from this run, all idle except this one: seller-walkthrough re
 
 ## Stage 1 — treasury
 
-Design and prompt: `docs/room-trials/eglise-tresor/`. Do not generate until `HOOK_FORM.tsv` is accepted or rewritten. The live treasury painting was inspected; findings are in that README. Berets in the paint are already the canonical colors. Several hotspots do not contain the helper. Both doors fail the reciprocal glimpse.
+Design: `docs/room-trials/eglise-tresor/`. The five open hooks were resolved by the agent and recorded in `HOOK_FORM.tsv` (not a user signature). Ham bone was dropped. Four `GenerateImage` candidates were reviewed and rejected. See `RESULT.md`. Live treasury, choir, and parish-hall paintings are unchanged. Do not start stage 2 until a treasury candidate passes placement, counts, striped-shirt mimes, and both door glimpses.
 
 ## Stage 2 — church and faiths, after the treasury is accepted
 

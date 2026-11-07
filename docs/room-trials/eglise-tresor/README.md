@@ -1,6 +1,6 @@
 # Treasury pilot — design proposal, not a painting
 
-Status: **do not generate.** No signed treasury design existed on main. `GenerateImage` is available in this environment and was not called. Nothing in `content/v2/eglise`, `village/eglise`, or `village/sw.js` changes here.
+Status: **generated and rejected.** See `RESULT.md`. Nothing in `content/v2/eglise`, `village/eglise`, or `village/sw.js` changes here.
 
 Base: `main` `331ca5a5` (`village-v52`). Live room: 12 words, 5 verbs, doors to `choeur` and `salle`, no zoom. Dialogue `V_eglise_tresor_01` ("Le grand nettoyage du trésor") already exists.
 
