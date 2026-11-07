@@ -1,0 +1,302 @@
+{
+  "building": "boulangerie",
+  "room": "boucherie_etage",
+  "coordinate_space": "1280x720-px",
+  "setting": "Upstairs butcher with separate tables, not one counter",
+  "theme_fit": "All nine words. Abattoir is only a blank plaque. No harm.",
+  "scene_situation": "The clerk and the customer each have their own table",
+  "prompt": {
+    "kind": "room",
+    "room_name": "L'étage de la boucherie",
+    "camera": "eye-level across three separate tables",
+    "light_from": "high windows",
+    "refs": "none",
+    "look": "calm tiled shop",
+    "materials": "cream wall, white tile, oak",
+    "set_apart": "open floor between tables",
+    "place": "upstairs butcher",
+    "landmark": "center stairwell going down",
+    "whimsy": "a paper kite with the fish",
+    "differ": "not one long counter",
+    "reference_board": "none",
+    "beyond": "lower counter visible only down the stairwell"
+  },
+  "siblings": [],
+  "used_motifs": [
+    "one continuous counter"
+  ],
+  "doors": [
+    {
+      "to": "boucherie",
+      "where": "center stairwell going down",
+      "painted_as": "a hole in the floor with steps down. The lower shop is below, not beside this floor."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [
+    {
+      "text": "BOUCHERIE",
+      "where": "the left wall sign"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_crevette_noun",
+        "fr_huitre_noun"
+      ],
+      "doing": "shrimp and one oyster on the left table only"
+    },
+    {
+      "who": [
+        "fr_boucherie_noun",
+        "background: wall"
+      ],
+      "doing": "the sign hangs above the left table"
+    },
+    {
+      "who": [
+        "fr_ecaille_noun",
+        "background: kite"
+      ],
+      "doing": "fish, shell, and kite share a middle island clear of the oyster"
+    },
+    {
+      "who": [
+        "fr_charcutier_noun",
+        "background: ham"
+      ],
+      "doing": "the clerk stands at his own rear-right table"
+    },
+    {
+      "who": [
+        "fr_requin_noun",
+        "background: ice crate"
+      ],
+      "doing": "the shark lies on its own crate"
+    },
+    {
+      "who": [
+        "fr_mangeur_noun",
+        "background: chair"
+      ],
+      "doing": "the eater sits at his own front-right table"
+    },
+    {
+      "who": [
+        "fr_steak_noun",
+        "fr_abattoir_noun"
+      ],
+      "doing": "the steak is on a high shelf under a blank plaque"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_boucherie_noun",
+      "word": "boucherie",
+      "g": "f",
+      "gloss": "butcher shop",
+      "hook": "\"boo-shuh-REE\": the wall sign reads BOUCHERIE.",
+      "hook_object": "shop sign",
+      "shown": "one hanging sign on the left wall",
+      "pose_action": "the sign hangs still",
+      "count": null,
+      "side": "left",
+      "zone": "left wall",
+      "depth": "back",
+      "box_hint": [
+        120,
+        70,
+        240,
+        90
+      ],
+      "interacts_with": "the left table",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_crevette_noun",
+      "word": "crevette",
+      "g": "f",
+      "gloss": "shrimp",
+      "hook": "\"kruh-VEHT\": one plate of pink shrimp. Plain depiction.",
+      "hook_object": "plate of shrimp",
+      "shown": "one plate of cooked pink shrimp on the left front table",
+      "pose_action": "the plate sits alone on that table",
+      "count": null,
+      "side": "left",
+      "zone": "left table",
+      "depth": "middle",
+      "box_hint": [
+        120,
+        250,
+        150,
+        110
+      ],
+      "interacts_with": "the oyster",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_huitre_noun",
+      "word": "huître",
+      "g": "f",
+      "gloss": "oyster",
+      "hook": "\"WEETR\": one oyster with a pearl. Plain depiction.",
+      "hook_object": "one oyster",
+      "shown": "one open oyster with a pearl on the left table, not touching the fish island",
+      "pose_action": "the shell sits on the table",
+      "count": 1,
+      "side": "left",
+      "zone": "left table",
+      "depth": "front",
+      "box_hint": [
+        120,
+        480,
+        140,
+        120
+      ],
+      "interacts_with": "the shrimp",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_ecaille_noun",
+      "word": "écaille",
+      "g": "f",
+      "gloss": "scale; shell",
+      "hook": "\"ay-KAHY\": one scaled fish, one shell, and one kite on their own island.",
+      "hook_object": "fish, shell, kite",
+      "shown": "one fish with silver scales, one shell, and one paper kite",
+      "pose_action": "all three are on the middle island and do not touch the oyster",
+      "count": null,
+      "side": "left",
+      "zone": "middle island",
+      "depth": "middle",
+      "box_hint": [
+        320,
+        280,
+        200,
+        180
+      ],
+      "interacts_with": "the island",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_abattoir_noun",
+      "word": "abattoir",
+      "g": "m",
+      "gloss": "slaughterhouse, not pictured",
+      "hook": "\"ah-bah-TWAHR\": a blank plaque. Nothing is drawn.",
+      "hook_object": "blank plaque",
+      "shown": "a blank plaque with no letters and no picture",
+      "pose_action": "it hangs above the steak shelf",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "right",
+      "zone": "right shelf",
+      "depth": "back",
+      "box_hint": [
+        1000,
+        70,
+        140,
+        80
+      ],
+      "interacts_with": "the steak shelf",
+      "pos": "noun"
+    },
+    {
+      "id": "fr_steak_noun",
+      "word": "steak",
+      "g": "m",
+      "gloss": "steak",
+      "hook": "\"STEHK\": one cooked steak on a plate. Same word in English.",
+      "hook_object": "one steak",
+      "shown": "one grilled steak on one plate on the high right shelf",
+      "pose_action": "the plate is not on the eater's table",
+      "count": 1,
+      "side": "right",
+      "zone": "right shelf",
+      "depth": "back",
+      "box_hint": [
+        1000,
+        180,
+        140,
+        90
+      ],
+      "interacts_with": "the blank plaque",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_charcutier_noun",
+      "word": "charcutier",
+      "g": "m",
+      "gloss": "delicatessen clerk",
+      "hook": "\"shahr-kew-TYAY\": the clerk slices a cooked ham at his own table. No blood.",
+      "hook_object": "clerk and ham",
+      "shown": "one full-body adult in a white apron, head to feet, at a rear-right table",
+      "pose_action": "knife on the ham only, both hands visible",
+      "count": 1,
+      "side": "right",
+      "zone": "rear-right table",
+      "depth": "middle",
+      "box_hint": [
+        760,
+        80,
+        150,
+        300
+      ],
+      "interacts_with": "the ham",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_requin_noun",
+      "word": "requin",
+      "g": "m",
+      "gloss": "shark; profiteer sense not shown",
+      "hook": "\"ruh-KAN\": one whole shark on its own ice crate, mouth shut.",
+      "hook_object": "shark on ice",
+      "shown": "one small whole shark, mouth closed, on a crate that touches nobody",
+      "pose_action": "the crate stands alone",
+      "count": 1,
+      "side": "right",
+      "zone": "ice crate",
+      "depth": "middle",
+      "box_hint": [
+        760,
+        420,
+        160,
+        100
+      ],
+      "interacts_with": "the crate",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_mangeur_noun",
+      "word": "mangeur",
+      "g": "m",
+      "gloss": "eater",
+      "hook": "\"mahn-ZHUHR\": an adult eats bread at his own front-right table.",
+      "hook_object": "adult eating bread",
+      "shown": "one full-body seated adult, head to feet, eating bread",
+      "pose_action": "both hands and both feet are visible",
+      "count": 1,
+      "side": "right",
+      "zone": "front-right table",
+      "depth": "front",
+      "box_hint": [
+        980,
+        380,
+        170,
+        250
+      ],
+      "interacts_with": "his own table",
+      "pos": "noun",
+      "sensitive": "none"
+    }
+  ]
+}
