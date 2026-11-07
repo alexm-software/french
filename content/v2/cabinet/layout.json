@@ -116,7 +116,9 @@
     "fr_poumon_noun",
     "fr_foie_noun",
     "fr_estomac_noun",
-    "fr_organe_noun"
+    "fr_organe_noun",
+    "fr_inspirer_verb",
+    "fr_respirer_verb"
    ]
   },
   "barbier": {
@@ -127,7 +129,8 @@
     "fr_machoire_noun",
     "fr_pommette_noun",
     "fr_menton_noun",
-    "fr_rein_noun"
+    "fr_rein_noun",
+    "fr_raser_verb"
    ]
   },
   "os": {
@@ -860,7 +863,7 @@
    "room_id": "R_body_04",
    "image": "cabinet/organes.jpg",
    "backTo": "cabinet",
-   "alt": "A cheerful lavender anatomy classroom at eye level, painted in ink and gouache. On the left a purple door leads back to the cabinet, beside a coat stand. A little green dragon on a stool breathes warmly and melts a lane through the icicles on a frosted window, and a waiter backs through swinging half-doors balancing a quiche on his raised thigh. A puma takes a huge breath under two pink balloons it has blown up, a stout man plays a tuba with a plush liver toy sitting in its bell, and a mother hippo pats her round tummy while her baby calls for more. On the right a mouse plays a little pipe organ whose pipes are a heart and two lungs, in front of an orange door; a teal door stands beside it.",
+   "alt": "A cheerful lavender anatomy classroom at eye level, painted in ink and gouache. On the left a purple door leads back to the cabinet, beside a coat stand. A little green dragon on a stool breathes warmly and melts a lane through the icicles on a frosted window, and a waiter backs through swinging half-doors balancing a quiche on his raised thigh. A puma takes a huge breath under two pink balloons it has blown up, a stout man plays a tuba with a plush liver toy sitting in its bell, and a mother hippo pats her round tummy while her baby calls for more. On the right a mouse plays a little pipe organ whose pipes are a heart and two lungs, in front of an orange door; a teal door stands beside it. On the left, Monsieur Verbe breathes in beside a blank easel, one hand on his chest. In the center he stands with his arms out, breathing, clear of the mouse at the organ and both doors.",
    "nameplate": [
     61.1,
     7.4
@@ -873,7 +876,7 @@
      "hit": [
       10,
       140,
-      145,
+      100,
       415
      ]
     },
@@ -907,8 +910,8 @@
      "box": [
       285,
       125,
-      225,
-      285
+      150,
+      265
      ],
      "labelAt": [
       397,
@@ -920,12 +923,12 @@
      "box": [
       320,
       420,
-      195,
+      120,
       190
      ],
      "labelAt": [
-      417,
-      422
+      372,
+      548
      ]
     },
     {
@@ -934,7 +937,7 @@
       650,
       130,
       95,
-      300
+      210
      ],
      "labelAt": [
       697,
@@ -979,6 +982,24 @@
       1027,
       264
      ]
+    },
+    {
+     "id": "fr_inspirer_verb",
+     "box": [
+      118,
+      285,
+      165,
+      365
+     ]
+    },
+    {
+     "id": "fr_respirer_verb",
+     "box": [
+      448,
+      352,
+      255,
+      305
+     ]
     }
    ],
    "building_id": "B17_cabinet",
@@ -989,7 +1010,7 @@
    "room_id": "R_body_04_b",
    "image": "cabinet/barbier.jpg",
    "backTo": "organes",
-   "alt": "A cozy barber's corner with orange and cream walls and a checkered floor, painted in ink and gouache. A barber with comb and scissors trims an old man's enormous curly beard in a green barber's chair, a moose in a blue coat proudly twirls its huge curly mustache, and a mother crocodile opens her huge jaw under a shower to rinse her teeth. A cheerleader with rosy cheeks waves a red pom-pom, a juggler in a striped leotard juts out his chin under an iron ball, and a girl runs off hugging a pink bean-shaped plush kidney. On the right a lavender door leads back to the anatomy classroom, beside a hat stand and a bench.",
+   "alt": "A cozy barber's corner with orange and cream walls and a checkered floor, painted in ink and gouache. A barber with comb and scissors trims an old man's enormous curly beard in a green barber's chair, a moose in a blue coat proudly twirls its huge curly mustache, and a mother crocodile opens her huge jaw under a shower to rinse her teeth. A cheerleader with rosy cheeks waves a red pom-pom, a juggler in a striped leotard juts out his chin under an iron ball, and a girl runs off hugging a pink bean-shaped plush kidney. On the right a lavender door leads back to the anatomy classroom, beside a hat stand and a bench. Monsieur Verbe sits on the bench at the right, red beret, shaving foam on his chin, razor in one hand and a hand mirror in the other.",
    "nameplate": [
     40,
     5
@@ -1002,7 +1023,7 @@
      "hit": [
       895,
       90,
-      200,
+      175,
       430
      ]
     }
@@ -1085,6 +1106,15 @@
      "labelAt": [
       830,
       347
+     ]
+    },
+    {
+     "id": "fr_raser_verb",
+     "box": [
+      1105,
+      255,
+      170,
+      400
      ]
     }
    ]
