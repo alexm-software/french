@@ -15,9 +15,11 @@ class FruitPromptGeometry(unittest.TestCase):
         text = PROMPT.read_text(encoding="utf-8")
         self.assertNotIn("between them", text)
         self.assertNotIn("oak counter", text)
-        self.assertIn("stepped wooden fruit stand", text)
-        self.assertIn("still left of center", text)
+        self.assertNotIn("shopper", text)
+        self.assertNotIn("monkey", text)
+        self.assertIn("wooden stepped stand", text)
         self.assertIn("Right of center", text)
+        self.assertIn("fluffy red pom-pom", text)
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
         for it in manifest["items"]:
             hook = it["hook"]
