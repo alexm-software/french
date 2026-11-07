@@ -1,13 +1,13 @@
-Camera shift of the framed stall. Not accepted. No further edit.
+Camera shift of the framed stall. Not accepted. Not installed. No further edit.
 
 image sha256 62c4114614b71834ab05df9f079959aea4d38f097f3015e8f68f3b26fefec870
 prompt sha256 e97287b9b3032f7cbb380b7e92cf09d13092b8659b3956aad4779450612efbe9
 base sha256 0ed56e70044bf74d45a80effb9a440e2f27cadf4077c3bc386120960c4b2ddb0
+bytes 376781
+tool GenerateImage, one edit of the attached base. No crop, paste, outpaint, or other pixel edit was applied after that output. The committed file and the raw output are the same hash.
 
-The edit did not slide the whole painting by one distance. The orange basket matches about 57 pixels left and 11 down. The apple matches about 88 left and 20 down. The seller's face matches about 116 left. Those patches still differ by 13 to 30 levels on average, so the picture was redrawn.
+Independent review (Grok Bot, 2026-11-07, about 4:55 PM CST): FAIL. The cause is a seam, not the side bands. From about x 1010 to the right edge, a flat oversized cobble panel cuts the glass hall, the iron arcade, and the picnic table. The strongest column break in this file is x 1009 to 1010. That panel is in the raw output. It is not a later composite.
 
-The apple, its leaf, its pom-pom, and its ribbon measure x 438–561, y 360–517. The centre is 499, left of 576. That is the miss this edit was asked to fix.
+The apple group, including the pom-pom, measures x 438–561, centre 499, and passes. The raisin hotspot is the grapes plus the named helpers, the seller and the scale: x 620–854, y 83–611, centre 737, which is right of 55 percent. The berry-only centre 685 is not the side test. At 2x the seller has one face, two hands, and two boots.
 
-The grape bunch does not clear 55 percent. The berries measure x 656–714, y 251–365. The centre is 685, between 576 and 704. The 55 percent line falls on the right side of the bunch. Raisin is masculine, so this picture fails.
-
-The wooden stand starts to the right of x 77. The hat begins near y 118. The boot soles end near y 614. At 2x the seller has one ordinary face, two hands, and two boots. The other fruits stay on the left stand. No further edit.
+The valid base remains 0ed56e70. Its only failure is the apple centre at 589. A local slide-and-outpaint is not the repair. The room stays one integrated painting.

@@ -43,6 +43,15 @@ class FruitSplit(unittest.TestCase):
         self.assertEqual(slots(text), 30)
         self.assertIn("R_pronouns_03", text)
         self.assertIn("not in this 30", text)
+        for ident in (
+            "R_bakery_02", "R_butcher_02", "R_fruits_01", "R_grocery_02",
+            "R_resto_kitchen_02", "R_resto_kitchen_01", "R_resto_room", "R_vegetables",
+            "R_laundry_01", "R_family_02", "R_chemistry_01", "R_chemistry_02",
+            "R_physics_01", "R_physics_02", "R_abs_study_03", "R_abs_study_02",
+            "R_biology", "R_geology", "R_math_01", "R_math_02",
+            "R_measures_01", "R_measures_03", "R_prepositions_03",
+        ):
+            self.assertIn(ident, text)
 
     def test_no_bakery_door(self):
         links = json.loads((ROOT / "docs" / "room-trials" / "fruits-frais" / "candidate" / "links.json").read_text(encoding="utf-8"))
