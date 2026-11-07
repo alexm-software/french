@@ -4,22 +4,22 @@
   "coordinate_space": "1280x720-px",
   "setting": "Fresh-fruit stall inside the blue-glass market hall",
   "theme_fit": "Eight fresh fruits. The shopper and the vendor share one errand.",
-  "scene_situation": "The vendor fills the shopper's basket while she shows two apples",
+  "scene_situation": "The vendor weighs grapes for the shopper at the stand",
   "prompt": {
     "kind": "room",
     "room_name": "L'étal de fruits frais",
     "camera": "eye-level inside the hall",
     "light_from": "the glass roof and the open arch",
-    "refs": "none",
+    "refs": "fruits-planning-diagram.png (layout only); market-hall-crop.png (style and architecture only)",
     "look": "a lived-in market stall",
-    "materials": "blue iron, glass, oak counter, cobbles",
-    "set_apart": "the counter sits between the two people",
+    "materials": "blue iron, glass, stepped wooden stand, cobbles",
+    "set_apart": "stepped stand on the left, shopper just right of it and still left of center, vendor right of center",
     "place": "covered market",
     "landmark": "open arch onto the lane",
     "whimsy": "a monkey with a banana",
-    "differ": "not a row of stools",
+    "differ": "fruit shares one stepped stand on the left; it is not a row of stools and not a counter between the people",
     "reference_board": "none",
-    "beyond": "the lane outside, and the picnic stall through the right aisle"
+    "beyond": "the lane through the arch, and the picnic stall through the right aisle"
   },
   "siblings": [
     "pique-nique"
@@ -31,12 +31,12 @@
     {
       "to": "place-du-marche",
       "where": "the tall arch at the back",
-      "painted_as": "an open arch onto the cobbled lane and trees. This is the way out to the square."
+      "painted_as": "an open arch onto the sunny lane and trees. The floor in front of it stays clear."
     },
     {
       "to": "pique-nique",
-      "where": "the aisle on the right",
-      "painted_as": "an open aisle into the next stall. A picnic table is just visible. No new door is cut into the bakery."
+      "where": "the open aisle on the far right",
+      "painted_as": "an open aisle under the same glass, with the edge of a picnic table beyond. No door is cut into the bakery."
     }
   ],
   "zooms": [],
@@ -45,37 +45,15 @@
     {
       "who": [
         "fr_pomme_noun",
-        "background: basket"
-      ],
-      "doing": "the shopper waves two apples and holds the basket being filled"
-    },
-    {
-      "who": [
         "fr_peche_noun",
-        "fr_orange_noun"
-      ],
-      "doing": "peaches and oranges sit on the counter within her reach"
-    },
-    {
-      "who": [
+        "fr_orange_noun",
         "fr_poire_noun",
-        "fr_fraise_noun"
-      ],
-      "doing": "a pear and strawberries sit further along that counter"
-    },
-    {
-      "who": [
+        "fr_fraise_noun",
         "fr_cerise_noun",
-        "fr_banane_noun"
+        "fr_banane_noun",
+        "fr_raisin_noun"
       ],
-      "doing": "paired cherries and a monkey with a banana share the near end of the counter"
-    },
-    {
-      "who": [
-        "fr_raisin_noun",
-        "background: vendor"
-      ],
-      "doing": "the vendor holds fresh grapes as he fills her basket"
+      "doing": "the vendor weighs grapes for the shopper at the stand"
     }
   ],
   "items": [
@@ -84,19 +62,19 @@
       "word": "pomme",
       "g": "f",
       "gloss": "apple",
-      "hook": "\"POM\": the shopper waves two red apples on ribbons, like pom-poms.",
+      "hook": "\"POM\": the shopper raises two red apples on ribbons, like pom-poms.",
       "hook_object": "apple pom-poms",
-      "shown": "an adult shopper, head to feet, waving two apples",
-      "pose_action": "she holds the basket in the other arm",
+      "shown": "an adult woman, head to feet, empty basket on one arm, raising two red apples on ribbons",
+      "pose_action": "she faces the vendor",
       "count": 2,
       "side": "left",
-      "zone": "counter",
-      "depth": "middle",
+      "zone": "shopper",
+      "depth": "front",
       "box_hint": [
-        90,
-        90,
-        470,
-        560
+        380,
+        180,
+        170,
+        460
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
@@ -107,19 +85,19 @@
       "word": "pêche",
       "g": "f",
       "gloss": "peach",
-      "hook": "\"PEHSH\": a pile of peaches on the counter. Plain fruit: a person pestering would be a second helper, and the shopper is the apple cue only.",
-      "hook_object": "peaches",
-      "shown": "a pile of peaches on the shared counter",
-      "pose_action": "the pile sits in reach",
+      "hook": "\"PEHSH\": a crate of peaches.",
+      "hook_object": "crate of peaches",
+      "shown": "a slanted crate of peaches on the stepped stand",
+      "pose_action": "the crate sits on the middle tier",
       "count": 1,
       "side": "left",
-      "zone": "counter",
+      "zone": "stepped stand",
       "depth": "middle",
       "box_hint": [
-        430,
-        430,
-        180,
-        110
+        95,
+        285,
+        140,
+        95
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
@@ -130,19 +108,19 @@
       "word": "orange",
       "g": "f",
       "gloss": "orange",
-      "hook": "\"oh-RAHNZH\": a basket of oranges on the counter. Plain fruit. It is not in the vendor's hand, and the basket is not left of the 45 percent line.",
-      "hook_object": "oranges",
-      "shown": "a shallow basket of oranges beside the scale",
-      "pose_action": "the basket sits on the counter",
+      "hook": "\"oh-RAHNZH\": a crate of oranges.",
+      "hook_object": "crate of oranges",
+      "shown": "a crate of oranges on the high back step",
+      "pose_action": "the crate sits on the high back step",
       "count": 1,
       "side": "left",
-      "zone": "counter",
-      "depth": "middle",
+      "zone": "stepped stand",
+      "depth": "back",
       "box_hint": [
-        520,
-        330,
-        160,
-        100
+        130,
+        140,
+        100,
+        95
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
@@ -153,18 +131,18 @@
       "word": "poire",
       "g": "f",
       "gloss": "pear",
-      "hook": "\"PWAHR\": one pear. Plain fruit: the war cue would need a weapon, which this stall does not show.",
+      "hook": "\"PWAHR\": one pear.",
       "hook_object": "one pear",
-      "shown": "one pear on the counter",
-      "pose_action": "the pear sits beside the strawberries",
+      "shown": "one pear on the lowest step",
+      "pose_action": "the pear sits on the low step",
       "count": 1,
       "side": "left",
-      "zone": "counter",
-      "depth": "middle",
+      "zone": "stepped stand",
+      "depth": "front",
       "box_hint": [
-        620,
-        450,
-        70,
+        285,
+        445,
+        80,
         90
       ],
       "interacts_with": "the shared errand",
@@ -176,18 +154,18 @@
       "word": "fraise",
       "g": "f",
       "gloss": "strawberry",
-      "hook": "\"FREHZ\": a pile of strawberries. Plain fruit: a phrase cue would need painted letters.",
-      "hook_object": "strawberries",
-      "shown": "strawberries on the counter",
-      "pose_action": "the pile sits beside the pear",
+      "hook": "\"FREHZ\": a punnet of strawberries.",
+      "hook_object": "punnet of strawberries",
+      "shown": "a punnet of strawberries on a middle step",
+      "pose_action": "the punnet sits on the middle tier",
       "count": 1,
       "side": "left",
-      "zone": "counter",
+      "zone": "stepped stand",
       "depth": "middle",
       "box_hint": [
-        700,
-        450,
-        140,
+        255,
+        315,
+        110,
         90
       ],
       "interacts_with": "the shared errand",
@@ -199,19 +177,19 @@
       "word": "cerise",
       "g": "f",
       "gloss": "cherry",
-      "hook": "\"suh-REEZ\": cherries in pairs, a series along their stems.",
+      "hook": "\"suh-REEZ\": cherries hanging in pairs, a series on their stems.",
       "hook_object": "paired cherries",
-      "shown": "pairs of cherries on the near counter",
-      "pose_action": "the pairs hang together",
+      "shown": "a front crate of cherries in pairs on their stems",
+      "pose_action": "the pairs hang on the front crate",
       "count": 1,
       "side": "left",
-      "zone": "counter",
-      "depth": "middle",
+      "zone": "stepped stand",
+      "depth": "front",
       "box_hint": [
-        840,
-        450,
-        110,
-        80
+        120,
+        475,
+        150,
+        95
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
@@ -222,19 +200,19 @@
       "word": "banane",
       "g": "f",
       "gloss": "banana",
-      "hook": "\"bah-NAHN\": a small monkey holds one banana beside the bunch. The monkey is this word's helper only.",
+      "hook": "\"bah-NAHN\": a small monkey holds one banana beside the bunch.",
       "hook_object": "monkey and bananas",
-      "shown": "one monkey, fully visible, with a banana and a bunch",
-      "pose_action": "the monkey sits by the bananas, not on the vendor",
+      "shown": "a small monkey on the top shelf holding one banana beside the bunch",
+      "pose_action": "the monkey stays on the stand, not on the vendor",
       "count": 1,
       "side": "left",
-      "zone": "counter",
-      "depth": "middle",
+      "zone": "stepped stand",
+      "depth": "back",
       "box_hint": [
-        900,
-        350,
-        280,
-        180
+        235,
+        100,
+        140,
+        140
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
@@ -245,19 +223,19 @@
       "word": "raisin",
       "g": "m",
       "gloss": "grapes",
-      "hook": "\"reh-ZAN\": the vendor holds fresh grapes, not dried raisins, while he fills the basket.",
-      "hook_object": "fresh grapes",
-      "shown": "one adult vendor, head to feet, holding a bunch of grapes",
-      "pose_action": "he faces the shopper",
+      "hook": "\"reh-ZAN\": the vendor weighs a bunch of fresh green grapes.",
+      "hook_object": "grapes on a scale",
+      "shown": "an adult man, head to feet, weighing green grapes on a brass hanging scale",
+      "pose_action": "he faces the shopper and weighs the grapes",
       "count": 1,
       "side": "right",
-      "zone": "right aisle",
-      "depth": "middle",
+      "zone": "vendor",
+      "depth": "front",
       "box_hint": [
-        640,
-        40,
-        430,
-        640
+        770,
+        165,
+        220,
+        475
       ],
       "interacts_with": "the shared errand",
       "pos": "noun",
