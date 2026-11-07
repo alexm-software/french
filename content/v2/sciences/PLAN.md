@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-Do not run `build_v2.py sciences` until an independent review accepts a painting.
+Do not run `build_v2.py sciences`. Independent review rejects `d5770a18`. The checkpoint blocks release until a later painting passes. No new design is open.
 
 ## Hall plan
 

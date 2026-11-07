@@ -1,37 +1,40 @@
-# Checkpoint — science hall parked
+# Final checkpoint — blocked
 
-Independent review: **global FAIL**. The candidate stays parked.
+No further image. No new design. No integration. No merge. The room is not complete.
 
-- Image sha256 `0a345ffe2c358edf8c4fc37b6d16c9136930c3bbeb990b276f75d994b232eb88`
-- Submitted prompt sha256 `2b6740d39c678d9f3abe45d6f36e124bbdbb2767275e8778ff5bf58096decb86`
-- Base `bdb6ae97`. No edit to the painting. No integration. No merge. Source `vocab.jsonl` and `rooms.json` unchanged.
-- Image calls stated in total: 24. This science pilot: 1. Repairs: 0. Ready: 0/30.
-- PR 272 and PR 273 were not touched.
+Independent review rejects candidate `d5770a18` globally. Report sha256 `aa1dbc16cc37464d4489d50461c87bf2d23708308628f68d3614469aedccb1a5`.
 
-## Independent measurements
+Stated image calls: 25. Science: 2 fresh paintings, 0 repairs. Ready: 0/30.
 
-Group center, not a band across the box. Mouse, ladybird, and worm anatomy pass. No local repair fixes the set.
+## Hashes
 
-| group | verified |
+| input | sha256 |
 |---|---|
-| pierre | x 19–238, y 300–470. A second mine. No pier and no dressed block. |
-| terre | left edge 22, bottom 681 |
-| mine | center x 612.5 (48%) |
-| minéral | center x 828, inside 30–70% |
-| sol | overlaps the crystal and the crucible |
-| cristal | right edge 1228 |
-| creuset | right edge 1265; overlaps sol and the pendulum |
-| pendule | bottom 712 |
-| doorway | red brick. The manifest asked for this faculty's tan stone. `village/map/university.jpg` was not attached. |
+| Six-word prompt (288 words, sent verbatim) | `bdd8e378d9614e9a04f680dc456970f5f3bb6cd391a4cd18cf014ab88082775c` |
+| Candidate `review/six/candidate.jpg` | `d5770a18452989a2041f325924b3bd20a323fc577b7b0943e4e317af2350af3d` |
+| Planning diagram, attachment 1 | `970e90f9a405a4ab79f78f1c0bea2c8472754ce6fc4da9173f5e0a133f159348` |
+| Faculty crop, attachment 2 | `e5212a33bc34f13892e042cce5d3e35bfcf31ecf04fc991d90fd7b30f40eb33a` |
+| Parent `village/map/university.jpg` | `fd1d0c93ded43ab8173cc372095336aa07a2c58d1f222064c6e74b473ec36d1b` |
+| Crop rect on that parent | `[950, 245, 320, 255]`, pixels match |
+| Design pack zip | `dd4a2e62cbe76c40d09e1219c4e3e8d16eaa764d1f81055947bb8f789e628bef` |
+| Parked eight-word image, unchanged | `0a345ffe2c358edf8c4fc37b6d16c9136930c3bbeb990b276f75d994b232eb88` |
 
-## Why the inputs did that
+The full campus map, the lycée painting, and the parked candidate were not attached to the six-word call.
 
-Attached files were `village/lycee/lycee.jpg` and `content/v2/sciences/hall-layout.png`. The lycée painting is red brick. The prompt told the doorway to match "this faculty exterior" in words only. The template already said to match the destination's appearance, and it already said a path written in the prompt is not an attachment. The campus map was never in `prompt.refs` and was never attached, so the red-brick style photo supplied the doorway.
+## Independent verdict
 
-The item lines already named a dressed stone plus a pier, and a separate mine. The model painted two tunnels. `FIGURES` already required distinct figures. It did not say that two near-synonym objects must not share a shape.
+Passes: faculty doors, path, trees, glass roof, and telescope. Mine center 29%. Minéral center 49%. Sol passes. At 2× the sole tread is visible, tilted onto the soil tray, with the worm. The whole man is x 731–1194, center 75%. Adult anatomy passes. The cart is the sack's support.
 
-`PLACEMENT` already requires the group center, the 6% edge, and one non-overlapping box around the whole helper. The empty box sheet and the tight envelopes did not make the model obey them. `composition.md` already says a floor plan is not a painted pass. That part is an execution failure.
+Fails:
 
-## Next
+- Pierre: the stone is a kiln with two openings. The pier was painted as the empty table. That table is the failed pier, not an extra object.
+- Terre: the sack's left edge is 44, inside the 77 px margin.
+- Cristal: the group reaches x 1275, past 1203. The rodent is on its own stool at x 1181–1269, not at the crystal's base. A cat face at the base makes the cue ambiguous. The whole crystal group overlaps the geologist.
 
-`PROPOSAL.md` is the revised composition. It is not a painting and it is not approval to generate.
+`fr_pendule_noun_m` stays queued for Forces. `fr_creuset_noun` stays queued for smelting with minerai and filon. Neither was removed from source.
+
+## Rule audit
+
+ITEMS already requires the whole recognizable cue and the meaning together. FIGURES already requires the named helper to be recognizable and forbids a confusing extra figure. PLACEMENT already requires the group center, the 6% edge, and one box around the whole helper. Those lines name the pier, the solid stone, and the mouse at the crystal. The painting did not follow them. That is an execution failure. It is not a reason to treat every two-part hook as impossible. No new check was added.
+
+`village/data/sciences.js` does not exist. This checkpoint blocks release on reliable integrated art.

@@ -1,6 +1,8 @@
-# Six-word candidate — global fail, no repair
+# Six-word candidate — self-review notes
 
-Status: **self-review only. Not accepted. Not integrated.** Image call 25 of the stated total. Repairs this candidate: 0. Ready: 0/30.
+Independent review supersedes this note. The standing verdict is `review/CHECKPOINT.md`. Sol passes there. The empty table is the failed pier, not an unused object.
+
+Status at the time of writing: self-review only. Image call 25. Repairs: 0. Ready: 0/30.
 
 This is a new painting. The parked candidate `review/candidate.jpg` (`0a345ffe…`) was not edited.
 
