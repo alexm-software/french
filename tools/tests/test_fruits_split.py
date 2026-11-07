@@ -36,7 +36,7 @@ class FruitSplit(unittest.TestCase):
         self.assertIn("throne", citron["hook"])
         self.assertNotIn("not painted", citron["hook"])
         pomme = next(it for it in fresh["items"] if it["id"] == "fr_pomme_noun")
-        self.assertIn("pom-poms", pomme["hook"])
+        self.assertIn("POM-pom", pomme["hook"])
 
     def test_batch_stays_thirty(self):
         text = (ROOT / "docs" / "changes" / "ROOMS_30_2026-11-07.md").read_text(encoding="utf-8")
