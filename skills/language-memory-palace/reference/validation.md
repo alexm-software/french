@@ -18,7 +18,7 @@ Run these in addition to the generic Validation section of the Memory palace bui
 - **Glosses:** they are accurate and cover the common sense first. They are written in our own words or properly credited. <!-- L101 -->
 - **Example sentences:** every word has one, in natural, grammatical target-language text that actually uses the word in the sense being taught. The translation is faithful. <!-- L102 -->
 - **Verb cards:** every tense tab is present and the conjugations are correct (spot-check irregular verbs fully). The verb character's color code (and reflexive mirror) matches the verb's class. <!-- L103 -->
-- **Conversations:** they are realistic everyday dialogues, with no template or quiz lines. Each `used_words` entry really appears in the lines. Unwritten conversations are hidden. <!-- L104 -->
+- **Conversations:** they are realistic everyday dialogues, with no template or quiz lines. They mostly practice the room's words and verbs; other words are allowed, and there is no quota that every room word appear. Each `used_words` entry really appears in the lines. Unwritten conversations are hidden. <!-- L104 -->
 - **Mnemonics:** the sound link works for a native speaker of the learner's language. Hooks contain no crude or slang sound-alikes. <!-- L105 -->
 - **Pronunciation:** if there is audio or speech synthesis, check that the target-language voice is used. <!-- L106 -->
 - **Quoted texts:** prayers and other quoted texts use the public-domain or licensed wording recorded in the audit. Required entries are present, and similar texts are clearly named. <!-- L107 -->

@@ -55,7 +55,7 @@ The language layer on top of the Memory palace builder skill. Each line is one c
 
 ## Cards and site (reference/cards-and-site.md)
 - Every word has an example sentence with a translation, a definition in our own words, and IPA plus a respelling.
-- Every room has realistic hand-written dialogues with speech, a transcript and a translation toggle; no template or quiz lines.
+- Every room has realistic hand-written dialogues with speech, a transcript and a translation toggle; no template or quiz lines. Mostly practice that room's words and verbs; other words are allowed so it sounds natural. No quota that every room word appear.
 - Every item has a label (article included); a remembered switch chooses always-on or hover.
 - All UI text has a native/target-language toggle, from one i18n file.
 - Quiz modes are filterable by room, sector and level.
