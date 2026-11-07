@@ -1,6 +1,8 @@
-# Rock hall candidate — blocked
+# Rock hall candidate — parked
 
-Status: **review pending. Not ready.** One image call. No repair. Do not build this into `village/data/sciences.js`.
+Status: **independent review global FAIL. Parked.** No further generation, no edit to the painting, no integration, no merge. Do not build `village/data/sciences.js`.
+
+The independent measurements in `CHECKPOINT.md` supersede the estimates below.
 
 Base: `main` `bdb6ae97`. Branch image: `review/candidate.jpg`.
 Prompt sha256 `2b6740d39c678d9f3abe45d6f36e124bbdbb2767275e8778ff5bf58096decb86`.
@@ -10,7 +12,7 @@ The compiled `prompt_text` in `hall.manifest.json` is the text submitted to Gene
 
 ## What the picture is
 
-A quiet tan-stone hall, glass roof, telescope gantry, blank plaque, open glass doors onto a campus path. No people. Neutral daylight. That part matches the brief.
+Interior walls are pale stone, with a glass roof, telescope gantry, and a blank plaque. No people. The open doorway shows a red-brick building. That is the lycée on the campus map. This faculty on that map is tan stone with a glass roof and a telescope. `village/map/university.jpg` was not attached; `village/lycee/lycee.jpg` was.
 
 The eight objects did not land in the planned envelopes. `overlay-planned.jpg` shows the plan boxes on empty wall and floor while the painted objects sit elsewhere.
 

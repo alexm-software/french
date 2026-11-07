@@ -7,7 +7,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
-from plan_check import validate_manifest
+from plan_check import exit_identity_refs, validate_manifest, validate_plan
 from unbuilt import live_ids
 
 REVIEW = ROOT / "content" / "v2" / "sciences" / "review"
@@ -100,3 +100,35 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertEqual(found, measured["overlaps"])
         self.assertFalse((ROOT / "village/data/sciences.js").exists())
         self.assertFalse((ROOT / "village/sciences/hall.jpg").exists())
+
+    def test_parked_exit_omits_the_sector_image(self):
+        parked = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
+        layout = json.loads((ROOT / "content/v2/sciences/layout.json").read_text())
+        fail, _warn = validate_plan(parked, layout)
+        self.assertEqual(fail, ["map exit requires the sector image in prompt.refs: village/map/university.jpg"])
+
+    def test_proposal_attaches_the_sector_image_and_keeps_slack(self):
+        proposal = json.loads((ROOT / "content/v2/sciences/review/proposal.manifest.json").read_text())
+        layout = json.loads((ROOT / "content/v2/sciences/layout.json").read_text())
+        self.assertEqual(validate_manifest(proposal)[0], [])
+        self.assertEqual(exit_identity_refs(proposal, layout), [])
+        self.assertIn("village/map/university.jpg", proposal["prompt"]["refs"])
+        self.assertNotIn("lycee.jpg", " ".join(proposal["prompt"]["refs"]))
+        boxes = []
+        for item in proposal["items"]:
+            x, y, w, h = item["box_hint"]
+            self.assertGreaterEqual(x, 100)
+            self.assertLessEqual(x + w, 1180)
+            self.assertGreaterEqual(y, 70)
+            self.assertLessEqual(y + h, 660)
+            cx = center_x(item["box_hint"])
+            if item["id"] == "fr_mineral_adj":
+                self.assertTrue(0.40 <= cx <= 0.55)
+            elif item.get("g") == "f":
+                self.assertLess(cx, 0.40)
+            elif item.get("g") == "m":
+                self.assertGreater(cx, 0.60)
+            boxes.append(item["box_hint"])
+        for i, box in enumerate(boxes):
+            for other in boxes[i + 1:]:
+                self.assertFalse(overlaps(box, other))

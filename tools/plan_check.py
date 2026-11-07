@@ -482,6 +482,66 @@ def linked_room_errors(manifest, layout, selected=None):
     return failures
 
 
+_IMAGE_PATH = re.compile(r"[\w./+-]+\.(?:jpg|jpeg|png|webp)", re.I)
+
+
+def _resolve_image(token):
+    token = str(token).lstrip("./")
+    for candidate in (ROOT / token, ROOT / "village" / token):
+        if candidate.is_file():
+            return candidate.resolve()
+    return None
+
+
+def _sector_image(layout):
+    """Repo-relative path of the sector painting, from the layout's sector id."""
+    sector_id = layout.get("sector_id") if isinstance(layout, dict) else None
+    if not sector_id:
+        return None
+    try:
+        maps = json.loads((ROOT / "content/v2/map.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    slug = next((row.get("slug") for row in (maps.get("world") or {}).get("sectors") or []
+                 if row.get("id") == sector_id), None)
+    image = ((maps.get("sectors") or {}).get(slug) or {}).get("image") if slug else None
+    if not isinstance(image, str) or not image.strip():
+        return None
+    return "village/" + image.lstrip("./")
+
+
+def exit_identity_refs(manifest, layout):
+    """Fail when a sector return does not name the real sector image, or a named image is missing.
+
+    This checks manifest paths against the repo. It does not accept or reject a painting.
+    """
+    if not isinstance(manifest, dict) or not isinstance(layout, dict):
+        return []
+    fail = []
+    refs = (manifest.get("prompt") or {}).get("refs")
+    text = " ".join(refs) if isinstance(refs, list) else str(refs or "")
+    for token in _IMAGE_PATH.findall(text):
+        if _resolve_image(token) is None:
+            fail.append(f"prompt.refs names a missing image: {token}")
+    room = (layout.get("rooms") or {}).get(manifest.get("room"), {})
+    doors = manifest.get("doors") if isinstance(manifest.get("doors"), list) else []
+    returns_to_sector = any(isinstance(door, dict) and door.get("to") == "map" for door in doors) or bool(
+        isinstance(room, dict) and room.get("mapExit"))
+    if not returns_to_sector:
+        return fail
+    need = _sector_image(layout)
+    if not need:
+        return fail
+    target = _resolve_image(need)
+    if target is None:
+        fail.append(f"sector image missing on disk: {need}")
+        return fail
+    named = {_resolve_image(token) for token in _IMAGE_PATH.findall(text)}
+    if target not in named:
+        fail.append(f"map exit requires the sector image in prompt.refs: {need}")
+    return fail
+
+
 def validate_plan(manifest=None, layout=None, selected=None, require_prompt=False):
     """Check one linked plan using the draft's actual controls and label geometry."""
     fail, warn = [], []
@@ -498,6 +558,8 @@ def validate_plan(manifest=None, layout=None, selected=None, require_prompt=Fals
         f, w = validate_layout(layout, selected, review_rooms={} if manifest is not None else None)
         fail.extend(f)
         warn.extend(w)
+    if isinstance(manifest, dict) and isinstance(layout, dict):
+        fail.extend(exit_identity_refs(manifest, layout))
     return list(dict.fromkeys(fail)), list(dict.fromkeys(warn))
 
 

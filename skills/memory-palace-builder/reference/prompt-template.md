@@ -17,14 +17,14 @@ SITUATION: {named situation, e.g. feeding time in the school farmyard}. All hook
 
 COMPOSITION: interacting groups: {group 1: who, doing what with whom}; {group 2: ...}; {group 3: ...}. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: {sibling rooms and how they look}.
 
-ITEMS: exactly {item_count} concepts, each with its entire recognizable sound cue and meaning visible together:
+ITEMS: exactly {item_count} concepts, each with its entire recognizable sound cue and meaning visible together. Near-synonym items stay visually unambiguous and do not share a shape:
 {n}. {word}: {gloss}; {shown}; {pose}.
 Verbs: Monsieur Verbe, cheerful striped mime with suspenders and white gloves; berets {red -er | green -ir | purple -re | gold irregular}, as individually specified above. Pronominal verbs hold a mirror. Act on {noun} at human scale, distributed among nouns. Non-verbs have no mime costume.
 Exact visible counts: {count list}. Reference board: {alphabet, number list, article table | none}. Plaque-only words: {list or "none"}, depict nothing beyond a blank plaque.
 
 PLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.
 
-DOORS AND EXITS: {door 1: to X, where, painted as a door that looks like X with a glimpse of it}; {door 2 / map exit: ...}. Clear floor-level thresholds at human scale; no props in openings. Beyond: {what lies beyond, per the plan}. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths.
+DOORS AND EXITS: {door 1: to X, where, painted as a door that looks like X with a glimpse of it}; {door 2 / map exit: ...}. Clear floor-level thresholds at human scale; no props in openings. Beyond: {what lies beyond, per the plan}. Match the destination's actual appearance from its attached image, including materials and silhouette; a style reference must not replace them. Reciprocal door design; plausible stairs and outdoor paths.
 
 GROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.
 
@@ -38,5 +38,13 @@ VARIETY: do not repeat existing hook motifs {used motifs, e.g. the duck, the red
 
 AVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures.
 ```
+
+## Accumulated failure rules
+
+Fold a repeated painting failure into the compiled template or into `plan_check`. Do not add an incident note.
+
+- A passage that shows another place takes that place's materials and silhouette from its attached image. A style reference does not replace them. When the room returns to its sector, `prompt.refs` must name the sector map image and that file must exist. The check does not look at the painting.
+- Near-synonym items do not share a shape. Each item's cue was already required; the compiled ITEMS line now states the distinction in every prompt.
+- Group center (feminine under 45%, masculine over 55%, adjective or adverb inside 30–70%), the 6% edge, and one non-overlapping box around the whole helper are already in PLACEMENT. Judge the center of the painted group, not a band across the box. An empty placement diagram does not prove those rules were painted (`composition.md`).
 
 Review the compiled prompt once against the manifest. Numbers and positions are planning hints, not permission to distort boxes after painting. The final painting still needs visual review; see `validation.md`. For a repair, pass the whole painting as context, identify the target by appearance and location, specify accepted neighbors to preserve, and make at most one or two related changes. Reject reframing or collateral damage. After two failures, revisit the hook/composition before buying another attempt. Never assemble separately generated figures onto a background.
