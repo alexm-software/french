@@ -1,0 +1,343 @@
+{
+  "building": "restaurant",
+  "room": "cuisine_etage",
+  "coordinate_space": "1280x720-px",
+  "setting": "Upstairs prep kitchen of the village restaurant",
+  "theme_fit": "Cooking the menu. Foods and tools, one mouse, no crowd of people.",
+  "scene_situation": "The dishes for service are laid out before they go downstairs",
+  "prompt": {
+    "kind": "room",
+    "room_name": "La cuisine",
+    "camera": "eye-level toward a stair that descends",
+    "light_from": "a left window",
+    "refs": "none",
+    "look": "a calm village restaurant kitchen",
+    "materials": "cream tile, copper, oak",
+    "set_apart": "morning light, no diners in this room",
+    "place": "upstairs restaurant kitchen",
+    "landmark": "steps going down to the dining room",
+    "whimsy": "a small mouse under a silver dome",
+    "differ": "no bakery oven and no butcher counter",
+    "reference_board": "none",
+    "beyond": "below the stair, dining tables, not on this floor"
+  },
+  "siblings": [],
+  "used_motifs": [
+    "striped mime",
+    "wood oven"
+  ],
+  "doors": [
+    {
+      "to": "salle",
+      "where": "back stair going down",
+      "painted_as": "steps descending. Below this floor: two dining tables. Not an arch on this floor."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "interactions": [
+    {
+      "who": [
+        "fr_vanille_noun",
+        "fr_moutarde_noun"
+      ],
+      "doing": "vanilla pods and a mustard jar share the left shelf"
+    },
+    {
+      "who": [
+        "fr_puree_noun",
+        "fr_cuisson_noun"
+      ],
+      "doing": "mashed potato and a timer sit by a small roast"
+    },
+    {
+      "who": [
+        "fr_bouillabaisse_noun",
+        "fr_salsa_noun"
+      ],
+      "doing": "a stew pot and a salsa bowl are on the same counter"
+    },
+    {
+      "who": [
+        "fr_gastronomie_noun",
+        "background: stack of plates"
+      ],
+      "doing": "a tall stack of fine plates stands on the counter"
+    },
+    {
+      "who": [
+        "fr_gastronomique_adj",
+        "background: mouse"
+      ],
+      "doing": "a small mouse lifts a silver dome in the center"
+    },
+    {
+      "who": [
+        "fr_barbecue_noun",
+        "fr_ingredient_noun"
+      ],
+      "doing": "a small grill and a board of eggs, flour, and butter"
+    },
+    {
+      "who": [
+        "fr_preparatif_noun",
+        "background: clipboard"
+      ],
+      "doing": "a clipboard of preparations lies on the right counter"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_vanille_noun",
+      "word": "vanille",
+      "pos": "noun",
+      "gloss": "vanilla",
+      "hook": "\"vah-NEEY\": a jar of dark VANILLA pods. Plain depiction.",
+      "hook_object": "vanilla pods",
+      "shown": "one glass jar of long dark vanilla pods",
+      "pose_action": "the jar sits on the shelf",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left shelf",
+      "depth": "back",
+      "box_hint": [
+        120,
+        90,
+        150,
+        110
+      ],
+      "interacts_with": "the mustard",
+      "g": "f"
+    },
+    {
+      "id": "fr_moutarde_noun",
+      "word": "moutarde",
+      "pos": "noun",
+      "gloss": "mustard",
+      "hook": "\"moo-TAHRD\": a jar of yellow MUSTARD. Plain depiction.",
+      "hook_object": "mustard jar",
+      "shown": "one jar of yellow mustard",
+      "pose_action": "the jar sits on the shelf",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left shelf",
+      "depth": "middle",
+      "box_hint": [
+        120,
+        250,
+        150,
+        120
+      ],
+      "interacts_with": "the vanilla",
+      "g": "f"
+    },
+    {
+      "id": "fr_puree_noun",
+      "word": "purée",
+      "pos": "noun",
+      "gloss": "mashed potatoes",
+      "hook": "\"pew-RAY\": a bowl of MASHED POTATOES. Plain depiction.",
+      "hook_object": "bowl of mashed potatoes",
+      "shown": "one bowl of creamy mashed potatoes",
+      "pose_action": "the bowl sits on the counter",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left counter",
+      "depth": "middle",
+      "box_hint": [
+        120,
+        420,
+        160,
+        140
+      ],
+      "interacts_with": "the timer",
+      "g": "f"
+    },
+    {
+      "id": "fr_cuisson_noun",
+      "word": "cuisson",
+      "pos": "noun",
+      "gloss": "cooking time or doneness",
+      "hook": "\"kwee-SOHN\": a kitchen timer beside one small roast. Plain depiction of cooking time.",
+      "hook_object": "timer and one roast",
+      "shown": "one kitchen timer and one small roast on a tray",
+      "pose_action": "the timer is next to the roast",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left front",
+      "depth": "front",
+      "box_hint": [
+        120,
+        560,
+        160,
+        90
+      ],
+      "interacts_with": "the mashed potatoes",
+      "g": "f"
+    },
+    {
+      "id": "fr_bouillabaisse_noun",
+      "word": "bouillabaisse",
+      "pos": "noun",
+      "gloss": "fish stew",
+      "hook": "\"boo-yah-BEHS\": one pot of fish stew. Plain depiction.",
+      "hook_object": "pot of fish stew",
+      "shown": "one copper pot of fish stew",
+      "pose_action": "the pot sits on the counter",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left middle",
+      "depth": "back",
+      "box_hint": [
+        310,
+        100,
+        180,
+        140
+      ],
+      "interacts_with": "the salsa",
+      "g": "f"
+    },
+    {
+      "id": "fr_salsa_noun",
+      "word": "salsa",
+      "pos": "noun",
+      "gloss": "salsa",
+      "hook": "\"sahl-SAH\": a bowl of red SALSA and two maracas.",
+      "hook_object": "salsa and two maracas",
+      "shown": "one bowl of chunky red salsa and exactly two maracas",
+      "pose_action": "the bowl and maracas are together",
+      "count": 2,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left middle",
+      "depth": "middle",
+      "box_hint": [
+        320,
+        300,
+        160,
+        130
+      ],
+      "interacts_with": "the stew",
+      "g": "f"
+    },
+    {
+      "id": "fr_gastronomie_noun",
+      "word": "gastronomie",
+      "pos": "noun",
+      "gloss": "gastronomy, fine cooking",
+      "hook": "\"gahs-troh-noh-MEE\": a tall stack of fine plates. Plain depiction.",
+      "hook_object": "stack of fine plates",
+      "shown": "one tall stack of white plates with a silver rim",
+      "pose_action": "the stack stands on the counter",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left front",
+      "depth": "front",
+      "box_hint": [
+        300,
+        470,
+        190,
+        160
+      ],
+      "interacts_with": "the counter",
+      "g": "f"
+    },
+    {
+      "id": "fr_gastronomique_adj",
+      "word": "gastronomique",
+      "pos": "adj",
+      "gloss": "gastronomic",
+      "hook": "\"gahs-troh-noh-MEEK\": a small mouse lifts a silver dome.",
+      "hook_object": "mouse and silver dome",
+      "shown": "one small mouse with its paws on one silver dome",
+      "pose_action": "the mouse is in the center",
+      "count": 1,
+      "sensitive": "none",
+      "side": "center",
+      "zone": "center",
+      "depth": "middle",
+      "box_hint": [
+        530,
+        200,
+        160,
+        200
+      ],
+      "interacts_with": "the dome"
+    },
+    {
+      "id": "fr_barbecue_noun",
+      "word": "barbecue",
+      "pos": "noun",
+      "gloss": "barbecue",
+      "hook": "\"bahr-buh-KYOO\": a small BARBECUE grill with sausages. Same word in English.",
+      "hook_object": "small grill",
+      "shown": "one small grill with a few sausages",
+      "pose_action": "the grill stands on the right",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right back",
+      "depth": "back",
+      "box_hint": [
+        760,
+        120,
+        180,
+        140
+      ],
+      "interacts_with": "the ingredients",
+      "g": "m"
+    },
+    {
+      "id": "fr_ingredient_noun",
+      "word": "ingrédient",
+      "pos": "noun",
+      "gloss": "ingredient",
+      "hook": "\"an-gray-DYAHN\": eggs, flour, and butter on one board. Plain depiction.",
+      "hook_object": "eggs, flour, and butter",
+      "shown": "one board holding eggs, a sack of flour, and a block of butter",
+      "pose_action": "the board sits on the right",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right",
+      "depth": "middle",
+      "box_hint": [
+        990,
+        200,
+        150,
+        170
+      ],
+      "interacts_with": "the grill",
+      "g": "m"
+    },
+    {
+      "id": "fr_preparatif_noun",
+      "word": "préparatif",
+      "pos": "noun",
+      "gloss": "preparation, usually plural",
+      "hook": "\"pray-pah-rah-TEEF\": a clipboard of preparations. Plain depiction.",
+      "hook_object": "clipboard",
+      "shown": "one clipboard with a paper list, no readable words",
+      "pose_action": "the clipboard lies on the counter",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right front",
+      "depth": "front",
+      "box_hint": [
+        800,
+        430,
+        200,
+        160
+      ],
+      "interacts_with": "the counter",
+      "g": "m"
+    }
+  ]
+}

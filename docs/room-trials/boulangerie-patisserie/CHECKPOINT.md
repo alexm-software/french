@@ -1,4 +1,10 @@
-# Pastry pilot `R_bakery_02` — pending, not complete
+# Pastry pilot `R_bakery_02` — FAIL, not installed
+
+Independent review (attached report) verdict: **FAIL**. Not accepted. 0/30. Image hash `47e74f2f254db6bfd9fe2641fcee9e4ae3f946529de4d5781c9a111e72f10e4f` is unchanged. No further pastry image.
+
+The pink-and-yellow pastille tin is valid. Neither the gloss nor the hook requires white sweets. That earlier fail is withdrawn.
+
+Actual fails: the oven reads as on this floor; the stair rises instead of descending; the chef cuts an extra loaf instead of setting down one cookie plate; two cookie plates split the bee cue; the croûte hook says croutons that are not painted; the bean sits by the truffles and a joint box would overlap; painted groups cross the 6% margins. Anatomy of all three people passes at 2×. A later retry needs a new composition, not a detail edit.
 
 Base: `bdb6ae972dfac51a03515a94f184fbae1163ad70`, plus the dialogue-rule commits on this branch. Not installed in `village/` or `content/v2`. Counts toward 30: **0**.
 

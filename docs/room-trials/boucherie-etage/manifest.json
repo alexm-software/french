@@ -1,0 +1,299 @@
+{
+  "building": "boulangerie",
+  "room": "poissonnerie",
+  "coordinate_space": "1280x720-px",
+  "setting": "Upstairs fish and deli counter above the butcher shop",
+  "theme_fit": "Ordinary fish and cooked charcuterie. The slaughterhouse word is a blank plaque. No one is harmed.",
+  "scene_situation": "The deli clerk slices cooked ham while a customer eats bread",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Le comptoir du poisson",
+    "camera": "eye-level, looking toward a stair that goes down",
+    "light_from": "a high window on the right",
+    "refs": "village/boulangerie/boucherie.jpg for the downstairs glimpse only",
+    "look": "the village butcher shop, calmer and with no hanging meat",
+    "materials": "white tile, oak, ice, cream walls",
+    "set_apart": "cool daylight, ice counter, no carcass rail",
+    "place": "upstairs fish and deli counter",
+    "landmark": "stairs descending to the shop below",
+    "whimsy": "a small paper kite hung by the fish",
+    "differ": "no hanging carcasses, no child, no horse, no piggy bank",
+    "reference_board": "none",
+    "beyond": "the stair goes down to a sausage counter and a striped apron, below this floor"
+  },
+  "siblings": [
+    "boucherie downstairs has hanging meat and a child; this room does not"
+  ],
+  "used_motifs": [
+    "hanging carcass",
+    "child at the counter",
+    "mime"
+  ],
+  "doors": [
+    {
+      "to": "boucherie",
+      "where": "center-back stair going down",
+      "painted_as": "wooden steps descending. Below, not on this floor: a counter of sausages and a striped apron. No carcass, no child, no animal being hurt."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [
+    {
+      "text": "BOUCHERIE",
+      "where": "a small hanging shop sign on the left"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_crevette_noun",
+        "fr_huitre_noun"
+      ],
+      "doing": "shrimp and one oyster sit on the same ice"
+    },
+    {
+      "who": [
+        "fr_boucherie_noun",
+        "background: shop sign"
+      ],
+      "doing": "the sign names the shop above the left counter"
+    },
+    {
+      "who": [
+        "fr_ecaille_noun",
+        "background: kite"
+      ],
+      "doing": "a fish with bright scales, one shell, and one kite share the left counter"
+    },
+    {
+      "who": [
+        "fr_charcutier_noun",
+        "fr_steak_noun"
+      ],
+      "doing": "the clerk slices cooked ham; a steak sits on a plate beside him"
+    },
+    {
+      "who": [
+        "fr_mangeur_noun",
+        "fr_requin_noun"
+      ],
+      "doing": "a customer eats bread beside the ice where a whole shark rests"
+    },
+    {
+      "who": [
+        "fr_abattoir_noun",
+        "background: wall"
+      ],
+      "doing": "a blank plaque hangs on the right wall and shows no scene"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_boucherie_noun",
+      "word": "boucherie",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "butcher shop; the violent sense is not shown",
+      "hook": "\"boo-shuh-REE\": the shop sign reads BOUCHERIE over the tile counter.",
+      "hook_object": "shop sign",
+      "shown": "a small wood sign and the tile counter under it",
+      "pose_action": "the sign hangs still",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left high",
+      "depth": "back",
+      "box_hint": [
+        96,
+        70,
+        200,
+        110
+      ],
+      "interacts_with": "the tile counter"
+    },
+    {
+      "id": "fr_crevette_noun",
+      "word": "crevette",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "shrimp",
+      "hook": "\"kruh-VEHT\": a plate of pink SHRIMP. Plain depiction.",
+      "hook_object": "plate of shrimp",
+      "shown": "one plate of cooked pink shrimp",
+      "pose_action": "the plate sits on the ice",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left ice",
+      "depth": "middle",
+      "box_hint": [
+        96,
+        210,
+        170,
+        150
+      ],
+      "interacts_with": "the oyster"
+    },
+    {
+      "id": "fr_huitre_noun",
+      "word": "huître",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "oyster",
+      "hook": "\"WEETR\": one OYSTER with a pearl. Plain depiction.",
+      "hook_object": "one oyster with a pearl",
+      "shown": "one open oyster shell with a pearl",
+      "pose_action": "the shell sits on the ice",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left ice",
+      "depth": "front",
+      "box_hint": [
+        96,
+        420,
+        160,
+        150
+      ],
+      "interacts_with": "the shrimp"
+    },
+    {
+      "id": "fr_ecaille_noun",
+      "word": "écaille",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "scale; shell",
+      "hook": "\"ay-KAHY\": one fish with silver SCALES, one SHELL, and one paper kite.",
+      "hook_object": "fish, shell, and kite",
+      "shown": "one whole fish with large silver scales, one shell, and one small kite",
+      "pose_action": "all three are together on the left counter",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left counter",
+      "depth": "front",
+      "box_hint": [
+        280,
+        390,
+        210,
+        200
+      ],
+      "interacts_with": "the kite"
+    },
+    {
+      "id": "fr_abattoir_noun",
+      "word": "abattoir",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "slaughterhouse, not pictured",
+      "hook": "\"ah-bah-TWAHR\": a blank plaque. Nothing is drawn.",
+      "hook_object": "blank plaque",
+      "shown": "a blank rectangular plaque with no picture and no letters",
+      "pose_action": "the plaque hangs on the wall",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "right",
+      "zone": "right wall",
+      "depth": "back",
+      "box_hint": [
+        760,
+        100,
+        150,
+        90
+      ],
+      "interacts_with": "the wall"
+    },
+    {
+      "id": "fr_requin_noun",
+      "word": "requin",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "shark; the profiteer sense is not shown",
+      "hook": "\"ruh-KAN\": one whole SHARK on ice, mouth closed, biting nothing.",
+      "hook_object": "one shark on ice",
+      "shown": "one small whole shark lying on ice",
+      "pose_action": "the fish is still, mouth shut",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right ice",
+      "depth": "middle",
+      "box_hint": [
+        980,
+        180,
+        160,
+        140
+      ],
+      "interacts_with": "the customer"
+    },
+    {
+      "id": "fr_mangeur_noun",
+      "word": "mangeur",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "eater",
+      "hook": "\"mahn-ZHUHR\": an adult EATER eats a piece of bread.",
+      "hook_object": "adult eating bread",
+      "shown": "one adult at a side table eating bread, no meat in his hands",
+      "pose_action": "both hands on the bread",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right middle",
+      "depth": "middle",
+      "box_hint": [
+        760,
+        240,
+        160,
+        210
+      ],
+      "interacts_with": "the shark on the ice"
+    },
+    {
+      "id": "fr_steak_noun",
+      "word": "steak",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "steak",
+      "hook": "\"STEHK\": one cooked STEAK on a plate. Same word in English.",
+      "hook_object": "one steak",
+      "shown": "one grilled steak on one plate",
+      "pose_action": "the plate sits by the clerk",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right counter",
+      "depth": "front",
+      "box_hint": [
+        1000,
+        400,
+        150,
+        130
+      ],
+      "interacts_with": "the clerk"
+    },
+    {
+      "id": "fr_charcutier_noun",
+      "word": "charcutier",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "pork butcher, delicatessen owner",
+      "hook": "\"shahr-kew-TYAY\": the deli clerk slices a cooked ham. Plain depiction. No blood.",
+      "hook_object": "clerk and cooked ham",
+      "shown": "one adult in a white apron slicing a cooked ham into pale slices",
+      "pose_action": "knife on the ham only, both hands visible",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right front",
+      "depth": "front",
+      "box_hint": [
+        760,
+        480,
+        180,
+        170
+      ],
+      "interacts_with": "the steak"
+    }
+  ]
+}
