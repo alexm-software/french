@@ -1,0 +1,125 @@
+{
+  "building": "sciences",
+  "building_id": "B35_sciences",
+  "sector_id": "S10_university",
+  "name": "Faculté des Sciences",
+  "main": "hall",
+  "roomList": [
+    {
+      "key": "hall",
+      "short": "Les roches"
+    }
+  ],
+  "planned": {
+    "hall": {
+      "vocabRoom": "R_geology",
+      "only": [
+        "fr_pierre_noun",
+        "fr_terre_noun",
+        "fr_mine_noun",
+        "fr_mineral_adj",
+        "fr_sol_noun",
+        "fr_cristal_noun",
+        "fr_pendule_noun_m",
+        "fr_creuset_noun"
+      ]
+    }
+  },
+  "rooms": {
+    "hall": {
+      "name": "Le hall des roches · The Rock Hall",
+      "room_id": "R_geology",
+      "image": "sciences/hall.jpg",
+      "alt": "Draft alt, rewritten after the painting is inspected.",
+      "nameplate": [
+        50,
+        3.5
+      ],
+      "mapExit": {
+        "box": [
+          40,
+          40,
+          210,
+          330
+        ],
+        "label": "Campus"
+      },
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_pierre_noun",
+          "box": [
+            300,
+            78,
+            200,
+            168
+          ]
+        },
+        {
+          "id": "fr_terre_noun",
+          "box": [
+            90,
+            468,
+            200,
+            168
+          ]
+        },
+        {
+          "id": "fr_mine_noun",
+          "box": [
+            318,
+            308,
+            196,
+            158
+          ]
+        },
+        {
+          "id": "fr_mineral_adj",
+          "box": [
+            548,
+            236,
+            156,
+            148
+          ]
+        },
+        {
+          "id": "fr_sol_noun",
+          "box": [
+            736,
+            368,
+            168,
+            148
+          ]
+        },
+        {
+          "id": "fr_cristal_noun",
+          "box": [
+            868,
+            70,
+            148,
+            196
+          ]
+        },
+        {
+          "id": "fr_pendule_noun_m",
+          "box": [
+            1052,
+            248,
+            132,
+            360
+          ]
+        },
+        {
+          "id": "fr_creuset_noun",
+          "box": [
+            768,
+            536,
+            176,
+            124
+          ]
+        }
+      ]
+    }
+  }
+}
