@@ -2,15 +2,15 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Live data still opens the hall from Campus. The planned root is the outdoor Cour des sciences.
+The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Campus opens the Cour. The Cour's glass doors open the hall, and the hall's glass doors return to the Cour. The campus painting still shows the telescope on the roof. Call 41 left that isometric frame, so it does not replace the map.
 
 ## Stop
 
-The 02:00 CST stop on 8 Nov 2026 has passed. It does not block the Cour repair. Do not paint new rooms in bulk. The finds image is rejected. Do not paint the bench or the campus map until the Cour is accepted. No merge.
+The 02:00 CST stop on 8 Nov 2026 has passed. Do not paint new rooms in bulk. The finds image is rejected. Do not replace the campus map until a faculty-block edit keeps the isometric crop. No merge.
 
 ## Connections
 
-Planned route: Campus opens the Cour. The Cour's glass doors open the hall. The hall's painted doors return to the Cour. Ordinary-room Back still says Campus. Hub is hidden when a painted door already goes to the Cour. West wing, arcade, and east stair leave the Cour. No second Campus door. The finds picture `080d7f5e` is rejected. The bench is not painted until the Cour is accepted. Master plan: `review/cour/walkthrough.json`.
+Campus opens the Cour. The Cour's glass doors open the hall. The hall's painted doors return to the Cour. Ordinary-room Back still says Campus. Hub is hidden on the Cour and on the hall, because the hall's painted door already goes to the Cour. West wing, arcade, and east stair stay painted and unlinked until those rooms exist. No second Campus door. The finds picture `080d7f5e` is rejected. The bench is not painted. Master plan for later rooms: `review/cour/walkthrough.json`. The live walk is `walkthrough.json`.
 
 ## Finds candidate, rejected
 
@@ -58,4 +58,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: 40. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 `080d7f5e` is rejected. Call 37 `4adf12ed` is the Cour base. Call 38 `a709b1c9` edits the doorway and drops the telescope. Call 39 keeps the telescope and puts a mine outdoors on the right. Call 40 removes that outdoor mine and is the identity candidate, not accepted. The campus map is unchanged. Hall navigation stays on Campus until the Cour is accepted.
+Image calls: 41. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 `080d7f5e` is rejected. Call 37 `4adf12ed` is the Cour base. Call 38 `a709b1c9` drops the telescope. Call 39 puts a mine outdoors. Call 40 `7939f72c` passed independent art review and is the live Cour painting. Call 41 `607c0749` redrew the faculty as an eye-level court and is not a map edit. `village/map/university.jpg` is unchanged.

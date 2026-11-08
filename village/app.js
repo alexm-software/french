@@ -323,7 +323,7 @@ var API=window.Village={onCard:[],onRoom:[],onView:[],openCard:function(it,from)
   speak:function(t){speak(t)},headword:function(it){return headword(it)},hasVoice:function(){return hasVoice()},
   here:function(){return {view:view,bld:B,key:curKey,room:R}},roomHref:function(b,k){return roomHref(b,k)},
   loadData:function(b,cb){loadData(b,cb)},stage:function(){return stage}};
-function roomHref(bld,key){ return key===bld?'#/'+bld:'#/'+bld+'/'+key }
+function roomHref(bld,key){ var D=window.VILLAGE_DATA&&window.VILLAGE_DATA[bld]; return key===((D&&D.main)||bld)?'#/'+bld:'#/'+bld+'/'+key }
 function renderRooms(bld,key){
   var D=window.VILLAGE_DATA[bld], L=D.roomList||[], cur=D.rooms[key];
   rooms.hidden=!(L.length>1&&!cur.parent);
@@ -339,8 +339,10 @@ function renderRoom(bld,key){
   // a side room of a street (ST_ buildings) goes out to that street; every other room goes to the map it stands on.
   backKey=R.parent||((/^ST_/.test(D.building_id||'')&&key!==D.main)?D.main:null);
   // Local hubs are ownership shortcuts. Painted doors still define the walk.
+  // Hide Hub at the hub, when Back already goes there, and when a painted door in this room already goes there.
   var HK=(D.hubParents||{})[R.parent||key]||D.main||bld;
-  hub.hidden=key===HK||!!(D.hubParents&&backKey===HK);
+  var doorToHub=(R.doors||[]).some(function(d){return !d.building&&d.to===HK});
+  hub.hidden=key===HK||!!(D.hubParents&&(backKey===HK||doorToHub));
   hub.href=roomHref(bld,HK); hub.title=D.rooms[HK].name;
   hub.setAttribute('aria-label','Hub: '+D.rooms[HK].name);
   var BT=backKey;
@@ -500,8 +502,11 @@ function route(){ closeCard(); API.onView.forEach(function(f){ try{f()}catch(e){
   if(bld==='quartier'){ if(m[2]&&MAP.sectors[m[2]]) renderSector(m[2]); else location.replace('#/'); return }
   if(!bld||!REG[bld]){ renderMap(); return }
   loadData(bld,function(ok){
-    var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||bld;
-    var Rk=D&&D.rooms[key], ok2=Rk&&(!m[2]||(key!==bld&&(Rk.parent?!!D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent:(D.roomList||[]).some(function(r){return r.key===key}))));
+    var D=ok&&window.VILLAGE_DATA[bld], key=m[2]||(D&&D.main)||bld;
+    var Rk=D&&D.rooms[key];
+    var listed=!!(D&&(D.roomList||[]).some(function(r){return r.key===key}));
+    var zoomOk=!!(Rk&&Rk.parent&&D.rooms[Rk.parent]&&!D.rooms[Rk.parent].parent);
+    var ok2=!!(Rk&&(!m[2]||listed||zoomOk));
     if(!ok2){ if(location.hash!=='#/')location.replace('#/'); else renderMap(); return }
     renderRoom(bld,key);
     if(want){ var hit=R.items.filter(function(x){return x.id===want})[0]; if(hit) openCard(hit,stage.querySelector('.hot[data-i="'+R.items.indexOf(hit)+'"]')) }

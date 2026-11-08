@@ -3,8 +3,12 @@
   "building_id": "B35_sciences",
   "sector_id": "S10_university",
   "name": "Faculté des Sciences",
-  "main": "sciences",
+  "main": "cour",
   "roomList": [
+    {
+      "key": "cour",
+      "short": "La cour"
+    },
     {
       "key": "sciences",
       "short": "Les roches"
@@ -24,6 +28,39 @@
     }
   },
   "rooms": {
+    "cour": {
+      "name": "La cour des sciences",
+      "image": "sciences/cour.jpg",
+      "alt": "The science-faculty forecourt, in ink and gouache: a white telescope on a black tripod and a round stone plinth stands on the gravel. Open glass doors show the rock hall's cream floor, tan walls and a purple crystal in the left bay. A wooden door and an open arcade are on the west wing, a wooden door is on the east wing, and a low stone wall has an open gate toward the campus path. Autumn trees stand behind the tan building.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          418,
+          528,
+          450,
+          192
+        ],
+        "label": "Campus"
+      },
+      "doors": [
+        {
+          "to": "sciences",
+          "label": "Le hall",
+          "hint": "Through the open glass doors into the rock hall",
+          "hit": [
+            440,
+            288,
+            490,
+            168
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    },
     "sciences": {
       "name": "Le hall des roches",
       "room_id": "R_geology",
@@ -33,16 +70,20 @@
         16,
         7
       ],
-      "mapExit": {
-        "box": [
-          560,
-          24,
-          210,
-          226
-        ],
-        "label": "Campus"
-      },
-      "doors": [],
+      "backTo": "cour",
+      "doors": [
+        {
+          "to": "cour",
+          "label": "La cour",
+          "hint": "Through the glass doors to the telescope in the court",
+          "hit": [
+            560,
+            24,
+            210,
+            226
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
         {

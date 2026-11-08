@@ -1,17 +1,33 @@
 {
   "version": 1,
   "entrance": {
-    "where": "Campus map click on the tan science faculty with the glass roof and telescope",
-    "appearance": "Open glass doors of the tan-stone faculty, from the gravel campus path",
-    "arrival": "The rock hall, with the glass roof and the telescope gantry overhead"
+    "where": "Campus map click on the tan science faculty",
+    "appearance": "A gravel forecourt, a low wall and an open gate, and the glass front of the hall",
+    "arrival": "The Cour des sciences, with the telescope on its round plinth"
   },
   "places": {
-    "sciences": {
+    "cour": {
       "kind": "hub",
-      "level": "ground floor",
-      "landmark": "Glass roof and telescope gantry",
-      "camera": "Looking toward the open campus doors at back center"
+      "level": "ground",
+      "landmark": "White telescope on a round stone plinth",
+      "camera": "Eye-level in the gravel court, glass doors ahead"
+    },
+    "sciences": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Open glass doors to the court",
+      "camera": "The accepted hall, looking out through the glass doors"
     }
   },
-  "passages": {}
+  "passages": {
+    "hall_doors": {
+      "kind": "door",
+      "appearance": "Open glass doors, cream floor inside and the telescope plinth outside",
+      "ends": [
+        {"place": "cour", "where": "center, in front of the plinth", "arrival": "The rock hall"},
+        {"place": "sciences", "where": "back center", "arrival": "The gravel court and the telescope"}
+      ]
+    }
+  }
 }

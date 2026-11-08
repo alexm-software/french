@@ -473,7 +473,8 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                     hrefs = await pg.evaluate("[...document.querySelectorAll('a.doorway:not(.mapexit)')].map(a=>a.getAttribute('href'))")
                     for d, hr in zip(R.get("doors", []), hrefs):
                         b2 = d.get("building") or bld
-                        want_d = f"#/{b2}" if d["to"] == b2 else f"#/{b2}/{d['to']}"
+                        target_main = D["main"] if b2 == bld else load_payload(b2)["main"]
+                        want_d = f"#/{b2}" if d["to"] == target_main else f"#/{b2}/{d['to']}"
                         if hr != want_d: errs.append(f"{bld}/{key}: door to {d['to']} links {hr}, expected {want_d}")
                     for i, d in enumerate(rects["door"]):
                         for j, h in enumerate(rects["hot"]):
@@ -523,8 +524,9 @@ async def browser_checks(blds, base, shots, errs, strict=False, M=None, maps_onl
                     parent = R.get("parent")
                     hub_key = D.get("hubParents", {}).get(parent or key, D["main"])
                     street_back = D["main"] if D.get("building_id", "").startswith("ST_") and key != D["main"] else None
-                    hidden = key == hub_key or ("hubParents" in D and hub_key == (parent or street_back))
-                    href = f"#/{bld}" if hub_key == bld else f"#/{bld}/{hub_key}"
+                    door_to_hub = any(not d.get("building") and d.get("to") == hub_key for d in (R.get("doors") or []))
+                    hidden = key == hub_key or ("hubParents" in D and (hub_key == (parent or street_back) or door_to_hub))
+                    href = f"#/{bld}" if hub_key == D["main"] else f"#/{bld}/{hub_key}"
                     if hb is None:
                         errs.append(f"{bld}/{key}: no ⌂ Hub button")
                     elif hb["v"] == hidden:
