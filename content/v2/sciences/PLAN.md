@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Campus opens the Cour. The Cour's glass doors open the hall, and the hall's glass doors return to the Cour. The campus painting still shows the telescope on the roof. Call 42 keeps the isometric frame and waits for review before it replaces the map.
+The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Campus opens the Cour. The Cour's glass doors open the hall, and the hall's glass doors return to the Cour. The campus painting still shows the telescope on the roof. Call 42 was rejected. Calls 43 to 45 did not pass self-screen, so the map is unchanged.
 
 ## Stop
 
@@ -58,4 +58,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: 42. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 40 `7939f72c` is the live Cour. Call 41 `607c0749` left the isometric frame. Call 42 `6109d978` keeps that frame and is awaiting review. `village/map/university.jpg` is unchanged.
+Image calls: 45. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 40 `7939f72c` is the live Cour. Call 42 `6109d978` was rejected for the missing faculty outline. Calls 43 to 45 scattered that outline onto other buildings and are not candidates. `village/map/university.jpg` is unchanged.
