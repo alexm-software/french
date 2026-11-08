@@ -24,21 +24,42 @@ def load_edges(path=None):
     return doc["edges"]
 
 
-def compares_index(edges=None):
-    """id -> list of learner-facing pointers, sources stripped."""
+def headword_of(w):
+    """Article plus noun when the source has an article. Other classes stay the lemma."""
+    lem = w.get("lemma") or ""
+    art = w.get("article") or ""
+    if w.get("pos") == "noun" and art:
+        return ("l'" + lem) if art == "l'" else f"{art} {lem}"
+    return lem
+
+
+def labeled_examples(edge, vocab):
+    out = []
+    for side, key in (("a", "a_ex"), ("b", "b_ex")):
+        ex = edge.get(key)
+        if ex:
+            out.append({"who": headword_of(vocab[edge[side]]), "fr": ex[0], "en": ex[1]})
+    return out
+
+
+def compares_index(edges=None, vocab=None):
+    """id -> list of learner-facing pointers. Sources and excerpts stay off the card."""
+    edges = edges if edges is not None else load_edges()
+    vocab = vocab if vocab is not None else load_vocab()
     out = defaultdict(list)
-    for e in edges if edges is not None else load_edges():
-        out[e["a"]].append(_pointer(e["b"], e["a_note"], e.get("a_ex")))
-        out[e["b"]].append(_pointer(e["a"], e["b_note"], e.get("b_ex")))
+    for e in edges:
+        examples = labeled_examples(e, vocab)
+        out[e["a"]].append(_pointer(e["b"], e["a_note"], examples, vocab))
+        out[e["b"]].append(_pointer(e["a"], e["b_note"], examples, vocab))
     for wid in out:
         out[wid].sort(key=lambda row: row["to"])
     return out
 
 
-def _pointer(to, note, ex):
-    row = {"to": to, "note": note}
-    if ex:
-        row["ex"] = list(ex)
+def _pointer(to, note, examples, vocab):
+    row = {"to": to, "note": note, "hw": headword_of(vocab[to])}
+    if examples:
+        row["examples"] = examples
     return row
 
 
@@ -105,12 +126,13 @@ def attach_compares(it, vocab, placements, index=None):
         item = {
             "to": row["to"],
             "fr": target["lemma"],
+            "hw": row.get("hw") or headword_of(target),
             "en": target.get("gloss") or "",
             "note": row["note"],
             "at": choose_placement(row["to"], placements, vocab),
         }
-        if row.get("ex"):
-            item["ex"] = list(row["ex"])
+        if row.get("examples"):
+            item["examples"] = row["examples"]
         out.append(item)
     it["compares"] = out
     return it
@@ -152,6 +174,15 @@ def validate(vocab=None, edges=None):
         sources = e.get("sources") or []
         if len(sources) < 1 or not all(isinstance(s, str) and s.startswith("https://") for s in sources):
             problems.append(f"{where}: sources must be https URLs")
+        if e.get("verified"):
+            support = e.get("support") or []
+            if not support:
+                problems.append(f"{where}: verified edge needs a support excerpt")
+            for s in support:
+                if not (isinstance(s, dict) and str(s.get("url", "")).startswith("https://") and str(s.get("excerpt", "")).strip()):
+                    problems.append(f"{where}: support needs an https url and an excerpt")
+        elif e.get("verified") is not False:
+            problems.append(f"{where}: verified must be true or false")
         axes = e.get("axes") or []
         if not axes:
             problems.append(f"{where}: axes required")

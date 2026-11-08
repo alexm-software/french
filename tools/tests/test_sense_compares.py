@@ -19,18 +19,20 @@ def card_compare_html(compares):
         return ""
     parts = ['<div class="sec cmp"><h3>Not the same</h3>']
     for c in compares:
+        name = c.get("hw") or c.get("fr")
         parts.append('<div class="cmp1">')
         if c.get("at"):
             b, room = c["at"]
             href = f"#/{b}" + ("" if room == b else f"/{room}") + f"?w={c['to']}"
-            parts.append(f'<p><a class="goto" href="{href}"><b lang="fr">{c["fr"]}</b></a></p>')
+            parts.append(f'<p><a class="goto" href="{href}"><b lang="fr">{name}</b></a></p>')
         else:
-            parts.append(f'<p><b lang="fr">{c["fr"]}</b> <span class="small">Not in a room yet.</span></p>')
+            parts.append(f'<p><b lang="fr">{name}</b> <span class="small">Not in a room yet.</span></p>')
         parts.append(f'<p>{c["note"]}</p>')
-        if c.get("ex"):
-            parts.append(f'<p class="fr"><i lang="fr">{c["ex"][0]}</i> '
-                         f'<button class="say" aria-label="Listen: {c["ex"][0]}">🔊</button></p>')
-            parts.append(f'<p class="tr">{c["ex"][1]}</p>')
+        for ex in c.get("examples") or []:
+            parts.append(f'<p class="exlab">Example of {ex["who"]}</p>')
+            parts.append(f'<p class="fr"><i lang="fr">{ex["fr"]}</i> '
+                         f'<button class="say" aria-label="Listen: {ex["fr"]}">🔊</button></p>')
+            parts.append(f'<p class="tr">{ex["en"]}</p>')
         parts.append("</div>")
     parts.append("</div>")
     return "".join(parts)
@@ -108,9 +110,26 @@ class SenseCompares(unittest.TestCase):
         self.assertEqual(totals["vocab_entries"], len(self.vocab))
         self.assertEqual(
             totals["exact_accepted"] + totals["exact_accepted_partial"] + totals["exact_unrelated"]
-            + totals["exact_uncertain"] + totals["exact_equivalent"],
+            + totals["exact_uncertain"] + totals["exact_equivalent"] + totals["exact_deferred_homograph"],
             totals["exact_clusters"],
         )
+        bark = next(r for r in audit["exact_clusters"] if r["key"] == "noun|bark")
+        self.assertEqual(bark["disposition"], "unrelated")
+        stove = next(r for r in audit["exact_clusters"] if r["key"] == "noun|stove")
+        self.assertEqual(stove["disposition"], "deferred_homograph")
+        ids = {e["a"] for e in self.edges} | {e["b"] for e in self.edges}
+        self.assertNotIn("fr_neuf_num", ids)
+        self.assertNotIn("fr_poele_noun", ids)
+        verified = [e for e in self.edges if e.get("verified")]
+        self.assertTrue(verified)
+        for e in verified:
+            self.assertTrue(e["support"][0]["excerpt"])
+            self.assertTrue(e["support"][0]["url"].startswith("https://"))
+        i18n = json.loads((ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))
+        extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
+        for key in ("notTheSame", "notInARoom", "exampleOf"):
+            self.assertIn(i18n["en"]["card"][key], extras)
+            self.assertIn(i18n["fr"]["card"][key], (ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))
         self.assertEqual(totals["published_edges"], len(self.edges))
         self.assertGreater(totals["entries_outside_candidate_clusters"], 0)
         self.assertGreater(totals["exact_clusters"], 300)

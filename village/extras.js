@@ -238,14 +238,22 @@ V.onCard.push(function(it){
   var en=card.querySelector('.en'); if(en&&it.cefr) en.insertAdjacentHTML('beforeend',' <span class="lvl" title="CEFR level">'+esc(it.cefr)+'</span>');
   var gram=card.querySelector('.gram'); if(gram&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
   var pic=card.querySelector('.pic'); if(pic){ pic.title='Tap to enlarge'; pic.addEventListener('click',function(){ pic.classList.toggle('big') }) }
+  // English card chrome. The same three strings are data/i18n.json en.card; fr.card holds the French.
+  // The village card does not load that file, so this section stays English like "Example" above it.
+  var CMP={notTheSame:'Not the same', notInARoom:'Not in a room yet.', exampleOf:'Example of {word}'};
   if(it.compares&&it.compares.length){
-    var cmp='<div class="sec cmp"><h3>Not the same</h3>';
+    var cmp='<div class="sec cmp"><h3>'+esc(CMP.notTheSame)+'</h3>';
     it.compares.forEach(function(c){
+      var name=c.hw||c.fr;
       cmp+='<div class="cmp1">';
-      if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(c.fr)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
-      else cmp+='<p><b lang="fr">'+esc(c.fr)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">Not in a room yet.</span></p>';
+      if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
+      else cmp+='<p><b lang="fr">'+esc(name)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.notInARoom)+'</span></p>';
       cmp+='<p>'+esc(c.note)+'</p>';
-      if(c.ex&&c.ex[0]) cmp+='<p class="fr"><i lang="fr">'+esc(c.ex[0])+'</i>'+(V.hasVoice()?' <button class="say" data-say="'+esc(c.ex[0])+'" aria-label="Listen: '+esc(c.ex[0])+'">🔊</button>':'')+'</p><p class="tr">'+esc(c.ex[1]||'')+'</p>';
+      (c.examples||[]).forEach(function(ex){
+        var label=CMP.exampleOf.replace('{word}', ex.who||'');
+        cmp+='<p class="exlab">'+esc(label)+'</p>';
+        cmp+='<p class="fr"><i lang="fr">'+esc(ex.fr)+'</i>'+(V.hasVoice()?' <button class="say" data-say="'+esc(ex.fr)+'" aria-label="Listen: '+esc(ex.fr)+'">🔊</button>':'')+'</p><p class="tr">'+esc(ex.en||'')+'</p>';
+      });
       cmp+='</div>';
     });
     cmp+='</div>';

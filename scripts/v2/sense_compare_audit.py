@@ -39,8 +39,10 @@ LIGHT = {"have", "do", "make", "go", "come", "take", "get", "put", "set", "give"
 UNRELATED = {
     "noun|game", "verb|succeed", "noun|mass", "noun|spring", "noun|organ", "noun|cape",
     "noun|temple", "noun|fan", "noun|seal", "noun|league", "noun|standard", "noun|deposit",
-    "noun|change", "noun|sheet", "noun|chest", "verb|smoke", "noun|marble", "verb|pay",
+    "noun|change", "noun|sheet", "noun|chest", "verb|smoke",     "noun|marble", "verb|pay", "noun|bark",
 }
+# Same English gloss, but the source id mixes senses. No learner note until the senses are separate ids.
+DEFERRED = {"noun|stove"}
 # A real nuance may exist. It is not published.
 UNCERTAIN = {
     "noun|rock", "noun|bar", "verb|raise", "verb|put back", "noun|opportunity",
@@ -162,6 +164,8 @@ def disposition(ids, key, pairs):
         return "accepted_partial"
     if key in UNRELATED:
         return "unrelated"
+    if key in DEFERRED:
+        return "deferred_homograph"
     if key in UNCERTAIN:
         return "uncertain"
     return "equivalent"
@@ -218,6 +222,7 @@ def main():
             "exact_accepted": counts["accepted"],
             "exact_accepted_partial": counts["accepted_partial"],
             "exact_unrelated": counts["unrelated"],
+            "exact_deferred_homograph": counts["deferred_homograph"],
             "exact_uncertain": counts["uncertain"],
             "exact_equivalent": counts["equivalent"],
             "near_accepted": near_counts["accepted"],
