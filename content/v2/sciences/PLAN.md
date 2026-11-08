@@ -6,7 +6,7 @@ The hall painting `d1d59540` is release-ready and integrated. It is not merged a
 
 ## Stop
 
-Work boundary t428u, 8 Nov 2026, 00:07 CST: continue the requested science-room work until that work is done, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. Saving this plan is not the end of the 30-room task and is not an early stop. After 06:00 CST, start no new generation, room, investigation, or batch; finish only a clean save already underway. The finds image is rejected. The Cour candidate is in review. Do not paint the bench until that court is accepted. No merge.
+Work boundary t430u: continue until the science-room work is done, or until 02:00 CST on 8 Nov 2026 (08:00 UTC), whichever is sooner. Saving a plan is not that end. After 02:00 CST, start nothing new; finish only a save already underway, then stop. The finds image is rejected. Do not paint the bench or the campus map until the Cour is accepted. No merge.
 
 ## Connections
 
@@ -58,4 +58,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: 37. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 `080d7f5e` is rejected. Call 37 is the Cour candidate `4adf12ed`, not integrated. The campus map is unchanged.
+Image calls: 38. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 `080d7f5e` is rejected. Call 37 `4adf12ed` is the Cour base. Call 38 `a709b1c9` edits the doorway and drops the telescope, so it does not replace call 37. The campus map is unchanged.
