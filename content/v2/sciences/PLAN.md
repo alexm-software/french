@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-Do not run `build_v2.py sciences`. The gallery painting `d2d9522d` stays the base. The correction `5c766c72` is not accepted. The room is not live.
+Do not run `build_v2.py sciences`. The corrective base is the edit `5c766c72`, not the earlier gallery frame. It is not accepted. The room is not live.
 
 ## Hall plan
 
@@ -44,4 +44,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: stated total through the gallery base is 31. The correction is call 32. It is not a completed room.
+Image calls: the gallery frame was 31. Edit `5c766c72` is call 32. Call 33 is `23c6b3e0`: the block is solid, and it still sits beside the sack. It is not a completed room. The next change has to move that block onto open floor.
