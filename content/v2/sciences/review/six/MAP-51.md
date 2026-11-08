@@ -10,4 +10,6 @@ One repaint of the massing plan. The original campus file and the rejected maps 
 
 The flat green clearing is painted as lawn, trees and paths. No flat colour blocks or outlines remain. Lycée, dome, letters building, observatory, gear-window school, satellite-dish school, quay painters, two jetties, sailboat, and the two fenced blue sculptures are in place.
 
-The science building is a single-storey tan hall with a barrel vault, a gravel court, a telescope on a round plinth, and a low wall with an open gate on the path. The front does not show the plan's separate parts: no three-arch left arcade, no three open glass doors under the vault, no squat tower below the vault crown, and no single east window. Wooden doors sit at the sides of the vault instead.
+The science building is a single-storey tan hall with a barrel vault, a gravel court, a telescope on a round plinth, and a low wall with an open gate. Gate, telescope and the middle opening sit on one line. Nothing is on the roof.
+
+The front does not follow the plan. The left wing is one wooden door, not a three-arch arcade. The three openings under the vault are open doorways without glass. The right block shares the same flat roof; it is not a squat tower below the vault crown. That block has a wooden door on the front and one window on the right wall.
