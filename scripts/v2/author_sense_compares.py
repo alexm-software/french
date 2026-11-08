@@ -1355,6 +1355,13 @@ def fetched_excerpt(lemma, defs):
 # Excerpts below are the sense that matches the note, copied from the page that was opened.
 # They are not the first sentence of the article when that sentence is another homograph.
 HAND = {
+tuple(sorted(("fr_ton_det", "fr_votre_det"))): [S(CN + "ton/adjectif", "qui répond au pronom personnel Tu, toi. On le met toujours devant le nom ou l'adjectif qui précède le nom."), S(CN + "votre", "Il répond au pronom personnel vous, se met toujours devant le substantif, et se dit en parlant à une personne ou à plusieurs.")],
+tuple(sorted(("fr_cahier_noun", "fr_carnet_noun"))): [S(CN + "cahier", "Cahier sur lequel l'élève rédige ses devoirs avant de les recopier au propre sur un cahier d'écolier"), S(CN + "carnet", "Petit livre ou registre de poche où l'on inscrit des comptes ou des notes.")],
+tuple(sorted(("fr_voiture_noun", "fr_bagnole_noun"))): [S(CN + "voiture", "Véhicule automobile servant à transporter un nombre réduit de personnes ou des objets de faible encombrement."), S(CN + "bagnole", "Vieille, mauvaise voiture; vieille, mauvaise automobile :"), S(CN + "bagnole", "Toute voiture, toute automobile :")],
+tuple(sorted(("fr_mort_noun_f", "fr_deces_noun"))): [S(CN + "mort", "Cessation de la vie."), S(CN + urllib.parse.quote("décès"), "Acte dressé par l'officier de l'état civil de la commune où a eu lieu le décès (autrefois enregistré à l'église par un prêtre).")],
+tuple(sorted(("fr_demission_noun", "fr_resignation_noun"))): [S(CN + urllib.parse.quote("démission"), "Action, fait pour une personne ou une collectivité de renoncer, généralement de plein gré, à une fonction, à une charge, à une dignité."), S(CN + urllib.parse.quote("résignation"), "Attitude d'une personne qui accepte, sans se révolter, une chose pénible, désagréable qu'elle juge inévitable.")],
+tuple(sorted(("fr_paraitre_verb", "fr_figurer_verb"))): [S(CN + urllib.parse.quote("paraître"), "Se présenter à la vue, soudainement ou progressivement."), S(CN + "figurer", "Avoir son nom inscrit sur une liste.")],
+tuple(sorted(("fr_apparaitre_verb", "fr_figurer_verb"))): [S(CN + urllib.parse.quote("apparaître"), "Arriver, se montrer, être vu souvent de manière inattendue."), S(CN + "figurer", "Avoir son nom inscrit sur une liste.")],
 tuple(sorted(("fr_ici_adv", "fr_la_bas_adv"))): [S(CN + "ici", "Adverbe de lieu (plus rarement de temps) marquant le lieu où se trouve le locuteur ou un lieu proche que le locuteur désigne."), S(CN + urllib.parse.quote("là-bas"), "En un lieu éloigné, à une distance plus ou moins grande du lieu où se trouve le locuteur ou dont il est question dans le discours.")],
 tuple(sorted(("fr_la_adv", "fr_la_bas_adv"))): [S(CN + urllib.parse.quote("là"), "Adverbe de lieu (plus rarement de temps) marquant le lieu où se trouve le locuteur ou un lieu plus ou moins éloigné de lui."), S(CN + urllib.parse.quote("là-bas"), "En un lieu éloigné, à une distance plus ou moins grande du lieu où se trouve le locuteur ou dont il est question dans le discours.")],
 tuple(sorted(("fr_partir_verb", "fr_quitter_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "quitter", "Laisser un lieu; cesser d'y être, s'en éloigner.")],
@@ -1422,8 +1429,36 @@ def prior_support():
     doc = json.loads(path.read_text(encoding="utf-8"))
     out = {}
     for e in doc.get("edges") or []:
-        if e.get("verified") and e.get("support"):
+        if e.get("support"):
             out[tuple(sorted((e["a"], e["b"])))] = e["support"]
+    return out
+
+
+def settle(support):
+    """A line that is not on the recorded page is uncertain, not a quote."""
+    if not support:
+        return support
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("quote_check", ROOT / "scripts" / "qa" / "quote_check.py")
+    qc = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(qc)
+    corpus = qc.load_corpus()
+    if not corpus:
+        return support
+    out = []
+    for s in support:
+        item = dict(s)
+        if item.get("kind") in ("uncertain", "paraphrase"):
+            item["kind"] = "uncertain"
+            out.append(item)
+            continue
+        text = corpus.get(item.get("url") or "")
+        if text and qc.excerpt_in(item.get("excerpt") or "", text):
+            item.pop("kind", None)
+            out.append(item)
+        else:
+            item["kind"] = "uncertain"
+            out.append(item)
     return out
 
 
@@ -1437,7 +1472,7 @@ def build_edges(vocab, defs=None):
         key = tuple(sorted((a, b)))
         # Hand-read excerpts win. Otherwise keep a pair already published with its excerpt.
         # Do not fill a gap from the first sentence of a scraped page.
-        support = HAND.get(key) or SUPPORT.get(key) or prev.get(key)
+        support = settle(HAND.get(key) or SUPPORT.get(key) or prev.get(key))
         if not support:
             deferred.append({"a": a, "b": b, "reason": "no hand-checked sense excerpt"})
             continue
@@ -1446,7 +1481,8 @@ def build_edges(vocab, defs=None):
             "a_note": a_note, "b_note": b_note,
             "sources": [s["url"] for s in support],
             "support": support,
-            "verified": True,
+            # A quote is a passage on the recorded page. Uncertain support is not a verification.
+            "verified": all((s.get("kind") or "quote") == "quote" for s in support),
         }
         if a_ex:
             edge["a_ex"] = a_ex
@@ -1464,14 +1500,15 @@ def main():
         print("\n".join(problems[:40]))
         raise SystemExit(f"{len(problems)} problem(s)")
     doc = {
-        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means support quotes the sense the note uses, from a page that was opened. A new pair is not filled from the first sentence of a scrape. au/aux and foot/football have no edge: they are the same word in another form. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
+        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means every support item is a quote of the relevant sense from a page that was opened. kind uncertain means the excerpt was not confirmed on the recorded page and is not a verification. A substring match is not treated as proof of the sense. au/aux and foot/football have no edge. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
         "edges": edges,
     }
     path = ROOT / "data" / "source" / "sense_compares.json"
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (ROOT / "data" / "source" / "sense_compare_deferred.json").write_text(
         json.dumps({"deferred_unsupported": deferred}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"wrote {len(edges)} verified edges; deferred {len(deferred)}")
+    quoted = sum(1 for e in edges if e["verified"])
+    print(f"wrote {len(edges)} edges; {quoted} fully quoted; {len(edges)-quoted} with uncertain evidence; deferred {len(deferred)}")
 
 
 if __name__ == "__main__":

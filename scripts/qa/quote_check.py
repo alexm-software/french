@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Check published comparison quotes against the recorded source text.
 
-A support item is a quote unless it says "kind": "paraphrase".
+A support item is a quote, a paraphrase, or uncertain.
 A quote must occur in the text recorded for its URL, and that URL must be a
-page for one of the two words. A paraphrase is labeled and is not treated as a quotation.
+page for one of the two words. Being a substring does not prove the sense.
+kind uncertain means the line was not confirmed and is not a verification.
 
   python3 scripts/qa/quote_check.py            # fail if a quote is missing or off-page
   python3 scripts/qa/quote_check.py --fetch    # record source text for every quote URL
@@ -24,6 +25,13 @@ REJECT = {
     ("fr_concurrence_noun", "fr_competition_noun"): ("agir de concert", "Fait d'être ensemble"),
     ("fr_ici_adv", "fr_la_bas_adv"): ("séjour des morts", "au-delà"),
     ("fr_la_adv", "fr_la_bas_adv"): ("séjour des morts", "au-delà"),
+    ("fr_ton_det", "fr_votre_det"): ("rénitence", "tissu organique"),
+    ("fr_cahier_noun", "fr_carnet_noun"): ("après pliage",),
+    ("fr_bagnole_noun", "fr_voiture_noun"): ("par tête", "taudis", "Mansarde"),
+    ("fr_deces_noun", "fr_mort_noun_f"): ("Ce n'est pas grave",),
+    ("fr_demission_noun", "fr_resignation_noun"): ("bénéfice ecclésiastique",),
+    ("fr_figurer_verb", "fr_paraitre_verb"): ("Donner une forme",),
+    ("fr_apparaitre_verb", "fr_figurer_verb"): ("Donner une forme",),
 }
 
 
@@ -137,10 +145,13 @@ def problems(edges=None, corpus=None, vocab=None):
         for s in e.get("support") or []:
             excerpt, url = s.get("excerpt") or "", s.get("url") or ""
             kind = s.get("kind") or "quote"
-            if kind not in ("quote", "paraphrase"):
-                out.append(f"{pair}: kind must be quote or paraphrase")
+            if kind not in ("quote", "paraphrase", "uncertain"):
+                out.append(f"{pair}: kind must be quote, paraphrase, or uncertain")
                 continue
-            if kind == "paraphrase":
+            for bad in REJECT.get(pair, ()):
+                if bad.lower() in excerpt.lower() or bad.lower() in url.lower():
+                    out.append(f"{pair}: rejected sense or page ({bad})")
+            if kind in ("paraphrase", "uncertain"):
                 continue
             path = fold(urllib.parse.unquote(url)).replace("’", "'").replace("_", " ")
             if not any(lem and lem.replace("’", "'") in path for lem in lemmas):
@@ -150,11 +161,11 @@ def problems(edges=None, corpus=None, vocab=None):
                 out.append(f"{pair}: no recorded source text for {url}")
             elif not excerpt_in(excerpt, text):
                 out.append(f"{pair}: excerpt is not in the recorded page {url}: {excerpt[:80]}")
-            for bad in REJECT.get(pair, ()):
-                if bad.lower() in excerpt.lower() or bad.lower() in url.lower():
-                    out.append(f"{pair}: rejected sense or page ({bad})")
             if re.search(r"\b(vieilli|vx ou)\b", excerpt, re.I) and not re.search(r"old|older|dated|regional|vieilli", notes, re.I):
                 out.append(f"{pair}: old-sense quote without saying so")
+        kinds = [(s.get("kind") or "quote") for s in e.get("support") or []]
+        if e.get("verified") and any(k != "quote" for k in kinds):
+            out.append(f"{pair}: verified but a support line is not a confirmed quote")
         if pair == ("fr_fac_noun", "fr_universite_noun"):
             if not any("fac" in fold(urllib.parse.unquote(s.get("url") or "")) for s in e.get("support") or []):
                 out.append(f"{pair}: fac has no quote of its own")
@@ -169,7 +180,7 @@ def label():
     for e in doc["edges"]:
         lemmas = [fold(vocab[e["a"]]["lemma"]), fold(vocab[e["b"]]["lemma"])]
         for s in e.get("support") or []:
-            if s.get("kind") == "paraphrase":
+            if s.get("kind") in ("paraphrase", "uncertain"):
                 continue
             url, excerpt = s.get("url") or "", s.get("excerpt") or ""
             path = fold(urllib.parse.unquote(url))

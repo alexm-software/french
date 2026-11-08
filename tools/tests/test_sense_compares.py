@@ -129,7 +129,13 @@ class SenseCompares(unittest.TestCase):
         extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
         for key in ("notTheSame", "notInARoom", "exampleOf", "noPainting"):
             self.assertIn(i18n["en"]["card"][key], extras if key != "noPainting" else (ROOT / "village" / "app.js").read_text(encoding="utf-8") + extras)
-        self.assertTrue(all(e.get("verified") and e.get("support") for e in self.edges))
+        for e in self.edges:
+            self.assertTrue(e.get("support"))
+            kinds = [(s.get("kind") or "quote") for s in e["support"]]
+            if e.get("verified"):
+                self.assertTrue(all(k == "quote" for k in kinds))
+            else:
+                self.assertTrue(any(k == "uncertain" for k in kinds))
         deferred = json.loads((ROOT / "data" / "source" / "sense_compare_deferred.json").read_text(encoding="utf-8"))
         self.assertEqual(deferred["deferred_unsupported"], [])
         self.assertNotIn("fr_au_det", ids)
@@ -231,6 +237,44 @@ class SenseCompares(unittest.TestCase):
         ):
             for s in by[key]["support"]:
                 self.assertNotEqual(s.get("kind"), "paraphrase")
+
+    def test_eight_wrong_sense_records_now_quote_the_note(self):
+        by = {tuple(sorted((e["a"], e["b"]))): e for e in self.edges}
+        expect = {
+            ("fr_ton_det", "fr_votre_det"): "pronom personnel Tu",
+            ("fr_cahier_noun", "fr_carnet_noun"): "cahier d'écolier",
+            ("fr_bagnole_noun", "fr_voiture_noun"): "Véhicule automobile",
+            ("fr_deces_noun", "fr_mort_noun_f"): "Cessation de la vie",
+            ("fr_demission_noun", "fr_resignation_noun"): "sans se révolter",
+            ("fr_figurer_verb", "fr_paraitre_verb"): "nom inscrit sur une liste",
+            ("fr_apparaitre_verb", "fr_figurer_verb"): "nom inscrit sur une liste",
+        }
+        for key, needle in expect.items():
+            blob = json.dumps(by[key]["support"], ensure_ascii=False)
+            self.assertIn(needle, blob)
+            self.assertNotIn("rénitence", blob)
+            self.assertNotIn("après pliage", blob)
+            self.assertNotIn("taudis", blob)
+            self.assertNotIn("Ce n'est pas grave", blob)
+            self.assertNotIn("bénéfice ecclésiastique", blob)
+            self.assertNotIn("Donner une forme", blob)
+            self.assertTrue(by[key]["verified"])
+        car = json.dumps(by[("fr_bagnole_noun", "fr_voiture_noun")]["support"], ensure_ascii=False)
+        self.assertIn("Toute voiture, toute automobile", car)
+
+    def test_entendre_text_card_is_regular_re(self):
+        from sense_compares import verb_marker, write_lexicon
+        w = self.vocab["fr_entendre_verb"]
+        self.assertEqual(w.get("verb_group"), 3)
+        self.assertFalse(w.get("irregular"))
+        self.assertEqual(verb_marker(w), ("-re", "purple"))
+        write_lexicon()
+        raw = (ROOT / "village" / "data" / "lexicon.js").read_text(encoding="utf-8")
+        items = json.loads(raw.split("window.V2_LEXICON=", 1)[1].split(";\nwindow.V2_LEXICON_INDEX=", 1)[0])
+        it = items["fr_entendre_verb"]
+        self.assertEqual(it["group"], "-re")
+        self.assertEqual(it["beret"], "purple")
+        self.assertNotEqual(it["beret"], "gold")
 
 
 if __name__ == "__main__":
