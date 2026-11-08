@@ -1,0 +1,498 @@
+{
+  "building": "caserne",
+  "building_id": "B16_caserne",
+  "sector_id": "S06_townhall",
+  "v1_room_id": "R_military_01",
+  "name": "Musée d’histoire militaire",
+  "main": "caserne",
+  "roomList": [
+    {
+      "key": "caserne",
+      "short": "Accueil"
+    },
+    {
+      "key": "entree",
+      "short": "The entrance hall: interpreting military history"
+    },
+    {
+      "key": "uniformes",
+      "short": "The entrance hall: people and service"
+    },
+    {
+      "key": "galerie_fond",
+      "short": "The far hall: historical terms"
+    },
+    {
+      "key": "recrutement",
+      "short": "The far hall: call-up and entry into service"
+    }
+  ],
+  "planned": {
+    "entree": {
+      "vocabRoom": "R_military_01",
+      "only": [
+        "fr_guerre_noun",
+        "fr_paix_noun",
+        "fr_armee_noun",
+        "fr_bataille_noun",
+        "fr_colonel_noun",
+        "fr_combat_noun",
+        "fr_ennemi_noun",
+        "fr_militaire_adj"
+      ]
+    },
+    "uniformes": {
+      "vocabRoom": "R_military_01",
+      "only": [
+        "fr_garde_noun_f",
+        "fr_solde_noun_f",
+        "fr_lutte_noun",
+        "fr_troupe_noun",
+        "fr_victoire_noun",
+        "fr_soldat_noun",
+        "fr_obus_noun"
+      ]
+    },
+    "galerie_fond": {
+      "vocabRoom": "R_military_04",
+      "only": [
+        "fr_avant_garde_noun",
+        "fr_embuscade_noun",
+        "fr_affrontement_noun",
+        "fr_bombardement_noun",
+        "fr_boulet_noun"
+      ]
+    },
+    "recrutement": {
+      "vocabRoom": "R_military_04",
+      "only": [
+        "fr_mobilisation_noun",
+        "fr_incorporation_noun",
+        "fr_recrutement_noun",
+        "fr_conscrit_noun",
+        "fr_recruteur_noun"
+      ]
+    }
+  },
+  "rooms": {
+    "entree": {
+      "name": "The entrance hall: interpreting military history",
+      "image": "caserne/entree.jpg",
+      "room_id": "R_military_01",
+      "alt": "Military history — entrance hall Blank upper-left plaque; Dove sculpture and olive branch on pedestal; Grouped unarmed military figures in glass case; Blank upper-left inner plaque; Full colonel uniform mannequin and plinth; Blank upper-right plaque; Blank lower-right plaque; Uniform fabric swatch and easel",
+      "doors": [
+        {
+          "to": "uniformes",
+          "label": "Les uniformes",
+          "hint": "Continue through the stone arch along the museum circuit",
+          "hit": [
+            610,
+            235,
+            115,
+            160
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_guerre_noun",
+          "box": [
+            120,
+            125,
+            200,
+            132
+          ],
+          "text": "vocab",
+          "labelAt": [
+            220.0,
+            178
+          ]
+        },
+        {
+          "id": "fr_paix_noun",
+          "box": [
+            121,
+            303,
+            155,
+            272
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_armee_noun",
+          "box": [
+            307,
+            301,
+            286,
+            261
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_bataille_noun",
+          "box": [
+            374,
+            125,
+            207,
+            131
+          ],
+          "text": "vocab",
+          "labelAt": [
+            477.5,
+            177
+          ]
+        },
+        {
+          "id": "fr_colonel_noun",
+          "box": [
+            1093,
+            109,
+            155,
+            482
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_combat_noun",
+          "box": [
+            859,
+            125,
+            202,
+            130
+          ],
+          "text": "vocab",
+          "labelAt": [
+            959.5,
+            176
+          ]
+        },
+        {
+          "id": "fr_ennemi_noun",
+          "box": [
+            867,
+            316,
+            201,
+            122
+          ],
+          "text": "vocab",
+          "labelAt": [
+            967.5,
+            364
+          ]
+        },
+        {
+          "id": "fr_militaire_adj",
+          "box": [
+            630,
+            428,
+            171,
+            274
+          ],
+          "text": "vocab"
+        }
+      ],
+      "arrivalFrom": "caserne",
+      "oneWay": "Museum interpretation circuit; continue through the next gallery to return to the vestibule."
+    },
+    "uniformes": {
+      "name": "The entrance hall: people and service",
+      "image": "caserne/uniformes.jpg",
+      "room_id": "R_military_01",
+      "alt": "Military history — entrance hall Three complete guard uniform mannequins as one group; Open pay ledger and grouped coins; Blank upper-left plaque; Complete group of small unarmed uniform figures; Laurel wreath on velvet; Full soldier uniform mannequin and plinth; Blank right-hand plaque",
+      "doors": [
+        {
+          "to": "galerie_fond",
+          "label": "La galerie du fond",
+          "hint": "Continue through the stone arch along the museum circuit",
+          "hit": [
+            650,
+            140,
+            150,
+            205
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_garde_noun_f",
+          "box": [
+            81,
+            143,
+            202,
+            270
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_solde_noun_f",
+          "box": [
+            44,
+            491,
+            288,
+            92
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_lutte_noun",
+          "box": [
+            336,
+            95,
+            239,
+            143
+          ],
+          "text": "vocab",
+          "labelAt": [
+            455.0,
+            153
+          ]
+        },
+        {
+          "id": "fr_troupe_noun",
+          "box": [
+            363,
+            312,
+            188,
+            97
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_victoire_noun",
+          "box": [
+            387,
+            481,
+            150,
+            102
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_soldat_noun",
+          "box": [
+            1109,
+            150,
+            132,
+            390
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_obus_noun",
+          "box": [
+            908,
+            265,
+            153,
+            130
+          ],
+          "text": "vocab",
+          "labelAt": [
+            984.0,
+            316
+          ]
+        }
+      ],
+      "arrivalFrom": "entree",
+      "oneWay": "Museum interpretation circuit; continue through the next gallery to return to the vestibule."
+    },
+    "galerie_fond": {
+      "name": "The far hall: historical terms",
+      "image": "caserne/galerie_fond.jpg",
+      "room_id": "R_military_04",
+      "alt": "Military history — far hall Upper-left brass plaque; Lower-left pale stone plaque; Upper-right pale stone plaque; Tall far-right oak plaque; Lower-right brass plaque",
+      "doors": [
+        {
+          "to": "recrutement",
+          "label": "Le recrutement",
+          "hint": "Continue through the stone arch along the museum circuit",
+          "hit": [
+            565,
+            210,
+            150,
+            220
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_avant_garde_noun",
+          "box": [
+            183,
+            126,
+            263,
+            146
+          ],
+          "text": "vocab",
+          "labelAt": [
+            314.5,
+            186
+          ]
+        },
+        {
+          "id": "fr_embuscade_noun",
+          "box": [
+            166,
+            364,
+            296,
+            130
+          ],
+          "text": "vocab",
+          "labelAt": [
+            314.0,
+            416
+          ]
+        },
+        {
+          "id": "fr_affrontement_noun",
+          "box": [
+            853,
+            87,
+            224,
+            137
+          ],
+          "text": "vocab",
+          "labelAt": [
+            965.5,
+            142
+          ]
+        },
+        {
+          "id": "fr_bombardement_noun",
+          "box": [
+            1099,
+            183,
+            159,
+            252
+          ],
+          "text": "vocab",
+          "labelAt": [
+            1179.0,
+            296
+          ]
+        },
+        {
+          "id": "fr_boulet_noun",
+          "box": [
+            823,
+            394,
+            269,
+            119
+          ],
+          "text": "vocab",
+          "labelAt": [
+            957.5,
+            440
+          ]
+        }
+      ],
+      "arrivalFrom": "uniformes",
+      "oneWay": "Museum interpretation circuit; continue through the next gallery to return to the vestibule."
+    },
+    "recrutement": {
+      "name": "The far hall: call-up and entry into service",
+      "image": "caserne/recrutement.jpg",
+      "room_id": "R_military_04",
+      "alt": "Military history — far hall Framed call-up document with wax seal; Full open induction register and stamped papers; Framed historical recruitment poster; Complete standing conscript mannequin holding call-up paper; Full seated recruiter mannequin with held forms and chair",
+      "doors": [
+        {
+          "to": "caserne",
+          "label": "Le vestibule",
+          "hint": "Continue through the stone arch along the museum circuit",
+          "hit": [
+            540,
+            190,
+            160,
+            250
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_mobilisation_noun",
+          "box": [
+            181,
+            74,
+            256,
+            278
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_incorporation_noun",
+          "box": [
+            116,
+            429,
+            388,
+            111
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_recrutement_noun",
+          "box": [
+            861,
+            59,
+            188,
+            226
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_conscrit_noun",
+          "box": [
+            1085,
+            154,
+            155,
+            442
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_recruteur_noun",
+          "box": [
+            770,
+            294,
+            200,
+            351
+          ],
+          "text": "vocab"
+        }
+      ],
+      "arrivalFrom": "galerie_fond",
+      "oneWay": "Museum interpretation circuit; continue through the next gallery to return to the vestibule."
+    },
+    "caserne": {
+      "name": "Le vestibule du musée · Military History Entrance",
+      "image": "caserne/accueil.jpg",
+      "alt": "A respectful museum vestibule begins a four-gallery interpretation circuit.",
+      "mapExit": {
+        "box": [
+          90,
+          253,
+          205,
+          300
+        ],
+        "label": "La place de la Mairie"
+      },
+      "doors": [
+        {
+          "to": "entree",
+          "label": "La salle d’entrée",
+          "hint": "Through the painted opening to La salle d’entrée",
+          "hit": [
+            978,
+            280,
+            231,
+            250
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    }
+  }
+}

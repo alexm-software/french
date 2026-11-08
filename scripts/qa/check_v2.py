@@ -83,6 +83,29 @@ LIMITS = json.loads((ROOT / "skills" / "limits.json").read_text(encoding="utf-8"
 QA = ROOT / "data" / "hooks" / "qa"
 
 
+def circuit_errors(rooms, key, main):
+    """An explicit one-way room must have a real arrival and a physical route outside."""
+    room = rooms[key]
+    origin = room.get("arrivalFrom")
+    errors = []
+    if not isinstance(room.get("oneWay"), str) or not room["oneWay"].strip():
+        errors.append("one-way route needs a reason")
+    if origin not in rooms or not any(d.get("to") == key and not d.get("building") for d in rooms.get(origin, {}).get("doors", [])):
+        errors.append(f"arrival room {origin} has no painted door here")
+    pending, seen = [key], set()
+    while pending:
+        current = pending.pop()
+        if current == main:
+            break
+        if current in seen or current not in rooms:
+            continue
+        seen.add(current)
+        pending.extend(d.get("to") for d in rooms[current].get("doors", []) if not d.get("building"))
+    else:
+        errors.append(f"one-way circuit has no painted route to {main}")
+    return errors
+
+
 def load_tsv(name):
     f = QA / name
     if not f.exists():
@@ -314,9 +337,12 @@ def check_building(bld, errs, warns, places=None):
         elif key == main:
             if not R.get("mapExit"): E(f"{tag}: main room has no painted exit to the village")
             for k2 in keys_in_list:
-                if k2 != main and rooms.get(k2, {}).get("backTo", main) == main and not any(d["to"] == k2 for d in R.get("doors", [])): E(f"{tag}: no painted door to sub-room {k2}")
+                if k2 != main and not rooms.get(k2, {}).get("oneWay") and rooms.get(k2, {}).get("backTo", main) == main and not any(d["to"] == k2 for d in R.get("doors", [])): E(f"{tag}: no painted door to sub-room {k2}")
         else:
             if key not in keys_in_list: E(f"{tag}: room not in roomList")
+            if R.get("oneWay"):
+                for error in circuit_errors(rooms, key, main): E(f"{tag}: {error}")
+                continue
             # a sub-room is entered from main, or from another listed sub-room (nested, e.g. maths -> recre, or a
             # chain kiosque -> redaction -> standard -> radio); backTo records that "entered from" room, which must
             # lead back to main through listed rooms, and both rooms need a real painted door. Back itself no longer
