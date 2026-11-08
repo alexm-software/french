@@ -3,15 +3,15 @@
   "building_id": "B35_sciences",
   "sector_id": "S10_university",
   "name": "Faculté des Sciences",
-  "main": "hall",
+  "main": "sciences",
   "roomList": [
     {
-      "key": "hall",
+      "key": "sciences",
       "short": "Les roches"
     }
   ],
   "planned": {
-    "hall": {
+    "sciences": {
       "vocabRoom": "R_geology",
       "only": [
         "fr_mine_noun",
@@ -24,21 +24,21 @@
     }
   },
   "rooms": {
-    "hall": {
-      "name": "Le hall des roches · The Rock Hall",
+    "sciences": {
+      "name": "Le hall des roches",
       "room_id": "R_geology",
-      "image": "sciences/hall.jpg",
-      "alt": "Planning layout only. Not a claim about a painting.",
+      "image": "sciences/sciences.jpg",
+      "alt": "The ground-floor hall of the science faculty, in ink and gouache, looking toward open glass doors. A rock mound with one tunnel, a lantern and an ore cart sits on a low table. A torn sack of earth spills from a wooden cart, with a seedling in the tear. One low gray stone slab lies on the open floor. A geologist holds a sparkling mineral cluster under a lamp that throws a rainbow. A tall purple crystal stands on the right with a mouse at its base. A rubber boot rests in a tray of soil, the sole toward the viewer, and a worm lifts its head. Through the open doors are a gravel path, autumn trees and the campus telescope.",
       "nameplate": [
-        50,
-        3.5
+        16,
+        7
       ],
       "mapExit": {
         "box": [
-          565,
-          45,
-          160,
-          185
+          560,
+          24,
+          210,
+          226
         ],
         "label": "Campus"
       },
@@ -47,57 +47,27 @@
       "items": [
         {
           "id": "fr_mine_noun",
-          "box": [
-            200,
-            140,
-            190,
-            120
-          ]
+          "box": [82, 148, 299, 180]
         },
         {
           "id": "fr_terre_noun",
-          "box": [
-            95,
-            300,
-            230,
-            150
-          ]
+          "box": [104, 410, 292, 258]
         },
         {
           "id": "fr_pierre_noun",
-          "box": [
-            300,
-            500,
-            170,
-            115
-          ]
+          "box": [416, 553, 178, 120]
         },
         {
           "id": "fr_mineral_adj",
-          "box": [
-            520,
-            265,
-            230,
-            245
-          ]
+          "box": [557, 272, 278, 250]
         },
         {
           "id": "fr_cristal_noun",
-          "box": [
-            860,
-            120,
-            130,
-            200
-          ]
+          "box": [1015, 102, 154, 279]
         },
         {
           "id": "fr_sol_noun",
-          "box": [
-            880,
-            450,
-            200,
-            130
-          ]
+          "box": [920, 435, 230, 210]
         }
       ]
     }

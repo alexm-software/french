@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-Do not run `build_v2.py sciences`. Call 35 `d1d59540` is the picture under review. It is not accepted. The room is not live.
+The hall uses the accepted painting `d1d59540` and is integrated. It is not merged. No further painting of this room.
 
 ## Hall plan
 
@@ -21,8 +21,8 @@ Do not run `build_v2.py sciences`. Call 35 `d1d59540` is the picture under revie
 
 | id | next room |
 |---|---|
-| fr_pendule_noun_m | Forces, with the other force words. Source room `R_physics_02`. |
-| fr_creuset_noun | Smelting, with minerai and filon, inside More rocks. Source `vocab.jsonl` room `R_geology`; `rooms.json` also lists it on `R_geology_z1`. |
+| fr_pendule_noun_m | Forces, with the other force words. Source room `R_physics_02`. Masculine. Unpainted hook: a pendulum in its own frame, one ladybird on the bob. |
+| fr_creuset_noun | Smelting, with minerai and filon, inside More rocks. Source `vocab.jsonl` room `R_geology`; `rooms.json` also lists it on `R_geology_z1`. Unpainted hook: an orange pot on a trivet. |
 
 No verb is in the 136 science words. `extraire` and `observer` stay on their own streets.
 

@@ -99,9 +99,11 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertEqual(ids, ["fr_mine_noun", "fr_terre_noun", "fr_pierre_noun", "fr_mineral_adj", "fr_cristal_noun", "fr_sol_noun"])
         for wid, room_id in sources.items():
             self.assertEqual(vocab[wid]["room_id"], room_id)
-            self.assertEqual(live.get(wid, []), [])
+            self.assertEqual(live.get(wid, []), [("sciences", "sciences")])
         self.assertEqual(vocab["fr_pendule_noun_m"]["room_id"], "R_physics_02")
+        self.assertEqual(live.get("fr_pendule_noun_m", []), [])
         self.assertEqual(vocab["fr_creuset_noun"]["room_id"], "R_geology")
+        self.assertEqual(live.get("fr_creuset_noun", []), [])
         plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
         self.assertIn("fr_pendule_noun_m", plan)
         self.assertIn("fr_creuset_noun", plan)
@@ -129,8 +131,12 @@ class ScienceHallPilot(unittest.TestCase):
                 if overlaps(box, obox):
                     found.append([wid, other])
         self.assertEqual(found, measured["overlaps"])
-        self.assertFalse((ROOT / "village/data/sciences.js").exists())
-        self.assertFalse((ROOT / "village/sciences/hall.jpg").exists())
+        hall = (ROOT / "village/sciences/sciences.jpg").read_bytes()
+        self.assertEqual(hashlib.sha256(hall).hexdigest(),
+                         "d1d59540fd47933c493dca00e0609b44c0c0fe927ae420a5a1cdb46218ab7c25")
+        payload = (ROOT / "village/data/sciences.js").read_text()
+        for wid in ("fr_mine_noun", "fr_terre_noun", "fr_pierre_noun", "fr_mineral_adj", "fr_cristal_noun", "fr_sol_noun"):
+            self.assertIn(wid, payload)
 
     def test_parked_exit_omits_the_sector_image(self):
         parked = json.loads((REVIEW / "parked-eight.manifest.json").read_text())
