@@ -2,7 +2,15 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-The hall uses the accepted painting `d1d59540` and is integrated. It is not merged. No further painting of this room.
+The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. It is the only room with a Campus exit.
+
+## Connections
+
+Campus opens the hall. Back and the hall's one door both return to Campus. Later rooms do not get a Campus exit. Their return is the hall. The hall does not gain a second control until a later paint adds a real opening. The finds candidate, if accepted, returns through an oak door into the hall.
+
+## Finds candidate, not integrated
+
+`finds` is one composition checkpoint. It is not in the live layout. Words: prospection, géologue, volcan, minerai, filon, caillou. Gisement stays unpainted. Creuset stays with smelting. Pendule stays with forces.
 
 ## Hall plan
 
@@ -44,4 +52,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: call 34 `bc62ca91` passed every cue. Call 35 `d1d59540` is the smaller slab. It is not a completed room.
+Image calls: 36. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 is the finds checkpoint `080d7f5e`, not integrated.
