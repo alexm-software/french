@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "village" / "data"
-SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js"}
+SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js", "lexicon.js"}
 REHOME = {"eglise/clocher": "eglise/parvis", "eglise/paroisse": "eglise/eglise", "eglise/bricolage": "eglise/eglise"}  # as build_extras.py
 MIN_SHARED = 3
 CHILD_BUILDINGS = {"ecole"}

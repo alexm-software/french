@@ -127,12 +127,28 @@ class SenseCompares(unittest.TestCase):
             self.assertTrue(e["support"][0]["url"].startswith("https://"))
         i18n = json.loads((ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))
         extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
-        for key in ("notTheSame", "notInARoom", "exampleOf"):
-            self.assertIn(i18n["en"]["card"][key], extras)
-            self.assertIn(i18n["fr"]["card"][key], (ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))
+        for key in ("notTheSame", "notInARoom", "exampleOf", "noPainting"):
+            self.assertIn(i18n["en"]["card"][key], extras if key != "noPainting" else (ROOT / "village" / "app.js").read_text(encoding="utf-8") + extras)
+        self.assertTrue(all(e.get("verified") and e.get("support") for e in self.edges))
+        deferred = json.loads((ROOT / "data" / "source" / "sense_compare_deferred.json").read_text(encoding="utf-8"))
+        self.assertGreater(len(deferred["deferred_unsupported"]), 0)
+        self.assertEqual(i18n["fr"]["card"]["notTheSame"], "Pas la même chose")
         self.assertEqual(totals["published_edges"], len(self.edges))
         self.assertGreater(totals["entries_outside_candidate_clusters"], 0)
         self.assertGreater(totals["exact_clusters"], 300)
+
+    def test_unpainted_lexicon_is_reciprocal_and_has_no_room(self):
+        from sense_compares import write_lexicon
+        self.assertGreater(write_lexicon(), 0)
+        raw = (ROOT / "village" / "data" / "lexicon.js").read_text(encoding="utf-8")
+        items = json.loads(raw.split("window.V2_LEXICON=", 1)[1].split(";\nwindow.V2_LEXICON_INDEX=", 1)[0])
+        for it in items.values():
+            self.assertTrue(it["lex"])
+            self.assertNotIn("cardSrc", it)
+            for c in it.get("compares") or []:
+                self.assertTrue(c.get("at") or c.get("lex"))
+                if c.get("at") is None:
+                    self.assertIn(c["to"], items)
 
 
 if __name__ == "__main__":

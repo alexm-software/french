@@ -229,6 +229,11 @@ def main():
             "near_not_same": near_counts["near_not_same"],
         },
         "equivalent_pairs_inside_accepted_clusters": EQUIVALENT_PAIRS,
+        "still_likely_false_equivalents": [
+            "réfléchir/refléter", "prélever/prendre", "usager/utilisateur", "croiser/traverser",
+            "dégât/dommage", "application/candidature", "lessive/buanderie", "trompe/trompette",
+            "merci/miséricorde", "couler/écouler"
+        ],
         "remaining": REMAINING,
         "exact_clusters": exact_rows,
         "near_clusters": near_rows,

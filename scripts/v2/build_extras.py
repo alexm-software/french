@@ -21,7 +21,7 @@
 
 usage: python3 scripts/v2/build_extras.py
 """
-import json, re
+import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -192,7 +192,10 @@ def main():
     w("talk/index.js", "V2_TALK_INDEX", {"cast": dlg.get("cast", {}), "rooms": {k: len(v) for k, v in by.items()}})
     w("listening.js", "V2_LISTENING", lis)
     w("prayers.js", "V2_PRAYERS", prayers)
-    print(f"live.js: {len(live)} buildings · index.js: {len(index)} entries · talk/: {sum(len(v) for v in by.values())} dialogues "
+    sys.path.insert(0, str(ROOT / "scripts" / "v2"))
+    from sense_compares import write_lexicon
+    nlex = write_lexicon()
+    print(f"live.js: {len(live)} buildings · index.js: {len(index)} entries · lexicon.js: {nlex} unpainted cards · talk/: {sum(len(v) for v in by.values())} dialogues "
           f"({placed} conversations placed) in {len(by)} rooms · listening.js: {len(lis)} passages · prayers.js: {len(prayers)} prayers")
 
 

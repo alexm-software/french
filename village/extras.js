@@ -22,7 +22,9 @@ function need(src,cb){ if(scripts[src]===true){cb();return} if(scripts[src]){scr
   sc.onload=function(){var l=scripts[src]; scripts[src]=true; l.forEach(function(f){f()})};
   sc.onerror=function(){var l=scripts[src]; delete scripts[src]; l.forEach(function(f){f(true)})};
   document.head.appendChild(sc) }
-function withIndex(cb){ need('data/index.js',function(){cb(window.V2_INDEX||[])}) }
+function withIndex(cb){ need('data/index.js',function(){ need('data/lexicon.js',function(){
+  var ix=(window.V2_INDEX||[]).concat(window.V2_LEXICON_INDEX||[]); cb(ix) }) }) }
+function openLex(id, from){ need('data/lexicon.js',function(){ var it=(window.V2_LEXICON||{})[id]; if(it) V.openCard(it, from||null) }) }
 function hrefFor(b,k,id){ return V.roomHref(b,k)+(id?'?w='+id:'') }
 
 // ---------- progress ----------
@@ -106,14 +108,17 @@ function search(){
         var sc=fr===t||bare===t?0:bare.indexOf(t)===0?1:(' '+en+' ').indexOf(' '+t)>=0?2:fr.indexOf(t)>=0?3:en.indexOf(t)>=0?4:9;
         if(sc<9) hits.push([sc,r]) });
       hits.sort(function(a,b){return a[0]-b[0]||a[1][1].length-b[1][1].length});
-      out.innerHTML=hits.slice(0,40).map(function(x){ var r=x[1];
-        return '<a role="listitem" class="sr1" href="'+hrefFor(r[3],r[4],r[0])+'"><b lang="fr">'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span><small>'+esc(r[5])+' · '+esc(r[3].replace(/_/g,' '))+'</small></a>' }).join('')||'<p class="small">No match.</p>' }
+      out.innerHTML=hits.slice(0,40).map(function(x){ var r=x[1], lex=r[3]==='lex';
+        var href=lex?'#':hrefFor(r[3],r[4],r[0]);
+        return '<a role="listitem" class="sr1" href="'+href+'"'+(lex?' data-lex="'+esc(r[0])+'"':'')+'><b lang="fr">'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span><small>'+esc(r[5])+' · '+esc(lex?CMP_SEARCH:r[3].replace(/_/g,' '))+'</small></a>' }).join('')||'<p class="small">No match.</p>' }
     q.addEventListener('input',run); run();
-    q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var a=out.querySelector('a'); if(a){ location.hash=a.getAttribute('href') } } });
+    q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var a=out.querySelector('a'); if(!a) return; if(a.dataset.lex){ e.preventDefault(); openLex(a.dataset.lex, a) } else location.hash=a.getAttribute('href') } });
   });
 }
+var CMP_SEARCH='not in a room';
 searchBtn.addEventListener('click',search);
-cardWrap.addEventListener('click',function(e){ var a=e.target.closest('a.sr1,a.goto'); if(a){ V.closeCard() } });
+document.addEventListener('click',function(e){ var a=e.target.closest('[data-lex]'); if(!a) return; e.preventDefault(); openLex(a.getAttribute('data-lex'), a) }, true);
+cardWrap.addEventListener('click',function(e){ var a=e.target.closest('a.sr1,a.goto'); if(a && !a.dataset.lex){ V.closeCard() } });
 
 // ---------- recall mode ----------
 function setRecall(on){ recall=on; stage.classList.toggle('recall',on); recallTag.hidden=!on;
@@ -236,17 +241,18 @@ function step(d){ var R=V.here().room; if(!R||!cur) return; var i=R.items.indexO
 V.onCard.push(function(it){
   cur=it;
   var en=card.querySelector('.en'); if(en&&it.cefr) en.insertAdjacentHTML('beforeend',' <span class="lvl" title="CEFR level">'+esc(it.cefr)+'</span>');
-  var gram=card.querySelector('.gram'); if(gram&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
+  var gram=card.querySelector('.gram'); if(gram&&!it.lex&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
   var pic=card.querySelector('.pic'); if(pic){ pic.title='Tap to enlarge'; pic.addEventListener('click',function(){ pic.classList.toggle('big') }) }
   // English card chrome. The same three strings are data/i18n.json en.card; fr.card holds the French.
   // The village card does not load that file, so this section stays English like "Example" above it.
-  var CMP={notTheSame:'Not the same', notInARoom:'Not in a room yet.', exampleOf:'Example of {word}'};
+  var CMP={notTheSame:'Not the same', notInARoom:'Not in a room yet.', exampleOf:'Example of {word}', noPainting:'No painting yet'};
   if(it.compares&&it.compares.length){
     var cmp='<div class="sec cmp"><h3>'+esc(CMP.notTheSame)+'</h3>';
     it.compares.forEach(function(c){
       var name=c.hw||c.fr;
       cmp+='<div class="cmp1">';
       if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
+      else if(c.lex) cmp+='<p><a class="lexopen" href="#" data-lex="'+esc(c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.noPainting)+'</span></p>';
       else cmp+='<p><b lang="fr">'+esc(name)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.notInARoom)+'</span></p>';
       cmp+='<p>'+esc(c.note)+'</p>';
       (c.examples||[]).forEach(function(ex){
@@ -267,7 +273,7 @@ V.onCard.push(function(it){
   foot+='<span class="kn">'+(p&&p.b>=2?'<span class="small">You know this one.</span>':'<button class="btn2 ghost" data-act="k2" data-id="'+esc(it.id)+'">I know this</button> <button class="btn2 ghost" data-act="k0" data-id="'+esc(it.id)+'">Practice it</button>')+'</span>';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="next" aria-label="Next word">next ›</button>';
   card.insertAdjacentHTML('beforeend',foot+'</div><div class="also" hidden></div>');
-  withIndex(function(IX){ if(cur!==it) return; var h=V.here(), other=IX.filter(function(r){return r[0]===it.id&&!(r[3]===h.bld&&r[4]===h.key)});
+  withIndex(function(IX){ if(cur!==it) return; var h=V.here(), other=IX.filter(function(r){return r[0]===it.id&&r[3]!=='lex'&&!(r[3]===h.bld&&r[4]===h.key)});
     if(other.length){ var a=card.querySelector('.also'); a.hidden=false; a.innerHTML='Also in: '+other.map(function(r){return '<a class="goto" href="'+hrefFor(r[3],r[4],r[0])+'">'+esc(r[3].replace(/_/g,' ')+(r[4]!==r[3]?' · '+r[4].replace(/_/g,' '):''))+'</a>'}).join(', ') } });
 });
 

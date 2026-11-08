@@ -131,6 +131,8 @@ def attach_compares(it, vocab, placements, index=None):
             "note": row["note"],
             "at": choose_placement(row["to"], placements, vocab),
         }
+        if item["at"] is None:
+            item["lex"] = True
         if row.get("examples"):
             item["examples"] = row["examples"]
         out.append(item)
@@ -187,6 +189,61 @@ def validate(vocab=None, edges=None):
         if not axes:
             problems.append(f"{where}: axes required")
     return problems
+
+
+def _lex_item(w, vocab, placements, index):
+    """Source text for a word that has no painting. No room and no image."""
+    pos = w.get("pos")
+    it = {
+        "id": w["id"], "lex": True, "fr": w["lemma"],
+        "en": w.get("gloss") or "", "ipa": w.get("ipa") or "", "say": w.get("respelling") or "",
+        "cefr": w.get("cefr") or "",
+        "ex": [w.get("example_fr") or "", w.get("example_en") or ""],
+        "hook": ((w.get("mnemonic_hook") or {}).get("scene") or ""),
+    }
+    if pos == "verb":
+        it.update(verb=True, beret="gold", group="irregular")
+    elif pos == "adj":
+        it.update(adj=True, invariable=True)
+    elif pos == "noun":
+        g = w.get("gender") or "m"
+        art = w.get("article") or ("la" if g == "f" else "le")
+        it.update(g=g, art=art, ind={"f": "une", "m": "un", "mf": "un/une"}.get(g, "un"))
+    else:
+        it.update(adv=True, gramLine={
+            "adv": "adverb · invariable", "prep": "preposition · invariable",
+            "pron": "pronoun", "conj": "conjunction · invariable", "det": "determiner",
+            "num": "number · invariable", "intj": "interjection · invariable",
+            "phrase": "phrase · fixed expression", "idiom": "idiom · fixed expression",
+        }.get(pos, pos or "word"))
+    return attach_compares(it, vocab, placements, index)
+
+
+def write_lexicon(vocab=None, placements=None, index=None):
+    """Text cards for compare-words that are not painted. Search and the other card open them."""
+    vocab = vocab if vocab is not None else load_vocab()
+    placements = placements if placements is not None else load_placements()
+    index = index if index is not None else compares_index(load_edges(), vocab)
+    ids = set()
+    for wid, rows in index.items():
+        if choose_placement(wid, placements, vocab) is None:
+            ids.add(wid)
+        for row in rows:
+            if choose_placement(row["to"], placements, vocab) is None:
+                ids.add(row["to"])
+    items = {}
+    rows = []
+    for wid in sorted(ids):
+        w = vocab[wid]
+        it = _lex_item(w, vocab, placements, index)
+        items[wid] = it
+        kind = "verb" if it.get("verb") else "adj" if it.get("adj") else "adv" if it.get("adv") else "noun"
+        rows.append([wid, it.get("hw") or headword_of(w), (it.get("en") or "")[:60], "lex", "lex", it.get("cefr") or "", kind])
+    path = ROOT / "village" / "data" / "lexicon.js"
+    path.write_text("window.V2_LEXICON=" + json.dumps(items, ensure_ascii=False, separators=(",", ":"))
+                    + ";\nwindow.V2_LEXICON_INDEX=" + json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + ";\n",
+                    encoding="utf-8")
+    return len(items)
 
 
 if __name__ == "__main__":

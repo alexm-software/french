@@ -1221,34 +1221,70 @@ def sources_for(lemma_a, lemma_b):
     return out
 
 
-def build_edges(vocab):
-    edges = []
+# First captured CNRTL sense is the wrong homograph for the note we teach.
+BAD_SENSE = {"quitter", "laisser", "si", "oui", "nous"}
+# A later sentence on the same page is the sense the note uses.
+SENSE_INDEX = {"travail": 3, "argent": 3, "sortir": 3}
+
+
+def load_fetched_defs():
+    path = Path("/tmp/sense_defs.json")
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def fetched_excerpt(lemma, defs):
+    if lemma in BAD_SENSE:
+        return None
+    rec = defs.get(lemma) or {}
+    sentences = rec.get("defs") or []
+    if not sentences:
+        return None
+    i = SENSE_INDEX.get(lemma, 0)
+    if i >= len(sentences):
+        i = 0
+    return {"url": rec.get("url") or ("https://www.cnrtl.fr/definition/" + urllib.parse.quote(lemma)), "excerpt": sentences[i]}
+
+
+def build_edges(vocab, defs=None):
+    defs = defs if defs is not None else load_fetched_defs()
+    edges, deferred = [], []
     for row in RAW:
         a, b, axes, a_note, b_note = row[:5]
         a_ex = row[5] if len(row) > 5 else None
         b_ex = row[6] if len(row) > 6 else None
         key = tuple(sorted((a, b)))
         support = SUPPORT.get(key)
+        if not support and defs:
+            sa = fetched_excerpt(vocab[a]["lemma"], defs)
+            sb = fetched_excerpt(vocab[b]["lemma"], defs)
+            if sa and sb:
+                support = [sa, sb]
+            else:
+                deferred.append({"a": a, "b": b, "reason": "no usable sense excerpt from the CNRTL page that was opened"})
+                continue
+        elif not support:
+            deferred.append({"a": a, "b": b, "reason": "sense excerpt file was not available; not published"})
+            continue
         edge = {
             "a": a, "b": b, "axes": axes,
             "a_note": a_note, "b_note": b_note,
-            "sources": sources_for(vocab[a]["lemma"], vocab[b]["lemma"]),
-            "verified": bool(support),
+            "sources": [s["url"] for s in support],
+            "support": support,
+            "verified": True,
         }
-        if support:
-            edge["support"] = support
-            edge["sources"] = [s["url"] for s in support]
         if a_ex:
             edge["a_ex"] = a_ex
         if b_ex:
             edge["b_ex"] = b_ex
         edges.append(edge)
-    return edges
+    return edges, deferred
 
 
 def main():
     vocab = load_vocab()
-    edges = build_edges(vocab)
+    edges, deferred = build_edges(vocab)
     problems = validate(vocab, edges)
     if problems:
         print("\n".join(problems[:40]))
@@ -1259,7 +1295,9 @@ def main():
     }
     path = ROOT / "data" / "source" / "sense_compares.json"
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"wrote {len(edges)} edges to {path}")
+    (ROOT / "data" / "source" / "sense_compare_deferred.json").write_text(
+        json.dumps({"deferred_unsupported": deferred}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"wrote {len(edges)} verified edges; deferred {len(deferred)}")
 
 
 if __name__ == "__main__":
