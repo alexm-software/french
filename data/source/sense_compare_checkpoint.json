@@ -1,12 +1,13 @@
 {
-  "boundary": "t428u",
-  "deadline_local": "2026-11-08 06:00 AM CST",
-  "deadline_utc": "2026-11-08T12:00:00Z",
-  "rule": "Work until the vocabulary-comparison audit is done or 06:00 AM CST, whichever is sooner. 12:00 UTC is the cutoff for starting any new audit batch, investigation, or implementation. After that, only bounded saving and testing already underway, then idle. No merge.",
+  "boundary": "t430u",
+  "replaces": "t428u 2026-11-08 06:00 AM CST / 2026-11-08T12:00:00Z",
+  "deadline_local": "2026-11-08 02:00 AM CST",
+  "deadline_utc": "2026-11-08T08:00:00Z",
+  "rule": "t430u replaces the 06:00 AM CST cutoff. New cutoff is 02:00 AM CST (08:00 UTC) on Nov 8. No new audit batch after that. Bounded checkpoint save, then idle. Implementation stays idle while PR 276 is reviewed. No merge.",
   "parallel": "Science PR 274 owns faculty forecourt/hub/navigation, including any app.js Hub dedup. This branch does not edit app.js or navigation. Parent reconciles the combined build. No merge of either PR.",
   "started_utc": "2026-11-08T06:08:11Z",
-  "checkpoint_utc": "2026-11-08T06:20:00Z",
-  "status": "checkpoint_saved",
+  "checkpoint_utc": "2026-11-08T06:22:00Z",
+  "status": "idle_pending_review",
   "branch": "cursor/sense-comparisons-c06a",
   "base": "bdb6ae972dfac51a03515a94f184fbae1163ad70",
   "scope": "Card comparison data and rendering only. No room painting, no layout/nav edits, no app.js.",
@@ -42,5 +43,5 @@
     "Secondary-atom token overlaps that are not a full primary gloss were not a candidate class.",
     "104 comparison targets are not in a painted room. Cards name them and say they are not in a room yet."
   ],
-  "next": "Do not start another audit batch after 12:00 UTC. Parent reconciles this branch with PR 274 without merging here."
+  "next": "Idle. No new batch after 2026-11-08T08:00:00Z. Wait for the independent review of PR 276. Do not merge."
 }
