@@ -2,17 +2,16 @@
   "building": "sciences",
   "room": "hall",
   "coordinate_space": "1280x720-px",
-  "setting": "Ground-floor hall of the science faculty as a geologist returns from fieldwork",
+  "setting": "Ground-floor hall of the science faculty, seen from an upstairs gallery",
   "theme_fit": "Six concrete earth-science words in one return-from-fieldwork moment.",
-  "scene_situation": "A geologist returns from the field: his cart, a stone with a pier in a pan of water, a small mine, a mineral, and a crystal with one mouse, while he sits with his boot in a soil tray.",
+  "scene_situation": "From the gallery, a geologist unpacks field samples on the hall floor.",
   "prompt": {
     "kind": "room",
     "room_name": "Le hall des roches",
-    "camera": "eye-level; sack high left, stone and jetty low left, man low right, crystal high right above him",
+    "camera": "elevated gallery view looking down about 35 degrees, not the aerial angle of the exterior picture",
     "light_from": "the glass roof and the open campus doors",
     "refs": [
-      "content/v2/sciences/review/six/sciences-faculty-crop.png",
-      "content/v2/sciences/review/jetty/2x-stone-pier.jpg"
+      "content/v2/sciences/review/six/sciences-faculty-crop.png"
     ],
     "look": "tan stone, glass roof, telescope and glass doors of the faculty crop",
     "materials": "pale tan stone walls, cream stone floor, oak tables, glass roof, white daylight",
@@ -44,7 +43,7 @@
     {
       "to": "map",
       "where": "back center",
-      "painted_as": "open glass doors onto a gravel campus path and autumn trees, frame and glass matching the attached faculty crop, threshold clear"
+      "painted_as": "open glass doors onto a gravel campus path and autumn trees, matching the faculty crop's tan stone, glass and telescope, seen from inside looking out"
     }
   ],
   "zooms": [],
@@ -55,47 +54,24 @@
         "fr_terre_noun",
         "fr_pierre_noun"
       ],
-      "doing": "the sack sits high on the cart and the stone with its water-jetty sits lower, with open floor between them; the jetty end rests on the stone"
+      "doing": "the cart with its one sack sits farther back than the plain stone, with bare floor between them"
     },
     {
       "who": [
         "fr_mine_noun",
         "fr_mineral_adj"
       ],
-      "doing": "the small mine model and the mineral cluster are on separate tables"
+      "doing": "the small mine model is back left and the geologist tilts a lamp onto the mineral cluster in the middle"
     },
     {
       "who": [
-        "fr_sol_noun",
-        "fr_cristal_noun"
+        "fr_cristal_noun",
+        "fr_sol_noun"
       ],
-      "doing": "the crystal and its mouse are high and to the right of the man, and his whole seated body stays below them"
+      "doing": "the crystal and mouse are back right and the boot stands in its soil tray nearer, with floor between"
     }
   ],
   "items": [
-    {
-      "id": "fr_terre_noun",
-      "word": "terre",
-      "pos": "noun",
-      "gloss": "earth; ground",
-      "hook": "TEHR sounds like tear: a torn sack of EARTH spills dark soil, and a seedling pokes through the tear.",
-      "hook_object": "tear in a sack",
-      "shown": "torn sack of earth with a seedling, on the cart, above the stone and clear of it",
-      "pose_action": "the sack is high on the left, not beside the stone",
-      "count": 1,
-      "sensitive": "none",
-      "side": "left",
-      "zone": "mid-left cart",
-      "depth": "middle",
-      "box_hint": [
-        160,
-        120,
-        200,
-        150
-      ],
-      "interacts_with": "the stone and water-pier in front of the cart",
-      "g": "f"
-    },
     {
       "id": "fr_mine_noun",
       "word": "mine",
@@ -103,20 +79,43 @@
       "gloss": "mine; pencil lead",
       "hook": "A tabletop MINE: one short rock tunnel, one lit lantern, and one ore cart on rails. Said MEEN.",
       "hook_object": "tabletop mine tunnel",
-      "shown": "one small mine model on a low table: one tunnel, one lantern, one ore cart, no wheelbarrow",
-      "pose_action": "the model sits alone on the back-left table",
+      "shown": "a small mine model on the floor's back left: one rock mound, one dark tunnel mouth, rails, a lantern and one ore cart",
+      "pose_action": "the model sits on a low table on the floor",
       "count": 1,
       "sensitive": "none",
       "side": "left",
-      "zone": "back-left table",
+      "zone": "back-left floor",
       "depth": "back",
       "box_hint": [
-        180,
-        300,
-        180,
-        130
+        200,
+        140,
+        190,
+        120
       ],
-      "interacts_with": "the mineral cluster across the open floor",
+      "interacts_with": "the cart and sack nearer on the left",
+      "g": "f"
+    },
+    {
+      "id": "fr_terre_noun",
+      "word": "terre",
+      "pos": "noun",
+      "gloss": "earth; ground",
+      "hook": "TEHR sounds like tear: a torn sack of EARTH spills dark soil, and a seedling pokes through the tear.",
+      "hook_object": "tear in a sack",
+      "shown": "one wooden hand-cart with one torn sack of earth, soil spilling, one seedling",
+      "pose_action": "the cart and sack sit on the floor, separate from the stone",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "mid-left floor",
+      "depth": "middle",
+      "box_hint": [
+        95,
+        300,
+        230,
+        150
+      ],
+      "interacts_with": "the plain stone nearer, with floor between",
       "g": "f"
     },
     {
@@ -124,22 +123,22 @@
       "word": "pierre",
       "pos": "noun",
       "gloss": "stone",
-      "hook": "PYEHR sounds like pier: a little wooden PIER stands in a pan of water and touches a solid dressed STONE.",
-      "hook_object": "small wooden pier model",
-      "shown": "solid rectangular stone with no hole; the near end of a wooden jetty in a water pan rests on that stone",
-      "pose_action": "the jetty end touches the stone; both sit low and clear of the sack",
+      "hook": "PYEHR: one dressed building STONE, a sawn block.",
+      "hook_object": "sawn stone block",
+      "shown": "one plain dressed building stone, a sawn rectangular block, with no pier",
+      "pose_action": "the block sits on the floor nearer than the cart",
       "count": 1,
       "sensitive": "none",
       "side": "left",
-      "zone": "front-left floor",
+      "zone": "near-left floor",
       "depth": "front",
       "box_hint": [
-        140,
-        480,
-        340,
-        150
+        300,
+        500,
+        170,
+        115
       ],
-      "interacts_with": "the cart and sack behind it",
+      "interacts_with": "the sack and cart farther back",
       "g": "f"
     },
     {
@@ -147,45 +146,22 @@
       "word": "minéral",
       "pos": "adj",
       "gloss": "mineral",
-      "hook": "mee-nay-RAHL, like English mineral: a sparkling MINERAL cluster throws a small rainbow under the hall lamp.",
-      "hook_object": "sparkling mineral cluster",
-      "shown": "a sparkling mineral cluster on a low round table under a desk lamp, with a small rainbow",
-      "pose_action": "the cluster rests under the lamp",
+      "hook": "mee-nay-RAHL, like English mineral: a sparkling MINERAL cluster throws a small rainbow under the lamp the geologist tilts.",
+      "hook_object": "mineral cluster and lamp",
+      "shown": "a standing geologist leans over a low table and tilts a lamp onto a sparkling mineral cluster",
+      "pose_action": "the geologist's whole body stays with the table and the cluster",
       "count": 1,
       "sensitive": "none",
       "side": "center",
-      "zone": "center foreground table",
+      "zone": "middle of the floor",
       "depth": "middle",
       "box_hint": [
-        560,
-        400,
-        150,
-        130
+        520,
+        265,
+        230,
+        245
       ],
-      "interacts_with": "the small mine model across the open floor"
-    },
-    {
-      "id": "fr_sol_noun",
-      "word": "sol",
-      "pos": "noun",
-      "gloss": "soil, earth; ground",
-      "hook": "SOL sounds like sole: the geologist stands his boot's SOLE in a tray of dark SOIL, and one worm lifts its head.",
-      "hook_object": "boot sole",
-      "shown": "compact seated geologist, boot sole in the soil tray, worm in the soil, whole body below the crystal",
-      "pose_action": "he sits low on the right and does not reach the crystal",
-      "count": 1,
-      "sensitive": "none",
-      "side": "right",
-      "zone": "right foreground bench",
-      "depth": "front",
-      "box_hint": [
-        770,
-        350,
-        210,
-        280
-      ],
-      "interacts_with": "the crystal across the open floor",
-      "g": "m"
+      "interacts_with": "the mine model and the crystal across open floor"
     },
     {
       "id": "fr_cristal_noun",
@@ -194,26 +170,49 @@
       "gloss": "crystal",
       "hook": "krees-TAHL, like English crystal, and TAHL is in TALL: a TALL purple CRYSTAL on a stand, with a teacup-sized mouse at its base.",
       "hook_object": "tall purple crystal",
-      "shown": "tall purple crystal high on the right; one mouse touches the crystal itself",
-      "pose_action": "the mouse is at the crystal, above and clear of the seated man",
+      "shown": "a tall purple crystal on a stand with one teacup-sized mouse at its base",
+      "pose_action": "the mouse is at the crystal base",
       "count": 1,
       "sensitive": "none",
       "side": "right",
-      "zone": "back-right, apart from the man",
+      "zone": "back-right floor",
       "depth": "back",
       "box_hint": [
-        1040,
-        80,
+        860,
+        120,
         130,
         200
       ],
-      "interacts_with": "the seated geologist, with open floor between them",
+      "interacts_with": "the boot tray nearer on the right",
+      "g": "m"
+    },
+    {
+      "id": "fr_sol_noun",
+      "word": "sol",
+      "pos": "noun",
+      "gloss": "soil, earth; ground",
+      "hook": "SOL sounds like sole: a rubber boot's SOLE pressed into a tray of dark SOIL, and one worm lifts its head.",
+      "hook_object": "boot sole",
+      "shown": "one rubber boot standing in a tray of soil, sole tread pressed in, one worm",
+      "pose_action": "the boot stands in the tray; no person is in this group",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "near-right floor",
+      "depth": "front",
+      "box_hint": [
+        880,
+        450,
+        200,
+        130
+      ],
+      "interacts_with": "the crystal farther back",
       "g": "m"
     }
   ],
   "prompt_extra": {
-    "FIGURES": "One adult man. One mouse touching the crystal. One worm in the soil tray. No cat, no second rodent, no stool under the mouse.",
-    "DOORS AND EXITS": "Open glass doors at back center onto the path and trees. Match the crop's tan stone, glass, and telescope. Do not show this building's own front from inside."
+    "STYLE": "One continuous room. The attached picture supplies materials only, not its aerial camera.",
+    "FIGURES": "One small standing geologist in the mineral group. One mouse at the crystal. One worm in the boot tray. No other person or animal."
   },
-  "prompt_text": "Storybook ink and gouache, dark contours, slightly realistic, fully painted to every edge, 16:9. Eye-level view of the science faculty hall. Walls, floor and glass roof reach the frame. No blank border.\n\nImage 1 is the building outside: match its tan stone, glass roof, telescope and glass doors. Do not copy its aerial view. Image 2 shows only how the stone and the water-jetty should look. In this new painting the jetty's near end rests on the stone. Do not copy image 2's gap or its place in the room.\n\nBack center: open glass doors onto a gravel path and autumn trees. The view looks outward.\n\nA geologist is back from the field. Paint the people and objects smaller than the room, with open floor between groups.\n\nHigh on the left, clear of the stone: a wooden hand-cart with a torn sack of dark earth, soil spilling from the rip, one seedling in the tear.\n\nLower on the left, below the sack and not touching it: one solid rectangular stone, flat faces, no hole, no window, no door, not a kiln. A shallow pan of blue water touches the stone. A short wooden jetty stands in the water on posts, and its near end lies on the stone. It is not a table.\n\nBack left, on a low table: one small mine model. One tunnel, one lantern, one ore cart. No wheelbarrow.\n\nCenter: a sparkling mineral cluster on its own low round table under a desk lamp, with a small rainbow.\n\nLow on the right: one adult man sits compactly on a bench. His head is well below the crystal. He tilts one rubber boot so the sole's tread rests in a tray of dark soil. One worm lifts its head from that soil. His body, bench and tray stay together and do not reach the crystal.\n\nHigh on the right, above the man's head, with empty floor between his head and the stand: a tall purple crystal on a wooden stand. One mouse touches the purple crystal itself. No cat. No other animal. The mouse is not on a stool.\n\nNo letters. No other people.\n"
+  "prompt_text": "Storybook ink and gouache, dark contours, slightly realistic, true colors, 16:9, one continuous room painted edge to edge. View from an upstairs gallery railing, looking down at about 35 degrees into the ground-floor hall of the science faculty, so the whole cream stone floor is visible like a stage, with wide bare floor around every group. Tan stone walls; the back wall has tall glass doors in its center, open onto a gravel path and autumn trees, and tall windows above them with the faculty telescope seen through the glass. The attached picture is this building outside: match its tan stone, glass and telescope, not its aerial angle.\n\nEverything stands on the floor. Seen from up here, people and objects are small.\n\nA geologist is unpacking his field samples. In the middle of the floor, he leans over a low round table and tilts a desk lamp onto a sparkling mineral cluster, which throws a small rainbow.\n\nLeft half of the floor, three separate spots: toward the back, a small mine model on a low table, a rock mound with one dark tunnel mouth, rails, a lantern and an ore cart; in the middle, his wooden hand-cart with one torn burlap sack, dark earth spilling from the rip, a seedling in the tear; nearer, one plain dressed building stone, a sawn rectangular block.\n\nRight half: toward the back, a tall purple crystal on a wooden stand with a teacup-sized mouse at its base; nearer, one rubber boot standing in a tray of dark soil, sole tread pressed into it, one worm lifting its head.\n\nNo letters, no other people or animals.\n"
 }
