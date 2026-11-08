@@ -6,7 +6,7 @@ The hall painting `d1d59540` is release-ready and integrated. It is not merged a
 
 ## Stop
 
-Work boundary t428u, 8 Nov 2026, 00:07 CST: keep going only until the current plan is saved, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. After 06:00 CST, no new generation, room, investigation, or batch. The finds image is rejected. The plan in `review/plan-next/` waits for a topology review. Do not paint it. No merge.
+Work boundary t428u, 8 Nov 2026, 00:07 CST: continue the requested science-room work until that work is done, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. Saving this plan is not the end of the 30-room task and is not an early stop. After 06:00 CST, start no new generation, room, investigation, or batch; finish only a clean save already underway. The finds image is rejected. Do not paint `review/plan-next/` until its topology is reviewed. No merge.
 
 ## Connections
 

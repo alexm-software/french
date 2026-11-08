@@ -1,6 +1,6 @@
 # Faculty plan checkpoint
 
-No new painting. The finds image `080d7f5e` is rejected. The hall at `abb996da` stays release-ready and unmerged. Art calls stay 36.
+No new painting until this topology is reviewed. The finds image `080d7f5e` is rejected. The hall at `abb996da` stays release-ready and unmerged. Art calls stay 36. This file is not the end of the 30-room task.
 
 ## Topology
 
