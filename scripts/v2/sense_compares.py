@@ -191,18 +191,39 @@ def validate(vocab=None, edges=None):
     return problems
 
 
+def verb_marker(w):
+    """Same beret rules as a painted verb card. Never treat every verb as irregular."""
+    try:
+        from build_v2 import verb_from_vocab
+        card = verb_from_vocab(w)
+        return card["group"], card["beret"]
+    except SystemExit:
+        grp, irr = w.get("verb_group"), bool(w.get("irregular"))
+        if grp == 1 and not irr:
+            return "-er", "red"
+        if grp == 2 and not irr:
+            return "-ir", "green"
+        if grp == 3 and not irr:
+            return "-re", "purple"
+        return "irregular", "gold"
+
+
 def _lex_item(w, vocab, placements, index):
-    """Source text for a word that has no painting. No room and no image."""
+    """Source text for a word that has no painting. No room, no image, no unchecked hook."""
     pos = w.get("pos")
     it = {
         "id": w["id"], "lex": True, "fr": w["lemma"],
         "en": w.get("gloss") or "", "ipa": w.get("ipa") or "", "say": w.get("respelling") or "",
         "cefr": w.get("cefr") or "",
         "ex": [w.get("example_fr") or "", w.get("example_en") or ""],
-        "hook": ((w.get("mnemonic_hook") or {}).get("scene") or ""),
+        # Source mnemonic scenes were written for a painting. A text card has no accepted hook.
+        "noMnemonic": True,
     }
+    if w.get("usage_warning"):
+        it["note"] = w["usage_warning"]
     if pos == "verb":
-        it.update(verb=True, beret="gold", group="irregular")
+        group, beret = verb_marker(w)
+        it.update(verb=True, group=group, beret=beret)
     elif pos == "adj":
         it.update(adj=True, invariable=True)
     elif pos == "noun":

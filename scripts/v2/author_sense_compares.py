@@ -1094,8 +1094,8 @@ RAW = [
  "Croire is to hold something as true. Penser is to think, and penser que is an opinion, not necessarily a belief you would defend.",
  ["Je crois ce qu'il dit.", "I believe what he says."], ["Je pense que tu as raison.", "I think you are right."]),
 ("fr_tres_adv", "fr_beaucoup_adv", ["grammar"],
- "Beaucoup is a lot, and it goes with a verb or with de plus a noun. Très is the intensifier in front of an adjective or an adverb.",
- "Très goes before an adjective or an adverb. Beaucoup goes with a verb or with de plus a noun, not in front of an adjective.",
+ "Beaucoup is a lot, with a verb or with de plus a noun. It also strengthens a comparison: beaucoup plus grand, beaucoup trop. Très is the intensifier in front of an adjective or an adverb.",
+ "Très goes before an adjective or an adverb. Beaucoup goes with a verb or with de plus a noun, and it can stand before plus or trop.",
  ["C'est très bon.", "It's very good."], ["J'ai beaucoup d'amis.", "I have a lot of friends."]),
 ("fr_depuis_prep", "fr_pendant_prep", ["grammar"],
  "Pendant covers a length of time (pendant une heure), finished or not. Depuis marks the starting point of something still going on.",
@@ -1193,9 +1193,9 @@ RAW = [
  "Rapporter brings an object back, or reports what happened. Ramener brings a person back, and it can bring an animal or an object back too.",
  "Ramener brings someone back to where they were. Rapporter brings an object back, or tells what you saw. Ramener can also bring an object back.",
  None, None),
-("fr_parfois_adv", "fr_tantot_adv", ["scope"],
- "Tantôt means later today or a little earlier, and tantôt… tantôt means now one thing, now another. Parfois means sometimes.",
- "Parfois means sometimes. Tantôt is later today or a short time ago. The pair tantôt… tantôt is not the same as parfois.",
+("fr_parfois_adv", "fr_tantot_adv", ["scope", "region"],
+ "Tantôt… tantôt means now one thing, now another. Tantôt for later today or a little earlier is dated, or regional (Normandy, Belgium, Canada). Parfois means sometimes.",
+ "Parfois means sometimes. Tantôt… tantôt is now one, now the other. Tantôt meaning later today is dated or regional, not the ordinary word in France.",
  None, None),
 ("fr_joindre_verb", "fr_rejoindre_verb", ["scope"],
  "Rejoindre is to go and meet someone, or to get back to a place. Joindre is to put things together.",
@@ -1269,23 +1269,24 @@ def S(url, excerpt):
 
 
 CN = "https://www.cnrtl.fr/definition/"
+WK = "https://fr.wiktionary.org/wiki/"
 US = "https://usito.usherbrooke.ca/d%C3%A9finitions/"
 LA = "https://www.larousse.fr/dictionnaires/francais/pendant"
 SUPPORT = {
 tuple(sorted(("fr_plus_adv", "fr_davantage_adv"))): [S(CN + "davantage", "Davantage modifie un verbe et la comparaison est implicite.")],
 tuple(sorted(("fr_moitie_noun", "fr_demi_noun"))): [S(CN + "demi", "Il a deux ans et demi; il est une heure et demie.")],
-tuple(sorted(("fr_chaussure_noun", "fr_soulier_noun"))): [S(US + "soulier", "Chaussure à tige basse et à semelle rigide qui couvre le pied. Cet emploi est caractéristique de la variété de français qui a cours au Québec.")],
+tuple(sorted(("fr_chaussure_noun", "fr_soulier_noun"))): [S(US + "soulier", "Chaussure à tige basse et à semelle rigide qui couvre le pied ou une partie du pied"), S(US + "soulier", "Cet emploi est caractéristique de la variété de français qui a cours au Québec")],
 tuple(sorted(("fr_asseoir_verb", "fr_sieger_verb"))): [S(CN + "si%C3%A9ger", "Être assis à une place officielle. Avoir son siège officiellement établi (à).")],
 tuple(sorted(("fr_professeur_noun", "fr_enseignant_noun"))): [S(CN + "professeur", "professeur de collège, de lycée, d'université, de faculté.")],
 tuple(sorted(("fr_ici_adv", "fr_la_adv"))): [S(CN + "l%C3%A0", "Adverbe de lieu marquant le lieu où se trouve le locuteur ou un lieu plus ou moins éloigné de lui. Monsieur, je suis là depuis une heure.")],
 tuple(sorted(("fr_cle_noun", "fr_clef_noun"))): [S(CN + "clef", "CLEF, CLÉ. MUSIQUE. Signe placé en tête de la portée. Chacun des trois signes pouvant se placer au commencement de la portée pour indiquer fa, sol ou ut.")],
 tuple(sorted(("fr_paysan_noun", "fr_fermier_noun"))): [S(CN + "paysan", "Personne de la campagne qui vit de la culture du sol. Synon. agriculteur, cultivateur, fermier. Péjoratif. Personne fruste.")],
 tuple(sorted(("fr_paysan_noun", "fr_agriculteur_noun"))): [S(CN + "paysan", "Synon. agriculteur, cultivateur, fermier. Péjoratif. Personne fruste ou ayant des manières frustes.")],
-tuple(sorted(("fr_bougie_noun", "fr_chandelle_noun"))): [S(US + "chandelle", "Petit cylindre de cire, entourant et alimentant une mèche. Synonyme bougie. Particularisme de l'usage québécois et canadien.")],
-tuple(sorted(("fr_entretien_noun", "fr_entrevue_noun"))): [S(US + "entrevue", "entrevue d'emploi: on évalue les aptitudes et les connaissances d'un candidat. Synonyme entretien d'embauche. Particularisme de l'usage québécois et canadien.")],
+tuple(sorted(("fr_bougie_noun", "fr_chandelle_noun"))): [S(US + "chandelle", "Petit cylindre de cire, entourant et alimentant une mèche, dont la flamme fournit un moyen d'éclairage"), S(US + "chandelle", "Cet emploi est caractéristique de la variété de français qui a cours au Québec")],
+tuple(sorted(("fr_entretien_noun", "fr_entrevue_noun"))): [S(US + "entrevue", "entrevue d'emploi , au cours de laquelle sont évaluées les capacités et les connaissances d'un candidat pour occuper un poste, une fonction déterminée."), S(US + "entrevue", "Cet emploi est caractéristique de la variété de français qui a cours au Québec")],
 tuple(sorted(("fr_retablir_verb", "fr_restaurer_verb"))): [S(CN + "restaurer", "Par extension. Nourrir. Restaurer ses invités. Surtout pronominal. Allons nous restaurer !")],
 tuple(sorted(("fr_entendre_verb", "fr_ecouter_verb"))): [S(CN + "%C3%A9couter", "Souvent en liaison ou en oppos. avec entendre, en face duquel il exprime l'effort volontaire; cf. regarder et voir.")],
-tuple(sorted(("fr_voir_verb", "fr_regarder_verb"))): [S(CN + "%C3%A9couter", "cf. regarder et voir. Voir: enregistrer l'image d'une manière passive. Regarder: diriger, fixer les yeux sur quelque chose.")],
+tuple(sorted(("fr_voir_verb", "fr_regarder_verb"))): [S(CN + "voir", "Percevoir par le sens de la vue."), S(CN + "voir", "Enregistrer l'image de ce qui se trouve dans le champ visuel, d'une manière passive, sans intention préalable"), S(CN + "regarder", "Diriger, fixer les yeux sur quelque chose, sur quelqu'un, sur un spectacle.")],
 tuple(sorted(("fr_devoir_verb", "fr_falloir_verb"))): [S(CN + "falloir", "FALLOIR verbe impersonnel."), S(CN + "devoir", "DEVOIR verbe. Il marque l'obligation.")],
 tuple(sorted(("fr_souvenir_verb", "fr_rappeler_verb"))): [S(CN + "rappeler", "Se rappeler qqc. Se rappeler son enfance, sa jeunesse."), S(CN + "souvenir", "Se souvenir de qqc. Se souvenir d'une époque.")],
 tuple(sorted(("fr_apprendre_verb", "fr_enseigner_verb"))): [S(CN + "apprendre", "Recevoir, donner un enseignement. Recevoir un enseignement."), S(CN + "enseigner", "Transmettre un savoir de type scolaire.")],
@@ -1293,16 +1294,16 @@ tuple(sorted(("fr_dire_verb", "fr_parler_verb"))): [S(CN + "dire", "Énoncer un 
 tuple(sorted(("fr_parler_verb", "fr_raconter_verb"))): [S(CN + "raconter", "Faire le récit de faits vrais ou faux.")],
 tuple(sorted(("fr_dire_verb", "fr_raconter_verb"))): [S(CN + "raconter", "Faire (de vive voix ou par écrit) le récit de faits vrais ou faux."), S(CN + "dire", "Énoncer un propos par la parole.")],
 tuple(sorted(("fr_croire_verb", "fr_penser_verb"))): [S(CN + "croire", "Attacher une valeur de vérité, ajouter foi à ce que dit une personne."), S(CN + "penser", "Exercer son esprit; mettre en oeuvre sa conscience.")],
-tuple(sorted(("fr_tres_adv", "fr_beaucoup_adv"))): [S(CN + "tr%C3%A8s", "Particule qui marque le superlatif absolu, et qui se joint à un adjectif, à un participe et à un adverbe.")],
+tuple(sorted(("fr_tres_adv", "fr_beaucoup_adv"))): [S(CN + "tr%C3%A8s", "Particule qui marque le superlatif absolu, et qui se joint à un adjectif, à un participe et à un adverbe"), S(WK + "beaucoup", "Suivi d'un adjectif ou d'un adverbe de comparaison, il exprime une augmentation ou une différence considérable.")],
 tuple(sorted(("fr_depuis_prep", "fr_pendant_prep"))): [S(CN + "depuis", "Prép. indiquant un point de référence initial, spatial ou temporel, à partir duquel une action se produit et dure."), S(LA, "Durant tel espace de temps. Travailler pendant une heure.")],
 tuple(sorted(("fr_editeur_noun", "fr_redacteur_noun"))): [S(CN + "%C3%A9diteur", "Personne ou société qui édite des œuvres sous forme d'objet imprimé."), S(CN + "r%C3%A9dacteur", "Personne qui rédige un texte, un document.")],
-tuple(sorted(("fr_judiciaire_adj", "fr_juridique_adj"))): [S(CN + "juridique", "Vieilli. Qui se fait devant la justice, en justice, selon les formes judiciaires.")],
+tuple(sorted(("fr_judiciaire_adj", "fr_juridique_adj"))): [S(CN + "judiciaire", "Domaine des tribunaux, ensemble des magistrats en tant que système."), S(CN + "juridique", "Qui est relatif, conforme au droit, à la loi.")],
 tuple(sorted(("fr_impot_noun", "fr_taxe_noun"))): [S(CN + "imp%C3%B4t", "Prélèvement obligatoire sur les ressources. Synon. contribution, droit, imposition, taxe, tribut."), S(CN + "taxe", "Fixation officielle du prix des denrées.")],
-tuple(sorted(("fr_concurrence_noun", "fr_competition_noun"))): [S(CN + "concurrence", "Fait d'être ensemble, d'agir de concert, dans la poursuite d'un même but."), S(CN + "comp%C3%A9tition", "Lutte, rivalité simultanée de plusieurs personnes dans la poursuite d'un même but.")],
+tuple(sorted(("fr_concurrence_noun", "fr_competition_noun"))): [S(CN + "concurrence", "Rivalité qui s'établit entre fabricants, marchands, entrepreneurs ou produits, etc."), S(CN + "comp%C3%A9tition", "Lutte, rivalité simultanée de plusieurs personnes ou groupes de personnes dans la poursuite d'un même but.")],
 tuple(sorted(("fr_fantaisie_noun", "fr_fantasme_noun"))): [S(CN + "fantaisie", "Imagination; production de l'imagination. Synon. chimère, fantasme."), S(CN + "fantasme", "PSYCHANAL. Construction imaginaire, consciente ou inconsciente.")],
 tuple(sorted(("fr_mule_noun", "fr_mulet_noun"))): [S(CN + "mule", "MULE1. Animal hybride femelle, produit de l'accouplement de l'âne et de la jument."), S(CN + "mulet", "MULET1. Animal hybride mâle, issu de l'accouplement de l'âne et de la jument.")],
 tuple(sorted(("fr_ivre_adj", "fr_saoul_adj"))): [S(CN + "ivre", "Qui est troublé par l'absorption excessive de boissons alcoolisées. Synon. soûl."), S(CN + "saoul", "Vx ou région. Qui a mangé ou bu à satiété, qui est complètement rassasié.")],
-tuple(sorted(("fr_fac_noun", "fr_universite_noun"))): [S(CN + "universit%C3%A9", "UNIVERSITÉ substantif féminin. Institution chargée de l'enseignement.")],
+tuple(sorted(("fr_fac_noun", "fr_universite_noun"))): [S(WK + "fac", "{{France|fr}} {{familier|fr}} [[faculté|Faculté]] ; [[université]]"), S(CN + "universit%C3%A9", "Institution d'enseignement supérieur et de recherche constitué par divers établissements (collèges, facultés, etc.) et formant un ensemble administratif.")],
 tuple(sorted(("fr_exiger_verb", "fr_revendiquer_verb"))): [S(CN + "exiger", "Faire savoir que l'on veut impérativement que quelque chose soit fait."), S(CN + "revendiquer", "Réclamer une chose dont on est légitimement propriétaire. Réclamer, exiger quelque chose qui est considéré comme dû.")],
 tuple(sorted(("fr_attaque_noun", "fr_atteinte_noun"))): [S(CN + "attaque", "Acte de violence, agression."), S(CN + "atteinte", "Action ou possibilité d'atteindre.")],
 tuple(sorted(("fr_affaiblir_verb", "fr_decliner_verb"))): [S(CN + "affaiblir", "Rendre progressivement plus faible."), S(CN + "decliner", "DÉCLINER1 verbe intransitif. Décroître après avoir atteint son apogée.")],
@@ -1351,10 +1352,11 @@ def fetched_excerpt(lemma, defs):
     return {"url": rec.get("url") or ("https://www.cnrtl.fr/definition/" + urllib.parse.quote(lemma)), "excerpt": sentences[i]}
 
 
-WK = "https://fr.wiktionary.org/wiki/"
 # Excerpts below are the sense that matches the note, copied from the page that was opened.
 # They are not the first sentence of the article when that sentence is another homograph.
 HAND = {
+tuple(sorted(("fr_ici_adv", "fr_la_bas_adv"))): [S(CN + "ici", "Adverbe de lieu (plus rarement de temps) marquant le lieu où se trouve le locuteur ou un lieu proche que le locuteur désigne."), S(CN + urllib.parse.quote("là-bas"), "En un lieu éloigné, à une distance plus ou moins grande du lieu où se trouve le locuteur ou dont il est question dans le discours.")],
+tuple(sorted(("fr_la_adv", "fr_la_bas_adv"))): [S(CN + urllib.parse.quote("là"), "Adverbe de lieu (plus rarement de temps) marquant le lieu où se trouve le locuteur ou un lieu plus ou moins éloigné de lui."), S(CN + urllib.parse.quote("là-bas"), "En un lieu éloigné, à une distance plus ou moins grande du lieu où se trouve le locuteur ou dont il est question dans le discours.")],
 tuple(sorted(("fr_partir_verb", "fr_quitter_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "quitter", "Laisser un lieu; cesser d'y être, s'en éloigner.")],
 tuple(sorted(("fr_partir_verb", "fr_laisser_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "laisser", "Quitter momentanément.")],
 tuple(sorted(("fr_quitter_verb", "fr_laisser_verb"))): [S(CN + "quitter", "Laisser un lieu; cesser d'y être, s'en éloigner."), S(CN + "laisser", "Faire rester.")],
@@ -1392,7 +1394,7 @@ tuple(sorted(("fr_trompe_noun", "fr_trompette_noun_f"))): [S(CN + "trompe", "Ins
 tuple(sorted(("fr_merci_noun_f", "fr_misericorde_noun"))): [S(CN + "merci", "Grâce que quelqu'un accorde à quelqu'un d'autre. État de dépendance vis-à-vis de quelqu'un à qui l'on demande grâce."), S(CN + urllib.parse.quote("miséricorde"), "Compassion pour la misère d'autrui. Générosité entraînant le pardon.")],
 tuple(sorted(("fr_couler_verb", "fr_ecouler_verb"))): [S(CN + "couler", "Se déplacer (en pente) d'un mouvement continu et naturel. S'engloutir, aller au fond de."), S(CN + urllib.parse.quote("écouler"), "Vendre jusqu'à épuisement ; liquider. Couler hors de quelque endroit. Avancer progressivement, à propos du temps.")],
 tuple(sorted(("fr_ramener_verb", "fr_rapporter_verb"))): [S(CN + "ramener", "Reconduire une personne, un animal ou un objet dans le lieu où elle était au départ."), S(CN + "rapporter", "Porter de nouveau (un objet). Faire le récit de ce qu'on a vu, ou entendu, ou appris.")],
-tuple(sorted(("fr_parfois_adv", "fr_tantot_adv"))): [S(CN + "parfois", "Quelquefois."), S(CN + urllib.parse.quote("tantôt"), "Dans un proche avenir. Cet après-midi. Parfois, redoublé, pour marquer des changements consécutifs.")],
+tuple(sorted(("fr_parfois_adv", "fr_tantot_adv"))): [S(CN + "parfois", "Quelquefois."), S(CN + urllib.parse.quote("tantôt"), "Parfois. — Note d'usage : Alors il est redoublé et s'emploie pour marquer des changements consécutifs"), S(WK + urllib.parse.quote("tantôt"), "{{vieilli|fr}} ou {{Normandie|fr}} {{Belgique|fr}} {{CA|fr}} [[peu|Peu]] de [[temps]] [[avant]] ou [[après]]")],
 tuple(sorted(("fr_joindre_verb", "fr_rejoindre_verb"))): [S(CN + "joindre", "Mettre ensemble, mettre avec, réunir."), S(CN + "rejoindre", "Aller retrouver quelqu'un ou quelque chose; regagner, rallier un endroit.")],
 tuple(sorted(("fr_mandataire_noun", "fr_procuration_noun"))): [S(CN + "mandataire", "Personne qui est chargée d'un mandat."), S(CN + "procuration", "Écrit constatant un mandat et en déterminant l'étendue.")],
 tuple(sorted(("fr_dressage_noun", "fr_entrainement_noun"))): [S(CN + "dressage", "Fait d'habituer un animal à certains comportements."), S(CN + urllib.parse.quote("entraînement"), "Préparation méthodique d'un sportif ou d'un cheval de course en vue d'une épreuve.")],

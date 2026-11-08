@@ -163,6 +163,75 @@ class SenseCompares(unittest.TestCase):
                 if c["to"] in items:
                     self.assertIsNotNone(back)
 
+    def test_lexicon_verbs_keep_real_groups_and_hide_hooks(self):
+        from sense_compares import verb_marker, write_lexicon
+        write_lexicon()
+        raw = (ROOT / "village" / "data" / "lexicon.js").read_text(encoding="utf-8")
+        items = json.loads(raw.split("window.V2_LEXICON=", 1)[1].split(";\nwindow.V2_LEXICON_INDEX=", 1)[0])
+        verbs = [it for it in items.values() if it.get("verb")]
+        self.assertGreater(len(verbs), 0)
+        red = 0
+        for it in items.values():
+            self.assertTrue(it.get("noMnemonic"))
+            self.assertNotIn("hook", it)
+            w = self.vocab[it["id"]]
+            scene = ((w.get("mnemonic_hook") or {}).get("scene") or "")
+            if scene:
+                self.assertNotIn(scene, json.dumps(it, ensure_ascii=False))
+        for it in verbs:
+            group, beret = verb_marker(self.vocab[it["id"]])
+            self.assertEqual(it["beret"], beret)
+            self.assertEqual(it["group"], group)
+            if beret == "red":
+                red += 1
+        self.assertGreater(red, 0)
+        extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
+        self.assertIn("r[3]==='lex'", extras)
+        self.assertIn("lexHash(r[0])", extras)
+        self.assertIn("roomHref", extras)
+        hook = (ROOT / "tools" / "hook_lint.py").read_text(encoding="utf-8")
+        self.assertIn('"lexicon.js"', hook)
+
+    def test_named_quotes_are_the_sense_the_note_uses(self):
+        by = {tuple(sorted((e["a"], e["b"]))): e for e in self.edges}
+        voir = by[("fr_regarder_verb", "fr_voir_verb")]
+        blob = json.dumps(voir["support"], ensure_ascii=False)
+        self.assertNotIn("ecouter", blob.lower())
+        self.assertNotIn("écouter", blob.lower())
+        self.assertIn("sans intention préalable", blob)
+        self.assertIn("fixer les yeux", blob)
+        jur = by[("fr_judiciaire_adj", "fr_juridique_adj")]
+        jblob = json.dumps(jur["support"], ensure_ascii=False)
+        self.assertNotIn("Vieilli", jblob)
+        self.assertIn("tribunaux", jblob)
+        self.assertIn("conforme au droit", jblob)
+        con = by[("fr_competition_noun", "fr_concurrence_noun")]
+        self.assertNotIn("agir de concert", json.dumps(con["support"]))
+        self.assertIn("fabricants", json.dumps(con["support"], ensure_ascii=False))
+        lab = by[("fr_ici_adv", "fr_la_bas_adv")]
+        self.assertNotIn("morts", json.dumps(lab["support"], ensure_ascii=False))
+        self.assertIn("lieu éloigné", json.dumps(lab["support"], ensure_ascii=False))
+        fac = by[("fr_fac_noun", "fr_universite_noun")]
+        self.assertTrue(any("wiktionary.org/wiki/fac" in s["url"] for s in fac["support"]))
+        beaucoup = by[("fr_beaucoup_adv", "fr_tres_adv")]
+        self.assertIn("beaucoup plus", beaucoup["a_note"] + beaucoup["b_note"])
+        tantot = by[("fr_parfois_adv", "fr_tantot_adv")]
+        self.assertIn("regional", (tantot["a_note"] + tantot["b_note"]).lower())
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("quote_check", ROOT / "scripts" / "qa" / "quote_check.py")
+        qc = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(qc)
+        self.assertEqual(qc.problems(), [])
+        for key in (
+            ("fr_regarder_verb", "fr_voir_verb"),
+            ("fr_judiciaire_adj", "fr_juridique_adj"),
+            ("fr_competition_noun", "fr_concurrence_noun"),
+            ("fr_ici_adv", "fr_la_bas_adv"),
+            ("fr_fac_noun", "fr_universite_noun"),
+        ):
+            for s in by[key]["support"]:
+                self.assertNotEqual(s.get("kind"), "paraphrase")
+
 
 if __name__ == "__main__":
     unittest.main()

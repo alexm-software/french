@@ -1,27 +1,14 @@
 {
-  "boundary": "t431u-finish-35",
+  "boundary": "t432u-four-regressions",
   "status": "fix_pack_saved",
-  "checkpoint_utc": "2026-11-08T15:20:00Z",
+  "checkpoint_utc": "2026-11-08T15:30:00Z",
   "branch": "cursor/sense-comparisons-c06a",
-  "merged_main": "e8ffce47800c15b837cd67eb2ab362b4b21207a5",
-  "pr274": "Not merged.",
-  "published": {"edges": 310, "words": 536, "all_have_a_sense_excerpt": true},
-  "deferred_unsupported": 0,
+  "published": {"edges": 310, "words": 536},
+  "quotes": {"verbatim": 503, "labeled_paraphrase": 108},
   "lexicon_text_cards": 138,
-  "no_note_same_form": ["au/aux", "foot/football"],
-  "no_note_near_synonym": ["gamin/gosse/môme", "boulot/job"],
-  "coverage": {
-    "vocab_entries": 8106,
-    "exact_clusters": 375,
-    "exact_accepted": 186,
-    "exact_accepted_partial": 21,
-    "exact_equivalent": 137,
-    "exact_unrelated": 19,
-    "exact_deferred_homograph": 1,
-    "exact_uncertain": 11,
-    "near_not_same": 394,
-    "entries_outside_candidate_clusters": 6331
-  },
-  "checks": "unittest OK. hook_lint OK (lexicon.js skipped). check_v2 --strict --placement PASS, 91 buildings, 5852 words, village-v53, 0 images. Browser: all 138 text cards open from #/lex?w=, soirée reloads, back returns to le soir, search uses the same hash, mobile card opens.",
-  "remaining": "137 exact clusters stay equivalent after a gloss pass; their dictionary pages were not each re-opened. 11 uncertain clusters stay unpublished. 6331 entries were outside the gloss clusters. fois is still absent. Text cards are not painted rooms and are not in live.js."
+  "lexicon_verbs": {"red_er": 66, "green_ir": 6, "gold_irregular": 21},
+  "hooks_on_text_cards": 0,
+  "checks": "unittest 9 OK. quote_check OK. hook_lint OK. check_v2 PASS, 91 buildings, village-v53, 0 images. Browser: review of aborder opens #/lex?w=fr_aborder_verb with a red beret and no memory hook; back returns to #/; review of la Bible opens #/abbaye/scriptorium.",
+  "app_js": "Not edited. Painted review and the beret line stay in app.js. Text-card review is extras.js and uses #/lex?w=.",
+  "remaining": "137 exact clusters stay equivalent. 11 uncertain stay unpublished. 6331 entries were outside the gloss clusters. 108 support lines are labeled paraphrases because the recorded page does not contain them verbatim."
 }
