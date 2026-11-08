@@ -1,0 +1,264 @@
+{
+  "building": "sciences",
+  "room": "hall",
+  "coordinate_space": "1280x720-px",
+  "setting": "Ground-floor entrance hall of the Faculté des Sciences during a specimen morning",
+  "theme_fit": "Eight concrete earth-science specimens from the unbuilt science inventory, in one hall you can enter from the campus.",
+  "scene_situation": "Specimen morning in the science-faculty hall: the demonstrations are already running and the glass doors stand open onto the campus.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Le hall des roches",
+    "camera": "eye-level three-quarter from inside the hall, looking toward the open campus doors at the back left",
+    "light_from": "the glass roof and the open campus doors",
+    "refs": [
+      "village/map/university.jpg"
+    ],
+    "look": "the tan science faculty on the attached campus map: glass roof and telescope, not the red-brick lycée",
+    "materials": "pale tan stone walls, cream stone floor, oak tables, glass roof, white daylight",
+    "set_apart": "cool morning daylight from the glass roof, with a small violet glint on the crystal and a small orange pot; no room-wide color cast",
+    "place": "the ground-floor rock hall of the faculty of sciences",
+    "landmark": "glass sawtooth roof with the telescope gantry visible through it",
+    "whimsy": "the campus telescope peeks down through the glass roof, as on the faculty's exterior",
+    "differ": "a quiet stone hall with one open campus door and specimens in use, not a crowded classroom",
+    "reference_board": "none",
+    "beyond": "the campus path and this faculty's own tan entrance, glass roof and telescope, taken from the attached campus map",
+    "sign_plates": "one blank stone plaque over the glass doors, no letters",
+    "style_slider": "3: respectful, slightly realistic painterly with cartoony elements"
+  },
+  "siblings": [],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "map",
+      "where": "back center, clear of the specimens",
+      "painted_as": "open glass doors whose frame and the building outside match the tan science faculty on the attached campus map, with its glass roof and telescope; the red-brick lycée on that map is a different building and is not this doorway"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "interactions": [
+    {
+      "who": [
+        "fr_pierre_noun",
+        "fr_terre_noun"
+      ],
+      "doing": "soil from the torn sack spills across the floor and stops against the dressed stone, while the little pier model leans on the stone"
+    },
+    {
+      "who": [
+        "fr_mine_noun",
+        "fr_mineral_adj"
+      ],
+      "doing": "the small mine model stays on the left and the mineral cluster sits on its own stand nearer the middle, with open floor between them"
+    },
+    {
+      "who": [
+        "fr_sol_noun",
+        "fr_creuset_noun"
+      ],
+      "doing": "the boot stands in its soil tray while the orange crucible heats on a separate stand farther forward, with open floor between them"
+    },
+    {
+      "who": [
+        "fr_cristal_noun",
+        "fr_pendule_noun_m"
+      ],
+      "doing": "the small mouse at the crystal watches the ladybird riding the swinging pendulum bob, with clear floor between them"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_pierre_noun",
+      "word": "pierre",
+      "pos": "noun",
+      "gloss": "stone",
+      "hook": "PYEHR sounds like pier: a short wooden PIER model leans on a dressed building STONE.",
+      "hook_object": "small wooden pier model",
+      "shown": "one solid dressed stone block with no hole and no cart; a small wooden pier model leans on its outer face",
+      "pose_action": "the pier model leans on the outside of the solid block; the block has no opening",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "back-left floor",
+      "depth": "back",
+      "box_hint": [
+        120,
+        90,
+        200,
+        170
+      ],
+      "interacts_with": "spilled earth from the torn sack beside it",
+      "g": "f"
+    },
+    {
+      "id": "fr_terre_noun",
+      "word": "terre",
+      "pos": "noun",
+      "gloss": "earth; ground",
+      "hook": "TEHR sounds like tear: a torn sack of EARTH spills dark soil, and a seedling pokes through the tear.",
+      "hook_object": "tear in a sack",
+      "shown": "one open burlap sack of dark earth with a visible rip and one seedling",
+      "pose_action": "soil spills from the rip onto the floor toward the stone",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "near-left floor",
+      "depth": "front",
+      "box_hint": [
+        120,
+        500,
+        220,
+        140
+      ],
+      "interacts_with": "the dressed stone it spills against",
+      "g": "f"
+    },
+    {
+      "id": "fr_mine_noun",
+      "word": "mine",
+      "pos": "noun",
+      "gloss": "mine; pencil lead",
+      "hook": "A tabletop MINE: one short rock tunnel, one lit lantern, and one ore cart on rails. Said MEEN.",
+      "hook_object": "tabletop mine tunnel",
+      "shown": "one small tabletop mine, the only tunnel in the room, with one lantern and one ore cart",
+      "pose_action": "the cart sits in the only tunnel mouth; this model is small and stays left of center",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left oak table",
+      "depth": "middle",
+      "box_hint": [
+        160,
+        320,
+        190,
+        140
+      ],
+      "interacts_with": "the mineral cluster across the open floor",
+      "g": "f"
+    },
+    {
+      "id": "fr_mineral_adj",
+      "word": "minéral",
+      "pos": "adj",
+      "gloss": "mineral",
+      "hook": "mee-nay-RAHL, like English mineral: a sparkling MINERAL cluster throws a small rainbow under the hall lamp.",
+      "hook_object": "sparkling mineral cluster",
+      "shown": "one mineral cluster on the table under a desk lamp, with a small rainbow glint",
+      "pose_action": "the cluster rests under the lamp",
+      "count": 1,
+      "sensitive": "none",
+      "side": "center",
+      "zone": "center of the oak table",
+      "depth": "back",
+      "box_hint": [
+        540,
+        440,
+        160,
+        130
+      ],
+      "interacts_with": "the small mine model across the open floor"
+    },
+    {
+      "id": "fr_sol_noun",
+      "word": "sol",
+      "pos": "noun",
+      "gloss": "soil, earth; ground",
+      "hook": "SOL sounds like sole: a rubber boot's SOLE stands in a tray of dark SOIL, and one worm lifts its head.",
+      "hook_object": "boot sole",
+      "shown": "one rubber boot standing in a wooden tray of soil, one worm visible",
+      "pose_action": "the boot stands upright in the tray",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right bench",
+      "depth": "middle",
+      "box_hint": [
+        800,
+        200,
+        140,
+        130
+      ],
+      "interacts_with": "the crucible on its own stand, with open floor between",
+      "g": "m"
+    },
+    {
+      "id": "fr_cristal_noun",
+      "word": "cristal",
+      "pos": "noun",
+      "gloss": "crystal",
+      "hook": "krees-TAHL, like English crystal, and TAHL is in TALL: a TALL purple CRYSTAL on a stand, with a teacup-sized mouse at its base.",
+      "hook_object": "tall purple crystal",
+      "shown": "one tall purple crystal on a wooden stand and one small mouse",
+      "pose_action": "the mouse sits at the base and looks toward the pendulum",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right pedestal",
+      "depth": "back",
+      "box_hint": [
+        1030,
+        100,
+        140,
+        180
+      ],
+      "interacts_with": "the pendulum swinging beside it",
+      "g": "m"
+    },
+    {
+      "id": "fr_pendule_noun_m",
+      "word": "pendule",
+      "pos": "noun",
+      "gloss": "pendulum",
+      "hook": "pahn-DEWL, like English pendulum: a PENDULUM swings in its own wooden frame, and one ladybird rides the bob.",
+      "hook_object": "swinging pendulum",
+      "shown": "one freestanding pendulum frame with one bob and one ladybird",
+      "pose_action": "the bob is mid-swing; the ladybird clings to it",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right floor frame",
+      "depth": "front",
+      "box_hint": [
+        1050,
+        400,
+        120,
+        230
+      ],
+      "interacts_with": "the mouse at the crystal watching the swing",
+      "g": "m"
+    },
+    {
+      "id": "fr_creuset_noun",
+      "word": "creuset",
+      "pos": "noun",
+      "gloss": "crucible, smelter; melting-pot",
+      "hook": "kreuh-ZEH: an orange cast-iron pot glows on a trivet as a CRUCIBLE, with one small steady flame under it.",
+      "hook_object": "orange cast-iron pot",
+      "shown": "one orange enameled pot on a stone trivet with a small flame",
+      "pose_action": "the pot rests on the trivet; the flame touches the trivet, not a person",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "near-right bench",
+      "depth": "front",
+      "box_hint": [
+        800,
+        480,
+        150,
+        110
+      ],
+      "interacts_with": "the soil tray behind it, with open floor between",
+      "g": "m"
+    }
+  ],
+  "prompt_extra": {
+    "STYLE": "Ink and gouache, dark contours, neutral daylight. The only attached picture is the campus map, and it supplies the doorway's building. Do not copy the red-brick lycée from that map.",
+    "LIGHT AND COLOR": "White stone, cream floor, true colors. No amber, orange, sepia, pink, or blue cast over the room. The orange pot and purple crystal are local objects only.",
+    "COMPOSITION": "Three separated pairs with open floor between them: stone and earth sack on the left, a small mine model left of the mineral cluster, boot tray and crucible and pendulum and crystal spaced across the right. No empty placement diagram is attached. Objects may sit well inside their envelopes.",
+    "PLACEMENT AND SPACING": "Feminine group centers stay near 20 percent. The adjective center stays near 48 percent. Masculine group centers stay past 65 percent. Keep a wide gap around every group so a drift still leaves the center on the correct side of 45 or 55 percent and the whole helper inside the 6 percent margin.",
+    "DOORS AND EXITS": "The open doors show this faculty as it appears on the attached campus map. Do not invent a red-brick frame.",
+    "FIGURES": "No people, no children, no dwarf, no mime. One teacup-sized mouse at the crystal, one ladybird on the pendulum bob, one worm in the soil. Each creature is entirely inside its own envelope and smaller than the object it accompanies.",
+    "TEXT": "No letters, numbers, labels, or speech anywhere. The plaque over the door is blank.",
+    "CONTENT": "All ages. The crucible flame is small and steady on a trivet, with no person and no child near it. No explosion, acid, weapon, or danger."
+  }
+}

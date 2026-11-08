@@ -1,0 +1,46 @@
+{
+  "status": "not-accepted",
+  "image": "23c6b3e028fec22161e73cdf360bcd74dc0dba9ccb811565a5f8ed70af511620",
+  "image_call": 33,
+  "delta": "d2dee571e7c6fe64368b6b7c91a2d16337309d1de61516632cfcf9f095157ec4",
+  "references": [
+    "5c766c72a59a37869fbb41bfeffefa1faa50d25a631643662004b74b52240521",
+    "31a8b744797de51bc768cf099778e62e059d1885fb6dbf518e570c0268b4972b"
+  ],
+  "tolerance_px": 8,
+  "note": "Self-screen readings. The stone box is a 2px flood from a pixel on the block. The front-floor target x420-600 y560-650 was not painted. These are not hotspots.",
+  "base_sol_check": "On 5c766c72 the boot, the soil and the worm sit above y=677. The tray's front lip meets that line and is support.",
+  "items": {
+    "fr_pierre_noun": {
+      "box": [316, 415, 214, 126],
+      "center_x": 0.33,
+      "cue": "one solid gray quarry block, flat faces, no arched opening",
+      "note": "Centre 423 is under 576. The block did not move to the front. Its left edge meets the earth spill."
+    },
+    "fr_terre_noun": {
+      "box": [100, 410, 210, 250],
+      "cue": "one cart, one torn sack, seedling, spilled earth",
+      "note": "Soil pixels reach about x=308 beside the block. The cart wheel is support."
+    },
+    "fr_mine_noun": {
+      "box": [74, 150, 310, 180],
+      "cue": "one tunnel, lantern, rails, one ore cart",
+      "note": "The mound's left toe still reads near x=74. That is not 8px inside x=77. The table is support."
+    },
+    "fr_mineral_adj": {
+      "box": [540, 280, 300, 280],
+      "center_x": 0.54,
+      "cue": "whole geologist, both hands on the cluster, lamp, rainbow"
+    },
+    "fr_cristal_noun": {
+      "box": [1010, 100, 160, 280],
+      "cue": "purple crystal, mouse at the base, cup remains"
+    },
+    "fr_sol_noun": {
+      "box": [860, 450, 300, 210],
+      "cue": "ridged sole facing the viewer and touching the soil, worm in the tray",
+      "note": "The boot, soil and worm are inside the tray. The tray lip is support and is not scored as the group edge."
+    }
+  },
+  "overlap": "pierre 316-530 / 415-541 meets terre, whose soil reaches about x=308 in that same vertical band. The requested open gap was not painted."
+}

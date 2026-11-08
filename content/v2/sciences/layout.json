@@ -1,0 +1,116 @@
+{
+  "building": "sciences",
+  "building_id": "B35_sciences",
+  "sector_id": "S10_university",
+  "name": "Faculté des Sciences",
+  "main": "cour",
+  "roomList": [
+    {
+      "key": "cour",
+      "short": "La cour"
+    },
+    {
+      "key": "sciences",
+      "short": "Les roches"
+    }
+  ],
+  "planned": {
+    "sciences": {
+      "vocabRoom": "R_geology",
+      "only": [
+        "fr_mine_noun",
+        "fr_terre_noun",
+        "fr_pierre_noun",
+        "fr_mineral_adj",
+        "fr_cristal_noun",
+        "fr_sol_noun"
+      ]
+    }
+  },
+  "rooms": {
+    "cour": {
+      "name": "La cour des sciences",
+      "image": "sciences/cour.jpg",
+      "alt": "The science-faculty forecourt, in ink and gouache: a white telescope on a black tripod and a round stone plinth stands on the gravel. Open glass doors show the rock hall's cream floor, tan walls and a purple crystal in the left bay. A wooden door and an open arcade are on the west wing, a wooden door is on the east wing, and a low stone wall has an open gate toward the campus path. Autumn trees stand behind the tan building.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          418,
+          528,
+          450,
+          192
+        ],
+        "label": "Campus"
+      },
+      "doors": [
+        {
+          "to": "sciences",
+          "label": "Le hall",
+          "hint": "Through the open glass doors into the rock hall",
+          "hit": [
+            440,
+            288,
+            490,
+            168
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    },
+    "sciences": {
+      "name": "Le hall des roches",
+      "room_id": "R_geology",
+      "image": "sciences/sciences.jpg",
+      "alt": "The ground-floor hall of the science faculty, in ink and gouache, looking toward open glass doors. A rock mound with one tunnel, a lantern and an ore cart sits on a low table. A torn sack of earth spills from a wooden cart, with a seedling in the tear. One low gray stone slab lies on the open floor. A geologist holds a sparkling mineral cluster under a lamp that throws a rainbow. A tall purple crystal stands on the right with a mouse at its base. A rubber boot rests in a tray of soil, the sole toward the viewer, and a worm lifts its head. Through the open doors are a gravel path, autumn trees and the campus telescope.",
+      "nameplate": [
+        16,
+        7
+      ],
+      "backTo": "cour",
+      "doors": [
+        {
+          "to": "cour",
+          "label": "La cour",
+          "hint": "Through the glass doors to the telescope in the court",
+          "hit": [
+            560,
+            24,
+            210,
+            226
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_mine_noun",
+          "box": [82, 148, 386, 177]
+        },
+        {
+          "id": "fr_terre_noun",
+          "box": [104, 410, 292, 258]
+        },
+        {
+          "id": "fr_pierre_noun",
+          "box": [416, 553, 178, 120]
+        },
+        {
+          "id": "fr_mineral_adj",
+          "box": [557, 272, 278, 250]
+        },
+        {
+          "id": "fr_cristal_noun",
+          "box": [1015, 102, 154, 279]
+        },
+        {
+          "id": "fr_sol_noun",
+          "box": [920, 435, 230, 210]
+        }
+      ]
+    }
+  }
+}
