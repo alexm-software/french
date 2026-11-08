@@ -1,0 +1,46 @@
+{
+  "boundary": "t428u",
+  "deadline_local": "2026-11-08 06:00 AM CST",
+  "deadline_utc": "2026-11-08T12:00:00Z",
+  "rule": "Work until the vocabulary-comparison audit is done or 06:00 AM CST, whichever is sooner. 12:00 UTC is the cutoff for starting any new audit batch, investigation, or implementation. After that, only bounded saving and testing already underway, then idle. No merge.",
+  "parallel": "Science PR 274 owns faculty forecourt/hub/navigation, including any app.js Hub dedup. This branch does not edit app.js or navigation. Parent reconciles the combined build. No merge of either PR.",
+  "started_utc": "2026-11-08T06:08:11Z",
+  "checkpoint_utc": "2026-11-08T06:20:00Z",
+  "status": "checkpoint_saved",
+  "branch": "cursor/sense-comparisons-c06a",
+  "base": "bdb6ae972dfac51a03515a94f184fbae1163ad70",
+  "scope": "Card comparison data and rendering only. No room painting, no layout/nav edits, no app.js.",
+  "published": {
+    "edges": 262,
+    "words": 446
+  },
+  "coverage": {
+    "vocab_entries": 8106,
+    "letters_not_clustered": 26,
+    "exact_clusters": 375,
+    "exact_entries": 802,
+    "near_clusters": 467,
+    "near_entries": 1107,
+    "entries_in_a_candidate_cluster": 1749,
+    "entries_outside_candidate_clusters": 6331,
+    "light_verb_object_pairs_excluded": 62,
+    "exact_accepted": 152,
+    "exact_accepted_partial": 18,
+    "exact_equivalent": 176,
+    "exact_unrelated": 18,
+    "exact_uncertain": 11,
+    "near_accepted": 65,
+    "near_not_same": 402
+  },
+  "checks": "python3 -m unittest tools.tests.test_sense_compares passed. python3 scripts/qa/check_v2.py --strict --placement --cache-base origin/main PASS. 0 existing images changed; sw.js stays village-v52.",
+  "remaining": [
+    "11 uncertain exact clusters are reviewed but unpublished (noun rock, bar, frost, opportunity, support, village; verb raise, put back, publish, count; adj heavy).",
+    "176 exact clusters were reviewed as interchangeable for the taught gloss, or too slight to state, and have no learner note.",
+    "402 near clusters were reviewed as a different meaning created by the extra English words, not a second word for the same gloss.",
+    "6331 non-letter entries share no exact or near primary gloss under this grouping. That is not a claim they have no synonym under different English wording.",
+    "Not candidates, so not published: entendre/écouter, voir/regarder, devoir/falloir, se souvenir versus se rappeler (rappeler is glossed call back / remind). fois is absent from vocab.jsonl.",
+    "Secondary-atom token overlaps that are not a full primary gloss were not a candidate class.",
+    "104 comparison targets are not in a painted room. Cards name them and say they are not in a room yet."
+  ],
+  "next": "Do not start another audit batch after 12:00 UTC. Parent reconciles this branch with PR 274 without merging here."
+}

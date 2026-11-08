@@ -238,6 +238,21 @@ V.onCard.push(function(it){
   var en=card.querySelector('.en'); if(en&&it.cefr) en.insertAdjacentHTML('beforeend',' <span class="lvl" title="CEFR level">'+esc(it.cefr)+'</span>');
   var gram=card.querySelector('.gram'); if(gram&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
   var pic=card.querySelector('.pic'); if(pic){ pic.title='Tap to enlarge'; pic.addEventListener('click',function(){ pic.classList.toggle('big') }) }
+  if(it.compares&&it.compares.length){
+    var cmp='<div class="sec cmp"><h3>Not the same</h3>';
+    it.compares.forEach(function(c){
+      cmp+='<div class="cmp1">';
+      if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(c.fr)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
+      else cmp+='<p><b lang="fr">'+esc(c.fr)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">Not in a room yet.</span></p>';
+      cmp+='<p>'+esc(c.note)+'</p>';
+      if(c.ex&&c.ex[0]) cmp+='<p class="fr"><i lang="fr">'+esc(c.ex[0])+'</i>'+(V.hasVoice()?' <button class="say" data-say="'+esc(c.ex[0])+'" aria-label="Listen: '+esc(c.ex[0])+'">🔊</button>':'')+'</p><p class="tr">'+esc(c.ex[1]||'')+'</p>';
+      cmp+='</div>';
+    });
+    cmp+='</div>';
+    var exs=card.querySelector('.sec.ex');
+    if(exs) exs.insertAdjacentHTML('afterend',cmp);
+    else card.insertAdjacentHTML('beforeend',cmp);
+  }
   var R=V.here().room, inRoom=R&&R.items.indexOf(it)>=0;
   var p=P[it.id], foot='<div class="cfoot">';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="prev" aria-label="Previous word">‹ prev</button>';
