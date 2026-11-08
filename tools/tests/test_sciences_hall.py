@@ -54,12 +54,21 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertEqual(fail, [])
 
     def test_six_word_prompt_is_the_reviewed_pack(self):
-        manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
-        pack = (REVIEW / "six/sciences-hall-prompt-whole.txt").read_text()
-        self.assertEqual(manifest["prompt_text"], pack)
-        self.assertEqual(hashlib.sha256(pack.encode()).hexdigest(),
+        six = (REVIEW / "six/sciences-hall-prompt-whole.txt").read_text()
+        self.assertEqual(hashlib.sha256(six.encode()).hexdigest(),
                          "bdd8e378d9614e9a04f680dc456970f5f3bb6cd391a4cd18cf014ab88082775c")
-        self.assertEqual(len(pack.split()), 288)
+        self.assertEqual(len(six.split()), 288)
+        gallery = (REVIEW / "gallery/prompt-gallery.txt").read_text()
+        manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
+        self.assertEqual(manifest["prompt_text"], gallery)
+        self.assertEqual(hashlib.sha256(gallery.encode()).hexdigest(),
+                         "2206ed68d6704f3183ba20de7825b69d988eb2001ee568905f68f0bff2f5ff48")
+        delta = (REVIEW / "gallery/edit-delta.txt").read_text()
+        self.assertEqual(hashlib.sha256(delta.encode()).hexdigest(),
+                         "8f00e3b09b7bee771013e2fd2953376bf56f95f3b26f2d74e38353cb801ad921")
+        plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
+        for room_id in ("R_cafe_02", "R_resto_kitchen_02", "R_measures_01", "R_emo_joy_01"):
+            self.assertIn(room_id, plan)
 
     def test_six_words_are_real_and_not_already_live(self):
         manifest = json.loads((ROOT / "content/v2/sciences/hall.manifest.json").read_text())
