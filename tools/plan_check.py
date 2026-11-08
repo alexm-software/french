@@ -561,10 +561,20 @@ def exit_identity_refs(manifest, layout):
             fail.append(f"prompt.refs names a missing image: {token}")
         else:
             named.add(found)
-    room = (layout.get("rooms") or {}).get(manifest.get("room"), {})
+    room_key = manifest.get("room")
+    room = (layout.get("rooms") or {}).get(room_key, {})
     doors = manifest.get("doors") if isinstance(manifest.get("doors"), list) else []
+    # Gate 19: ordinary Back leaves for the sector map. A zoom closes to its parent, and a
+    # street side room returns to that street. A declared identity crop is still checked for
+    # that Back even when the painted door goes to another room in the building.
+    building_id = str(layout.get("building_id") or "")
+    main = layout.get("main") or layout.get("building")
+    ordinary_back = (
+        isinstance(room, dict) and not room.get("parent")
+        and not (building_id.startswith("ST_") and room_key != main))
+    declares_crop = isinstance(prompt.get("identity_crop"), dict) or isinstance(manifest.get("identity_crop"), dict)
     returns_to_sector = any(isinstance(door, dict) and door.get("to") == "map" for door in doors) or bool(
-        isinstance(room, dict) and room.get("mapExit"))
+        isinstance(room, dict) and room.get("mapExit")) or (declares_crop and ordinary_back)
     if not returns_to_sector:
         return fail
     need = _sector_image(layout)
