@@ -4,9 +4,13 @@ Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words
 
 The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. It is the only room with a Campus exit.
 
+## Stop
+
+Work boundary t428u, 8 Nov 2026, 00:07 CST: keep going only until the current plan is saved, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. After 06:00 CST, no new generation, room, investigation, or batch. The finds image is rejected. The plan in `review/plan-next/` waits for a topology review. Do not paint it. No merge.
+
 ## Connections
 
-Campus opens the hall. Back and the hall's one door both return to Campus. Later rooms do not get a Campus exit. Their return is the hall. The hall does not gain a second control until a later paint adds a real opening. The finds candidate, if accepted, returns through an oak door into the hall.
+Campus opens the hall. Back and the hall's one door both return to Campus. The hall has no side door. A later room cannot pretend one exists. The rejected finds picture is not a base.
 
 ## Finds candidate, rejected
 
