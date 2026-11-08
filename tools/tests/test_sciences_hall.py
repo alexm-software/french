@@ -72,6 +72,9 @@ class ScienceHallPilot(unittest.TestCase):
         delta3 = (REVIEW / "gallery/edit-2/edit-delta-3.txt").read_text()
         self.assertEqual(hashlib.sha256(delta3.encode()).hexdigest(),
                          "54836735b5beeffcc4c600ee77a260513783e3230758af93433c093a4c62e76b")
+        delta4 = (REVIEW / "gallery/edit-3/edit-delta-4.txt").read_text()
+        self.assertEqual(hashlib.sha256(delta4.encode()).hexdigest(),
+                         "f23f92b48f614eb2b67ed9b3191e8450fa32edb1477ce6ba8b13735833d230e7")
         plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
         for room_id in ("R_cafe_02", "R_resto_kitchen_02", "R_measures_01", "R_emo_joy_01"):
             self.assertIn(room_id, plan)
