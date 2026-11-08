@@ -8,9 +8,9 @@ The hall painting `d1d59540` is release-ready and integrated. It is not merged a
 
 Campus opens the hall. Back and the hall's one door both return to Campus. Later rooms do not get a Campus exit. Their return is the hall. The hall does not gain a second control until a later paint adds a real opening. The finds candidate, if accepted, returns through an oak door into the hall.
 
-## Finds candidate, not integrated
+## Finds candidate, rejected
 
-`finds` is one composition checkpoint. It is not in the live layout. Words: prospection, géologue, volcan, minerai, filon, caillou. Gisement stays unpainted. Creuset stays with smelting. Pendule stays with forces.
+`080d7f5e` is not an edit base. It is not in the live layout. Its words stay queued. The next plan is `review/plan-next/` and is not for painting.
 
 ## Hall plan
 
