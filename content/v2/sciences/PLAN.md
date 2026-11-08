@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Campus opens the Cour. The Cour's glass doors open the hall, and the hall's glass doors return to the Cour. The live campus painting is still `fd1d0c93`. Call 55 repairs the close-up plinth and gate pier and is not integrated. Call 52 is discarded as a base.
+The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Campus opens the Cour. The Cour's glass doors open the hall, and the hall's glass doors return to the Cour. The live campus painting is still `fd1d0c93`. Call 56 is a whole-campus candidate and is not integrated. Call 52 is discarded as a base.
 
 ## Stop
 
@@ -58,4 +58,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: 55. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 40 `7939f72c` is the live Cour. Call 55 `5908a5af` repairs the close-up plinth and gate pier and awaits review. Call B has not been made. `village/map/university.jpg` is unchanged.
+Image calls: 56. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 40 `7939f72c` is the live Cour. Call 56 `68ef3844` is a whole-campus candidate and awaits review. `village/map/university.jpg` is unchanged.
