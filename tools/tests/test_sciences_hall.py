@@ -76,7 +76,7 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertEqual(hashlib.sha256(delta4.encode()).hexdigest(),
                          "f23f92b48f614eb2b67ed9b3191e8450fa32edb1477ce6ba8b13735833d230e7")
         plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
-        for room_id in ("R_cafe_02", "R_resto_kitchen_02", "R_measures_01", "R_emo_joy_01"):
+        for room_id in ("R_cafe_02", "R_resto_kitchen_02", "R_measures_01", "R_emo_joy_01", "R_resto_kitchen_01", "R_math_02", "R_military_01", "R_military_04"):
             self.assertIn(room_id, plan)
 
     def test_six_words_are_real_and_not_already_live(self):

@@ -6,7 +6,7 @@ The hall painting `d1d59540` is release-ready and integrated. It is not merged a
 
 ## Stop
 
-Work boundary t428u, 8 Nov 2026, 00:07 CST: continue the requested science-room work until that work is done, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. Saving this plan is not the end of the 30-room task and is not an early stop. After 06:00 CST, start no new generation, room, investigation, or batch; finish only a clean save already underway. The finds image is rejected. Do not paint `review/plan-next/` until its topology is reviewed. No merge.
+Work boundary t428u, 8 Nov 2026, 00:07 CST: continue the requested science-room work until that work is done, or until 06:00 CST (12:00 UTC) on 8 Nov 2026, whichever is sooner. Saving this plan is not the end of the 30-room task and is not an early stop. After 06:00 CST, start no new generation, room, investigation, or batch; finish only a clean save already underway. The finds image is rejected. The Cour candidate is in review. Do not paint the bench until that court is accepted. No merge.
 
 ## Connections
 
@@ -40,7 +40,9 @@ No verb is in the 136 science words. `extraire` and `observer` stay on their own
 
 ## Not our rooms
 
-The user reserved these for a ChatGPT sideload (t426u). They are excluded from this build queue: `R_cafe_02`, `R_resto_kitchen_02`, `R_measures_01`, `R_emo_joy_01`.
+Eight source rooms are reserved for ChatGPT standalone packs (t426u, t429u). They are excluded from this build queue. Those packs do not change this repo's map or navigation.
+
+`R_cafe_02`, `R_resto_kitchen_02`, `R_measures_01`, `R_emo_joy_01`, `R_resto_kitchen_01`, `R_math_02`, `R_military_01`, `R_military_04`.
 
 ## Later rooms (not painted, not validated)
 
