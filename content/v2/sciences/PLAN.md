@@ -2,7 +2,7 @@
 
 Base: `main` `bdb6ae97`. Source bins are not room designs. All 136 science words stay in `data/source`. The parked eight-word painting is unchanged. The current hall plan is six words.
 
-The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. It is the only room with a Campus exit.
+The hall painting `d1d59540` is release-ready and integrated. It is not merged and not live. Do not repaint it. Live data still opens the hall from Campus. The planned root is the outdoor Cour des sciences.
 
 ## Stop
 
@@ -10,7 +10,7 @@ Work boundary t428u, 8 Nov 2026, 00:07 CST: continue the requested science-room 
 
 ## Connections
 
-Campus opens the hall. Back and the hall's one door both return to Campus. The hall has no side door. A later room cannot pretend one exists. The rejected finds picture is not a base.
+Planned route: Campus opens the Cour. The Cour's glass doors open the hall. The hall's painted doors return to the Cour. Ordinary-room Back still says Campus. Hub is hidden when a painted door already goes to the Cour. West wing, arcade, and east stair leave the Cour. No second Campus door. The finds picture `080d7f5e` is rejected. The bench is not painted until the Cour is accepted. Master plan: `review/cour/walkthrough.json`.
 
 ## Finds candidate, rejected
 
@@ -56,4 +56,4 @@ One activity each, 6–10 words, concrete before abstract. Add a real door in a 
 - Living things: cellule, gène, bactérie, germe, organisme, évolution, création, reproduction, biologique, spécifique, extinction, parasite, biologie, embryon, neurone, écologie, biodiversité, physiologie, clonage, cellulaire, biologiste, émergence.
 - Methods, upstairs: the `R_abs_study_02`, `R_abs_study_02_z1`, and `R_abs_study_03` words (recherche through expérimental). They are mostly abstract and wait until a concrete lab is accepted.
 
-Image calls: 36. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 is the finds checkpoint `080d7f5e`, not integrated.
+Image calls: 37. The hall `d1d59540` is call 35 and is release-ready, not merged. Call 36 `080d7f5e` is rejected. Call 37 is the Cour candidate `4adf12ed`, not integrated. The campus map is unchanged.
