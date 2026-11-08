@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "main ground-floor opening",
+    "appearance": "open entrance court connected to its existing sector path",
+    "arrival": "Le vestibule du musée · Military History Entrance"
+  },
+  "places": {
+    "entree": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "The entrance hall: interpreting military history",
+      "camera": "from inside the place toward its visible passage",
+      "within": "caserne"
+    },
+    "uniformes": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "The entrance hall: people and service",
+      "camera": "from inside the place toward its visible passage",
+      "within": "caserne"
+    },
+    "galerie_fond": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "The far hall: historical terms",
+      "camera": "from inside the place toward its visible passage",
+      "within": "caserne"
+    },
+    "recrutement": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "The far hall: call-up and entry into service",
+      "camera": "from inside the place toward its visible passage",
+      "within": "caserne"
+    },
+    "caserne": {
+      "kind": "hub",
+      "level": "ground floor",
+      "landmark": "Le vestibule du musée · Military History Entrance",
+      "camera": "from inside the place toward its visible passage"
+    }
+  },
+  "passages": {
+    "caserne-to-entree": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
+      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
+      "ends": [
+        {
+          "place": "caserne",
+          "where": "forward gallery opening",
+          "arrival": "Le vestibule du musée · Military History Entrance"
+        },
+        {
+          "place": "entree",
+          "where": "arrival from the previous gallery",
+          "arrival": "The entrance hall: interpreting military history"
+        }
+      ]
+    },
+    "entree-to-uniformes": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
+      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
+      "ends": [
+        {
+          "place": "entree",
+          "where": "forward gallery opening",
+          "arrival": "The entrance hall: interpreting military history"
+        },
+        {
+          "place": "uniformes",
+          "where": "arrival from the previous gallery",
+          "arrival": "The entrance hall: people and service"
+        }
+      ]
+    },
+    "uniformes-to-galerie_fond": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
+      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
+      "ends": [
+        {
+          "place": "uniformes",
+          "where": "forward gallery opening",
+          "arrival": "The entrance hall: people and service"
+        },
+        {
+          "place": "galerie_fond",
+          "where": "arrival from the previous gallery",
+          "arrival": "The far hall: historical terms"
+        }
+      ]
+    },
+    "galerie_fond-to-recrutement": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
+      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
+      "ends": [
+        {
+          "place": "galerie_fond",
+          "where": "forward gallery opening",
+          "arrival": "The far hall: historical terms"
+        },
+        {
+          "place": "recrutement",
+          "where": "arrival from the previous gallery",
+          "arrival": "The far hall: call-up and entry into service"
+        }
+      ]
+    },
+    "recrutement-to-caserne": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
+      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
+      "ends": [
+        {
+          "place": "recrutement",
+          "where": "forward gallery opening",
+          "arrival": "The far hall: call-up and entry into service"
+        },
+        {
+          "place": "caserne",
+          "where": "arrival from the previous gallery",
+          "arrival": "Le vestibule du musée · Military History Entrance"
+        }
+      ]
+    }
+  }
+}

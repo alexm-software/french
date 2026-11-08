@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "main ground-floor opening",
+    "appearance": "open entrance court connected to its existing sector path",
+    "arrival": "Le vestibule · Mathematics Entrance Court"
+  },
+  "places": {
+    "mesures": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Les mesures · Measures and Quantities",
+      "camera": "from inside the place toward its visible passage",
+      "within": "maths"
+    },
+    "quantites": {
+      "kind": "room",
+      "level": "upper floor",
+      "landmark": "Picnic quantity planning",
+      "camera": "from inside the place toward its visible passage",
+      "within": "maths"
+    },
+    "modeles": {
+      "kind": "room",
+      "level": "upper floor",
+      "landmark": "Models and algebra workshop",
+      "camera": "from inside the place toward its visible passage",
+      "within": "maths"
+    },
+    "maths": {
+      "kind": "hub",
+      "level": "ground floor",
+      "landmark": "Le vestibule · Mathematics Entrance Court",
+      "camera": "from inside the place toward its visible passage"
+    }
+  },
+  "passages": {
+    "to-mesures": {
+      "kind": "door",
+      "appearance": "Open sage-green arch between the shared entrance court and workroom",
+      "ends": [
+        {
+          "place": "maths",
+          "where": "ground-floor court arch",
+          "arrival": "Le vestibule · Mathematics Entrance Court"
+        },
+        {
+          "place": "mesures",
+          "where": "sage-green doorway to the court",
+          "arrival": "Les mesures · Measures and Quantities"
+        }
+      ]
+    },
+    "to-quantites": {
+      "kind": "stairs",
+      "appearance": "Oak stairs with slate-blue handrails between the covered entrance court and the upper classroom",
+      "ends": [
+        {
+          "place": "maths",
+          "where": "upper landing",
+          "arrival": "Le vestibule · Mathematics Entrance Court"
+        },
+        {
+          "place": "quantites",
+          "where": "descending stairhead",
+          "arrival": "Picnic quantity planning"
+        }
+      ]
+    },
+    "to-modeles": {
+      "kind": "stairs",
+      "appearance": "Oak stairs with slate-blue handrails between the covered entrance court and the upper classroom",
+      "ends": [
+        {
+          "place": "maths",
+          "where": "upper landing",
+          "arrival": "Le vestibule · Mathematics Entrance Court"
+        },
+        {
+          "place": "modeles",
+          "where": "descending stairhead",
+          "arrival": "Models and algebra workshop"
+        }
+      ]
+    }
+  }
+}

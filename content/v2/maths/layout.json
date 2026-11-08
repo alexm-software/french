@@ -1,0 +1,385 @@
+{
+  "building": "maths",
+  "building_id": "B36_maths",
+  "sector_id": "S10_university",
+  "v1_room_id": "R_measures_01",
+  "name": "Institut de Mathématiques",
+  "main": "maths",
+  "roomList": [
+    {
+      "key": "maths",
+      "short": "Accueil"
+    },
+    {
+      "key": "mesures",
+      "short": "Les mesures"
+    },
+    {
+      "key": "quantites",
+      "short": "Picnic quantity planning"
+    },
+    {
+      "key": "modeles",
+      "short": "Models and algebra workshop"
+    }
+  ],
+  "planned": {
+    "mesures": {
+      "only": [
+        "fr_livre_noun_f",
+        "fr_metre_noun",
+        "fr_taille_noun",
+        "fr_kilometre_noun",
+        "fr_mesure_noun",
+        "fr_poids_noun",
+        "fr_charge_noun",
+        "fr_kilo_noun",
+        "fr_litre_noun"
+      ],
+      "vocabRoom": "R_measures_01"
+    },
+    "quantites": {
+      "vocabRoom": "R_math_02",
+      "only": [
+        "fr_estimation_noun",
+        "fr_fraction_noun",
+        "fr_ration_noun",
+        "fr_soustraction_noun",
+        "fr_mathematique_adj",
+        "fr_pourcentage_noun"
+      ]
+    },
+    "modeles": {
+      "vocabRoom": "R_math_02",
+      "only": [
+        "fr_equation_noun",
+        "fr_matrice_noun",
+        "fr_rotation_noun",
+        "fr_geometrique_adj",
+        "fr_mathematicien_noun"
+      ]
+    }
+  },
+  "rooms": {
+    "mesures": {
+      "name": "Les mesures · Measures and Quantities",
+      "image": "maths/mesures.jpg",
+      "alt": "A practical measurement class weighs a delivery and checks fabric, length, mass and liquid volume. balance scale with a block of butter and a mass marked 500 g; long scarf measured against a straight ruler marked 1 m; dressmaker mannequin with a long tie around its waist; key-backed snail beside a route card marked 1 km; tailor measuring a fabric roll with a tape; large iron weight hanging from a spring balance on a stand; small patient donkey harnessed to a cart of sacks; large brass key on a low scale whose display reads 1 kg; clear graduated measuring jug filled exactly to the 1 L line. Ground-floor measurement laboratory in the mathematics institute, entered from the campus path.",
+      "doors": [
+        {
+          "to": "maths",
+          "label": "Le vestibule",
+          "hint": "Return through the doorway to the shared entrance court",
+          "hit": [
+            30,
+            180,
+            65,
+            170
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_livre_noun_f",
+          "box": [
+            280,
+            254,
+            128,
+            90
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_metre_noun",
+          "box": [
+            650,
+            237,
+            359,
+            63
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_taille_noun",
+          "box": [
+            411,
+            162,
+            77,
+            221
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_kilometre_noun",
+          "box": [
+            782,
+            302,
+            321,
+            65
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_mesure_noun",
+          "box": [
+            427,
+            399,
+            201,
+            183
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_poids_noun",
+          "box": [
+            847,
+            374,
+            106,
+            206
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_charge_noun",
+          "box": [
+            82,
+            389,
+            333,
+            241
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_kilo_noun",
+          "box": [
+            983,
+            483,
+            155,
+            100
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_litre_noun",
+          "box": [
+            1030,
+            375,
+            102,
+            94
+          ],
+          "text": "vocab"
+        }
+      ],
+      "room_id": "R_measures_01",
+      "backTo": "maths"
+    },
+    "quantites": {
+      "name": "Picnic quantity planning",
+      "image": "maths/quantites.jpg",
+      "room_id": "R_math_02",
+      "alt": "Upstairs mathematics estimation; fraction; ration; soustraction; mathématique; pourcentage",
+      "doors": [
+        {
+          "to": "maths",
+          "label": "Le vestibule",
+          "hint": "Down the oak steps with slate-blue handrails to the entrance court",
+          "hit": [
+            950,
+            525,
+            225,
+            150
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_estimation_noun",
+          "box": [
+            46,
+            154,
+            291,
+            217
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_fraction_noun",
+          "box": [
+            343,
+            163,
+            269,
+            209
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_ration_noun",
+          "box": [
+            32,
+            458,
+            315,
+            235
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_soustraction_noun",
+          "box": [
+            372,
+            480,
+            304,
+            205
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_mathematique_adj",
+          "box": [
+            651,
+            264,
+            228,
+            127
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_pourcentage_noun",
+          "box": [
+            948,
+            148,
+            306,
+            237
+          ],
+          "text": "vocab"
+        }
+      ],
+      "backTo": "maths"
+    },
+    "modeles": {
+      "name": "Models and algebra workshop",
+      "image": "maths/modeles.jpg",
+      "room_id": "R_math_02",
+      "alt": "Upstairs mathematics équation; matrice; rotation; géométrique; mathématicien",
+      "doors": [
+        {
+          "to": "maths",
+          "label": "Le vestibule",
+          "hint": "Down the oak steps with slate-blue handrails to the entrance court",
+          "hit": [
+            727,
+            510,
+            105,
+            150
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_equation_noun",
+          "box": [
+            88,
+            155,
+            308,
+            259
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_matrice_noun",
+          "box": [
+            94,
+            428,
+            239,
+            237
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_rotation_noun",
+          "box": [
+            411,
+            370,
+            309,
+            314
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_geometrique_adj",
+          "box": [
+            451,
+            0,
+            390,
+            279
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_mathematicien_noun",
+          "box": [
+            847,
+            201,
+            337,
+            480
+          ],
+          "text": "vocab"
+        }
+      ],
+      "backTo": "maths"
+    },
+    "maths": {
+      "name": "Le vestibule · Mathematics Entrance Court",
+      "image": "maths/accueil.jpg",
+      "alt": "A covered entrance court gives access to the ground-floor measures laboratory and two upstairs classrooms.",
+      "mapExit": {
+        "box": [
+          70,
+          294,
+          106,
+          300
+        ],
+        "label": "Le campus"
+      },
+      "doors": [
+        {
+          "to": "mesures",
+          "label": "Les mesures",
+          "hint": "Through the painted opening to Les mesures",
+          "hit": [
+            341,
+            414,
+            99,
+            151
+          ]
+        },
+        {
+          "to": "quantites",
+          "label": "Les quantités",
+          "hint": "Through the painted opening to Les quantités",
+          "hit": [
+            545,
+            215,
+            110,
+            125
+          ]
+        },
+        {
+          "to": "modeles",
+          "label": "Les modèles",
+          "hint": "Through the painted opening to Les modèles",
+          "hit": [
+            1006,
+            210,
+            114,
+            133
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    }
+  }
+}
