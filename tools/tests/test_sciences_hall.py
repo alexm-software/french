@@ -137,6 +137,7 @@ class ScienceHallPilot(unittest.TestCase):
         payload = (ROOT / "village/data/sciences.js").read_text()
         for wid in ("fr_mine_noun", "fr_terre_noun", "fr_pierre_noun", "fr_mineral_adj", "fr_cristal_noun", "fr_sol_noun"):
             self.assertIn(wid, payload)
+        self.assertIn('"boxPx": [82, 148, 386, 177]', payload)
 
     def test_parked_exit_omits_the_sector_image(self):
         parked = json.loads((REVIEW / "parked-eight.manifest.json").read_text())
