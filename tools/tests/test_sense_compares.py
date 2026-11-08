@@ -131,24 +131,37 @@ class SenseCompares(unittest.TestCase):
             self.assertIn(i18n["en"]["card"][key], extras if key != "noPainting" else (ROOT / "village" / "app.js").read_text(encoding="utf-8") + extras)
         self.assertTrue(all(e.get("verified") and e.get("support") for e in self.edges))
         deferred = json.loads((ROOT / "data" / "source" / "sense_compare_deferred.json").read_text(encoding="utf-8"))
-        self.assertGreater(len(deferred["deferred_unsupported"]), 0)
+        self.assertEqual(deferred["deferred_unsupported"], [])
+        self.assertNotIn("fr_au_det", ids)
+        self.assertNotIn("fr_foot_noun", ids)
         self.assertEqual(i18n["fr"]["card"]["notTheSame"], "Pas la même chose")
         self.assertEqual(totals["published_edges"], len(self.edges))
         self.assertGreater(totals["entries_outside_candidate_clusters"], 0)
         self.assertGreater(totals["exact_clusters"], 300)
 
     def test_unpainted_lexicon_is_reciprocal_and_has_no_room(self):
-        from sense_compares import write_lexicon
+        from sense_compares import choose_placement, write_lexicon
         self.assertGreater(write_lexicon(), 0)
         raw = (ROOT / "village" / "data" / "lexicon.js").read_text(encoding="utf-8")
         items = json.loads(raw.split("window.V2_LEXICON=", 1)[1].split(";\nwindow.V2_LEXICON_INDEX=", 1)[0])
+        live = (ROOT / "village" / "data" / "live.js").read_text(encoding="utf-8")
+        self.assertNotIn('"lexicon":', live)
+        extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
+        self.assertIn("#/lex?w=", extras)
+        self.assertIn("lexicon.js", (ROOT / "tools" / "hook_lint.py").read_text(encoding="utf-8"))
         for it in items.values():
             self.assertTrue(it["lex"])
             self.assertNotIn("cardSrc", it)
+            self.assertIsNone(choose_placement(it["id"], self.placements, self.vocab))
+            if it.get("g"):
+                self.assertTrue(it["art"])
             for c in it.get("compares") or []:
                 self.assertTrue(c.get("at") or c.get("lex"))
                 if c.get("at") is None:
                     self.assertIn(c["to"], items)
+                back = next(x for x in items[c["to"]]["compares"] if x["to"] == it["id"]) if c["to"] in items else None
+                if c["to"] in items:
+                    self.assertIsNotNone(back)
 
 
 if __name__ == "__main__":

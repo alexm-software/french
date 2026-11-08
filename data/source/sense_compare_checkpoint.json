@@ -1,32 +1,27 @@
 {
-  "boundary": "t430u-resumed",
-  "deadline_note": "The 02:00 AM CST stop was lifted by the Nov 8 8:41 AM CST request to finish the comparison fixes.",
+  "boundary": "t431u-finish-35",
   "status": "fix_pack_saved",
-  "checkpoint_utc": "2026-11-08T14:55:00Z",
+  "checkpoint_utc": "2026-11-08T15:20:00Z",
   "branch": "cursor/sense-comparisons-c06a",
   "merged_main": "e8ffce47800c15b837cd67eb2ab362b4b21207a5",
-  "main_check": "origin/main was still e8ffce47. No new merge was required.",
   "pr274": "Not merged.",
-  "published": {"edges": 259, "words": 449, "all_verified_with_excerpt": true},
-  "deferred_unsupported": 25,
-  "lexicon_unpainted_cards": 116,
+  "published": {"edges": 310, "words": 536, "all_have_a_sense_excerpt": true},
+  "deferred_unsupported": 0,
+  "lexicon_text_cards": 138,
+  "no_note_same_form": ["au/aux", "foot/football"],
+  "no_note_near_synonym": ["gamin/gosse/môme", "boulot/job"],
   "coverage": {
     "vocab_entries": 8106,
     "exact_clusters": 375,
-    "exact_accepted": 153,
-    "exact_accepted_partial": 16,
-    "exact_equivalent": 175,
+    "exact_accepted": 186,
+    "exact_accepted_partial": 21,
+    "exact_equivalent": 137,
     "exact_unrelated": 19,
     "exact_deferred_homograph": 1,
     "exact_uncertain": 11,
-    "near_not_same": 406,
+    "near_not_same": 394,
     "entries_outside_candidate_clusters": 6331
   },
-  "still_likely_false_equivalents_not_published": [
-    "réfléchir/refléter", "prélever/prendre", "usager/utilisateur", "croiser/traverser",
-    "dégât/dommage", "application/candidature", "lessive/buanderie", "trompe/trompette",
-    "merci/miséricorde", "couler/écouler"
-  ],
-  "checks": "unittest tools.tests.test_sense_compares OK. check_v2 --strict --placement --cache-base origin/main PASS, village-v53, 0 images. Browser: soir opens la soirée text card; that card links back to le soir.",
-  "remaining": "Not a full synonym review of 8106 entries. 6331 were outside the gloss clusters. 175 exact clusters stay equivalent. 11 uncertain. 406 near-not-same were not re-read. 25 edges were removed because the opened CNRTL page did not yield the sense the note needed. fois is still absent."
+  "checks": "unittest OK. hook_lint OK (lexicon.js skipped). check_v2 --strict --placement PASS, 91 buildings, 5852 words, village-v53, 0 images. Browser: all 138 text cards open from #/lex?w=, soirée reloads, back returns to le soir, search uses the same hash, mobile card opens.",
+  "remaining": "137 exact clusters stay equivalent after a gloss pass; their dictionary pages were not each re-opened. 11 uncertain clusters stay unpublished. 6331 entries were outside the gloss clusters. fois is still absent. Text cards are not painted rooms and are not in live.js."
 }

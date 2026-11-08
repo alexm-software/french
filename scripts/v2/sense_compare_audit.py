@@ -62,11 +62,14 @@ EQUIVALENT_PAIRS = [
     ["fr_toutefois_adv", "fr_neanmoins_adv"],
 ]
 REMAINING = [
-    "entendre/écouter and voir/regarder use different English glosses (hear/listen, see/look), so they were not candidates. Not published.",
-    "devoir/falloir and se souvenir/se rappeler were not a shared-gloss cluster (rappeler is glossed as call back / remind). Not published.",
+    "The remaining equivalent clusters were read as glosses in this pass. They stay equivalent because the difference is a near-synonym or a shade too slight to state. Each of those pages was not re-opened.",
+    "au/aux is the same contraction of à: au is à + le and aux is à + les. The gloss already says so. No sense note.",
+    "foot is the informal short form of football, the soccer sense. No sense note. CNRTL lists football américain as a separate sense of football.",
+    "gamin, gosse, and môme are three informal words for a kid. enfant already contrasts with each. No note among the three.",
+    "boulot and job are both informal for work or a job. emploi already contrasts with boulot. No note between boulot and job.",
     "fois is not in the vocabulary source, so heure/temps has no third member.",
     "Words with a unique primary gloss were not candidates. That is not a claim that no other synonym exists under a different English wording.",
-    "Secondary-atom overlaps that are not someone's full primary gloss were not a candidate class. They are mostly unrelated senses sharing one English word.",
+    "The eleven uncertain clusters stay unpublished.",
 ]
 
 
@@ -229,11 +232,7 @@ def main():
             "near_not_same": near_counts["near_not_same"],
         },
         "equivalent_pairs_inside_accepted_clusters": EQUIVALENT_PAIRS,
-        "still_likely_false_equivalents": [
-            "réfléchir/refléter", "prélever/prendre", "usager/utilisateur", "croiser/traverser",
-            "dégât/dommage", "application/candidature", "lessive/buanderie", "trompe/trompette",
-            "merci/miséricorde", "couler/écouler"
-        ],
+        "still_likely_false_equivalents": [],
         "remaining": REMAINING,
         "exact_clusters": exact_rows,
         "near_clusters": near_rows,

@@ -24,7 +24,10 @@ function need(src,cb){ if(scripts[src]===true){cb();return} if(scripts[src]){scr
   document.head.appendChild(sc) }
 function withIndex(cb){ need('data/index.js',function(){ need('data/lexicon.js',function(){
   var ix=(window.V2_INDEX||[]).concat(window.V2_LEXICON_INDEX||[]); cb(ix) }) }) }
+function lexHash(id){ return '#/lex?w='+id }
 function openLex(id, from){ need('data/lexicon.js',function(){ var it=(window.V2_LEXICON||{})[id]; if(it) V.openCard(it, from||null) }) }
+function openLexFromHash(){ var m=(location.hash||'').match(/^#\/lex\?w=([A-Za-z0-9_]+)$/); if(m) openLex(m[1]) }
+window.addEventListener('hashchange', openLexFromHash);
 function hrefFor(b,k,id){ return V.roomHref(b,k)+(id?'?w='+id:'') }
 
 // ---------- progress ----------
@@ -109,15 +112,15 @@ function search(){
         if(sc<9) hits.push([sc,r]) });
       hits.sort(function(a,b){return a[0]-b[0]||a[1][1].length-b[1][1].length});
       out.innerHTML=hits.slice(0,40).map(function(x){ var r=x[1], lex=r[3]==='lex';
-        var href=lex?'#':hrefFor(r[3],r[4],r[0]);
+        var href=lex?lexHash(r[0]):hrefFor(r[3],r[4],r[0]);
         return '<a role="listitem" class="sr1" href="'+href+'"'+(lex?' data-lex="'+esc(r[0])+'"':'')+'><b lang="fr">'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span><small>'+esc(r[5])+' · '+esc(lex?CMP_SEARCH:r[3].replace(/_/g,' '))+'</small></a>' }).join('')||'<p class="small">No match.</p>' }
     q.addEventListener('input',run); run();
     q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var a=out.querySelector('a'); if(!a) return; if(a.dataset.lex){ e.preventDefault(); openLex(a.dataset.lex, a) } else location.hash=a.getAttribute('href') } });
   });
 }
-var CMP_SEARCH='not in a room';
+var CMP_SEARCH='Not in a room yet.';
 searchBtn.addEventListener('click',search);
-document.addEventListener('click',function(e){ var a=e.target.closest('[data-lex]'); if(!a) return; e.preventDefault(); openLex(a.getAttribute('data-lex'), a) }, true);
+document.addEventListener('click',function(e){ var a=e.target.closest('[data-lex]'); if(!a) return; e.preventDefault(); var id=a.getAttribute('data-lex'); if(location.hash===lexHash(id)) openLex(id, a); else location.hash=lexHash(id) }, true);
 cardWrap.addEventListener('click',function(e){ var a=e.target.closest('a.sr1,a.goto'); if(a && !a.dataset.lex){ V.closeCard() } });
 
 // ---------- recall mode ----------
@@ -252,7 +255,7 @@ V.onCard.push(function(it){
       var name=c.hw||c.fr;
       cmp+='<div class="cmp1">';
       if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
-      else if(c.lex) cmp+='<p><a class="lexopen" href="#" data-lex="'+esc(c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.noPainting)+'</span></p>';
+      else if(c.lex) cmp+='<p><a class="lexopen" href="'+lexHash(c.to)+'" data-lex="'+esc(c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.noPainting)+'</span></p>';
       else cmp+='<p><b lang="fr">'+esc(name)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.notInARoom)+'</span></p>';
       cmp+='<p>'+esc(c.note)+'</p>';
       (c.examples||[]).forEach(function(ex){
@@ -303,4 +306,5 @@ if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostn
   var hadSW=!!navigator.serviceWorker.controller, swReloaded=false;
   navigator.serviceWorker.addEventListener('controllerchange',function(){ if(hadSW&&!swReloaded){ swReloaded=true; location.reload() } });
   navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(function(reg){ reg.update() }).catch(function(){}) }
+openLexFromHash();
 })();

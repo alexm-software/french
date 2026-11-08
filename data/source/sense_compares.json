@@ -1,5 +1,5 @@
 {
- "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means support holds a sense excerpt from a page that was opened. verified false means the URL only names a headword page and the sense was not re-checked in this pass. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
+ "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means support quotes the sense the note uses, from a page that was opened. A new pair is not filled from the first sentence of a scrape. au/aux and foot/football have no edge: they are the same word in another form. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
  "edges": [
   {
    "a": "fr_an_noun",
@@ -162,6 +162,122 @@
    "b_ex": [
     "Je connais Marie.",
     "I know Marie."
+   ]
+  },
+  {
+   "a": "fr_partir_verb",
+   "b": "fr_quitter_verb",
+   "axes": [
+    "grammar"
+   ],
+   "a_note": "Quitter names the person or place you leave. Partir does not take that direct object. For the place, partir takes de.",
+   "b_note": "Partir has no direct object (partir de Paris). Quitter takes the person or place directly.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/partir",
+    "https://www.cnrtl.fr/definition/quitter"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/partir",
+     "excerpt": "Se mettre en mouvement, quitter un lieu (pour une destination)."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/quitter",
+     "excerpt": "Laisser un lieu; cesser d'y être, s'en éloigner."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Je pars à huit heures.",
+    "I leave at eight."
+   ],
+   "b_ex": [
+    "Je quitte Paris demain.",
+    "I leave Paris tomorrow."
+   ]
+  },
+  {
+   "a": "fr_partir_verb",
+   "b": "fr_laisser_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Laisser is to leave something behind, or to let someone do something. Partir is to leave, yourself.",
+   "b_note": "Partir is to go away. Laisser is to leave something or someone behind, or to allow it.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/partir",
+    "https://www.cnrtl.fr/definition/laisser"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/partir",
+     "excerpt": "Se mettre en mouvement, quitter un lieu (pour une destination)."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/laisser",
+     "excerpt": "Quitter momentanément."
+    }
+   ],
+   "verified": true,
+   "b_ex": [
+    "J'ai laissé mes clés à la maison.",
+    "I left my keys at home."
+   ]
+  },
+  {
+   "a": "fr_quitter_verb",
+   "b": "fr_laisser_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Laisser is to leave something behind or to let someone act. Quitter is to leave a person or a place.",
+   "b_note": "Quitter is to leave a person or a place. Laisser is to leave something behind, or to let.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/quitter",
+    "https://www.cnrtl.fr/definition/laisser"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/quitter",
+     "excerpt": "Laisser un lieu; cesser d'y être, s'en éloigner."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/laisser",
+     "excerpt": "Faire rester."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_partir_verb",
+   "b": "fr_sortir_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Sortir is to go out, or to come out of a place. Partir is to leave, to set off.",
+   "b_note": "Partir is to set off. Sortir is to go out or to exit.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/partir",
+    "https://www.cnrtl.fr/definition/sortir"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/partir",
+     "excerpt": "Se mettre en mouvement, quitter un lieu (pour une destination)."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/sortir",
+     "excerpt": "Passer du dedans au dehors."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Le train part à neuf heures.",
+    "The train leaves at nine."
+   ],
+   "b_ex": [
+    "Je sors ce soir.",
+    "I'm going out tonight."
    ]
   },
   {
@@ -371,6 +487,62 @@
   },
   {
    "a": "fr_numero_noun",
+   "b": "fr_nombre_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Nombre is a quantity, or a number you do math with. Numéro is a number that labels something, like a phone or a house.",
+   "b_note": "Numéro is a label in a series. Nombre is how many, or a number in math.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/num%C3%A9ro",
+    "https://www.cnrtl.fr/definition/nombre"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/num%C3%A9ro",
+     "excerpt": "Chiffre, nombre attribué à une chose et qui sert à indiquer sa place dans une série."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/nombre",
+     "excerpt": "Concept caractérisant une unité, une collection d'unités ou une fraction d'unité."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Quel est ton numéro ?",
+    "What is your number?"
+   ],
+   "b_ex": [
+    "Choisis un nombre entre un et dix.",
+    "Pick a number between one and ten."
+   ]
+  },
+  {
+   "a": "fr_nombre_noun",
+   "b": "fr_chiffre_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Chiffre is a digit, from 0 to 9, or a figure people quote. Nombre is the whole number or the quantity.",
+   "b_note": "Nombre is a quantity or a full number. Chiffre is one digit, or a quoted figure.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/nombre",
+    "https://www.cnrtl.fr/definition/chiffre"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/nombre",
+     "excerpt": "Concept caractérisant une unité, une collection d'unités ou une fraction d'unité."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/chiffre",
+     "excerpt": "Caractère servant à représenter un nombre."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_numero_noun",
    "b": "fr_chiffre_noun",
    "axes": [
     "scope"
@@ -384,11 +556,11 @@
    "support": [
     {
      "url": "https://www.cnrtl.fr/definition/num%C3%A9ro",
-     "excerpt": "Chiffre, nombre attribué à une chose et qui sert à indiquer sa place dans une série, à la classer, à la reconnaître (abrév. usuelle devant un chiffre: n"
+     "excerpt": "Chiffre, nombre attribué à une chose et qui sert à indiquer sa place dans une série."
     },
     {
      "url": "https://www.cnrtl.fr/definition/chiffre",
-     "excerpt": "Signe graphique servant à marquer, à représenter une chose à l'intention d'un lecteur."
+     "excerpt": "Caractère servant à représenter un nombre."
     }
    ],
    "verified": true
@@ -416,6 +588,38 @@
     }
    ],
    "verified": true
+  },
+  {
+   "a": "fr_libre_adj",
+   "b": "fr_gratuit_adj",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Gratuit means you do not pay. Libre means available, or free to act. Entrée libre can also mean you do not pay, so the two meet there.",
+   "b_note": "Libre means available or free to act, and entrée libre can mean you do not pay. Gratuit means free of charge.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/libre",
+    "https://fr.wiktionary.org/wiki/gratuit"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/libre",
+     "excerpt": "Qui est disponible, qui n'est pas possédé par personne. Entrée libre, inscription libre."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/gratuit",
+     "excerpt": "Que l'on donne librement sans obligation, ni rétribution ou contrepartie."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Tu es libre samedi ?",
+    "Are you free Saturday?"
+   ],
+   "b_ex": [
+    "L'entrée est gratuite.",
+    "Admission is free."
+   ]
   },
   {
    "a": "fr_feu_noun",
@@ -913,6 +1117,59 @@
    ]
   },
   {
+   "a": "fr_oui_phrase",
+   "b": "fr_si_phrase",
+   "axes": [
+    "grammar"
+   ],
+   "a_note": "Si means yes when you contradict a negative question or statement. Oui is yes to a positive one. Si also means if.",
+   "b_note": "Oui answers a positive question. Si answers a negative one, and it also means if.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/oui",
+    "https://fr.wiktionary.org/wiki/si"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/oui",
+     "excerpt": "Mot utilisé pour apporter une réponse affirmative."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/si",
+     "excerpt": "Au contraire. Dans ce sens il est utilisé pour infirmer une prédication négative ou interro-négative."
+    }
+   ],
+   "verified": true,
+   "b_ex": [
+    "Tu ne viens pas ? — Si !",
+    "You're not coming? — Yes, I am!"
+   ]
+  },
+  {
+   "a": "fr_s_il_te_plait_phrase",
+   "b": "fr_s_il_vous_plait_phrase",
+   "axes": [
+    "register",
+    "grammar"
+   ],
+   "a_note": "S'il vous plaît is please for vous: polite, or more than one person. S'il te plaît is for one person you know well.",
+   "b_note": "S'il te plaît is please for tu. S'il vous plaît is the polite or plural please.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/s%E2%80%99il_te_pla%C3%AEt",
+    "https://fr.wiktionary.org/wiki/s%E2%80%99il_vous_pla%C3%AEt"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/s%E2%80%99il_te_pla%C3%AEt",
+     "excerpt": "Locution permettant de demander quelque chose de façon polie, à quelqu'un que l'on tutoie."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/s%E2%80%99il_vous_pla%C3%AEt",
+     "excerpt": "Locution qui permet de demander quelque chose poliment, à quelqu'un que l'on vouvoie, ou à plusieurs personnes."
+    }
+   ],
+   "verified": true
+  },
+  {
    "a": "fr_tu_pron",
    "b": "fr_vous_pron",
    "axes": [
@@ -1023,6 +1280,35 @@
    "verified": true
   },
   {
+   "a": "fr_on_pron",
+   "b": "fr_nous_pron",
+   "axes": [
+    "usage",
+    "register"
+   ],
+   "a_note": "Nous is we or us, and it is the form you often see in writing. On is the everyday word for we, and it also means people in general.",
+   "b_note": "On often means we in conversation, and it can mean people in general. Nous is we or us.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/on",
+    "https://www.cnrtl.fr/definition/nous"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/on",
+     "excerpt": "Il indique d'une manière générale ou vague les gens, les personnes. On peut restreindre son sens à une personne désignée par je, tu, il, nous, vous, ils."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/nous",
+     "excerpt": "Nous sujet se place avant le verbe, excepté dans les phrases interrogatives."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "On y va ?",
+    "Shall we go?"
+   ]
+  },
+  {
    "a": "fr_plus_adv",
    "b": "fr_davantage_adv",
    "axes": [
@@ -1049,6 +1335,30 @@
     "Elle est plus grande.",
     "She is taller."
    ]
+  },
+  {
+   "a": "fr_argent_noun",
+   "b": "fr_fric_noun",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Fric is informal for money. Argent is the ordinary word, and it also means silver.",
+   "b_note": "Argent is the ordinary word for money. Fric is casual slang.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/argent",
+    "https://fr.wiktionary.org/wiki/fric"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/argent",
+     "excerpt": "Toute monnaie, qu'il s'agisse de monnaie métallique ou de papier-monnaie."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/fric",
+     "excerpt": "Populaire. Argent."
+    }
+   ],
+   "verified": true
   },
   {
    "a": "fr_fille_noun",
@@ -1093,7 +1403,55 @@
     },
     {
      "url": "https://www.cnrtl.fr/definition/emploi",
-     "excerpt": "Action ou manière d'employer quelque chose; usage, utilisation (d'un objet, d'un outil, d'un moyen matériel); p. ext.,"
+     "excerpt": "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_travail_noun",
+   "b": "fr_boulot_noun",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Boulot is an informal word for work or a job. Travail is the ordinary word.",
+   "b_note": "Travail is the ordinary word. Boulot is informal.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/travail",
+    "https://fr.wiktionary.org/wiki/boulot"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/travail",
+     "excerpt": "Activité humaine exigeant un effort soutenu, qui vise à la modification des éléments naturels, à la création et/ou à la production de nouvelles choses, de nouvelles idées."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/boulot",
+     "excerpt": "Familier. Travail."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_emploi_noun",
+   "b": "fr_boulot_noun",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Boulot is informal for a job or for work. Emploi is a position, more neutral, and it can mean a use.",
+   "b_note": "Emploi is a job or a use. Boulot is the informal word.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/emploi",
+    "https://fr.wiktionary.org/wiki/boulot"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/emploi",
+     "excerpt": "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/boulot",
+     "excerpt": "Familier. Emploi professionnel."
     }
    ],
    "verified": true
@@ -1113,11 +1471,11 @@
    "support": [
     {
      "url": "https://www.cnrtl.fr/definition/emploi",
-     "excerpt": "Action ou manière d'employer quelque chose; usage, utilisation (d'un objet, d'un outil, d'un moyen matériel); p. ext.,"
+     "excerpt": "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué."
     },
     {
      "url": "https://www.cnrtl.fr/definition/poste",
-     "excerpt": "Chacun des relais de chevaux placés le long d'une grande route, afin d'assurer le transport des voyageurs ainsi que l'acheminement du courrier et permettant aux voyageurs de faire étape."
+     "excerpt": "Fonction précise, emploi professionnel qu'occupe une personne. Station de radio ou de télévision."
     }
    ],
    "verified": true
@@ -2065,6 +2423,31 @@
   },
   {
    "a": "fr_drole_adj",
+   "b": "fr_marrant_adj",
+   "axes": [
+    "register",
+    "scope"
+   ],
+   "a_note": "Marrant is informal for funny, and it can mean odd. Drôle is the ordinary word for funny, and un drôle de means strange.",
+   "b_note": "Drôle is funny, or strange in un drôle de. Marrant is the informal word for funny.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/dr%C3%B4le",
+    "https://www.cnrtl.fr/definition/marrant"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/dr%C3%B4le",
+     "excerpt": "Qui divertit ou porte à rire. Qui intrigue, paraît étrange, surprenant."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/marrant",
+     "excerpt": "Drôle, amusant."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_drole_adj",
    "b": "fr_rigolo_adj",
    "axes": [
     "register"
@@ -2187,6 +2570,30 @@
     {
      "url": "https://www.cnrtl.fr/definition/%C3%A9mouvoir",
      "excerpt": "Se mettre en mouvement, bouger, s'agiter, se soulever."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_bouger_verb",
+   "b": "fr_mouvoir_verb",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Mouvoir is a formal verb for to move. Bouger is the ordinary word.",
+   "b_note": "Bouger is ordinary. Mouvoir is formal.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/bouger",
+    "https://www.cnrtl.fr/definition/mouvoir"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/bouger",
+     "excerpt": "Faire un mouvement (le plus souvent minime), remuer."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/mouvoir",
+     "excerpt": "Mettre en mouvement."
     }
    ],
    "verified": true
@@ -2414,6 +2821,30 @@
     {
      "url": "https://www.cnrtl.fr/definition/gamin",
      "excerpt": "Jeune garçon servant d'aide ou de commissionnaire dans différents métiers."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_enfant_noun",
+   "b": "fr_mome_noun",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Môme is informal for a kid. Enfant is the ordinary word.",
+   "b_note": "Enfant is the ordinary word. Môme is informal.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/enfant",
+    "https://fr.wiktionary.org/wiki/m%C3%B4me"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/enfant",
+     "excerpt": "Être humain, sans différenciation de sexe, dans les premières années de sa vie et avant l'adolescence."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/m%C3%B4me",
+     "excerpt": "Familier. France. Petit garçon, petite fille."
     }
    ],
    "verified": true
@@ -3007,6 +3438,63 @@
    ]
   },
   {
+   "a": "fr_pendant_prep",
+   "b": "fr_durant_prep",
+   "axes": [
+    "register",
+    "grammar"
+   ],
+   "a_note": "Durant is a little more formal and often covers a whole period. Pendant is the usual word for during, and with a length it means for.",
+   "b_note": "Pendant is the ordinary word. With a length of time it means for. Durant is during or throughout, a bit more formal.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/pendant",
+    "https://fr.wiktionary.org/wiki/durant"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/pendant",
+     "excerpt": "Préposition. Durant ; tout au long de."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/durant",
+     "excerpt": "Préposition. Tout au long de. Au cours de. Synonyme pendant."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "pendant deux heures",
+    "for two hours"
+   ],
+   "b_ex": [
+    "durant toute la nuit",
+    "all through the night"
+   ]
+  },
+  {
+   "a": "fr_enfin_adv",
+   "b": "fr_finalement_adv",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Finalement is in the end, when you look at how things turned out. Enfin is finally, or a spoken well.",
+   "b_note": "Enfin is finally, or well in speech. Finalement is when the outcome is what you settle on.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/enfin",
+    "https://www.cnrtl.fr/definition/finalement"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/enfin",
+     "excerpt": "À la fin ; après un long temps ; après une longue attente. À la fin d'une énumération, pour abréger, en résumé."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/finalement",
+     "excerpt": "À la fin, pour finir, en dernier lieu. En fin de compte, en dernier ressort."
+    }
+   ],
+   "verified": true
+  },
+  {
    "a": "fr_erreur_noun",
    "b": "fr_faute_noun",
    "axes": [
@@ -3344,6 +3832,30 @@
     {
      "url": "https://www.cnrtl.fr/definition/roux",
      "excerpt": "(D'une couleur) qui se situe entre le jaune orangé et le brun rouge."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_propre_adj",
+   "b": "fr_net_adj",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Net is clean in the sense of clear or sharp, or a net amount. Propre is clean, or one's own.",
+   "b_note": "Propre is clean, or own. Net is clear, sharp, or net of deductions.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/propre",
+    "https://www.cnrtl.fr/definition/net"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/propre",
+     "excerpt": "Qui appartient exclusivement ou en particulier à (une personne ou une chose). Ce qui n'est pas couvert de saleté ; ce qui est nettoyé."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/net",
+     "excerpt": "Qui est sans tache, sans souillure; que rien ne ternit, ne salit."
     }
    ],
    "verified": true
@@ -4625,6 +5137,30 @@
    "verified": true
   },
   {
+   "a": "fr_briller_verb",
+   "b": "fr_luire_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Luire is to give off light or to reflect it. Briller is to shine with a bright light.",
+   "b_note": "Briller is to shine brightly. Luire is to give off light, or to reflect it.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/briller",
+    "https://www.cnrtl.fr/definition/luire"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/briller",
+     "excerpt": "Répandre une lumière vive, intense, parfois diffuse."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/luire",
+     "excerpt": "Émettre de la lumière. Réfléchir la lumière."
+    }
+   ],
+   "verified": true
+  },
+  {
    "a": "fr_dessiner_verb",
    "b": "fr_tracer_verb",
    "axes": [
@@ -5457,6 +5993,30 @@
    "verified": true
   },
   {
+   "a": "fr_feter_verb",
+   "b": "fr_celebrer_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Célébrer carries out a ceremony or praises someone. Fêter marks an occasion with a celebration. Fêter is defined as celebrating with a fête, so the two meet.",
+   "b_note": "Fêter celebrates with a party or a welcome. Célébrer performs a rite or praises. The two overlap when the occasion is a fête.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/f%C3%AAter",
+    "https://www.cnrtl.fr/definition/c%C3%A9l%C3%A9brer"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/f%C3%AAter",
+     "excerpt": "Célébrer et solenniser par une fête."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/c%C3%A9l%C3%A9brer",
+     "excerpt": "Accomplir avec solennité. Accomplir les rites ou les cérémonies d'un culte."
+    }
+   ],
+   "verified": true
+  },
+  {
    "a": "fr_ecriture_noun",
    "b": "fr_ecrit_noun",
    "axes": [
@@ -5610,6 +6170,30 @@
     {
      "url": "https://www.cnrtl.fr/definition/interview",
      "excerpt": "Entretien d'un journaliste avec une personne (généralement en vue) qui accepte de répondre, pour les besoins d'un article ou d'une émission radiophonique ou télévisée, à des questions d'ordre professionnel ou personnel."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_moche_adj",
+   "b": "fr_laid_adj",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Moche is informal for ugly. Laid is the ordinary word.",
+   "b_note": "Laid is ordinary. Moche is informal.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/moche",
+    "https://www.cnrtl.fr/definition/laid"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/moche",
+     "excerpt": "Informel. Laid."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/laid",
+     "excerpt": "Qui, par sa forme, sa couleur, son aspect, son manque d'harmonie, est désagréable à voir."
     }
    ],
    "verified": true
@@ -5870,6 +6454,30 @@
     {
      "url": "https://www.cnrtl.fr/definition/r%C3%A9signation",
      "excerpt": "« Démission du titulaire d'un bénéfice ecclésiastique en faveur d'une personne déterminée remplissant les conditions requises pour l'obtenir » ( Lep."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_dame_noun",
+   "b": "fr_lady_noun",
+   "axes": [
+    "register"
+   ],
+   "a_note": "Lady is the English word, used as a title or for a stylish woman. Dame is the ordinary word for a lady.",
+   "b_note": "Dame is a lady. Lady is the English title or loan.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/dame",
+    "https://www.cnrtl.fr/definition/lady"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/dame",
+     "excerpt": "Personne adulte du sexe féminin."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/lady",
+     "excerpt": "Dame de l'aristocratie anglaise. Titre qui appartient en Angleterre à l'épouse d'un lord ou d'un chevalier."
     }
    ],
    "verified": true
@@ -6470,6 +7078,678 @@
     {
      "url": "https://www.cnrtl.fr/definition/pervertir",
      "excerpt": "Faire changer en mal, pousser au mal, corrompre."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_reflechir_verb",
+   "b": "fr_refleter_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Refléter throws back light or an image. Réfléchir can do that too, and it is the verb for thinking something over.",
+   "b_note": "Réfléchir is to think, and it can also throw light back. Refléter throws back an image or a light. It does not mean to think.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/r%C3%A9fl%C3%A9chir",
+    "https://www.cnrtl.fr/definition/refl%C3%A9ter"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/r%C3%A9fl%C3%A9chir",
+     "excerpt": "Renvoyer par réflexion. Faire usage de sa réflexion, exercer sa réflexion."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/refl%C3%A9ter",
+     "excerpt": "Renvoyer par réflexion une lumière ou une couleur. Renvoyer par réflexion une image."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_prelever_verb",
+   "b": "fr_prendre_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Prendre is the general word for to take. Prélever is to take a portion out of a whole, as a sample, a tax, or a deduction.",
+   "b_note": "Prélever takes a part out before the rest is used. Prendre is to take, in the broad sense.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/pr%C3%A9lever",
+    "https://www.cnrtl.fr/definition/prendre"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/pr%C3%A9lever",
+     "excerpt": "Prendre, mettre à part (une portion d'un tout, une partie d'un ensemble), préalablement à toute opération."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/prendre",
+     "excerpt": "Mettre avec soi. Saisir quelque chose (ou quelqu'un)."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_usager_noun",
+   "b": "fr_utilisateur_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Utilisateur is a person who uses a tool or a product. Usager is a person who uses a service, or who has a right of use.",
+   "b_note": "Usager is someone using a service, or holding a right of use. Utilisateur is someone using a tool or a product.",
+   "sources": [
+    "https://fr.wiktionary.org/wiki/usager",
+    "https://fr.wiktionary.org/wiki/utilisateur"
+   ],
+   "support": [
+    {
+     "url": "https://fr.wiktionary.org/wiki/usager",
+     "excerpt": "Droit. Personne qui a droit d'usage, qui fait usage."
+    },
+    {
+     "url": "https://fr.wiktionary.org/wiki/utilisateur",
+     "excerpt": "Celui qui utilise un outil ou quelque chose."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_croiser_verb",
+   "b": "fr_traverser_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Traverser is to go across, from one side to the other. Croiser is to cross two things, or to pass someone coming the other way.",
+   "b_note": "Croiser lays things across each other, or passes someone. Traverser goes across a space.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/croiser",
+    "https://www.cnrtl.fr/definition/traverser"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/croiser",
+     "excerpt": "Disposer deux choses en forme de croix. Rencontrer sur son trajet, venant en sens opposé ou différent."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/traverser",
+     "excerpt": "Franchir, parcourir quelque chose d'une extrémité à l'autre."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_degat_noun",
+   "b": "fr_dommage_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Dommage is harm or loss, and c'est dommage means what a pity. Dégât is physical damage from a violent cause.",
+   "b_note": "Dégât is damage done to things. Dommage is harm, and c'est dommage means it is a pity.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/d%C3%A9g%C3%A2t",
+    "https://www.cnrtl.fr/definition/dommage"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/d%C3%A9g%C3%A2t",
+     "excerpt": "Détérioration subie par les choses et provoquée par une cause violente."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/dommage",
+     "excerpt": "Préjudice porté à quelqu'un ou à quelque chose. C'est dommage : manière d'exprimer ce que certaines choses ont de fâcheux, de regrettable."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_application_noun",
+   "b": "fr_candidature_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Candidature is putting yourself forward for a job or a post. Application is putting a rule or a method to use, and in computing it is a program.",
+   "b_note": "Application is using something, or a computer program. Candidature is your bid for a post.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/application",
+    "https://www.cnrtl.fr/definition/candidature"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/application",
+     "excerpt": "Action d'utiliser quelque chose en vue d'arriver à un but concret. Programme informatique utilisant des fonctionnalités d'une certaine plate-forme."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/candidature",
+     "excerpt": "Action de se porter candidat; état, situation de candidat."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_lessive_noun",
+   "b": "fr_buanderie_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Buanderie is the room where the wash is done. Lessive is the detergent, or the wash itself.",
+   "b_note": "Lessive is the washing powder or the act of washing clothes. Buanderie is the laundry room.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/lessive",
+    "https://www.cnrtl.fr/definition/buanderie"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/lessive",
+     "excerpt": "Dissolution aqueuse de produits détersifs. Action de lessiver, de laver, de blanchir le linge."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/buanderie",
+     "excerpt": "Pièce aménagée pour faire la lessive."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_trompe_noun",
+   "b": "fr_trompette_noun_f",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Trompette is the brass trumpet. Trompe is a hunting horn or a simple signaling horn, and it is also an elephant's trunk.",
+   "b_note": "Trompe is a horn, often a hunting horn, or an elephant's trunk. Trompette is the trumpet.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/trompe",
+    "https://www.cnrtl.fr/definition/trompette"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/trompe",
+     "excerpt": "Instrument à vent à embouchure, constitué par un tube conique. Prolongement nasal servant à la fois d'organe de préhension."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/trompette",
+     "excerpt": "Instrument à vent de sonorité éclatante et brillante, muni d'une embouchure."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_merci_noun_f",
+   "b": "fr_misericorde_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Miséricorde is compassion, or pardon. Merci, in à la merci de, is being in someone's power. The thank-you is a different word.",
+   "b_note": "Merci in à la merci de is being in someone's power. Miséricorde is compassion or pardon.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/merci",
+    "https://www.cnrtl.fr/definition/mis%C3%A9ricorde"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/merci",
+     "excerpt": "Grâce que quelqu'un accorde à quelqu'un d'autre. État de dépendance vis-à-vis de quelqu'un à qui l'on demande grâce."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/mis%C3%A9ricorde",
+     "excerpt": "Compassion pour la misère d'autrui. Générosité entraînant le pardon."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_couler_verb",
+   "b": "fr_ecouler_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Écouler is to sell stock off, and s'écouler is liquid draining away or time passing. Couler is to flow, or to sink.",
+   "b_note": "Couler is a liquid flowing, or a boat going under. Écouler sells something off, or, as s'écouler, drains or passes.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/couler",
+    "https://www.cnrtl.fr/definition/%C3%A9couler"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/couler",
+     "excerpt": "Se déplacer (en pente) d'un mouvement continu et naturel. S'engloutir, aller au fond de."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/%C3%A9couler",
+     "excerpt": "Vendre jusqu'à épuisement ; liquider. Couler hors de quelque endroit. Avancer progressivement, à propos du temps."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_ramener_verb",
+   "b": "fr_rapporter_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Rapporter brings an object back, or reports what happened. Ramener brings a person back, and it can bring an animal or an object back too.",
+   "b_note": "Ramener brings someone back to where they were. Rapporter brings an object back, or tells what you saw. Ramener can also bring an object back.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/ramener",
+    "https://www.cnrtl.fr/definition/rapporter"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/ramener",
+     "excerpt": "Reconduire une personne, un animal ou un objet dans le lieu où elle était au départ."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/rapporter",
+     "excerpt": "Porter de nouveau (un objet). Faire le récit de ce qu'on a vu, ou entendu, ou appris."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_parfois_adv",
+   "b": "fr_tantot_adv",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Tantôt means later today or a little earlier, and tantôt… tantôt means now one thing, now another. Parfois means sometimes.",
+   "b_note": "Parfois means sometimes. Tantôt is later today or a short time ago. The pair tantôt… tantôt is not the same as parfois.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/parfois",
+    "https://www.cnrtl.fr/definition/tant%C3%B4t"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/parfois",
+     "excerpt": "Quelquefois."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/tant%C3%B4t",
+     "excerpt": "Dans un proche avenir. Cet après-midi. Parfois, redoublé, pour marquer des changements consécutifs."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_joindre_verb",
+   "b": "fr_rejoindre_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Rejoindre is to go and meet someone, or to get back to a place. Joindre is to put things together.",
+   "b_note": "Joindre puts things together. Rejoindre goes and finds someone again, or gets back to a place.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/joindre",
+    "https://www.cnrtl.fr/definition/rejoindre"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/joindre",
+     "excerpt": "Mettre ensemble, mettre avec, réunir."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/rejoindre",
+     "excerpt": "Aller retrouver quelqu'un ou quelque chose; regagner, rallier un endroit."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_mandataire_noun",
+   "b": "fr_procuration_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Procuration is the power you give someone to act for you, often the paper that says so. Mandataire is the person who holds that power.",
+   "b_note": "Mandataire is the person charged with a mandate. Procuration is the authority you give them, or the document.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/mandataire",
+    "https://www.cnrtl.fr/definition/procuration"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/mandataire",
+     "excerpt": "Personne qui est chargée d'un mandat."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/procuration",
+     "excerpt": "Écrit constatant un mandat et en déterminant l'étendue."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_dressage_noun",
+   "b": "fr_entrainement_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Entraînement is practice for a sport or a skill. Dressage is training an animal, and it is also the equestrian discipline.",
+   "b_note": "Dressage trains an animal, or names that riding discipline. Entraînement is methodical practice before an event.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/dressage",
+    "https://www.cnrtl.fr/definition/entra%C3%AEnement"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/dressage",
+     "excerpt": "Fait d'habituer un animal à certains comportements."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/entra%C3%AEnement",
+     "excerpt": "Préparation méthodique d'un sportif ou d'un cheval de course en vue d'une épreuve."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_quete_noun",
+   "b": "fr_collection_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Collection is a set of things gathered together. Quête is a search, or asking people for donations.",
+   "b_note": "Quête is searching, or collecting gifts of money. Collection is the set of objects someone has brought together.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/qu%C3%AAte",
+    "https://www.cnrtl.fr/definition/collection"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/qu%C3%AAte",
+     "excerpt": "Action de chercher à trouver. Action de demander et de recueillir des dons."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/collection",
+     "excerpt": "Ensemble d'objets réunis par un amateur."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_evasion_noun",
+   "b": "fr_fuite_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Fuite is running away, or a leak. Évasion is escaping from a place that held you, or escaping into a fantasy.",
+   "b_note": "Évasion is a breakout, or an escape from a hard reality. Fuite is flight from a threat, or a leak.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/%C3%A9vasion",
+    "https://www.cnrtl.fr/definition/fuite"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/%C3%A9vasion",
+     "excerpt": "Action de s'évader, de s'échapper d'un lieu où l'on était tenu enfermé."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/fuite",
+     "excerpt": "Action de fuir quelqu'un ou quelque chose."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_horriblement_adv",
+   "b": "fr_peniblement_adv",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Péniblement means with pain or with difficulty. Horriblement means horribly, or extremely.",
+   "b_note": "Horriblement is horribly or to an extreme. Péniblement is painfully or with great difficulty.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/horriblement",
+    "https://www.cnrtl.fr/definition/p%C3%A9niblement"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/horriblement",
+     "excerpt": "D'une manière horrible, effrayante. D'une manière excessive."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/p%C3%A9niblement",
+     "excerpt": "Au prix de beaucoup d'effort, de fatigue, de souffrance. Avec difficulté."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_absenter_verb",
+   "b": "fr_partir_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Partir is to set off. S'absenter is to step away from where you are expected to stay.",
+   "b_note": "S'absenter is only the reflexive: to go away for a while from where you should be. Partir is to leave, to set off.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/absenter",
+    "https://www.cnrtl.fr/definition/partir"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/absenter",
+     "excerpt": "Utilisé uniquement dans s'absenter. S'éloigner de quelque lieu où l'on est habituellement."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/partir",
+     "excerpt": "Se mettre en mouvement, quitter un lieu (pour une destination)."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_renover_verb",
+   "b": "fr_renouveler_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Renouveler replaces something used up, or starts it again, as with a contract. Rénover restores something worn. Renouveler can also mean to make something new again, so the two meet there.",
+   "b_note": "Rénover restores something worn out. Renouveler replaces it or starts it again. Both can mean making something new.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/r%C3%A9nover",
+    "https://www.cnrtl.fr/definition/renouveler"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/r%C3%A9nover",
+     "excerpt": "Remettre en état ou à neuf une chose abîmée, usée."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/renouveler",
+     "excerpt": "Remplacer (une chose consommée, disparue, usée ou désuète) par une chose de même espèce."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_capter_verb",
+   "b": "fr_capturer_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Capturer seizes a person, an animal, or a ship. Capter picks up a signal, water, or something else you intercept.",
+   "b_note": "Capter intercepts a signal or collects water. Capturer seizes a living being or a prize.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/capter",
+    "https://www.cnrtl.fr/definition/capturer"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/capter",
+     "excerpt": "Recevoir, recueillir, fixer des sons, des images, des ondes à l'aide d'appareils récepteurs."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/capturer",
+     "excerpt": "S'emparer, plus particulièrement en temps de guerre, à la chasse ou à la pêche."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_inscription_noun",
+   "b": "fr_enregistrement_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Enregistrement writes something on an official register, records sound, or checks a bag. Inscription writes a name on a list, as when you sign up. For an official register the two can meet.",
+   "b_note": "Inscription puts a name on a list. Enregistrement records an act, a sound, or luggage. One sense of enregistrement is inscription on an official register.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/inscription",
+    "https://www.cnrtl.fr/definition/enregistrement"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/inscription",
+     "excerpt": "Action de porter le nom de quelqu'un ou une mention sur un document, une liste, un registre."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/enregistrement",
+     "excerpt": "Inscription sur un registre officiel."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_concilier_verb",
+   "b": "fr_reconcilier_verb",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Réconcilier brings people back together after a quarrel. Concilier makes opposing people or ideas compatible. Concilier is also used for people who disagree, so it is not only for ideas.",
+   "b_note": "Concilier brings disagreeing people or contrary things into agreement. Réconcilier restores peace after a quarrel, and it can also align contrary things.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/concilier",
+    "https://www.cnrtl.fr/definition/r%C3%A9concilier"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/concilier",
+     "excerpt": "Rapprocher des personnes en désaccord. Rapprocher des choses opposées pour les rendre compatibles."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/r%C3%A9concilier",
+     "excerpt": "Remettre d'accord, en harmonie des personnes qui étaient brouillées."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_bloc_noun",
+   "b": "fr_blocage_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Blocage is the act of blocking, or being stuck. Bloc is a solid mass, or a political alliance. An older sense of bloc names the blocking itself; the usual word for that action is blocage.",
+   "b_note": "Bloc is a block of material, or an alliance. Blocage is a blockage.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/bloc",
+    "https://www.cnrtl.fr/definition/blocage"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/bloc",
+     "excerpt": "Masse pesante constituée d'un seul tenant. Alliance, union de partis politiques ou d'États."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/blocage",
+     "excerpt": "Action de bloquer, d'arrêter; résultat de cette action."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_allumage_noun",
+   "b": "fr_eclairage_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Éclairage is the light that lights a place. Allumage is the act of lighting something, or the ignition in an engine.",
+   "b_note": "Allumage switches a light on, or ignites fuel. Éclairage is the illumination itself.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/allumage",
+    "https://www.cnrtl.fr/definition/%C3%A9clairage"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/allumage",
+     "excerpt": "Action d'allumer, de s'allumer. Inflammation par étincelle électrique du mélange gazeux."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/%C3%A9clairage",
+     "excerpt": "Lumière naturelle ou artificielle qui éclaire."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_pousse_noun",
+   "b": "fr_croissance_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Croissance is growth in general. Pousse is a new shoot, or a plant's burst of growth.",
+   "b_note": "Pousse is a young stem, or the season's growth of a plant. Croissance is the process of growing.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/pousse",
+    "https://www.cnrtl.fr/definition/croissance"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/pousse",
+     "excerpt": "Jeune tige développée à partir d'un rameau, d'un bourgeon. Croissance annuelle des végétaux."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/croissance",
+     "excerpt": "Action de croître, de se développer progressivement."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_developpement_noun",
+   "b": "fr_epanouissement_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Épanouissement is a full opening, of a flower or of a person. Développement is development: unfolding, or working something out. One sense of épanouissement is a full and harmonious développement.",
+   "b_note": "Développement is the process of developing. Épanouissement is blooming, or a person coming fully into their own.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/d%C3%A9veloppement",
+    "https://www.cnrtl.fr/definition/%C3%A9panouissement"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/d%C3%A9veloppement",
+     "excerpt": "Action de développer, de se développer."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/%C3%A9panouissement",
+     "excerpt": "Déploiement de la corolle des fleurs. Plein et harmonieux développement."
+    }
+   ],
+   "verified": true
+  },
+  {
+   "a": "fr_sachet_noun",
+   "b": "fr_sacoche_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Sacoche is a leather bag or a satchel carried at the side. Sachet is a little bag or a small packet.",
+   "b_note": "Sachet is a small bag. Sacoche is a larger pouch, a saddlebag, or a handbag.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/sachet",
+    "https://www.cnrtl.fr/definition/sacoche"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/sachet",
+     "excerpt": "Petit sac."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/sacoche",
+     "excerpt": "Grosse bourse de cuir ou de toile forte retenue par une courroie."
     }
    ],
    "verified": true

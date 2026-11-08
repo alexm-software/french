@@ -100,8 +100,8 @@ RAW = [
  "Rivière is a smaller river, which may join a fleuve, a lake, or the sea. Fleuve is a large river, usually one that reaches the sea.",
  None, None),
 ("fr_libre_adj", "fr_gratuit_adj", ["scope"],
- "Gratuit means free of charge. Libre means available, or free to act.",
- "Libre means available or free to do something. Gratuit means you do not pay.",
+ "Gratuit means you do not pay. Libre means available, or free to act. Entrée libre can also mean you do not pay, so the two meet there.",
+ "Libre means available or free to act, and entrée libre can mean you do not pay. Gratuit means free of charge.",
  ["Tu es libre samedi ?", "Are you free Saturday?"], ["L'entrée est gratuite.", "Admission is free."]),
 ("fr_feu_noun", "fr_incendie_noun", ["scope"],
  "Incendie is a damaging fire, a blaze in a building or a forest. Feu is fire in general, a flame, or a traffic light.",
@@ -203,10 +203,6 @@ RAW = [
 ("fr_ton_det", "fr_votre_det", ["register", "grammar"],
  "Votre is your for vous: polite or plural. Ton is your for tu, one person you know well.",
  "Ton goes with tu. Votre goes with vous.",
- None, None),
-("fr_au_det", "fr_aux_det", ["grammar"],
- "Aux is à + les, for a plural. Au is à + le, for one masculine noun.",
- "Au is à + le. Aux is à + les.",
  None, None),
 ("fr_on_pron", "fr_nous_pron", ["usage", "register"],
  "Nous is we or us, and it is the form you often see in writing. On is the everyday word for we, and it also means people in general.",
@@ -392,9 +388,9 @@ RAW = [
  "Pelote is a ball of yarn, or the ball in pelota. Balle is a small game ball, or a bullet.",
  "Balle is a small ball or a bullet. Pelote is yarn wound into a ball, or a pelota ball.",
  None, None),
-("fr_drole_adj", "fr_marrant_adj", ["register"],
- "Marrant is informal for funny. Drôle is the ordinary word.",
- "Drôle is the ordinary word. Marrant is informal.",
+("fr_drole_adj", "fr_marrant_adj", ["register", "scope"],
+ "Marrant is informal for funny, and it can mean odd. Drôle is the ordinary word for funny, and un drôle de means strange.",
+ "Drôle is funny, or strange in un drôle de. Marrant is the informal word for funny.",
  None, None),
 ("fr_drole_adj", "fr_rigolo_adj", ["register"],
  "Rigolo is informal for funny. Drôle is the ordinary word.",
@@ -834,8 +830,8 @@ RAW = [
  "Connaissance is what you know, or a person you know. Savoir, the noun, is a body of knowledge.",
  None, None),
 ("fr_briller_verb", "fr_luire_verb", ["scope"],
- "Luire is to glow or to gleam. Briller is to shine, and it is the ordinary word.",
- "Briller is the ordinary word for to shine. Luire is a softer gleam.",
+ "Luire is to give off light or to reflect it. Briller is to shine with a bright light.",
+ "Briller is to shine brightly. Luire is to give off light, or to reflect it.",
  None, None),
 ("fr_dessiner_verb", "fr_tracer_verb", ["scope"],
  "Tracer is to trace or draw a line. Dessiner is to draw a picture.",
@@ -977,9 +973,9 @@ RAW = [
  "Tendu is taut, or tense as a person. Serré is tight, squeezed, or close.",
  "Serré is tight or packed close. Tendu is stretched tight, or on edge.",
  None, None),
-("fr_feter_verb", "fr_celebrer_verb", ["register"],
- "Célébrer is to celebrate in a formal or ceremonial way. Fêter is the everyday word.",
- "Fêter is everyday. Célébrer is more ceremonial.",
+("fr_feter_verb", "fr_celebrer_verb", ["scope"],
+ "Célébrer carries out a ceremony or praises someone. Fêter marks an occasion with a celebration. Fêter is defined as celebrating with a fête, so the two meet.",
+ "Fêter celebrates with a party or a welcome. Célébrer performs a rite or praises. The two overlap when the occasion is a fête.",
  None, None),
 ("fr_ecriture_noun", "fr_ecrit_noun", ["scope"],
  "Écrit is a piece of writing. Écriture is handwriting, or writing as a practice, and in religion it can mean Scripture.",
@@ -1048,10 +1044,6 @@ RAW = [
 ("fr_banlieue_noun", "fr_faubourg_noun", ["scope"],
  "Faubourg was a district just outside the old city walls, and it survives in place names. Banlieue is the suburbs.",
  "Banlieue is the modern suburbs. Faubourg is a historic quarter just beyond the old walls.",
- None, None),
-("fr_foot_noun", "fr_football_noun", ["register", "scope"],
- "Football in France is usually soccer. For the American game, people say football américain. Foot is the everyday short word for soccer.",
- "Foot is the short word for soccer. Football is the full word, usually soccer unless you add américain.",
  None, None),
 ("fr_circulation_noun", "fr_trafic_noun", ["scope"],
  "Trafic is traffic, and it is also the word for illegal trade. Circulation is traffic on the roads, or circulation of the blood.",
@@ -1157,6 +1149,118 @@ RAW = [
  "Pervertir is to corrupt someone, to turn them toward harm. Aggraver is to make a bad situation worse.",
  "Aggraver makes a problem heavier. Pervertir corrupts a person.",
  None, None),
+("fr_reflechir_verb", "fr_refleter_verb", ["scope"],
+ "Refléter throws back light or an image. Réfléchir can do that too, and it is the verb for thinking something over.",
+ "Réfléchir is to think, and it can also throw light back. Refléter throws back an image or a light. It does not mean to think.",
+ None, None),
+("fr_prelever_verb", "fr_prendre_verb", ["scope"],
+ "Prendre is the general word for to take. Prélever is to take a portion out of a whole, as a sample, a tax, or a deduction.",
+ "Prélever takes a part out before the rest is used. Prendre is to take, in the broad sense.",
+ None, None),
+("fr_usager_noun", "fr_utilisateur_noun", ["scope"],
+ "Utilisateur is a person who uses a tool or a product. Usager is a person who uses a service, or who has a right of use.",
+ "Usager is someone using a service, or holding a right of use. Utilisateur is someone using a tool or a product.",
+ None, None),
+("fr_croiser_verb", "fr_traverser_verb", ["scope"],
+ "Traverser is to go across, from one side to the other. Croiser is to cross two things, or to pass someone coming the other way.",
+ "Croiser lays things across each other, or passes someone. Traverser goes across a space.",
+ None, None),
+("fr_degat_noun", "fr_dommage_noun", ["scope"],
+ "Dommage is harm or loss, and c'est dommage means what a pity. Dégât is physical damage from a violent cause.",
+ "Dégât is damage done to things. Dommage is harm, and c'est dommage means it is a pity.",
+ None, None),
+("fr_application_noun", "fr_candidature_noun", ["scope"],
+ "Candidature is putting yourself forward for a job or a post. Application is putting a rule or a method to use, and in computing it is a program.",
+ "Application is using something, or a computer program. Candidature is your bid for a post.",
+ None, None),
+("fr_lessive_noun", "fr_buanderie_noun", ["scope"],
+ "Buanderie is the room where the wash is done. Lessive is the detergent, or the wash itself.",
+ "Lessive is the washing powder or the act of washing clothes. Buanderie is the laundry room.",
+ None, None),
+("fr_trompe_noun", "fr_trompette_noun_f", ["scope"],
+ "Trompette is the brass trumpet. Trompe is a hunting horn or a simple signaling horn, and it is also an elephant's trunk.",
+ "Trompe is a horn, often a hunting horn, or an elephant's trunk. Trompette is the trumpet.",
+ None, None),
+("fr_merci_noun_f", "fr_misericorde_noun", ["scope"],
+ "Miséricorde is compassion, or pardon. Merci, in à la merci de, is being in someone's power. The thank-you is a different word.",
+ "Merci in à la merci de is being in someone's power. Miséricorde is compassion or pardon.",
+ None, None),
+("fr_couler_verb", "fr_ecouler_verb", ["scope"],
+ "Écouler is to sell stock off, and s'écouler is liquid draining away or time passing. Couler is to flow, or to sink.",
+ "Couler is a liquid flowing, or a boat going under. Écouler sells something off, or, as s'écouler, drains or passes.",
+ None, None),
+("fr_ramener_verb", "fr_rapporter_verb", ["scope"],
+ "Rapporter brings an object back, or reports what happened. Ramener brings a person back, and it can bring an animal or an object back too.",
+ "Ramener brings someone back to where they were. Rapporter brings an object back, or tells what you saw. Ramener can also bring an object back.",
+ None, None),
+("fr_parfois_adv", "fr_tantot_adv", ["scope"],
+ "Tantôt means later today or a little earlier, and tantôt… tantôt means now one thing, now another. Parfois means sometimes.",
+ "Parfois means sometimes. Tantôt is later today or a short time ago. The pair tantôt… tantôt is not the same as parfois.",
+ None, None),
+("fr_joindre_verb", "fr_rejoindre_verb", ["scope"],
+ "Rejoindre is to go and meet someone, or to get back to a place. Joindre is to put things together.",
+ "Joindre puts things together. Rejoindre goes and finds someone again, or gets back to a place.",
+ None, None),
+("fr_mandataire_noun", "fr_procuration_noun", ["scope"],
+ "Procuration is the power you give someone to act for you, often the paper that says so. Mandataire is the person who holds that power.",
+ "Mandataire is the person charged with a mandate. Procuration is the authority you give them, or the document.",
+ None, None),
+("fr_dressage_noun", "fr_entrainement_noun", ["scope"],
+ "Entraînement is practice for a sport or a skill. Dressage is training an animal, and it is also the equestrian discipline.",
+ "Dressage trains an animal, or names that riding discipline. Entraînement is methodical practice before an event.",
+ None, None),
+("fr_quete_noun", "fr_collection_noun", ["scope"],
+ "Collection is a set of things gathered together. Quête is a search, or asking people for donations.",
+ "Quête is searching, or collecting gifts of money. Collection is the set of objects someone has brought together.",
+ None, None),
+("fr_evasion_noun", "fr_fuite_noun", ["scope"],
+ "Fuite is running away, or a leak. Évasion is escaping from a place that held you, or escaping into a fantasy.",
+ "Évasion is a breakout, or an escape from a hard reality. Fuite is flight from a threat, or a leak.",
+ None, None),
+("fr_horriblement_adv", "fr_peniblement_adv", ["scope"],
+ "Péniblement means with pain or with difficulty. Horriblement means horribly, or extremely.",
+ "Horriblement is horribly or to an extreme. Péniblement is painfully or with great difficulty.",
+ None, None),
+("fr_absenter_verb", "fr_partir_verb", ["scope"],
+ "Partir is to set off. S'absenter is to step away from where you are expected to stay.",
+ "S'absenter is only the reflexive: to go away for a while from where you should be. Partir is to leave, to set off.",
+ None, None),
+("fr_renover_verb", "fr_renouveler_verb", ["scope"],
+ "Renouveler replaces something used up, or starts it again, as with a contract. Rénover restores something worn. Renouveler can also mean to make something new again, so the two meet there.",
+ "Rénover restores something worn out. Renouveler replaces it or starts it again. Both can mean making something new.",
+ None, None),
+("fr_capter_verb", "fr_capturer_verb", ["scope"],
+ "Capturer seizes a person, an animal, or a ship. Capter picks up a signal, water, or something else you intercept.",
+ "Capter intercepts a signal or collects water. Capturer seizes a living being or a prize.",
+ None, None),
+("fr_inscription_noun", "fr_enregistrement_noun", ["scope"],
+ "Enregistrement writes something on an official register, records sound, or checks a bag. Inscription writes a name on a list, as when you sign up. For an official register the two can meet.",
+ "Inscription puts a name on a list. Enregistrement records an act, a sound, or luggage. One sense of enregistrement is inscription on an official register.",
+ None, None),
+("fr_concilier_verb", "fr_reconcilier_verb", ["scope"],
+ "Réconcilier brings people back together after a quarrel. Concilier makes opposing people or ideas compatible. Concilier is also used for people who disagree, so it is not only for ideas.",
+ "Concilier brings disagreeing people or contrary things into agreement. Réconcilier restores peace after a quarrel, and it can also align contrary things.",
+ None, None),
+("fr_bloc_noun", "fr_blocage_noun", ["scope"],
+ "Blocage is the act of blocking, or being stuck. Bloc is a solid mass, or a political alliance. An older sense of bloc names the blocking itself; the usual word for that action is blocage.",
+ "Bloc is a block of material, or an alliance. Blocage is a blockage.",
+ None, None),
+("fr_allumage_noun", "fr_eclairage_noun", ["scope"],
+ "Éclairage is the light that lights a place. Allumage is the act of lighting something, or the ignition in an engine.",
+ "Allumage switches a light on, or ignites fuel. Éclairage is the illumination itself.",
+ None, None),
+("fr_pousse_noun", "fr_croissance_noun", ["scope"],
+ "Croissance is growth in general. Pousse is a new shoot, or a plant's burst of growth.",
+ "Pousse is a young stem, or the season's growth of a plant. Croissance is the process of growing.",
+ None, None),
+("fr_developpement_noun", "fr_epanouissement_noun", ["scope"],
+ "Épanouissement is a full opening, of a flower or of a person. Développement is development: unfolding, or working something out. One sense of épanouissement is a full and harmonious développement.",
+ "Développement is the process of developing. Épanouissement is blooming, or a person coming fully into their own.",
+ None, None),
+("fr_sachet_noun", "fr_sacoche_noun", ["scope"],
+ "Sacoche is a leather bag or a satchel carried at the side. Sachet is a little bag or a small packet.",
+ "Sachet is a small bag. Sacoche is a larger pouch, a saddlebag, or a handbag.",
+ None, None),
 ]
 
 
@@ -1247,25 +1351,93 @@ def fetched_excerpt(lemma, defs):
     return {"url": rec.get("url") or ("https://www.cnrtl.fr/definition/" + urllib.parse.quote(lemma)), "excerpt": sentences[i]}
 
 
+WK = "https://fr.wiktionary.org/wiki/"
+# Excerpts below are the sense that matches the note, copied from the page that was opened.
+# They are not the first sentence of the article when that sentence is another homograph.
+HAND = {
+tuple(sorted(("fr_partir_verb", "fr_quitter_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "quitter", "Laisser un lieu; cesser d'y être, s'en éloigner.")],
+tuple(sorted(("fr_partir_verb", "fr_laisser_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "laisser", "Quitter momentanément.")],
+tuple(sorted(("fr_quitter_verb", "fr_laisser_verb"))): [S(CN + "quitter", "Laisser un lieu; cesser d'y être, s'en éloigner."), S(CN + "laisser", "Faire rester.")],
+tuple(sorted(("fr_partir_verb", "fr_sortir_verb"))): [S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination)."), S(CN + "sortir", "Passer du dedans au dehors.")],
+tuple(sorted(("fr_numero_noun", "fr_nombre_noun"))): [S(CN + urllib.parse.quote("numéro"), "Chiffre, nombre attribué à une chose et qui sert à indiquer sa place dans une série."), S(CN + "nombre", "Concept caractérisant une unité, une collection d'unités ou une fraction d'unité.")],
+tuple(sorted(("fr_nombre_noun", "fr_chiffre_noun"))): [S(CN + "nombre", "Concept caractérisant une unité, une collection d'unités ou une fraction d'unité."), S(CN + "chiffre", "Caractère servant à représenter un nombre.")],
+tuple(sorted(("fr_numero_noun", "fr_chiffre_noun"))): [S(CN + urllib.parse.quote("numéro"), "Chiffre, nombre attribué à une chose et qui sert à indiquer sa place dans une série."), S(CN + "chiffre", "Caractère servant à représenter un nombre.")],
+tuple(sorted(("fr_libre_adj", "fr_gratuit_adj"))): [S(WK + "libre", "Qui est disponible, qui n'est pas possédé par personne. Entrée libre, inscription libre."), S(WK + "gratuit", "Que l'on donne librement sans obligation, ni rétribution ou contrepartie.")],
+tuple(sorted(("fr_oui_phrase", "fr_si_phrase"))): [S(WK + "oui", "Mot utilisé pour apporter une réponse affirmative."), S(WK + "si", "Au contraire. Dans ce sens il est utilisé pour infirmer une prédication négative ou interro-négative.")],
+tuple(sorted(("fr_s_il_te_plait_phrase", "fr_s_il_vous_plait_phrase"))): [S(WK + urllib.parse.quote("s’il_te_plaît"), "Locution permettant de demander quelque chose de façon polie, à quelqu'un que l'on tutoie."), S(WK + urllib.parse.quote("s’il_vous_plaît"), "Locution qui permet de demander quelque chose poliment, à quelqu'un que l'on vouvoie, ou à plusieurs personnes.")],
+tuple(sorted(("fr_on_pron", "fr_nous_pron"))): [S(CN + "on", "Il indique d'une manière générale ou vague les gens, les personnes. On peut restreindre son sens à une personne désignée par je, tu, il, nous, vous, ils."), S(CN + "nous", "Nous sujet se place avant le verbe, excepté dans les phrases interrogatives.")],
+tuple(sorted(("fr_argent_noun", "fr_fric_noun"))): [S(CN + "argent", "Toute monnaie, qu'il s'agisse de monnaie métallique ou de papier-monnaie."), S(WK + "fric", "Populaire. Argent.")],
+tuple(sorted(("fr_travail_noun", "fr_boulot_noun"))): [S(CN + "travail", "Activité humaine exigeant un effort soutenu, qui vise à la modification des éléments naturels, à la création et/ou à la production de nouvelles choses, de nouvelles idées."), S(WK + "boulot", "Familier. Travail.")],
+tuple(sorted(("fr_emploi_noun", "fr_boulot_noun"))): [S(CN + "emploi", "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué."), S(WK + "boulot", "Familier. Emploi professionnel.")],
+tuple(sorted(("fr_travail_noun", "fr_emploi_noun"))): [S(CN + "travail", "Activité humaine exigeant un effort soutenu, qui vise à la modification des éléments naturels, à la création et/ou à la production de nouvelles choses, de nouvelles idées."), S(CN + "emploi", "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué.")],
+tuple(sorted(("fr_emploi_noun", "fr_poste_noun_m"))): [S(CN + "emploi", "Place, situation occupée par un employé, un fonctionnaire dans une administration, une entreprise, impliquant un travail régulier et rétribué."), S(CN + "poste", "Fonction précise, emploi professionnel qu'occupe une personne. Station de radio ou de télévision.")],
+tuple(sorted(("fr_drole_adj", "fr_marrant_adj"))): [S(CN + urllib.parse.quote("drôle"), "Qui divertit ou porte à rire. Qui intrigue, paraît étrange, surprenant."), S(CN + "marrant", "Drôle, amusant.")],
+tuple(sorted(("fr_bouger_verb", "fr_mouvoir_verb"))): [S(CN + "bouger", "Faire un mouvement (le plus souvent minime), remuer."), S(CN + "mouvoir", "Mettre en mouvement.")],
+tuple(sorted(("fr_enfant_noun", "fr_mome_noun"))): [S(CN + "enfant", "Être humain, sans différenciation de sexe, dans les premières années de sa vie et avant l'adolescence."), S(WK + urllib.parse.quote("môme"), "Familier. France. Petit garçon, petite fille.")],
+tuple(sorted(("fr_pendant_prep", "fr_durant_prep"))): [S(WK + "pendant", "Préposition. Durant ; tout au long de."), S(WK + "durant", "Préposition. Tout au long de. Au cours de. Synonyme pendant.")],
+tuple(sorted(("fr_enfin_adv", "fr_finalement_adv"))): [S(CN + "enfin", "À la fin ; après un long temps ; après une longue attente. À la fin d'une énumération, pour abréger, en résumé."), S(CN + "finalement", "À la fin, pour finir, en dernier lieu. En fin de compte, en dernier ressort.")],
+tuple(sorted(("fr_propre_adj", "fr_net_adj"))): [S(CN + "propre", "Qui appartient exclusivement ou en particulier à (une personne ou une chose). Ce qui n'est pas couvert de saleté ; ce qui est nettoyé."), S(CN + "net", "Qui est sans tache, sans souillure; que rien ne ternit, ne salit.")],
+tuple(sorted(("fr_briller_verb", "fr_luire_verb"))): [S(CN + "briller", "Répandre une lumière vive, intense, parfois diffuse."), S(CN + "luire", "Émettre de la lumière. Réfléchir la lumière.")],
+tuple(sorted(("fr_feter_verb", "fr_celebrer_verb"))): [S(CN + urllib.parse.quote("fêter"), "Célébrer et solenniser par une fête."), S(CN + urllib.parse.quote("célébrer"), "Accomplir avec solennité. Accomplir les rites ou les cérémonies d'un culte.")],
+tuple(sorted(("fr_moche_adj", "fr_laid_adj"))): [S(WK + "moche", "Informel. Laid."), S(CN + "laid", "Qui, par sa forme, sa couleur, son aspect, son manque d'harmonie, est désagréable à voir.")],
+tuple(sorted(("fr_dame_noun", "fr_lady_noun"))): [S(CN + "dame", "Personne adulte du sexe féminin."), S(CN + "lady", "Dame de l'aristocratie anglaise. Titre qui appartient en Angleterre à l'épouse d'un lord ou d'un chevalier.")],
+tuple(sorted(("fr_reflechir_verb", "fr_refleter_verb"))): [S(CN + urllib.parse.quote("réfléchir"), "Renvoyer par réflexion. Faire usage de sa réflexion, exercer sa réflexion."), S(CN + urllib.parse.quote("refléter"), "Renvoyer par réflexion une lumière ou une couleur. Renvoyer par réflexion une image.")],
+tuple(sorted(("fr_prelever_verb", "fr_prendre_verb"))): [S(CN + urllib.parse.quote("prélever"), "Prendre, mettre à part (une portion d'un tout, une partie d'un ensemble), préalablement à toute opération."), S(CN + "prendre", "Mettre avec soi. Saisir quelque chose (ou quelqu'un).")],
+tuple(sorted(("fr_usager_noun", "fr_utilisateur_noun"))): [S(WK + "usager", "Droit. Personne qui a droit d'usage, qui fait usage."), S(WK + "utilisateur", "Celui qui utilise un outil ou quelque chose.")],
+tuple(sorted(("fr_croiser_verb", "fr_traverser_verb"))): [S(CN + "croiser", "Disposer deux choses en forme de croix. Rencontrer sur son trajet, venant en sens opposé ou différent."), S(CN + "traverser", "Franchir, parcourir quelque chose d'une extrémité à l'autre.")],
+tuple(sorted(("fr_degat_noun", "fr_dommage_noun"))): [S(CN + urllib.parse.quote("dégât"), "Détérioration subie par les choses et provoquée par une cause violente."), S(CN + "dommage", "Préjudice porté à quelqu'un ou à quelque chose. C'est dommage : manière d'exprimer ce que certaines choses ont de fâcheux, de regrettable.")],
+tuple(sorted(("fr_application_noun", "fr_candidature_noun"))): [S(CN + "application", "Action d'utiliser quelque chose en vue d'arriver à un but concret. Programme informatique utilisant des fonctionnalités d'une certaine plate-forme."), S(CN + "candidature", "Action de se porter candidat; état, situation de candidat.")],
+tuple(sorted(("fr_lessive_noun", "fr_buanderie_noun"))): [S(CN + "lessive", "Dissolution aqueuse de produits détersifs. Action de lessiver, de laver, de blanchir le linge."), S(CN + "buanderie", "Pièce aménagée pour faire la lessive.")],
+tuple(sorted(("fr_trompe_noun", "fr_trompette_noun_f"))): [S(CN + "trompe", "Instrument à vent à embouchure, constitué par un tube conique. Prolongement nasal servant à la fois d'organe de préhension."), S(CN + "trompette", "Instrument à vent de sonorité éclatante et brillante, muni d'une embouchure.")],
+tuple(sorted(("fr_merci_noun_f", "fr_misericorde_noun"))): [S(CN + "merci", "Grâce que quelqu'un accorde à quelqu'un d'autre. État de dépendance vis-à-vis de quelqu'un à qui l'on demande grâce."), S(CN + urllib.parse.quote("miséricorde"), "Compassion pour la misère d'autrui. Générosité entraînant le pardon.")],
+tuple(sorted(("fr_couler_verb", "fr_ecouler_verb"))): [S(CN + "couler", "Se déplacer (en pente) d'un mouvement continu et naturel. S'engloutir, aller au fond de."), S(CN + urllib.parse.quote("écouler"), "Vendre jusqu'à épuisement ; liquider. Couler hors de quelque endroit. Avancer progressivement, à propos du temps.")],
+tuple(sorted(("fr_ramener_verb", "fr_rapporter_verb"))): [S(CN + "ramener", "Reconduire une personne, un animal ou un objet dans le lieu où elle était au départ."), S(CN + "rapporter", "Porter de nouveau (un objet). Faire le récit de ce qu'on a vu, ou entendu, ou appris.")],
+tuple(sorted(("fr_parfois_adv", "fr_tantot_adv"))): [S(CN + "parfois", "Quelquefois."), S(CN + urllib.parse.quote("tantôt"), "Dans un proche avenir. Cet après-midi. Parfois, redoublé, pour marquer des changements consécutifs.")],
+tuple(sorted(("fr_joindre_verb", "fr_rejoindre_verb"))): [S(CN + "joindre", "Mettre ensemble, mettre avec, réunir."), S(CN + "rejoindre", "Aller retrouver quelqu'un ou quelque chose; regagner, rallier un endroit.")],
+tuple(sorted(("fr_mandataire_noun", "fr_procuration_noun"))): [S(CN + "mandataire", "Personne qui est chargée d'un mandat."), S(CN + "procuration", "Écrit constatant un mandat et en déterminant l'étendue.")],
+tuple(sorted(("fr_dressage_noun", "fr_entrainement_noun"))): [S(CN + "dressage", "Fait d'habituer un animal à certains comportements."), S(CN + urllib.parse.quote("entraînement"), "Préparation méthodique d'un sportif ou d'un cheval de course en vue d'une épreuve.")],
+tuple(sorted(("fr_quete_noun", "fr_collection_noun"))): [S(CN + urllib.parse.quote("quête"), "Action de chercher à trouver. Action de demander et de recueillir des dons."), S(CN + "collection", "Ensemble d'objets réunis par un amateur.")],
+tuple(sorted(("fr_evasion_noun", "fr_fuite_noun"))): [S(CN + urllib.parse.quote("évasion"), "Action de s'évader, de s'échapper d'un lieu où l'on était tenu enfermé."), S(CN + "fuite", "Action de fuir quelqu'un ou quelque chose.")],
+tuple(sorted(("fr_horriblement_adv", "fr_peniblement_adv"))): [S(CN + "horriblement", "D'une manière horrible, effrayante. D'une manière excessive."), S(CN + urllib.parse.quote("péniblement"), "Au prix de beaucoup d'effort, de fatigue, de souffrance. Avec difficulté.")],
+tuple(sorted(("fr_absenter_verb", "fr_partir_verb"))): [S(CN + "absenter", "Utilisé uniquement dans s'absenter. S'éloigner de quelque lieu où l'on est habituellement."), S(CN + "partir", "Se mettre en mouvement, quitter un lieu (pour une destination).")],
+tuple(sorted(("fr_renover_verb", "fr_renouveler_verb"))): [S(CN + urllib.parse.quote("rénover"), "Remettre en état ou à neuf une chose abîmée, usée."), S(CN + "renouveler", "Remplacer (une chose consommée, disparue, usée ou désuète) par une chose de même espèce.")],
+tuple(sorted(("fr_capter_verb", "fr_capturer_verb"))): [S(CN + "capter", "Recevoir, recueillir, fixer des sons, des images, des ondes à l'aide d'appareils récepteurs."), S(CN + "capturer", "S'emparer, plus particulièrement en temps de guerre, à la chasse ou à la pêche.")],
+tuple(sorted(("fr_inscription_noun", "fr_enregistrement_noun"))): [S(CN + "inscription", "Action de porter le nom de quelqu'un ou une mention sur un document, une liste, un registre."), S(CN + "enregistrement", "Inscription sur un registre officiel.")],
+tuple(sorted(("fr_concilier_verb", "fr_reconcilier_verb"))): [S(CN + "concilier", "Rapprocher des personnes en désaccord. Rapprocher des choses opposées pour les rendre compatibles."), S(CN + urllib.parse.quote("réconcilier"), "Remettre d'accord, en harmonie des personnes qui étaient brouillées.")],
+tuple(sorted(("fr_bloc_noun", "fr_blocage_noun"))): [S(CN + "bloc", "Masse pesante constituée d'un seul tenant. Alliance, union de partis politiques ou d'États."), S(CN + "blocage", "Action de bloquer, d'arrêter; résultat de cette action.")],
+tuple(sorted(("fr_allumage_noun", "fr_eclairage_noun"))): [S(CN + "allumage", "Action d'allumer, de s'allumer. Inflammation par étincelle électrique du mélange gazeux."), S(CN + urllib.parse.quote("éclairage"), "Lumière naturelle ou artificielle qui éclaire.")],
+tuple(sorted(("fr_pousse_noun", "fr_croissance_noun"))): [S(CN + "pousse", "Jeune tige développée à partir d'un rameau, d'un bourgeon. Croissance annuelle des végétaux."), S(CN + "croissance", "Action de croître, de se développer progressivement.")],
+tuple(sorted(("fr_developpement_noun", "fr_epanouissement_noun"))): [S(CN + urllib.parse.quote("développement"), "Action de développer, de se développer."), S(CN + urllib.parse.quote("épanouissement"), "Déploiement de la corolle des fleurs. Plein et harmonieux développement.")],
+tuple(sorted(("fr_sachet_noun", "fr_sacoche_noun"))): [S(CN + "sachet", "Petit sac."), S(CN + "sacoche", "Grosse bourse de cuir ou de toile forte retenue par une courroie.")],
+}
+
+
+def prior_support():
+    """Keep excerpts already stored for pairs this pass is not rewriting."""
+    path = ROOT / "data" / "source" / "sense_compares.json"
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    out = {}
+    for e in doc.get("edges") or []:
+        if e.get("verified") and e.get("support"):
+            out[tuple(sorted((e["a"], e["b"])))] = e["support"]
+    return out
+
+
 def build_edges(vocab, defs=None):
-    defs = defs if defs is not None else load_fetched_defs()
+    prev = prior_support()
     edges, deferred = [], []
     for row in RAW:
         a, b, axes, a_note, b_note = row[:5]
         a_ex = row[5] if len(row) > 5 else None
         b_ex = row[6] if len(row) > 6 else None
         key = tuple(sorted((a, b)))
-        support = SUPPORT.get(key)
-        if not support and defs:
-            sa = fetched_excerpt(vocab[a]["lemma"], defs)
-            sb = fetched_excerpt(vocab[b]["lemma"], defs)
-            if sa and sb:
-                support = [sa, sb]
-            else:
-                deferred.append({"a": a, "b": b, "reason": "no usable sense excerpt from the CNRTL page that was opened"})
-                continue
-        elif not support:
-            deferred.append({"a": a, "b": b, "reason": "sense excerpt file was not available; not published"})
+        # Hand-read excerpts win. Otherwise keep a pair already published with its excerpt.
+        # Do not fill a gap from the first sentence of a scraped page.
+        support = HAND.get(key) or SUPPORT.get(key) or prev.get(key)
+        if not support:
+            deferred.append({"a": a, "b": b, "reason": "no hand-checked sense excerpt"})
             continue
         edge = {
             "a": a, "b": b, "axes": axes,
@@ -1290,7 +1462,7 @@ def main():
         print("\n".join(problems[:40]))
         raise SystemExit(f"{len(problems)} problem(s)")
     doc = {
-        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means support holds a sense excerpt from a page that was opened. verified false means the URL only names a headword page and the sense was not re-checked in this pass. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
+        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means support quotes the sense the note uses, from a page that was opened. A new pair is not filled from the first sentence of a scrape. au/aux and foot/football have no edge: they are the same word in another form. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
         "edges": edges,
     }
     path = ROOT / "data" / "source" / "sense_compares.json"
