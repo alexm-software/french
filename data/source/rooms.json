@@ -4868,16 +4868,14 @@
     },
     {
       "id": "R_resto_room",
-      "name": "Dining hall (menu & service)",
+      "name": "Dining and service rooms",
       "type": "theme",
-      "setting": "Dining hall (menu & service) inside Restaurant Le Bon Goût.",
+      "setting": "Connected ground-floor dining and below-ground cellar galleries at Restaurant Le Bon Goût.",
       "kind": "full",
       "sector_id": "S04_cafes",
       "building_id": "B09_restaurant",
       "links_back_to_sector": "S04_cafes",
-      "zoom_ids": [
-        "R_resto_room_z1"
-      ],
+      "zoom_ids": [],
       "cefr_band": "B2",
       "mean_level": 3.53,
       "related_rooms": [
@@ -5001,17 +4999,14 @@
     },
     {
       "id": "R_wine_01",
-      "name": "Wine cellar [first & second floor] · wine, alcohol, bottle",
+      "name": "Wine cellar and bottling",
       "type": "theme",
-      "setting": "Wine cellar inside Restaurant Le Bon Goût.",
+      "setting": "Connected ground-floor dining and below-ground cellar galleries at Restaurant Le Bon Goût.",
       "kind": "full",
       "sector_id": "S04_cafes",
       "building_id": "B09_restaurant",
       "links_back_to_sector": "S04_cafes",
-      "zoom_ids": [
-        "R_wine_01_z2",
-        "R_wine_01_z1"
-      ],
+      "zoom_ids": [],
       "cefr_band": "B2",
       "mean_level": 3.71,
       "related_rooms": [
@@ -11946,9 +11941,9 @@
     },
     {
       "id": "R_math_01",
-      "name": "Mathematics room [first & second floor] · number, sum",
+      "name": "Calculation and geometry workshops",
       "type": "theme",
-      "setting": "Mathematics room inside Institut de Mathématiques.",
+      "setting": "Connected ground-floor calculation and geometry workshops at the mathematics institute.",
       "kind": "full",
       "sector_id": "S10_university",
       "building_id": "B36_maths",
@@ -11986,7 +11981,8 @@
         "right": 5,
         "left": 7,
         "n/a": 1
-      }
+      },
+      "zoom_ids": []
     },
     {
       "id": "R_math_02",
@@ -32438,20 +32434,13 @@
     },
     {
       "id": "R_resto_room_z1",
-      "name": "Dining hall (menu & service) — bar counter (right)",
-      "type": "zoom",
-      "setting": "A bar counter on the right wall of 'Dining hall (menu & service)' (Restaurant Le Bon Goût); zoom in to see its items.",
-      "kind": "zoom",
+      "name": "Banquet salon and dinner service",
+      "type": "theme",
+      "setting": "Connected ground-floor dining and below-ground cellar galleries at Restaurant Le Bon Goût.",
+      "kind": "full",
       "sector_id": "S04_cafes",
       "building_id": "B09_restaurant",
       "links_back_to_sector": "S04_cafes",
-      "parent_room_id": "R_resto_room",
-      "furniture": "bar counter",
-      "sign": "Bar counter: banquet, pub, appetizer",
-      "position": {
-        "side": "right",
-        "wall": "right wall"
-      },
       "cefr_band": "B2",
       "mean_level": 4.43,
       "related_rooms": [
@@ -32471,7 +32460,8 @@
       "side_counts": {
         "right": 7
       },
-      "name_fr": "Le comptoir"
+      "name_fr": "Le comptoir",
+      "zoom_ids": []
     },
     {
       "id": "R_resto_kitchen_01_z1",
@@ -32510,20 +32500,13 @@
     },
     {
       "id": "R_wine_01_z2",
-      "name": "Wine cellar [first & second floor] — bar counter (right)",
-      "type": "zoom",
-      "setting": "A bar counter on the right wall of 'Wine cellar [first & second floor]' (Restaurant Le Bon Goût); zoom in to see its items.",
-      "kind": "zoom",
+      "name": "Cellar packaging and storage",
+      "type": "theme",
+      "setting": "Connected ground-floor dining and below-ground cellar galleries at Restaurant Le Bon Goût.",
+      "kind": "full",
       "sector_id": "S04_cafes",
       "building_id": "B09_restaurant",
       "links_back_to_sector": "S04_cafes",
-      "parent_room_id": "R_wine_01",
-      "furniture": "bar counter",
-      "sign": "Bar counter: wine, alcohol, barrel",
-      "position": {
-        "side": "right",
-        "wall": "right wall"
-      },
       "cefr_band": "B1",
       "mean_level": 2.75,
       "related_rooms": [
@@ -32539,24 +32522,18 @@
       "item_count": 4,
       "side_counts": {
         "right": 4
-      }
+      },
+      "zoom_ids": []
     },
     {
       "id": "R_wine_01_z1",
-      "name": "Wine cellar [first & second floor] — dessert trolley (right)",
-      "type": "zoom",
-      "setting": "A dessert cart on the right wall of 'Wine cellar [first & second floor]' (Restaurant Le Bon Goût); zoom in to see its items.",
-      "kind": "zoom",
+      "name": "Brasserie stores and vineyard origins",
+      "type": "theme",
+      "setting": "Connected ground-floor dining and below-ground cellar galleries at Restaurant Le Bon Goût.",
+      "kind": "full",
       "sector_id": "S04_cafes",
       "building_id": "B09_restaurant",
       "links_back_to_sector": "S04_cafes",
-      "parent_room_id": "R_wine_01",
-      "furniture": "dessert cart",
-      "sign": "Dessert cart: rum, champagne, wine expert",
-      "position": {
-        "side": "right",
-        "wall": "right wall"
-      },
       "cefr_band": "B2",
       "mean_level": 4.1,
       "related_rooms": [
@@ -32579,7 +32556,8 @@
       "side_counts": {
         "right": 10
       },
-      "name_fr": "Le comptoir"
+      "name_fr": "Le comptoir",
+      "zoom_ids": []
     },
     {
       "id": "R_bank_counter_02_z1",

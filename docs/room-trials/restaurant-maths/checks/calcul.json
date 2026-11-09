@@ -1,0 +1,20 @@
+{
+ "image": "/workspace/scratch/3764cc994451/french/village/maths/calcul.jpg",
+ "room": "calcul",
+ "fail": [],
+ "warn": [
+  "manifest: fr_numero_noun: hook has no word in CAPS for meaning/sound cue",
+  "manifest: grid_check (Gate 25) on box_hint: depths: box bottoms only in ['back', 'front']"
+ ],
+ "flag": [
+  "ocr: 'eee' conf 89 at [256, 190, 54, 11] on somme [undeclared]",
+  "ocr: '2x3' conf 92 at [224, 358, 62, 27] on multiplication [DIGIT - can break a count]",
+  "ocr: '12' conf 90 at [1087, 353, 24, 24] on numéro [DIGIT - can break a count]"
+ ],
+ "notes": [
+  "size: 1280x720 ok",
+  "ocr: tesseract eng, tiled, 3 text run(s) flagged for human review (flags never reject)",
+  "labels: 7 items, 1 fixed rects (doors/mapExit/zoom badges/nameplate) checked",
+  "manifest: 7 entries checked"
+ ]
+}

@@ -21,6 +21,14 @@
     {
       "key": "modeles",
       "short": "Models and algebra workshop"
+    },
+    {
+      "key": "calcul",
+      "short": "Le laboratoire du calcul · Calculation Workshop"
+    },
+    {
+      "key": "geometrie",
+      "short": "Les formes et les repères · Shapes and Reference Points"
     }
   ],
   "planned": {
@@ -57,6 +65,29 @@
         "fr_rotation_noun",
         "fr_geometrique_adj",
         "fr_mathematicien_noun"
+      ]
+    },
+    "calcul": {
+      "vocabRoom": "R_math_01",
+      "only": [
+        "fr_somme_noun_f",
+        "fr_moyenne_noun",
+        "fr_maths_noun",
+        "fr_multiplication_noun",
+        "fr_nombre_noun",
+        "fr_numero_noun",
+        "fr_tripler_verb"
+      ]
+    },
+    "geometrie": {
+      "vocabRoom": "R_math_01",
+      "only": [
+        "fr_formule_noun",
+        "fr_limite_noun",
+        "fr_cote_noun_3",
+        "fr_angle_noun",
+        "fr_facteur_noun",
+        "fr_intervalle_noun"
       ]
     }
   },
@@ -376,10 +407,214 @@
             114,
             133
           ]
+        },
+        {
+          "to": "calcul",
+          "label": "Le laboratoire du calcul",
+          "hint": "Ground-floor slate-blue door to the calculation workshop",
+          "hit": [
+            1070,
+            467,
+            94,
+            117
+          ]
         }
       ],
       "zooms": [],
       "items": []
+    },
+    "calcul": {
+      "name": "Le laboratoire du calcul · Calculation Workshop",
+      "image": "maths/calcul.jpg",
+      "room_id": "R_math_01",
+      "alt": "A tutor and learners prepare three activity kits while a red-beret mime triples two blocks into six. left slate showing exactly 2 + 3 = 5 beside two and three counting beads. two stages: stacks of two and four blocks become three and three; twelve blocks painted across both stages. adult woman solving arithmetic on a floor mat at left. left board with exactly two rows of three counters and the equation 2 × 3 = 6. large numeral 8 and exactly eight wooden counters on a right board. ticket dispenser with one paper ticket marked 12 on the right. adult male mime with white face striped shirt and bright red beret arranging three identical trays each with two blocks in the center foreground",
+      "doors": [
+        {
+          "to": "geometrie",
+          "label": "Les formes et les repères · Shapes and Reference Points",
+          "hint": "slate-blue pointed doorway with cream trim and continuous blue-and-cream tile floor",
+          "hit": [
+            635,
+            145,
+            153,
+            160
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_somme_noun_f",
+          "box": [
+            149,
+            118,
+            193,
+            122
+          ],
+          "text": "vocab",
+          "scene": "left slate showing exactly 2 + 3 = 5 beside two and three counting beads"
+        },
+        {
+          "id": "fr_moyenne_noun",
+          "box": [
+            357,
+            139,
+            246,
+            132
+          ],
+          "text": "vocab",
+          "scene": "two stages: stacks of two and four blocks become three and three; twelve blocks painted across both stages"
+        },
+        {
+          "id": "fr_maths_noun",
+          "box": [
+            44,
+            397,
+            275,
+            318
+          ],
+          "text": "vocab",
+          "scene": "adult woman solving arithmetic on a floor mat at left"
+        },
+        {
+          "id": "fr_multiplication_noun",
+          "box": [
+            212,
+            289,
+            129,
+            99
+          ],
+          "text": "vocab",
+          "scene": "six counters in two rows of three with the equation 2 × 3 = 6 on a blackboard"
+        },
+        {
+          "id": "fr_nombre_noun",
+          "box": [
+            930,
+            102,
+            292,
+            162
+          ],
+          "text": "vocab",
+          "scene": "large numeral 8 and exactly eight wooden counters on a right board"
+        },
+        {
+          "id": "fr_numero_noun",
+          "box": [
+            1075,
+            271,
+            111,
+            122
+          ],
+          "text": "vocab",
+          "scene": "ticket dispenser with one paper ticket marked 12 on the right"
+        },
+        {
+          "id": "fr_tripler_verb",
+          "box": [
+            368,
+            319,
+            513,
+            341
+          ],
+          "text": "vocab",
+          "scene": "adult male mime with white face striped shirt and bright red beret arranging three identical trays each with two blocks in the center foreground"
+        }
+      ],
+      "backTo": "maths",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "maths"
+    },
+    "geometrie": {
+      "name": "Les formes et les repères · Shapes and Reference Points",
+      "image": "maths/geometrie.jpg",
+      "room_id": "R_math_01",
+      "alt": "Adult learners build a triangular model and check its angle, formula, interval and reference-book rating. left blackboard showing A = b × h / 2 with triangle diagram. left model work area ending at a clear red boundary line. an assessment clipboard showing 4/5 with four filled stars and one empty star. a large tick-marked semicircular protractor measuring a wooden triangle corner. right board showing 3 × 4 = 12 with three groups of four counters. right ruler-like number line from 0 to 4 with equal gaps between adjacent marks",
+      "doors": [
+        {
+          "to": "maths",
+          "label": "Le vestibule",
+          "hint": "slate-blue pointed doorway with cream trim and continuous blue-and-cream tile floor",
+          "hit": [
+            500,
+            103,
+            172,
+            237
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_formule_noun",
+          "box": [
+            133,
+            95,
+            325,
+            207
+          ],
+          "text": "vocab",
+          "scene": "left blackboard showing A = b × h / 2 with triangle diagram"
+        },
+        {
+          "id": "fr_limite_noun",
+          "box": [
+            12,
+            435,
+            268,
+            130
+          ],
+          "text": "vocab",
+          "scene": "left model work area ending at a clear red boundary line"
+        },
+        {
+          "id": "fr_cote_noun_3",
+          "box": [
+            383,
+            513,
+            156,
+            171
+          ],
+          "text": "vocab",
+          "scene": "an assessment clipboard showing 4/5 with four filled stars and one empty star"
+        },
+        {
+          "id": "fr_angle_noun",
+          "box": [
+            783,
+            145,
+            178,
+            114
+          ],
+          "text": "vocab",
+          "scene": "a large tick-marked protractor with a yellow marked angle"
+        },
+        {
+          "id": "fr_facteur_noun",
+          "box": [
+            968,
+            64,
+            301,
+            194
+          ],
+          "text": "vocab",
+          "scene": "right board showing 3 × 4 = 12 with three groups of four counters"
+        },
+        {
+          "id": "fr_intervalle_noun",
+          "box": [
+            948,
+            267,
+            305,
+            142
+          ],
+          "text": "vocab",
+          "scene": "right ruler-like number line from 0 to 4 with equal gaps between adjacent marks"
+        }
+      ],
+      "backTo": "maths",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "calcul"
     }
   }
 }

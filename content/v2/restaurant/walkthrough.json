@@ -30,8 +30,50 @@
     "restaurant": {
       "kind": "hub",
       "level": "ground floor",
-      "landmark": "La cour du restaurant · Restaurant Courtyard",
+      "landmark": "sage-green courtyard arches and foreground cellar stair arrival",
       "camera": "from inside the place toward its visible passage"
+    },
+    "service": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "L’accueil et le service · Welcome and Service",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
+    },
+    "salle": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "La salle du dîner · Dinner Room",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
+    },
+    "banquet": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Le salon du banquet · Banquet Salon",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
+    },
+    "cave": {
+      "kind": "room",
+      "level": "cellar",
+      "landmark": "La cave et le conditionnement · Cellar and Bottling",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
+    },
+    "terroir": {
+      "kind": "room",
+      "level": "cellar",
+      "landmark": "Le terroir et les arômes · Origins and Aromas",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
+    },
+    "reserve": {
+      "kind": "room",
+      "level": "cellar",
+      "landmark": "La réserve de la brasserie · Brasserie Stores",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "restaurant"
     }
   },
   "passages": {
@@ -82,6 +124,125 @@
           "arrival": "Le plan de préparation · Preparation Bench"
         }
       ]
+    },
+    "circuit-service": {
+      "kind": "door",
+      "appearance": "tall clear sage-green limestone arch with continuous terracotta floor",
+      "ends": [
+        {
+          "place": "service",
+          "where": "central back-wall threshold",
+          "arrival": "L’accueil et le service · Welcome and Service"
+        },
+        {
+          "place": "salle",
+          "where": "arrival behind viewer",
+          "arrival": "La salle du dîner · Dinner Room"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-salle": {
+      "kind": "door",
+      "appearance": "tall clear sage-green limestone arch with continuous terracotta floor",
+      "ends": [
+        {
+          "place": "salle",
+          "where": "central back-wall threshold",
+          "arrival": "La salle du dîner · Dinner Room"
+        },
+        {
+          "place": "banquet",
+          "where": "arrival behind viewer",
+          "arrival": "Le salon du banquet · Banquet Salon"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-banquet": {
+      "kind": "stairs",
+      "appearance": "sage-green stair arch with pale stone steps descending to vaulted cellar and black iron handrail",
+      "ends": [
+        {
+          "place": "banquet",
+          "where": "central back-wall threshold",
+          "arrival": "Le salon du banquet · Banquet Salon"
+        },
+        {
+          "place": "cave",
+          "where": "arrival behind viewer",
+          "arrival": "La cave et le conditionnement · Cellar and Bottling"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-cave": {
+      "kind": "door",
+      "appearance": "tall clear sage-green limestone arch with continuous terracotta floor",
+      "ends": [
+        {
+          "place": "cave",
+          "where": "central back-wall threshold",
+          "arrival": "La cave et le conditionnement · Cellar and Bottling"
+        },
+        {
+          "place": "terroir",
+          "where": "arrival behind viewer",
+          "arrival": "Le terroir et les arômes · Origins and Aromas"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-terroir": {
+      "kind": "door",
+      "appearance": "tall clear sage-green limestone arch with continuous terracotta floor",
+      "ends": [
+        {
+          "place": "terroir",
+          "where": "central back-wall threshold",
+          "arrival": "Le terroir et les arômes · Origins and Aromas"
+        },
+        {
+          "place": "reserve",
+          "where": "arrival behind viewer",
+          "arrival": "La réserve de la brasserie · Brasserie Stores"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-reserve": {
+      "kind": "stairs",
+      "appearance": "sage-green stair arch with pale stone steps ascending toward bright courtyard and black iron handrail",
+      "ends": [
+        {
+          "place": "reserve",
+          "where": "central back-wall threshold",
+          "arrival": "La réserve de la brasserie · Brasserie Stores"
+        },
+        {
+          "place": "restaurant",
+          "where": "iron-railed stone stair arrival at the front edge of the courtyard",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "to-service": {
+      "kind": "door",
+      "appearance": "ground-floor sage-green side doorway",
+      "ends": [
+        {
+          "place": "restaurant",
+          "where": "left side-wing arch between street exit and first kitchen",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        },
+        {
+          "place": "service",
+          "where": "arrival behind viewer",
+          "arrival": "L’accueil et le service · Welcome and Service"
+        }
+      ],
+      "one_way_reason": "Entrance to the one-way teaching circuit; the final room returns to this hub."
     }
   }
 }

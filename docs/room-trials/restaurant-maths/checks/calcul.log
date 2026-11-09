@@ -1,0 +1,11 @@
+precheck /workspace/scratch/3764cc994451/french/village/maths/calcul.jpg  room maths/calcul
+  ok    size: 1280x720 ok
+  ok    ocr: tesseract eng, tiled, 3 text run(s) flagged for human review (flags never reject)
+  ok    labels: 7 items, 1 fixed rects (doors/mapExit/zoom badges/nameplate) checked
+  ok    manifest: 7 entries checked
+  WARN  manifest: fr_numero_noun: hook has no word in CAPS for meaning/sound cue
+  WARN  manifest: grid_check (Gate 25) on box_hint: depths: box bottoms only in ['back', 'front']
+  FLAG  ocr: 'eee' conf 89 at [256, 190, 54, 11] on somme [undeclared]
+  FLAG  ocr: '2x3' conf 92 at [224, 358, 62, 27] on multiplication [DIGIT - can break a count]
+  FLAG  ocr: '12' conf 90 at [1087, 353, 24, 24] on numéro [DIGIT - can break a count]
+summary: 0 fail, 2 warn, 3 flag  -> ready for the contact-sheet review

@@ -32,6 +32,20 @@
       "level": "ground floor",
       "landmark": "Le vestibule · Mathematics Entrance Court",
       "camera": "from inside the place toward its visible passage"
+    },
+    "calcul": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Le laboratoire du calcul · Calculation Workshop",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "maths"
+    },
+    "geometrie": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Les formes et les repères · Shapes and Reference Points",
+      "camera": "arriving behind the viewer, looking toward the next named threshold",
+      "within": "maths"
     }
   },
   "passages": {
@@ -82,6 +96,57 @@
           "arrival": "Models and algebra workshop"
         }
       ]
+    },
+    "circuit-calcul": {
+      "kind": "door",
+      "appearance": "slate-blue pointed doorway with cream trim and continuous blue-and-cream tile floor",
+      "ends": [
+        {
+          "place": "calcul",
+          "where": "central back-wall threshold",
+          "arrival": "Le laboratoire du calcul · Calculation Workshop"
+        },
+        {
+          "place": "geometrie",
+          "where": "arrival behind viewer",
+          "arrival": "Les formes et les repères · Shapes and Reference Points"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "circuit-geometrie": {
+      "kind": "door",
+      "appearance": "slate-blue pointed doorway with cream trim and continuous blue-and-cream tile floor",
+      "ends": [
+        {
+          "place": "geometrie",
+          "where": "central back-wall threshold",
+          "arrival": "Les formes et les repères · Shapes and Reference Points"
+        },
+        {
+          "place": "maths",
+          "where": "arrival behind viewer",
+          "arrival": "Le vestibule · Mathematics Entrance Court"
+        }
+      ],
+      "one_way_reason": "One-way interpretation circuit; the arrival is behind the visitor, and the complete circuit returns to the entrance hub."
+    },
+    "to-calcul": {
+      "kind": "door",
+      "appearance": "ground-floor slate-blue pointed doorway",
+      "ends": [
+        {
+          "place": "maths",
+          "where": "ground-floor right wall beneath stair landing",
+          "arrival": "Le vestibule · Mathematics Entrance Court"
+        },
+        {
+          "place": "calcul",
+          "where": "arrival behind viewer",
+          "arrival": "Le laboratoire du calcul · Calculation Workshop"
+        }
+      ],
+      "one_way_reason": "Entrance to the one-way teaching circuit; the final room returns to this hub."
     }
   }
 }

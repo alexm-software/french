@@ -21,6 +21,30 @@
     {
       "key": "preparation",
       "short": "Le plan de préparation"
+    },
+    {
+      "key": "service",
+      "short": "L’accueil et le service · Welcome and Service"
+    },
+    {
+      "key": "salle",
+      "short": "La salle du dîner · Dinner Room"
+    },
+    {
+      "key": "banquet",
+      "short": "Le salon du banquet · Banquet Salon"
+    },
+    {
+      "key": "cave",
+      "short": "La cave et le conditionnement · Cellar and Bottling"
+    },
+    {
+      "key": "terroir",
+      "short": "Le terroir et les arômes · Origins and Aromas"
+    },
+    {
+      "key": "reserve",
+      "short": "La réserve de la brasserie · Brasserie Stores"
     }
   ],
   "planned": {
@@ -62,6 +86,78 @@
         "fr_grille_adj",
         "fr_culinaire_adj",
         "fr_haricot_noun"
+      ]
+    },
+    "service": {
+      "vocabRoom": "R_resto_room",
+      "only": [
+        "fr_commande_noun",
+        "fr_addition_noun",
+        "fr_restauration_noun",
+        "fr_restaurant_noun",
+        "fr_serveur_noun",
+        "fr_resto_noun"
+      ]
+    },
+    "salle": {
+      "vocabRoom": "R_resto_room",
+      "only": [
+        "fr_crudite_noun",
+        "fr_menu_noun",
+        "fr_couvert_noun",
+        "fr_dessert_noun",
+        "fr_pourboire_noun",
+        "fr_plat_noun"
+      ]
+    },
+    "banquet": {
+      "vocabRoom": "R_resto_room_z1",
+      "only": [
+        "fr_cabaret_noun",
+        "fr_couscous_noun",
+        "fr_banquet_noun",
+        "fr_hors_d_oeuvre_noun",
+        "fr_restaurateur_noun",
+        "fr_bistro_noun"
+      ]
+    },
+    "cave": {
+      "vocabRoom": "R_wine_01",
+      "only": [
+        "fr_cave_noun",
+        "fr_bouteille_noun",
+        "fr_capsule_noun",
+        "fr_verre_noun",
+        "fr_vin_noun",
+        "fr_bouchon_noun",
+        "fr_tonneau_noun",
+        "fr_tire_bouchon_noun"
+      ]
+    },
+    "terroir": {
+      "vocabRoom": "R_wine_01",
+      "only": [
+        "fr_vigne_noun",
+        "fr_appellation_noun",
+        "fr_ivresse_noun",
+        "fr_degustation_noun",
+        "fr_vignoble_noun",
+        "fr_cru_noun",
+        "fr_gourmet_noun",
+        "fr_cidre_noun"
+      ]
+    },
+    "reserve": {
+      "vocabRoom": "R_wine_01_z1",
+      "only": [
+        "fr_vodka_noun",
+        "fr_brasserie_noun",
+        "fr_champagne_noun",
+        "fr_whisky_noun",
+        "fr_cigare_noun",
+        "fr_rhum_noun",
+        "fr_cognac_noun",
+        "fr_alcool_noun"
       ]
     }
   },
@@ -435,10 +531,633 @@
             235,
             260
           ]
+        },
+        {
+          "to": "service",
+          "label": "La salle et la cave",
+          "hint": "New ground-floor side doorway into the dining wing",
+          "hit": [
+            225,
+            291,
+            61,
+            218
+          ]
         }
       ],
       "zooms": [],
       "items": []
+    },
+    "service": {
+      "name": "L’accueil et le service · Welcome and Service",
+      "image": "restaurant/service.jpg",
+      "room_id": "R_resto_room",
+      "alt": "The team welcomes adult diners at reception, checks an order and bill, and prepares food service. adult waitress writes an order on a notepad at the left reception desk. long bill curling from a small adding machine on the left desk. a silver buffet trolley with covered dishes and plates. large architectural dollhouse model of a restaurant with dining tables and an awning on the right reception counter. an adult male waiter holding a tray close to his chest. tired adult hiker resting in a chair with backpack at his feet on the right",
+      "doors": [
+        {
+          "to": "salle",
+          "label": "La salle du dîner · Dinner Room",
+          "hint": "tall clear sage-green limestone arch with continuous terracotta floor",
+          "hit": [
+            599,
+            128,
+            116,
+            175
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_commande_noun",
+          "box": [
+            361,
+            140,
+            103,
+            146
+          ],
+          "text": "vocab",
+          "scene": "adult waitress writes an order on a notepad at the left reception desk"
+        },
+        {
+          "id": "fr_addition_noun",
+          "box": [
+            478,
+            212,
+            109,
+            177
+          ],
+          "text": "vocab",
+          "scene": "long bill curling from a small adding machine on the left desk"
+        },
+        {
+          "id": "fr_restauration_noun",
+          "box": [
+            202,
+            390,
+            302,
+            297
+          ],
+          "text": "vocab",
+          "scene": "a silver buffet trolley with covered dishes and plates"
+        },
+        {
+          "id": "fr_restaurant_noun",
+          "box": [
+            762,
+            56,
+            292,
+            216
+          ],
+          "text": "vocab",
+          "scene": "large architectural dollhouse model of a restaurant with dining tables and an awning on the right reception counter"
+        },
+        {
+          "id": "fr_serveur_noun",
+          "box": [
+            1128,
+            192,
+            107,
+            244
+          ],
+          "text": "vocab",
+          "scene": "an adult male waiter holding a tray close to his chest"
+        },
+        {
+          "id": "fr_resto_noun",
+          "box": [
+            724,
+            311,
+            363,
+            399
+          ],
+          "text": "vocab",
+          "scene": "tired adult hiker resting in a chair with backpack at his feet on the right"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "restaurant"
+    },
+    "salle": {
+      "name": "La salle du dîner · Dinner Room",
+      "image": "restaurant/salle.jpg",
+      "room_id": "R_resto_room",
+      "alt": "Adult diners choose their meal while the team lays a round table and brings the first course. raw carrot and celery sticks with a dip on a plate on the left sideboard. open set-menu card with three clear food drawings on the right rear table. complete plate fork knife and empty glass place setting beneath a raised silver cover on the right middle table. a chocolate dessert with cream and one red cherry on its plate. small ordinary boar in patched waistcoat beside a tip saucer with a coin on the right foreground. a plated main course of vegetables and fish on the right serving trolley",
+      "doors": [
+        {
+          "to": "banquet",
+          "label": "Le salon du banquet · Banquet Salon",
+          "hint": "tall clear sage-green limestone arch with continuous terracotta floor",
+          "hit": [
+            554,
+            105,
+            187,
+            225
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_crudite_noun",
+          "box": [
+            128,
+            249,
+            128,
+            53
+          ],
+          "text": "vocab",
+          "scene": "raw carrot and celery sticks with a dip on a plate on the left sideboard"
+        },
+        {
+          "id": "fr_menu_noun",
+          "box": [
+            999,
+            173,
+            152,
+            89
+          ],
+          "text": "vocab",
+          "scene": "open set-menu card with three clear food drawings on the right rear table"
+        },
+        {
+          "id": "fr_couvert_noun",
+          "box": [
+            801,
+            253,
+            178,
+            131
+          ],
+          "text": "vocab",
+          "scene": "complete plate fork knife and empty glass place setting beneath a raised silver cover on the right middle table"
+        },
+        {
+          "id": "fr_dessert_noun",
+          "box": [
+            998,
+            582,
+            112,
+            97
+          ],
+          "text": "vocab",
+          "scene": "a chocolate dessert with cream and one cherry on the lower serving-trolley shelf"
+        },
+        {
+          "id": "fr_pourboire_noun",
+          "box": [
+            1009,
+            279,
+            248,
+            191
+          ],
+          "text": "vocab",
+          "scene": "small ordinary boar in patched waistcoat beside a tip saucer with a coin on the right foreground"
+        },
+        {
+          "id": "fr_plat_noun",
+          "box": [
+            949,
+            473,
+            261,
+            86
+          ],
+          "text": "vocab",
+          "scene": "a plated main course of vegetables and fish on the right serving trolley"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "service"
+    },
+    "banquet": {
+      "name": "Le salon du banquet · Banquet Salon",
+      "image": "restaurant/banquet.jpg",
+      "room_id": "R_resto_room_z1",
+      "alt": "An adult restaurant owner and his team prepare a small cabaret supper around a long curved banquet table. tiny raised cabaret stage at right rear with closed red curtains and one microphone on a stand. a large serving dish of couscous grains and vegetables. a framed illustration of a long feast table surrounded by chairs. small tray of savory appetizer bites on the right foreground side table. adult male restaurant owner in waistcoat checking his booking book at right. small cutaway bistro model with striped awning on a right wall shelf",
+      "doors": [
+        {
+          "to": "cave",
+          "label": "La cave et le conditionnement · Cellar and Bottling",
+          "hint": "sage-green stair arch with pale stone steps descending to vaulted cellar and black iron handrail",
+          "hit": [
+            299,
+            152,
+            147,
+            220
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_cabaret_noun",
+          "box": [
+            940,
+            49,
+            285,
+            212
+          ],
+          "text": "vocab",
+          "scene": "tiny raised cabaret stage at right rear with closed red curtains and one microphone on a stand"
+        },
+        {
+          "id": "fr_couscous_noun",
+          "box": [
+            799,
+            275,
+            133,
+            91
+          ],
+          "text": "vocab",
+          "scene": "a large serving dish of couscous grains and vegetables"
+        },
+        {
+          "id": "fr_banquet_noun",
+          "box": [
+            832,
+            80,
+            78,
+            89
+          ],
+          "text": "vocab",
+          "scene": "a framed illustration of a long feast table surrounded by chairs"
+        },
+        {
+          "id": "fr_hors_d_oeuvre_noun",
+          "box": [
+            748,
+            542,
+            282,
+            96
+          ],
+          "text": "vocab",
+          "scene": "small tray of savory appetizer bites on the right foreground side table"
+        },
+        {
+          "id": "fr_restaurateur_noun",
+          "box": [
+            951,
+            281,
+            139,
+            205
+          ],
+          "text": "vocab",
+          "scene": "adult male restaurant owner in waistcoat checking his booking book at right"
+        },
+        {
+          "id": "fr_bistro_noun",
+          "box": [
+            1094,
+            431,
+            175,
+            176
+          ],
+          "text": "vocab",
+          "scene": "small cutaway bistro model with striped awning on a right wall shelf"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "salle"
+    },
+    "cave": {
+      "name": "La cave et le conditionnement · Cellar and Bottling",
+      "image": "restaurant/cave.jpg",
+      "room_id": "R_wine_01",
+      "alt": "An adult cellar team prepares sealed bottles and checks the corking tools below the restaurant. small calm calf resting on straw inside a recessed left stone alcove. large empty green bottle beside an upright boot at left. a large red foil capsule being fitted over a closed bottle neck. clear glass of water resting on a right ledge. sealed wine bottles in an open wooden crate at right. an adult cellar worker inspecting a cork stopper in his hand. single large oak barrel on a low right cradle. large corkscrew on the right foreground workbench",
+      "doors": [
+        {
+          "to": "terroir",
+          "label": "Le terroir et les arômes · Origins and Aromas",
+          "hint": "tall clear sage-green limestone arch with continuous terracotta floor",
+          "hit": [
+            576,
+            170,
+            132,
+            199
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_cave_noun",
+          "box": [
+            43,
+            227,
+            172,
+            82
+          ],
+          "text": "vocab",
+          "scene": "small calm calf resting on straw inside a recessed left stone alcove"
+        },
+        {
+          "id": "fr_bouteille_noun",
+          "box": [
+            21,
+            364,
+            218,
+            290
+          ],
+          "text": "vocab",
+          "scene": "large empty green bottle beside an upright boot at left"
+        },
+        {
+          "id": "fr_capsule_noun",
+          "box": [
+            390,
+            378,
+            46,
+            58
+          ],
+          "text": "vocab",
+          "scene": "a large red foil capsule being fitted over a closed bottle neck"
+        },
+        {
+          "id": "fr_verre_noun",
+          "box": [
+            885,
+            191,
+            53,
+            65
+          ],
+          "text": "vocab",
+          "scene": "clear glass of water resting on a right ledge"
+        },
+        {
+          "id": "fr_vin_noun",
+          "box": [
+            1072,
+            117,
+            196,
+            137
+          ],
+          "text": "vocab",
+          "scene": "sealed wine bottles in an open wooden crate at right"
+        },
+        {
+          "id": "fr_bouchon_noun",
+          "box": [
+            719,
+            275,
+            237,
+            370
+          ],
+          "text": "vocab",
+          "scene": "an adult cellar worker inspecting a cork stopper in his hand"
+        },
+        {
+          "id": "fr_tonneau_noun",
+          "box": [
+            1000,
+            273,
+            270,
+            235
+          ],
+          "text": "vocab",
+          "scene": "single large oak barrel on a low right cradle"
+        },
+        {
+          "id": "fr_tire_bouchon_noun",
+          "box": [
+            976,
+            527,
+            274,
+            111
+          ],
+          "text": "vocab",
+          "scene": "large corkscrew on the right foreground workbench"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "banquet"
+    },
+    "terroir": {
+      "name": "Le terroir et les arômes · Origins and Aromas",
+      "image": "restaurant/terroir.jpg",
+      "room_id": "R_wine_01",
+      "alt": "Adult staff explain vineyard origins and food aromas at a daylight cellar workshop, with no drinking. potted grape vine with purple bunches on the far left. official-looking wine-origin certificate with a simple vineyard map and wax seal at left. a blank brass interpretation plaque on a small wooden stand. cheese and bread samples prepared for a food tasting. detailed terrain model of vineyard rows on a right table. one sealed bottle with a vineyard-origin tag on a right plinth. adult food lover smelling a covered dish he has just opened on the right. sealed cider bottle beside two apples on the right foreground",
+      "doors": [
+        {
+          "to": "reserve",
+          "label": "La réserve de la brasserie · Brasserie Stores",
+          "hint": "tall clear sage-green limestone arch with continuous terracotta floor",
+          "hit": [
+            574,
+            128,
+            145,
+            180
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_vigne_noun",
+          "box": [
+            18,
+            82,
+            218,
+            253
+          ],
+          "text": "vocab",
+          "scene": "potted grape vine with purple bunches on the far left"
+        },
+        {
+          "id": "fr_appellation_noun",
+          "box": [
+            242,
+            143,
+            154,
+            180
+          ],
+          "text": "vocab",
+          "scene": "official-looking wine-origin certificate with a simple vineyard map and wax seal at left"
+        },
+        {
+          "id": "fr_ivresse_noun",
+          "box": [
+            184,
+            421,
+            165,
+            163
+          ],
+          "text": "vocab",
+          "scene": "a blank brass interpretation plaque on a small wooden stand"
+        },
+        {
+          "id": "fr_degustation_noun",
+          "box": [
+            351,
+            509,
+            252,
+            84
+          ],
+          "text": "vocab",
+          "scene": "cheese and bread samples prepared for a food tasting"
+        },
+        {
+          "id": "fr_vignoble_noun",
+          "box": [
+            790,
+            168,
+            294,
+            165
+          ],
+          "text": "vocab",
+          "scene": "detailed terrain model of vineyard rows on a right table"
+        },
+        {
+          "id": "fr_cru_noun",
+          "box": [
+            1108,
+            152,
+            78,
+            154
+          ],
+          "text": "vocab",
+          "scene": "one sealed bottle with a vineyard-origin tag on a right plinth"
+        },
+        {
+          "id": "fr_gourmet_noun",
+          "box": [
+            674,
+            343,
+            353,
+            251
+          ],
+          "text": "vocab",
+          "scene": "adult food lover smelling a covered dish he has just opened on the right"
+        },
+        {
+          "id": "fr_cidre_noun",
+          "box": [
+            1048,
+            399,
+            153,
+            207
+          ],
+          "text": "vocab",
+          "scene": "sealed cider bottle beside two apples on the right foreground"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "cave"
+    },
+    "reserve": {
+      "name": "La réserve de la brasserie · Brasserie Stores",
+      "image": "restaurant/reserve.jpg",
+      "room_id": "R_wine_01_z1",
+      "alt": "Two adult staff check sealed bottles and closed supplies in a brasserie stockroom. sealed clear vodka bottle in a metal ice bucket at left rear. adult gray-mustached server carrying empty brass tankards at left. sealed champagne bottle with foil and wire cage in right rear wall niche. sealed square whisky bottle on right middle counter. a blank brass interpretation plaque on a small wooden stand. sealed squat rum bottle with a ship emblem at right. sealed round brandy bottle with long neck on right foreground table. closed spirits bottle in a locked glass-front cabinet on right",
+      "doors": [
+        {
+          "to": "restaurant",
+          "label": "La cour du restaurant",
+          "hint": "sage-green stair arch with pale stone steps ascending toward bright courtyard and black iron handrail",
+          "hit": [
+            395,
+            112,
+            115,
+            88
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_vodka_noun",
+          "box": [
+            38,
+            232,
+            76,
+            115
+          ],
+          "text": "vocab",
+          "scene": "sealed clear vodka bottle in a metal ice bucket at left rear"
+        },
+        {
+          "id": "fr_brasserie_noun",
+          "box": [
+            122,
+            203,
+            360,
+            514
+          ],
+          "text": "vocab",
+          "scene": "adult gray-mustached server carrying empty brass tankards at left"
+        },
+        {
+          "id": "fr_champagne_noun",
+          "box": [
+            870,
+            56,
+            62,
+            177
+          ],
+          "text": "vocab",
+          "scene": "sealed champagne bottle with foil and wire cage in right rear wall niche"
+        },
+        {
+          "id": "fr_whisky_noun",
+          "box": [
+            870,
+            264,
+            90,
+            119
+          ],
+          "text": "vocab",
+          "scene": "sealed square whisky bottle on right middle counter"
+        },
+        {
+          "id": "fr_cigare_noun",
+          "box": [
+            787,
+            401,
+            149,
+            103
+          ],
+          "text": "vocab",
+          "scene": "a blank brass interpretation plaque on a small wooden stand"
+        },
+        {
+          "id": "fr_rhum_noun",
+          "box": [
+            1104,
+            340,
+            113,
+            135
+          ],
+          "text": "vocab",
+          "scene": "sealed squat rum bottle with a ship emblem at right"
+        },
+        {
+          "id": "fr_cognac_noun",
+          "box": [
+            944,
+            390,
+            151,
+            257
+          ],
+          "text": "vocab",
+          "scene": "sealed round brandy bottle with long neck on right foreground table"
+        },
+        {
+          "id": "fr_alcool_noun",
+          "box": [
+            1055,
+            78,
+            191,
+            258
+          ],
+          "text": "vocab",
+          "scene": "closed spirits bottle in a locked glass-front cabinet on right"
+        }
+      ],
+      "backTo": "restaurant",
+      "oneWay": "A continuous teaching circuit has its arrival behind the viewer and returns physically to the entrance hub.",
+      "arrivalFrom": "terroir"
     }
   }
 }

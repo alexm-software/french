@@ -1,0 +1,20 @@
+{
+ "image": "/workspace/scratch/3764cc994451/french/village/restaurant/terroir.jpg",
+ "room": "terroir",
+ "fail": [],
+ "warn": [
+  "manifest: grid_check (Gate 25) on box_hint: baseline: 4 boxes end within 40px (y 584-624)",
+  "manifest: grid_check (Gate 25) on box_hint: bands: two horizontal bands of box bottoms (306-335 x4, 584-606 x4)",
+  "manifest: grid_check (Gate 25) on box_hint: rows: empty middle between box bottoms 335 and 584 (4 boxes above, 4 below)",
+  "manifest: grid_check (Gate 25) on box_hint: depths: box bottoms only in ['back', 'front']"
+ ],
+ "flag": [
+  "ocr: 'DAS' conf 89 at [800, 451, 52, 21] on gourmet [undeclared]"
+ ],
+ "notes": [
+  "size: 1280x720 ok",
+  "ocr: tesseract eng, tiled, 1 text run(s) flagged for human review (flags never reject)",
+  "labels: 8 items, 1 fixed rects (doors/mapExit/zoom badges/nameplate) checked",
+  "manifest: 8 entries checked"
+ ]
+}

@@ -1,0 +1,12 @@
+precheck /workspace/scratch/3764cc994451/french/village/restaurant/reserve.jpg  room restaurant/reserve
+  ok    size: 1280x720 ok
+  ok    ocr: tesseract eng, tiled, 5 text run(s) flagged for human review (flags never reject)
+  ok    labels: 8 items, 1 fixed rects (doors/mapExit/zoom badges/nameplate) checked
+  ok    manifest: 8 entries checked
+  WARN  manifest: hotspot champagne touches nameplate (--strict)
+  FLAG  ocr: 'VODKA' conf 88 at [63, 279, 24, 9] on vodka [undeclared]
+  FLAG  ocr: 'WHISKY' conf 97 at [887, 336, 53, 14] on whisky [undeclared]
+  FLAG  ocr: 'RHUM' conf 92 at [1133, 403, 44, 15] on rhum [undeclared]
+  FLAG  ocr: '4' conf 95 at [1145, 422, 8, 15] on rhum [DIGIT - can break a count]
+  FLAG  ocr: 'COGNAC' conf 97 at [982, 575, 71, 16] on cognac [undeclared]
+summary: 0 fail, 1 warn, 5 flag  -> ready for the contact-sheet review
