@@ -1,0 +1,168 @@
+{
+  "building": "caserne",
+  "room": "consequences",
+  "coordinate_space": "1280x720-px",
+  "setting": "A respectful French military-history museum gallery",
+  "theme_fit": "The assigned vocabulary is interpreted in one coherent museum exhibit. Five-item rooms reserve enough right-side space for the overwhelmingly masculine rank words.",
+  "scene_situation": "A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les conséquences et la mémoire",
+    "camera": "wide eye-level three-quarter view, 1280x720",
+    "light_from": "tall left windows, neutral daylight",
+    "refs": "village/caserne/uniformes.jpg, attached museum-style reference",
+    "look": "quiet storybook ink-and-gouache museum",
+    "materials": "pale limestone, muted sage pilasters, oak furniture, glass cases",
+    "set_apart": "A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm.",
+    "place": "Les conséquences et la mémoire",
+    "landmark": "a clear central tall limestone arch into the next gallery",
+    "whimsy": "restrained historic architecture; no decorative creatures",
+    "differ": "A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm.",
+    "reference_board": "none"
+  },
+  "siblings": [
+    "service",
+    "officiers",
+    "formations",
+    "conflits",
+    "consequences",
+    "archives"
+  ],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "archives",
+      "where": "[661, 215, 210, 340]",
+      "painted_as": "floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "items": [
+    {
+      "id": "fr_revolte_noun",
+      "word": "révolte",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "revolt; rebellion",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank oak-framed wall plaque",
+      "shown": "a blank oak-framed wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "left",
+      "zone": "left [256, 56, 259, 163]",
+      "depth": "back",
+      "box_hint": [
+        256,
+        56,
+        259,
+        163
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_defaite_noun",
+      "word": "défaite",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "defeat",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank pale-stone framed plaque",
+      "shown": "a blank pale-stone framed plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "left",
+      "zone": "left [305, 229, 237, 140]",
+      "depth": "back",
+      "box_hint": [
+        305,
+        229,
+        237,
+        140
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_destruction_noun",
+      "word": "destruction",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "destruction",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank slate-framed wall plaque",
+      "shown": "a blank slate-framed wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "left",
+      "zone": "left [282, 391, 237, 134]",
+      "depth": "middle",
+      "box_hint": [
+        282,
+        391,
+        237,
+        134
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_combattant_noun",
+      "word": "combattant",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "combatant; in ancien combattant, veteran",
+      "hook": "COMBATANT; IN ANCIEN COMBATTANT, VETERAN: plain depiction of a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait.",
+      "hook_object": "a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait",
+      "shown": "a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [1003, 20, 251, 320]",
+      "depth": "back",
+      "box_hint": [
+        1003,
+        20,
+        251,
+        320
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_tir_noun",
+      "word": "tir",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "firing; a shot",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank brass wall plaque",
+      "shown": "a blank brass wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "right",
+      "zone": "right [1009, 385, 241, 110]",
+      "depth": "middle",
+      "box_hint": [
+        1009,
+        385,
+        241,
+        110
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_combattant_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, wide eye-level three-quarter view, 1280x720, of caserne / Les conséquences et la mémoire.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/caserne/uniformes.jpg, attached museum-style reference, this quiet storybook ink-and-gouache museum, and materials pale limestone, muted sage pilasters, oak furniture, glass cases. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from tall left windows, neutral daylight; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm..\n\nSETTING: Les conséquences et la mémoire; landmark a clear central tall limestone arch into the next gallery; architectural whimsy restrained historic architecture; no decorative creatures. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm.. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_combattant_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: service; officiers; formations; conflits; consequences; archives.\n\nITEMS: exactly 5 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. révolte = revolt; rebellion: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank oak-framed wall plaque; shown as a blank oak-framed wall plaque; pose/action mounted or supported as a museum exhibit; count -; at left, left [256, 56, 259, 163], back; interacts with the shared museum interpretation display; planned pixel envelope [256, 56, 259, 163].\n2. défaite = defeat: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank pale-stone framed plaque; shown as a blank pale-stone framed plaque; pose/action mounted or supported as a museum exhibit; count -; at left, left [305, 229, 237, 140], back; interacts with the shared museum interpretation display; planned pixel envelope [305, 229, 237, 140].\n3. destruction = destruction: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank slate-framed wall plaque; shown as a blank slate-framed wall plaque; pose/action mounted or supported as a museum exhibit; count -; at left, left [282, 391, 237, 134], middle; interacts with the shared museum interpretation display; planned pixel envelope [282, 391, 237, 134].\n4. combattant = combatant; in ancien combattant, veteran: chosen hook COMBATANT; IN ANCIEN COMBATTANT, VETERAN: plain depiction of a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait.; literal cue a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait; shown as a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait; pose/action mounted or supported as a museum exhibit; count -; at right, right [1003, 20, 251, 320], back; interacts with the shared museum interpretation display; planned pixel envelope [1003, 20, 251, 320].\n5. tir = firing; a shot: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank brass wall plaque; shown as a blank brass wall plaque; pose/action mounted or supported as a museum exhibit; count -; at right, right [1009, 385, 241, 110], middle; interacts with the shared museum interpretation display; planned pixel envelope [1009, 385, 241, 110].\nExact visible counts: none. Reference board: none. Plaque-only words: révolte, défaite, destruction, tir, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to archives, [661, 215, 210, 340], painted as floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor. Clear floor-level thresholds at human scale; no props in openings. Beyond: archives. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths. Shared plan: conflits-to-consequences (one-way arrival): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: arrival behind the viewer. Other side: forward gallery opening, arriving at Comprendre les conflits. Match reference caserne/conflits.jpg. consequences-to-archives (painted passage): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: forward gallery opening. Other side: arrival behind the viewer, arriving at Les archives et les distinctions. Match reference caserne/archives.jpg.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text none. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs none so far. This room differs by A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm..\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}

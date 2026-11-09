@@ -7812,7 +7812,7 @@
       "id": "R_military_02",
       "name": "Military history hall [middle paths 1] · sergeant, ensign (officer), commander",
       "type": "theme",
-      "setting": "Military history hall inside Monument aux morts & caserne (military history).",
+      "setting": "Connected respectful museum galleries inside Musée d’histoire militaire.",
       "kind": "full",
       "sector_id": "S06_townhall",
       "building_id": "B16_caserne",
@@ -7826,7 +7826,9 @@
         "R_police_02"
       ],
       "conversation_ids": [
-        "C_R_military_02"
+        "C_R_military_02",
+        "C_military_officiers",
+        "C_military_formations"
       ],
       "base_room": "R_military",
       "words": [
@@ -7859,14 +7861,11 @@
       "id": "R_military_03",
       "name": "Military history hall [middle paths 2] · attack",
       "type": "theme",
-      "setting": "Military history hall inside Monument aux morts & caserne (military history).",
+      "setting": "Connected respectful museum galleries inside Musée d’histoire militaire.",
       "kind": "full",
       "sector_id": "S06_townhall",
       "building_id": "B16_caserne",
       "links_back_to_sector": "S06_townhall",
-      "zoom_ids": [
-        "R_military_03_z1"
-      ],
       "cefr_band": "B2",
       "mean_level": 3.81,
       "related_rooms": [
@@ -7876,7 +7875,8 @@
         "R_text_crime_01"
       ],
       "conversation_ids": [
-        "C_R_military_03"
+        "C_R_military_03",
+        "C_military_consequences"
       ],
       "base_room": "R_military",
       "words": [
@@ -7893,7 +7893,7 @@
         "fr_tir_noun"
       ],
       "item_count": 11,
-      "total_items_incl_zooms": 17,
+      "total_items_incl_zooms": 11,
       "side_counts": {
         "left": 6,
         "right": 5
@@ -33827,20 +33827,13 @@
     },
     {
       "id": "R_military_03_z1",
-      "name": "Military history hall [middle paths 2] — clerk desk (center)",
-      "type": "zoom",
-      "setting": "A clerk desk on the back wall of 'Military history hall [second floor 2]' (Monument aux morts & caserne (military history)); zoom in to see its items.",
-      "kind": "zoom",
+      "name": "Military history — archives and distinctions",
+      "type": "theme",
+      "setting": "Connected respectful museum galleries inside Musée d’histoire militaire.",
+      "kind": "full",
       "sector_id": "S06_townhall",
       "building_id": "B16_caserne",
       "links_back_to_sector": "S06_townhall",
-      "parent_room_id": "R_military_03",
-      "furniture": "clerk desk",
-      "sign": "Clerk desk: attack, invasion",
-      "position": {
-        "side": "center",
-        "wall": "back wall"
-      },
       "cefr_band": "B2",
       "mean_level": 4.0,
       "related_rooms": [
@@ -33859,7 +33852,10 @@
       "side_counts": {
         "left": 4,
         "right": 2
-      }
+      },
+      "conversation_ids": [
+        "C_military_archives"
+      ]
     },
     {
       "id": "R_doctor_01_z1",
