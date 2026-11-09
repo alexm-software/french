@@ -39,6 +39,48 @@
       "level": "ground floor",
       "landmark": "Le vestibule du musée · Military History Entrance",
       "camera": "from inside the place toward its visible passage"
+    },
+    "service": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "La vie de caserne",
+      "camera": "from the arrival threshold toward the next gallery arch"
+    },
+    "officiers": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "Les officiers et la marine",
+      "camera": "from the arrival threshold toward the next gallery arch"
+    },
+    "formations": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "Les corps et les traditions",
+      "camera": "from the arrival threshold toward the next gallery arch"
+    },
+    "conflits": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "Comprendre les conflits",
+      "camera": "from the arrival threshold toward the next gallery arch"
+    },
+    "consequences": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "Les conséquences et la mémoire",
+      "camera": "from the arrival threshold toward the next gallery arch"
+    },
+    "archives": {
+      "kind": "room",
+      "within": "caserne",
+      "level": "ground floor",
+      "landmark": "Les archives et les distinctions",
+      "camera": "from the arrival threshold toward the next gallery arch"
     }
   },
   "passages": {
@@ -76,23 +118,6 @@
         }
       ]
     },
-    "uniformes-to-galerie_fond": {
-      "kind": "arch",
-      "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
-      "one_way_reason": "A deliberate one-way museum interpretation circuit proceeds from the entrance through uniforms and the far galleries, returning to the vestibule.",
-      "ends": [
-        {
-          "place": "uniformes",
-          "where": "forward gallery opening",
-          "arrival": "The entrance hall: people and service"
-        },
-        {
-          "place": "galerie_fond",
-          "where": "arrival from the previous gallery",
-          "arrival": "The far hall: historical terms"
-        }
-      ]
-    },
     "galerie_fond-to-recrutement": {
       "kind": "arch",
       "appearance": "Tall limestone arch with muted sage pilasters linking the museum galleries",
@@ -124,6 +149,125 @@
           "place": "caserne",
           "where": "arrival from the previous gallery",
           "arrival": "Le vestibule du musée · Military History Entrance"
+        }
+      ]
+    },
+    "uniformes-to-service": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "uniformes",
+          "where": "forward gallery opening",
+          "arrival": "The entrance hall: people and service"
+        },
+        {
+          "place": "service",
+          "where": "arrival behind the viewer",
+          "arrival": "La vie de caserne"
+        }
+      ]
+    },
+    "service-to-officiers": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "service",
+          "where": "forward gallery opening",
+          "arrival": "La vie de caserne"
+        },
+        {
+          "place": "officiers",
+          "where": "arrival behind the viewer",
+          "arrival": "Les officiers et la marine"
+        }
+      ]
+    },
+    "officiers-to-formations": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "officiers",
+          "where": "forward gallery opening",
+          "arrival": "Les officiers et la marine"
+        },
+        {
+          "place": "formations",
+          "where": "arrival behind the viewer",
+          "arrival": "Les corps et les traditions"
+        }
+      ]
+    },
+    "formations-to-conflits": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "formations",
+          "where": "forward gallery opening",
+          "arrival": "Les corps et les traditions"
+        },
+        {
+          "place": "conflits",
+          "where": "arrival behind the viewer",
+          "arrival": "Comprendre les conflits"
+        }
+      ]
+    },
+    "conflits-to-consequences": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "conflits",
+          "where": "forward gallery opening",
+          "arrival": "Comprendre les conflits"
+        },
+        {
+          "place": "consequences",
+          "where": "arrival behind the viewer",
+          "arrival": "Les conséquences et la mémoire"
+        }
+      ]
+    },
+    "consequences-to-archives": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "consequences",
+          "where": "forward gallery opening",
+          "arrival": "Les conséquences et la mémoire"
+        },
+        {
+          "place": "archives",
+          "where": "arrival behind the viewer",
+          "arrival": "Les archives et les distinctions"
+        }
+      ]
+    },
+    "archives-to-galerie_fond": {
+      "kind": "arch",
+      "appearance": "Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery",
+      "one_way_reason": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "ends": [
+        {
+          "place": "archives",
+          "where": "forward gallery opening",
+          "arrival": "Les archives et les distinctions"
+        },
+        {
+          "place": "galerie_fond",
+          "where": "arrival behind the viewer",
+          "arrival": "The far hall: historical terms"
         }
       ]
     }

@@ -19,6 +19,30 @@
       "short": "The entrance hall: people and service"
     },
     {
+      "key": "service",
+      "short": "La vie de caserne"
+    },
+    {
+      "key": "officiers",
+      "short": "Les officiers et la marine"
+    },
+    {
+      "key": "formations",
+      "short": "Les corps et les traditions"
+    },
+    {
+      "key": "conflits",
+      "short": "Comprendre les conflits"
+    },
+    {
+      "key": "consequences",
+      "short": "Les conséquences et la mémoire"
+    },
+    {
+      "key": "archives",
+      "short": "Les archives et les distinctions"
+    },
+    {
       "key": "galerie_fond",
       "short": "The far hall: historical terms"
     },
@@ -71,6 +95,69 @@
         "fr_recrutement_noun",
         "fr_conscrit_noun",
         "fr_recruteur_noun"
+      ]
+    },
+    "service": {
+      "vocabRoom": "R_military_02",
+      "only": [
+        "fr_caserne_noun",
+        "fr_permission_noun",
+        "fr_major_noun",
+        "fr_adjudant_noun",
+        "fr_sergent_noun",
+        "fr_uniforme_noun"
+      ]
+    },
+    "officiers": {
+      "vocabRoom": "R_military_02",
+      "only": [
+        "fr_marine_noun",
+        "fr_commandement_noun",
+        "fr_lieutenant_noun",
+        "fr_commandant_noun",
+        "fr_enseigne_noun_m"
+      ]
+    },
+    "formations": {
+      "vocabRoom": "R_military_02",
+      "only": [
+        "fr_cavalerie_noun",
+        "fr_marechal_noun",
+        "fr_regiment_noun",
+        "fr_brigadier_noun",
+        "fr_cadet_noun"
+      ]
+    },
+    "conflits": {
+      "vocabRoom": "R_military_03",
+      "only": [
+        "fr_attaque_noun",
+        "fr_alliance_noun",
+        "fr_tranchee_noun",
+        "fr_conflit_noun",
+        "fr_bataillon_noun",
+        "fr_abandon_noun"
+      ]
+    },
+    "consequences": {
+      "vocabRoom": "R_military_03",
+      "only": [
+        "fr_revolte_noun",
+        "fr_defaite_noun",
+        "fr_destruction_noun",
+        "fr_combattant_noun",
+        "fr_tir_noun"
+      ]
+    },
+    "archives": {
+      "vocabRoom": "R_military_03_z1",
+      "only": [
+        "fr_legion_noun",
+        "fr_elite_noun",
+        "fr_invasion_noun",
+        "fr_atteinte_noun",
+        "fr_attentat_noun",
+        "fr_gagnant_noun"
       ]
     }
   },
@@ -202,8 +289,8 @@
       "alt": "Military history — entrance hall Three complete guard uniform mannequins as one group; Open pay ledger and grouped coins; Blank upper-left plaque; Complete group of small unarmed uniform figures; Laurel wreath on velvet; Full soldier uniform mannequin and plinth; Blank right-hand plaque",
       "doors": [
         {
-          "to": "galerie_fond",
-          "label": "La galerie du fond",
+          "to": "service",
+          "label": "La vie de caserne",
           "hint": "Continue through the stone arch along the museum circuit",
           "hit": [
             650,
@@ -388,7 +475,7 @@
           ]
         }
       ],
-      "arrivalFrom": "uniformes",
+      "arrivalFrom": "archives",
       "oneWay": "Museum interpretation circuit; continue through the next gallery to return to the vestibule."
     },
     "recrutement": {
@@ -493,6 +580,520 @@
       ],
       "zooms": [],
       "items": []
+    },
+    "service": {
+      "name": "La vie de caserne",
+      "image": "caserne/service.jpg",
+      "room_id": "R_military_02",
+      "alt": "An airy quartermaster-office diorama: a leave pass and a barracks model explain everyday service; uniform exhibits and portraits show the staff. a cutaway scale model of an intact barracks courtyard and sleeping wing; an open military leave pass with a small travel suitcase, no lettering; a female senior NCO mannequin in an olive uniform, hands at her sides; a framed historical portrait of a mustached warrant officer with a clipboard; a seated historical sergeant mannequin in a red uniform coat, hands resting separately on knees; an empty complete navy-blue uniform jacket and trousers mounted on one tailor form",
+      "arrivalFrom": "uniformes",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "officiers",
+          "label": "Les officiers et la marine",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            672,
+            150,
+            174,
+            310
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_caserne_noun",
+          "box": [
+            23,
+            194,
+            405,
+            195
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_permission_noun",
+          "box": [
+            20,
+            422,
+            389,
+            170
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_major_noun",
+          "box": [
+            429,
+            75,
+            186,
+            612
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_adjudant_noun",
+          "box": [
+            946,
+            20,
+            142,
+            223
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_sergent_noun",
+          "box": [
+            889,
+            245,
+            219,
+            421
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_uniforme_noun",
+          "box": [
+            1116,
+            134,
+            128,
+            442
+          ],
+          "text": "vocab"
+        }
+      ]
+    },
+    "officiers": {
+      "name": "Les officiers et la marine",
+      "image": "caserne/officiers.jpg",
+      "room_id": "R_military_02",
+      "alt": "A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage. a large glass-cased historical navy sailing-ship model on a wooden base; a command organization chart made of blank cards linked by cords on a framed board; an oval framed portrait of a young historical lieutenant in a high-collared blue coat; a standing historical field-officer mannequin in a dark coat with gold trim; a seated naval ensign mannequin at a small writing desk, full torso and both hands visible",
+      "arrivalFrom": "service",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "formations",
+          "label": "Les corps et les traditions",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            550,
+            200,
+            150,
+            300
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_marine_noun",
+          "box": [
+            52,
+            143,
+            419,
+            558
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_commandement_noun",
+          "box": [
+            959,
+            64,
+            251,
+            166
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_lieutenant_noun",
+          "box": [
+            824,
+            69,
+            127,
+            170
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_commandant_noun",
+          "box": [
+            1080,
+            244,
+            150,
+            407
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_enseigne_noun_m",
+          "box": [
+            750,
+            316,
+            312,
+            330
+          ],
+          "text": "vocab"
+        }
+      ]
+    },
+    "formations": {
+      "name": "Les corps et les traditions",
+      "image": "caserne/formations.jpg",
+      "room_id": "R_military_02",
+      "alt": "A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above. a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle; a framed painted portrait of a historical marshal holding a blue ceremonial baton; a glass-cased scale model of a regiment parading unarmed beneath its single plain flag; a historical cavalry brigadier uniform mannequin beside a saddle, empty hands; a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame",
+      "arrivalFrom": "officiers",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "conflits",
+          "label": "Comprendre les conflits",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            514,
+            260,
+            160,
+            285
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_cavalerie_noun",
+          "box": [
+            113,
+            363,
+            300,
+            234
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_marechal_noun",
+          "box": [
+            792,
+            171,
+            166,
+            196
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_regiment_noun",
+          "box": [
+            777,
+            400,
+            207,
+            178
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_brigadier_noun",
+          "box": [
+            993,
+            346,
+            178,
+            230
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_cadet_noun",
+          "box": [
+            990,
+            187,
+            122,
+            151
+          ],
+          "text": "vocab"
+        }
+      ]
+    },
+    "conflits": {
+      "name": "Comprendre les conflits",
+      "image": "caserne/conflits.jpg",
+      "room_id": "R_military_03",
+      "alt": "A quiet interpretation gallery distinguishes an alliance, a military unit and a trench model from sober wall-text terms. No combat scenes. a blank pale limestone wall plaque; two linked ribbon seals on a single open treaty document displayed in glass; a glass-cased architectural cutaway model of an empty trench, no people or weapons; a blank slate-framed wall plaque; a glass-cased model of a battalion standing in ceremonial formation, unarmed; a blank oak-framed wall plaque",
+      "arrivalFrom": "formations",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "consequences",
+          "label": "Les conséquences et la mémoire",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            667,
+            200,
+            160,
+            277
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_attaque_noun",
+          "box": [
+            238,
+            66,
+            290,
+            146
+          ],
+          "text": "vocab",
+          "labelAt": [
+            383.0,
+            125.0
+          ]
+        },
+        {
+          "id": "fr_alliance_noun",
+          "box": [
+            243,
+            250,
+            338,
+            174
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_tranchee_noun",
+          "box": [
+            26,
+            435,
+            479,
+            219
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_conflit_noun",
+          "box": [
+            970,
+            65,
+            274,
+            148
+          ],
+          "text": "vocab",
+          "labelAt": [
+            1107.0,
+            125.0
+          ]
+        },
+        {
+          "id": "fr_bataillon_noun",
+          "box": [
+            923,
+            252,
+            326,
+            153
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_abandon_noun",
+          "box": [
+            1000,
+            473,
+            249,
+            158
+          ],
+          "text": "vocab",
+          "labelAt": [
+            1124.5,
+            538.0
+          ]
+        }
+      ]
+    },
+    "consequences": {
+      "name": "Les conséquences et la mémoire",
+      "image": "caserne/consequences.jpg",
+      "room_id": "R_military_03",
+      "alt": "A peaceful memorial reading gallery uses five sober exhibits, with pale framed wall texts and an unarmed veteran portrait. No weapons or scenes of harm. a blank oak-framed wall plaque; a blank pale-stone framed plaque; a blank slate-framed wall plaque; a framed portrait of an elderly unarmed veteran wearing a modest medal, hands outside the portrait; a blank brass wall plaque",
+      "arrivalFrom": "conflits",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "archives",
+          "label": "Les archives et les distinctions",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            661,
+            215,
+            210,
+            340
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_revolte_noun",
+          "box": [
+            256,
+            56,
+            259,
+            163
+          ],
+          "text": "vocab",
+          "labelAt": [
+            385.5,
+            123.5
+          ]
+        },
+        {
+          "id": "fr_defaite_noun",
+          "box": [
+            305,
+            229,
+            237,
+            140
+          ],
+          "text": "vocab",
+          "labelAt": [
+            423.5,
+            285.0
+          ]
+        },
+        {
+          "id": "fr_destruction_noun",
+          "box": [
+            282,
+            391,
+            237,
+            134
+          ],
+          "text": "vocab",
+          "labelAt": [
+            400.5,
+            444.0
+          ]
+        },
+        {
+          "id": "fr_combattant_noun",
+          "box": [
+            1003,
+            20,
+            251,
+            320
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_tir_noun",
+          "box": [
+            1009,
+            385,
+            241,
+            110
+          ],
+          "text": "vocab",
+          "labelAt": [
+            1129.5,
+            426.0
+          ]
+        }
+      ]
+    },
+    "archives": {
+      "name": "Les archives et les distinctions",
+      "image": "caserne/archives.jpg",
+      "room_id": "R_military_03_z1",
+      "alt": "An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom. a historical Roman legion standard mounted on the wall by two iron collars; a glass-cased special-selection badge resting on blue velvet; a blank pale stone wall plaque; a blank oak-framed wall plaque; a blank brass wall plaque; a museum laurel trophy on a marble base beside a closed prize certificate",
+      "arrivalFrom": "consequences",
+      "oneWay": "Continue along the museum interpretation circuit; the route returns through the far galleries to the vestibule.",
+      "doors": [
+        {
+          "to": "galerie_fond",
+          "label": "La galerie du fond",
+          "hint": "Continue through the tall limestone arch with sage pilasters",
+          "hit": [
+            633,
+            175,
+            190,
+            340
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_legion_noun",
+          "box": [
+            266,
+            58,
+            119,
+            253
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_elite_noun",
+          "box": [
+            368,
+            315,
+            206,
+            173
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_invasion_noun",
+          "box": [
+            190,
+            362,
+            166,
+            110
+          ],
+          "text": "vocab",
+          "labelAt": [
+            273.0,
+            403.0
+          ]
+        },
+        {
+          "id": "fr_atteinte_noun",
+          "box": [
+            236,
+            515,
+            257,
+            118
+          ],
+          "text": "vocab",
+          "labelAt": [
+            364.5,
+            560.0
+          ]
+        },
+        {
+          "id": "fr_attentat_noun",
+          "box": [
+            974,
+            118,
+            263,
+            140
+          ],
+          "text": "vocab",
+          "labelAt": [
+            1105.5,
+            174.0
+          ]
+        },
+        {
+          "id": "fr_gagnant_noun",
+          "box": [
+            909,
+            314,
+            347,
+            187
+          ],
+          "text": "vocab"
+        }
+      ]
     }
   }
 }

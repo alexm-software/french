@@ -1,0 +1,205 @@
+{
+  "building": "caserne",
+  "room": "archives",
+  "coordinate_space": "1280x720-px",
+  "setting": "A respectful French military-history museum gallery",
+  "theme_fit": "The assigned vocabulary is interpreted in one coherent museum exhibit. Five-item rooms reserve enough right-side space for the overwhelmingly masculine rank words.",
+  "scene_situation": "An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les archives et les distinctions",
+    "camera": "wide eye-level three-quarter view, 1280x720",
+    "light_from": "tall left windows, neutral daylight",
+    "refs": "village/caserne/uniformes.jpg, attached museum-style reference",
+    "look": "quiet storybook ink-and-gouache museum",
+    "materials": "pale limestone, muted sage pilasters, oak furniture, glass cases",
+    "set_apart": "An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom.",
+    "place": "Les archives et les distinctions",
+    "landmark": "a clear central tall limestone arch into the next gallery",
+    "whimsy": "restrained historic architecture; no decorative creatures",
+    "differ": "An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom.",
+    "reference_board": "none"
+  },
+  "siblings": [
+    "service",
+    "officiers",
+    "formations",
+    "conflits",
+    "consequences",
+    "archives"
+  ],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "galerie_fond",
+      "where": "[633, 175, 190, 340]",
+      "painted_as": "floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "items": [
+    {
+      "id": "fr_legion_noun",
+      "word": "légion",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "legion",
+      "hook": "LEGION: plain depiction of a historical Roman legion standard attached to the wall by two visible iron mounting collars.",
+      "hook_object": "a historical Roman legion standard attached to the wall by two visible iron mounting collars",
+      "shown": "a historical Roman legion standard attached to the wall by two visible iron mounting collars",
+      "pose_action": "the pole is held against the wall by two iron collars",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "[266, 58, 119, 253]",
+      "depth": "back",
+      "box_hint": [
+        266,
+        58,
+        119,
+        253
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_elite_noun",
+      "word": "élite",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "elite; a select highly trained group",
+      "hook": "ELITE; A SELECT HIGHLY TRAINED GROUP: plain depiction of a glass-cased special-selection badge resting on blue velvet.",
+      "hook_object": "a glass-cased special-selection badge resting on blue velvet",
+      "shown": "a glass-cased special-selection badge resting on blue velvet",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left [368, 315, 206, 173]",
+      "depth": "middle",
+      "box_hint": [
+        368,
+        315,
+        206,
+        173
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_invasion_noun",
+      "word": "invasion",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "invasion",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank pale stone wall plaque",
+      "shown": "a blank pale stone wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "left",
+      "zone": "left [190, 362, 166, 110]",
+      "depth": "middle",
+      "box_hint": [
+        190,
+        362,
+        166,
+        110
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_atteinte_noun",
+      "word": "atteinte",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "harm or infringement, especially atteinte à",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank oak-framed wall plaque",
+      "shown": "a blank oak-framed wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "left",
+      "zone": "left [236, 515, 257, 118]",
+      "depth": "front",
+      "box_hint": [
+        236,
+        515,
+        257,
+        118
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_attentat_noun",
+      "word": "attentat",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "violent attack; bombing or assassination attempt",
+      "hook": "TEXT ONLY: a sober blank museum plaque presents this historical term.",
+      "hook_object": "a blank brass wall plaque",
+      "shown": "a blank brass wall plaque",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "plaque",
+      "side": "right",
+      "zone": "right [974, 118, 263, 140]",
+      "depth": "back",
+      "box_hint": [
+        974,
+        118,
+        263,
+        140
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_gagnant_noun",
+      "word": "gagnant",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "winner; victor",
+      "hook": "WINNER; VICTOR: plain depiction of a museum laurel trophy on a marble base beside a closed prize certificate.",
+      "hook_object": "a museum laurel trophy on a marble base beside a closed prize certificate",
+      "shown": "a museum laurel trophy on a marble base beside a closed prize certificate",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [909, 314, 347, 187]",
+      "depth": "middle",
+      "box_hint": [
+        909,
+        314,
+        347,
+        187
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_legion_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_elite_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_gagnant_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, wide eye-level three-quarter view, 1280x720, of caserne / Les archives et les distinctions.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/caserne/uniformes.jpg, attached museum-style reference, this quiet storybook ink-and-gouache museum, and materials pale limestone, muted sage pilasters, oak furniture, glass cases. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from tall left windows, neutral daylight; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom..\n\nSETTING: Les archives et les distinctions; landmark a clear central tall limestone arch into the next gallery; architectural whimsy restrained historic architecture; no decorative creatures. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom.. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_legion_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_elite_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_gagnant_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: service; officiers; formations; conflits; consequences; archives.\n\nITEMS: exactly 6 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. légion = legion: chosen hook LEGION: plain depiction of a historical Roman legion standard attached to the wall by two visible iron mounting collars.; literal cue a historical Roman legion standard attached to the wall by two visible iron mounting collars; shown as a historical Roman legion standard attached to the wall by two visible iron mounting collars; pose/action the pole is held against the wall by two iron collars; count -; at left, [266, 58, 119, 253], back; interacts with the shared museum interpretation display; planned pixel envelope [266, 58, 119, 253].\n2. élite = elite; a select highly trained group: chosen hook ELITE; A SELECT HIGHLY TRAINED GROUP: plain depiction of a glass-cased special-selection badge resting on blue velvet.; literal cue a glass-cased special-selection badge resting on blue velvet; shown as a glass-cased special-selection badge resting on blue velvet; pose/action mounted or supported as a museum exhibit; count -; at left, left [368, 315, 206, 173], middle; interacts with the shared museum interpretation display; planned pixel envelope [368, 315, 206, 173].\n3. invasion = invasion: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank pale stone wall plaque; shown as a blank pale stone wall plaque; pose/action mounted or supported as a museum exhibit; count -; at left, left [190, 362, 166, 110], middle; interacts with the shared museum interpretation display; planned pixel envelope [190, 362, 166, 110].\n4. atteinte = harm or infringement, especially atteinte à: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank oak-framed wall plaque; shown as a blank oak-framed wall plaque; pose/action mounted or supported as a museum exhibit; count -; at left, left [236, 515, 257, 118], front; interacts with the shared museum interpretation display; planned pixel envelope [236, 515, 257, 118].\n5. attentat = violent attack; bombing or assassination attempt: chosen hook TEXT ONLY: a sober blank museum plaque presents this historical term.; literal cue a blank brass wall plaque; shown as a blank brass wall plaque; pose/action mounted or supported as a museum exhibit; count -; at right, right [974, 118, 263, 140], back; interacts with the shared museum interpretation display; planned pixel envelope [974, 118, 263, 140].\n6. gagnant = winner; victor: chosen hook WINNER; VICTOR: plain depiction of a museum laurel trophy on a marble base beside a closed prize certificate.; literal cue a museum laurel trophy on a marble base beside a closed prize certificate; shown as a museum laurel trophy on a marble base beside a closed prize certificate; pose/action mounted or supported as a museum exhibit; count -; at right, right [909, 314, 347, 187], middle; interacts with the shared museum interpretation display; planned pixel envelope [909, 314, 347, 187].\nExact visible counts: none. Reference board: none. Plaque-only words: invasion, atteinte, attentat, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to galerie_fond, [633, 175, 190, 340], painted as floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor. Clear floor-level thresholds at human scale; no props in openings. Beyond: galerie_fond. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths. Shared plan: consequences-to-archives (one-way arrival): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: arrival behind the viewer. Other side: forward gallery opening, arriving at Les conséquences et la mémoire. Match reference caserne/consequences.jpg. archives-to-galerie_fond (painted passage): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: forward gallery opening. Other side: arrival behind the viewer, arriving at The far hall: historical terms. Match reference caserne/galerie_fond.jpg.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text none. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs none so far. This room differs by An archival gallery presents military distinctions and historical vocabulary through preserved insignia, a trophy and sober text plaques. It is a full gallery, replacing the unbuilt generic desk zoom..\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}

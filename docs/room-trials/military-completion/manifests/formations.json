@@ -1,0 +1,196 @@
+{
+  "building": "caserne",
+  "room": "formations",
+  "coordinate_space": "1280x720-px",
+  "setting": "A respectful French military-history museum gallery",
+  "theme_fit": "The assigned vocabulary is interpreted in one coherent museum exhibit. Five-item rooms reserve enough right-side space for the overwhelmingly masculine rank words.",
+  "scene_situation": "A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les corps et les traditions",
+    "camera": "wide eye-level three-quarter view, 1280x720",
+    "light_from": "tall left windows, neutral daylight",
+    "refs": "village/caserne/uniformes.jpg, attached museum-style reference",
+    "look": "quiet storybook ink-and-gouache museum",
+    "materials": "pale limestone, muted sage pilasters, oak furniture, glass cases",
+    "set_apart": "A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above.",
+    "place": "Les corps et les traditions",
+    "landmark": "a clear central tall limestone arch into the next gallery",
+    "whimsy": "restrained historic architecture; no decorative creatures",
+    "differ": "A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above.",
+    "reference_board": "none"
+  },
+  "siblings": [
+    "service",
+    "officiers",
+    "formations",
+    "conflits",
+    "consequences",
+    "archives"
+  ],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "conflits",
+      "where": "[514, 260, 160, 285]",
+      "painted_as": "floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "items": [
+    {
+      "id": "fr_cavalerie_noun",
+      "word": "cavalerie",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "cavalry",
+      "hook": "CAVALRY: plain depiction of a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle.",
+      "hook_object": "a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle",
+      "shown": "a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": 3,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left [113, 363, 300, 234]",
+      "depth": "front",
+      "box_hint": [
+        113,
+        363,
+        300,
+        234
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_marechal_noun",
+      "word": "maréchal",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "marshal; in France, an honorary dignity",
+      "hook": "MARSHAL; IN FRANCE, AN HONORARY DIGNITY: plain depiction of a framed painted portrait of a historical marshal holding a blue ceremonial baton.",
+      "hook_object": "a framed painted portrait of a historical marshal holding a blue ceremonial baton",
+      "shown": "a framed painted portrait of a historical marshal holding a blue ceremonial baton",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [792, 171, 166, 196]",
+      "depth": "back",
+      "box_hint": [
+        792,
+        171,
+        166,
+        196
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_regiment_noun",
+      "word": "régiment",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "regiment",
+      "hook": "REGIMENT: plain depiction of a glass-cased scale model of a regiment parading unarmed beneath its single plain flag.",
+      "hook_object": "a glass-cased scale model of a regiment parading unarmed beneath its single plain flag",
+      "shown": "a glass-cased scale model of a regiment parading unarmed beneath its single plain flag",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": 6,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [777, 400, 207, 178]",
+      "depth": "middle",
+      "box_hint": [
+        777,
+        400,
+        207,
+        178
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_brigadier_noun",
+      "word": "brigadier",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "brigadier: cavalry equivalent of corporal",
+      "hook": "BRIGADIER: CAVALRY EQUIVALENT OF CORPORAL: plain depiction of a historical cavalry brigadier uniform mannequin beside a saddle, empty hands.",
+      "hook_object": "a historical cavalry brigadier uniform mannequin beside a saddle, empty hands",
+      "shown": "a historical cavalry brigadier uniform mannequin beside a saddle, empty hands",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [993, 346, 178, 230]",
+      "depth": "middle",
+      "box_hint": [
+        993,
+        346,
+        178,
+        230
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_cadet_noun",
+      "word": "cadet",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "officer cadet",
+      "hook": "OFFICER CADET: plain depiction of a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame.",
+      "hook_object": "a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame",
+      "shown": "a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [990, 187, 122, 151]",
+      "depth": "back",
+      "box_hint": [
+        990,
+        187,
+        122,
+        151
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_cavalerie_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_marechal_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_regiment_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_brigadier_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_cadet_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, wide eye-level three-quarter view, 1280x720, of caserne / Les corps et les traditions.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/caserne/uniformes.jpg, attached museum-style reference, this quiet storybook ink-and-gouache museum, and materials pale limestone, muted sage pilasters, oak furniture, glass cases. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from tall left windows, neutral daylight; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above..\n\nSETTING: Les corps et les traditions; landmark a clear central tall limestone arch into the next gallery; architectural whimsy restrained historic architecture; no decorative creatures. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above.. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_cavalerie_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_marechal_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_regiment_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_brigadier_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_cadet_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: service; officiers; formations; conflits; consequences; archives.\n\nITEMS: exactly 5 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. cavalerie = cavalry: chosen hook CAVALRY: plain depiction of a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle.; literal cue a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle; shown as a large glass-cased scale model of unarmed mounted cavalry at a walk, no battle; pose/action mounted or supported as a museum exhibit; count 3; at left, left [113, 363, 300, 234], front; interacts with the shared museum interpretation display; planned pixel envelope [113, 363, 300, 234].\n2. maréchal = marshal; in France, an honorary dignity: chosen hook MARSHAL; IN FRANCE, AN HONORARY DIGNITY: plain depiction of a framed painted portrait of a historical marshal holding a blue ceremonial baton.; literal cue a framed painted portrait of a historical marshal holding a blue ceremonial baton; shown as a framed painted portrait of a historical marshal holding a blue ceremonial baton; pose/action mounted or supported as a museum exhibit; count -; at right, right [792, 171, 166, 196], back; interacts with the shared museum interpretation display; planned pixel envelope [792, 171, 166, 196].\n3. régiment = regiment: chosen hook REGIMENT: plain depiction of a glass-cased scale model of a regiment parading unarmed beneath its single plain flag.; literal cue a glass-cased scale model of a regiment parading unarmed beneath its single plain flag; shown as a glass-cased scale model of a regiment parading unarmed beneath its single plain flag; pose/action mounted or supported as a museum exhibit; count 6; at right, right [777, 400, 207, 178], middle; interacts with the shared museum interpretation display; planned pixel envelope [777, 400, 207, 178].\n4. brigadier = brigadier: cavalry equivalent of corporal: chosen hook BRIGADIER: CAVALRY EQUIVALENT OF CORPORAL: plain depiction of a historical cavalry brigadier uniform mannequin beside a saddle, empty hands.; literal cue a historical cavalry brigadier uniform mannequin beside a saddle, empty hands; shown as a historical cavalry brigadier uniform mannequin beside a saddle, empty hands; pose/action mounted or supported as a museum exhibit; count -; at right, right [993, 346, 178, 230], middle; interacts with the shared museum interpretation display; planned pixel envelope [993, 346, 178, 230].\n5. cadet = officer cadet: chosen hook OFFICER CADET: plain depiction of a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame.; literal cue a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame; shown as a framed portrait of an adult officer cadet studying a notebook, with an academy cap in the frame; pose/action mounted or supported as a museum exhibit; count -; at right, right [990, 187, 122, 151], back; interacts with the shared museum interpretation display; planned pixel envelope [990, 187, 122, 151].\nExact visible counts: cavalerie: 3, régiment: 6. Reference board: none. Plaque-only words: none, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to conflits, [514, 260, 160, 285], painted as floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor. Clear floor-level thresholds at human scale; no props in openings. Beyond: conflits. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths. Shared plan: officiers-to-formations (one-way arrival): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: arrival behind the viewer. Other side: forward gallery opening, arriving at Les officiers et la marine. Match reference caserne/officiers.jpg. formations-to-conflits (painted passage): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: forward gallery opening. Other side: arrival behind the viewer, arriving at Comprendre les conflits. Match reference caserne/conflits.jpg.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text none. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs none so far. This room differs by A cavalry and formation gallery: an equestrian scale model and regiment display share a curving oak exhibition bench, with marshal and cadet exhibits above..\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}
