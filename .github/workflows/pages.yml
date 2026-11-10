@@ -14,6 +14,10 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# village/ is published as committed. There is no build step here, so a local
+# preview (python -m http.server in village/) and Pages serve the same files.
+# index.js, live.js, map.js, and talk/ stay in git. checks.yml rebuilds them and
+# fails the pull request if the committed copies have gone stale.
 jobs:
   build:
     runs-on: ubuntu-latest
