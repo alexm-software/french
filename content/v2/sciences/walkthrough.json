@@ -18,6 +18,13 @@
       "level": "ground",
       "landmark": "Open glass doors to the court",
       "camera": "The accepted hall, looking out through the glass doors"
+    },
+    "labo": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Open door back to the court telescope",
+      "camera": "Eye-level in the chemistry lab, door to the court ahead"
     }
   },
   "passages": {
@@ -27,6 +34,14 @@
       "ends": [
         {"place": "cour", "where": "center, in front of the plinth", "arrival": "The rock hall"},
         {"place": "sciences", "where": "back center", "arrival": "The gravel court and the telescope"}
+      ]
+    },
+    "east_door": {
+      "kind": "door",
+      "appearance": "The east wooden door of the court, opening into the chemistry lab",
+      "ends": [
+        {"place": "cour", "where": "east wing wooden door", "arrival": "The chemistry bench"},
+        {"place": "labo", "where": "back center", "arrival": "The gravel court and the telescope"}
       ]
     }
   }
