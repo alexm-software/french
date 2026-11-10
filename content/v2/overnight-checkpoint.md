@@ -7,11 +7,12 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `sciences/tables`, 6 words (catastrophe, volcanique, géologique, creuset, tremblement, pilier), west door. PR 281, merge `93575b76`. Pages deploy run 42773116090 succeeded. Production `sciences/tables.jpg` sha `725e4eea6b283df6c72d5a31ec0ccad98e7366c081ea12a9d1f630146b06a6ca` matches. Cache stayed `village-v57`.
 
 ## In progress
-- none. The court's arcade is still unlinked. Its painted view is columns and a bright gap, not a room that can be matched yet.
+- `ecole/cottage`, 6 words (douzaine, phrase, trentaine, quart, sein, accent), the garden's open blue door. Painting sha `126db4206b704f03ed579f86733587c472ce5460df13a7385a72ddf16f5b26ef`. Not yet in production.
 
 ## Parked
 - `sciences/trouvailles` (prospection, géologue, caillou, minerai, filon, volcan). Three generations: the coyote and the gold vein merged, then the miner's boot sat inside the kneeling man's box.
 - `sciences/essai` (a person with a marshmallow beside the pig). The two figures' boxes interlocked.
+- Cottage prepositions (hors, via, moyennant, excepté, par-delà, hormis). The horse-and-pen group stayed on the left, outside the center band a preposition needs.
 
 ## Art calls
-14 (13 images and 1 blocked request)
+20 (19 images and 1 blocked request)
