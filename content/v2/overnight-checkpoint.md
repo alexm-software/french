@@ -8,7 +8,7 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `ecole/cottage`, 6 words (douzaine, phrase, trentaine, quart, sein, accent), the garden's open blue door. PR 283, merge `33e03e80`. Pages deploy run 42776521744 succeeded. Production `ecole/cottage.jpg` sha `126db4206b704f03ed579f86733587c472ce5460df13a7385a72ddf16f5b26ef` matches. Cache stayed `village-v57`.
 
 ## In progress
-- `ecole/reserve`, six pantry foods down the farmyard hatch (confiture, huile, sucrerie, riz, miel, yaourt). Art review passed. Production not confirmed yet.
+- `ecole/reserve`, six pantry foods (confiture, huile, sucrerie, riz, miel, yaourt). PR 285 merged as `46ed2821`. Pages deploy run 42781967034 timed out while syncing files, so production is not confirmed. Local image sha `f51471622d8759a5e2a66b19700731fc7987d537f3515f61fbc594637bd24146`.
 
 ## Later
 - `ecole/cottage` is a candidate for a theme pass. Douzaine, phrase, quart, sein and accent do not share one activity.
