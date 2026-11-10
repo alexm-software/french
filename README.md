@@ -14,7 +14,7 @@ The live site is the static folder `village/`, published with GitHub Pages.
 | `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, `sectors.json`, the dialogues (`village_dialogues.json`, `conversations.json`), the listening passages (`listening.json`), the prayers (`prayers.json`) and credits. |
 | `data/curated/` | Hand-written tables: `verb_patterns.json` (the prepositions each verb takes), `expressions.json` (idioms shown on cards). |
 | `data/cache/conjugations.json` | Verb tables (seven tenses), read by the build. |
-| `data/v1-payloads/` | Card text from the first village; the build still reads it. |
+| `data/v1-payloads/` | Retired card text from the first village. The build does not read it. Painted cards that still use that wording are frozen in `content/v2/card_keep.json`. |
 | `data/hooks/qa/`, `docs/` | Review notes, proposals and change logs. |
 | `skills/` | The memory-palace build skills (builder, language, release gates). Start with each `SKILL.md`. |
 | `tools/` | Cheap checks before review: `unbuilt.py`, `precheck.py`, `contact_sheet.py`, the manifest template. See `tools/README.md`. |

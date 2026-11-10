@@ -81,8 +81,9 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
   `phrase · fixed expression` or `idiom · fixed expression`.
 * The room list drops below the strip when it does not fit beside the title; the painting is then pushed down
   36 px so the list never covers labels (`--strict` checks this).
-* Card text comes from the retired v1 payload `data/v1-payloads/<bld>.js` (matched by id), else `data/source/vocab.jsonl`;
-  `"text": "vocab"` forces the vocab source. Never copy or edit that text.
+* Card text comes from `data/source/vocab.jsonl`, except words listed in `content/v2/card_keep.json`
+  (the painted wording formerly copied out of `data/v1-payloads/`). `"text": "vocab"` forces the vocab
+  source. Never copy or edit that text in the generated `village/data/*.js`.
 * `hooks.json` is only for hooks that break the content rules (crude, scary, drinking/smoking, mature, God the
   Father…) or that cannot be painted; the painting must then show the new hook.
 
