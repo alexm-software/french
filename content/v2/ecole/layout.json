@@ -40,6 +40,10 @@
    "short": "Le jardin de l'école"
   },
   {
+   "key": "cottage",
+   "short": "La maisonnette"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
   },
@@ -1235,6 +1239,17 @@
       230,
       275
      ]
+    },
+    {
+     "to": "cottage",
+     "label": "La maisonnette",
+     "hint": "Through the open blue door of the cottage",
+     "hit": [
+      1096,
+      148,
+      150,
+      270
+     ]
     }
    ],
    "zooms": [],
@@ -2287,6 +2302,31 @@
      ]
     }
    ]
+  },
+  "cottage": {
+   "name": "La maisonnette",
+   "room_id": "R_numbers2",
+   "image": "ecole/cottage.jpg",
+   "backTo": "jardin",
+   "alt": "Inside the school garden's cottage, in ink and gouache: terracotta tiles and cream walls. A carton of calm eggs with closed eyes sits on the left, a toy train of plain carriages below it, and a green wagon of many beads beside the train. A pie with one slice cut out rests on a plate, a snail sits in a ring of sand, and a man in a dark beret stands talking on the right. An open blue door shows the garden lawn, flowers, and a blue sofa. A small wooden table and two chairs stand just inside, and a framed picture of flowers hangs on the wall.",
+   "nameplate": [16, 7],
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "Through the open blue door to the garden",
+     "hit": [500, 36, 220, 220]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_douzaine_noun", "box": [16, 330, 270, 180]},
+    {"id": "fr_phrase_noun", "box": [16, 530, 390, 170]},
+    {"id": "fr_trentaine_noun", "box": [430, 530, 200, 160]},
+    {"id": "fr_quart_noun", "box": [700, 420, 230, 170]},
+    {"id": "fr_sein_noun", "box": [700, 600, 190, 110]},
+    {"id": "fr_accent_noun", "box": [980, 40, 270, 660]}
+   ]
   }
  },
  "planned": {
@@ -2368,6 +2408,17 @@
     "fr_cinquante_num",
     "fr_soixante_num",
     "fr_quatre_vingts_num"
+   ]
+  },
+  "cottage": {
+   "vocabRoom": "R_numbers2",
+   "only": [
+    "fr_douzaine_noun",
+    "fr_phrase_noun",
+    "fr_trentaine_noun",
+    "fr_quart_noun",
+    "fr_sein_noun",
+    "fr_accent_noun"
    ]
   },
   "jardin": {
