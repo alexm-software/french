@@ -258,7 +258,14 @@ def check_building(bld, errs, warns, places=None):
         ids = [it["id"] for it in R["items"]]
         counts[key] = len(ids)
         if plan:
-            want = plan.get("only") or (VR.get(plan["vocabRoom"], []) if "vocabRoom" in plan else v1_room(*plan["v1"].split("/")))
+            # An explicit "only" list is the whole plan, including an empty list.
+            # `or` would treat [] as missing and pull in the entire vocab room.
+            if "only" in plan:
+                want = plan["only"]
+            elif "vocabRoom" in plan:
+                want = VR.get(plan["vocabRoom"], [])
+            else:
+                want = v1_room(*plan["v1"].split("/"))
             miss = [w for w in want if w not in ids]
             extra = [w for w in ids if w not in want]
             if miss: E(f"{tag}: missing planned words {miss}")
