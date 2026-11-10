@@ -44,3 +44,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # The default 10 minute poll gives up while a full village sync is still running.
+          timeout: 1800000
