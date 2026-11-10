@@ -19,6 +19,8 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `sciences/essai` (a person with a marshmallow beside the pig). The two figures' boxes interlocked.
 - Cottage prepositions (hors, via, moyennant, excepté, par-delà, hormis). The horse-and-pen group stayed on the left, outside the center band a preposition needs.
 - `ecole/cave` (carotte, patate, tomate, oignon, chou, ail). Three generations: the parrot's wing and the dog's tail stayed on the left margin, and the dog stayed against the crate.
+- `plage/cabine` (pizza, céréale, épice, spaghetti, bonbon, vinaigre). Three generations. The cereal bowl's foot and the left spice-jar lid stayed on the same line, so the boxes interlocked.
+- Library-window garden (serre, clôture, irrigation, hamac, parterre, potager). Two generations. The hose and the cabbage bed stayed on the picture edge.
 
 ## Art calls
-26 (25 images and 1 blocked request)
+31 (30 images and 1 blocked request)
