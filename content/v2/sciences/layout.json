@@ -20,6 +20,10 @@
     {
       "key": "tables",
       "short": "Les tables"
+    },
+    {
+      "key": "trouvailles",
+      "short": "Les trouvailles"
     }
   ],
   "planned": {
@@ -60,6 +64,17 @@
         "fr_creuset_noun",
         "fr_tremblement_noun",
         "fr_pilier_noun"
+      ]
+    },
+    "trouvailles": {
+      "vocabRoom": "R_geology",
+      "only": [
+        "fr_prospection_noun",
+        "fr_geologue_noun",
+        "fr_volcan_noun",
+        "fr_minerai_noun",
+        "fr_filon_noun",
+        "fr_caillou_noun"
       ]
     }
   },
@@ -113,6 +128,17 @@
             308,
             64,
             150
+          ]
+        },
+        {
+          "to": "trouvailles",
+          "label": "Les trouvailles",
+          "hint": "Through the open west arcade into the finds room",
+          "hit": [
+            145,
+            295,
+            120,
+            155
           ]
         }
       ],
@@ -412,6 +438,90 @@
             10,
             190,
             500
+          ]
+        }
+      ]
+    },
+    "trouvailles": {
+      "name": "Les trouvailles · The finds",
+      "image": "sciences/trouvailles.jpg",
+      "backTo": "cour",
+      "alt": "The science faculty finds room, ink and gouache, seen from the west arcade. One oak table. On the left a gold pan holds one piece of gold. In the middle a geologist taps a gray rock with a small hammer. On the right of the table sit a small model volcano with white foam, a tiny mole figurine beside one lump of ore, a split rock with a thin gold line, and one pebble. The open arcade shows the court telescope. She is the only person.",
+      "nameplate": [
+        1080,
+        8
+      ],
+      "doors": [
+        {
+          "to": "cour",
+          "label": "La cour",
+          "hint": "Through the arcade back to the telescope in the court",
+          "hit": [
+            30,
+            30,
+            330,
+            400
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_prospection_noun",
+          "box": [
+            45,
+            455,
+            310,
+            165
+          ]
+        },
+        {
+          "id": "fr_geologue_noun",
+          "box": [
+            400,
+            20,
+            325,
+            685
+          ]
+        },
+        {
+          "id": "fr_volcan_noun",
+          "box": [
+            760,
+            455,
+            155,
+            145
+          ]
+        },
+        {
+          "id": "fr_minerai_noun",
+          "box": [
+            935,
+            470,
+            115,
+            135
+          ]
+        },
+        {
+          "id": "fr_filon_noun",
+          "box": [
+            1065,
+            490,
+            100,
+            110
+          ]
+        },
+        {
+          "id": "fr_caillou_noun",
+          "box": [
+            1180,
+            495,
+            65,
+            65
+          ],
+          "labelAt": [
+            1212,
+            440
           ]
         }
       ]
