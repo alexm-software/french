@@ -10,9 +10,10 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `ecole/fenetre`, Le jardin fleuri, 6 garden words (serre, clôture, irrigation, hamac, parterre, potager), out the library window. PR 289, merge `79f8b214`. Independent review passed. Pages deploy 42798765278 timed out while syncing. Deploy 42800732006 succeeded. Production `ecole/fenetre.jpg` sha `b5792e2c72e5f3267df35e3f6807958c111e2eededfba5b4a4613b25f1a3cefb` matches. Cache stayed `village-v57`.
 - `plage/cabine`, La cabine, 6 picnic foods (pizza, céréale, épice, spaghetti, bonbon, vinaigre), through the striped hut door. PR 290, merge `857e5845`. Independent review passed. The cereal box and the spice box meet along one line. Same deploys. Production `plage/cabine.jpg` sha `dedcd3f6dd66adf5326810ce53fefb3e74335af18f2cd407eba448248ce840bf` matches. Cache stayed `village-v57`.
 - `ecole/verger`, Le verger, 6 fruits (pêche, fraise, poire, citron, raisin, melon), out the canteen's right-hand window. PR 294, merge `d5da8c99`. Independent review passed. Pages deploy 42802774035 timed out while syncing. Deploy 42804881735 succeeded. Production `ecole/verger.jpg` sha `aa4979b712e2d51dcdf41499729a4958b2f1340e6e5881200f8b3d22e5d48eea` matches. Cache stayed `village-v57`.
+- `ecole/office`, L'office, 6 snack words (bouteille, tartine, galette, fromage, lait, plat), through the fête's blue-shuttered window. PR 297. Independent review passed. Deploy 42807299132 succeeded. Production `ecole/office.jpg` sha `e2c78da73b3e04e91abffc779e5a4b856485b754e04b2b06e29ba8dd916e7db2` matches. Cache stayed `village-v57`.
 
 ## In progress
-- `ecole/office`, the fête pantry. Review passed. Not yet merged.
+- none.
 
 ## Later
 - `ecole/cottage` is a candidate for a theme pass. Douzaine, phrase, quart, sein and accent do not share one activity.
