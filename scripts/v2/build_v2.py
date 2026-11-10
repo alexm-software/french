@@ -605,7 +605,7 @@ def polish_verb(it):
     it["note"] = note or None
 
 
-def build(bld, vocab):
+def build(bld, vocab, placements=None, compare_index=None):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
     kept = load_kept_cards()
     walkthrough = load_model(ROOT, L)
@@ -617,6 +617,12 @@ def build(bld, vocab):
     fp = ROOT / "content" / "v2" / "vocab_fixes.json"
     fixes = json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
     fixes = {k: v for k, v in fixes.items() if not k.startswith("_")}
+    if placements is None or compare_index is None:
+        from sense_compares import compares_index, load_placements
+        if placements is None:
+            placements = load_placements()
+        if compare_index is None:
+            compare_index = compares_index()
     out_rooms = {}
     for key, room in L["rooms"].items():
         img = Image.open(V2 / room["image"]).convert("RGB")
@@ -664,6 +670,10 @@ def build(bld, vocab):
             ph = expressions(vocab).get(wid) or expressions(vocab).get(re.sub(r"_\d+$", "", wid))
             if ph:  # "Expressions" section: common phrases and idioms with this word
                 it["phrases"] = ph
+            # reciprocal sense comparisons (data/source/sense_compares.json). A note override
+            # above does not remove them. Unpainted targets get at=null, not a fake room.
+            from sense_compares import attach_compares
+            attach_compares(it, vocab, placements, compare_index)
             # museum-plaque words (word shown only as text on a blank plaque, nothing depicted):
             # hooks.json {"plaque": true} lets check_v2 skip the content filter on the gloss (en) only
             if overrides.get(wid, {}).get("plaque") is True:
@@ -737,8 +747,10 @@ def main():
         sys.argv.remove("--no-cards")
     blds = sys.argv[1:] or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
     vocab = load_vocab()
+    from sense_compares import compares_index, load_placements
+    placements, compare_index = load_placements(), compares_index()
     for b in blds:
-        build(b, vocab)
+        build(b, vocab, placements, compare_index)
     unused = []
     for b in blds:
         hp = ROOT / "content" / "v2" / b / "hooks.json"

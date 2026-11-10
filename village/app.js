@@ -408,7 +408,7 @@ function beretSvg(c){return '<svg viewBox="0 0 34 22" aria-hidden="true"><ellips
 function openCard(it,from){
   lastFocus=from||document.activeElement;
   var hw=headword(it), sp=hasVoice();
-  var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic"><img src="'+esc(it.cardSrc||'')+'" alt=""></div><div class="hw">';
+  var h='<button class="x" data-close aria-label="Close">×</button><div class="head"><div class="pic">'+(it.lex?'<span class="nopic">No painting yet</span>':'<img src="'+esc(it.cardSrc||'')+'" alt="">')+'</div><div class="hw">';
   h+='<h2 id="cardTitle">'+(it.verb||it.adj||it.adv?esc(it.fr):(it.art==="l'"?'<span class="art">l\u2019</span>':'<span class="art">'+esc(it.art)+' </span>')+esc(it.fr))+'</h2>';
   h+='<div class="en">'+esc(it.en)+'</div>';
   h+='<div class="pron">'+esc(it.ipa)+' · say <b>'+esc(it.say)+'</b>'+(sp?'<button class="say" data-say="'+esc(hw)+'" aria-label="Listen">🔊 Listen</button>':'')+'</div>';

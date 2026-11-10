@@ -22,7 +22,12 @@ function need(src,cb){ if(scripts[src]===true){cb();return} if(scripts[src]){scr
   sc.onload=function(){var l=scripts[src]; scripts[src]=true; l.forEach(function(f){f()})};
   sc.onerror=function(){var l=scripts[src]; delete scripts[src]; l.forEach(function(f){f(true)})};
   document.head.appendChild(sc) }
-function withIndex(cb){ need('data/index.js',function(){cb(window.V2_INDEX||[])}) }
+function withIndex(cb){ need('data/index.js',function(){ need('data/lexicon.js',function(){
+  var ix=(window.V2_INDEX||[]).concat(window.V2_LEXICON_INDEX||[]); cb(ix) }) }) }
+function lexHash(id){ return '#/lex?w='+id }
+function openLex(id, from){ need('data/lexicon.js',function(){ var it=(window.V2_LEXICON||{})[id]; if(it) V.openCard(it, from||null) }) }
+function openLexFromHash(){ var m=(location.hash||'').match(/^#\/lex\?w=([A-Za-z0-9_]+)$/); if(m) openLex(m[1]) }
+window.addEventListener('hashchange', openLexFromHash);
 function hrefFor(b,k,id){ return V.roomHref(b,k)+(id?'?w='+id:'') }
 
 // ---------- progress ----------
@@ -106,14 +111,17 @@ function search(){
         var sc=fr===t||bare===t?0:bare.indexOf(t)===0?1:(' '+en+' ').indexOf(' '+t)>=0?2:fr.indexOf(t)>=0?3:en.indexOf(t)>=0?4:9;
         if(sc<9) hits.push([sc,r]) });
       hits.sort(function(a,b){return a[0]-b[0]||a[1][1].length-b[1][1].length});
-      out.innerHTML=hits.slice(0,40).map(function(x){ var r=x[1];
-        return '<a role="listitem" class="sr1" href="'+hrefFor(r[3],r[4],r[0])+'"><b lang="fr">'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span><small>'+esc(r[5])+' · '+esc(r[3].replace(/_/g,' '))+'</small></a>' }).join('')||'<p class="small">No match.</p>' }
+      out.innerHTML=hits.slice(0,40).map(function(x){ var r=x[1], lex=r[3]==='lex';
+        var href=lex?lexHash(r[0]):hrefFor(r[3],r[4],r[0]);
+        return '<a role="listitem" class="sr1" href="'+href+'"'+(lex?' data-lex="'+esc(r[0])+'"':'')+'><b lang="fr">'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span><small>'+esc(r[5])+' · '+esc(lex?CMP_SEARCH:r[3].replace(/_/g,' '))+'</small></a>' }).join('')||'<p class="small">No match.</p>' }
     q.addEventListener('input',run); run();
-    q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var a=out.querySelector('a'); if(a){ location.hash=a.getAttribute('href') } } });
+    q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var a=out.querySelector('a'); if(!a) return; if(a.dataset.lex){ e.preventDefault(); openLex(a.dataset.lex, a) } else location.hash=a.getAttribute('href') } });
   });
 }
+var CMP_SEARCH='Not in a room yet.';
 searchBtn.addEventListener('click',search);
-cardWrap.addEventListener('click',function(e){ var a=e.target.closest('a.sr1,a.goto'); if(a){ V.closeCard() } });
+document.addEventListener('click',function(e){ var a=e.target.closest('[data-lex]'); if(!a) return; e.preventDefault(); var id=a.getAttribute('data-lex'); if(location.hash===lexHash(id)) openLex(id, a); else location.hash=lexHash(id) }, true);
+cardWrap.addEventListener('click',function(e){ var a=e.target.closest('a.sr1,a.goto'); if(a && !a.dataset.lex){ V.closeCard() } });
 
 // ---------- recall mode ----------
 function setRecall(on){ recall=on; stage.classList.toggle('recall',on); recallTag.hidden=!on;
@@ -167,12 +175,23 @@ function findTap(i,b){ if(find.k>=find.order.length) return; var want=find.order
 // ---------- review: walk back to each due word ----------
 function stopReview(){ review=null; var t=$('#revTag'); if(t) t.remove(); stage.querySelectorAll('.hot.target').forEach(function(x){x.classList.remove('target')}) }
 function startReview(){ var ids=due(); if(!ids.length){ V.closeCard(); return }
-  withIndex(function(IX){ var where={}; IX.forEach(function(r){ if(!where[r[0]]) where[r[0]]=r });
+  withIndex(function(IX){ var where={}; IX.forEach(function(r){ if(!where[r[0]]||(where[r[0]][3]==='lex'&&r[3]!=='lex')) where[r[0]]=r });
     var list=ids.filter(function(id){return where[id]}).map(function(id){return where[id]});
     list.sort(function(a,b){ return (a[3]+a[4]).localeCompare(b[3]+b[4]) }); // room by room
     review={list:list,k:0}; setRecall(true); V.closeCard(); goReview() }) }
 function goReview(){ if(!review) return; if(review.k>=review.list.length){ var n=review.list.length; stopReview(); setRecall(false); panel('<h2 class="ptitle">Review done</h2><p>'+n+' word'+(n>1?'s':'')+' reviewed. They will come back when they are due.</p>','panel'); return }
-  var r=review.list[review.k], h=V.here(), target=V.roomHref(r[3],r[4]);
+  var r=review.list[review.k], h=V.here();
+  // Text cards are not a room. #/lex?w= opens the card; #/lex would be a missing building.
+  if(r[3]==='lex'){
+    var target=lexHash(r[0]);
+    function showLex(){ if(!review) return; openLex(r[0]);
+      var t=$('#revTag'); if(!t){ t=document.createElement('div'); t.id='revTag'; $('#viewport').appendChild(t) }
+      t.innerHTML='Review '+(review.k+1)+'/'+review.list.length+': no painting, the card is the word · <button data-a="skip">skip</button> <button data-a="stop">stop</button>';
+      t.onclick=function(e){ var a=e.target.dataset.a; if(a==='stop'){ stopReview(); setRecall(false) } else if(a==='skip'){ nextReview() } } }
+    if(location.hash===target) showLex();
+    else { var once=function(){ window.removeEventListener('hashchange', once); setTimeout(showLex, 0) }; window.addEventListener('hashchange', once); location.hash=target }
+    return }
+  var target=V.roomHref(r[3],r[4]);
   if(h.bld===r[3]&&h.key===r[4]) markTarget(); else location.hash=target }
 function markTarget(){ if(!review) return; var r=review.list[review.k], R=V.here().room; if(!R) return;
   var i=-1; R.items.forEach(function(x,j){ if(x.id===r[0]) i=j });
@@ -221,8 +240,8 @@ var ACT={
   words:words, hl:function(){ V.closeCard(); var b=$('#hl'); if(b) b.click() }, settings:settings, help:help, csv:csv, print:function(){ window.print() },
   reset:function(){ if(confirmReset()) { P={}; save('village.progress',P); updateBadge(); settings() } },
   open:function(a){ var R=V.here().room, it=R&&R.items[+a.dataset.i]; if(!it) return; if(recall) ask(it,+a.dataset.i,null); else V.openCard(it) },
-  prev:function(){ step(-1) }, next:function(){ step(1) }, k2:function(a){ grade(a.dataset.id,2); a.parentNode.innerHTML='<span class="small">Marked as known.</span>'; markRoom() },
-  k0:function(a){ grade(a.dataset.id,0); a.parentNode.innerHTML='<span class="small">It will come back in review.</span>'; markRoom() }
+  prev:function(){ step(-1) }, next:function(){ step(1) },   k2:function(a){ grade(a.dataset.id,2); a.parentNode.innerHTML='<span class="small">Marked as known.</span>'; markRoom(); if(review&&review.list[review.k]&&review.list[review.k][0]===a.dataset.id&&review.list[review.k][3]==='lex') nextReview() },
+  k0:function(a){ grade(a.dataset.id,0); a.parentNode.innerHTML='<span class="small">It will come back in review.</span>'; markRoom(); if(review&&review.list[review.k]&&review.list[review.k][0]===a.dataset.id&&review.list[review.k][3]==='lex') nextReview() }
 };
 // small API for practice.js (quizzes, conversations, listening, prayer book)
 window.VillageX={panel:panel,grade:grade,ACT:ACT,esc:esc,hrefFor:hrefFor,known:known,settings:S,hiddenByLevel:hiddenByLevel,need:need,
@@ -236,15 +255,40 @@ function step(d){ var R=V.here().room; if(!R||!cur) return; var i=R.items.indexO
 V.onCard.push(function(it){
   cur=it;
   var en=card.querySelector('.en'); if(en&&it.cefr) en.insertAdjacentHTML('beforeend',' <span class="lvl" title="CEFR level">'+esc(it.cefr)+'</span>');
-  var gram=card.querySelector('.gram'); if(gram&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
+  var gram=card.querySelector('.gram'); if(gram&&!it.lex&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
   var pic=card.querySelector('.pic'); if(pic){ pic.title='Tap to enlarge'; pic.addEventListener('click',function(){ pic.classList.toggle('big') }) }
+  // English card chrome. The same three strings are archive/data/i18n.json en.card; fr.card holds the French.
+  // The village card does not load that file, so this section stays English like "Example" above it.
+  if(it.lex&&it.note){ var noteHtml='<div class="sec lexnote"><h3>Note</h3><p>'+esc(it.note)+'</p></div>'; var ex0=card.querySelector('.sec.ex'); if(ex0) ex0.insertAdjacentHTML('beforebegin',noteHtml); else card.insertAdjacentHTML('beforeend',noteHtml) }
+  var CMP={notTheSame:'Not the same', notInARoom:'Not in a room yet.', exampleOf:'Example of {word}', noPainting:'No painting yet'};
+  if(it.compares&&it.compares.length){
+    var cmp='<div class="sec cmp"><h3>'+esc(CMP.notTheSame)+'</h3>';
+    it.compares.forEach(function(c){
+      var name=c.hw||c.fr;
+      cmp+='<div class="cmp1">';
+      if(c.at) cmp+='<p><a class="goto" href="'+hrefFor(c.at[0],c.at[1],c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span></p>';
+      else if(c.lex) cmp+='<p><a class="lexopen" href="'+lexHash(c.to)+'" data-lex="'+esc(c.to)+'"><b lang="fr">'+esc(name)+'</b></a> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.noPainting)+'</span></p>';
+      else cmp+='<p><b lang="fr">'+esc(name)+'</b> <span class="pen">'+esc(c.en)+'</span> <span class="small">'+esc(CMP.notInARoom)+'</span></p>';
+      cmp+='<p>'+esc(c.note)+'</p>';
+      (c.examples||[]).forEach(function(ex){
+        var label=CMP.exampleOf.replace('{word}', ex.who||'');
+        cmp+='<p class="exlab">'+esc(label)+'</p>';
+        cmp+='<p class="fr"><i lang="fr">'+esc(ex.fr)+'</i>'+(V.hasVoice()?' <button class="say" data-say="'+esc(ex.fr)+'" aria-label="Listen: '+esc(ex.fr)+'">🔊</button>':'')+'</p><p class="tr">'+esc(ex.en||'')+'</p>';
+      });
+      cmp+='</div>';
+    });
+    cmp+='</div>';
+    var exs=card.querySelector('.sec.ex');
+    if(exs) exs.insertAdjacentHTML('afterend',cmp);
+    else card.insertAdjacentHTML('beforeend',cmp);
+  }
   var R=V.here().room, inRoom=R&&R.items.indexOf(it)>=0;
   var p=P[it.id], foot='<div class="cfoot">';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="prev" aria-label="Previous word">‹ prev</button>';
   foot+='<span class="kn">'+(p&&p.b>=2?'<span class="small">You know this one.</span>':'<button class="btn2 ghost" data-act="k2" data-id="'+esc(it.id)+'">I know this</button> <button class="btn2 ghost" data-act="k0" data-id="'+esc(it.id)+'">Practice it</button>')+'</span>';
   if(inRoom) foot+='<button class="btn2 ghost" data-act="next" aria-label="Next word">next ›</button>';
   card.insertAdjacentHTML('beforeend',foot+'</div><div class="also" hidden></div>');
-  withIndex(function(IX){ if(cur!==it) return; var h=V.here(), other=IX.filter(function(r){return r[0]===it.id&&!(r[3]===h.bld&&r[4]===h.key)});
+  withIndex(function(IX){ if(cur!==it) return; var h=V.here(), other=IX.filter(function(r){return r[0]===it.id&&r[3]!=='lex'&&!(r[3]===h.bld&&r[4]===h.key)});
     if(other.length){ var a=card.querySelector('.also'); a.hidden=false; a.innerHTML='Also in: '+other.map(function(r){return '<a class="goto" href="'+hrefFor(r[3],r[4],r[0])+'">'+esc(r[3].replace(/_/g,' ')+(r[4]!==r[3]?' · '+r[4].replace(/_/g,' '):''))+'</a>'}).join(', ') } });
 });
 
@@ -274,4 +318,5 @@ if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostn
   var hadSW=!!navigator.serviceWorker.controller, swReloaded=false;
   navigator.serviceWorker.addEventListener('controllerchange',function(){ if(hadSW&&!swReloaded){ swReloaded=true; location.reload() } });
   navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(function(reg){ reg.update() }).catch(function(){}) }
+openLexFromHash();
 })();
