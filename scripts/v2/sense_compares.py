@@ -252,6 +252,14 @@ def write_lexicon(vocab=None, placements=None, index=None):
         for row in rows:
             if choose_placement(row["to"], placements, vocab) is None:
                 ids.add(row["to"])
+    # Words taken off a painting with no honest object in another room.
+    # They stay searchable as text cards. A later painting drops them from here.
+    extra = ROOT / "content" / "v2" / "text_cards.json"
+    if extra.exists():
+        listed = json.loads(extra.read_text(encoding="utf-8"))
+        for wid in listed.get("ids") or []:
+            if wid in vocab and choose_placement(wid, placements, vocab) is None:
+                ids.add(wid)
     items = {}
     rows = []
     for wid in sorted(ids):
