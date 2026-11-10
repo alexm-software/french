@@ -11,7 +11,7 @@ The live site is the static folder `village/`, published with GitHub Pages.
 | `village/` | The site: `index.html`, `app.js`, `style.css`, the paintings (`village/<building>/*.jpg`, card crops in `cards/`), the maps (`map/`) and the generated data (`data/<building>.js`, `data/map.js`). See `village/README.md`. |
 | `content/v2/<building>/` | Per-building inputs: `layout.json` (hotspot boxes in painting pixels, doors, zooms) and `hooks.json` (hook and text overrides for that building). |
 | `content/v2/vocab_fixes.json` | Text corrections for every building: article and gender, respelling, gloss, example, plural, note. |
-| `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, `sectors.json`, the dialogues (`village_dialogues.json`, `conversations.json`), the listening passages (`listening.json`), the prayers (`prayers.json`) and credits. |
+| `data/source/` | The plan: `vocab.jsonl` (8,000 words), `rooms.json`, `buildings.json`, the dialogues (`village_dialogues.json`, `conversations.json`), the listening passages (`listening.json`), the prayers (`prayers.json`) and credits. `sectors.json` and `map.json` are an older snapshot; the painted map is `content/v2/map.json`. |
 | `data/curated/` | Hand-written tables: `verb_patterns.json` (the prepositions each verb takes), `expressions.json` (idioms shown on cards). |
 | `data/cache/conjugations.json` | Verb tables (seven tenses), read by the build. |
 | `data/v1-payloads/` | Retired card text from the first village. The build does not read it. Painted cards that still use that wording are frozen in `content/v2/card_keep.json`. |

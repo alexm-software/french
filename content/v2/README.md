@@ -1,10 +1,11 @@
 # content/v2 — per-building inputs for the painted village (v2)
 
 The v2 shell (`village/index.html`, `app.js`, `style.css`, `data/map.js`, `map/`) is **shared and frozen**.
-The maps follow the memory-palace registry (`/data/sectors.json`, `/data/buildings.json`):
+The painted map is `content/v2/map.json` (built to `village/data/map.js`). `data/source/sectors.json` and
+`data/source/map.json` are an older plan and are not read by the build.
 `#/` is the world map of the 16 sectors (S09 Vallée Verte lies outside the walls), and `#/quartier/<slug>` is
 a painted map of one sector (slug = sector id without `Sxx_`, e.g. `S09_nature` → `nature`) with a click area
-for every building **and** every `ST_` verb street of that sector (`content/v2/map.json` → `data/map.js`).
+for every building **and** every `ST_` verb street of that sector.
 
 Buildings are discovered **at runtime**: for every building on a sector map the app tries
 `village/data/<id>.js`; a building whose data file loads is **live** (clickable, opens `#/<id>`), every
