@@ -38,8 +38,10 @@ Static rules (per building/room):
     reason in data/hooks/qa/dialogue_content_ok.tsv
   * cache busting (gate 27): village/sw.js serves every GET network-first (the cache is only the offline fallback) and
     declares its cache name V='village-vN'; extras.js registers it with updateViaCache 'none'. --cache-base REF (a
-    commit or tree, e.g. the deploy base; required at pack time): if any existing image/card under village/ was
-    modified since REF, sw.js's V must differ from REF's, so returning visitors drop their old caches
+    commit or tree, e.g. the deploy base; required at pack time and on every pull request): if any existing image/card
+    under village/ was modified since REF, sw.js's V must differ from REF's, so returning visitors drop their old caches
+  * live manifests (content/v2/<building>/*.manifest.json, not files under review/) name a room in that building's
+    layout, and their door targets (plus "map" when the room has a map exit) and zoom targets match the layout
 Browser rules (--browser, needs a server on --base): rendered hotspot and label rectangles do not
 overlap, every route renders with no JS error, Back goes straight outside (gate 19: sector map, or the street for an
 ST_ side room; zoom -> its room), verb cards have no
@@ -111,6 +113,38 @@ def load_tsv(name):
     if not f.exists():
         return []
     return [l.rstrip("\n").split("\t") for l in f.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
+
+
+def passage_gates(errs):
+    """A manifest beside a building layout is a live plan: its passages must match the painted doors.
+
+    Review drafts live under content/v2/<building>/review/ and are not checked here.
+    """
+    for mf in sorted((ROOT / "content" / "v2").glob("*/*.manifest.json")):
+        rel = str(mf.relative_to(ROOT))
+        try:
+            M = json.loads(mf.read_text(encoding="utf-8"))
+            L = json.loads((mf.parent / "layout.json").read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as error:
+            errs.append(f"{rel}: {error}")
+            continue
+        if M.get("building") != L.get("building"):
+            errs.append(f"{rel}: building {M.get('building')!r} is not layout building {L.get('building')!r}")
+            continue
+        room = (L.get("rooms") or {}).get(M.get("room"))
+        if room is None:
+            errs.append(f"{rel}: room {M.get('room')!r} is not in the live layout")
+            continue
+        expected = {d.get("to") for d in room.get("doors") or []}
+        if room.get("mapExit"):
+            expected.add("map")
+        got = {d.get("to") for d in (M.get("doors") or []) if isinstance(d, dict)}
+        if expected != got:
+            errs.append(f"{rel}: passage destinations {sorted(got)} disagree with the live layout {sorted(expected)}")
+        zoom_expected = {z.get("to") for z in room.get("zooms") or []}
+        zoom_got = {z.get("to") for z in (M.get("zooms") or []) if isinstance(z, dict)}
+        if zoom_expected != zoom_got:
+            errs.append(f"{rel}: zoom destinations {sorted(zoom_got)} disagree with the live layout {sorted(zoom_expected)}")
 
 
 def site_gates(blds, errs):
@@ -670,6 +704,7 @@ def main():
         nb += 1; nw += sum(c.values())
         if a.verbose: print(f"{bld}: " + ", ".join(f"{k} {n}" for k, n in c.items()) + f" = {sum(c.values())} words")
     site_gates(blds, errs)
+    passage_gates(errs)
     print(f"dialogues: {dialogue_check.check(errs, warns)} placed dialogues checked")
     cache_gates(errs, a.cache_base)
     print(f"{nb} buildings, {nw} words checked")

@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Build the village (village/) from the SAME text metadata as the retired v1 payloads.
+"""Build the village (village/) from vocab.jsonl, with painted-card exceptions in card_keep.json.
 
 Card text (French word, article, gloss, IPA, respelling, memory hook, example, plural,
 notes, verb tables) is read, never rewritten, from:
-  1. the retired v1 payloads data/v1-payloads/<building>.js (items matched by id), else
+  1. content/v2/card_keep.json when the word is listed there, unless the layout item sets
+     "text": "vocab". That file freezes the painted card for words whose live text came from
+     the retired data/v1-payloads/*.js files. The build does not read those payloads.
   2. data/source/vocab.jsonl (+ data/source/rooms.json for planned room membership).
-A layout entry may set "text": "vocab" to use data/source/vocab.jsonl instead of the v1 payload
-(e.g. v1's « le banc » hook is a piggy bank; the source hook is a pew/bench).
+A layout entry may set "text": "vocab" to ignore card_keep.json and use vocab.jsonl
+(e.g. the kept « le banc » hook is a piggy bank; the source hook is a pew/bench).
 v2-specific inputs live in content/v2/<building>/:
   layout.json  painting, hotspot box (1280x720 px), optional "labelAt" [cx, top] px,
                doors, map exit and zooms. Labels are otherwise placed automatically.
@@ -80,6 +82,19 @@ def label_w(text):
     if FONT:
         return int(FONT.getlength(text)) + 22
     return int(len(text) * 9.5) + 22
+
+
+def load_kept_cards():
+    """Painted card text for words that must not switch to the vocab.jsonl wording.
+
+    Keyed by word id. A leading-underscore key is a note. hooks.json and vocab_fixes.json
+    still override these fields. data/v1-payloads/ is not read.
+    """
+    path = ROOT / "content" / "v2" / "card_keep.json"
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    return {k: v for k, v in raw.items() if not str(k).startswith("_")}
 
 
 def load_v1_items():
@@ -590,8 +605,9 @@ def polish_verb(it):
     it["note"] = note or None
 
 
-def build(bld, v1, vocab):
+def build(bld, vocab):
     L = json.loads((ROOT / "content" / "v2" / bld / "layout.json").read_text(encoding="utf-8"))
+    kept = load_kept_cards()
     walkthrough = load_model(ROOT, L)
     # v2 hook overrides (content/v2/<bld>/hooks.json): {word_id: {"hook": ..., "why": ...}}
     # used where the v1 hook breaks the content rules or does not match the painting; v1 data is never edited.
@@ -608,8 +624,9 @@ def build(bld, v1, vocab):
         items = []
         for spec in room["items"]:
             wid = spec["id"]
-            if wid in v1 and spec.get("text") != "vocab":
-                it = {k: v for k, v in v1[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
+            # card_keep.json is the painted card. "text": "vocab" is the explicit opt-out.
+            if wid in kept and spec.get("text") != "vocab":
+                it = {k: v for k, v in kept[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
             elif wid in vocab:
                 w = vocab[wid]
                 if overrides.get(wid, {}).get("pronominal_form"):  # se-form missing in vocab (fr_cramponner_verb)
@@ -719,9 +736,9 @@ def main():
         WRITE_CARDS = False
         sys.argv.remove("--no-cards")
     blds = sys.argv[1:] or sorted(p.parent.name for p in (ROOT / "content" / "v2").glob("*/layout.json"))
-    v1, vocab = load_v1_items(), load_vocab()
+    vocab = load_vocab()
     for b in blds:
-        build(b, v1, vocab)
+        build(b, vocab)
     unused = []
     for b in blds:
         hp = ROOT / "content" / "v2" / b / "hooks.json"

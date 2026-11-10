@@ -13,12 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Fetch the base commit for the cache-version check
+        # A shallow checkout does not contain the PR base. Gate 27 compares image bytes with that commit.
+        run: |
+          if [ -n "${{ github.event.pull_request.base.sha }}" ]; then
+            git fetch --no-tags --depth=1 origin "${{ github.event.pull_request.base.sha }}"
+          else
+            git fetch --no-tags --depth=1 origin main
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: python -m pip install pillow
-      - name: Gates on the built data (check_v2 --strict --placement)
-        run: python scripts/qa/check_v2.py --strict --placement
+      - name: Gates on the built data (check_v2 --strict --placement --cache-base)
+        run: |
+          if [ -n "${{ github.event.pull_request.base.sha }}" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE="origin/main"
+          fi
+          python scripts/qa/check_v2.py --strict --placement --cache-base "$BASE"
       - name: Quoted texts have a public-domain or own source
         run: python tools/copyright_check.py
       - name: Room planning and prompt regression fixtures
@@ -28,9 +44,8 @@ jobs:
       - name: Hook lint (report only)
         run: python tools/hook_lint.py
       - name: Generated data matches its sources
-        # Rebuilds the text (not the card crops) and reports files that differ from what was committed.
-        # Report only for now: other pipelines also write village/data.
-        continue-on-error: true
+        # Rebuilds the text (not the card crops). A diff here fails the pull request.
+        # Regenerate village/data with the build scripts; do not hand-merge those files.
         run: |
           python scripts/v2/build_v2.py --no-cards > /dev/null
           python scripts/v2/build_map.py > /dev/null
