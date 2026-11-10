@@ -1,0 +1,544 @@
+{
+ "building": "bibliotheque",
+ "building_id": "B71_bibliotheque",
+ "sector_id": "S13_museum",
+ "name": "La bibliothèque",
+ "main": "enquete",
+ "roomList": [
+  {
+   "key": "enquete",
+   "short": "Les romans policiers"
+  },
+  {
+   "key": "armes",
+   "short": "La salle d'armes"
+  },
+  {
+   "key": "mots_delits",
+   "short": "Couloir des mots 1"
+  }
+ ],
+ "planned": {
+  "enquete": {
+   "vocabRoom": "R_text_crime_02",
+   "only": [
+    "fr_crime_noun",
+    "fr_criminel_noun",
+    "fr_voleur_noun",
+    "fr_assassin_noun",
+    "fr_prison_noun",
+    "fr_empoisonner_verb",
+    "fr_assaut_noun",
+    "fr_otage_noun",
+    "fr_hostilite_noun",
+    "fr_heroine_noun",
+    "fr_explosif_adj",
+    "fr_enfer_noun"
+   ]
+  },
+  "armes": {
+   "vocabRoom": "R_heraldry_01",
+   "only": [
+    "fr_arme_noun",
+    "fr_fusil_noun",
+    "fr_pistolet_noun",
+    "fr_hache_noun",
+    "fr_lance_noun",
+    "fr_bombe_noun",
+    "fr_epee_noun",
+    "fr_poignard_noun",
+    "fr_arc_noun",
+    "fr_bouclier_noun",
+    "fr_armure_noun"
+   ]
+  },
+  "mots_delits": {
+   "vocabRoom": "R_text_crime_01",
+   "only": [
+    "fr_execution_noun",
+    "fr_torture_noun",
+    "fr_mutiler_verb",
+    "fr_noyer_verb",
+    "fr_perir_verb",
+    "fr_terroriste_noun",
+    "fr_carceral_adj",
+    "fr_abus_noun",
+    "fr_meurtre_noun",
+    "fr_tueur_noun",
+    "fr_assassinat_noun",
+    "fr_meurtrier_noun",
+    "fr_prostitue_noun",
+    "fr_terrorisme_noun",
+    "fr_stupefiant_noun"
+   ]
+  }
+ },
+ "rooms": {
+  "enquete": {
+   "name": "Les romans policiers · Detective stories",
+   "room_id": "R_text_crime_02",
+   "image": "musee/enquete.jpg",
+   "alt": "The museum's detective-story gallery on its 'solve the mystery' family day, seen from the near left: bottle-green walls, brass picture lamps, red velvet ropes on brass posts and a giant deerstalker hat over the striped puppet booth. At the back left a cheerful lady in a black dress holds up a blue prize rosette behind the iron bars of the old prison-cell exhibit while her friend photographs her; at a café table two old ladies frown comically and tug the one teacup. In the middle Monsieur Verbe in a red beret plays the fairy-tale witch in the puppet booth, dipping a red apple into a bubbling green cauldron beside a hobby-horse pony and a girl in a witch hat. At the back right a waxwork gentleman-criminal in a top hat and mask holds a popsicle and a little bell, and a waxwork villain in a cloak stands empty-handed in a tall glass case with sand at his boots. In front a young woman in a red cape raises a lantern and magnifying glass, a giant striped party popper bursts confetti as a girl in yellow claps, a girl offers a cookie to a little white dog guarding a small white model of the Taj Mahal, and a detective in a deerstalker studies a red jewel cushion smeared with whipped cream. On the right a man in a Hawaiian shirt rushes the gift-shop postcard racks, a grinning masked burglar tiptoes off with a small painting and a fishing rod with a green lure, and a man in a bow tie clutches his hot cheeks beside a flame-red book on a lectern. Doors: slate-blue on the left back to the great hall, iron-studded oak at the back, plain gray at the back right.",
+   "nameplate": [
+    31.7,
+    4.5
+   ],
+   "doors": [
+    {
+     "to": "armes",
+     "label": "La salle d'armes",
+     "hint": "the iron-studded oak door at the back, to the armory hall",
+     "hit": [
+      669,
+      15,
+      125,
+      220
+     ]
+    },
+    {
+     "to": "mots_delits",
+     "label": "Couloir des mots 1",
+     "hint": "the plain gray door at the back right, to the word corridor",
+     "hit": [
+      1150,
+      35,
+      118,
+      245
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_prison_noun",
+     "box": [
+      176,
+      62,
+      135,
+      160
+     ]
+    },
+    {
+     "id": "fr_hostilite_noun",
+     "box": [
+      144,
+      226,
+      244,
+      174
+     ]
+    },
+    {
+     "id": "fr_heroine_noun",
+     "box": [
+      19,
+      404,
+      206,
+      316
+     ]
+    },
+    {
+     "id": "fr_empoisonner_verb",
+     "box": [
+      462,
+      135,
+      165,
+      155
+     ]
+    },
+    {
+     "id": "fr_otage_noun",
+     "box": [
+      522,
+      322,
+      178,
+      222
+     ]
+    },
+    {
+     "id": "fr_explosif_adj",
+     "box": [
+      262,
+      430,
+      258,
+      290
+     ]
+    },
+    {
+     "id": "fr_criminel_noun",
+     "box": [
+      822,
+      60,
+      135,
+      220
+     ]
+    },
+    {
+     "id": "fr_assassin_noun",
+     "box": [
+      962,
+      22,
+      160,
+      258
+     ]
+    },
+    {
+     "id": "fr_crime_noun",
+     "box": [
+      727,
+      284,
+      280,
+      190
+     ]
+    },
+    {
+     "id": "fr_assaut_noun",
+     "box": [
+      1037,
+      284,
+      243,
+      200
+     ]
+    },
+    {
+     "id": "fr_voleur_noun",
+     "box": [
+      702,
+      478,
+      136,
+      242
+     ]
+    },
+    {
+     "id": "fr_enfer_noun",
+     "box": [
+      944,
+      490,
+      336,
+      170
+     ]
+    }
+   ],
+   "mapExit": {
+    "box": [
+     12,
+     40,
+     130,
+     300
+    ],
+    "label": "Musée du Village"
+   }
+  },
+  "armes": {
+   "name": "La salle d'armes · The armory hall",
+   "room_id": "R_heraldry_01",
+   "image": "musee/armes.jpg",
+   "alt": "The museum's armory hall, seen from the near left: gray stone walls, iron chandeliers with white bulbs, a blue banner with a smiling golden lion and one unbroken red velvet rope on brass posts running in front of the displays; every weapon is an antique display object and nobody holds one. On the far left a life-size figure of Sir Lancelot in a blue tunic with a white cross stands on a stone plinth beside his tall striped jousting lance. On the back wall a big bronze arm sticks out of the stone, holding up an old mace, while a little girl points up at it; a ginger cat mews at the feet of an empty suit of armor, and a forester lady holds an ash sprig up to an old ax on a wall rack. In front a lady offers a candy from a paper bag beside a small glass case with a round black cartoon bomb, its fuse unlit, and a gray-haired lady hands a coin to a guard beside a long shining sword lying on a red velvet cushion. On the right an old gentleman points a yardstick at a jeweled dagger on a cushion, a guard dozes on a stool below an old rifle on wall pegs, a man in a green cardigan makes a peace sign by the small pistol case, a boy holds up a toy Noah's ark toward the longbow on the wall, and a potter holds up a little clay shield beside a big round painted shield. Door: bottle-green on the left wall, back to the detective-story gallery.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "enquete",
+   "doors": [
+    {
+     "to": "enquete",
+     "label": "Les romans policiers",
+     "hint": "the bottle-green door on the left wall, back to the detective-story gallery",
+     "hit": [
+      150,
+      40,
+      55,
+      250
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_arme_noun",
+     "box": [
+      244,
+      100,
+      124,
+      160
+     ]
+    },
+    {
+     "id": "fr_lance_noun",
+     "box": [
+      20,
+      12,
+      128,
+      488
+     ]
+    },
+    {
+     "id": "fr_armure_noun",
+     "box": [
+      406,
+      94,
+      114,
+      300
+     ]
+    },
+    {
+     "id": "fr_hache_noun",
+     "box": [
+      540,
+      90,
+      160,
+      290
+     ]
+    },
+    {
+     "id": "fr_bombe_noun",
+     "box": [
+      15,
+      505,
+      200,
+      195
+     ]
+    },
+    {
+     "id": "fr_epee_noun",
+     "box": [
+      444,
+      535,
+      356,
+      180
+     ]
+    },
+    {
+     "id": "fr_pistolet_noun",
+     "box": [
+      905,
+      530,
+      185,
+      175
+     ]
+    },
+    {
+     "id": "fr_fusil_noun",
+     "box": [
+      766,
+      118,
+      240,
+      105
+     ]
+    },
+    {
+     "id": "fr_poignard_noun",
+     "box": [
+      726,
+      228,
+      184,
+      199
+     ]
+    },
+    {
+     "id": "fr_arc_noun",
+     "box": [
+      1010,
+      25,
+      120,
+      262
+     ]
+    },
+    {
+     "id": "fr_bouclier_noun",
+     "box": [
+      1132,
+      290,
+      148,
+      322
+     ]
+    }
+   ]
+  },
+  "mots_delits": {
+   "name": "Le couloir des mots (1) · Word corridor 1 (text only)",
+   "room_id": "R_text_crime_01",
+   "image": "musee/mots_delits.jpg",
+   "alt": "A quiet, plain word corridor of the museum seen straight down its length: pale gray walls, pale oak floor and three round milk-glass lamps. Small blank cream plaques with brass screws hang at different heights along both walls, five on the left and eight on the right; two low wooden lecterns in the middle each hold one more blank plaque. Nothing is depicted: the words here exist only as wall text. A potted fern stands on a bench against the back wall. Doors: plain gray on the left wall, back to the detective-story gallery; plain gray at the back, on to the second word corridor.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "enquete",
+   "doors": [
+    {
+     "to": "enquete",
+     "label": "Les romans policiers",
+     "hint": "the plain gray door on the left wall, back to the detective-story gallery",
+     "hit": [
+      291,
+      187,
+      65,
+      319
+     ]
+    },
+    {
+     "to": "mots_deuil",
+     "label": "Couloir des mots 2",
+     "hint": "the plain gray door at the back, on to the second word corridor",
+     "hit": [
+      716,
+      237,
+      84,
+      165
+     ],
+     "building": "musee"
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_execution_noun",
+     "box": [
+      59,
+      497,
+      69,
+      84
+     ]
+    },
+    {
+     "id": "fr_torture_noun",
+     "box": [
+      162,
+      106,
+      60,
+      73
+     ]
+    },
+    {
+     "id": "fr_mutiler_verb",
+     "box": [
+      207,
+      352,
+      47,
+      57
+     ]
+    },
+    {
+     "id": "fr_noyer_verb",
+     "box": [
+      362,
+      370,
+      50,
+      90
+     ]
+    },
+    {
+     "id": "fr_perir_verb",
+     "box": [
+      405,
+      240,
+      44,
+      58
+     ]
+    },
+    {
+     "id": "fr_terroriste_noun",
+     "box": [
+      444,
+      472,
+      102,
+      188
+     ]
+    },
+    {
+     "id": "fr_carceral_adj",
+     "box": [
+      589,
+      454,
+      101,
+      204
+     ]
+    },
+    {
+     "id": "fr_abus_noun",
+     "box": [
+      1081,
+      110,
+      57,
+      71
+     ]
+    },
+    {
+     "id": "fr_meurtre_noun",
+     "box": [
+      880,
+      375,
+      42,
+      75
+     ],
+     "labelAt": [
+      901,
+      342
+     ]
+    },
+    {
+     "id": "fr_tueur_noun",
+     "box": [
+      1025,
+      360,
+      46,
+      59
+     ]
+    },
+    {
+     "id": "fr_assassinat_noun",
+     "box": [
+      1159,
+      355,
+      62,
+      70
+     ]
+    },
+    {
+     "id": "fr_meurtrier_noun",
+     "box": [
+      1159,
+      497,
+      62,
+      82
+     ]
+    },
+    {
+     "id": "fr_prostitue_noun",
+     "box": [
+      925,
+      230,
+      48,
+      60
+     ]
+    },
+    {
+     "id": "fr_terrorisme_noun",
+     "box": [
+      955,
+      405,
+      45,
+      62
+     ],
+     "labelAt": [
+      977,
+      471
+     ]
+    },
+    {
+     "id": "fr_stupefiant_noun",
+     "box": [
+      1007,
+      178,
+      48,
+      60
+     ],
+     "labelAt": [
+      1056,
+      242
+     ]
+    }
+   ]
+  }
+ }
+}
