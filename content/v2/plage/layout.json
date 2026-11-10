@@ -13,6 +13,10 @@
   {
    "key": "dunes",
    "short": "Les dunes"
+  },
+  {
+   "key": "cabine",
+   "short": "La cabine"
   }
  ],
  "planned": {
@@ -60,6 +64,17 @@
     "fr_coquillage_noun",
     "fr_atterrir_verb"
    ]
+  },
+  "cabine": {
+   "vocabRoom": "R_grocery_02",
+   "only": [
+    "fr_pizza_noun",
+    "fr_cereale_noun",
+    "fr_epice_noun",
+    "fr_spaghetti_noun",
+    "fr_bonbon_noun",
+    "fr_vinaigre_noun"
+   ]
   }
  },
  "rooms": {
@@ -91,6 +106,17 @@
       592,
       215,
       124
+     ]
+    },
+    {
+     "to": "cabine",
+     "label": "La cabine",
+     "hint": "Through the door of the striped beach hut",
+     "hit": [
+      998,
+      362,
+      75,
+      58
      ]
     }
    ],
@@ -447,6 +473,87 @@
    ],
    "building_id": "B29_plage",
    "sector_id": "S09_nature"
+  },
+  "cabine": {
+   "name": "La cabine",
+   "room_id": "R_grocery_02",
+   "image": "plage/cabine.jpg",
+   "backTo": "plage",
+   "alt": "Inside the striped beach hut, painted in ink and gouache. One picnic is laid out on a blue-and-white cloth, with a wicker basket in the middle and a wide empty center. The open blue door shows sand, sea, and a rock cave. On the left, a pizza sits on a plate, a bowl of cereal holds a spoon, and three spice jars stand in front of the bowl. On the right, spaghetti sits beside a cup of tea, candies sit on a small plate, and a glass cruet of vinegar stands beside a green salad. No people and no animals.",
+   "nameplate": [
+    16,
+    15
+   ],
+   "doors": [
+    {
+     "to": "plage",
+     "label": "La plage",
+     "hint": "Back out through the open door to the beach",
+     "hit": [
+      520,
+      55,
+      230,
+      260
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_pizza_noun",
+     "box": [
+      288,
+      405,
+      185,
+      95
+     ]
+    },
+    {
+     "id": "fr_cereale_noun",
+     "box": [
+      160,
+      502,
+      230,
+      89
+     ]
+    },
+    {
+     "id": "fr_epice_noun",
+     "box": [
+      165,
+      591,
+      230,
+      100
+     ]
+    },
+    {
+     "id": "fr_spaghetti_noun",
+     "box": [
+      750,
+      408,
+      290,
+      100
+     ]
+    },
+    {
+     "id": "fr_bonbon_noun",
+     "box": [
+      860,
+      520,
+      145,
+      72
+     ]
+    },
+    {
+     "id": "fr_vinaigre_noun",
+     "box": [
+      1018,
+      515,
+      175,
+      170
+     ]
+    }
+   ]
   }
  }
 }

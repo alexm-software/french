@@ -58,6 +58,10 @@
   {
    "key": "cantine",
    "short": "La cantine"
+  },
+  {
+   "key": "fenetre",
+   "short": "Le jardin fleuri"
   }
  ],
  "rooms": {
@@ -1728,6 +1732,17 @@
       110,
       200
      ]
+    },
+    {
+     "to": "fenetre",
+     "label": "Le jardin fleuri",
+     "hint": "Out through the tall arched window",
+     "hit": [
+      318,
+      50,
+      78,
+      100
+     ]
     }
    ],
    "zooms": [],
@@ -2479,6 +2494,87 @@
      ]
     }
    ]
+  },
+  "fenetre": {
+   "name": "Le jardin fleuri",
+   "room_id": "R_garden",
+   "image": "ecole/fenetre.jpg",
+   "backTo": "bibliotheque",
+   "alt": "The garden outside the library window, painted in ink and gouache, at watering time. A wide lawn fills the middle. On the left, a small glass greenhouse stands on the grass, a white picket fence runs below it, and a green hose pours into a pool among the lettuce. On the right, an empty striped hammock hangs between two posts, a bed of lavender and purple pansies sits below it, and cabbages grow beside one terracotta pot. An arched window in the cream wall shows the library bookshelves. No people and no animals.",
+   "nameplate": [
+    50,
+    55
+   ],
+   "doors": [
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "Back through the arched window into the library",
+     "hit": [
+      520,
+      40,
+      240,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_serre_noun",
+     "box": [
+      70,
+      60,
+      320,
+      270
+     ]
+    },
+    {
+     "id": "fr_cloture_noun",
+     "box": [
+      30,
+      345,
+      260,
+      73
+     ]
+    },
+    {
+     "id": "fr_irrigation_noun",
+     "box": [
+      0,
+      419,
+      470,
+      281
+     ]
+    },
+    {
+     "id": "fr_hamac_noun",
+     "box": [
+      900,
+      100,
+      340,
+      230
+     ]
+    },
+    {
+     "id": "fr_parterre_noun",
+     "box": [
+      800,
+      340,
+      400,
+      180
+     ]
+    },
+    {
+     "id": "fr_potager_noun",
+     "box": [
+      780,
+      530,
+      430,
+      175
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -2713,6 +2809,17 @@
     "fr_riz_noun",
     "fr_miel_noun",
     "fr_yaourt_noun"
+   ]
+  },
+  "fenetre": {
+   "vocabRoom": "R_garden",
+   "only": [
+    "fr_serre_noun",
+    "fr_cloture_noun",
+    "fr_irrigation_noun",
+    "fr_hamac_noun",
+    "fr_parterre_noun",
+    "fr_potager_noun"
    ]
   }
  },
