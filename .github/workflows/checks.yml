@@ -43,9 +43,14 @@ jobs:
         run: python tools/skills_paths.py
       - name: Hook lint (report only)
         run: python tools/hook_lint.py
+      - name: Hook overrides match vocab.jsonl
+        # vocab.jsonl owns the hook text. A hooks.json or vocab_fixes.json hook may repeat it.
+        # It may not disagree. Two painted variants stay listed in two_hooks_ok.tsv.
+        run: python scripts/qa/hook_source.py
       - name: Generated data matches its sources
         # Rebuilds the text (not the card crops). A diff here fails the pull request.
         # Regenerate village/data with the build scripts; do not hand-merge those files.
+        # Pages does not run this build: village/ is served as committed, including local preview.
         run: |
           python scripts/v2/build_v2.py --no-cards > /dev/null
           python scripts/v2/build_map.py > /dev/null
