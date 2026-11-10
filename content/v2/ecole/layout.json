@@ -48,6 +48,10 @@
    "short": "La basse-cour"
   },
   {
+   "key": "reserve",
+   "short": "La réserve"
+  },
+  {
    "key": "preau",
    "short": "Le préau"
   },
@@ -1557,6 +1561,17 @@
       190,
       250
      ]
+    },
+    {
+     "to": "reserve",
+     "label": "La réserve",
+     "hint": "Down through the open cellar hatch",
+     "hit": [
+      248,
+      618,
+      155,
+      100
+     ]
     }
    ],
    "zooms": [
@@ -2309,23 +2324,160 @@
    "image": "ecole/cottage.jpg",
    "backTo": "jardin",
    "alt": "Inside the school garden's cottage, in ink and gouache: terracotta tiles and cream walls. A carton of calm eggs with closed eyes sits on the left, a toy train of plain carriages below it, and a green wagon of many beads beside the train. A pie with one slice cut out rests on a plate, a snail sits in a ring of sand, and a man in a dark beret stands talking on the right. An open blue door shows the garden lawn, flowers, and a blue sofa. A small wooden table and two chairs stand just inside, and a framed picture of flowers hangs on the wall.",
-   "nameplate": [16, 7],
+   "nameplate": [
+    16,
+    7
+   ],
    "doors": [
     {
      "to": "jardin",
      "label": "Le jardin",
      "hint": "Through the open blue door to the garden",
-     "hit": [500, 36, 220, 220]
+     "hit": [
+      500,
+      36,
+      220,
+      220
+     ]
     }
    ],
    "zooms": [],
    "items": [
-    {"id": "fr_douzaine_noun", "box": [16, 330, 270, 180]},
-    {"id": "fr_phrase_noun", "box": [16, 530, 390, 170]},
-    {"id": "fr_trentaine_noun", "box": [430, 530, 200, 160]},
-    {"id": "fr_quart_noun", "box": [700, 420, 230, 170]},
-    {"id": "fr_sein_noun", "box": [700, 600, 190, 110]},
-    {"id": "fr_accent_noun", "box": [980, 40, 270, 660]}
+    {
+     "id": "fr_douzaine_noun",
+     "box": [
+      16,
+      330,
+      270,
+      180
+     ]
+    },
+    {
+     "id": "fr_phrase_noun",
+     "box": [
+      16,
+      530,
+      390,
+      170
+     ]
+    },
+    {
+     "id": "fr_trentaine_noun",
+     "box": [
+      430,
+      530,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_quart_noun",
+     "box": [
+      700,
+      420,
+      230,
+      170
+     ]
+    },
+    {
+     "id": "fr_sein_noun",
+     "box": [
+      700,
+      600,
+      190,
+      110
+     ]
+    },
+    {
+     "id": "fr_accent_noun",
+     "box": [
+      980,
+      40,
+      270,
+      660
+     ]
+    }
+   ]
+  },
+  "reserve": {
+   "name": "La réserve",
+   "room_id": "R_grocery_01",
+   "image": "ecole/reserve.jpg",
+   "backTo": "basse_cour",
+   "alt": "Looking down through the open hatch into the farm's pantry cellar, painted in ink and gouache. Stone walls and a dirt floor, one lantern, and the wooden hatch lid raised above the opening, with the farmyard's stone paving and whitewashed wall around the rim. On the left, a jar of red jam wears a blank luggage tag, a green oil can lets one drop fall from its spout toward a wooden cart wheel, and a jar is packed with colorful candies. On the right, a bowl of cooked rice holds a wooden spoon, a jar of honey holds a wooden dipper, and a pot of pink yogurt holds a spoon. Each one sits on its own stool, with empty floor between them.",
+   "nameplate": [
+    50,
+    46
+   ],
+   "doors": [
+    {
+     "to": "basse_cour",
+     "label": "La basse-cour",
+     "hint": "Back up through the open hatch to the farmyard",
+     "hit": [
+      430,
+      8,
+      420,
+      112
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_confiture_noun",
+     "box": [
+      410,
+      180,
+      130,
+      135
+     ]
+    },
+    {
+     "id": "fr_huile_noun",
+     "box": [
+      250,
+      320,
+      290,
+      130
+     ]
+    },
+    {
+     "id": "fr_sucrerie_noun",
+     "box": [
+      245,
+      460,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_riz_noun",
+     "box": [
+      770,
+      155,
+      155,
+      135
+     ]
+    },
+    {
+     "id": "fr_miel_noun",
+     "box": [
+      845,
+      292,
+      200,
+      168
+     ]
+    },
+    {
+     "id": "fr_yaourt_noun",
+     "box": [
+      800,
+      470,
+      250,
+      175
+     ]
+    }
    ]
   }
  },
@@ -2550,6 +2702,17 @@
     "fr_pour_prep",
     "fr_de_prep",
     "fr_derriere_prep"
+   ]
+  },
+  "reserve": {
+   "vocabRoom": "R_grocery_01",
+   "only": [
+    "fr_confiture_noun",
+    "fr_huile_noun",
+    "fr_sucrerie_noun",
+    "fr_riz_noun",
+    "fr_miel_noun",
+    "fr_yaourt_noun"
    ]
   }
  },
