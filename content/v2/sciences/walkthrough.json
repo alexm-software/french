@@ -32,6 +32,13 @@
       "level": "ground",
       "landmark": "Open wooden door back to the court telescope",
       "camera": "Eye-level in the specimen room, door to the court ahead"
+    },
+    "trouvailles": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Oak finds table and the arcade back to the telescope",
+      "camera": "Eye-level at the table, arcade to the court on the left"
     }
   },
   "passages": {
@@ -80,6 +87,22 @@
           "place": "tables",
           "where": "back center",
           "arrival": "The separate specimen tables"
+        }
+      ]
+    },
+    "west_arcade": {
+      "kind": "door",
+      "appearance": "The open stone arcade on the west wing, columns and a step, not the wooden door",
+      "ends": [
+        {
+          "place": "cour",
+          "where": "west wing arcade, left of the wooden door",
+          "arrival": "The finds table"
+        },
+        {
+          "place": "trouvailles",
+          "where": "left side, the open arcade",
+          "arrival": "The gravel court and the telescope"
         }
       ]
     }

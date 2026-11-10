@@ -26,3 +26,10 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 
 ## Art calls
 33 (32 images and 1 blocked request)
+
+
+## Parked on 10 Nov, after the finds room
+- Cottage retheme: two paintings drew eight eggs for a dozen, and an edit of the accepted painting deleted the eggs, the wagon, and the pie. The live cottage is unchanged.
+- Cottage prepositions (hors, via, moyennant, excepté, par-delà, hormis): no unused painted opening in the school.
+- `ecole/cave`: the farmyard hatch already opens the pantry, and no other opening is a cellar.
+- `sciences/essai`: the words already painted in the specimen room were dropped, and too few were left for a room. The west arcade is the finds room.
