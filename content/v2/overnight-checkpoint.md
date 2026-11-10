@@ -6,7 +6,7 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - none confirmed in production yet
 
 ## In progress
-- `sciences/labo` (R_chemistry_01, 13 words), PR 280, head `ea11efb0`. Painting sha `a27805a542920546135ac7d70564fe703ec0e8ec30f49f49040744555f82cc8d`. East wooden door of the Cour opens it. Painted door returns to the Cour. Ordinary Back goes to Campus. Hub hidden. Two art calls. Residual: the gas burner has no separate gauze square, and the green gel is stirred rather than a standing column. Waiting on CI before merge.
+- `sciences/labo`, 12 words from `R_chemistry_01`, PR 280. Painting sha `a27805a542920546135ac7d70564fe703ec0e8ec30f49f49040744555f82cc8d`. Independent review recorded in `content/v2/sciences/review/labo/REVIEW.md`. `fr_plomb_noun` was left out because the painted object reads as a plum. Hooks for gas and the green substance match the paint. Not yet in production.
 
 ## Parked
 - none
