@@ -103,7 +103,7 @@ class ScienceHallPilot(unittest.TestCase):
         self.assertEqual(vocab["fr_pendule_noun_m"]["room_id"], "R_physics_02")
         self.assertEqual(live.get("fr_pendule_noun_m", []), [])
         self.assertEqual(vocab["fr_creuset_noun"]["room_id"], "R_geology")
-        self.assertEqual(live.get("fr_creuset_noun", []), [])
+        self.assertEqual(live.get("fr_creuset_noun", []), [("sciences", "tables")])
         plan = (ROOT / "content/v2/sciences/PLAN.md").read_text()
         self.assertIn("fr_pendule_noun_m", plan)
         self.assertIn("fr_creuset_noun", plan)
