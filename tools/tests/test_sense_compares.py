@@ -125,7 +125,7 @@ class SenseCompares(unittest.TestCase):
         for e in verified:
             self.assertTrue(e["support"][0]["excerpt"])
             self.assertTrue(e["support"][0]["url"].startswith("https://"))
-        i18n = json.loads((ROOT / "data" / "i18n.json").read_text(encoding="utf-8"))
+        i18n = json.loads((ROOT / "archive" / "data" / "i18n.json").read_text(encoding="utf-8"))
         extras = (ROOT / "village" / "extras.js").read_text(encoding="utf-8")
         for key in ("notTheSame", "notInARoom", "exampleOf", "noPainting"):
             self.assertIn(i18n["en"]["card"][key], extras if key != "noPainting" else (ROOT / "village" / "app.js").read_text(encoding="utf-8") + extras)

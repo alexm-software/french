@@ -26,7 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "village" / "data"
-SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js"}  # (talk/ is a subfolder, so not globbed)
+SKIP = {"map.js", "live.js", "index.js", "dialogues.js", "listening.js", "prayers.js", "lexicon.js"}  # (talk/ is a subfolder, so not globbed)
 # Village dialogues whose original room was folded into another when the church was repainted
 REHOME = {"eglise/clocher": "eglise/parvis", "eglise/paroisse": "eglise/eglise", "eglise/bricolage": "eglise/eglise"}
 MIN_SHARED = 3  # an unpinned dialogue needs this many of its words in a room to be placed there (scripts/qa/dialogue_check.py)

@@ -1,0 +1,161 @@
+{
+  "building": "sciences",
+  "room": "finds",
+  "coordinate_space": "1280x720-px",
+  "setting": "A side room of the science faculty, not the entrance hall",
+  "theme_fit": "One morning's rock finds, set out together. The crucible and the pendulum stay queued.",
+  "scene_situation": "The geologist and a prospector set the morning's finds on the floor.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les trouvailles",
+    "camera": "eye-level from inside the side room, looking toward an open oak door",
+    "light_from": "a tall side window",
+    "refs": ["content/v2/sciences/review/six/sciences-faculty-crop.png"],
+    "look": "tan stone and glass of the faculty crop, seen as interior materials, not its aerial angle",
+    "materials": "pale tan stone walls, cream stone floor, oak door",
+    "set_apart": "cool morning light from one side window, no room-wide color cast",
+    "place": "the side room where the faculty sets out rock finds",
+    "landmark": "open oak door back into the rock hall",
+    "whimsy": "a small model volcano with baking-soda foam",
+    "differ": "a side workroom with people handling finds, not the entrance hall's view out to the telescope",
+    "reference_board": "none",
+    "beyond": "a glimpse of the rock hall's cream floor and glass, not the campus",
+    "sign_plates": "none",
+    "style_slider": "3: respectful, slightly realistic painterly with cartoony elements"
+  },
+  "siblings": ["sciences/sciences"],
+  "used_motifs": ["the hall's standing man with the mineral cluster", "the hall's boot tray", "the hall's mine model"],
+  "doors": [
+    {
+      "to": "sciences",
+      "where": "back left",
+      "painted_as": "one open oak door onto the rock hall's cream floor and glass, not onto the campus"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "interactions": [
+    {
+      "who": ["fr_geologue_noun", "fr_filon_noun"],
+      "doing": "she stands clear of the vein rock and taps her own log-shaped stone"
+    },
+    {
+      "who": ["fr_prospection_noun", "fr_caillou_noun"],
+      "doing": "the prospector pans on the left and the pebble game is on the right, with open floor between"
+    },
+    {
+      "who": ["fr_volcan_noun", "fr_minerai_noun"],
+      "doing": "the model volcano sits farther back than the mole and the ore lump"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_prospection_noun",
+      "word": "prospection",
+      "pos": "noun",
+      "gloss": "prospecting",
+      "hook": "pros-pehk-SYOHN, like prospecting: a PROSPECTOR pans one gold flake from a shallow pan.",
+      "hook_object": "prospector with a pan",
+      "shown": "one kneeling prospector, one pan, one gold flake",
+      "pose_action": "his whole body stays with the pan on the left side of the floor",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left floor",
+      "depth": "middle",
+      "box_hint": [90, 360, 280, 270],
+      "interacts_with": "the open floor toward the geologist",
+      "g": "f"
+    },
+    {
+      "id": "fr_geologue_noun",
+      "word": "géologue",
+      "pos": "noun",
+      "gloss": "geologist",
+      "hook": "zhay-oh-LOG, like geologist: she taps a LOG-shaped rock with a small hammer.",
+      "hook_object": "log-shaped rock and hammer",
+      "shown": "one woman geologist, one log-shaped rock, one hammer",
+      "pose_action": "she stands in the middle and her whole body stays with the log-shaped rock",
+      "count": 1,
+      "sensitive": "none",
+      "side": "center",
+      "zone": "middle of the floor",
+      "depth": "middle",
+      "box_hint": [470, 250, 250, 330],
+      "interacts_with": "open floor around her",
+      "g": "mf"
+    },
+    {
+      "id": "fr_volcan_noun",
+      "word": "volcan",
+      "pos": "noun",
+      "gloss": "volcano",
+      "hook": "vol-KAHN, like volcano: a small model VOLCANO spills baking-soda foam, and one toy dinosaur stands at its base.",
+      "hook_object": "model volcano",
+      "shown": "one small volcano model, baking-soda foam, one toy dinosaur",
+      "pose_action": "the model and the dinosaur sit together on the floor at the back right",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "back right floor",
+      "depth": "back",
+      "box_hint": [880, 70, 230, 190],
+      "interacts_with": "the ore lump nearer",
+      "g": "m"
+    },
+    {
+      "id": "fr_minerai_noun",
+      "word": "minerai",
+      "pos": "noun",
+      "gloss": "ore",
+      "hook": "mee-nuh-REH, like ore: a mole lifts one lump of iron ORE.",
+      "hook_object": "lump of iron ore",
+      "shown": "one mole and one iron-ore lump",
+      "pose_action": "the mole is small and stays with the lump",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "mid right floor",
+      "depth": "middle",
+      "box_hint": [980, 300, 180, 150],
+      "interacts_with": "the volcano farther back",
+      "g": "m"
+    },
+    {
+      "id": "fr_filon_noun",
+      "word": "filon",
+      "pos": "noun",
+      "gloss": "lode, seam, vein",
+      "hook": "fee-LOHN: one cut rock shows a single gold VEIN.",
+      "hook_object": "gold vein in a rock",
+      "shown": "one cut rock with one gold vein and no person",
+      "pose_action": "the rock sits on the floor, clear of the geologist",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "lower right floor",
+      "depth": "front",
+      "box_hint": [800, 500, 190, 140],
+      "interacts_with": "the pebble farther right",
+      "g": "m"
+    },
+    {
+      "id": "fr_caillou_noun",
+      "word": "caillou",
+      "pos": "noun",
+      "gloss": "pebble",
+      "hook": "kah-YOO, like coyote: a small coyote figurine skims one PEBBLE across a bowl.",
+      "hook_object": "pebble",
+      "shown": "one pebble and one small coyote figurine at a bowl",
+      "pose_action": "the figurine is toy-sized and stays with the pebble",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "front right floor",
+      "depth": "front",
+      "box_hint": [1040, 490, 140, 150],
+      "interacts_with": "the vein rock to its left",
+      "g": "m"
+    }
+  ]
+}

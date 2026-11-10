@@ -8,11 +8,23 @@
   "roomList": [
     {
       "key": "restaurant",
+      "short": "Accueil"
+    },
+    {
+      "key": "cuisine_chef",
       "short": "La cuisine du chef"
+    },
+    {
+      "key": "degustation",
+      "short": "Le passe des saveurs"
+    },
+    {
+      "key": "preparation",
+      "short": "Le plan de préparation"
     }
   ],
   "planned": {
-    "restaurant": {
+    "cuisine_chef": {
       "only": [
         "fr_puree_noun",
         "fr_preparatif_noun",
@@ -27,14 +39,50 @@
         "fr_gastronomie_noun"
       ],
       "vocabRoom": "R_resto_kitchen_02"
+    },
+    "degustation": {
+      "vocabRoom": "R_resto_kitchen_01",
+      "only": [
+        "fr_recette_noun",
+        "fr_amertume_noun",
+        "fr_soupe_noun",
+        "fr_saveur_noun",
+        "fr_delicieux_adj",
+        "fr_cuisinier_noun",
+        "fr_gout_noun"
+      ]
+    },
+    "preparation": {
+      "vocabRoom": "R_resto_kitchen_01",
+      "only": [
+        "fr_menthe_noun",
+        "fr_preparation_noun",
+        "fr_frite_noun",
+        "fr_sauce_noun",
+        "fr_grille_adj",
+        "fr_culinaire_adj",
+        "fr_haricot_noun"
+      ]
     }
   },
   "rooms": {
-    "restaurant": {
+    "cuisine_chef": {
       "name": "La cuisine du chef · Chef’s Kitchen",
       "image": "restaurant/cuisine.jpg",
       "alt": "The kitchen team prepares a tasting supper, passing dishes from the cooking range to the serving pass. bowl of mashed potatoes with resting potato ricer; adult organizer with a long checklist and pencil near his mouth; small savory tart covered with mustard and a simple cow face; adult grandmother tending a rectangular barbecue grill; eggs, flour sack and butter grouped on a gray slate board; adult cook with one long dark vanilla pod; small oven with visible roast and a clear hourglass timer beside it; shy mouse lifting a silver cloche from an elegant small plate; red salsa in a white bowl beside two maracas; blue-aproned fisherwoman and a pot of orange fish stew with visible fish pieces; proud chef in a white toque presenting a composed tasting plate. Ground-floor demonstration kitchen reached directly through the restaurant service entrance.",
-      "doors": [],
+      "doors": [
+        {
+          "to": "restaurant",
+          "label": "La cour du restaurant",
+          "hint": "Return through the doorway to the shared entrance court",
+          "hit": [
+            30,
+            180,
+            65,
+            170
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
         {
@@ -152,16 +200,245 @@
           "text": "vocab"
         }
       ],
+      "room_id": "R_resto_kitchen_02",
+      "backTo": "restaurant"
+    },
+    "degustation": {
+      "name": "Le passe des saveurs · Tasting Pass",
+      "image": "restaurant/degustation.jpg",
+      "room_id": "R_resto_kitchen_01",
+      "alt": "The kitchen team tastes a soup and dessert before service and adjusts their flavors. recipe book with food diagrams and round reset-arrow control; adult taster puckering at dark chocolate with a coffee cup beside him; copper vegetable-soup pot with looping steam; adult female cook savoring a wooden spoonful; flat-cap deli worker with a strawberry tart and raised waving hand; white-toque cook stirring a saucepan; seated adult taster eating purple fruit puree",
+      "doors": [
+        {
+          "to": "restaurant",
+          "label": "La cour",
+          "hint": "Out through the sage-green courtyard doorway",
+          "hit": [
+            63,
+            185,
+            100,
+            225
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_recette_noun",
+          "box": [
+            238,
+            231,
+            194,
+            84
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_amertume_noun",
+          "box": [
+            439,
+            168,
+            138,
+            143
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_soupe_noun",
+          "box": [
+            211,
+            348,
+            170,
+            184
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_saveur_noun",
+          "box": [
+            408,
+            319,
+            167,
+            219
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_delicieux_adj",
+          "box": [
+            603,
+            245,
+            171,
+            206
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_cuisinier_noun",
+          "box": [
+            860,
+            151,
+            145,
+            171
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_gout_noun",
+          "box": [
+            891,
+            330,
+            225,
+            343
+          ],
+          "text": "vocab"
+        }
+      ],
+      "backTo": "restaurant"
+    },
+    "preparation": {
+      "name": "Le plan de préparation · Preparation Bench",
+      "image": "restaurant/preparation.jpg",
+      "room_id": "R_resto_kitchen_01",
+      "alt": "The team prepares a grilled-fish plate with fries, beans and mint sauce. older aunt in a straw hat tending a terracotta mint plant; adult cook chopping cucumber at a board beside prepared bowls; paper-boat serving tray of golden French fries; adult server pouring sauce onto a cooked fish from a sauceboat; two pieces of bread with dark grill stripes cooling on a rack; sunglasses cat beside a golden whisk and mixing bowl; shaggy cow with two horns leaning through a window and eating a green bean above a colander",
+      "doors": [
+        {
+          "to": "restaurant",
+          "label": "La cour",
+          "hint": "Out through the sage-green courtyard doorway",
+          "hit": [
+            1020,
+            325,
+            145,
+            290
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_menthe_noun",
+          "box": [
+            68,
+            146,
+            220,
+            203
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_preparation_noun",
+          "box": [
+            398,
+            154,
+            211,
+            214
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_frite_noun",
+          "box": [
+            136,
+            499,
+            137,
+            84
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_sauce_noun",
+          "box": [
+            287,
+            371,
+            287,
+            235
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_grille_adj",
+          "box": [
+            652,
+            264,
+            145,
+            58
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_culinaire_adj",
+          "box": [
+            642,
+            346,
+            244,
+            217
+          ],
+          "text": "vocab"
+        },
+        {
+          "id": "fr_haricot_noun",
+          "box": [
+            1014,
+            88,
+            205,
+            198
+          ],
+          "text": "vocab"
+        }
+      ],
+      "backTo": "restaurant"
+    },
+    "restaurant": {
+      "name": "La cour du restaurant · Restaurant Courtyard",
+      "image": "restaurant/accueil.jpg",
+      "alt": "An open restaurant courtyard joins the three kitchen workrooms.",
       "mapExit": {
         "box": [
-          30,
-          180,
-          65,
-          170
+          80,
+          245,
+          120,
+          270
         ],
         "label": "La rue des Saveurs"
       },
-      "room_id": "R_resto_kitchen_02"
+      "doors": [
+        {
+          "to": "cuisine_chef",
+          "label": "La cuisine du chef",
+          "hint": "Through the painted opening to La cuisine du chef",
+          "hit": [
+            325,
+            250,
+            210,
+            250
+          ]
+        },
+        {
+          "to": "degustation",
+          "label": "Le passe des saveurs",
+          "hint": "Through the painted opening to Le passe des saveurs",
+          "hit": [
+            642,
+            245,
+            217,
+            255
+          ]
+        },
+        {
+          "to": "preparation",
+          "label": "Le plan de préparation",
+          "hint": "Through the painted opening to Le plan de préparation",
+          "hit": [
+            974,
+            245,
+            235,
+            260
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
     }
   }
 }

@@ -257,7 +257,7 @@ V.onCard.push(function(it){
   var en=card.querySelector('.en'); if(en&&it.cefr) en.insertAdjacentHTML('beforeend',' <span class="lvl" title="CEFR level">'+esc(it.cefr)+'</span>');
   var gram=card.querySelector('.gram'); if(gram&&!it.lex&&!it.verb&&!it.adj&&!it.adv&&(it.g==='f'||it.g==='m')) gram.insertAdjacentHTML('beforeend',' · <span class="side">stands on the '+(it.g==='f'?'left':'right')+'</span>');
   var pic=card.querySelector('.pic'); if(pic){ pic.title='Tap to enlarge'; pic.addEventListener('click',function(){ pic.classList.toggle('big') }) }
-  // English card chrome. The same three strings are data/i18n.json en.card; fr.card holds the French.
+  // English card chrome. The same three strings are archive/data/i18n.json en.card; fr.card holds the French.
   // The village card does not load that file, so this section stays English like "Example" above it.
   if(it.lex&&it.note){ var noteHtml='<div class="sec lexnote"><h3>Note</h3><p>'+esc(it.note)+'</p></div>'; var ex0=card.querySelector('.sec.ex'); if(ex0) ex0.insertAdjacentHTML('beforebegin',noteHtml); else card.insertAdjacentHTML('beforeend',noteHtml) }
   var CMP={notTheSame:'Not the same', notInARoom:'Not in a room yet.', exampleOf:'Example of {word}', noPainting:'No painting yet'};

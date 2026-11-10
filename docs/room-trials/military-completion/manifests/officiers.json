@@ -1,0 +1,196 @@
+{
+  "building": "caserne",
+  "room": "officiers",
+  "coordinate_space": "1280x720-px",
+  "setting": "A respectful French military-history museum gallery",
+  "theme_fit": "The assigned vocabulary is interpreted in one coherent museum exhibit. Five-item rooms reserve enough right-side space for the overwhelmingly masculine rank words.",
+  "scene_situation": "A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage.",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les officiers et la marine",
+    "camera": "wide eye-level three-quarter view, 1280x720",
+    "light_from": "tall left windows, neutral daylight",
+    "refs": "village/caserne/uniformes.jpg, attached museum-style reference",
+    "look": "quiet storybook ink-and-gouache museum",
+    "materials": "pale limestone, muted sage pilasters, oak furniture, glass cases",
+    "set_apart": "A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage.",
+    "place": "Les officiers et la marine",
+    "landmark": "a clear central tall limestone arch into the next gallery",
+    "whimsy": "restrained historic architecture; no decorative creatures",
+    "differ": "A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage.",
+    "reference_board": "none"
+  },
+  "siblings": [
+    "service",
+    "officiers",
+    "formations",
+    "conflits",
+    "consequences",
+    "archives"
+  ],
+  "used_motifs": [],
+  "doors": [
+    {
+      "to": "formations",
+      "where": "[550, 200, 150, 300]",
+      "painted_as": "floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "items": [
+    {
+      "id": "fr_marine_noun",
+      "word": "marine",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "navy",
+      "hook": "NAVY: plain depiction of a large glass-cased historical navy sailing-ship model on a wooden base.",
+      "hook_object": "a large glass-cased historical navy sailing-ship model on a wooden base",
+      "shown": "a large glass-cased historical navy sailing-ship model on a wooden base",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left [52, 143, 419, 558]",
+      "depth": "front",
+      "box_hint": [
+        52,
+        143,
+        419,
+        558
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_commandement_noun",
+      "word": "commandement",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "command; military leadership",
+      "hook": "COMMAND; MILITARY LEADERSHIP: plain depiction of a command organization chart made of blank cards linked by cords on a framed board.",
+      "hook_object": "a command organization chart made of blank cards linked by cords on a framed board",
+      "shown": "a command organization chart made of blank cards linked by cords on a framed board",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [959, 64, 251, 166]",
+      "depth": "back",
+      "box_hint": [
+        959,
+        64,
+        251,
+        166
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_lieutenant_noun",
+      "word": "lieutenant",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "lieutenant",
+      "hook": "LIEUTENANT: plain depiction of an oval framed portrait of a young historical lieutenant in a high-collared blue coat.",
+      "hook_object": "an oval framed portrait of a young historical lieutenant in a high-collared blue coat",
+      "shown": "an oval framed portrait of a young historical lieutenant in a high-collared blue coat",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [824, 69, 127, 170]",
+      "depth": "back",
+      "box_hint": [
+        824,
+        69,
+        127,
+        170
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_commandant_noun",
+      "word": "commandant",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "commandant: field-officer rank corresponding to major",
+      "hook": "COMMANDANT: FIELD-OFFICER RANK CORRESPONDING TO MAJOR: plain depiction of a standing historical field-officer mannequin in a dark coat with gold trim.",
+      "hook_object": "a standing historical field-officer mannequin in a dark coat with gold trim",
+      "shown": "a standing historical field-officer mannequin in a dark coat with gold trim",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [1080, 244, 150, 407]",
+      "depth": "front",
+      "box_hint": [
+        1080,
+        244,
+        150,
+        407
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    },
+    {
+      "id": "fr_enseigne_noun_m",
+      "word": "enseigne",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "naval ensign; junior naval officer",
+      "hook": "NAVAL ENSIGN; JUNIOR NAVAL OFFICER: plain depiction of a seated naval ensign mannequin at a small writing desk, full torso and both hands visible.",
+      "hook_object": "a seated naval ensign mannequin at a small writing desk, full torso and both hands visible",
+      "shown": "a seated naval ensign mannequin at a small writing desk, full torso and both hands visible",
+      "pose_action": "mounted or supported as a museum exhibit",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right [750, 316, 312, 330]",
+      "depth": "front",
+      "box_hint": [
+        750,
+        316,
+        312,
+        330
+      ],
+      "interacts_with": "the shared museum interpretation display"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_marine_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_commandement_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_lieutenant_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_commandant_noun",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    },
+    {
+      "who": [
+        "fr_enseigne_noun_m",
+        "background: museum curator arranging exhibits"
+      ],
+      "doing": "the exhibit contributes to the curator’s coherent history display; curator remains outside the image"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, wide eye-level three-quarter view, 1280x720, of caserne / Les officiers et la marine.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/caserne/uniformes.jpg, attached museum-style reference, this quiet storybook ink-and-gouache museum, and materials pale limestone, muted sage pilasters, oak furniture, glass cases. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from tall left windows, neutral daylight; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage..\n\nSETTING: Les officiers et la marine; landmark a clear central tall limestone arch into the next gallery; architectural whimsy restrained historic architecture; no decorative creatures. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage.. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_marine_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_commandement_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_lieutenant_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_commandant_noun, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image; fr_enseigne_noun_m, background: museum curator arranging exhibits: the exhibit contributes to the curator’s coherent history display; curator remains outside the image. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: service; officiers; formations; conflits; consequences; archives.\n\nITEMS: exactly 5 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. marine = navy: chosen hook NAVY: plain depiction of a large glass-cased historical navy sailing-ship model on a wooden base.; literal cue a large glass-cased historical navy sailing-ship model on a wooden base; shown as a large glass-cased historical navy sailing-ship model on a wooden base; pose/action mounted or supported as a museum exhibit; count -; at left, left [52, 143, 419, 558], front; interacts with the shared museum interpretation display; planned pixel envelope [52, 143, 419, 558].\n2. commandement = command; military leadership: chosen hook COMMAND; MILITARY LEADERSHIP: plain depiction of a command organization chart made of blank cards linked by cords on a framed board.; literal cue a command organization chart made of blank cards linked by cords on a framed board; shown as a command organization chart made of blank cards linked by cords on a framed board; pose/action mounted or supported as a museum exhibit; count -; at right, right [959, 64, 251, 166], back; interacts with the shared museum interpretation display; planned pixel envelope [959, 64, 251, 166].\n3. lieutenant = lieutenant: chosen hook LIEUTENANT: plain depiction of an oval framed portrait of a young historical lieutenant in a high-collared blue coat.; literal cue an oval framed portrait of a young historical lieutenant in a high-collared blue coat; shown as an oval framed portrait of a young historical lieutenant in a high-collared blue coat; pose/action mounted or supported as a museum exhibit; count -; at right, right [824, 69, 127, 170], back; interacts with the shared museum interpretation display; planned pixel envelope [824, 69, 127, 170].\n4. commandant = commandant: field-officer rank corresponding to major: chosen hook COMMANDANT: FIELD-OFFICER RANK CORRESPONDING TO MAJOR: plain depiction of a standing historical field-officer mannequin in a dark coat with gold trim.; literal cue a standing historical field-officer mannequin in a dark coat with gold trim; shown as a standing historical field-officer mannequin in a dark coat with gold trim; pose/action mounted or supported as a museum exhibit; count -; at right, right [1080, 244, 150, 407], front; interacts with the shared museum interpretation display; planned pixel envelope [1080, 244, 150, 407].\n5. enseigne = naval ensign; junior naval officer: chosen hook NAVAL ENSIGN; JUNIOR NAVAL OFFICER: plain depiction of a seated naval ensign mannequin at a small writing desk, full torso and both hands visible.; literal cue a seated naval ensign mannequin at a small writing desk, full torso and both hands visible; shown as a seated naval ensign mannequin at a small writing desk, full torso and both hands visible; pose/action mounted or supported as a museum exhibit; count -; at right, right [750, 316, 312, 330], front; interacts with the shared museum interpretation display; planned pixel envelope [750, 316, 312, 330].\nExact visible counts: none. Reference board: none. Plaque-only words: none, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to formations, [550, 200, 150, 300], painted as floor-level tall limestone arch with muted sage pilasters; unobstructed threshold and continuous floor. Clear floor-level thresholds at human scale; no props in openings. Beyond: formations. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths. Shared plan: service-to-officiers (one-way arrival): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: arrival behind the viewer. Other side: forward gallery opening, arriving at La vie de caserne. Match reference caserne/service.jpg. officiers-to-formations (painted passage): Tall limestone arch with muted sage pilasters and a continuous pale stone floor; arrival is behind the viewer in the next gallery. Here: forward gallery opening. Other side: arrival behind the viewer, arriving at Les corps et les traditions. Match reference caserne/formations.jpg.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text none. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs none so far. This room differs by A naval-history study with a model ship, command papers and officer exhibits arranged around a clear arched passage..\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}

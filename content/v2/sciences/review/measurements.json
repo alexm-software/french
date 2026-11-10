@@ -1,0 +1,135 @@
+{
+  "status": "blocked",
+  "image_calls": 1,
+  "repair_calls": 0,
+  "reason": "Candidate ignored planned envelopes. Honest boxes fail the 45% gender line and the 6% edge, and several would overlap. Not a single local repair.",
+  "items": {
+    "fr_pierre_noun": {
+      "kind": "f",
+      "box": [
+        8,
+        290,
+        242,
+        180
+      ],
+      "note": "Painted as a second mine tunnel with an interior plank bridge, not a dressed stone plus a pier model.",
+      "center_x": 0.1008,
+      "fails": [
+        "left-6%"
+      ]
+    },
+    "fr_terre_noun": {
+      "kind": "f",
+      "box": [
+        4,
+        490,
+        330,
+        220
+      ],
+      "note": "Torn sack, soil and seedling are present. Sack and spill cross the left and bottom 6% margins.",
+      "center_x": 0.132,
+      "fails": [
+        "left-6%",
+        "bottom-6%"
+      ]
+    },
+    "fr_mine_noun": {
+      "kind": "f",
+      "box": [
+        490,
+        175,
+        240,
+        160
+      ],
+      "note": "Tabletop mine is readable (tunnel, lantern, cart). Its center is right of 45%.",
+      "center_x": 0.4766,
+      "fails": [
+        "feminine 47.7%"
+      ]
+    },
+    "fr_mineral_adj": {
+      "kind": "adj",
+      "box": [
+        750,
+        190,
+        180,
+        140
+      ],
+      "note": "Cluster and desk lamp. Center stays inside 30-70. An extra iris sits nearby and is not this word.",
+      "center_x": 0.6562,
+      "fails": []
+    },
+    "fr_sol_noun": {
+      "kind": "m",
+      "box": [
+        860,
+        250,
+        220,
+        170
+      ],
+      "note": "Boot, soil tray and worm. Masculine center is fine. The tray meets the crystal pedestal.",
+      "center_x": 0.7578,
+      "fails": []
+    },
+    "fr_cristal_noun": {
+      "kind": "m",
+      "box": [
+        1040,
+        130,
+        230,
+        210
+      ],
+      "note": "Tall purple crystal and mouse. Mouse is past the right 6% line. Box meets the pot and the soil tray.",
+      "center_x": 0.9023,
+      "fails": [
+        "right-6%"
+      ]
+    },
+    "fr_pendule_noun_m": {
+      "kind": "m",
+      "box": [
+        860,
+        450,
+        270,
+        260
+      ],
+      "note": "Real pendulum, ladybird on the string above the bob. Base crosses the bottom 6% line.",
+      "center_x": 0.7773,
+      "fails": [
+        "bottom-6%"
+      ]
+    },
+    "fr_creuset_noun": {
+      "kind": "m",
+      "box": [
+        1090,
+        300,
+        180,
+        160
+      ],
+      "note": "Orange pot, trivet, small flame. Handle crosses the right 6% line and the box meets the crystal and the pendulum.",
+      "center_x": 0.9219,
+      "fails": [
+        "right-6%"
+      ]
+    }
+  },
+  "overlaps": [
+    [
+      "fr_mineral_adj",
+      "fr_sol_noun"
+    ],
+    [
+      "fr_sol_noun",
+      "fr_cristal_noun"
+    ],
+    [
+      "fr_cristal_noun",
+      "fr_creuset_noun"
+    ],
+    [
+      "fr_pendule_noun_m",
+      "fr_creuset_noun"
+    ]
+  ]
+}

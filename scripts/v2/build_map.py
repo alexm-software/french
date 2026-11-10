@@ -5,8 +5,8 @@ map.json = {"world": {image, alt, h?, sectors: [{id, slug, name, rect}]},
             "sectors": {slug: {id, slug, name, image, alt,
                                buildings: [{building_id, name, rect, id?}],
                                streets:   [{id, name, rect}]}}}
-It follows the memory-palace registry (data/sectors.json, data/buildings.json): every sector and every
-building / ST_ verb street of each sector is painted on that sector's map. Nothing here says which
+The painted map is this file. data/source/sectors.json and data/source/map.json are an older
+plan and are not read here. Nothing here says which
 buildings are live: the app probes village/data/<id>.js for each building at runtime, where
 id = building_id without its "Bnn_" prefix (B29_plage -> plage) unless the entry gives a legacy "id"
 (B06_marche -> boulangerie, B05_maison's garage -> garage). The world may give "h": the height of a tall, vertically scrolling world painting (default 720).

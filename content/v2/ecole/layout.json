@@ -40,8 +40,16 @@
    "short": "Le jardin de l'école"
   },
   {
+   "key": "cottage",
+   "short": "La maisonnette"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
+  },
+  {
+   "key": "reserve",
+   "short": "La réserve"
   },
   {
    "key": "preau",
@@ -50,6 +58,18 @@
   {
    "key": "cantine",
    "short": "La cantine"
+  },
+  {
+   "key": "fenetre",
+   "short": "Le jardin fleuri"
+  },
+  {
+   "key": "verger",
+   "short": "Le verger"
+  },
+  {
+   "key": "office",
+   "short": "L'office"
   }
  ],
  "rooms": {
@@ -1235,6 +1255,17 @@
       230,
       275
      ]
+    },
+    {
+     "to": "cottage",
+     "label": "La maisonnette",
+     "hint": "Through the open blue door of the cottage",
+     "hit": [
+      1096,
+      148,
+      150,
+      270
+     ]
     }
    ],
    "zooms": [],
@@ -1337,6 +1368,17 @@
       12,
       210,
       285
+     ]
+    },
+    {
+     "to": "verger",
+     "label": "Le verger",
+     "hint": "Out through the right-hand window",
+     "hit": [
+      1160,
+      40,
+      90,
+      140
      ]
     }
    ],
@@ -1542,6 +1584,17 @@
       190,
       250
      ]
+    },
+    {
+     "to": "reserve",
+     "label": "La réserve",
+     "hint": "Down through the open cellar hatch",
+     "hit": [
+      248,
+      618,
+      155,
+      100
+     ]
     }
    ],
    "zooms": [
@@ -1698,6 +1751,17 @@
       110,
       200
      ]
+    },
+    {
+     "to": "fenetre",
+     "label": "Le jardin fleuri",
+     "hint": "Out through the tall arched window",
+     "hit": [
+      318,
+      50,
+      78,
+      100
+     ]
     }
    ],
    "zooms": [],
@@ -1791,6 +1855,17 @@
       40,
       58,
       160
+     ]
+    },
+    {
+     "to": "office",
+     "label": "L'office",
+     "hint": "Through the blue-shuttered window",
+     "hit": [
+      620,
+      50,
+      85,
+      65
      ]
     }
    ],
@@ -2287,6 +2362,411 @@
      ]
     }
    ]
+  },
+  "cottage": {
+   "name": "La maisonnette",
+   "room_id": "R_numbers2",
+   "image": "ecole/cottage.jpg",
+   "backTo": "jardin",
+   "alt": "Inside the school garden's cottage, in ink and gouache: terracotta tiles and cream walls. A carton of calm eggs with closed eyes sits on the left, a toy train of plain carriages below it, and a green wagon of many beads beside the train. A pie with one slice cut out rests on a plate, a snail sits in a ring of sand, and a man in a dark beret stands talking on the right. An open blue door shows the garden lawn, flowers, and a blue sofa. A small wooden table and two chairs stand just inside, and a framed picture of flowers hangs on the wall.",
+   "nameplate": [
+    16,
+    7
+   ],
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "Through the open blue door to the garden",
+     "hit": [
+      500,
+      36,
+      220,
+      220
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_douzaine_noun",
+     "box": [
+      16,
+      330,
+      270,
+      180
+     ]
+    },
+    {
+     "id": "fr_phrase_noun",
+     "box": [
+      16,
+      530,
+      390,
+      170
+     ]
+    },
+    {
+     "id": "fr_trentaine_noun",
+     "box": [
+      430,
+      530,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_quart_noun",
+     "box": [
+      700,
+      420,
+      230,
+      170
+     ]
+    },
+    {
+     "id": "fr_sein_noun",
+     "box": [
+      700,
+      600,
+      190,
+      110
+     ]
+    },
+    {
+     "id": "fr_accent_noun",
+     "box": [
+      980,
+      40,
+      270,
+      660
+     ]
+    }
+   ]
+  },
+  "reserve": {
+   "name": "La réserve",
+   "room_id": "R_grocery_01",
+   "image": "ecole/reserve.jpg",
+   "backTo": "basse_cour",
+   "alt": "Looking down through the open hatch into the farm's pantry cellar, painted in ink and gouache. Stone walls and a dirt floor, one lantern, and the wooden hatch lid raised above the opening, with the farmyard's stone paving and whitewashed wall around the rim. On the left, a jar of red jam wears a blank luggage tag, a green oil can lets one drop fall from its spout toward a wooden cart wheel, and a jar is packed with colorful candies. On the right, a bowl of cooked rice holds a wooden spoon, a jar of honey holds a wooden dipper, and a pot of pink yogurt holds a spoon. Each one sits on its own stool, with empty floor between them.",
+   "nameplate": [
+    50,
+    46
+   ],
+   "doors": [
+    {
+     "to": "basse_cour",
+     "label": "La basse-cour",
+     "hint": "Back up through the open hatch to the farmyard",
+     "hit": [
+      430,
+      8,
+      420,
+      112
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_confiture_noun",
+     "box": [
+      410,
+      180,
+      130,
+      135
+     ]
+    },
+    {
+     "id": "fr_huile_noun",
+     "box": [
+      250,
+      320,
+      290,
+      130
+     ]
+    },
+    {
+     "id": "fr_sucrerie_noun",
+     "box": [
+      245,
+      460,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_riz_noun",
+     "box": [
+      770,
+      155,
+      155,
+      135
+     ]
+    },
+    {
+     "id": "fr_miel_noun",
+     "box": [
+      845,
+      292,
+      200,
+      168
+     ]
+    },
+    {
+     "id": "fr_yaourt_noun",
+     "box": [
+      800,
+      470,
+      250,
+      175
+     ]
+    }
+   ]
+  },
+  "fenetre": {
+   "name": "Le jardin fleuri",
+   "room_id": "R_garden",
+   "image": "ecole/fenetre.jpg",
+   "backTo": "bibliotheque",
+   "alt": "The garden outside the library window, painted in ink and gouache, at watering time. A wide lawn fills the middle. On the left, a small glass greenhouse stands on the grass, a white picket fence runs below it, and a green hose pours into a pool among the lettuce. On the right, an empty striped hammock hangs between two posts, a bed of lavender and purple pansies sits below it, and cabbages grow beside one terracotta pot. An arched window in the cream wall shows the library bookshelves. No people and no animals.",
+   "nameplate": [
+    50,
+    55
+   ],
+   "doors": [
+    {
+     "to": "bibliotheque",
+     "label": "La bibliothèque",
+     "hint": "Back through the arched window into the library",
+     "hit": [
+      520,
+      40,
+      240,
+      190
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_serre_noun",
+     "box": [
+      70,
+      60,
+      320,
+      270
+     ]
+    },
+    {
+     "id": "fr_cloture_noun",
+     "box": [
+      30,
+      345,
+      260,
+      73
+     ]
+    },
+    {
+     "id": "fr_irrigation_noun",
+     "box": [
+      0,
+      419,
+      470,
+      281
+     ]
+    },
+    {
+     "id": "fr_hamac_noun",
+     "box": [
+      900,
+      100,
+      340,
+      230
+     ]
+    },
+    {
+     "id": "fr_parterre_noun",
+     "box": [
+      800,
+      340,
+      400,
+      180
+     ]
+    },
+    {
+     "id": "fr_potager_noun",
+     "box": [
+      780,
+      530,
+      430,
+      175
+     ]
+    }
+   ]
+  },
+  "verger": {
+   "name": "Le verger",
+   "room_id": "R_fruits_01",
+   "image": "ecole/verger.jpg",
+   "backTo": "cantine",
+   "alt": "Under the blossoming trees outside the canteen window, painted in ink and gouache. Pink flowers fill the trees. A white-framed window shows the canteen's wooden tables and a glowing lamp. On the grass at the left, a peach, a strawberry, and a pear each sit alone. On the right, a lemon, a bunch of purple grapes, and a round melon each sit alone. Empty grass lies between them. No people and no animals.",
+   "nameplate": [
+    50,
+    48
+   ],
+   "doors": [
+    {
+     "to": "cantine",
+     "label": "La cantine",
+     "hint": "Back through the window into the canteen",
+     "hit": [
+      490,
+      45,
+      290,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_peche_noun",
+     "box": [
+      290,
+      245,
+      160,
+      140
+     ]
+    },
+    {
+     "id": "fr_fraise_noun",
+     "box": [
+      290,
+      385,
+      170,
+      120
+     ]
+    },
+    {
+     "id": "fr_poire_noun",
+     "box": [
+      270,
+      510,
+      160,
+      155
+     ]
+    },
+    {
+     "id": "fr_citron_noun",
+     "box": [
+      770,
+      255,
+      200,
+      115
+     ]
+    },
+    {
+     "id": "fr_raisin_noun",
+     "box": [
+      800,
+      385,
+      210,
+      125
+     ]
+    },
+    {
+     "id": "fr_melon_noun",
+     "box": [
+      790,
+      520,
+      240,
+      145
+     ]
+    }
+   ]
+  },
+  "office": {
+   "name": "L'office",
+   "room_id": "R_grocery_02",
+   "image": "ecole/office.jpg",
+   "backTo": "fete",
+   "alt": "The pantry behind the school fête's blue-shuttered window, painted in ink and gouache. Cream walls and a wooden table. The open window shows the courtyard, the maypole, a bench, and a tree. On the left, a brown boot is stuck in the neck of a green bottle, a slice of bread wears red jam, and a round cake wears a paper crown with one bean. On the right, a wheel of cheese sits on a shelf, a white jug holds milk, and a white plate holds a splash of red sauce. No people and no animals.",
+   "nameplate": [
+    50,
+    72
+   ],
+   "doors": [
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "Back through the window to the fête courtyard",
+     "hit": [
+      345,
+      35,
+      510,
+      290
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bouteille_noun",
+     "box": [
+      8,
+      0,
+      230,
+      420
+     ]
+    },
+    {
+     "id": "fr_tartine_noun",
+     "box": [
+      248,
+      330,
+      210,
+      120
+     ]
+    },
+    {
+     "id": "fr_galette_noun",
+     "box": [
+      15,
+      455,
+      290,
+      190
+     ]
+    },
+    {
+     "id": "fr_fromage_noun",
+     "box": [
+      950,
+      45,
+      290,
+      230
+     ]
+    },
+    {
+     "id": "fr_lait_noun",
+     "box": [
+      970,
+      280,
+      240,
+      195
+     ]
+    },
+    {
+     "id": "fr_plat_noun",
+     "box": [
+      850,
+      495,
+      360,
+      170
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -2368,6 +2848,17 @@
     "fr_cinquante_num",
     "fr_soixante_num",
     "fr_quatre_vingts_num"
+   ]
+  },
+  "cottage": {
+   "vocabRoom": "R_numbers2",
+   "only": [
+    "fr_douzaine_noun",
+    "fr_phrase_noun",
+    "fr_trentaine_noun",
+    "fr_quart_noun",
+    "fr_sein_noun",
+    "fr_accent_noun"
    ]
   },
   "jardin": {
@@ -2499,6 +2990,49 @@
     "fr_pour_prep",
     "fr_de_prep",
     "fr_derriere_prep"
+   ]
+  },
+  "reserve": {
+   "vocabRoom": "R_grocery_01",
+   "only": [
+    "fr_confiture_noun",
+    "fr_huile_noun",
+    "fr_sucrerie_noun",
+    "fr_riz_noun",
+    "fr_miel_noun",
+    "fr_yaourt_noun"
+   ]
+  },
+  "fenetre": {
+   "vocabRoom": "R_garden",
+   "only": [
+    "fr_serre_noun",
+    "fr_cloture_noun",
+    "fr_irrigation_noun",
+    "fr_hamac_noun",
+    "fr_parterre_noun",
+    "fr_potager_noun"
+   ]
+  },
+  "verger": {
+   "vocabRoom": "R_fruits_01",
+   "only": [
+    "fr_peche_noun",
+    "fr_fraise_noun",
+    "fr_poire_noun",
+    "fr_citron_noun",
+    "fr_raisin_noun",
+    "fr_melon_noun"
+   ]
+  },
+  "office": {
+   "only": [
+    "fr_bouteille_noun",
+    "fr_tartine_noun",
+    "fr_galette_noun",
+    "fr_fromage_noun",
+    "fr_lait_noun",
+    "fr_plat_noun"
    ]
   }
  },

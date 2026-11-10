@@ -4,8 +4,9 @@ Served at `/french/`. `/french/v2/` redirects here and keeps the hash.
 
 * Every room is ONE integrated ink-and-gouache painting (1280×720); the mnemonic objects are painted in,
   and the page only adds invisible hotspots, a soft glow and white label pills (with articles).
-* Text (glosses, hooks, examples, verb tables) is **not forked**: `scripts/v2/build_v2.py` reads the v1
-  payloads in `data/v1-payloads/*.js` and `data/source/vocab.jsonl` at build time.
+* Text (glosses, hooks, examples, verb tables) is **not forked**: `scripts/v2/build_v2.py` reads
+  `data/source/vocab.jsonl`, then `content/v2/card_keep.json` for painted cards whose wording is still
+  the retired v1 text. `data/v1-payloads/` is not read.
 * Per building: `content/v2/<bld>/layout.json` (hotspot boxes in painting px, doors, zooms), optional
   `content/v2/<bld>/hooks.json` (v2 hook overrides), `village/<bld>/*.jpg` (paintings + `cards/` crops),
   `village/data/<bld>.js` (generated). Maps: `#/` = world map of the 16 memory-palace sectors (`map/world.jpg`),

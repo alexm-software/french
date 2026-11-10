@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "Campus map click on the tan science faculty",
+    "appearance": "A gravel forecourt, a low wall and an open gate, and the glass front of the hall",
+    "arrival": "The Cour des sciences, with the telescope on its round plinth"
+  },
+  "places": {
+    "cour": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "White telescope on a round stone plinth",
+      "camera": "Eye-level in the gravel court, glass doors ahead"
+    },
+    "sciences": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Open glass doors to the court",
+      "camera": "The accepted hall, looking out through the glass doors"
+    },
+    "labo": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Open door back to the court telescope",
+      "camera": "Eye-level in the chemistry lab, door to the court ahead"
+    },
+    "tables": {
+      "kind": "room",
+      "within": "cour",
+      "level": "ground",
+      "landmark": "Open wooden door back to the court telescope",
+      "camera": "Eye-level in the specimen room, door to the court ahead"
+    }
+  },
+  "passages": {
+    "hall_doors": {
+      "kind": "door",
+      "appearance": "Open glass doors, cream floor inside and the telescope plinth outside",
+      "ends": [
+        {
+          "place": "cour",
+          "where": "center, in front of the plinth",
+          "arrival": "The rock hall"
+        },
+        {
+          "place": "sciences",
+          "where": "back center",
+          "arrival": "The gravel court and the telescope"
+        }
+      ]
+    },
+    "east_door": {
+      "kind": "door",
+      "appearance": "The east wooden door of the court, opening into the chemistry lab",
+      "ends": [
+        {
+          "place": "cour",
+          "where": "east wing wooden door",
+          "arrival": "The chemistry bench"
+        },
+        {
+          "place": "labo",
+          "where": "back center",
+          "arrival": "The gravel court and the telescope"
+        }
+      ]
+    },
+    "west_door": {
+      "kind": "door",
+      "appearance": "The west wing's brown paneled wooden door, stone frame and one step, opening into the demonstration room",
+      "ends": [
+        {
+          "place": "cour",
+          "where": "west wing wooden door",
+          "arrival": "The ground demonstration"
+        },
+        {
+          "place": "tables",
+          "where": "back center",
+          "arrival": "The separate specimen tables"
+        }
+      ]
+    }
+  }
+}

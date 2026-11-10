@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "status": "plan-not-live",
+  "note": "Later rooms only. The live walk is content/v2/sciences/walkthrough.json and currently links the Cour and the hall. Do not add these unpainted rooms to the live walk.",
+  "entrance": {
+    "where": "Campus map click on the tan science faculty",
+    "appearance": "A gravel forecourt, a low wall and open gate, the glass front of the hall",
+    "arrival": "The Cour des sciences"
+  },
+  "places": {
+    "cour": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "White telescope on a round stone plinth",
+      "camera": "Eye-level in the gravel court, glass doors ahead",
+      "within": null,
+      "controls": ["campus gate", "hall doors", "west door", "west arcade", "east tower"]
+    },
+    "sciences": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Open glass doors to the court",
+      "camera": "The accepted hall, unchanged",
+      "within": "cour"
+    },
+    "trouvailles": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "One floor of rock finds",
+      "camera": "Elevated view, groups on the floor",
+      "within": "cour"
+    },
+    "galerie": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "West arcade",
+      "camera": "Along the arcade",
+      "within": "cour",
+      "controls": ["arcade to cour", "strates", "forces", "lumiere", "fonderie"]
+    },
+    "strates": {"kind": "room", "level": "ground", "landmark": "Layered rocks", "camera": "Inside the arcade wing", "within": "galerie"},
+    "forces": {"kind": "room", "level": "ground", "landmark": "Pendulum", "camera": "Inside the arcade wing", "within": "galerie"},
+    "lumiere": {"kind": "room", "level": "ground", "landmark": "A beam of light", "camera": "Inside the arcade wing", "within": "galerie"},
+    "fonderie": {"kind": "room", "level": "ground", "landmark": "Crucible", "camera": "Inside the arcade wing", "within": "galerie"},
+    "escalier": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "East stair tower",
+      "camera": "Foot of the stair",
+      "within": "cour",
+      "controls": ["door to cour", "paillasse", "particules", "stair up"]
+    },
+    "paillasse": {"kind": "room", "level": "ground", "landmark": "Chemistry bench", "camera": "At the bench", "within": "escalier"},
+    "particules": {"kind": "room", "level": "ground", "landmark": "A particle track", "camera": "At the bench", "within": "escalier"},
+    "palier": {
+      "kind": "hub",
+      "level": "upper",
+      "landmark": "Upper landing",
+      "camera": "On the landing",
+      "within": "escalier",
+      "controls": ["stair down", "chimie", "vivant", "methodes"]
+    },
+    "chimie": {"kind": "hub", "level": "upper", "landmark": "Chemistry corridor", "camera": "In the corridor", "within": "palier", "controls": ["back to palier", "chimie-a", "chimie-b"]},
+    "chimie_a": {"kind": "room", "level": "upper", "landmark": "First chemistry room", "camera": "In the room", "within": "chimie"},
+    "chimie_b": {"kind": "room", "level": "upper", "landmark": "Second chemistry room", "camera": "In the room", "within": "chimie"},
+    "vivant": {"kind": "hub", "level": "upper", "landmark": "Life-sciences corridor", "camera": "In the corridor", "within": "palier", "controls": ["back to palier", "vivant-a", "vivant-b", "vivant-c"]},
+    "vivant_a": {"kind": "room", "level": "upper", "landmark": "First life room", "camera": "In the room", "within": "vivant"},
+    "vivant_b": {"kind": "room", "level": "upper", "landmark": "Second life room", "camera": "In the room", "within": "vivant"},
+    "vivant_c": {"kind": "room", "level": "upper", "landmark": "Third life room", "camera": "In the room", "within": "vivant"},
+    "methodes": {"kind": "hub", "level": "upper", "landmark": "Methods corridor", "camera": "In the corridor", "within": "palier", "controls": ["back to palier", "methodes-a", "methodes-b"]},
+    "methodes_a": {"kind": "room", "level": "upper", "landmark": "First methods room", "camera": "In the room", "within": "methodes"},
+    "methodes_b": {"kind": "room", "level": "upper", "landmark": "Second methods room", "camera": "In the room", "within": "methodes"}
+  },
+  "passages": {
+    "campus_gate": {
+      "kind": "gate",
+      "appearance": "Low stone wall and an open gate onto the campus path",
+      "ends": [
+        {"place": "cour", "where": "front of the court", "arrival": "Campus"},
+        {"place": "campus", "where": "faculty front", "arrival": "The Cour des sciences"}
+      ]
+    },
+    "hall_doors": {
+      "kind": "door",
+      "appearance": "The hall's existing glass doors, cream floor inside, telescope plinth outside",
+      "ends": [
+        {"place": "cour", "where": "center, in front of the plinth", "arrival": "The rock hall"},
+        {"place": "sciences", "where": "back center", "arrival": "The gravel court and the telescope"}
+      ]
+    },
+    "west_door": {
+      "kind": "door",
+      "appearance": "A wooden door in the west wing",
+      "ends": [
+        {"place": "cour", "where": "west wing", "arrival": "Les trouvailles"},
+        {"place": "trouvailles", "where": "the return door", "arrival": "The Cour des sciences"}
+      ]
+    },
+    "west_arcade": {
+      "kind": "arcade",
+      "appearance": "An open arcade along the west side, distinct from the wing door",
+      "ends": [
+        {"place": "cour", "where": "west", "arrival": "The gallery"},
+        {"place": "galerie", "where": "the arcade mouth", "arrival": "The Cour des sciences"}
+      ]
+    },
+    "east_tower": {
+      "kind": "door",
+      "appearance": "A door in the east stair tower",
+      "ends": [
+        {"place": "cour", "where": "east tower", "arrival": "The foot of the stair"},
+        {"place": "escalier", "where": "the tower door", "arrival": "The Cour des sciences"}
+      ]
+    },
+    "stair": {
+      "kind": "stair",
+      "appearance": "A stone stair in the east tower",
+      "ends": [
+        {"place": "escalier", "where": "up", "arrival": "The upper landing"},
+        {"place": "palier", "where": "down", "arrival": "The foot of the stair"}
+      ]
+    }
+  }
+}

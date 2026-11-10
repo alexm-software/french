@@ -1,17 +1,87 @@
 {
   "version": 1,
   "entrance": {
-    "where": "open ground-floor doorway on left",
-    "appearance": "open threshold onto the existing sector path",
-    "arrival": "a large stone cooking range beneath a chef-hat-shaped extractor hood"
+    "where": "main ground-floor opening",
+    "appearance": "open entrance court connected to its existing sector path",
+    "arrival": "La cour du restaurant · Restaurant Courtyard"
   },
   "places": {
+    "cuisine_chef": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "La cuisine du chef · Chef’s Kitchen",
+      "camera": "from inside the place toward its visible passage",
+      "within": "restaurant"
+    },
+    "degustation": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Le passe des saveurs · Tasting Pass",
+      "camera": "from inside the place toward its visible passage",
+      "within": "restaurant"
+    },
+    "preparation": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Le plan de préparation · Preparation Bench",
+      "camera": "from inside the place toward its visible passage",
+      "within": "restaurant"
+    },
     "restaurant": {
       "kind": "hub",
       "level": "ground floor",
-      "landmark": "a large stone cooking range beneath a chef-hat-shaped extractor hood",
-      "camera": "diagonal view from the service entrance toward the range"
+      "landmark": "La cour du restaurant · Restaurant Courtyard",
+      "camera": "from inside the place toward its visible passage"
     }
   },
-  "passages": {}
+  "passages": {
+    "to-cuisine_chef": {
+      "kind": "door",
+      "appearance": "Open sage-green arch between the shared entrance court and workroom",
+      "ends": [
+        {
+          "place": "restaurant",
+          "where": "ground-floor court arch",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        },
+        {
+          "place": "cuisine_chef",
+          "where": "sage-green doorway to the court",
+          "arrival": "La cuisine du chef · Chef’s Kitchen"
+        }
+      ]
+    },
+    "to-degustation": {
+      "kind": "door",
+      "appearance": "Open sage-green arch between the shared entrance court and workroom",
+      "ends": [
+        {
+          "place": "restaurant",
+          "where": "ground-floor court arch",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        },
+        {
+          "place": "degustation",
+          "where": "sage-green doorway to the court",
+          "arrival": "Le passe des saveurs · Tasting Pass"
+        }
+      ]
+    },
+    "to-preparation": {
+      "kind": "door",
+      "appearance": "Open sage-green arch between the shared entrance court and workroom",
+      "ends": [
+        {
+          "place": "restaurant",
+          "where": "ground-floor court arch",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        },
+        {
+          "place": "preparation",
+          "where": "sage-green doorway to the court",
+          "arrival": "Le plan de préparation · Preparation Bench"
+        }
+      ]
+    }
+  }
 }
