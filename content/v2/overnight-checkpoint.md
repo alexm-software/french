@@ -12,7 +12,7 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `ecole/verger`, Le verger, 6 fruits (pêche, fraise, poire, citron, raisin, melon), out the canteen's right-hand window. PR 294, merge `d5da8c99`. Independent review passed. Pages deploy 42802774035 timed out while syncing. Deploy 42804881735 succeeded. Production `ecole/verger.jpg` sha `aa4979b712e2d51dcdf41499729a4958b2f1340e6e5881200f8b3d22e5d48eea` matches. Cache stayed `village-v57`.
 
 ## In progress
-- none.
+- `ecole/office`, the fête pantry. Review passed. Not yet merged.
 
 ## Later
 - `ecole/cottage` is a candidate for a theme pass. Douzaine, phrase, quart, sein and accent do not share one activity.
@@ -24,4 +24,4 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `sciences/essai`. Five of its words already live in `sciences/tables`, and the west door is taken.
 
 ## Art calls
-32 (31 images and 1 blocked request)
+33 (32 images and 1 blocked request)

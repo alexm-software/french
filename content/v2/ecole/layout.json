@@ -66,6 +66,10 @@
   {
    "key": "verger",
    "short": "Le verger"
+  },
+  {
+   "key": "office",
+   "short": "L'office"
   }
  ],
  "rooms": {
@@ -1852,6 +1856,17 @@
       58,
       160
      ]
+    },
+    {
+     "to": "office",
+     "label": "L'office",
+     "hint": "Through the blue-shuttered window",
+     "hit": [
+      620,
+      50,
+      85,
+      65
+     ]
     }
    ],
    "zooms": [
@@ -2671,6 +2686,87 @@
      ]
     }
    ]
+  },
+  "office": {
+   "name": "L'office",
+   "room_id": "R_grocery_02",
+   "image": "ecole/office.jpg",
+   "backTo": "fete",
+   "alt": "The pantry behind the school fête's blue-shuttered window, painted in ink and gouache. Cream walls and a wooden table. The open window shows the courtyard, the maypole, a bench, and a tree. On the left, a brown boot is stuck in the neck of a green bottle, a slice of bread wears red jam, and a round cake wears a paper crown with one bean. On the right, a wheel of cheese sits on a shelf, a white jug holds milk, and a white plate holds a splash of red sauce. No people and no animals.",
+   "nameplate": [
+    50,
+    72
+   ],
+   "doors": [
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "Back through the window to the fête courtyard",
+     "hit": [
+      345,
+      35,
+      510,
+      290
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bouteille_noun",
+     "box": [
+      8,
+      0,
+      230,
+      420
+     ]
+    },
+    {
+     "id": "fr_tartine_noun",
+     "box": [
+      248,
+      330,
+      210,
+      120
+     ]
+    },
+    {
+     "id": "fr_galette_noun",
+     "box": [
+      15,
+      455,
+      290,
+      190
+     ]
+    },
+    {
+     "id": "fr_fromage_noun",
+     "box": [
+      950,
+      45,
+      290,
+      230
+     ]
+    },
+    {
+     "id": "fr_lait_noun",
+     "box": [
+      970,
+      280,
+      240,
+      195
+     ]
+    },
+    {
+     "id": "fr_plat_noun",
+     "box": [
+      850,
+      495,
+      360,
+      170
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -2927,6 +3023,16 @@
     "fr_citron_noun",
     "fr_raisin_noun",
     "fr_melon_noun"
+   ]
+  },
+  "office": {
+   "only": [
+    "fr_bouteille_noun",
+    "fr_tartine_noun",
+    "fr_galette_noun",
+    "fr_fromage_noun",
+    "fr_lait_noun",
+    "fr_plat_noun"
    ]
   }
  },
