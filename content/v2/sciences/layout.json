@@ -12,9 +12,31 @@
     {
       "key": "sciences",
       "short": "Les roches"
+    },
+    {
+      "key": "labo",
+      "short": "Le labo"
     }
   ],
   "planned": {
+    "labo": {
+      "vocabRoom": "R_chemistry_01",
+      "only": [
+        "fr_element_noun",
+        "fr_laboratoire_noun",
+        "fr_gaz_noun",
+        "fr_pression_noun",
+        "fr_reaction_noun",
+        "fr_labo_noun",
+        "fr_substance_noun",
+        "fr_oxygene_noun",
+        "fr_elementaire_adj",
+        "fr_chimie_noun",
+        "fr_chimique_adj",
+        "fr_plomb_noun",
+        "fr_explosion_noun"
+      ]
+    },
     "sciences": {
       "vocabRoom": "R_geology",
       "only": [
@@ -56,6 +78,17 @@
             490,
             168
           ]
+        },
+        {
+          "to": "labo",
+          "label": "Le labo",
+          "hint": "Through the east wooden door into the chemistry lab",
+          "hit": [
+            976,
+            308,
+            52,
+            180
+          ]
         }
       ],
       "zooms": [],
@@ -88,27 +121,201 @@
       "items": [
         {
           "id": "fr_mine_noun",
-          "box": [82, 148, 386, 177]
+          "box": [
+            82,
+            148,
+            386,
+            177
+          ]
         },
         {
           "id": "fr_terre_noun",
-          "box": [104, 410, 292, 258]
+          "box": [
+            104,
+            410,
+            292,
+            258
+          ]
         },
         {
           "id": "fr_pierre_noun",
-          "box": [416, 553, 178, 120]
+          "box": [
+            416,
+            553,
+            178,
+            120
+          ]
         },
         {
           "id": "fr_mineral_adj",
-          "box": [557, 272, 278, 250]
+          "box": [
+            557,
+            272,
+            278,
+            250
+          ]
         },
         {
           "id": "fr_cristal_noun",
-          "box": [1015, 102, 154, 279]
+          "box": [
+            1015,
+            102,
+            154,
+            279
+          ]
         },
         {
           "id": "fr_sol_noun",
-          "box": [920, 435, 230, 210]
+          "box": [
+            920,
+            435,
+            230,
+            210
+          ]
+        }
+      ]
+    },
+    "labo": {
+      "name": "Le labo",
+      "room_id": "R_chemistry_01",
+      "image": "sciences/labo.jpg",
+      "alt": "The science faculty chemistry lab, in ink and gouache: one oak bench in a tan stone room. An elephant in a lab coat holds a metal cube, a rat in goggles mixes flasks, a girl fizzes tubes, a cat leaps from a purple reaction, a cork pops, a balloon swells under a pump, a green gel stands in a beaker, a meek mouse watches a green potion, a lemon lights a bulb, gauze lifts off a green gas, Jen fills a balloon from an oxygen cylinder, a Labrador sniffs a portable kit, and a plum-shaped lead weight sinks in a basin. The open door shows the court telescope.",
+      "nameplate": [
+        16,
+        7
+      ],
+      "backTo": "cour",
+      "doors": [
+        {
+          "to": "cour",
+          "label": "La cour",
+          "hint": "Through the open door to the telescope in the court",
+          "hit": [
+            510,
+            55,
+            190,
+            200
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_chimie_noun",
+          "box": [
+            77,
+            80,
+            90,
+            200
+          ]
+        },
+        {
+          "id": "fr_reaction_noun",
+          "box": [
+            175,
+            80,
+            150,
+            170
+          ]
+        },
+        {
+          "id": "fr_pression_noun",
+          "box": [
+            250,
+            260,
+            180,
+            190
+          ]
+        },
+        {
+          "id": "fr_explosion_noun",
+          "box": [
+            77,
+            510,
+            85,
+            150
+          ]
+        },
+        {
+          "id": "fr_substance_noun",
+          "box": [
+            175,
+            500,
+            230,
+            160
+          ]
+        },
+        {
+          "id": "fr_chimique_adj",
+          "box": [
+            440,
+            310,
+            120,
+            150
+          ]
+        },
+        {
+          "id": "fr_elementaire_adj",
+          "box": [
+            575,
+            310,
+            160,
+            175
+          ]
+        },
+        {
+          "id": "fr_element_noun",
+          "box": [
+            750,
+            50,
+            175,
+            250
+          ]
+        },
+        {
+          "id": "fr_gaz_noun",
+          "box": [
+            935,
+            270,
+            145,
+            200
+          ]
+        },
+        {
+          "id": "fr_laboratoire_noun",
+          "box": [
+            1090,
+            70,
+            110,
+            170
+          ]
+        },
+        {
+          "id": "fr_oxygene_noun",
+          "box": [
+            1090,
+            270,
+            110,
+            190
+          ]
+        },
+        {
+          "id": "fr_labo_noun",
+          "box": [
+            640,
+            500,
+            290,
+            165
+          ]
+        },
+        {
+          "id": "fr_plomb_noun",
+          "box": [
+            960,
+            510,
+            200,
+            150
+          ]
         }
       ]
     }
