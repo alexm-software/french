@@ -1,10 +1,11 @@
 # content/v2 — per-building inputs for the painted village (v2)
 
 The v2 shell (`village/index.html`, `app.js`, `style.css`, `data/map.js`, `map/`) is **shared and frozen**.
-The maps follow the memory-palace registry (`/data/sectors.json`, `/data/buildings.json`):
+The painted map is `content/v2/map.json` (built to `village/data/map.js`). `data/source/sectors.json` and
+`data/source/map.json` are an older plan and are not read by the build.
 `#/` is the world map of the 16 sectors (S09 Vallée Verte lies outside the walls), and `#/quartier/<slug>` is
 a painted map of one sector (slug = sector id without `Sxx_`, e.g. `S09_nature` → `nature`) with a click area
-for every building **and** every `ST_` verb street of that sector (`content/v2/map.json` → `data/map.js`).
+for every building **and** every `ST_` verb street of that sector.
 
 Buildings are discovered **at runtime**: for every building on a sector map the app tries
 `village/data/<id>.js`; a building whose data file loads is **live** (clickable, opens `#/<id>`), every
@@ -26,6 +27,10 @@ and the app places the building with them (it falls back to `map.json` for older
 ```
 The main room's painted exit (`mapExit`) and Back go to the building's sector map, `#/quartier/<slug>`
 (or to `mapExit.href` if given). Label the exit with the sector's name (e.g. "La vallée").
+
+## Paintings that belong in git
+
+Commit the accepted painting (`village/<bld>/*.jpg`) and the card crops the build writes. Keep rejected and intermediate candidates outside the repo. A short note may record the accepted file's sha256. Do not add new review rasters. The packet already in `content/v2/sciences/review/` stays.
 
 ## The per-building rule (for every worker)
 
@@ -81,8 +86,9 @@ QA must print `PASS`. Then look at every hotspot yourself: the painting must sho
   `phrase · fixed expression` or `idiom · fixed expression`.
 * The room list drops below the strip when it does not fit beside the title; the painting is then pushed down
   36 px so the list never covers labels (`--strict` checks this).
-* Card text comes from the retired v1 payload `data/v1-payloads/<bld>.js` (matched by id), else `data/source/vocab.jsonl`;
-  `"text": "vocab"` forces the vocab source. Never copy or edit that text.
+* Card text comes from `data/source/vocab.jsonl`, except words listed in `content/v2/card_keep.json`
+  (the painted wording formerly copied out of `data/v1-payloads/`). `"text": "vocab"` forces the vocab
+  source. Never copy or edit that text in the generated `village/data/*.js`.
 * `hooks.json` is only for hooks that break the content rules (crude, scary, drinking/smoking, mature, God the
   Father…) or that cannot be painted; the painting must then show the new hook.
 

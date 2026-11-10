@@ -37,7 +37,10 @@ def load_sources(bld_slug):
 
 def resolve_word(wid, v1, vocab, fixes, overrides, force_vocab=False):
     """Resolve one word ID using build_v2.py's exact precedence."""
-    if wid in v1 and not force_vocab:
+    kept = build_v2.load_kept_cards()
+    if wid in kept and not force_vocab:
+        it = {k: v for k, v in kept[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
+    elif wid in v1 and not force_vocab:
         it = {k: v for k, v in v1[wid].items() if k not in ("img", "box", "label", "side", "surface", "cardSrc")}
     elif wid in vocab:
         w = vocab[wid]

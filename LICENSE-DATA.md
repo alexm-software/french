@@ -2,7 +2,7 @@
 
 The word data and written content in this repository are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0)**: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-This covers data/source/ (vocab.jsonl, rooms.json, buildings.json, sectors.json, map.json, conversations.json), data/guide.json, data/i18n.json, data/cache/conjugations.json, content/*.json and content/art/*/hotspots.json.
+This covers data/source/ (vocab.jsonl, rooms.json, buildings.json, sectors.json, map.json, conversations.json), archive/data/guide.json, archive/data/i18n.json, archive/data/adj_forms.json, data/cache/conjugations.json, content/*.json and content/art/*/hotspots.json.
 
 The data adapts material from Wiktionary (via kaikki.org; CC BY-SA 4.0 / GFDL) and Lexique 3.83 (CC BY-SA 4.0), and uses FLELex (CC BY-NC-SA 4.0) as one input to our CEFR grading. FLELex values are not included. data/source/CREDITS.md gives the full credits and the list of changes we made.
 
