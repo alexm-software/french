@@ -1,0 +1,217 @@
+{
+  "building": "sciences",
+  "room": "tables",
+  "coordinate_space": "1280x720-px",
+  "setting": "Ground-floor specimen room off the science court's west door",
+  "theme_fit": "Six ground specimens, each on its own stand, with no extra person.",
+  "scene_situation": "Setting specimens out on separate stands",
+  "prompt": {
+    "kind": "room",
+    "room_name": "Les tables",
+    "camera": "eye-level inside the west wing, looking toward the open wooden door",
+    "light_from": "the open court door",
+    "refs": [
+      "village/sciences/cour.jpg",
+      "west door crop",
+      "telescope crop"
+    ],
+    "look": "tan stone faculty and the gravel court",
+    "materials": "pale tan stone walls, gray tile floor, white daylight",
+    "set_apart": "wide empty floor between six stands",
+    "place": "the specimen room off the west door",
+    "landmark": "the open brown paneled door and the court telescope",
+    "whimsy": "one round empty window",
+    "differ": "separate specimen stands, not the rock hall and not the chemistry bench",
+    "reference_board": "none",
+    "beyond": "gravel and the white telescope on its black tripod and round plinth",
+    "sign_plates": "one blank plaque, no letters",
+    "style_slider": "3: respectful, slightly realistic painterly with cartoony elements"
+  },
+  "siblings": [
+    "the rock hall",
+    "the chemistry lab",
+    "the open court"
+  ],
+  "used_motifs": [
+    "the elephant",
+    "the laboratory rat",
+    "the purple crystal"
+  ],
+  "doors": [
+    {
+      "to": "cour",
+      "where": "back center",
+      "painted_as": "one brown paneled wooden door, open, telescope on the gravel beyond"
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "prompt_extra": {
+    "COMPOSITION": "No people. The pig stays inside the left group. The sloth stays on the pillar. Empty floor between every pair of stands.",
+    "DOORS AND EXITS": "One door leaf, not two. Match the attached brown paneled door and the telescope."
+  },
+  "interactions": [
+    {
+      "who": [
+        "fr_catastrophe_noun",
+        "fr_volcanique_adj"
+      ],
+      "doing": "the cone drips into the pig's bowl while a separate round crater sits a step away"
+    },
+    {
+      "who": [
+        "fr_geologique_adj",
+        "fr_creuset_noun"
+      ],
+      "doing": "the layered stone wedge stands near the door and the orange pot glows on its own bench"
+    },
+    {
+      "who": [
+        "fr_tremblement_noun",
+        "fr_pilier_noun"
+      ],
+      "doing": "the jelly wobbles on a stand beside the pillar"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_catastrophe_noun",
+      "word": "catastrophe",
+      "pos": "noun",
+      "gloss": "catastrophe",
+      "hook": "A tiny cone spills red syrup into a pig's bowl: a small CATASTROPHE.",
+      "hook_object": "the bowl of red syrup",
+      "shown": "a cone, a low bowl, and one pig",
+      "pose_action": "the pig stands at the bowl; syrup runs from the cone",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left floor",
+      "depth": "foreground",
+      "box_hint": [
+        60,
+        300,
+        240,
+        280
+      ],
+      "interacts_with": "its own stand",
+      "g": "f"
+    },
+    {
+      "id": "fr_volcanique_adj",
+      "word": "volcanique",
+      "pos": "adj",
+      "gloss": "volcanic",
+      "hook": "A small round VOLCANIC crater sits on the floor.",
+      "hook_object": "the dark round crater",
+      "shown": "a low ring of rock with a black center, no person",
+      "pose_action": "the crater rests on the floor",
+      "count": null,
+      "sensitive": "none",
+      "side": "center",
+      "zone": "mid left floor",
+      "depth": "middle",
+      "box_hint": [
+        480,
+        340,
+        180,
+        140
+      ],
+      "interacts_with": "the empty floor",
+      "g": null
+    },
+    {
+      "id": "fr_geologique_adj",
+      "word": "géologique",
+      "pos": "adj",
+      "gloss": "geological",
+      "hook": "GEOLOGICAL layers stripe a stone wedge.",
+      "hook_object": "the striped stone wedge",
+      "shown": "one gray wedge with three rock bands on a low stand",
+      "pose_action": "the wedge stands on the stand",
+      "count": null,
+      "sensitive": "none",
+      "side": "center",
+      "zone": "center floor",
+      "depth": "foreground",
+      "box_hint": [
+        700,
+        470,
+        160,
+        160
+      ],
+      "interacts_with": "the empty floor",
+      "g": null
+    },
+    {
+      "id": "fr_creuset_noun",
+      "word": "creuset",
+      "pos": "noun",
+      "gloss": "crucible",
+      "hook": "An orange pot glows on a trivet: a CRUCIBLE.",
+      "hook_object": "the orange pot",
+      "shown": "one orange pot on a three-legged trivet, no coins",
+      "pose_action": "the pot sits and glows",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right bench",
+      "depth": "middle",
+      "box_hint": [
+        900,
+        150,
+        140,
+        140
+      ],
+      "interacts_with": "its trivet",
+      "g": "m"
+    },
+    {
+      "id": "fr_tremblement_noun",
+      "word": "tremblement",
+      "pos": "noun",
+      "gloss": "shake, tremble",
+      "hook": "A dish of jelly TREMBLES on a tall stand.",
+      "hook_object": "the wobbling jelly",
+      "shown": "one glass dish of jelly with wobble lines",
+      "pose_action": "the jelly wobbles on the stand",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right floor",
+      "depth": "foreground",
+      "box_hint": [
+        900,
+        470,
+        150,
+        150
+      ],
+      "interacts_with": "its stand",
+      "g": "m"
+    },
+    {
+      "id": "fr_pilier_noun",
+      "word": "pilier",
+      "pos": "noun",
+      "gloss": "pillar",
+      "hook": "A sloth hugs a stone PILLAR.",
+      "hook_object": "the stone pillar",
+      "shown": "one pillar and one natural sloth clinging to it",
+      "pose_action": "the sloth clings and does not reach past the pillar",
+      "count": null,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right wall",
+      "depth": "middle",
+      "box_hint": [
+        1100,
+        140,
+        120,
+        500
+      ],
+      "interacts_with": "the pillar",
+      "g": "m"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, eye-level inside the west wing, looking toward the open wooden door, of sciences / Les tables.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/sciences/cour.jpg, west door crop, telescope crop, this tan stone faculty and the gravel court, and materials pale tan stone walls, gray tile floor, white daylight. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from the open court door; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: wide empty floor between six stands.\n\nSETTING: the specimen room off the west door; landmark the open brown paneled door and the court telescope; architectural whimsy one round empty window. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: Setting specimens out on separate stands. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_catastrophe_noun, fr_volcanique_adj: the cone drips into the pig's bowl while a separate round crater sits a step away; fr_geologique_adj, fr_creuset_noun: the layered stone wedge stands near the door and the orange pot glows on its own bench; fr_tremblement_noun, fr_pilier_noun: the jelly wobbles on a stand beside the pillar. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: the rock hall; the chemistry lab; the open court. No people. The pig stays inside the left group. The sloth stays on the pillar. Empty floor between every pair of stands.\n\nITEMS: exactly 6 concepts, each with its entire recognizable sound cue and meaning visible together. Near-synonym items stay visually unambiguous and do not share a shape:\n1. catastrophe = catastrophe: chosen hook A tiny cone spills red syrup into a pig's bowl: a small CATASTROPHE.; literal cue the bowl of red syrup; shown as a cone, a low bowl, and one pig; pose/action the pig stands at the bowl; syrup runs from the cone; count -; at left, left floor, foreground; interacts with its own stand; planned pixel envelope [60, 300, 240, 280].\n2. volcanique = volcanic: chosen hook A small round VOLCANIC crater sits on the floor.; literal cue the dark round crater; shown as a low ring of rock with a black center, no person; pose/action the crater rests on the floor; count -; at center, mid left floor, middle; interacts with the empty floor; planned pixel envelope [480, 340, 180, 140].\n3. géologique = geological: chosen hook GEOLOGICAL layers stripe a stone wedge.; literal cue the striped stone wedge; shown as one gray wedge with three rock bands on a low stand; pose/action the wedge stands on the stand; count -; at center, center floor, foreground; interacts with the empty floor; planned pixel envelope [700, 470, 160, 160].\n4. creuset = crucible: chosen hook An orange pot glows on a trivet: a CRUCIBLE.; literal cue the orange pot; shown as one orange pot on a three-legged trivet, no coins; pose/action the pot sits and glows; count -; at right, right bench, middle; interacts with its trivet; planned pixel envelope [900, 150, 140, 140].\n5. tremblement = shake, tremble: chosen hook A dish of jelly TREMBLES on a tall stand.; literal cue the wobbling jelly; shown as one glass dish of jelly with wobble lines; pose/action the jelly wobbles on the stand; count -; at right, right floor, foreground; interacts with its stand; planned pixel envelope [900, 470, 150, 150].\n6. pilier = pillar: chosen hook A sloth hugs a stone PILLAR.; literal cue the stone pillar; shown as one pillar and one natural sloth clinging to it; pose/action the sloth clings and does not reach past the pillar; count -; at right, right wall, middle; interacts with the pillar; planned pixel envelope [1100, 140, 120, 500].\nExact visible counts: none. Reference board: none. Plaque-only words: none, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives, adverbs, and epicene nouns (article le/la) in the central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to cour, back center, painted as one brown paneled wooden door, open, telescope on the gravel beyond. Clear floor-level thresholds at human scale; no props in openings. Beyond: gravel and the white telescope on its black tripod and round plinth. Match the destination's actual appearance from its attached image, including materials and silhouette; a style reference must not replace them. Reciprocal door design; plausible stairs and outdoor paths. Paint a door only when both ends show that opening. Do not invent a door into an accepted room that has none. A glimpse through an opening shows that room's real floor, walls, and the exhibits the facing direction would see, and it adds no exit the room does not have. One door leaf, not two. Match the attached brown paneled door and the telescope. Shared plan: west_door (painted passage): The west wing's brown paneled wooden door, stone frame and one step, opening into the demonstration room. Here: back center. Other side: west wing wooden door, arriving at The ground demonstration. Match reference sciences/cour.jpg.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise. A model, toy, or figurine cue sits at object scale on the shared surface with the people. It is not a life-size animal or a landscape.\n\nTEXT: only declared natural scene text none. Blank sign plates: one blank plaque, no letters. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs the elephant, the laboratory rat, the purple crystal. This room differs by separate specimen stands, not the rock hall and not the chemistry bench.\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}

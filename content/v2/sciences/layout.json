@@ -16,6 +16,10 @@
     {
       "key": "labo",
       "short": "Le labo"
+    },
+    {
+      "key": "tables",
+      "short": "Les tables"
     }
   ],
   "planned": {
@@ -45,6 +49,17 @@
         "fr_mineral_adj",
         "fr_cristal_noun",
         "fr_sol_noun"
+      ]
+    },
+    "tables": {
+      "vocabRoom": "R_geology",
+      "only": [
+        "fr_catastrophe_noun",
+        "fr_volcanique_adj",
+        "fr_geologique_adj",
+        "fr_creuset_noun",
+        "fr_tremblement_noun",
+        "fr_pilier_noun"
       ]
     }
   },
@@ -87,6 +102,17 @@
             308,
             52,
             180
+          ]
+        },
+        {
+          "to": "tables",
+          "label": "Les tables",
+          "hint": "Through the west wooden door into the specimen room",
+          "hit": [
+            288,
+            308,
+            64,
+            150
           ]
         }
       ],
@@ -305,6 +331,87 @@
             500,
             290,
             165
+          ]
+        }
+      ]
+    },
+    "tables": {
+      "name": "Les tables",
+      "room_id": "R_geology",
+      "image": "sciences/tables.jpg",
+      "alt": "The science faculty specimen room, in ink and gouache. A pig stands by a bowl with a cup of red syrup in it. A round stone crater sits in the middle of the floor. A gray stone wedge with horizontal layers rests on a low stand. An orange pot glows on a stool. Blue jelly wobbles on another stand. A sloth clings to a stone pillar. One open wooden door shows the court telescope.",
+      "nameplate": [
+        16,
+        7
+      ],
+      "backTo": "cour",
+      "doors": [
+        {
+          "to": "cour",
+          "label": "La cour",
+          "hint": "Through the open wooden door to the telescope in the court",
+          "hit": [
+            520,
+            40,
+            220,
+            300
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_catastrophe_noun",
+          "box": [
+            8,
+            330,
+            330,
+            250
+          ]
+        },
+        {
+          "id": "fr_volcanique_adj",
+          "box": [
+            400,
+            390,
+            280,
+            180
+          ]
+        },
+        {
+          "id": "fr_geologique_adj",
+          "box": [
+            700,
+            490,
+            190,
+            190
+          ]
+        },
+        {
+          "id": "fr_creuset_noun",
+          "box": [
+            750,
+            160,
+            160,
+            210
+          ]
+        },
+        {
+          "id": "fr_tremblement_noun",
+          "box": [
+            900,
+            410,
+            170,
+            230
+          ]
+        },
+        {
+          "id": "fr_pilier_noun",
+          "box": [
+            1080,
+            10,
+            190,
+            500
           ]
         }
       ]

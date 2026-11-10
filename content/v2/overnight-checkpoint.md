@@ -3,13 +3,14 @@
 Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is frozen after that.
 
 ## Shipped
-- none confirmed in production yet
+- `sciences/labo`, 12 words from `R_chemistry_01` (`fr_plomb_noun` left out), PR 280, merge `7a443748`. Pages deploy run 42765336391 succeeded. Production `sciences/labo.jpg` sha `a27805a542920546135ac7d70564fe703ec0e8ec30f49f49040744555f82cc8d` matches. Cache `village-v57`.
 
 ## In progress
-- `sciences/labo`, 12 words from `R_chemistry_01`, PR 280. Painting sha `a27805a542920546135ac7d70564fe703ec0e8ec30f49f49040744555f82cc8d`. Independent review recorded in `content/v2/sciences/review/labo/REVIEW.md`. `fr_plomb_noun` was left out because the painted object reads as a plum. Hooks for gas and the green substance match the paint. Not yet in production.
+- `sciences/tables`, 6 words (catastrophe, volcanique, géologique, creuset, tremblement, pilier), west door of the court. Painting sha `725e4eea6b283df6c72d5a31ec0ccad98e7366c081ea12a9d1f630146b06a6ca`. Independent review passed. Not yet in production.
 
 ## Parked
-- none
+- `sciences/trouvailles` (prospection, géologue, caillou, minerai, filon, volcan). Three generations: the coyote and the gold vein merged, then the miner's boot sat inside the kneeling man's box.
+- `sciences/essai` (a person with a marshmallow beside the pig). The two figures' boxes interlocked.
 
 ## Art calls
-2
+13
