@@ -11,7 +11,7 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `plage/cabine`, La cabine, 6 picnic foods (pizza, céréale, épice, spaghetti, bonbon, vinaigre), through the striped hut door. PR 290, merge `857e5845`. Independent review passed. The cereal box and the spice box meet along one line. Same deploys. Production `plage/cabine.jpg` sha `dedcd3f6dd66adf5326810ce53fefb3e74335af18f2cd407eba448248ce840bf` matches. Cache stayed `village-v57`.
 
 ## In progress
-- none.
+- `ecole/verger`, fruit under the trees outside the canteen's right-hand window. Review passed. Not yet merged.
 
 ## Later
 - `ecole/cottage` is a candidate for a theme pass. Douzaine, phrase, quart, sein and accent do not share one activity.

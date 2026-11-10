@@ -62,6 +62,10 @@
   {
    "key": "fenetre",
    "short": "Le jardin fleuri"
+  },
+  {
+   "key": "verger",
+   "short": "Le verger"
   }
  ],
  "rooms": {
@@ -1361,6 +1365,17 @@
       210,
       285
      ]
+    },
+    {
+     "to": "verger",
+     "label": "Le verger",
+     "hint": "Out through the right-hand window",
+     "hit": [
+      1160,
+      40,
+      90,
+      140
+     ]
     }
    ],
    "zooms": [],
@@ -2575,6 +2590,87 @@
      ]
     }
    ]
+  },
+  "verger": {
+   "name": "Le verger",
+   "room_id": "R_fruits_01",
+   "image": "ecole/verger.jpg",
+   "backTo": "cantine",
+   "alt": "Under the blossoming trees outside the canteen window, painted in ink and gouache. Pink flowers fill the trees. A white-framed window shows the canteen's wooden tables and a glowing lamp. On the grass at the left, a peach, a strawberry, and a pear each sit alone. On the right, a lemon, a bunch of purple grapes, and a round melon each sit alone. Empty grass lies between them. No people and no animals.",
+   "nameplate": [
+    50,
+    48
+   ],
+   "doors": [
+    {
+     "to": "cantine",
+     "label": "La cantine",
+     "hint": "Back through the window into the canteen",
+     "hit": [
+      490,
+      45,
+      290,
+      165
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_peche_noun",
+     "box": [
+      290,
+      245,
+      160,
+      140
+     ]
+    },
+    {
+     "id": "fr_fraise_noun",
+     "box": [
+      290,
+      385,
+      170,
+      120
+     ]
+    },
+    {
+     "id": "fr_poire_noun",
+     "box": [
+      270,
+      510,
+      160,
+      155
+     ]
+    },
+    {
+     "id": "fr_citron_noun",
+     "box": [
+      770,
+      255,
+      200,
+      115
+     ]
+    },
+    {
+     "id": "fr_raisin_noun",
+     "box": [
+      800,
+      385,
+      210,
+      125
+     ]
+    },
+    {
+     "id": "fr_melon_noun",
+     "box": [
+      790,
+      520,
+      240,
+      145
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -2820,6 +2916,17 @@
     "fr_hamac_noun",
     "fr_parterre_noun",
     "fr_potager_noun"
+   ]
+  },
+  "verger": {
+   "vocabRoom": "R_fruits_01",
+   "only": [
+    "fr_peche_noun",
+    "fr_fraise_noun",
+    "fr_poire_noun",
+    "fr_citron_noun",
+    "fr_raisin_noun",
+    "fr_melon_noun"
    ]
   }
  },
