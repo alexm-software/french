@@ -28,6 +28,10 @@ and the app places the building with them (it falls back to `map.json` for older
 The main room's painted exit (`mapExit`) and Back go to the building's sector map, `#/quartier/<slug>`
 (or to `mapExit.href` if given). Label the exit with the sector's name (e.g. "La vallée").
 
+## Paintings that belong in git
+
+Commit the accepted painting (`village/<bld>/*.jpg`) and the card crops the build writes. Keep rejected and intermediate candidates outside the repo. A short note may record the accepted file's sha256. Do not add new review rasters. The packet already in `content/v2/sciences/review/` stays.
+
 ## The per-building rule (for every worker)
 
 A building tarball (`v2-<bld>.tar.gz`) **only adds** these paths:

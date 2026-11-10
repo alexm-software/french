@@ -16,4 +16,8 @@ Prefer connected GitHub publishing tools when available. Do not retry command-li
 
 Check the walkthrough and compile the linked draft once. Use `contact_sheet.py --image --grid --anatomy-2x` to fit a candidate, then add `--layout` for measured labels, passage checks and a review packet with input hashes. Sync the manifest only for the same complete room. Reuse the reviewer and inspect required 2× details and actual parent/zoom pairs with `zoom_sheet.py`.
 
-Use unique review paths per revision. Layout/`boxPx` coordinates are pixels; built `box` values are percentages. Rebuild with existing scripts, never hand-fix generated payloads or invent another geometry implementation. Run targeted iteration checks (`check_v2.py --browser --rooms-only` for room iterations) and global CI on the combined pack; reuse only results with unchanged inputs.
+Use unique review paths per revision, outside the repository. Layout/`boxPx` coordinates are pixels; built `box` values are percentages. Rebuild with existing scripts, never hand-fix generated payloads or invent another geometry implementation. Run targeted iteration checks (`check_v2.py --browser --rooms-only` for room iterations) and global CI on the combined pack; reuse only results with unchanged inputs.
+
+## Paintings that belong in git
+
+Commit the accepted room painting and its card crops (`village/<building>/<room>.jpg` and `village/<building>/cards/`). Keep every rejected or intermediate candidate outside the repo. A short note next to the manifest may record the accepted file's sha256 and the decision. Do not commit new review rasters. The science-faculty packet already in `content/v2/sciences/review/` stays; removing it would not shrink git history.
