@@ -8,12 +8,16 @@ Base when this note started: `be846271`. Deadline: 10 Nov 2026 13:00 UTC. Art is
 - `ecole/cottage`, 6 words (douzaine, phrase, trentaine, quart, sein, accent), the garden's open blue door. PR 283, merge `33e03e80`. Pages deploy run 42776521744 succeeded. Production `ecole/cottage.jpg` sha `126db4206b704f03ed579f86733587c472ce5460df13a7385a72ddf16f5b26ef` matches. Cache stayed `village-v57`.
 
 ## In progress
-- none.
+- `ecole/reserve`, six pantry foods down the farmyard hatch (confiture, huile, sucrerie, riz, miel, yaourt). Art review passed. Production not confirmed yet.
+
+## Later
+- `ecole/cottage` is a candidate for a theme pass. Douzaine, phrase, quart, sein and accent do not share one activity.
 
 ## Parked
 - `sciences/trouvailles` (prospection, géologue, caillou, minerai, filon, volcan). Three generations: the coyote and the gold vein merged, then the miner's boot sat inside the kneeling man's box.
 - `sciences/essai` (a person with a marshmallow beside the pig). The two figures' boxes interlocked.
 - Cottage prepositions (hors, via, moyennant, excepté, par-delà, hormis). The horse-and-pen group stayed on the left, outside the center band a preposition needs.
+- `ecole/cave` (carotte, patate, tomate, oignon, chou, ail). Three generations: the parrot's wing and the dog's tail stayed on the left margin, and the dog stayed against the crate.
 
 ## Art calls
-20 (19 images and 1 blocked request)
+26 (25 images and 1 blocked request)
