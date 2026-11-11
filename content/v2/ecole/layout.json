@@ -44,6 +44,14 @@
    "short": "La maisonnette"
   },
   {
+   "key": "puits",
+   "short": "Le puits"
+  },
+  {
+   "key": "escalier",
+   "short": "L'escalier"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
   },
@@ -2368,7 +2376,7 @@
    "room_id": "R_numbers2",
    "image": "ecole/cottage.jpg",
    "backTo": "jardin",
-   "alt": "Inside the school garden's cottage, in ink and gouache: terracotta tiles and cream walls. A carton of calm eggs with closed eyes sits on the left, a toy train of plain carriages below it, and a green wagon of many beads beside the train. A pie with one slice cut out rests on a plate, a snail sits in a ring of sand, and a man in a dark beret stands talking on the right. An open blue door shows the garden lawn, flowers, and a blue sofa. A small wooden table and two chairs stand just inside, and a framed picture of flowers hangs on the wall.",
+   "alt": "Inside the school garden's cottage, in ink and gouache: terracotta tiles and cream walls. A carton of calm eggs with closed eyes sits on the left, a toy train of plain carriages below it, and a green wagon of many beads beside the train. A pie with one slice cut out rests on a plate, a snail sits in a ring of sand, and a man in a dark beret stands talking on the right. An open blue door shows the garden lawn, flowers, and a blue sofa. A small wooden table and two chairs stand just inside, and a framed picture of flowers hangs on the wall. The framed picture of flowers opens onto the well.",
    "nameplate": [
     16,
     7
@@ -2383,6 +2391,17 @@
       36,
       220,
       220
+     ]
+    },
+    {
+     "to": "puits",
+     "label": "Le puits",
+     "hint": "Through the flower picture",
+     "hit": [
+      764,
+      70,
+      96,
+      130
      ]
     }
    ],
@@ -2749,6 +2768,152 @@
      ]
     }
    ]
+  },
+  "puits": {
+   "name": "Le puits",
+   "room_id": "R_prepositions_02",
+   "image": "ecole/puits.jpg",
+   "backTo": "cottage",
+   "alt": "A tall stone well painted in ink and gouache, centered on a cream wall above terracotta tiles. An open green door on the left shows the garden. A rooster crows in front of a sunrise at the top. In the well opening a hairdresser in a pink apron reads a blank book. Below her a toy horse jumps. At the bottom a boy in striped pajamas kneels beside an empty plate, with a white picket fence behind him. The tiles on the right lead to the staircase.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "cottage",
+     "label": "La maisonnette",
+     "hint": "Back through the green door",
+     "hit": [
+      40,
+      155,
+      165,
+      390
+     ]
+    },
+    {
+     "to": "escalier",
+     "label": "L'escalier",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      650,
+      180,
+      60
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_des_prep",
+     "box": [
+      520,
+      5,
+      250,
+      130
+     ]
+    },
+    {
+     "id": "fr_selon_prep",
+     "box": [
+      495,
+      140,
+      290,
+      235
+     ]
+    },
+    {
+     "id": "fr_hors_prep",
+     "box": [
+      490,
+      385,
+      300,
+      95
+     ]
+    },
+    {
+     "id": "fr_apres_prep",
+     "box": [
+      445,
+      490,
+      380,
+      220
+     ]
+    }
+   ]
+  },
+  "escalier": {
+   "name": "L'escalier",
+   "room_id": "R_prepositions_03",
+   "image": "ecole/escalier.jpg",
+   "backTo": "puits",
+   "alt": "A wooden staircase painted in ink and gouache, running down the middle of a cream wall. An open yellow door on the left shows the garden. At the top a girl touches a chart of colored dots. Below her a white-bearded man reads a blank letter. A girl reads under one small rain cloud. A boy holds a cookie and pushes a toy lawnmower. At the bottom a boy looks through a telescope past three drums and a plain flag.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "puits",
+     "label": "Le puits",
+     "hint": "Back through the yellow door",
+     "hit": [
+      55,
+      160,
+      155,
+      380
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_touchant_prep",
+     "box": [
+      495,
+      2,
+      260,
+      100
+     ]
+    },
+    {
+     "id": "fr_concernant_prep",
+     "box": [
+      495,
+      105,
+      260,
+      175
+     ]
+    },
+    {
+     "id": "fr_malgre_prep",
+     "box": [
+      495,
+      290,
+      230,
+      95
+     ]
+    },
+    {
+     "id": "fr_moyennant_prep",
+     "box": [
+      600,
+      390,
+      250,
+      145
+     ]
+    },
+    {
+     "id": "fr_par_dela_prep",
+     "box": [
+      415,
+      540,
+      450,
+      170
+     ]
+    }
+   ]
   }
  },
  "planned": {
@@ -3013,6 +3178,24 @@
     "fr_fromage_noun",
     "fr_lait_noun",
     "fr_plat_noun"
+   ]
+  },
+  "puits": {
+   "vocabRoom": "R_prepositions_02",
+   "only": [
+    "fr_des_prep",
+    "fr_selon_prep",
+    "fr_hors_prep",
+    "fr_apres_prep"
+   ]
+  },
+  "escalier": {
+   "only": [
+    "fr_touchant_prep",
+    "fr_concernant_prep",
+    "fr_malgre_prep",
+    "fr_moyennant_prep",
+    "fr_par_dela_prep"
    ]
   }
  },
