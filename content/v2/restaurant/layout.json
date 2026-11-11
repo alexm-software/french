@@ -33,6 +33,10 @@
     {
       "key": "cave",
       "short": "La cave"
+    },
+    {
+      "key": "degust",
+      "short": "Dégustation"
     }
   ],
   "planned": {
@@ -106,6 +110,21 @@
         "fr_champagne_noun",
         "fr_cidre_noun",
         "fr_tire_bouchon_noun"
+      ]
+    },
+    "degust": {
+      "vocabRoom": "R_wine_01",
+      "only": [
+        "fr_ivresse_noun",
+        "fr_degustation_noun",
+        "fr_whisky_noun",
+        "fr_rhum_noun",
+        "fr_cognac_noun",
+        "fr_cigare_noun",
+        "fr_cru_noun",
+        "fr_vignoble_noun",
+        "fr_gourmet_noun",
+        "fr_alcool_noun"
       ]
     }
   },
@@ -653,6 +672,17 @@
             220,
             370
           ]
+        },
+        {
+          "to": "degust",
+          "label": "La dégustation",
+          "hint": "Across the cellar floor to the tasting room",
+          "hit": [
+            560,
+            580,
+            200,
+            110
+          ]
         }
       ],
       "zooms": [],
@@ -763,6 +793,123 @@
             560,
             175,
             70
+          ]
+        }
+      ]
+    },
+    "degust": {
+      "name": "La dégustation · Tasting Room",
+      "room_id": "R_wine_01",
+      "image": "restaurant/degust.jpg",
+      "backTo": "cave",
+      "alt": "A tasting room off the cellar. A blank plaque and a woman tasting soup are on the left. On the right, three closed bottles, a sealed wooden box, a flask, two vineyard pictures, and a woman eating. The arch shows the other cellar's van and barrel. Nobody drinks.",
+      "nameplate": [
+        50,
+        3.5
+      ],
+      "doors": [
+        {
+          "to": "cave",
+          "label": "La cave",
+          "hint": "Through the arch back to the cellar",
+          "hit": [
+            490,
+            20,
+            170,
+            340
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_ivresse_noun",
+          "box": [
+            10,
+            360,
+            180,
+            200
+          ]
+        },
+        {
+          "id": "fr_degustation_noun",
+          "box": [
+            210,
+            120,
+            260,
+            540
+          ]
+        },
+        {
+          "id": "fr_whisky_noun",
+          "box": [
+            770,
+            220,
+            80,
+            190
+          ]
+        },
+        {
+          "id": "fr_rhum_noun",
+          "box": [
+            860,
+            210,
+            60,
+            200
+          ]
+        },
+        {
+          "id": "fr_cognac_noun",
+          "box": [
+            930,
+            260,
+            90,
+            160
+          ]
+        },
+        {
+          "id": "fr_cigare_noun",
+          "box": [
+            1030,
+            290,
+            160,
+            150
+          ]
+        },
+        {
+          "id": "fr_alcool_noun",
+          "box": [
+            1100,
+            20,
+            80,
+            160
+          ]
+        },
+        {
+          "id": "fr_cru_noun",
+          "box": [
+            690,
+            460,
+            150,
+            180
+          ]
+        },
+        {
+          "id": "fr_vignoble_noun",
+          "box": [
+            860,
+            450,
+            160,
+            190
+          ]
+        },
+        {
+          "id": "fr_gourmet_noun",
+          "box": [
+            1040,
+            440,
+            210,
+            250
           ]
         }
       ]
