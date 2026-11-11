@@ -11,6 +11,7 @@
    "key": "cartes",
    "short": "Les cartes"
   },
+  {"key": "depart", "short": "Le départ"},
   {
    "key": "etage",
    "short": "Le 1er étage"
@@ -48,6 +49,7 @@
     "fr_continent_noun"
    ]
   },
+  "depart": {"only": ["fr_hate_noun","fr_contree_noun","fr_emigration_noun","fr_rebelle_noun","fr_cocher_noun","fr_ramer_verb","fr_fond_noun","fr_exode_noun"]},
   "cartes": {
    "only": [
     "fr_facon_noun",
@@ -430,6 +432,23 @@
     }
    ]
   },
+  "depart": {
+   "name": "Le départ", "room_id": "R_world_01", "image": "monde/depart.jpg", "backTo": "cartes",
+   "alt": "A travel office. A brown door is on the left. A bookcase holds a hurrying man with a clock, a map, and a suitcase with a paper boat. A clothed man holds a small flag. The right bookcase holds a coachman and a toy coach, a mime rowing a boat, an open box, and three small travelers.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "cartes", "label": "Les cartes", "hint": "Back through the brown door", "hit": [30, 40, 140, 460]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_hate_noun", "box": [250, 30, 220, 170]},
+    {"id": "fr_contree_noun", "box": [230, 230, 250, 140]},
+    {"id": "fr_emigration_noun", "box": [230, 420, 270, 170]},
+    {"id": "fr_rebelle_noun", "box": [520, 240, 180, 400]},
+    {"id": "fr_cocher_noun", "box": [860, 15, 360, 130]},
+    {"id": "fr_ramer_verb", "box": [860, 160, 360, 140]},
+    {"id": "fr_fond_noun", "box": [880, 320, 280, 110]},
+    {"id": "fr_exode_noun", "box": [860, 450, 380, 180]}
+   ]
+  },
   "cartes": {
    "name": "La salle des cartes",
    "image": "monde/cartes.jpg",
@@ -450,7 +469,8 @@
       115,
       235
      ]
-    }
+    },
+    {"to": "depart", "label": "Le départ", "hint": "Across the floor", "hit": [40, 655, 140, 48]}
    ],
    "zooms": [
     {

@@ -13,6 +13,7 @@
    "key": "pentes",
    "short": "Les pentes"
   },
+  {"key": "sommet", "short": "Le sommet"},
   {
    "key": "glacier",
    "short": "Le glacier"
@@ -36,6 +37,7 @@
     "fr_figer_verb"
    ]
   },
+  "sommet": {"only": ["fr_phase_noun","fr_nuageux_adj","fr_climatique_adj","fr_chalet_noun","fr_glacier_noun","fr_torrent_noun","fr_apogee_noun","fr_barometre_noun","fr_heu_noun"]},
   "pentes": {
    "vocabRoom": "R_mountain_02",
    "only": [
@@ -245,6 +247,24 @@
    "building_id": "B26_montagne",
    "sector_id": "S09_nature"
   },
+  "sommet": {
+   "name": "Le sommet", "room_id": "R_mountain_01", "image": "montagne/sommet.jpg", "backTo": "pentes",
+   "alt": "A mountain corner. A brown door is on the left. A small cabinet shows two moon phases. A centre bookcase holds a cloud and a sun-and-cloud chart. The right bookcase holds a chalet, a snow peak, a stream diorama, a little rocket, a barometer, and a mime with a finger to his lips.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "pentes", "label": "Les pentes", "hint": "Back through the brown door", "hit": [30, 40, 140, 460]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_phase_noun", "box": [280, 240, 180, 180]},
+    {"id": "fr_nuageux_adj", "box": [490, 160, 160, 110]},
+    {"id": "fr_climatique_adj", "box": [470, 330, 210, 150]},
+    {"id": "fr_chalet_noun", "box": [780, 15, 180, 110]},
+    {"id": "fr_glacier_noun", "box": [980, 15, 180, 110]},
+    {"id": "fr_torrent_noun", "box": [760, 145, 220, 130]},
+    {"id": "fr_apogee_noun", "box": [1000, 145, 150, 140]},
+    {"id": "fr_barometre_noun", "box": [760, 300, 160, 130]},
+    {"id": "fr_heu_noun", "box": [940, 460, 250, 180]}
+   ]
+  },
   "pentes": {
    "name": "Les pentes",
    "room_id": "R_mountain_02",
@@ -266,7 +286,8 @@
       215,
       163
      ]
-    }
+    },
+    {"to": "sommet", "label": "Le sommet", "hint": "Across the floor", "hit": [40, 655, 140, 48]}
    ],
    "zooms": [
     {

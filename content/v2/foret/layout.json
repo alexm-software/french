@@ -14,6 +14,7 @@
    "key": "arbres",
    "short": "Les arbres · The trees"
   },
+  {"key": "clairiere", "short": "La clairière"},
   {
    "key": "animaux",
    "short": "Les animaux · The animals"
@@ -52,6 +53,7 @@
     "fr_bucheron_noun"
    ]
   },
+  "clairiere": {"only": ["fr_genie_noun","fr_murmure_noun","fr_maintien_noun","fr_menestrel_noun","fr_survivant_noun","fr_tirage_noun","fr_gibier_noun","fr_abattage_noun","fr_safari_noun"]},
   "arbres": {
    "vocabRoom": "R_forest_02",
    "only": [
@@ -398,6 +400,24 @@
    "building_id": "B27_foret",
    "sector_id": "S09_nature"
   },
+  "clairiere": {
+   "name": "La clairière", "room_id": "R_forest_01", "image": "foret/clairiere.jpg", "backTo": "arbres",
+   "alt": "A forest corner. A brown door is on the left. Two bookcases on the right hold a lamp and a small clothed person, a shell, a person standing straight, a lute player, a hiker, a person pulling a rope, a pheasant, a log and a saw, and a person with binoculars.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "arbres", "label": "Les arbres", "hint": "Back through the brown door", "hit": [30, 40, 150, 470]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_genie_noun", "box": [680, 20, 250, 110]},
+    {"id": "fr_murmure_noun", "box": [680, 145, 250, 100]},
+    {"id": "fr_maintien_noun", "box": [700, 260, 200, 110]},
+    {"id": "fr_menestrel_noun", "box": [680, 385, 230, 110]},
+    {"id": "fr_survivant_noun", "box": [680, 510, 220, 150]},
+    {"id": "fr_tirage_noun", "box": [960, 15, 260, 120]},
+    {"id": "fr_gibier_noun", "box": [960, 150, 270, 120]},
+    {"id": "fr_abattage_noun", "box": [960, 290, 290, 110]},
+    {"id": "fr_safari_noun", "box": [980, 430, 220, 200]}
+   ]
+  },
   "arbres": {
    "name": "Les arbres · The trees",
    "room_id": "R_forest_02",
@@ -419,7 +439,8 @@
       180,
       250
      ]
-    }
+    },
+    {"to": "clairiere", "label": "La clairière", "hint": "Across the floor", "hit": [400, 655, 140, 48]}
    ],
    "zooms": [
     {
