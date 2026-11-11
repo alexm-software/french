@@ -113,6 +113,10 @@
   {
    "key": "commode",
    "short": "La commode"
+  },
+  {
+   "key": "chausson",
+   "short": "Le chausson"
   }
  ],
  "planned": {
@@ -628,6 +632,14 @@
     "fr_cape_noun",
     "fr_pantoufle_noun",
     "fr_traine_noun"
+   ]
+  },
+  "chausson": {
+   "only": [
+    "fr_chausson_noun",
+    "fr_escarpin_noun",
+    "fr_polo_noun",
+    "fr_pourpoint_noun"
    ]
   },
   "jardin_facade": {
@@ -4352,7 +4364,7 @@
    "room_id": "R_living",
    "image": "maison/commode.jpg",
    "backTo": "sonnette",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A chest of drawers sits on the top shelf. A crab sits on a red cape. A fully clothed grandmother in a cardigan and fluffy slippers holds a pan of pancakes. A fully clothed bride in a white dress stands on the bottom shelf with three ducklings on her train. The brown door on the right leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A chest of drawers sits on the top shelf. A crab sits on a red cape. A fully clothed grandmother in a cardigan and fluffy slippers holds a pan of pancakes. A fully clothed bride in a white dress stands on the bottom shelf with three ducklings on her train. The brown door on the right leads back. The bricks in front of the empty wall lead to the slipper cupboard.",
    "nameplate": [94, 94],
    "doors": [
     {
@@ -4360,6 +4372,12 @@
      "label": "La sonnette",
      "hint": "Back through the brown door",
      "hit": [940, 180, 280, 430]
+    },
+    {
+     "to": "chausson",
+     "label": "Le chausson",
+     "hint": "Across the bricks",
+     "hit": [760, 655, 150, 55]
     }
    ],
    "zooms": [],
@@ -4368,6 +4386,29 @@
     {"id": "fr_cape_noun", "box": [80, 178, 560, 96]},
     {"id": "fr_pantoufle_noun", "box": [50, 276, 630, 206]},
     {"id": "fr_traine_noun", "box": [30, 492, 670, 183]}
+   ]
+  },
+  "chausson": {
+   "name": "Le chausson",
+   "room_id": "R_wardrobe_04",
+   "image": "maison/chausson.jpg",
+   "backTo": "commode",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed father holds up pink knitted baby bootees. A sparkly black court shoe has a tiny red toy car inside it. A fully clothed boy in a green polo shirt rides a wooden hobby horse and holds a polo mallet. A fully clothed boy in a quilted doublet points into an empty purse.",
+   "nameplate": [50, 4],
+   "doors": [
+    {
+     "to": "commode",
+     "label": "La commode",
+     "hint": "Back through the brown door",
+     "hit": [80, 72, 280, 548]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_chausson_noun", "box": [880, 18, 200, 184]},
+    {"id": "fr_escarpin_noun", "box": [800, 228, 210, 92]},
+    {"id": "fr_polo_noun", "box": [800, 332, 370, 148]},
+    {"id": "fr_pourpoint_noun", "box": [830, 498, 220, 162]}
    ]
   },
   "jardin_facade": {
