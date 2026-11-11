@@ -37,6 +37,10 @@
   {
    "key": "poissonnerie",
    "short": "La poissonnerie"
+  },
+  {
+   "key": "mercerie",
+   "short": "La mercerie"
   }
  ],
  "planned": {
@@ -192,6 +196,27 @@
   },
   "claim_butcher_01": {
    "vocabRoom": "R_butcher_01"
+  },
+  "mercerie": {
+   "vocabRoom": "R_abs_beauty_03",
+   "only": [
+    "fr_marque_noun",
+    "fr_vierge_noun_2",
+    "fr_enfiler_verb",
+    "fr_couturier_noun",
+    "fr_fuseau_noun",
+    "fr_velours_noun",
+    "fr_satin_noun"
+   ]
+  },
+  "claim_velours": {
+   "vocabRoom": "R_hardware_01"
+  },
+  "claim_marque": {
+   "vocabRoom": "R_shop_general_01"
+  },
+  "claim_vierge": {
+   "vocabRoom": "R_bookshop_01"
   }
  },
  "rooms": {
@@ -1052,6 +1077,17 @@
       145,
       420
      ]
+    },
+    {
+     "to": "mercerie",
+     "label": "La mercerie",
+     "hint": "the blue door with the spool",
+     "hit": [
+      955,
+      145,
+      140,
+      420
+     ]
     }
    ],
    "zooms": [],
@@ -1611,6 +1647,96 @@
       290,
       210,
       150
+     ]
+    }
+   ]
+  },
+  "mercerie": {
+   "name": "La mercerie · The haberdashery",
+   "room_id": "R_abs_beauty_03",
+   "image": "boulangerie/mercerie.jpg",
+   "alt": "A haberdashery off the market arcade. A blue door opens onto the street. On the left, a basket of unspun white wool and a cloth tag with a stitched star. In front, hands thread a needle. On the right, a wooden spindle, a bolt of red velvet, a bolt of pale satin, and a designer in a jacket with a tape measure.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the blue door back to the arcade",
+     "hit": [
+      8,
+      40,
+      175,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_vierge_noun_2",
+     "box": [
+      0,
+      490,
+      210,
+      155
+     ]
+    },
+    {
+     "id": "fr_marque_noun",
+     "box": [
+      25,
+      655,
+      100,
+      60
+     ]
+    },
+    {
+     "id": "fr_enfiler_verb",
+     "box": [
+      330,
+      450,
+      430,
+      270
+     ]
+    },
+    {
+     "id": "fr_fuseau_noun",
+     "box": [
+      820,
+      510,
+      130,
+      160
+     ]
+    },
+    {
+     "id": "fr_velours_noun",
+     "box": [
+      960,
+      545,
+      190,
+      150
+     ]
+    },
+    {
+     "id": "fr_satin_noun",
+     "box": [
+      1160,
+      500,
+      115,
+      190
+     ]
+    },
+    {
+     "id": "fr_couturier_noun",
+     "box": [
+      1000,
+      120,
+      260,
+      370
      ]
     }
    ]
