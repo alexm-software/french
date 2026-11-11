@@ -44,22 +44,16 @@ UNRELATED = {
 # Same English gloss, but the source id mixes senses. No learner note until the senses are separate ids.
 DEFERRED = {"noun|stove"}
 # A real nuance may exist. It is not published.
-UNCERTAIN = {
-    "noun|rock", "noun|bar", "verb|raise", "verb|put back", "noun|opportunity",
-    "verb|publish", "noun|support", "verb|count", "noun|village", "adj|heavy", "noun|frost",
-}
+UNCERTAIN = set()
 # Pairs inside an accepted cluster that are interchangeable, so they have no direct edge.
-EQUIVALENT_PAIRS = [
-    ["fr_finir_verb", "fr_terminer_verb"],
-    ["fr_marrant_adj", "fr_rigolo_adj"],
-]
+EQUIVALENT_PAIRS = []
 REMAINING = [
     "All 160 gloss-only equivalent pairs now have a reciprocal note, including au/aux, foot/football, and vite/rapidement.",
     "Fois is one occurrence, compared with heure and temps. Neuf the number and neuf brand-new are separate cards. La poêle is the frying pan and le poêle is the heater.",
     "Near-match review: 500 pairs read. 288 edges where the senses overlap, 212 skipped as partial-gloss coincidences. The near-match list is done.",
     "boulot and job are both informal for work or a job. emploi already contrasts with boulot. No note between boulot and job.",
     "Words with a unique primary gloss were not candidates. That is not a claim that no other synonym exists under a different English wording.",
-    "The eleven uncertain clusters stay unpublished.",
+    "The eleven uncertain clusters are decided. Bar the café has no note with barre or barreau. Rock the music has no note with roc, roche, or rocher. The other members have a reciprocal note, as do finir and terminer, and marrant and rigolo.",
 ]
 
 
