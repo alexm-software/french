@@ -19,6 +19,10 @@
    "short": "La famille"
   },
   {
+   "key": "parente",
+   "short": "La parenté"
+  },
+  {
    "key": "cuisine",
    "short": "La cuisine"
   },
@@ -56,6 +60,20 @@
   }
  ],
  "planned": {
+  "parente": {
+   "only": [
+    "fr_petite_fille_noun",
+    "fr_epouse_noun",
+    "fr_belle_mere_noun",
+    "fr_paternite_noun",
+    "fr_parente_noun",
+    "fr_beau_frere_noun",
+    "fr_heritier_noun",
+    "fr_bambin_noun",
+    "fr_descendant_noun",
+    "fr_demi_frere_noun"
+   ]
+  },
   "maison": {
    "vocabRoom": "R_entrance_01",
    "only": [
@@ -998,7 +1016,7 @@
    "room_id": "R_family_01",
    "image": "maison/famille.jpg",
    "backTo": "maison",
-   "alt": "The family room, painted in ink and gouache, with family portraits on the wall and an open family album full of photos on a low table at the front. A granny knits in a rocking chair, a horse looks in at the window, a mother holds a toy horse and a girl pays at a cardboard-box booth. A woman in red speaks by a blackboard, a little brother stands beside her, a boy cousin sits with a pigeon in a little tent, and young men hold up pears and blow a trumpet. A boy in a window seat plays with a toy boat and a grandpa with a pear sits in a red armchair. The yellow door on the left leads back to the hall.",
+   "alt": "The family room, painted in ink and gouache, with family portraits on the wall and an open family album full of photos on a low table at the front. A granny knits in a rocking chair, a horse looks in at the window, a mother holds a toy horse and a girl pays at a cardboard-box booth. A woman in red speaks by a blackboard, a little brother stands beside her, a boy cousin sits with a pigeon in a little tent, and young men hold up pears and blow a trumpet. A boy in a window seat plays with a toy boat and a grandpa with a pear sits in a red armchair. The yellow door on the left leads back to the hall. The red rug in front opens toward the kinship parlor.",
    "nameplate": [
     24.5,
     95.3
@@ -1013,6 +1031,17 @@
       150,
       68,
       385
+     ]
+    },
+    {
+     "to": "parente",
+     "label": "La parenté",
+     "hint": "Across the red rug",
+     "hit": [
+      210,
+      615,
+      180,
+      90
      ]
     }
    ],
@@ -1142,6 +1171,35 @@
    ],
    "building_id": "B05_maison",
    "sector_id": "S02_home"
+  },
+  "parente": {
+   "name": "La parenté",
+   "room_id": "R_family_02",
+   "image": "maison/parente.jpg",
+   "backTo": "famille",
+   "alt": "A family parlor in ink and gouache. On the left a granddaughter wears fairy wings, a wife poses in a white gown, a mother-in-law stands with a mare, a father holds a patterned teapot, and a little girl and her aunt sit at tea. On the right a friar in a bow tie stands with a young man, a boy cheers in a hairy necktie, a toddler stacks blocks, a girl sends a wagon down a ramp, and a small friar stands in a giant teacup. The oak door on the left leads back.",
+   "nameplate": [88, 4],
+   "doors": [
+    {
+     "to": "famille",
+     "label": "La famille",
+     "hint": "Back through the oak door",
+     "hit": [10, 12, 145, 230]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_petite_fille_noun", "box": [18, 250, 125, 450]},
+    {"id": "fr_epouse_noun", "box": [185, 48, 165, 600]},
+    {"id": "fr_belle_mere_noun", "box": [445, 6, 185, 250]},
+    {"id": "fr_paternite_noun", "box": [368, 268, 145, 112]},
+    {"id": "fr_parente_noun", "box": [525, 355, 110, 290]},
+    {"id": "fr_beau_frere_noun", "box": [800, 18, 140, 482]},
+    {"id": "fr_heritier_noun", "box": [648, 168, 125, 295]},
+    {"id": "fr_bambin_noun", "box": [648, 510, 200, 200]},
+    {"id": "fr_descendant_noun", "box": [955, 270, 175, 430]},
+    {"id": "fr_demi_frere_noun", "box": [1148, 150, 120, 320]}
+   ]
   },
   "famille_portraits": {
    "name": "Les portraits · Portraits",
