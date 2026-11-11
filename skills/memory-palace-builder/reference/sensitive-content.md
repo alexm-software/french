@@ -4,6 +4,7 @@ Read when a room has sacred, adult, grave or mature words, or children near adul
 
 - **Sacred and cultural respect**: religious content is depicted reverently. Never mock sacred figures, objects, or rites; keep whimsy in nearby props or the mnemonic character, never on or touching sacred objects; follow the tradition's own sensitivities (ask the user which ones apply, e.g. no depictions of God the Father, no animals on crosses or altars). When unsure, show the item as text instead. <!-- B17 -->
 - **Audience and mature words.** Default to all ages: no crude terms, profanity or crude mnemonics (room check 7). Mature-but-necessary words are shown as text only (a museum wall plaque), never drawn. <!-- B18 B63 B149 L39 L57 -->
+- **Clothing.** Every figure is fully clothed and age-appropriate. No towels, bathing, or undress, even in bathroom rooms. A washing or grooming word is a fully clothed figure or the object alone, in the painting and in the hook text.
 8. Religious and cultural imagery is reverent and follows the sensitivities recorded for the project. <!-- B64 -->
 - No depiction of God the Father and nothing likely to cause religious or cultural offense. Vulgar or insulting senses carry a gentle usage warning. <!-- B150 -->
 - Never place children next to alcohol or tobacco props, and nobody drinks or smokes (detail: release-gates gate 6). <!-- B169 -->

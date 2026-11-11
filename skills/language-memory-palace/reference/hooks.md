@@ -25,6 +25,7 @@ Each word is drawn as something that, said aloud in the learner's native languag
 ## Hook lessons
 
 - Prefer a familiar English cue that matches the real sound; a recognizable partial cue can work when it is vivid and honestly explained. Preserve user-selected scenes (for example, jupe: Jupiter wearing a skirt; accès: an axe opening something). Paint the actual figure/action named by the hook. Do not replace Jupiter with a generic planet or the opening action with an idle axe.
+- Every figure in the hook text and the painting is fully clothed and age-appropriate. No towels, bathing, or undress, even in a bathroom. A washing or grooming cue is a fully clothed figure or the object alone.
 - Never lean on another word in the same language (piéger cannot be shown with a piège) or on knowing the target language. <!-- L111 -->
 - For abstract or quantity words, show the meaning and the sound together (le grain is a microscope on a tiny grain beside wheat). <!-- L112 -->
 - **Use only English the learner knows.** No Latin or word-history hooks, and no obscure English ("chandler"). A French word the learner has certainly met already is fine as a helper. <!-- L124 -->
