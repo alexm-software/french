@@ -37,6 +37,6 @@ For changed buildings/floors, use `reference/building-walkthrough.md`; overview/
 
 ## Token and retry budget
 
-Default to one composition candidate and one focused repair, not a succession of detail edits. After two failed finished-image edits of the same interaction/composition, write one diagnosis and revise its pose, space allocation or parent/zoom contract before generating again. Do not reset this rule by naming each hand, animal or position a separate defect. Continue the authorized task with the revised plan; never lower acceptance criteria to meet a call budget.
+Default to one composition candidate and one focused repair, not a succession of detail edits. Settle the geometry (boxes, bands, label clearance, passages) before any image call. After two failed finished-image edits of the same interaction, change the method: pose, space, or hook. If that second method fails, park the item and record why. Do not buy a third attempt of the same approach, and do not reset the count by naming each hand, animal or position a separate defect. Never lower acceptance criteria to meet a call budget.
 
 Keep one manifest and a short checkpoint: base, changed paths, accepted revision, failures, next action. Load references on demand; process payloads and tool responses programmatically and print only findings/counts. Reuse unchanged evidence and the same review context. Fold lessons into the canonical rule rather than adding case histories.

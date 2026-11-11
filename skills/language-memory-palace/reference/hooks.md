@@ -8,7 +8,7 @@ Each word is drawn as something that, said aloud in the learner's native languag
 
 ## Hook quality bar (language)
 
-- The sound-alike must be a real word or phrase in the learner's language that sounds like the target word said aloud, at least the stressed or first syllable, and it must appear in the scene. Write the meaning in CAPS and the pronunciation in brackets. <!-- L22 -->
+- The sound-alike must be a real English word or phrase whose stressed syllable matches the stressed syllable of the French word, and that cue must be something visible in the painting: a figure, a gesture, a color, or a nearby object. A match on an unstressed English syllable is not a hook. If no honest sound match exists, depict the meaning clearly and say on the card that no English word matches that syllable. Write the meaning in CAPS and the pronunciation in brackets. <!-- L22 -->
 - Do not label a meaning-only picture as a sound hook. Do not invent a better-sounding respelling to justify a pun. A plain depiction is an honest fallback; an approximate first-syllable cue must be described as partial and retain the correct pronunciation on the card.
 - Never use the meaning as the sound-alike. 'cook' for cuisinier or 'cat' for chat (said SHAH) link nothing to the French sound. Derive the sound-alike from the pronunciation (IPA or respelling) and check it out loud. <!-- L24 -->
 - Cognates count only when the word both looks AND sounds close (sauce, soupe). Write them plainly ("Same as English 'sauce', said SOHS") with one vivid image that fits the room, and note any pronunciation trap. Words that look alike but sound different (frite, said FREET) still need a sound cue. Mark false friends explicitly on the card. <!-- L25 -->
