@@ -25,6 +25,7 @@
    "key": "organes",
    "short": "La salle des organes"
   },
+  {"key": "clinique", "short": "La clinique"},
   {
    "key": "barbier",
    "short": "Le coin du barbier"
@@ -108,6 +109,7 @@
     "fr_index_noun"
    ]
   },
+  "clinique": {"only": ["fr_canne_noun","fr_bequille_noun","fr_tension_noun","fr_cardiaque_adj","fr_respiratoire_adj","fr_clinique_adj","fr_chirurgical_adj","fr_hereditaire_adj","fr_battement_noun"]},
   "organes": {
    "vocabRoom": "R_body_04",
    "only": [
@@ -858,6 +860,24 @@
    "building_id": "B17_cabinet",
    "sector_id": "S07_health"
   },
+  "clinique": {
+   "name": "La clinique", "room_id": "R_doctor_01", "image": "cabinet/clinique.jpg", "backTo": "organes",
+   "alt": "A bright clinic. A brown door is on the left. A bookcase holds a cane, a crutch, and a blood-pressure cuff. The middle bookcase holds a heart model, a lungs card, a doctor's bag, a surgical cap, and a photo of three clothed generations. A drum sits on the right bookcase.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "organes", "label": "Les organes", "hint": "Back through the brown door", "hit": [40, 60, 160, 480]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_canne_noun", "box": [390, 90, 200, 90]},
+    {"id": "fr_bequille_noun", "box": [370, 200, 250, 100]},
+    {"id": "fr_tension_noun", "box": [390, 360, 220, 120]},
+    {"id": "fr_cardiaque_adj", "box": [720, 70, 140, 110]},
+    {"id": "fr_respiratoire_adj", "box": [700, 190, 180, 110]},
+    {"id": "fr_clinique_adj", "box": [700, 310, 180, 100]},
+    {"id": "fr_chirurgical_adj", "box": [700, 420, 180, 90]},
+    {"id": "fr_hereditaire_adj", "box": [680, 520, 220, 130]},
+    {"id": "fr_battement_noun", "box": [980, 90, 180, 120]}
+   ]
+  },
   "organes": {
    "name": "La salle des organes",
    "room_id": "R_body_04",
@@ -880,6 +900,7 @@
       415
      ]
     },
+    {"to": "clinique", "label": "La clinique", "hint": "Across the floor", "hit": [220, 655, 160, 48]},
     {
      "to": "barbier",
      "label": "Le coin du barbier",
