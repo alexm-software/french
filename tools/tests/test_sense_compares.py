@@ -118,8 +118,11 @@ class SenseCompares(unittest.TestCase):
         stove = next(r for r in audit["exact_clusters"] if r["key"] == "noun|stove")
         self.assertEqual(stove["disposition"], "deferred_homograph")
         ids = {e["a"] for e in self.edges} | {e["b"] for e in self.edges}
-        self.assertNotIn("fr_neuf_num", ids)
-        self.assertNotIn("fr_poele_noun", ids)
+        self.assertIn("fr_neuf_num", ids)
+        self.assertIn("fr_neuf_adj", ids)
+        self.assertIn("fr_poele_noun", ids)
+        self.assertIn("fr_poele_noun_f", ids)
+        self.assertIn("fr_fois_noun", ids)
         verified = [e for e in self.edges if e.get("verified")]
         self.assertTrue(verified)
         for e in verified:
