@@ -93,6 +93,10 @@
   {
    "key": "heritage",
    "short": "L'héritage"
+  },
+  {
+   "key": "adoption",
+   "short": "L'adoption"
   }
  ],
  "planned": {
@@ -568,6 +572,14 @@
     "fr_divorce_noun",
     "fr_demenagement_noun",
     "fr_jardinier_noun"
+   ]
+  },
+  "adoption": {
+   "only": [
+    "fr_adoption_noun",
+    "fr_belle_fille_noun",
+    "fr_filiation_noun",
+    "fr_embrasse_noun"
    ]
   },
   "jardin_facade": {
@@ -4147,7 +4159,7 @@
    "room_id": "R_family_02",
    "image": "maison/heritage.jpg",
    "backTo": "armoire",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A clothed bearded man lifts a small white Taj Mahal model from an open chest. A clothed woman and a clothed man sit on the two halves of a sawn sofa. Two clothed removal men carry a small wardrobe. A clothed gardener holds a glass jar of seedlings. The brown door on the left leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A clothed bearded man lifts a small white Taj Mahal model from an open chest. A clothed woman and a clothed man sit on the two halves of a sawn sofa. Two clothed removal men carry a small wardrobe. A clothed gardener holds a glass jar of seedlings. The brown door on the left leads back. The bricks to the right of that door lead to the adoption cupboard.",
    "nameplate": [40, 5],
    "doors": [
     {
@@ -4155,6 +4167,12 @@
      "label": "L'armoire",
      "hint": "Back through the brown door",
      "hit": [75, 130, 210, 470]
+    },
+    {
+     "to": "adoption",
+     "label": "L'adoption",
+     "hint": "Across the bricks",
+     "hit": [340, 650, 180, 60]
     }
    ],
    "zooms": [],
@@ -4163,6 +4181,29 @@
     {"id": "fr_divorce_noun", "box": [620, 222, 610, 156]},
     {"id": "fr_demenagement_noun", "box": [655, 384, 550, 144]},
     {"id": "fr_jardinier_noun", "box": [700, 548, 500, 168]}
+   ]
+  },
+  "adoption": {
+   "name": "L'adoption",
+   "room_id": "R_family_02",
+   "image": "maison/adoption.jpg",
+   "backTo": "heritage",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A hen hugs a yellow duckling. A clothed girl in a long white dress rings a brass handbell. Three ducks stand in a row, large then medium then tiny. A brass curtain tie-back holds a red curtain. The brown door on the right leads back.",
+   "nameplate": [93, 94],
+   "doors": [
+    {
+     "to": "heritage",
+     "label": "L'héritage",
+     "hint": "Back through the brown door",
+     "hit": [830, 48, 350, 545]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_adoption_noun", "box": [70, 0, 500, 182]},
+    {"id": "fr_belle_fille_noun", "box": [130, 190, 430, 242]},
+    {"id": "fr_filiation_noun", "box": [30, 438, 580, 88]},
+    {"id": "fr_embrasse_noun", "box": [15, 548, 640, 162]}
    ]
   },
   "jardin_facade": {
