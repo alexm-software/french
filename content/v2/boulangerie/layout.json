@@ -13,6 +13,10 @@
   {
    "key": "fournil",
    "short": "Le fournil"
+  },
+  {
+   "key": "fruits",
+   "short": "Les fruits"
   }
  ],
  "planned": {
@@ -68,6 +72,20 @@
     "fr_pate_noun_2",
     "fr_jambon_noun",
     "fr_porc_noun"
+   ]
+  },
+  "fruits": {
+   "only": [
+    "fr_fruit_noun",
+    "fr_banane_noun",
+    "fr_orange_noun",
+    "fr_abricot_noun",
+    "fr_amande_noun",
+    "fr_cerise_noun",
+    "fr_olive_noun",
+    "fr_pamplemousse_noun",
+    "fr_bananier_noun",
+    "fr_cocotier_noun"
    ]
   }
  },
@@ -350,6 +368,17 @@
       80,
       76,
       410
+     ]
+    },
+    {
+     "to": "fruits",
+     "label": "Les fruits",
+     "hint": "across the open tiles toward the fruit stall",
+     "hit": [
+      310,
+      628,
+      170,
+      82
      ]
     }
    ],
@@ -723,6 +752,123 @@
       814,
       650
      ]
+    }
+   ]
+  },
+  "fruits": {
+   "name": "L'étal de fruits · The fruit stall",
+   "room_id": "R_fruits_01",
+   "image": "boulangerie/fruits.jpg",
+   "alt": "A fruit stall off the bakehouse, painted in ink and gouache: an open wooden door on the left shows the oven glowing in the bakehouse. A girl in a blue apron holds a bunch of bananas beside a crate of oranges, a bowl of almonds and a jar of olives. A boy holds out red cherries. A grapefruit sits on a little stand. A mime in a red beret holds a basket of mixed fruit. A tray of apricots rests on the floor to the right, with a tall potted banana plant and a small potted coconut palm.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "fournil",
+   "doors": [
+    {
+     "to": "fournil",
+     "label": "Le fournil",
+     "hint": "the open wooden door back to the bakehouse",
+     "hit": [
+      4,
+      18,
+      125,
+      455
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+   "id": "fr_banane_noun",
+   "box": [
+    200,
+    370,
+    175,
+    90
+   ]
+    },
+    {
+     "id": "fr_orange_noun",
+     "box": [
+      6,
+      508,
+      188,
+      200
+     ]
+    },
+    {
+     "id": "fr_amande_noun",
+     "box": [
+      198,
+      535,
+      145,
+      145
+     ]
+    },
+    {
+     "id": "fr_olive_noun",
+     "box": [
+      348,
+      468,
+      82,
+      165
+     ]
+    },
+    {
+     "id": "fr_cerise_noun",
+     "box": [
+      430,
+      305,
+      195,
+      225
+     ]
+    },
+    {
+     "id": "fr_fruit_noun",
+     "box": [
+      655,
+      255,
+      230,
+      195
+     ]
+    },
+    {
+     "id": "fr_pamplemousse_noun",
+     "box": [
+      628,
+      488,
+      125,
+      115
+     ]
+    },
+    {
+     "id": "fr_abricot_noun",
+     "box": [
+      1005,
+      568,
+      240,
+      125
+     ]
+    },
+    {
+     "id": "fr_bananier_noun",
+     "box": [
+      1010,
+      8,
+      260,
+      345
+     ]
+    },
+    {
+   "id": "fr_cocotier_noun",
+   "box": [
+    1115,
+    390,
+    150,
+    165
+   ]
     }
    ]
   }
