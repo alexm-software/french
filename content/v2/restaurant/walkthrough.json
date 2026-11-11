@@ -53,6 +53,13 @@
       "landmark": "La cave · Wine Cellar",
       "camera": "from the cellar toward the stair",
       "within": "restaurant"
+    },
+    "degust": {
+      "kind": "room",
+      "level": "cellar",
+      "landmark": "La dégustation · Tasting Room",
+      "camera": "from the tasting room toward the arch",
+      "within": "restaurant"
     }
   },
   "passages": {
@@ -149,6 +156,22 @@
           "place": "cave",
           "where": "stair up to the corridor",
           "arrival": "La cave · Wine Cellar"
+        }
+      ]
+    },
+    "to-degust": {
+      "kind": "path",
+      "appearance": "Cellar floor leading into the tasting room",
+      "ends": [
+        {
+          "place": "cave",
+          "where": "foreground floor",
+          "arrival": "La cave · Wine Cellar"
+        },
+        {
+          "place": "degust",
+          "where": "arch back to the cellar",
+          "arrival": "La dégustation · Tasting Room"
         }
       ]
     }
