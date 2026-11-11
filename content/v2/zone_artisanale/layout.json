@@ -26,6 +26,14 @@
       "short": "La forge"
     },
     {
+      "key": "poste",
+      "short": "La poste"
+    },
+    {
+      "key": "reparations",
+      "short": "Les réparations"
+    },
+    {
       "key": "atelier",
       "short": "L'atelier"
     },
@@ -96,6 +104,12 @@
         "fr_fixer_verb",
         "fr_lier_verb"
       ]
+    },
+    "poste": {
+      "only": ["fr_poster_verb","fr_expedier_verb","fr_priser_verb","fr_commercer_verb","fr_commercialiser_verb","fr_fouiller_verb","fr_photographier_verb","fr_identifier_verb","fr_intenter_verb"]
+    },
+    "reparations": {
+      "only": ["fr_carreler_verb","fr_demonter_verb","fr_vider_verb","fr_annuler_verb","fr_decoller_verb","fr_recomposer_verb","fr_redonner_verb","fr_reprendre_verb","fr_etablir_verb","fr_envoler_verb"]
     },
     "etabli": {
       "vocabRoom": "R_industry_01",
@@ -926,6 +940,49 @@
       "sector_id": "S05_bank",
       "alt": "Close-up of the long counter in the upstairs workshop: a little white factory; tile stacks with two birds perched on them; a sailing ship carries a crate out over a puddle; a model town on stilts; a beaver beside a row of little chairs; a stone house and a small clock; a boy at a little lathe; a craftsman weaves a basket, and a man with a pack stands by a sack of grain. The girl with the watering can and the grandma lean in from the edges."
     },
+    "poste": {
+      "name": "La poste",
+      "room_id": "R_industry_02",
+      "image": "zone_artisanale/poste.jpg",
+      "backTo": "pavillon",
+      "alt": "A post-office back room. A brown door is on the left. The left bookcase holds a mime with a blank envelope, a mime weighing a parcel, a mime putting a blank price tag on a jar, and a mime trading an apple for a cup. The right bookcase holds a mime setting a jar on a shelf, a mime searching a drawer, a mime with a camera and a flower, a mime holding a blank card, and a mime filing blank folders.",
+      "nameplate": [50, 4],
+      "doors": [{"to": "pavillon", "label": "Le pavillon", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}],
+      "zooms": [],
+      "items": [
+        {"id": "fr_poster_verb", "box": [400, 40, 260, 120]},
+        {"id": "fr_expedier_verb", "box": [400, 175, 260, 120]},
+        {"id": "fr_priser_verb", "box": [400, 310, 260, 125]},
+        {"id": "fr_commercer_verb", "box": [400, 450, 260, 140]},
+        {"id": "fr_commercialiser_verb", "box": [770, 25, 400, 120]},
+        {"id": "fr_fouiller_verb", "box": [770, 160, 400, 120]},
+        {"id": "fr_photographier_verb", "box": [770, 295, 400, 120]},
+        {"id": "fr_identifier_verb", "box": [770, 430, 400, 115]},
+        {"id": "fr_intenter_verb", "box": [770, 555, 400, 130]}
+      ]
+    },
+    "reparations": {
+      "name": "Les réparations",
+      "room_id": "R_industry_01",
+      "image": "zone_artisanale/reparations.jpg",
+      "backTo": "centrale",
+      "alt": "A repair room. A brown door is on the left. The left bookcase holds a mime laying tiles, a mime taking a clock apart, a mime emptying a bucket, a mime tearing a blank paper, and a mime lifting the lid off a box. The right bookcase holds a mime fitting a puzzle, a mime giving a toy rabbit to a clothed child, a mime in a gold beret taking a book, a mime in a green beret setting a blank sign, and a mime letting a paper bird fly from his hand.",
+      "nameplate": [50, 4],
+      "doors": [{"to": "centrale", "label": "La centrale", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}],
+      "zooms": [],
+      "items": [
+        {"id": "fr_carreler_verb", "box": [410, 25, 250, 115]},
+        {"id": "fr_demonter_verb", "box": [410, 155, 250, 115]},
+        {"id": "fr_vider_verb", "box": [410, 285, 250, 115]},
+        {"id": "fr_annuler_verb", "box": [410, 410, 250, 110]},
+        {"id": "fr_decoller_verb", "box": [410, 530, 250, 140]},
+        {"id": "fr_recomposer_verb", "box": [780, 20, 400, 120]},
+        {"id": "fr_redonner_verb", "box": [780, 155, 420, 125]},
+        {"id": "fr_reprendre_verb", "box": [780, 290, 400, 115]},
+        {"id": "fr_etablir_verb", "box": [780, 415, 400, 115]},
+        {"id": "fr_envoler_verb", "box": [780, 540, 400, 140]}
+      ]
+    },
     "centrale": {
       "name": "La centrale",
       "room_id": "R_energy_01",
@@ -942,7 +999,8 @@
             100,
             160
           ]
-        }
+        },
+        {"to": "reparations", "label": "Les réparations", "hint": "Across the floor", "hit": [500, 655, 150, 48]}
       ],
       "zooms": [
         {
@@ -1170,7 +1228,8 @@
             120,
             258
           ]
-        }
+        },
+        {"to": "poste", "label": "La poste", "hint": "Across the floor", "hit": [20, 655, 150, 48]}
       ],
       "zooms": [
         {
