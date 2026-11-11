@@ -1,0 +1,106 @@
+{
+  "building": "st_pas",
+  "building_id": "ST_pas",
+  "sector_id": "S04_cafes",
+  "v1_room_id": "ST_movement_seg004",
+  "name": "Rue des Pas Perdus",
+  "main": "st_pas",
+  "roomList": [
+    {
+      "key": "st_pas",
+      "short": "Les coureurs"
+    }
+  ],
+  "planned": {
+    "st_pas": {
+      "vocabRoom": "ST_movement_seg004",
+      "only": [
+        "fr_sauter_verb",
+        "fr_tomber_verb",
+        "fr_courir_verb",
+        "fr_depecher_verb",
+        "fr_rompre_verb",
+        "fr_passer_verb"
+      ]
+    }
+  },
+  "rooms": {
+    "st_pas": {
+      "name": "Rue des Coureurs · Runners' Lane",
+      "room_id": "ST_movement_seg004",
+      "image": "st_pas/st_pas.jpg",
+      "alt": "A sunny cobbled lane on Rue des Pas Perdus, painted in ink and gouache. A red-beret mime jumps a puddle; another has fallen in the leaves; a gold-beret courier runs with a satchel; a red-beret mime hurries with a coin and a hand mirror; a gold-beret mime breaks a stick; a red-beret mime passes a baton. The open gate on the left leads back to Rue des Saveurs.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          0,
+          55,
+          80,
+          310
+        ],
+        "label": "Rue des Saveurs"
+      },
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_sauter_verb",
+          "box": [
+            90,
+            70,
+            240,
+            350
+          ]
+        },
+        {
+          "id": "fr_tomber_verb",
+          "box": [
+            0,
+            430,
+            330,
+            280
+          ]
+        },
+        {
+          "id": "fr_courir_verb",
+          "box": [
+            345,
+            240,
+            200,
+            450
+          ]
+        },
+        {
+          "id": "fr_depecher_verb",
+          "box": [
+            560,
+            165,
+            220,
+            460
+          ]
+        },
+        {
+          "id": "fr_rompre_verb",
+          "box": [
+            850,
+            115,
+            240,
+            300
+          ]
+        },
+        {
+          "id": "fr_passer_verb",
+          "box": [
+            800,
+            435,
+            470,
+            275
+          ]
+        }
+      ]
+    }
+  }
+}
