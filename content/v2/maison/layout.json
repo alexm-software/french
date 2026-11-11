@@ -129,6 +129,10 @@
   {
    "key": "chiffon",
    "short": "Le chiffon"
+  },
+  {
+   "key": "edifice",
+   "short": "L'édifice"
   }
  ],
  "planned": {
@@ -676,6 +680,14 @@
     "fr_lavage_noun",
     "fr_haillon_noun",
     "fr_reflet_noun"
+   ]
+  },
+  "edifice": {
+   "only": [
+    "fr_edifice_noun",
+    "fr_logis_noun",
+    "fr_jardinage_noun",
+    "fr_bandeau_noun"
    ]
   },
   "jardin_facade": {
@@ -4516,7 +4528,7 @@
    "room_id": "R_laundry_01",
    "image": "maison/chiffon.jpg",
    "backTo": "pointure",
-   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed woman dusts a black telephone with a pink rag. A fully clothed toddler washes a toy volcano in a bucket of suds. A scarecrow in patched rags yawns in a laundry basket. A peacock looks at its reflection in a puddle.",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed woman dusts a black telephone with a pink rag. A fully clothed toddler washes a toy volcano in a bucket of suds. A scarecrow in patched rags yawns in a laundry basket. A peacock looks at its reflection in a puddle. The bricks between the door and the cupboard lead to the building-tower cupboard.",
    "nameplate": [30, 5],
    "doors": [
     {
@@ -4524,6 +4536,12 @@
      "label": "La pointure",
      "hint": "Back through the brown door",
      "hit": [8, 72, 165, 520]
+    },
+    {
+     "to": "edifice",
+     "label": "L'édifice",
+     "hint": "Across the bricks",
+     "hit": [240, 655, 200, 55]
     }
    ],
    "zooms": [],
@@ -4532,6 +4550,29 @@
     {"id": "fr_lavage_noun", "box": [700, 196, 480, 150]},
     {"id": "fr_haillon_noun", "box": [730, 364, 460, 145]},
     {"id": "fr_reflet_noun", "box": [660, 528, 540, 145]}
+   ]
+  },
+  "edifice": {
+   "name": "L'édifice",
+   "room_id": "R_entrance_02",
+   "image": "maison/edifice.jpg",
+   "backTo": "chiffon",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed man stacks giant dice into a tower. A hedgehog looks out of a tiny wooden lodge. A fully clothed woman kneels and plants pansies. A fully clothed drummer in a headband stirs a bowl of dough.",
+   "nameplate": [32, 5],
+   "doors": [
+    {
+     "to": "chiffon",
+     "label": "Le chiffon",
+     "hint": "Back through the brown door",
+     "hit": [70, 90, 200, 490]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_edifice_noun", "box": [700, 16, 460, 196]},
+    {"id": "fr_logis_noun", "box": [760, 220, 400, 115]},
+    {"id": "fr_jardinage_noun", "box": [690, 350, 500, 145]},
+    {"id": "fr_bandeau_noun", "box": [700, 510, 480, 155]}
    ]
   },
   "jardin_facade": {
