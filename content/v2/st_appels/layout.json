@@ -9,6 +9,22 @@
     {
       "key": "st_appels",
       "short": "Les crieurs"
+    },
+    {
+      "key": "galerie",
+      "short": "La galerie"
+    },
+    {
+      "key": "kiosque",
+      "short": "Le kiosque"
+    },
+    {
+      "key": "panneaux",
+      "short": "Les panneaux"
+    },
+    {
+      "key": "declarations",
+      "short": "Les déclarations"
     }
   ],
   "planned": {
@@ -22,6 +38,43 @@
         "fr_signifier_verb",
         "fr_taper_verb"
       ]
+    },
+    "galerie": {
+      "vocabRoom": "ST_communication_seg001",
+      "only": []
+    },
+    "kiosque": {
+      "vocabRoom": "ST_communication_seg001",
+      "only": [
+        "fr_contacter_verb",
+        "fr_composer_verb",
+        "fr_exprimer_verb",
+        "fr_former_verb",
+        "fr_rappeler_verb",
+        "fr_sonner_verb"
+      ]
+    },
+    "panneaux": {
+      "vocabRoom": "ST_communication_seg002",
+      "only": [
+        "fr_inscrire_verb",
+        "fr_utiliser_verb",
+        "fr_indiquer_verb",
+        "fr_affirmer_verb",
+        "fr_informer_verb",
+        "fr_taire_verb"
+      ]
+    },
+    "declarations": {
+      "vocabRoom": "ST_communication_seg003",
+      "only": [
+        "fr_engager_verb",
+        "fr_murmurer_verb",
+        "fr_realiser_verb",
+        "fr_adresser_verb",
+        "fr_interroger_verb",
+        "fr_avouer_verb"
+      ]
     }
   },
   "rooms": {
@@ -29,7 +82,7 @@
       "name": "Place des Crieurs · Criers' Square",
       "room_id": "ST_communication_seg004",
       "image": "st_appels/st_appels.jpg",
-      "alt": "A sunny square on Rue des Appels, painted in ink and gouache. A mime howls with a wolf; another speaks by a curtained parlor cabinet; one quotes from a blank book; one pronounces a word with a finger raised and a blank card; one points at a blank sign while holding an apple; one types on a typewriter beside a gold coin. The arch on the left leads back to Rue des Saveurs. écrire stays at the town hall.",
+      "alt": "A sunny square on Rue des Appels, painted in ink and gouache. A mime howls with a wolf; another speaks by a curtained parlor cabinet; one quotes from a blank book; one pronounces a word with a finger raised and a blank card; one points at a blank sign while holding an apple; one types on a typewriter beside a gold coin. The arch on the left leads back to Rue des Saveurs. écrire stays at the town hall. The cobbles in front of the speaking mime open into the gallery.",
       "nameplate": [
         50,
         4.5
@@ -43,7 +96,19 @@
         ],
         "label": "Rue des Saveurs"
       },
-      "doors": [],
+      "doors": [
+        {
+          "to": "galerie",
+          "label": "La galerie",
+          "hint": "Across the cobbles into the gallery",
+          "hit": [
+            260,
+            648,
+            170,
+            68
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
         {
@@ -98,6 +163,308 @@
             420,
             435,
             290
+          ]
+        }
+      ]
+    },
+    "galerie": {
+      "name": "La galerie · Kiosk Gallery",
+      "room_id": "ST_communication_seg001",
+      "image": "st_appels/galerie.jpg",
+      "backTo": "st_appels",
+      "alt": "A sunny stone gallery. An arch on the left returns to the criers' square. A blue booth, a honey-wood booth with a blank board, and a red booth with a megaphone stand open. No writing.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "st_appels",
+          "label": "Les crieurs",
+          "hint": "Back through the arch to the square",
+          "hit": [
+            30,
+            70,
+            200,
+            340
+          ]
+        },
+        {
+          "to": "kiosque",
+          "label": "Le kiosque",
+          "hint": "Through the blue booth",
+          "hit": [
+            250,
+            170,
+            210,
+            310
+          ]
+        },
+        {
+          "to": "panneaux",
+          "label": "Les panneaux",
+          "hint": "Through the honey-wood booth",
+          "hit": [
+            490,
+            180,
+            200,
+            290
+          ]
+        },
+        {
+          "to": "declarations",
+          "label": "Les déclarations",
+          "hint": "Through the red booth",
+          "hit": [
+            980,
+            150,
+            220,
+            340
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    },
+    "kiosque": {
+      "name": "Le kiosque · Telephone Kiosk",
+      "room_id": "ST_communication_seg001",
+      "image": "st_appels/kiosque.jpg",
+      "backTo": "galerie",
+      "alt": "A blue kiosk yard. A mime calls with tea and a tin can; a cat walks piano keys; a mime leaps with a hand mirror under blossom; a mime forms a vase beside a goose; a mime in sunglasses calls on an old telephone; a mime sounds a horn beside a white horse. The blue door returns to the gallery.",
+      "nameplate": [
+        62,
+        5
+      ],
+      "doors": [
+        {
+          "to": "galerie",
+          "label": "La galerie",
+          "hint": "Back through the blue door",
+          "hit": [
+            70,
+            55,
+            160,
+            120
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_contacter_verb",
+          "box": [
+            8,
+            175,
+            175,
+            490
+          ]
+        },
+        {
+          "id": "fr_composer_verb",
+          "box": [
+            190,
+            500,
+            280,
+            210
+          ]
+        },
+        {
+          "id": "fr_exprimer_verb",
+          "box": [
+            390,
+            20,
+            250,
+            370
+          ]
+        },
+        {
+          "id": "fr_former_verb",
+          "box": [
+            500,
+            400,
+            250,
+            310
+          ]
+        },
+        {
+          "id": "fr_rappeler_verb",
+          "box": [
+            770,
+            150,
+            180,
+            480
+          ]
+        },
+        {
+          "id": "fr_sonner_verb",
+          "box": [
+            960,
+            50,
+            310,
+            650
+          ]
+        }
+      ]
+    },
+    "panneaux": {
+      "name": "Les panneaux · Notice Yard",
+      "room_id": "ST_communication_seg002",
+      "image": "st_appels/panneaux.jpg",
+      "backTo": "galerie",
+      "alt": "A notice yard. A gold-beret mime chisels a blank plaque; a mime and an octopus wash a window; a mime points beside a duck; a mime nods beside a goat; a mime holds four daisies; a gold-beret mime with a hand mirror watches a mouse and a sleeping cat. The honey-wood door returns to the gallery.",
+      "nameplate": [
+        55,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "galerie",
+          "label": "La galerie",
+          "hint": "Back through the honey-wood door",
+          "hit": [
+            90,
+            20,
+            140,
+            140
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_inscrire_verb",
+          "box": [
+            0,
+            170,
+            230,
+            530
+          ]
+        },
+        {
+          "id": "fr_utiliser_verb",
+          "box": [
+            240,
+            150,
+            220,
+            430
+          ]
+        },
+        {
+          "id": "fr_indiquer_verb",
+          "box": [
+            470,
+            170,
+            200,
+            530
+          ]
+        },
+        {
+          "id": "fr_affirmer_verb",
+          "box": [
+            680,
+            180,
+            220,
+            450
+          ]
+        },
+        {
+          "id": "fr_informer_verb",
+          "box": [
+            910,
+            70,
+            200,
+            340
+          ]
+        },
+        {
+          "id": "fr_taire_verb",
+          "box": [
+            960,
+            430,
+            310,
+            280
+          ]
+        }
+      ]
+    },
+    "declarations": {
+      "name": "Les déclarations · Declarations Corner",
+      "room_id": "ST_communication_seg003",
+      "image": "st_appels/declarations.jpg",
+      "backTo": "galerie",
+      "alt": "A declarations corner. A bear in a red beret hires a raccoon; a mime murmurs to a stingray; a bulldog directs beside a blank clapper; a cat in a map dress stands by a hand mirror; a mime questions a goldfish; a mime bows beside a dog and cake crumbs. The red door returns to the gallery.",
+      "nameplate": [
+        50,
+        3.5
+      ],
+      "doors": [
+        {
+          "to": "galerie",
+          "label": "La galerie",
+          "hint": "Back through the red door",
+          "hit": [
+            0,
+            10,
+            80,
+            170
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_engager_verb",
+          "box": [
+            90,
+            70,
+            250,
+            320
+          ]
+        },
+        {
+          "id": "fr_murmurer_verb",
+          "box": [
+            0,
+            400,
+            390,
+            310
+          ]
+        },
+        {
+          "id": "fr_realiser_verb",
+          "box": [
+            400,
+            390,
+            310,
+            320
+          ]
+        },
+        {
+          "id": "fr_adresser_verb",
+          "box": [
+            410,
+            50,
+            350,
+            320
+          ]
+        },
+        {
+          "id": "fr_interroger_verb",
+          "box": [
+            920,
+            20,
+            350,
+            380
+          ]
+        },
+        {
+          "id": "fr_avouer_verb",
+          "box": [
+            750,
+            430,
+            520,
+            280
           ]
         }
       ]
