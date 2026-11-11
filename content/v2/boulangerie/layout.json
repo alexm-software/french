@@ -29,6 +29,10 @@
   {
    "key": "epicerie",
    "short": "L'épicerie"
+  },
+  {
+   "key": "patisserie",
+   "short": "La pâtisserie"
   }
  ],
  "planned": {
@@ -143,6 +147,29 @@
   },
   "claim_grocery_02": {
    "vocabRoom": "R_grocery_02"
+  },
+  "patisserie": {
+   "vocabRoom": "R_bakery_02",
+   "only": [
+    "fr_barre_noun",
+    "fr_boulangerie_noun",
+    "fr_patisserie_noun",
+    "fr_croute_noun",
+    "fr_pastille_noun",
+    "fr_truffe_noun",
+    "fr_madeleine_noun",
+    "fr_quiche_noun",
+    "fr_biscuit_noun",
+    "fr_patissier_noun",
+    "fr_gratin_noun",
+    "fr_boudoir_noun"
+   ]
+  },
+  "claim_bakery_01": {
+   "vocabRoom": "R_bakery_01"
+  },
+  "claim_boudoir": {
+   "vocabRoom": "R_abs_beauty_02"
   }
  },
  "rooms": {
@@ -981,6 +1008,17 @@
       165,
       420
      ]
+    },
+    {
+     "to": "patisserie",
+     "label": "La pâtisserie",
+     "hint": "the pink door with the cake",
+     "hit": [
+      610,
+      145,
+      145,
+      420
+     ]
     }
    ],
    "zooms": [],
@@ -1183,13 +1221,13 @@
      ]
     },
     {
-    "id": "fr_nourriture_noun",
-    "box": [
-     130,
-     300,
-     250,
-     180
-    ]
+     "id": "fr_nourriture_noun",
+     "box": [
+      130,
+      300,
+      250,
+      180
+     ]
     },
     {
      "id": "fr_proteine_noun",
@@ -1228,13 +1266,13 @@
      ]
     },
     {
-    "id": "fr_laitier_adj",
-    "box": [
-     500,
-     280,
-     110,
-     195
-    ]
+     "id": "fr_laitier_adj",
+     "box": [
+      500,
+      280,
+      110,
+      195
+     ]
     },
     {
      "id": "fr_alimentaire_adj",
@@ -1288,6 +1326,141 @@
       470,
       85,
       220
+     ]
+    }
+   ]
+  },
+  "patisserie": {
+   "name": "La pâtisserie · The pastry shop",
+   "room_id": "R_bakery_02",
+   "image": "boulangerie/patisserie.jpg",
+   "alt": "A pastry shop off the market arcade. A pink door on the left opens onto the arcade. On the left: a chocolate bar, a little bakery model full of baguettes, a glass case, a tart, a quiche, round candies, chocolate truffles and madeleines. On the right, a pastry chef stands behind cookies, a gratin and ladyfingers.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the pink door back to the arcade",
+     "hit": [
+      0,
+      20,
+      90,
+      300
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_barre_noun",
+     "box": [
+      105,
+      295,
+      140,
+      52
+     ]
+    },
+    {
+     "id": "fr_boulangerie_noun",
+     "box": [
+      260,
+      165,
+      275,
+      175
+     ]
+    },
+    {
+     "id": "fr_patisserie_noun",
+     "box": [
+      110,
+      360,
+      380,
+      38
+     ]
+    },
+    {
+     "id": "fr_croute_noun",
+     "box": [
+      20,
+      430,
+      175,
+      110
+     ]
+    },
+    {
+     "id": "fr_quiche_noun",
+     "box": [
+      205,
+      405,
+      150,
+      90
+     ]
+    },
+    {
+     "id": "fr_pastille_noun",
+     "box": [
+      5,
+      590,
+      145,
+      120
+     ]
+    },
+    {
+     "id": "fr_truffe_noun",
+     "box": [
+      160,
+      560,
+      150,
+      140
+     ]
+    },
+    {
+     "id": "fr_madeleine_noun",
+     "box": [
+      370,
+      510,
+      165,
+      140
+     ]
+    },
+    {
+     "id": "fr_biscuit_noun",
+     "box": [
+      685,
+      505,
+      140,
+      100
+     ]
+    },
+    {
+     "id": "fr_gratin_noun",
+     "box": [
+      835,
+      520,
+      180,
+      140
+     ]
+    },
+    {
+     "id": "fr_boudoir_noun",
+     "box": [
+      1045,
+      535,
+      205,
+      125
+     ]
+    },
+    {
+     "id": "fr_patissier_noun",
+     "box": [
+      910,
+      25,
+      290,
+      470
      ]
     }
    ]
