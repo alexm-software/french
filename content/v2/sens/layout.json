@@ -38,6 +38,10 @@
    "short": "La fête"
   },
   {
+   "key": "coulisse",
+   "short": "La coulisse"
+  },
+  {
    "key": "matieres",
    "short": "Les matières"
   },
@@ -339,6 +343,20 @@
     "fr_ludique_adj",
     "fr_calcaire_adj",
     "fr_charnel_adj"
+   ]
+  },
+  "coulisse": {
+   "only": [
+    "fr_voir_verb",
+    "fr_regarder_verb",
+    "fr_surprendre_verb",
+    "fr_etonner_verb",
+    "fr_apercevoir_verb",
+    "fr_noter_verb",
+    "fr_constater_verb",
+    "fr_observer_verb",
+    "fr_remarquer_verb",
+    "fr_reconnaitre_verb"
    ]
   }
  },
@@ -1395,6 +1413,17 @@
       140,
       125,
       340
+     ]
+    },
+    {
+     "to": "coulisse",
+     "label": "La coulisse",
+     "hint": "the little curtained stage on the right wall, into the wings",
+     "hit": [
+      1100,
+      175,
+      170,
+      320
      ]
     }
    ],
@@ -2561,6 +2590,131 @@
       444,
       250,
       232
+     ]
+    }
+   ]
+  },
+  "coulisse": {
+   "name": "La coulisse · The wings",
+   "room_id": "ST_perception_seg001",
+   "image": "musee/coulisse.jpg",
+   "alt": "The wings behind the party-room stage: a cream backstage with a wooden door and a pink flower on the left. A magician pulls a white cloth off a top hat and a rabbit is revealed; a sleepy guard in blue watches. A toy chest pops open and surprises a little wolf. A pony stands by a heap of carrots, and a child looks through binoculars. A girl writes in a notebook beside a cow in a top hat, and a constable writes in his own notebook. An owl looks through a telescope. In front, a girl notices a smudge on a cat's nose, and a goose waddles up to her owner.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "fete",
+   "doors": [
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "the wooden door with the pink flower on the left wall, back to the party room",
+     "hit": [
+      22,
+      95,
+      115,
+      335
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_voir_verb",
+     "box": [
+      150,
+      210,
+      175,
+      420
+     ]
+    },
+    {
+     "id": "fr_regarder_verb",
+     "box": [
+      335,
+      300,
+      100,
+      330
+     ]
+    },
+    {
+     "id": "fr_surprendre_verb",
+     "box": [
+      435,
+      195,
+      165,
+      225
+     ]
+    },
+    {
+     "id": "fr_etonner_verb",
+     "box": [
+      615,
+      225,
+      150,
+      235
+     ]
+    },
+    {
+     "id": "fr_apercevoir_verb",
+     "box": [
+      785,
+      165,
+      120,
+      285
+     ]
+    },
+    {
+     "id": "fr_noter_verb",
+     "box": [
+      915,
+      200,
+      150,
+      230
+     ]
+    },
+    {
+   "id": "fr_constater_verb",
+   "box": [
+    1085,
+    140,
+    125,
+    265
+   ],
+   "labelAt": [
+    1147,
+    155
+   ]
+    },
+    {
+   "id": "fr_observer_verb",
+   "box": [
+    1218,
+    165,
+    58,
+    240
+   ],
+   "labelAt": [
+    1216,
+    90
+   ]
+    },
+    {
+     "id": "fr_remarquer_verb",
+     "box": [
+      745,
+      475,
+      245,
+      225
+     ]
+    },
+    {
+     "id": "fr_reconnaitre_verb",
+     "box": [
+      1005,
+      455,
+      250,
+      245
      ]
     }
    ]
