@@ -32,6 +32,10 @@
   {
    "key": "placements",
    "short": "Les placements"
+  },
+  {
+   "key": "coffre",
+   "short": "Le coffre"
   }
  ],
  "planned": {
@@ -179,6 +183,19 @@
     "fr_placement_noun",
     "fr_debouche_noun"
    ]
+  },
+  "coffre": {
+   "only": [
+    "fr_assurance_noun",
+    "fr_caution_noun",
+    "fr_epargner_verb",
+    "fr_hypothequer_verb",
+    "fr_coffre_fort_noun",
+    "fr_garantir_verb",
+    "fr_acquerir_verb",
+    "fr_rendre_verb"
+   ],
+   "vocabRoom": "ST_commerce_seg003"
   },
   "coffret": {
    "vocabRoom": "R_bank_economy_04",
@@ -1387,6 +1404,12 @@
       110,
       300
      ]
+    },
+    {
+     "to": "coffre",
+     "label": "Le coffre",
+     "hint": "Across the floor",
+     "hit": [400, 650, 160, 55]
     }
    ],
    "zooms": [
@@ -1489,6 +1512,28 @@
    ],
    "building_id": "B10_banque",
    "sector_id": "S05_bank"
+  },
+  "coffre": {
+   "name": "Le coffre",
+   "room_id": "R_bank_counter_03",
+   "image": "banque/coffre.jpg",
+   "backTo": "placements",
+   "alt": "A bank back room with a pale wall and a brick floor. A brown door is on the left. A bookcase holds a tortoise reassuring a snail, a firefighter with a jar of coins, a mime in a red beret dropping a coin into a piggy bank, and a hippo in a red beret handing over a house key beside a cottage. The right bookcase holds a stone fort with an open safe, a mime in a green beret testing a boot, a mime in a gold beret handing over a vase, and a mime in a purple beret giving a book back.",
+   "nameplate": [50, 4],
+   "doors": [
+    {"to": "placements", "label": "Les placements", "hint": "Back through the brown door", "hit": [40, 70, 200, 500]}
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_assurance_noun", "box": [390, 40, 240, 130]},
+    {"id": "fr_caution_noun", "box": [400, 190, 250, 140]},
+    {"id": "fr_epargner_verb", "box": [400, 350, 240, 130]},
+    {"id": "fr_hypothequer_verb", "box": [380, 490, 280, 150]},
+    {"id": "fr_coffre_fort_noun", "box": [760, 30, 420, 160]},
+    {"id": "fr_garantir_verb", "box": [760, 200, 400, 150]},
+    {"id": "fr_acquerir_verb", "box": [760, 360, 420, 140]},
+    {"id": "fr_rendre_verb", "box": [760, 510, 420, 150]}
+   ]
   },
   "coffret": {
    "name": "Le buffet des placements",
