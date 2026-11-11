@@ -15,6 +15,7 @@
   },
   {"key": "soins", "short": "Les soins"},
   {"key": "retour", "short": "Le retour"},
+  {"key": "calme", "short": "La salle calme"},
   {
    "key": "dentiste",
    "short": "Le dentiste"
@@ -96,6 +97,7 @@
   },
   "soins": {"only": ["fr_vacciner_verb","fr_remedier_verb","fr_cicatriser_verb","fr_greffer_verb","fr_moucher_verb","fr_enrhumer_verb","fr_dilater_verb"]},
   "retour": {"only": ["fr_ranimer_verb","fr_regagner_verb","fr_restituer_verb","fr_hospitaliser_verb","fr_assouplir_verb","fr_dissocier_verb","fr_proliferer_verb","fr_palpiter_verb"]},
+  "calme": {"only": ["fr_deceder_verb","fr_defigurer_verb","fr_martyriser_verb","fr_affamer_verb","fr_incurable_adj","fr_infecter_verb","fr_blaser_verb"]},
   "dentiste": {
    "vocabRoom": "R_dentist_01",
    "only": [
@@ -814,7 +816,8 @@
    "name": "Le retour", "room_id": "R_hospital_02", "image": "hopital/retour.jpg", "backTo": "soins",
    "alt": "A quiet clinic corridor. A brown door is on the left. The left bookcase holds a mime waking a clothed friend, a mime walking back to a small door, a mime returning a book, and a mime with a suitcase at a tiny door. The right bookcase holds a mime in a green beret stretching, a mime separating blocks, a mime watering seedlings, and a mime listening to a fluttering heart model.",
    "nameplate": [50, 4],
-   "doors": [{"to": "soins", "label": "Les soins", "hint": "Back through the brown door", "hit": [40, 55, 160, 470]}],
+   "doors": [{"to": "soins", "label": "Les soins", "hint": "Back through the brown door", "hit": [40, 55, 160, 470]},
+    {"to": "calme", "label": "La salle calme", "hint": "Across the floor", "hit": [40, 655, 140, 48]}],
    "zooms": [],
    "items": [
     {"id": "fr_ranimer_verb", "box": [390, 20, 340, 130]},
@@ -825,6 +828,22 @@
     {"id": "fr_dissocier_verb", "box": [760, 165, 400, 120]},
     {"id": "fr_proliferer_verb", "box": [760, 300, 420, 130]},
     {"id": "fr_palpiter_verb", "box": [760, 460, 420, 180]}
+   ]
+  },
+  "calme": {
+   "name": "La salle calme", "room_id": "R_hospital_02", "image": "hopital/calme.jpg", "backTo": "retour",
+   "alt": "A quiet consult room. A brown door is on the left. Four shelves each hold blank wooden plaques. A closed book sits on a small table. A clean apple and a spotted apple share a shelf, and a calm cat sits below.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "retour", "label": "Le retour", "hint": "Back through the brown door", "hit": [40, 50, 150, 470]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_deceder_verb", "box": [430, 80, 280, 110]},
+    {"id": "fr_defigurer_verb", "box": [430, 200, 280, 110]},
+    {"id": "fr_martyriser_verb", "box": [430, 320, 280, 110]},
+    {"id": "fr_affamer_verb", "box": [430, 450, 280, 120]},
+    {"id": "fr_incurable_adj", "box": [720, 300, 160, 100]},
+    {"id": "fr_infecter_verb", "box": [900, 40, 280, 120]},
+    {"id": "fr_blaser_verb", "box": [900, 420, 280, 200]}
    ]
   },
   "dentiste": {

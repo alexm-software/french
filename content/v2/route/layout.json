@@ -18,6 +18,10 @@
     {
       "key": "parking",
       "short": "Le parking"
+    },
+    {
+      "key": "garage_mots",
+      "short": "Le garage"
     }
   ],
   "rooms": {
@@ -791,6 +795,23 @@
         }
       ]
     },
+    "garage_mots": {
+      "name": "Le garage", "room_id": "R_road_02", "image": "route/garage_mots.jpg", "backTo": "parking",
+      "alt": "A village garage. A brown door is on the left. A milestone and a model dead-end street sit on a small cabinet. A mime in a red beret walks a pedestrian crossing. The right bookcase holds a mime parking a blue toy car, a mime at a red toy car's wheel, a windshield, a strip of road, and a round drain.",
+      "nameplate": [50, 4],
+      "doors": [{"to": "parking", "label": "Le parking", "hint": "Back through the brown door", "hit": [40, 50, 160, 480]}],
+      "zooms": [],
+      "items": [
+        {"id": "fr_etape_noun", "box": [300, 40, 180, 110]},
+        {"id": "fr_impasse_noun", "box": [280, 180, 240, 220]},
+        {"id": "fr_pieton_adj", "box": [520, 160, 180, 420]},
+        {"id": "fr_garer_verb", "box": [760, 30, 420, 130]},
+        {"id": "fr_freiner_verb", "box": [760, 170, 420, 130]},
+        {"id": "fr_pare_brise_noun", "box": [800, 320, 360, 100]},
+        {"id": "fr_macadam_noun", "box": [800, 440, 380, 90]},
+        {"id": "fr_egout_noun", "box": [860, 540, 200, 100]}
+      ]
+    },
     "parking": {
       "name": "Le parking",
       "image": "route/parking.jpg",
@@ -807,7 +828,8 @@
             160,
             160
           ]
-        }
+        },
+        {"to": "garage_mots", "label": "Le garage", "hint": "Across the floor", "hit": [600, 655, 140, 48]}
       ],
       "zooms": [
         {
@@ -1142,6 +1164,7 @@
         "fr_stationnement_noun"
       ]
     },
+    "garage_mots": {"only": ["fr_etape_noun","fr_impasse_noun","fr_pieton_adj","fr_garer_verb","fr_freiner_verb","fr_pare_brise_noun","fr_macadam_noun","fr_egout_noun"]},
     "consigne": {
       "only": [
         "fr_encombrement_noun",
