@@ -21,6 +21,10 @@
     {
       "key": "boissons",
       "short": "La cour des boissons"
+    },
+    {
+      "key": "zinc",
+      "short": "Le zinc"
     }
   ],
   "planned": {
@@ -79,6 +83,19 @@
         "fr_fumeur_noun"
       ],
       "vocabRoom": "R_cafe_02"
+    },
+    "zinc": {
+      "vocabRoom": "R_cafe_01",
+      "only": [
+        "fr_terrasse_noun",
+        "fr_soif_noun",
+        "fr_biere_noun",
+        "fr_cigarette_noun",
+        "fr_bistrot_noun",
+        "fr_tilleul_noun",
+        "fr_bar_noun",
+        "fr_aperitif_noun"
+      ]
     }
   },
   "rooms": {
@@ -623,6 +640,17 @@
             95,
             160
           ]
+        },
+        {
+          "to": "zinc",
+          "label": "Le zinc",
+          "hint": "Across the cobbles to the zinc bar",
+          "hit": [
+            450,
+            560,
+            180,
+            110
+          ]
         }
       ],
       "zooms": [],
@@ -730,6 +758,104 @@
       ],
       "backTo": "terrasse",
       "room_id": "R_cafe_02"
+    },
+    "zinc": {
+      "name": "Le zinc · The Zinc Bar",
+      "image": "cafe/zinc.jpg",
+      "backTo": "boissons",
+      "alt": "An adults-only café room. A parasol table, a thirsty fox, a closed beer bottle with a bee, and a seagull beside a sealed packet are on the left. On the right, bees toss a sugar cube, a grandmother pours lime-blossom tea by a Yule log, a real zinc counter holds an espresso machine, and a goose stands by a corked bottle and olives. The open doors lead back to the drinks courtyard. Nobody drinks alcohol and nobody smokes.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "boissons",
+          "label": "La cour des boissons",
+          "hint": "Through the open doors back to the drinks courtyard",
+          "hit": [
+            540,
+            20,
+            110,
+            155
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_terrasse_noun",
+          "box": [
+            0,
+            30,
+            250,
+            380
+          ]
+        },
+        {
+          "id": "fr_biere_noun",
+          "box": [
+            370,
+            90,
+            120,
+            190
+          ]
+        },
+        {
+          "id": "fr_soif_noun",
+          "box": [
+            270,
+            380,
+            250,
+            250
+          ]
+        },
+        {
+          "id": "fr_cigarette_noun",
+          "box": [
+            0,
+            490,
+            240,
+            210
+          ]
+        },
+        {
+          "id": "fr_bistrot_noun",
+          "box": [
+            910,
+            40,
+            150,
+            140
+          ]
+        },
+        {
+          "id": "fr_tilleul_noun",
+          "box": [
+            640,
+            200,
+            240,
+            250
+          ]
+        },
+        {
+          "id": "fr_bar_noun",
+          "box": [
+            1070,
+            150,
+            200,
+            400
+          ]
+        },
+        {
+          "id": "fr_aperitif_noun",
+          "box": [
+            760,
+            500,
+            290,
+            190
+          ]
+        }
+      ]
     }
   }
 }
