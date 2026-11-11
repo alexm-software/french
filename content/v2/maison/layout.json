@@ -69,6 +69,10 @@
   {
    "key": "casserole",
    "short": "La casserole"
+  },
+  {
+   "key": "frigo",
+   "short": "Le frigo"
   }
  ],
  "planned": {
@@ -496,6 +500,14 @@
     "fr_office_noun_f",
     "fr_etagere_noun",
     "fr_faience_noun"
+   ]
+  },
+  "frigo": {
+   "only": [
+    "fr_couvercle_noun",
+    "fr_frigo_noun",
+    "fr_congelateur_noun",
+    "fr_chandelier_noun"
    ]
   },
   "jardin_facade": {
@@ -3901,7 +3913,7 @@
    "room_id": "R_kitchen_01",
    "image": "maison/casserole.jpg",
    "backTo": "location",
-   "alt": "A pale kitchen wall and a brick floor. A girl in a striped dress stirs a copper saucepan on a wooden shelf. Below it, an open pantry cupboard holds jars and flour sacks. A child in a white shirt and brown trousers sits on a chair and reaches a white shelf. A blue-and-white faience vase stands on the bricks. The yellow door on the right leads back.",
+   "alt": "A pale kitchen wall and a brick floor. A girl in a striped dress stirs a copper saucepan on a wooden shelf. Below it, an open pantry cupboard holds jars and flour sacks. A child in a white shirt and brown trousers sits on a chair and reaches a white shelf. A blue-and-white faience vase stands on the bricks. The yellow door on the right leads back. The bricks to the right of the vase lead to the cupboard.",
    "nameplate": [48, 6],
    "doors": [
     {
@@ -3909,6 +3921,12 @@
      "label": "La location",
      "hint": "Back through the yellow door",
      "hit": [930, 80, 180, 520]
+    },
+    {
+     "to": "frigo",
+     "label": "Le frigo",
+     "hint": "Across the bricks",
+     "hit": [660, 640, 200, 70]
     }
    ],
    "zooms": [],
@@ -3917,6 +3935,29 @@
     {"id": "fr_office_noun_f", "box": [20, 246, 470, 194]},
     {"id": "fr_etagere_noun", "box": [5, 448, 355, 258]},
     {"id": "fr_faience_noun", "box": [378, 468, 240, 232]}
+   ]
+  },
+  "frigo": {
+   "name": "Le frigo",
+   "room_id": "R_kitchen_01",
+   "image": "maison/frigo.jpg",
+   "backTo": "casserole",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. On the top shelf a white dove stands on a pot lid above a steaming saucepan. A penguin stands in an open mint fridge. On the bottom shelf a silver candlestick holds one candle, and a clothed grandfather with a strawberry ice-cream cone stands beside an open chest freezer. The red door on the left leads back.",
+   "nameplate": [36, 5],
+   "doors": [
+    {
+     "to": "casserole",
+     "label": "La casserole",
+     "hint": "Back through the red door",
+     "hit": [6, 30, 190, 590]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_couvercle_noun", "box": [700, 0, 520, 228]},
+    {"id": "fr_frigo_noun", "box": [740, 248, 460, 174]},
+    {"id": "fr_chandelier_noun", "box": [650, 452, 175, 200]},
+    {"id": "fr_congelateur_noun", "box": [835, 424, 400, 238]}
    ]
   },
   "jardin_facade": {
