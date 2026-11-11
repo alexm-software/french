@@ -64,6 +64,18 @@
    "short": "Le pilier"
   },
   {
+   "key": "casier",
+   "short": "Le casier"
+  },
+  {
+   "key": "echelle",
+   "short": "L'échelle"
+  },
+  {
+   "key": "tresor",
+   "short": "Le trésor"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
   },
@@ -3109,7 +3121,7 @@
    "room_id": "R_pronouns_03",
    "image": "ecole/pilier.jpg",
    "backTo": "tronc",
-   "alt": "A tall stone pillar painted in ink and gouache, centered on a cream wall above terracotta tiles. An open wooden door on the left shows a dark passage. At the top a boy calls and three small heads peek over the ledge. An old mailman hands a blank letter to a girl. A duck nibbles kelp spilling from an open trunk. At the bottom a boy blows a seashell beside a hanging golden key.",
+   "alt": "A tall stone pillar painted in ink and gouache, centered on a cream wall above terracotta tiles. An open wooden door on the left shows a dark passage. At the top a boy calls and three small heads peek over the ledge. An old mailman hands a blank letter to a girl. A duck nibbles kelp spilling from an open trunk. At the bottom a boy blows a seashell beside a hanging golden key. The tiles on the right lead to the pigeonholes.",
    "nameplate": [
     10,
     5
@@ -3124,6 +3136,17 @@
       70,
       160,
       430
+     ]
+    },
+    {
+     "to": "casier",
+     "label": "Le casier",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      640,
+      180,
+      70
      ]
     }
    ],
@@ -3163,6 +3186,226 @@
       500,
       420,
       200
+     ]
+    }
+   ]
+  },
+  "casier": {
+   "name": "Le casier",
+   "room_id": "R_numbers2",
+   "image": "ecole/casier.jpg",
+   "backTo": "pilier",
+   "alt": "A wooden bookcase painted in ink and gouache, centered on a cream wall above terracotta tiles. An open green door on the left. Top shelf: sand buckets. Then a plate of peas. A swan beside a red die. A cat, four toy vans, and a small die. At the bottom a boy darns a sock. The tiles on the right lead to the ladder.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "pilier",
+     "label": "Le pilier",
+     "hint": "Back through the green door",
+     "hit": [
+      18,
+      80,
+      155,
+      420
+     ]
+    },
+    {
+     "to": "echelle",
+     "label": "L'échelle",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      640,
+      180,
+      65
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_cent_num",
+     "box": [
+      450,
+      12,
+      360,
+      125
+     ]
+    },
+    {
+     "id": "fr_mille_num",
+     "box": [
+      455,
+      148,
+      390,
+      105
+     ]
+    },
+    {
+     "id": "fr_soixante_dix_num",
+     "box": [
+      445,
+      278,
+      410,
+      88
+     ]
+    },
+    {
+     "id": "fr_quatre_vingt_dix_num",
+     "box": [
+      435,
+      385,
+      430,
+      88
+     ]
+    },
+    {
+     "id": "fr_dernier_adj",
+     "box": [
+      455,
+      495,
+      390,
+      205
+     ]
+    }
+   ]
+  },
+  "echelle": {
+   "name": "L'échelle",
+   "room_id": "R_numbers2",
+   "image": "ecole/echelle.jpg",
+   "backTo": "casier",
+   "alt": "A tall wooden ladder painted in ink and gouache, centered on a cream wall above terracotta tiles. An open yellow door on the left. A child lifts a gold cup. A child wears a silver medal. A child wears a bronze medal. A girl spins on the lowest rung. The tiles on the right lead to the treasure.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "casier",
+     "label": "Le casier",
+     "hint": "Back through the yellow door",
+     "hit": [
+      20,
+      70,
+      190,
+      450
+     ]
+    },
+    {
+     "to": "tresor",
+     "label": "Le trésor",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      640,
+      180,
+      65
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_premier_adj",
+     "box": [
+      500,
+      2,
+      240,
+      171
+     ]
+    },
+    {
+     "id": "fr_deuxieme_adj",
+     "box": [
+      490,
+      175,
+      260,
+      135
+     ]
+    },
+    {
+     "id": "fr_troisieme_adj",
+     "box": [
+      490,
+      318,
+      260,
+      155
+     ]
+    },
+    {
+     "id": "fr_dixieme_adj",
+     "box": [
+      450,
+      480,
+      400,
+      185
+     ]
+    }
+   ]
+  },
+  "tresor": {
+   "name": "Le trésor",
+   "room_id": "R_numbers2",
+   "image": "ecole/tresor.jpg",
+   "backTo": "echelle",
+   "alt": "Four objects stacked down the right side of a cream wall, painted in ink and gouache, with terracotta tiles below. An open blue door on the left. A lion lies on a pile of gold coins. A wooden rack of plain colored balls. A three-layer cake with one slice cut out. A pie with one slice set on a small plate.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "echelle",
+     "label": "L'échelle",
+     "hint": "Back through the blue door",
+     "hit": [
+      20,
+      70,
+      190,
+      450
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_million_noun",
+     "box": [
+      660,
+      5,
+      540,
+      255
+     ]
+    },
+    {
+     "id": "fr_milliard_noun",
+     "box": [
+      700,
+      270,
+      480,
+      135
+     ]
+    },
+    {
+     "id": "fr_tiers_noun",
+     "box": [
+      690,
+      430,
+      500,
+      130
+     ]
+    },
+    {
+     "id": "fr_cinquieme_noun",
+     "box": [
+      660,
+      580,
+      540,
+      130
      ]
     }
    ]
@@ -3475,6 +3718,31 @@
     "fr_auquel_pron",
     "fr_duquel_pron",
     "fr_quiconque_pron"
+   ]
+  },
+  "casier": {
+   "only": [
+    "fr_cent_num",
+    "fr_mille_num",
+    "fr_soixante_dix_num",
+    "fr_quatre_vingt_dix_num",
+    "fr_dernier_adj"
+   ]
+  },
+  "echelle": {
+   "only": [
+    "fr_premier_adj",
+    "fr_deuxieme_adj",
+    "fr_troisieme_adj",
+    "fr_dixieme_adj"
+   ]
+  },
+  "tresor": {
+   "only": [
+    "fr_million_noun",
+    "fr_milliard_noun",
+    "fr_tiers_noun",
+    "fr_cinquieme_noun"
    ]
   }
  },
