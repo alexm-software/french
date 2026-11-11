@@ -65,6 +65,10 @@
   {
    "key": "location",
    "short": "La location"
+  },
+  {
+   "key": "casserole",
+   "short": "La casserole"
   }
  ],
  "planned": {
@@ -484,6 +488,14 @@
     "fr_colocation_noun",
     "fr_location_noun",
     "fr_locataire_noun"
+   ]
+  },
+  "casserole": {
+   "only": [
+    "fr_casserole_noun",
+    "fr_office_noun_f",
+    "fr_etagere_noun",
+    "fr_faience_noun"
    ]
   },
   "jardin_facade": {
@@ -3860,7 +3872,7 @@
    "room_id": "R_entrance_03",
    "image": "maison/location.jpg",
    "backTo": "jardin",
-   "alt": "A pale wall and a brick floor. A wooden shack with a coat rack stands at the upper left. Two children share a bench beside one padlock. A woman rents a bicycle to a child, with coins stacked by the wheel. A boy with a tear locks a small door. The blue door on the right leads back to the garden.",
+   "alt": "A pale wall and a brick floor. A wooden shack with a coat rack stands at the upper left. Two children share a bench beside one padlock. A woman rents a bicycle to a child, with coins stacked by the wheel. A boy with a tear locks a small door. The blue door on the right leads back to the garden. The bricks between the boy and the blue door lead to the pantry corner.",
    "nameplate": [10, 5],
    "doors": [
     {
@@ -3868,6 +3880,12 @@
      "label": "Le jardin",
      "hint": "Back through the blue door",
      "hit": [1055, 100, 215, 500]
+    },
+    {
+     "to": "casserole",
+     "label": "La casserole",
+     "hint": "Across the bricks",
+     "hit": [860, 640, 160, 70]
     }
    ],
    "zooms": [],
@@ -3876,6 +3894,29 @@
     {"id": "fr_colocation_noun", "box": [12, 232, 480, 189]},
     {"id": "fr_location_noun", "box": [8, 422, 480, 288]},
     {"id": "fr_locataire_noun", "box": [515, 320, 320, 370]}
+   ]
+  },
+  "casserole": {
+   "name": "La casserole",
+   "room_id": "R_kitchen_01",
+   "image": "maison/casserole.jpg",
+   "backTo": "location",
+   "alt": "A pale kitchen wall and a brick floor. A girl in a striped dress stirs a copper saucepan on a wooden shelf. Below it, an open pantry cupboard holds jars and flour sacks. A child in a white shirt and brown trousers sits on a chair and reaches a white shelf. A blue-and-white faience vase stands on the bricks. The yellow door on the right leads back.",
+   "nameplate": [48, 6],
+   "doors": [
+    {
+     "to": "location",
+     "label": "La location",
+     "hint": "Back through the yellow door",
+     "hit": [930, 80, 180, 520]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_casserole_noun", "box": [12, 0, 450, 228]},
+    {"id": "fr_office_noun_f", "box": [20, 246, 470, 194]},
+    {"id": "fr_etagere_noun", "box": [5, 448, 355, 258]},
+    {"id": "fr_faience_noun", "box": [378, 468, 240, 232]}
    ]
   },
   "jardin_facade": {
