@@ -121,6 +121,10 @@
   {
    "key": "batiment",
    "short": "Le bâtiment"
+  },
+  {
+   "key": "pointure",
+   "short": "La pointure"
   }
  ],
  "planned": {
@@ -652,6 +656,14 @@
     "fr_escalier_noun",
     "fr_logement_noun",
     "fr_studio_noun"
+   ]
+  },
+  "pointure": {
+   "only": [
+    "fr_pointure_noun",
+    "fr_digestion_noun",
+    "fr_ventilation_noun",
+    "fr_boucle_noun"
    ]
   },
   "jardin_facade": {
@@ -4434,7 +4446,7 @@
    "room_id": "R_entrance_01",
    "image": "maison/batiment.jpg",
    "backTo": "chausson",
-   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. On top of the cupboard a bat serves tea to a clothed man in a deckchair beside a model building. A clothed long-nosed man sits on a model staircase. A beaver in a vest stands on a twig lodge. A clothed chef stirs stew inside a tiny studio.",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. On top of the cupboard a bat serves tea to a clothed man in a deckchair beside a model building. A clothed long-nosed man sits on a model staircase. A beaver in a vest stands on a twig lodge. A clothed chef stirs stew inside a tiny studio. The bricks left of the cupboard lead to the shoe-size cupboard.",
    "nameplate": [15, 4],
    "doors": [
     {
@@ -4442,6 +4454,12 @@
      "label": "Le chausson",
      "hint": "Back through the brown door",
      "hit": [48, 130, 280, 480]
+    },
+    {
+     "to": "pointure",
+     "label": "La pointure",
+     "hint": "Across the bricks",
+     "hit": [360, 655, 190, 55]
     }
    ],
    "zooms": [],
@@ -4450,6 +4468,29 @@
     {"id": "fr_escalier_noun", "box": [630, 186, 450, 160]},
     {"id": "fr_logement_noun", "box": [740, 372, 380, 122]},
     {"id": "fr_studio_noun", "box": [620, 518, 460, 190]}
+   ]
+  },
+  "pointure": {
+   "name": "La pointure",
+   "room_id": "R_wardrobe_04",
+   "image": "maison/pointure.jpg",
+   "backTo": "batiment",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A fully clothed salesclerk measures a fully clothed girl's shoe size on a metal gauge. A python with a lump in its middle lies on the next shelf. A white vent puffs a curl of air. A lock of hair and a gold earring lie on the bottom shelf. The brown door on the right leads back.",
+   "nameplate": [90, 94],
+   "doors": [
+    {
+     "to": "batiment",
+     "label": "Le bâtiment",
+     "hint": "Back through the brown door",
+     "hit": [950, 60, 280, 540]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_pointure_noun", "box": [55, 26, 580, 228]},
+    {"id": "fr_digestion_noun", "box": [48, 260, 600, 116]},
+    {"id": "fr_ventilation_noun", "box": [60, 388, 560, 130]},
+    {"id": "fr_boucle_noun", "box": [70, 536, 500, 116]}
    ]
   },
   "jardin_facade": {
