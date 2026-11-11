@@ -105,6 +105,10 @@
   {
    "key": "lessive",
    "short": "La lessive"
+  },
+  {
+   "key": "sonnette",
+   "short": "La sonnette"
   }
  ],
  "planned": {
@@ -604,6 +608,14 @@
     "fr_pagaille_noun",
     "fr_buanderie_noun",
     "fr_vidange_noun"
+   ]
+  },
+  "sonnette": {
+   "only": [
+    "fr_structure_noun",
+    "fr_sonnette_noun",
+    "fr_voute_noun",
+    "fr_alarme_noun"
    ]
   },
   "jardin_facade": {
@@ -4270,7 +4282,7 @@
    "room_id": "R_laundry_01",
    "image": "maison/lessive.jpg",
    "backTo": "muraille",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A washing machine spills foam through a sieve. A pug sits in suds among odd socks. A fully clothed witch in a purple dress points her wand at socks on a line. A gray hose lies beside a round drain. The brown door on the right leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A washing machine spills foam through a sieve. A pug sits in suds among odd socks. A fully clothed witch in a purple dress points her wand at socks on a line. A gray hose lies beside a round drain. The brown door on the right leads back. The bricks in front of the door lead to the doorbell cupboard.",
    "nameplate": [94, 94],
    "doors": [
     {
@@ -4278,6 +4290,12 @@
      "label": "La muraille",
      "hint": "Back through the brown door",
      "hit": [920, 55, 300, 530]
+    },
+    {
+     "to": "sonnette",
+     "label": "La sonnette",
+     "hint": "Across the bricks",
+     "hit": [760, 650, 150, 60]
     }
    ],
    "zooms": [],
@@ -4286,6 +4304,29 @@
     {"id": "fr_pagaille_noun", "box": [50, 218, 650, 146]},
     {"id": "fr_buanderie_noun", "box": [40, 366, 680, 170]},
     {"id": "fr_vidange_noun", "box": [40, 548, 660, 92]}
+   ]
+  },
+  "sonnette": {
+   "name": "La sonnette",
+   "room_id": "R_entrance_02",
+   "image": "maison/sonnette.jpg",
+   "backTo": "lessive",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A clothed girl stacks a tower of striped rolls. A clothed poet in a beret presses a brass doorbell. A clothed gymnast in a blue tracksuit vaults a leather horse. An alarm clock stands beside a dachshund in a basket. The brown door on the right leads back.",
+   "nameplate": [94, 94],
+   "doors": [
+    {
+     "to": "lessive",
+     "label": "La lessive",
+     "hint": "Back through the brown door",
+     "hit": [990, 80, 270, 520]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_structure_noun", "box": [110, 12, 470, 190]},
+    {"id": "fr_sonnette_noun", "box": [140, 206, 480, 202]},
+    {"id": "fr_voute_noun", "box": [90, 412, 550, 132]},
+    {"id": "fr_alarme_noun", "box": [50, 556, 630, 136]}
    ]
   },
   "jardin_facade": {
