@@ -56,6 +56,14 @@
    "short": "Le rayon"
   },
   {
+   "key": "tronc",
+   "short": "Le tronc"
+  },
+  {
+   "key": "pilier",
+   "short": "Le pilier"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
   },
@@ -2935,7 +2943,7 @@
    "room_id": "R_pronouns_02",
    "image": "ecole/rayon.jpg",
    "backTo": "escalier",
-   "alt": "A tall wooden bookcase painted in ink and gouache, centered on a cream wall above terracotta tiles. An open blue door on the left shows the garden. Five shelves, top to bottom: an empty tin can; a boy lifting one puppy from a basket; two children each holding a can; a raccoon in a kelp hood peeking through a curtain; a boy with an old telephone.",
+   "alt": "A tall wooden bookcase painted in ink and gouache, centered on a cream wall above terracotta tiles. An open blue door on the left shows the garden. Five shelves, top to bottom: an empty tin can; a boy lifting one puppy from a basket; two children each holding a can; a raccoon in a kelp hood peeking through a curtain; a boy with an old telephone. The tiles on the right lead to the tree trunk.",
    "nameplate": [
     10,
     5
@@ -2950,6 +2958,17 @@
       80,
       160,
       420
+     ]
+    },
+    {
+     "to": "tronc",
+     "label": "Le tronc",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      650,
+      180,
+      60
      ]
     }
    ],
@@ -2998,6 +3017,152 @@
       540,
       400,
       160
+     ]
+    }
+   ]
+  },
+  "tronc": {
+   "name": "Le tronc",
+   "room_id": "R_pronouns_03",
+   "image": "ecole/tronc.jpg",
+   "backTo": "rayon",
+   "alt": "A tall tree trunk painted in ink and gouache, centered on a cream wall above terracotta tiles. An open red door on the left shows a dark passage. A man in a red cape and a feathered hat sits at the top. Below him a girl ties her own shoelace. A girl blows a kiss to a small oval mirror. A boy sways alone in a hammock. At the bottom a boy holds a hand mirror out. The tiles on the right lead to the pillar.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "rayon",
+     "label": "Le rayon",
+     "hint": "Back through the red door",
+     "hit": [
+      20,
+      140,
+      170,
+      400
+     ]
+    },
+    {
+     "to": "pilier",
+     "label": "Le pilier",
+     "hint": "Across the tiles",
+     "hit": [
+      1040,
+      640,
+      180,
+      70
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_dont_pron",
+     "box": [
+      390,
+      8,
+      280,
+      165
+     ]
+    },
+    {
+     "id": "fr_elle_meme_pron",
+     "box": [
+      430,
+      185,
+      240,
+      130
+     ]
+    },
+    {
+     "id": "fr_moi_meme_pron",
+     "box": [
+      450,
+      325,
+      340,
+      108
+     ]
+    },
+    {
+     "id": "fr_soi_pron",
+     "box": [
+      355,
+      435,
+      200,
+      205
+     ]
+    },
+    {
+     "id": "fr_toi_meme_pron",
+     "box": [
+      575,
+      545,
+      260,
+      160
+     ]
+    }
+   ]
+  },
+  "pilier": {
+   "name": "Le pilier",
+   "room_id": "R_pronouns_03",
+   "image": "ecole/pilier.jpg",
+   "backTo": "tronc",
+   "alt": "A tall stone pillar painted in ink and gouache, centered on a cream wall above terracotta tiles. An open wooden door on the left shows a dark passage. At the top a boy calls and three small heads peek over the ledge. An old mailman hands a blank letter to a girl. A duck nibbles kelp spilling from an open trunk. At the bottom a boy blows a seashell beside a hanging golden key.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "tronc",
+     "label": "Le tronc",
+     "hint": "Back through the wooden door",
+     "hit": [
+      12,
+      70,
+      160,
+      430
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_quelques_uns_pron",
+     "box": [
+      455,
+      4,
+      370,
+      168
+     ]
+    },
+    {
+     "id": "fr_auquel_pron",
+     "box": [
+      425,
+      180,
+      430,
+      155
+     ]
+    },
+    {
+     "id": "fr_duquel_pron",
+     "box": [
+      435,
+      345,
+      400,
+      145
+     ]
+    },
+    {
+     "id": "fr_quiconque_pron",
+     "box": [
+      430,
+      500,
+      420,
+      200
      ]
     }
    ]
@@ -3293,6 +3458,23 @@
     "fr_chacun_pron",
     "fr_quelqu_un_pron",
     "fr_tel_pron"
+   ]
+  },
+  "tronc": {
+   "only": [
+    "fr_dont_pron",
+    "fr_elle_meme_pron",
+    "fr_moi_meme_pron",
+    "fr_soi_pron",
+    "fr_toi_meme_pron"
+   ]
+  },
+  "pilier": {
+   "only": [
+    "fr_quelques_uns_pron",
+    "fr_auquel_pron",
+    "fr_duquel_pron",
+    "fr_quiconque_pron"
    ]
   }
  },
