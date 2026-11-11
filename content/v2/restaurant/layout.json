@@ -21,6 +21,18 @@
     {
       "key": "preparation",
       "short": "Le plan de préparation"
+    },
+    {
+      "key": "service",
+      "short": "Le couloir"
+    },
+    {
+      "key": "salle",
+      "short": "La salle"
+    },
+    {
+      "key": "cave",
+      "short": "La cave"
     }
   ],
   "planned": {
@@ -62,6 +74,38 @@
         "fr_grille_adj",
         "fr_culinaire_adj",
         "fr_haricot_noun"
+      ]
+    },
+    "service": {
+      "only": []
+    },
+    "salle": {
+      "vocabRoom": "R_resto_room",
+      "only": [
+        "fr_commande_noun",
+        "fr_crudite_noun",
+        "fr_restauration_noun",
+        "fr_restaurant_noun",
+        "fr_dessert_noun",
+        "fr_resto_noun",
+        "fr_couvert_noun"
+      ]
+    },
+    "cave": {
+      "vocabRoom": "R_wine_01",
+      "only": [
+        "fr_cave_noun",
+        "fr_vigne_noun",
+        "fr_vodka_noun",
+        "fr_brasserie_noun",
+        "fr_capsule_noun",
+        "fr_appellation_noun",
+        "fr_vin_noun",
+        "fr_bouchon_noun",
+        "fr_tonneau_noun",
+        "fr_champagne_noun",
+        "fr_cidre_noun",
+        "fr_tire_bouchon_noun"
       ]
     }
   },
@@ -435,10 +479,293 @@
             235,
             260
           ]
+        },
+        {
+          "to": "service",
+          "label": "Le couloir",
+          "hint": "Across the cobbles into the service corridor",
+          "hit": [
+            500,
+            560,
+            280,
+            140
+          ]
         }
       ],
       "zooms": [],
       "items": []
+    },
+    "service": {
+      "name": "Le couloir de service · Service Corridor",
+      "image": "restaurant/service.jpg",
+      "backTo": "restaurant",
+      "alt": "A cream service corridor in Le Bon Goût. The left arch opens onto the cobbled kitchen courtyard, the center oak doors open onto the checked dining room, and the stone stair on the right goes down to the cellar. A handcart stands by the stair.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "restaurant",
+          "label": "La cour",
+          "hint": "Through the left arch back to the courtyard",
+          "hit": [
+            30,
+            60,
+            300,
+            470
+          ]
+        },
+        {
+          "to": "salle",
+          "label": "La salle",
+          "hint": "Through the oak doors into the dining room",
+          "hit": [
+            400,
+            90,
+            390,
+            470
+          ]
+        },
+        {
+          "to": "cave",
+          "label": "La cave",
+          "hint": "Down the stone stair into the cellar",
+          "hit": [
+            910,
+            130,
+            300,
+            430
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    },
+    "salle": {
+      "name": "La salle · Dining Hall",
+      "room_id": "R_resto_room",
+      "image": "restaurant/salle.jpg",
+      "backTo": "service",
+      "alt": "The dining hall of Le Bon Goût. A waiter writes a long order, a plate of raw vegetables sits on a checked cloth, and a woman restores a wooden chair. Through the arch is the kitchen courtyard. On the right a strawberry cake, a casual checked table, a place setting, and a window onto a restaurant with a striped awning.",
+      "nameplate": [
+        62,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "service",
+          "label": "Le couloir",
+          "hint": "Through the arch back to the service corridor",
+          "hit": [
+            540,
+            40,
+            250,
+            230
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_commande_noun",
+          "box": [
+            80,
+            140,
+            155,
+            360
+          ]
+        },
+        {
+          "id": "fr_crudite_noun",
+          "box": [
+            0,
+            520,
+            140,
+            160
+          ]
+        },
+        {
+          "id": "fr_restauration_noun",
+          "box": [
+            250,
+            270,
+            240,
+            300
+          ]
+        },
+        {
+          "id": "fr_dessert_noun",
+          "box": [
+            900,
+            330,
+            160,
+            150
+          ]
+        },
+        {
+          "id": "fr_resto_noun",
+          "box": [
+            760,
+            430,
+            130,
+            150
+          ]
+        },
+        {
+          "id": "fr_couvert_noun",
+          "box": [
+            980,
+            520,
+            260,
+            170
+          ]
+        },
+        {
+          "id": "fr_restaurant_noun",
+          "box": [
+            1100,
+            70,
+            160,
+            250
+          ]
+        }
+      ]
+    },
+    "cave": {
+      "name": "La cave · Wine Cellar",
+      "room_id": "R_wine_01",
+      "image": "restaurant/cave.jpg",
+      "backTo": "service",
+      "alt": "A stone cellar. On the left a grapevine in a niche, a closed clear bottle, a brass kettle, a bottle cap and a wax seal. On the right a toy van beside a closed dark bottle, a cork, a barrel, a closed foil-top bottle, an apple, and a corkscrew. Every bottle is shut. The stair leads back up to the corridor.",
+      "nameplate": [
+        50,
+        3.5
+      ],
+      "doors": [
+        {
+          "to": "service",
+          "label": "Le couloir",
+          "hint": "Up the stone stair to the service corridor",
+          "hit": [
+            500,
+            40,
+            220,
+            370
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_vigne_noun",
+          "box": [
+            0,
+            60,
+            210,
+            300
+          ]
+        },
+        {
+          "id": "fr_vodka_noun",
+          "box": [
+            215,
+            100,
+            110,
+            260
+          ]
+        },
+        {
+          "id": "fr_cave_noun",
+          "box": [
+            360,
+            20,
+            130,
+            170
+          ]
+        },
+        {
+          "id": "fr_brasserie_noun",
+          "box": [
+            5,
+            420,
+            210,
+            150
+          ]
+        },
+        {
+          "id": "fr_capsule_noun",
+          "box": [
+            225,
+            525,
+            70,
+            55
+          ]
+        },
+        {
+          "id": "fr_appellation_noun",
+          "box": [
+            300,
+            485,
+            110,
+            75
+          ]
+        },
+        {
+          "id": "fr_vin_noun",
+          "box": [
+            745,
+            220,
+            190,
+            340
+          ]
+        },
+        {
+          "id": "fr_tonneau_noun",
+          "box": [
+            955,
+            215,
+            145,
+            235
+          ]
+        },
+        {
+          "id": "fr_champagne_noun",
+          "box": [
+            1115,
+            175,
+            85,
+            265
+          ]
+        },
+        {
+          "id": "fr_bouchon_noun",
+          "box": [
+            985,
+            470,
+            50,
+            70
+          ]
+        },
+        {
+          "id": "fr_cidre_noun",
+          "box": [
+            1150,
+            465,
+            80,
+            85
+          ]
+        },
+        {
+          "id": "fr_tire_bouchon_noun",
+          "box": [
+            960,
+            560,
+            175,
+            70
+          ]
+        }
+      ]
     }
   }
 }
