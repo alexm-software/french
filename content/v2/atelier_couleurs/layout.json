@@ -14,6 +14,10 @@
    "short": "Les formes"
   },
   {
+   "key": "figures",
+   "short": "Les tracés"
+  },
+  {
    "key": "mesures",
    "short": "Les mesures"
   },
@@ -54,6 +58,20 @@
     "fr_bord_noun",
     "fr_coin_noun",
     "fr_sphere_noun"
+   ]
+  },
+  "figures": {
+   "only": [
+    "fr_courbe_noun",
+    "fr_ride_noun",
+    "fr_diagonale_noun",
+    "fr_deformation_noun",
+    "fr_circulaire_adj",
+    "fr_tournant_noun",
+    "fr_axe_noun",
+    "fr_recoin_noun",
+    "fr_virage_noun",
+    "fr_pointille_noun"
    ]
   },
   "toile": {
@@ -317,6 +335,12 @@
       120,
       105
      ]
+    },
+    {
+     "to": "figures",
+     "label": "Les tracés",
+     "hint": "Across the floorboards",
+     "hit": [24, 652, 190, 58]
     }
    ],
    "zooms": [
@@ -449,6 +473,35 @@
     }
    ],
    "alt": "A close look at the meadow painting: a girl leans over a wide stone basin and sees her face on the still water, a white canvas on an easel carries one bold black brushstroke, a boy kneels to draw a heart in a bowl of sand with a stick, and an orange hoop leans against a tree stump."
+  },
+  "figures": {
+   "name": "Les tracés",
+   "room_id": "R_shapes_03",
+   "image": "atelier_couleurs/figures.jpg",
+   "backTo": "formes",
+   "alt": "A pale wall and a wooden floor. A brown door is on the left. A bookcase holds a scooter on a curved curb, a wrinkled tortoise with a reed, a slate with one diagonal chalk stroke, and a crushed tin can. A billiard cue and a round ball sit on a small table. A tall bookcase on the right holds a green bus on a bend, a globe on an axis beside a toy axe, a mouse with a coin in a nook, a red car on an S-bend, and a dotted line of teacups.",
+   "nameplate": [48, 4],
+   "doors": [
+    {
+     "to": "formes",
+     "label": "Les formes",
+     "hint": "Back through the brown door",
+     "hit": [48, 60, 200, 500]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_courbe_noun", "box": [325, 195, 235, 115]},
+    {"id": "fr_ride_noun", "box": [335, 325, 210, 100]},
+    {"id": "fr_diagonale_noun", "box": [340, 440, 175, 75]},
+    {"id": "fr_deformation_noun", "box": [325, 528, 185, 85]},
+    {"id": "fr_circulaire_adj", "box": [600, 430, 180, 90]},
+    {"id": "fr_tournant_noun", "box": [845, 65, 375, 115]},
+    {"id": "fr_axe_noun", "box": [860, 190, 330, 145]},
+    {"id": "fr_recoin_noun", "box": [865, 345, 240, 105]},
+    {"id": "fr_virage_noun", "box": [845, 455, 405, 110]},
+    {"id": "fr_pointille_noun", "box": [885, 572, 290, 60]}
+   ]
   },
   "mesures": {
    "name": "La salle des mesures",
