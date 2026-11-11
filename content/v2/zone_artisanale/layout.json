@@ -18,6 +18,14 @@
       "short": "L'usine"
     },
     {
+      "key": "fabrique",
+      "short": "La fabrique"
+    },
+    {
+      "key": "forge",
+      "short": "La forge"
+    },
+    {
       "key": "atelier",
       "short": "L'atelier"
     },
@@ -59,6 +67,34 @@
         "fr_site_noun",
         "fr_equipement_noun",
         "fr_emplacement_noun"
+      ]
+    },
+    "fabrique": {
+      "only": [
+        "fr_benne_noun",
+        "fr_conditionner_verb",
+        "fr_fabriquer_verb",
+        "fr_installer_verb",
+        "fr_fonctionner_verb",
+        "fr_eboueur_noun",
+        "fr_recycler_verb",
+        "fr_produire_verb",
+        "fr_developper_verb",
+        "fr_inventer_verb"
+      ]
+    },
+    "forge": {
+      "only": [
+        "fr_forger_verb",
+        "fr_graver_verb",
+        "fr_sculpter_verb",
+        "fr_tisser_verb",
+        "fr_edifier_verb",
+        "fr_creer_verb",
+        "fr_reconstruire_verb",
+        "fr_attacher_verb",
+        "fr_fixer_verb",
+        "fr_lier_verb"
       ]
     },
     "etabli": {
@@ -381,6 +417,12 @@
             185,
             145
           ]
+        },
+        {
+          "to": "fabrique",
+          "label": "La fabrique",
+          "hint": "Across the floor",
+          "hit": [780, 655, 140, 48]
         }
       ],
       "zooms": [
@@ -606,6 +648,54 @@
       "sector_id": "S05_bank",
       "alt": "Close-up of the workbench on the factory floor: a rag doll lies on a stone slab; a stone bollard wears a baby bonnet; a little red-brick factory; a toy robot works a press; a boy holds up his drawing of a house; three little builders lift a wooden frame; a hen stands by her crate of eggs; a small cement mixer, and a pony peeps out of a concrete stall. Old Pa's hand and the key hang in at the top right."
     },
+    "fabrique": {
+      "name": "La fabrique",
+      "room_id": "R_industry_01",
+      "image": "zone_artisanale/fabrique.jpg",
+      "backTo": "usine",
+      "alt": "A factory corner with a pale wall and a gray floor. A brown door is on the left. The left bookcase holds a metal dumpster, a mime packing a wooden crate, a mime building a chair, a mime setting a lamp, and a mime turning a working machine. The right bookcase holds a clothed collector with a toy garbage truck, a mime dropping a bottle into a recycling bin, a mime in a gold beret at a press, a mime unfolding a plan, and a mime holding a new light bulb.",
+      "nameplate": [50, 4],
+      "doors": [
+        {"to": "usine", "label": "L'usine", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}
+      ],
+      "zooms": [],
+      "items": [
+        {"id": "fr_benne_noun", "box": [455, 55, 200, 115]},
+        {"id": "fr_conditionner_verb", "box": [420, 175, 240, 110]},
+        {"id": "fr_fabriquer_verb", "box": [420, 295, 240, 110]},
+        {"id": "fr_installer_verb", "box": [420, 415, 240, 110]},
+        {"id": "fr_fonctionner_verb", "box": [420, 535, 240, 125]},
+        {"id": "fr_eboueur_noun", "box": [790, 40, 340, 140]},
+        {"id": "fr_recycler_verb", "box": [790, 190, 340, 115]},
+        {"id": "fr_produire_verb", "box": [790, 315, 340, 120]},
+        {"id": "fr_developper_verb", "box": [770, 445, 380, 125]},
+        {"id": "fr_inventer_verb", "box": [790, 580, 340, 115]}
+      ]
+    },
+    "forge": {
+      "name": "La forge",
+      "room_id": "R_industry_02",
+      "image": "zone_artisanale/forge.jpg",
+      "backTo": "atelier",
+      "alt": "An artisan workshop with a pale wall and a brick floor. A brown door is on the left. The left bookcase holds a mime forging a horseshoe, a mime engraving a plate, a mime chiseling a bust, a mime at a loom, and a mime stacking blocks. The right bookcase holds a mime with a paper bird, a mime in a gold beret rebuilding a brick wall, a mime tying a parcel, a mime nailing a board, and a mime linking two rings.",
+      "nameplate": [50, 4],
+      "doors": [
+        {"to": "atelier", "label": "L'atelier", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}
+      ],
+      "zooms": [],
+      "items": [
+        {"id": "fr_forger_verb", "box": [420, 45, 240, 115]},
+        {"id": "fr_graver_verb", "box": [420, 170, 240, 110]},
+        {"id": "fr_sculpter_verb", "box": [420, 290, 240, 110]},
+        {"id": "fr_tisser_verb", "box": [420, 410, 250, 115]},
+        {"id": "fr_edifier_verb", "box": [420, 535, 240, 125]},
+        {"id": "fr_creer_verb", "box": [790, 40, 360, 130]},
+        {"id": "fr_reconstruire_verb", "box": [790, 180, 360, 120]},
+        {"id": "fr_attacher_verb", "box": [790, 310, 360, 115]},
+        {"id": "fr_fixer_verb", "box": [790, 435, 360, 115]},
+        {"id": "fr_lier_verb", "box": [790, 560, 360, 120]}
+      ]
+    },
     "atelier": {
       "name": "L'atelier du haut",
       "room_id": "R_industry_02",
@@ -622,6 +712,12 @@
             72,
             75
           ]
+        },
+        {
+          "to": "forge",
+          "label": "La forge",
+          "hint": "Across the floor",
+          "hit": [620, 655, 140, 48]
         }
       ],
       "zooms": [
