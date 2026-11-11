@@ -1,0 +1,54 @@
+{
+  "building": "st_gourmets",
+  "building_id": "ST_gourmets",
+  "sector_id": "S04_cafes",
+  "v1_room_id": "ST_cooking_seg001",
+  "name": "Ruelle des Gourmets",
+  "main": "st_gourmets",
+  "roomList": [
+    {
+      "key": "st_gourmets",
+      "short": "Le festin"
+    }
+  ],
+  "planned": {
+    "st_gourmets": {
+      "vocabRoom": "ST_cooking_seg001",
+      "only": [
+        "fr_manger_verb",
+        "fr_diner_verb",
+        "fr_dejeuner_verb",
+        "fr_devorer_verb",
+        "fr_bouffer_verb",
+        "fr_regaler_verb",
+        "fr_souper_verb",
+        "fr_alimenter_verb"
+      ]
+    }
+  },
+  "rooms": {
+    "st_gourmets": {
+      "name": "Place du Grand-Festin · The Great Feast",
+      "room_id": "ST_cooking_seg001",
+      "image": "st_gourmets/st_gourmets.jpg",
+      "alt": "A sunny feast garden on Rue des Saveurs, painted in ink and gouache. Eight red-beret mimes eat at different depths: one shares a sandwich with a blue jay, one dines by two candles beside a roast and a toy horse, one cheers over a lunch box, one devours sausages under a manta-ray kite, one scoffs at a long buffet, one in a flower lei treats himself to cake with a hand mirror, one pays a gold coin for soup beside an owl, and one pours lemon tea into a robot's funnel. The open wooden gate on the left leads back to the street. A rose arch and a blue pantry door are in the garden walls.",
+      "nameplate": [50, 4.5],
+      "mapExit": {
+        "box": [18, 110, 118, 215],
+        "label": "Rue des Saveurs"
+      },
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {"id": "fr_manger_verb", "box": [138, 198, 292, 190]},
+        {"id": "fr_diner_verb", "box": [435, 138, 318, 252]},
+        {"id": "fr_dejeuner_verb", "box": [400, 395, 240, 168]},
+        {"id": "fr_souper_verb", "box": [2, 432, 275, 284]},
+        {"id": "fr_devorer_verb", "box": [760, 6, 195, 442]},
+        {"id": "fr_alimenter_verb", "box": [960, 132, 225, 288]},
+        {"id": "fr_bouffer_verb", "box": [650, 456, 400, 260]},
+        {"id": "fr_regaler_verb", "box": [1068, 432, 204, 284]}
+      ]
+    }
+  }
+}
