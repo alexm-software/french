@@ -9,6 +9,26 @@
     {
       "key": "st_pas",
       "short": "Les coureurs"
+    },
+    {
+      "key": "avenues",
+      "short": "Les avenues"
+    },
+    {
+      "key": "traversee",
+      "short": "La traversée"
+    },
+    {
+      "key": "voyageurs",
+      "short": "Les voyageurs"
+    },
+    {
+      "key": "promeneurs",
+      "short": "Les promeneurs"
+    },
+    {
+      "key": "descente",
+      "short": "La descente"
     }
   ],
   "planned": {
@@ -22,6 +42,54 @@
         "fr_rompre_verb",
         "fr_passer_verb"
       ]
+    },
+    "avenues": {
+      "vocabRoom": "ST_movement_seg001",
+      "only": []
+    },
+    "traversee": {
+      "vocabRoom": "ST_movement_seg001",
+      "only": [
+        "fr_accompagner_verb",
+        "fr_avancer_verb",
+        "fr_poursuivre_verb",
+        "fr_parvenir_verb",
+        "fr_importer_verb",
+        "fr_traverser_verb"
+      ]
+    },
+    "voyageurs": {
+      "vocabRoom": "ST_movement_seg002",
+      "only": [
+        "fr_croiser_verb",
+        "fr_penetrer_verb",
+        "fr_voyager_verb",
+        "fr_arriver_verb",
+        "fr_suivre_verb",
+        "fr_monter_verb"
+      ]
+    },
+    "promeneurs": {
+      "vocabRoom": "ST_movement_seg003",
+      "only": [
+        "fr_entrer_verb",
+        "fr_animer_verb",
+        "fr_conduire_verb",
+        "fr_marcher_verb",
+        "fr_promener_verb",
+        "fr_approcher_verb"
+      ]
+    },
+    "descente": {
+      "vocabRoom": "ST_movement_seg005",
+      "only": [
+        "fr_briser_verb",
+        "fr_bouger_verb",
+        "fr_deplacer_verb",
+        "fr_venir_verb",
+        "fr_descendre_verb",
+        "fr_refermer_verb"
+      ]
     }
   },
   "rooms": {
@@ -29,7 +97,7 @@
       "name": "Rue des Coureurs · Runners' Lane",
       "room_id": "ST_movement_seg004",
       "image": "st_pas/st_pas.jpg",
-      "alt": "A sunny cobbled lane on Rue des Pas Perdus, painted in ink and gouache. A red-beret mime jumps a puddle; another has fallen in the leaves; a gold-beret courier runs with a satchel; a red-beret mime hurries with a coin and a hand mirror; a gold-beret mime breaks a stick; a red-beret mime passes a baton. The open gate on the left leads back to Rue des Saveurs.",
+      "alt": "A sunny cobbled lane on Rue des Pas Perdus, painted in ink and gouache. A red-beret mime jumps a puddle; another has fallen in the leaves; a gold-beret courier runs with a satchel; a red-beret mime hurries with a coin and a hand mirror; a gold-beret mime breaks a stick; a red-beret mime passes a baton. The open gate on the left leads back to Rue des Saveurs. The cobbles in front of the hurrying mime open into the avenues.",
       "nameplate": [
         50,
         4.5
@@ -43,7 +111,19 @@
         ],
         "label": "Rue des Saveurs"
       },
-      "doors": [],
+      "doors": [
+        {
+          "to": "avenues",
+          "label": "Les avenues",
+          "hint": "Across the cobbles into the avenues",
+          "hit": [
+            575,
+            640,
+            180,
+            75
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
         {
@@ -98,6 +178,400 @@
             435,
             470,
             275
+          ]
+        }
+      ]
+    },
+    "avenues": {
+      "name": "Les avenues · Avenue Passage",
+      "room_id": "ST_movement_seg001",
+      "image": "st_pas/avenues.jpg",
+      "backTo": "st_pas",
+      "alt": "An autumn passage. The left arch returns to the runners' lane. A green door shows a van, a blue door shows toy boats, a yellow door shows a walk, and a stone stair goes down.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "st_pas",
+          "label": "Les coureurs",
+          "hint": "Back through the left arch",
+          "hit": [
+            10,
+            90,
+            160,
+            300
+          ]
+        },
+        {
+          "to": "traversee",
+          "label": "La traversée",
+          "hint": "Through the green door",
+          "hit": [
+            450,
+            180,
+            140,
+            280
+          ]
+        },
+        {
+          "to": "voyageurs",
+          "label": "Les voyageurs",
+          "hint": "Through the blue door",
+          "hit": [
+            620,
+            160,
+            140,
+            300
+          ]
+        },
+        {
+          "to": "promeneurs",
+          "label": "Les promeneurs",
+          "hint": "Through the yellow door",
+          "hit": [
+            780,
+            180,
+            130,
+            280
+          ]
+        },
+        {
+          "to": "descente",
+          "label": "La descente",
+          "hint": "Down the stone stair",
+          "hit": [
+            1050,
+            120,
+            200,
+            400
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": []
+    },
+    "traversee": {
+      "name": "La traversée · Crossing Street",
+      "room_id": "ST_movement_seg001",
+      "image": "st_pas/traversee.jpg",
+      "backTo": "avenues",
+      "alt": "An autumn crossing. A mime walks with a dog and a basket; a mime stands by a white van and sheep; a gold-beret mime runs with a collie and a red ball; a gold-beret mime reaches a golf ball to a hole; a mime opens a banana crate for a monkey; a mime holds a blank round sign while ducks cross. The green door returns to the passage.",
+      "nameplate": [
+        70,
+        4
+      ],
+      "doors": [
+        {
+          "to": "avenues",
+          "label": "Les avenues",
+          "hint": "Back through the green door",
+          "hit": [
+            15,
+            15,
+            90,
+            100
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_accompagner_verb",
+          "box": [
+            0,
+            150,
+            200,
+            360
+          ]
+        },
+        {
+          "id": "fr_avancer_verb",
+          "box": [
+            210,
+            140,
+            280,
+            370
+          ]
+        },
+        {
+          "id": "fr_poursuivre_verb",
+          "box": [
+            510,
+            180,
+            230,
+            420
+          ]
+        },
+        {
+          "id": "fr_parvenir_verb",
+          "box": [
+            750,
+            160,
+            170,
+            280
+          ]
+        },
+        {
+          "id": "fr_importer_verb",
+          "box": [
+            930,
+            100,
+            340,
+            330
+          ]
+        },
+        {
+          "id": "fr_traverser_verb",
+          "box": [
+            760,
+            460,
+            280,
+            250
+          ]
+        }
+      ]
+    },
+    "voyageurs": {
+      "name": "Les voyageurs · Travelers' Quay",
+      "room_id": "ST_movement_seg002",
+      "image": "st_pas/voyageurs.jpg",
+      "backTo": "avenues",
+      "alt": "An autumn quay. A mime waves at two toy boats; a mime and a mole carry trays; a mime walks a tortoise on a skateboard; a mime cheers a pigeon; a gold-beret mime follows ducklings; a mime in a broad hat rides a horse. The blue door returns to the passage.",
+      "nameplate": [
+        55,
+        4
+      ],
+      "doors": [
+        {
+          "to": "avenues",
+          "label": "Les avenues",
+          "hint": "Back through the blue door",
+          "hit": [
+            30,
+            10,
+            110,
+            90
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_croiser_verb",
+          "box": [
+            0,
+            200,
+            200,
+            500
+          ]
+        },
+        {
+          "id": "fr_penetrer_verb",
+          "box": [
+            210,
+            40,
+            220,
+            480
+          ]
+        },
+        {
+          "id": "fr_voyager_verb",
+          "box": [
+            450,
+            280,
+            190,
+            400
+          ]
+        },
+        {
+          "id": "fr_arriver_verb",
+          "box": [
+            660,
+            60,
+            160,
+            460
+          ]
+        },
+        {
+          "id": "fr_suivre_verb",
+          "box": [
+            840,
+            240,
+            180,
+            420
+          ]
+        },
+        {
+          "id": "fr_monter_verb",
+          "box": [
+            1040,
+            20,
+            230,
+            520
+          ]
+        }
+      ]
+    },
+    "promeneurs": {
+      "name": "Les promeneurs · Walkers' Alley",
+      "room_id": "ST_movement_seg003",
+      "image": "st_pas/promeneurs.jpg",
+      "backTo": "avenues",
+      "alt": "An autumn alley. A mime enters with a cat on a tray; a mime works a wooden horse puppet; a gold-beret mime drives a cream car with a deer; a mime walks by a heron; a mime with a hand mirror stands by a pony in a bonnet; a mime kneels as a kitten approaches a sleeping cat. The yellow door returns to the passage.",
+      "nameplate": [
+        62,
+        4
+      ],
+      "doors": [
+        {
+          "to": "avenues",
+          "label": "Les avenues",
+          "hint": "Back through the yellow door",
+          "hit": [
+            0,
+            0,
+            60,
+            50
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_entrer_verb",
+          "box": [
+            10,
+            70,
+            180,
+            330
+          ]
+        },
+        {
+          "id": "fr_animer_verb",
+          "box": [
+            200,
+            70,
+            190,
+            370
+          ]
+        },
+        {
+          "id": "fr_approcher_verb",
+          "box": [
+            0,
+            450,
+            320,
+            260
+          ]
+        },
+        {
+          "id": "fr_conduire_verb",
+          "box": [
+            400,
+            200,
+            320,
+            340
+          ]
+        },
+        {
+          "id": "fr_marcher_verb",
+          "box": [
+            730,
+            140,
+            180,
+            500
+          ]
+        },
+        {
+          "id": "fr_promener_verb",
+          "box": [
+            920,
+            80,
+            350,
+            560
+          ]
+        }
+      ]
+    },
+    "descente": {
+      "name": "La descente · Downhill Landing",
+      "room_id": "ST_movement_seg005",
+      "image": "st_pas/descente.jpg",
+      "backTo": "avenues",
+      "alt": "A stone landing. A mime with a hand mirror watches a window shatter; a mime jumps as a chair slides; a mime with a hand mirror pushes a piano on wheels; a gold-beret mime carries a wooden table; a gold-beret mime watches a cat on a ladder; a mime with a hand mirror shuts a door. The stair returns to the passage.",
+      "nameplate": [
+        40,
+        4
+      ],
+      "doors": [
+        {
+          "to": "avenues",
+          "label": "Les avenues",
+          "hint": "Back up the stone stair",
+          "hit": [
+            540,
+            40,
+            150,
+            110
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_briser_verb",
+          "box": [
+            0,
+            140,
+            170,
+            540
+          ]
+        },
+        {
+          "id": "fr_bouger_verb",
+          "box": [
+            180,
+            100,
+            210,
+            520
+          ]
+        },
+        {
+          "id": "fr_deplacer_verb",
+          "box": [
+            400,
+            240,
+            270,
+            460
+          ]
+        },
+        {
+          "id": "fr_venir_verb",
+          "box": [
+            690,
+            180,
+            190,
+            460
+          ]
+        },
+        {
+          "id": "fr_descendre_verb",
+          "box": [
+            890,
+            30,
+            190,
+            640
+          ]
+        },
+        {
+          "id": "fr_refermer_verb",
+          "box": [
+            1090,
+            160,
+            180,
+            520
           ]
         }
       ]
