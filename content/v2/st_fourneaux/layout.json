@@ -9,6 +9,18 @@
     {
       "key": "st_fourneaux",
       "short": "Les épices"
+    },
+    {
+      "key": "epluchures",
+      "short": "Épluchures"
+    },
+    {
+      "key": "melange",
+      "short": "Mélange"
+    },
+    {
+      "key": "feu",
+      "short": "Le feu"
     }
   ],
   "planned": {
@@ -24,6 +36,42 @@
         "fr_ailler_verb",
         "fr_farcir_verb",
         "fr_truffer_verb"
+      ]
+    },
+    "epluchures": {
+      "vocabRoom": "ST_cooking_seg005",
+      "only": [
+        "fr_couper_verb",
+        "fr_trancher_verb",
+        "fr_decouper_verb",
+        "fr_entamer_verb",
+        "fr_eplucher_verb",
+        "fr_aiguiser_verb",
+        "fr_ciseler_verb"
+      ]
+    },
+    "melange": {
+      "vocabRoom": "ST_cooking_seg006",
+      "only": [
+        "fr_meler_verb",
+        "fr_ecraser_verb",
+        "fr_remuer_verb",
+        "fr_broyer_verb",
+        "fr_congeler_verb",
+        "fr_dissoudre_verb",
+        "fr_surgeler_verb"
+      ]
+    },
+    "feu": {
+      "vocabRoom": "ST_cooking_seg007",
+      "only": [
+        "fr_rechauffer_verb",
+        "fr_saurer_verb",
+        "fr_griller_verb",
+        "fr_bouillir_verb",
+        "fr_flamber_verb",
+        "fr_frire_verb",
+        "fr_rotir_verb"
       ]
     }
   },
@@ -46,7 +94,19 @@
         ],
         "label": "Rue des Saveurs"
       },
-      "doors": [],
+      "doors": [
+        {
+          "to": "epluchures",
+          "label": "Les épluchures",
+          "hint": "Across the floor tiles into the cutting kitchen",
+          "hit": [
+            840,
+            600,
+            160,
+            100
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
         {
@@ -128,6 +188,298 @@
             450,
             215,
             260
+          ]
+        }
+      ]
+    },
+    "epluchures": {
+      "name": "Ruelle des Épluchures · Peeling Lane",
+      "room_id": "ST_cooking_seg005",
+      "image": "st_fourneaux/epluchures.jpg",
+      "backTo": "st_fourneaux",
+      "alt": "A prep kitchen. Seven red-beret mimes cut bread, slice a roast, joint a chicken, start a melon, peel a potato, sharpen a knife, and chop herbs. The left arch returns to the spice kitchen. A green door and a red door lead on.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "st_fourneaux",
+          "label": "Les épices",
+          "hint": "Through the left arch back to the spice kitchen",
+          "hit": [
+            80,
+            20,
+            240,
+            240
+          ]
+        },
+        {
+          "to": "melange",
+          "label": "Le mélange",
+          "hint": "Through the green door to the mixing kitchen",
+          "hit": [
+            500,
+            15,
+            220,
+            200
+          ]
+        },
+        {
+          "to": "feu",
+          "label": "Le feu",
+          "hint": "Through the red door to the hot kitchen",
+          "hit": [
+            1000,
+            15,
+            200,
+            200
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_couper_verb",
+          "box": [
+            0,
+            330,
+            150,
+            370
+          ]
+        },
+        {
+          "id": "fr_trancher_verb",
+          "box": [
+            155,
+            310,
+            165,
+            390
+          ]
+        },
+        {
+          "id": "fr_decouper_verb",
+          "box": [
+            325,
+            300,
+            175,
+            400
+          ]
+        },
+        {
+          "id": "fr_entamer_verb",
+          "box": [
+            510,
+            300,
+            160,
+            400
+          ]
+        },
+        {
+          "id": "fr_eplucher_verb",
+          "box": [
+            680,
+            300,
+            160,
+            400
+          ]
+        },
+        {
+          "id": "fr_aiguiser_verb",
+          "box": [
+            850,
+            300,
+            160,
+            400
+          ]
+        },
+        {
+          "id": "fr_ciseler_verb",
+          "box": [
+            1020,
+            290,
+            240,
+            410
+          ]
+        }
+      ]
+    },
+    "melange": {
+      "name": "L'office du mélange · Mixing Office",
+      "room_id": "ST_cooking_seg006",
+      "image": "st_fourneaux/melange.jpg",
+      "backTo": "epluchures",
+      "alt": "A mixing kitchen. Mimes toss a salad, mash a potato, stir a pot, grind pepper, close ice in a freezer, dissolve sugar in water, and freeze a bag of peas. The green door leads back to the cutting table.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "epluchures",
+          "label": "Les épluchures",
+          "hint": "Through the green door back to the cutting kitchen",
+          "hit": [
+            70,
+            30,
+            250,
+            230
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_meler_verb",
+          "box": [
+            0,
+            300,
+            185,
+            400
+          ]
+        },
+        {
+          "id": "fr_ecraser_verb",
+          "box": [
+            200,
+            300,
+            180,
+            400
+          ]
+        },
+        {
+          "id": "fr_broyer_verb",
+          "box": [
+            450,
+            55,
+            160,
+            230
+          ]
+        },
+        {
+          "id": "fr_remuer_verb",
+          "box": [
+            740,
+            55,
+            150,
+            290
+          ]
+        },
+        {
+          "id": "fr_dissoudre_verb",
+          "box": [
+            500,
+            330,
+            220,
+            370
+          ]
+        },
+        {
+          "id": "fr_surgeler_verb",
+          "box": [
+            910,
+            290,
+            160,
+            350
+          ]
+        },
+        {
+          "id": "fr_congeler_verb",
+          "box": [
+            1085,
+            410,
+            175,
+            270
+          ]
+        }
+      ]
+    },
+    "feu": {
+      "name": "L'allée du feu · Heat Lane",
+      "room_id": "ST_cooking_seg007",
+      "image": "st_fourneaux/feu.jpg",
+      "backTo": "epluchures",
+      "alt": "A hot kitchen. Mimes warm soup, salt a pot, grill sausages, boil water, cook a pan over a flame, fry potatoes, and turn a roast. The red door leads back to the cutting table.",
+      "nameplate": [
+        55,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "epluchures",
+          "label": "Les épluchures",
+          "hint": "Through the red door back to the cutting kitchen",
+          "hit": [
+            10,
+            20,
+            150,
+            280
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_rechauffer_verb",
+          "box": [
+            0,
+            300,
+            155,
+            400
+          ]
+        },
+        {
+          "id": "fr_saurer_verb",
+          "box": [
+            160,
+            280,
+            170,
+            420
+          ]
+        },
+        {
+          "id": "fr_griller_verb",
+          "box": [
+            340,
+            290,
+            170,
+            410
+          ]
+        },
+        {
+          "id": "fr_bouillir_verb",
+          "box": [
+            520,
+            270,
+            170,
+            430
+          ]
+        },
+        {
+          "id": "fr_flamber_verb",
+          "box": [
+            700,
+            270,
+            170,
+            430
+          ]
+        },
+        {
+          "id": "fr_frire_verb",
+          "box": [
+            880,
+            270,
+            170,
+            430
+          ]
+        },
+        {
+          "id": "fr_rotir_verb",
+          "box": [
+            1060,
+            250,
+            210,
+            450
           ]
         }
       ]
