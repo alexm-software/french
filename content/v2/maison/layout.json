@@ -81,6 +81,10 @@
   {
    "key": "tiroir",
    "short": "Le tiroir"
+  },
+  {
+   "key": "pyjama",
+   "short": "Le pyjama"
   }
  ],
  "planned": {
@@ -532,6 +536,14 @@
     "fr_balai_noun",
     "fr_filtre_noun",
     "fr_store_noun"
+   ]
+  },
+  "pyjama": {
+   "only": [
+    "fr_pyjama_noun",
+    "fr_aspirateur_noun",
+    "fr_foulard_noun",
+    "fr_landau_noun"
    ]
   },
   "jardin_facade": {
@@ -4024,7 +4036,7 @@
    "room_id": "R_bedroom_01",
    "image": "maison/tiroir.jpg",
    "backTo": "loyer",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A lion cub leans on an open drawer of tea tins. A girl in a pink tutu, tights, and ballet shoes holds a straw broom. A raccoon holds a fluffy lint filter. A white stork pulls a window blind by its cord. The blue door on the left leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A lion cub leans on an open drawer of tea tins. A girl in a pink tutu, tights, and ballet shoes holds a straw broom. A raccoon holds a fluffy lint filter. A white stork pulls a window blind by its cord. The blue door on the left leads back. The bricks to the right of the blue door lead to the pyjama cupboard.",
    "nameplate": [40, 5],
    "doors": [
     {
@@ -4032,6 +4044,12 @@
      "label": "Le loyer",
      "hint": "Back through the blue door",
      "hit": [55, 110, 230, 490]
+    },
+    {
+     "to": "pyjama",
+     "label": "Le pyjama",
+     "hint": "Across the bricks",
+     "hit": [320, 645, 180, 65]
     }
    ],
    "zooms": [],
@@ -4040,6 +4058,29 @@
     {"id": "fr_balai_noun", "box": [790, 182, 420, 166]},
     {"id": "fr_filtre_noun", "box": [700, 358, 520, 138]},
     {"id": "fr_store_noun", "box": [750, 500, 480, 175]}
+   ]
+  },
+  "pyjama": {
+   "name": "Le pyjama",
+   "room_id": "R_bedroom_01",
+   "image": "maison/pyjama.jpg",
+   "backTo": "tiroir",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A toddler in a striped pajama shirt, long trousers, and slippers raises both arms. A red vacuum cleaner stands on the next shelf. A fully clothed jester in a motley costume ties a silk scarf, with a small bird on the shoulder. A fawn stands beside a hooded baby carriage. The brown door on the left leads back.",
+   "nameplate": [38, 5],
+   "doors": [
+    {
+     "to": "tiroir",
+     "label": "Le tiroir",
+     "hint": "Back through the brown door",
+     "hit": [48, 100, 250, 500]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_pyjama_noun", "box": [660, 0, 440, 176]},
+    {"id": "fr_aspirateur_noun", "box": [650, 198, 140, 142]},
+    {"id": "fr_foulard_noun", "box": [795, 182, 370, 300]},
+    {"id": "fr_landau_noun", "box": [600, 496, 650, 180]}
    ]
   },
   "jardin_facade": {
