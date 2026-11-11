@@ -14,6 +14,7 @@
    "short": "L'étage"
   },
   {"key": "soins", "short": "Les soins"},
+  {"key": "retour", "short": "Le retour"},
   {
    "key": "dentiste",
    "short": "Le dentiste"
@@ -94,6 +95,7 @@
    ]
   },
   "soins": {"only": ["fr_vacciner_verb","fr_remedier_verb","fr_cicatriser_verb","fr_greffer_verb","fr_moucher_verb","fr_enrhumer_verb","fr_dilater_verb"]},
+  "retour": {"only": ["fr_ranimer_verb","fr_regagner_verb","fr_restituer_verb","fr_hospitaliser_verb","fr_assouplir_verb","fr_dissocier_verb","fr_proliferer_verb","fr_palpiter_verb"]},
   "dentiste": {
    "vocabRoom": "R_dentist_01",
    "only": [
@@ -795,7 +797,8 @@
    "name": "Les soins", "room_id": "R_hospital_01", "image": "hopital/soins.jpg", "backTo": "etage",
    "alt": "A gentle clinic workroom. A brown door is on the left. The left bookcase holds a mime putting a plaster on a teddy, a mime with a small remedy bottle, a mime looking at a small bandage on a clothed arm, and a mime grafting a rose. The right bookcase holds a mime with a tissue, a mime with a hand on his forehead beside a seated friend, a mime stretching, and a mime blowing up a balloon.",
    "nameplate": [50, 4],
-   "doors": [{"to": "etage", "label": "L'étage", "hint": "Back through the brown door", "hit": [40, 55, 170, 480]}],
+   "doors": [{"to": "etage", "label": "L'étage", "hint": "Back through the brown door", "hit": [40, 55, 170, 480]},
+    {"to": "retour", "label": "Le retour", "hint": "Across the floor", "hit": [20, 655, 150, 48]}],
    "zooms": [],
    "items": [
     {"id": "fr_vacciner_verb", "box": [400, 30, 300, 130]},
@@ -805,6 +808,23 @@
     {"id": "fr_moucher_verb", "box": [760, 20, 430, 140]},
     {"id": "fr_enrhumer_verb", "box": [760, 175, 450, 140]},
     {"id": "fr_dilater_verb", "box": [760, 500, 420, 160]}
+   ]
+  },
+  "retour": {
+   "name": "Le retour", "room_id": "R_hospital_02", "image": "hopital/retour.jpg", "backTo": "soins",
+   "alt": "A quiet clinic corridor. A brown door is on the left. The left bookcase holds a mime waking a clothed friend, a mime walking back to a small door, a mime returning a book, and a mime with a suitcase at a tiny door. The right bookcase holds a mime in a green beret stretching, a mime separating blocks, a mime watering seedlings, and a mime listening to a fluttering heart model.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "soins", "label": "Les soins", "hint": "Back through the brown door", "hit": [40, 55, 160, 470]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_ranimer_verb", "box": [390, 20, 340, 130]},
+    {"id": "fr_regagner_verb", "box": [400, 165, 300, 120]},
+    {"id": "fr_restituer_verb", "box": [390, 300, 340, 120]},
+    {"id": "fr_hospitaliser_verb", "box": [400, 450, 280, 160]},
+    {"id": "fr_assouplir_verb", "box": [760, 15, 400, 130]},
+    {"id": "fr_dissocier_verb", "box": [760, 165, 400, 120]},
+    {"id": "fr_proliferer_verb", "box": [760, 300, 420, 130]},
+    {"id": "fr_palpiter_verb", "box": [760, 460, 420, 180]}
    ]
   },
   "dentiste": {
