@@ -125,6 +125,10 @@
   {
    "key": "pointure",
    "short": "La pointure"
+  },
+  {
+   "key": "chiffon",
+   "short": "Le chiffon"
   }
  ],
  "planned": {
@@ -664,6 +668,14 @@
     "fr_digestion_noun",
     "fr_ventilation_noun",
     "fr_boucle_noun"
+   ]
+  },
+  "chiffon": {
+   "only": [
+    "fr_chiffon_noun",
+    "fr_lavage_noun",
+    "fr_haillon_noun",
+    "fr_reflet_noun"
    ]
   },
   "jardin_facade": {
@@ -4475,7 +4487,7 @@
    "room_id": "R_wardrobe_04",
    "image": "maison/pointure.jpg",
    "backTo": "batiment",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A fully clothed salesclerk measures a fully clothed girl's shoe size on a metal gauge. A python with a lump in its middle lies on the next shelf. A white vent puffs a curl of air. A lock of hair and a gold earring lie on the bottom shelf. The brown door on the right leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. A fully clothed salesclerk measures a fully clothed girl's shoe size on a metal gauge. A python with a lump in its middle lies on the next shelf. A white vent puffs a curl of air. A lock of hair and a gold earring lie on the bottom shelf. The brown door on the right leads back. The bricks between the cupboard and the door lead to the rag cupboard.",
    "nameplate": [90, 94],
    "doors": [
     {
@@ -4483,6 +4495,12 @@
      "label": "Le bâtiment",
      "hint": "Back through the brown door",
      "hit": [950, 60, 280, 540]
+    },
+    {
+     "to": "chiffon",
+     "label": "Le chiffon",
+     "hint": "Across the bricks",
+     "hit": [760, 655, 150, 55]
     }
    ],
    "zooms": [],
@@ -4491,6 +4509,29 @@
     {"id": "fr_digestion_noun", "box": [48, 260, 600, 116]},
     {"id": "fr_ventilation_noun", "box": [60, 388, 560, 130]},
     {"id": "fr_boucle_noun", "box": [70, 536, 500, 116]}
+   ]
+  },
+  "chiffon": {
+   "name": "Le chiffon",
+   "room_id": "R_laundry_01",
+   "image": "maison/chiffon.jpg",
+   "backTo": "pointure",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed woman dusts a black telephone with a pink rag. A fully clothed toddler washes a toy volcano in a bucket of suds. A scarecrow in patched rags yawns in a laundry basket. A peacock looks at its reflection in a puddle.",
+   "nameplate": [30, 5],
+   "doors": [
+    {
+     "to": "pointure",
+     "label": "La pointure",
+     "hint": "Back through the brown door",
+     "hit": [8, 72, 165, 520]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_chiffon_noun", "box": [690, 24, 500, 158]},
+    {"id": "fr_lavage_noun", "box": [700, 196, 480, 150]},
+    {"id": "fr_haillon_noun", "box": [730, 364, 460, 145]},
+    {"id": "fr_reflet_noun", "box": [660, 528, 540, 145]}
    ]
   },
   "jardin_facade": {
