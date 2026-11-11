@@ -1,0 +1,106 @@
+{
+  "building": "st_appels",
+  "building_id": "ST_appels",
+  "sector_id": "S04_cafes",
+  "v1_room_id": "ST_communication_seg004",
+  "name": "Rue des Appels",
+  "main": "st_appels",
+  "roomList": [
+    {
+      "key": "st_appels",
+      "short": "Les crieurs"
+    }
+  ],
+  "planned": {
+    "st_appels": {
+      "vocabRoom": "ST_communication_seg004",
+      "only": [
+        "fr_hurler_verb",
+        "fr_parler_verb",
+        "fr_citer_verb",
+        "fr_prononcer_verb",
+        "fr_signifier_verb",
+        "fr_taper_verb"
+      ]
+    }
+  },
+  "rooms": {
+    "st_appels": {
+      "name": "Place des Crieurs · Criers' Square",
+      "room_id": "ST_communication_seg004",
+      "image": "st_appels/st_appels.jpg",
+      "alt": "A sunny square on Rue des Appels, painted in ink and gouache. A mime howls with a wolf; another speaks by a curtained parlor cabinet; one quotes from a blank book; one pronounces a word with a finger raised and a blank card; one points at a blank sign while holding an apple; one types on a typewriter beside a gold coin. The arch on the left leads back to Rue des Saveurs. écrire stays at the town hall.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          90,
+          30,
+          140,
+          150
+        ],
+        "label": "Rue des Saveurs"
+      },
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_hurler_verb",
+          "box": [
+            0,
+            185,
+            230,
+            500
+          ]
+        },
+        {
+          "id": "fr_parler_verb",
+          "box": [
+            245,
+            125,
+            200,
+            510
+          ]
+        },
+        {
+          "id": "fr_citer_verb",
+          "box": [
+            450,
+            135,
+            180,
+            545
+          ]
+        },
+        {
+          "id": "fr_prononcer_verb",
+          "box": [
+            640,
+            165,
+            180,
+            495
+          ]
+        },
+        {
+          "id": "fr_signifier_verb",
+          "box": [
+            870,
+            65,
+            400,
+            345
+          ]
+        },
+        {
+          "id": "fr_taper_verb",
+          "box": [
+            835,
+            420,
+            435,
+            290
+          ]
+        }
+      ]
+    }
+  }
+}
