@@ -1,0 +1,136 @@
+{
+  "building": "st_fourneaux",
+  "building_id": "ST_fourneaux",
+  "sector_id": "S04_cafes",
+  "v1_room_id": "ST_cooking_seg004",
+  "name": "Impasse des Fourneaux",
+  "main": "st_fourneaux",
+  "roomList": [
+    {
+      "key": "st_fourneaux",
+      "short": "Les épices"
+    }
+  ],
+  "planned": {
+    "st_fourneaux": {
+      "vocabRoom": "ST_cooking_seg004",
+      "only": [
+        "fr_gouter_verb",
+        "fr_deguster_verb",
+        "fr_savourer_verb",
+        "fr_saler_verb",
+        "fr_epicer_verb",
+        "fr_sucrer_verb",
+        "fr_ailler_verb",
+        "fr_farcir_verb",
+        "fr_truffer_verb"
+      ]
+    }
+  },
+  "rooms": {
+    "st_fourneaux": {
+      "name": "Ruelle des Épices · Spice Lane",
+      "room_id": "ST_cooking_seg004",
+      "image": "st_fourneaux/st_fourneaux.jpg",
+      "alt": "A sunny village kitchen on Impasse des Fourneaux, painted in ink and gouache. A mime tastes honey with his tea; a woman in a blowing scarf savors a tart; a tortoise eats a strawberry beside a party popper; a sailor salts potatoes; a cook seasons a pot; a woman sugars a crayfish's tea; two cooks handle garlic and garlic toast; a green-beret mime with a mirror stands by a giant tomato and a telescope; a fairy sprinkles truffle bits on an omelette. The open arch on the left leads back to Rue des Saveurs.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "mapExit": {
+        "box": [
+          180,
+          12,
+          150,
+          58
+        ],
+        "label": "Rue des Saveurs"
+      },
+      "doors": [],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_gouter_verb",
+          "box": [
+            8,
+            100,
+            165,
+            320
+          ]
+        },
+        {
+          "id": "fr_deguster_verb",
+          "box": [
+            185,
+            75,
+            245,
+            335
+          ]
+        },
+        {
+          "id": "fr_savourer_verb",
+          "box": [
+            0,
+            440,
+            420,
+            270
+          ]
+        },
+        {
+          "id": "fr_saler_verb",
+          "box": [
+            435,
+            165,
+            195,
+            515
+          ]
+        },
+        {
+          "id": "fr_epicer_verb",
+          "box": [
+            655,
+            50,
+            180,
+            255
+          ]
+        },
+        {
+          "id": "fr_sucrer_verb",
+          "box": [
+            640,
+            365,
+            200,
+            345
+          ]
+        },
+        {
+          "id": "fr_ailler_verb",
+          "box": [
+            850,
+            40,
+            215,
+            400
+          ]
+        },
+        {
+          "id": "fr_farcir_verb",
+          "box": [
+            1080,
+            25,
+            190,
+            400
+          ]
+        },
+        {
+          "id": "fr_truffer_verb",
+          "box": [
+            1055,
+            450,
+            215,
+            260
+          ]
+        }
+      ]
+    }
+  }
+}
