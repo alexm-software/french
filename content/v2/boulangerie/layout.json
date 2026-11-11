@@ -25,6 +25,10 @@
   {
    "key": "legumes",
    "short": "Les légumes"
+  },
+  {
+   "key": "epicerie",
+   "short": "L'épicerie"
   }
  ],
  "planned": {
@@ -118,6 +122,27 @@
     "fr_saladier_noun",
     "fr_epinard_noun"
    ]
+  },
+  "epicerie": {
+   "vocabRoom": "R_grocery_01",
+   "only": [
+    "fr_creme_noun",
+    "fr_nourriture_noun",
+    "fr_proteine_noun",
+    "fr_fraicheur_noun",
+    "fr_graisse_noun",
+    "fr_biscotte_noun",
+    "fr_laitier_adj",
+    "fr_alimentaire_adj",
+    "fr_supermarche_noun",
+    "fr_caviar_noun",
+    "fr_soja_noun",
+    "fr_aliment_noun",
+    "fr_coca_noun"
+   ]
+  },
+  "claim_grocery_02": {
+   "vocabRoom": "R_grocery_02"
   }
  },
  "rooms": {
@@ -945,6 +970,17 @@
       140,
       420
      ]
+    },
+    {
+     "to": "epicerie",
+     "label": "L'épicerie",
+     "hint": "the cream door with the cheese",
+     "hit": [
+      430,
+      145,
+      165,
+      420
+     ]
     }
    ],
    "zooms": [],
@@ -1108,6 +1144,150 @@
       545,
       165,
       155
+     ]
+    }
+   ]
+  },
+  "epicerie": {
+   "name": "L'épicerie · The grocery",
+   "room_id": "R_grocery_01",
+   "image": "boulangerie/epicerie.jpg",
+   "alt": "A grocery off the market arcade. An open door on the left shows the arcade. On the left table: a jug of cream, a basket of bread cheese and apples, an egg, mint, a jar of white fat, and rusks. A milk can stands near the middle. A grocer in a beret stacks wooden food boxes. On the right: a supermarket shelf, a tin of caviar, a bowl of soybeans, a loaf, and a bottle of cola.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the open door back to the arcade",
+     "hit": [
+      0,
+      15,
+      120,
+      270
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_creme_noun",
+     "box": [
+      0,
+      390,
+      125,
+      175
+     ]
+    },
+    {
+    "id": "fr_nourriture_noun",
+    "box": [
+     130,
+     300,
+     250,
+     180
+    ]
+    },
+    {
+     "id": "fr_proteine_noun",
+     "box": [
+      0,
+      575,
+      140,
+      140
+     ]
+    },
+    {
+     "id": "fr_fraicheur_noun",
+     "box": [
+      145,
+      530,
+      100,
+      150
+     ]
+    },
+    {
+     "id": "fr_graisse_noun",
+     "box": [
+      255,
+      500,
+      95,
+      160
+     ]
+    },
+    {
+     "id": "fr_biscotte_noun",
+     "box": [
+      360,
+      490,
+      150,
+      145
+     ]
+    },
+    {
+    "id": "fr_laitier_adj",
+    "box": [
+     500,
+     280,
+     110,
+     195
+    ]
+    },
+    {
+     "id": "fr_alimentaire_adj",
+     "box": [
+      620,
+      330,
+      210,
+      160
+     ]
+    },
+    {
+     "id": "fr_supermarche_noun",
+     "box": [
+      1040,
+      250,
+      210,
+      210
+     ]
+    },
+    {
+     "id": "fr_caviar_noun",
+     "box": [
+      880,
+      520,
+      90,
+      100
+     ]
+    },
+    {
+     "id": "fr_soja_noun",
+     "box": [
+      890,
+      630,
+      120,
+      85
+     ]
+    },
+    {
+     "id": "fr_aliment_noun",
+     "box": [
+      1020,
+      545,
+      165,
+      120
+     ]
+    },
+    {
+     "id": "fr_coca_noun",
+     "box": [
+      1185,
+      470,
+      85,
+      220
      ]
     }
    ]
