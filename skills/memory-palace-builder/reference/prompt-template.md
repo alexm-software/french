@@ -28,15 +28,15 @@ DOORS AND EXITS: {door 1: to X, where, painted as a door that looks like X with 
 
 GROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.
 
-FIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise. A model, toy, or figurine cue sits at object scale on the shared surface with the people. It is not a life-size animal or a landscape.
+FIGURES: word figures and their named helpers are distinct and recognizable. Every figure is fully clothed and age-appropriate. No towels, bathing, or undress, even in a bathroom. A washing or grooming word is a fully clothed figure or the object alone. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise. A model, toy, or figurine cue sits at object scale on the shared surface with the people. It is not a life-size animal or a landscape.
 
 TEXT: only declared natural scene text {text_in_image list, e.g. "CANTINE" on the sign over the counter | none}. Blank sign plates: {where}. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.
 
-CONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.
+CONTENT: all ages; every figure fully clothed and age-appropriate, with no towels, bathing, or undress, even in a bathroom; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.
 
 VARIETY: do not repeat existing hook motifs {used motifs, e.g. the duck, the red toy car}. This room differs by {how this room's camera, layout, focal action and light differ}.
 
-AVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures.
+AVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures, towels, bathing, undress.
 ```
 
 ## Accumulated failure rules
