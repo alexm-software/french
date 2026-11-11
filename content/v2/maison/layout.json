@@ -133,6 +133,10 @@
   {
    "key": "edifice",
    "short": "L'édifice"
+  },
+  {
+   "key": "convive",
+   "short": "Le convive"
   }
  ],
  "planned": {
@@ -688,6 +692,14 @@
     "fr_logis_noun",
     "fr_jardinage_noun",
     "fr_bandeau_noun"
+   ]
+  },
+  "convive": {
+   "only": [
+    "fr_convive_noun",
+    "fr_ancetre_noun",
+    "fr_parental_adj",
+    "fr_paternel_adj"
    ]
   },
   "jardin_facade": {
@@ -4557,7 +4569,7 @@
    "room_id": "R_entrance_02",
    "image": "maison/edifice.jpg",
    "backTo": "chiffon",
-   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed man stacks giant dice into a tower. A hedgehog looks out of a tiny wooden lodge. A fully clothed woman kneels and plants pansies. A fully clothed drummer in a headband stirs a bowl of dough.",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. A fully clothed man stacks giant dice into a tower. A hedgehog looks out of a tiny wooden lodge. A fully clothed woman kneels and plants pansies. A fully clothed drummer in a headband stirs a bowl of dough. The bricks between the door and the cupboard lead to the guest cupboard.",
    "nameplate": [32, 5],
    "doors": [
     {
@@ -4565,6 +4577,12 @@
      "label": "Le chiffon",
      "hint": "Back through the brown door",
      "hit": [70, 90, 200, 490]
+    },
+    {
+     "to": "convive",
+     "label": "Le convive",
+     "hint": "Across the bricks",
+     "hit": [300, 655, 200, 55]
     }
    ],
    "zooms": [],
@@ -4573,6 +4591,29 @@
     {"id": "fr_logis_noun", "box": [760, 220, 400, 115]},
     {"id": "fr_jardinage_noun", "box": [690, 350, 500, 145]},
     {"id": "fr_bandeau_noun", "box": [700, 510, 480, 155]}
+   ]
+  },
+  "convive": {
+   "name": "Le convive",
+   "room_id": "R_dining",
+   "image": "maison/convive.jpg",
+   "backTo": "edifice",
+   "alt": "A pale wall and a brick floor. An arched brown door is on the left. A tall wooden cupboard stands in the centre. Two fully clothed guests clink teacups. An oval frame holds a bearded knight in armor. Tall riding boots stand beside tiny baby booties. A penguin balances an egg while a fully clothed woman in a coat writes in a notebook.",
+   "nameplate": [88, 5],
+   "doors": [
+    {
+     "to": "edifice",
+     "label": "L'édifice",
+     "hint": "Back through the brown door",
+     "hit": [40, 55, 270, 540]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_convive_noun", "box": [430, 18, 440, 188]},
+    {"id": "fr_ancetre_noun", "box": [450, 214, 400, 140]},
+    {"id": "fr_parental_adj", "box": [430, 370, 440, 115]},
+    {"id": "fr_paternel_adj", "box": [420, 505, 460, 150]}
    ]
   },
   "jardin_facade": {
