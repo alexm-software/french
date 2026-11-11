@@ -38,6 +38,58 @@
    "short": "La fête"
   },
   {
+   "key": "couloir",
+   "short": "Le couloir"
+  },
+  {
+   "key": "couloir2",
+   "short": "Second couloir"
+  },
+  {
+   "key": "etat",
+   "short": "L'état"
+  },
+  {
+   "key": "changement",
+   "short": "Le changement"
+  },
+  {
+   "key": "effluves",
+   "short": "Les effluves"
+  },
+  {
+   "key": "devoir",
+   "short": "Le devoir"
+  },
+  {
+   "key": "lien",
+   "short": "Le lien"
+  },
+  {
+   "key": "garde",
+   "short": "La garde"
+  },
+  {
+   "key": "forme",
+   "short": "La forme"
+  },
+  {
+   "key": "trouble",
+   "short": "L'imbroglio"
+  },
+  {
+   "key": "place",
+   "short": "La place"
+  },
+  {
+   "key": "traces",
+   "short": "Les traces"
+  },
+  {
+   "key": "teintes",
+   "short": "Les teintes"
+  },
+  {
    "key": "ouie",
    "short": "L'ouïe"
   },
@@ -376,6 +428,151 @@
     "fr_surveiller_verb",
     "fr_controler_verb"
    ]
+  },
+  "etat": {
+   "only": [
+    "fr_etre_verb",
+    "fr_exister_verb",
+    "fr_sembler_verb",
+    "fr_durer_verb",
+    "fr_subsister_verb",
+    "fr_perdurer_verb",
+    "fr_valoir_verb",
+    "fr_suffire_verb",
+    "fr_dependre_verb",
+    "fr_consister_verb"
+   ]
+  },
+  "changement": {
+   "only": [
+    "fr_disparaitre_verb",
+    "fr_naitre_verb",
+    "fr_separer_verb",
+    "fr_survenir_verb",
+    "fr_resulter_verb",
+    "fr_unifier_verb",
+    "fr_constituer_verb",
+    "fr_dissiper_verb"
+   ]
+  },
+  "effluves": {
+   "only": [
+    "fr_parfumer_verb",
+    "fr_repandre_verb",
+    "fr_diffuser_verb",
+    "fr_disperser_verb",
+    "fr_eparpiller_verb",
+    "fr_suer_verb",
+    "fr_entourer_verb",
+    "fr_exhiber_verb"
+   ]
+  },
+  "devoir": {
+   "only": [
+    "fr_agir_verb",
+    "fr_maintenir_verb",
+    "fr_pouvoir_verb",
+    "fr_exiger_verb",
+    "fr_devoir_verb",
+    "fr_patienter_verb",
+    "fr_meriter_verb",
+    "fr_recenser_verb",
+    "fr_passionner_verb",
+    "fr_falloir_verb"
+   ]
+  },
+  "lien": {
+   "only": [
+    "fr_appartenir_verb",
+    "fr_contenir_verb",
+    "fr_comporter_verb",
+    "fr_inclure_verb",
+    "fr_renfermer_verb",
+    "fr_baser_verb",
+    "fr_apparenter_verb",
+    "fr_comparer_verb",
+    "fr_coincider_verb",
+    "fr_equivaloir_verb"
+   ]
+  },
+  "garde": {
+   "only": [
+    "fr_preserver_verb",
+    "fr_entretenir_verb",
+    "fr_persister_verb",
+    "fr_perpetuer_verb",
+    "fr_detenir_verb",
+    "fr_munir_verb",
+    "fr_confier_verb",
+    "fr_dedier_verb"
+   ]
+  },
+  "forme": {
+   "only": [
+    "fr_tasser_verb",
+    "fr_emboiter_verb",
+    "fr_representer_verb",
+    "fr_cadrer_verb",
+    "fr_depeindre_verb",
+    "fr_contempler_verb",
+    "fr_confiner_verb",
+    "fr_encastrer_verb"
+   ]
+  },
+  "trouble": {
+   "only": [
+    "fr_compliquer_verb",
+    "fr_manquer_verb",
+    "fr_egarer_verb",
+    "fr_negliger_verb",
+    "fr_pretendre_verb",
+    "fr_indigner_verb",
+    "fr_presumer_verb",
+    "fr_endetter_verb",
+    "fr_contenter_verb"
+   ]
+  },
+  "place": {
+   "only": [
+    "fr_inaugurer_verb",
+    "fr_reconcilier_verb",
+    "fr_concilier_verb",
+    "fr_assieger_verb",
+    "fr_rapatrier_verb",
+    "fr_abolir_verb",
+    "fr_leguer_verb",
+    "fr_adonner_verb",
+    "fr_dater_verb",
+    "fr_improviser_verb",
+    "fr_incarner_verb"
+   ]
+  },
+  "traces": {
+   "only": [
+    "fr_inspecter_verb",
+    "fr_experimenter_verb",
+    "fr_detecter_verb",
+    "fr_empreindre_verb",
+    "fr_attester_verb",
+    "fr_souscrire_verb",
+    "fr_etoiler_verb",
+    "fr_flirter_verb"
+   ]
+  },
+  "teintes": {
+   "only": [
+    "fr_contraster_verb",
+    "fr_teinter_verb",
+    "fr_desorienter_verb",
+    "fr_ecorcher_verb",
+    "fr_depouiller_verb"
+   ]
+  },
+  "couloir": {
+   "only": []
+  },
+  "couloir2": {
+   "only": []
   }
  },
  "rooms": {
@@ -1445,9 +1642,9 @@
      ]
     },
     {
-     "to": "ouie",
-     "label": "L'ouïe",
-     "hint": "the teal door with the painted ear, just right of the orange door",
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear, just right of the orange door, into the verb hall",
      "hit": [
       150,
       95,
@@ -1459,17 +1656,17 @@
    "zooms": [],
    "items": [
     {
-   "id": "fr_cool_adj",
-   "box": [
-    380,
-    195,
-    85,
-    275
-   ],
-   "labelAt": [
-    430,
-    168
-   ]
+     "id": "fr_cool_adj",
+     "box": [
+      380,
+      195,
+      85,
+      275
+     ],
+     "labelAt": [
+      430,
+      168
+     ]
     },
     {
      "id": "fr_turbulent_adj",
@@ -2761,12 +2958,12 @@
     50,
     4.5
    ],
-   "backTo": "fete",
+   "backTo": "couloir",
    "doors": [
     {
-     "to": "fete",
-     "label": "La fête",
-     "hint": "the teal door with the painted ear on the left wall, back to the party room",
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left, back to the verb hall",
      "hit": [
       16,
       48,
@@ -2796,17 +2993,17 @@
      ]
     },
     {
-   "id": "fr_montrer_verb",
-   "box": [
-    325,
-    160,
-    145,
-    290
-   ],
-   "labelAt": [
-    397,
-    148
-   ]
+     "id": "fr_montrer_verb",
+     "box": [
+      325,
+      160,
+      145,
+      290
+     ],
+     "labelAt": [
+      397,
+      148
+     ]
     },
     {
      "id": "fr_exposer_verb",
@@ -2872,6 +3069,1331 @@
      ]
     }
    ]
+  },
+  "etat": {
+   "name": "La salle de l'état · How things are",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/etat.jpg",
+   "alt": "A gallery of how things are. A costumed fox stands on a little stage under a lamp. A tiny unicorn steps from a cloud. A cat with a feather duster casts a dragon shadow. A candle burns in a window. A tower of coconuts stands by a stone tower. A medal outshines a crown. Two children and three ducks share one umbrella. A monkey hangs from a vine above a plate of jam on toast. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_etre_verb",
+     "box": [
+      145,
+      250,
+      140,
+      250
+     ]
+    },
+    {
+     "id": "fr_exister_verb",
+     "box": [
+      20,
+      500,
+      170,
+      190
+     ]
+    },
+    {
+     "id": "fr_sembler_verb",
+     "box": [
+      300,
+      370,
+      150,
+      210
+     ]
+    },
+    {
+     "id": "fr_durer_verb",
+     "box": [
+      500,
+      70,
+      190,
+      240
+     ]
+    },
+    {
+     "id": "fr_subsister_verb",
+     "box": [
+      500,
+      370,
+      145,
+      200
+     ]
+    },
+    {
+     "id": "fr_perdurer_verb",
+     "box": [
+      660,
+      310,
+      140,
+      270
+     ]
+    },
+    {
+     "id": "fr_valoir_verb",
+     "box": [
+      830,
+      160,
+      150,
+      180
+     ]
+    },
+    {
+     "id": "fr_suffire_verb",
+     "box": [
+      800,
+      400,
+      230,
+      230
+     ]
+    },
+    {
+     "id": "fr_dependre_verb",
+     "box": [
+      1080,
+      20,
+      185,
+      350
+     ]
+    },
+    {
+     "id": "fr_consister_verb",
+     "box": [
+      1100,
+      500,
+      165,
+      175
+     ]
+    }
+   ]
+  },
+  "changement": {
+   "name": "La salle du changement · Things changing",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/changement.jpg",
+   "alt": "A room of things changing. A rabbit pops through a top hat. A baby-bottle race car sits nearby. An owl in a striped shirt separates two kittens. A surveyor measures while a cow sits on a map. Plates crash as a black cat passes. A conductor leads a mouse, a bird, and a frog. A pebble mosaic forms a cat. A heron stands as fog thins. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_disparaitre_verb",
+     "box": [
+      18,
+      400,
+      145,
+      270
+     ]
+    },
+    {
+     "id": "fr_naitre_verb",
+     "box": [
+      230,
+      440,
+      185,
+      155
+     ]
+    },
+    {
+     "id": "fr_separer_verb",
+     "box": [
+      170,
+      120,
+      210,
+      270
+     ]
+    },
+    {
+     "id": "fr_survenir_verb",
+     "box": [
+      430,
+      70,
+      290,
+      350
+     ]
+    },
+    {
+     "id": "fr_resulter_verb",
+     "box": [
+      430,
+      500,
+      330,
+      200
+     ]
+    },
+    {
+     "id": "fr_unifier_verb",
+     "box": [
+      740,
+      40,
+      330,
+      330
+     ]
+    },
+    {
+     "id": "fr_constituer_verb",
+     "box": [
+      790,
+      480,
+      390,
+      220
+     ]
+    },
+    {
+     "id": "fr_dissiper_verb",
+     "box": [
+      1120,
+      70,
+      150,
+      370
+     ]
+    }
+   ]
+  },
+  "effluves": {
+   "name": "La salle des effluves · Spreading and scent",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/effluves.jpg",
+   "alt": "Scent and things spreading. A skunk holds lavender. A panda spills honey. Pigeons perch on a tower. A girl sneezes a dandelion apart. Papers blow off a pillar. A boy sweats. A peacock shows its tail. A small group surrounds a statue. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_parfumer_verb",
+     "box": [
+      8,
+      400,
+      155,
+      280
+     ]
+    },
+    {
+     "id": "fr_repandre_verb",
+     "box": [
+      175,
+      380,
+      270,
+      320
+     ]
+    },
+    {
+     "id": "fr_diffuser_verb",
+     "box": [
+      250,
+      60,
+      190,
+      250
+     ]
+    },
+    {
+     "id": "fr_disperser_verb",
+     "box": [
+      460,
+      190,
+      155,
+      340
+     ]
+    },
+    {
+     "id": "fr_eparpiller_verb",
+     "box": [
+      630,
+      150,
+      150,
+      280
+     ]
+    },
+    {
+     "id": "fr_suer_verb",
+     "box": [
+      800,
+      290,
+      160,
+      390
+     ]
+    },
+    {
+     "id": "fr_entourer_verb",
+     "box": [
+      900,
+      50,
+      240,
+      200
+     ]
+    },
+    {
+     "id": "fr_exhiber_verb",
+     "box": [
+      990,
+      300,
+      270,
+      390
+     ]
+    }
+   ]
+  },
+  "devoir": {
+   "name": "La salle du devoir · What one must do",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/devoir.jpg",
+   "alt": "Duty and ability. Three officers follow a map. A child in a green cape carries a toy car. A mayor mouse medals an ant. A girl in a red cape reaches for a kite. A boy folds his arms by a cookie and a stack of paper. A man holds a ladder. A tortoise waits by a plain pole. Sheep stand together. A pony watches a butterfly. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_agir_verb",
+     "box": [
+      145,
+      70,
+      150,
+      250
+     ]
+    },
+    {
+     "id": "fr_maintenir_verb",
+     "box": [
+      300,
+      55,
+      140,
+      300
+     ]
+    },
+    {
+     "id": "fr_pouvoir_verb",
+     "box": [
+      450,
+      240,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_exiger_verb",
+     "box": [
+      8,
+      360,
+      75,
+      230
+     ]
+    },
+    {
+     "id": "fr_devoir_verb",
+     "box": [
+      160,
+      430,
+      170,
+      250
+     ]
+    },
+    {
+     "id": "fr_patienter_verb",
+     "box": [
+      640,
+      230,
+      80,
+      130
+     ]
+    },
+    {
+     "id": "fr_meriter_verb",
+     "box": [
+      540,
+      440,
+      250,
+      250
+     ]
+    },
+    {
+     "id": "fr_recenser_verb",
+     "box": [
+      740,
+      220,
+      180,
+      170
+     ]
+    },
+    {
+     "id": "fr_passionner_verb",
+     "box": [
+      1000,
+      70,
+      250,
+      200
+     ]
+    },
+    {
+     "id": "fr_falloir_verb",
+     "box": [
+      960,
+      300,
+      300,
+      380
+     ]
+    }
+   ]
+  },
+  "lien": {
+   "name": "La salle du lien · Belonging and containing",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/lien.jpg",
+   "alt": "Belonging and containing. A snowman and a lost glove. A giraffe and a ten-scoop cone. An open lunchbox. A sandwich big enough for a picnic. A red barn. A woman shows one blue bead. Families stand together. Two boys and one coin. A pile of eggs and one gold egg. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_appartenir_verb",
+     "box": [
+      8,
+      400,
+      155,
+      290
+     ]
+    },
+    {
+     "id": "fr_contenir_verb",
+     "box": [
+      170,
+      70,
+      200,
+      300
+     ]
+    },
+    {
+     "id": "fr_comporter_verb",
+     "box": [
+      165,
+      540,
+      165,
+      165
+     ]
+    },
+    {
+     "id": "fr_inclure_verb",
+     "box": [
+      400,
+      440,
+      300,
+      230
+     ]
+    },
+    {
+     "id": "fr_renfermer_verb",
+     "box": [
+      480,
+      150,
+      200,
+      220
+     ]
+    },
+    {
+     "id": "fr_baser_verb",
+     "box": [
+      720,
+      300,
+      80,
+      100
+     ]
+    },
+    {
+     "id": "fr_comparer_verb",
+     "box": [
+      730,
+      160,
+      120,
+      130
+     ]
+    },
+    {
+     "id": "fr_apparenter_verb",
+     "box": [
+      870,
+      80,
+      240,
+      340
+     ]
+    },
+    {
+     "id": "fr_coincider_verb",
+     "box": [
+      740,
+      520,
+      270,
+      180
+     ]
+    },
+    {
+     "id": "fr_equivaloir_verb",
+     "box": [
+      1050,
+      420,
+      210,
+      200
+     ]
+    }
+   ]
+  },
+  "garde": {
+   "name": "La salle de la garde · Keeping and caring",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/garde.jpg",
+   "alt": "Keeping and caring. Jars of jam and a grandmother. A man oils a tall clock. A woodpecker knocks. Another grandmother shares a recipe book. A librarian sits with a boy and a stack of books. A soldier fits a canteen on a mule. A girl whispers to a snail. A man writes in a book. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_preserver_verb",
+     "box": [
+      8,
+      340,
+      170,
+      340
+     ]
+    },
+    {
+     "id": "fr_entretenir_verb",
+     "box": [
+      190,
+      70,
+      180,
+      360
+     ]
+    },
+    {
+     "id": "fr_persister_verb",
+     "box": [
+      380,
+      110,
+      110,
+      200
+     ]
+    },
+    {
+     "id": "fr_perpetuer_verb",
+     "box": [
+      400,
+      330,
+      250,
+      320
+     ]
+    },
+    {
+     "id": "fr_detenir_verb",
+     "box": [
+      660,
+      160,
+      180,
+      250
+     ]
+    },
+    {
+     "id": "fr_munir_verb",
+     "box": [
+      860,
+      140,
+      220,
+      280
+     ]
+    },
+    {
+     "id": "fr_confier_verb",
+     "box": [
+      860,
+      430,
+      200,
+      250
+     ]
+    },
+    {
+     "id": "fr_dedier_verb",
+     "box": [
+      1080,
+      250,
+      180,
+      400
+     ]
+    }
+   ]
+  },
+  "forme": {
+   "name": "La salle de la forme · Making and fitting",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/forme.jpg",
+   "alt": "Making and fitting. A girl packs a suitcase. Blocks fill a box. A boy holds a family drawing. A photographer frames a toy car. A painter depicts a sunset. A cat sits in a square of sun. A beaver fits a log into a wall. A cat watches the sunset from the window. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir2",
+   "doors": [
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tasser_verb",
+     "box": [
+      165,
+      210,
+      220,
+      260
+     ]
+    },
+    {
+     "id": "fr_emboiter_verb",
+     "box": [
+      20,
+      500,
+      210,
+      200
+     ]
+    },
+    {
+     "id": "fr_representer_verb",
+     "box": [
+      410,
+      150,
+      155,
+      320
+     ]
+    },
+    {
+     "id": "fr_cadrer_verb",
+     "box": [
+      580,
+      150,
+      200,
+      330
+     ]
+    },
+    {
+     "id": "fr_depeindre_verb",
+     "box": [
+      800,
+      140,
+      180,
+      300
+     ]
+    },
+    {
+     "id": "fr_contempler_verb",
+     "box": [
+      1080,
+      30,
+      185,
+      250
+     ]
+    },
+    {
+     "id": "fr_confiner_verb",
+     "box": [
+      470,
+      510,
+      150,
+      160
+     ]
+    },
+    {
+     "id": "fr_encastrer_verb",
+     "box": [
+      900,
+      440,
+      360,
+      260
+     ]
+    }
+   ]
+  },
+  "trouble": {
+   "name": "La salle de l'imbroglio · Small troubles",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/trouble.jpg",
+   "alt": "Small troubles, gently. A kitten tangles yarn. A monkey misses a banana. A man searches a pile of clothes. A plant droops on a shelf. A swan and a duck dispute a place. A squirrel holds an acorn. A boy lifts a large trophy. A detective offers pie to a dog. A cow holds a pat of butter. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir2",
+   "doors": [
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_compliquer_verb",
+     "box": [
+      8,
+      400,
+      190,
+      190
+     ]
+    },
+    {
+     "id": "fr_manquer_verb",
+     "box": [
+      180,
+      50,
+      200,
+      300
+     ]
+    },
+    {
+     "id": "fr_egarer_verb",
+     "box": [
+      420,
+      150,
+      210,
+      250
+     ]
+    },
+    {
+     "id": "fr_negliger_verb",
+     "box": [
+      1160,
+      10,
+      110,
+      160
+     ]
+    },
+    {
+     "id": "fr_pretendre_verb",
+     "box": [
+      820,
+      70,
+      150,
+      330
+     ]
+    },
+    {
+     "id": "fr_indigner_verb",
+     "box": [
+      990,
+      170,
+      160,
+      230
+     ]
+    },
+    {
+     "id": "fr_presumer_verb",
+     "box": [
+      200,
+      430,
+      400,
+      270
+     ]
+    },
+    {
+     "id": "fr_endetter_verb",
+     "box": [
+      660,
+      340,
+      130,
+      170
+     ]
+    },
+    {
+     "id": "fr_contenter_verb",
+     "box": [
+      900,
+      430,
+      360,
+      270
+     ]
+    }
+   ]
+  },
+  "place": {
+   "name": "La salle de la place · Public moments",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/place.jpg",
+   "alt": "Public moments. A goose in a top hat cuts a ribbon on a tiny bridge. Ants besiege a sugar bowl. A stork flies with a toy plane toward a nest. A king tosses papers from a window. An officer gives a girl a pocket watch. A baker offers doughnuts. An archaeologist studies a vase. A boy plays a saxophone. A duck holds a watering can. Owls sit by a book and a swing. A puppy and a bowl of berries. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir2",
+   "doors": [
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_inaugurer_verb",
+     "box": [
+      145,
+      140,
+      220,
+      250
+     ]
+    },
+    {
+     "id": "fr_reconcilier_verb",
+     "box": [
+      8,
+      430,
+      200,
+      260
+     ]
+    },
+    {
+     "id": "fr_concilier_verb",
+     "box": [
+      220,
+      390,
+      100,
+      140
+     ]
+    },
+    {
+     "id": "fr_assieger_verb",
+     "box": [
+      390,
+      200,
+      190,
+      260
+     ]
+    },
+    {
+     "id": "fr_rapatrier_verb",
+     "box": [
+      600,
+      40,
+      180,
+      180
+     ]
+    },
+    {
+     "id": "fr_abolir_verb",
+     "box": [
+      1080,
+      30,
+      190,
+      250
+     ]
+    },
+    {
+     "id": "fr_leguer_verb",
+     "box": [
+      900,
+      190,
+      170,
+      200
+     ]
+    },
+    {
+     "id": "fr_adonner_verb",
+     "box": [
+      1000,
+      440,
+      260,
+      260
+     ]
+    },
+    {
+     "id": "fr_dater_verb",
+     "box": [
+      740,
+      430,
+      180,
+      250
+     ]
+    },
+    {
+     "id": "fr_improviser_verb",
+     "box": [
+      560,
+      490,
+      180,
+      200
+     ]
+    },
+    {
+     "id": "fr_incarner_verb",
+     "box": [
+      340,
+      500,
+      170,
+      200
+     ]
+    }
+   ]
+  },
+  "traces": {
+   "name": "La salle des traces · Clues and marks",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/traces.jpg",
+   "alt": "Clues. An owl holds a magnifying glass. A mouse works a pump beside cheese. A dog sniffs a handbag. Another dog leaves a paw print in plaster. A parrot perches. A mouse holds cheese. A peacock shows its tail. A girl places stars on the ceiling. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir2",
+   "doors": [
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_inspecter_verb",
+     "box": [
+      140,
+      170,
+      170,
+      300
+     ]
+    },
+    {
+     "id": "fr_experimenter_verb",
+     "box": [
+      5,
+      500,
+      190,
+      200
+     ]
+    },
+    {
+     "id": "fr_detecter_verb",
+     "box": [
+      370,
+      270,
+      230,
+      190
+     ]
+    },
+    {
+     "id": "fr_empreindre_verb",
+     "box": [
+      220,
+      500,
+      340,
+      200
+     ]
+    },
+    {
+     "id": "fr_attester_verb",
+     "box": [
+      1080,
+      40,
+      185,
+      250
+     ]
+    },
+    {
+     "id": "fr_souscrire_verb",
+     "box": [
+      640,
+      500,
+      160,
+      180
+     ]
+    },
+    {
+     "id": "fr_etoiler_verb",
+     "box": [
+      860,
+      15,
+      200,
+      310
+     ]
+    },
+    {
+     "id": "fr_flirter_verb",
+     "box": [
+      900,
+      380,
+      360,
+      310
+     ]
+    }
+   ]
+  },
+  "teintes": {
+   "name": "La salle des teintes · Color and scrapes",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/teintes.jpg",
+   "alt": "Color and small scrapes. A black cat stands in snow. A painter tints a sheep green. A duck stands by a carousel. A puppy with a bandage sits by a rope net. A nurse cat waits. A raccoon empties a picnic basket. A teal ear-door is on the left.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir2",
+   "doors": [
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the teal door with the painted ear on the left",
+     "hit": [
+      18,
+      45,
+      108,
+      275
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_contraster_verb",
+     "box": [
+      10,
+      410,
+      155,
+      210
+     ]
+    },
+    {
+     "id": "fr_teinter_verb",
+     "box": [
+      185,
+      90,
+      350,
+      340
+     ]
+    },
+    {
+     "id": "fr_desorienter_verb",
+     "box": [
+      560,
+      230,
+      210,
+      180
+     ]
+    },
+    {
+     "id": "fr_ecorcher_verb",
+     "box": [
+      800,
+      270,
+      200,
+      160
+     ]
+    },
+    {
+     "id": "fr_depouiller_verb",
+     "box": [
+      500,
+      470,
+      350,
+      230
+     ]
+    }
+   ]
+  },
+  "couloir": {
+   "name": "Le couloir des verbes · The verb hall",
+   "room_id": "ST_existence_seg001",
+   "image": "musee/couloir.jpg",
+   "alt": "A lantern-lit hall of seven doors: teal with an ear, green with a fox, cream with a candle, red with a top hat, purple with a feather, navy with a ladder, and brown with an arch.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "fete",
+   "doors": [
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "the teal door with the ear, back to the party room",
+     "hit": [
+      40,
+      175,
+      110,
+      370
+     ]
+    },
+    {
+     "to": "ouie",
+     "label": "L'ouïe",
+     "hint": "the green door with the fox",
+     "hit": [
+      210,
+      185,
+      130,
+      355
+     ]
+    },
+    {
+     "to": "etat",
+     "label": "L'état",
+     "hint": "the cream door with the candle",
+     "hit": [
+      385,
+      185,
+      140,
+      350
+     ]
+    },
+    {
+     "to": "changement",
+     "label": "Le changement",
+     "hint": "the red door with the top hat",
+     "hit": [
+      570,
+      185,
+      145,
+      350
+     ]
+    },
+    {
+     "to": "effluves",
+     "label": "Les effluves",
+     "hint": "the purple door with the feather",
+     "hit": [
+      760,
+      185,
+      140,
+      350
+     ]
+    },
+    {
+     "to": "devoir",
+     "label": "Le devoir",
+     "hint": "the navy door with the ladder",
+     "hit": [
+      945,
+      185,
+      140,
+      350
+     ]
+    },
+    {
+     "to": "couloir2",
+     "label": "Le second couloir",
+     "hint": "the brown door with the arch",
+     "hit": [
+      1125,
+      180,
+      125,
+      370
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": []
+  },
+  "couloir2": {
+   "name": "Le second couloir · The second hall",
+   "room_id": "ST_existence_seg002",
+   "image": "musee/couloir2.jpg",
+   "alt": "A second hall: an arch back to the first corridor, then a gold frame door, a grey yarn door, a red ribbon door, a blue magnifying-glass door, and an orange paintbrush door.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "couloir",
+   "doors": [
+    {
+     "to": "couloir",
+     "label": "Le couloir",
+     "hint": "the arched opening on the left, back to the first hall",
+     "hit": [
+      8,
+      150,
+      160,
+      390
+     ]
+    },
+    {
+     "to": "forme",
+     "label": "La forme",
+     "hint": "the gold door with the picture frame",
+     "hit": [
+      250,
+      185,
+      160,
+      350
+     ]
+    },
+    {
+     "to": "trouble",
+     "label": "L'imbroglio",
+     "hint": "the grey door with the yarn",
+     "hit": [
+      455,
+      185,
+      160,
+      350
+     ]
+    },
+    {
+     "to": "place",
+     "label": "La place",
+     "hint": "the red door with the ribbon",
+     "hit": [
+      665,
+      185,
+      160,
+      350
+     ]
+    },
+    {
+     "to": "traces",
+     "label": "Les traces",
+     "hint": "the blue door with the magnifying glass",
+     "hit": [
+      875,
+      185,
+      165,
+      350
+     ]
+    },
+    {
+     "to": "teintes",
+     "label": "Les teintes",
+     "hint": "the orange door with the paintbrush",
+     "hit": [
+      1080,
+      185,
+      165,
+      350
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": []
   }
  }
 }
