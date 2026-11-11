@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "left open gate",
+    "appearance": "open gate back to Rue des Saveurs",
+    "arrival": "Rue des Coureurs · Runners' Lane"
+  },
+  "places": {
+    "st_pas": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "Rue des Coureurs · Runners' Lane",
+      "camera": "from the lane toward the cobbles"
+    },
+    "avenues": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "Les avenues · Avenue Passage",
+      "camera": "from the passage toward the four openings",
+      "within": "st_pas"
+    },
+    "traversee": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "La traversée · Crossing Street",
+      "camera": "from the crossing toward the green door",
+      "within": "avenues"
+    },
+    "voyageurs": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Les voyageurs · Travelers' Quay",
+      "camera": "from the quay toward the blue door",
+      "within": "avenues"
+    },
+    "promeneurs": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Les promeneurs · Walkers' Alley",
+      "camera": "from the alley toward the yellow door",
+      "within": "avenues"
+    },
+    "descente": {
+      "kind": "room",
+      "level": "cellar landing",
+      "landmark": "La descente · Downhill Landing",
+      "camera": "from the landing toward the stair",
+      "within": "avenues"
+    }
+  },
+  "passages": {
+    "to-avenues": {
+      "kind": "path",
+      "appearance": "cobbles in front of the hurrying mime",
+      "ends": [
+        {"place": "st_pas", "where": "foreground cobbles", "arrival": "Rue des Coureurs · Runners' Lane"},
+        {"place": "avenues", "where": "left arch", "arrival": "Les avenues · Avenue Passage"}
+      ]
+    },
+    "to-traversee": {
+      "kind": "door",
+      "appearance": "open green door with a white van beyond",
+      "ends": [
+        {"place": "avenues", "where": "green door", "arrival": "Les avenues · Avenue Passage"},
+        {"place": "traversee", "where": "green door", "arrival": "La traversée · Crossing Street"}
+      ]
+    },
+    "to-voyageurs": {
+      "kind": "door",
+      "appearance": "open blue door with toy boats beyond",
+      "ends": [
+        {"place": "avenues", "where": "blue door", "arrival": "Les avenues · Avenue Passage"},
+        {"place": "voyageurs", "where": "blue door", "arrival": "Les voyageurs · Travelers' Quay"}
+      ]
+    },
+    "to-promeneurs": {
+      "kind": "door",
+      "appearance": "open yellow door onto a walk",
+      "ends": [
+        {"place": "avenues", "where": "yellow door", "arrival": "Les avenues · Avenue Passage"},
+        {"place": "promeneurs", "where": "yellow door", "arrival": "Les promeneurs · Walkers' Alley"}
+      ]
+    },
+    "to-descente": {
+      "kind": "stairs",
+      "appearance": "stone stair down to a landing",
+      "ends": [
+        {"place": "avenues", "where": "right-hand stair", "arrival": "Les avenues · Avenue Passage"},
+        {"place": "descente", "where": "stair up", "arrival": "La descente · Downhill Landing"}
+      ]
+    }
+  }
+}
