@@ -33,6 +33,8 @@
       "key": "reparations",
       "short": "Les réparations"
     },
+    {"key": "dossiers", "short": "Les dossiers"},
+    {"key": "presse", "short": "La presse"},
     {
       "key": "atelier",
       "short": "L'atelier"
@@ -111,6 +113,8 @@
     "reparations": {
       "only": ["fr_carreler_verb","fr_demonter_verb","fr_vider_verb","fr_annuler_verb","fr_decoller_verb","fr_recomposer_verb","fr_redonner_verb","fr_reprendre_verb","fr_etablir_verb","fr_envoler_verb"]
     },
+    "dossiers": {"only": ["fr_determiner_verb","fr_resoudre_verb","fr_repertorier_verb","fr_enumerer_verb","fr_occuper_verb","fr_combiner_verb","fr_soutenir_verb","fr_epauler_verb","fr_implanter_verb"]},
+    "presse": {"only": ["fr_extraire_verb","fr_plaquer_verb","fr_reproduire_verb","fr_ceder_verb","fr_supporter_verb","fr_profiter_verb","fr_accabler_verb","fr_aventurer_verb","fr_retravailler_verb"]},
     "etabli": {
       "vocabRoom": "R_industry_01",
       "only": [
@@ -670,7 +674,8 @@
       "alt": "A factory corner with a pale wall and a gray floor. A brown door is on the left. The left bookcase holds a metal dumpster, a mime packing a wooden crate, a mime building a chair, a mime setting a lamp, and a mime turning a working machine. The right bookcase holds a clothed collector with a toy garbage truck, a mime dropping a bottle into a recycling bin, a mime in a gold beret at a press, a mime unfolding a plan, and a mime holding a new light bulb.",
       "nameplate": [50, 4],
       "doors": [
-        {"to": "usine", "label": "L'usine", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}
+        {"to": "usine", "label": "L'usine", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]},
+        {"to": "dossiers", "label": "Les dossiers", "hint": "Across the floor", "hit": [20, 655, 150, 48]}
       ],
       "zooms": [],
       "items": [
@@ -694,7 +699,8 @@
       "alt": "An artisan workshop with a pale wall and a brick floor. A brown door is on the left. The left bookcase holds a mime forging a horseshoe, a mime engraving a plate, a mime chiseling a bust, a mime at a loom, and a mime stacking blocks. The right bookcase holds a mime with a paper bird, a mime in a gold beret rebuilding a brick wall, a mime tying a parcel, a mime nailing a board, and a mime linking two rings.",
       "nameplate": [50, 4],
       "doors": [
-        {"to": "atelier", "label": "L'atelier", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]}
+        {"to": "atelier", "label": "L'atelier", "hint": "Back through the brown door", "hit": [40, 55, 190, 500]},
+        {"to": "presse", "label": "La presse", "hint": "Across the floor", "hit": [250, 655, 150, 48]}
       ],
       "zooms": [],
       "items": [
@@ -939,6 +945,42 @@
       "building_id": "B12_zone_artisanale",
       "sector_id": "S05_bank",
       "alt": "Close-up of the long counter in the upstairs workshop: a little white factory; tile stacks with two birds perched on them; a sailing ship carries a crate out over a puddle; a model town on stilts; a beaver beside a row of little chairs; a stone house and a small clock; a boy at a little lathe; a craftsman weaves a basket, and a man with a pack stands by a sack of grain. The girl with the watering can and the grandma lean in from the edges."
+    },
+    "dossiers": {
+      "name": "Les dossiers", "room_id": "R_industry_02", "image": "zone_artisanale/dossiers.jpg", "backTo": "fabrique",
+      "alt": "A filing office. A brown door is on the left. A mime points between two arrows. A mime in a gold beret fits a key in a lock. A mime sorts blank cards and another counts blocks. A mime sits at a small desk. On the right, a mime joins gears, a mime in a gold beret holds a beam, a mime rests a hand on a friend's shoulder, and a mime plants a post.",
+      "nameplate": [50, 4],
+      "doors": [{"to": "fabrique", "label": "La fabrique", "hint": "Back through the brown door", "hit": [30, 50, 150, 460]}],
+      "zooms": [],
+      "items": [
+        {"id": "fr_determiner_verb", "box": [400, 15, 280, 110]},
+        {"id": "fr_resoudre_verb", "box": [400, 145, 280, 115]},
+        {"id": "fr_repertorier_verb", "box": [400, 275, 280, 115]},
+        {"id": "fr_enumerer_verb", "box": [400, 405, 280, 100]},
+        {"id": "fr_occuper_verb", "box": [300, 530, 280, 170]},
+        {"id": "fr_combiner_verb", "box": [760, 10, 400, 115]},
+        {"id": "fr_soutenir_verb", "box": [740, 145, 450, 125]},
+        {"id": "fr_epauler_verb", "box": [760, 290, 420, 140]},
+        {"id": "fr_implanter_verb", "box": [760, 450, 400, 190]}
+      ]
+    },
+    "presse": {
+      "name": "La presse", "room_id": "R_industry_01", "image": "zone_artisanale/presse.jpg", "backTo": "forge",
+      "alt": "A metal workshop. A brown door is on the left. A mime in a gold beret pries a board loose. A mime presses a metal sheet. A mime in a gold beret copies a house drawing. A mime bends a bar. On the right, a mime carries a box, a mime sorts scrap wood, a mime stands under stacked boxes, a mime steps on a small footbridge, and a mime sands a little chair.",
+      "nameplate": [50, 4],
+      "doors": [{"to": "forge", "label": "La forge", "hint": "Back through the brown door", "hit": [30, 50, 150, 460]}],
+      "zooms": [],
+      "items": [
+        {"id": "fr_extraire_verb", "box": [340, 5, 300, 140]},
+        {"id": "fr_plaquer_verb", "box": [380, 155, 280, 115]},
+        {"id": "fr_reproduire_verb", "box": [380, 285, 280, 115]},
+        {"id": "fr_ceder_verb", "box": [380, 415, 280, 140]},
+        {"id": "fr_supporter_verb", "box": [760, 10, 400, 115]},
+        {"id": "fr_profiter_verb", "box": [760, 140, 400, 115]},
+        {"id": "fr_accabler_verb", "box": [760, 270, 400, 120]},
+        {"id": "fr_aventurer_verb", "box": [760, 405, 420, 120]},
+        {"id": "fr_retravailler_verb", "box": [800, 545, 250, 140]}
+      ]
     },
     "poste": {
       "name": "La poste",
