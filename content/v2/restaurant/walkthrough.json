@@ -32,6 +32,27 @@
       "level": "ground floor",
       "landmark": "La cour du restaurant · Restaurant Courtyard",
       "camera": "from inside the place toward its visible passage"
+    },
+    "service": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "Le couloir de service · Service Corridor",
+      "camera": "from inside the corridor toward its three openings",
+      "within": "restaurant"
+    },
+    "salle": {
+      "kind": "room",
+      "level": "ground floor",
+      "landmark": "La salle · Dining Hall",
+      "camera": "from inside the dining hall toward the courtyard arch",
+      "within": "restaurant"
+    },
+    "cave": {
+      "kind": "room",
+      "level": "cellar",
+      "landmark": "La cave · Wine Cellar",
+      "camera": "from the cellar toward the stair",
+      "within": "restaurant"
     }
   },
   "passages": {
@@ -80,6 +101,54 @@
           "place": "preparation",
           "where": "sage-green doorway to the court",
           "arrival": "Le plan de préparation · Preparation Bench"
+        }
+      ]
+    },
+    "to-service": {
+      "kind": "path",
+      "appearance": "Open cobbles of the courtyard leading into the service corridor",
+      "ends": [
+        {
+          "place": "restaurant",
+          "where": "foreground cobbles",
+          "arrival": "La cour du restaurant · Restaurant Courtyard"
+        },
+        {
+          "place": "service",
+          "where": "left arch back to the court",
+          "arrival": "Le couloir de service · Service Corridor"
+        }
+      ]
+    },
+    "to-salle": {
+      "kind": "door",
+      "appearance": "Open oak doors between the corridor and the dining hall",
+      "ends": [
+        {
+          "place": "service",
+          "where": "center oak doors",
+          "arrival": "Le couloir de service · Service Corridor"
+        },
+        {
+          "place": "salle",
+          "where": "courtyard arch",
+          "arrival": "La salle · Dining Hall"
+        }
+      ]
+    },
+    "to-cave": {
+      "kind": "stairs",
+      "appearance": "Stone stair between the corridor and the cellar",
+      "ends": [
+        {
+          "place": "service",
+          "where": "right-hand stair",
+          "arrival": "Le couloir de service · Service Corridor"
+        },
+        {
+          "place": "cave",
+          "where": "stair up to the corridor",
+          "arrival": "La cave · Wine Cellar"
         }
       ]
     }
