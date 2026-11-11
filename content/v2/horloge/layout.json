@@ -14,6 +14,10 @@
    "short": "L'escalier"
   },
   {
+   "key": "quand",
+   "short": "Quand"
+  },
+  {
    "key": "fresque",
    "short": "La fresque"
   },
@@ -24,6 +28,10 @@
   {
    "key": "semaines",
    "short": "Les semaines"
+  },
+  {
+   "key": "mois",
+   "short": "Les mois"
   },
   {
    "key": "palier",
@@ -76,6 +84,17 @@
     "fr_jamais_adv",
     "fr_maintenant_adv",
     "fr_tard_adv"
+   ]
+  },
+  "quand": {
+   "only": [
+    "fr_constamment_adv",
+    "fr_apres_demain_adv",
+    "fr_avant_hier_adv",
+    "fr_dernierement_adv",
+    "fr_habituellement_adv",
+    "fr_traditionnellement_adv",
+    "fr_eternellement_adv"
    ]
   },
   "alcove": {
@@ -145,6 +164,17 @@
     "fr_rendez_vous_noun",
     "fr_lundi_noun",
     "fr_week_end_noun"
+   ]
+  },
+  "mois": {
+   "only": [
+    "fr_janvier_noun",
+    "fr_fevrier_noun",
+    "fr_mars_noun",
+    "fr_avril_noun",
+    "fr_aout_noun",
+    "fr_novembre_noun",
+    "fr_decembre_noun"
    ]
   },
   "balcon": {
@@ -524,6 +554,12 @@
       117,
       195
      ]
+    },
+    {
+     "to": "quand",
+     "label": "Quand",
+     "hint": "Across the floor",
+     "hit": [20, 648, 180, 60]
     }
    ],
    "zooms": [
@@ -662,6 +698,27 @@
     }
    ],
    "alt": "Close-up into the alcove under the stairs: two identical gray cats stare at each other through an empty mirror frame, an old man with a beard down to the floor sits in a cobwebbed armchair, a sleepy man in striped pajamas and a nightcap yawns on his packed suitcase, holding up his alarm clock, his bowler hat and umbrella ready beside him, and a girl holds fresh daisies and a sunny mug."
+  },
+  "quand": {
+   "name": "Quand",
+   "room_id": "R_adv_time_02",
+   "image": "horloge/quand.jpg",
+   "backTo": "escalier",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. Two bookcases stand in the middle. One holds a bird in a top hat beside a glass, a man with folded hands by a calendar, a toy van, and a grandmother darning a sock. The other holds a nun with a teacup, a folk dancer in costume, and an oil lamp with a steady flame.",
+   "nameplate": [50, 4],
+   "doors": [
+    {"to": "escalier", "label": "L'escalier", "hint": "Back through the brown door", "hit": [40, 50, 210, 520]}
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_constamment_adv", "box": [395, 60, 220, 125]},
+    {"id": "fr_apres_demain_adv", "box": [405, 192, 230, 150]},
+    {"id": "fr_avant_hier_adv", "box": [405, 352, 210, 100]},
+    {"id": "fr_dernierement_adv", "box": [390, 458, 250, 160]},
+    {"id": "fr_habituellement_adv", "box": [655, 40, 240, 250]},
+    {"id": "fr_traditionnellement_adv", "box": [645, 300, 270, 195]},
+    {"id": "fr_eternellement_adv", "box": [670, 505, 170, 120]}
+   ]
   },
   "fresque": {
    "name": "La fresque du temps · Fresco of Time",
@@ -1034,6 +1091,12 @@
       125,
       169
      ]
+    },
+    {
+     "to": "mois",
+     "label": "Les mois",
+     "hint": "Across the floor",
+     "hit": [20, 650, 180, 58]
     }
    ],
    "zooms": [
@@ -1183,6 +1246,27 @@
     }
    ],
    "alt": "Close-up from the balcony onto the market street: a boy skates to market with his basket, a man carries a basket of strawberries, a schoolboy walks with a new brown satchel and a fishmonger pushes a little blue handcart of fish."
+  },
+  "mois": {
+   "name": "Les mois",
+   "room_id": "R_time_days_01",
+   "image": "horloge/mois.jpg",
+   "backTo": "semaines",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. Two bookcases stand on the right. One holds a jam jar in a wool cap, a clothed child with an ice pack and a paper heart, a model of the planet Mars, and a fishing reel with a fish and a closed umbrella. The other holds an owl in sunglasses and a summer shirt beside a sunflower, a pot of white chrysanthemums, and a small Christmas tree.",
+   "nameplate": [28, 5],
+   "doors": [
+    {"to": "semaines", "label": "Les semaines", "hint": "Back through the brown door", "hit": [40, 40, 230, 530]}
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_janvier_noun", "box": [720, 55, 180, 120]},
+    {"id": "fr_fevrier_noun", "box": [700, 185, 200, 165]},
+    {"id": "fr_mars_noun", "box": [730, 355, 140, 135]},
+    {"id": "fr_avril_noun", "box": [685, 498, 230, 130]},
+    {"id": "fr_aout_noun", "box": [990, 35, 230, 185]},
+    {"id": "fr_novembre_noun", "box": [1000, 225, 190, 175]},
+    {"id": "fr_decembre_noun", "box": [990, 415, 210, 200]}
+   ]
   },
   "palier": {
    "name": "Le palier · Landing",

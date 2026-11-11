@@ -18,6 +18,10 @@
    "short": "Les tracés"
   },
   {
+   "key": "teintes",
+   "short": "Les teintes"
+  },
+  {
    "key": "mesures",
    "short": "Les mesures"
   },
@@ -72,6 +76,15 @@
     "fr_recoin_noun",
     "fr_virage_noun",
     "fr_pointille_noun"
+   ]
+  },
+  "teintes": {
+   "only": [
+    "fr_chatain_adj",
+    "fr_distinct_adj",
+    "fr_varie_adj",
+    "fr_rougeatre_adj",
+    "fr_tricolore_adj"
    ]
   },
   "toile": {
@@ -503,6 +516,25 @@
     {"id": "fr_pointille_noun", "box": [885, 572, 290, 60]}
    ]
   },
+  "teintes": {
+   "name": "Les teintes",
+   "room_id": "R_colors_02",
+   "image": "atelier_couleurs/teintes.jpg",
+   "backTo": "mesures",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. Two bookcases stand in the middle. One holds a doll with chestnut hair and tan shoes, a tray of red buttons and blue buttons, and a tin of colored pencils. The other holds a reddish sunset beside a bowl of pink rouge and a toy bicycle with a blue, white, and red ribbon.",
+   "nameplate": [50, 4],
+   "doors": [
+    {"to": "mesures", "label": "Les mesures", "hint": "Back through the brown door", "hit": [40, 55, 200, 500]}
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_chatain_adj", "box": [420, 130, 220, 220]},
+    {"id": "fr_distinct_adj", "box": [420, 355, 240, 120]},
+    {"id": "fr_varie_adj", "box": [410, 490, 230, 140]},
+    {"id": "fr_rougeatre_adj", "box": [660, 120, 310, 200]},
+    {"id": "fr_tricolore_adj", "box": [670, 390, 330, 230]}
+   ]
+  },
   "mesures": {
    "name": "La salle des mesures",
    "room_id": "R_shapes_02",
@@ -523,6 +555,12 @@
       60,
       290
      ]
+    },
+    {
+     "to": "teintes",
+     "label": "Les teintes",
+     "hint": "Across the floor",
+     "hit": [240, 652, 200, 55]
     }
    ],
    "zooms": [
