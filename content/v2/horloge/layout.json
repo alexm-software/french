@@ -30,6 +30,10 @@
    "short": "Le palier"
   },
   {
+   "key": "heures",
+   "short": "Les heures"
+  },
+  {
    "key": "cadran",
    "short": "Le cadran"
   },
@@ -158,6 +162,18 @@
     "fr_desormais_adv",
     "fr_jadis_adv",
     "fr_tantot_adv"
+   ]
+  },
+  "heures": {
+   "only": [
+    "fr_demi_heure_noun",
+    "fr_veille_noun",
+    "fr_apres_midi_noun",
+    "fr_lendemain_noun",
+    "fr_midi_noun",
+    "fr_retard_noun",
+    "fr_minuit_noun",
+    "fr_cadran_noun"
    ]
   },
   "marches": {
@@ -1188,6 +1204,12 @@
       138,
       188
      ]
+    },
+    {
+     "to": "heures",
+     "label": "Les heures",
+     "hint": "Across the bricks",
+     "hit": [180, 650, 260, 58]
     }
    ],
    "zooms": [
@@ -1337,6 +1359,33 @@
     }
    ],
    "alt": "Close-up through the open window of the landing: a man packs a parachute into a van, a general with a chest full of medals points, a boy who has just won a race stands beside a puffing man, and a man squints at a four-leaf clover through a magnifying glass."
+  },
+  "heures": {
+   "name": "Les heures",
+   "room_id": "R_time_clock_01",
+   "image": "horloge/heures.jpg",
+   "backTo": "palier",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A bookcase holds a clock-face cake cut in half, and below it a little bride with a veil beside a calendar. A baker in an apron points at a clock just past noon. Two bookcases on the right hold a parachutist landing on a calendar, a brass sun over a sundial, a snail in tar, an owl beside a midnight clock, and a clock face in four colored quarters.",
+   "nameplate": [46, 5],
+   "doors": [
+    {
+     "to": "palier",
+     "label": "Le palier",
+     "hint": "Back through the brown door",
+     "hit": [48, 75, 190, 490]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_demi_heure_noun", "box": [300, 250, 200, 125]},
+    {"id": "fr_veille_noun", "box": [290, 405, 230, 160]},
+    {"id": "fr_apres_midi_noun", "box": [520, 210, 200, 270]},
+    {"id": "fr_lendemain_noun", "box": [740, 130, 230, 165]},
+    {"id": "fr_midi_noun", "box": [745, 310, 235, 115]},
+    {"id": "fr_retard_noun", "box": [740, 445, 250, 115]},
+    {"id": "fr_minuit_noun", "box": [1010, 165, 210, 165]},
+    {"id": "fr_cadran_noun", "box": [1025, 385, 195, 175]}
+   ]
   },
   "cadran": {
    "name": "Le cadran · Clock Face",
