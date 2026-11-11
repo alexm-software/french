@@ -61,6 +61,10 @@
   {
    "key": "jardin",
    "short": "Le jardin"
+  },
+  {
+   "key": "location",
+   "short": "La location"
   }
  ],
  "planned": {
@@ -472,6 +476,14 @@
     "fr_sentier_noun",
     "fr_square_noun",
     "fr_gazon_noun"
+   ]
+  },
+  "location": {
+   "only": [
+    "fr_baraque_noun",
+    "fr_colocation_noun",
+    "fr_location_noun",
+    "fr_locataire_noun"
    ]
   },
   "jardin_facade": {
@@ -3692,7 +3704,7 @@
    "room_id": "R_garden",
    "image": "maison/jardin.jpg",
    "backTo": "maison",
-   "alt": "The garden behind the house, painted in ink and gouache: a veranda with a granny in a chair beside the green back door, a bull grazes on the grass and a horse leaps toward a stack of hay in front of the hedge. A teddy sits in a little fenced plot, a jar of bees stands on a stone gatepost, a dog runs along a dirt path and a fox trots by. A boy pushes a mower beside a red jerry can near a fountain ringed by a box hedge; a green ball rolls across the lawn. The house wall rises at the top left and the neighbors' houses stand beyond the hedge at the top right, with tiny figures at their doors and windows. The green door on the left leads back to the hall.",
+   "alt": "The garden behind the house, painted in ink and gouache: a veranda with a granny in a chair beside the green back door, a bull grazes on the grass and a horse leaps toward a stack of hay in front of the hedge. A teddy sits in a little fenced plot, a jar of bees stands on a stone gatepost, a dog runs along a dirt path and a fox trots by. A boy pushes a mower beside a red jerry can near a fountain ringed by a box hedge; a green ball rolls across the lawn. The house wall rises at the top left and the neighbors' houses stand beyond the hedge at the top right, with tiny figures at their doors and windows. The green door on the left leads back to the hall. The flowers at the lower left lead to the rental corner.",
    "nameplate": [
     88,
     95
@@ -3708,6 +3720,12 @@
       72,
       188
      ]
+    },
+    {
+     "to": "location",
+     "label": "La location",
+     "hint": "Across the flowers",
+     "hit": [30, 625, 160, 80]
     }
    ],
    "zooms": [
@@ -3836,6 +3854,29 @@
    ],
    "building_id": "B05_maison",
    "sector_id": "S02_home"
+  },
+  "location": {
+   "name": "La location",
+   "room_id": "R_entrance_03",
+   "image": "maison/location.jpg",
+   "backTo": "jardin",
+   "alt": "A pale wall and a brick floor. A wooden shack with a coat rack stands at the upper left. Two children share a bench beside one padlock. A woman rents a bicycle to a child, with coins stacked by the wheel. A boy with a tear locks a small door. The blue door on the right leads back to the garden.",
+   "nameplate": [10, 5],
+   "doors": [
+    {
+     "to": "jardin",
+     "label": "Le jardin",
+     "hint": "Back through the blue door",
+     "hit": [1055, 100, 215, 500]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_baraque_noun", "box": [8, 4, 470, 224]},
+    {"id": "fr_colocation_noun", "box": [12, 232, 480, 189]},
+    {"id": "fr_location_noun", "box": [8, 422, 480, 288]},
+    {"id": "fr_locataire_noun", "box": [515, 320, 320, 370]}
+   ]
   },
   "jardin_facade": {
    "name": "La façade · Front of the House",
