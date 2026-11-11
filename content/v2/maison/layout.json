@@ -73,6 +73,10 @@
   {
    "key": "frigo",
    "short": "Le frigo"
+  },
+  {
+   "key": "loyer",
+   "short": "Le loyer"
   }
  ],
  "planned": {
@@ -508,6 +512,14 @@
     "fr_frigo_noun",
     "fr_congelateur_noun",
     "fr_chandelier_noun"
+   ]
+  },
+  "loyer": {
+   "only": [
+    "fr_loyer_noun",
+    "fr_porche_noun",
+    "fr_ascenseur_noun",
+    "fr_foyer_noun"
    ]
   },
   "jardin_facade": {
@@ -3942,7 +3954,7 @@
    "room_id": "R_kitchen_01",
    "image": "maison/frigo.jpg",
    "backTo": "casserole",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. On the top shelf a white dove stands on a pot lid above a steaming saucepan. A penguin stands in an open mint fridge. On the bottom shelf a silver candlestick holds one candle, and a clothed grandfather with a strawberry ice-cream cone stands beside an open chest freezer. The red door on the left leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. On the top shelf a white dove stands on a pot lid above a steaming saucepan. A penguin stands in an open mint fridge. On the bottom shelf a silver candlestick holds one candle, and a clothed grandfather with a strawberry ice-cream cone stands beside an open chest freezer. The red door on the left leads back. The bricks to the right of the red door lead to the rent cupboard.",
    "nameplate": [36, 5],
    "doors": [
     {
@@ -3950,6 +3962,12 @@
      "label": "La casserole",
      "hint": "Back through the red door",
      "hit": [6, 30, 190, 590]
+    },
+    {
+     "to": "loyer",
+     "label": "Le loyer",
+     "hint": "Across the bricks",
+     "hit": [250, 645, 180, 65]
     }
    ],
    "zooms": [],
@@ -3958,6 +3976,29 @@
     {"id": "fr_frigo_noun", "box": [740, 248, 460, 174]},
     {"id": "fr_chandelier_noun", "box": [650, 452, 175, 200]},
     {"id": "fr_congelateur_noun", "box": [835, 424, 400, 238]}
+   ]
+  },
+  "loyer": {
+   "name": "Le loyer",
+   "room_id": "R_entrance_03",
+   "image": "maison/loyer.jpg",
+   "backTo": "frigo",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A lawyer in a black coat and white wig holds a blank envelope. A red toy car sits under a small stone arch. An elevator attendant in a red jacket holds the door for a clothed passenger. A girl in a blue dress stands beside a lit hearth. The green door on the left leads back.",
+   "nameplate": [34, 5],
+   "doors": [
+    {
+     "to": "frigo",
+     "label": "Le frigo",
+     "hint": "Back through the green door",
+     "hit": [14, 80, 200, 530]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_loyer_noun", "box": [870, 0, 300, 322]},
+    {"id": "fr_porche_noun", "box": [590, 168, 250, 178]},
+    {"id": "fr_ascenseur_noun", "box": [720, 348, 400, 160]},
+    {"id": "fr_foyer_noun", "box": [640, 530, 530, 160]}
    ]
   },
   "jardin_facade": {
