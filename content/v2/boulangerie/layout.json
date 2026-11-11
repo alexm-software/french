@@ -17,6 +17,14 @@
   {
    "key": "fruits",
    "short": "Les fruits"
+  },
+  {
+   "key": "marche",
+   "short": "La halle"
+  },
+  {
+   "key": "legumes",
+   "short": "Les légumes"
   }
  ],
  "planned": {
@@ -87,6 +95,29 @@
     "fr_bananier_noun",
     "fr_cocotier_noun"
    ]
+  },
+  "marche": {
+   "only": []
+  },
+  "legumes": {
+   "vocabRoom": "R_vegetables",
+   "only": [
+    "fr_tomate_noun",
+    "fr_carotte_noun",
+    "fr_patate_noun",
+    "fr_choucroute_noun",
+    "fr_feve_noun",
+    "fr_chou_noun",
+    "fr_oignon_noun",
+    "fr_ail_noun",
+    "fr_concombre_noun",
+    "fr_pois_noun",
+    "fr_navet_noun",
+    "fr_artichaut_noun",
+    "fr_persil_noun",
+    "fr_saladier_noun",
+    "fr_epinard_noun"
+   ]
   }
  },
  "rooms": {
@@ -117,6 +148,17 @@
       120,
       66,
       350
+     ]
+    },
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "across the open floor in front of the counter, into the market arcade",
+     "hit": [
+      720,
+      630,
+      170,
+      75
      ]
     }
    ],
@@ -781,13 +823,13 @@
    "zooms": [],
    "items": [
     {
-   "id": "fr_banane_noun",
-   "box": [
-    200,
-    370,
-    175,
-    90
-   ]
+     "id": "fr_banane_noun",
+     "box": [
+      200,
+      370,
+      175,
+      90
+     ]
     },
     {
      "id": "fr_orange_noun",
@@ -862,13 +904,211 @@
      ]
     },
     {
-   "id": "fr_cocotier_noun",
-   "box": [
-    1115,
-    390,
-    150,
-    165
+     "id": "fr_cocotier_noun",
+     "box": [
+      1115,
+      390,
+      150,
+      165
+     ]
+    }
    ]
+  },
+  "marche": {
+   "name": "La halle du marché · The market arcade",
+   "image": "boulangerie/marche.jpg",
+   "alt": "A covered market arcade with a honey wood floor, paper lanterns and a green garland. An open stone arch on the left shows baguettes and a red beret, back toward the bakery. Six shop doors stand along the wall: green with a carrot, cream with a cheese wedge, pink with a cake, red with a fish, blue with a spool of thread, and brown with a teacup.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "boulangerie",
+   "doors": [
+    {
+     "to": "boulangerie",
+     "label": "La boutique",
+     "hint": "the open arch back to the bakery",
+     "hit": [
+      0,
+      70,
+      210,
+      360
+     ]
+    },
+    {
+     "to": "legumes",
+     "label": "Les légumes",
+     "hint": "the green door with the carrot",
+     "hit": [
+      268,
+      145,
+      140,
+      420
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": []
+  },
+  "legumes": {
+   "name": "L'étal de légumes · The vegetable stall",
+   "room_id": "R_vegetables",
+   "image": "boulangerie/legumes.jpg",
+   "alt": "A vegetable stall off the market arcade. An open door on the left shows the arcade. On the left counter: a crate of tomatoes, carrots, a sack of potatoes, a bowl of sauerkraut and a jar of broad beans. A grocer in a striped shirt stands in the middle. On the right: a hanging cabbage, onions, garlic, a second cabbage with cucumbers and turnips, pea pods, a salad bowl, artichokes, parsley in a pot, and spinach.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the open door back to the market arcade",
+     "hit": [
+      8,
+      25,
+      175,
+      400
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tomate_noun",
+     "box": [
+      4,
+      475,
+      190,
+      110
+     ]
+    },
+    {
+     "id": "fr_carotte_noun",
+     "box": [
+      210,
+      390,
+      230,
+      155
+     ]
+    },
+    {
+     "id": "fr_patate_noun",
+     "box": [
+      0,
+      605,
+      175,
+      110
+     ]
+    },
+    {
+     "id": "fr_choucroute_noun",
+     "box": [
+      185,
+      610,
+      165,
+      105
+     ]
+    },
+    {
+     "id": "fr_feve_noun",
+     "box": [
+      365,
+      555,
+      125,
+      155
+     ]
+    },
+    {
+     "id": "fr_chou_noun",
+     "box": [
+      730,
+      145,
+      185,
+      175
+     ]
+    },
+    {
+     "id": "fr_oignon_noun",
+     "box": [
+      935,
+      75,
+      105,
+      270
+     ]
+    },
+    {
+     "id": "fr_ail_noun",
+     "box": [
+      1050,
+      70,
+      90,
+      200
+     ]
+    },
+    {
+     "id": "fr_persil_noun",
+     "box": [
+      1155,
+      185,
+      115,
+      210
+     ]
+    },
+    {
+     "id": "fr_concombre_noun",
+     "box": [
+      690,
+      445,
+      165,
+      85
+     ]
+    },
+    {
+     "id": "fr_navet_noun",
+     "box": [
+      865,
+      430,
+      125,
+      100
+     ]
+    },
+    {
+     "id": "fr_artichaut_noun",
+     "box": [
+      1020,
+      400,
+      200,
+      125
+     ]
+    },
+    {
+     "id": "fr_pois_noun",
+     "box": [
+      680,
+      555,
+      175,
+      135
+     ]
+    },
+    {
+     "id": "fr_saladier_noun",
+     "box": [
+      865,
+      555,
+      220,
+      145
+     ]
+    },
+    {
+     "id": "fr_epinard_noun",
+     "box": [
+      1100,
+      545,
+      165,
+      155
+     ]
     }
    ]
   }
