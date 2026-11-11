@@ -38,6 +38,10 @@
    "short": "La fête"
   },
   {
+   "key": "ouie",
+   "short": "L'ouïe"
+  },
+  {
    "key": "coulisse",
    "short": "La coulisse"
   },
@@ -357,6 +361,20 @@
     "fr_observer_verb",
     "fr_remarquer_verb",
     "fr_reconnaitre_verb"
+   ]
+  },
+  "ouie": {
+   "only": [
+    "fr_entendre_verb",
+    "fr_toucher_verb",
+    "fr_montrer_verb",
+    "fr_exposer_verb",
+    "fr_apparaitre_verb",
+    "fr_paraitre_verb",
+    "fr_sentir_verb",
+    "fr_revoir_verb",
+    "fr_surveiller_verb",
+    "fr_controler_verb"
    ]
   }
  },
@@ -1425,26 +1443,41 @@
       170,
       320
      ]
+    },
+    {
+     "to": "ouie",
+     "label": "L'ouïe",
+     "hint": "the teal door with the painted ear, just right of the orange door",
+     "hit": [
+      150,
+      95,
+      115,
+      385
+     ]
     }
    ],
    "zooms": [],
    "items": [
     {
-     "id": "fr_cool_adj",
-     "box": [
-      345,
-      235,
-      120,
-      225
-     ]
+   "id": "fr_cool_adj",
+   "box": [
+    380,
+    195,
+    85,
+    275
+   ],
+   "labelAt": [
+    430,
+    168
+   ]
     },
     {
      "id": "fr_turbulent_adj",
      "box": [
-      470,
-      180,
-      105,
-      205
+      475,
+      155,
+      110,
+      220
      ]
     },
     {
@@ -2674,30 +2707,30 @@
      ]
     },
     {
-   "id": "fr_constater_verb",
-   "box": [
-    1085,
-    140,
-    125,
-    265
-   ],
-   "labelAt": [
-    1147,
-    155
-   ]
+     "id": "fr_constater_verb",
+     "box": [
+      1085,
+      140,
+      125,
+      265
+     ],
+     "labelAt": [
+      1147,
+      155
+     ]
     },
     {
-   "id": "fr_observer_verb",
-   "box": [
-    1218,
-    165,
-    58,
-    240
-   ],
-   "labelAt": [
-    1216,
-    90
-   ]
+     "id": "fr_observer_verb",
+     "box": [
+      1218,
+      165,
+      58,
+      240
+     ],
+     "labelAt": [
+      1216,
+      90
+     ]
     },
     {
      "id": "fr_remarquer_verb",
@@ -2715,6 +2748,127 @@
       455,
       250,
       245
+     ]
+    }
+   ]
+  },
+  "ouie": {
+   "name": "Le cabinet de l'ouïe · Hearing and noticing",
+   "room_id": "ST_perception_seg003",
+   "image": "musee/ouie.jpg",
+   "alt": "A cream cabinet of noticing, reached by the teal ear-door from the party room. A fox listens to a mouse in a patch of snow, a dog sniffs a string of sausages, and a fencer touches a vest with a foil. A girl shows a tray of medals beside easels of paintings. A friendly ghost appears with a lantern, a crowned parrot sits at the window, two friends wave, a meerkat watches from a pedestal, and a ticket inspector checks a hen's ticket. A teal door on the left leads back.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "fete",
+   "doors": [
+    {
+     "to": "fete",
+     "label": "La fête",
+     "hint": "the teal door with the painted ear on the left wall, back to the party room",
+     "hit": [
+      16,
+      48,
+      122,
+      325
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_entendre_verb",
+     "box": [
+      8,
+      430,
+      155,
+      260
+     ]
+    },
+    {
+     "id": "fr_toucher_verb",
+     "box": [
+      170,
+      145,
+      140,
+      280
+     ]
+    },
+    {
+   "id": "fr_montrer_verb",
+   "box": [
+    325,
+    160,
+    145,
+    290
+   ],
+   "labelAt": [
+    397,
+    148
+   ]
+    },
+    {
+     "id": "fr_exposer_verb",
+     "box": [
+      485,
+      170,
+      260,
+      300
+     ]
+    },
+    {
+     "id": "fr_apparaitre_verb",
+     "box": [
+      855,
+      40,
+      185,
+      200
+     ]
+    },
+    {
+     "id": "fr_paraitre_verb",
+     "box": [
+      1120,
+      40,
+      150,
+      210
+     ]
+    },
+    {
+     "id": "fr_sentir_verb",
+     "box": [
+      175,
+      500,
+      540,
+      210
+     ]
+    },
+    {
+     "id": "fr_revoir_verb",
+     "box": [
+      850,
+      255,
+      280,
+      215
+     ]
+    },
+    {
+     "id": "fr_surveiller_verb",
+     "box": [
+      1150,
+      255,
+      115,
+      185
+     ]
+    },
+    {
+     "id": "fr_controler_verb",
+     "box": [
+      800,
+      500,
+      360,
+      210
      ]
     }
    ]
