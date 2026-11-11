@@ -265,16 +265,15 @@ class SenseCompares(unittest.TestCase):
         car = json.dumps(by[("fr_bagnole_noun", "fr_voiture_noun")]["support"], ensure_ascii=False)
         self.assertIn("Toute voiture, toute automobile", car)
 
-    def test_entendre_text_card_is_regular_re(self):
-        from sense_compares import verb_marker, write_lexicon
+    def test_entendre_painted_card_is_regular_re(self):
+        from sense_compares import verb_marker
         w = self.vocab["fr_entendre_verb"]
         self.assertEqual(w.get("verb_group"), 3)
         self.assertFalse(w.get("irregular"))
         self.assertEqual(verb_marker(w), ("-re", "purple"))
-        write_lexicon()
-        raw = (ROOT / "village" / "data" / "lexicon.js").read_text(encoding="utf-8")
-        items = json.loads(raw.split("window.V2_LEXICON=", 1)[1].split(";\nwindow.V2_LEXICON_INDEX=", 1)[0])
-        it = items["fr_entendre_verb"]
+        raw = (ROOT / "village" / "data" / "sens.js").read_text(encoding="utf-8")
+        payload = json.loads(raw[raw.index("]=") + 2:].rstrip().rstrip(";"))
+        it = next(it for room in payload["rooms"].values() for it in room["items"] if it["id"] == "fr_entendre_verb")
         self.assertEqual(it["group"], "-re")
         self.assertEqual(it["beret"], "purple")
         self.assertNotEqual(it["beret"], "gold")
