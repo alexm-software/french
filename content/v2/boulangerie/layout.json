@@ -33,6 +33,10 @@
   {
    "key": "patisserie",
    "short": "La pâtisserie"
+  },
+  {
+   "key": "poissonnerie",
+   "short": "La poissonnerie"
   }
  ],
  "planned": {
@@ -170,6 +174,24 @@
   },
   "claim_boudoir": {
    "vocabRoom": "R_abs_beauty_02"
+  },
+  "poissonnerie": {
+   "vocabRoom": "R_butcher_02",
+   "only": [
+    "fr_tripe_noun",
+    "fr_boucherie_noun",
+    "fr_crevette_noun",
+    "fr_huitre_noun",
+    "fr_ecaille_noun",
+    "fr_fume_adj",
+    "fr_abattoir_noun",
+    "fr_mangeur_noun",
+    "fr_requin_noun",
+    "fr_charcutier_noun"
+   ]
+  },
+  "claim_butcher_01": {
+   "vocabRoom": "R_butcher_01"
   }
  },
  "rooms": {
@@ -1019,6 +1041,17 @@
       145,
       420
      ]
+    },
+    {
+     "to": "poissonnerie",
+     "label": "La poissonnerie",
+     "hint": "the red door with the fish",
+     "hit": [
+      790,
+      145,
+      145,
+      420
+     ]
     }
    ],
    "zooms": [],
@@ -1461,6 +1494,123 @@
       25,
       290,
       470
+     ]
+    }
+   ]
+  },
+  "poissonnerie": {
+   "name": "La poissonnerie · The butcher and fishmonger",
+   "room_id": "R_butcher_02",
+   "image": "boulangerie/poissonnerie.jpg",
+   "alt": "A butcher and fish shop off the market arcade. An open door shows the arcade. On the left: a bowl of pale tripe, a little butcher-shop model, shrimp, a silver fish and oysters. A smoked fish hangs near the middle. On the right: a picture of a closed brick gate, a small shark on ice, and a pork butcher eating a sandwich.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the open door back to the arcade",
+     "hit": [
+      0,
+      15,
+      75,
+      340
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_tripe_noun",
+     "box": [
+      0,
+      470,
+      150,
+      100
+     ]
+    },
+    {
+     "id": "fr_boucherie_noun",
+     "box": [
+      165,
+      365,
+      215,
+      185
+     ]
+    },
+    {
+     "id": "fr_crevette_noun",
+     "box": [
+      390,
+      415,
+      220,
+      105
+     ]
+    },
+    {
+     "id": "fr_ecaille_noun",
+     "box": [
+      0,
+      590,
+      265,
+      125
+     ]
+    },
+    {
+     "id": "fr_huitre_noun",
+     "box": [
+      280,
+      560,
+      290,
+      145
+     ]
+    },
+    {
+     "id": "fr_fume_adj",
+     "box": [
+      410,
+      35,
+      165,
+      310
+     ]
+    },
+    {
+     "id": "fr_abattoir_noun",
+     "box": [
+      690,
+      35,
+      270,
+      270
+     ]
+    },
+    {
+     "id": "fr_requin_noun",
+     "box": [
+      660,
+      500,
+      250,
+      150
+     ]
+    },
+    {
+     "id": "fr_charcutier_noun",
+     "box": [
+      1020,
+      15,
+      240,
+      250
+     ]
+    },
+    {
+     "id": "fr_mangeur_noun",
+     "box": [
+      1000,
+      290,
+      210,
+      150
      ]
     }
    ]
