@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "entrance": {
+    "where": "left stone arch",
+    "appearance": "open stone arch back to Rue des Saveurs",
+    "arrival": "Place des Crieurs · Criers' Square"
+  },
+  "places": {
+    "st_appels": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "Place des Crieurs · Criers' Square",
+      "camera": "from the square toward the cobbles"
+    },
+    "galerie": {
+      "kind": "hub",
+      "level": "ground",
+      "landmark": "La galerie · Kiosk Gallery",
+      "camera": "from the gallery toward the three booths",
+      "within": "st_appels"
+    },
+    "kiosque": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Le kiosque · Telephone Kiosk",
+      "camera": "from the kiosk yard toward the blue door",
+      "within": "galerie"
+    },
+    "panneaux": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Les panneaux · Notice Yard",
+      "camera": "from the notice yard toward the honey-wood door",
+      "within": "galerie"
+    },
+    "declarations": {
+      "kind": "room",
+      "level": "ground",
+      "landmark": "Les déclarations · Declarations Corner",
+      "camera": "from the corner toward the red door",
+      "within": "galerie"
+    }
+  },
+  "passages": {
+    "to-galerie": {
+      "kind": "path",
+      "appearance": "cobbles in front of the speaking mime",
+      "ends": [
+        {
+          "place": "st_appels",
+          "where": "foreground cobbles",
+          "arrival": "Place des Crieurs · Criers' Square"
+        },
+        {
+          "place": "galerie",
+          "where": "left stone arch",
+          "arrival": "La galerie · Kiosk Gallery"
+        }
+      ]
+    },
+    "to-kiosque": {
+      "kind": "door",
+      "appearance": "open blue booth",
+      "ends": [
+        {
+          "place": "galerie",
+          "where": "blue booth",
+          "arrival": "La galerie · Kiosk Gallery"
+        },
+        {
+          "place": "kiosque",
+          "where": "blue door",
+          "arrival": "Le kiosque · Telephone Kiosk"
+        }
+      ]
+    },
+    "to-panneaux": {
+      "kind": "door",
+      "appearance": "open honey-wood booth",
+      "ends": [
+        {
+          "place": "galerie",
+          "where": "honey-wood booth",
+          "arrival": "La galerie · Kiosk Gallery"
+        },
+        {
+          "place": "panneaux",
+          "where": "honey-wood door",
+          "arrival": "Les panneaux · Notice Yard"
+        }
+      ]
+    },
+    "to-declarations": {
+      "kind": "door",
+      "appearance": "open red booth",
+      "ends": [
+        {
+          "place": "galerie",
+          "where": "red booth",
+          "arrival": "La galerie · Kiosk Gallery"
+        },
+        {
+          "place": "declarations",
+          "where": "red door",
+          "arrival": "Les déclarations · Declarations Corner"
+        }
+      ]
+    }
+  }
+}
