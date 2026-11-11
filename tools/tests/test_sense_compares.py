@@ -116,7 +116,7 @@ class SenseCompares(unittest.TestCase):
         bark = next(r for r in audit["exact_clusters"] if r["key"] == "noun|bark")
         self.assertEqual(bark["disposition"], "unrelated")
         stove = next(r for r in audit["exact_clusters"] if r["key"] == "noun|stove")
-        self.assertEqual(stove["disposition"], "deferred_homograph")
+        self.assertEqual(stove["disposition"], "accepted")
         ids = {e["a"] for e in self.edges} | {e["b"] for e in self.edges}
         self.assertIn("fr_neuf_num", ids)
         self.assertIn("fr_neuf_adj", ids)
@@ -141,7 +141,7 @@ class SenseCompares(unittest.TestCase):
                 self.assertTrue(any(k == "uncertain" for k in kinds))
         deferred = json.loads((ROOT / "data" / "source" / "sense_compare_deferred.json").read_text(encoding="utf-8"))
         self.assertEqual(deferred["deferred_unsupported"], [])
-        self.assertNotIn("fr_au_det", ids)
+        self.assertIn("fr_au_det", ids)
         self.assertNotIn("fr_foot_noun", ids)
         self.assertEqual(i18n["fr"]["card"]["notTheSame"], "Pas la même chose")
         self.assertEqual(totals["published_edges"], len(self.edges))

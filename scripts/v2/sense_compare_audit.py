@@ -51,23 +51,15 @@ UNCERTAIN = {
 # Pairs inside an accepted cluster that are interchangeable, so they have no direct edge.
 EQUIVALENT_PAIRS = [
     ["fr_finir_verb", "fr_terminer_verb"],
-    ["fr_voiture_noun", "fr_auto_noun"],
     ["fr_vite_adv", "fr_rapidement_adv"],
-    ["fr_gosse_noun", "fr_gamin_noun"],
-    ["fr_gosse_noun", "fr_mome_noun"],
-    ["fr_gamin_noun", "fr_mome_noun"],
     ["fr_marrant_adj", "fr_rigolo_adj"],
-    ["fr_cependant_adv", "fr_toutefois_adv"],
-    ["fr_cependant_adv", "fr_neanmoins_adv"],
-    ["fr_toutefois_adv", "fr_neanmoins_adv"],
 ]
 REMAINING = [
-    "The remaining equivalent clusters were read as glosses in this pass. They stay equivalent because the difference is a near-synonym or a shade too slight to state. Each of those pages was not re-opened.",
-    "au/aux is the same contraction of à: au is à + le and aux is à + les. The gloss already says so. No sense note.",
-    "foot is the informal short form of football, the soccer sense. No sense note. CNRTL lists football américain as a separate sense of football.",
-    "gamin, gosse, and môme are three informal words for a kid. enfant already contrasts with each. No note among the three.",
+    "One hundred gloss-only pairs now have a reciprocal note. Sixty of that list are still open, then the near-match groups.",
+    "au is à + le and aux is à + les. That note is published.",
+    "foot is the informal short form of football. That pair is not published yet.",
     "boulot and job are both informal for work or a job. emploi already contrasts with boulot. No note between boulot and job.",
-    "fois is not in the vocabulary source, so heure/temps has no third member.",
+    "Fois is one occurrence, compared with heure and temps.",
     "Words with a unique primary gloss were not candidates. That is not a claim that no other synonym exists under a different English wording.",
     "The eleven uncertain clusters stay unpublished.",
 ]
