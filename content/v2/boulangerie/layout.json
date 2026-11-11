@@ -41,6 +41,10 @@
   {
    "key": "mercerie",
    "short": "La mercerie"
+  },
+  {
+   "key": "brocante",
+   "short": "La brocante"
   }
  ],
  "planned": {
@@ -217,6 +221,16 @@
   },
   "claim_vierge": {
    "vocabRoom": "R_bookshop_01"
+  },
+  "brocante": {
+   "vocabRoom": "R_adj_time_02",
+   "only": [
+    "fr_bibelot_noun",
+    "fr_rebut_noun"
+   ]
+  },
+  "claim_rebut": {
+   "vocabRoom": "R_adj_time_05"
   }
  },
  "rooms": {
@@ -1088,6 +1102,17 @@
       140,
       420
      ]
+    },
+    {
+     "to": "brocante",
+     "label": "La brocante",
+     "hint": "the brown door with the teacup",
+     "hit": [
+      1130,
+      145,
+      140,
+      420
+     ]
     }
    ],
    "zooms": [],
@@ -1737,6 +1762,51 @@
       120,
       260,
       370
+     ]
+    }
+   ]
+  },
+  "brocante": {
+   "name": "La brocante · Antiques and bric-a-brac",
+   "room_id": "R_adj_time_02",
+   "image": "boulangerie/brocante.jpg",
+   "alt": "An antiques stall off the market arcade. A brown door opens onto the arcade. A window and an empty chair are on the left. On the right, a china cat sits on a shelf and a crate holds broken scraps, a cracked plate and a bent spoon.",
+   "nameplate": [
+    50,
+    4.5
+   ],
+   "backTo": "marche",
+   "doors": [
+    {
+     "to": "marche",
+     "label": "La halle",
+     "hint": "the brown door back to the arcade",
+     "hit": [
+      0,
+      80,
+      210,
+      460
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_bibelot_noun",
+     "box": [
+      990,
+      150,
+      150,
+      160
+     ]
+    },
+    {
+     "id": "fr_rebut_noun",
+     "box": [
+      900,
+      470,
+      350,
+      210
      ]
     }
    ]
