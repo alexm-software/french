@@ -137,6 +137,10 @@
   {
    "key": "convive",
    "short": "Le convive"
+  },
+  {
+   "key": "mobilier",
+   "short": "Le mobilier"
   }
  ],
  "planned": {
@@ -700,6 +704,14 @@
     "fr_ancetre_noun",
     "fr_parental_adj",
     "fr_paternel_adj"
+   ]
+  },
+  "mobilier": {
+   "only": [
+    "fr_mobilier_noun",
+    "fr_manche_noun_m",
+    "fr_refrigerateur_noun",
+    "fr_pique_nique_noun"
    ]
   },
   "jardin_facade": {
@@ -4598,7 +4610,7 @@
    "room_id": "R_dining",
    "image": "maison/convive.jpg",
    "backTo": "edifice",
-   "alt": "A pale wall and a brick floor. An arched brown door is on the left. A tall wooden cupboard stands in the centre. Two fully clothed guests clink teacups. An oval frame holds a bearded knight in armor. Tall riding boots stand beside tiny baby booties. A penguin balances an egg while a fully clothed woman in a coat writes in a notebook.",
+   "alt": "A pale wall and a brick floor. An arched brown door is on the left. A tall wooden cupboard stands in the centre. Two fully clothed guests clink teacups. An oval frame holds a bearded knight in armor. Tall riding boots stand beside tiny baby booties. A penguin balances an egg while a fully clothed woman in a coat writes in a notebook. The bricks in front of the empty wall lead to the furniture cupboard.",
    "nameplate": [88, 5],
    "doors": [
     {
@@ -4606,6 +4618,12 @@
      "label": "L'édifice",
      "hint": "Back through the brown door",
      "hit": [40, 55, 270, 540]
+    },
+    {
+     "to": "mobilier",
+     "label": "Le mobilier",
+     "hint": "Across the bricks",
+     "hit": [320, 670, 150, 45]
     }
    ],
    "zooms": [],
@@ -4614,6 +4632,29 @@
     {"id": "fr_ancetre_noun", "box": [450, 214, 400, 140]},
     {"id": "fr_parental_adj", "box": [430, 370, 440, 115]},
     {"id": "fr_paternel_adj", "box": [420, 505, 460, 150]}
+   ]
+  },
+  "mobilier": {
+   "name": "Le mobilier",
+   "room_id": "R_living",
+   "image": "maison/mobilier.jpg",
+   "backTo": "convive",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. Tiny furniture sits on the top shelf: a chair, a table, a bed, and a sofa. A beaver in a vest holds a broom handle. Two polar bear cubs sleep in a small refrigerator. A squirrel sits beside a picnic basket with a pea on the lid.",
+   "nameplate": [90, 94],
+   "doors": [
+    {
+     "to": "convive",
+     "label": "Le convive",
+     "hint": "Back through the brown door",
+     "hit": [110, 70, 260, 500]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_mobilier_noun", "box": [700, 50, 530, 155]},
+    {"id": "fr_manche_noun_m", "box": [700, 212, 540, 115]},
+    {"id": "fr_refrigerateur_noun", "box": [690, 348, 430, 125]},
+    {"id": "fr_pique_nique_noun", "box": [690, 498, 540, 145]}
    ]
   },
   "jardin_facade": {
