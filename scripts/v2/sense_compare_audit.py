@@ -51,15 +51,13 @@ UNCERTAIN = {
 # Pairs inside an accepted cluster that are interchangeable, so they have no direct edge.
 EQUIVALENT_PAIRS = [
     ["fr_finir_verb", "fr_terminer_verb"],
-    ["fr_vite_adv", "fr_rapidement_adv"],
     ["fr_marrant_adj", "fr_rigolo_adj"],
 ]
 REMAINING = [
-    "One hundred gloss-only pairs now have a reciprocal note. Sixty of that list are still open, then the near-match groups.",
-    "au is à + le and aux is à + les. That note is published.",
-    "foot is the informal short form of football. That pair is not published yet.",
+    "All 160 gloss-only equivalent pairs now have a reciprocal note, including au/aux, foot/football, and vite/rapidement.",
+    "Fois is one occurrence, compared with heure and temps. Neuf the number and neuf brand-new are separate cards. La poêle is the frying pan and le poêle is the heater.",
+    "Near-match groups that share only part of an English gloss are not published yet.",
     "boulot and job are both informal for work or a job. emploi already contrasts with boulot. No note between boulot and job.",
-    "Fois is one occurrence, compared with heure and temps.",
     "Words with a unique primary gloss were not candidates. That is not a claim that no other synonym exists under a different English wording.",
     "The eleven uncertain clusters stay unpublished.",
 ]
