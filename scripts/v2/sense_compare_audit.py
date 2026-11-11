@@ -56,7 +56,7 @@ EQUIVALENT_PAIRS = [
 REMAINING = [
     "All 160 gloss-only equivalent pairs now have a reciprocal note, including au/aux, foot/football, and vite/rapidement.",
     "Fois is one occurrence, compared with heure and temps. Neuf the number and neuf brand-new are separate cards. La poêle is the frying pan and le poêle is the heater.",
-    "Near-match review, first 100 pairs: 38 edges where the senses overlap, 62 skipped as partial-gloss coincidences. About 400 pairs remain.",
+    "Near-match review: 200 pairs read. 97 edges where the senses overlap, 103 skipped as partial-gloss coincidences. 300 pairs remain.",
     "boulot and job are both informal for work or a job. emploi already contrasts with boulot. No note between boulot and job.",
     "Words with a unique primary gloss were not candidates. That is not a claim that no other synonym exists under a different English wording.",
     "The eleven uncertain clusters stay unpublished.",
