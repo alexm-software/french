@@ -14,6 +14,7 @@
    "key": "dunes",
    "short": "Les dunes"
   },
+  {"key": "cote", "short": "La côte"},
   {
    "key": "cabine",
    "short": "La cabine"
@@ -50,6 +51,7 @@
     "fr_peignoir_noun"
    ]
   },
+  "cote": {"only": ["fr_colonne_noun","fr_race_noun","fr_tortueux_adj","fr_cotier_adj","fr_oceanique_adj","fr_contre_courant_noun","fr_tabac_noun","fr_mepris_noun","fr_attribut_noun"]},
   "dunes": {
    "vocabRoom": "R_beach_02",
    "only": [
@@ -78,6 +80,24 @@
   }
  },
  "rooms": {
+  "cote": {
+   "name": "La côte", "room_id": "R_beach_01", "image": "plage/cote.jpg", "backTo": "dunes",
+   "alt": "A coast corner. A brown door is on the left. A bookcase holds a column and two clothed dogs. The middle bookcase holds a winding path, a little coast, and a wave. The right bookcase holds a stream, a blank board, a clothed person turned away, and a blank tag.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "dunes", "label": "Les dunes", "hint": "Back through the brown door", "hit": [30, 40, 150, 470]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_colonne_noun", "box": [300, 80, 160, 120]},
+    {"id": "fr_race_noun", "box": [280, 230, 220, 180]},
+    {"id": "fr_tortueux_adj", "box": [520, 40, 200, 140]},
+    {"id": "fr_cotier_adj", "box": [500, 200, 240, 150]},
+    {"id": "fr_oceanique_adj", "box": [500, 380, 260, 140]},
+    {"id": "fr_contre_courant_noun", "box": [820, 20, 300, 130]},
+    {"id": "fr_tabac_noun", "box": [840, 170, 250, 120]},
+    {"id": "fr_mepris_noun", "box": [840, 320, 220, 180]},
+    {"id": "fr_attribut_noun", "box": [860, 520, 180, 100]}
+   ]
+  },
   "plage": {
    "name": "La plage",
    "room_id": "R_beach_01",
@@ -368,7 +388,8 @@
       300,
       163
      ]
-    }
+    },
+    {"to": "cote", "label": "La côte", "hint": "Across the floor", "hit": [400, 655, 140, 48]}
    ],
    "zooms": [],
    "items": [

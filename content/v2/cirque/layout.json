@@ -22,6 +22,7 @@
    "key": "menagerie",
    "short": "La ménagerie"
   },
+  {"key": "piste", "short": "La piste"},
   {
    "key": "dresseur",
    "short": "La tente du dresseur"
@@ -117,6 +118,7 @@
     "fr_tendrement_adv"
    ]
   },
+  "piste": {"only": ["fr_ailleurs_adv","fr_dessus_adv","fr_environ_adv","fr_la_haut_adv","fr_dessous_adv","fr_la_dedans_adv","fr_la_dessus_adv","fr_outre_mer_adv","fr_secretement_adv","fr_cirque_noun","fr_gladiateur_noun"]},
   "menagerie": {
    "vocabRoom": "R_adv_manner_03",
    "only": [
@@ -243,6 +245,26 @@
   }
  },
  "rooms": {
+  "piste": {
+   "name": "La piste", "room_id": "R_adv_place_01", "image": "cirque/piste.jpg", "backTo": "menagerie",
+   "alt": "A circus storeroom. A brown door is on the left. Two middle bookcases hold a bird, a hat on a box, a circle of stones, a balloon, a toy under a chair, a closed box, a book on a box, a toy boat, and a mime whispering. A right bookcase holds a circus tent and a clothed toy gladiator.",
+   "nameplate": [50, 4],
+   "doors": [{"to": "menagerie", "label": "La ménagerie", "hint": "Back through the brown door", "hit": [30, 40, 140, 460]}],
+   "zooms": [],
+   "items": [
+    {"id": "fr_ailleurs_adv", "box": [300, 20, 200, 100]},
+    {"id": "fr_dessus_adv", "box": [300, 140, 200, 110]},
+    {"id": "fr_environ_adv", "box": [300, 270, 200, 110]},
+    {"id": "fr_la_haut_adv", "box": [300, 400, 180, 120]},
+    {"id": "fr_dessous_adv", "box": [280, 540, 220, 140]},
+    {"id": "fr_la_dedans_adv", "box": [540, 20, 200, 100]},
+    {"id": "fr_la_dessus_adv", "box": [540, 140, 200, 110]},
+    {"id": "fr_outre_mer_adv", "box": [540, 280, 200, 120]},
+    {"id": "fr_secretement_adv", "box": [520, 430, 240, 220]},
+    {"id": "fr_cirque_noun", "box": [860, 40, 280, 180]},
+    {"id": "fr_gladiateur_noun", "box": [860, 280, 240, 280]}
+   ]
+  },
   "cirque": {
    "name": "Le Chapiteau du Cirque",
    "room_id": "R_adv_manner_01",
@@ -914,6 +936,7 @@
       250
      ]
     },
+    {"to": "piste", "label": "La piste", "hint": "Across the floor", "hit": [40, 655, 140, 48]},
     {
      "to": "dresseur",
      "label": "La tente du dresseur",
