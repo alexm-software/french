@@ -52,6 +52,10 @@
    "short": "L'escalier"
   },
   {
+   "key": "rayon",
+   "short": "Le rayon"
+  },
+  {
    "key": "basse_cour",
    "short": "La basse-cour"
   },
@@ -2848,7 +2852,7 @@
    "room_id": "R_prepositions_03",
    "image": "ecole/escalier.jpg",
    "backTo": "puits",
-   "alt": "A wooden staircase painted in ink and gouache, running down the middle of a cream wall. An open yellow door on the left shows the garden. At the top a girl touches a chart of colored dots. Below her a white-bearded man reads a blank letter. A girl reads under one small rain cloud. A boy holds a cookie and pushes a toy lawnmower. At the bottom a boy looks through a telescope past three drums and a plain flag.",
+   "alt": "A wooden staircase painted in ink and gouache, running down the middle of a cream wall. An open yellow door on the left shows the garden. At the top a girl touches a chart of colored dots. Below her a white-bearded man reads a blank letter. A girl reads under one small rain cloud. A boy holds a cookie and pushes a toy lawnmower. At the bottom a boy looks through a telescope past three drums and a plain flag. The floor on the right leads to the shelf.",
    "nameplate": [
     10,
     5
@@ -2863,6 +2867,17 @@
       160,
       155,
       380
+     ]
+    },
+    {
+     "to": "rayon",
+     "label": "Le rayon",
+     "hint": "Across the floor",
+     "hit": [
+      1020,
+      650,
+      180,
+      60
      ]
     }
    ],
@@ -2911,6 +2926,78 @@
       540,
       450,
       170
+     ]
+    }
+   ]
+  },
+  "rayon": {
+   "name": "Le rayon",
+   "room_id": "R_pronouns_02",
+   "image": "ecole/rayon.jpg",
+   "backTo": "escalier",
+   "alt": "A tall wooden bookcase painted in ink and gouache, centered on a cream wall above terracotta tiles. An open blue door on the left shows the garden. Five shelves, top to bottom: an empty tin can; a boy lifting one puppy from a basket; two children each holding a can; a raccoon in a kelp hood peeking through a curtain; a boy with an old telephone.",
+   "nameplate": [
+    10,
+    5
+   ],
+   "doors": [
+    {
+     "to": "escalier",
+     "label": "L'escalier",
+     "hint": "Back through the blue door",
+     "hit": [
+      12,
+      80,
+      160,
+      420
+     ]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {
+     "id": "fr_aucun_pron",
+     "box": [
+      545,
+      18,
+      160,
+      95
+     ]
+    },
+    {
+     "id": "fr_celui_pron",
+     "box": [
+      445,
+      118,
+      400,
+      150
+     ]
+    },
+    {
+     "id": "fr_chacun_pron",
+     "box": [
+      455,
+      275,
+      390,
+      135
+     ]
+    },
+    {
+     "id": "fr_quelqu_un_pron",
+     "box": [
+      475,
+      420,
+      370,
+      110
+     ]
+    },
+    {
+     "id": "fr_tel_pron",
+     "box": [
+      445,
+      540,
+      400,
+      160
      ]
     }
    ]
@@ -3196,6 +3283,16 @@
     "fr_malgre_prep",
     "fr_moyennant_prep",
     "fr_par_dela_prep"
+   ]
+  },
+  "rayon": {
+   "vocabRoom": "R_pronouns_02",
+   "only": [
+    "fr_aucun_pron",
+    "fr_celui_pron",
+    "fr_chacun_pron",
+    "fr_quelqu_un_pron",
+    "fr_tel_pron"
    ]
   }
  },
