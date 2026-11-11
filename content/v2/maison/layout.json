@@ -89,6 +89,10 @@
   {
    "key": "armoire",
    "short": "L'armoire"
+  },
+  {
+   "key": "heritage",
+   "short": "L'héritage"
   }
  ],
  "planned": {
@@ -556,6 +560,14 @@
     "fr_sieste_noun",
     "fr_omelette_noun",
     "fr_delicatesse_noun"
+   ]
+  },
+  "heritage": {
+   "only": [
+    "fr_heritage_noun",
+    "fr_divorce_noun",
+    "fr_demenagement_noun",
+    "fr_jardinier_noun"
    ]
   },
   "jardin_facade": {
@@ -4106,7 +4118,7 @@
    "room_id": "R_bedroom_01",
    "image": "maison/armoire.jpg",
    "backTo": "pyjama",
-   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. Two clothed toy soldiers and two toy cannons stand on a small open wardrobe. A clothed grandfather sleeps in an armchair. A clothed chef flips an omelette beside a hen. A cat in a chef's hat sits by one pink cake. The brown door on the right leads back.",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the left. Two clothed toy soldiers and two toy cannons stand on a small open wardrobe. A clothed grandfather sleeps in an armchair. A clothed chef flips an omelette beside a hen. A cat in a chef's hat sits by one pink cake. The brown door on the right leads back. The bricks between the cupboard and that door lead to the inheritance cupboard.",
    "nameplate": [94, 94],
    "doors": [
     {
@@ -4114,6 +4126,12 @@
      "label": "Le pyjama",
      "hint": "Back through the brown door",
      "hit": [820, 108, 345, 490]
+    },
+    {
+     "to": "heritage",
+     "label": "L'héritage",
+     "hint": "Across the bricks",
+     "hit": [640, 650, 160, 60]
     }
    ],
    "zooms": [],
@@ -4122,6 +4140,29 @@
     {"id": "fr_sieste_noun", "box": [200, 232, 470, 140]},
     {"id": "fr_omelette_noun", "box": [140, 378, 590, 142]},
     {"id": "fr_delicatesse_noun", "box": [175, 528, 420, 147]}
+   ]
+  },
+  "heritage": {
+   "name": "L'héritage",
+   "room_id": "R_family_02",
+   "image": "maison/heritage.jpg",
+   "backTo": "armoire",
+   "alt": "A pale wall and a brick floor. A tall wooden cupboard stands on the right. A clothed bearded man lifts a small white Taj Mahal model from an open chest. A clothed woman and a clothed man sit on the two halves of a sawn sofa. Two clothed removal men carry a small wardrobe. A clothed gardener holds a glass jar of seedlings. The brown door on the left leads back.",
+   "nameplate": [40, 5],
+   "doors": [
+    {
+     "to": "armoire",
+     "label": "L'armoire",
+     "hint": "Back through the brown door",
+     "hit": [75, 130, 210, 470]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_heritage_noun", "box": [700, 0, 530, 218]},
+    {"id": "fr_divorce_noun", "box": [620, 222, 610, 156]},
+    {"id": "fr_demenagement_noun", "box": [655, 384, 550, 144]},
+    {"id": "fr_jardinier_noun", "box": [700, 548, 500, 168]}
    ]
   },
   "jardin_facade": {
