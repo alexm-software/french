@@ -13,6 +13,10 @@
     {
       "key": "carafes",
       "short": "Les carafes"
+    },
+    {
+      "key": "pique",
+      "short": "Le pique-nique"
     }
   ],
   "planned": {
@@ -39,6 +43,20 @@
         "fr_trinquer_verb",
         "fr_diluer_verb",
         "fr_desalterer_verb"
+      ]
+    },
+    "pique": {
+      "vocabRoom": "ST_cooking_seg002",
+      "only": [
+        "fr_croquer_verb",
+        "fr_engouffrer_verb",
+        "fr_servir_verb",
+        "fr_engloutir_verb",
+        "fr_grignoter_verb",
+        "fr_attabler_verb",
+        "fr_pique_niquer_verb",
+        "fr_desservir_verb",
+        "fr_rassasier_verb"
       ]
     }
   },
@@ -71,6 +89,17 @@
             48,
             82,
             240
+          ]
+        },
+        {
+          "to": "pique",
+          "label": "Le pique-nique",
+          "hint": "Across the grass to the picnic",
+          "hit": [
+            400,
+            590,
+            180,
+            100
           ]
         }
       ],
@@ -236,6 +265,114 @@
             355,
             420,
             355
+          ]
+        }
+      ]
+    },
+    "pique": {
+      "name": "Allée du Pique-Nique · Picnic Lane",
+      "room_id": "ST_cooking_seg002",
+      "image": "st_gourmets/pique.jpg",
+      "backTo": "st_gourmets",
+      "alt": "A picnic lawn. Mimes crunch an apple, gobble a sandwich, serve a cake, swallow a basket of bread, nibble cheese, sit down with a hand mirror, spread a checked cloth, clear plates, and lean back full. The gate leads back to the feast.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "st_gourmets",
+          "label": "Le festin",
+          "hint": "Through the garden gate back to the feast",
+          "hit": [
+            15,
+            100,
+            155,
+            220
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_croquer_verb",
+          "box": [
+            200,
+            220,
+            140,
+            250
+          ]
+        },
+        {
+          "id": "fr_engouffrer_verb",
+          "box": [
+            350,
+            180,
+            130,
+            280
+          ]
+        },
+        {
+          "id": "fr_servir_verb",
+          "box": [
+            490,
+            140,
+            140,
+            340
+          ]
+        },
+        {
+          "id": "fr_engloutir_verb",
+          "box": [
+            640,
+            120,
+            170,
+            360
+          ]
+        },
+        {
+          "id": "fr_grignoter_verb",
+          "box": [
+            830,
+            210,
+            150,
+            270
+          ]
+        },
+        {
+          "id": "fr_attabler_verb",
+          "box": [
+            1000,
+            180,
+            180,
+            290
+          ]
+        },
+        {
+          "id": "fr_pique_niquer_verb",
+          "box": [
+            250,
+            500,
+            280,
+            200
+          ]
+        },
+        {
+          "id": "fr_desservir_verb",
+          "box": [
+            640,
+            500,
+            200,
+            200
+          ]
+        },
+        {
+          "id": "fr_rassasier_verb",
+          "box": [
+            1000,
+            490,
+            250,
+            210
           ]
         }
       ]
