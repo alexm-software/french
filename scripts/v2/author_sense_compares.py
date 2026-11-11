@@ -1261,6 +1261,30 @@ RAW = [
  "Sacoche is a leather bag or a satchel carried at the side. Sachet is a little bag or a small packet.",
  "Sachet is a small bag. Sacoche is a larger pouch, a saddlebag, or a handbag.",
  None, None),
+("fr_neuf_num", "fr_neuf_adj", ["scope"],
+ "Neuf the adjective means brand-new, not yet used. This neuf is the number nine.",
+ "Neuf the number is nine. This neuf means brand-new.",
+ ["Mon fils a neuf ans.", "My son is nine."], ["Ces chaussures sont neuves.", "These shoes are brand-new."]),
+("fr_neuf_adj", "fr_nouveau_adj", ["scope", "usage"],
+ "Nouveau means new, recent, or a different one. Neuf means brand-new, not yet used.",
+ "Neuf means brand-new and unused. Nouveau means new or recent, and it is the ordinary word.",
+ ["Ces chaussures sont neuves.", "These shoes are brand-new."], ["J'ai un nouveau vélo.", "I have a new bike."]),
+("fr_poele_noun", "fr_poele_noun_f", ["scope", "grammar"],
+ "La poêle is the frying pan. Le poêle is a heater for a room.",
+ "Le poêle is a closed heater. La poêle is the frying pan.",
+ ["On allume le poêle quand il fait froid.", "We light the stove when it's cold."], ["Fais cuire l'œuf à la poêle.", "Fry the egg in the pan."]),
+("fr_poele_noun", "fr_fourneau_noun", ["scope"],
+ "Fourneau is a stove you cook on. Poêle here is a closed heater for a room.",
+ "Poêle is a room heater. Fourneau is the cooking stove.",
+ None, ["La soupe chauffe sur le fourneau.", "The soup is heating on the stove."]),
+("fr_fois_noun", "fr_heure_noun", ["scope"],
+ "Heure is an hour, or the time on the clock. Fois is one occurrence: une fois, deux fois.",
+ "Fois counts how many times something happens. Heure is an hour or the clock time.",
+ ["Je suis venu une fois.", "I came one time."], ["Quelle heure est-il ?", "What time is it?"]),
+("fr_fois_noun", "fr_temps_noun", ["scope"],
+ "Temps is time in general, or the weather. Fois is one time something happens.",
+ "Fois is a single occurrence. Temps is time as a stretch, or the weather.",
+ ["Je suis venu une fois.", "I came one time."], ["Quel temps fait-il ?", "What's the weather like?"]),
 ]
 
 
@@ -1418,6 +1442,12 @@ tuple(sorted(("fr_allumage_noun", "fr_eclairage_noun"))): [S(CN + "allumage", "A
 tuple(sorted(("fr_pousse_noun", "fr_croissance_noun"))): [S(CN + "pousse", "Jeune tige développée à partir d'un rameau, d'un bourgeon. Croissance annuelle des végétaux."), S(CN + "croissance", "Action de croître, de se développer progressivement.")],
 tuple(sorted(("fr_developpement_noun", "fr_epanouissement_noun"))): [S(CN + urllib.parse.quote("développement"), "Action de développer, de se développer."), S(CN + urllib.parse.quote("épanouissement"), "Déploiement de la corolle des fleurs. Plein et harmonieux développement.")],
 tuple(sorted(("fr_sachet_noun", "fr_sacoche_noun"))): [S(CN + "sachet", "Petit sac."), S(CN + "sacoche", "Grosse bourse de cuir ou de toile forte retenue par une courroie.")],
+tuple(sorted(("fr_neuf_num", "fr_neuf_adj"))): [S(CN + "neuf", "Huit plus un (noté 9)."), S(CN + "neuf", "Qui a l'état, l'aspect frais, inaltéré de ce qui vient d'être fait, ou n'a jamais ou peu servi.")],
+tuple(sorted(("fr_neuf_adj", "fr_nouveau_adj"))): [S(CN + "neuf", "Qui a l'état, l'aspect frais, inaltéré de ce qui vient d'être fait, ou n'a jamais ou peu servi."), S(CN + "nouveau", "Qui n'existe que depuis peu (et qui n'existait pas auparavant)")],
+tuple(sorted(("fr_poele_noun", "fr_poele_noun_f"))): [S(CN + urllib.parse.quote("poêle"), "Sorte de fourneau de fonte, de faïence, etc., qui sert au chauffage."), S(CN + urllib.parse.quote("poêle"), "Ustensile de cuisine en métal, de forme ronde, à bords bas et légèrement inclinés, muni d'une longue queue et servant à cuire certains aliments à feu vif.")],
+tuple(sorted(("fr_poele_noun", "fr_fourneau_noun"))): [S(CN + urllib.parse.quote("poêle"), "Sorte de fourneau de fonte, de faïence, etc., qui sert au chauffage."), S(CN + "fourneau", "Activité liée au fourneau ou, plus généralement, ensemble des travaux culinaires.")],
+tuple(sorted(("fr_fois_noun", "fr_heure_noun"))): [S(CN + "fois", "Moment où une action, un fait se produit ou se répète."), S(CN + "heure", "Une des vingt-quatre divisions de la journée, durant soixante minutes.")],
+tuple(sorted(("fr_fois_noun", "fr_temps_noun"))): [S(CN + "fois", "Moment où une action, un fait se produit ou se répète."), S(CN + "temps", "État de l'atmosphère caractérisé par l'élément senti comme dominant en un lieu et à un moment donnés.")],
 }
 
 
@@ -1500,7 +1530,7 @@ def main():
         print("\n".join(problems[:40]))
         raise SystemExit(f"{len(problems)} problem(s)")
     doc = {
-        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means every support item is a quote of the relevant sense from a page that was opened. kind uncertain means the excerpt was not confirmed on the recorded page and is not a verification. A substring match is not treated as proof of the sense. au/aux and foot/football have no edge. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
+        "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means every support item is a quote of the relevant sense from a page that was opened. kind uncertain means the excerpt was not confirmed on the recorded page and is not a verification. A substring match is not treated as proof of the sense. au/aux and foot/football have no edge. Neuf the number and neuf brand-new are separate entries. Le poêle is the heater and la poêle is the frying pan.",
         "edges": edges,
     }
     path = ROOT / "data" / "source" / "sense_compares.json"

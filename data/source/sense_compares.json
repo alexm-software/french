@@ -1,5 +1,5 @@
 {
- "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means every support item is a quote of the relevant sense from a page that was opened. kind uncertain means the excerpt was not confirmed on the recorded page and is not a verification. A substring match is not treated as proof of the sense. au/aux and foot/football have no edge. fr_neuf_num is not compared with nouveau. poêle is not compared with fourneau.",
+ "about": "Learner cards use a_note, b_note, and labeled examples only. verified true means every support item is a quote of the relevant sense from a page that was opened. kind uncertain means the excerpt was not confirmed on the recorded page and is not a verification. A substring match is not treated as proof of the sense. au/aux and foot/football have no edge. Neuf the number and neuf brand-new are separate entries. Le poêle is the heater and la poêle is the frying pan.",
  "edges": [
   {
    "a": "fr_an_noun",
@@ -7804,6 +7804,196 @@
     }
    ],
    "verified": true
+  },
+  {
+   "a": "fr_neuf_num",
+   "b": "fr_neuf_adj",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Neuf the adjective means brand-new, not yet used. This neuf is the number nine.",
+   "b_note": "Neuf the number is nine. This neuf means brand-new.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/neuf",
+    "https://www.cnrtl.fr/definition/neuf"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/neuf",
+     "excerpt": "Huit plus un (noté 9)."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/neuf",
+     "excerpt": "Qui a l'état, l'aspect frais, inaltéré de ce qui vient d'être fait, ou n'a jamais ou peu servi."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Mon fils a neuf ans.",
+    "My son is nine."
+   ],
+   "b_ex": [
+    "Ces chaussures sont neuves.",
+    "These shoes are brand-new."
+   ]
+  },
+  {
+   "a": "fr_neuf_adj",
+   "b": "fr_nouveau_adj",
+   "axes": [
+    "scope",
+    "usage"
+   ],
+   "a_note": "Nouveau means new, recent, or a different one. Neuf means brand-new, not yet used.",
+   "b_note": "Neuf means brand-new and unused. Nouveau means new or recent, and it is the ordinary word.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/neuf",
+    "https://www.cnrtl.fr/definition/nouveau"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/neuf",
+     "excerpt": "Qui a l'état, l'aspect frais, inaltéré de ce qui vient d'être fait, ou n'a jamais ou peu servi."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/nouveau",
+     "excerpt": "Qui n'existe que depuis peu (et qui n'existait pas auparavant)"
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Ces chaussures sont neuves.",
+    "These shoes are brand-new."
+   ],
+   "b_ex": [
+    "J'ai un nouveau vélo.",
+    "I have a new bike."
+   ]
+  },
+  {
+   "a": "fr_poele_noun",
+   "b": "fr_poele_noun_f",
+   "axes": [
+    "scope",
+    "grammar"
+   ],
+   "a_note": "La poêle is the frying pan. Le poêle is a heater for a room.",
+   "b_note": "Le poêle is a closed heater. La poêle is the frying pan.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/po%C3%AAle",
+    "https://www.cnrtl.fr/definition/po%C3%AAle"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/po%C3%AAle",
+     "excerpt": "Sorte de fourneau de fonte, de faïence, etc., qui sert au chauffage."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/po%C3%AAle",
+     "excerpt": "Ustensile de cuisine en métal, de forme ronde, à bords bas et légèrement inclinés, muni d'une longue queue et servant à cuire certains aliments à feu vif."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "On allume le poêle quand il fait froid.",
+    "We light the stove when it's cold."
+   ],
+   "b_ex": [
+    "Fais cuire l'œuf à la poêle.",
+    "Fry the egg in the pan."
+   ]
+  },
+  {
+   "a": "fr_poele_noun",
+   "b": "fr_fourneau_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Fourneau is a stove you cook on. Poêle here is a closed heater for a room.",
+   "b_note": "Poêle is a room heater. Fourneau is the cooking stove.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/po%C3%AAle",
+    "https://www.cnrtl.fr/definition/fourneau"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/po%C3%AAle",
+     "excerpt": "Sorte de fourneau de fonte, de faïence, etc., qui sert au chauffage."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/fourneau",
+     "excerpt": "Activité liée au fourneau ou, plus généralement, ensemble des travaux culinaires."
+    }
+   ],
+   "verified": true,
+   "b_ex": [
+    "La soupe chauffe sur le fourneau.",
+    "The soup is heating on the stove."
+   ]
+  },
+  {
+   "a": "fr_fois_noun",
+   "b": "fr_heure_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Heure is an hour, or the time on the clock. Fois is one occurrence: une fois, deux fois.",
+   "b_note": "Fois counts how many times something happens. Heure is an hour or the clock time.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/fois",
+    "https://www.cnrtl.fr/definition/heure"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/fois",
+     "excerpt": "Moment où une action, un fait se produit ou se répète."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/heure",
+     "excerpt": "Une des vingt-quatre divisions de la journée, durant soixante minutes."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Je suis venu une fois.",
+    "I came one time."
+   ],
+   "b_ex": [
+    "Quelle heure est-il ?",
+    "What time is it?"
+   ]
+  },
+  {
+   "a": "fr_fois_noun",
+   "b": "fr_temps_noun",
+   "axes": [
+    "scope"
+   ],
+   "a_note": "Temps is time in general, or the weather. Fois is one time something happens.",
+   "b_note": "Fois is a single occurrence. Temps is time as a stretch, or the weather.",
+   "sources": [
+    "https://www.cnrtl.fr/definition/fois",
+    "https://www.cnrtl.fr/definition/temps"
+   ],
+   "support": [
+    {
+     "url": "https://www.cnrtl.fr/definition/fois",
+     "excerpt": "Moment où une action, un fait se produit ou se répète."
+    },
+    {
+     "url": "https://www.cnrtl.fr/definition/temps",
+     "excerpt": "État de l'atmosphère caractérisé par l'élément senti comme dominant en un lieu et à un moment donnés."
+    }
+   ],
+   "verified": true,
+   "a_ex": [
+    "Je suis venu une fois.",
+    "I came one time."
+   ],
+   "b_ex": [
+    "Quel temps fait-il ?",
+    "What's the weather like?"
+   ]
   }
  ]
 }
