@@ -9,6 +9,10 @@
     {
       "key": "st_gourmets",
       "short": "Le festin"
+    },
+    {
+      "key": "carafes",
+      "short": "Les carafes"
     }
   ],
   "planned": {
@@ -24,6 +28,18 @@
         "fr_souper_verb",
         "fr_alimenter_verb"
       ]
+    },
+    "carafes": {
+      "vocabRoom": "ST_cooking_seg003",
+      "only": [
+        "fr_verser_verb",
+        "fr_remplir_verb",
+        "fr_emplir_verb",
+        "fr_consommer_verb",
+        "fr_trinquer_verb",
+        "fr_diluer_verb",
+        "fr_desalterer_verb"
+      ]
     }
   },
   "rooms": {
@@ -32,22 +48,196 @@
       "room_id": "ST_cooking_seg001",
       "image": "st_gourmets/st_gourmets.jpg",
       "alt": "A sunny feast garden on Rue des Saveurs, painted in ink and gouache. Eight red-beret mimes eat at different depths: one shares a sandwich with a blue jay, one dines by two candles beside a roast and a toy horse, one cheers over a lunch box, one devours sausages under a manta-ray kite, one scoffs at a long buffet, one in a flower lei treats himself to cake with a hand mirror, one pays a gold coin for soup beside an owl, and one pours lemon tea into a robot's funnel. The open wooden gate on the left leads back to the street. A rose arch and a blue pantry door are in the garden walls.",
-      "nameplate": [50, 4.5],
+      "nameplate": [
+        50,
+        4.5
+      ],
       "mapExit": {
-        "box": [18, 110, 118, 215],
+        "box": [
+          18,
+          110,
+          118,
+          215
+        ],
         "label": "Rue des Saveurs"
       },
-      "doors": [],
+      "doors": [
+        {
+          "to": "carafes",
+          "label": "Rue des Carafes",
+          "hint": "Through the open blue door into the pantry",
+          "hit": [
+            1190,
+            48,
+            82,
+            240
+          ]
+        }
+      ],
       "zooms": [],
       "items": [
-        {"id": "fr_manger_verb", "box": [138, 198, 292, 190]},
-        {"id": "fr_diner_verb", "box": [435, 138, 318, 252]},
-        {"id": "fr_dejeuner_verb", "box": [400, 395, 240, 168]},
-        {"id": "fr_souper_verb", "box": [2, 432, 275, 284]},
-        {"id": "fr_devorer_verb", "box": [760, 6, 195, 442]},
-        {"id": "fr_alimenter_verb", "box": [960, 132, 225, 288]},
-        {"id": "fr_bouffer_verb", "box": [650, 456, 400, 260]},
-        {"id": "fr_regaler_verb", "box": [1068, 432, 204, 284]}
+        {
+          "id": "fr_manger_verb",
+          "box": [
+            138,
+            198,
+            292,
+            190
+          ]
+        },
+        {
+          "id": "fr_diner_verb",
+          "box": [
+            435,
+            138,
+            318,
+            252
+          ]
+        },
+        {
+          "id": "fr_dejeuner_verb",
+          "box": [
+            400,
+            395,
+            240,
+            168
+          ]
+        },
+        {
+          "id": "fr_souper_verb",
+          "box": [
+            2,
+            432,
+            275,
+            284
+          ]
+        },
+        {
+          "id": "fr_devorer_verb",
+          "box": [
+            760,
+            6,
+            195,
+            442
+          ]
+        },
+        {
+          "id": "fr_alimenter_verb",
+          "box": [
+            960,
+            132,
+            225,
+            288
+          ]
+        },
+        {
+          "id": "fr_bouffer_verb",
+          "box": [
+            650,
+            456,
+            400,
+            260
+          ]
+        },
+        {
+          "id": "fr_regaler_verb",
+          "box": [
+            1068,
+            432,
+            204,
+            284
+          ]
+        }
+      ]
+    },
+    "carafes": {
+      "name": "Rue des Carafes · Pitchers Lane",
+      "room_id": "ST_cooking_seg003",
+      "image": "st_gourmets/carafes.jpg",
+      "backTo": "st_gourmets",
+      "alt": "A stone pantry off the feast garden, painted in ink and gouache. A red-beret mime pours tea beside an open book; a green-beret mime and a horned ram fill a bucket at a pump; another green-beret mime inflates a yellow balloon and holds a hand mirror; a caterpillar in a party hat eats a leaf; friends clink glasses of orange juice; a grandmother in a red beret thins orange juice with a watering can; a bearded red-beret mime drinks a tall glass of water. The open garden door leads back to the feast.",
+      "nameplate": [
+        50,
+        4.5
+      ],
+      "doors": [
+        {
+          "to": "st_gourmets",
+          "label": "Le festin",
+          "hint": "Through the open garden door back to the feast",
+          "hit": [
+            205,
+            20,
+            155,
+            115
+          ]
+        }
+      ],
+      "zooms": [],
+      "items": [
+        {
+          "id": "fr_verser_verb",
+          "box": [
+            0,
+            160,
+            190,
+            450
+          ]
+        },
+        {
+          "id": "fr_remplir_verb",
+          "box": [
+            200,
+            150,
+            250,
+            550
+          ]
+        },
+        {
+          "id": "fr_consommer_verb",
+          "box": [
+            470,
+            55,
+            210,
+            200
+          ]
+        },
+        {
+          "id": "fr_emplir_verb",
+          "box": [
+            475,
+            265,
+            255,
+            430
+          ]
+        },
+        {
+          "id": "fr_trinquer_verb",
+          "box": [
+            740,
+            60,
+            320,
+            285
+          ]
+        },
+        {
+          "id": "fr_desalterer_verb",
+          "box": [
+            1070,
+            40,
+            200,
+            305
+          ]
+        },
+        {
+          "id": "fr_diluer_verb",
+          "box": [
+            850,
+            355,
+            420,
+            355
+          ]
+        }
       ]
     }
   }
