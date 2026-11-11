@@ -141,6 +141,10 @@
   {
    "key": "mobilier",
    "short": "Le mobilier"
+  },
+  {
+   "key": "soir",
+   "short": "Le soir"
   }
  ],
  "planned": {
@@ -713,6 +717,14 @@
     "fr_refrigerateur_noun",
     "fr_pique_nique_noun"
    ]
+  },
+  "soir": {
+   "only": [
+    "fr_telecommande_noun",
+    "fr_deshabiller_verb",
+    "fr_miauler_verb"
+   ],
+   "vocabRoom": "ST_routine_seg001"
   },
   "jardin_facade": {
    "vocabRoom": "R_entrance_02",
@@ -4639,7 +4651,7 @@
    "room_id": "R_living",
    "image": "maison/mobilier.jpg",
    "backTo": "convive",
-   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. Tiny furniture sits on the top shelf: a chair, a table, a bed, and a sofa. A beaver in a vest holds a broom handle. Two polar bear cubs sleep in a small refrigerator. A squirrel sits beside a picnic basket with a pea on the lid.",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A tall wooden cupboard stands on the right. Tiny furniture sits on the top shelf: a chair, a table, a bed, and a sofa. A beaver in a vest holds a broom handle. Two polar bear cubs sleep in a small refrigerator. A squirrel sits beside a picnic basket with a pea on the lid. The bricks in front of the empty wall lead to the evening corner.",
    "nameplate": [90, 94],
    "doors": [
     {
@@ -4647,6 +4659,12 @@
      "label": "Le convive",
      "hint": "Back through the brown door",
      "hit": [110, 70, 260, 500]
+    },
+    {
+     "to": "soir",
+     "label": "Le soir",
+     "hint": "Across the bricks",
+     "hit": [390, 655, 250, 55]
     }
    ],
    "zooms": [],
@@ -4655,6 +4673,28 @@
     {"id": "fr_manche_noun_m", "box": [700, 212, 540, 115]},
     {"id": "fr_refrigerateur_noun", "box": [690, 348, 430, 125]},
     {"id": "fr_pique_nique_noun", "box": [690, 498, 540, 145]}
+   ]
+  },
+  "soir": {
+   "name": "Le soir",
+   "room_id": "R_living",
+   "image": "maison/soir.jpg",
+   "backTo": "mobilier",
+   "alt": "A pale wall and a brick floor. A brown door is on the left. A wooden bookcase holds a little king standing on a television remote and pointing at a television. A second bookcase has two shelves: on the top shelf a fully clothed mime in a red beret pulls off a winter coat while a bee sits on the coat and he holds a mirror; on the bottom shelf a fully clothed mime lays a ball of yarn beside a meowing cat.",
+   "nameplate": [40, 6],
+   "doors": [
+    {
+     "to": "mobilier",
+     "label": "Le mobilier",
+     "hint": "Back through the brown door",
+     "hit": [55, 70, 200, 530]
+    }
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_telecommande_noun", "box": [390, 310, 290, 230]},
+    {"id": "fr_deshabiller_verb", "box": [740, 45, 470, 330]},
+    {"id": "fr_miauler_verb", "box": [760, 400, 470, 250]}
    ]
   },
   "jardin_facade": {
