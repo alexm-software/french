@@ -142,7 +142,7 @@ class SenseCompares(unittest.TestCase):
         deferred = json.loads((ROOT / "data" / "source" / "sense_compare_deferred.json").read_text(encoding="utf-8"))
         self.assertEqual(deferred["deferred_unsupported"], [])
         self.assertIn("fr_au_det", ids)
-        self.assertNotIn("fr_foot_noun", ids)
+        self.assertIn("fr_foot_noun", ids)
         self.assertEqual(i18n["fr"]["card"]["notTheSame"], "Pas la même chose")
         self.assertEqual(totals["published_edges"], len(self.edges))
         self.assertGreater(totals["entries_outside_candidate_clusters"], 0)
