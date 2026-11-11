@@ -87,7 +87,7 @@ def build(M, layout=None):
     ttxt = "; ".join(f"\"{x.get('text')}\" on {x.get('where')}" for x in texts) or "none"
     counts = [f"{it.get('word')}: {it.get('count')}" for it in items if isinstance(it.get("count"), int)]
     plaques = [it.get("word") for it in items if str(it.get("sensitive", "")).lower().startswith("plaque")]
-    em = LIMITS["edge_margin"]; band = LIMITS["centre_band"]
+    band = LIMITS["centre_band"]
     sub = {
         "{room | zoom}": "zoom" if kind == "zoom" else "room",
         "{camera: eye-level three-quarter from ...}": v("camera"),
@@ -120,8 +120,8 @@ def build(M, layout=None):
         "{how this room's camera, layout, focal action and light differ}": v("differ", "how this room differs from its siblings"),
         "{unless hook}": "unless the animal is itself the hook",
         "central 30-70% band": f"central {band[0]:.0%}-{band[1]:.0%} band",
-        "at least 77 px from the left and right edges and 43 px from the top and bottom (6%)":
-            f"at least {round(W * em)} px from the left and right edges and {round(H * em)} px from the top and bottom ({em:.0%})",
+        "Leave 8 px of clearance for each label from the scene edge":
+            f"Leave {LIMITS['label_edge_px']} px of clearance for each label from the scene edge",
         "about 110 px between": f"about {LIMITS['label_gap_px']} px between",
     }
     for a, b in sub.items():
