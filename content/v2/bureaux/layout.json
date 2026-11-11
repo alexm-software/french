@@ -18,6 +18,10 @@
    "short": "La direction"
   },
   {
+   "key": "greve",
+   "short": "La grève"
+  },
+  {
    "key": "metiers",
    "short": "Les métiers"
   },
@@ -115,6 +119,15 @@
     "fr_fournisseur_noun",
     "fr_entrepreneur_noun",
     "fr_compere_noun"
+   ]
+  },
+  "greve": {
+   "only": [
+    "fr_greve_noun",
+    "fr_syndical_adj",
+    "fr_echelon_noun",
+    "fr_remunerer_verb",
+    "fr_licencier_verb"
    ]
   },
   "pupitre": {
@@ -877,6 +890,12 @@
       160,
       105
      ]
+    },
+    {
+     "to": "greve",
+     "label": "La grève",
+     "hint": "Across the floor",
+     "hit": [20, 650, 180, 55]
     }
    ],
    "zooms": [
@@ -1038,6 +1057,25 @@
    ],
    "building_id": "B11_bureaux",
    "sector_id": "S05_bank"
+  },
+  "greve": {
+   "name": "La grève",
+   "room_id": "R_office_01",
+   "image": "bureaux/greve.jpg",
+   "backTo": "direction",
+   "alt": "A quiet office with a pale wall and a wooden floor. A brown door is on the left. A bookcase holds two clerks with grave faces and blank placards, and below them two crabs in a box of sand holding blank placards. The right bookcase holds a cat climbing one rung of a ladder, a mime in a red beret paying a helper with a croissant, and a mime in a red beret holding a blank sheet while a colleague points to the door. The bottom shelf is empty.",
+   "nameplate": [50, 4],
+   "doors": [
+    {"to": "direction", "label": "La direction", "hint": "Back through the brown door", "hit": [40, 60, 190, 500]}
+   ],
+   "zooms": [],
+   "items": [
+    {"id": "fr_greve_noun", "box": [350, 175, 290, 215]},
+    {"id": "fr_syndical_adj", "box": [350, 400, 300, 200]},
+    {"id": "fr_echelon_noun", "box": [770, 25, 380, 180]},
+    {"id": "fr_remunerer_verb", "box": [750, 215, 450, 170]},
+    {"id": "fr_licencier_verb", "box": [750, 395, 460, 210]}
+   ]
   },
   "metiers": {
    "name": "La galerie des métiers",
