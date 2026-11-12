@@ -1,0 +1,51 @@
+{
+  "building": "fruits",
+  "room": "pique-nique",
+  "coordinate_space": "1280x720-px",
+  "setting": "The picnic stall beside the fresh-fruit stall, same blue-glass hall",
+  "theme_fit": "Seven specialty foods. No picture yet. The fresh-fruit stall must pass review first.",
+  "scene_situation": "A vendor sets out a picnic order",
+  "prompt": {
+    "kind": "room",
+    "room_name": "L'étal du pique-nique",
+    "camera": "eye-level inside the same hall",
+    "light_from": "the glass roof",
+    "refs": "the fresh-fruit stall, once it is accepted",
+    "look": "a picnic order being arranged",
+    "materials": "blue iron, glass, oak, cobbles",
+    "set_apart": "the picnic table is the shared job",
+    "place": "covered market",
+    "landmark": "the aisle back to the fresh fruit",
+    "whimsy": "a lemon on a tiny throne",
+    "differ": "not a second row of stools",
+    "reference_board": "none",
+    "beyond": "the fresh-fruit stall through the left aisle"
+  },
+  "siblings": ["fruits"],
+  "used_motifs": ["fifteen stools in a row"],
+  "doors": [
+    {
+      "to": "fruits",
+      "where": "the aisle on the left",
+      "painted_as": "an open aisle back to the fresh-fruit stall. The shopper with the apple ribbons and the vendor with the grapes are the glimpse. No door is cut into the bakery."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "interactions": [
+    {"who": ["fr_olive_noun", "fr_amande_noun"], "doing": "olives and a mound of almonds sit on the left of the picnic table"},
+    {"who": ["fr_paille_noun", "background: picnic table"], "doing": "a pie with one straw sits on that table"},
+    {"who": ["fr_citron_noun", "background: throne"], "doing": "one lemon sits on a tiny crown-topped wooden throne"},
+    {"who": ["fr_abricot_noun", "background: coat"], "doing": "one apricot wears a little knitted coat"},
+    {"who": ["fr_melon_noun", "fr_fruit_noun"], "doing": "a melon and the mixed basket are with the vendor who is packing the order"}
+  ],
+  "items": [
+    {"id": "fr_olive_noun", "word": "olive", "g": "f", "gloss": "olive", "hook": "\"oh-LEEV\": a bowl of olives.", "hook_object": "olives", "shown": "a bowl of olives on the picnic table", "pose_action": "the bowl sits on the left", "count": 1, "side": "left", "zone": "left table", "depth": "middle", "box_hint": [170, 200, 140, 100], "interacts_with": "the picnic order", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_amande_noun", "word": "amande", "g": "f", "gloss": "almond", "hook": "\"ah-MAHND\": a mound of almonds. The mound is the sound cue and the meaning.", "hook_object": "a mound of almonds", "shown": "a mound of almonds beside the olives", "pose_action": "the mound sits on the table", "count": 1, "side": "left", "zone": "left table", "depth": "middle", "box_hint": [170, 340, 150, 100], "interacts_with": "the olives", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_paille_noun", "word": "paille", "g": "f", "gloss": "straw", "hook": "\"PAHY\": one pie with a single drinking straw stuck in it.", "hook_object": "pie and straw", "shown": "one pie with one straw on the picnic table", "pose_action": "the pie is part of the order", "count": 1, "side": "left", "zone": "left table", "depth": "front", "box_hint": [170, 480, 180, 110], "interacts_with": "the picnic table", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_citron_noun", "word": "citron", "g": "m", "gloss": "lemon", "hook": "\"see-TROHN\": one lemon sits on a tiny wooden throne with a crown-shaped back.", "hook_object": "lemon on a throne", "shown": "one lemon on its own small throne", "pose_action": "the throne stands on the right", "count": 1, "side": "right", "zone": "right", "depth": "back", "box_hint": [720, 150, 140, 160], "interacts_with": "the throne", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_melon_noun", "word": "melon", "g": "m", "gloss": "melon", "hook": "\"muh-LOHN\": one whole melon.", "hook_object": "one melon", "shown": "one round melon", "pose_action": "the melon sits with the order", "count": 1, "side": "right", "zone": "right", "depth": "middle", "box_hint": [720, 360, 140, 110], "interacts_with": "the order", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_abricot_noun", "word": "abricot", "g": "m", "gloss": "apricot", "hook": "\"ah-bree-KOH\": one apricot wears a little knitted coat.", "hook_object": "apricot in a coat", "shown": "one apricot in a knitted coat", "pose_action": "the coat is on the apricot, not on a person", "count": 1, "side": "right", "zone": "right", "depth": "front", "box_hint": [720, 500, 140, 90], "interacts_with": "the order", "pos": "noun", "sensitive": "none"},
+    {"id": "fr_fruit_noun", "word": "fruit", "g": "m", "gloss": "fruit", "hook": "\"FRWEE\": an open basket of mixed fruit.", "hook_object": "mixed basket", "shown": "one adult vendor, head to feet, packing an open basket of mixed fruit", "pose_action": "this vendor is the basket's helper only", "count": 1, "side": "right", "zone": "right", "depth": "middle", "box_hint": [920, 180, 200, 400], "interacts_with": "the picnic order", "pos": "noun", "sensitive": "none"}
+  ]
+}

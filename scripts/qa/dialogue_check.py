@@ -3,8 +3,11 @@
 
 Reads the built village/data/talk/*.js and their sources (data/source/village_dialogues.json,
 data/source/conversations.json) and fails on:
-  * an unpinned dialogue in a room that holds fewer than MIN_SHARED (3) of its words. Village dialogues are pinned
-    by building/room; a written conversation is pinned by its "room" field ("building/room"; null = no room)
+  * an unpinned dialogue in a room that holds fewer than MIN_SHARED (3) of its words. That floor only
+    keeps an unpinned dialogue from drifting onto a room that shares almost none of its words. It is not a
+    closed-vocabulary rule and not a quota that every room word appear. Lines may use words from outside the room.
+    Village dialogues are pinned by building/room; a written conversation is pinned by its "room" field
+    ("building/room"; null = no room)
   * a pin to a room that does not exist (the dialogue then drifts by the word rule)
   * adult or medical words (sex, cancer, ultrasound, blood test, drunk, alcohol, cigarettes, weapons, murder...)
     in a children's room: the school, playrooms, toy rooms, the children's workshop, classrooms

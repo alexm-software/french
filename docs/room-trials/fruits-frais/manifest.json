@@ -1,0 +1,245 @@
+{
+  "building": "fruits",
+  "room": "fruits",
+  "coordinate_space": "1280x720-px",
+  "setting": "Fresh-fruit stall inside the blue-glass market hall",
+  "theme_fit": "Eight fresh fruits. The seller weighs grapes beside the stand.",
+  "scene_situation": "The fruit seller weighs grapes beside the stepped stand",
+  "prompt": {
+    "kind": "room",
+    "room_name": "L'étal de fruits frais",
+    "camera": "eye-level inside the hall",
+    "light_from": "the glass roof and the open arch",
+    "refs": "fruits-simple-planning-diagram.png (layout only); market-hall-crop.png (style and architecture only)",
+    "look": "a lived-in market stall",
+    "materials": "blue iron, glass, stepped wooden stand, cobbles",
+    "set_apart": "one stepped stand on the left and the seller on the right",
+    "place": "covered market",
+    "landmark": "open arch onto the lane",
+    "whimsy": "an apple with a fluffy pom-pom on its stem",
+    "differ": "one seller and one stand, not two people and not a row of stools",
+    "reference_board": "none",
+    "beyond": "the lane through the arch, and the picnic stall through the right aisle"
+  },
+  "siblings": [
+    "pique-nique"
+  ],
+  "used_motifs": [
+    "fifteen stools in a row"
+  ],
+  "doors": [
+    {
+      "to": "place-du-marche",
+      "where": "the tall arch at the back",
+      "painted_as": "an open arch onto the sunny lane and trees. The floor in front of it stays clear."
+    },
+    {
+      "to": "pique-nique",
+      "where": "the open aisle on the far right",
+      "painted_as": "an open aisle under the same glass, with the edge of a picnic table beyond. No door is cut into the bakery."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [],
+  "interactions": [
+    {
+      "who": [
+        "fr_orange_noun",
+        "fr_banane_noun",
+        "fr_peche_noun",
+        "fr_fraise_noun",
+        "fr_cerise_noun",
+        "fr_poire_noun",
+        "fr_pomme_noun",
+        "fr_raisin_noun"
+      ],
+      "doing": "the seller weighs grapes beside the stepped stand"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_orange_noun",
+      "word": "orange",
+      "g": "f",
+      "gloss": "orange",
+      "hook": "\"oh-RAHNZH\": a basket of oranges.",
+      "hook_object": "basket of oranges",
+      "shown": "a basket of oranges",
+      "pose_action": "the basket sits on the top step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "back",
+      "box_hint": [
+        100,
+        105,
+        120,
+        85
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_banane_noun",
+      "word": "banane",
+      "g": "f",
+      "gloss": "banana",
+      "hook": "\"bah-NAHN\": a bunch of BANANAS.",
+      "hook_object": "bunch of bananas",
+      "shown": "a plain bunch of bananas in a basket",
+      "pose_action": "the bunch sits on the top step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "back",
+      "box_hint": [
+        245,
+        95,
+        125,
+        90
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_peche_noun",
+      "word": "pêche",
+      "g": "f",
+      "gloss": "peach",
+      "hook": "\"PEHSH\": a basket of peaches.",
+      "hook_object": "basket of peaches",
+      "shown": "a basket of peaches",
+      "pose_action": "the basket sits on the middle step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "middle",
+      "box_hint": [
+        135,
+        250,
+        130,
+        85
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_fraise_noun",
+      "word": "fraise",
+      "g": "f",
+      "gloss": "strawberry",
+      "hook": "\"FREHZ\": a punnet of strawberries.",
+      "hook_object": "punnet of strawberries",
+      "shown": "a punnet of strawberries",
+      "pose_action": "the punnet sits on the middle step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "middle",
+      "box_hint": [
+        300,
+        270,
+        110,
+        80
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_cerise_noun",
+      "word": "cerise",
+      "g": "f",
+      "gloss": "cherry",
+      "hook": "\"suh-REEZ\": a SERIES of CHERRIES, pair after pair.",
+      "hook_object": "paired cherries",
+      "shown": "cherries hanging in pairs on their stems",
+      "pose_action": "the pairs are on the bottom step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "front",
+      "box_hint": [
+        170,
+        415,
+        130,
+        85
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_poire_noun",
+      "word": "poire",
+      "g": "f",
+      "gloss": "pear",
+      "hook": "\"PWAHR\": one pear.",
+      "hook_object": "one pear",
+      "shown": "one pear",
+      "pose_action": "the pear sits on the bottom step",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "front",
+      "box_hint": [
+        345,
+        435,
+        80,
+        90
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_pomme_noun",
+      "word": "pomme",
+      "g": "f",
+      "gloss": "apple",
+      "hook": "\"POM\": a red APPLE wearing a fluffy POM-pom on its stem.",
+      "hook_object": "apple with a pom-pom",
+      "shown": "one red apple with a leaf and a small fluffy red pom-pom tied to its stem",
+      "pose_action": "the apple lies on the front counter of the stand",
+      "count": 1,
+      "side": "left",
+      "zone": "stepped stand",
+      "depth": "front",
+      "box_hint": [
+        455,
+        455,
+        115,
+        105
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    },
+    {
+      "id": "fr_raisin_noun",
+      "word": "raisin",
+      "g": "m",
+      "gloss": "grapes",
+      "hook": "\"reh-ZAN\": not a RAISIN yet: fresh GRAPES on the seller's scale.",
+      "hook_object": "grapes on a scale",
+      "shown": "an adult man, head to feet, weighing green grapes on a brass hand scale",
+      "pose_action": "he faces the stand and weighs the grapes",
+      "count": 1,
+      "side": "right",
+      "zone": "vendor",
+      "depth": "front",
+      "box_hint": [
+        800,
+        150,
+        250,
+        450
+      ],
+      "interacts_with": "the shared errand",
+      "pos": "noun",
+      "sensitive": "none"
+    }
+  ]
+}

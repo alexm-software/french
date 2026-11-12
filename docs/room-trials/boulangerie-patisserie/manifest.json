@@ -1,0 +1,301 @@
+{
+  "building": "boulangerie",
+  "room": "patisserie",
+  "coordinate_space": "1280x720-px",
+  "setting": "Upstairs finishing kitchen of the village bakery",
+  "theme_fit": "Sweet and savory pastries finished before they go downstairs. Nine assigned words, no verbs.",
+  "scene_situation": "The pastry chef and one assistant finish the morning order",
+  "prompt": {
+    "kind": "room",
+    "room_name": "La pâtisserie",
+    "camera": "eye-level from the stair landing",
+    "light_from": "a window on the right",
+    "refs": "village/boulangerie/fournil.jpg, village/boulangerie/boulangerie.jpg",
+    "look": "the existing bakery bakehouse",
+    "materials": "cream plaster, oak beams, terracotta floor, white tile worktop",
+    "set_apart": "cooler morning light than the wood oven downstairs",
+    "place": "upstairs pastry kitchen",
+    "landmark": "open wooden stair down to the bakehouse",
+    "whimsy": "the stair rail is shaped like a twisted baguette",
+    "differ": "no shop counter and no wood oven in this room; those stay downstairs",
+    "reference_board": "none",
+    "beyond": "the stair opens onto the bakehouse wood oven and a baker in a white toque"
+  },
+  "siblings": [
+    "fournil is the downstairs bakehouse with the wood oven and mimes",
+    "boulangerie is the shop with the purple counter"
+  ],
+  "used_motifs": [
+    "striped-shirt mimes",
+    "pelican",
+    "watermelon bowl"
+  ],
+  "doors": [
+    {
+      "to": "fournil",
+      "where": "back center open stair",
+      "painted_as": "a wooden stair with a baguette-twist rail. Through it: the bakehouse wood oven, terracotta floor, and a baker in a white toque, matching fournil.jpg. No butcher and no shop counter."
+    }
+  ],
+  "zooms": [],
+  "text_in_image": [
+    {
+      "text": "PÂTISSERIE",
+      "where": "a small wood sign over the stair"
+    }
+  ],
+  "interactions": [
+    {
+      "who": [
+        "fr_croute_noun",
+        "background: assistant"
+      ],
+      "doing": "the assistant cuts a bread crust into croutons"
+    },
+    {
+      "who": [
+        "fr_galette_noun",
+        "background: paper crown"
+      ],
+      "doing": "a round galette sits with a paper crown and one bean beside it"
+    },
+    {
+      "who": [
+        "fr_truffe_noun",
+        "fr_madeleine_noun"
+      ],
+      "doing": "chocolate truffles and shell cakes cool on the same rack"
+    },
+    {
+      "who": [
+        "fr_pastille_noun",
+        "fr_quiche_noun"
+      ],
+      "doing": "a tin of lozenges and a quiche share the front table"
+    },
+    {
+      "who": [
+        "fr_patissier_noun",
+        "fr_biscuit_noun"
+      ],
+      "doing": "the pastry chef sets a plate of cookies, one bee on the rim"
+    },
+    {
+      "who": [
+        "fr_gratin_noun",
+        "background: pastry chef"
+      ],
+      "doing": "a cheese gratin rests on the pass beside the chef"
+    }
+  ],
+  "items": [
+    {
+      "id": "fr_galette_noun",
+      "word": "galette",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "galette; slang for money is not shown",
+      "hook": "\"gah-LEHT\": one round GALETTE, a paper crown, and one bean beside the cake.",
+      "hook_object": "round galette, paper crown, one bean",
+      "shown": "one round golden cake, a paper crown, and one bean on the table",
+      "pose_action": "the cake sits still",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left high shelf",
+      "depth": "back",
+      "box_hint": [
+        100,
+        80,
+        140,
+        120
+      ],
+      "interacts_with": "the paper crown"
+    },
+    {
+      "id": "fr_croute_noun",
+      "word": "croûte",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "crust; the scab sense is not shown",
+      "hook": "\"KROOT\": she cuts the bread CRUST into croutons.",
+      "hook_object": "bread crust cut into croutons",
+      "shown": "a woman in a white coat cutting a loaf crust into croutons",
+      "pose_action": "one hand on the loaf, the other on the knife",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "left",
+      "depth": "middle",
+      "box_hint": [
+        100,
+        230,
+        150,
+        220
+      ],
+      "interacts_with": "the loaf"
+    },
+    {
+      "id": "fr_truffe_noun",
+      "word": "truffe",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "chocolate truffle",
+      "hook": "\"TREWF\": a box of chocolate TRUFFLES.",
+      "hook_object": "box of chocolate truffles",
+      "shown": "an open box of round cocoa-dusted chocolates",
+      "pose_action": "the box sits on the rack",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "middle rack",
+      "depth": "back",
+      "box_hint": [
+        300,
+        150,
+        140,
+        150
+      ],
+      "interacts_with": "the madeleine tray"
+    },
+    {
+      "id": "fr_madeleine_noun",
+      "word": "madeleine",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "madeleine cake",
+      "hook": "\"mah-duh-LEHN\": a tray of shell-shaped MADELEINES.",
+      "hook_object": "shell-shaped madeleines",
+      "shown": "a tray of small shell-shaped sponge cakes",
+      "pose_action": "the tray rests on the rack",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "middle rack",
+      "depth": "middle",
+      "box_hint": [
+        300,
+        340,
+        150,
+        130
+      ],
+      "interacts_with": "the truffle box"
+    },
+    {
+      "id": "fr_pastille_noun",
+      "word": "pastille",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "pastille, lozenge",
+      "hook": "\"pahs-TEEY\": an open tin of round PASTILLES. Plain depiction; English stress differs.",
+      "hook_object": "tin of round lozenges",
+      "shown": "one open tin of small round sweets",
+      "pose_action": "the tin sits on the front table",
+      "count": null,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "front left",
+      "depth": "front",
+      "box_hint": [
+        100,
+        500,
+        140,
+        130
+      ],
+      "interacts_with": "the quiche"
+    },
+    {
+      "id": "fr_quiche_noun",
+      "word": "quiche",
+      "pos": "noun",
+      "g": "f",
+      "gloss": "quiche",
+      "hook": "\"KEESH\": one QUICHE in a fluted dish. Same word in English.",
+      "hook_object": "one quiche",
+      "shown": "one savory quiche in a round fluted dish",
+      "pose_action": "the dish sits on the front table",
+      "count": 1,
+      "sensitive": "none",
+      "side": "left",
+      "zone": "front",
+      "depth": "front",
+      "box_hint": [
+        320,
+        510,
+        160,
+        140
+      ],
+      "interacts_with": "the pastille tin"
+    },
+    {
+      "id": "fr_patissier_noun",
+      "word": "pâtissier",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "pastry chef",
+      "hook": "\"pah-tee-SYAY\": the PASTRY CHEF in a white coat and toque. Plain depiction.",
+      "hook_object": "pastry chef",
+      "shown": "one man in a white baker coat and toque, no stripes and no beret",
+      "pose_action": "both hands visible as he sets down the cookie plate",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right",
+      "depth": "middle",
+      "box_hint": [
+        880,
+        150,
+        150,
+        270
+      ],
+      "interacts_with": "the cookie plate"
+    },
+    {
+      "id": "fr_biscuit_noun",
+      "word": "biscuit",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "cookie",
+      "hook": "\"bees-KWEE\": exactly one BEE on the rim of a plate of COOKIES.",
+      "hook_object": "one bee and a plate of cookies",
+      "shown": "a plate of round cookies with exactly one bee on the rim",
+      "pose_action": "the plate is on the bench",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right bench",
+      "depth": "front",
+      "box_hint": [
+        1040,
+        400,
+        140,
+        140
+      ],
+      "interacts_with": "the pastry chef"
+    },
+    {
+      "id": "fr_gratin_noun",
+      "word": "gratin",
+      "pos": "noun",
+      "g": "m",
+      "gloss": "gratin; the social sense is not shown",
+      "hook": "\"grah-TAN\": a bubbling cheese GRATIN.",
+      "hook_object": "cheese gratin",
+      "shown": "one oval dish of bubbling browned cheese",
+      "pose_action": "the dish sits on the pass",
+      "count": 1,
+      "sensitive": "none",
+      "side": "right",
+      "zone": "right front",
+      "depth": "front",
+      "box_hint": [
+        760,
+        470,
+        160,
+        140
+      ],
+      "interacts_with": "the pastry chef"
+    }
+  ],
+  "prompt_text": "IMAGE: one integrated room painting, 1280x720, eye-level from the stair landing, of boulangerie / La pâtisserie.\n\nSTYLE: storybook ink and gouache, dark contours; style slider 3: respectful, slightly realistic painterly with cartoony elements. Match attached references village/boulangerie/fournil.jpg, village/boulangerie/boulangerie.jpg, this the existing bakery bakehouse, and materials cream plaster, oak beams, terracotta floor, white tile worktop. Fully painted to the edges.\n\nLIGHT AND COLOR: natural true colors and neutral daylight from a window on the right; white whites, varied clothing. No whole-room amber, orange, sepia, pink or blue cast. Distinctive local light/palette: cooler morning light than the wood oven downstairs.\n\nSETTING: upstairs pastry kitchen; landmark open wooden stair down to the bakehouse; architectural whimsy the stair rail is shaped like a twisted baguette. Believable walls, floor and depth, with breathing room; no arbitrary clutter.\n\nSITUATION: The pastry chef and one assistant finish the morning order. All hook actions belong to this shared moment.\n\nCOMPOSITION: interacting groups: fr_croute_noun, background: assistant: the assistant cuts a bread crust into croutons; fr_galette_noun, background: paper crown: a round galette sits with a paper crown and one bean beside it; fr_truffe_noun, fr_madeleine_noun: chocolate truffles and shell cakes cool on the same rack; fr_pastille_noun, fr_quiche_noun: a tin of lozenges and a quiche share the front table; fr_patissier_noun, fr_biscuit_noun: the pastry chef sets a plate of cookies, one bee on the rim; fr_gratin_noun, background: pastry chef: a cheese gratin rests on the pass beside the chef. Angled, layered foreground/middle/back; varied facing, scale and box-bottom heights. Neither a lineup nor two bands nor a grid; no isolated display of gags. Read as one scene with labels removed. Distinguish these siblings: fournil is the downstairs bakehouse with the wood oven and mimes; boulangerie is the shop with the purple counter.\n\nITEMS: exactly 9 concepts, each with its entire recognizable sound cue and meaning visible together:\n1. galette = galette; slang for money is not shown: chosen hook \"gah-LEHT\": one round GALETTE, a paper crown, and one bean beside the cake.; literal cue round galette, paper crown, one bean; shown as one round golden cake, a paper crown, and one bean on the table; pose/action the cake sits still; count 1; at left, left high shelf, back; interacts with the paper crown; planned pixel envelope [100, 80, 140, 120].\n2. croûte = crust; the scab sense is not shown: chosen hook \"KROOT\": she cuts the bread CRUST into croutons.; literal cue bread crust cut into croutons; shown as a woman in a white coat cutting a loaf crust into croutons; pose/action one hand on the loaf, the other on the knife; count -; at left, left, middle; interacts with the loaf; planned pixel envelope [100, 230, 150, 220].\n3. truffe = chocolate truffle: chosen hook \"TREWF\": a box of chocolate TRUFFLES.; literal cue box of chocolate truffles; shown as an open box of round cocoa-dusted chocolates; pose/action the box sits on the rack; count -; at left, middle rack, back; interacts with the madeleine tray; planned pixel envelope [300, 150, 140, 150].\n4. madeleine = madeleine cake: chosen hook \"mah-duh-LEHN\": a tray of shell-shaped MADELEINES.; literal cue shell-shaped madeleines; shown as a tray of small shell-shaped sponge cakes; pose/action the tray rests on the rack; count -; at left, middle rack, middle; interacts with the truffle box; planned pixel envelope [300, 340, 150, 130].\n5. pastille = pastille, lozenge: chosen hook \"pahs-TEEY\": an open tin of round PASTILLES. Plain depiction; English stress differs.; literal cue tin of round lozenges; shown as one open tin of small round sweets; pose/action the tin sits on the front table; count -; at left, front left, front; interacts with the quiche; planned pixel envelope [100, 500, 140, 130].\n6. quiche = quiche: chosen hook \"KEESH\": one QUICHE in a fluted dish. Same word in English.; literal cue one quiche; shown as one savory quiche in a round fluted dish; pose/action the dish sits on the front table; count 1; at left, front, front; interacts with the pastille tin; planned pixel envelope [320, 510, 160, 140].\n7. pâtissier = pastry chef: chosen hook \"pah-tee-SYAY\": the PASTRY CHEF in a white coat and toque. Plain depiction.; literal cue pastry chef; shown as one man in a white baker coat and toque, no stripes and no beret; pose/action both hands visible as he sets down the cookie plate; count 1; at right, right, middle; interacts with the cookie plate; planned pixel envelope [880, 150, 150, 270].\n8. biscuit = cookie: chosen hook \"bees-KWEE\": exactly one BEE on the rim of a plate of COOKIES.; literal cue one bee and a plate of cookies; shown as a plate of round cookies with exactly one bee on the rim; pose/action the plate is on the bench; count 1; at right, right bench, front; interacts with the pastry chef; planned pixel envelope [1040, 400, 140, 140].\n9. gratin = gratin; the social sense is not shown: chosen hook \"grah-TAN\": a bubbling cheese GRATIN.; literal cue cheese gratin; shown as one oval dish of bubbling browned cheese; pose/action the dish sits on the pass; count 1; at right, right front, front; interacts with the pastry chef; planned pixel envelope [760, 470, 160, 140].\nExact visible counts: galette: 1, quiche: 1, pâtissier: 1, biscuit: 1, gratin: 1. Reference board: none. Plaque-only words: none, depict nothing beyond a blank plaque.\n\nPLACEMENT AND SPACING: feminine noun centers left of 45%, masculine right of 55%; adjectives/adverbs in central 30%-70% band. No dividing line. Whole item plus helper fits one tight nonoverlapping box, at least 77 px from the left and right edges and 43 px from the top and bottom (6%). Leave about 110 px between neighboring long labels and space below each item for its label. Do not hide key props.\n\nDOORS AND EXITS: to fournil, back center open stair, painted as a wooden stair with a baguette-twist rail. Through it: the bakehouse wood oven, terracotta floor, and a baker in a white toque, matching fournil.jpg. No butcher and no shop counter.. Clear floor-level thresholds at human scale; no props in openings. Beyond: the stair opens onto the bakehouse wood oven and a baker in a white toque. Match the destination's actual appearance and reciprocal door design; plausible stairs and outdoor paths.\n\nGROUNDING AND ANATOMY: held, mounted or supported props with contact shadows; no floating controls. Correct heads, limbs, hands, fingers and faces; hands connect to their own shoulders. No duplicates, merged bodies or severed parts.\n\nFIGURES: word figures and their named helpers are distinct and recognizable. Background figures participate plainly, without separate gags or confusing props. Helpers never dominate their item. Animals behave naturally unless the hook explicitly requires otherwise.\n\nTEXT: only declared natural scene text \"PÂTISSERIE\" on a small wood sign over the stair. Blank sign plates: none. No item captions, garbled lettering, speech bubbles, stray symbols or digits competing with counts. Labels are added by the site.\n\nCONTENT: all ages; no crude humor, drinking, smoking, child romance, unsafe children or costume stereotypes. Alcohol/tobacco only closed untouched objects, with no children nearby. Grave/mature terms use plaques. Sacred subjects reverent: no depiction of God the Father, no whimsical props touching sacred things. Harmless playful hooks are welcome.\n\nVARIETY: do not repeat existing hook motifs striped-shirt mimes, pelican, watermelon bowl. This room differs by no shop counter and no wood oven in this room; those stay downstairs.\n\nAVOID: pasted-on figures, seams, lineup, shelves of separate gags, repeated motifs, blocked doors, clipped hooks, amber cast, stray text, floating props, merged or extra limbs, unexplained figures."
+}

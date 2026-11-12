@@ -114,7 +114,7 @@ def suggest_boxes(resolved_items):
         [80, 410, 145, 135],   # bottom 545 (middle)
         [240, 470, 145, 140],  # bottom 610 (front)
         [400, 515, 135, 140],  # bottom 655 (front)
-        [80, 585, 145, 95],    # bottom 680 (front)
+        [80, 545, 145, 120],   # bottom 665 (front)
     ]
     center_slots = [
         [470, 80, 155, 130],   # bottom 210 (back)
@@ -127,14 +127,14 @@ def suggest_boxes(resolved_items):
     right_slots = [
         [745, 65, 145, 110],   # bottom 175 (back)
         [910, 115, 145, 140],  # bottom 255 (back)
-        [1070, 160, 145, 150], # bottom 310 (back)
+        [1060, 160, 140, 150], # bottom 310 (back)
         [745, 225, 145, 130],  # bottom 355 (back)
         [910, 295, 145, 150],  # bottom 445 (middle)
-        [1070, 350, 145, 150], # bottom 500 (middle)
+        [1060, 350, 140, 150], # bottom 500 (middle)
         [745, 405, 145, 130],  # bottom 535 (middle)
         [910, 485, 145, 140],  # bottom 625 (front)
-        [1070, 535, 145, 135], # bottom 670 (front)
-        [745, 580, 145, 95],   # bottom 675 (front)
+        [1060, 520, 140, 140], # bottom 660 (front)
+        [745, 555, 145, 105],  # bottom 660 (front)
     ]
     boxes = {}
     for group, slots in ((lefts, left_slots), (centers, center_slots), (rights, right_slots)):

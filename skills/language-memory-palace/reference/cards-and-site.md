@@ -8,9 +8,9 @@ Every word must have at least one natural example sentence with a translation, u
 
 ## Conversations
 
-Each room gets one or more short dialogues using its words, playable with browser speech synthesis (one voice per speaker where available), with a transcript and translation toggle. <!-- L75 -->
+Each room gets one or more short dialogues, playable with browser speech synthesis (one voice per speaker where available), with a transcript and translation toggle. <!-- L75 -->
 
-- Dialogues must be realistic everyday scenes (ordering at a café, booking a table, cooking with a friend, asking a waiter about the bill) with natural turns, using the room's words in context. <!-- L76 -->
+- A dialogue mostly exercises that room's vocabulary and verbs, through a realistic recurring-cast conversation (ordering at a café, booking a table, cooking with a friend, asking a waiter about the bill). Other verbs, nouns, and adjectives are allowed when they keep the talk natural. This is not a closed word list, and there is no quota that every room word appear. <!-- L76 -->
 - Never generate them from a template, and never have characters quiz each other ("Do you know the verb X? It means Y"). If a room has no hand-written dialogue yet, hide the conversation rather than show filler. <!-- L77 -->
 
 ## Labels
